@@ -170,8 +170,8 @@ NES
 * Castlevania II - Simon's Quest
 * Castlevania III - Dracula's Curse [Akumajou Densetsu] (VRC6)
 * Chaos World
-* Chip 'n Dale Rescure Rangers
-* Chip 'n Dale Rescure Rangers 2
+* Chip 'n Dale Rescue Rangers
+* Chip 'n Dale Rescue Rangers 2
 * Choujin Sentai - Jetman
 * Circus Charlie
 * Contra [Probotector]
