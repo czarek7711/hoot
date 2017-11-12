@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //NIC -->
+	<game>
+		<name>[PC-98] Magic Knight (マジックナイト)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">nic</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="mknight_98">
+			<rom type="file" offset="-1">mknig_98.com</rom>
+			<rom type="file" offset="-1">ADVMAIN.EXE</rom>
+			<rom type="conin" offset="5">ADVMAIN.EXE</rom>
+			<rom type="file" offset="6" >SND.DAT</rom>
+			<rom type="file" offset="11">AINOYOME.MUF</rom>
+			<rom type="file" offset="12">ARIA.MUF</rom>
+			<rom type="file" offset="13">BACH.MUF</rom>
+			<rom type="file" offset="14">CANNON.MUF</rom>
+			<rom type="file" offset="15">FLUTE.MUF</rom>
+			<rom type="file" offset="16">KURUMI.MUF</rom>
+			<rom type="file" offset="17">SATI.MUF</rom>
+			<rom type="file" offset="18">SS01.MUF</rom>
+			<rom type="file" offset="19">SS02.MUF</rom>
+			<rom type="file" offset="20">SS03.MUF</rom>
+			<rom type="file" offset="21">TAISU.MUF</rom>
+			<rom type="file" offset="22">UNGARIA.MUF</rom>
+			<rom type="file" offset="23">_SIKI.MUF</rom>
+			<rom type="shell" offset="0">mknig_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">AINOYOME.MUF</title>
+			<title code="12">ARIA.MUF</title>
+			<title code="13">BACH.MUF</title>
+			<title code="14">CANNON.MUF</title>
+			<title code="15">FLUTE.MUF</title>
+			<title code="16">KURUMI.MUF</title>
+			<title code="17">SATI.MUF</title>
+			<title code="18">SS01.MUF</title>
+			<title code="19">SS02.MUF</title>
+			<title code="21">TAISU.MUF</title>
+			<title code="22">UNGARIA.MUF</title>
+			<title code="23">_SIKI.MUF</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Battle High School (バトルハイスクール)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">nic</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="btlhisch_98">
+			<rom type="file" offset="-1">BTLHS_98.COM</rom>
+			<rom type="file" offset="-1">ADVMAIN.EXE</rom>
+			<rom type="conin" offset="5">ADVMAIN.EXE</rom>
+			<rom type="file" offset="6" >SND.DAT</rom>
+			<rom type="file" offset="11">ARIA.DAT</rom>
+			<rom type="file" offset="12">REST.DAT</rom>
+			<rom type="file" offset="13">SATI.DAT</rom>
+			<rom type="file" offset="14">SS01.DAT</rom>
+			<rom type="file" offset="15">SS02.DAT</rom>
+			<rom type="shell" offset="0">btlhs_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="12">Stop the Music (演奏停止)</title>
+			<title code="14">SS01.DAT</title>
+			<title code="15">SS02.DAT</title>
+			<title code="11">ARIA.DAT</title>
+			<title code="13">SATI.DAT</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Holy Wood -->
+	<game>
+		<name>[PC-98] Vastness (ヴァーストニス 空虚の生贄達) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">holy_wood</driveralias>
+		<options>
+      <option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="vastness_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PP_CAT.KMD</rom>
+			<rom type="file" offset="-1">SECT01_1.KMD</rom>
+			<rom type="file" offset="-1">SECT01_2.KMD</rom>
+			<rom type="file" offset="-1">SECT02_1.KMD</rom>
+			<rom type="file" offset="-1">SECT02_2.KMD</rom>
+			<rom type="file" offset="-1">SECT03_1.KMD</rom>
+			<rom type="file" offset="-1">SECT03_2.KMD</rom>
+			<rom type="conin" offset="0x10">PP_CAT.KMD</rom>
+			<rom type="conin" offset="0x11">SECT01_1.KMD</rom>
+			<rom type="conin" offset="0x12">SECT01_2.KMD</rom>
+			<rom type="conin" offset="0x13">SECT02_1.KMD</rom>
+			<rom type="conin" offset="0x14">SECT02_2.KMD</rom>
+			<rom type="conin" offset="0x15">SECT03_1.KMD</rom>
+			<rom type="conin" offset="0x16">SECT03_2.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV -mPPPP.KMD</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PP_CAT.KMD</title>
+			<title code="0x11">SECT01_1.KMD</title>
+			<title code="0x12">SECT01_2.KMD</title>
+			<title code="0x13">SECT02_1.KMD</title>
+			<title code="0x14">SECT02_2.KMD</title>
+			<title code="0x15">SECT03_1.KMD</title>
+			<title code="0x16">SECT03_2.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Vastness (ヴァーストニス 空虚の生贄達) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">holy_wood</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="vastness_98">
+			<rom type="file" offset="-1">MDDRV.COM</rom>
+			<rom type="file" offset="-1">MDDRV_98.COM</rom>
+			<rom type="file" offset="-1">PP_CAT.KMM</rom>
+			<rom type="file" offset="-1">SECT01_1.KMM</rom>
+			<rom type="file" offset="-1">SECT01_2.KMM</rom>
+			<rom type="file" offset="-1">SECT02_1.KMM</rom>
+			<rom type="file" offset="-1">SECT02_2.KMM</rom>
+			<rom type="file" offset="-1">SECT03_1.KMM</rom>
+			<rom type="file" offset="-1">SECT03_2.KMM</rom>
+			<rom type="conin" offset="0x10">PP_CAT.KMM</rom>
+			<rom type="conin" offset="0x11">SECT01_1.KMM</rom>
+			<rom type="conin" offset="0x12">SECT01_2.KMM</rom>
+			<rom type="conin" offset="0x13">SECT02_1.KMM</rom>
+			<rom type="conin" offset="0x14">SECT02_2.KMM</rom>
+			<rom type="conin" offset="0x15">SECT03_1.KMM</rom>
+			<rom type="conin" offset="0x16">SECT03_2.KMM</rom>
+			<rom type="shell" offset="0">MDDRV</rom>
+			<rom type="shell" offset="0">MDDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PP_CAT.KMM</title>
+			<title code="0x11">SECT01_1.KMM</title>
+			<title code="0x12">SECT01_2.KMM</title>
+			<title code="0x13">SECT02_1.KMM</title>
+			<title code="0x14">SECT02_2.KMM</title>
+			<title code="0x15">SECT03_1.KMM</title>
+			<title code="0x16">SECT03_2.KMM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Vastness (ヴァーストニス 空虚の生贄達) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">holy_wood</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="vastness_98">
+			<rom type="file" offset="-1">MDDRV.COM</rom>
+			<rom type="file" offset="-1">MDDRV_98.COM</rom>
+			<rom type="file" offset="-1">PP_CAT.KMM</rom>
+			<rom type="file" offset="-1">SECT01_1.KMM</rom>
+			<rom type="file" offset="-1">SECT01_2.KMM</rom>
+			<rom type="file" offset="-1">SECT02_1.KMM</rom>
+			<rom type="file" offset="-1">SECT02_2.KMM</rom>
+			<rom type="file" offset="-1">SECT03_1.KMM</rom>
+			<rom type="file" offset="-1">SECT03_2.KMM</rom>
+			<rom type="conin" offset="0x10">PP_CAT.KMM</rom>
+			<rom type="conin" offset="0x11">SECT01_1.KMM</rom>
+			<rom type="conin" offset="0x12">SECT01_2.KMM</rom>
+			<rom type="conin" offset="0x13">SECT02_1.KMM</rom>
+			<rom type="conin" offset="0x14">SECT02_2.KMM</rom>
+			<rom type="conin" offset="0x15">SECT03_1.KMM</rom>
+			<rom type="conin" offset="0x16">SECT03_2.KMM</rom>
+			<rom type="shell" offset="0">MDDRV</rom>
+			<rom type="shell" offset="0">MDDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PP_CAT.KMM</title>
+			<title code="0x11">SECT01_1.KMM</title>
+			<title code="0x12">SECT01_2.KMM</title>
+			<title code="0x13">SECT02_1.KMM</title>
+			<title code="0x14">SECT02_2.KMM</title>
+			<title code="0x15">SECT03_1.KMM</title>
+			<title code="0x16">SECT03_2.KMM</title>
+		</titlelist>
+	</game>
+</gamelist>

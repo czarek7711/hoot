@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //magical -->
+	<game>
+		<name>[X68000] Garou Densetsu (餓狼伝説) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68k">magical</driveralias>
+		<options>
+			<option name="opm_mix" value="0x180"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="garou168snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">Stage 1</title>
+			<title code="0x01">Stage 2</title>
+			<title code="0x02">Stage 3</title>
+			<title code="0x03">Stage 4</title>
+			<title code="0x04">Stage 5</title>
+			<title code="0x05">Stage 6</title>
+			<title code="0x06">Stage 7</title>
+			<title code="0x07">Stage 8</title>
+			<title code="0x08">Opening Title</title>
+			<title code="0x09">Player Select</title>
+			<title code="0x0A">Man Vs Man</title>
+			<title code="0x0B">Before Demo</title>
+			<title code="0x0C">After Demo</title>
+			<title code="0x0D">Geese Demo</title>
+			<title code="0x0E">Bonus In Game</title>
+			<title code="0x0F">Win!</title>
+			<title code="0x10">Lose</title>
+			<title code="0x11">Stage 8 Demo 1</title>
+			<title code="0x12">Stage 8 Demo 2</title>
+			<title code="0x13">Stage 8 Demo 3</title>
+			<title code="0x14">Name Entry</title>
+			<title code="0x15">Game Over</title>
+			<title code="0x16">Continue?</title>
+			<title code="0x17">Magical Sound Logo</title>
+			<title code="0x18">Ending</title>
+			<title code="0x19">Bonus Stage Start</title>
+			<title code="0x1A">Balance Test</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Garou Densetsu (餓狼伝説) (MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68k">magical</driveralias>
+		<options>
+			<option name="opm_mix" value="0x180"/>
+			<option name="pcm_mix" value="0x100"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="garou168snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1B">Stage 1</title>           
+			<title code="0x1C">Stage 2</title>           
+			<title code="0x1D">Stage 3</title>           
+			<title code="0x1E">Stage 4</title>           
+			<title code="0x1F">Stage 5</title>           
+			<title code="0x20">Stage 6</title>           
+			<title code="0x21">Stage 7</title>           
+			<title code="0x22">Stage 8</title>           
+			<title code="0x23">Opening Title</title>     
+			<title code="0x24">Player Select</title>     
+			<title code="0x25">Man Vs Man</title>        
+			<title code="0x26">Before Demo</title>       
+			<title code="0x27">After Demo</title>        
+			<title code="0x28">Geese Demo</title>        
+			<title code="0x29">Bonus In Game</title>     
+			<title code="0x2A">Win!</title>              
+			<title code="0x2B">Lose</title>              
+			<title code="0x2C">Stage 8 Demo 1</title>    
+			<title code="0x2D">Stage 8 Demo 2</title>    
+			<title code="0x2E">Stage 8 Demo 3</title>    
+			<title code="0x2F">Name Entry</title>        
+			<title code="0x30">Game Over</title>         
+			<title code="0x31">Continue?</title>         
+			<title code="0x32">Magical Sound Logo</title>
+			<title code="0x33">Ending</title>            
+			<title code="0x34">Bonus Stage Start</title> 
+			<title code="0x35">Balance Test</title>      
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Garou Densetsu (餓狼伝説) (MT-32 EMU)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68k">magical</driveralias>
+		<options>
+			<option name="opm_mix" value="0x180"/>
+			<option name="pcm_mix" value="0x100"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+			<option name="midiout_mix" value="0x400"/>
+		</options>
+		<romlist archive="garou168snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1B">Stage 1</title>           
+			<title code="0x1C">Stage 2</title>           
+			<title code="0x1D">Stage 3</title>           
+			<title code="0x1E">Stage 4</title>           
+			<title code="0x1F">Stage 5</title>           
+			<title code="0x20">Stage 6</title>           
+			<title code="0x21">Stage 7</title>           
+			<title code="0x22">Stage 8</title>           
+			<title code="0x23">Opening Title</title>     
+			<title code="0x24">Player Select</title>     
+			<title code="0x25">Man Vs Man</title>        
+			<title code="0x26">Before Demo</title>       
+			<title code="0x27">After Demo</title>        
+			<title code="0x28">Geese Demo</title>        
+			<title code="0x29">Bonus In Game</title>     
+			<title code="0x2A">Win!</title>              
+			<title code="0x2B">Lose</title>              
+			<title code="0x2C">Stage 8 Demo 1</title>    
+			<title code="0x2D">Stage 8 Demo 2</title>    
+			<title code="0x2E">Stage 8 Demo 3</title>    
+			<title code="0x2F">Name Entry</title>        
+			<title code="0x30">Game Over</title>         
+			<title code="0x31">Continue?</title>         
+			<title code="0x32">Magical Sound Logo</title>
+			<title code="0x33">Ending</title>            
+			<title code="0x34">Bonus Stage Start</title> 
+			<title code="0x35">Balance Test</title>      
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Garou Densetsu (餓狼伝説) (SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68k">magical</driveralias>
+		<options>
+			<option name="opm_mix" value="0x180"/>
+			<option name="pcm_mix" value="0x100"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="garou168snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x36">Stage 1</title>           
+			<title code="0x37">Stage 2</title>           
+			<title code="0x38">Stage 3</title>           
+			<title code="0x39">Stage 4</title>           
+			<title code="0x3A">Stage 5</title>           
+			<title code="0x3B">Stage 6</title>           
+			<title code="0x3C">Stage 7</title>           
+			<title code="0x3D">Stage 8</title>           
+			<title code="0x3E">Opening Title</title>     
+			<title code="0x3F">Player Select</title>     
+			<title code="0x40">Man Vs Man</title>        
+			<title code="0x41">Before Demo</title>       
+			<title code="0x42">After Demo</title>        
+			<title code="0x43">Geese Demo</title>        
+			<title code="0x44">Bonus In Game</title>     
+			<title code="0x45">Win!</title>              
+			<title code="0x46">Lose</title>              
+			<title code="0x47">Stage 8 Demo 1</title>    
+			<title code="0x48">Stage 8 Demo 2</title>    
+			<title code="0x49">Stage 8 Demo 3</title>    
+			<title code="0x4A">Name Entry</title>        
+			<title code="0x4B">Game Over</title>         
+			<title code="0x4C">Continue?</title>         
+			<title code="0x4D">Magical Sound Logo</title>
+			<title code="0x4E">Ending</title>            
+			<title code="0x4F">Bonus Stage Start</title> 
+			<title code="0x50">Balance Test</title>      
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Garou Densetsu (餓狼伝説) (Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68k">magical</driveralias>
+		<options>
+			<option name="opm_mix" value="0x180"/>
+			<option name="pcm_mix" value="0x100"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="garou168snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x36">Stage 1</title>           
+			<title code="0x37">Stage 2</title>           
+			<title code="0x38">Stage 3</title>           
+			<title code="0x39">Stage 4</title>           
+			<title code="0x3A">Stage 5</title>           
+			<title code="0x3B">Stage 6</title>           
+			<title code="0x3C">Stage 7</title>           
+			<title code="0x3D">Stage 8</title>           
+			<title code="0x3E">Opening Title</title>     
+			<title code="0x3F">Player Select</title>     
+			<title code="0x40">Man Vs Man</title>        
+			<title code="0x41">Before Demo</title>       
+			<title code="0x42">After Demo</title>        
+			<title code="0x43">Geese Demo</title>        
+			<title code="0x44">Bonus In Game</title>     
+			<title code="0x45">Win!</title>              
+			<title code="0x46">Lose</title>              
+			<title code="0x47">Stage 8 Demo 1</title>    
+			<title code="0x48">Stage 8 Demo 2</title>    
+			<title code="0x49">Stage 8 Demo 3</title>    
+			<title code="0x4A">Name Entry</title>        
+			<title code="0x4B">Game Over</title>         
+			<title code="0x4C">Continue?</title>         
+			<title code="0x4D">Magical Sound Logo</title>
+			<title code="0x4E">Ending</title>            
+			<title code="0x4F">Bonus Stage Start</title> 
+			<title code="0x50">Balance Test</title>      
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Garou Densetsu 2 (餓狼伝説2) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68k">magical</driveralias>
+		<options>
+			<option name="opm_mix" value="0x180"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="garou268snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">Opening</title>
+			<title code="0x01">Option</title>
+			<title code="0x02">Charsel</title>
+			<title code="0x03">Earth</title>
+			<title code="0x04">Stage 01</title>
+			<title code="0x05">Stage 02</title>
+			<title code="0x06">Stage 03</title>
+			<title code="0x07">Stage 04</title>
+			<title code="0x08">Stage 05</title>
+			<title code="0x09">Stage 06</title>
+			<title code="0x0A">Stage 07</title>
+			<title code="0x0B">Stage 08</title>
+			<title code="0x0C">Stage 09</title>
+			<title code="0x0D">Stage 10</title>
+			<title code="0x0E">Stage 11</title>
+			<title code="0x0F">Stage 12</title>
+			<title code="0x10">Kru_Dem</title>
+			<title code="0x11">Kru_Voi</title>
+			<title code="0x12">Winner</title>
+			<title code="0x14">Ending 01</title>
+			<title code="0x15">Endcrdt</title>
+			<title code="0x16">Meddemo</title>
+			<title code="0x17">Ranking</title>
+			<title code="0x18">Game Over</title>
+			<title code="0x19">Bonus</title>
+			<title code="0x1A">Mahologo</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Garou Densetsu 2 (餓狼伝説2) (MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68k">magical</driveralias>
+		<options>
+			<option name="opm_mix" value="0x180"/>
+			<option name="pcm_mix" value="0x100"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="garou268snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1B">Opening</title> 
+			<title code="0x1C">Option</title>  
+			<title code="0x1D">Charsel</title> 
+			<title code="0x1E">Earth</title>   
+			<title code="0x1F">Stage 01</title> 
+			<title code="0x20">Stage 02</title> 
+			<title code="0x21">Stage 03</title> 
+			<title code="0x22">Stage 04</title> 
+			<title code="0x23">Stage 05</title> 
+			<title code="0x24">Stage 06</title> 
+			<title code="0x25">Stage 07</title> 
+			<title code="0x26">Stage 08</title> 
+			<title code="0x27">Stage 09</title> 
+			<title code="0x28">Stage 10</title> 
+			<title code="0x29">Stage 11</title> 
+			<title code="0x2A">Stage 12</title> 
+			<title code="0x2B">Kru_Dem</title> 
+			<title code="0x2C">Kru_Voi</title> 
+			<title code="0x2D">Winner</title>  
+			<title code="0x2E">Balance</title> 
+			<title code="0x2F">Ending 01</title>
+			<title code="0x30">Endcrdt</title> 
+			<title code="0x31">Meddemo</title> 
+			<title code="0x32">Ranking</title> 
+			<title code="0x33">Gameover</title>
+			<title code="0x34">Bounus</title>  
+			<title code="0x35">Mahologo</title>
+			<title code="0x51">Stage 07 (unused alternate)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Garou Densetsu 2 (餓狼伝説2) (MT-32 EMU)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68k">magical</driveralias>
+		<options>
+			<option name="opm_mix" value="0x180"/>
+			<option name="pcm_mix" value="0x100"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+			<option name="midiout_mix" value="0x400"/>
+		</options>
+		<romlist archive="garou268snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1B">Opening</title>                    
+			<title code="0x1C">Option</title>                     
+			<title code="0x1D">Charsel</title>                    
+			<title code="0x1E">Earth</title>                      
+			<title code="0x1F">Stage 01</title>                   
+			<title code="0x20">Stage 02</title>                   
+			<title code="0x21">Stage 03</title>                   
+			<title code="0x22">Stage 04</title>                   
+			<title code="0x23">Stage 05</title>                   
+			<title code="0x24">Stage 06</title>                   
+			<title code="0x25">Stage 07</title>                   
+			<title code="0x26">Stage 08</title>                   
+			<title code="0x27">Stage 09</title>                   
+			<title code="0x28">Stage 10</title>                   
+			<title code="0x29">Stage 11</title>                   
+			<title code="0x2A">Stage 12</title>                   
+			<title code="0x2B">Kru_Dem</title>                    
+			<title code="0x2C">Kru_Voi</title>                    
+			<title code="0x2D">Winner</title>                     
+			<title code="0x2E">Balance</title>                    
+			<title code="0x2F">Ending 01</title>                  
+			<title code="0x30">Endcrdt</title>                    
+			<title code="0x31">Meddemo</title>                    
+			<title code="0x32">Ranking</title>                    
+			<title code="0x33">Gameover</title>                   
+			<title code="0x34">Bounus</title>                     
+			<title code="0x35">Mahologo</title>                   
+			<title code="0x51">Stage 07 (unused alternate)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Garou Densetsu 2 (餓狼伝説2) (SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68k">magical</driveralias>
+		<options>
+			<option name="opm_mix" value="0x180"/>
+			<option name="pcm_mix" value="0x100"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="garou268snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x36">Opening</title>  
+			<title code="0x37">Option</title>   
+			<title code="0x38">Charsel</title>  
+			<title code="0x39">Earth</title>    
+			<title code="0x3A">Stage 01</title> 
+			<title code="0x3B">Stage 02</title> 
+			<title code="0x3C">Stage 03</title> 
+			<title code="0x3D">Stage 04</title> 
+			<title code="0x3E">Stage 05</title> 
+			<title code="0x3F">Stage 06</title> 
+			<title code="0x40">Stage 07</title> 
+			<title code="0x41">Stage 08</title> 
+			<title code="0x42">Stage 09</title> 
+			<title code="0x43">Stage 10</title> 
+			<title code="0x44">Stage 11</title> 
+			<title code="0x45">Stage 12</title> 
+			<title code="0x46">Kru_Dem</title>  
+			<title code="0x47">Kru_Voi</title>  
+			<title code="0x48">Winner</title>   
+			<title code="0x49">Balance</title>  
+			<title code="0x4A">Ending 01</title>
+			<title code="0x4B">Endcrdt</title>  
+			<title code="0x4C">Meddemo</title>  
+			<title code="0x4D">Ranking</title>  
+			<title code="0x4E">Gameover</title> 
+			<title code="0x4F">Bounus</title>   
+			<title code="0x50">Mahologo</title> 
+		</titlelist>        
+	</game>
+	<game>
+		<name>[X68000] Garou Densetsu 2 (餓狼伝説2) (Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68k">magical</driveralias>
+		<options>
+			<option name="opm_mix" value="0x180"/>
+			<option name="pcm_mix" value="0x100"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="garou268snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x36">Opening</title>  
+			<title code="0x37">Option</title>   
+			<title code="0x38">Charsel</title>  
+			<title code="0x39">Earth</title>    
+			<title code="0x3A">Stage 01</title> 
+			<title code="0x3B">Stage 02</title> 
+			<title code="0x3C">Stage 03</title> 
+			<title code="0x3D">Stage 04</title> 
+			<title code="0x3E">Stage 05</title> 
+			<title code="0x3F">Stage 06</title> 
+			<title code="0x40">Stage 07</title> 
+			<title code="0x41">Stage 08</title> 
+			<title code="0x42">Stage 09</title> 
+			<title code="0x43">Stage 10</title> 
+			<title code="0x44">Stage 11</title> 
+			<title code="0x45">Stage 12</title> 
+			<title code="0x46">Kru_Dem</title>  
+			<title code="0x47">Kru_Voi</title>  
+			<title code="0x48">Winner</title>   
+			<title code="0x49">Balance</title>  
+			<title code="0x4A">Ending 01</title>
+			<title code="0x4B">Endcrdt</title>  
+			<title code="0x4C">Meddemo</title>  
+			<title code="0x4D">Ranking</title>  
+			<title code="0x4E">Gameover</title> 
+			<title code="0x4F">Bounus</title>   
+			<title code="0x50">Mahologo</title> 
+		</titlelist>
+	</game>
+</gamelist>

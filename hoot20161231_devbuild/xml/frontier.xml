@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //FRONTIER -->
+	<game>
+		<name>[PC-9801] FRONTIER(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">FRONTIER</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="frontier_98">
+			<rom type="file" offset="-1">MSDRV4.EXE</rom>
+			<rom type="file" offset="-1">MSP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">FRONT1.OPN</rom>
+			<rom type="file" offset="0x11">FRONT1.SSG</rom>
+			<rom type="file" offset="0x12">BADEN_86.MS</rom>
+			<rom type="file" offset="0x13">BL_01_B2.MS</rom>
+			<rom type="file" offset="0x14">BL_02_B2.MS</rom>
+			<rom type="file" offset="0x15">BL_03_B2.MS</rom>
+			<rom type="file" offset="0x16">BL_E_B2.MS</rom>
+			<rom type="file" offset="0x17">HHHH2_86.MS</rom>
+			<rom type="file" offset="0x18">HONOB_86.MS</rom>
+			<rom type="file" offset="0x19">MAIN_86.MS</rom>
+			<rom type="file" offset="0x1a">THEME_86.MS</rom>
+			<rom type="file" offset="0x1b">TITLE_86.MS</rom>
+			<rom type="file" offset="0x1c">WAI00B2.MS</rom>
+			<rom type="file" offset="0x1d">WAI01B2.MS</rom>
+			<rom type="file" offset="0x1e">WAI03B2.MS</rom>
+			<rom type="file" offset="0x1f">WAI04B2.MS</rom>
+			<rom type="shell" offset="0">MSDRV4 -B49152</rom>
+			<rom type="shell" offset="0">MSP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x19">MAIN_86.MS  : Frontier island</title>
+			<title code="0x1c">WAI00B2.MS  : ロンリネス・ナイト</title>
+			<title code="0x1d">WAI01B2.MS  : ラバーズ・メモリー</title>
+			<title code="0x1e">WAI03B2.MS  : ジャスティス・ブレイカー</title>
+			<title code="0x1f">WAI04B2.MS  : 遠雷ワイヴァーン</title>
+			<title code="0x1b">TITLE_86.MS : 愛こそすべて</title>
+			<title code="0x1a">THEME_86.MS : 重い想い</title>
+			<title code="0x18">HONOB_86.MS : 時の波間</title>
+			<title code="0x12">BADEN_86.MS : 心を捨てた恋人達</title>
+			<title code="0x17">HHHH2_86.MS : 奇嬉快戒</title>
+			<title code="0x14">BL_02_B2.MS : スペースシップ・フロンティア</title>
+			<title code="0x13">BL_01_B2.MS : 妖しきBLOOD-LINE(血統)</title>
+			<title code="0x15">BL_03_B2.MS : シュルツカッツェのテーマ</title>
+			<title code="0x16">BL_E_B2.MS  : 旅立ち～父を探して～</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] FRONTIER(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">FRONTIER</driveralias>
+		<options>
+			<option name="showfm3ex" value="1"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="frontier_98">
+			<rom type="file" offset="-1">MSDRV4.EXE</rom>
+			<rom type="file" offset="-1">MSP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">FRONT1.OPN</rom>
+			<rom type="file" offset="0x11">FRONT1.SSG</rom>
+			<rom type="file" offset="0x12">BADEN_26.MS</rom>
+			<rom type="file" offset="0x13">BL_01_N.MS</rom>
+			<rom type="file" offset="0x14">BL_02_N.MS</rom>
+			<rom type="file" offset="0x15">BL_03_N.MS</rom>
+			<rom type="file" offset="0x16">BL_E_N.MS</rom>
+			<rom type="file" offset="0x17">HHHH2_26.MS</rom>
+			<rom type="file" offset="0x18">HONOB_26.MS</rom>
+			<rom type="file" offset="0x19">MAIN_26.MS</rom>
+			<rom type="file" offset="0x1a">THEME_26.MS</rom>
+			<rom type="file" offset="0x1b">TITLE_26.MS</rom>
+			<rom type="file" offset="0x1c">WAI00N.MS</rom>
+			<rom type="file" offset="0x1d">WAI01N.MS</rom>
+			<rom type="file" offset="0x1e">WAI03N.MS</rom>
+			<rom type="file" offset="0x1f">WAI04N.MS</rom>
+			<rom type="shell" offset="0">MSDRV4 -B49152</rom>
+			<rom type="shell" offset="0">MSP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x19">MAIN_26.MS  : Frontier island</title>
+			<title code="0x1c">WAI00N.MS   : ロンリネス・ナイト</title>
+			<title code="0x1d">WAI01N.MS   : ラバーズ・メモリー</title>
+			<title code="0x1e">WAI03N.MS   : ジャスティス・ブレイカー</title>
+			<title code="0x1f">WAI04N.MS   : 遠雷ワイヴァーン</title>
+			<title code="0x1b">TITLE_26.MS : 愛こそすべて</title>
+			<title code="0x1a">THEME_26.MS : 重い想い</title>
+			<title code="0x18">HONOB_26.MS : 時の波間</title>
+			<title code="0x12">BADEN_26.MS : 心を捨てた恋人達</title>
+			<title code="0x17">HHHH2_26.MS : 奇嬉快戒</title>
+			<title code="0x14">BL_02_N.MS  : スペースシップ・フロンティア</title>
+			<title code="0x13">BL_01_N.MS  : 妖しきBLOOD-LINE(血統)</title>
+			<title code="0x15">BL_03_N.MS  : シュルツカッツェのテーマ</title>
+			<title code="0x16">BL_E_N.MS   : 旅立ち～父を探して～</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] FRONTIER(SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">FRONTIER</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="frontier_98">
+			<rom type="file" offset="-1">MSDRV4.EXE</rom>
+			<rom type="file" offset="-1">MSP_HOOT.COM</rom>
+			<rom type="file" offset="0x12">INIT.MS</rom>
+			<rom type="file" offset="0x13">BADEN_GS.MS</rom>
+			<rom type="file" offset="0x14">BL_01B.MS</rom>
+			<rom type="file" offset="0x15">BL_02.MS</rom>
+			<rom type="file" offset="0x16">BL_03_.MS</rom>
+			<rom type="file" offset="0x17">BL_04B.MS</rom>
+			<rom type="file" offset="0x18">HHHH2_GS.MS</rom>
+			<rom type="file" offset="0x19">HONOB_GS.MS</rom>
+			<rom type="file" offset="0x1a">MAIN_GS.MS</rom>
+			<rom type="file" offset="0x1b">THEME_GS.MS</rom>
+			<rom type="file" offset="0x1c">TITLE_GS.MS</rom>
+			<rom type="file" offset="0x1d">WAI_01.MS</rom>
+			<rom type="file" offset="0x1e">WAI_02.MS</rom>
+			<rom type="file" offset="0x1f">WAI_03.MS</rom>
+			<rom type="file" offset="0x20">WAI_ED.MS</rom>
+			<rom type="shell" offset="0">MSDRV4 -B49152</rom>
+			<rom type="shell" offset="0">MSP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">INIT.MS     : [音源初期化/最初に実行して下さい]</title>
+			<title code="0x1a">MAIN_GS.MS  : Frontier island</title>
+			<title code="0x1d">WAI_01.MS   : ロンリネス・ナイト</title>
+			<title code="0x1e">WAI_02.MS   : ラバーズ・メモリー</title>
+			<title code="0x1f">WAI_03.MS   : ジャスティス・ブレイカー</title>
+			<title code="0x20">WAI_ED.MS   : 遠雷ワイヴァーン</title>
+			<title code="0x1c">TITLE_GS.MS : 愛こそすべて</title>
+			<title code="0x1b">THEME_GS.MS : 重い想い</title>
+			<title code="0x19">HONOB_GS.MS : 時の波間</title>
+			<title code="0x13">BADEN_GS.MS : 心を捨てた恋人達</title>
+			<title code="0x18">HHHH2_GS.MS : 奇嬉快戒</title>
+			<title code="0x15">BL_02.MS    : スペースシップ・フロンティア</title>
+			<title code="0x14">BL_01B.MS   : 妖しきBLOOD-LINE(血統)</title>
+			<title code="0x16">BL_03_.MS   : シュルツカッツェのテーマ</title>
+			<title code="0x17">BL_04B.MS   : 旅立ち～父を探して～</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] RONDO -ロンド-(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">FRONTIER</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="rondo_98">
+			<rom type="file" offset="-1">MSDRV4.EXE</rom>
+			<rom type="file" offset="-1">MSP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">RON_MS.OPN</rom>
+			<rom type="file" offset="0x11">RON_MS.SSG</rom>
+			<rom type="file" offset="0x12">RON01_86.MS</rom>
+			<rom type="file" offset="0x13">RON02_86.MS</rom>
+			<rom type="file" offset="0x14">RON03_86.MS</rom>
+			<rom type="file" offset="0x15">RON04_86.MS</rom>
+			<rom type="file" offset="0x16">RON05_86.MS</rom>
+			<rom type="file" offset="0x17">RON06_86.MS</rom>
+			<rom type="file" offset="0x18">RON07_86.MS</rom>
+			<rom type="file" offset="0x19">RON08_86.MS</rom>
+			<rom type="file" offset="0x1a">RON09_86.MS</rom>
+			<rom type="shell" offset="0">MSDRV4 -B49152</rom>
+			<rom type="shell" offset="0">MSP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">RON01_86.MS : At School</title>
+			<title code="0x13">RON02_86.MS : Look for</title>
+			<title code="0x14">RON03_86.MS : fu・shi・gi</title>
+			<title code="0x15">RON04_86.MS : 悲しみ</title>
+			<title code="0x16">RON05_86.MS : 奇怪</title>
+			<title code="0x17">RON06_86.MS : にげろっ</title>
+			<title code="0x18">RON07_86.MS : Silent Scene</title>
+			<title code="0x19">RON08_86.MS : また逢おうね</title>
+			<title code="0x1a">RON09_86.MS : チャイム</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] RONDO -ロンド-(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">FRONTIER</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="rondo_98">
+			<rom type="file" offset="-1">MSDRV4.EXE</rom>
+			<rom type="file" offset="-1">MSP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">RON_MS.OPN</rom>
+			<rom type="file" offset="0x11">RON_MS.SSG</rom>
+			<rom type="file" offset="0x12">RON01_26.MS</rom>
+			<rom type="file" offset="0x13">RON02_26.MS</rom>
+			<rom type="file" offset="0x14">RON03_26.MS</rom>
+			<rom type="file" offset="0x15">RON04_26.MS</rom>
+			<rom type="file" offset="0x16">RON05_26.MS</rom>
+			<rom type="file" offset="0x17">RON06_26.MS</rom>
+			<rom type="file" offset="0x18">RON07_26.MS</rom>
+			<rom type="file" offset="0x19">RON08_26.MS</rom>
+			<rom type="file" offset="0x1a">RON09_26.MS</rom>
+			<rom type="shell" offset="0">MSDRV4 -B49152</rom>
+			<rom type="shell" offset="0">MSP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">RON01_26.MS : At School</title>
+			<title code="0x13">RON02_26.MS : Look for</title>
+			<title code="0x14">RON03_26.MS : fu・shi・gi</title>
+			<title code="0x15">RON04_26.MS : 悲しみ</title>
+			<title code="0x16">RON05_26.MS : 奇怪</title>
+			<title code="0x17">RON06_26.MS : にげろっ</title>
+			<title code="0x18">RON07_26.MS : Silent Scene</title>
+			<title code="0x19">RON08_26.MS : また逢おうね</title>
+			<title code="0x1a">RON09_26.MS : チャイム</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] RONDO -ロンド-(SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">FRONTIER</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="rondo_98">
+			<rom type="file" offset="-1">MSDRV4.EXE</rom>
+			<rom type="file" offset="-1">MSP_HOOT.COM</rom>
+			<rom type="file" offset="0x12">RON01_GS.MS</rom>
+			<rom type="file" offset="0x13">RON02_GS.MS</rom>
+			<rom type="file" offset="0x14">RON03_GS.MS</rom>
+			<rom type="file" offset="0x15">RON04_GS.MS</rom>
+			<rom type="file" offset="0x16">RON05_GS.MS</rom>
+			<rom type="file" offset="0x17">RON06_GS.MS</rom>
+			<rom type="file" offset="0x18">RON07_GS.MS</rom>
+			<rom type="file" offset="0x19">RON08_GS.MS</rom>
+			<rom type="file" offset="0x1a">RON09_GS.MS</rom>
+			<rom type="shell" offset="0">MSDRV4 -B49152</rom>
+			<rom type="shell" offset="0">MSP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">RON01_GS.MS : At School</title>
+			<title code="0x13">RON02_GS.MS : Look for</title>
+			<title code="0x14">RON03_GS.MS : fu・shi・gi</title>
+			<title code="0x15">RON04_GS.MS : 悲しみ</title>
+			<title code="0x16">RON05_GS.MS : 奇怪</title>
+			<title code="0x17">RON06_GS.MS : にげろっ</title>
+			<title code="0x18">RON07_GS.MS : Silent Scene</title>
+			<title code="0x19">RON08_GS.MS : また逢おうね</title>
+			<title code="0x1a">RON09_GS.MS : チャイム</title>
+		</titlelist>
+	</game>
+</gamelist>

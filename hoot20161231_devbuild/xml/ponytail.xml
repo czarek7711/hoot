@@ -1,0 +1,1571 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //ポニーテールソフト -->
+	<game>
+		<name>[X68000] PONYON</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">ポニーテールソフト</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="ponyon68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">INIT.OPM</rom>
+			<rom type="code" offset="0x28000">ANI.OPM</rom>
+			<rom type="code" offset="0x2c000">DEMO.OPM</rom>
+			<rom type="code" offset="0x30000">EIJI.OPM</rom>
+			<rom type="code" offset="0x34000">END.OPM</rom>
+			<rom type="code" offset="0x38000">FLU.OPM</rom>
+			<rom type="code" offset="0x3c000">MAR.OPM</rom>
+			<rom type="code" offset="0x40000">MUSHI.OPM</rom>
+			<rom type="code" offset="0x44000">V_SET.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0a08">MAR.OPM   : 封印</title>
+			<title code="0x0a09">MUSHI.OPM : 太陽神</title>
+			<title code="0x0a03">ANI.OPM   : さんぽ</title>
+			<title code="0x0a07">FLU.OPM   : モーニング</title>
+			<title code="0x0a05">EIJI.OPM  : うきうき!</title>
+			<title code="0x0a04">DEMO.OPM  : </title>
+			<title code="0x0a06">END.OPM   : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Engage Errands ～魅惑の使徒～(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ee_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x01">MUON.MDT</rom>
+			<rom type="file" offset="0x02">ALLY_S2.MDT</rom>
+			<rom type="file" offset="0x03">BTL_1_S2.MDT</rom>
+			<rom type="file" offset="0x04">BTL_2_S2.MDT</rom>
+			<rom type="file" offset="0x05">BTL_3_S2.MDT</rom>
+			<rom type="file" offset="0x06">BTL_4_S2.MDT</rom>
+			<rom type="file" offset="0x07">BTL_5_S2.MDT</rom>
+			<rom type="file" offset="0x08">BTL_6_S2.MDT</rom>
+			<rom type="file" offset="0x09">END_1_S2.MDT</rom>
+			<rom type="file" offset="0x0a">END_2_S2.MDT</rom>
+			<rom type="file" offset="0x0b">END_3_S2.MDT</rom>
+			<rom type="file" offset="0x0c">EVOLV_S2.MDT</rom>
+			<rom type="file" offset="0x0d">EVT_1_S2.MDT</rom>
+			<rom type="file" offset="0x0e">EVT_2_S2.MDT</rom>
+			<rom type="file" offset="0x0f">GOVER_S2.MDT</rom>
+			<rom type="file" offset="0x10">H_S2.MDT</rom>
+			<rom type="file" offset="0x11">OPEN1_S2.MDT</rom>
+			<rom type="file" offset="0x12">OPEN2_S2.MDT</rom>
+			<rom type="file" offset="0x13">REST_S2.MDT</rom>
+			<rom type="file" offset="0x14">RNWY_S2.MDT</rom>
+			<rom type="file" offset="0x15">WIN_S2.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">[STOP]</title>
+			<title code="0x02">ALLY_S2.MDT</title>
+			<title code="0x03">BTL_1_S2.MDT</title>
+			<title code="0x04">BTL_2_S2.MDT</title>
+			<title code="0x05">BTL_3_S2.MDT</title>
+			<title code="0x06">BTL_4_S2.MDT</title>
+			<title code="0x07">BTL_5_S2.MDT</title>
+			<title code="0x08">BTL_6_S2.MDT</title>
+			<title code="0x09">END_1_S2.MDT</title>
+			<title code="0x0a">END_2_S2.MDT</title>
+			<title code="0x0b">END_3_S2.MDT</title>
+			<title code="0x0c">EVOLV_S2.MDT</title>
+			<title code="0x0d">EVT_1_S2.MDT</title>
+			<title code="0x0e">EVT_2_S2.MDT</title>
+			<title code="0x0f">GOVER_S2.MDT</title>
+			<title code="0x10">H_S2.MDT</title>
+			<title code="0x11">OPEN1_S2.MDT</title>
+			<title code="0x12">OPEN2_S2.MDT</title>
+			<title code="0x13">REST_S2.MDT</title>
+			<title code="0x14">RNWY_S2.MDT</title>
+			<title code="0x15">WIN_S2.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Engage Errands ～魅惑の使徒～(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ee_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x01">MUON.MDT</rom>
+			<rom type="file" offset="0x02">ALLY_S1.MDT</rom>
+			<rom type="file" offset="0x03">BTL_1_S1.MDT</rom>
+			<rom type="file" offset="0x04">BTL_2_S1.MDT</rom>
+			<rom type="file" offset="0x05">BTL_3_S1.MDT</rom>
+			<rom type="file" offset="0x06">BTL_4_S1.MDT</rom>
+			<rom type="file" offset="0x07">BTL_5_S1.MDT</rom>
+			<rom type="file" offset="0x08">BTL_6_S1.MDT</rom>
+			<rom type="file" offset="0x09">END_1_S1.MDT</rom>
+			<rom type="file" offset="0x0a">END_2_S1.MDT</rom>
+			<rom type="file" offset="0x0b">END_3_S1.MDT</rom>
+			<rom type="file" offset="0x0c">EVOLV_S1.MDT</rom>
+			<rom type="file" offset="0x0d">EVT_1_S1.MDT</rom>
+			<rom type="file" offset="0x0e">EVT_2_S1.MDT</rom>
+			<rom type="file" offset="0x0f">GOVER_S1.MDT</rom>
+			<rom type="file" offset="0x10">H_S1.MDT</rom>
+			<rom type="file" offset="0x11">OPEN1_S1.MDT</rom>
+			<rom type="file" offset="0x12">OPEN2_S1.MDT</rom>
+			<rom type="file" offset="0x13">REST_S1.MDT</rom>
+			<rom type="file" offset="0x14">RNWY_S1.MDT</rom>
+			<rom type="file" offset="0x15">WIN_S1.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">[STOP]</title>
+			<title code="0x02">ALLY_S1.MDT</title>
+			<title code="0x03">BTL_1_S1.MDT</title>
+			<title code="0x04">BTL_2_S1.MDT</title>
+			<title code="0x05">BTL_3_S1.MDT</title>
+			<title code="0x06">BTL_4_S1.MDT</title>
+			<title code="0x07">BTL_5_S1.MDT</title>
+			<title code="0x08">BTL_6_S1.MDT</title>
+			<title code="0x09">END_1_S1.MDT</title>
+			<title code="0x0a">END_2_S1.MDT</title>
+			<title code="0x0b">END_3_S1.MDT</title>
+			<title code="0x0c">EVOLV_S1.MDT</title>
+			<title code="0x0d">EVT_1_S1.MDT</title>
+			<title code="0x0e">EVT_2_S1.MDT</title>
+			<title code="0x0f">GOVER_S1.MDT</title>
+			<title code="0x10">H_S1.MDT</title>
+			<title code="0x11">OPEN1_S1.MDT</title>
+			<title code="0x12">OPEN2_S1.MDT</title>
+			<title code="0x13">REST_S1.MDT</title>
+			<title code="0x14">RNWY_S1.MDT</title>
+			<title code="0x15">WIN_S1.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Engage Errands II ～光輝を担うもの～(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ee2_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">EE2SE01.MDT</rom>
+			<rom type="file" offset="0x11">EE2SE02.MDT</rom>
+			<rom type="file" offset="0x12">EE2SE04.MDT</rom>
+			<rom type="file" offset="0x13">EE2SE05.MDT</rom>
+			<rom type="file" offset="0x14">EE2SE06.MDT</rom>
+			<rom type="file" offset="0x15">EE2SE07.MDT</rom>
+			<rom type="file" offset="0x16">EE2SE09.MDT</rom>
+			<rom type="file" offset="0x17">EE2SE10.MDT</rom>
+			<rom type="file" offset="0x18">FIELD1_B.MDT</rom>
+			<rom type="file" offset="0x19">FIELD2_B.MDT</rom>
+			<rom type="file" offset="0x1a">FIELD3_B.MDT</rom>
+			<rom type="file" offset="0x1b">FIELD4_B.MDT</rom>
+			<rom type="file" offset="0x1c">FIELD5_B.MDT</rom>
+			<rom type="file" offset="0x1d">MUSIC01B.MDT</rom>
+			<rom type="file" offset="0x1e">MUSIC02B.MDT</rom>
+			<rom type="file" offset="0x1f">MUSIC03B.MDT</rom>
+			<rom type="file" offset="0x20">MUSIC04B.MDT</rom>
+			<rom type="file" offset="0x21">MUSIC05B.MDT</rom>
+			<rom type="file" offset="0x22">MUSIC06B.MDT</rom>
+			<rom type="file" offset="0x23">MUSIC08B.MDT</rom>
+			<rom type="file" offset="0x24">MUSIC09B.MDT</rom>
+			<rom type="file" offset="0x25">MUSIC10B.MDT</rom>
+			<rom type="file" offset="0x26">MUSIC12B.MDT</rom>
+			<rom type="file" offset="0x27">MUSIC13B.MDT</rom>
+			<rom type="file" offset="0x28">MUSIC15B.MDT</rom>
+			<rom type="file" offset="0x29">MUSIC16B.MDT</rom>
+			<rom type="file" offset="0x2a">MUSIC17B.MDT</rom>
+			<rom type="file" offset="0x2b">MUSIC20B.MDT</rom>
+			<rom type="file" offset="0x2c">MUSIC23B.MDT</rom>
+			<rom type="file" offset="0x2d">MUSIC30B.MDT</rom>
+			<rom type="file" offset="0x2e">MUSIC31B.MDT</rom>
+			<rom type="file" offset="0x2f">MUSIC32B.MDT</rom>
+			<rom type="file" offset="0x30">MUSIC40B.MDT</rom>
+			<rom type="file" offset="0x31">MUSIC48B.MDT</rom>
+			<rom type="file" offset="0x32">MUSIC99B.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x2d">MUSIC30B.MDT : オープニング</title>
+			<title code="0x18">FIELD1_B.MDT : 戦闘1</title>
+			<title code="0x19">FIELD2_B.MDT : 戦闘2</title>
+			<title code="0x1a">FIELD3_B.MDT : 戦闘3</title>
+			<title code="0x1b">FIELD4_B.MDT : 戦闘4</title>
+			<title code="0x1c">FIELD5_B.MDT : 戦闘5</title>
+			<title code="0x1d">MUSIC01B.MDT : 異次元の歪み</title>
+			<title code="0x1e">MUSIC02B.MDT : ドミニオン登場</title>
+			<title code="0x1f">MUSIC03B.MDT : 悲しみ</title>
+			<title code="0x20">MUSIC04B.MDT : 戦闘/一触即発</title>
+			<title code="0x28">MUSIC15B.MDT : 仲間の登場</title>
+			<title code="0x29">MUSIC16B.MDT : 屋敷での会話1</title>
+			<title code="0x2a">MUSIC17B.MDT : 屋敷での会話2</title>
+			<title code="0x21">MUSIC05B.MDT : お茶目な人たち</title>
+			<title code="0x23">MUSIC08B.MDT : 降臨祭</title>
+			<title code="0x24">MUSIC09B.MDT : 聖なる力</title>
+			<title code="0x27">MUSIC13B.MDT : 緊迫</title>
+			<title code="0x2b">MUSIC20B.MDT : 謎1</title>
+			<title code="0x2e">MUSIC31B.MDT : 謎2</title>
+			<title code="0x32">MUSIC99B.MDT : 戦闘</title>
+			<title code="0x2c">MUSIC23B.MDT : 戦闘前後</title>
+			<title code="0x2f">MUSIC32B.MDT : 夜に抱かれて</title>
+			<title code="0x26">MUSIC12B.MDT : 最終章</title>
+			<title code="0x25">MUSIC10B.MDT : アーシュラの神秘</title>
+			<title code="0x30">MUSIC40B.MDT : エンディング1</title>
+			<title code="0x22">MUSIC06B.MDT : エンディング2</title>
+			<title code="0x31">MUSIC48B.MDT : </title>
+			<title code="0x10">EE2SE01.MDT  : SE</title>
+			<title code="0x11">EE2SE02.MDT  : SE</title>
+			<title code="0x12">EE2SE04.MDT  : SE</title>
+			<title code="0x13">EE2SE05.MDT  : SE</title>
+			<title code="0x14">EE2SE06.MDT  : SE</title>
+			<title code="0x15">EE2SE07.MDT  : SE</title>
+			<title code="0x16">EE2SE09.MDT  : SE</title>
+			<title code="0x17">EE2SE10.MDT  : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Engage Errands II ～光輝を担うもの～(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ee2_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">EE2SE01.MDT</rom>
+			<rom type="file" offset="0x11">EE2SE02.MDT</rom>
+			<rom type="file" offset="0x12">EE2SE04.MDT</rom>
+			<rom type="file" offset="0x13">EE2SE05.MDT</rom>
+			<rom type="file" offset="0x14">EE2SE06.MDT</rom>
+			<rom type="file" offset="0x15">EE2SE07.MDT</rom>
+			<rom type="file" offset="0x16">EE2SE09.MDT</rom>
+			<rom type="file" offset="0x17">EE2SE10.MDT</rom>
+			<rom type="file" offset="0x18">FIELD1_A.MDT</rom>
+			<rom type="file" offset="0x19">FIELD2_A.MDT</rom>
+			<rom type="file" offset="0x1a">FIELD3_A.MDT</rom>
+			<rom type="file" offset="0x1b">FIELD4_A.MDT</rom>
+			<rom type="file" offset="0x1c">FIELD5_A.MDT</rom>
+			<rom type="file" offset="0x1d">MUSIC01A.MDT</rom>
+			<rom type="file" offset="0x1e">MUSIC02A.MDT</rom>
+			<rom type="file" offset="0x1f">MUSIC03A.MDT</rom>
+			<rom type="file" offset="0x20">MUSIC04A.MDT</rom>
+			<rom type="file" offset="0x21">MUSIC05A.MDT</rom>
+			<rom type="file" offset="0x22">MUSIC06A.MDT</rom>
+			<rom type="file" offset="0x23">MUSIC08A.MDT</rom>
+			<rom type="file" offset="0x24">MUSIC09A.MDT</rom>
+			<rom type="file" offset="0x25">MUSIC10A.MDT</rom>
+			<rom type="file" offset="0x26">MUSIC12A.MDT</rom>
+			<rom type="file" offset="0x27">MUSIC13A.MDT</rom>
+			<rom type="file" offset="0x28">MUSIC15A.MDT</rom>
+			<rom type="file" offset="0x29">MUSIC16A.MDT</rom>
+			<rom type="file" offset="0x2a">MUSIC17A.MDT</rom>
+			<rom type="file" offset="0x2b">MUSIC20A.MDT</rom>
+			<rom type="file" offset="0x2c">MUSIC23A.MDT</rom>
+			<rom type="file" offset="0x2d">MUSIC30A.MDT</rom>
+			<rom type="file" offset="0x2e">MUSIC31A.MDT</rom>
+			<rom type="file" offset="0x2f">MUSIC32A.MDT</rom>
+			<rom type="file" offset="0x30">MUSIC40A.MDT</rom>
+			<rom type="file" offset="0x31">MUSIC48A.MDT</rom>
+			<rom type="file" offset="0x32">MUSIC99A.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x2d">MUSIC30A.MDT : オープニング</title>
+			<title code="0x18">FIELD1_A.MDT : 戦闘1</title>
+			<title code="0x19">FIELD2_A.MDT : 戦闘2</title>
+			<title code="0x1a">FIELD3_A.MDT : 戦闘3</title>
+			<title code="0x1b">FIELD4_A.MDT : 戦闘4</title>
+			<title code="0x1c">FIELD5_A.MDT : 戦闘5</title>
+			<title code="0x1d">MUSIC01A.MDT : 異次元の歪み</title>
+			<title code="0x1e">MUSIC02A.MDT : ドミニオン登場</title>
+			<title code="0x1f">MUSIC03A.MDT : 悲しみ</title>
+			<title code="0x20">MUSIC04A.MDT : 戦闘/一触即発</title>
+			<title code="0x28">MUSIC15A.MDT : 仲間の登場</title>
+			<title code="0x29">MUSIC16A.MDT : 屋敷での会話1</title>
+			<title code="0x2a">MUSIC17A.MDT : 屋敷での会話2</title>
+			<title code="0x21">MUSIC05A.MDT : お茶目な人たち</title>
+			<title code="0x23">MUSIC08A.MDT : 降臨祭</title>
+			<title code="0x24">MUSIC09A.MDT : 聖なる力</title>
+			<title code="0x27">MUSIC13A.MDT : 緊迫</title>
+			<title code="0x2b">MUSIC20A.MDT : 謎1</title>
+			<title code="0x2e">MUSIC31A.MDT : 謎2</title>
+			<title code="0x32">MUSIC99A.MDT : 戦闘</title>
+			<title code="0x2c">MUSIC23A.MDT : 戦闘前後</title>
+			<title code="0x2f">MUSIC32A.MDT : 夜に抱かれて</title>
+			<title code="0x26">MUSIC12A.MDT : 最終章</title>
+			<title code="0x25">MUSIC10A.MDT : アーシュラの神秘</title>
+			<title code="0x30">MUSIC40A.MDT : エンディング1</title>
+			<title code="0x22">MUSIC06A.MDT : エンディング2</title>
+			<title code="0x31">MUSIC48A.MDT : </title>
+			<title code="0x10">EE2SE01.MDT  : SE</title>
+			<title code="0x11">EE2SE02.MDT  : SE</title>
+			<title code="0x12">EE2SE04.MDT  : SE</title>
+			<title code="0x13">EE2SE05.MDT  : SE</title>
+			<title code="0x14">EE2SE06.MDT  : SE</title>
+			<title code="0x15">EE2SE07.MDT  : SE</title>
+			<title code="0x16">EE2SE09.MDT  : SE</title>
+			<title code="0x17">EE2SE10.MDT  : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PONKAN(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ponkan_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">A3R_SB2.MDT</rom>
+			<rom type="file" offset="0x11">AOKI1_S2.MDT</rom>
+			<rom type="file" offset="0x12">K1_B.MDT</rom>
+			<rom type="file" offset="0x13">K2_B.MDT</rom>
+			<rom type="file" offset="0x14">K3_B.MDT</rom>
+			<rom type="file" offset="0x15">K4_B.MDT</rom>
+			<rom type="file" offset="0x16">M1_B.MDT</rom>
+			<rom type="file" offset="0x17">M2_B.MDT</rom>
+			<rom type="file" offset="0x18">M3_B.MDT</rom>
+			<rom type="file" offset="0x19">M4_B.MDT</rom>
+			<rom type="file" offset="0x1a">M5_B.MDT</rom>
+			<rom type="file" offset="0x1b">N13_S2.MDT</rom>
+			<rom type="file" offset="0x1c">OPEN1_S2.MDT</rom>
+			<rom type="file" offset="0x1d">OPEN_SB2.MDT</rom>
+			<rom type="file" offset="0x1e">P1L_SB2.MDT</rom>
+			<rom type="file" offset="0x1f">T02_2.MDT</rom>
+			<rom type="file" offset="0x20">T01_2.MDT</rom>
+			<rom type="file" offset="0x21">T07_2.MDT</rom>
+			<rom type="file" offset="0x22">T15_2.MDT</rom>
+			<rom type="file" offset="0x23">TITLE_B.MDT</rom>
+			<rom type="file" offset="0x24">Y1_B.MDT</rom>
+			<rom type="file" offset="0x25">Y2_B.MDT</rom>
+			<rom type="file" offset="0x26">Y3_B.MDT</rom>
+			<rom type="file" offset="0x27">Y4_B.MDT</rom>
+			<rom type="file" offset="0x28">Y5_B.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">TITLE_B.MDT  : タイトル</title>
+			<title code="0x16">M1_B.MDT     : いたいけ探偵日誌 - ディティクティブ奇想曲</title>
+			<title code="0x17">M2_B.MDT     : いたいけ探偵日誌 - 哀愁の捜査＜サーチ セレナーデ＞</title>
+			<title code="0x18">M3_B.MDT     : いたいけ探偵日誌 - 荒波が俺を待っているぜ!</title>
+			<title code="0x19">M4_B.MDT     : いたいけ探偵日誌 - 恋の港街</title>
+			<title code="0x1a">M5_B.MDT     : いたいけ探偵日誌 - 英国の女の子＜ブリティッシュ ロリータ＞</title>
+			<title code="0x12">K1_B.MDT     : ダンシン・ダディ・ダンジョン - パパとその災厄に関す売る第一楽章</title>
+			<title code="0x13">K2_B.MDT     : ダンシン・ダディ・ダンジョン - 迷宮と探検における第二楽章</title>
+			<title code="0x14">K3_B.MDT     : ダンシン・ダディ・ダンジョン - 姉妹の緑色の髪を愛でる第三楽章</title>
+			<title code="0x15">K4_B.MDT     : ダンシン・ダディ・ダンジョン - 剣とモンスターと炎を回顧する最終楽章</title>
+			<title code="0x24">Y1_B.MDT     : SEX-FIGHTER 麗華 - 女の怒り、北は沖縄、オレのオヤジとアニキ</title>
+			<title code="0x25">Y2_B.MDT     : SEX-FIGHTER 麗華 - 羅生門をつぶせ、オレのオヤジ</title>
+			<title code="0x26">Y3_B.MDT     : SEX-FIGHTER 麗華 - ボクのヨメさんオカマ、オレのアニキ</title>
+			<title code="0x27">Y4_B.MDT     : SEX-FIGHTER 麗華 - マヨネーズ対しょうゆ、オカマVSレズ</title>
+			<title code="0x28">Y5_B.MDT     : SEX-FIGHTER 麗華 - 家に帰りたい働かない、ボクの女</title>
+			<title code="0x20">T01_2.MDT    : 制作日誌</title>
+			<title code="0x22">T15_2.MDT    : 制作日誌</title>
+			<title code="0x21">T07_2.MDT    : 制作日誌</title>
+			<title code="0x1e">P1L_SB2.MDT  : 商品紹介 - ポッキー</title>
+			<title code="0x1d">OPEN_SB2.MDT : 商品紹介 - 雀ボーグすすめ</title>
+			<title code="0x10">A3R_SB2.MDT  : 商品紹介 - ポッキー2</title>
+			<title code="0x11">AOKI1_S2.MDT : 商品紹介 - PONYON</title>
+			<title code="0x1f">T02_2.MDT    : 商品紹介 - 天仙娘々</title>
+			<title code="0x1b">N13_S2.MDT   : 商品紹介 - 妖幻道夢</title>
+			<title code="0x1c">OPEN1_S2.MDT : 商品紹介 - Engage Errands</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PONKAN(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ponkan_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">A3R_SB1.MDT</rom>
+			<rom type="file" offset="0x11">AOKI1_S1.MDT</rom>
+			<rom type="file" offset="0x12">K1_A.MDT</rom>
+			<rom type="file" offset="0x13">K2_A.MDT</rom>
+			<rom type="file" offset="0x14">K3_A.MDT</rom>
+			<rom type="file" offset="0x15">K4_A.MDT</rom>
+			<rom type="file" offset="0x16">M1_A.MDT</rom>
+			<rom type="file" offset="0x17">M2_A.MDT</rom>
+			<rom type="file" offset="0x18">M3_A.MDT</rom>
+			<rom type="file" offset="0x19">M4_A.MDT</rom>
+			<rom type="file" offset="0x1a">M5_A.MDT</rom>
+			<rom type="file" offset="0x1b">N13_S1.MDT</rom>
+			<rom type="file" offset="0x1c">OPEN1_S1.MDT</rom>
+			<rom type="file" offset="0x1d">OPEN_SB1.MDT</rom>
+			<rom type="file" offset="0x1e">P1L_SB1.MDT</rom>
+			<rom type="file" offset="0x1f">T02_1.MDT</rom>
+			<rom type="file" offset="0x20">T01_1.MDT</rom>
+			<rom type="file" offset="0x21">T07_1.MDT</rom>
+			<rom type="file" offset="0x22">T15_1.MDT</rom>
+			<rom type="file" offset="0x23">TITLE_A.MDT</rom>
+			<rom type="file" offset="0x24">Y1_A.MDT</rom>
+			<rom type="file" offset="0x25">Y2_A.MDT</rom>
+			<rom type="file" offset="0x26">Y3_A.MDT</rom>
+			<rom type="file" offset="0x27">Y4_A.MDT</rom>
+			<rom type="file" offset="0x28">Y5_A.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">TITLE_A.MDT  : タイトル</title>
+			<title code="0x16">M1_A.MDT     : いたいけ探偵日誌 - ディティクティブ奇想曲</title>
+			<title code="0x17">M2_A.MDT     : いたいけ探偵日誌 - 哀愁の捜査＜サーチ セレナーデ＞</title>
+			<title code="0x18">M3_A.MDT     : いたいけ探偵日誌 - 荒波が俺を待っているぜ!</title>
+			<title code="0x19">M4_A.MDT     : いたいけ探偵日誌 - 恋の港街</title>
+			<title code="0x1a">M5_A.MDT     : いたいけ探偵日誌 - 英国の女の子＜ブリティッシュ ロリータ＞</title>
+			<title code="0x12">K1_A.MDT     : ダンシン・ダディ・ダンジョン - パパとその災厄に関す売る第一楽章</title>
+			<title code="0x13">K2_A.MDT     : ダンシン・ダディ・ダンジョン - 迷宮と探検における第二楽章</title>
+			<title code="0x14">K3_A.MDT     : ダンシン・ダディ・ダンジョン - 姉妹の緑色の髪を愛でる第三楽章</title>
+			<title code="0x15">K4_A.MDT     : ダンシン・ダディ・ダンジョン - 剣とモンスターと炎を回顧する最終楽章</title>
+			<title code="0x24">Y1_A.MDT     : SEX-FIGHTER 麗華 - 女の怒り、北は沖縄、オレのオヤジとアニキ</title>
+			<title code="0x25">Y2_A.MDT     : SEX-FIGHTER 麗華 - 羅生門をつぶせ、オレのオヤジ</title>
+			<title code="0x26">Y3_A.MDT     : SEX-FIGHTER 麗華 - ボクのヨメさんオカマ、オレのアニキ</title>
+			<title code="0x27">Y4_A.MDT     : SEX-FIGHTER 麗華 - マヨネーズ対しょうゆ、オカマVSレズ</title>
+			<title code="0x28">Y5_A.MDT     : SEX-FIGHTER 麗華 - 家に帰りたい働かない、ボクの女</title>
+			<title code="0x20">T01_1.MDT    : 制作日誌</title>
+			<title code="0x22">T15_1.MDT    : 制作日誌</title>
+			<title code="0x21">T07_1.MDT    : 制作日誌</title>
+			<title code="0x1e">P1L_SB1.MDT  : 商品紹介 - ポッキー</title>
+			<title code="0x1d">OPEN_SB1.MDT : 商品紹介 - 雀ボーグすすめ</title>
+			<title code="0x10">A3R_SB1.MDT  : 商品紹介 - ポッキー2</title>
+			<title code="0x11">AOKI1_S1.MDT : 商品紹介 - PONYON</title>
+			<title code="0x1f">T02_1.MDT    : 商品紹介 - 天仙娘々</title>
+			<title code="0x1b">N13_S1.MDT   : 商品紹介 - 妖幻道夢</title>
+			<title code="0x1c">OPEN1_S1.MDT : 商品紹介 - Engage Errands</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PONYON</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ponyon_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">AOKI198.MDT</rom>
+			<rom type="file" offset="0x11">AOKI298.MDT</rom>
+			<rom type="file" offset="0x12">M12698.MDT</rom>
+			<rom type="file" offset="0x13">M1M598.MDT</rom>
+			<rom type="file" offset="0x14">MUON.MDT</rom>
+			<rom type="file" offset="0x15">N198.MDT</rom>
+			<rom type="file" offset="0x16">N298.MDT</rom>
+			<rom type="file" offset="0x17">N398.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AOKI198.MDT : 封印</title>
+			<title code="0x15">N198.MDT    : 太陽神</title>
+			<title code="0x16">N298.MDT    : さんぽ</title>
+			<title code="0x11">AOKI298.MDT : モーニング</title>
+			<title code="0x17">N398.MDT    : うきうき!</title>
+			<title code="0x14">MUON.MDT    : BGM無し</title>
+			<title code="0x12">M12698.MDT  : </title>
+			<title code="0x13">M1M598.MDT  : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ポッキー2 ～怪人赤マントの挑戦～(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pocky2_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">A1_SB1.MDT</rom>
+			<rom type="file" offset="0x11">A2_SB1.MDT</rom>
+			<rom type="file" offset="0x12">A3_SB1.MDT</rom>
+			<rom type="file" offset="0x13">A4_SB1.MDT</rom>
+			<rom type="file" offset="0x14">A5_SB1.MDT</rom>
+			<rom type="file" offset="0x15">A6_SB1.MDT</rom>
+			<rom type="file" offset="0x16">M1_SB1.MDT</rom>
+			<rom type="file" offset="0x17">M2_SB1.MDT</rom>
+			<rom type="file" offset="0x18">M3_SB1.MDT</rom>
+			<rom type="file" offset="0x19">M4_SB1.MDT</rom>
+			<rom type="file" offset="0x1a">M5_SB1.MDT</rom>
+			<rom type="file" offset="0x1b">M6_SB1.MDT</rom>
+			<rom type="file" offset="0x1c">N1_SB1.MDT</rom>
+			<rom type="file" offset="0x1d">N2_SB1.MDT</rom>
+			<rom type="file" offset="0x1e">N3_SB1.MDT</rom>
+			<rom type="file" offset="0x1f">N4_SB1.MDT</rom>
+			<rom type="file" offset="0x20">N5_SB1.MDT</rom>
+			<rom type="file" offset="0x21">Y1_SB1.MDT</rom>
+			<rom type="file" offset="0x22">Y2_SB1.MDT</rom>
+			<rom type="file" offset="0x23">Y3_SB1.MDT</rom>
+			<rom type="file" offset="0x24">Y4_SB1.MDT</rom>
+			<rom type="file" offset="0x25">Y5_SB1.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">A1_SB1.MDT</title>
+			<title code="0x11">A2_SB1.MDT</title>
+			<title code="0x12">A3_SB1.MDT</title>
+			<title code="0x13">A4_SB1.MDT</title>
+			<title code="0x14">A5_SB1.MDT</title>
+			<title code="0x15">A6_SB1.MDT</title>
+			<title code="0x16">M1_SB1.MDT</title>
+			<title code="0x17">M2_SB1.MDT</title>
+			<title code="0x18">M3_SB1.MDT</title>
+			<title code="0x19">M4_SB1.MDT</title>
+			<title code="0x1a">M5_SB1.MDT</title>
+			<title code="0x1b">M6_SB1.MDT</title>
+			<title code="0x1c">N1_SB1.MDT</title>
+			<title code="0x1d">N2_SB1.MDT</title>
+			<title code="0x1e">N3_SB1.MDT</title>
+			<title code="0x1f">N4_SB1.MDT</title>
+			<title code="0x20">N5_SB1.MDT</title>
+			<title code="0x21">Y1_SB1.MDT</title>
+			<title code="0x22">Y2_SB1.MDT</title>
+			<title code="0x23">Y3_SB1.MDT</title>
+			<title code="0x24">Y4_SB1.MDT</title>
+			<title code="0x25">Y5_SB1.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ポッキー2 ～怪人赤マントの挑戦～(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pocky2_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">A1_SB2.MDT</rom>
+			<rom type="file" offset="0x11">A2_SB2.MDT</rom>
+			<rom type="file" offset="0x12">A3_SB2.MDT</rom>
+			<rom type="file" offset="0x13">A4_SB2.MDT</rom>
+			<rom type="file" offset="0x14">A5_SB2.MDT</rom>
+			<rom type="file" offset="0x15">A6_SB2.MDT</rom>
+			<rom type="file" offset="0x16">M1_SB2.MDT</rom>
+			<rom type="file" offset="0x17">M2_SB2.MDT</rom>
+			<rom type="file" offset="0x18">M3_SB2.MDT</rom>
+			<rom type="file" offset="0x19">M4_SB2.MDT</rom>
+			<rom type="file" offset="0x1a">M5_SB2.MDT</rom>
+			<rom type="file" offset="0x1b">M6_SB2.MDT</rom>
+			<rom type="file" offset="0x1c">N1_SB2.MDT</rom>
+			<rom type="file" offset="0x1d">N2_SB2.MDT</rom>
+			<rom type="file" offset="0x1e">N3_SB2.MDT</rom>
+			<rom type="file" offset="0x1f">N4_SB2.MDT</rom>
+			<rom type="file" offset="0x20">N5_SB2.MDT</rom>
+			<rom type="file" offset="0x21">Y1_SB2.MDT</rom>
+			<rom type="file" offset="0x22">Y2_SB2.MDT</rom>
+			<rom type="file" offset="0x23">Y3_SB2.MDT</rom>
+			<rom type="file" offset="0x24">Y4_SB2.MDT</rom>
+			<rom type="file" offset="0x25">Y5_SB2.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">A1_SB2.MDT</title>
+			<title code="0x11">A2_SB2.MDT</title>
+			<title code="0x12">A3_SB2.MDT</title>
+			<title code="0x13">A4_SB2.MDT</title>
+			<title code="0x14">A5_SB2.MDT</title>
+			<title code="0x15">A6_SB2.MDT</title>
+			<title code="0x16">M1_SB2.MDT</title>
+			<title code="0x17">M2_SB2.MDT</title>
+			<title code="0x18">M3_SB2.MDT</title>
+			<title code="0x19">M4_SB2.MDT</title>
+			<title code="0x1a">M5_SB2.MDT</title>
+			<title code="0x1b">M6_SB2.MDT</title>
+			<title code="0x1c">N1_SB2.MDT</title>
+			<title code="0x1d">N2_SB2.MDT</title>
+			<title code="0x1e">N3_SB2.MDT</title>
+			<title code="0x1f">N4_SB2.MDT</title>
+			<title code="0x20">N5_SB2.MDT</title>
+			<title code="0x21">Y1_SB2.MDT</title>
+			<title code="0x22">Y2_SB2.MDT</title>
+			<title code="0x23">Y3_SB2.MDT</title>
+			<title code="0x24">Y4_SB2.MDT</title>
+			<title code="0x25">Y5_SB2.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 恭子のいぢわる!! ～ハチャメチャ大進撃～(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="kyoko_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">ALLY_S2.MDT</rom>
+			<rom type="file" offset="0x11">BTL_5_S2.MDT</rom>
+			<rom type="file" offset="0x12">H_S2.MDT</rom>
+			<rom type="file" offset="0x13">MUSIC00B.MDT</rom>
+			<rom type="file" offset="0x14">MUSIC01B.MDT</rom>
+			<rom type="file" offset="0x15">MUSIC02B.MDT</rom>
+			<rom type="file" offset="0x16">MUSIC03B.MDT</rom>
+			<rom type="file" offset="0x17">MUSIC04B.MDT</rom>
+			<rom type="file" offset="0x18">MUSIC05B.MDT</rom>
+			<rom type="file" offset="0x19">MUSIC06B.MDT</rom>
+			<rom type="file" offset="0x1a">MUSIC07B.MDT</rom>
+			<rom type="file" offset="0x1b">MUSIC08B.MDT</rom>
+			<rom type="file" offset="0x1c">MUSIC09B.MDT</rom>
+			<rom type="file" offset="0x1d">MUSIC10B.MDT</rom>
+			<rom type="file" offset="0x1e">MUSIC11B.MDT</rom>
+			<rom type="file" offset="0x1f">MUSIC12B.MDT</rom>
+			<rom type="file" offset="0x20">MUSIC13B.MDT</rom>
+			<rom type="file" offset="0x21">MUSIC14B.MDT</rom>
+			<rom type="file" offset="0x22">MUSIC15B.MDT</rom>
+			<rom type="file" offset="0x23">MUSIC16B.MDT</rom>
+			<rom type="file" offset="0x24">MUSIC17B.MDT</rom>
+			<rom type="file" offset="0x25">MUSIC18B.MDT</rom>
+			<rom type="file" offset="0x26">MUSIC19B.MDT</rom>
+			<rom type="file" offset="0x27">MUSIC20B.MDT</rom>
+			<rom type="file" offset="0x28">MUSIC21B.MDT</rom>
+			<rom type="file" offset="0x29">MUSIC22B.MDT</rom>
+			<rom type="file" offset="0x2a">MUSIC23B.MDT</rom>
+			<rom type="file" offset="0x2b">MUSIC24B.MDT</rom>
+			<rom type="file" offset="0x2c">MUSIC25B.MDT</rom>
+			<rom type="file" offset="0x2d">OPEN1_S2.MDT</rom>
+			<rom type="file" offset="0x2e">P3FAN.MDT</rom>
+			<rom type="file" offset="0x2f">RNWY_S2.MDT</rom>
+			<rom type="file" offset="0x30">WIN_S2.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x14">MUSIC01B.MDT : 恭之介、病に倒れる!!</title>
+			<title code="0x15">MUSIC02B.MDT : 恭子のいぢわる PART1</title>
+			<title code="0x16">MUSIC03B.MDT : 恭子のいぢわる PART2</title>
+			<title code="0x17">MUSIC04B.MDT : 走る!!</title>
+			<title code="0x18">MUSIC05B.MDT : 立ち塞がる巨大な壁</title>
+			<title code="0x19">MUSIC06B.MDT : プレイミュージック1</title>
+			<title code="0x1a">MUSIC07B.MDT : プレイミュージック2</title>
+			<title code="0x1b">MUSIC08B.MDT : のどかな風景</title>
+			<title code="0x1c">MUSIC09B.MDT : 何やってんの!?</title>
+			<title code="0x1d">MUSIC10B.MDT : 恭子が逃げる!!</title>
+			<title code="0x1e">MUSIC11B.MDT : 恭子、暴れる!!</title>
+			<title code="0x1f">MUSIC12B.MDT : やめて…‥</title>
+			<title code="0x20">MUSIC13B.MDT : 恐怖</title>
+			<title code="0x21">MUSIC14B.MDT : 感じて感じてしょうがないの(少女編)</title>
+			<title code="0x22">MUSIC15B.MDT : 感じて感じてしょうがないの(大人編)</title>
+			<title code="0x23">MUSIC16B.MDT : 宮崎先生のテーマ</title>
+			<title code="0x24">MUSIC17B.MDT : 美保ちゃんのテーマ</title>
+			<title code="0x25">MUSIC18B.MDT : ふんどし娘のテーマ</title>
+			<title code="0x26">MUSIC19B.MDT : 倉崎先生のテーマ</title>
+			<title code="0x27">MUSIC20B.MDT : 小泉 愛のテーマ</title>
+			<title code="0x28">MUSIC21B.MDT : 小泉 愛の片想い</title>
+			<title code="0x29">MUSIC22B.MDT : 只今、着替え中!!</title>
+			<title code="0x2a">MUSIC23B.MDT : 危機一髪!!</title>
+			<title code="0x2b">MUSIC24B.MDT : 恭子の逆襲</title>
+			<title code="0x2c">MUSIC25B.MDT : エンディング</title>
+			<title code="0x13">MUSIC00B.MDT : </title>
+			<title code="0x2d">OPEN1_S2.MDT : エランズコンバット</title>
+			<title code="0x10">ALLY_S2.MDT  : エランズコンバット</title>
+			<title code="0x11">BTL_5_S2.MDT : エランズコンバット</title>
+			<title code="0x12">H_S2.MDT     : エランズコンバット</title>
+			<title code="0x2e">P3FAN.MDT    : エランズコンバット</title>
+			<title code="0x2f">RNWY_S2.MDT  : エランズコンバット</title>
+			<title code="0x30">WIN_S2.MDT   : エランズコンバット</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 恭子のいぢわる!! ～ハチャメチャ大進撃～(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="kyoko_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">ALLY_S1.MDT</rom>
+			<rom type="file" offset="0x11">BTL_5_S1.MDT</rom>
+			<rom type="file" offset="0x12">H_S1.MDT</rom>
+			<rom type="file" offset="0x13">MUSIC00A.MDT</rom>
+			<rom type="file" offset="0x14">MUSIC01A.MDT</rom>
+			<rom type="file" offset="0x15">MUSIC02A.MDT</rom>
+			<rom type="file" offset="0x16">MUSIC03A.MDT</rom>
+			<rom type="file" offset="0x17">MUSIC04A.MDT</rom>
+			<rom type="file" offset="0x18">MUSIC05A.MDT</rom>
+			<rom type="file" offset="0x19">MUSIC06A.MDT</rom>
+			<rom type="file" offset="0x1a">MUSIC07A.MDT</rom>
+			<rom type="file" offset="0x1b">MUSIC08A.MDT</rom>
+			<rom type="file" offset="0x1c">MUSIC09A.MDT</rom>
+			<rom type="file" offset="0x1d">MUSIC10A.MDT</rom>
+			<rom type="file" offset="0x1e">MUSIC11A.MDT</rom>
+			<rom type="file" offset="0x1f">MUSIC12A.MDT</rom>
+			<rom type="file" offset="0x20">MUSIC13A.MDT</rom>
+			<rom type="file" offset="0x21">MUSIC14A.MDT</rom>
+			<rom type="file" offset="0x22">MUSIC15A.MDT</rom>
+			<rom type="file" offset="0x23">MUSIC16A.MDT</rom>
+			<rom type="file" offset="0x24">MUSIC17A.MDT</rom>
+			<rom type="file" offset="0x25">MUSIC18A.MDT</rom>
+			<rom type="file" offset="0x26">MUSIC19A.MDT</rom>
+			<rom type="file" offset="0x27">MUSIC20A.MDT</rom>
+			<rom type="file" offset="0x28">MUSIC21A.MDT</rom>
+			<rom type="file" offset="0x29">MUSIC22A.MDT</rom>
+			<rom type="file" offset="0x2a">MUSIC23A.MDT</rom>
+			<rom type="file" offset="0x2b">MUSIC24A.MDT</rom>
+			<rom type="file" offset="0x2c">MUSIC25A.MDT</rom>
+			<rom type="file" offset="0x2d">OPEN1_S1.MDT</rom>
+			<rom type="file" offset="0x2e">P3FAN.MDT</rom>
+			<rom type="file" offset="0x2f">RNWY_S1.MDT</rom>
+			<rom type="file" offset="0x30">WIN_S1.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x14">MUSIC01A.MDT : 恭之介、病に倒れる!!</title>
+			<title code="0x15">MUSIC02A.MDT : 恭子のいぢわる PART1</title>
+			<title code="0x16">MUSIC03A.MDT : 恭子のいぢわる PART2</title>
+			<title code="0x17">MUSIC04A.MDT : 走る!!</title>
+			<title code="0x18">MUSIC05A.MDT : 立ち塞がる巨大な壁</title>
+			<title code="0x19">MUSIC06A.MDT : プレイミュージック1</title>
+			<title code="0x1a">MUSIC07A.MDT : プレイミュージック2</title>
+			<title code="0x1b">MUSIC08A.MDT : のどかな風景</title>
+			<title code="0x1c">MUSIC09A.MDT : 何やってんの!?</title>
+			<title code="0x1d">MUSIC10A.MDT : 恭子が逃げる!!</title>
+			<title code="0x1e">MUSIC11A.MDT : 恭子、暴れる!!</title>
+			<title code="0x1f">MUSIC12A.MDT : やめて…‥</title>
+			<title code="0x20">MUSIC13A.MDT : 恐怖</title>
+			<title code="0x21">MUSIC14A.MDT : 感じて感じてしょうがないの(少女編)</title>
+			<title code="0x22">MUSIC15A.MDT : 感じて感じてしょうがないの(大人編)</title>
+			<title code="0x23">MUSIC16A.MDT : 宮崎先生のテーマ</title>
+			<title code="0x24">MUSIC17A.MDT : 美保ちゃんのテーマ</title>
+			<title code="0x25">MUSIC18A.MDT : ふんどし娘のテーマ</title>
+			<title code="0x26">MUSIC19A.MDT : 倉崎先生のテーマ</title>
+			<title code="0x27">MUSIC20A.MDT : 小泉 愛のテーマ</title>
+			<title code="0x28">MUSIC21A.MDT : 小泉 愛の片想い</title>
+			<title code="0x29">MUSIC22A.MDT : 只今、着替え中!!</title>
+			<title code="0x2a">MUSIC23A.MDT : 危機一髪!!</title>
+			<title code="0x2b">MUSIC24A.MDT : 恭子の逆襲</title>
+			<title code="0x2c">MUSIC25A.MDT : エンディング</title>
+			<title code="0x13">MUSIC00A.MDT : </title>
+			<title code="0x2d">OPEN1_S1.MDT : エランズコンバット</title>
+			<title code="0x10">ALLY_S1.MDT  : エランズコンバット</title>
+			<title code="0x11">BTL_5_S1.MDT : エランズコンバット</title>
+			<title code="0x12">H_S1.MDT     : エランズコンバット</title>
+			<title code="0x2e">P3FAN.MDT    : エランズコンバット</title>
+			<title code="0x2f">RNWY_S1.MDT  : エランズコンバット</title>
+			<title code="0x30">WIN_S1.MDT   : エランズコンバット</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 銀河遊侠伝説トバッカー(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="tobakka_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">T01B.MDT</rom>
+			<rom type="file" offset="0x11">T02B.MDT</rom>
+			<rom type="file" offset="0x12">T03B.MDT</rom>
+			<rom type="file" offset="0x13">T04B.MDT</rom>
+			<rom type="file" offset="0x14">T05B.MDT</rom>
+			<rom type="file" offset="0x15">T06B.MDT</rom>
+			<rom type="file" offset="0x16">T07B.MDT</rom>
+			<rom type="file" offset="0x17">T08B.MDT</rom>
+			<rom type="file" offset="0x18">T09B.MDT</rom>
+			<rom type="file" offset="0x19">T10B.MDT</rom>
+			<rom type="file" offset="0x1a">T11B.MDT</rom>
+			<rom type="file" offset="0x1b">T12B.MDT</rom>
+			<rom type="file" offset="0x1c">T13B.MDT</rom>
+			<rom type="file" offset="0x1d">T14B.MDT</rom>
+			<rom type="file" offset="0x1e">T15B.MDT</rom>
+			<rom type="file" offset="0x1f">T16B.MDT</rom>
+			<rom type="file" offset="0x20">T17B.MDT</rom>
+			<rom type="file" offset="0x21">T18B.MDT</rom>
+			<rom type="file" offset="0x22">T19B.MDT</rom>
+			<rom type="file" offset="0x23">T20B.MDT</rom>
+			<rom type="file" offset="0x24">T21B.MDT</rom>
+			<rom type="file" offset="0x25">T22B.MDT</rom>
+			<rom type="file" offset="0x26">T23B.MDT</rom>
+			<rom type="file" offset="0x27">T24B.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">T01B.MDT : エレクトリカル テクノ</title>
+			<title code="0x11">T02B.MDT : 大宇宙の戦士</title>
+			<title code="0x12">T03B.MDT : パッションフルーツ</title>
+			<title code="0x13">T04B.MDT : ワイルドカード</title>
+			<title code="0x18">T09B.MDT ; 謎のオーパーツ</title>
+			<title code="0x19">T10B.MDT : ミラクルアズテック</title>
+			<title code="0x16">T07B.MDT : 日本の宴</title>
+			<title code="0x17">T08B.MDT : 楓</title>
+			<title code="0x14">T05B.MDT : スチームロック</title>
+			<title code="0x15">T06B.MDT : 高速ウィスパー</title>
+			<title code="0x1a">T11B.MDT : 悪の大伽藍</title>
+			<title code="0x1b">T12B.MDT : 悪魔の鎮魂歌</title>
+			<title code="0x1c">T13B.MDT : やったぜ!ベイビー</title>
+			<title code="0x1d">T14B.MDT ; お出かけショッピング</title>
+			<title code="0x1e">T15B.MDT : ちょっと一息</title>
+			<title code="0x1f">T16B.MDT : 魔の招待状</title>
+			<title code="0x20">T17B.MDT : 宇宙平和の足音</title>
+			<title code="0x21">T18B.MDT : ならず者行進曲</title>
+			<title code="0x22">T19B.MDT : ワン モア チャンス</title>
+			<title code="0x23">T20B.MDT : R・C ドロップ</title>
+			<title code="0x24">T21B.MDT : 賭博の王様トバッカー</title>
+			<title code="0x25">T22B.MDT : すき!すき!大好き!!勝太君</title>
+			<title code="0x26">T23B.MDT : 愛しのハーレムノクターン</title>
+			<title code="0x27">T24B.MDT : デンジャラス ゲーム</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 銀河遊侠伝説トバッカー(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="tobakka_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">T01A.MDT</rom>
+			<rom type="file" offset="0x11">T02A.MDT</rom>
+			<rom type="file" offset="0x12">T03A.MDT</rom>
+			<rom type="file" offset="0x13">T04A.MDT</rom>
+			<rom type="file" offset="0x14">T05A.MDT</rom>
+			<rom type="file" offset="0x15">T06A.MDT</rom>
+			<rom type="file" offset="0x16">T07A.MDT</rom>
+			<rom type="file" offset="0x17">T08A.MDT</rom>
+			<rom type="file" offset="0x18">T09A.MDT</rom>
+			<rom type="file" offset="0x19">T10A.MDT</rom>
+			<rom type="file" offset="0x1a">T11A.MDT</rom>
+			<rom type="file" offset="0x1b">T12A.MDT</rom>
+			<rom type="file" offset="0x1c">T13A.MDT</rom>
+			<rom type="file" offset="0x1d">T14A.MDT</rom>
+			<rom type="file" offset="0x1e">T15A.MDT</rom>
+			<rom type="file" offset="0x1f">T16A.MDT</rom>
+			<rom type="file" offset="0x20">T17A.MDT</rom>
+			<rom type="file" offset="0x21">T18A.MDT</rom>
+			<rom type="file" offset="0x22">T19A.MDT</rom>
+			<rom type="file" offset="0x23">T20A.MDT</rom>
+			<rom type="file" offset="0x24">T21A.MDT</rom>
+			<rom type="file" offset="0x25">T22A.MDT</rom>
+			<rom type="file" offset="0x26">T23A.MDT</rom>
+			<rom type="file" offset="0x27">T24A.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">T01A.MDT : エレクトリカル テクノ</title>
+			<title code="0x11">T02A.MDT : 大宇宙の戦士</title>
+			<title code="0x12">T03A.MDT : パッションフルーツ</title>
+			<title code="0x13">T04A.MDT : ワイルドカード</title>
+			<title code="0x18">T09A.MDT ; 謎のオーパーツ</title>
+			<title code="0x19">T10A.MDT : ミラクルアズテック</title>
+			<title code="0x16">T07A.MDT : 日本の宴</title>
+			<title code="0x17">T08A.MDT : 楓</title>
+			<title code="0x14">T05A.MDT : スチームロック</title>
+			<title code="0x15">T06A.MDT : 高速ウィスパー</title>
+			<title code="0x1a">T11A.MDT : 悪の大伽藍</title>
+			<title code="0x1b">T12A.MDT : 悪魔の鎮魂歌</title>
+			<title code="0x1c">T13A.MDT : やったぜ!ベイビー</title>
+			<title code="0x1d">T14A.MDT ; お出かけショッピング</title>
+			<title code="0x1e">T15A.MDT : ちょっと一息</title>
+			<title code="0x1f">T16A.MDT : 魔の招待状</title>
+			<title code="0x20">T17A.MDT : 宇宙平和の足音</title>
+			<title code="0x21">T18A.MDT : ならず者行進曲</title>
+			<title code="0x22">T19A.MDT : ワン モア チャンス</title>
+			<title code="0x23">T20A.MDT : R・C ドロップ</title>
+			<title code="0x24">T21A.MDT : 賭博の王様トバッカー</title>
+			<title code="0x25">T22A.MDT : すき!すき!大好き!!勝太君</title>
+			<title code="0x26">T23A.MDT : 愛しのハーレムノクターン</title>
+			<title code="0x27">T24A.MDT : デンジャラス ゲーム</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 雀ボーグすずめ (ポニーテールAnthology vol.2)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pt_anth2_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">JB_AGARI.MDT</rom>
+			<rom type="file" offset="0x11">JB_CNUDE.MDT</rom>
+			<rom type="file" offset="0x12">JB_CSEL.MDT</rom>
+			<rom type="file" offset="0x13">JB_END.MDT</rom>
+			<rom type="file" offset="0x14">JB_EYEC.MDT</rom>
+			<rom type="file" offset="0x15">JB_GOVER.MDT</rom>
+			<rom type="file" offset="0x16">JB_INTRO.MDT</rom>
+			<rom type="file" offset="0x17">JB_LASTS.MDT</rom>
+			<rom type="file" offset="0x18">JB_MAKE.MDT</rom>
+			<rom type="file" offset="0x19">JB_MAP.MDT</rom>
+			<rom type="file" offset="0x1A">JB_MATCH.MDT</rom>
+			<rom type="file" offset="0x1B">JB_NUGI.MDT</rom>
+			<rom type="file" offset="0x1C">JB_OPEN.MDT</rom>
+			<rom type="file" offset="0x1D">JB_PLAY1.MDT</rom>
+			<rom type="file" offset="0x1E">JB_PLAY2.MDT</rom>
+			<rom type="file" offset="0x1F">JB_POWER.MDT</rom>
+			<rom type="file" offset="0x20">JB_SHOP.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">JB_AGARI.MDT</title>
+			<title code="0x11">JB_CNUDE.MDT</title>
+			<title code="0x12">JB_CSEL.MDT</title>
+			<title code="0x13">JB_END.MDT</title>
+			<title code="0x14">JB_EYEC.MDT</title>
+			<title code="0x15">JB_GOVER.MDT</title>
+			<title code="0x16">JB_INTRO.MDT</title>
+			<title code="0x17">JB_LASTS.MDT</title>
+			<title code="0x18">JB_MAKE.MDT</title>
+			<title code="0x19">JB_MAP.MDT</title>
+			<title code="0x1A">JB_MATCH.MDT</title>
+			<title code="0x1B">JB_NUGI.MDT</title>
+			<title code="0x1C">JB_OPEN.MDT</title>
+			<title code="0x1D">JB_PLAY1.MDT</title>
+			<title code="0x1E">JB_PLAY2.MDT</title>
+			<title code="0x1F">JB_POWER.MDT</title>
+			<title code="0x20">JB_SHOP.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 天仙娘々(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="tensen_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x01">T00_2.MDT</rom>
+			<rom type="file" offset="0x02">T01_2.MDT</rom>
+			<rom type="file" offset="0x03">T02_2.MDT</rom>
+			<rom type="file" offset="0x04">T03_2.MDT</rom>
+			<rom type="file" offset="0x05">T04_2.MDT</rom>
+			<rom type="file" offset="0x06">T05_2.MDT</rom>
+			<rom type="file" offset="0x07">T06_2.MDT</rom>
+			<rom type="file" offset="0x08">T07_2.MDT</rom>
+			<rom type="file" offset="0x09">T08.MDT</rom>
+			<rom type="file" offset="0x0a">T09.MDT</rom>
+			<rom type="file" offset="0x0b">T10_2.MDT</rom>
+			<rom type="file" offset="0x0c">T11_2.MDT</rom>
+			<rom type="file" offset="0x0d">T12_2.MDT</rom>
+			<rom type="file" offset="0x0e">T13_2.MDT</rom>
+			<rom type="file" offset="0x0f">T14_2.MDT</rom>
+			<rom type="file" offset="0x10">T15_2.MDT</rom>
+			<rom type="file" offset="0x11">T16_2.MDT</rom>
+			<rom type="file" offset="0x12">T17_2.MDT</rom>
+			<rom type="file" offset="0x13">T18_2.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">T00_2.MDT</title>
+			<title code="0x02">T01_2.MDT</title>
+			<title code="0x03">T02_2.MDT</title>
+			<title code="0x04">T03_2.MDT</title>
+			<title code="0x05">T04_2.MDT</title>
+			<title code="0x06">T05_2.MDT</title>
+			<title code="0x07">T06_2.MDT</title>
+			<title code="0x08">T07_2.MDT</title>
+			<title code="0x09">T08.MDT</title>
+			<title code="0x0a">T09.MDT</title>
+			<title code="0x0b">T10_2.MDT</title>
+			<title code="0x0c">T11_2.MDT</title>
+			<title code="0x0d">T12_2.MDT</title>
+			<title code="0x0e">T13_2.MDT</title>
+			<title code="0x0f">T14_2.MDT</title>
+			<title code="0x10">T15_2.MDT</title>
+			<title code="0x11">T16_2.MDT</title>
+			<title code="0x12">T17_2.MDT</title>
+			<title code="0x13">T18_2.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 天仙娘々(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="tensen_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x01">T00_1.MDT</rom>
+			<rom type="file" offset="0x02">T01_1.MDT</rom>
+			<rom type="file" offset="0x03">T02_1.MDT</rom>
+			<rom type="file" offset="0x04">T03_1.MDT</rom>
+			<rom type="file" offset="0x05">T04_1.MDT</rom>
+			<rom type="file" offset="0x06">T05_1.MDT</rom>
+			<rom type="file" offset="0x07">T06_1.MDT</rom>
+			<rom type="file" offset="0x08">T07_1.MDT</rom>
+			<rom type="file" offset="0x09">T08.MDT</rom>
+			<rom type="file" offset="0x0a">T09.MDT</rom>
+			<rom type="file" offset="0x0b">T10_1.MDT</rom>
+			<rom type="file" offset="0x0c">T11_1.MDT</rom>
+			<rom type="file" offset="0x0d">T12_1.MDT</rom>
+			<rom type="file" offset="0x0e">T13_1.MDT</rom>
+			<rom type="file" offset="0x0f">T14_1.MDT</rom>
+			<rom type="file" offset="0x10">T15_1.MDT</rom>
+			<rom type="file" offset="0x11">T16_1.MDT</rom>
+			<rom type="file" offset="0x12">T17_1.MDT</rom>
+			<rom type="file" offset="0x13">T18_1.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">T00_1.MDT</title>
+			<title code="0x02">T01_1.MDT</title>
+			<title code="0x03">T02_1.MDT</title>
+			<title code="0x04">T03_1.MDT</title>
+			<title code="0x05">T04_1.MDT</title>
+			<title code="0x06">T05_1.MDT</title>
+			<title code="0x07">T06_1.MDT</title>
+			<title code="0x08">T07_1.MDT</title>
+			<title code="0x09">T08.MDT</title>
+			<title code="0x0a">T09.MDT</title>
+			<title code="0x0b">T10_1.MDT</title>
+			<title code="0x0c">T11_1.MDT</title>
+			<title code="0x0d">T12_1.MDT</title>
+			<title code="0x0e">T13_1.MDT</title>
+			<title code="0x0f">T14_1.MDT</title>
+			<title code="0x10">T15_1.MDT</title>
+			<title code="0x11">T16_1.MDT</title>
+			<title code="0x12">T17_1.MDT</title>
+			<title code="0x13">T18_1.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 魔雀夢(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mjm_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">COMBAT2.MDT</rom>
+			<rom type="file" offset="0x11">M01B.MDT</rom>
+			<rom type="file" offset="0x12">M02B.MDT</rom>
+			<rom type="file" offset="0x13">M03B.MDT</rom>
+			<rom type="file" offset="0x14">M04B.MDT</rom>
+			<rom type="file" offset="0x15">M05B.MDT</rom>
+			<rom type="file" offset="0x16">M06B.MDT</rom>
+			<rom type="file" offset="0x17">M07B.MDT</rom>
+			<rom type="file" offset="0x18">M08B.MDT</rom>
+			<rom type="file" offset="0x19">PKN_TB.MDT</rom>
+			<rom type="file" offset="0x1a">T23B.MDT</rom>
+			<rom type="file" offset="0x1b">YDM02B.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">M01B.MDT    : オープニング1</title>
+			<title code="0x12">M02B.MDT    : オープニング2</title>
+			<title code="0x13">M03B.MDT    : タイトル</title>
+			<title code="0x14">M04B.MDT    : 屋敷内</title>
+			<title code="0x15">M05B.MDT    : 麻雀対戦</title>
+			<title code="0x16">M06B.MDT    : 脱衣</title>
+			<title code="0x17">M07B.MDT    : ゲームオーバー</title>
+			<title code="0x18">M08B.MDT    : エンディング</title>
+			<title code="0x10">COMBAT2.MDT : コンバット</title>
+			<title code="0x1a">T23B.MDT    : コンバット脱衣</title>
+			<title code="0x1b">YDM02B.MDT  : ペアマッチ</title>
+			<title code="0x19">PKN_TB.MDT  : スタッフのコーナー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 魔雀夢(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mjm_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x10">COMBAT1.MDT</rom>
+			<rom type="file" offset="0x11">M01A.MDT</rom>
+			<rom type="file" offset="0x12">M02A.MDT</rom>
+			<rom type="file" offset="0x13">M03A.MDT</rom>
+			<rom type="file" offset="0x14">M04A.MDT</rom>
+			<rom type="file" offset="0x15">M05A.MDT</rom>
+			<rom type="file" offset="0x16">M06A.MDT</rom>
+			<rom type="file" offset="0x17">M07A.MDT</rom>
+			<rom type="file" offset="0x18">M08A.MDT</rom>
+			<rom type="file" offset="0x19">PKN_TA.MDT</rom>
+			<rom type="file" offset="0x1a">T23A.MDT</rom>
+			<rom type="file" offset="0x1b">YDM02A.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">M01A.MDT    : オープニング1</title>
+			<title code="0x12">M02A.MDT    : オープニング2</title>
+			<title code="0x13">M03A.MDT    : タイトル</title>
+			<title code="0x14">M04A.MDT    : 屋敷内</title>
+			<title code="0x15">M05A.MDT    : 麻雀対戦</title>
+			<title code="0x16">M06A.MDT    : 脱衣</title>
+			<title code="0x17">M07A.MDT    : ゲームオーバー</title>
+			<title code="0x18">M08A.MDT    : エンディング</title>
+			<title code="0x10">COMBAT1.MDT : コンバット</title>
+			<title code="0x1a">T23A.MDT    : コンバット脱衣</title>
+			<title code="0x1b">YDM02A.MDT  : ペアマッチ</title>
+			<title code="0x19">PKN_TA.MDT  : スタッフのコーナー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 妖幻道夢(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="yougen_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x01">MUON.MDT</rom>
+			<rom type="file" offset="0x02">MS_11_S2.MDT</rom>
+			<rom type="file" offset="0x03">MS_15_S2.MDT</rom>
+			<rom type="file" offset="0x04">MS_17_S2.MDT</rom>
+			<rom type="file" offset="0x05">MS_1_S2.MDT</rom>
+			<rom type="file" offset="0x06">MS_2_S2.MDT</rom>
+			<rom type="file" offset="0x07">N10_S2.MDT</rom>
+			<rom type="file" offset="0x08">N11_S2.MDT</rom>
+			<rom type="file" offset="0x09">N12_S2.MDT</rom>
+			<rom type="file" offset="0x0a">N13_S2.MDT</rom>
+			<rom type="file" offset="0x0b">N17_S2.MDT</rom>
+			<rom type="file" offset="0x0c">N1_S2.MDT</rom>
+			<rom type="file" offset="0x0d">N2_S2.MDT</rom>
+			<rom type="file" offset="0x0e">N3_S2.MDT</rom>
+			<rom type="file" offset="0x0f">N4_S2.MDT</rom>
+			<rom type="file" offset="0x10">N5_S2.MDT</rom>
+			<rom type="file" offset="0x11">N6_S2.MDT</rom>
+			<rom type="file" offset="0x12">N8_S2.MDT</rom>
+			<rom type="file" offset="0x13">N9_S2.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">[STOP]</title>
+			<title code="0x05">MS_1_S2.MDT</title>
+			<title code="0x06">MS_2_S2.MDT</title>
+			<title code="0x02">MS_11_S2.MDT</title>
+			<title code="0x03">MS_15_S2.MDT</title>
+			<title code="0x04">MS_17_S2.MDT</title>
+			<title code="0x0c">N1_S2.MDT</title>
+			<title code="0x0d">N2_S2.MDT</title>
+			<title code="0x0e">N3_S2.MDT</title>
+			<title code="0x0f">N4_S2.MDT</title>
+			<title code="0x10">N5_S2.MDT</title>
+			<title code="0x11">N6_S2.MDT</title>
+			<title code="0x12">N8_S2.MDT</title>
+			<title code="0x13">N9_S2.MDT</title>
+			<title code="0x07">N10_S2.MDT</title>
+			<title code="0x08">N11_S2.MDT</title>
+			<title code="0x09">N12_S2.MDT</title>
+			<title code="0x0a">N13_S2.MDT</title>
+			<title code="0x0b">N17_S2.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 妖幻道夢(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="yougen_98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">MDRV98P.COM</rom>
+			<rom type="file" offset="0x01">MUON.MDT</rom>
+			<rom type="file" offset="0x02">MS_11_S1.MDT</rom>
+			<rom type="file" offset="0x03">MS_15_S1.MDT</rom>
+			<rom type="file" offset="0x04">MS_17_S1.MDT</rom>
+			<rom type="file" offset="0x05">MS_1_S1.MDT</rom>
+			<rom type="file" offset="0x06">MS_2_S1.MDT</rom>
+			<rom type="file" offset="0x07">N10_S1.MDT</rom>
+			<rom type="file" offset="0x08">N11_S1.MDT</rom>
+			<rom type="file" offset="0x09">N12_S1.MDT</rom>
+			<rom type="file" offset="0x0a">N13_S1.MDT</rom>
+			<rom type="file" offset="0x0b">N17_S1.MDT</rom>
+			<rom type="file" offset="0x0c">N1_S1.MDT</rom>
+			<rom type="file" offset="0x0d">N2_S1.MDT</rom>
+			<rom type="file" offset="0x0e">N3_S1.MDT</rom>
+			<rom type="file" offset="0x0f">N4_S1.MDT</rom>
+			<rom type="file" offset="0x10">N5_S1.MDT</rom>
+			<rom type="file" offset="0x11">N6_S1.MDT</rom>
+			<rom type="file" offset="0x12">N8_S1.MDT</rom>
+			<rom type="file" offset="0x13">N9_S1.MDT</rom>
+			<rom type="shell" offset="0">MDRV98 -W1 -W^1</rom>
+			<rom type="shell" offset="0">MDRV98P</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">[STOP]</title>
+			<title code="0x05">MS_1_S1.MDT</title>
+			<title code="0x06">MS_2_S1.MDT</title>
+			<title code="0x02">MS_11_S1.MDT</title>
+			<title code="0x03">MS_15_S1.MDT</title>
+			<title code="0x04">MS_17_S1.MDT</title>
+			<title code="0x0c">N1_S1.MDT</title>
+			<title code="0x0d">N2_S1.MDT</title>
+			<title code="0x0e">N3_S1.MDT</title>
+			<title code="0x0f">N4_S1.MDT</title>
+			<title code="0x10">N5_S1.MDT</title>
+			<title code="0x11">N6_S1.MDT</title>
+			<title code="0x12">N8_S1.MDT</title>
+			<title code="0x13">N9_S1.MDT</title>
+			<title code="0x07">N10_S1.MDT</title>
+			<title code="0x08">N11_S1.MDT</title>
+			<title code="0x09">N12_S1.MDT</title>
+			<title code="0x0a">N13_S1.MDT</title>
+			<title code="0x0b">N17_S1.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 雀ボーグすずめ</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x010000"/>
+			<option name="filesize" value="4096"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x13"/>
+		</options>
+		<romlist archive="jnbgszm_98">
+			<rom type="code" offset="0x00600">jbs_98.bin</rom>
+			<rom type="code" offset="0x04000">mdrv2</rom>
+			<rom type="bgm" offset="0x01">JB_OPEN.MD2</rom>
+			<rom type="bgm" offset="0x02">JB_CSEL.MD2</rom>
+			<rom type="bgm" offset="0x03">JB_PLAY2.MD2</rom>
+			<rom type="bgm" offset="0x04">JB_PLAY1.MD2</rom>
+			<rom type="bgm" offset="0x05">JB_NUGI.MD2</rom>
+			<rom type="bgm" offset="0x06">JB_CNUDE.MD2</rom>
+			<rom type="bgm" offset="0x07">JB_GOVER.MD2</rom>
+			<rom type="bgm" offset="0x08">JB_AGARI.MD2</rom>
+			<rom type="bgm" offset="0x09">JB_MAKE.MD2</rom>
+			<rom type="bgm" offset="0x0a">CHRｼｮｳｶｲ.MD2</rom>
+			<rom type="bgm" offset="0x0b">JB_MAP.MD2</rom>
+			<rom type="bgm" offset="0x0c">JB_SHOP.MD2</rom>
+			<rom type="bgm" offset="0x0d">JB_POWER.MD2</rom>
+			<rom type="bgm" offset="0x0e">mmmap.md2</rom>
+			<rom type="bgm" offset="0x0f">JB_MATCH.MD2</rom>
+			<rom type="bgm" offset="0x10">JB_EYEC.MD2</rom>
+			<rom type="bgm" offset="0x11">JB_LASTS.MD2</rom>
+			<rom type="bgm" offset="0x12">JB_END.MD2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">JB_OPEN.MD2</title>
+			<title code="0x02">JB_CSEL.MD2</title>
+			<title code="0x03">JB_PLAY2.MD2</title>
+			<title code="0x04">JB_PLAY1.MD2</title>
+			<title code="0x05">JB_NUGI.MD2</title>
+			<title code="0x06">JB_CNUDE.MD2</title>
+			<title code="0x07">JB_GOVER.MD2</title>
+			<title code="0x08">JB_AGARI.MD2</title>
+			<title code="0x09">JB_MAKE.MD2</title>
+			<title code="0x0a">CHRｼｮｳｶｲ.MD2</title>
+			<title code="0x0b">JB_MAP.MD2</title>
+			<title code="0x0c">JB_SHOP.MD2</title>
+			<title code="0x0d">JB_POWER.MD2</title>
+			<title code="0x0e">mmmap.md2</title>
+			<title code="0x0f">JB_MATCH.MD2</title>
+			<title code="0x10">JB_EYEC.MD2</title>
+			<title code="0x11">JB_LASTS.MD2</title>
+			<title code="0x12">JB_END.MD2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] ポッキー2 ～怪人赤マントの挑戦～</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">ポニーテールソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xd000"/>
+			<option name="mdata_size" value="0x0c00"/>
+			<option name="mfile_size" value="0x0c00"/>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="pocky2_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xc000">MDRV2.BIN</rom>
+			<rom type="bgm" offset="0x00">A1</rom>
+			<rom type="bgm" offset="0x02">A2</rom>
+			<rom type="bgm" offset="0x03">A3</rom>
+			<rom type="bgm" offset="0x04">A4</rom>
+			<rom type="bgm" offset="0x05">A5</rom>
+			<rom type="bgm" offset="0x06">A6</rom>
+			<rom type="bgm" offset="0x07">M1</rom>
+			<rom type="bgm" offset="0x08">M2</rom>
+			<rom type="bgm" offset="0x09">M3</rom>
+			<rom type="bgm" offset="0x0a">M4</rom>
+			<rom type="bgm" offset="0x0b">M5</rom>
+			<rom type="bgm" offset="0x0c">M6</rom>
+			<rom type="bgm" offset="0x0d">N1</rom>
+			<rom type="bgm" offset="0x0e">N2</rom>
+			<rom type="bgm" offset="0x0f">N3</rom>
+			<rom type="bgm" offset="0x10">N4</rom>
+			<rom type="bgm" offset="0x11">N5</rom>
+			<rom type="bgm" offset="0x12">Y1</rom>
+			<rom type="bgm" offset="0x13">Y2</rom>
+			<rom type="bgm" offset="0x14">Y3</rom>
+			<rom type="bgm" offset="0x15">Y4</rom>
+			<rom type="bgm" offset="0x16">Y5</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">A1 : </title>
+			<title code="0x02">A2 : </title>
+			<title code="0x03">A3 : </title>
+			<title code="0x04">A4 : </title>
+			<title code="0x05">A5 : </title>
+			<title code="0x06">A6 : </title>
+			<title code="0x07">M1 : </title>
+			<title code="0x08">M2 : </title>
+			<title code="0x09">M3 : </title>
+			<title code="0x0a">M4 : </title>
+			<title code="0x0b">M5 : </title>
+			<title code="0x0c">M6 : </title>
+			<title code="0x0d">N1 : </title>
+			<title code="0x0e">N2 : </title>
+			<title code="0x0f">N3 : </title>
+			<title code="0x10">N4 : </title>
+			<title code="0x11">N5 : </title>
+			<title code="0x12">Y1 : </title>
+			<title code="0x13">Y2 : </title>
+			<title code="0x14">Y3 : </title>
+			<title code="0x15">Y4 : </title>
+			<title code="0x16">Y5 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] ポッキー2 ～怪人赤マントの挑戦～(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x4600"/>
+			<option name="mdata_size" value="0x2000"/>
+			<option name="mfile_size" value="0x2000"/>
+			<option name="init_pc"    value="0x0000"/>
+		</options>
+		<romlist archive="pocky2_88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x3000">mdrv2.bin</rom>
+			<rom type="bgm" offset="0x00">a1_sb1.mdt</rom>
+			<rom type="bgm" offset="0x01">a2_sb1.mdt</rom>
+			<rom type="bgm" offset="0x02">a3_sb1.mdt</rom>
+			<rom type="bgm" offset="0x03">a4_sb1.mdt</rom>
+			<rom type="bgm" offset="0x04">a5_sb1.mdt</rom>
+			<rom type="bgm" offset="0x05">a6_sb1.mdt</rom>
+			<rom type="bgm" offset="0x06">m1_sb1.mdt</rom>
+			<rom type="bgm" offset="0x07">m2_sb1.mdt</rom>
+			<rom type="bgm" offset="0x08">m3_sb1.mdt</rom>
+			<rom type="bgm" offset="0x09">m4_sb1.mdt</rom>
+			<rom type="bgm" offset="0x0a">m5_sb1.mdt</rom>
+			<rom type="bgm" offset="0x0b">m6_sb1.mdt</rom>
+			<rom type="bgm" offset="0x0c">n1_sb1.mdt</rom>
+			<rom type="bgm" offset="0x0d">n2_sb1.mdt</rom>
+			<rom type="bgm" offset="0x0e">n3_sb1.mdt</rom>
+			<rom type="bgm" offset="0x0f">n4_sb1.mdt</rom>
+			<rom type="bgm" offset="0x10">n5_sb1.mdt</rom>
+			<rom type="bgm" offset="0x11">y1_sb1.mdt</rom>
+			<rom type="bgm" offset="0x12">y2_sb1.mdt</rom>
+			<rom type="bgm" offset="0x13">y3_sb1.mdt</rom>
+			<rom type="bgm" offset="0x14">y4_sb1.mdt</rom>
+			<rom type="bgm" offset="0x15">y5_sb1.mdt</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">a1_sb1.mdt : </title>
+			<title code="0x01">a2_sb1.mdt : </title>
+			<title code="0x02">a3_sb1.mdt : </title>
+			<title code="0x03">a4_sb1.mdt : </title>
+			<title code="0x04">a5_sb1.mdt : </title>
+			<title code="0x05">a6_sb1.mdt : </title>
+			<title code="0x06">m1_sb1.mdt : </title>
+			<title code="0x07">m2_sb1.mdt : </title>
+			<title code="0x08">m3_sb1.mdt : </title>
+			<title code="0x09">m4_sb1.mdt : </title>
+			<title code="0x0a">m5_sb1.mdt : </title>
+			<title code="0x0b">m6_sb1.mdt : </title>
+			<title code="0x0c">n1_sb1.mdt : </title>
+			<title code="0x0d">n2_sb1.mdt : </title>
+			<title code="0x0e">n3_sb1.mdt : </title>
+			<title code="0x0f">n4_sb1.mdt : </title>
+			<title code="0x10">n5_sb1.mdt : </title>
+			<title code="0x11">y1_sb1.mdt : </title>
+			<title code="0x12">y2_sb1.mdt : </title>
+			<title code="0x13">y3_sb1.mdt : </title>
+			<title code="0x14">y4_sb1.mdt : </title>
+			<title code="0x15">y5_sb1.mdt : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] ポッキー2 ～怪人赤マントの挑戦～(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x4600"/>
+			<option name="mdata_size" value="0x2000"/>
+			<option name="mfile_size" value="0x2000"/>
+			<option name="init_pc"    value="0x0000"/>
+		</options>
+		<romlist archive="pocky2_88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x3000">mdrv2.bin</rom>
+			<rom type="bgm" offset="0x00">a1_sb2.mdt</rom>
+			<rom type="bgm" offset="0x01">a2_sb2.mdt</rom>
+			<rom type="bgm" offset="0x02">a3_sb2.mdt</rom>
+			<rom type="bgm" offset="0x03">a4_sb2.mdt</rom>
+			<rom type="bgm" offset="0x04">a5_sb2.mdt</rom>
+			<rom type="bgm" offset="0x05">a6_sb2.mdt</rom>
+			<rom type="bgm" offset="0x06">m1_sb2.mdt</rom>
+			<rom type="bgm" offset="0x07">m2_sb2.mdt</rom>
+			<rom type="bgm" offset="0x08">m3_sb2.mdt</rom>
+			<rom type="bgm" offset="0x09">m4_sb2.mdt</rom>
+			<rom type="bgm" offset="0x0a">m5_sb2.mdt</rom>
+			<rom type="bgm" offset="0x0b">m6_sb2.mdt</rom>
+			<rom type="bgm" offset="0x0c">n1_sb2.mdt</rom>
+			<rom type="bgm" offset="0x0d">n2_sb2.mdt</rom>
+			<rom type="bgm" offset="0x0e">n3_sb2.mdt</rom>
+			<rom type="bgm" offset="0x0f">n4_sb2.mdt</rom>
+			<rom type="bgm" offset="0x10">n5_sb2.mdt</rom>
+			<rom type="bgm" offset="0x11">y1_sb2.mdt</rom>
+			<rom type="bgm" offset="0x12">y2_sb2.mdt</rom>
+			<rom type="bgm" offset="0x13">y3_sb2.mdt</rom>
+			<rom type="bgm" offset="0x14">y4_sb2.mdt</rom>
+			<rom type="bgm" offset="0x15">y5_sb2.mdt</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">a1_sb2.mdt : </title>
+			<title code="0x01">a2_sb2.mdt : </title>
+			<title code="0x02">a3_sb2.mdt : </title>
+			<title code="0x03">a4_sb2.mdt : </title>
+			<title code="0x04">a5_sb2.mdt : </title>
+			<title code="0x05">a6_sb2.mdt : </title>
+			<title code="0x06">m1_sb2.mdt : </title>
+			<title code="0x07">m2_sb2.mdt : </title>
+			<title code="0x08">m3_sb2.mdt : </title>
+			<title code="0x09">m4_sb2.mdt : </title>
+			<title code="0x0a">m5_sb2.mdt : </title>
+			<title code="0x0b">m6_sb2.mdt : </title>
+			<title code="0x0c">n1_sb2.mdt : </title>
+			<title code="0x0d">n2_sb2.mdt : </title>
+			<title code="0x0e">n3_sb2.mdt : </title>
+			<title code="0x0f">n4_sb2.mdt : </title>
+			<title code="0x10">n5_sb2.mdt : </title>
+			<title code="0x11">y1_sb2.mdt : </title>
+			<title code="0x12">y2_sb2.mdt : </title>
+			<title code="0x13">y3_sb2.mdt : </title>
+			<title code="0x14">y4_sb2.mdt : </title>
+			<title code="0x15">y5_sb2.mdt : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 雀ボーグすずめ</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">ポニーテールソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5800"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc"    value="0x0000"/>
+		</options>
+		<romlist archive="jnbgszm_88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1800">Music_driver_sb1</rom>
+			<rom type="bgm" offset="0x00">CHRｼｮｳｶｲMD2</rom>
+			<rom type="bgm" offset="0x01">JB_AGARIMD2</rom>
+			<rom type="bgm" offset="0x02">JB_CNUDEMD2</rom>
+			<rom type="bgm" offset="0x03">JB_CSEL_MD2</rom>
+			<rom type="bgm" offset="0x04">JB_END__MD2</rom>
+			<rom type="bgm" offset="0x05">JB_EYEC_MD2</rom>
+			<rom type="bgm" offset="0x06">JB_GOVERMD2</rom>
+			<rom type="bgm" offset="0x07">JB_LASTSMD2</rom>
+			<rom type="bgm" offset="0x08">JB_MAKE_MD2</rom>
+			<rom type="bgm" offset="0x09">JB_MAP__MD2</rom>
+			<rom type="bgm" offset="0x0a">JB_MATCHMD2</rom>
+			<rom type="bgm" offset="0x0b">JB_NUGI_MD2</rom>
+			<rom type="bgm" offset="0x0c">JB_OPEN_MD2</rom>
+			<rom type="bgm" offset="0x0d">JB_PLAY1MD2</rom>
+			<rom type="bgm" offset="0x0e">JB_PLAY2MD2</rom>
+			<rom type="bgm" offset="0x0f">JB_POWERMD2</rom>
+			<rom type="bgm" offset="0x10">JB_SHOP_MD2</rom>
+			<rom type="bgm" offset="0x11">mmmap.md2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">CHRｼｮｳｶｲMD2 : </title>
+			<title code="0x01">JB_AGARIMD2 : </title>
+			<title code="0x02">JB_CNUDEMD2 : </title>
+			<title code="0x03">JB_CSEL_MD2 : </title>
+			<title code="0x04">JB_END__MD2 : </title>
+			<title code="0x05">JB_EYEC_MD2 : </title>
+			<title code="0x06">JB_GOVERMD2 : </title>
+			<title code="0x07">JB_LASTSMD2 : </title>
+			<title code="0x08">JB_MAKE_MD2 : </title>
+			<title code="0x09">JB_MAP__MD2 : </title>
+			<title code="0x0a">JB_MATCHMD2 : </title>
+			<title code="0x0b">JB_NUGI_MD2 : </title>
+			<title code="0x0c">JB_OPEN_MD2 : </title>
+			<title code="0x0d">JB_PLAY1MD2 : </title>
+			<title code="0x0e">JB_PLAY2MD2 : </title>
+			<title code="0x0f">JB_POWERMD2 : </title>
+			<title code="0x10">JB_SHOP_MD2 : </title>
+			<title code="0x11">mmmap.md2   : </title>
+		</titlelist>
+	</game>
+</gamelist>

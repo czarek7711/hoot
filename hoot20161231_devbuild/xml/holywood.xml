@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Holy Wood -->
+	<game>
+		<name>[PC-9801] VASTNESS ～空虚の生贄達～(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="vastness_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PP_CAT.KMD</rom>
+			<rom type="file" offset="-1">SECT01_1.KMD</rom>
+			<rom type="file" offset="-1">SECT01_2.KMD</rom>
+			<rom type="file" offset="-1">SECT02_1.KMD</rom>
+			<rom type="file" offset="-1">SECT02_2.KMD</rom>
+			<rom type="file" offset="-1">SECT03_1.KMD</rom>
+			<rom type="file" offset="-1">SECT03_2.KMD</rom>
+			<rom type="conin" offset="0x10">PP_CAT.KMD</rom>
+			<rom type="conin" offset="0x11">SECT01_1.KMD</rom>
+			<rom type="conin" offset="0x12">SECT01_2.KMD</rom>
+			<rom type="conin" offset="0x13">SECT02_1.KMD</rom>
+			<rom type="conin" offset="0x14">SECT02_2.KMD</rom>
+			<rom type="conin" offset="0x15">SECT03_1.KMD</rom>
+			<rom type="conin" offset="0x16">SECT03_2.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT > nul</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM > nul</rom>
+			<rom type="shell" offset="0">MDRV -mPPPP.KMD > nul</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PP_CAT.KMD</title>
+			<title code="0x11">SECT01_1.KMD</title>
+			<title code="0x12">SECT01_2.KMD</title>
+			<title code="0x13">SECT02_1.KMD</title>
+			<title code="0x14">SECT02_2.KMD</title>
+			<title code="0x15">SECT03_1.KMD</title>
+			<title code="0x16">SECT03_2.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] VASTNESS ～空虚の生贄達～(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="vastness_98">
+			<rom type="file" offset="-1">MDDRV.COM</rom>
+			<rom type="file" offset="-1">MDDRV_98.COM</rom>
+			<rom type="file" offset="-1">PP_CAT.KMM</rom>
+			<rom type="file" offset="-1">SECT01_1.KMM</rom>
+			<rom type="file" offset="-1">SECT01_2.KMM</rom>
+			<rom type="file" offset="-1">SECT02_1.KMM</rom>
+			<rom type="file" offset="-1">SECT02_2.KMM</rom>
+			<rom type="file" offset="-1">SECT03_1.KMM</rom>
+			<rom type="file" offset="-1">SECT03_2.KMM</rom>
+			<rom type="conin" offset="0x10">PP_CAT.KMM</rom>
+			<rom type="conin" offset="0x11">SECT01_1.KMM</rom>
+			<rom type="conin" offset="0x12">SECT01_2.KMM</rom>
+			<rom type="conin" offset="0x13">SECT02_1.KMM</rom>
+			<rom type="conin" offset="0x14">SECT02_2.KMM</rom>
+			<rom type="conin" offset="0x15">SECT03_1.KMM</rom>
+			<rom type="conin" offset="0x16">SECT03_2.KMM</rom>
+			<rom type="shell" offset="0">MDDRV</rom>
+			<rom type="shell" offset="0">MDDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PP_CAT.KMM</title>
+			<title code="0x11">SECT01_1.KMM</title>
+			<title code="0x12">SECT01_2.KMM</title>
+			<title code="0x13">SECT02_1.KMM</title>
+			<title code="0x14">SECT02_2.KMM</title>
+			<title code="0x15">SECT03_1.KMM</title>
+			<title code="0x16">SECT03_2.KMM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] VASTNESS ～空虚の生贄達～</name>
+		<driver type="86">pc98vx</driver>
+		<driveralias type="NEC PC-9821">Holy Wood</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x10000"/>
+			<option name="filesize" value="0x6000"/>
+			<option name="datamax" value="0xff"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="vastness_21">
+			<rom type="code" offset="0x600">DOFMD_98.BIN</rom>
+			<rom type="code" offset="0xfa0">VMD</rom>
+			<rom type="bgm" offset="0x01">VA02.MDF</rom>
+			<rom type="bgm" offset="0x02">VA03.MDF</rom>
+			<rom type="bgm" offset="0x03">VA04.MDF</rom>
+			<rom type="bgm" offset="0x04">VA05.MDF</rom>
+			<rom type="bgm" offset="0x05">VA06.MDF</rom>
+			<rom type="bgm" offset="0x06">VA07.MDF</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">VA02.MDF : </title>
+			<title code="0x02">VA03.MDF : </title>
+			<title code="0x03">VA04.MDF : </title>
+			<title code="0x04">VA05.MDF : </title>
+			<title code="0x05">VA06.MDF : </title>
+			<title code="0x06">VA07.MDF : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.01(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk01_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK01.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK01.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK01.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.01(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="ppdisk01_98">
+			<rom type="file" offset="-1">MDDRV.COM</rom>
+			<rom type="file" offset="-1">MDDRV_98.COM</rom>
+			<rom type="file" offset="-1">PPDISK01.KMM</rom>
+			<rom type="conin" offset="0x10">PPDISK01.KMM</rom>
+			<rom type="shell" offset="0">MDDRV</rom>
+			<rom type="shell" offset="0">MDDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK01.KMM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.02(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk02_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK01.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK01.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK01.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.02(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="ppdisk02_98">
+			<rom type="file" offset="-1">MDDRV.COM</rom>
+			<rom type="file" offset="-1">MDDRV_98.COM</rom>
+			<rom type="file" offset="-1">PPDISK01.KMM</rom>
+			<rom type="conin" offset="0x10">PPDISK01.KMM</rom>
+			<rom type="shell" offset="0">MDDRV</rom>
+			<rom type="shell" offset="0">MDDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK01.KMM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.03(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk03_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK01.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK01.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK01.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.03(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="ppdisk03_98">
+			<rom type="file" offset="-1">MDDRV.COM</rom>
+			<rom type="file" offset="-1">MDDRV_98.COM</rom>
+			<rom type="file" offset="-1">PPDISK01.KMM</rom>
+			<rom type="conin" offset="0x10">PPDISK01.KMM</rom>
+			<rom type="shell" offset="0">MDDRV</rom>
+			<rom type="shell" offset="0">MDDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK01.KMM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.04</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk04_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK01.KMD</rom>
+			<rom type="file" offset="-1">PPDISK02.KMD</rom>
+			<rom type="file" offset="-1">PPDISK03.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK01.KMD</rom>
+			<rom type="conin" offset="0x11">PPDISK02.KMD</rom>
+			<rom type="conin" offset="0x12">PPDISK03.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK01.KMD</title>
+			<title code="0x11">PPDISK02.KMD</title>
+			<title code="0x12">PPDISK03.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.05</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk05_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK03.KMD</rom>
+			<rom type="file" offset="-1">PPDISK04.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK03.KMD</rom>
+			<rom type="conin" offset="0x11">PPDISK04.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK03.KMD</title>
+			<title code="0x11">PPDISK04.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.06</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk06_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK01.KMD</rom>
+			<rom type="file" offset="-1">PPDISK02.KMD</rom>
+			<rom type="file" offset="-1">PPDISK03.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK01.KMD</rom>
+			<rom type="conin" offset="0x11">PPDISK02.KMD</rom>
+			<rom type="conin" offset="0x12">PPDISK03.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK01.KMD</title>
+			<title code="0x11">PPDISK02.KMD</title>
+			<title code="0x12">PPDISK03.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.07</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk07_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK05.KMD</rom>
+			<rom type="file" offset="-1">PPDISK06.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK05.KMD</rom>
+			<rom type="conin" offset="0x11">PPDISK06.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK05.KMD</title>
+			<title code="0x11">PPDISK06.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.08</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk08_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK03.KMD</rom>
+			<rom type="file" offset="-1">PPDISK05.KMD</rom>
+			<rom type="file" offset="-1">PPDISK06.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK03.KMD</rom>
+			<rom type="conin" offset="0x11">PPDISK05.KMD</rom>
+			<rom type="conin" offset="0x12">PPDISK06.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK03.KMD</title>
+			<title code="0x11">PPDISK05.KMD</title>
+			<title code="0x12">PPDISK06.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.09</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk09_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK03.KMD</rom>
+			<rom type="file" offset="-1">PPDISK05.KMD</rom>
+			<rom type="file" offset="-1">PPDISK06.KMD</rom>
+			<rom type="file" offset="-1">PPDISK07.KMD</rom>
+			<rom type="file" offset="-1">PPDISK08.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK03.KMD</rom>
+			<rom type="conin" offset="0x11">PPDISK05.KMD</rom>
+			<rom type="conin" offset="0x12">PPDISK06.KMD</rom>
+			<rom type="conin" offset="0x13">PPDISK07.KMD</rom>
+			<rom type="conin" offset="0x14">PPDISK08.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK03.KMD</title>
+			<title code="0x11">PPDISK05.KMD</title>
+			<title code="0x12">PPDISK06.KMD</title>
+			<title code="0x13">PPDISK07.KMD</title>
+			<title code="0x14">PPDISK08.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.10</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk10_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK03.KMD</rom>
+			<rom type="file" offset="-1">PPDISK07.KMD</rom>
+			<rom type="file" offset="-1">PPDISK08.KMD</rom>
+			<rom type="file" offset="-1">PPDISK09.KMD</rom>
+			<rom type="file" offset="-1">PPDISK10.KMD</rom>
+			<rom type="file" offset="-1">PPDISK11.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK03.KMD</rom>
+			<rom type="conin" offset="0x12">PPDISK07.KMD</rom>
+			<rom type="conin" offset="0x13">PPDISK08.KMD</rom>
+			<rom type="conin" offset="0x14">PPDISK09.KMD</rom>
+			<rom type="conin" offset="0x15">PPDISK10.KMD</rom>
+			<rom type="conin" offset="0x16">PPDISK11.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK03.KMD</title>
+			<title code="0x12">PPDISK07.KMD</title>
+			<title code="0x13">PPDISK08.KMD</title>
+			<title code="0x14">PPDISK09.KMD</title>
+			<title code="0x15">PPDISK10.KMD</title>
+			<title code="0x16">PPDISK11.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.11</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk11_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK03.KMD</rom>
+			<rom type="file" offset="-1">PPDISK07.KMD</rom>
+			<rom type="file" offset="-1">PPDISK08.KMD</rom>
+			<rom type="file" offset="-1">PPDISK09.KMD</rom>
+			<rom type="file" offset="-1">PPDISK10.KMD</rom>
+			<rom type="file" offset="-1">PPDISK11.KMD</rom>
+			<rom type="file" offset="-1">PPDISK12.KMD</rom>
+			<rom type="file" offset="-1">PPDISK13.KMD</rom>
+			<rom type="file" offset="-1">PPDISK14.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK03.KMD</rom>
+			<rom type="conin" offset="0x12">PPDISK07.KMD</rom>
+			<rom type="conin" offset="0x13">PPDISK08.KMD</rom>
+			<rom type="conin" offset="0x14">PPDISK09.KMD</rom>
+			<rom type="conin" offset="0x15">PPDISK10.KMD</rom>
+			<rom type="conin" offset="0x16">PPDISK11.KMD</rom>
+			<rom type="conin" offset="0x17">PPDISK12.KMD</rom>
+			<rom type="conin" offset="0x18">PPDISK13.KMD</rom>
+			<rom type="conin" offset="0x19">PPDISK14.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK03.KMD</title>
+			<title code="0x12">PPDISK07.KMD</title>
+			<title code="0x13">PPDISK08.KMD</title>
+			<title code="0x14">PPDISK09.KMD</title>
+			<title code="0x15">PPDISK10.KMD</title>
+			<title code="0x16">PPDISK11.KMD</title>
+			<title code="0x17">PPDISK12.KMD</title>
+			<title code="0x18">PPDISK13.KMD</title>
+			<title code="0x19">PPDISK14.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PP DISK No.12</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Holy Wood</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdisk12_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK03.KMD</rom>
+			<rom type="file" offset="-1">PPDISK07.KMD</rom>
+			<rom type="file" offset="-1">PPDISK08.KMD</rom>
+			<rom type="file" offset="-1">PPDISK09.KMD</rom>
+			<rom type="file" offset="-1">PPDISK10.KMD</rom>
+			<rom type="file" offset="-1">PPDISK11.KMD</rom>
+			<rom type="file" offset="-1">PPDISK12.KMD</rom>
+			<rom type="file" offset="-1">PPDISK13.KMD</rom>
+			<rom type="file" offset="-1">PPDISK14.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK03.KMD</rom>
+			<rom type="conin" offset="0x12">PPDISK07.KMD</rom>
+			<rom type="conin" offset="0x13">PPDISK08.KMD</rom>
+			<rom type="conin" offset="0x14">PPDISK09.KMD</rom>
+			<rom type="conin" offset="0x15">PPDISK10.KMD</rom>
+			<rom type="conin" offset="0x16">PPDISK11.KMD</rom>
+			<rom type="conin" offset="0x17">PPDISK12.KMD</rom>
+			<rom type="conin" offset="0x18">PPDISK13.KMD</rom>
+			<rom type="conin" offset="0x19">PPDISK14.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK03.KMD</title>
+			<title code="0x12">PPDISK07.KMD</title>
+			<title code="0x13">PPDISK08.KMD</title>
+			<title code="0x14">PPDISK09.KMD</title>
+			<title code="0x15">PPDISK10.KMD</title>
+			<title code="0x16">PPDISK11.KMD</title>
+			<title code="0x17">PPDISK12.KMD</title>
+			<title code="0x18">PPDISK13.KMD</title>
+			<title code="0x19">PPDISK14.KMD</title>
+		</titlelist>
+	</game>
+</gamelist>

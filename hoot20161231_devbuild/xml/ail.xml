@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //AIL -->
+	<game>
+		<name>[PC-9801] スカーミッシュ</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">AIL</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="sker_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">SK_01.M</rom>
+			<rom type="file" offset="0x11">SK_02.M</rom>
+			<rom type="file" offset="0x12">SK_03.M</rom>
+			<rom type="file" offset="0x13">SK_04.M</rom>
+			<rom type="file" offset="0x14">SK_05.M</rom>
+			<rom type="file" offset="0x15">SK_06.M</rom>
+			<rom type="file" offset="0x16">SK_07.M</rom>
+			<rom type="file" offset="0x17">SK_08.M</rom>
+			<rom type="file" offset="0x18">SK_09.M</rom>
+			<rom type="file" offset="0x19">SK_10.M</rom>
+			<rom type="file" offset="0x1a">SK_11.M</rom>
+			<rom type="file" offset="0x1b">SK_12.M</rom>
+			<rom type="file" offset="0x1c">SK_13.M</rom>
+			<rom type="file" offset="0x1d">SK_14.M</rom>
+			<rom type="file" offset="0x1e">SK_15.M</rom>
+			<rom type="shell" offset="0">PMD /k /m8 /v0 /e0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">SK_01.M</title>
+			<title code="0x11">SK_02.M</title>
+			<title code="0x12">SK_03.M</title>
+			<title code="0x13">SK_04.M</title>
+			<title code="0x14">SK_05.M</title>
+			<title code="0x15">SK_06.M</title>
+			<title code="0x16">SK_07.M</title>
+			<title code="0x17">SK_08.M</title>
+			<title code="0x18">SK_09.M</title>
+			<title code="0x19">SK_10.M</title>
+			<title code="0x1a">SK_11.M</title>
+			<title code="0x1b">SK_12.M</title>
+			<title code="0x1c">SK_13.M</title>
+			<title code="0x1d">SK_14.M</title>
+			<title code="0x1e">SK_15.M</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] デュアルソウル</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">AIL</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="dualsoul_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">DS_01.M</rom>
+			<rom type="file" offset="0x11">DS_02.M</rom>
+			<rom type="file" offset="0x12">DS_03.M</rom>
+			<rom type="file" offset="0x13">DS_04.M</rom>
+			<rom type="file" offset="0x14">DS_05.M</rom>
+			<rom type="file" offset="0x15">DS_06.M</rom>
+			<rom type="file" offset="0x16">DS_07.M</rom>
+			<rom type="file" offset="0x17">DS_08.M</rom>
+			<rom type="file" offset="0x18">DS_09.M</rom>
+			<rom type="file" offset="0x19">DS_10.M</rom>
+			<rom type="file" offset="0x1a">DS_11.M</rom>
+			<rom type="file" offset="0x1b">DS_12.M</rom>
+			<rom type="file" offset="0x1c">DS_13.M</rom>
+			<rom type="file" offset="0x1d">DS_14.M</rom>
+			<rom type="file" offset="0x1e">DS_15.M</rom>
+			<rom type="shell" offset="0">PMD /K /M8 /V0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">DS_01.M : 城</title>
+			<title code="0x11">DS_02.M : 室内</title>
+			<title code="0x12">DS_03.M : 屋外</title>
+			<title code="0x13">DS_04.M : Hシーン・B</title>
+			<title code="0x14">DS_05.M : Hシーン・B</title>
+			<title code="0x15">DS_06.M : 戦闘</title>
+			<title code="0x16">DS_07.M : 酒場</title>
+			<title code="0x17">DS_08.M : あわてる</title>
+			<title code="0x18">DS_09.M : 教会</title>
+			<title code="0x19">DS_10.M : エンディング</title>
+			<title code="0x1a">DS_11.M : 楽しい</title>
+			<title code="0x1b">DS_12.M : 悲しい</title>
+			<title code="0x1c">DS_13.M : エルフの里</title>
+			<title code="0x1d">DS_14.M</title>
+			<title code="0x1e">DS_15.M : 予備曲・1</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] マハ・バラタ</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">AIL</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="mahabara_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">MH1.M</rom>
+			<rom type="file" offset="0x11">MH2.M</rom>
+			<rom type="file" offset="0x12">MH3.M</rom>
+			<rom type="file" offset="0x13">MH4.M</rom>
+			<rom type="file" offset="0x14">MH5.M</rom>
+			<rom type="file" offset="0x15">MH6.M</rom>
+			<rom type="file" offset="0x16">MH7.M</rom>
+			<rom type="file" offset="0x17">MH8.M</rom>
+			<rom type="file" offset="0x18">MH8-2.M</rom>
+			<rom type="file" offset="0x19">MH9.M</rom>
+			<rom type="file" offset="0x1a">MH10.M</rom>
+			<rom type="file" offset="0x1b">MH10X.M</rom>
+			<rom type="shell" offset="0">PMD /K /DF16 /M8</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MH1.M</title>
+			<title code="0x11">MH2.M</title>
+			<title code="0x12">MH3.M</title>
+			<title code="0x13">MH4.M</title>
+			<title code="0x14">MH5.M</title>
+			<title code="0x15">MH6.M</title>
+			<title code="0x16">MH7.M</title>
+			<title code="0x17">MH8.M</title>
+			<title code="0x18">MH8-2.M</title>
+			<title code="0x19">MH9.M</title>
+			<title code="0x1a">MH10.M</title>
+			<title code="0x1b">MH10X.M</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 淫魔制服狩り</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">AIL</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="inma_sei_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">IS_01.M</rom>
+			<rom type="file" offset="0x11">IS_02.M</rom>
+			<rom type="file" offset="0x12">IS_03.M</rom>
+			<rom type="file" offset="0x13">IS_04.M</rom>
+			<rom type="file" offset="0x14">IS_05.M</rom>
+			<rom type="file" offset="0x15">IS_06.M</rom>
+			<rom type="file" offset="0x16">IS_07.M</rom>
+			<rom type="file" offset="0x17">IS_08.M</rom>
+			<rom type="file" offset="0x18">IS_09.M</rom>
+			<rom type="file" offset="0x19">IS_10.M</rom>
+			<rom type="shell" offset="0">PMD /K /M8 /V0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">IS_01.M : オープニング</title>
+			<title code="0x11">IS_02.M : セレクト</title>
+			<title code="0x12">IS_03.M : 戦闘</title>
+			<title code="0x13">IS_04.M : Hシーン・対 潮見 早苗(女子高生)</title>
+			<title code="0x14">IS_05.M : Hシーン・対 看護</title>
+			<title code="0x15">IS_06.M : Hシーン・対 桜木 今日子(婦人警官)</title>
+			<title code="0x16">IS_07.M : Hシーン・対 神宮寺 端穂</title>
+			<title code="0x17">IS_08.M : エンディング</title>
+			<title code="0x18">IS_09.M : 変身</title>
+			<title code="0x19">IS_10.M : 雨</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 脅迫</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">AIL</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="kyouhaku_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">KH_01.M</rom>
+			<rom type="file" offset="0x11">KH_02.M</rom>
+			<rom type="file" offset="0x12">KH_03.M</rom>
+			<rom type="file" offset="0x13">KH_04.M</rom>
+			<rom type="file" offset="0x14">KH_05.M</rom>
+			<rom type="file" offset="0x15">KH_06.M</rom>
+			<rom type="file" offset="0x16">KH_07.M</rom>
+			<rom type="file" offset="0x17">KH_08.M</rom>
+			<rom type="file" offset="0x18">KH_09.M</rom>
+			<rom type="file" offset="0x19">KH_10.M</rom>
+			<rom type="file" offset="0x1a">KH_11.M</rom>
+			<rom type="file" offset="0x1b">KH_12.M</rom>
+			<rom type="file" offset="0x1c">KH_13.M</rom>
+			<rom type="file" offset="0x1d">KH_14.M</rom>
+			<rom type="file" offset="0x1e">KH_15.M</rom>
+			<rom type="shell" offset="0">PMD #/K /M8 /V0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">KH_01.M : LOVING YOU</title>
+			<title code="0x11">KH_02.M : 夢</title>
+			<title code="0x12">KH_03.M : 危機</title>
+			<title code="0x13">KH_04.M : 諦め</title>
+			<title code="0x1a">KH_11.M : 甘美な世界</title>
+			<title code="0x14">KH_05.M : 灰色のキャンパス</title>
+			<title code="0x15">KH_06.M : つかのまの安らぎを</title>
+			<title code="0x16">KH_07.M : Darkside Visiter</title>
+			<title code="0x19">KH_10.M : 良介乱入</title>
+			<title code="0x17">KH_08.M : 告白</title>
+			<title code="0x18">KH_09.M : 明日へはばたいて ～メインテーマ～</title>
+			<title code="0x1e">KH_15.M : 雨</title>
+			<title code="0x1b">KH_12.M : ガーーーン!!</title>
+			<title code="0x1c">KH_13.M : 学校のチャイム</title>
+			<title code="0x1d">KH_14.M : 電話のコール</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 魔女狩りの夜に</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">AIL</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="majogari_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">MJ_01.M</rom>
+			<rom type="file" offset="0x11">MJ_02.M</rom>
+			<rom type="file" offset="0x12">MJ_03.M</rom>
+			<rom type="file" offset="0x13">MJ_04.M</rom>
+			<rom type="file" offset="0x14">MJ_05.M</rom>
+			<rom type="file" offset="0x15">MJ_06.M</rom>
+			<rom type="file" offset="0x16">MJ_07.M</rom>
+			<rom type="file" offset="0x17">MJ_08.M</rom>
+			<rom type="file" offset="0x18">MJ_09.M</rom>
+			<rom type="shell" offset="0">PMD /K /M8 /V0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MJ_01.M : オープニング</title>
+			<title code="0x11">MJ_02.M : 地下拷問室</title>
+			<title code="0x12">MJ_03.M : 教会</title>
+			<title code="0x13">MJ_04.M : 街</title>
+			<title code="0x14">MJ_05.M : Hシーン1</title>
+			<title code="0x15">MJ_06.M : エンディング</title>
+			<title code="0x16">MJ_07.M : 魔女</title>
+			<title code="0x17">MJ_08.M : Hシーン2</title>
+			<title code="0x18">MJ_09.M : Hシーン3</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 瑠璃色の雪(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">AIL</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="ruriiro_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">RURI_01.M</rom>
+			<rom type="file" offset="0x11">RURI_02.M</rom>
+			<rom type="file" offset="0x12">RURI_03.M</rom>
+			<rom type="file" offset="0x13">RURI_04.M</rom>
+			<rom type="file" offset="0x14">RURI_05.M</rom>
+			<rom type="file" offset="0x15">RURI_06.M</rom>
+			<rom type="file" offset="0x16">RURI_07.M</rom>
+			<rom type="file" offset="0x17">RURI_08.M</rom>
+			<rom type="file" offset="0x18">RURI_09.M</rom>
+			<rom type="file" offset="0x19">RURI_10.M</rom>
+			<rom type="file" offset="0x1a">RURI_11.M</rom>
+			<rom type="file" offset="0x1b">RURI_12.M</rom>
+			<rom type="file" offset="0x1c">RURI_13.M</rom>
+			<rom type="shell" offset="0">PMD #/K /M8 /V0 /E0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">RURI_01.M : 瑠璃色の雪</title>
+			<title code="0x11">RURI_02.M : 天下泰平</title>
+			<title code="0x12">RURI_03.M : 口笛を吹きながら</title>
+			<title code="0x13">RURI_04.M : 失意</title>
+			<title code="0x14">RURI_05.M : 試練</title>
+			<title code="0x19">RURI_10.M : 暖かな月</title>
+			<title code="0x18">RURI_09.M : 強奪</title>
+			<title code="0x15">RURI_06.M : 静寂</title>
+			<title code="0x16">RURI_07.M : 夢見るように</title>
+			<title code="0x17">RURI_08.M : あやかしの瞳</title>
+			<title code="0x1c">RURI_13.M : SPECIAL TO ME</title>
+			<title code="0x1b">RURI_12.M : SMART BOY</title>
+			<title code="0x1a">RURI_11.M : 氷結の夜</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 瑠璃色の雪(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">AIL</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="ruriiro_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">RURI_01.MMD</rom>
+			<rom type="file" offset="0x11">RURI_02.MMD</rom>
+			<rom type="file" offset="0x12">RURI_03.MMD</rom>
+			<rom type="file" offset="0x13">RURI_04.MMD</rom>
+			<rom type="file" offset="0x14">RURI_05.MMD</rom>
+			<rom type="file" offset="0x15">RURI_06.MMD</rom>
+			<rom type="file" offset="0x16">RURI_07.MMD</rom>
+			<rom type="file" offset="0x17">RURI_08.MMD</rom>
+			<rom type="file" offset="0x18">RURI_09.MMD</rom>
+			<rom type="file" offset="0x19">RURI_10.MMD</rom>
+			<rom type="file" offset="0x1a">RURI_11.MMD</rom>
+			<rom type="file" offset="0x1b">RURI_12.MMD</rom>
+			<rom type="file" offset="0x1c">RURI_13.MMD</rom>
+			<rom type="shell" offset="0">MMD /K</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">RURI_01.MMD : 瑠璃色の雪</title>
+			<title code="0x11">RURI_02.MMD : 天下泰平</title>
+			<title code="0x12">RURI_03.MMD : 口笛を吹きながら</title>
+			<title code="0x13">RURI_04.MMD : 失意</title>
+			<title code="0x14">RURI_05.MMD : 試練</title>
+			<title code="0x19">RURI_10.MMD : 暖かな月</title>
+			<title code="0x18">RURI_09.MMD : 強奪</title>
+			<title code="0x15">RURI_06.MMD : 静寂</title>
+			<title code="0x16">RURI_07.MMD : 夢見るように</title>
+			<title code="0x17">RURI_08.MMD : あやかしの瞳</title>
+			<title code="0x1c">RURI_13.MMD : SPECIAL TO ME</title>
+			<title code="0x1b">RURI_12.MMD : SMART BOY</title>
+			<title code="0x1a">RURI_11.MMD : 氷結の夜</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //天津堂 -->
+	<game>
+		<name>[PC-9801] G.R. -グラヴィティ レスポンス-</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">天津堂</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="gr_98">
+			<rom type="file" offset="-1">fmd_98.com</rom>
+			<rom type="file" offset="-1">FMD.COM</rom>
+			<rom type="file" offset="-1">MUS_DATA.VM</rom>
+			<rom type="shell" offset="0">fmd</rom>
+			<rom type="shell" offset="0">fmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Lovin' KOBE</title>
+			<title code="0x01">どれにするの?</title>
+			<title code="0x02">マイルドセブンの白い風</title>
+			<title code="0x03">宇宙戦艦大戦争</title>
+			<title code="0x04">ある休日のひと時</title>
+			<title code="0x05">ガンツ先生登場!!</title>
+			<title code="0x06">かもんべぃべ、おぅいぇ!</title>
+			<title code="0x07">ガンツ哀歌(ｴﾚｼﾞｰ)</title>
+			<title code="0x08">冬の夜空に</title>
+			<title code="0x09">隷夜</title>
+			<title code="0x0a">威圧</title>
+			<title code="0x0b">服従</title>
+			<title code="0x0c">悲しみの円舞</title>
+			<title code="0x0d">結末</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GOICE(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">天津堂</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="goice_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">GOICE_01.M</rom>
+			<rom type="file" offset="0x11">GOICE_02.M</rom>
+			<rom type="file" offset="0x12">GOICE_03.M</rom>
+			<rom type="file" offset="0x13">GOICE_04.M</rom>
+			<rom type="file" offset="0x14">GOICE_05.M</rom>
+			<rom type="file" offset="0x15">GOICE_06.M</rom>
+			<rom type="file" offset="0x16">GOICE_07.M</rom>
+			<rom type="file" offset="0x17">GOICE_08.M</rom>
+			<rom type="file" offset="0x18">GOICE_09.M</rom>
+			<rom type="file" offset="0x19">GOICE_10.M</rom>
+			<rom type="file" offset="0x1A">GOICE_11.M</rom>
+			<rom type="file" offset="0x1B">GOICE_12.M</rom>
+			<rom type="file" offset="0x1C">GOICE_13.M</rom>
+			<rom type="file" offset="0x1D">GOICE_14.M</rom>
+			<rom type="file" offset="0x1E">GOICE_15.M</rom>
+			<rom type="file" offset="0x1F">GOICE_16.M</rom>
+			<rom type="file" offset="0x20">GOICE_17.M</rom>
+			<rom type="file" offset="0x21">GOICE_18.M</rom>
+			<rom type="file" offset="0x22">GOICE_19.M</rom>
+			<rom type="shell" offset="0">pmd #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GOICE_01.M : Let's Go Faraway</title>
+			<title code="0x11">GOICE_02.M : Scenario Selection</title>
+			<title code="0x12">GOICE_03.M : Hory Day</title>
+			<title code="0x13">GOICE_04.M : Kaerimichi</title>
+			<title code="0x14">GOICE_05.M : OUTER ENVOI</title>
+			<title code="0x15">GOICE_06.M : Super Sonic Claymore</title>
+			<title code="0x16">GOICE_07.M : IN THE DARKNESS</title>
+			<title code="0x17">GOICE_08.M : BLACK WISH</title>
+			<title code="0x18">GOICE_09.M : You Need Me</title>
+			<title code="0x19">GOICE_10.M : LIKE A ROLLING"K"</title>
+			<title code="0x1A">GOICE_11.M : Rotterdam Fake</title>
+			<title code="0x1B">GOICE_12.M : "GANTU" STRIKES BACK!</title>
+			<title code="0x1C">GOICE_13.M : 絶頂! オルガバン</title>
+			<title code="0x1D">GOICE_14.M : かりそめの平和</title>
+			<title code="0x1E">GOICE_15.M : MESSIAH</title>
+			<title code="0x1F">GOICE_16.M : CHAOS flame</title>
+			<title code="0x20">GOICE_17.M : I'll Kiss U</title>
+			<title code="0x21">GOICE_18.M : Sunshine</title>
+			<title code="0x22">GOICE_19.M : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GOICE(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">天津堂</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="goice_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x10">GOICE_01.M2</rom>
+			<rom type="file" offset="0x11">GOICE_02.M2</rom>
+			<rom type="file" offset="0x12">GOICE_03.M2</rom>
+			<rom type="file" offset="0x13">GOICE_04.M2</rom>
+			<rom type="file" offset="0x14">GOICE_05.M2</rom>
+			<rom type="file" offset="0x15">GOICE_06.M2</rom>
+			<rom type="file" offset="0x16">GOICE_07.M2</rom>
+			<rom type="file" offset="0x17">GOICE_08.M2</rom>
+			<rom type="file" offset="0x18">GOICE_09.M2</rom>
+			<rom type="file" offset="0x19">GOICE_10.M2</rom>
+			<rom type="file" offset="0x1A">GOICE_11.M2</rom>
+			<rom type="file" offset="0x1B">GOICE_12.M2</rom>
+			<rom type="file" offset="0x1C">GOICE_13.M2</rom>
+			<rom type="file" offset="0x1D">GOICE_14.M2</rom>
+			<rom type="file" offset="0x1E">GOICE_15.M2</rom>
+			<rom type="file" offset="0x1F">GOICE_16.M2</rom>
+			<rom type="file" offset="0x20">GOICE_17.M2</rom>
+			<rom type="file" offset="0x21">GOICE_18.M2</rom>
+			<rom type="shell" offset="0">pmdb2 #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GOICE_01.M2 : Let's Go Faraway</title>
+			<title code="0x11">GOICE_02.M2 : Scenario Selection</title>
+			<title code="0x12">GOICE_03.M2 : Hory Day</title>
+			<title code="0x13">GOICE_04.M2 : Kaerimichi</title>
+			<title code="0x14">GOICE_05.M2 : OUTER ENVOI</title>
+			<title code="0x15">GOICE_06.M2 : Super Sonic Claymore</title>
+			<title code="0x16">GOICE_07.M2 : IN THE DARKNESS</title>
+			<title code="0x17">GOICE_08.M2 : BLACK WISH</title>
+			<title code="0x18">GOICE_09.M2 : You Need Me</title>
+			<title code="0x19">GOICE_10.M2 : LIKE A ROLLING"K"</title>
+			<title code="0x1A">GOICE_11.M2 : Rotterdam Fake</title>
+			<title code="0x1B">GOICE_12.M2 : "GANTU" STRIKES BACK!</title>
+			<title code="0x1C">GOICE_13.M2 : 絶頂! オルガバン</title>
+			<title code="0x1D">GOICE_14.M2 : かりそめの平和</title>
+			<title code="0x1E">GOICE_15.M2 : MESSIAH</title>
+			<title code="0x1F">GOICE_16.M2 : CHAOS flame</title>
+			<title code="0x20">GOICE_17.M2 : I'll Kiss U</title>
+			<title code="0x21">GOICE_18.M2 : Sunshine</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] JINN ～永遠の勇士～(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">天津堂</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="jinn_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">JINN_01.M</rom>
+			<rom type="file" offset="0x11">JINN_02.M</rom>
+			<rom type="file" offset="0x12">JINN_03.M</rom>
+			<rom type="file" offset="0x13">JINN_04.M</rom>
+			<rom type="file" offset="0x14">JINN_05.M</rom>
+			<rom type="file" offset="0x15">JINN_06.M</rom>
+			<rom type="file" offset="0x16">JINN_07.M</rom>
+			<rom type="file" offset="0x17">JINN_08.M</rom>
+			<rom type="file" offset="0x18">JINN_09.M</rom>
+			<rom type="file" offset="0x19">JINN_10.M</rom>
+			<rom type="file" offset="0x1A">JINN_11.M</rom>
+			<rom type="file" offset="0x1B">JINN_12.M</rom>
+			<rom type="file" offset="0x1C">JINN_13.M</rom>
+			<rom type="file" offset="0x1D">JINN_14.M</rom>
+			<rom type="file" offset="0x1E">JINN_15.M</rom>
+			<rom type="file" offset="0x1F">JINN_16.M</rom>
+			<rom type="file" offset="0x20">JINN_17.M</rom>
+			<rom type="file" offset="0x21">JINN_18.M</rom>
+			<rom type="file" offset="0x22">JINN_19.M</rom>
+			<rom type="file" offset="0x23">JINN_20.M</rom>
+			<rom type="file" offset="0x24">JINN_21.M</rom>
+			<rom type="file" offset="0x25">JINN_22.M</rom>
+			<rom type="file" offset="0x26">JINN_23.M</rom>
+			<rom type="file" offset="0x27">JINN_24.M</rom>
+			<rom type="file" offset="0x28">JINN_25.M</rom>
+			<rom type="file" offset="0x29">JINN_26.M</rom>
+			<rom type="file" offset="0x2A">JINN_27.M</rom>
+			<rom type="file" offset="0x2B">JINN_28.M</rom>
+			<rom type="file" offset="0x2C">JINN_29.M</rom>
+			<rom type="file" offset="0x2D">JINN_30.M</rom>
+			<rom type="file" offset="0x2E">JINN_31.M</rom>
+			<rom type="file" offset="0x2F">JINN_32.M</rom>
+			<rom type="file" offset="0x30">JINN_33.M</rom>
+			<rom type="file" offset="0x31">JINN_34.M</rom>
+			<rom type="shell" offset="0">pmd #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">JINN_01.M : JINN main theme mochif</title>
+			<title code="0x11">JINN_02.M : Prosperous Town</title>
+			<title code="0x12">JINN_03.M : JINN main theme fanfare</title>
+			<title code="0x13">JINN_04.M : Light in the Blackness</title>
+			<title code="0x14">JINN_05.M : Strange Shop</title>
+			<title code="0x15">JINN_06.M : Chhrful Shopping</title>
+			<title code="0x16">JINN_07.M : Sweet Dreams</title>
+			<title code="0x17">JINN_08.M : Peaceful Time</title>
+			<title code="0x18">JINN_09.M : Cheap Bar</title>
+			<title code="0x19">JINN_10.M : Castle</title>
+			<title code="0x1A">JINN_11.M : Adventurous spirit</title>
+			<title code="0x1B">JINN_12.M : Achievement</title>
+			<title code="0x1C">JINN_13.M : Juicy Fruits</title>
+			<title code="0x1D">JINN_14.M : Battle Field</title>
+			<title code="0x1E">JINN_15.M : Sense of Crisis</title>
+			<title code="0x1F">JINN_16.M : We will Overcome Obstacle</title>
+			<title code="0x20">JINN_17.M : Final Battle</title>
+			<title code="0x21">JINN_18.M : V Music</title>
+			<title code="0x22">JINN_19.M : Defeat</title>
+			<title code="0x23">JINN_20.M : Bless You</title>
+			<title code="0x24">JINN_21.M : Gonna Another Space</title>
+			<title code="0x25">JINN_22.M : Try my skill</title>
+			<title code="0x26">JINN_23.M : Dry up Area</title>
+			<title code="0x27">JINN_24.M : Chilly world</title>
+			<title code="0x28">JINN_25.M : Giant Remains</title>
+			<title code="0x29">JINN_26.M : Elemental Tower</title>
+			<title code="0x2A">JINN_27.M : Dark Garden</title>
+			<title code="0x2B">JINN_28.M : Intruders</title>
+			<title code="0x2C">JINN_29.M : Friendly Terms</title>
+			<title code="0x2D">JINN_30.M : Adversity</title>
+			<title code="0x2E">JINN_31.M : Requiem for JINN</title>
+			<title code="0x2F">JINN_32.M : Suggestion</title>
+			<title code="0x30">JINN_33.M : Get on!</title>
+			<title code="0x31">JINN_34.M : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] JINN ～永遠の勇士～(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">天津堂</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="jinn_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x10">JINN_01.M2</rom>
+			<rom type="file" offset="0x11">JINN_02.M2</rom>
+			<rom type="file" offset="0x12">JINN_03.M2</rom>
+			<rom type="file" offset="0x13">JINN_04.M2</rom>
+			<rom type="file" offset="0x14">JINN_05.M2</rom>
+			<rom type="file" offset="0x15">JINN_06.M2</rom>
+			<rom type="file" offset="0x16">JINN_07.M2</rom>
+			<rom type="file" offset="0x17">JINN_08.M2</rom>
+			<rom type="file" offset="0x18">JINN_09.M2</rom>
+			<rom type="file" offset="0x19">JINN_10.M2</rom>
+			<rom type="file" offset="0x1A">JINN_11.M2</rom>
+			<rom type="file" offset="0x1B">JINN_12.M2</rom>
+			<rom type="file" offset="0x1C">JINN_13.M2</rom>
+			<rom type="file" offset="0x1D">JINN_14.M2</rom>
+			<rom type="file" offset="0x1E">JINN_15.M2</rom>
+			<rom type="file" offset="0x1F">JINN_16.M2</rom>
+			<rom type="file" offset="0x20">JINN_17.M2</rom>
+			<rom type="file" offset="0x21">JINN_18.M2</rom>
+			<rom type="file" offset="0x22">JINN_19.M2</rom>
+			<rom type="file" offset="0x23">JINN_20.M2</rom>
+			<rom type="file" offset="0x24">JINN_21.M2</rom>
+			<rom type="file" offset="0x25">JINN_22.M2</rom>
+			<rom type="file" offset="0x26">JINN_23.M2</rom>
+			<rom type="file" offset="0x27">JINN_24.M2</rom>
+			<rom type="file" offset="0x28">JINN_25.M2</rom>
+			<rom type="file" offset="0x29">JINN_26.M2</rom>
+			<rom type="file" offset="0x2A">JINN_27.M2</rom>
+			<rom type="file" offset="0x2B">JINN_28.M2</rom>
+			<rom type="file" offset="0x2C">JINN_29.M2</rom>
+			<rom type="file" offset="0x2D">JINN_30.M2</rom>
+			<rom type="file" offset="0x2E">JINN_31.M2</rom>
+			<rom type="file" offset="0x2F">JINN_32.M2</rom>
+			<rom type="file" offset="0x30">JINN_33.M2</rom>
+			<rom type="shell" offset="0">pmdb2 #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">JINN_01.M2 : JINN main theme mochif</title>
+			<title code="0x11">JINN_02.M2 : Prosperous Town</title>
+			<title code="0x12">JINN_03.M2 : JINN main theme fanfare</title>
+			<title code="0x13">JINN_04.M2 : Light in the Blackness</title>
+			<title code="0x14">JINN_05.M2 : Strange Shop</title>
+			<title code="0x15">JINN_06.M2 : Chhrful Shopping</title>
+			<title code="0x16">JINN_07.M2 : Sweet Dreams</title>
+			<title code="0x17">JINN_08.M2 : Peaceful Time</title>
+			<title code="0x18">JINN_09.M2 : Cheap Bar</title>
+			<title code="0x19">JINN_10.M2 : Castle</title>
+			<title code="0x1A">JINN_11.M2 : Adventurous spirit</title>
+			<title code="0x1B">JINN_12.M2 : Achievement</title>
+			<title code="0x1C">JINN_13.M2 : Juicy Fruits</title>
+			<title code="0x1D">JINN_14.M2 : Battle Field</title>
+			<title code="0x1E">JINN_15.M2 : Sense of Crisis</title>
+			<title code="0x1F">JINN_16.M2 : We will Overcome Obstacle</title>
+			<title code="0x20">JINN_17.M2 : Final Battle</title>
+			<title code="0x21">JINN_18.M2 : V Music</title>
+			<title code="0x22">JINN_19.M2 : Defeat</title>
+			<title code="0x23">JINN_20.M2 : Bless You</title>
+			<title code="0x24">JINN_21.M2 : Gonna Another Space</title>
+			<title code="0x25">JINN_22.M2 : Try my skill</title>
+			<title code="0x26">JINN_23.M2 : Dry up Area</title>
+			<title code="0x27">JINN_24.M2 : Chilly world</title>
+			<title code="0x28">JINN_25.M2 : Giant Remains</title>
+			<title code="0x29">JINN_26.M2 : Elemental Tower</title>
+			<title code="0x2A">JINN_27.M2 : Dark Garden</title>
+			<title code="0x2B">JINN_28.M2 : Intruders</title>
+			<title code="0x2C">JINN_29.M2 : Friendly Terms</title>
+			<title code="0x2D">JINN_30.M2 : Adversity</title>
+			<title code="0x2E">JINN_31.M2 : Requiem for JINN</title>
+			<title code="0x2F">JINN_32.M2 : Suggestion</title>
+			<title code="0x30">JINN_33.M2 : Get on!</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] WAVER ～The Seeker2～(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">天津堂</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="waver_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">WAV00.M</rom>
+			<rom type="file" offset="0x11">WAV01.M</rom>
+			<rom type="file" offset="0x12">WAV02.M</rom>
+			<rom type="file" offset="0x13">WAV03.M</rom>
+			<rom type="file" offset="0x14">WAV04.M</rom>
+			<rom type="file" offset="0x15">WAV05.M</rom>
+			<rom type="file" offset="0x16">WAV06.M</rom>
+			<rom type="file" offset="0x17">WAV07.M</rom>
+			<rom type="file" offset="0x18">WAV08.M</rom>
+			<rom type="file" offset="0x19">WAV09.M</rom>
+			<rom type="file" offset="0x1A">WAV10.M</rom>
+			<rom type="shell" offset="0">pmd #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WAV00.M : 懐疑</title>
+			<title code="0x11">WAV01.M : 錯綜</title>
+			<title code="0x12">WAV02.M : 流転</title>
+			<title code="0x13">WAV03.M : 月影</title>
+			<title code="0x14">WAV04.M : 陥落</title>
+			<title code="0x15">WAV05.M : 狂気</title>
+			<title code="0x16">WAV06.M : 焦躁</title>
+			<title code="0x17">WAV07.M : 増長</title>
+			<title code="0x18">WAV08.M : 野望</title>
+			<title code="0x19">WAV09.M : 欺瞞</title>
+			<title code="0x1A">WAV10.M : 終焉</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] WAVER ～The Seeker2～(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">天津堂</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="waver_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x10">WAV00.N</rom>
+			<rom type="file" offset="0x11">WAV01.N</rom>
+			<rom type="file" offset="0x12">WAV02.N</rom>
+			<rom type="file" offset="0x13">WAV03.N</rom>
+			<rom type="file" offset="0x14">WAV04.N</rom>
+			<rom type="file" offset="0x15">WAV05.N</rom>
+			<rom type="file" offset="0x16">WAV06.N</rom>
+			<rom type="file" offset="0x17">WAV07.N</rom>
+			<rom type="file" offset="0x18">WAV08.N</rom>
+			<rom type="file" offset="0x19">WAV09.N</rom>
+			<rom type="file" offset="0x1A">WAV10.N</rom>
+			<rom type="shell" offset="0">pmdb2 #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WAV00.N : 懐疑</title>
+			<title code="0x11">WAV01.N : 錯綜</title>
+			<title code="0x12">WAV02.N : 流転</title>
+			<title code="0x13">WAV03.N : 月影</title>
+			<title code="0x14">WAV04.N : 陥落</title>
+			<title code="0x15">WAV05.N : 狂気</title>
+			<title code="0x16">WAV06.N : 焦躁</title>
+			<title code="0x17">WAV07.N : 増長</title>
+			<title code="0x18">WAV08.N : 野望</title>
+			<title code="0x19">WAV09.N : 欺瞞</title>
+			<title code="0x1A">WAV10.N : 終焉</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] やんやんのクイズいっちょまえ</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">天津堂</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="yanyanq_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">QE.EFC</rom>
+			<rom type="file" offset="0x10">BLOWUPN.M</rom>
+			<rom type="file" offset="0x11">C2N.M</rom>
+			<rom type="file" offset="0x12">CONTINUE.M</rom>
+			<rom type="file" offset="0x13">CRYN.M</rom>
+			<rom type="file" offset="0x14">EUN.M</rom>
+			<rom type="file" offset="0x15">EXTRAN.M</rom>
+			<rom type="file" offset="0x16">FASN.M</rom>
+			<rom type="file" offset="0x17">GAMEOVER.M</rom>
+			<rom type="file" offset="0x18">GETWAYN.M</rom>
+			<rom type="file" offset="0x19">JOYFULN.M</rom>
+			<rom type="file" offset="0x1a">LUCKY.M</rom>
+			<rom type="file" offset="0x1b">MICRON.M</rom>
+			<rom type="file" offset="0x1c">MSCAPEN.M</rom>
+			<rom type="file" offset="0x1d">NEWDAY1.M</rom>
+			<rom type="file" offset="0x1e">RDCLEAR.M</rom>
+			<rom type="file" offset="0x1f">SEL1N.M</rom>
+			<rom type="file" offset="0x20">SEL2N.M</rom>
+			<rom type="file" offset="0x21">SEL3N.M</rom>
+			<rom type="file" offset="0x22">SEL4N.M</rom>
+			<rom type="file" offset="0x23">SEL5N.M</rom>
+			<rom type="file" offset="0x24">SEL6N.M</rom>
+			<rom type="file" offset="0x25">SLAVEN.M</rom>
+			<rom type="file" offset="0x26">SORRY.M</rom>
+			<rom type="file" offset="0x27">THINKN.M</rom>
+			<rom type="file" offset="0x28">WHEREN.M</rom>
+			<rom type="shell" offset="0">pmd /K /DF16</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x15">EXTRAN.M   : Extraordinary</title>
+			<title code="0x10">BLOWUPN.M  : Blow Up</title>
+			<title code="0x28">WHEREN.M   : Where Are You Going?</title>
+			<title code="0x19">JOYFULN.M  : Joyful Holiday</title>
+			<title code="0x27">THINKN.M   : Thinking Time</title>
+			<title code="0x13">CRYN.M     : Cry for the Moon</title>
+			<title code="0x18">GETWAYN.M  : Get Away</title>
+			<title code="0x12">CONTINUE.M : Please Continue</title>
+			<title code="0x17">GAMEOVER.M : Try Again</title>
+			<title code="0x16">FASN.M     : Fascinator</title>
+			<title code="0x25">SLAVEN.M   : Bewicthed Slave</title>
+			<title code="0x1e">RDCLEAR.M  : Round Clear</title>
+			<title code="0x11">C2N.M      : Stage Clear</title>
+			<title code="0x1c">MSCAPEN.M  : Moonscape</title>
+			<title code="0x1f">SEL1N.M    : Catch 1</title>
+			<title code="0x20">SEL2N.M    : Catch 2</title>
+			<title code="0x21">SEL3N.M    : Sequance 3</title>
+			<title code="0x22">SEL4N.M    : Sequence 4</title>
+			<title code="0x23">SEL5N.M    : Calling</title>
+			<title code="0x24">SEL6N.M    : Let us Select</title>
+			<title code="0x1a">LUCKY.M    : Item Get LUCKY</title>
+			<title code="0x26">SORRY.M    : Item Get SORRY</title>
+			<title code="0x1b">MICRON.M   : Microscope</title>
+			<title code="0x14">EUN.M      : Euphony</title>
+			<title code="0x1d">NEWDAY1.M  : The Brand New Day</title>
+			<range min="0x0801" max="0x0805" extcode="1">QE.EFC     : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] やんやんの激闘同窓会(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">天津堂</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="yanyan2_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">YAN2_01.M</rom>
+			<rom type="file" offset="0x11">YAN2_02.M</rom>
+			<rom type="file" offset="0x12">YAN2_03.M</rom>
+			<rom type="file" offset="0x13">YAN2_04.M</rom>
+			<rom type="file" offset="0x14">YAN2_06.M</rom>
+			<rom type="file" offset="0x15">YAN2_07.M</rom>
+			<rom type="file" offset="0x16">YAN2_08.M</rom>
+			<rom type="file" offset="0x17">YAN2_09.M</rom>
+			<rom type="file" offset="0x18">YAN2_10.M</rom>
+			<rom type="shell" offset="0">pmd #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x16">YAN2_08.M : オープニング曲</title>
+			<title code="0x10">YAN2_01.M : キャラセレクト曲</title>
+			<title code="0x11">YAN2_02.M : メインゲーム中の曲</title>
+			<title code="0x12">YAN2_03.M : 最終ラウンドの曲</title>
+			<title code="0x13">YAN2_04.M : 結果発表時の曲</title>
+			<title code="0x18">YAN2_10.M : Hシーンの曲A</title>
+			<title code="0x14">YAN2_06.M : Hシーンの曲B</title>
+			<title code="0x17">YAN2_09.M : エンディングの曲</title>
+			<title code="0x15">YAN2_07.M : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] やんやんの激闘同窓会(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">天津堂</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="yanyan2_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x10">YAN2_01.M2</rom>
+			<rom type="file" offset="0x11">YAN2_02.M2</rom>
+			<rom type="file" offset="0x12">YAN2_03.M2</rom>
+			<rom type="file" offset="0x13">YAN2_04.M2</rom>
+			<rom type="file" offset="0x14">YAN2_05.M2</rom>
+			<rom type="file" offset="0x15">YAN2_06.M2</rom>
+			<rom type="file" offset="0x16">YAN2_07.M2</rom>
+			<rom type="file" offset="0x17">YAN2_08.M2</rom>
+			<rom type="file" offset="0x18">YAN2_09.M2</rom>
+			<rom type="shell" offset="0">pmdb2 #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x17">YAN2_08.M2 : オープニング曲</title>
+			<title code="0x10">YAN2_01.M2 : キャラセレクト曲</title>
+			<title code="0x11">YAN2_02.M2 : メインゲーム中の曲</title>
+			<title code="0x12">YAN2_03.M2 : 最終ラウンドの曲</title>
+			<title code="0x13">YAN2_04.M2 : 結果発表時の曲</title>
+			<title code="0x14">YAN2_05.M2 : Hシーンの曲A</title>
+			<title code="0x15">YAN2_06.M2 : Hシーンの曲B</title>
+			<title code="0x18">YAN2_09.M2 : エンディングの曲</title>
+			<title code="0x16">YAN2_07.M2 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] マーシャルエイジ</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">天津堂</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="m_age_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">MPMD.COM</rom>
+			<rom type="file" offset="0x10">BG01.M</rom>
+			<rom type="file" offset="0x11">BG02.M</rom>
+			<rom type="file" offset="0x12">BG03.M</rom>
+			<rom type="file" offset="0x13">BG04.M</rom>
+			<rom type="file" offset="0x14">BG05.M</rom>
+			<rom type="file" offset="0x15">BG06.M</rom>
+			<rom type="file" offset="0x16">BG07.M</rom>
+			<rom type="file" offset="0x17">BG08.M</rom>
+			<rom type="file" offset="0x18">BG08LOOP.M</rom>
+			<rom type="file" offset="0x19">BG09.M</rom>
+			<rom type="file" offset="0x1a">BG10.M</rom>
+			<rom type="file" offset="0x1b">BG11.M</rom>
+			<rom type="file" offset="0x1c">BG12.M</rom>
+			<rom type="file" offset="0x1d">BG13.M</rom>
+			<rom type="file" offset="0x1e">BG14.M</rom>
+			<rom type="file" offset="0x1f">BG15.M</rom>
+			<rom type="shell" offset="0">mpmd /D12 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">BG03.M     : Overture From MARTIAL</title>
+			<title code="0x11">BG02.M     : Select Your?</title>
+			<title code="0x10">BG01.M     : Introduction</title>
+			<title code="0x1f">BG15.M     : Happy town's as You</title>
+			<title code="0x14">BG05.M     : Your FIGHT!!</title>
+			<title code="0x1e">BG14.M     : Noting to your lose</title>
+			<title code="0x15">BG06.M     : SURE??</title>
+			<title code="0x16">BG07.M     : Alone</title>
+			<title code="0x1b">BG11.M     : Believe of Time</title>
+			<title code="0x1c">BG12.M     : Motion my Operation</title>
+			<title code="0x1d">BG13.M     : Luck your</title>
+			<title code="0x13">BG04.M     : Flower Cleam Dream</title>
+			<title code="0x17">BG08.M     : IF……YOU</title>
+			<title code="0x18">BG08LOOP.M : IF……YOU</title>
+			<title code="0x19">BG09.M     : Return To ME</title>
+			<title code="0x1a">BG10.M     : Remember You</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] マーシャルエイジ</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">天津堂</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="mrtlage68snd">
+			<rom type="code">ma68snd.bin</rom>
+			<rom type="code" offset="0x010000">MA.R</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : Introduction</title>
+			<title code="0x02">01 : Select Your?</title>
+			<title code="0x03">02 : Overture From MARTIAL</title>
+			<title code="0x04">03 : Flower Cleam Dream</title>
+			<title code="0x05">04 : Your FIGHT!!</title>
+			<title code="0x06">05 : SURE??</title>
+			<title code="0x07">06 : Alone</title>
+			<title code="0x08">07 : IF……YOU</title>
+			<title code="0x09">08 : Return To ME</title>
+			<title code="0x0a">09 : Remember You</title>
+			<title code="0x0b">0A : Believe of Time</title>
+			<title code="0x0c">0B : Motion my Operation</title>
+			<title code="0x0d">0C : Luck your</title>
+			<title code="0x0e">0D : Noting to your lose</title>
+			<title code="0x0f">0E : Happy town's as You</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] G.R. -グラヴィティ レスポンス-</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">天津堂</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="gr68snd">
+			<rom type="code">gr68snd.bin</rom>
+			<rom type="code" offset="0x010000">GR.R</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : Lovin' KOBE</title>
+			<title code="0x02">01 : どれにするの?</title>
+			<title code="0x03">02 : マイルドセブンの白い風</title>
+			<title code="0x04">03 : 宇宙戦艦大戦争</title>
+			<title code="0x05">04 : ある休日のひと時</title>
+			<title code="0x06">05 : ガンツ先生登場!!</title>
+			<title code="0x07">06 : かもんべぃべ、おぅいぇ!</title>
+			<title code="0x08">07 : ガンツ哀歌(エレジー)</title>
+			<title code="0x09">08 : 冬の夜空に</title>
+			<title code="0x0a">09 : 隷夜</title>
+			<title code="0x0b">0A : 威圧</title>
+			<title code="0x0c">0B : 服従</title>
+			<title code="0x0d">0C : 悲しみの円舞</title>
+			<title code="0x0e">0D : 結末</title>
+		</titlelist>
+	</game>
+</gamelist>

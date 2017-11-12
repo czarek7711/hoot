@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //lip_star -->
+	<game>
+		<name>[PC-98] Estate (エステート) (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">lip_star</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-16"/>
+		</options>
+		<romlist archive="estate_98">
+			<rom type="file" offset="-1">MUSDRV.COM</rom>
+			<rom type="file" offset="-1">MBMUSP.COM</rom>
+			<rom type="file" offset="-1">Este_00s.msb</rom>
+			<rom type="file" offset="-1">Este_01s.msb</rom>
+			<rom type="file" offset="-1">Este_02s.msb</rom>
+			<rom type="file" offset="-1">Este_03s.msb</rom>
+			<rom type="file" offset="-1">Este_04s.msb</rom>
+			<rom type="file" offset="-1">Este_05s.msb</rom>
+			<rom type="conin" offset="0x01">Este_00s.msb</rom>
+			<rom type="conin" offset="0x02">Este_01s.msb</rom>
+			<rom type="conin" offset="0x03">Este_02s.msb</rom>
+			<rom type="conin" offset="0x04">Este_03s.msb</rom>
+			<rom type="conin" offset="0x05">Este_04s.msb</rom>
+			<rom type="conin" offset="0x06">Este_05s.msb</rom>
+			<rom type="shell" offset="0">MUSDRV</rom>
+			<rom type="shell" offset="0">MBMUSP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Este_00s.msb</title>
+			<title code="0x02">Este_01s.msb</title>
+			<title code="0x03">Este_02s.msb</title>
+			<title code="0x04">Este_03s.msb</title>
+			<title code="0x05">Este_04s.msb</title>
+			<title code="0x06">Este_05s.msb</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Estate (エステート) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">lip_star</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-16"/>
+		</options>
+		<romlist archive="estate_98">
+			<rom type="file" offset="-1">MUSDRV.COM</rom>
+			<rom type="file" offset="-1">MBMUSP.COM</rom>
+			<rom type="file" offset="-1">Este_00n.msb</rom>
+			<rom type="file" offset="-1">Este_01n.msb</rom>
+			<rom type="file" offset="-1">Este_02n.msb</rom>
+			<rom type="file" offset="-1">Este_03n.msb</rom>
+			<rom type="file" offset="-1">Este_04n.msb</rom>
+			<rom type="file" offset="-1">Este_05n.msb</rom>
+			<rom type="conin" offset="0x01">Este_00n.msb</rom>
+			<rom type="conin" offset="0x02">Este_01n.msb</rom>
+			<rom type="conin" offset="0x03">Este_02n.msb</rom>
+			<rom type="conin" offset="0x04">Este_03n.msb</rom>
+			<rom type="conin" offset="0x05">Este_04n.msb</rom>
+			<rom type="conin" offset="0x06">Este_05n.msb</rom>
+			<rom type="shell" offset="0">MUSDRV</rom>
+			<rom type="shell" offset="0">MBMUSP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Este_00n.msb</title>
+			<title code="0x02">Este_01n.msb</title>
+			<title code="0x03">Este_02n.msb</title>
+			<title code="0x04">Este_03n.msb</title>
+			<title code="0x05">Este_04n.msb</title>
+			<title code="0x06">Este_05n.msb</title>
+		</titlelist>
+	</game>
+</gamelist>

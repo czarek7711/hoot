@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //KATTY -->
+	<game>
+		<name>[PC-9801] 暗黒千年王国 マジカルキュービック(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KATTY</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ankoku_98">
+			<rom type="file" offset="-1">NA.COM</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">BATTLE1.O</rom>
+			<rom type="file" offset="0x11">BATTLE2.O</rom>
+			<rom type="file" offset="0x12">ENDING.O</rom>
+			<rom type="file" offset="0x13">MAP.O</rom>
+			<rom type="file" offset="0x14">OPENING.O</rom>
+			<rom type="file" offset="0x15">WIN.O</rom>
+			<rom type="shell" offset="0">NA</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x14">OPENING.O</title>
+			<title code="0x10">BATTLE1.O</title>
+			<title code="0x11">BATTLE2.O</title>
+			<title code="0x13">MAP.O</title>
+			<title code="0x15">WIN.O</title>
+			<title code="0x12">ENDING.O</title>
+		</titlelist>
+	</game>
+</gamelist>

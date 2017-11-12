@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //WIZ -->
+	<game>
+		<name>[PC-9801] BURNING DRAGON(OPNA)</name>
+		<driver type="opna">pc98</driver>
+		<driveralias type="NEC PC-9801">WIZ</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x658e"/>
+			<option name="filesize" value="0x200c"/>
+			<option name="datamax" value="0x1a"/>
+			<option name="opn_mix" value="0x200"/>
+		</options>
+		<romlist archive="bd98">
+			<rom type="code" offset="0x00600">bd98.bin</rom>
+			<rom type="code" offset="0x01100">BD_MAIN.COM</rom>
+			<rom type="code" offset="0x0458e">CM_NEIRO.DAT</rom>
+			<rom type="code" offset="0x0638e">CM_ENV.DAT</rom>
+			<rom type="code" offset="0x04d8e">CM_SE.DAT</rom>
+			<rom type="binary" offset="0x01a45">01</rom>
+			<rom type="bgm" offset="0x01">BDC.CMD</rom>
+			<rom type="bgm" offset="0x02">BDX.CMD</rom>
+			<rom type="bgm" offset="0x03">BD_0.CMD</rom>
+			<rom type="bgm" offset="0x04">BD_1.CMD</rom>
+			<rom type="bgm" offset="0x05">BD_2.CMD</rom>
+			<rom type="bgm" offset="0x06">BD_3.CMD</rom>
+			<rom type="bgm" offset="0x07">BD_4.CMD</rom>
+			<rom type="bgm" offset="0x08">BD_5.CMD</rom>
+			<rom type="bgm" offset="0x09">BD_6.CMD</rom>
+			<rom type="bgm" offset="0x0a">BD_BS1.CMD</rom>
+			<rom type="bgm" offset="0x0b">BD_BS2.CMD</rom>
+			<rom type="bgm" offset="0x0c">BD_BS4.CMD</rom>
+			<rom type="bgm" offset="0x0d">BD_BS5.CMD</rom>
+			<rom type="bgm" offset="0x0e">BD_BS6A.CMD</rom>
+			<rom type="bgm" offset="0x0f">BD_BS6B.CMD</rom>
+			<rom type="bgm" offset="0x10">BD_CLEAR.CMD</rom>
+			<rom type="bgm" offset="0x11">BD_DM1.CMD</rom>
+			<rom type="bgm" offset="0x12">BD_DM2.CMD</rom>
+			<rom type="bgm" offset="0x13">BD_END.CMD</rom>
+			<rom type="bgm" offset="0x14">BD_NAME.CMD</rom>
+			<rom type="bgm" offset="0x15">BD_OVER.CMD</rom>
+			<rom type="bgm" offset="0x16">BD_STAFF.CMD</rom>
+			<rom type="bgm" offset="0x17">BD_TITLE.CMD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">演奏停止</title>
+		<!--	<title code="0x02">BDX.CMD      : MUSIC STOP</title> -->
+			<title code="0x11">BD_DM1.CMD   : OPENING DEMO 1</title>
+			<title code="0x12">BD_DM2.CMD   : OPENING DEMO 2</title>
+			<title code="0x17">BD_TITLE.CMD : TITLE LOGO</title>
+		<!--	<title code="0x03">BD_0.CMD     : </title> -->
+			<title code="0x04">BD_1.CMD     : STAGE 1</title>
+			<title code="0x05">BD_2.CMD     : STAGE 2</title>
+			<title code="0x06">BD_3.CMD     : STAGE 3</title>
+			<title code="0x07">BD_4.CMD     : STAGE 4</title>
+			<title code="0x08">BD_5.CMD     : STAGE 5</title>
+			<title code="0x09">BD_6.CMD     : STAGE 6</title>
+			<title code="0x0a">BD_BS1.CMD   : BOSS 1</title>
+			<title code="0x0b">BD_BS2.CMD   : BOSS 2</title>
+			<title code="0x0c">BD_BS4.CMD   : BOSS 4</title>
+			<title code="0x0d">BD_BS5.CMD   : BOSS 5</title>
+			<title code="0x0e">BD_BS6A.CMD  : BOSS 6-A</title>
+			<title code="0x0f">BD_BS6B.CMD  : BOSS 6-B</title>
+			<title code="0x10">BD_CLEAR.CMD : STAGE CLEAR</title>
+			<title code="0x13">BD_END.CMD   : ENDING</title>
+			<title code="0x14">BD_NAME.CMD  : NAME ENTRY</title>
+			<title code="0x01">BDC.CMD      : CONTINUE</title>
+			<title code="0x15">BD_OVER.CMD  : GAME OVER</title>
+			<title code="0x16">BD_STAFF.CMD : STAFF CREDIT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] BURNING DRAGON(OPN)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="NEC PC-9801">WIZ</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x658e"/>
+			<option name="filesize" value="0x200c"/>
+			<option name="datamax" value="0x1a"/>
+			<option name="opn_mix" value="0x200"/>
+		</options>
+		<romlist archive="bd98">
+			<rom type="code" offset="0x00600">bd98.bin</rom>
+			<rom type="code" offset="0x01100">BD_MAIN.COM</rom>
+			<rom type="code" offset="0x0458e">CM_NEIRO.DAT</rom>
+			<rom type="code" offset="0x0638e">CM_ENV.DAT</rom>
+			<rom type="code" offset="0x04d8e">CM_SE.DAT</rom>
+			<rom type="bgm" offset="0x01">BDC.CMD</rom>
+			<rom type="bgm" offset="0x02">BDX.CMD</rom>
+			<rom type="bgm" offset="0x03">BD_0.CMD</rom>
+			<rom type="bgm" offset="0x04">BD_1.CMD</rom>
+			<rom type="bgm" offset="0x05">BD_2.CMD</rom>
+			<rom type="bgm" offset="0x06">BD_3.CMD</rom>
+			<rom type="bgm" offset="0x07">BD_4.CMD</rom>
+			<rom type="bgm" offset="0x08">BD_5.CMD</rom>
+			<rom type="bgm" offset="0x09">BD_6.CMD</rom>
+			<rom type="bgm" offset="0x0a">BD_BS1.CMD</rom>
+			<rom type="bgm" offset="0x0b">BD_BS2.CMD</rom>
+			<rom type="bgm" offset="0x0c">BD_BS4.CMD</rom>
+			<rom type="bgm" offset="0x0d">BD_BS5.CMD</rom>
+			<rom type="bgm" offset="0x0e">BD_BS6A.CMD</rom>
+			<rom type="bgm" offset="0x0f">BD_BS6B.CMD</rom>
+			<rom type="bgm" offset="0x10">BD_CLEAR.CMD</rom>
+			<rom type="bgm" offset="0x11">BD_DM1.CMD</rom>
+			<rom type="bgm" offset="0x12">BD_DM2.CMD</rom>
+			<rom type="bgm" offset="0x13">BD_END.CMD</rom>
+			<rom type="bgm" offset="0x14">BD_NAME.CMD</rom>
+			<rom type="bgm" offset="0x15">BD_OVER.CMD</rom>
+			<rom type="bgm" offset="0x16">BD_STAFF.CMD</rom>
+			<rom type="bgm" offset="0x17">BD_TITLE.CMD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">演奏停止</title>
+		<!--	<title code="0x02">BDX.CMD      : MUSIC STOP</title> -->
+			<title code="0x11">BD_DM1.CMD   : OPENING DEMO 1</title>
+			<title code="0x12">BD_DM2.CMD   : OPENING DEMO 2</title>
+			<title code="0x17">BD_TITLE.CMD : TITLE LOGO</title>
+		<!--	<title code="0x03">BD_0.CMD     : </title> -->
+			<title code="0x04">BD_1.CMD     : STAGE 1</title>
+			<title code="0x05">BD_2.CMD     : STAGE 2</title>
+			<title code="0x06">BD_3.CMD     : STAGE 3</title>
+			<title code="0x07">BD_4.CMD     : STAGE 4</title>
+			<title code="0x08">BD_5.CMD     : STAGE 5</title>
+			<title code="0x09">BD_6.CMD     : STAGE 6</title>
+			<title code="0x0a">BD_BS1.CMD   : BOSS 1</title>
+			<title code="0x0b">BD_BS2.CMD   : BOSS 2</title>
+			<title code="0x0c">BD_BS4.CMD   : BOSS 4</title>
+			<title code="0x0d">BD_BS5.CMD   : BOSS 5</title>
+			<title code="0x0e">BD_BS6A.CMD  : BOSS 6-A</title>
+			<title code="0x0f">BD_BS6B.CMD  : BOSS 6-B</title>
+			<title code="0x10">BD_CLEAR.CMD : STAGE CLEAR</title>
+			<title code="0x13">BD_END.CMD   : ENDING</title>
+			<title code="0x14">BD_NAME.CMD  : NAME ENTRY</title>
+			<title code="0x01">BDC.CMD      : CONTINUE</title>
+			<title code="0x15">BD_OVER.CMD  : GAME OVER</title>
+			<title code="0x16">BD_STAFF.CMD : STAFF CREDIT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] BURNING DRAGON PLUS(OPNA)</name>
+		<driver type="opna">pc98</driver>
+		<driveralias type="NEC PC-9801">WIZ</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x658e"/>
+			<option name="filesize" value="0x200c"/>
+			<option name="datamax" value="0x1a"/>
+			<option name="opn_mix" value="0x200"/>
+		</options>
+		<romlist archive="bdp98">
+			<rom type="code" offset="0x00600">bdp98.bin</rom>
+			<rom type="code" offset="0x01100">BD_MAIN.COM</rom>
+			<rom type="code" offset="0x0458e">CM_NEIRO.DAT</rom>
+			<rom type="code" offset="0x0638e">CM_ENV.DAT</rom>
+			<rom type="code" offset="0x04d8e">CM_SE.DAT</rom>
+			<rom type="binary" offset="0x01a24">01</rom>
+			<rom type="bgm" offset="0x01">BDC.CMD</rom>
+			<rom type="bgm" offset="0x02">BDX.CMD</rom>
+			<rom type="bgm" offset="0x03">BD_1.CMD</rom>
+			<rom type="bgm" offset="0x04">BD_2.CMD</rom>
+			<rom type="bgm" offset="0x05">BD_3.CMD</rom>
+			<rom type="bgm" offset="0x06">BD_4.CMD</rom>
+			<rom type="bgm" offset="0x07">BD_5.CMD</rom>
+			<rom type="bgm" offset="0x08">BD_6.CMD</rom>
+			<rom type="bgm" offset="0x09">BD_7.CMD</rom>
+			<rom type="bgm" offset="0x0a">BD_BS1_2.CMD</rom>
+			<rom type="bgm" offset="0x0b">BD_BS3_5.CMD</rom>
+			<rom type="bgm" offset="0x0c">BD_BS4.CMD</rom>
+			<rom type="bgm" offset="0x0d">BD_BS6.CMD</rom>
+			<rom type="bgm" offset="0x0e">BD_BS7A.CMD</rom>
+			<rom type="bgm" offset="0x0f">BD_BS7B.CMD</rom>
+			<rom type="bgm" offset="0x10">BD_CLEAR.CMD</rom>
+			<rom type="bgm" offset="0x11">BD_DM1.CMD</rom>
+			<rom type="bgm" offset="0x12">BD_DM2.CMD</rom>
+			<rom type="bgm" offset="0x13">BD_END.CMD</rom>
+			<rom type="bgm" offset="0x14">BD_END2.CMD</rom>
+			<rom type="bgm" offset="0x15">BD_NAME.CMD</rom>
+			<rom type="bgm" offset="0x16">BD_OVER.CMD</rom>
+			<rom type="bgm" offset="0x17">BD_SEL.CMD</rom>
+			<rom type="bgm" offset="0x18">BD_STAFF.CMD</rom>
+			<rom type="bgm" offset="0x19">BD_TITLE.CMD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">演奏停止</title>
+		<!--	<title code="0x02">BDX.CMD      : MUSIC STOP</title> -->
+			<title code="0x11">BD_DM1.CMD   : OPENING DEMO 1</title>
+			<title code="0x12">BD_DM2.CMD   : OPENING DEMO 2</title>
+			<title code="0x19">BD_TITLE.CMD : TITLE LOGO</title>
+			<title code="0x17">BD_SEL.CMD   : MACHINE SELECT</title>
+			<title code="0x03">BD_1.CMD     : STAGE 1</title>
+			<title code="0x04">BD_2.CMD     : STAGE 2</title>
+			<title code="0x05">BD_3.CMD     : STAGE 3</title>
+			<title code="0x06">BD_4.CMD     : STAGE 4</title>
+			<title code="0x07">BD_5.CMD     : STAGE 5</title>
+			<title code="0x08">BD_6.CMD     : STAGE 6</title>
+			<title code="0x09">BD_7.CMD     : STAGE 7</title>
+			<title code="0x0a">BD_BS1_2.CMD : BOSS 1,2</title>
+			<title code="0x0b">BD_BS3_5.CMD : BOSS 3,5</title>
+			<title code="0x0c">BD_BS4.CMD   : BOSS 4</title>
+			<title code="0x0d">BD_BS6.CMD   : BOSS 6</title>
+			<title code="0x0e">BD_BS7A.CMD  : BOSS 7-A</title>
+			<title code="0x0f">BD_BS7B.CMD  : BOSS 7-B</title>
+			<title code="0x10">BD_CLEAR.CMD : STAGE CLEAR</title>
+			<title code="0x13">BD_END.CMD   : ENDING 1</title>
+			<title code="0x14">BD_END2.CMD  : ENDING 2</title>
+			<title code="0x18">BD_STAFF.CMD : STAFF CREDIT</title>
+			<title code="0x15">BD_NAME.CMD  : NAME ENTRY</title>
+			<title code="0x16">BD_OVER.CMD  : GAME OVER</title>
+			<title code="0x01">BDC.CMD      : BEST PLAYERS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] BURNING DRAGON PLUS(OPN)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="NEC PC-9801">WIZ</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x658e"/>
+			<option name="filesize" value="0x200c"/>
+			<option name="datamax" value="0x1a"/>
+			<option name="opn_mix" value="0x200"/>
+		</options>
+		<romlist archive="bdp98">
+			<rom type="code" offset="0x00600">bdp98.bin</rom>
+			<rom type="code" offset="0x01100">BD_MAIN.COM</rom>
+			<rom type="code" offset="0x0458e">CM_NEIRO.DAT</rom>
+			<rom type="code" offset="0x0638e">CM_ENV.DAT</rom>
+			<rom type="code" offset="0x04d8e">CM_SE.DAT</rom>
+			<rom type="bgm" offset="0x01">BDC.CMD</rom>
+			<rom type="bgm" offset="0x02">BDX.CMD</rom>
+			<rom type="bgm" offset="0x03">BD_1.CMD</rom>
+			<rom type="bgm" offset="0x04">BD_2.CMD</rom>
+			<rom type="bgm" offset="0x05">BD_3.CMD</rom>
+			<rom type="bgm" offset="0x06">BD_4.CMD</rom>
+			<rom type="bgm" offset="0x07">BD_5.CMD</rom>
+			<rom type="bgm" offset="0x08">BD_6.CMD</rom>
+			<rom type="bgm" offset="0x09">BD_7.CMD</rom>
+			<rom type="bgm" offset="0x0a">BD_BS1_2.CMD</rom>
+			<rom type="bgm" offset="0x0b">BD_BS3_5.CMD</rom>
+			<rom type="bgm" offset="0x0c">BD_BS4.CMD</rom>
+			<rom type="bgm" offset="0x0d">BD_BS6.CMD</rom>
+			<rom type="bgm" offset="0x0e">BD_BS7A.CMD</rom>
+			<rom type="bgm" offset="0x0f">BD_BS7B.CMD</rom>
+			<rom type="bgm" offset="0x10">BD_CLEAR.CMD</rom>
+			<rom type="bgm" offset="0x11">BD_DM1.CMD</rom>
+			<rom type="bgm" offset="0x12">BD_DM2.CMD</rom>
+			<rom type="bgm" offset="0x13">BD_END.CMD</rom>
+			<rom type="bgm" offset="0x14">BD_END2.CMD</rom>
+			<rom type="bgm" offset="0x15">BD_NAME.CMD</rom>
+			<rom type="bgm" offset="0x16">BD_OVER.CMD</rom>
+			<rom type="bgm" offset="0x17">BD_SEL.CMD</rom>
+			<rom type="bgm" offset="0x18">BD_STAFF.CMD</rom>
+			<rom type="bgm" offset="0x19">BD_TITLE.CMD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">演奏停止</title>
+		<!--	<title code="0x02">BDX.CMD      : MUSIC STOP</title> -->
+			<title code="0x11">BD_DM1.CMD   : OPENING DEMO 1</title>
+			<title code="0x12">BD_DM2.CMD   : OPENING DEMO 2</title>
+			<title code="0x19">BD_TITLE.CMD : TITLE LOGO</title>
+			<title code="0x17">BD_SEL.CMD   : MACHINE SELECT</title>
+			<title code="0x03">BD_1.CMD     : STAGE 1</title>
+			<title code="0x04">BD_2.CMD     : STAGE 2</title>
+			<title code="0x05">BD_3.CMD     : STAGE 3</title>
+			<title code="0x06">BD_4.CMD     : STAGE 4</title>
+			<title code="0x07">BD_5.CMD     : STAGE 5</title>
+			<title code="0x08">BD_6.CMD     : STAGE 6</title>
+			<title code="0x09">BD_7.CMD     : STAGE 7</title>
+			<title code="0x0a">BD_BS1_2.CMD : BOSS 1,2</title>
+			<title code="0x0b">BD_BS3_5.CMD : BOSS 3,5</title>
+			<title code="0x0c">BD_BS4.CMD   : BOSS 4</title>
+			<title code="0x0d">BD_BS6.CMD   : BOSS 6</title>
+			<title code="0x0e">BD_BS7A.CMD  : BOSS 7-A</title>
+			<title code="0x0f">BD_BS7B.CMD  : BOSS 7-B</title>
+			<title code="0x10">BD_CLEAR.CMD : STAGE CLEAR</title>
+			<title code="0x13">BD_END.CMD   : ENDING 1</title>
+			<title code="0x14">BD_END2.CMD  : ENDING 2</title>
+			<title code="0x18">BD_STAFF.CMD : STAFF CREDIT</title>
+			<title code="0x15">BD_NAME.CMD  : NAME ENTRY</title>
+			<title code="0x16">BD_OVER.CMD  : GAME OVER</title>
+			<title code="0x01">BDC.CMD      : BEST PLAYERS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] CRW</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">WIZ</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="crw_98">
+			<rom type="file" offset="-1">nlp_hoot.com</rom>
+			<rom type="file" offset="-1">NL.COM</rom>
+			<rom type="file" offset="-1">TONE.DTA</rom>
+			<rom type="file" offset="0x10">MJ_00.O</rom>
+			<rom type="file" offset="0x11">MJ_01.O</rom>
+			<rom type="file" offset="0x12">MJ_02.O</rom>
+			<rom type="file" offset="0x13">MJ_03.O</rom>
+			<rom type="file" offset="0x14">MJ_04.O</rom>
+			<rom type="file" offset="0x15">MJ_05.O</rom>
+			<rom type="file" offset="0x16">MJ_06.O</rom>
+			<rom type="file" offset="0x17">MJ_07.O</rom>
+			<rom type="file" offset="0x18">MJ_08.O</rom>
+			<rom type="file" offset="0x19">MJ_09.O</rom>
+			<rom type="file" offset="0x1a">MJ_10.O</rom>
+			<rom type="file" offset="0x1b">MJ_11.O</rom>
+			<rom type="file" offset="0x1c">MJ_12.O</rom>
+			<rom type="file" offset="0x1d">MJ_13.O</rom>
+			<rom type="file" offset="0x1e">MJ_14.O</rom>
+			<rom type="file" offset="0x1f">MJ_15.O</rom>
+			<rom type="shell" offset="0">nl</rom>
+			<rom type="shell" offset="0">nlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MJ_00.O</title>
+			<title code="0x11">MJ_01.O</title>
+			<title code="0x12">MJ_02.O</title>
+			<title code="0x13">MJ_03.O</title>
+			<title code="0x14">MJ_04.O</title>
+			<title code="0x15">MJ_05.O</title>
+			<title code="0x16">MJ_06.O</title>
+			<title code="0x17">MJ_07.O</title>
+			<title code="0x18">MJ_08.O</title>
+			<title code="0x19">MJ_09.O</title>
+			<title code="0x1a">MJ_10.O</title>
+			<title code="0x1b">MJ_11.O</title>
+			<title code="0x1c">MJ_12.O</title>
+			<title code="0x1d">MJ_13.O</title>
+			<title code="0x1e">MJ_14.O</title>
+			<title code="0x1f">MJ_15.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] CRW2(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">WIZ</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="crw2_98">
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">NAX.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="11">CR2_00.O</rom>
+			<rom type="file" offset="12">CR2_01.O</rom>
+			<rom type="file" offset="13">CR2_02.O</rom>
+			<rom type="file" offset="14">CR2_03.O</rom>
+			<rom type="file" offset="15">CR2_04.O</rom>
+			<rom type="file" offset="16">CR2_05.O</rom>
+			<rom type="file" offset="17">CR2_06.O</rom>
+			<rom type="file" offset="18">CR2_07.O</rom>
+			<rom type="file" offset="19">CR2_08.O</rom>
+			<rom type="file" offset="20">CR2_09.O</rom>
+			<rom type="file" offset="21">CR2_10.O</rom>
+			<rom type="file" offset="22">CR2_11.O</rom>
+			<rom type="file" offset="23">CR2_12.O</rom>
+			<rom type="file" offset="24">CR2_13.O</rom>
+			<rom type="file" offset="25">CR2_14.O</rom>
+			<rom type="file" offset="26">CR2_15.O</rom>
+			<rom type="file" offset="27">CR2_16.O</rom>
+			<rom type="file" offset="28">CR2_17.O</rom>
+			<rom type="file" offset="29">CR2_18.O</rom>
+			<rom type="file" offset="30">CR2_19.O</rom>
+			<rom type="file" offset="31">CR2_20.O</rom>
+			<rom type="file" offset="32">CR2_21.O</rom>
+			<rom type="file" offset="33">CR2_22.O</rom>
+			<rom type="shell" offset="0">NAX</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">CR2_00.O</title>
+			<title code="12">CR2_01.O</title>
+			<title code="13">CR2_02.O</title>
+			<title code="14">CR2_03.O</title>
+			<title code="15">CR2_04.O</title>
+			<title code="16">CR2_05.O</title>
+			<title code="17">CR2_06.O</title>
+			<title code="18">CR2_07.O</title>
+			<title code="19">CR2_08.O</title>
+			<title code="20">CR2_09.O</title>
+			<title code="21">CR2_10.O</title>
+			<title code="22">CR2_11.O</title>
+			<title code="23">CR2_12.O</title>
+			<title code="24">CR2_13.O</title>
+			<title code="25">CR2_14.O</title>
+			<title code="26">CR2_15.O</title>
+			<title code="27">CR2_16.O</title>
+			<title code="28">CR2_17.O</title>
+			<title code="29">CR2_18.O</title>
+			<title code="30">CR2_19.O</title>
+			<title code="31">CR2_20.O</title>
+			<title code="32">CR2_21.O</title>
+			<title code="33">CR2_22.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] モンスターメーカー マジックマスター</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">WIZ</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mmaker2_98">
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">NL.COM</rom>
+			<rom type="file" offset="-1">TONE.DTA</rom>
+			<rom type="file" offset="11">MM2_01A.O</rom>
+			<rom type="file" offset="12">MM2_01B.O</rom>
+			<rom type="file" offset="13">MM2_02A.O</rom>
+			<rom type="file" offset="14">MM2_02B.O</rom>
+			<rom type="file" offset="15">MM2_03A.O</rom>
+			<rom type="file" offset="16">MM2_03B.O</rom>
+			<rom type="file" offset="17">MM2_04A.O</rom>
+			<rom type="file" offset="18">MM2_04B.O</rom>
+			<rom type="file" offset="19">MM2_04C.O</rom>
+			<rom type="file" offset="20">MM2_04D.O</rom>
+			<rom type="file" offset="21">MM2_06.O</rom>
+			<rom type="file" offset="22">MM2_08.O</rom>
+			<rom type="file" offset="23">MM2_END.O</rom>
+			<rom type="file" offset="24">MM2_GO.O</rom>
+			<rom type="file" offset="25">MM2_OP.O</rom>
+			<rom type="file" offset="26">MM2_TT.O</rom>
+			<rom type="shell" offset="0">NL</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">MM2_01A.O</title>
+			<title code="12">MM2_01B.O</title>
+			<title code="13">MM2_02A.O</title>
+			<title code="14">MM2_02B.O</title>
+			<title code="15">MM2_03A.O</title>
+			<title code="16">MM2_03B.O</title>
+			<title code="17">MM2_04A.O</title>
+			<title code="18">MM2_04B.O</title>
+			<title code="19">MM2_04C.O</title>
+			<title code="20">MM2_04D.O</title>
+			<title code="21">MM2_06.O</title>
+			<title code="22">MM2_08.O</title>
+			<title code="23">MM2_END.O</title>
+			<title code="24">MM2_GO.O</title>
+			<title code="25">MM2_OP.O</title>
+			<title code="26">MM2_TT.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] モンスターメーカー</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">WIZ</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mmaker_98">
+			<rom type="file" offset="-1">mmake_98.com</rom>
+			<rom type="file" offset="-1">SND7A.COM</rom>
+			<rom type="file" offset="11">ARAB.SND</rom>
+			<rom type="file" offset="12">CHIN.SND</rom>
+			<rom type="file" offset="13">FLEU.SND</rom>
+			<rom type="file" offset="14">IHUU.SND</rom>
+			<rom type="file" offset="15">KONP.SND</rom>
+			<rom type="file" offset="16">MARC.SND</rom>
+			<rom type="file" offset="17">MINI.SND</rom>
+			<rom type="file" offset="18">MIRL.SND</rom>
+			<rom type="file" offset="19">TREP.SND</rom>
+			<rom type="shell" offset="0">snd7a</rom>
+			<rom type="shell" offset="0">mmake_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">ARAB.SND : </title>
+			<title code="12">CHIN.SND : </title>
+			<title code="13">FLEU.SND : </title>
+			<title code="14">IHUU.SND : </title>
+			<title code="15">KONP.SND : </title>
+			<title code="16">MARC.SND : </title>
+			<title code="17">MINI.SND : </title>
+			<title code="18">MIRL.SND : </title>
+			<title code="19">TREP.SND : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ブロッククエスト V</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">WIZ</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="blockq_98">
+			<rom type="file" offset="-1">NL.COM</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">BQ_CLEAR.O</rom>
+			<rom type="file" offset="0x11">BQ_COSM.O</rom>
+			<rom type="file" offset="0x12">BQ_COSM2.O</rom>
+			<rom type="file" offset="0x13">BQ_END.O</rom>
+			<rom type="file" offset="0x14">BQ_GOVER.O</rom>
+			<rom type="file" offset="0x15">BQ_HEART.O</rom>
+			<rom type="file" offset="0x16">BQ_HOSHI.O</rom>
+			<rom type="file" offset="0x17">BQ_OVER.O</rom>
+			<rom type="file" offset="0x18">BQ_QUEST.O</rom>
+			<rom type="file" offset="0x19">BQ_ST.O</rom>
+			<rom type="file" offset="0x1a">BQ_TITLE.O</rom>
+			<rom type="file" offset="0x1b">BQ_VIS.O</rom>
+			<rom type="shell" offset="0">NL -f9 -i</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1a">BQ_TITLE.O</title>
+			<title code="0x18">BQ_QUEST.O</title>
+			<title code="0x19">BQ_ST.O</title>
+			<title code="0x11">BQ_COSM.O</title>
+			<title code="0x12">BQ_COSM2.O</title>
+			<title code="0x10">BQ_CLEAR.O</title>
+			<title code="0x1b">BQ_VIS.O</title>
+			<title code="0x17">BQ_OVER.O</title>
+			<title code="0x14">BQ_GOVER.O</title>
+			<title code="0x15">BQ_HEART.O</title>
+			<title code="0x16">BQ_HOSHI.O</title>
+			<title code="0x13">BQ_END.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PACMAN(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">WIZ</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pacman_98">
+			<rom type="file" offset="-1">mmake_98.com</rom>
+			<rom type="file" offset="-1">SND7.COM</rom>
+			<rom type="file" offset="10">PACMAIN0.SND</rom>
+			<rom type="file" offset="11">PACMAIN1.SND</rom>
+			<rom type="file" offset="12">PACMAIN2.SND</rom>
+			<rom type="file" offset="13">PACMAIN3.SND</rom>
+			<rom type="file" offset="14">PACMAIN4.SND</rom>
+			<rom type="file" offset="15">PACMAIN5.SND</rom>
+			<rom type="file" offset="16">PACMAIN6.SND</rom>
+			<rom type="file" offset="17">PACMAIN7.SND</rom>
+			<rom type="shell" offset="0">snd7</rom>
+			<rom type="shell" offset="0">mmake_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="10">PACMAIN0.SND : </title>
+			<title code="11">PACMAIN1.SND : </title>
+			<title code="12">PACMAIN2.SND : </title>
+			<title code="13">PACMAIN3.SND : </title>
+			<title code="14">PACMAIN4.SND : </title>
+			<title code="15">PACMAIN5.SND : </title>
+			<title code="16">PACMAIN6.SND : </title>
+			<title code="17">PACNAIN7.SND : </title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //heartsoft -->
+	<game>
+		<name>[PC-88] Heavy Armed Storming Vehicle -Vaxol- (ヴァクソル)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">heartsoft</driveralias>
+		<romlist archive="vaxol">
+			<rom type="code" offset="0x0100">PATCH</rom>
+			<rom type="code" offset="0xe000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x08">MUS06</rom>
+			<rom type="bgm" offset="0x09">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening Title</title>
+			<title code="0x01">BGM #1</title>
+			<title code="0x02">BGM #2</title>
+			<title code="0x03">BGM #3</title>
+			<title code="0x04">BGM #4</title>
+			<title code="0x05">BGM #5</title>
+			<title code="0x08">BGM #6</title>
+			<title code="0x09">BGM #7</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Tanteidan X (探偵団Ｘ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">heartsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="tanteix">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">N88_3.ROM</rom>
+			<rom type="code" offset="0xf000">PLY88.B</rom>
+			<rom type="bgm" offset="0x00">BATTLE.X</rom>
+			<rom type="bgm" offset="0x01">BEAR1.X</rom>
+			<rom type="bgm" offset="0x02">BEAR2.X</rom>
+			<rom type="bgm" offset="0x03">BEAR3.X</rom>
+			<rom type="bgm" offset="0x04">BLIGHT.X</rom>
+			<rom type="bgm" offset="0x05">BUSY.X</rom>
+			<rom type="bgm" offset="0x06">CAT1.X</rom>
+			<rom type="bgm" offset="0x07">CAT2.X</rom>
+			<rom type="bgm" offset="0x08">FEAR.X</rom>
+			<rom type="bgm" offset="0x09">KING1.X</rom>
+			<rom type="bgm" offset="0x0a">KING2.X</rom>
+			<rom type="bgm" offset="0x0b">KING3.X</rom>
+			<rom type="bgm" offset="0x0c">KOHMON.X</rom>
+			<rom type="bgm" offset="0x0d">RIDER.X</rom>
+			<rom type="bgm" offset="0x0e">SE1.X</rom>
+			<rom type="bgm" offset="0x0f">SE2.X</rom>
+			<rom type="bgm" offset="0x10">SE3.X</rom>
+			<rom type="bgm" offset="0x11">SE5.X</rom>
+			<rom type="bgm" offset="0x12">TABU.X</rom>
+			<rom type="bgm" offset="0x13">THEME.X</rom>
+			<rom type="bgm" offset="0x14">XEND.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BATTLE.X</title>
+			<title code="0x01">BEAR1.X</title>
+			<title code="0x02">BEAR2.X</title>
+			<title code="0x03">BEAR3.X</title>
+			<title code="0x04">BLIGHT.X</title>
+			<title code="0x05">BUSY.X</title>
+			<title code="0x06">CAT1.X</title>
+			<title code="0x07">CAT2.X</title>
+			<title code="0x08">FEAR.X</title>
+			<title code="0x09">KING1.X</title>
+			<title code="0x0a">KING2.X</title>
+			<title code="0x0b">KING3.X</title>
+			<title code="0x0c">KOHMON.X</title>
+			<title code="0x0d">RIDER.X</title>
+			<title code="0x0e">SE1.X</title>
+			<title code="0x0f">SE2.X</title>
+			<title code="0x10">SE3.X</title>
+			<title code="0x11">SE5.X</title>
+			<title code="0x12">TABU.X</title>
+			<title code="0x13">THEME.X</title>
+			<title code="0x14">XEND.X</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Kaettekita Tanteidan X (帰ってきた探偵団Ｘ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">heartsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="tanteix2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">N88_3.ROM</rom>
+			<rom type="code" offset="0xf000">PLY88</rom>
+			<rom type="bgm" offset="0x00">BGM1.X</rom>
+			<rom type="bgm" offset="0x01">BGM2.X</rom>
+			<rom type="bgm" offset="0x02">BGM3.X</rom>
+			<rom type="bgm" offset="0x03">CURRY.X</rom>
+			<rom type="bgm" offset="0x04">DOMEST.X</rom>
+			<rom type="bgm" offset="0x05">ENDING.X</rom>
+			<rom type="bgm" offset="0x06">F1A.X</rom>
+			<rom type="bgm" offset="0x07">F1B.X</rom>
+			<rom type="bgm" offset="0x08">F1C.X</rom>
+			<rom type="bgm" offset="0x09">FIGHT.X</rom>
+			<rom type="bgm" offset="0x0a">GMOVER.X</rom>
+			<rom type="bgm" offset="0x0b">HEART.X</rom>
+			<rom type="bgm" offset="0x0c">INSIDE.X</rom>
+			<rom type="bgm" offset="0x0d">JAIL.X</rom>
+			<rom type="bgm" offset="0x0e">MARIN.X</rom>
+			<rom type="bgm" offset="0x0f">SAKE.X</rom>
+			<rom type="bgm" offset="0x10">SE1.X</rom>
+			<rom type="bgm" offset="0x11">SE2.X</rom>
+			<rom type="bgm" offset="0x12">SHARK.X</rom>
+			<rom type="bgm" offset="0x13">TITLE.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM1.X</title>
+			<title code="0x01">BGM2.X</title>
+			<title code="0x02">BGM3.X</title>
+			<title code="0x03">CURRY.X</title>
+			<title code="0x04">DOMEST.X</title>
+			<title code="0x05">ENDING.X</title>
+			<title code="0x06">F1A.X</title>
+			<title code="0x07">F1B.X</title>
+			<title code="0x08">F1C.X</title>
+			<title code="0x09">FIGHT.X</title>
+			<title code="0x0a">GMOVER.X</title>
+			<title code="0x0b">HEART.X</title>
+			<title code="0x0c">INSIDE.X</title>
+			<title code="0x0d">JAIL.X</title>
+			<title code="0x0e">MARIN.X</title>
+			<title code="0x0f">SAKE.X</title>
+			<title code="0x10">SE1.X</title>
+			<title code="0x11">SE2.X</title>
+			<title code="0x12">SHARK.X</title>
+			<title code="0x13">TITLE.X</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Xantgenos (キサントゲノス 魔性甦る時)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">heartsoft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="xantgeno_98">
+			<rom type="file" offset="-1">SDN_98.COM</rom>
+			<rom type="file" offset="0x09">SDN.COM</rom>
+			<rom type="file" offset="0x10">WXA</rom>
+			<rom type="file" offset="0x11">WXB</rom>
+			<rom type="file" offset="0x12">WXC</rom>
+			<rom type="file" offset="0x13">WXD</rom>
+			<rom type="file" offset="0x14">WXE</rom>
+			<rom type="file" offset="0x15">WXF</rom>
+			<rom type="file" offset="0x16">WXG</rom>
+			<rom type="file" offset="0x17">WXH</rom>
+			<rom type="file" offset="0x18">WXI</rom>
+			<rom type="file" offset="0x19">WXJ</rom>
+			<rom type="file" offset="0x1a">WXK</rom>
+			<rom type="file" offset="0x1b">WXL</rom>
+			<rom type="file" offset="0x1c">WXM</rom>
+			<rom type="file" offset="0x1d">WXN</rom>
+			<rom type="file" offset="0x1e">WXO</rom>
+			<rom type="file" offset="0x1f">WXP</rom>
+			<rom type="file" offset="0x20">WXEF</rom>
+			<rom type="shell" offset="0">SDN_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WXA</title>
+			<title code="0x11">WXB</title>
+			<title code="0x12">WXC</title>
+			<title code="0x13">WXD</title>
+			<title code="0x14">WXE</title>
+			<title code="0x15">WXF</title>
+			<title code="0x16">WXG</title>
+			<title code="0x17">WXH</title>
+			<title code="0x18">WXI</title>
+			<title code="0x19">WXJ</title>
+			<title code="0x1a">WXK</title>
+			<title code="0x1b">WXL</title>
+			<title code="0x1c">WXM</title>
+			<title code="0x1d">WXN</title>
+			<title code="0x1e">WXO</title>
+			<title code="0x1f">WXP</title>
+			<title code="0x20">WXEF</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Giddy 2 (ギディ２)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">heartsoft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="giddy2_98">
+			<rom type="file" offset="-1">SDN_98.COM</rom>
+			<rom type="file" offset="0x09">SDN.COM</rom>
+			<rom type="file" offset="0x10">BGM00.X</rom>
+			<rom type="file" offset="0x11">BGM01.X</rom>
+			<rom type="file" offset="0x12">BGM02.X</rom>
+			<rom type="file" offset="0x13">BGM03.X</rom>
+			<rom type="file" offset="0x14">BGM04.X</rom>
+			<rom type="file" offset="0x15">BGM05.X</rom>
+			<rom type="file" offset="0x16">BGM06.X</rom>
+			<rom type="file" offset="0x17">BGM07.X</rom>
+			<rom type="file" offset="0x18">BGM08.X</rom>
+			<rom type="file" offset="0x19">BGM09.X</rom>
+			<rom type="file" offset="0x1a">BGM10.X</rom>
+			<rom type="file" offset="0x1b">BGM11.X</rom>
+			<rom type="file" offset="0x1c">BGM12.X</rom>
+			<rom type="file" offset="0x1d">BGM13.X</rom>
+			<rom type="file" offset="0x1e">BGM14.X</rom>
+			<rom type="file" offset="0x1f">BGM15.X</rom>
+			<rom type="file" offset="0x20">BGM16.X</rom>
+			<rom type="file" offset="0x21">BGM17.X</rom>
+			<rom type="file" offset="0x22">BGM18.X</rom>
+			<rom type="file" offset="0x23">BGM19.X</rom>
+			<rom type="file" offset="0x24">SE1</rom>
+			<rom type="file" offset="0x25">SE2</rom>
+			<rom type="file" offset="0x26">SE3</rom>
+			<rom type="file" offset="0x27">SE4</rom>
+			<rom type="file" offset="0x28">SE5</rom>
+			<rom type="file" offset="0x29">SE6</rom>
+			<rom type="file" offset="0x2a">SE7</rom>
+			<rom type="file" offset="0x2b">SE8</rom>
+			<rom type="shell" offset="0">SDN_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM00.X</title>
+			<title code="0x11">BGM01.X</title>
+			<title code="0x12">BGM02.X</title>
+			<title code="0x13">BGM03.X</title>
+			<title code="0x14">BGM04.X</title>
+			<title code="0x15">BGM05.X</title>
+			<title code="0x16">BGM06.X</title>
+			<title code="0x17">BGM07.X</title>
+			<title code="0x18">BGM08.X</title>
+			<title code="0x19">BGM09.X</title>
+			<title code="0x1a">BGM10.X</title>
+			<title code="0x1b">BGM11.X</title>
+			<title code="0x1c">BGM12.X</title>
+			<title code="0x1d">BGM13.X</title>
+			<title code="0x1e">BGM14.X</title>
+			<title code="0x1f">BGM15.X</title>
+			<title code="0x20">BGM16.X</title>
+			<title code="0x21">BGM17.X</title>
+			<title code="0x22">BGM18.X</title>
+			<title code="0x23">BGM19.X</title>
+			<title code="0x24">SE1</title>
+			<title code="0x25">SE2</title>
+			<title code="0x26">SE3</title>
+			<title code="0x27">SE4</title>
+			<title code="0x28">SE5</title>
+			<title code="0x29">SE6</title>
+			<title code="0x2a">SE7</title>
+			<title code="0x2b">SE8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Shared Magic (シャレイドマジック)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">heartsoft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="sharedem_98">
+			<rom type="file" offset="-1">SDN_98.COM</rom>
+			<rom type="file" offset="0x09">SDN.COM</rom>
+			<rom type="file" offset="0x10">BGM00.X</rom>
+			<rom type="file" offset="0x11">BGM01.X</rom>
+			<rom type="file" offset="0x12">BGM02.X</rom>
+			<rom type="file" offset="0x13">BGM03.X</rom>
+			<rom type="file" offset="0x14">BGM04.X</rom>
+			<rom type="file" offset="0x15">BGM05.X</rom>
+			<rom type="file" offset="0x16">BGM06.X</rom>
+			<rom type="file" offset="0x17">BGM07.X</rom>
+			<rom type="file" offset="0x18">BGM08.X</rom>
+			<rom type="file" offset="0x19">BGM09.X</rom>
+			<rom type="file" offset="0x1a">BGM10.X</rom>
+			<rom type="file" offset="0x1b">BGM11.X</rom>
+			<rom type="file" offset="0x1c">BGM12.X</rom>
+			<rom type="file" offset="0x1d">BGM13.X</rom>
+			<rom type="file" offset="0x1e">BGM14.X</rom>
+			<rom type="file" offset="0x1f">BGM15.X</rom>
+			<rom type="file" offset="0x20">BGM99.X</rom>
+			<rom type="file" offset="0x21">CAT.X</rom>
+			<rom type="shell" offset="0">SDN_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM00.X</title>
+			<title code="0x11">BGM01.X</title>
+			<title code="0x12">BGM02.X</title>
+			<title code="0x13">BGM03.X</title>
+			<title code="0x14">BGM04.X</title>
+			<title code="0x15">BGM05.X</title>
+			<title code="0x16">BGM06.X</title>
+			<title code="0x17">BGM07.X</title>
+			<title code="0x18">BGM08.X</title>
+			<title code="0x19">BGM09.X</title>
+			<title code="0x1a">BGM10.X</title>
+			<title code="0x1b">BGM11.X</title>
+			<title code="0x1c">BGM12.X</title>
+			<title code="0x1d">BGM13.X</title>
+			<title code="0x1e">BGM14.X</title>
+			<title code="0x1f">BGM15.X</title>
+			<title code="0x20">BGM99.X</title>
+			<title code="0x21">CAT.X</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Craze (クレイズ)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">heartsoft</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="craze_msx">
+			<rom type="code">Craze (1988)(Heart Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Heavy Armed Storming Vehicle -Vaxol- (ヴァクソル)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">heartsoft</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="vaxol_msx">
+			<rom type="code">Vaxol (1987)(Heart Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+		</titlelist>
+	</game>
+</gamelist>

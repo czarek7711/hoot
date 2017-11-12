@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //panther -->
+	<game>
+		<name>[PC-88] Kami no Machi (神の聖都) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">panther</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xd000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="vdata_addr" value="0xb000"/>
+			<option name="vdata_size" value="0x2000"/>
+			<option name="vfile_size" value="0x2000"/>
+		</options>
+		<romlist archive="kami">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xe100">DRIVER01.BIN</rom>
+			<rom type="code" offset="0x9000">DRIVER02.BIN</rom>
+			<rom type="bgm" offset="0x00">mdat01</rom>
+			<rom type="voice" offset="0x00">2000.dat</rom>
+			<rom type="bgm" offset="0x01">mdat02</rom>
+			<rom type="voice" offset="0x01">mdat021</rom>
+			<rom type="bgm" offset="0x02">mdat03</rom>
+			<rom type="voice" offset="0x02">2000.dat</rom>
+			<rom type="bgm" offset="0x03">1000.dat</rom>
+			<rom type="voice" offset="0x03">mdat041</rom>
+			<rom type="bgm" offset="0x04">mdat05</rom>
+			<rom type="voice" offset="0x04">2000.dat</rom>
+			<rom type="bgm" offset="0x05">mdat06</rom>
+			<rom type="voice" offset="0x05">mdat061</rom>
+			<rom type="bgm" offset="0x06">1000.dat</rom>
+			<rom type="voice" offset="0x06">mdat071</rom>
+			<rom type="bgm" offset="0x07">mdat08</rom>
+			<rom type="voice" offset="0x07">2000.dat</rom>
+			<rom type="bgm" offset="0x08">mdat09</rom>
+			<rom type="voice" offset="0x08">mdat091</rom>
+			<rom type="bgm" offset="0x09">mdat10</rom>
+			<rom type="voice" offset="0x09">2000.dat</rom>
+			<rom type="bgm" offset="0x10">1000.dat</rom>
+			<rom type="voice" offset="0x10">mdat111</rom>
+			<rom type="bgm" offset="0x11">mdat12</rom>
+			<rom type="voice" offset="0x11">2000.dat</rom>
+			<rom type="bgm" offset="0x12">mdat13</rom>
+			<rom type="voice" offset="0x12">2000.dat</rom>
+			<rom type="bgm" offset="0x13">mdat14</rom>
+			<rom type="voice" offset="0x13">2000.dat</rom>
+			<rom type="bgm" offset="0x14">mdat15</rom>
+			<rom type="voice" offset="0x14">2000.dat</rom>
+			<rom type="bgm" offset="0x15">mdat16</rom>
+			<rom type="voice" offset="0x15">2000.dat</rom>
+			<rom type="bgm" offset="0x16">mdat17</rom>
+			<rom type="voice" offset="0x16">2000.dat</rom>
+			<rom type="bgm" offset="0x17">mdat18</rom>
+			<rom type="voice" offset="0x17">2000.dat</rom>
+			<rom type="bgm" offset="0x18">mdat19</rom>
+			<rom type="voice" offset="0x18">2000.dat</rom>
+			<rom type="bgm" offset="0x19">mdat20</rom>
+			<rom type="voice" offset="0x19">2000.dat</rom>
+			<rom type="bgm" offset="0x20">mdat21</rom>
+			<rom type="voice" offset="0x20">2000.dat</rom>
+			<rom type="bgm" offset="0x21">mdat22</rom>
+			<rom type="voice" offset="0x21">2000.dat</rom>
+			<rom type="bgm" offset="0x22">mdat23</rom>
+			<rom type="voice" offset="0x22">mdat231</rom>
+			<rom type="bgm" offset="0x23">mdat24</rom>
+			<rom type="voice" offset="0x23">2000.dat</rom>
+			<rom type="bgm" offset="0x24">mdat25</rom>
+			<rom type="voice" offset="0x24">2000.dat</rom>
+			<rom type="bgm" offset="0x25">mdat26</rom>
+			<rom type="voice" offset="0x25">2000.dat</rom>
+			<rom type="bgm" offset="0x26">mdat27</rom>
+			<rom type="voice" offset="0x26">2000.dat</rom>
+			<rom type="bgm" offset="0x27">mdat28</rom>
+			<rom type="voice" offset="0x27">2000.dat</rom>
+			<rom type="bgm" offset="0x28">mdat29</rom>
+			<rom type="voice" offset="0x28">2000.dat</rom>
+			<rom type="bgm" offset="0x29">mdat30</rom>
+			<rom type="voice" offset="0x29">2000.dat</rom>
+			<rom type="bgm" offset="0x30">mdat31</rom>
+			<rom type="voice" offset="0x30">2000.dat</rom>
+			<rom type="bgm" offset="0x31">mdat32</rom>
+			<rom type="voice" offset="0x31">2000.dat</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">神の聖都のテーマ</title>
+			<title code="0x03">オープニングデモ１</title>
+			<title code="0x04">オープニングデモ２</title>
+			<title code="0x06">オープニングデモ３</title>
+			<title code="0x00">アレック商会</title>
+			<title code="0x01">酒場</title>
+			<title code="0x07">ハイツン先生の病院</title>
+			<title code="0x10">移動(走る)</title>
+			<title code="0x11">移動(歩く)</title>
+			<title code="0x08">戦闘</title>
+			<title code="0x09">病院の襲撃</title>
+			<title code="0x12">戦慄の蟲</title>
+			<title code="0x13">ノートンの過去</title>
+			<title code="0x14">ノートンとシャーマス</title>
+			<title code="0x15">神殿</title>
+			<title code="0x16">神殿の中</title>
+			<title code="0x17">アルフィスへの試練</title>
+			<title code="0x18">フェルナンドの家</title>
+			<title code="0x19">事件発生</title>
+			<title code="0x20">逃亡してきたジナ</title>
+			<title code="0x21">ラノン登場</title>
+			<title code="0x22">ラノンとの戦い</title>
+			<title code="0x23">フィレンVSラノン</title>
+			<title code="0x24">戦いのあとで</title>
+			<title code="0x25">由加利とジナの関係</title>
+			<title code="0x02">敵・本拠地</title>
+			<title code="0x26">３番目の部屋</title>
+			<title code="0x27">人間の壁</title>
+			<title code="0x28">ダルダルート</title>
+			<title code="0x29">ショック～由加利の死１</title>
+			<title code="0x30">由加利の死２</title>
+			<title code="0x31">エンディング１</title>
+			<title code="0x05">エンディング２</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Kami no Machi (神の聖都) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">panther</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xd000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="vdata_addr" value="0xb000"/>
+			<option name="vdata_size" value="0x2000"/>
+			<option name="vfile_size" value="0x2000"/>
+		</options>
+		<romlist archive="kami">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0xe100">DRIVER01.BIN</rom>
+			<rom type="code" offset="0x9000">DRIVER02.BIN</rom>
+			<rom type="bgm" offset="0x00">mdat01</rom>
+			<rom type="voice" offset="0x00">2000.dat</rom>
+			<rom type="bgm" offset="0x01">mdat02</rom>
+			<rom type="voice" offset="0x01">mdat021</rom>
+			<rom type="bgm" offset="0x02">mdat03</rom>
+			<rom type="voice" offset="0x02">2000.dat</rom>
+			<rom type="bgm" offset="0x03">1000.dat</rom>
+			<rom type="voice" offset="0x03">mdat041</rom>
+			<rom type="bgm" offset="0x04">mdat05</rom>
+			<rom type="voice" offset="0x04">2000.dat</rom>
+			<rom type="bgm" offset="0x05">mdat06</rom>
+			<rom type="voice" offset="0x05">mdat061</rom>
+			<rom type="bgm" offset="0x06">1000.dat</rom>
+			<rom type="voice" offset="0x06">mdat071</rom>
+			<rom type="bgm" offset="0x07">mdat08</rom>
+			<rom type="voice" offset="0x07">2000.dat</rom>
+			<rom type="bgm" offset="0x08">mdat09</rom>
+			<rom type="voice" offset="0x08">mdat091</rom>
+			<rom type="bgm" offset="0x09">mdat10</rom>
+			<rom type="voice" offset="0x09">2000.dat</rom>
+			<rom type="bgm" offset="0x10">1000.dat</rom>
+			<rom type="voice" offset="0x10">mdat111</rom>
+			<rom type="bgm" offset="0x11">mdat12</rom>
+			<rom type="voice" offset="0x11">2000.dat</rom>
+			<rom type="bgm" offset="0x12">mdat13</rom>
+			<rom type="voice" offset="0x12">2000.dat</rom>
+			<rom type="bgm" offset="0x13">mdat14</rom>
+			<rom type="voice" offset="0x13">2000.dat</rom>
+			<rom type="bgm" offset="0x14">mdat15</rom>
+			<rom type="voice" offset="0x14">2000.dat</rom>
+			<rom type="bgm" offset="0x15">mdat16</rom>
+			<rom type="voice" offset="0x15">2000.dat</rom>
+			<rom type="bgm" offset="0x16">mdat17</rom>
+			<rom type="voice" offset="0x16">2000.dat</rom>
+			<rom type="bgm" offset="0x17">mdat18</rom>
+			<rom type="voice" offset="0x17">2000.dat</rom>
+			<rom type="bgm" offset="0x18">mdat19</rom>
+			<rom type="voice" offset="0x18">2000.dat</rom>
+			<rom type="bgm" offset="0x19">mdat20</rom>
+			<rom type="voice" offset="0x19">2000.dat</rom>
+			<rom type="bgm" offset="0x20">mdat21</rom>
+			<rom type="voice" offset="0x20">2000.dat</rom>
+			<rom type="bgm" offset="0x21">mdat22</rom>
+			<rom type="voice" offset="0x21">2000.dat</rom>
+			<rom type="bgm" offset="0x22">mdat23</rom>
+			<rom type="voice" offset="0x22">mdat231</rom>
+			<rom type="bgm" offset="0x23">mdat24</rom>
+			<rom type="voice" offset="0x23">2000.dat</rom>
+			<rom type="bgm" offset="0x24">mdat25</rom>
+			<rom type="voice" offset="0x24">2000.dat</rom>
+			<rom type="bgm" offset="0x25">mdat26</rom>
+			<rom type="voice" offset="0x25">2000.dat</rom>
+			<rom type="bgm" offset="0x26">mdat27</rom>
+			<rom type="voice" offset="0x26">2000.dat</rom>
+			<rom type="bgm" offset="0x27">mdat28</rom>
+			<rom type="voice" offset="0x27">2000.dat</rom>
+			<rom type="bgm" offset="0x28">mdat29</rom>
+			<rom type="voice" offset="0x28">2000.dat</rom>
+			<rom type="bgm" offset="0x29">mdat30</rom>
+			<rom type="voice" offset="0x29">2000.dat</rom>
+			<rom type="bgm" offset="0x30">mdat31</rom>
+			<rom type="voice" offset="0x30">2000.dat</rom>
+			<rom type="bgm" offset="0x31">mdat32</rom>
+			<rom type="voice" offset="0x31">2000.dat</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">神の聖都のテーマ</title>
+			<title code="0x03">オープニングデモ１</title>
+			<title code="0x04">オープニングデモ２</title>
+			<title code="0x06">オープニングデモ３</title>
+			<title code="0x00">アレック商会</title>
+			<title code="0x01">酒場</title>
+			<title code="0x07">ハイツン先生の病院</title>
+			<title code="0x10">移動(走る)</title>
+			<title code="0x11">移動(歩く)</title>
+			<title code="0x08">戦闘</title>
+			<title code="0x09">病院の襲撃</title>
+			<title code="0x12">戦慄の蟲</title>
+			<title code="0x13">ノートンの過去</title>
+			<title code="0x14">ノートンとシャーマス</title>
+			<title code="0x15">神殿</title>
+			<title code="0x16">神殿の中</title>
+			<title code="0x17">アルフィスへの試練</title>
+			<title code="0x18">フェルナンドの家</title>
+			<title code="0x19">事件発生</title>
+			<title code="0x20">逃亡してきたジナ</title>
+			<title code="0x21">ラノン登場</title>
+			<title code="0x22">ラノンとの戦い</title>
+			<title code="0x23">フィレンVSラノン</title>
+			<title code="0x24">戦いのあとで</title>
+			<title code="0x25">由加利とジナの関係</title>
+			<title code="0x02">敵・本拠地</title>
+			<title code="0x26">３番目の部屋</title>
+			<title code="0x27">人間の壁</title>
+			<title code="0x28">ダルダルート</title>
+			<title code="0x29">ショック～由加利の死１</title>
+			<title code="0x30">由加利の死２</title>
+			<title code="0x31">エンディング１</title>
+			<title code="0x05">エンディング２</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lesser Mern (レッサーメルン)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">panther</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x6000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x3c"/>
+			<option name="fm_mix"   value="15"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="lesserm98">
+			<rom type="code" offset="0x00600">msc.bin</rom>
+			<rom type="code" offset="0x10000">MSC</rom>
+			<rom type="code" offset="0x18000">SND</rom>
+			<rom type="bgm" offset="0x01">M01</rom>
+			<rom type="bgm" offset="0x02">M02</rom>
+			<rom type="bgm" offset="0x03">M03</rom>
+			<rom type="bgm" offset="0x04">M04</rom>
+			<rom type="bgm" offset="0x05">M05</rom>
+			<rom type="bgm" offset="0x06">M06</rom>
+			<rom type="bgm" offset="0x07">M07</rom>
+			<rom type="bgm" offset="0x08">M08</rom>
+			<rom type="bgm" offset="0x09">M09</rom>
+			<rom type="bgm" offset="0x0a">M10</rom>
+			<rom type="bgm" offset="0x0b">M11</rom>
+			<rom type="bgm" offset="0x0c">M12</rom>
+			<rom type="bgm" offset="0x0d">M13</rom>
+			<rom type="bgm" offset="0x0e">M14</rom>
+			<rom type="bgm" offset="0x0f">M15</rom>
+			<rom type="bgm" offset="0x10">M16</rom>
+			<rom type="bgm" offset="0x11">M17</rom>
+			<rom type="bgm" offset="0x12">M18</rom>
+			<rom type="bgm" offset="0x13">M19</rom>
+			<rom type="bgm" offset="0x14">M20</rom>
+			<rom type="bgm" offset="0x15">M21</rom>
+			<rom type="bgm" offset="0x16">M22</rom>
+			<rom type="bgm" offset="0x17">M23</rom>
+			<rom type="bgm" offset="0x18">M24</rom>
+			<rom type="bgm" offset="0x19">M25</rom>
+			<rom type="bgm" offset="0x1a">M26</rom>
+			<rom type="bgm" offset="0x1b">M27</rom>
+			<rom type="bgm" offset="0x1c">M28</rom>
+			<rom type="bgm" offset="0x1d">M29</rom>
+			<rom type="bgm" offset="0x1e">M30</rom>
+			<rom type="bgm" offset="0x1f">M31</rom>
+			<rom type="bgm" offset="0x20">M32</rom>
+			<rom type="bgm" offset="0x21">M33</rom>
+			<rom type="bgm" offset="0x22">M34</rom>
+			<rom type="bgm" offset="0x23">M35</rom>
+			<rom type="bgm" offset="0x24">M36</rom>
+			<rom type="bgm" offset="0x25">M37</rom>
+			<rom type="bgm" offset="0x26">M38</rom>
+			<rom type="bgm" offset="0x27">M39</rom>
+			<rom type="bgm" offset="0x28">M40</rom>
+			<rom type="bgm" offset="0x29">M41</rom>
+			<rom type="bgm" offset="0x2a">M42</rom>
+			<rom type="bgm" offset="0x2b">M43</rom>
+			<rom type="bgm" offset="0x2c">M44</rom>
+			<rom type="bgm" offset="0x2d">M45</rom>
+			<rom type="bgm" offset="0x2e">M46</rom>
+			<rom type="bgm" offset="0x2f">M47</rom>
+			<rom type="bgm" offset="0x30">M48</rom>
+			<rom type="bgm" offset="0x31">M49</rom>
+			<rom type="bgm" offset="0x32">M50</rom>
+			<rom type="bgm" offset="0x33">M51</rom>
+			<rom type="bgm" offset="0x34">M52</rom>
+			<rom type="bgm" offset="0x35">M53</rom>
+			<rom type="bgm" offset="0x36">M54</rom>
+			<rom type="bgm" offset="0x37">M55</rom>
+			<rom type="bgm" offset="0x38">M56</rom>
+			<rom type="bgm" offset="0x39">M57</rom>
+			<rom type="bgm" offset="0x3a">M99</rom>
+			<rom type="bgm" offset="0x3b">MSC.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00003a">Stop the Music (演奏停止)</title>
+			<title code="0x01003b">MSC.DAT #00</title>
+			<title code="0x02003b">MSC.DAT #01</title>
+			<title code="0x03003b">MSC.DAT #02</title>
+			<title code="0x04003b">MSC.DAT #03</title>
+			<title code="0x05003b">MSC.DAT #04</title>
+			<title code="0x06003b">MSC.DAT #05</title>
+			<title code="0x07003b">MSC.DAT #06</title>
+			<title code="0x08003b">MSC.DAT #07</title>
+			<title code="0x09003b">MSC.DAT #08</title>
+			<title code="0x0a003b">MSC.DAT #09</title>
+			<title code="0x0b003b">MSC.DAT #0A</title>
+			<title code="0x0c003b">MSC.DAT #0B</title>
+			<title code="0x0d003b">MSC.DAT #0C</title>
+			<title code="0x0e003b">MSC.DAT #0D</title>
+			<title code="0x0f003b">MSC.DAT #0E</title>
+			<title code="0x10003b">MSC.DAT #0F</title>
+			<title code="0x11003b">MSC.DAT #10</title>
+			<title code="0x12003b">MSC.DAT #11</title>
+			<title code="0x000001">M01</title>
+			<title code="0x000002">M02</title>
+			<title code="0x000003">M03</title>
+			<title code="0x000004">M04</title>
+			<title code="0x000005">M05</title>
+			<title code="0x000006">M06</title>
+			<title code="0x000007">M07</title>
+			<title code="0x000008">M08</title>
+			<title code="0x000009">M09</title>
+			<title code="0x00000a">M10</title>
+			<title code="0x00000b">M11</title>
+			<title code="0x00000c">M12</title>
+			<title code="0x00000d">M13</title>
+			<title code="0x00000e">M14</title>
+			<title code="0x00000f">M15</title>
+			<title code="0x000010">M16</title>
+			<title code="0x000011">M17</title>
+			<title code="0x000012">M18</title>
+			<title code="0x000013">M19</title>
+			<title code="0x000014">M20</title>
+			<title code="0x000015">M21</title>
+			<title code="0x000016">M22</title>
+			<title code="0x000017">M23</title>
+			<title code="0x000018">M24</title>
+			<title code="0x000019">M25</title>
+			<title code="0x00001a">M26</title>
+			<title code="0x00001b">M27</title>
+			<title code="0x00001c">M28</title>
+			<title code="0x00001d">M29</title>
+			<title code="0x00001e">M30</title>
+			<title code="0x00001f">M31</title>
+			<title code="0x000020">M32</title>
+			<title code="0x000021">M33</title>
+			<title code="0x000022">M34</title>
+			<title code="0x000023">M35</title>
+			<title code="0x000024">M36</title>
+			<title code="0x000025">M37</title>
+			<title code="0x000026">M38</title>
+			<title code="0x000027">M39</title>
+			<title code="0x000028">M40</title>
+			<title code="0x000029">M41</title>
+			<title code="0x00002a">M42</title>
+			<title code="0x00002b">M43</title>
+			<title code="0x00002c">M44</title>
+			<title code="0x00002d">M45</title>
+			<title code="0x00002e">M46</title>
+			<title code="0x00002f">M47</title>
+			<title code="0x000030">M48</title>
+			<title code="0x000031">M49</title>
+			<title code="0x000032">M50</title>
+			<title code="0x000033">M51</title>
+			<title code="0x000034">M52</title>
+			<title code="0x000035">M53</title>
+			<title code="0x000036">M54</title>
+			<title code="0x000037">M55</title>
+			<title code="0x000038">M56</title>
+			<title code="0x000039">M57</title>
+			<title code="0x00ffff">EFFECT #00</title>
+			<title code="0x01ffff">EFFECT #01</title>
+			<title code="0x02ffff">EFFECT #02</title>
+			<title code="0x03ffff">EFFECT #03</title>
+			<title code="0x04ffff">EFFECT #04</title>
+			<title code="0x05ffff">EFFECT #05</title>
+			<title code="0x06ffff">EFFECT #06</title>
+			<title code="0x07ffff">EFFECT #07</title>
+			<title code="0x08ffff">EFFECT #08</title>
+			<title code="0x09ffff">EFFECT #09</title>
+			<title code="0x0affff">EFFECT #0a</title>
+			<title code="0x0bffff">EFFECT #0b</title>
+			<title code="0x0cffff">EFFECT #0c</title>
+			<title code="0x0dffff">EFFECT #0d</title>
+			<title code="0x0effff">EFFECT #0e</title>
+			<title code="0x0fffff">EFFECT #0f</title>
+			<title code="0x10ffff">EFFECT #10</title>
+			<title code="0x11ffff">EFFECT #11</title>
+			<title code="0x12ffff">EFFECT #12</title>
+			<title code="0x13ffff">EFFECT #13</title>
+			<title code="0x14ffff">EFFECT #14</title>
+			<title code="0x15ffff">EFFECT #15</title>
+			<title code="0x16ffff">EFFECT #16</title>
+			<title code="0x17ffff">EFFECT #17</title>
+			<title code="0x18ffff">EFFECT #18</title>
+			<title code="0x19ffff">EFFECT #19</title>
+			<title code="0x1affff">EFFECT #1a</title>
+			<title code="0x1bffff">EFFECT #1b</title>
+			<title code="0x1cffff">EFFECT #1c</title>
+			<title code="0x1dffff">EFFECT #1d</title>
+			<title code="0x1effff">EFFECT #1e</title>
+			<title code="0x1fffff">EFFECT #1f</title>
+			<title code="0x20ffff">EFFECT #20</title>
+			<title code="0x21ffff">EFFECT #21</title>
+			<title code="0x22ffff">EFFECT #22</title>
+			<title code="0x23ffff">EFFECT #23</title>
+			<title code="0x24ffff">EFFECT #24</title>
+			<title code="0x25ffff">EFFECT #25</title>
+			<title code="0x26ffff">EFFECT #26</title>
+			<title code="0x27ffff">EFFECT #27</title>
+			<title code="0x28ffff">EFFECT #28</title>
+			<title code="0x29ffff">EFFECT #29</title>
+			<title code="0x2affff">EFFECT #2a</title>
+			<title code="0x2bffff">EFFECT #2b</title>
+			<title code="0x2cffff">EFFECT #2c</title>
+			<title code="0x2dffff">EFFECT #2d</title>
+			<title code="0x2effff">EFFECT #2e</title>
+			<title code="0x2fffff">EFFECT #2f</title>
+			<title code="0x30ffff">EFFECT #30</title>
+			<title code="0x31ffff">EFFECT #31</title>
+			<title code="0x32ffff">EFFECT #32</title>
+			<title code="0x33ffff">EFFECT #33</title>
+			<title code="0x34ffff">EFFECT #34</title>
+			<title code="0x35ffff">EFFECT #35</title>
+			<title code="0x36ffff">EFFECT #36</title>
+			<title code="0x37ffff">EFFECT #37</title>
+			<title code="0x38ffff">EFFECT #38</title>
+			<title code="0x39ffff">EFFECT #39</title>
+			<title code="0x3affff">EFFECT #3a</title>
+			<title code="0x3bffff">EFFECT #3b</title>
+			<title code="0x3cffff">EFFECT #3c</title>
+			<title code="0x3dffff">EFFECT #3d</title>
+			<title code="0x3effff">EFFECT #3e</title>
+			<title code="0x3fffff">EFFECT #3f</title>
+			<title code="0x40ffff">EFFECT #40</title>
+			<title code="0x41ffff">EFFECT #41</title>
+			<title code="0x42ffff">EFFECT #42</title>
+			<title code="0x43ffff">EFFECT #43</title>
+			<title code="0x44ffff">EFFECT #44</title>
+			<title code="0x45ffff">EFFECT #45</title>
+			<title code="0x46ffff">EFFECT #46</title>
+			<title code="0x47ffff">EFFECT #47</title>
+			<title code="0x48ffff">EFFECT #48</title>
+			<title code="0x49ffff">EFFECT #49</title>
+			<title code="0x4affff">EFFECT #4a</title>
+			<title code="0x4bffff">EFFECT #4b</title>
+			<title code="0x4cffff">EFFECT #4c</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Hamlet (ハムレット)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">panther</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x10000"/>
+			<option name="filesize" value="0x6000"/>
+			<option name="datamax" value="0xff"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="hamlet_98">
+			<rom type="code" offset="0x600">DOFMD_98.BIN</rom>
+			<rom type="code" offset="0xfa0">MV22</rom>
+			<rom type="bgm" offset="0x01">HML001</rom>
+			<rom type="bgm" offset="0x02">HML002</rom>
+			<rom type="bgm" offset="0x03">HML003</rom>
+			<rom type="bgm" offset="0x04">HML004</rom>
+			<rom type="bgm" offset="0x05">HML005</rom>
+			<rom type="bgm" offset="0x06">HML006</rom>
+			<rom type="bgm" offset="0x07">HML007</rom>
+			<rom type="bgm" offset="0x08">HML008</rom>
+			<rom type="bgm" offset="0x09">HML009</rom>
+			<rom type="bgm" offset="0x0a">HML010</rom>
+			<rom type="bgm" offset="0x0b">HML011</rom>
+			<rom type="bgm" offset="0x0c">HML012</rom>
+			<rom type="bgm" offset="0x0d">HML013</rom>
+			<rom type="bgm" offset="0x0e">HML014</rom>
+			<rom type="bgm" offset="0x0f">HML015</rom>
+			<rom type="bgm" offset="0x10">HML016</rom>
+			<rom type="bgm" offset="0x11">HML017</rom>
+			<rom type="bgm" offset="0x12">HML018</rom>
+			<rom type="bgm" offset="0x13">HML019</rom>
+			<rom type="bgm" offset="0x14">HML020</rom>
+			<rom type="bgm" offset="0x15">HML021</rom>
+			<rom type="bgm" offset="0x16">HML022</rom>
+			<rom type="bgm" offset="0x17">HML023</rom>
+			<rom type="bgm" offset="0x18">HML024</rom>
+			<rom type="bgm" offset="0x19">HML025</rom>
+			<rom type="bgm" offset="0x1a">HML028</rom>
+			<rom type="bgm" offset="0x1b">HML029</rom>
+			<rom type="bgm" offset="0x1c">HML030</rom>
+			<rom type="bgm" offset="0x1d">HML031</rom>
+			<rom type="bgm" offset="0x1e">HML032</rom>
+			<rom type="bgm" offset="0x1f">HML033</rom>
+			<rom type="bgm" offset="0x20">HML034</rom>
+			<rom type="bgm" offset="0x21">HML035</rom>
+			<rom type="bgm" offset="0x22">HML036</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">HML001</title>
+			<title code="0x02">HML002</title>
+			<title code="0x03">HML003</title>
+			<title code="0x04">HML004</title>
+			<title code="0x05">HML005</title>
+			<title code="0x06">HML006</title>
+			<title code="0x07">HML007</title>
+			<title code="0x08">HML008</title>
+			<title code="0x09">HML009</title>
+			<title code="0x0a">HML010</title>
+			<title code="0x0b">HML011</title>
+			<title code="0x0c">HML012</title>
+			<title code="0x0d">HML013</title>
+			<title code="0x0e">HML014</title>
+			<title code="0x0f">HML015</title>
+			<title code="0x10">HML016</title>
+			<title code="0x11">HML017</title>
+			<title code="0x12">HML018</title>
+			<title code="0x13">HML019</title>
+			<title code="0x14">HML020</title>
+			<title code="0x15">HML021</title>
+			<title code="0x16">HML022</title>
+			<title code="0x17">HML023</title>
+			<title code="0x18">HML024</title>
+			<title code="0x19">HML025</title>
+			<title code="0x1a">HML028</title>
+			<title code="0x1b">HML029</title>
+			<title code="0x1c">HML030</title>
+			<title code="0x1d">HML031</title>
+			<title code="0x1e">HML032</title>
+			<title code="0x1f">HML033</title>
+			<title code="0x20">HML034</title>
+			<title code="0x21">HML035</title>
+			<title code="0x22">HML036</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Joshua (JOSHUA ～異世界伝承～)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">panther</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="joshua_98">
+			<rom type="file" offset="-1">YOUJU_98.COM</rom>
+			<rom type="file" offset="-1">JOSHUA.EXE</rom>
+			<rom type="conin" offset="5">JOSHUA.EXE</rom>
+			<rom type="file" offset="0x10">JM002</rom>
+			<rom type="file" offset="0x11">LM002</rom>
+			<rom type="file" offset="0x12">LM003</rom>
+			<rom type="file" offset="0x13">LM006</rom>
+			<rom type="file" offset="0x14">LM008</rom>
+			<rom type="shell" offset="0">YOUJU_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">JM002</title>
+			<title code="0x11">LM002</title>
+			<title code="0x12">LM003</title>
+			<title code="0x13">LM006</title>
+			<title code="0x14">LM008</title>
+		</titlelist>
+	</game>
+</gamelist>

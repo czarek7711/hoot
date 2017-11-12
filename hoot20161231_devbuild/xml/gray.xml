@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //GRAY -->
+	<game>
+		<name>[PC-9801] NIGHT SEEP</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">GRAY</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="nghtseep_98">
+			<rom type="file" offset="-1">NSHEEP_98.COM</rom>
+			<rom type="file" offset="-1">VSYNCMAN.SYS</rom>
+			<rom type="file" offset="-1">SNDDRV2.SYS</rom>
+			<rom type="file" offset="0x10">NIGHT.MFB</rom>
+			<rom type="device" offset="0">vsyncman.sys</rom>
+			<rom type="device" offset="0">snddrv2.sys</rom>
+			<rom type="shell"  offset="0">nsheep_98</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x01" max="0x08" extcode="1">BGM %02x</range>
+			<range min="0x09" max="0x12" extcode="1">SE %02x</range>
+		</titlelist>
+	</game>
+</gamelist>

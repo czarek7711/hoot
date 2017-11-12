@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //BIT2 -->
+	<game>
+		<name>[X68000] SHOOT RANGE</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIT2</driveralias>
+		<options>
+			<option name="opm_mix" value="0xb0"/>
+		</options>
+		<romlist archive="shootrng68snd">
+			<rom type="code">sr68snd.bin</rom>
+			<rom type="x"    offset="0x10000">OPMDRV.X</rom>
+			<rom type="code" offset="0x30000">SR.FMD</rom>
+			<rom type="x"    offset="0x40000">shoot.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : </title>
+			<title code="0x02">01 : </title>
+			<title code="0x03">02 : </title>
+			<title code="0x04">03 : </title>
+			<title code="0x05">04 : </title>
+			<title code="0x06">05 : </title>
+			<title code="0x07">06 : </title>
+			<title code="0x08">07 : </title>
+			<title code="0x09">08 : </title>
+			<title code="0x0a">09 : </title>
+			<title code="0x0b">0A : </title>
+			<title code="0x0c">0B : </title>
+			<title code="0x0d">0C : </title>
+			<title code="0x0e">0D : </title>
+			<title code="0x0f">0E : </title>
+			<title code="0x10">0F : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] chitty chitty TRAIN</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BIT2</driveralias>
+		<romlist archive="chitty98">
+			<rom type="file" offset="-1">chitty.com</rom>
+			<rom type="file" offset="-1">TRAIN/TRAIN.EXE</rom>
+			<rom type="file" offset="-1">TRAIN/CHIKI.FPS</rom>
+			<rom type="file" offset="-1">TRAIN/BA198.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/BFAN98.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/BG198.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/BGT98.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/BGTBW98.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/BGTG98.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/BGTST98.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/BREAK.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/BUBU.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/CHEAK.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/CHIKI098.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/CHIKI198.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/CHIKI298.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/CHIKI398.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/CHIKI498.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/EFC1.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/EFC2.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/HAZR.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/KIKO.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/LOAL.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/PIKO.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/POPYU.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/ROLL.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/SHU198.GU1</rom>
+			<rom type="file" offset="-1">TRAIN/TRT98.GU1</rom>
+			<rom type="shell" offset="0">chitty</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">0x01</title>
+			<title code="0x02">0x02</title>
+			<title code="0x03">0x03</title>
+			<title code="0x04">0x04</title>
+			<title code="0x05">0x05</title>
+			<title code="0x06">0x06</title>
+			<title code="0x07">0x07</title>
+			<title code="0x08">0x08</title>
+			<title code="0x09">0x09</title>
+			<title code="0x0a">0x0a</title>
+			<title code="0x0b">0x0b</title>
+			<title code="0x0c">0x0c</title>
+			<title code="0x0d">0x0d</title>
+			<title code="0x0e">0x0e</title>
+			<title code="0x0f">0x0f</title>
+			<title code="0x10">0x10</title>
+			<title code="0x11">0x11</title>
+			<title code="0x12">0x12</title>
+			<title code="0x13">0x13</title>
+			<title code="0x14">0x14</title>
+			<title code="0x15">0x15</title>
+			<title code="0x16">0x16</title>
+			<title code="0x17">0x17</title>
+			<title code="0x18">0x18</title>
+			<title code="0x19">0x19</title>
+			<title code="0x1a">0x1a</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] FAMICLE PARODIC 2</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIT2</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb180"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="famicle2_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xa000">FMDRV.BIN</rom>
+			<rom type="code" offset="0xc580">TONE.BIN</rom>
+			<rom type="code" offset="0xd800">SE.BIN</rom>
+			<rom type="bgm"  offset="0x0000">MUS00.BIN</rom>
+			<rom type="bgm"  offset="0x0001">MUS01.BIN</rom>
+			<rom type="bgm"  offset="0x0002">MUS02.BIN</rom>
+			<rom type="bgm"  offset="0x0003">MUS03.BIN</rom>
+			<rom type="bgm"  offset="0x0004">MUS04.BIN</rom>
+			<rom type="bgm"  offset="0x0005">MUS05.BIN</rom>
+			<rom type="bgm"  offset="0x0006">MUS06.BIN</rom>
+			<rom type="bgm"  offset="0x0007">MUS07.BIN</rom>
+			<rom type="bgm"  offset="0x0008">MUS08.BIN</rom>
+			<rom type="bgm"  offset="0x0009">MUS09.BIN</rom>
+			<rom type="bgm"  offset="0x000a">MUS0A.BIN</rom>
+			<rom type="bgm"  offset="0x000b">MUS0B.BIN</rom>
+			<rom type="bgm"  offset="0x000c">MUS0C.BIN</rom>
+			<rom type="bgm"  offset="0x000d">MUS0D.BIN</rom>
+			<rom type="bgm"  offset="0x000e">MUS0E.BIN</rom>
+			<rom type="bgm"  offset="0x000f">MUS0F.BIN</rom>
+			<rom type="bgm"  offset="0x0010">MUS10.BIN</rom>
+			<rom type="bgm"  offset="0x0011">MUS11.BIN</rom>
+			<rom type="bgm"  offset="0x0012">MUS12.BIN</rom>
+			<rom type="bgm"  offset="0x0013">MUS13.BIN</rom>
+			<rom type="bgm"  offset="0x0014">MUS14.BIN</rom>
+			<rom type="bgm"  offset="0x0015">MUS15.BIN</rom>
+			<rom type="bgm"  offset="0x0016">MUS16.BIN</rom>
+			<rom type="bgm"  offset="0x0017">MUS17.BIN</rom>
+			<rom type="bgm"  offset="0x0018">MUS18.BIN</rom>
+			<rom type="bgm"  offset="0x0019">MUS19.BIN</rom>
+			<rom type="bgm"  offset="0x001a">MUS1A.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">OPENING</title>
+			<title code="0x01">TITLE</title>
+			<title code="0x02">CHARACTER SELECT</title>
+			<title code="0x04">STAGE 1</title>
+			<title code="0x05">STAGE 2</title>
+			<title code="0x06">STAGE 3</title>
+			<title code="0x07">STAGE 4</title>
+			<title code="0x08">STAGE 5</title>
+			<title code="0x0e">STAGE 5 BOSS</title>
+			<title code="0x09">STAGE 6</title>
+			<title code="0x0a">STAGE 7</title>
+			<title code="0x0b">STAGE 7 MIDDLE BOSS</title>
+			<title code="0x13">STAGE 7 BOSS</title>
+			<!-- <title code="0x14">STAGE 7 BOSS</title> -->
+			<title code="0x16">STAGE 7 BOSS DOWN</title>
+			<title code="0x17">STAGE 7 CLEAR</title>
+			<title code="0x0f">CAUTION</title>
+			<title code="0x0d">MIDDLE BOSS</title>
+			<title code="0x10">BOSS</title>
+			<title code="0x11">BOSS DOWN</title>
+			<title code="0x12">STAGE CLEAR</title>
+			<title code="0x18">ENDING</title>
+			<title code="0x03">CONTINUE?</title>
+			<title code="0x19">MISS</title>
+			<title code="0x1a">GAME OVER</title>
+			<title code="0x0c">???</title>
+			<title code="0x15">???</title>
+			<range min="0x0101" max="0x012d" extcode="0">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 秘録 首斬り館 ～逐電屋藤兵衛～(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIT2</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8800"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="kubikiri_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x8000">FMDRV.BIN</rom>
+			<rom type="bgm" offset="0x0000">FM00.BIN</rom>
+			<rom type="bgm" offset="0x01">FM01.BIN</rom>
+			<rom type="bgm" offset="0x02">FM02.BIN</rom>
+			<rom type="bgm" offset="0x03">FM03.BIN</rom>
+			<rom type="bgm" offset="0x04">FM04.BIN</rom>
+			<rom type="bgm" offset="0x35">FM05.BIN</rom>
+			<rom type="bgm" offset="0x36">FM06.BIN</rom>
+			<rom type="bgm" offset="0x05">FM10.BIN</rom>
+			<rom type="bgm" offset="0x06">FM11.BIN</rom>
+			<rom type="bgm" offset="0x07">FM12.BIN</rom>
+			<rom type="bgm" offset="0x08">FM13.BIN</rom>
+			<rom type="bgm" offset="0x09">FM14.BIN</rom>
+			<rom type="bgm" offset="0x0a">FM15.BIN</rom>
+			<rom type="bgm" offset="0x0b">FM16.BIN</rom>
+			<rom type="bgm" offset="0x0c">FM17.BIN</rom>
+			<rom type="bgm" offset="0x0d">FM18.BIN</rom>
+			<rom type="bgm" offset="0x0e">FM19.BIN</rom>
+			<rom type="bgm" offset="0x0f">FM1A.BIN</rom>
+			<rom type="bgm" offset="0x10">FM1B.BIN</rom>
+			<rom type="bgm" offset="0x11">FM1C.BIN</rom>
+			<rom type="bgm" offset="0x12">FM1D.BIN</rom>
+			<rom type="bgm" offset="0x13">FM1E.BIN</rom>
+			<rom type="bgm" offset="0x14">FM20.BIN</rom>
+			<rom type="bgm" offset="0x15">FM21.BIN</rom>
+			<rom type="bgm" offset="0x16">FM22.BIN</rom>
+			<rom type="bgm" offset="0x17">FM23.BIN</rom>
+			<rom type="bgm" offset="0x18">FM24.BIN</rom>
+			<rom type="bgm" offset="0x19">FM25.BIN</rom>
+			<rom type="bgm" offset="0x1a">FM26.BIN</rom>
+			<rom type="bgm" offset="0x1b">FM27.BIN</rom>
+			<rom type="bgm" offset="0x1c">FM28.BIN</rom>
+			<rom type="bgm" offset="0x1d">FM29.BIN</rom>
+			<rom type="bgm" offset="0x1e">FM2A.BIN</rom>
+			<rom type="bgm" offset="0x1f">FM30.BIN</rom>
+			<rom type="bgm" offset="0x20">FM31.BIN</rom>
+			<rom type="bgm" offset="0x21">FM32.BIN</rom>
+			<rom type="bgm" offset="0x22">FM33.BIN</rom>
+			<rom type="bgm" offset="0x23">FM34.BIN</rom>
+			<rom type="bgm" offset="0x24">FM35.BIN</rom>
+			<rom type="bgm" offset="0x25">FM36.BIN</rom>
+			<rom type="bgm" offset="0x26">FM37.BIN</rom>
+			<rom type="bgm" offset="0x27">FM38.BIN</rom>
+			<rom type="bgm" offset="0x28">FM39.BIN</rom>
+			<rom type="bgm" offset="0x29">FM3A.BIN</rom>
+			<rom type="bgm" offset="0x2a">FM3B.BIN</rom>
+			<rom type="bgm" offset="0x2b">FM3C.BIN</rom>
+			<rom type="bgm" offset="0x2c">FM40.BIN</rom>
+			<rom type="bgm" offset="0x2d">FM41.BIN</rom>
+			<rom type="bgm" offset="0x2e">FM42.BIN</rom>
+			<rom type="bgm" offset="0x2f">FM43.BIN</rom>
+			<rom type="bgm" offset="0x30">FM44.BIN</rom>
+			<rom type="bgm" offset="0x31">FM45.BIN</rom>
+			<rom type="bgm" offset="0x32">FM46.BIN</rom>
+			<rom type="bgm" offset="0x33">FM47.BIN</rom>
+			<rom type="bgm" offset="0x34">FM48.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010000">00:01</title>
+			<!--
+			<title code="0x010008">13:01</title>
+			<title code="0x010017">23:01</title>
+			<title code="0x010029">3A:01</title>
+			  -->
+			<title code="0x010001">01:01</title>
+			<title code="0x010003">03:01</title>
+			<title code="0x010103">03:02</title>
+			<!--
+			<title code="0x010018">24:01</title>
+			<title code="0x01001f">30:01</title>
+			<title code="0x010034">48:01</title>
+			  -->
+			<title code="0x000203">03:03</title>
+			<title code="0x010004">04:01</title>
+			<title code="0x010005">10:01</title>
+			<title code="0x010006">11:01</title>
+			<title code="0x010007">12:01</title>
+			<title code="0x010009">14:01</title>
+			<!--
+			<title code="0x01001e">2A:01</title>
+			<title code="0x010021">32:01</title>
+			  -->
+			<title code="0x01000a">15:01</title>
+			<!--
+			<title code="0x010020">31:01</title>
+			  -->
+			<title code="0x01000c">17:01</title>
+			<!--
+			<title code="0x01001d">29:01</title>
+			  -->
+			<title code="0x01000d">18:01</title>
+			<!--
+			<title code="0x01001a">26:01</title>
+			  -->
+			<title code="0x01000f">1A:01</title>
+			<!--
+			<title code="0x010027">38:01</title>
+			  -->
+			<title code="0x010010">1B:01</title>
+			<!--
+			<title code="0x010016">22:01</title>
+			  -->
+			<title code="0x010011">1C:01</title>
+			<title code="0x010012">1D:01</title>
+			<title code="0x010013">1E:01</title>
+			<!--
+			<title code="0x010019">25:01</title>
+			  -->
+			<title code="0x010014">20:01</title>
+			<title code="0x010015">21:01</title>
+			<title code="0x01001b">27:01</title>
+			<!--
+			<title code="0x010025">36:01</title>
+			  -->
+			<title code="0x01001c">28:01</title>
+			<!--
+			<title code="0x010024">35:01</title>
+			  -->
+			<title code="0x010026">37:01</title>
+			<title code="0x01002c">40:01</title>
+			<title code="0x01002d">41:01</title>
+			<title code="0x010031">45:01</title>
+			<!--
+			<title code="0x000035">05:01</title>
+			  -->
+			<title code="0x000032">46:01</title>
+			<title code="0x000002">02:01 : SE</title>
+			<!--
+			<title code="0x00002b">3C:01 : SE</title>
+			  -->
+			<title code="0x000303">03:01 : SE</title>
+			<!--
+			<title code="0x000036">06:01 : SE</title>
+			  -->
+			<title code="0x00000b">16:01 : SE</title>
+			<title code="0x00000e">19:01 : SE</title>
+			<!--
+			<title code="0x000028">39:01 : SE</title>
+			<title code="0x000033">47:01 : SE</title>
+			  -->
+			<title code="0x000022">33:01 : SE</title>
+			<title code="0x000023">34:01 : SE</title>
+			<title code="0x00002a">3B:01 : SE</title>
+			<title code="0x00002e">42:01 : SE</title>
+			<title code="0x00002f">43:01 : SE</title>
+			<title code="0x000030">44:01 : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 秘録 首斬り館 ～逐電屋藤兵衛～(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIT2</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x0c00"/>
+			<option name="mfile_size" value="0x0c00"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="kubikiri_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x8000">PSGDRV.BIN</rom>
+			<rom type="code" offset="0x8c00">PSGIN.BIN</rom>
+
+			<rom type="bgm" offset="0x00">PSG00.BIN</rom>
+			<rom type="bgm" offset="0x01">PSG01.BIN</rom>
+			<rom type="bgm" offset="0x02">PSG02.BIN</rom>
+			<rom type="bgm" offset="0x03">PSG03.BIN</rom>
+			<rom type="bgm" offset="0x04">PSG04.BIN</rom>
+			<rom type="bgm" offset="0x05">PSG10.BIN</rom>
+			<rom type="bgm" offset="0x06">PSG11.BIN</rom>
+			<rom type="bgm" offset="0x07">PSG12.BIN</rom>
+			<rom type="bgm" offset="0x08">PSG13.BIN</rom>
+			<rom type="bgm" offset="0x09">PSG14.BIN</rom>
+			<rom type="bgm" offset="0x0a">PSG15.BIN</rom>
+			<rom type="bgm" offset="0x0b">PSG16.BIN</rom>
+			<rom type="bgm" offset="0x0c">PSG17.BIN</rom>
+			<rom type="bgm" offset="0x0d">PSG18.BIN</rom>
+			<rom type="bgm" offset="0x0e">PSG19.BIN</rom>
+			<rom type="bgm" offset="0x0f">PSG1A.BIN</rom>
+			<rom type="bgm" offset="0x10">PSG1B.BIN</rom>
+			<rom type="bgm" offset="0x11">PSG1C.BIN</rom>
+			<rom type="bgm" offset="0x12">PSG1D.BIN</rom>
+			<rom type="bgm" offset="0x13">PSG1E.BIN</rom>
+			<rom type="bgm" offset="0x14">PSG20.BIN</rom>
+			<rom type="bgm" offset="0x15">PSG21.BIN</rom>
+			<rom type="bgm" offset="0x16">PSG22.BIN</rom>
+			<rom type="bgm" offset="0x17">PSG23.BIN</rom>
+			<rom type="bgm" offset="0x18">PSG24.BIN</rom>
+			<rom type="bgm" offset="0x19">PSG25.BIN</rom>
+			<rom type="bgm" offset="0x1a">PSG26.BIN</rom>
+			<rom type="bgm" offset="0x1b">PSG27.BIN</rom>
+			<rom type="bgm" offset="0x1c">PSG28.BIN</rom>
+			<rom type="bgm" offset="0x1d">PSG29.BIN</rom>
+			<rom type="bgm" offset="0x1e">PSG2A.BIN</rom>
+			<rom type="bgm" offset="0x1f">PSG30.BIN</rom>
+			<rom type="bgm" offset="0x20">PSG31.BIN</rom>
+			<rom type="bgm" offset="0x21">PSG32.BIN</rom>
+			<rom type="bgm" offset="0x22">PSG33.BIN</rom>
+			<rom type="bgm" offset="0x23">PSG34.BIN</rom>
+			<rom type="bgm" offset="0x24">PSG35.BIN</rom>
+			<rom type="bgm" offset="0x25">PSG36.BIN</rom>
+			<rom type="bgm" offset="0x26">PSG37.BIN</rom>
+			<rom type="bgm" offset="0x27">PSG38.BIN</rom>
+			<rom type="bgm" offset="0x28">PSG39.BIN</rom>
+			<rom type="bgm" offset="0x29">PSG3A.BIN</rom>
+			<rom type="bgm" offset="0x2a">PSG3B.BIN</rom>
+			<rom type="bgm" offset="0x2b">PSG3C.BIN</rom>
+			<rom type="bgm" offset="0x2c">PSG40.BIN</rom>
+			<rom type="bgm" offset="0x2d">PSG41.BIN</rom>
+			<rom type="bgm" offset="0x2e">PSG42.BIN</rom>
+			<rom type="bgm" offset="0x2f">PSG43.BIN</rom>
+			<rom type="bgm" offset="0x30">PSG44.BIN</rom>
+			<rom type="bgm" offset="0x31">PSG45.BIN</rom>
+			<rom type="bgm" offset="0x32">PSG46.BIN</rom>
+			<rom type="bgm" offset="0x33">PSG47.BIN</rom>
+			<rom type="bgm" offset="0x34">PSG48.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010000">00:01</title>
+			<!--
+			<title code="0x010008">13:01</title>
+			<title code="0x010017">23:01</title>
+			<title code="0x010029">3A:01</title>
+			  -->
+			<title code="0x010001">01:01</title>
+			<title code="0x010003">03:01</title>
+
+			<title code="0x010103">03:02</title>
+			<!--
+			<title code="0x010018">24:01</title>
+			<title code="0x01001f">30:01</title>
+			<title code="0x010034">48:01</title>
+			  -->
+			<title code="0x010203">03:03</title>
+			<title code="0x010004">04:01</title>
+			<title code="0x010005">10:01</title>
+			<title code="0x010006">11:01</title>
+			<title code="0x010007">12:01</title>
+
+			<title code="0x010009">14:01</title>
+			<!--
+			<title code="0x01001e">2A:01</title>
+			<title code="0x010021">32:01</title>
+			  -->
+
+			<title code="0x01000a">15:01</title>
+			<!--
+			<title code="0x010020">31:01</title>
+			  -->
+			<title code="0x01000c">17:01</title>
+			<!--
+			<title code="0x01001d">29:01</title>
+			  -->
+			<title code="0x01000d">18:01</title>
+			<!--
+			<title code="0x01001a">26:01</title>
+			  -->
+			<title code="0x01000f">1A:01</title>
+			<!--
+			<title code="0x010027">38:01</title>
+			  -->
+			<title code="0x010010">1B:01</title>
+			<!--
+			<title code="0x010016">22:01</title>
+			  -->
+			<title code="0x010011">1C:01</title>
+			<title code="0x010012">1D:01</title>
+			<title code="0x010013">1E:01</title>
+			<!--
+			<title code="0x010019">25:01</title>
+			  -->
+			<title code="0x010014">20:01</title>
+			<title code="0x010015">21:01</title>
+			<title code="0x01001b">27:01</title>
+			<!--
+			<title code="0x010025">36:01</title>
+			  -->
+			<title code="0x01001c">28:01</title>
+			<!--
+			<title code="0x010024">35:01</title>
+			  -->
+			<title code="0x010026">37:01</title>
+			<title code="0x01002c">40:01</title>
+			<title code="0x01002d">41:01</title>
+			<title code="0x010031">45:01</title>
+			<title code="0x000032">46:01</title>
+			<title code="0x000002">02:01 : SE</title>
+			<!--
+			<title code="0x00002b">3C:01 : SE</title>
+			  -->
+			<title code="0x000303">03:01 : SE</title>
+			<title code="0x00000b">16:01 : SE</title>
+			<title code="0x00000e">19:01 : SE</title>
+			<!--
+			<title code="0x000028">39:01 : SE</title>
+			<title code="0x000033">47:01 : SE</title>
+			  -->
+			<title code="0x000022">33:01 : SE</title>
+			<title code="0x000023">34:01 : SE</title>
+			<title code="0x00002a">3B:01 : SE</title>
+			<title code="0x00002e">42:01 : SE</title>
+			<title code="0x00002f">43:01 : SE</title>
+			<title code="0x000030">44:01 : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] QUINPL(FD)(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIT2</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa400"/>
+			<option name="mdata_size" value="0x1800"/>
+			<option name="mfile_size" value="0x1800"/>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="quinplf_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x57b4">DRIVER.BIN</rom>
+			<rom type="bgm" offset="0x00">FM00.BIN</rom>
+			<rom type="bgm" offset="0x01">FM01.BIN</rom>
+			<rom type="bgm" offset="0x02">FM02.BIN</rom>
+			<rom type="bgm" offset="0x03">FM03.BIN</rom>
+			<rom type="bgm" offset="0x04">FM04.BIN</rom>
+			<rom type="bgm" offset="0x05">FM05.BIN</rom>
+			<rom type="bgm" offset="0x06">FM06.BIN</rom>
+			<rom type="bgm" offset="0x07">FM07.BIN</rom>
+			<rom type="bgm" offset="0x08">FM08.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">00:01 : TITLE</title>
+			<title code="0x010100">00:02 : DEMO #1</title>
+			<title code="0x010200">00:03 : DEMO #2</title>
+			<title code="0x010300">00:04 : DEMO #3</title>
+			<title code="0x010001">01:01 : STAGE 01~09</title>
+			<title code="0x010002">02:01 : STAGE 11~19</title>
+			<title code="0x010003">03:01 : STAGE 21~29</title>
+			<title code="0x010004">04:01 : STAGE 31~39</title>
+			<title code="0x010005">05:01 : STAGE 41~49</title>
+			<title code="0x010006">06:01 : STAGE 51</title>
+			<title code="0x010007">07:01 : BOSS</title>
+			<title code="0x010008">08:01 ; GOD</title>
+			<title code="0x010408">08:05 : END DEMO</title>
+			<title code="0x000101">01:02 : MISS</title>
+			<!--
+			<title code="0x000102">02:02 : MISS</title>
+			<title code="0x000103">03:02 : MISS</title>
+			<title code="0x000104">04:02 : MISS</title>
+			<title code="0x000105">05:02 : MISS</title>
+			<title code="0x000106">06:02 : MISS</title>
+			<title code="0x000107">07:02 : MISS</title>
+			<title code="0x000108">08:02 : MISS</title>
+			  -->
+
+			<title code="0x000201">01:03 : STAGE CLEAR</title>
+			<!--
+			<title code="0x000202">02:03 : STAGE CLEAR</title>
+			<title code="0x000203">03:03 : STAGE CLEAR</title>
+			<title code="0x000204">04:03 : STAGE CLEAR</title>
+			<title code="0x000205">05:03 : STAGE CLEAR</title>
+			<title code="0x000206">06:03 : STAGE CLEAR</title>
+			<title code="0x000207">07:03 : STAGE CLEAR</title>
+			<title code="0x000208">08:03 : STAGE CLEAR</title>
+			  -->
+
+			<title code="0x000301">01:04 : GAME OVER</title>
+			<!--
+			<title code="0x000302">02:04 : GAME OVER</title>
+			<title code="0x000303">03:04 : GAME OVER</title>
+			<title code="0x000304">04:04 : GAME OVER</title>
+			<title code="0x000305">05:04 : GAME OVER</title>
+			<title code="0x000306">06:04 : GAME OVER</title>
+			<title code="0x000307">07:04 : GAME OVER</title>
+			<title code="0x000308">08:04 : GAME OVER</title>
+			  -->
+			<range min="0xff01" max="0xff0c" extcode="0">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] QUINPL(FD)(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIT2</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa400"/>
+			<option name="mdata_size" value="0x1800"/>
+			<option name="mfile_size" value="0x1800"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="quinplf_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x57b4">DRIVER.BIN</rom>
+			<rom type="bgm" offset="0x00">PSG00.BIN</rom>
+			<rom type="bgm" offset="0x01">PSG01.BIN</rom>
+			<rom type="bgm" offset="0x02">PSG02.BIN</rom>
+			<rom type="bgm" offset="0x03">PSG03.BIN</rom>
+			<rom type="bgm" offset="0x04">PSG04.BIN</rom>
+			<rom type="bgm" offset="0x05">PSG05.BIN</rom>
+			<rom type="bgm" offset="0x06">PSG06.BIN</rom>
+			<rom type="bgm" offset="0x07">PSG07.BIN</rom>
+			<rom type="bgm" offset="0x08">PSG08.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">00:01 : TITLE</title>
+			<title code="0x010100">00:02 : DEMO #1</title>
+			<title code="0x010200">00:03 : DEMO #2</title>
+			<title code="0x010300">00:04 : DEMO #3</title>
+			<title code="0x010001">01:01 : STAGE 01~09</title>
+			<title code="0x010002">02:01 : STAGE 11~19</title>
+			<title code="0x010003">03:01 : STAGE 21~29</title>
+			<title code="0x010004">04:01 : STAGE 31~39</title>
+			<title code="0x010005">05:01 : STAGE 41~49</title>
+			<title code="0x010006">06:01 : STAGE 51</title>
+			<title code="0x010007">07:01 : BOSS</title>
+			<title code="0x010008">08:01 ; GOD</title>
+			<title code="0x010408">08:05 : END DEMO</title>
+			<title code="0x000101">01:02 : MISS</title>
+			<!--
+			<title code="0x000102">02:02 : MISS</title>
+			<title code="0x000103">03:02 : MISS</title>
+			<title code="0x000104">04:02 : MISS</title>
+			<title code="0x000105">05:02 : MISS</title>
+			<title code="0x000106">06:02 : MISS</title>
+			<title code="0x000107">07:02 : MISS</title>
+			<title code="0x000108">08:02 : MISS</title>
+			  -->
+
+			<title code="0x000201">01:03 : STAGE CLEAR</title>
+			<!--
+			<title code="0x000202">02:03 : STAGE CLEAR</title>
+			<title code="0x000203">03:03 : STAGE CLEAR</title>
+			<title code="0x000204">04:03 : STAGE CLEAR</title>
+			<title code="0x000205">05:03 : STAGE CLEAR</title>
+			<title code="0x000206">06:03 : STAGE CLEAR</title>
+			<title code="0x000207">07:03 : STAGE CLEAR</title>
+			<title code="0x000208">08:03 : STAGE CLEAR</title>
+			  -->
+
+			<title code="0x000301">01:04 : GAME OVER</title>
+			<!--
+			<title code="0x000302">02:04 : GAME OVER</title>
+			<title code="0x000303">03:04 : GAME OVER</title>
+			<title code="0x000304">04:04 : GAME OVER</title>
+			<title code="0x000305">05:04 : GAME OVER</title>
+			<title code="0x000306">06:04 : GAME OVER</title>
+			<title code="0x000307">07:04 : GAME OVER</title>
+			<title code="0x000308">08:04 : GAME OVER</title>
+			  -->
+			<range min="0xff01" max="0xff0c" extcode="0">SE 0x%02x</range>
+		</titlelist>
+	</game>
+</gamelist>

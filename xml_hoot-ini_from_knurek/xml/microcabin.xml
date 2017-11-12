@@ -1,0 +1,3415 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //microcabin -->
+	<game>
+		<name>[PC-88] Carmine (カーマイン88)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">microcabin</driveralias>
+		<options>
+			<option name="mdata_size" value="0x2a00"/>
+			<option name="mfile_size" value="0x2a00"/>
+		</options>
+		<romlist archive="carmine88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xa000">MUSIC</rom>
+			<rom type="bgm" offset="0x00">M000</rom>
+			<rom type="bgm" offset="0x01">M001</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">オープニング</title>
+			<title code="0x00">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Maison Ikkoku (めぞん一刻～想い出のフォトグラフ～)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">microcabin</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+			<option name="mdata_size" value="0x4800"/>
+			<option name="mfile_size" value="0x4800"/>
+			<option name="use_vrtc" value="1"/>
+		</options>
+		<romlist archive="maison">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8800">MUSIC</rom>
+			<rom type="bgm" offset="0x00">M000</rom>
+			<rom type="bgm" offset="0x01">M001</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">悲しみよこんにちは</title>
+			<title code="0x01">シ・ネ・マ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Maison Ikkoku Kanketsu hen (めぞん一刻・完結篇 ～さよなら、そして～)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">microcabin</driveralias>
+		<romlist archive="maisonk">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x75b0">MUSIC88.COM</rom>
+			<rom type="bgm" offset="0x00">M00000.BIN</rom>
+			<rom type="bgm" offset="0x01">M00001.BIN</rom>
+			<rom type="bgm" offset="0x02">M00002.BIN</rom>
+			<rom type="bgm" offset="0x03">M00003.BIN</rom>
+			<rom type="bgm" offset="0x04">M00004.BIN</rom>
+			<rom type="bgm" offset="0x05">M00005.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">好きさ</title>
+			<title code="0x01">予感</title>
+			<title code="0x02">宴会謝絶</title>
+			<title code="0x03">朱美のハブラシ</title>
+			<title code="0x04">複雑夜</title>
+			<title code="0x05">愛・夜明け前</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Urusei Yatsura (うる星やつら ～恋のサバイバル・バースディ～)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">microcabin</driveralias>
+		<romlist archive="urusei">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9500">MUSIC88.COM</rom>
+			<rom type="bgm" offset="0x00">TONO.BIN</rom>
+			<rom type="bgm" offset="0x01">PAJAMA.BIN</rom>
+			<rom type="bgm" offset="0x02">BOO.BIN</rom>
+			<rom type="bgm" offset="0x03">TAIHEN.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">殿方ごめん遊ばせ</title>
+			<title code="0x01">パジャマ・じゃまだ！</title>
+			<title code="0x02">愛はブーメラン</title>
+			<title code="0x03">宇宙は大ヘンだ！</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Seilane (セイレーン)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">microcabin</driveralias>
+		<romlist archive="seilane">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x74a0">MUSIC88.COM</rom>
+			<rom type="code" offset="0x7e80">PCMDRV.COM</rom>
+			<rom type="adpcm" offset="0x00000">SOUND.PCM</rom>
+			<rom type="bgm" offset="0x00">MUS000.BGM</rom>
+			<rom type="bgm" offset="0x01">MUS001.BGM</rom>
+			<rom type="bgm" offset="0x02">MUS002.BGM</rom>
+			<rom type="bgm" offset="0x03">MUS003.BGM</rom>
+			<rom type="bgm" offset="0x04">MUS004.BGM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xe0">Stop the Sound (演奏停止)</title>
+			<title code="0x00">プリル</title>
+			<title code="0x01">セイレイ</title>
+			<title code="0x02">地底メイズ</title>
+			<title code="0x03">セイレーン</title>
+			<title code="0x04">MUS004.BGM</title>
+			<title code="0xe1">雷鳴</title>
+			<title code="0xe2">小川のせせらぎ</title>
+			<title code="0xe3">滝</title>
+			<title code="0xe4">小鳥のさえずり1</title>
+			<title code="0xe5">風</title>
+			<title code="0xe6">爆発音</title>
+			<title code="0xe7">キツツキ</title>
+			<title code="0xe8">カラス</title>
+			<title code="0xe9">コウモリ</title>
+			<title code="0xea">小鳥のさえずり2</title>
+			<title code="0xeb">落下音</title>
+			<title code="0xec">風切り音</title>
+			<title code="0xed">タイトルロゴ</title>
+			<title code="0xee">殴打音</title>
+			<title code="0xef">駆け足音</title>
+			<title code="0xf0">落下音2</title>
+			<title code="0xf1">モノアイ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Kimagure Orange Road (きまぐれオレンジロード ～夏のミラージュ～)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">microcabin</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x032b"/>
+		</options>
+		<romlist archive="orangerd">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7070">CLY88.COM</rom>
+			<rom type="code" offset="0x7bf4">VOICE.BIN</rom>
+			<rom type="bgm" offset="0x00">M00000.BIN</rom>
+			<rom type="bgm" offset="0x01">M00001.BIN</rom>
+			<rom type="bgm" offset="0x02">M00002.BIN</rom>
+			<rom type="bgm" offset="0x03">M00003.BIN</rom>
+			<rom type="bgm" offset="0x04">M00004.BIN</rom>
+			<rom type="bgm" offset="0x05">M00005.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">悲しいハートは燃えている</title>
+			<title code="0x01">鏡の中のアクトレス</title>
+			<title code="0x02">ダンス・イン・ザ・メモリーズ</title>
+			<title code="0x03">ナイト・オブ・サマーサイド</title>
+			<title code="0x04">ジェニーナ</title>
+			<title code="0x05">夏のミラージュ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] What's Michael? (ホワッツマイケル)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">microcabin</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x032b"/>
+		</options>
+		<romlist archive="michael">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7070">CLY88.COM</rom>
+			<rom type="code" offset="0x7bf4">VOICE.BIN</rom>
+			<rom type="bgm" offset="0x00">M00000.BIN</rom>
+			<rom type="bgm" offset="0x01">M00001.BIN</rom>
+			<rom type="bgm" offset="0x02">M00002.BIN</rom>
+			<rom type="bgm" offset="0x03">M00003.BIN</rom>
+			<rom type="bgm" offset="0x04">M00004.BIN</rom>
+			<rom type="bgm" offset="0x05">M00005.BIN</rom>
+			<rom type="bgm" offset="0x06">M00006.BIN</rom>
+			<rom type="bgm" offset="0x07">M00007.BIN</rom>
+			<rom type="bgm" offset="0x08">M00008.BIN</rom>
+			<rom type="bgm" offset="0x09">M00009.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">M00000.DAT</title>
+			<title code="0x01">M00001.DAT</title>
+			<title code="0x02">M00002.DAT</title>
+			<title code="0x03">M00003.DAT</title>
+			<title code="0x04">M00004.DAT</title>
+			<title code="0x05">M00005.DAT</title>
+			<title code="0x06">M00006.DAT</title>
+			<title code="0x07">M00007.DAT</title>
+			<title code="0x08">M00008.DAT</title>
+			<title code="0x09">星空のエトランゼ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Xak: The Art of Visual Stage (サーク Ｔｈｅ Ａｒｔ ｏｆ Ｖｉｓｕａｌ Ｓｔａｇｅ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">microcabin</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf400"/>
+			<option name="mdata_size" value="0x0c00"/>
+			<option name="mdata_num" value="0x100"/>
+		</options>
+		<romlist archive="xak_88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xbf00">FM88.COM</rom>
+			<rom type="code" offset="0xcb40">EFFECT.DAT</rom>
+			<rom type="bgm"   offset="0x00">M000.BGM</rom>
+			<rom type="voice" offset="0x00">V000.VOI</rom>
+			<rom type="bgm"   offset="0x01">M001.BGM</rom>
+			<rom type="voice" offset="0x01">V000.VOI</rom>
+			<rom type="bgm"   offset="0x02">M002.BGM</rom>
+			<rom type="voice" offset="0x02">V000.VOI</rom>
+			<rom type="bgm"   offset="0x03">M003.BGM</rom>
+			<rom type="voice" offset="0x03">V000.VOI</rom>
+			<rom type="bgm"   offset="0x04">M004.BGM</rom>
+			<rom type="voice" offset="0x04">V000.VOI</rom>
+			<rom type="bgm"   offset="0x05">M005.BGM</rom>
+			<rom type="voice" offset="0x05">V000.VOI</rom>
+			<rom type="bgm"   offset="0x06">M006.BGM</rom>
+			<rom type="voice" offset="0x06">V000.VOI</rom>
+			<rom type="bgm"   offset="0x07">M007.BGM</rom>
+			<rom type="voice" offset="0x07">V000.VOI</rom>
+			<rom type="bgm"   offset="0x08">M008.BGM</rom>
+			<rom type="voice" offset="0x08">V000.VOI</rom>
+			<rom type="bgm"   offset="0x09">M009.BGM</rom>
+			<rom type="voice" offset="0x09">V001.VOI</rom>
+			<rom type="bgm"   offset="0x0a">M010.BGM</rom>
+			<rom type="voice" offset="0x0a">V001.VOI</rom>
+			<rom type="bgm"   offset="0x0b">M011.BGM</rom>
+			<rom type="voice" offset="0x0b">V002.VOI</rom>
+			<rom type="bgm"   offset="0x0c">M012.BGM</rom>
+			<rom type="voice" offset="0x0c">V000.VOI</rom>
+			<rom type="bgm"   offset="0x0d">M013.BGM</rom>
+			<rom type="voice" offset="0x0d">V000.VOI</rom>
+			<rom type="bgm"   offset="0x0e">M014.BGM</rom>
+			<rom type="voice" offset="0x0e">V001.VOI</rom>
+			<rom type="bgm"   offset="0x0f">M015.BGM</rom>
+			<rom type="voice" offset="0x0f">V001.VOI</rom>
+			<rom type="bgm"   offset="0x10">M016.BGM</rom>
+			<rom type="voice" offset="0x10">V000.VOI</rom>
+			<rom type="bgm"   offset="0x11">M017.BGM</rom>
+			<rom type="voice" offset="0x11">V001.VOI</rom>
+			<rom type="bgm"   offset="0x12">M018.BGM</rom>
+			<rom type="voice" offset="0x12">V001.VOI</rom>
+			<rom type="bgm"   offset="0x13">M019.BGM</rom>
+			<rom type="voice" offset="0x13">V000.VOI</rom>
+			<rom type="bgm"   offset="0x14">M020.BGM</rom>
+			<rom type="voice" offset="0x14">V003.VOI</rom>
+			<rom type="bgm"   offset="0x15">M021.BGM</rom>
+			<rom type="voice" offset="0x15">V001.VOI</rom>
+			<rom type="bgm"   offset="0x16">M022.BGM</rom>
+			<rom type="voice" offset="0x16">V000.VOI</rom>
+			<rom type="bgm"   offset="0x17">M023.BGM</rom>
+			<rom type="voice" offset="0x17">V000.VOI</rom>
+			<rom type="bgm"   offset="0x18">M024.BGM</rom>
+			<rom type="voice" offset="0x18">V000.VOI</rom>
+			<rom type="bgm"   offset="0x19">M025.BGM</rom>
+			<rom type="voice" offset="0x19">V000.VOI</rom>
+			<rom type="bgm"   offset="0x1a">M026.BGM</rom>
+			<rom type="voice" offset="0x1a">V000.VOI</rom>
+			<rom type="bgm"   offset="0x1b">M027.BGM</rom>
+			<rom type="voice" offset="0x1b">V003.VOI</rom>
+			<rom type="bgm"   offset="0x1c">M028.BGM</rom>
+			<rom type="voice" offset="0x1c">V004.VOI</rom>
+			<rom type="bgm"   offset="0x1d">M029.BGM</rom>
+			<rom type="voice" offset="0x1d">V004.VOI</rom>
+			<rom type="bgm"   offset="0x1e">M030.BGM</rom>
+			<rom type="voice" offset="0x1e">V004.VOI</rom>
+			<rom type="bgm"   offset="0x1f">M031.BGM</rom>
+			<rom type="voice" offset="0x1f">V003.VOI</rom>
+			<rom type="bgm"   offset="0x20">M032.BGM</rom>
+			<rom type="voice" offset="0x20">V002.VOI</rom>
+			<rom type="bgm"   offset="0x21">M033.BGM</rom>
+			<rom type="voice" offset="0x21">V005.VOI</rom>
+			<rom type="bgm"   offset="0x22">M034.BGM</rom>
+			<rom type="voice" offset="0x22">V002.VOI</rom>
+			<rom type="bgm"   offset="0x23">M035.BGM</rom>
+			<rom type="voice" offset="0x23">V003.VOI</rom>
+			<rom type="bgm"   offset="0x24">M036.BGM</rom>
+			<rom type="voice" offset="0x24">V001.VOI</rom>
+			<rom type="bgm"   offset="0x25">PALACE.BGM</rom>
+			<rom type="voice" offset="0x25">V000.VOI</rom>
+			<rom type="bgm"   offset="0x26">OPEF0.BGM</rom>
+			<rom type="voice" offset="0x26">V002.VOI</rom>
+			<rom type="bgm"   offset="0x27">OPEF1.BGM</rom>
+			<rom type="voice" offset="0x27">V002.VOI</rom>
+			<rom type="bgm"   offset="0x28">OPENING.BGM</rom>
+			<rom type="voice" offset="0x28">V002.VOI</rom>
+			<rom type="bgm"   offset="0x29">OPEF2.BGM</rom>
+			<rom type="voice" offset="0x29">V002.VOI</rom>
+			<rom type="bgm"   offset="0x2a">SARA.BGM</rom>
+			<rom type="voice" offset="0x2a">V002.VOI</rom>
+			<rom type="bgm"   offset="0x2b">BOSS_D.BGM</rom>
+			<rom type="voice" offset="0x2b">V002.VOI</rom>
+			<rom type="bgm"   offset="0x2c">BOS_D2.BGM</rom>
+			<rom type="voice" offset="0x2c">V004.VOI</rom>
+			<rom type="bgm"   offset="0x2d">END1.BGM</rom>
+			<rom type="voice" offset="0x2d">END1.VOI</rom>
+			<rom type="bgm"   offset="0x2e">EYE.BGM</rom>
+			<rom type="voice" offset="0x2e">V002.VOI</rom>
+			<rom type="bgm"   offset="0x2f">END2.BGM</rom>
+			<rom type="voice" offset="0x2f">END2.VOI</rom>
+			<rom type="bgm"   offset="0x30">MESSAGE.BGM</rom>
+			<rom type="voice" offset="0x30">MESSAGE.VOI</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x26">オープニング効果音1</title>
+			<title code="0x27">オープニング効果音2</title>
+			<title code="0x28">オープニング</title>
+			<title code="0x29">フェアリー効果音</title>
+			<title code="0x00">フェアレスの町</title>
+			<title code="0x01">教会</title>
+			<title code="0x02">メッセンジャー</title>
+			<title code="0x03">ショップ</title>
+			<title code="0x04">悲しみ</title>
+			<title code="0x05">やすらぎ</title>
+			<title code="0x06">微笑み1</title>
+			<title code="0x07">微笑み2</title>
+			<title code="0x08">不安</title>
+			<title code="0x09">街へ</title>
+			<title code="0x0a">バトル・フィールド</title>
+			<title code="0x24">バトル・フィールド(滝の音入り)</title>
+			<title code="0x0b">緑の大地</title>
+			<title code="0x0c">邪悪な木</title>
+			<title code="0x0d">砦への道</title>
+			<title code="0x0e">砦</title>
+			<title code="0x0f">水龍</title>
+			<title code="0x10">ノルマナの町</title>
+			<title code="0x11">青い海</title>
+			<title code="0x12">洞窟</title>
+			<title code="0x13">ロック・バイター</title>
+			<title code="0x14">ファイアー＆ウォーターエレメンタル</title>
+			<title code="0x15">合体エレメンタル</title>
+			<title code="0x2d">エンディング1</title>
+			<title code="0x2e">アイキャッチ</title>
+			<title code="0x16">ネムヌの町</title>
+			<title code="0x17">地の下の塔</title>
+			<title code="0x18">ネクロマンサー</title>
+			<title code="0x19">炎の地</title>
+			<title code="0x1a">炎の砦</title>
+			<title code="0x1b">炎の地、上空</title>
+			<title code="0x2a">サラマンダー</title>
+			<title code="0x2b">ボスを倒した音</title>
+			<title code="0x1c">聖域へ</title>
+			<title code="0x25">封印の地</title>
+			<title code="0x23">効果音</title>
+			<title code="0x1d">バドゥーの驚異</title>
+			<title code="0x2c">バドゥーを倒した音</title>
+			<title code="0x1e">勝利</title>
+			<title code="0x2f">エンディング2</title>
+			<title code="0x30">メッセージ</title>
+			<title code="0x20">ゲームオーバー</title>
+			<title code="0x21">ゲームオーバー2</title>
+			<title code="0x22">Get アイテム</title>
+			<title code="0xe0">SFX #01</title>
+			<title code="0xe1">SFX #02</title>
+			<title code="0xe2">SFX #03</title>
+			<title code="0xe3">SFX #04</title>
+			<title code="0xe4">SFX #05</title>
+			<title code="0xe5">SFX #06</title>
+			<title code="0xe6">SFX #07</title>
+			<title code="0xe7">SFX #08</title>
+			<title code="0xe8">SFX #09</title>
+			<title code="0xe9">SFX #10</title>
+			<title code="0xea">SFX #11</title>
+			<title code="0xeb">SFX #12</title>
+			<title code="0xec">SFX #13</title>
+			<title code="0xed">SFX #14</title>
+			<title code="0xee">SFX #15</title>
+			<title code="0xef">SFX #16</title>
+			<title code="0xf0">SFX #17</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Urusei Yatsura (うる星やつら ～恋のサバイバル・バースデイ～)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="urusei98">
+			<rom type="file" offset="-1">music.com</rom>
+			<rom type="file" offset="-1">MUSIC98.EXE</rom>
+			<rom type="file" offset="-1">VOICE.BIN</rom>
+			<rom type="file" offset="0x10">PAJAMA.BIN</rom>
+			<rom type="file" offset="0x11">TAIHEN.BIN</rom>
+			<rom type="file" offset="0x12">TONO.BIN</rom>
+			<rom type="shell" offset="0">MUSIC98 6144</rom>
+			<rom type="shell" offset="0">music</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">殿方ごめん遊ばせ</title>
+			<title code="0x10">パジャマ・じゃまだ！</title>
+			<title code="0x11">宇宙は大ヘンだ！</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Seilane (セイレーン)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="seilane_98">
+			<rom type="file" offset="-1">mmd.com</rom>
+			<rom type="file" offset="-1">MMD.SYS</rom>
+			<rom type="file" offset="-1">VOICE.BIN</rom>
+			<rom type="file" offset="0x10">SLM01.BIN</rom>
+			<rom type="file" offset="0x11">SLM02.BIN</rom>
+			<rom type="file" offset="0x12">SLM03.BIN</rom>
+			<rom type="file" offset="0x13">SLM04.BIN</rom>
+			<rom type="file" offset="0x14">SLM05.BIN</rom>
+			<rom type="device" offset="0">mmd.sys 8192 2048</rom>
+			<rom type="shell" offset="0">mmd.com</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">プリル</title>
+			<title code="0x11">セイレイ</title>
+			<title code="0x12">地底メイズ</title>
+			<title code="0x13">セイレーン</title>
+			<title code="0x14">SLM05.BIN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Maison Ikkoku (めぞん一刻完結編～さよなら　そして～)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<romlist archive="maisok98">
+			<rom type="file" offset="-1">mmd.com</rom>
+			<rom type="file" offset="-1">MMD.SYS</rom>
+			<rom type="file" offset="-1">VOICE.BIN</rom>
+			<rom type="file" offset="0x10">M00000.BIN</rom>
+			<rom type="file" offset="0x11">M00001.BIN</rom>
+			<rom type="file" offset="0x12">M00002.BIN</rom>
+			<rom type="file" offset="0x13">M00003.BIN</rom>
+			<rom type="file" offset="0x14">M00004.BIN</rom>
+			<rom type="file" offset="0x15">M00005.BIN</rom>
+			<rom type="device" offset="0">mmd.sys 4096</rom>
+			<rom type="shell" offset="0">mmd.com</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">好きさ</title>
+			<title code="0x11">予感</title>
+			<title code="0x12">宴会謝絶</title>
+			<title code="0x13">朱美のハブラシ</title>
+			<title code="0x14">複雑夜</title>
+			<title code="0x15">愛・夜明け前</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Kimagure Orange Road (きまぐれオレンジロード ～夏のミラージュ～)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="orangerd98">
+			<rom type="file" offset="-1">mmd2.com</rom>
+			<rom type="file" offset="-1">MMD2.SYS</rom>
+			<rom type="file" offset="0x05">VOICE.BIN</rom>
+			<rom type="file" offset="0x10">M00000.BIN</rom>
+			<rom type="file" offset="0x11">M00001.BIN</rom>
+			<rom type="file" offset="0x12">M00002.BIN</rom>
+			<rom type="file" offset="0x13">M00003.BIN</rom>
+			<rom type="file" offset="0x14">M00004.BIN</rom>
+			<rom type="file" offset="0x15">M00005.BIN</rom>
+			<rom type="device" offset="0">MMD2.SYS 4096</rom>
+			<rom type="shell" offset="0">mmd2.com</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x050010">悲しいハートは燃えている</title>
+			<title code="0x050011">鏡の中のアクトレス</title>
+			<title code="0x050012">ダンス・イン・ザ・メモリーズ</title>
+			<title code="0x050013">ナイト・オブ・サマーサイド</title>
+			<title code="0x050014">ジェニーナ</title>
+			<title code="0x050015">夏のミラージュ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] What's Michael? (ホワッツマイケル)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="michael98">
+			<rom type="file" offset="-1">mmd2.com</rom>
+			<rom type="file" offset="-1">MMD2.SYS</rom>
+			<rom type="file" offset="0x05">VOICE.BIN</rom>
+			<rom type="file" offset="0x10">M00000.BIN</rom>
+			<rom type="file" offset="0x11">M00001.BIN</rom>
+			<rom type="file" offset="0x12">M00002.BIN</rom>
+			<rom type="file" offset="0x13">M00003.BIN</rom>
+			<rom type="file" offset="0x14">M00004.BIN</rom>
+			<rom type="file" offset="0x15">M00005.BIN</rom>
+			<rom type="file" offset="0x16">M00006.BIN</rom>
+			<rom type="file" offset="0x17">M00007.BIN</rom>
+			<rom type="file" offset="0x18">M00008.BIN</rom>
+			<rom type="file" offset="0x19">M00009.BIN</rom>
+			<rom type="device" offset="0">MMD2.SYS 4096</rom>
+			<rom type="shell" offset="0">mmd2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x050010">M00000.BIN</title>
+			<title code="0x050011">M00001.BIN</title>
+			<title code="0x050012">M00002.BIN</title>
+			<title code="0x050013">M00003.BIN</title>
+			<title code="0x050014">M00004.BIN</title>
+			<title code="0x050015">M00005.BIN</title>
+			<title code="0x050016">M00006.BIN</title>
+			<title code="0x050017">M00007.BIN</title>
+			<title code="0x050018">M00008.BIN</title>
+			<title code="0x050019">星空のエトランゼ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Xak: The Art of Visual Stage (サーク Ｔｈｅ Ａｒｔ ｏｆ Ｖｉｓｕａｌ Ｓｔａｇｅ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul"  value="0x04"/>
+			<option name="opn_mix"   value="0x100"/>
+			<option name="fm_mix"    value="19"/>
+			<option name="ssg_mix"   value="0"/>
+		</options>
+		<romlist archive="xak_98">
+			<rom type="file" offset="-1">mmd2.com</rom>
+			<rom type="file" offset="-1">MMD2.SYS</rom>
+			<!-- DEMO -->
+			<rom type="file" offset="0x0b">DEMO/ORANYO.BIN</rom>
+			<rom type="file" offset="0x0c">DEMO/XAK.BIN</rom>
+			<rom type="file" offset="0x0d">DEMO/XAKIII.BIN</rom>
+			<rom type="file" offset="0x0e">DEMO/XAKEEE.BIN</rom>
+			<rom type="file" offset="0x0f">DEMO/XAK@@@.BIN</rom>
+			<rom type="file" offset="0x40">DEMO/USAUSA.BGM</rom>
+			<rom type="file" offset="0x41">DEMO/GOOO.BGM</rom>
+			<rom type="file" offset="0x42">DEMO/END.BGM</rom>
+			<rom type="file" offset="0x43">DEMO/OPNAB.BGM</rom>
+			<rom type="file" offset="0x44">DEMO/PIKSY.BGM</rom>
+			<rom type="file" offset="0x45">DEMO/XAK12.BGM</rom>
+			<rom type="file" offset="0x46">DEMO/END2.BGM</rom>
+			<rom type="file" offset="0x47">DEMO/AHXAK'.BGM</rom>
+			<!-- ROOT -->
+			<rom type="file" offset="0x05">ORANYO.BIN</rom>
+			<rom type="file" offset="0x06">XAK.BIN</rom>
+			<rom type="file" offset="0x07">XAK@@@.BIN</rom>
+			<rom type="file" offset="0x08">XAKEEE.BIN</rom>
+			<rom type="file" offset="0x09">XAKENK.BIN</rom>
+			<rom type="file" offset="0x0a">XAKIII.BIN</rom>
+			<rom type="file" offset="0x10">TOWN1.BGM</rom>
+			<rom type="file" offset="0x11">YOSTE2.BGM</rom>
+			<rom type="file" offset="0x12">TALK1.BGM</rom>
+			<rom type="file" offset="0x13">SHOP.BGM</rom>
+			<rom type="file" offset="0x14">YOSTE1.BGM</rom>
+			<rom type="file" offset="0x15">FEELD2.BGM</rom>
+			<rom type="file" offset="0x16">TALK2.BGM</rom>
+			<rom type="file" offset="0x17">TALK3.BGM</rom>
+			<rom type="file" offset="0x18">TALK4.BGM</rom>
+			<rom type="file" offset="0x19">BOSS1.BGM</rom>
+			<rom type="file" offset="0x1a">BOSS4.BGM</rom>
+			<rom type="file" offset="0x1b">FEELD.BGM</rom>
+			<rom type="file" offset="0x1c">TOWN2.BGM</rom>
+			<rom type="file" offset="0x1d">IDA.BGM</rom>
+			<rom type="file" offset="0x1e">TOWN3.BGM</rom>
+			<rom type="file" offset="0x1f">END2.BGM</rom>
+			<rom type="file" offset="0x20">UNDER.BGM</rom>
+			<rom type="file" offset="0x21">NECRO.BGM</rom>
+			<rom type="file" offset="0x22">FIRE.BGM</rom>
+			<rom type="file" offset="0x23">F_FORT.BGM</rom>
+			<rom type="file" offset="0x24">FEELD3.BGM</rom>
+			<rom type="file" offset="0x25">EYE.BGM</rom>
+			<rom type="file" offset="0x26">XAK11.BGM</rom>
+			<rom type="file" offset="0x27">XAK7'.BGM</rom>
+			<rom type="file" offset="0x28">XAK77'.BGM</rom>
+			<rom type="file" offset="0x29">XAK9.BGM</rom>
+			<rom type="file" offset="0x2a">XAK3.BGM</rom>
+			<rom type="file" offset="0x2b">SEA.BGM</rom>
+			<rom type="file" offset="0x2c">XAK5.BGM</rom>
+			<rom type="file" offset="0x2d">XAK10'.BGM</rom>
+			<rom type="file" offset="0x2e">FORT2.BGM</rom>
+			<rom type="file" offset="0x2f">SARA.BGM</rom>
+			<rom type="file" offset="0x30">BOS_D1.BGM</rom>
+			<rom type="file" offset="0x31">JNR.BGM</rom>
+			<rom type="file" offset="0x32">HIROTA.BGM</rom>
+			<rom type="file" offset="0x33">XAK14.BGM</rom>
+			<rom type="file" offset="0x34">DRG.BGM</rom>
+			<rom type="file" offset="0x35">XAK12.BGM</rom>
+			<rom type="file" offset="0x36">XAK15.BGM</rom>
+			<rom type="file" offset="0x37">TORIDE.BGM</rom>
+			<rom type="file" offset="0x38">BBOSS.BGM</rom>
+			<rom type="file" offset="0x39">BOS_D2.BGM</rom>
+			<rom type="file" offset="0x3a">OYAXAK.BGM</rom>
+			<rom type="file" offset="0x3b">AHXAK'.BGM</rom>
+			<rom type="file" offset="0x3c">END.BGM</rom>
+			<rom type="file" offset="0x3d">AHHA.BGM</rom>
+			<rom type="file" offset="0x3e">XAKE.BGM</rom>
+			<rom type="device" offset="0">MMD2.SYS 3072 2048</rom>
+			<rom type="shell" offset="0">mmd2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0d0040">オープニング効果音1</title>
+			<title code="0x0d0041">オープニング効果音2</title>
+			<title code="0x0e0043">オープニング</title>
+			<title code="0x0e0044">フェアリー効果音</title>
+			<title code="0x050010">フェアレスの町</title>
+			<title code="0x050011">教会</title>
+			<title code="0x050012">メッセンジャー</title>
+			<title code="0x050013">ショップ</title>
+			<title code="0x050014">悲しみ</title>
+			<title code="0x050015">やすらぎ</title>
+			<title code="0x050016">微笑み1</title>
+			<title code="0x050017">微笑み2</title>
+			<title code="0x050018">不安</title>
+			<title code="0x080026">街へ</title>
+			<title code="0x080027">バトル・フィールド</title>
+			<title code="0x080028">バトル・フィールド(滝の音入り)</title>
+			<title code="0x0a002e">緑の大地</title>
+			<title code="0x050019">邪悪な木</title>
+			<title code="0x05001b">砦への道</title>
+			<title code="0x080029">砦</title>
+			<title code="0x08002a">水龍</title>
+			<title code="0x05001c">ノルマナの町</title>
+			<title code="0x08002b">青い海</title>
+			<title code="0x08002c">洞窟</title>
+			<title code="0x05001d">ロック・バイター</title>
+			<title code="0x060033">ファイアー＆ウォーターエレメンタル</title>
+			<title code="0x08002d">合体エレメンタル</title>
+			<title code="0x0b0046">エンディング1</title>
+			<title code="0x0e0045">アイキャッチ</title>
+			<title code="0x05001e">ネムヌの町</title>
+			<title code="0x050020">地の下の塔</title>
+			<title code="0x050021">ネクロマンサー</title>
+			<title code="0x050022">炎の地</title>
+			<title code="0x050023">炎の砦</title>
+			<title code="0x060036">炎の地、上空</title>
+			<title code="0x0a002f">サラマンダー</title>
+			<title code="0x0a0030">ボスを倒した音</title>
+			<title code="0x070037">聖域へ</title>
+			<title code="0x050024">封印の地</title>
+			<title code="0x060034">効果音</title>
+			<title code="0x070038">バドゥーの驚異</title>
+			<title code="0x070039">バドゥーを倒した音</title>
+			<title code="0x07003a">勝利</title>
+			<title code="0x0f0047">エンディング2</title>
+			<title code="0x0d0042">メッセージ</title>
+			<title code="0x07003d">ゲームオーバー</title>
+			<title code="0x09003e">ゲームオーバー2</title>
+			<title code="0x0a0031">Get アイテム</title>
+			<title code="0x0a0032">Get アイテム</title>
+			<title code="0x050025">アイキャッチ(未使用)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Kax (KAX － グリーンアスパラの観る夢 －)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="xak_98">
+			<rom type="file" offset="-1">mmd2.com</rom>
+			<rom type="file" offset="-1">MMD2.SYS</rom>
+			<rom type="file" offset="0x05">KAX/KAX.BIN</rom>
+			<rom type="file" offset="0x10">KAX/(()).BGM</rom>
+			<rom type="file" offset="0x11">KAX/AAAA.BGM</rom>
+			<rom type="file" offset="0x12">KAX/AKUMA.BGM</rom>
+			<rom type="file" offset="0x13">KAX/ASPR.BGM</rom>
+			<rom type="file" offset="0x14">KAX/BALAR'.BGM</rom>
+			<rom type="file" offset="0x15">KAX/BOMB.BGM</rom>
+			<rom type="file" offset="0x16">KAX/BOSS1.BGM</rom>
+			<rom type="file" offset="0x17">KAX/MEN.BGM</rom>
+			<rom type="file" offset="0x18">KAX/OPEN.BGM</rom>
+			<rom type="file" offset="0x19">KAX/SIRAN.BGM</rom>
+			<rom type="file" offset="0x1a">KAX/START.BGM</rom>
+			<rom type="file" offset="0x1b">KAX/USAGE.BGM</rom>
+			<rom type="file" offset="0x1c">KAX/XAK2.BGM</rom>
+			<rom type="device" offset="0">MMD2.SYS 8192</rom>
+			<rom type="shell" offset="0">mmd2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05001b">How To Play</title>
+			<title code="0x050013">オープニング「アスパラの歌」</title>
+			<title code="0x050018">ゲームスタート</title>
+			<title code="0x050019">Stage 1</title>
+			<title code="0x05001a">ステージクリア</title>
+			<title code="0x050017">Stage 2</title>
+			<title code="0x050016">Stage 3</title>
+			<title code="0x050012">Stage 4</title>
+			<title code="0x05001c">Stage 5</title>
+			<title code="0x050011">Stage 6</title>
+			<title code="0x050015">ミス</title>
+			<title code="0x050010">ゲームオーバー</title>
+			<title code="0x050014">エンディング「アスパラガスに贈るバラード」</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Xak II: Rising of the Redmoon (サーク２ Ｒｉｓｉｎｇ ｏｆ Ｔｈｅ Ｒｅｄｍｏｏｎ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="9"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="xak2_98">
+			<rom type="file" offset="-1">mmd2.com</rom>
+			<rom type="file" offset="-1">MMD.SYS</rom>
+			<!-- 0 -->
+			<rom type="file" offset="0x40">0/AWAW.BIN</rom>
+			<rom type="file" offset="0x41">0/ORANYO.BIN</rom>
+			<rom type="file" offset="0x42">0/XAK2.BIN</rom>
+			<rom type="file" offset="0x10">0/AHHA2.BGM</rom>
+			<rom type="file" offset="0x11">0/ATOWN.BGM</rom>
+			<rom type="file" offset="0x12">0/BOON.BGM</rom>
+			<rom type="file" offset="0x13">0/BOSS_1.BGM</rom>
+			<rom type="file" offset="0x14">0/JUN_AI.BGM</rom>
+			<rom type="file" offset="0x15">0/KUEKUE.BGM</rom>
+			<rom type="file" offset="0x16">0/PON_2.BGM</rom>
+			<rom type="file" offset="0x17">0/SAKABA.BGM</rom>
+			<rom type="file" offset="0x18">0/SHOP.BGM</rom>
+			<rom type="file" offset="0x19">0/SIJIN.BGM</rom>
+			<rom type="file" offset="0x1a">0/YOSUTE.BGM</rom>
+			<!-- 1 -->
+			<rom type="file" offset="0x43">1/AWAW.BIN</rom>
+			<rom type="file" offset="0x44">1/ORANYO.BIN</rom>
+			<rom type="file" offset="0x45">1/XAK2.BIN</rom>
+			<rom type="file" offset="0x1b">1/BORO_1.BGM</rom>
+			<rom type="file" offset="0x1c">1/HEN.BGM</rom>
+			<rom type="file" offset="0x1d">1/HOUSE.BGM</rom>
+			<rom type="file" offset="0x1e">1/KYOBOC.BGM</rom>
+			<rom type="file" offset="0x1f">1/NEMU_M.BGM</rom>
+			<rom type="file" offset="0x20">1/SAIKAI.BGM</rom>
+			<!-- 2 -->
+			<rom type="file" offset="0x46">2/AWAW.BIN</rom>
+			<rom type="file" offset="0x47">2/ORANYO.BIN</rom>
+			<rom type="file" offset="0x21">2/BOSS_0.BGM</rom>
+			<rom type="file" offset="0x22">2/BOS_D1.BGM</rom>
+			<rom type="file" offset="0x23">2/GOLGOL.BGM</rom>
+			<rom type="file" offset="0x24">2/HASHI.BGM</rom>
+			<rom type="file" offset="0x25">2/HOUS_P.BGM</rom>
+			<rom type="file" offset="0x26">2/KESSYO.BGM</rom>
+			<rom type="file" offset="0x27">2/LAST.BGM</rom>
+			<rom type="file" offset="0x28">2/SYUGE.BGM</rom>
+			<!-- 3 -->
+			<rom type="file" offset="0x48">3/ORANYO.BIN</rom>
+			<rom type="file" offset="0x49">3/XAK2.BIN</rom>
+			<rom type="file" offset="0x29">3/CASTLE.BGM</rom>
+			<rom type="file" offset="0x2a">3/OBOUU.BGM</rom>
+			<rom type="file" offset="0x2b">3/SUIROO.BGM</rom>
+			<!-- 4 -->
+			<rom type="file" offset="0x4a">4/AWAW.BIN</rom>
+			<rom type="file" offset="0x4b">4/ORANYO.BIN</rom>
+			<rom type="file" offset="0x4c">4/XAK2.BIN</rom>
+			<rom type="file" offset="0x2c">4/AKA.BGM</rom>
+			<rom type="file" offset="0x2d">4/END_0.BGM</rom>
+			<rom type="file" offset="0x2e">4/FLYING.BGM</rom>
+			<rom type="file" offset="0x2f">4/MINATO.BGM</rom>
+			<rom type="file" offset="0x30">4/M_1.BGM</rom>
+			<rom type="file" offset="0x31">4/OFUNE.BGM</rom>
+			<rom type="file" offset="0x32">4/PAZU_2.BGM</rom>
+			<rom type="file" offset="0x33">4/PUI2.BGM</rom>
+			<rom type="file" offset="0x34">4/SUKETT.BGM</rom>
+			<rom type="file" offset="0x35">4/SYO-RI.BGM</rom>
+			<!-- OP -->
+			<rom type="file" offset="0x4d">OP/AWAW</rom>
+			<rom type="file" offset="0x4e">OP/XAK22</rom>
+			<rom type="file" offset="0x4f">OP/XAK2O</rom>
+			<rom type="file" offset="0x36">OP/AUNN.BGM</rom>
+			<rom type="file" offset="0x37">OP/GABIN.BGM</rom>
+			<rom type="file" offset="0x38">OP/OPN_00.BGM</rom>
+			<rom type="file" offset="0x39">OP/OPN_01.BGM</rom>
+			<rom type="file" offset="0x3a">OP/OPN_02.BGM</rom>
+			<!-- ED -->
+			<rom type="file" offset="0x50">ED/KAX</rom>
+			<rom type="file" offset="0x3b">ED/END_1.BGM</rom>
+			<rom type="file" offset="0x3c">ED/END_2.BGM</rom>
+			<rom type="file" offset="0x3d">ED/FIGHT!.BGM</rom>
+			<rom type="file" offset="0x3e">ED/KILA.BGM</rom>
+			<rom type="device" offset="0">MMD.SYS 3072 2048</rom>
+			<rom type="shell" offset="0">mmd2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x4d0038">繁栄</title>
+			<title code="0x4d0039">メインタイトル</title>
+			<title code="0x4d003a">現在</title>
+			<title code="0x400011">バヌワの町</title>
+			<title code="0x400018">町人（その２）</title>
+			<title code="0x40001a">聖なる教え</title>
+			<title code="0x400017">酒場の酔っ払い</title>
+			<title code="0x43001b">ボローズの森</title>
+			<title code="0x44001d">タウトゥーク・森の民</title>
+			<title code="0x470025">鉱夫ペルナンドの苦悩</title>
+			<title code="0x410014">Ai・Yu・E・Ni</title>
+			<title code="0x460028">あやしき輝き</title>
+			<title code="0x400019">放浪の吟遊詩人</title>
+			<title code="0x410013">激闘！四天王</title>
+			<title code="0x400015">町人（その１）</title>
+			<title code="0x400016">妖魔対決</title>
+			<title code="0x43001c">森の洞窟</title>
+			<title code="0x45001e">天空の橋</title>
+			<title code="0x43001f">眠り姫ミューン</title>
+			<title code="0x440020">再会・親しき友よ</title>
+			<title code="0x460021">最後の死闘</title>
+			<title code="0x460024">Ta・Ka・Mi・Ni・Te</title>
+			<title code="0x460026">結晶採掘場</title>
+			<title code="0x490029">カウリャンの城</title>
+			<title code="0x48002a">トラップ</title>
+			<title code="0x48002b">水路を行く</title>
+			<title code="0x4b002f">港にて</title>
+			<title code="0x4a0031">船出</title>
+			<title code="0x4a0030">デスマウンテン漂着</title>
+			<title code="0x4a0032">封印の地</title>
+			<title code="0x4b002c">赤き月満ちるとき</title>
+			<title code="0x4a002e">襲撃！</title>
+			<title code="0x4a0033">飛翔</title>
+			<title code="0x4a0034">参上！レイ</title>
+			<title code="0x4a0035">静かなる勝利</title>
+			<title code="0x460027">ただ一人最終決戦！</title>
+			<title code="0x470023">対峙！将軍ゴスペル</title>
+			<title code="0x4d0036">暗雲</title>
+			<title code="0x400010">ゲームオーバー</title>
+			<title code="0x4a002d">再会・同士たち！</title>
+			<title code="0x4d003b">エンディング１</title>
+			<title code="0x50003d">フレイとピクシー</title>
+			<title code="0x4d003c">エンディング２</title>
+			<title code="0x50003e">Endロゴ</title>
+			<title code="0x410012">SFX #410012</title>
+			<title code="0x470022">SFX #470022</title>
+			<title code="0x4d0037">SFX #4d0037</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Xak: The Tower of Gazzel (サーク ガゼルの塔)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="gazzel_98">
+			<rom type="file" offset="-1">mmd2.com</rom>
+			<rom type="file" offset="-1">MMD.SYS</rom>
+			<!-- OP -->
+			<rom type="file" offset="0x40">OP/AWAW.BIN</rom>
+			<rom type="file" offset="0x41">OP/BOYOYO.BIN</rom>
+			<rom type="file" offset="0x10">OP/UON_1.BGM</rom>
+			<rom type="file" offset="0x11">OP/UON_2.BGM</rom>
+			<rom type="file" offset="0x12">OP/WARU_#.BGM</rom>
+			<rom type="file" offset="0x13">OP/OPNING.BGM</rom>
+			<rom type="file" offset="0x14">OP/KURU.BGM</rom>
+			<!-- 0 -->
+			<rom type="file" offset="0x42">0/AWAW.BIN</rom>
+			<rom type="file" offset="0x43">0/BOYOYO.BIN</rom>
+			<rom type="file" offset="0x44">0/KAX.BIN</rom>
+			<rom type="file" offset="0x45">0/KIKI.BIN</rom>
+			<rom type="file" offset="0x46">0/ORANYO.BIN</rom>
+			<rom type="file" offset="0x47">0/OTO-3.BIN</rom>
+			<rom type="file" offset="0x48">0/OTO-8.BIN</rom>
+			<rom type="file" offset="0x49">0/OTO-9'.BIN</rom>
+			<rom type="file" offset="0x4a">0/XAK2.BIN</rom>
+			<rom type="file" offset="0x15">0/ASPR.BGM</rom>
+			<rom type="file" offset="0x16">0/BOON.BGM</rom>
+			<rom type="file" offset="0x17">0/BORO_1.BGM</rom>
+			<rom type="file" offset="0x18">0/BOSS_0.BGM</rom>
+			<rom type="file" offset="0x19">0/BOSS_1.BGM</rom>
+			<rom type="file" offset="0x1a">0/BOS_D1.BGM</rom>
+			<rom type="file" offset="0x1b">0/BOS_D2.BGM</rom>
+			<rom type="file" offset="0x1c">0/CHIKA3.BGM</rom>
+			<rom type="file" offset="0x1d">0/CHI_3.BGM</rom>
+			<rom type="file" offset="0x1e">0/GAZZE!.BGM</rom>
+			<rom type="file" offset="0x1f">0/GOGO_1.BGM</rom>
+			<rom type="file" offset="0x20">0/HI_4.BGM</rom>
+			<rom type="file" offset="0x21">0/NO_10.BGM</rom>
+			<rom type="file" offset="0x22">0/NO_12.BGM</rom>
+			<rom type="file" offset="0x23">0/NO_14.BGM</rom>
+			<rom type="file" offset="0x24">0/NO_21.BGM</rom>
+			<rom type="file" offset="0x25">0/NO_24.BGM</rom>
+			<rom type="file" offset="0x26">0/NO_27.BGM</rom>
+			<rom type="file" offset="0x27">0/NO_30.BGM</rom>
+			<rom type="file" offset="0x28">0/NO_30B.BGM</rom>
+			<rom type="file" offset="0x29">0/NO_31.BGM</rom>
+			<rom type="file" offset="0x2a">0/NO_32'.BGM</rom>
+			<rom type="file" offset="0x2b">0/NO_33.BGM</rom>
+			<rom type="file" offset="0x2c">0/NO_34.BGM</rom>
+			<rom type="file" offset="0x2d">0/NO_36.BGM</rom>
+			<rom type="file" offset="0x2e">0/NO_37.BGM</rom>
+			<rom type="file" offset="0x2f">0/NO_48.BGM</rom>
+			<rom type="file" offset="0x30">0/OVER.BGM</rom>
+			<rom type="file" offset="0x31">0/SUKET3.BGM</rom>
+			<rom type="file" offset="0x32">0/TEN.BGM</rom>
+			<rom type="file" offset="0x33">0/WATER'.BGM</rom>
+			<!-- ED -->
+			<rom type="file" offset="0x4b">ED/AWAW.BIN</rom>
+			<rom type="file" offset="0x4c">ED/BOYOYO.BIN</rom>
+			<rom type="file" offset="0x34">ED/END_3.BGM</rom>
+			<rom type="file" offset="0x35">ED/GOGO_1.BGM</rom>
+			<rom type="file" offset="0x36">ED/GOGO_2.BGM</rom>
+			<rom type="file" offset="0x37">ED/SANJO.BGM</rom>
+			<!-- CT -->
+			<rom type="file" offset="0x4d">CT/AWAW.BIN</rom>
+			<rom type="file" offset="0x4e">CT/OTO-3.BIN</rom>
+			<rom type="file" offset="0x4f">CT/OTO-K.BIN</rom>
+			<rom type="file" offset="0x50">CT/SOUND.BIN</rom>
+			<rom type="file" offset="0x38">CT/BGM.BGM</rom>
+			<rom type="file" offset="0x39">CT/DENNO.BGM</rom>
+			<rom type="file" offset="0x3a">CT/NEWS.BGM</rom>
+			<rom type="file" offset="0x3b">CT/NOISE.BGM</rom>
+			<rom type="file" offset="0x3c">CT/TIMES.BGM</rom>
+			<rom type="file" offset="0x3d">CT/TIME_E.BGM</rom>
+			<rom type="device" offset="0">MMD.SYS 3072 2048</rom>
+			<rom type="shell" offset="0">mmd2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x400012">オープニング1</title>
+			<title code="0x400013">オープニング2（メインタイトル）</title>
+			<title code="0x420017">ボローズの森</title>
+			<title code="0x420018">サークⅡ最終ボス</title>
+			<title code="0x4a0019">サークⅡ中ボス</title>
+			<title code="0x49002f">地上（塔の入り口）</title>
+			<title code="0x47001d">１Ｆ</title>
+			<title code="0x49001c">地下</title>
+			<title code="0x47001e">ガス室</title>
+			<title code="0x490020">２Ｆ</title>
+			<title code="0x490021">中ボス #1</title>
+			<title code="0x490022">３Ｆ</title>
+			<title code="0x490023">中ボス #2</title>
+			<title code="0x490024">中ボス #3</title>
+			<title code="0x490025">中ボス #4</title>
+			<title code="0x490026">中ボス対面</title>
+			<title code="0x490027">詩人の曲 #1</title>
+			<title code="0x490028">詩人の曲 #2</title>
+			<title code="0x490029">中ボス #5</title>
+			<title code="0x49002a">４Ｆ</title>
+			<title code="0x49002b">５Ｆ</title>
+			<title code="0x49002c">最終ボス</title>
+			<title code="0x49002d">最終ボス対面</title>
+			<title code="0x49002e">６Ｆ</title>
+			<title code="0x450030">ゲームオーバー</title>
+			<title code="0x450031">助っ人参上</title>
+			<title code="0x480032">７Ｆ</title>
+			<title code="0x450033">水のフロア</title>
+			<title code="0x4b0034">エンディング２（スタッフロール）</title>
+			<title code="0x4b0037">エンディング</title>
+			<title code="0x4f003a">キャビンタイムズ/オープニング        「回る世間は・・・」</title>
+			<title code="0x4e0038">キャビンタイムズ/メインBGM           「今日は、いい天気」</title>
+			<title code="0x500039">キャビンタイムズ/電脳絵画展          「魅惑の１ドット」</title>
+			<title code="0x4d003c">キャビンタイムズ/CABIN CM            「みんな おいでよ」</title>
+			<title code="0x400014">キャビンタイムズ/店頭デモグラフィック </title>
+			<title code="0x50003d">キャビンタイムズ/エンディング        「夢見るスタジオ」</title>
+			<title code="0x440015">おまけ</title>
+			<title code="0x460016">SFX #1（ボーン）</title>
+			<title code="0x410010">SFX #2（オープニング1）</title>
+			<title code="0x400011">SFX #3（オープニング2）</title>
+			<title code="0x46001a">SFX #4（ボス破壊1）</title>
+			<title code="0x42001b">SFX #5（ボス破壊2）</title>
+			<title code="0x4c0035">SFX #6（地鳴り）</title>
+			<title code="0x4c0036">SFX #7（地鳴り）</title>
+			<title code="0x50003b">SFX #8（ノイズ）</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Fray -In Magical Adventure- (フレイ ～Ｉｎ ｍａｇｉｃａｌ ａｄｖｅｎｔｕｒｅ～)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="fray_98">
+			<rom type="file" offset="-1">mmd2.com</rom>
+			<rom type="file" offset="-1">MMD.SYS</rom>
+			<rom type="file" offset="0x05">FRAY.BIN</rom>
+			<rom type="file" offset="0x10">BEACH2.BGM</rom>
+			<rom type="file" offset="0x11">BOS_D1.BGM</rom>
+			<rom type="file" offset="0x12">BOS_D2.BGM</rom>
+			<rom type="file" offset="0x13">CATLE2.BGM</rom>
+			<rom type="file" offset="0x14">CEG_GO.BGM</rom>
+			<rom type="file" offset="0x15">END_B0.BGM</rom>
+			<rom type="file" offset="0x16">E_GOO.BGM</rom>
+			<rom type="file" offset="0x17">E_HIMEI.BGM</rom>
+			<rom type="file" offset="0x18">F_THEME.BGM</rom>
+			<rom type="file" offset="0x19">F_THEME2.BGM</rom>
+			<rom type="file" offset="0x1a">GET.BGM</rom>
+			<rom type="file" offset="0x1b">INDIAN.BGM</rom>
+			<rom type="file" offset="0x1c">LAST.BGM</rom>
+			<rom type="file" offset="0x1d">MENU.BGM</rom>
+			<rom type="file" offset="0x1e">MILL.BGM</rom>
+			<rom type="file" offset="0x1f">MILY.BGM</rom>
+			<rom type="file" offset="0x20">OH!.BGM</rom>
+			<rom type="file" offset="0x21">ONMO.BGM</rom>
+			<rom type="file" offset="0x22">OPN_1.BGM</rom>
+			<rom type="file" offset="0x23">OPN_2.BGM</rom>
+			<rom type="file" offset="0x24">OPN_3.BGM</rom>
+			<rom type="file" offset="0x25">OSORA.BGM</rom>
+			<rom type="file" offset="0x26">OYASU1.BGM</rom>
+			<rom type="file" offset="0x27">OYAXAK.BGM</rom>
+			<rom type="file" offset="0x28">PIKU.BGM</rom>
+			<rom type="file" offset="0x29">P_GOGO.BGM</rom>
+			<rom type="file" offset="0x2a">P_HOHO.BGM</rom>
+			<rom type="file" offset="0x2b">SHOCK.BGM</rom>
+			<rom type="file" offset="0x2c">SILENT.BGM</rom>
+			<rom type="file" offset="0x2d">TOWN0.BGM</rom>
+			<rom type="file" offset="0x2e">TOWN1.BGM</rom>
+			<rom type="file" offset="0x2f">VALHA.BGM</rom>
+			<rom type="file" offset="0x30">XAK15.BGM</rom>
+			<rom type="file" offset="0x31">YOSUTE2.BGM</rom>
+			<rom type="device" offset="0">MMD.SYS 3072 2048</rom>
+			<rom type="shell"  offset="0">mmd2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05002c">Stop the Music (演奏停止)</title>
+			<title code="0x050028">キャビン ロゴ</title>
+			<title code="0x050022">帰郷</title>
+			<title code="0x050023">おのろけフレイ</title>
+			<title code="0x050024">Hurry Fray!</title>
+			<title code="0x05002d">平和な町</title>
+			<title code="0x050031">町の教会</title>
+			<title code="0x050018">Running Fray</title>
+			<title code="0x05001b">フレイのマーチ</title>
+			<title code="0x05002e">フェアレスの町</title>
+			<title code="0x050014">ドミソGo!</title>
+			<title code="0x050010">サーフィンGo!Go!</title>
+			<title code="0x050013">ク・オルのワルツ</title>
+			<title code="0x05001c">邪悪の中心</title>
+			<title code="0x05001d">メニュー</title>
+			<title code="0x05001e">空に浮く城</title>
+			<title code="0x05001f">ミリーのテーマ</title>
+			<title code="0x050021">城のテラス</title>
+			<title code="0x050025">星空の下で</title>
+			<title code="0x050027">Tears</title>
+			<title code="0x05002f">ヴァルアの祝宴</title>
+			<title code="0x050030">飛翔</title>
+			<title code="0x050019">ピクシーVSフレイ</title>
+			<title code="0x050015">エンディングマーチ／旅立ち</title>
+			<title code="0x050029">Go!Go!ピクシー タイトルBGM</title>
+			<title code="0x05002a">Go!Go!ピクシー メインBGM</title>
+			<title code="0x05001a">ジングル #1</title>
+			<title code="0x050020">ジングル #2</title>
+			<title code="0x050026">ジングル #3</title>
+			<title code="0x05002b">ジングル #4</title>
+			<title code="0x050011">SFX #1</title>
+			<title code="0x050012">SFX #2</title>
+			<title code="0x050016">SFX #3</title>
+			<title code="0x050017">SFX #4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Geneitoshi - Illusion City (幻影都市) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul"  value="0x04"/>
+			<option name="opn_mix"   value="0x100"/>
+			<option name="fm_mix"    value="19"/>
+			<option name="ssg_mix"   value="0"/>
+		</options>
+		<romlist archive="ic_98">
+			<rom type="file" offset="-1">mmd2.com</rom>
+			<rom type="file" offset="-1">MMD.SYS</rom>
+			<rom type="file" offset="0x05">AWAW.BIN</rom>
+			<rom type="file" offset="0x06">CAPAN.BIN</rom>
+			<rom type="file" offset="0x07">FLH.BIN</rom>
+			<rom type="file" offset="0x08">FLH_N.BIN</rom>
+			<rom type="file" offset="0x09">KIKI.BIN</rom>
+			<rom type="file" offset="0x0a">OTO-IC.BIN</rom>
+			<rom type="file" offset="0x0b">OP/AWAW.BIN</rom>
+			<rom type="file" offset="0x0c">OP/KIKI.BIN</rom>
+			<rom type="file" offset="0x12">000018.DAT</rom>
+			<rom type="file" offset="0x13">000019.DAT</rom>
+			<rom type="file" offset="0x14">000020.DAT</rom>
+			<rom type="file" offset="0x15">000021.DAT</rom>
+			<rom type="file" offset="0x16">000022.DAT</rom>
+			<rom type="file" offset="0x17">000023.DAT</rom>
+			<rom type="file" offset="0x18">000024.DAT</rom>
+			<rom type="file" offset="0x19">000025.DAT</rom>
+			<rom type="file" offset="0x1a">000026.DAT</rom>
+			<rom type="file" offset="0x1b">000027.DAT</rom>
+			<rom type="file" offset="0x1c">000028.DAT</rom>
+			<rom type="file" offset="0x1d">000029.DAT</rom>
+			<rom type="file" offset="0x1e">000030.DAT</rom>
+			<rom type="file" offset="0x1f">000031.DAT</rom>
+			<rom type="file" offset="0x20">000032.DAT</rom>
+			<rom type="file" offset="0x21">000033.DAT</rom>
+			<rom type="file" offset="0x22">000034.DAT</rom>
+			<rom type="file" offset="0x23">000035.DAT</rom>
+			<rom type="file" offset="0x24">000036.DAT</rom>
+			<rom type="file" offset="0x25">000037.DAT</rom>
+			<rom type="file" offset="0x26">000038.DAT</rom>
+			<rom type="file" offset="0x27">000039.DAT</rom>
+			<rom type="file" offset="0x28">000040.DAT</rom>
+			<rom type="file" offset="0x29">000041.DAT</rom>
+			<rom type="file" offset="0x2a">000042.DAT</rom>
+			<rom type="file" offset="0x2b">000043.DAT</rom>
+			<rom type="file" offset="0x2c">000044.DAT</rom>
+			<rom type="file" offset="0x2d">000045.DAT</rom>
+			<rom type="file" offset="0x2e">000046.DAT</rom>
+			<rom type="file" offset="0x2f">000047.DAT</rom>
+			<rom type="file" offset="0x3d">000061.DAT</rom>
+			<rom type="file" offset="0x3e">000062.DAT</rom>
+			<rom type="file" offset="0x51">OP/IL-DOR.98</rom>
+			<rom type="file" offset="0x52">OP/THEME_A'.98</rom>
+			<rom type="file" offset="0x53">OP/URI_IC.98</rom>
+			<rom type="file" offset="0x54">END/IL-SYO.98</rom>
+			<rom type="file" offset="0x55">END/SONG.98</rom>
+			<rom type="file" offset="0x56">END/THEME_A.98</rom>
+			<rom type="file" offset="0x57">END/URI_IC.98</rom>
+			<rom type="device" offset="0">mmd.sys 3584 2048</rom>
+			<rom type="shell"  offset="0">mmd2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0c0051">SFX</title>
+			<title code="0x0b0052">イリュージョンテーマＡ</title>
+			<title code="0x0b0053">イリュージョンテーマＢ</title>
+			<title code="0x070012">ショップ</title>
+			<title code="0x070013">クライシス・エリア</title>
+			<title code="0x060014">インドア・コンバット</title>
+			<title code="0x050015">ハザード・エリア</title>
+			<title code="0x050016">ＭＥＴＡＬエリア</title>
+			<title code="0x070017">ＷＡＴＥＲパイプ</title>
+			<title code="0x0a0018">ＣＡＶＥＲＮ（迷宮）</title>
+			<title code="0x070019">研究施設（月の狂気）</title>
+			<title code="0x0a001a">街のざわめき</title>
+			<title code="0x07001b">悪夢（ＤＡＲＫ　ＤＲＥＡＭ）</title>
+			<title code="0x0a001c">Ｈｏｍｅ</title>
+			<title code="0x05001d">シャオメイ</title>
+			<title code="0x06001e">老師</title>
+			<title code="0x0a001f">Ｄａｎｃｉｎｇ</title>
+			<title code="0x0a0020">ＶＩＰルーム</title>
+			<title code="0x090021">Ｌｏｖｅｒｓ</title>
+			<title code="0x090022">囚われて</title>
+			<title code="0x090023">勝利</title>
+			<title code="0x050024">幻影城</title>
+			<title code="0x0a0025">胎動</title>
+			<title code="0x0a0026">魔天教</title>
+			<title code="0x090027">儀式</title>
+			<title code="0x090028">危機</title>
+			<title code="0x090029">レクイエム</title>
+			<title code="0x0a002a">ネットワーク・イマージュ</title>
+			<title code="0x07002b">イリュージョン・テーマ１</title>
+			<title code="0x06002c">イリュージョン・テーマ２</title>
+			<title code="0x09002d">イリュージョン・エンディング</title>
+			<title code="0x0a002e">バトル</title>
+			<title code="0x09002f">八部衆バトル</title>
+			<title code="0x0a003d">魔天王バトル</title>
+			<title code="0x0a003e">ファイナルバトル</title>
+			<title code="0x090054">勝利</title>
+			<title code="0x080055">SE</title>
+			<title code="0x080056">エンディング</title>
+			<title code="0x060057">イリュージョンテーマＢ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Geneitoshi - Illusion City (幻影都市) (MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="ic_98">
+			<rom type="file" offset="-1">mmd2m.com</rom>
+			<rom type="file" offset="-1">MMD.SYS</rom>
+			<rom type="file" offset="0x08">IC98.CM6</rom>
+			<rom type="file" offset="0x12">000018.RCP</rom>
+			<rom type="file" offset="0x13">000019.RCP</rom>
+			<rom type="file" offset="0x14">000020.RCP</rom>
+			<rom type="file" offset="0x15">000021.RCP</rom>
+			<rom type="file" offset="0x16">000022.RCP</rom>
+			<rom type="file" offset="0x17">000023.RCP</rom>
+			<rom type="file" offset="0x18">000024.RCP</rom>
+			<rom type="file" offset="0x19">000025.RCP</rom>
+			<rom type="file" offset="0x1a">000026.RCP</rom>
+			<rom type="file" offset="0x1b">000027.RCP</rom>
+			<rom type="file" offset="0x1c">000028.RCP</rom>
+			<rom type="file" offset="0x1d">000029.RCP</rom>
+			<rom type="file" offset="0x1e">000030.RCP</rom>
+			<rom type="file" offset="0x1f">000031.RCP</rom>
+			<rom type="file" offset="0x20">000032.RCP</rom>
+			<rom type="file" offset="0x21">000033.RCP</rom>
+			<rom type="file" offset="0x22">000034.RCP</rom>
+			<rom type="file" offset="0x23">000035.RCP</rom>
+			<rom type="file" offset="0x24">000036.RCP</rom>
+			<rom type="file" offset="0x25">000037.RCP</rom>
+			<rom type="file" offset="0x26">000038.RCP</rom>
+			<rom type="file" offset="0x27">000039.RCP</rom>
+			<rom type="file" offset="0x28">000040.RCP</rom>
+			<rom type="file" offset="0x29">000041.RCP</rom>
+			<rom type="file" offset="0x2a">000042.RCP</rom>
+			<rom type="file" offset="0x2b">000043.RCP</rom>
+			<rom type="file" offset="0x2c">000044.RCP</rom>
+			<rom type="file" offset="0x2d">000045.RCP</rom>
+			<rom type="file" offset="0x2e">000046.RCP</rom>
+			<rom type="file" offset="0x2f">000047.RCP</rom>
+			<rom type="file" offset="0x3d">000061.RCP</rom>
+			<rom type="file" offset="0x3e">000062.RCP</rom>
+			<rom type="file" offset="0x51">OP/IL-IPL.RCP</rom>
+			<rom type="file" offset="0x52">OP/10THEM-A.RCP</rom>
+			<rom type="file" offset="0x53">OP/8THEME-B.RCP</rom>
+			<rom type="file" offset="0x54">END/31WIN.RCP</rom>
+			<rom type="file" offset="0x56">END/11THEM-A.RCP</rom>
+			<rom type="file" offset="0x57">END/8THEME-B.RCP</rom>
+			<rom type="device" offset="0">mmd.sys 3584 2048 30000</rom>
+			<rom type="shell"  offset="0">mmd2m</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0051">SFX</title>
+			<title code="0x0052">イリュージョンテーマＡ</title>
+			<title code="0x0053">イリュージョンテーマＢ</title>
+			<title code="0x0012">ショップ</title>
+			<title code="0x0013">クライシス・エリア</title>
+			<title code="0x0014">インドア・コンバット</title>
+			<title code="0x0015">ハザード・エリア</title>
+			<title code="0x0016">ＭＥＴＡＬエリア</title>
+			<title code="0x0017">ＷＡＴＥＲパイプ</title>
+			<title code="0x0018">ＣＡＶＥＲＮ（迷宮）</title>
+			<title code="0x0019">研究施設（月の狂気）</title>
+			<title code="0x001a">街のざわめき</title>
+			<title code="0x001b">悪夢（ＤＡＲＫ　ＤＲＥＡＭ）</title>
+			<title code="0x001c">Ｈｏｍｅ</title>
+			<title code="0x001d">シャオメイ</title>
+			<title code="0x001e">老師</title>
+			<title code="0x001f">Ｄａｎｃｉｎｇ</title>
+			<title code="0x0020">ＶＩＰルーム</title>
+			<title code="0x0021">Ｌｏｖｅｒｓ</title>
+			<title code="0x0022">囚われて</title>
+			<title code="0x0023">勝利</title>
+			<title code="0x0024">幻影城</title>
+			<title code="0x0025">胎動</title>
+			<title code="0x0026">魔天教</title>
+			<title code="0x0027">儀式</title>
+			<title code="0x0028">危機</title>
+			<title code="0x0029">レクイエム</title>
+			<title code="0x002a">ネットワーク・イマージュ</title>
+			<title code="0x002b">イリュージョン・テーマ１</title>
+			<title code="0x002c">イリュージョン・テーマ２</title>
+			<title code="0x002e">バトル</title>
+			<title code="0x002f">八部衆バトル</title>
+			<title code="0x003d">魔天王バトル</title>
+			<title code="0x003e">ファイナルバトル</title>
+			<title code="0x0054">勝利</title>
+			<title code="0x0056">エンディング</title>
+			<title code="0x0057">イリュージョンテーマＢ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Geneitoshi - Illusion City (幻影都市) (MT-32 EMU)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="ic_98">
+			<rom type="file" offset="-1">mmd2m.com</rom>
+			<rom type="file" offset="-1">MMD.SYS</rom>
+			<rom type="file" offset="0x12">000018.RCP</rom>
+			<rom type="file" offset="0x13">000019.RCP</rom>
+			<rom type="file" offset="0x14">000020.RCP</rom>
+			<rom type="file" offset="0x15">000021.RCP</rom>
+			<rom type="file" offset="0x16">000022.RCP</rom>
+			<rom type="file" offset="0x17">000023.RCP</rom>
+			<rom type="file" offset="0x18">000024.RCP</rom>
+			<rom type="file" offset="0x19">000025.RCP</rom>
+			<rom type="file" offset="0x1a">000026.RCP</rom>
+			<rom type="file" offset="0x1b">000027.RCP</rom>
+			<rom type="file" offset="0x1c">000028.RCP</rom>
+			<rom type="file" offset="0x1d">000029.RCP</rom>
+			<rom type="file" offset="0x1e">000030.RCP</rom>
+			<rom type="file" offset="0x1f">000031.RCP</rom>
+			<rom type="file" offset="0x20">000032.RCP</rom>
+			<rom type="file" offset="0x21">000033.RCP</rom>
+			<rom type="file" offset="0x22">000034.RCP</rom>
+			<rom type="file" offset="0x23">000035.RCP</rom>
+			<rom type="file" offset="0x24">000036.RCP</rom>
+			<rom type="file" offset="0x25">000037.RCP</rom>
+			<rom type="file" offset="0x26">000038.RCP</rom>
+			<rom type="file" offset="0x27">000039.RCP</rom>
+			<rom type="file" offset="0x28">000040.RCP</rom>
+			<rom type="file" offset="0x29">000041.RCP</rom>
+			<rom type="file" offset="0x2a">000042.RCP</rom>
+			<rom type="file" offset="0x2b">000043.RCP</rom>
+			<rom type="file" offset="0x2c">000044.RCP</rom>
+			<rom type="file" offset="0x2e">000046.RCP</rom>
+			<rom type="file" offset="0x2f">000047.RCP</rom>
+			<rom type="file" offset="0x3d">000061.RCP</rom>
+			<rom type="file" offset="0x3e">000062.RCP</rom>
+			<rom type="file" offset="0x51">OP/IL-IPL.RCP</rom>
+			<rom type="file" offset="0x52">OP/10THEM-A.RCP</rom>
+			<rom type="file" offset="0x53">OP/8THEME-B.RCP</rom>
+			<rom type="file" offset="0x54">END/31WIN.RCP</rom>
+			<rom type="file" offset="0x56">END/11THEM-A.RCP</rom>
+			<rom type="file" offset="0x57">END/8THEME-B.RCP</rom>
+			<rom type="device" offset="0">mmd.sys 3584 2048 30000</rom>
+			<rom type="shell"  offset="0">mmd2m</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0051">SFX</title>
+			<title code="0x0052">イリュージョンテーマＡ</title>
+			<title code="0x0053">イリュージョンテーマＢ</title>
+			<title code="0x0012">ショップ</title>
+			<title code="0x0013">クライシス・エリア</title>
+			<title code="0x0014">インドア・コンバット</title>
+			<title code="0x0015">ハザード・エリア</title>
+			<title code="0x0016">ＭＥＴＡＬエリア</title>
+			<title code="0x0017">ＷＡＴＥＲパイプ</title>
+			<title code="0x0018">ＣＡＶＥＲＮ（迷宮）</title>
+			<title code="0x0019">研究施設（月の狂気）</title>
+			<title code="0x001a">街のざわめき</title>
+			<title code="0x001b">悪夢（ＤＡＲＫ　ＤＲＥＡＭ）</title>
+			<title code="0x001c">Ｈｏｍｅ</title>
+			<title code="0x001d">シャオメイ</title>
+			<title code="0x001e">老師</title>
+			<title code="0x001f">Ｄａｎｃｉｎｇ</title>
+			<title code="0x0020">ＶＩＰルーム</title>
+			<title code="0x0021">Ｌｏｖｅｒｓ</title>
+			<title code="0x0022">囚われて</title>
+			<title code="0x0023">勝利</title>
+			<title code="0x0024">幻影城</title>
+			<title code="0x0025">胎動</title>
+			<title code="0x0026">魔天教</title>
+			<title code="0x0027">儀式</title>
+			<title code="0x0028">危機</title>
+			<title code="0x0029">レクイエム</title>
+			<title code="0x002a">ネットワーク・イマージュ</title>
+			<title code="0x002b">イリュージョン・テーマ１</title>
+			<title code="0x002c">イリュージョン・テーマ２</title>
+			<title code="0x002d">イリュージョン・エンディング</title>
+			<title code="0x002e">バトル</title>
+			<title code="0x002f">八部衆バトル</title>
+			<title code="0x003d">魔天王バトル</title>
+			<title code="0x003e">ファイナルバトル</title>
+			<title code="0x0054">勝利</title>
+			<title code="0x0056">エンディング</title>
+			<title code="0x0057">イリュージョンテーマＢ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Elm Knight (エルムナイト)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<!-- 音色の対応が未確認です -->
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="elm_98">
+			<rom type="file" offset="-1">mmd3.com</rom>
+			<rom type="file" offset="-1">MMD.EXE</rom>
+			<rom type="file" offset="0x05">ORANYO.BIN</rom>
+			<rom type="file" offset="0x06">OTO_EL.BIN</rom>
+			<rom type="file" offset="0x07">CASTLE_1.BGM</rom>
+			<rom type="file" offset="0x08">DA_TA_1.BGM</rom>
+			<rom type="file" offset="0x09">ELM_1.BGM</rom>
+			<rom type="file" offset="0x0a">ELM_2.BGM</rom>
+			<rom type="file" offset="0x0b">ELM_20.BGM</rom>
+			<rom type="file" offset="0x0c">ELM_26.BGM</rom>
+			<rom type="file" offset="0x0d">ELM_27.BGM</rom>
+			<rom type="file" offset="0x0e">ELM_28.BGM</rom>
+			<rom type="file" offset="0x0f">ELM_29.BGM</rom>
+			<rom type="file" offset="0x10">ELM_3.BGM</rom>
+			<rom type="file" offset="0x11">ELM_34.BGM</rom>
+			<rom type="file" offset="0x12">ELM_35.BGM</rom>
+			<rom type="file" offset="0x13">ELM_37.BGM</rom>
+			<rom type="file" offset="0x14">ELM_41.BGM</rom>
+			<rom type="file" offset="0x15">ELM_43.BGM</rom>
+			<rom type="file" offset="0x16">ELM_45.BGM</rom>
+			<rom type="file" offset="0x17">ELM_51.BGM</rom>
+			<rom type="file" offset="0x18">ELM_56.BGM</rom>
+			<rom type="file" offset="0x19">ELM_57.BGM</rom>
+			<rom type="file" offset="0x1a">ELM_6.BGM</rom>
+			<rom type="file" offset="0x1b">ELM_61.BGM</rom>
+			<rom type="file" offset="0x1c">ELM_62.BGM</rom>
+			<rom type="file" offset="0x1d">ELM_63.BGM</rom>
+			<rom type="file" offset="0x1e">ELM_7.BGM</rom>
+			<rom type="file" offset="0x1f">ELM_B1RR.BGM</rom>
+			<rom type="file" offset="0x20">ELM_SI.BGM</rom>
+			<rom type="file" offset="0x21">E_VS_E1.BGM</rom>
+			<rom type="file" offset="0x22">FROSSER1.BGM</rom>
+			<rom type="file" offset="0x23">ICEMAN2.BGM</rom>
+			<rom type="file" offset="0x24">KNIGHT.BGM</rom>
+			<rom type="file" offset="0x25">KYOJIN1.BGM</rom>
+			<rom type="file" offset="0x26">LIKAMO_1.BGM</rom>
+			<rom type="file" offset="0x27">MAJYU_2.BGM</rom>
+			<rom type="file" offset="0x28">MISSION1.BGM</rom>
+			<rom type="file" offset="0x29">RION_1.BGM</rom>
+			<rom type="file" offset="0x2a">RYUE_1.BGM</rom>
+			<rom type="file" offset="0x2b">THEME_E.BGM</rom>
+			<rom type="file" offset="0x2c">USAYNO1.BGM</rom>
+			<rom type="shell" offset="0">MMD /c 3534 2048</rom>
+			<rom type="shell" offset="0">mmd3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x060020">Stop the Music (演奏停止)</title>
+			<title code="0x05002b">光の誘惑 ～Opening～</title>
+			<title code="0x060007">Metal Castle</title>
+			<title code="0x060008">Da-Ta</title>
+			<title code="0x050009">エルム ルーインズ</title>
+			<title code="0x05000a">ヘッドオフィル -Yoru-</title>
+			<title code="0x05000b">リビング シング</title>
+			<title code="0x05000c">レジスタンス</title>
+			<title code="0x05000d">ガッデム</title>
+			<title code="0x05000e">イフル</title>
+			<title code="0x05000f">コックピット</title>
+			<title code="0x050010">ミアリス ケイブ</title>
+			<title code="0x050011">セレナ</title>
+			<title code="0x050012">セレナ キュート</title>
+			<title code="0x050013">ドラゴン</title>
+			<title code="0x050014">インターバル</title>
+			<title code="0x050015">ネロ</title>
+			<title code="0x050016">ルティーク</title>
+			<title code="0x050017">バーニング</title>
+			<title code="0x050018">オブスティナシー ペア</title>
+			<title code="0x050019">クレイジー バレー</title>
+			<title code="0x05001a">ヘッドオフィス</title>
+			<title code="0x05001b">モーニング</title>
+			<title code="0x05001c">オーダー</title>
+			<title code="0x05001d">バット</title>
+			<title code="0x05001e">ボス</title>
+			<title code="0x06001f">Syo-Gun</title>
+			<title code="0x060021">Deal-Elm</title>
+			<title code="0x060022">Frosser</title>
+			<title code="0x060023">The Ice Man</title>
+			<title code="0x060024">Lake of the Ryue</title>
+			<title code="0x060025">巨人族の憂鬱</title>
+			<title code="0x060026">The Likamo Desert</title>
+			<title code="0x060027">魔獣地帯</title>
+			<title code="0x060028">最終作戦</title>
+			<title code="0x060029">Saint Forest</title>
+			<title code="0x06002a">Elm Knight</title>
+			<title code="0x06002c">障害</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Kax 2 (カックス２世)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="elm_98">
+			<rom type="file" offset="-1">mmd3.com</rom>
+			<rom type="file" offset="-1">KAX2/MMD.EXE</rom>
+			<rom type="file" offset="0x05">KAX2/KAX.BIN</rom>
+			<rom type="file" offset="0x06">KAX2/ORARYO.BIN</rom>
+			<rom type="file" offset="0x10">KAX2/(()).BGM</rom>
+			<rom type="file" offset="0x11">KAX2/AAAA.BGM</rom>
+			<rom type="file" offset="0x12">KAX2/AKUMA.BGM</rom>
+			<rom type="file" offset="0x13">KAX2/ASPR.BGM</rom>
+			<rom type="file" offset="0x14">KAX2/BALAR'.BGM</rom>
+			<rom type="file" offset="0x15">KAX2/BOMB.BGM</rom>
+			<rom type="file" offset="0x16">KAX2/BOSS1.BGM</rom>
+			<rom type="file" offset="0x17">KAX2/MEN.BGM</rom>
+			<rom type="file" offset="0x18">KAX2/OPEN.BGM</rom>
+			<rom type="file" offset="0x19">KAX2/SIRAN.BGM</rom>
+			<rom type="file" offset="0x1a">KAX2/START.BGM</rom>
+			<rom type="file" offset="0x1b">KAX2/USAGE.BGM</rom>
+			<rom type="file" offset="0x1c">KAX2/XAK2.BGM</rom>
+			<rom type="file" offset="0x1d">KAX2/DRA_1.BGM</rom>
+			<rom type="file" offset="0x1e">KAX2/ORDE_1.BGM</rom>
+			<rom type="shell" offset="0">KAX2/MMD /c 3534 2048</rom>
+			<rom type="shell" offset="0">mmd3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05001b">How To Play</title>
+			<title code="0x050013">オープニング「アスパラの歌」</title>
+			<title code="0x050018">ゲームスタート</title>
+			<title code="0x050019">BGM #1</title>
+			<title code="0x050017">BGM #2</title>
+			<title code="0x050016">BGM #3</title>
+			<title code="0x050012">BGM #4</title>
+			<title code="0x05001c">BGM #5</title>
+			<title code="0x050011">BGM #6</title>
+			<title code="0x06001d">BGM #7</title>
+			<title code="0x06001e">BGM #8</title>
+			<title code="0x05001a">ステージクリア</title>
+			<title code="0x050015">ミス</title>
+			<title code="0x050010">ゲームオーバー</title>
+		</titlelist>
+	</game>
+  <game>
+		<name>[PC-98] The Tower? of Cabin Panic (The Tower? of CABIN ～キャビンパニック～)</name>
+		<!-- 音色の対応が未確認です -->
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="cpanic_98">
+			<rom type="file" offset="-1">mmd3.com</rom>
+			<rom type="file" offset="-1">MMD.EXE</rom>
+			<!-- Voice Data -->
+			<rom type="file" offset="0x50">0/AWAW2.BIN</rom>
+			<rom type="file" offset="0x51">0/FRAY.BIN</rom>
+			<rom type="file" offset="0x52">0/KIKI.BIN</rom>
+			<rom type="file" offset="0x53">0/KIKI_G.BIN</rom>
+			<rom type="file" offset="0x54">0/OTO-3.BIN</rom>
+			<rom type="file" offset="0x55">0/OTO-8.BIN</rom>
+			<rom type="file" offset="0x56">0/OTO-9'.BIN</rom>
+			<rom type="file" offset="0x57">0/OTO-IC.BIN</rom>
+			<rom type="file" offset="0x58">0/SOUND.BIN</rom>
+			<rom type="file" offset="0x59">ADV/AWAW.BIN</rom>
+			<rom type="file" offset="0x5a">ADV/ORANYO.BIN</rom>
+			<rom type="file" offset="0x5b">ADV/ORANYO2.BIN</rom>
+			<rom type="file" offset="0x5c">ADV/OTO-9'.BIN</rom>
+			<rom type="file" offset="0x5d">ADV/XAKEEE.BIN</rom>
+			<rom type="file" offset="0x5e">CAR/FRAY.BIN</rom>
+			<rom type="file" offset="0x5f">CAR/KIKI_G.BIN</rom>
+			<rom type="file" offset="0x60">CAR/OTO-9'.BIN</rom>
+			<rom type="file" offset="0x61">CAR/OTO-IC.BIN</rom>
+			<rom type="file" offset="0x62">GLOBAL/OTO_EL.BIN</rom>
+			<rom type="file" offset="0x63">GOGO/FRAY.BIN</rom>
+			<rom type="file" offset="0x64">MUNOU/FRAY.BIN</rom>
+			<rom type="file" offset="0x65">OPENING/CP.BIN</rom>
+			<rom type="file" offset="0x66">PLAY/AWAW.BIN</rom>
+			<rom type="file" offset="0x67">PLAY/AWAW2.BIN</rom>
+			<rom type="file" offset="0x68">PLAY/FLH.BIN</rom>
+			<rom type="file" offset="0x69">PLAY/FRAY.BIN</rom>
+			<rom type="file" offset="0x6a">PLAY/KIKI.BIN</rom>
+			<rom type="file" offset="0x6b">PLAY/KIKI_G.BIN</rom>
+			<rom type="file" offset="0x6c">PLAY/ORANY2.BIN</rom>
+			<rom type="file" offset="0x6d">PLAY/ORANYO.BIN</rom>
+			<rom type="file" offset="0x6e">PLAY/OTO-8.BIN</rom>
+			<rom type="file" offset="0x6f">PLAY/OTO-9'.BIN</rom>
+			<rom type="file" offset="0x70">PLAY/OTO-IC.BIN</rom>
+			<rom type="file" offset="0x71">PLAY/XAK.BIN</rom>
+			<rom type="file" offset="0x72">PLAY/XAK2.BIN</rom>
+			<rom type="file" offset="0x73">PLAY/XAKIII.BIN</rom>
+			<rom type="file" offset="0x74">PUZZLE/FRAY.BIN</rom>
+			<rom type="file" offset="0x75">VS/FRAY.BIN</rom>
+			<rom type="file" offset="0x76">VS/SOUND.BIN</rom>
+			<!-- Music Data -->
+			<rom type="file" offset="0x05">0/BGM.BGM</rom>
+			<rom type="file" offset="0x06">0/BOSS0.BGM</rom>
+			<rom type="file" offset="0x07">0/CHIKA3.BGM</rom>
+			<rom type="file" offset="0x08">0/CHI_3.BGM</rom>
+			<rom type="file" offset="0x09">0/DENNO.BGM</rom>
+			<rom type="file" offset="0x0a">0/F_THEME.BGM</rom>
+			<rom type="file" offset="0x0b">0/GAZZEL!.BGM</rom>
+			<rom type="file" offset="0x0c">0/HI_4.BGM</rom>
+			<rom type="file" offset="0x0d">0/HOME-2.BGM</rom>
+			<rom type="file" offset="0x0e">0/IL-BA1.BGM</rom>
+			<rom type="file" offset="0x0f">0/IL-LVS.BGM</rom>
+			<rom type="file" offset="0x10">0/JAZZ.BGM</rom>
+			<rom type="file" offset="0x11">0/NET-2.BGM</rom>
+			<rom type="file" offset="0x12">0/NO_30.BGM</rom>
+			<rom type="file" offset="0x13">0/NO_30B.BGM</rom>
+			<rom type="file" offset="0x14">0/NO_32'.BGM</rom>
+			<rom type="file" offset="0x15">0/NO_33.BGM</rom>
+			<rom type="file" offset="0x16">0/NO_48.BGM</rom>
+			<rom type="file" offset="0x17">0/TEN_2.BGM</rom>
+			<rom type="file" offset="0x18">0/TIMES.BGM</rom>
+			<rom type="file" offset="0x19">0/WATER'.BGM</rom>
+			<rom type="file" offset="0x1a">ADV/END_2.BGM</rom>
+			<rom type="file" offset="0x1b">ADV/HEN.BGM</rom>
+			<rom type="file" offset="0x1c">ADV/HOUS_P.BGM</rom>
+			<rom type="file" offset="0x1d">ADV/NECRO.BGM</rom>
+			<rom type="file" offset="0x1e">ADV/PON_2.BGM</rom>
+			<rom type="file" offset="0x1f">ADV/SAKABA.BGM</rom>
+			<rom type="file" offset="0x20">ADV/XAK3.BGM</rom>
+			<rom type="file" offset="0x21">CAR/DANCE4.BGM</rom>
+			<rom type="file" offset="0x22">CAR/HONGEE.BGM</rom>
+			<rom type="file" offset="0x23">CAR/NO_31.BGM</rom>
+			<rom type="file" offset="0x24">CAR/SILENT.BGM</rom>
+			<rom type="file" offset="0x25">CAR/SUKET2.BGM</rom>
+			<rom type="file" offset="0x26">GLOBAL/RION_1.BGM</rom>
+			<rom type="file" offset="0x27">GOGO/GET.BGM</rom>
+			<rom type="file" offset="0x28">GOGO/INDIAN.BGM</rom>
+			<rom type="file" offset="0x29">GOGO/P_GOGO.BGM</rom>
+			<rom type="file" offset="0x2a">GOGO/P_HOHO.BGM</rom>
+			<rom type="file" offset="0x2b">MUNOU/F_THEME.BGM</rom>
+			<rom type="file" offset="0x2c">OPENING/IL-TRM.BGM</rom>
+			<rom type="file" offset="0x2d">OPENING/OPENING.BGM</rom>
+			<rom type="file" offset="0x2e">PLAY/ATOWN.BGM</rom>
+			<rom type="file" offset="0x2f">PLAY/BATTLE8.BGM</rom>
+			<rom type="file" offset="0x30">PLAY/BEACH2.BGM</rom>
+			<rom type="file" offset="0x31">PLAY/BORO_1.BGM</rom>
+			<rom type="file" offset="0x32">PLAY/DANCE4.BGM</rom>
+			<rom type="file" offset="0x33">PLAY/FEELD.BGM</rom>
+			<rom type="file" offset="0x34">PLAY/IL-BA1.BGM</rom>
+			<rom type="file" offset="0x35">PLAY/IL-REQ.BGM</rom>
+			<rom type="file" offset="0x36">PLAY/IL-SYO.BGM</rom>
+			<rom type="file" offset="0x37">PLAY/INDIAN.BGM</rom>
+			<rom type="file" offset="0x38">PLAY/KUEKUE.BGM</rom>
+			<rom type="file" offset="0x39">PLAY/NO_12.BGM</rom>
+			<rom type="file" offset="0x3a">PLAY/NO_24.BGM</rom>
+			<rom type="file" offset="0x3b">PLAY/OPNAB.BGM</rom>
+			<rom type="file" offset="0x3c">PLAY/OPN_01.BGM</rom>
+			<rom type="file" offset="0x3d">PLAY/SYAO1.BGM</rom>
+			<rom type="file" offset="0x3e">PLAY/THEME_A'.BGM</rom>
+			<rom type="file" offset="0x3f">PLAY/WATER'.BGM</rom>
+			<rom type="file" offset="0x40">PLAY/XAK15.BGM</rom>
+			<rom type="file" offset="0x41">PUZZLE/CEG_GO.BGM</rom>
+			<rom type="file" offset="0x42">PUZZLE/MILY.BGM</rom>
+			<rom type="file" offset="0x43">PUZZLE/TOWN1.BGM</rom>
+			<rom type="file" offset="0x44">PUZZLE/VALHA2.BGM</rom>
+			<rom type="file" offset="0x45">VS/ONMO.BGM</rom>
+			<rom type="file" offset="0x46">VS/TIMES.BGM</rom>
+			<rom type="shell" offset="0">MMD /c 3534 2048</rom>
+			<rom type="shell" offset="0">mmd3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x540005">0/BGM.BGM</title>
+			<title code="0x500006">0/BOSS0.BGM</title>
+			<title code="0x560007">0/CHIKA3.BGM</title>
+			<title code="0x540008">0/CHI_3.BGM</title>
+			<title code="0x580009">0/DENNO.BGM</title>
+			<title code="0x51000a">0/F_THEME.BGM</title>
+			<title code="0x54000b">0/GAZZEL!.BGM</title>
+			<title code="0x56000c">0/HI_4.BGM</title>
+			<title code="0x57000d">0/HOME-2.BGM</title>
+			<title code="0x52000e">0/IL-BA1.BGM</title>
+			<title code="0x52000f">0/IL-LVS.BGM</title>
+			<title code="0x520010">0/JAZZ.BGM</title>
+			<title code="0x570011">0/NET-2.BGM</title>
+			<title code="0x560012">0/NO_30.BGM</title>
+			<title code="0x560013">0/NO_30B.BGM</title>
+			<title code="0x560014">0/NO_32'.BGM</title>
+			<title code="0x560015">0/NO_33.BGM</title>
+			<title code="0x560016">0/NO_48.BGM</title>
+			<title code="0x550017">0/TEN_2.BGM</title>
+			<title code="0x580018">0/TIMES.BGM</title>
+			<title code="0x530019">0/WATER'.BGM</title>
+			<title code="0x59001a">ADV/END_2.BGM</title>
+			<title code="0x59001b">ADV/HEN.BGM</title>
+			<title code="0x5b001c">ADV/HOUS_P.BGM</title>
+			<title code="0x5a001d">ADV/NECRO.BGM</title>
+			<title code="0x59001e">ADV/PON_2.BGM</title>
+			<title code="0x59001f">ADV/SAKABA.BGM</title>
+			<title code="0x5d0020">ADV/XAK3.BGM</title>
+			<title code="0x610021">CAR/DANCE4.BGM</title>
+			<title code="0x5e0022">CAR/HONGEE.BGM</title>
+			<title code="0x600023">CAR/NO_31.BGM</title>
+			<title code="0x5e0024">CAR/SILENT.BGM</title>
+			<title code="0x5f0025">CAR/SUKET2.BGM</title>
+			<title code="0x620026">GLOBAL/RION_1.BGM</title>
+			<title code="0x630027">GOGO/GET.BGM</title>
+			<title code="0x630028">GOGO/INDIAN.BGM</title>
+			<title code="0x630029">GOGO/P_GOGO.BGM</title>
+			<title code="0x63002a">GOGO/P_HOHO.BGM</title>
+			<title code="0x64002b">MUNOU/F_THEME.BGM</title>
+			<title code="0x65002c">OPENING/IL-TRM.BGM</title>
+			<title code="0x65002d">OPENING/OPENING.BGM</title>
+			<title code="0x72002e">PLAY/ATOWN.BGM</title>
+			<title code="0x70002f">PLAY/BATTLE8.BGM</title>
+			<title code="0x690030">PLAY/BEACH2.BGM</title>
+			<title code="0x660031">PLAY/BORO_1.BGM</title>
+			<title code="0x700032">PLAY/DANCE4.BGM</title>
+			<title code="0x6d0033">PLAY/FEELD.BGM</title>
+			<title code="0x6a0034">PLAY/IL-BA1.BGM</title>
+			<title code="0x6a0035">PLAY/IL-REQ.BGM</title>
+			<title code="0x6a0036">PLAY/IL-SYO.BGM</title>
+			<title code="0x690037">PLAY/INDIAN.BGM</title>
+			<title code="0x6c0038">PLAY/KUEKUE.BGM</title>
+			<title code="0x6e0039">PLAY/NO_12.BGM</title>
+			<title code="0x6f003a">PLAY/NO_24.BGM</title>
+			<title code="0x73003b">PLAY/OPNAB.BGM</title>
+			<title code="0x66003c">PLAY/OPN_01.BGM</title>
+			<title code="0x67003d">PLAY/SYAO1.BGM</title>
+			<title code="0x68003e">PLAY/THEME_A'.BGM</title>
+			<title code="0x6b003f">PLAY/WATER'.BGM</title>
+			<title code="0x710040">PLAY/XAK15.BGM</title>
+			<title code="0x740041">PUZZLE/CEG_GO.BGM</title>
+			<title code="0x740042">PUZZLE/MILY.BGM</title>
+			<title code="0x740043">PUZZLE/TOWN1.BGM</title>
+			<title code="0x740044">PUZZLE/VALHA2.BGM</title>
+			<title code="0x750045">VS/ONMO.BGM</title>
+			<title code="0x760046">VS/TIMES.BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Xak Ⅲ -The Eternal Reccurence- (サーク３ ザ エターナル レクレンス) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="xak3_98">
+			<rom type="file" offset="-1">mmd3.com</rom>
+			<rom type="file" offset="-1">MMD.EXE</rom>
+			<rom type="file" offset="0x05">MERCURY.BIN</rom>
+			<rom type="file" offset="0x06">BOSS1.BGM</rom>
+			<rom type="file" offset="0x07">BOSS2.BGM</rom>
+			<rom type="file" offset="0x08">FX_42B.BGM</rom>
+			<rom type="file" offset="0x09">M-10A.BGM</rom>
+			<rom type="file" offset="0x0a">M-10B.BGM</rom>
+			<rom type="file" offset="0x0b">M-11A.BGM</rom>
+			<rom type="file" offset="0x0c">M-11D.BGM</rom>
+			<rom type="file" offset="0x0d">M-12A.BGM</rom>
+			<rom type="file" offset="0x0e">M-12B.BGM</rom>
+			<rom type="file" offset="0x0f">M-2A1.BGM</rom>
+			<rom type="file" offset="0x10">M-3A.BGM</rom>
+			<rom type="file" offset="0x11">M-4A.BGM</rom>
+			<rom type="file" offset="0x12">M-4B.BGM</rom>
+			<rom type="file" offset="0x13">M-4CX.BGM</rom>
+			<rom type="file" offset="0x14">M-4D.BGM</rom>
+			<rom type="file" offset="0x15">M-4E.BGM</rom>
+			<rom type="file" offset="0x16">M-4F.BGM</rom>
+			<rom type="file" offset="0x17">M-5A.BGM</rom>
+			<rom type="file" offset="0x18">M-5B.BGM</rom>
+			<rom type="file" offset="0x19">M-6A.BGM</rom>
+			<rom type="file" offset="0x1a">M-6B.BGM</rom>
+			<rom type="file" offset="0x1b">M-6C.BGM</rom>
+			<rom type="file" offset="0x1c">M-6D.BGM</rom>
+			<rom type="file" offset="0x1d">M-6E.BGM</rom>
+			<rom type="file" offset="0x1e">M-7A.BGM</rom>
+			<rom type="file" offset="0x1f">M-7B.BGM</rom>
+			<rom type="file" offset="0x20">M-9B.BGM</rom>
+			<rom type="file" offset="0x21">M-9D.BGM</rom>
+			<rom type="file" offset="0x22">M-9E.BGM</rom>
+			<rom type="file" offset="0x23">SILENT.BGM</rom>
+			<rom type="file" offset="0x24">ZAMA_0.BGM</rom>
+			<rom type="shell" offset="0">MMD /v2 8192 2048</rom>
+			<rom type="shell" offset="0">mmd3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x050023">Stop the Music (演奏停止)</title>
+			<title code="0x050010">Main theme from Xak Ⅲ</title>
+			<title code="0x05000f">Fairless</title>
+			<title code="0x050014">Blood bath</title>
+			<title code="0x050015">Tensions</title>
+			<title code="0x050013">Assault on (*)</title>
+			<title code="0x050011">The voice of Moon</title>
+			<title code="0x050012">Silent for the insanity</title>
+			<title code="0x050018">Stillness of the nights</title>
+			<title code="0x050019">Gahoo the walock</title>
+			<title code="0x05001b">Escape from the tower</title>
+			<title code="0x05001d">The entrance to the nightmare</title>
+			<title code="0x05001c">Evil eyes</title>
+			<title code="0x05001a">Lucifer the black</title>
+			<title code="0x05001e">Premonitions</title>
+			<title code="0x05001f">Great winds</title>
+			<title code="0x050017">From this town</title>
+			<title code="0x050016">Forgotten Myth</title>
+			<title code="0x050020">Tera incognita</title>
+			<title code="0x050021">Over lord</title>
+			<title code="0x050009">Oracle of trinity</title>
+			<title code="0x05000b">In the ultimathule</title>
+			<title code="0x050022">Mael Strome</title>
+			<title code="0x05000c">Xexis</title>
+			<title code="0x05000a">How many tears</title>
+			<title code="0x05000d">The eternal reccurence</title>
+			<title code="0x05000e">Closing cledits</title>
+			<title code="0x050024">Jingle</title>
+			<title code="0x050006">Boss out #1</title>
+			<title code="0x050007">Boss out #2</title>
+			<title code="0x050008">SFX #01</title>
+			<title code="0x00ffff">*: Loop Exit</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Xak Ⅲ -The Eternal Reccurence- (サーク３ ザ エターナル レクレンス) (CM-64)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="3"/>
+		</options>
+		<romlist archive="xak3_98">
+			<rom type="file" offset="-1">mmd3m.com</rom>
+			<rom type="file" offset="-1">MMD.EXE</rom>
+			<rom type="file" offset="0x08">XAKIII.CM6</rom>
+			<rom type="file" offset="0x09">M-10A.RCP</rom>
+			<rom type="file" offset="0x0a">M-10B.RCP</rom>
+			<rom type="file" offset="0x0b">M-11A.RCP</rom>
+			<rom type="file" offset="0x0c">M-11D.RCP</rom>
+			<rom type="file" offset="0x0d">M-12A.RCP</rom>
+			<rom type="file" offset="0x0e">M-12B.RCP</rom>
+			<rom type="file" offset="0x0f">M-2A.RCP</rom>
+			<rom type="file" offset="0x10">M-3A.RCP</rom>
+			<rom type="file" offset="0x11">M-4A.RCP</rom>
+			<rom type="file" offset="0x12">M-4B.RCP</rom>
+			<rom type="file" offset="0x13">M-4C.RCP</rom>
+			<rom type="file" offset="0x14">M-4D.RCP</rom>
+			<rom type="file" offset="0x15">M-4E.RCP</rom>
+			<rom type="file" offset="0x16">M-4F.RCP</rom>
+			<rom type="file" offset="0x17">M-5A.RCP</rom>
+			<rom type="file" offset="0x18">M-5B.RCP</rom>
+			<rom type="file" offset="0x19">M-6A.RCP</rom>
+			<rom type="file" offset="0x1a">M-6B.RCP</rom>
+			<rom type="file" offset="0x1b">M-6C.RCP</rom>
+			<rom type="file" offset="0x1c">M-6D.RCP</rom>
+			<rom type="file" offset="0x1d">M-6E.RCP</rom>
+			<rom type="file" offset="0x1e">M-7A.RCP</rom>
+			<rom type="file" offset="0x1f">M-7B.RCP</rom>
+			<rom type="file" offset="0x20">M-9B.RCP</rom>
+			<rom type="file" offset="0x21">M-9D.RCP</rom>
+			<rom type="file" offset="0x22">M-9E.RCP</rom>
+			<rom type="file" offset="0x23">SILENT.RCP</rom>
+			<rom type="shell" offset="0">mmd.exe /c /v2 /x3 3584 3584 40960</rom>
+			<rom type="shell" offset="0">mmd3m</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0023">Stop the Music (演奏停止)</title>
+			<title code="0x0010">Main theme from Xak Ⅲ</title>
+			<title code="0x000f">Fairless</title>
+			<title code="0x0014">Blood bath</title>
+			<title code="0x0015">Tensions</title>
+			<title code="0x0013">Assault on</title>
+			<title code="0x0011">The voice of Moon</title>
+			<title code="0x0012">Silent for the insanity</title>
+			<title code="0x0018">Stillness of the nights</title>
+			<title code="0x0019">Gahoo the walock</title>
+			<title code="0x001b">Escape from the tower</title>
+			<title code="0x001d">The entrance to the nightmare</title>
+			<title code="0x001c">Evil eyes</title>
+			<title code="0x001a">Lucifer the black</title>
+			<title code="0x001e">Premonitions</title>
+			<title code="0x001f">Great winds</title>
+			<title code="0x0017">From this town</title>
+			<title code="0x0016">Forgotten Myth</title>
+			<title code="0x0020">Tera incognita</title>
+			<title code="0x0021">Over lord</title>
+			<title code="0x0009">Oracle of trinity</title>
+			<title code="0x000b">In the ultimathule</title>
+			<title code="0x0022">Mael Strome</title>
+			<title code="0x000c">Xexis</title>
+			<title code="0x000a">How many tears</title>
+			<title code="0x000d">The eternal reccurence</title>
+			<title code="0xffff">*: Loop Exit</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Xak Ⅲ -The Eternal Reccurence- (サーク３ ザ エターナル レクレンス) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="xak3_98">
+			<rom type="file" offset="-1">mmd3m.com</rom>
+			<rom type="file" offset="-1">MMD.EXE</rom>
+			<rom type="file" offset="0x08">XAK3.GSD</rom>
+			<rom type="file" offset="0x09">M-10A.RCP</rom>
+			<rom type="file" offset="0x0a">M-10B.RCP</rom>
+			<rom type="file" offset="0x0b">M-11A.RCP</rom>
+			<rom type="file" offset="0x0c">M-11D.RCP</rom>
+			<rom type="file" offset="0x0d">M-12A.RCP</rom>
+			<rom type="file" offset="0x0e">M-12B.RCP</rom>
+			<rom type="file" offset="0x0f">M-2A.RCP</rom>
+			<rom type="file" offset="0x10">M-3A.RCP</rom>
+			<rom type="file" offset="0x11">M-4A.RCP</rom>
+			<rom type="file" offset="0x12">M-4B.RCP</rom>
+			<rom type="file" offset="0x13">M-4C.RCP</rom>
+			<rom type="file" offset="0x14">M-4D.RCP</rom>
+			<rom type="file" offset="0x15">M-4E.RCP</rom>
+			<rom type="file" offset="0x16">M-4F.RCP</rom>
+			<rom type="file" offset="0x17">M-5A.RCP</rom>
+			<rom type="file" offset="0x18">M-5B.RCP</rom>
+			<rom type="file" offset="0x19">M-6A.RCP</rom>
+			<rom type="file" offset="0x1a">M-6B.RCP</rom>
+			<rom type="file" offset="0x1b">M-6C.RCP</rom>
+			<rom type="file" offset="0x1c">M-6D.RCP</rom>
+			<rom type="file" offset="0x1d">M-6E.RCP</rom>
+			<rom type="file" offset="0x1e">M-7A.RCP</rom>
+			<rom type="file" offset="0x1f">M-7B.RCP</rom>
+			<rom type="file" offset="0x20">M-9B.RCP</rom>
+			<rom type="file" offset="0x21">M-9D.RCP</rom>
+			<rom type="file" offset="0x22">M-9E.RCP</rom>
+			<rom type="file" offset="0x23">SILENT.RCP</rom>
+			<rom type="shell" offset="0">mmd.exe /c /v2 /x3 3584 3584 40960</rom>
+			<rom type="shell" offset="0">mmd3m</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0023">Stop the Music (演奏停止)</title>
+			<title code="0x0010">Main theme from Xak Ⅲ</title>
+			<title code="0x000f">Fairless</title>
+			<title code="0x0014">Blood bath</title>
+			<title code="0x0015">Tensions</title>
+			<title code="0x0013">Assault on</title>
+			<title code="0x0011">The voice of Moon</title>
+			<title code="0x0012">Silent for the insanity</title>
+			<title code="0x0018">Stillness of the nights</title>
+			<title code="0x0019">Gahoo the walock</title>
+			<title code="0x001b">Escape from the tower</title>
+			<title code="0x001d">The entrance to the nightmare</title>
+			<title code="0x001c">Evil eyes</title>
+			<title code="0x001a">Lucifer the black</title>
+			<title code="0x001e">Premonitions</title>
+			<title code="0x001f">Great winds</title>
+			<title code="0x0017">From this town</title>
+			<title code="0x0016">Forgotten Myth</title>
+			<title code="0x0020">Tera incognita</title>
+			<title code="0x0021">Over lord</title>
+			<title code="0x0009">Oracle of trinity</title>
+			<title code="0x000b">In the ultimathule</title>
+			<title code="0x0022">Mael Strome</title>
+			<title code="0x000c">Xexis</title>
+			<title code="0x000a">How many tears</title>
+			<title code="0x000d">The eternal reccurence</title>
+			<title code="0xffff">*: Loop Exit</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Xak Ⅲ -The Eternal Reccurence- (サーク３ ザ エターナル レクレンス) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="xak3_98">
+			<rom type="file" offset="-1">mmd3m.com</rom>
+			<rom type="file" offset="-1">MMD.EXE</rom>
+			<rom type="file" offset="0x08">XAK3.GSD</rom>
+			<rom type="file" offset="0x09">M-10A.RCP</rom>
+			<rom type="file" offset="0x0a">M-10B.RCP</rom>
+			<rom type="file" offset="0x0b">M-11A.RCP</rom>
+			<rom type="file" offset="0x0c">M-11D.RCP</rom>
+			<rom type="file" offset="0x0d">M-12A.RCP</rom>
+			<rom type="file" offset="0x0e">M-12B.RCP</rom>
+			<rom type="file" offset="0x0f">M-2A.RCP</rom>
+			<rom type="file" offset="0x10">M-3A.RCP</rom>
+			<rom type="file" offset="0x11">M-4A.RCP</rom>
+			<rom type="file" offset="0x12">M-4B.RCP</rom>
+			<rom type="file" offset="0x13">M-4C.RCP</rom>
+			<rom type="file" offset="0x14">M-4D.RCP</rom>
+			<rom type="file" offset="0x15">M-4E.RCP</rom>
+			<rom type="file" offset="0x16">M-4F.RCP</rom>
+			<rom type="file" offset="0x17">M-5A.RCP</rom>
+			<rom type="file" offset="0x18">M-5B.RCP</rom>
+			<rom type="file" offset="0x19">M-6A.RCP</rom>
+			<rom type="file" offset="0x1a">M-6B.RCP</rom>
+			<rom type="file" offset="0x1b">M-6C.RCP</rom>
+			<rom type="file" offset="0x1c">M-6D.RCP</rom>
+			<rom type="file" offset="0x1d">M-6E.RCP</rom>
+			<rom type="file" offset="0x1e">M-7A.RCP</rom>
+			<rom type="file" offset="0x1f">M-7B.RCP</rom>
+			<rom type="file" offset="0x20">M-9B.RCP</rom>
+			<rom type="file" offset="0x21">M-9D.RCP</rom>
+			<rom type="file" offset="0x22">M-9E.RCP</rom>
+			<rom type="file" offset="0x23">SILENT.RCP</rom>
+			<rom type="shell" offset="0">mmd.exe /c /v2 /x3 3584 3584 40960</rom>
+			<rom type="shell" offset="0">mmd3m</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0023">Stop the Music (演奏停止)</title>
+			<title code="0x0010">Main theme from Xak Ⅲ</title>
+			<title code="0x000f">Fairless</title>
+			<title code="0x0014">Blood bath</title>
+			<title code="0x0015">Tensions</title>
+			<title code="0x0013">Assault on</title>
+			<title code="0x0011">The voice of Moon</title>
+			<title code="0x0012">Silent for the insanity</title>
+			<title code="0x0018">Stillness of the nights</title>
+			<title code="0x0019">Gahoo the walock</title>
+			<title code="0x001b">Escape from the tower</title>
+			<title code="0x001d">The entrance to the nightmare</title>
+			<title code="0x001c">Evil eyes</title>
+			<title code="0x001a">Lucifer the black</title>
+			<title code="0x001e">Premonitions</title>
+			<title code="0x001f">Great winds</title>
+			<title code="0x0017">From this town</title>
+			<title code="0x0016">Forgotten Myth</title>
+			<title code="0x0020">Tera incognita</title>
+			<title code="0x0021">Over lord</title>
+			<title code="0x0009">Oracle of trinity</title>
+			<title code="0x000b">In the ultimathule</title>
+			<title code="0x0022">Mael Strome</title>
+			<title code="0x000c">Xexis</title>
+			<title code="0x000a">How many tears</title>
+			<title code="0x000d">The eternal reccurence</title>
+			<title code="0xffff">*: Loop Exit</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Dragon Half (ドラゴンハーフ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="dhalf_98">
+			<rom type="file" offset="-1">mmd3.com</rom>
+			<rom type="file" offset="-1">MMD.EXE</rom>
+			<rom type="file" offset="0x05">ORANYO93.BIN</rom>
+			<rom type="file" offset="0x06">AS.BGM</rom>
+			<rom type="file" offset="0x07">ELM_SI.BGM</rom>
+			<rom type="file" offset="0x08">LOG.BGM</rom>
+			<rom type="file" offset="0x09">MIG.BGM</rom>
+			<rom type="file" offset="0x0a">SONG_10.BGM</rom>
+			<rom type="file" offset="0x0b">SONG_100.BGM</rom>
+			<rom type="file" offset="0x0c">SONG_20.BGM</rom>
+			<rom type="file" offset="0x0d">SONG_22.BGM</rom>
+			<rom type="file" offset="0x0e">SONG_28.BGM</rom>
+			<rom type="file" offset="0x0f">SONG_29.BGM</rom>
+			<rom type="file" offset="0x10">SONG_31.BGM</rom>
+			<rom type="file" offset="0x11">SONG_32.BGM</rom>
+			<rom type="file" offset="0x12">SONG_37.BGM</rom>
+			<rom type="file" offset="0x13">SONG_39.BGM</rom>
+			<rom type="file" offset="0x14">SONG_41.BGM</rom>
+			<rom type="file" offset="0x15">SONG_44.BGM</rom>
+			<rom type="file" offset="0x16">SONG_45.BGM</rom>
+			<rom type="file" offset="0x17">SONG_48.BGM</rom>
+			<rom type="file" offset="0x18">SONG_50.BGM</rom>
+			<rom type="file" offset="0x19">SONG_51.BGM</rom>
+			<rom type="file" offset="0x1a">SONG_52.BGM</rom>
+			<rom type="file" offset="0x1b">SONG_53.BGM</rom>
+			<rom type="file" offset="0x1c">SONG_55.BGM</rom>
+			<rom type="file" offset="0x1d">SONG_59.BGM</rom>
+			<rom type="file" offset="0x1e">SONG_67.BGM</rom>
+			<rom type="file" offset="0x1f">SONG_71.BGM</rom>
+			<rom type="file" offset="0x20">SONG_74.BGM</rom>
+			<rom type="file" offset="0x21">SONG_93.BGM</rom>
+			<rom type="file" offset="0x22">SONG_99.BGM</rom>
+			<rom type="shell" offset="0">MMD /c 5192 2048</rom>
+			<rom type="shell" offset="0">mmd3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x050007">Stop the Music (演奏停止)</title>
+			<title code="0x05001e">さぁ！さぁ！よってらっしゃい！！みてらっしゃい！！</title>
+			<title code="0x05001a">シチテンバットウね…してるの。</title>
+			<title code="0x050022">カッコウ(ウサギの応援団長が大ファン)が住んでいる島</title>
+			<title code="0x05000a">海辺でトランペットの音をあわせながら口笛を吹いているカッコウ</title>
+			<title code="0x05000c">うきうきわくわく、草原はどこだ？</title>
+			<title code="0x05000d">純情通り商店街を遊園地の汽車がマーチで横切る。</title>
+			<title code="0x05000f">絶叫！！講釈師が叫ぶ！！「今日は正々堂々と勝負しましょっ」</title>
+			<title code="0x050013">「んんんん～、ん、ん～ん、んんん～！」って、なに？</title>
+			<title code="0x05001b">雪がコンコンと降るシルクロードに住んでる娘の正月</title>
+			<title code="0x05001d">妙なステップで一晩中踊りあかすウサギの応援団長の突撃ラッパが鳴り響く！！</title>
+			<title code="0x050012">動かない動けないピアノが一服する。「ふぅ～」</title>
+			<title code="0x050011">色違いの５人組が描いてある扇子で踊りまくる水の王様＆兵士</title>
+			<title code="0x050006">AS.BGM</title>
+			<title code="0x050008">LOG.BGM</title>
+			<title code="0x050009">MIG.BGM</title>
+			<title code="0x05000b">SONG_100.BGM</title>
+			<title code="0x05000e">SONG_28.BGM</title>
+			<title code="0x050010">SONG_31.BGM</title>
+			<title code="0x050014">SONG_41.BGM</title>
+			<title code="0x050015">SONG_44.BGM</title>
+			<title code="0x050016">SONG_45.BGM</title>
+			<title code="0x050017">SONG_48.BGM</title>
+			<title code="0x050018">SONG_50.BGM</title>
+			<title code="0x050019">SONG_51.BGM</title>
+			<title code="0x05001c">SONG_55.BGM</title>
+			<title code="0x05001f">SONG_71.BGM</title>
+			<title code="0x050020">SONG_74.BGM</title>
+			<title code="0x050021">SONG_93.BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Gal.Act.Heroism (英雄志願 ～GAL･ACT･HEROISM～)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="galact98">
+			<rom type="file" offset="-1">mmd3.com</rom>
+			<rom type="file" offset="-1">MMD.EXE</rom>
+			<rom type="file" offset="0x05">TONE.BIN</rom>
+			<rom type="file" offset="0x06">EX1.BGM</rom>
+			<rom type="file" offset="0x07">EX2.BGM</rom>
+			<rom type="file" offset="0x08">EX3.BGM</rom>
+			<rom type="file" offset="0x09">EX4.BGM</rom>
+			<rom type="file" offset="0x0a">EX5.BGM</rom>
+			<rom type="file" offset="0x0b">EX6.BGM</rom>
+			<rom type="file" offset="0x0c">EX7.BGM</rom>
+			<rom type="file" offset="0x0d">EX8.BGM</rom>
+			<rom type="file" offset="0x0e">EX9.BGM</rom>
+			<rom type="file" offset="0x0f">EX10.BGM</rom>
+			<rom type="file" offset="0x10">EX11.BGM</rom>
+			<rom type="file" offset="0x11">EX12.BGM</rom>
+			<rom type="file" offset="0x12">EX13.BGM</rom>
+			<rom type="file" offset="0x13">EX14.BGM</rom>
+			<rom type="file" offset="0x14">EX15.BGM</rom>
+			<rom type="file" offset="0x15">EX15B.BGM</rom>
+			<rom type="file" offset="0x16">EX17.BGM</rom>
+			<rom type="file" offset="0x17">EX18B.BGM</rom>
+			<rom type="file" offset="0x18">EX19.BGM</rom>
+			<rom type="file" offset="0x19">EX20C.BGM</rom>
+			<rom type="file" offset="0x1a">SILENT.BGM</rom>
+			<rom type="shell" offset="0">MMD /c /v2 4096 1024</rom>
+			<rom type="shell" offset="0">mmd3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05001a">Stop the Music (演奏停止)</title>
+			<title code="0x050014">私達、英雄志願！(オープニング)</title>
+			<title code="0x050015">私達、英雄志願！(ループバージョン)</title>
+			<title code="0x05000a">懐かしの都、我が心のホームタウン</title>
+			<title code="0x050008">これ、下さい！</title>
+			<title code="0x05000e">風に乗って</title>
+			<title code="0x05000c">冒険の序曲</title>
+			<title code="0x050007">探索は闇の中</title>
+			<title code="0x050013">乙女の闘魂</title>
+			<title code="0x050006">樹々の微笑む街</title>
+			<title code="0x05000b">挑戦、謎の人工建造物！</title>
+			<title code="0x050009">ざわめく心</title>
+			<title code="0x050012">オーヴァーテクノロジー</title>
+			<title code="0x05000d">追跡</title>
+			<title code="0x050016">女神は白く凍る</title>
+			<title code="0x050010">悲しみはクリスタル</title>
+			<title code="0x050011">歓喜は高らかに鳴り響く</title>
+			<title code="0x05000f">やれば出来るじゃん！</title>
+			<title code="0x050017">私達、英雄志願！(エンディング)</title>
+			<title code="0x050019">卒業、それぞれの道は別れても…</title>
+			<title code="0x050018">波の音</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Konpeki no Kantai (紺碧の艦隊)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="konpeki_98">
+			<rom type="file" offset="-1">mmd3.com</rom>
+			<rom type="file" offset="-1">MMD.EXE</rom>
+			<rom type="file" offset="0x05">ORANYO94.BIN</rom>
+			<rom type="file" offset="0x06">SONG_1.BGM</rom>
+			<rom type="file" offset="0x07">SONG_10.BGM</rom>
+			<rom type="file" offset="0x08">SONG_11.BGM</rom>
+			<rom type="file" offset="0x09">SONG_12.BGM</rom>
+			<rom type="file" offset="0x0a">SONG_13.BGM</rom>
+			<rom type="file" offset="0x0b">SONG_3.BGM</rom>
+			<rom type="file" offset="0x0c">SONG_6.BGM</rom>
+			<rom type="file" offset="0x0d">SONG_8.BGM</rom>
+			<rom type="shell" offset="0">MMD /c 5192 2048</rom>
+			<rom type="shell" offset="0">mmd3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x050006">SONG_1.BGM</title>
+			<title code="0x050007">SONG_10.BGM</title>
+			<title code="0x050008">SONG_11.BGM</title>
+			<title code="0x050009">SONG_12.BGM</title>
+			<title code="0x05000a">SONG_13.BGM</title>
+			<title code="0x05000b">SONG_3.BGM</title>
+			<title code="0x05000c">SONG_6.BGM</title>
+			<title code="0x05000d">SONG_8.BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Konpeki no Kantai 2 Perfect (紺碧の艦隊2パーフェクト)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">microcabin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x100"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="konpeki2_98">
+			<rom type="file" offset="-1">mmd3.com</rom>
+			<rom type="file" offset="-1">MMD.EXE</rom>
+			<rom type="file" offset="0x05">BGMSE_14.BIN</rom>
+			<rom type="file" offset="0x10">BGMSE_00.BGM</rom>
+			<rom type="file" offset="0x11">BGMSE_01.BGM</rom>
+			<rom type="file" offset="0x12">BGMSE_02.BGM</rom>
+			<rom type="file" offset="0x13">BGMSE_03.BGM</rom>
+			<rom type="file" offset="0x14">BGMSE_04.BGM</rom>
+			<rom type="file" offset="0x15">BGMSE_05.BGM</rom>
+			<rom type="file" offset="0x16">BGMSE_06.BGM</rom>
+			<rom type="file" offset="0x17">BGMSE_07.BGM</rom>
+			<rom type="file" offset="0x18">BGMSE_08.BGM</rom>
+			<rom type="file" offset="0x19">BGMSE_09.BGM</rom>
+			<rom type="file" offset="0x1a">BGMSE_10.BGM</rom>
+			<rom type="file" offset="0x1b">BGMSE_11.BGM</rom>
+			<rom type="file" offset="0x1c">BGMSE_12.BGM</rom>
+			<rom type="file" offset="0x1d">BGMSE_15.BGM</rom>
+			<rom type="shell" offset="0">MMD /c 8192 2048</rom>
+			<rom type="shell" offset="0">mmd3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05001d">Stop the Music (演奏停止)</title>
+			<title code="0x050010">BGMSE_00.BGM</title>
+			<title code="0x050011">BGMSE_01.BGM</title>
+			<title code="0x050012">BGMSE_02.BGM</title>
+			<title code="0x050013">BGMSE_03.BGM</title>
+			<title code="0x050014">BGMSE_04.BGM</title>
+			<title code="0x050015">BGMSE_05.BGM</title>
+			<title code="0x050016">BGMSE_06.BGM</title>
+			<title code="0x050017">BGMSE_07.BGM</title>
+			<title code="0x050018">BGMSE_08.BGM</title>
+			<title code="0x050019">BGMSE_09.BGM</title>
+			<title code="0x05001a">BGMSE_10.BGM</title>
+			<title code="0x05001b">BGMSE_11.BGM</title>
+			<title code="0x05001c">BGMSE_12.BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] うる星やつら～恋のサバイバル・バースデイ～</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="x1">microcabin</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa900"/>
+		</options>
+		<romlist archive="x1urusei">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9500">PSG-X1.COM</rom>
+			<rom type="bgm" offset="0x00">TONO.BIN</rom>
+			<rom type="bgm" offset="0x01">PAJAMA.BIN</rom>
+			<rom type="bgm" offset="0x02">BOO.BIN</rom>
+			<rom type="bgm" offset="0x03">TAIHEN.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">殿方ごめん遊ばせ</title>
+			<title code="0x01">パジャマ・じゃまだ！</title>
+			<title code="0x02">愛はブーメラン</title>
+			<title code="0x03">宇宙は大ヘンだ！</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Maison Ikkoku (めぞん一刻 完結篇 ～さよなら、そして～) (OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="X1">microcabin</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+		</options>
+		<romlist archive="x1msnk">
+			<rom type="code" offset="0x0000">DEMO</rom>
+			<rom type="code" offset="0x0010">PAT.COM</rom>
+			<rom type="code" offset="0x7000">MAIN</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">好きさ</title>
+			<title code="0x01">予感</title>
+			<title code="0x02">宴会謝絶</title>
+			<title code="0x03">朱美の歯ブラシ</title>
+			<title code="0x04">複雑夜</title>
+			<title code="0x05">愛・夜明け前</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Maison Ikkoku (めぞん一刻 完結篇 ～さよなら、そして～) (PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">microcabin</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+		</options>
+		<romlist archive="x1msnk">
+			<rom type="code" offset="0x0000">DEMO</rom>
+			<rom type="code" offset="0x0010">PAT.COM</rom>
+			<rom type="code" offset="0x7000">MAIN</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">好きさ</title>
+			<title code="0x01">予感</title>
+			<title code="0x02">宴会謝絶</title>
+			<title code="0x03">朱美の歯ブラシ</title>
+			<title code="0x04">複雑夜</title>
+			<title code="0x05">愛・夜明け前</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Xak -The Art of Visual Stage- (サーク Ｔｈｅ Ａｒｔ ｏｆ Ｖｉｓｕａｌ Ｓｔａｇｅ)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">microcabin</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="xak68snd">
+			<rom type="code">xak68snd.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="x" offset="0x1f000">OPMB.X</rom>
+			<rom type="code" offset="0x20000">SYOKI2.BGM</rom>
+			<rom type="code" offset="0x34000">AHXAKK.BGM</rom>
+			<rom type="code" offset="0x38000">BBOSS.BGM</rom>
+			<rom type="code" offset="0x3c000">BOSS.BGM</rom>
+			<rom type="code" offset="0x40000">BOSS2.BGM</rom>
+			<rom type="code" offset="0x44000">BOSS4.BGM</rom>
+			<rom type="code" offset="0x48000">DRG.BGM</rom>
+			<rom type="code" offset="0x4c000">END.BGM</rom>
+			<rom type="code" offset="0x50000">END2.BGM</rom>
+			<rom type="code" offset="0x54000">FEELD.BGM</rom>
+			<rom type="code" offset="0x58000">FEELD2.BGM</rom>
+			<rom type="code" offset="0x5c000">FEELD3.BGM</rom>
+			<rom type="code" offset="0x60000">FIRE.BGM</rom>
+			<rom type="code" offset="0x64000">FORT2.BGM</rom>
+			<rom type="code" offset="0x68000">F_FORT.BGM</rom>
+			<rom type="code" offset="0x6c000">GOGO.BGM</rom>
+			<rom type="code" offset="0x70000">IDA.BGM</rom>
+			<rom type="code" offset="0x74000">JNR.BGM</rom>
+			<rom type="code" offset="0x78000">NECRO.BGM</rom>
+			<rom type="code" offset="0x7c000">OPNAB.BGM</rom>
+			<rom type="code" offset="0x80000">OYAXAK.BGM</rom>
+			<rom type="code" offset="0x84000">PIKSY.BGM</rom>
+			<rom type="code" offset="0x88000">SARA.BGM</rom>
+			<rom type="code" offset="0x8c000">SEA.BGM</rom>
+			<rom type="code" offset="0x90000">SHOP.BGM</rom>
+			<rom type="code" offset="0x94000">TALK1.BGM</rom>
+			<rom type="code" offset="0x98000">TALK2.BGM</rom>
+			<rom type="code" offset="0x9c000">TALK3.BGM</rom>
+			<rom type="code" offset="0xa0000">TALK4.BGM</rom>
+			<rom type="code" offset="0xa4000">TORIDE.BGM</rom>
+			<rom type="code" offset="0xa8000">TOWN1.BGM</rom>
+			<rom type="code" offset="0xac000">TOWN2.BGM</rom>
+			<rom type="code" offset="0xb0000">TOWN3.BGM</rom>
+			<rom type="code" offset="0xb4000">UNDER.BGM</rom>
+			<rom type="code" offset="0xb8000">USAUSA.BGM</rom>
+			<rom type="code" offset="0xbc000">XAK100.BGM</rom>
+			<rom type="code" offset="0xc0000">XAK1000.BGM</rom>
+			<rom type="code" offset="0xc4000">XAK11.BGM</rom>
+			<rom type="code" offset="0xc8000">XAK12.BGM</rom>
+			<rom type="code" offset="0xcc000">XAK14.BGM</rom>
+			<rom type="code" offset="0xd0000">XAK15.BGM</rom>
+			<rom type="code" offset="0xd4000">XAK3.BGM</rom>
+			<rom type="code" offset="0xd8000">XAK5.BGM</rom>
+			<rom type="code" offset="0xdc000">XAK77.BGM</rom>
+			<rom type="code" offset="0xe0000">XAK777.BGM</rom>
+			<rom type="code" offset="0xe4000">XAK9.BGM</rom>
+			<rom type="code" offset="0xe8000">XAKE.BGM</rom>
+			<rom type="code" offset="0xec000">YOSTE1.BGM</rom>
+			<rom type="code" offset="0xf0000">YOSTE2.BGM</rom>
+			<rom type="code" offset="0xf4000">AHHA.BGM</rom>
+			<rom type="code" offset="0x100000">CAPAN.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x23">オープニング効果音1</title>
+			<title code="0x14">オープニング</title>
+			<title code="0x16">フェアリー効果音</title>
+			<title code="0x1F">フェアレスの町</title>
+			<title code="0x31">教会</title>
+			<title code="0x1A">メッセンジャー</title>
+			<title code="0x19">ショップ</title>
+			<title code="0x30">悲しみ</title>
+			<title code="0x0B">やすらぎ</title>
+			<title code="0x1B">微笑み1</title>
+			<title code="0x1C">微笑み2</title>
+			<title code="0x1D">不安</title>
+			<title code="0x26">街へ</title>
+			<title code="0x2C">バトル・フィールド</title>
+			<title code="0x2D">バトル・フィールド(滝の音は聞こえない？？)</title>
+			<title code="0x0E">緑の大地</title>
+			<title code="0x06">邪悪な木</title>
+			<title code="0x0A">砦への道</title>
+			<title code="0x2E">砦</title>
+			<title code="0x2A">水龍</title>
+			<title code="0x20">ノルマナの町</title>
+			<title code="0x18">青い海</title>
+			<title code="0x2B">洞窟</title>
+			<title code="0x11">ロック・バイター</title>
+			<title code="0x28">ファイアー＆ウォーターエレメンタル</title>
+			<title code="0x24">合体エレメンタル</title>
+			<title code="0x09">エンディング1</title>
+			<title code="0x27">アイキャッチ</title>
+			<title code="0x21">ネムヌの町</title>
+			<title code="0x22">地の下の塔</title>
+			<title code="0x13">ネクロマンサー</title>
+			<title code="0x0D">炎の地</title>
+			<title code="0x0F">炎の砦</title>
+			<title code="0x07">効果音</title>
+			<title code="0x29">炎の地、上空</title>
+			<title code="0x17">サラマンダー</title>
+			<title code="0x04">ボスを倒した音</title>
+			<title code="0x1E">聖域へ</title>
+			<title code="0x0C">封印の地</title>
+			<title code="0x03">バドゥーの驚異</title>
+			<title code="0x05">バドゥーを倒した音</title>
+			<title code="0x15">勝利</title>
+			<title code="0x02">エンディング2</title>
+			<title code="0x32">ゲームオーバー</title>
+			<title code="0x2F">ゲームオーバー2</title>
+			<title code="0x12">Get アイテム</title>
+			<title code="0x08">END.BGM</title>
+			<title code="0x10">GOGO.BGM</title>
+			<title code="0x25">XAK1000.BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Maison Ikkoku Kanketsu hen Special (めぞん一刻完結編 スペシャル)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">microcabin</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="maison68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">CINEMA.OPM</rom>
+			<rom type="code" offset="0x28000">ENKAI.OPM</rom>
+			<rom type="code" offset="0x2c000">FUKUZATS.OPM</rom>
+			<rom type="code" offset="0x30000">HABURASH.OPM</rom>
+			<rom type="code" offset="0x34000">ICHINOSE.OPM</rom>
+			<rom type="code" offset="0x38000">KAIEN.OPM</rom>
+			<rom type="code" offset="0x3c000">KANASHIM.OPM</rom>
+			<rom type="code" offset="0x40000">KYOKO.OPM</rom>
+			<rom type="code" offset="0x44000">NEGAI.OPM</rom>
+			<rom type="code" offset="0x48000">SUKISA.OPM</rom>
+			<rom type="code" offset="0x4c000">YOAKE.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">シネマ</title>
+			<title code="0x03">宴会謝絶</title>
+			<title code="0x04">複雑夜</title>
+			<title code="0x05">朱美のはぶらし</title>
+			<title code="0x06">一の瀬さんは今日も行く</title>
+			<title code="0x08">悲しみよこんにちは</title>
+			<title code="0x09">響子</title>
+			<title code="0x0a">ねがい</title>
+			<title code="0x0b">好きさ・こってりタイプ</title>
+			<title code="0x0c">愛・夜明け前</title>
+			<title code="0x07">KAIEN.OPM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Ashguine -Fukushuu no Honoo- (アシュギーネ 復讐の炎)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="ashguine3_msx">
+			<rom type="code">Ashguine 3 - Fukushuu no Honoo (1987)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Cabin Panic - The Tower? of Cabin (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="cabin_msx">
+			<rom type="code">Cabin Panic - Tower of Cabin (1992)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x2a">BGM #2a</title>
+			<title code="0x2c">BGM #2c</title>
+			<title code="0x2e">BGM #2e</title>
+			<title code="0x30">BGM #30</title>
+			<title code="0x32">BGM #32</title>
+			<title code="0x34">BGM #34</title>
+			<title code="0x36">BGM #36</title>
+			<title code="0x38">BGM #38</title>
+			<title code="0x3a">BGM #3a</title>
+			<title code="0x3c">BGM #3c</title>
+			<title code="0x3e">BGM #3e</title>
+			<title code="0x40">BGM #40</title>
+			<title code="0x42">BGM #42</title>
+			<title code="0x44">BGM #44</title>
+			<title code="0x46">BGM #46</title>
+			<title code="0x48">BGM #48</title>
+			<title code="0x4a">BGM #4a</title>
+			<title code="0x4c">BGM #4c</title>
+			<title code="0x4e">BGM #4e</title>
+			<title code="0x50">BGM #50</title>
+			<title code="0x52">BGM #52</title>
+			<title code="0x54">BGM #54</title>
+			<title code="0x56">BGM #56</title>
+			<title code="0x58">BGM #58</title>
+			<title code="0x5a">BGM #5a</title>
+			<title code="0x5c">BGM #5c</title>
+			<title code="0x5e">BGM #5e</title>
+			<title code="0x60">BGM #60</title>
+			<title code="0x62">BGM #62</title>
+			<title code="0x64">BGM #64</title>
+			<title code="0x66">BGM #66</title>
+			<title code="0x68">BGM #68</title>
+			<title code="0x6a">BGM #6a</title>
+			<title code="0x6f">BGM #6f</title>
+			<title code="0x70">BGM #70</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Cabin Panic - The Tower? of Cabin (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="cabin_msx">
+			<rom type="code">Cabin Panic - Tower of Cabin (1992)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x29">BGM #29</title>
+			<title code="0x2f">BGM #2f</title>
+			<title code="0x31">BGM #31</title>
+			<title code="0x33">BGM #33</title>
+			<title code="0x35">BGM #35</title>
+			<title code="0x37">BGM #37</title>
+			<title code="0x39">BGM #39</title>
+			<title code="0x3b">BGM #3b</title>
+			<title code="0x3d">BGM #3d</title>
+			<title code="0x3f">BGM #3f</title>
+			<title code="0x41">BGM #41</title>
+			<title code="0x43">BGM #43</title>
+			<title code="0x45">BGM #45</title>
+			<title code="0x47">BGM #47</title>
+			<title code="0x49">BGM #49</title>
+			<title code="0x4b">BGM #4b</title>
+			<title code="0x4d">BGM #4d</title>
+			<title code="0x4f">BGM #4f</title>
+			<title code="0x51">BGM #51</title>
+			<title code="0x53">BGM #53</title>
+			<title code="0x55">BGM #55</title>
+			<title code="0x57">BGM #57</title>
+			<title code="0x59">BGM #59</title>
+			<title code="0x5b">BGM #5b</title>
+			<title code="0x5d">BGM #5d</title>
+			<title code="0x5f">BGM #5f</title>
+			<title code="0x61">BGM #61</title>
+			<title code="0x63">BGM #63</title>
+			<title code="0x65">BGM #65</title>
+			<title code="0x67">BGM #67</title>
+			<title code="0x69">BGM #69</title>
+			<title code="0x6b">BGM #6b</title>
+			<title code="0x6e">BGM #6e</title>
+			<title code="0x71">BGM #71</title>
+			<title code="0x72">BGM #72</title>
+			<title code="0x73">BGM #73</title>
+			<title code="0x74">BGM #74</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Fray -In Magical Adventure- (フレイ ～Ｉｎ ｍａｇｉｃａｌ ａｄｖｅｎｔｕｒｅ～) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="fray_msx">
+			<rom type="code">Fray -In Magical Adventure- (1990)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x2f">BGM #2f</title>
+			<title code="0x4a">BGM #4a</title>
+			<title code="0x4c">BGM #4c</title>
+			<title code="0x4d">BGM #4d</title>
+			<title code="0x4e">BGM #4e</title>
+			<title code="0x4f">BGM #4f</title>
+			<title code="0x50">BGM #50</title>
+			<title code="0x51">BGM #51</title>
+			<title code="0x52">BGM #52</title>
+			<title code="0x5f">BGM #5f</title>
+			<title code="0x61">BGM #61</title>
+			<title code="0x62">BGM #62</title>
+			<title code="0x63">BGM #63</title>
+			<title code="0x64">BGM #64</title>
+			<title code="0x65">BGM #65</title>
+			<title code="0x66">BGM #66</title>
+			<title code="0x6a">BGM #6a</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Fray -In Magical Adventure- (フレイ ～Ｉｎ ｍａｇｉｃａｌ ａｄｖｅｎｔｕｒｅ～) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="fray_msx">
+			<rom type="code">Fray -In Magical Adventure- (1990)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x30">BGM #30</title>
+			<title code="0x31">BGM #31</title>
+			<title code="0x32">BGM #32</title>
+			<title code="0x33">BGM #33</title>
+			<title code="0x34">BGM #34</title>
+			<title code="0x35">BGM #35</title>
+			<title code="0x36">BGM #36</title>
+			<title code="0x37">BGM #37</title>
+			<title code="0x38">BGM #38</title>
+			<title code="0x39">BGM #39</title>
+			<title code="0x3a">BGM #3a</title>
+			<title code="0x3b">BGM #3b</title>
+			<title code="0x3c">BGM #3c</title>
+			<title code="0x3d">BGM #3d</title>
+			<title code="0x3e">BGM #3e</title>
+			<title code="0x3f">BGM #3f</title>
+			<title code="0x40">BGM #40</title>
+			<title code="0x42">BGM #42</title>
+			<title code="0x43">BGM #43</title>
+			<title code="0x44">BGM #44</title>
+			<title code="0x45">BGM #45</title>
+			<title code="0x46">BGM #46</title>
+			<title code="0x47">BGM #47</title>
+			<title code="0x56">BGM #56</title>
+			<title code="0x57">BGM #57</title>
+			<title code="0x58">BGM #58</title>
+			<title code="0x59">BGM #59</title>
+			<title code="0x5a">BGM #5a</title>
+			<title code="0x5b">BGM #5b</title>
+			<title code="0x5c">BGM #5c</title>
+			<title code="0x5d">BGM #5d</title>
+			<title code="0x6b">BGM #6b</title>
+			<title code="0x6c">BGM #6c</title>
+			<title code="0x6d">BGM #6d</title>
+			<title code="0x6e">BGM #6e</title>
+			<title code="0x6f">BGM #6f</title>
+			<title code="0x70">BGM #70</title>
+			<title code="0x71">BGM #71</title>
+			<title code="0x73">BGM #73</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Geneitoshi - Illusion City (幻影都市)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="ic_msx">
+			<rom type="code">Geneitoshi - Illusion City (1991)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x29">BGM #29</title>
+			<title code="0x2a">BGM #2a</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Maison Ikkoku Kanketsu hen (めぞん一刻・完結篇 ～さよなら、そして～) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="maisonk_msx">
+			<rom type="code">Maison Ikkoku Final Episode (1988)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Maison Ikkoku Kanketsu hen (めぞん一刻・完結篇 ～さよなら、そして～) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="maisonk_msx">
+			<rom type="code">Maison Ikkoku Final Episode (1988)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Xak: The Art of Visual Stage (サーク Ｔｈｅ Ａｒｔ ｏｆ Ｖｉｓｕａｌ Ｓｔａｇｅ) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="xak_msx">
+			<rom type="code">Xak - The Art of Visual Stage (1989)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x29">BGM #29</title>
+			<title code="0x2a">BGM #2a</title>
+			<title code="0x2b">BGM #2b</title>
+			<title code="0x2c">BGM #2c</title>
+			<title code="0x2d">BGM #2d</title>
+			<title code="0x2e">BGM #2e</title>
+			<title code="0x2f">BGM #2f</title>
+			<title code="0x30">BGM #30</title>
+			<title code="0x31">BGM #31</title>
+			<title code="0x32">BGM #32</title>
+			<title code="0x33">BGM #33</title>
+			<title code="0x34">BGM #34</title>
+			<title code="0x35">BGM #35</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Xak: The Art of Visual Stage (サーク Ｔｈｅ Ａｒｔ ｏｆ Ｖｉｓｕａｌ Ｓｔａｇｅ) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="xak_msx">
+			<rom type="code">Xak - The Art of Visual Stage (1989)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80">BGM #80</title>
+			<title code="0x81">BGM #81</title>
+			<title code="0x82">BGM #82</title>
+			<title code="0x83">BGM #83</title>
+			<title code="0x84">BGM #84</title>
+			<title code="0x85">BGM #85</title>
+			<title code="0x86">BGM #86</title>
+			<title code="0x87">BGM #87</title>
+			<title code="0x88">BGM #88</title>
+			<title code="0x89">BGM #89</title>
+			<title code="0x8a">BGM #8a</title>
+			<title code="0x8b">BGM #8b</title>
+			<title code="0x8c">BGM #8c</title>
+			<title code="0x8d">BGM #8d</title>
+			<title code="0x8e">BGM #8e</title>
+			<title code="0x8f">BGM #8f</title>
+			<title code="0x90">BGM #90</title>
+			<title code="0x91">BGM #91</title>
+			<title code="0x92">BGM #92</title>
+			<title code="0x93">BGM #93</title>
+			<title code="0x94">BGM #94</title>
+			<title code="0x95">BGM #95</title>
+			<title code="0x96">BGM #96</title>
+			<title code="0x97">BGM #97</title>
+			<title code="0x98">BGM #98</title>
+			<title code="0x99">BGM #99</title>
+			<title code="0x9a">BGM #9a</title>
+			<title code="0x9b">BGM #9b</title>
+			<title code="0x9c">BGM #9c</title>
+			<title code="0x9d">BGM #9d</title>
+			<title code="0x9e">BGM #9e</title>
+			<title code="0x9f">BGM #9f</title>
+			<title code="0xa0">BGM #a0</title>
+			<title code="0xa1">BGM #a1</title>
+			<title code="0xa2">BGM #a2</title>
+			<title code="0xa3">BGM #a3</title>
+			<title code="0xa4">BGM #a4</title>
+			<title code="0xa5">BGM #a5</title>
+			<title code="0xa6">BGM #a6</title>
+			<title code="0xa7">BGM #a7</title>
+			<title code="0xa8">BGM #a8</title>
+			<title code="0xa9">BGM #a9</title>
+			<title code="0xaa">BGM #aa</title>
+			<title code="0xab">BGM #ab</title>
+			<title code="0xac">BGM #ac</title>
+			<title code="0xad">BGM #ad</title>
+			<title code="0xae">BGM #ae</title>
+			<title code="0xaf">BGM #af</title>
+			<title code="0xb0">BGM #b0</title>
+			<title code="0xb1">BGM #b1</title>
+			<title code="0xb2">BGM #b2</title>
+			<title code="0xb3">BGM #b3</title>
+			<title code="0xb4">BGM #b4</title>
+			<title code="0xb5">BGM #b5</title>
+		</titlelist>
+	</game>                       
+	<game>
+		<name>[MSX2] Xak II: Rising of the Redmoon (サーク２ Ｒｉｓｉｎｇ ｏｆ Ｔｈｅ Ｒｅｄｍｏｏｎ) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="xak2_msx">
+			<rom type="code">Xak 2 - Rising of the Redmoon (1990)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x2a">BGM #2a</title>
+			<title code="0x2c">BGM #2c</title>
+			<title code="0x2e">BGM #2e</title>
+			<title code="0x30">BGM #30</title>
+			<title code="0x32">BGM #32</title>
+			<title code="0x34">BGM #34</title>
+			<title code="0x36">BGM #36</title>
+			<title code="0x37">BGM #37</title>
+			<title code="0x39">BGM #39</title>
+			<title code="0x3b">BGM #3b</title>
+			<title code="0x3d">BGM #3d</title>
+			<title code="0x3f">BGM #3f</title>
+			<title code="0x41">BGM #41</title>
+			<title code="0x43">BGM #43</title>
+			<title code="0x45">BGM #45</title>
+			<title code="0x47">BGM #47</title>
+			<title code="0x49">BGM #49</title>
+			<title code="0x4b">BGM #4b</title>
+			<title code="0x4d">BGM #4d</title>
+			<title code="0x4f">BGM #4f</title>
+			<title code="0x51">BGM #51</title>
+			<title code="0x53">BGM #53</title>
+			<title code="0x55">BGM #55</title>
+			<title code="0x57">BGM #57</title>
+			<title code="0x59">BGM #59</title>
+			<title code="0x5b">BGM #5b</title>
+			<title code="0x5d">BGM #5d</title>
+			<title code="0x5f">BGM #5f</title>
+			<title code="0x61">BGM #61</title>
+			<title code="0x63">BGM #63</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Xak II: Rising of the Redmoon (サーク２ Ｒｉｓｉｎｇ ｏｆ Ｔｈｅ Ｒｅｄｍｏｏｎ) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="xak2_msx">
+			<rom type="code">Xak 2 - Rising of the Redmoon (1990)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x29">BGM #29</title>
+			<title code="0x2b">BGM #2b</title>
+			<title code="0x2d">BGM #2d</title>
+			<title code="0x2f">BGM #2f</title>
+			<title code="0x31">BGM #31</title>
+			<title code="0x33">BGM #33</title>
+			<title code="0x35">BGM #35</title>
+			<title code="0x38">BGM #38</title>
+			<title code="0x3a">BGM #3a</title>
+			<title code="0x3c">BGM #3c</title>
+			<title code="0x3e">BGM #3e</title>
+			<title code="0x40">BGM #40</title>
+			<title code="0x42">BGM #42</title>
+			<title code="0x44">BGM #44</title>
+			<title code="0x46">BGM #46</title>
+			<title code="0x48">BGM #48</title>
+			<title code="0x4a">BGM #4a</title>
+			<title code="0x4c">BGM #4c</title>
+			<title code="0x4e">BGM #4e</title>
+			<title code="0x50">BGM #50</title>
+			<title code="0x52">BGM #52</title>
+			<title code="0x54">BGM #54</title>
+			<title code="0x56">BGM #56</title>
+			<title code="0x58">BGM #58</title>
+			<title code="0x5a">BGM #5a</title>
+			<title code="0x5c">BGM #5c</title>
+			<title code="0x5e">BGM #5e</title>
+			<title code="0x60">BGM #60</title>
+			<title code="0x62">BGM #62</title>
+			<title code="0x64">BGM #64</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Xak: The Tower of Gazzel (サーク ガゼルの塔) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="gazzel_msx">
+			<rom type="code">Xak - The Tower of the Gazell (1991)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x2a">BGM #2a</title>
+			<title code="0x2c">BGM #2c</title>
+			<title code="0x2e">BGM #2e</title>
+			<title code="0x30">BGM #30</title>
+			<title code="0x32">BGM #32</title>
+			<title code="0x34">BGM #34</title>
+			<title code="0x36">BGM #36</title>
+			<title code="0x38">BGM #38</title>
+			<title code="0x3a">BGM #3a</title>
+			<title code="0x3c">BGM #3c</title>
+			<title code="0x3e">BGM #3e</title>
+			<title code="0x40">BGM #40</title>
+			<title code="0x42">BGM #42</title>
+			<title code="0x44">BGM #44</title>
+			<title code="0x46">BGM #46</title>
+			<title code="0x48">BGM #48</title>
+			<title code="0x4a">BGM #4a</title>
+			<title code="0x4c">BGM #4c</title>
+			<title code="0x4e">BGM #4e</title>
+			<title code="0x50">BGM #50</title>
+			<title code="0x52">BGM #52</title>
+			<title code="0x54">BGM #54</title>
+			<title code="0x56">BGM #56</title>
+			<title code="0x58">BGM #58</title>
+			<title code="0x5a">BGM #5a</title>
+			<title code="0x5b">BGM #5b</title>
+			<title code="0x5c">BGM #5c</title>
+			<title code="0x5d">BGM #5d</title>
+			<title code="0x5e">BGM #5e</title>
+			<title code="0x5f">BGM #5f</title>
+			<title code="0x60">BGM #60</title>
+			<title code="0x61">BGM #61</title>
+			<title code="0x62">BGM #62</title>
+			<title code="0x63">BGM #63</title>
+			<title code="0x64">BGM #64</title>
+			<title code="0x67">BGM #67</title>
+			<title code="0x68">BGM #68</title>
+			<title code="0x69">BGM #69</title>
+			<title code="0x6a">BGM #6a</title>
+			<title code="0x6b">BGM #6b</title>
+			<title code="0x6c">BGM #6c</title>
+			<title code="0x6d">BGM #6d</title>
+			<title code="0x6e">BGM #6e</title>
+			<title code="0x6f">BGM #6f</title>
+			<title code="0x70">BGM #70</title>
+			<title code="0x71">BGM #71</title>
+			<title code="0x72">BGM #72</title>
+			<title code="0x73">BGM #73</title>
+			<title code="0x74">BGM #74</title>
+			<title code="0x75">BGM #75</title>
+			<title code="0x76">BGM #76</title>
+			<title code="0x77">BGM #77</title>
+			<title code="0x78">BGM #78</title>
+			<title code="0x79">BGM #79</title>
+			<title code="0x7d">BGM #7d</title>
+			<title code="0x7e">BGM #7e</title>
+			<title code="0x7f">BGM #7f</title>
+			<title code="0x80">BGM #80</title>
+			<title code="0x82">BGM #82</title>
+			<title code="0x84">BGM #84</title>
+			<title code="0x86">BGM #86</title>
+			<title code="0x88">BGM #88</title>
+			<title code="0x89">BGM #89</title>
+			<title code="0x8a">BGM #8a</title>
+			<title code="0x8c">BGM #8c</title>
+			<title code="0x8e">BGM #8e</title>
+			<title code="0x90">BGM #90</title>
+			<title code="0x92">BGM #92</title>
+			<title code="0x94">BGM #94</title>
+			<title code="0x96">BGM #96</title>
+			<title code="0x98">BGM #98</title>
+			<title code="0x9a">BGM #9a</title>
+			<title code="0x9c">BGM #9c</title>
+			<title code="0x9e">BGM #9e</title>
+			<title code="0xa0">BGM #a0</title>
+			<title code="0xa2">BGM #a2</title>
+			<title code="0xa4">BGM #a4</title>
+			<title code="0xa6">BGM #a6</title>
+			<title code="0xa8">BGM #a8</title>
+			<title code="0xaa">BGM #aa</title>
+			<title code="0xac">BGM #ac</title>
+			<title code="0xae">BGM #ae</title>
+			<title code="0xb0">BGM #b0</title>
+			<title code="0xb2">BGM #b2</title>
+			<title code="0xb4">BGM #b4</title>
+			<title code="0xb6">BGM #b6</title>
+			<title code="0xb8">BGM #b8</title>
+			<title code="0xba">BGM #ba</title>
+			<title code="0xbc">BGM #bc</title>
+			<title code="0xbe">BGM #be</title>
+			<title code="0xbf">BGM #bf</title>
+			<title code="0xc1">BGM #c1</title>
+			<title code="0xc3">BGM #c3</title>
+			<title code="0xc5">BGM #c5</title>
+			<title code="0xc7">BGM #c7</title>
+			<title code="0xc9">BGM #c9</title>
+			<title code="0xcb">BGM #cb</title>
+			<title code="0xcd">BGM #cd</title>
+			<title code="0xcf">BGM #cf</title>
+			<title code="0xd1">BGM #d1</title>
+			<title code="0xd3">BGM #d3</title>
+			<title code="0xd5">BGM #d5</title>
+			<title code="0xd7">BGM #d7</title>
+			<title code="0xd9">BGM #d9</title>
+			<title code="0xdb">BGM #db</title>
+			<title code="0xdd">BGM #dd</title>
+			<title code="0xdf">BGM #df</title>
+			<title code="0xe1">BGM #e1</title>
+			<title code="0xe3">BGM #e3</title>
+			<title code="0xe5">BGM #e5</title>
+			<title code="0xe8">BGM #e8</title>
+			<title code="0xe9">BGM #e9</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Xak: The Tower of Gazzel (サーク ガゼルの塔) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">microcabin</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="gazzel_msx">
+			<rom type="code">Xak - The Tower of the Gazell (1991)(Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x29">BGM #29</title>
+			<title code="0x2b">BGM #2b</title>
+			<title code="0x2d">BGM #2d</title>
+			<title code="0x2f">BGM #2f</title>
+			<title code="0x31">BGM #31</title>
+			<title code="0x33">BGM #33</title>
+			<title code="0x35">BGM #35</title>
+			<title code="0x37">BGM #37</title>
+			<title code="0x39">BGM #39</title>
+			<title code="0x3b">BGM #3b</title>
+			<title code="0x3d">BGM #3d</title>
+			<title code="0x3f">BGM #3f</title>
+			<title code="0x41">BGM #41</title>
+			<title code="0x43">BGM #43</title>
+			<title code="0x45">BGM #45</title>
+			<title code="0x47">BGM #47</title>
+			<title code="0x49">BGM #49</title>
+			<title code="0x4b">BGM #4b</title>
+			<title code="0x4d">BGM #4d</title>
+			<title code="0x4f">BGM #4f</title>
+			<title code="0x51">BGM #51</title>
+			<title code="0x53">BGM #53</title>
+			<title code="0x55">BGM #55</title>
+			<title code="0x57">BGM #57</title>
+			<title code="0x59">BGM #59</title>
+			<title code="0x65">BGM #65</title>
+			<title code="0x66">BGM #66</title>
+			<title code="0x7a">BGM #7a</title>
+			<title code="0x7b">BGM #7b</title>
+			<title code="0x7c">BGM #7c</title>
+			<title code="0x81">BGM #81</title>
+			<title code="0x83">BGM #83</title>
+			<title code="0x85">BGM #85</title>
+			<title code="0x87">BGM #87</title>
+			<title code="0x8b">BGM #8b</title>
+			<title code="0x8d">BGM #8d</title>
+			<title code="0x8f">BGM #8f</title>
+			<title code="0x91">BGM #91</title>
+			<title code="0x93">BGM #93</title>
+			<title code="0x95">BGM #95</title>
+			<title code="0x97">BGM #97</title>
+			<title code="0x99">BGM #99</title>
+			<title code="0x9b">BGM #9b</title>
+			<title code="0x9d">BGM #9d</title>
+			<title code="0x9f">BGM #9f</title>
+			<title code="0xa1">BGM #a1</title>
+			<title code="0xa3">BGM #a3</title>
+			<title code="0xa5">BGM #a5</title>
+			<title code="0xa7">BGM #a7</title>
+			<title code="0xa9">BGM #a9</title>
+			<title code="0xab">BGM #ab</title>
+			<title code="0xad">BGM #ad</title>
+			<title code="0xaf">BGM #af</title>
+			<title code="0xb1">BGM #b1</title>
+			<title code="0xb3">BGM #b3</title>
+			<title code="0xb5">BGM #b5</title>
+			<title code="0xb7">BGM #b7</title>
+			<title code="0xb9">BGM #b9</title>
+			<title code="0xbb">BGM #bb</title>
+			<title code="0xbd">BGM #bd</title>
+			<title code="0xc0">BGM #c0</title>
+			<title code="0xc2">BGM #c2</title>
+			<title code="0xc4">BGM #c4</title>
+			<title code="0xc6">BGM #c6</title>
+			<title code="0xc8">BGM #c8</title>
+			<title code="0xca">BGM #ca</title>
+			<title code="0xcc">BGM #cc</title>
+			<title code="0xce">BGM #ce</title>
+			<title code="0xd0">BGM #d0</title>
+			<title code="0xd2">BGM #d2</title>
+			<title code="0xd4">BGM #d4</title>
+			<title code="0xd6">BGM #d6</title>
+			<title code="0xd8">BGM #d8</title>
+			<title code="0xda">BGM #da</title>
+			<title code="0xdc">BGM #dc</title>
+			<title code="0xde">BGM #de</title>
+			<title code="0xe0">BGM #e0</title>
+			<title code="0xe2">BGM #e2</title>
+			<title code="0xe4">BGM #e4</title>
+			<title code="0xe6">BGM #e6</title>
+			<title code="0xe7">BGM #e7</title>
+		</titlelist>
+	</game>
+</gamelist>

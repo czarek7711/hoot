@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2010/03/26">
+	<!-- //Hertz -->
+	<game>
+		<name>[MSX] Hydefos - Hyper Defending Force System -(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Hertz</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x3000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc" value="0x400"/>
+			<option name="use_opll" value="0x01"/>
+		</options>
+		<romlist archive="hydefos_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x1800">BGMDRV.BIN</rom>
+			<rom type="bgm" offset="0x00">BGM5-B.OBF</rom>
+			<rom type="bgm" offset="0x01">BGM5-M.OBF</rom>
+			<rom type="bgm" offset="0x02">BGM5-NA.OBF</rom>
+			<rom type="bgm" offset="0x03">BGM5-NB.OBF</rom>
+			<rom type="bgm" offset="0x04">SOUND01.OBF</rom>
+			<rom type="bgm" offset="0x05">SOUND02.OBF</rom>
+			<rom type="bgm" offset="0x06">SOUND03.OBF</rom>
+			<rom type="bgm" offset="0x07">SOUND04.OBF</rom>
+			<rom type="bgm" offset="0x08">SOUND05.OBF</rom>
+			<rom type="bgm" offset="0x09">SOUND06.OBF</rom>
+			<rom type="bgm" offset="0x0a">SOUND07.OBF</rom>
+			<rom type="bgm" offset="0x0b">SOUND08.OBF</rom>
+			<rom type="bgm" offset="0x0c">SOUND09.OBF</rom>
+			<rom type="bgm" offset="0x0d">SOUND10.OBF</rom>
+			<rom type="bgm" offset="0x0e">SOUND11.OBF</rom>
+			<rom type="bgm" offset="0x0f">SOUND12.OBF</rom>
+			<rom type="bgm" offset="0x10">SOUND13.OBF</rom>
+			<rom type="bgm" offset="0x11">SOUND14.OBF</rom>
+			<rom type="bgm" offset="0x12">SOUND15.OBF</rom>
+			<rom type="bgm" offset="0x13">SOUND16.OBF</rom>
+			<rom type="bgm" offset="0x14">SOUND17.OBF</rom>
+			<rom type="bgm" offset="0x15">VIS1.OBF</rom>
+			<rom type="bgm" offset="0x16">VIS2.OBF</rom>
+			<rom type="bgm" offset="0x17">VIS3.OBF</rom>
+			<rom type="bgm" offset="0x18">VIS4.OBF</rom>
+			<rom type="bgm" offset="0x19">WLD1.OBF</rom>
+			<rom type="bgm" offset="0x1a">WLD2.OBF</rom>
+			<rom type="bgm" offset="0x1b">WLD3.OBF</rom>
+			<rom type="bgm" offset="0x1c">WLD4.OBF</rom>
+			<rom type="bgm" offset="0x1d">WLD5.OBF</rom>
+			<rom type="bgm" offset="0x1e">WLD6.OBF</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xff15">VIS1.OBF    : </title>
+			<title code="0xff16">VIS2.OBF    : HYPER DEFENDING FORCE</title>
+			<!--
+			<title code="0xff0d">SOUND10.OBF : HYPER DEFENDING FORCE</title>
+			<title code="0xff00">BGM5-B.OBF  : HYPER DEFENDING FORCE</title>
+			<title code="0xff01">BGM5-M.OBF  : HYPER DEFENDING FORCE</title>
+			<title code="0xff03">BGM5-NB.OBF : HYPER DEFENDING FORCE</title>
+			<title code="0xff19">WLD1.OBF    : AREA-1</title>
+			  -->
+			<title code="0xff04">SOUND01.OBF : AREA-1</title>
+			<title code="0xff0a">SOUND07.OBF : PIT</title>
+			<title code="0xff0b">SOUND08.OBF : METAL CREATURE-A</title>
+			<title code="0xff11">SOUND14.OBF : WORLD CLEAR</title>
+			<title code="0xff05">SOUND02.OBF : AREA-2</title>
+			<!--
+			<title code="0xff1a">WLD2.OBF    : AREA-2</title>
+			  -->
+			<title code="0xff0c">SOUND09.OBF : METAL CREATURE-B</title>
+			<title code="0xff17">VIS3.OBF    : VISUAL ALIEN</title>
+			<!--
+			<title code="0xff0e">SOUND11.OBF : VISUAL ALIEN</title>
+			  -->
+			<title code="0xff06">SOUND03.OBF : AREA-3</title>
+			<!--
+			<title code="0xff1b">WLD3.OBF    : AREA-3</title>
+			  -->
+			<title code="0xff07">SOUND04.OBF : AREA-4</title>
+			<!--
+			<title code="0xff1c">WLD4.OBF    : AREA-4</title>
+			  -->
+			<title code="0xff18">VIS4.OBF    : THEME OF STACY</title>
+			<!--
+			<title code="0xff10">SOUND13.OBF : THEME OF STACY</title>
+			  -->
+			<title code="0xff08">SOUND05.OBF : AREA-5</title>
+			<!--
+			<title code="0xff1d">WLD5.OBF    : AREA-5</title>
+			  -->
+			<title code="0xff09">SOUND06.OBF : AREA-6</title>
+			<!--
+			<title code="0xff1e">WLD6.OBF    : AREA-6</title>
+			  -->
+			<title code="0xff0f">SOUND12.OBF : VISUAL GREAT RACE</title>
+			<!--
+			<title code="0xff02">BGM5-NA.OBF : VISUAL GREAT RACE</title>
+			  -->
+			<title code="0x0114">SOUND17.OBF : STAFF ROLL</title>
+			<title code="0xff13">SOUND16.OBF : VISUAL WEDDING</title>
+			<title code="0x0112">SOUND15.OBF : GAME OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Hydefos - Hyper Defending Force System -(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Hertz</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x3000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc" value="0x400"/>
+		</options>
+		<romlist archive="hydefos_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x1800">BGMDRV.BIN</rom>
+			<rom type="bgm" offset="0x00">BGM5-B.OBS</rom>
+			<rom type="bgm" offset="0x01">BGM5-M.OBS</rom>
+			<rom type="bgm" offset="0x02">BGM5-NA.OBS</rom>
+			<rom type="bgm" offset="0x03">BGM5-NB.OBS</rom>
+			<rom type="bgm" offset="0x04">SOUND01.OBS</rom>
+			<rom type="bgm" offset="0x05">SOUND02.OBS</rom>
+			<rom type="bgm" offset="0x06">SOUND03.OBS</rom>
+			<rom type="bgm" offset="0x07">SOUND04.OBS</rom>
+			<rom type="bgm" offset="0x08">SOUND05.OBS</rom>
+			<rom type="bgm" offset="0x09">SOUND06.OBS</rom>
+			<rom type="bgm" offset="0x0a">SOUND07.OBS</rom>
+			<rom type="bgm" offset="0x0b">SOUND08.OBS</rom>
+			<rom type="bgm" offset="0x0c">SOUND09.OBS</rom>
+			<rom type="bgm" offset="0x0d">SOUND10.OBS</rom>
+			<rom type="bgm" offset="0x0e">SOUND11.OBS</rom>
+			<rom type="bgm" offset="0x0f">SOUND12.OBS</rom>
+			<rom type="bgm" offset="0x10">SOUND13.OBS</rom>
+			<rom type="bgm" offset="0x11">SOUND14.OBS</rom>
+			<rom type="bgm" offset="0x12">SOUND15.OBS</rom>
+			<rom type="bgm" offset="0x13">SOUND16.OBS</rom>
+			<rom type="bgm" offset="0x14">SOUND17.OBS</rom>
+			<rom type="bgm" offset="0x15">VIS1.OBS</rom>
+			<rom type="bgm" offset="0x16">VIS2.OBS</rom>
+			<rom type="bgm" offset="0x17">VIS3.OBS</rom>
+			<rom type="bgm" offset="0x18">VIS4.OBS</rom>
+			<rom type="bgm" offset="0x19">WLD1.OBS</rom>
+			<rom type="bgm" offset="0x1a">WLD2.OBS</rom>
+			<rom type="bgm" offset="0x1b">WLD3.OBS</rom>
+			<rom type="bgm" offset="0x1c">WLD4.OBS</rom>
+			<rom type="bgm" offset="0x1d">WLD5.OBS</rom>
+			<rom type="bgm" offset="0x1e">WLD6.OBS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xff15">VIS1.OBS    : </title>
+			<title code="0xff16">VIS2.OBS    : HYPER DEFENDING FORCE</title>
+			<!--
+			<title code="0xff0d">SOUND10.OBS : HYPER DEFENDING FORCE</title>
+			<title code="0xff00">BGM5-B.OBS  : HYPER DEFENDING FORCE</title>
+			<title code="0xff01">BGM5-M.OBS  : HYPER DEFENDING FORCE</title>
+			<title code="0xff03">BGM5-NB.OBS : HYPER DEFENDING FORCE</title>
+			  -->
+			<title code="0xff04">SOUND01.OBS : AREA-1</title>
+			<!--
+			<title code="0xff19">WLD1.OBS    : AREA-1</title>
+			  -->
+			<title code="0xff0a">SOUND07.OBS : PIT</title>
+			<title code="0xff0b">SOUND08.OBS : METAL CREATURE-A</title>
+			<title code="0xff11">SOUND14.OBS : WORLD CLEAR</title>
+			<title code="0xff05">SOUND02.OBS : AREA-2</title>
+			<!--
+			<title code="0xff1a">WLD2.OBS    : AREA-2</title>
+			  -->
+			<title code="0xff0c">SOUND09.OBS : METAL CREATURE-B</title>
+			<title code="0xff17">VIS3.OBS    : VISUAL ALIEN</title>
+			<!--
+			<title code="0xff0e">SOUND11.OBS : VISUAL ALIEN</title>
+			  -->
+			<title code="0xff06">SOUND03.OBS : AREA-3</title>
+			<!--
+			<title code="0xff1b">WLD3.OBS    : AREA-3</title>
+			  -->
+			<title code="0xff07">SOUND04.OBS : AREA-4</title>
+			<!--
+			<title code="0xff1c">WLD4.OBS    : AREA-4</title>
+			  -->
+			<title code="0xff18">VIS4.OBS    : THEME OF STACY</title>
+			<!--
+			<title code="0xff10">SOUND13.OBS : THEME OF STACY</title>
+			  -->
+			<title code="0xff08">SOUND05.OBS : AREA-5</title>
+			<!--
+			<title code="0xff1d">WLD5.OBS    : AREA-5</title>
+			  -->
+			<title code="0xff09">SOUND06.OBS : AREA-6</title>
+			<!--
+			<title code="0xff1e">WLD6.OBS    : AREA-6</title>
+			  -->
+			<title code="0xff0f">SOUND12.OBS : VISUAL GREAT RACE</title>
+			<!--
+			<title code="0xff02">BGM5-NA.OBS : VISUAL GREAT RACE</title>
+			  -->
+			<title code="0x0114">SOUND17.OBS : STAFF ROLL</title>
+			<title code="0xff13">SOUND16.OBS : VISUAL WEDDING</title>
+			<title code="0x0112">SOUND15.OBS : GAME OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Lenam - SOWORD OF LEGNED -(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Hertz</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x3000"/>
+			<option name="mdata_size" value="0x2000"/>
+			<option name="mfile_size" value="0x2000"/>
+			<option name="init_pc" value="0x400"/>
+			<option name="use_opll" value="0x01"/>
+		</options>
+		<romlist archive="lenam_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x0B00">BGMDRV.BIN</rom>
+			<rom type="bgm" offset="0x00">CAS.OBF</rom>
+			<rom type="bgm" offset="0x01">DAN.OBF</rom>
+			<rom type="bgm" offset="0x02">ENDING.OBF</rom>
+			<rom type="bgm" offset="0x03">IV1.OBF</rom>
+			<rom type="bgm" offset="0x04">IV2.OBF</rom>
+			<rom type="bgm" offset="0x05">IV3B.OBF</rom>
+			<rom type="bgm" offset="0x06">LM1.OBF</rom>
+			<rom type="bgm" offset="0x07">LM2.OBF</rom>
+			<rom type="bgm" offset="0x08">LM4.OBF</rom>
+			<rom type="bgm" offset="0x09">MAZE.OBF</rom>
+			<rom type="bgm" offset="0x0a">OPING.OBF</rom>
+			<rom type="bgm" offset="0x0b">SLEEP.OBF</rom>
+			<rom type="bgm" offset="0x0c">TOWN1.OBF</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xFF000a">OPING.OBF  : タイトル</title>
+			<title code="0x01010a">OPING.OBF  : オープニング</title>
+			<title code="0xFF000c">TOWN1.OBF  : まちの曲</title>
+			<title code="0xFF0001">DAN.OBF    : ダンジョンの曲その1</title>
+			<title code="0xFF0009">MAZE.OBF   : 迷路の曲</title>
+			<title code="0xFF0000">CAS.OBF    : おしろの曲</title>
+			<title code="0xFF0006">LM1.OBF    : 戦闘の曲</title>
+			<title code="0xFF0008">LM4.OBF    : 中ボスの曲</title>
+			<title code="0xFF0003">IV1.OBF    : イベントの曲のその1</title>
+			<title code="0xFF0004">IV2.OBF    : イベントの曲のその2</title>
+			<title code="0xFF000b">SLEEP.OBF  : イベントの曲のその3</title>
+			<title code="0xFF0005">IV3B.OBF   : イベントの曲のその4</title>
+			<title code="0xFF0007">LM2.OBF    : ドレドッソ</title>
+			<title code="0xFF0002">ENDING.OBF : エンディング前半</title>
+			<title code="0xFF0102">ENDING.OBF : エンディング後半</title>
+			<title code="0xFF020a">OPING.OBF  : </title>
+			<title code="0xFF030a">OPING.OBF  : </title>
+			<title code="0xFF040a">OPING.OBF  : </title>
+			<!--
+			<title code="0x01050a">OPING.OBF  : タイトル</title>
+			  -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Lenam - SOWORD OF LEGNED -(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Hertz</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x3000"/>
+			<option name="mdata_size" value="0x2000"/>
+			<option name="mfile_size" value="0x2000"/>
+			<option name="init_pc" value="0x400"/>
+		</options>
+		<romlist archive="lenam_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x0B00">BGMDRV.BIN</rom>
+			<rom type="bgm" offset="0x00">CAS.OBS</rom>
+			<rom type="bgm" offset="0x01">DAN.OBS</rom>
+			<rom type="bgm" offset="0x02">ENDING.OBS</rom>
+			<rom type="bgm" offset="0x03">IV1.OBS</rom>
+			<rom type="bgm" offset="0x04">IV2.OBS</rom>
+			<rom type="bgm" offset="0x05">IV3B.OBS</rom>
+			<rom type="bgm" offset="0x06">LM1.OBS</rom>
+			<rom type="bgm" offset="0x07">LM2.OBS</rom>
+			<rom type="bgm" offset="0x08">LM4.OBS</rom>
+			<rom type="bgm" offset="0x09">MAZE.OBS</rom>
+			<rom type="bgm" offset="0x0a">OPING.OBS</rom>
+			<rom type="bgm" offset="0x0b">SLEEP.OBS</rom>
+			<rom type="bgm" offset="0x0c">TOWN1.OBS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xFF000a">OPING.OBS  : タイトル</title>
+			<title code="0xFF010a">OPING.OBS  : オープニング</title>
+			<title code="0xFF000c">TOWN1.OBS  : まちの曲</title>
+			<title code="0xFF0001">DAN.OBS    : ダンジョンの曲その1</title>
+			<title code="0xFF0009">MAZE.OBS   : 迷路の曲</title>
+			<title code="0xFF0000">CAS.OBS    : おしろの曲</title>
+			<title code="0xFF0006">LM1.OBS    : 戦闘の曲</title>
+			<title code="0xFF0008">LM4.OBS    : 中ボスの曲</title>
+			<title code="0xFF0003">IV1.OBS    : イベントの曲のその1</title>
+			<title code="0xFF0004">IV2.OBS    : イベントの曲のその2</title>
+			<title code="0xFF000b">SLEEP.OBS  : イベントの曲のその3</title>
+			<title code="0xFF0005">IV3B.OBS   : イベントの曲のその4</title>
+			<title code="0xFF0007">LM2.OBS    : ドレドッソ</title>
+			<title code="0xFF0002">ENDING.OBS : エンディング前半</title>
+			<title code="0xFF0102">ENDING.OBS : エンディング後半</title>
+			<title code="0xFF020a">OPING.OBS  : </title>
+			<title code="0xFF030a">OPING.OBS  : </title>
+			<title code="0xFF040a">OPING.OBS  : </title>
+			<!--
+			<title code="0x01050a">OPING.OBS  : タイトル</title>
+			  -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] PSYCHO WORLD(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Hertz</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x3500"/>
+			<option name="mdata_size" value="0x1800"/>
+			<option name="mfile_size" value="0x1800"/>
+			<option name="init_pc" value="0x400"/>
+			<option name="use_opll" value="0x01"/>
+		</options>
+		<romlist archive="psywrld_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x1D00">FMSUB.BIN</rom>
+			<rom type="bgm" offset="0x00">VISUAL0.OBF</rom>
+			<rom type="bgm" offset="0x01">VISUAL01.OBF</rom>
+			<rom type="bgm" offset="0x02">VISUAL1.OBF</rom>
+			<rom type="bgm" offset="0x03">VISUAL2.OBF</rom>
+			<rom type="bgm" offset="0x04">VISUAL3.OBF</rom>
+			<rom type="bgm" offset="0x05">VISUAL31.OBF</rom>
+			<rom type="bgm" offset="0x06">WLD1.OBF</rom>
+			<rom type="bgm" offset="0x07">WLD2.OBF</rom>
+			<rom type="bgm" offset="0x08">WLD3.OBF</rom>
+			<rom type="bgm" offset="0x09">WLD4.OBF</rom>
+			<rom type="bgm" offset="0x0a">WLD5.OBF</rom>
+			<rom type="bgm" offset="0x0b">WLD6.OBF</rom>
+			<rom type="bgm" offset="0x0c">WLD7.OBF</rom>
+			<rom type="bgm" offset="0x0d">WLD8.OBF</rom>
+			<rom type="bgm" offset="0x0e">WLD9.OBF</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010000">VISUAL0.OBF  : OPENING</title>
+			<title code="0x010001">VISUAL01.OBF : TITLE</title>
+			<title code="0xff0006">WLD1.OBF     : STAGE 1</title>
+			<title code="0xff0106">WLD1.OBF     : BOSS 1</title>
+			<title code="0x010206">WLD1.OBF     : STAGE CLEAR</title>
+			<title code="0xff0007">WLD2.OBF     : STAGE 2</title>
+			<title code="0xff0008">WLD3.OBF     : STAGE 3</title>
+			<title code="0xff0009">WLD4.OBF     : STAGE 4</title>
+			<title code="0xff000a">WLD5.OBF     : STAGE 5</title>
+			<title code="0x010002">VISUAL1.OBF  : VISUAL DEMO 1</title>
+			<title code="0xff040b">WLD6.OBF     : STAGE 6</title>
+			<title code="0xff010b">WLD6.OBF     : BOSS 2</title>
+			<title code="0xff000c">WLD7.OBF     : STAGE 7</title>
+			<title code="0xff000d">WLD8.OBF     : STAGE 8</title>
+			<title code="0x010003">VISUAL2.OBF  : VISUAL DEMO 2</title>
+			<title code="0xff010e">WLD9.OBF     : LAST BOSS</title>
+			<title code="0x010004">VISUAL3.OBF  : ENDING</title>
+			<title code="0x010005">VISUAL31.OBF : STAFF ROLL</title>
+			<title code="0x010306">WLD1.OBF     : GAME OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] PSYCHO WORLD(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Hertz</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x3500"/>
+			<option name="mdata_size" value="0x1800"/>
+			<option name="mfile_size" value="0x1800"/>
+			<option name="init_pc" value="0x400"/>
+		</options>
+		<romlist archive="psywrld_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x1D00">PSGSUB.BIN</rom>
+			<rom type="bgm" offset="0x00">VISUAL0.OBP</rom>
+			<rom type="bgm" offset="0x01">VISUAL01.OBP</rom>
+			<rom type="bgm" offset="0x02">VISUAL1.OBP</rom>
+			<rom type="bgm" offset="0x03">VISUAL2.OBP</rom>
+			<rom type="bgm" offset="0x04">VISUAL3.OBP</rom>
+			<rom type="bgm" offset="0x05">VISUAL31.OBP</rom>
+			<rom type="bgm" offset="0x06">WLD1.OBP</rom>
+			<rom type="bgm" offset="0x07">WLD2.OBP</rom>
+			<rom type="bgm" offset="0x08">WLD3.OBP</rom>
+			<rom type="bgm" offset="0x09">WLD4.OBP</rom>
+			<rom type="bgm" offset="0x0a">WLD5.OBP</rom>
+			<rom type="bgm" offset="0x0b">WLD6.OBP</rom>
+			<rom type="bgm" offset="0x0c">WLD7.OBP</rom>
+			<rom type="bgm" offset="0x0d">WLD8.OBP</rom>
+			<rom type="bgm" offset="0x0e">WLD9.OBP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010000">VISUAL0.OBP  : OPENING</title>
+			<title code="0x010001">VISUAL01.OBP : TITLE</title>
+			<title code="0xff0006">WLD1.OBP     : STAGE 1</title>
+			<title code="0xff0106">WLD1.OBP     : BOSS 1</title>
+			<title code="0x010206">WLD1.OBP     : STAGE CLEAR</title>
+			<title code="0xff0007">WLD2.OBP     : STAGE 2</title>
+			<title code="0xff0008">WLD3.OBP     : STAGE 3</title>
+			<title code="0xff0009">WLD4.OBP     : STAGE 4</title>
+			<title code="0xff000a">WLD5.OBP     : STAGE 5</title>
+			<title code="0x010002">VISUAL1.OBP  : VISUAL DEMO 1</title>
+			<title code="0xff040b">WLD6.OBP     : STAGE 6</title>
+			<title code="0xff010b">WLD6.OBP     : BOSS 2</title>
+			<title code="0xff000c">WLD7.OBP     : STAGE 7</title>
+			<title code="0xff000d">WLD8.OBP     : STAGE 8</title>
+			<title code="0x010003">VISUAL2.OBP  : VISUAL DEMO 2</title>
+			<title code="0xff010e">WLD9.OBP     : LAST BOSS</title>
+			<title code="0x010004">VISUAL3.OBP  : ENDING</title>
+			<title code="0x010005">VISUAL31.OBP : STAFF ROLL</title>
+			<title code="0x010306">WLD1.OBP     : GAME OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] DYNAMITE DUKE</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Hertz</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="dynduke68snd">
+			<rom type="code" offset="0x000000">dduke68snd.bin</rom>
+			<rom type="x"    offset="0x010000">DUKE.X</rom>
+			<rom type="code" offset="0x062e56">ff.snd</rom>
+			<rom type="code" offset="0x0f0000">DD1F.DAT</rom>
+			<rom type="code" offset="0x0f5000">DD2F.DAT</rom>
+			<rom type="code" offset="0x0fa000">DD3F.DAT</rom>
+			<rom type="code" offset="0x0ff000">DD4F.DAT</rom>
+			<rom type="code" offset="0x104000">DD5F.DAT</rom>
+			<rom type="code" offset="0x109000">DD6F.DAT</rom>
+			<rom type="code" offset="0x10e000">DD7F.DAT</rom>
+			<rom type="code" offset="0x113000">DD8F.DAT</rom>
+			<rom type="code" offset="0x118000">DDAF.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x9605">DD5F.DAT : Mission 1,4,7</title>
+			<title code="0xa008">DD8F.DAT : Boss</title>
+			<title code="0xe602">DD2F.DAT : Stage Clear</title>
+			<title code="0xaa06">DD6F.DAT : Mission 2,5,8</title>
+			<title code="0xa007">DD7F.DAT : Mission 3.6.9</title>
+			<title code="0xf009">DDAF.DAT : 通路</title>
+			<title code="0xa001">DD1F.DAT : Continue</title>
+			<title code="0xc803">DD3F.DAT : Ending</title>
+			<title code="0xc804">DD4F.DAT : Ranking</title>
+		</titlelist>
+	</game>
+</gamelist>

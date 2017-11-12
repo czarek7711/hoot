@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //HOT・B -->
+	<game>
+		<name>[PC-98] The 7colors (セブンカラーズ) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">hot-b</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="7colors_98">
+			<rom type="file" offset="-1">TRPSCR98.COM</rom>
+			<rom type="file" offset="-1">TRPSCHRN.COM</rom>
+			<rom type="file" offset="0x10">SEVEN01.MDT</rom>
+			<rom type="file" offset="0x11">SEVEN02.MDT</rom>
+			<rom type="file" offset="0x12">SEVEN03.MDT</rom>
+			<rom type="file" offset="0x13">SEVEN04.MDT</rom>
+			<rom type="file" offset="0x14">SEVEN05.MDT</rom>
+			<rom type="shell" offset="0">TRPSCHRN</rom>
+			<rom type="shell" offset="0">TRPSCR98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">SEVEN01.MDT</title>
+			<title code="0x11">SEVEN02.MDT</title>
+			<title code="0x12">SEVEN03.MDT</title>
+			<title code="0x13">SEVEN04.MDT</title>
+			<title code="0x14">SEVEN05.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] The 7colors (セブンカラーズ) (MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">hot-b</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="7colors_98">
+			<rom type="file" offset="-1">7COLM_98.COM</rom>
+			<rom type="file" offset="-1">MIDIDRV.EXE</rom>
+			<rom type="file" offset="0x10">PP01.MDT</rom>
+			<rom type="file" offset="0x11">PP02.MDT</rom>
+			<rom type="file" offset="0x12">PP03.MDT</rom>
+			<rom type="file" offset="0x13">PP04.MDT</rom>
+			<rom type="file" offset="0x14">PP05.MDT</rom>
+			<rom type="shell" offset="0">MIDIDRV</rom>
+			<rom type="shell" offset="0">7COLM_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PP01.MDT</title>
+			<title code="0x11">PP02.MDT</title>
+			<title code="0x12">PP03.MDT</title>
+			<title code="0x13">PP04.MDT</title>
+			<title code="0x14">PP05.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] The 7colors (セブンカラーズ) (MT-32 EMU)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">hot-b</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="7colors_98">
+			<rom type="file" offset="-1">7COLM_98.COM</rom>
+			<rom type="file" offset="-1">MIDIDRV.EXE</rom>
+			<rom type="file" offset="0x10">PP01.MDT</rom>
+			<rom type="file" offset="0x11">PP02.MDT</rom>
+			<rom type="file" offset="0x12">PP03.MDT</rom>
+			<rom type="file" offset="0x13">PP04.MDT</rom>
+			<rom type="file" offset="0x14">PP05.MDT</rom>
+			<rom type="shell" offset="0">MIDIDRV</rom>
+			<rom type="shell" offset="0">7COLM_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000010">PP01.MDT</title>
+			<title code="0x010011">PP02.MDT</title>
+			<title code="0x010012">PP03.MDT</title>
+			<title code="0x010013">PP04.MDT</title>
+			<title code="0x000014">PP05.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Slimyer</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">hot-b</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="slmy68snd">
+			<rom type="code" offset="0x00000">slm68snd.bin</rom>
+			<rom type="code" offset="0x10000">SLIMYU.R</rom>
+			<rom type="code" offset="0x12944">SLMUS.MDT</rom>
+			<rom type="code" offset="0x17e80">KON.PCM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Anaza -Kaleidoscope Special- (アナザ)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">hot-b</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="anaza_msx">
+			<rom type="code">Anaza - Kaleidoscope Special (1987)(Hot-B).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] The Fairyland Story (フェアリーランドストーリー)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">hot-b</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="fstory_msx">
+			<rom type="code">The Fairyland Story (1987)(Hot-B).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x21">BGM #21</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x33">BGM #33</title>
+			<title code="0x37">BGM #37</title>
+			<title code="0x39">BGM #39</title>
+			<title code="0x3b">BGM #3b</title>
+			<title code="0x81">BGM #81</title>
+			<title code="0x82">BGM #82</title>
+			<title code="0x83">BGM #83</title>
+			<title code="0x84">BGM #84</title>
+			<title code="0x85">BGM #85</title>
+			<title code="0x86">BGM #86</title>
+			<title code="0x87">BGM #87</title>
+			<title code="0x88">BGM #88</title>
+			<title code="0x8a">BGM #8a</title>
+			<title code="0x8b">BGM #8b</title>
+			<title code="0x8d">BGM #8d</title>
+			<title code="0x8f">BGM #8f</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Mon Mon Monster (悶々怪物) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">hot-b</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="monmon_msx">
+			<rom type="code">Mon Mon Monster (1989)(Hot-B).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Mon Mon Monster (悶々怪物) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">hot-b</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="monmon_msx">
+			<rom type="code">Mon Mon Monster (1989)(Hot-B).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80">BGM #80</title>
+			<title code="0x81">BGM #81</title>
+			<title code="0x82">BGM #82</title>
+			<title code="0x83">BGM #83</title>
+			<title code="0x84">BGM #84</title>
+			<title code="0x85">BGM #85</title>
+			<title code="0x86">BGM #86</title>
+			<title code="0x87">BGM #87</title>
+			<title code="0x88">BGM #88</title>
+			<title code="0x89">BGM #89</title>
+			<title code="0x8a">BGM #8a</title>
+			<title code="0x8b">BGM #8b</title>
+		</titlelist>
+	</game>
+</gamelist>

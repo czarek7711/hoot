@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //CROWD -->
+	<game>
+		<name>[PC-9801] 復讐</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">CROWD</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="fukushu_98">
+			<rom type="file" offset="-1">CMD.COM</rom>
+			<rom type="file" offset="-1">CMDP.COM</rom>
+			<rom type="file" offset="0x10">REVENGE0.KM</rom>
+			<rom type="file" offset="0x11">REVENGE1.KM</rom>
+			<rom type="file" offset="0x12">REVENGE2.KM</rom>
+			<rom type="file" offset="0x13">REVENGE3.KM</rom>
+			<rom type="file" offset="0x14">REVENGE4.KM</rom>
+			<rom type="file" offset="0x15">REVENGE5.KM</rom>
+			<rom type="file" offset="0x16">REVENGE6.KM</rom>
+			<rom type="file" offset="0x17">REVENGE7.KM</rom>
+			<rom type="file" offset="0x18">REVENGE8.KM</rom>
+			<rom type="file" offset="0x19">REVENGE9.KM</rom>
+			<rom type="shell" offset="0">CMD /K</rom>
+			<rom type="shell" offset="0">CMDP.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">REVENGE0.KM : Title Logo</title>
+			<title code="0x11">REVENGE1.KM : Ivent</title>
+			<title code="0x12">REVENGE2.KM : Violence M</title>
+			<title code="0x13">REVENGE3.KM : Violence F</title>
+			<title code="0x14">REVENGE4.KM : Make Love</title>
+			<title code="0x15">REVENGE5.KM : Happy End</title>
+			<title code="0x16">REVENGE6.KM : Bad Ending</title>
+			<title code="0x17">REVENGE7.KM : Staff Roll</title>
+			<title code="0x18">REVENGE8.KM : </title>
+			<title code="0x19">REVENGE9.KM : </title>
+		</titlelist>
+	</game>
+</gamelist>

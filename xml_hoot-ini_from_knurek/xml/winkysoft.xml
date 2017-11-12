@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //winkysoft -->
+	<game>
+		<name>[PC-88] Tenchi wo Kurau (天地を喰らう －魔界三国志－)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">winkysoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7000"/>
+			<option name="mdata_size" value="0x0500"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="tenchi">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7500">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS100</rom>
+			<rom type="bgm" offset="0x01">MUS101</rom>
+			<rom type="bgm" offset="0x02">MUS102</rom>
+			<rom type="bgm" offset="0x03">MUS103</rom>
+			<rom type="bgm" offset="0x04">MUS104</rom>
+			<rom type="bgm" offset="0x05">MUS105</rom>
+			<rom type="bgm" offset="0x06">MUS106</rom>
+			<rom type="bgm" offset="0x07">MUS107</rom>
+			<rom type="bgm" offset="0x08">MUS108</rom>
+			<rom type="bgm" offset="0x09">MUS200</rom>
+			<rom type="bgm" offset="0x0a">MUS201</rom>
+			<rom type="bgm" offset="0x0b">MUS202</rom>
+			<rom type="bgm" offset="0x0c">MUS203</rom>
+			<rom type="bgm" offset="0x0d">MUS204</rom>
+			<rom type="bgm" offset="0x0e">MUS205</rom>
+			<rom type="bgm" offset="0x0f">MUS206</rom>
+			<rom type="bgm" offset="0x10">MUS300</rom>
+			<rom type="bgm" offset="0x11">MUS301</rom>
+			<rom type="bgm" offset="0x12">MUS302</rom>
+			<rom type="bgm" offset="0x13">MUS303</rom>
+			<rom type="bgm" offset="0x14">MUS304</rom>
+			<rom type="bgm" offset="0x15">MUS305</rom>
+			<rom type="bgm" offset="0x16">MUS306</rom>
+			<rom type="bgm" offset="0x17">MUS307</rom>
+			<rom type="bgm" offset="0x18">MUS308</rom>
+			<rom type="bgm" offset="0x19">MUS309</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x41000000">MUS100</title>
+			<title code="0x41000001">MUS101</title>
+			<title code="0x41000002">MUS102</title>
+			<title code="0x41000003">MUS103</title>
+			<title code="0x41000004">MUS104</title>
+			<title code="0x41000005">MUS105</title>
+			<title code="0x41000006">MUS106</title>
+			<title code="0x41000007">MUS107</title>
+			<title code="0x41000008">MUS108</title>
+			<title code="0x41000009">MUS200</title>
+			<title code="0x4100000a">MUS201</title>
+			<title code="0x4100000b">MUS202</title>
+			<title code="0x4100000c">MUS203</title>
+			<title code="0x4100000d">MUS204</title>
+			<title code="0x4100000e">MUS205</title>
+			<title code="0x4100000f">MUS206</title>
+			<title code="0x41000010">MUS300</title>
+			<title code="0x41000011">MUS301</title>
+			<title code="0x41000012">MUS302</title>
+			<title code="0x41000013">MUS303</title>
+			<title code="0x41000014">MUS304</title>
+			<title code="0x41000015">MUS305</title>
+			<title code="0x41000016">MUS306</title>
+			<title code="0x41000017">MUS307</title>
+			<title code="0x41000018">MUS308</title>
+			<title code="0x41000019">MUS309</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Lost Power</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">winkysoft</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="lostpwr">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">MUSIC</rom>
+			<rom type="code" offset="0x9000">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x01">ゲーム中BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Olteus 2</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">winkysoft</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="olt268snd">
+			<rom type="code">olt268snd.bin</rom>
+			<rom type="x" offset="0x8000">OLT_DRV2.X</rom>
+			<rom type="code" offset="0xc82a">MUSIC.DAT</rom>
+			<rom type="code" offset="0x20000">OLT.PCM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #10</title>
+			<title code="0x0b">BGM #11</title>
+			<title code="0x0c">BGM #12</title>
+			<title code="0x0d">BGM #13</title>
+			<title code="0x0e">BGM #14</title>
+			<title code="0x0f">BGM #15</title>
+			<title code="0x10">BGM #16</title>
+			<title code="0x11">BGM #17</title>
+			<title code="0x12">BGM #18</title>
+			<title code="0x13">BGM #19</title>
+			<title code="0x14">BGM #20</title>
+			<title code="0x15">BGM #21</title>
+			<title code="0x16">BGM #22</title>
+		</titlelist>
+	</game>
+</gamelist>

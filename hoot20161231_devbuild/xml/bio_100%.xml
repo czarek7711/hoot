@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Bio_100% -->
+	<game>
+		<name>[PC-9801] ろりろりろーりんぐ</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="rolling">
+			<rom type="file" offset="-1">tky98.com</rom>
+			<rom type="file" offset="-1">OPNDRV.EXE</rom>
+			<rom type="file" offset="-1">SSGDRV.EXE</rom>
+			<rom type="file" offset="-1">TKYDRV.EXE</rom>
+			<rom type="file" offset="0x05">FEDA2.MDT</rom>
+			<rom type="file" offset="0x06">HOPO.MDT</rom>
+			<rom type="file" offset="0x07">HYON.MDT</rom>
+			<rom type="file" offset="0x08">MATA.MDT</rom>
+			<rom type="file" offset="0x09">ROLI.MDT</rom>
+			<rom type="file" offset="0x0a">RUN.MDT</rom>
+			<rom type="file" offset="0x0b">SIL.MDT</rom>
+			<rom type="shell" offset="0">OPNDRV</rom>
+			<rom type="shell" offset="0">SSGDRV</rom>
+			<rom type="shell" offset="0">TKYDRV</rom>
+			<rom type="shell" offset="0">tky98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">ROLI.MDT  : World of Rolling</title>
+			<title code="0x05">FEDA2.MDT : ふぇみたまだ</title>
+			<title code="0x0b">SIL.MDT   : SILFEE</title>
+			<title code="0x0a">RUN.MDT   : Runner</title>
+			<title code="0x06">HOPO.MDT  : ほぽぺぴ</title>
+			<title code="0x07">HYON.MDT  : HYON HYON</title>
+			<title code="0x08">MATA.MDT  : またあいませう</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ROLLING95</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="rolling95">
+			<rom type="file" offset="-1">tky98.com</rom>
+			<rom type="file" offset="-1">OPNDRV.EXE</rom>
+			<rom type="file" offset="-1">SSGDRV.EXE</rom>
+			<rom type="file" offset="-1">TKYDRV.EXE</rom>
+			<rom type="file" offset="0x05">BO.MDT</rom>
+			<rom type="file" offset="0x06">FEDA2.MDT</rom>
+			<rom type="file" offset="0x07">HOPO.MDT</rom>
+			<rom type="file" offset="0x08">HYON.MDT</rom>
+			<rom type="file" offset="0x09">MATA.MDT</rom>
+			<rom type="file" offset="0x0a">ROLI.MDT</rom>
+			<rom type="file" offset="0x0b">RUN.MDT</rom>
+			<rom type="file" offset="0x0c">SIL.MDT</rom>
+			<rom type="file" offset="0x0d">BIO_100%.MDT</rom>
+			<rom type="file" offset="0x0e">WGP.MDT</rom>
+			<rom type="shell" offset="0">OPNDRV</rom>
+			<rom type="shell" offset="0">SSGDRV</rom>
+			<rom type="shell" offset="0">TKYDRV</rom>
+			<rom type="shell" offset="0">tky98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0d">BIO_100%.MDT : Bio_100% LOGO</title>
+			<title code="0x0a">ROLI.MDT     : World of Rolling</title>
+			<title code="0x06">FEDA2.MDT    : ふぇみたまだ</title>
+			<title code="0x0c">SIL.MDT      : SILFEE</title>
+			<title code="0x0b">RUN.MDT      : Runner</title>
+			<title code="0x05">BO.MDT       : いわゆるボーナス一括払い</title>
+			<title code="0x07">HOPO.MDT     : ほぽぺぴ</title>
+			<title code="0x08">HYON.MDT     : HYON HYON</title>
+			<title code="0x09">MATA.MDT     : またあいませう</title>
+			<title code="0x0e">WGP.MDT      : Winner GP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] CarII GrandPrix (ver 0.20)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="3"/>
+			<option name="wstimer" value="2"/>
+		</options>
+		<romlist archive="c2gp">
+			<rom type="file" offset="-1">tky98.com</rom>
+			<rom type="file" offset="-1">OPNDRV.EXE</rom>
+			<rom type="file" offset="-1">SSGDRV.EXE</rom>
+			<rom type="file" offset="-1">TKYDRV.EXE</rom>
+			<rom type="file" offset="0x05">BIO_100%.MDT</rom>
+			<rom type="file" offset="0x06">CV.MDT</rom>
+			<rom type="file" offset="0x07">LPD.MDT</rom>
+			<rom type="file" offset="0x08">TAILTONO.MDT</rom>
+			<rom type="file" offset="0x09">CF.MDT</rom>
+			<rom type="file" offset="0x0a">WGP.MDT</rom>
+			<rom type="shell" offset="0">OPNDRV</rom>
+			<rom type="shell" offset="0">SSGDRV</rom>
+			<rom type="shell" offset="0">TKYDRV</rom>
+			<rom type="shell" offset="0">tky98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">BIO_100%.MDT : Bio_100% Logo</title>
+			<title code="0x06">CV.MDT       : Circuit Vacance</title>
+			<title code="0x07">LPD.MDT      : Let's Power Dance</title>
+			<title code="0x08">TAILTONO.MDT : Tail To Nose</title>
+			<title code="0x09">CF.MDT       : Checker Flag</title>
+			<title code="0x0a">WGP.MDT      : Winner GP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Dynamo</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="dynamo98">
+			<rom type="file" offset="-1">tky98.com</rom>
+			<rom type="file" offset="-1">OPNDRV.EXE</rom>
+			<rom type="file" offset="-1">SSGDRV.EXE</rom>
+			<rom type="file" offset="-1">TKYDRV.EXE</rom>
+			<rom type="file" offset="0x10">APHRODIT.MDT</rom>
+			<rom type="file" offset="0x11">BATTLER.MDT</rom>
+			<rom type="file" offset="0x12">BIO_D.MDT</rom>
+			<rom type="file" offset="0x13">BURNING.MDT</rom>
+			<rom type="file" offset="0x14">FINEEPHE.MDT</rom>
+			<rom type="file" offset="0x15">GAA.MDT</rom>
+			<rom type="file" offset="0x16">GERORI.MDT</rom>
+			<rom type="file" offset="0x17">HIE.MDT</rom>
+			<rom type="file" offset="0x18">KEKEKE.MDT</rom>
+			<rom type="file" offset="0x19">MA.MDT</rom>
+			<rom type="file" offset="0x1a">RA.MDT</rom>
+			<rom type="file" offset="0x1b">SEASIDE.MDT</rom>
+			<rom type="file" offset="0x1c">SILENT.MDT</rom>
+			<rom type="file" offset="0x1d">TARA.MDT</rom>
+			<rom type="shell" offset="0">OPNDRV</rom>
+			<rom type="shell" offset="0">SSGDRV</rom>
+			<rom type="shell" offset="0">TKYDRV</rom>
+			<rom type="shell" offset="0">tky98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">BIO_D.MDT    : Theme of Bio_D</title>
+			<title code="0x1c">SILENT.MDT   : Silent night</title>
+			<title code="0x1b">SEASIDE.MDT  : Seaside street</title>
+			<title code="0x17">HIE.MDT      : ひえぇぇ</title>
+			<title code="0x1d">TARA.MDT     : たらりら</title>
+			<title code="0x13">BURNING.MDT  : Burning off</title>
+			<title code="0x15">GAA.MDT      : GAAoben</title>
+			<title code="0x1a">RA.MDT       : Run a way</title>
+			<title code="0x14">FINEEPHE.MDT : Fineephe</title>
+			<title code="0x11">BATTLER.MDT  : Battler</title>
+			<title code="0x10">APHRODIT.MDT : Aphrodite</title>
+			<title code="0x16">GERORI.MDT   : げろりん</title>
+			<title code="0x18">KEKEKE.MDT   : KEKEKE</title>
+			<title code="0x19">MA.MDT       : 真夜中の恐怖</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] MARKADIA(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mrkdia98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">mlp_hoot.com</rom>
+			<rom type="file" offset="0x10">BOSS.MDT</rom>
+			<rom type="file" offset="0x11">CLEAR.MDT</rom>
+			<rom type="file" offset="0x12">ENDING.MDT</rom>
+			<rom type="file" offset="0x13">GAMEOVER.MDT</rom>
+			<rom type="file" offset="0x14">MKD00.MDT</rom>
+			<rom type="file" offset="0x15">MKD01.MDT</rom>
+			<rom type="file" offset="0x16">MKD02.MDT</rom>
+			<rom type="file" offset="0x17">MKD03.MDT</rom>
+			<rom type="file" offset="0x18">MKD04.MDT</rom>
+			<rom type="file" offset="0x19">MKD05.MDT</rom>
+			<rom type="file" offset="0x1a">RANKING.MDT</rom>
+			<rom type="shell" offset="0">mdrv98</rom>
+			<rom type="shell" offset="0">mlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x14">MKD00.MDT    : (演奏停止)</title>
+			<title code="0x15">MKD01.MDT    : Strato Fighter (MARKADIA Stage 1) / 羊男</title>
+			<title code="0x16">MKD02.MDT    : 山の空気はおいしいよ (MARKADIA Stage 2) / 羊男</title>
+			<title code="0x17">MKD03.MDT    : らぶらぶDARKNESS (MARKADIA Stage 3) / 羊男</title>
+			<title code="0x18">MKD04.MDT    : カレーの季節 (MARKADIA Stage 4) / 羊男</title>
+			<title code="0x19">MKD05.MDT    : Warning! (MARKADIA Stage 5) / 羊男</title>
+			<title code="0x10">BOSS.MDT     : たのむよボス (MARKADIA Boss) / 羊男</title>
+			<title code="0x11">CLEAR.MDT    : STAGE CLEAR #2 (MARKADIA Stage Clear) / 羊男</title>
+			<title code="0x13">GAMEOVER.MDT : GAME OVER #1 (MARKADIA Game Over) / 羊男</title>
+			<title code="0x1a">RANKING.MDT  : ピアノのおけいこ (MARKADIA Ranking) / 羊男</title>
+			<title code="0x12">ENDING.MDT   : 帰り道 / 羊男</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] MARKADIA(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mrkdia98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">mlp_hoot.com</rom>
+			<rom type="file" offset="0x10">BOSS.MDT</rom>
+			<rom type="file" offset="0x11">CLEAR.MDT</rom>
+			<rom type="file" offset="0x12">ENDING.MDT</rom>
+			<rom type="file" offset="0x13">GAMEOVER.MDT</rom>
+			<rom type="file" offset="0x14">MKD00.MDT</rom>
+			<rom type="file" offset="0x15">MKD01.MDT</rom>
+			<rom type="file" offset="0x16">MKD02.MDT</rom>
+			<rom type="file" offset="0x17">MKD03.MDT</rom>
+			<rom type="file" offset="0x18">MKD04.MDT</rom>
+			<rom type="file" offset="0x19">MKD05.MDT</rom>
+			<rom type="file" offset="0x1a">RANKING.MDT</rom>
+			<rom type="shell" offset="0">mdrv98</rom>
+			<rom type="shell" offset="0">mlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x14">MKD00.MDT    : (演奏停止)</title>
+			<title code="0x15">MKD01.MDT    : Strato Fighter (MARKADIA Stage 1) / 羊男</title>
+			<title code="0x16">MKD02.MDT    : 山の空気はおいしいよ (MARKADIA Stage 2) / 羊男</title>
+			<title code="0x17">MKD03.MDT    : らぶらぶDARKNESS (MARKADIA Stage 3) / 羊男</title>
+			<title code="0x18">MKD04.MDT    : カレーの季節 (MARKADIA Stage 4) / 羊男</title>
+			<title code="0x19">MKD05.MDT    : Warning! (MARKADIA Stage 5) / 羊男</title>
+			<title code="0x10">BOSS.MDT     : たのむよボス (MARKADIA Boss) / 羊男</title>
+			<title code="0x11">CLEAR.MDT    : STAGE CLEAR #2 (MARKADIA Stage Clear) / 羊男</title>
+			<title code="0x13">GAMEOVER.MDT : GAME OVER #1 (MARKADIA Game Over) / 羊男</title>
+			<title code="0x1a">RANKING.MDT  : ピアノのおけいこ (MARKADIA Ranking) / 羊男</title>
+			<title code="0x12">ENDING.MDT   : 帰り道 / 羊男</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] TWINS(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="twins98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">mlp_hoot.com</rom>
+			<rom type="file" offset="0x10">TW00.MDT</rom>
+			<rom type="file" offset="0x11">TW01.MDT</rom>
+			<rom type="file" offset="0x12">TW02.MDT</rom>
+			<rom type="file" offset="0x13">TW03.MDT</rom>
+			<rom type="file" offset="0x14">TW04.MDT</rom>
+			<rom type="file" offset="0x15">TW05.MDT</rom>
+			<rom type="file" offset="0x16">TW06.MDT</rom>
+			<rom type="file" offset="0x17">TW07.MDT</rom>
+			<rom type="file" offset="0x18">TW08.MDT</rom>
+			<rom type="shell" offset="0">mdrv98</rom>
+			<rom type="shell" offset="0">mlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">TW00.MDT : (演奏停止)</title>
+			<title code="0x11">TW01.MDT : Twins - MARKA &amp; HARKA - / 羊男</title>
+			<title code="0x12">TW02.MDT : 戦闘準備 / 羊男</title>
+			<title code="0x13">TW03.MDT : 荒野の対決 / 羊男</title>
+			<title code="0x14">TW04.MDT : 戦車戦 / 羊男</title>
+			<title code="0x15">TW05.MDT : 忍び寄る気配 / 羊男</title>
+			<title code="0x16">TW06.MDT : トカチッチ / 羊男</title>
+			<title code="0x17">TW07.MDT : ゲームオーバー / 羊男</title>
+			<title code="0x18">TW08.MDT : 夕焼け小焼けで日が暮れて / 羊男</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] TWINS(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="twins98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">mlp_hoot.com</rom>
+			<rom type="file" offset="0x10">TW00.MDT</rom>
+			<rom type="file" offset="0x11">TW01.MDT</rom>
+			<rom type="file" offset="0x12">TW02.MDT</rom>
+			<rom type="file" offset="0x13">TW03.MDT</rom>
+			<rom type="file" offset="0x14">TW04.MDT</rom>
+			<rom type="file" offset="0x15">TW05.MDT</rom>
+			<rom type="file" offset="0x16">TW06.MDT</rom>
+			<rom type="file" offset="0x17">TW07.MDT</rom>
+			<rom type="file" offset="0x18">TW08.MDT</rom>
+			<rom type="shell" offset="0">mdrv98</rom>
+			<rom type="shell" offset="0">mlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">TW00.MDT : (演奏停止)</title>
+			<title code="0x11">TW01.MDT : Twins - MARKA &amp; HARKA - / 羊男</title>
+			<title code="0x12">TW02.MDT : 戦闘準備 / 羊男</title>
+			<title code="0x13">TW03.MDT : 荒野の対決 / 羊男</title>
+			<title code="0x14">TW04.MDT : 戦車戦 / 羊男</title>
+			<title code="0x15">TW05.MDT : 忍び寄る気配 / 羊男</title>
+			<title code="0x16">TW06.MDT : トカチッチ / 羊男</title>
+			<title code="0x17">TW07.MDT : ゲームオーバー / 羊男</title>
+			<title code="0x18">TW08.MDT : 夕焼け小焼けで日が暮れて / 羊男</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 爆突TURB(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="bktb98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">mlp_hoot.com</rom>
+			<rom type="file" offset="0x10">BKTB00.MDT</rom>
+			<rom type="file" offset="0x11">BKTB01.MDT</rom>
+			<rom type="file" offset="0x12">BKTB02.MDT</rom>
+			<rom type="file" offset="0x13">BKTB03.MDT</rom>
+			<rom type="shell" offset="0">mdrv98</rom>
+			<rom type="shell" offset="0">mlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BKTB00.MDT : らぶらぶDARKNESS (MARKADIA Stage 3) / 羊男</title>
+			<title code="0x11">BKTB01.MDT : たのむよボス (MARKADIA Boss) / 羊男</title>
+			<title code="0x12">BKTB02.MDT : STAGE CLEAR #2 (MARKADIA Stage Clear) / 羊男</title>
+			<title code="0x13">BKTB03.MDT : GAME OVER #1 (MARKADIA Game Over) / 羊男</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 爆突TURB(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="bktb98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">mlp_hoot.com</rom>
+			<rom type="file" offset="0x10">BKTB00.MDT</rom>
+			<rom type="file" offset="0x11">BKTB01.MDT</rom>
+			<rom type="file" offset="0x12">BKTB02.MDT</rom>
+			<rom type="file" offset="0x13">BKTB03.MDT</rom>
+			<rom type="shell" offset="0">mdrv98</rom>
+			<rom type="shell" offset="0">mlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BKTB00.MDT : らぶらぶDARKNESS (MARKADIA Stage 3) / 羊男</title>
+			<title code="0x11">BKTB01.MDT : たのむよボス (MARKADIA Boss) / 羊男</title>
+			<title code="0x12">BKTB02.MDT : STAGE CLEAR #2 (MARKADIA Stage Clear) / 羊男</title>
+			<title code="0x13">BKTB03.MDT : GAME OVER #1 (MARKADIA Game Over) / 羊男</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Camel-Zoo(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="cz98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">mlp_hoot.com</rom>
+			<rom type="file" offset="0x10">CZ00.MDT</rom>
+			<rom type="file" offset="0x11">CZ01.MDT</rom>
+			<rom type="file" offset="0x12">CZ02.MDT</rom>
+			<rom type="file" offset="0x13">CZ03.MDT</rom>
+			<rom type="shell" offset="0">mdrv98</rom>
+			<rom type="shell" offset="0">mlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">CZ00.MDT : (演奏停止)</title>
+			<title code="0x11">CZ01.MDT : へんな曲</title>
+			<title code="0x12">CZ02.MDT : ねこいくさ 復刻バージョン(Camel-Zoo Stage BGM) / 羊男</title>
+			<title code="0x13">CZ03.MDT : STAGE CLEAR #2 (MARKADIA Stage Clear) / 羊男</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Camel-Zoo(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="cz98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">mlp_hoot.com</rom>
+			<rom type="file" offset="0x10">CZ00.MDT</rom>
+			<rom type="file" offset="0x11">CZ01.MDT</rom>
+			<rom type="file" offset="0x12">CZ02.MDT</rom>
+			<rom type="file" offset="0x13">CZ03.MDT</rom>
+			<rom type="shell" offset="0">mdrv98</rom>
+			<rom type="shell" offset="0">mlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">CZ00.MDT : (演奏停止)</title>
+			<title code="0x11">CZ01.MDT : へんな曲</title>
+			<title code="0x12">CZ02.MDT : ねこいくさ 復刻バージョン(Camel-Zoo Stage BGM) / 羊男</title>
+			<title code="0x13">CZ03.MDT : STAGE CLEAR #2 (MARKADIA Stage Clear) / 羊男</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Owl-Zoo(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="oz98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">mlp_hoot.com</rom>
+			<rom type="file" offset="0x10">OZ00.MDT</rom>
+			<rom type="file" offset="0x11">OZ01.MDT</rom>
+			<rom type="file" offset="0x12">OZ020.MDT</rom>
+			<rom type="file" offset="0x13">OZ021.MDT</rom>
+			<rom type="file" offset="0x14">OZ022.MDT</rom>
+			<rom type="file" offset="0x15">OZ023.MDT</rom>
+			<rom type="file" offset="0x16">OZ030.MDT</rom>
+			<rom type="file" offset="0x17">OZ031.MDT</rom>
+			<rom type="file" offset="0x18">OZ04.MDT</rom>
+			<rom type="file" offset="0x19">OZ05.MDT</rom>
+			<rom type="file" offset="0x1a">OZ06.MDT</rom>
+			<rom type="file" offset="0x1b">OZ07.MDT</rom>
+			<rom type="file" offset="0x1c">OZ08.MDT</rom>
+			<rom type="shell" offset="0">mdrv98</rom>
+			<rom type="shell" offset="0">mlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">OZ00.MDT  : "OwlZoo Opening"      TODOS</title>
+			<title code="0x11">OZ01.MDT  : "OwlZoo Prologue"     TODOS</title>
+			<title code="0x12">OZ020.MDT : "OwlZoo Overture"     TODOS</title>
+			<title code="0x13">OZ021.MDT : "OwlZoo Look Over"    TODOS</title>
+			<title code="0x14">OZ022.MDT : "OwlZoo in the Field" TODOS</title>
+			<title code="0x15">OZ023.MDT : "OwlZoo Sequence"     TODOS</title>
+			<title code="0x16">OZ030.MDT : "OwlZoo Boss#1"       TODOS</title>
+			<title code="0x17">OZ031.MDT : "OwlZoo Boss#2"       TODOS</title>
+			<title code="0x18">OZ04.MDT  : "OwlZoo Fanfare"      TODOS</title>
+			<title code="0x19">OZ05.MDT  : "OwlZoo Game Over"    TODOS</title>
+			<title code="0x1a">OZ06.MDT  : "OwlZoo After Fight"  TODOS</title>
+			<title code="0x1b">OZ07.MDT  : "OwlZoo Fanfare#2"    TODOS</title>
+			<title code="0x1c">OZ08.MDT  : "OwlZoo Great March"  TODOS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Owl-Zoo(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="oz98">
+			<rom type="file" offset="-1">MDRV98.COM</rom>
+			<rom type="file" offset="-1">mlp_hoot.com</rom>
+			<rom type="file" offset="0x10">OZ00.MDT</rom>
+			<rom type="file" offset="0x11">OZ01.MDT</rom>
+			<rom type="file" offset="0x12">OZ020.MDT</rom>
+			<rom type="file" offset="0x13">OZ021.MDT</rom>
+			<rom type="file" offset="0x14">OZ022.MDT</rom>
+			<rom type="file" offset="0x15">OZ023.MDT</rom>
+			<rom type="file" offset="0x16">OZ030.MDT</rom>
+			<rom type="file" offset="0x17">OZ031.MDT</rom>
+			<rom type="file" offset="0x18">OZ04.MDT</rom>
+			<rom type="file" offset="0x19">OZ05.MDT</rom>
+			<rom type="file" offset="0x1a">OZ06.MDT</rom>
+			<rom type="file" offset="0x1b">OZ07.MDT</rom>
+			<rom type="file" offset="0x1c">OZ08.MDT</rom>
+			<rom type="shell" offset="0">mdrv98</rom>
+			<rom type="shell" offset="0">mlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">OZ00.MDT  : "OwlZoo Opening"      TODOS</title>
+			<title code="0x11">OZ01.MDT  : "OwlZoo Prologue"     TODOS</title>
+			<title code="0x12">OZ020.MDT : "OwlZoo Overture"     TODOS</title>
+			<title code="0x13">OZ021.MDT : "OwlZoo Look Over"    TODOS</title>
+			<title code="0x14">OZ022.MDT : "OwlZoo in the Field" TODOS</title>
+			<title code="0x15">OZ023.MDT : "OwlZoo Sequence"     TODOS</title>
+			<title code="0x16">OZ030.MDT : "OwlZoo Boss#1"       TODOS</title>
+			<title code="0x17">OZ031.MDT : "OwlZoo Boss#2"       TODOS</title>
+			<title code="0x18">OZ04.MDT  : "OwlZoo Fanfare"      TODOS</title>
+			<title code="0x19">OZ05.MDT  : "OwlZoo Game Over"    TODOS</title>
+			<title code="0x1a">OZ06.MDT  : "OwlZoo After Fight"  TODOS</title>
+			<title code="0x1b">OZ07.MDT  : "OwlZoo Fanfare#2"    TODOS</title>
+			<title code="0x1c">OZ08.MDT  : "OwlZoo Great March"  TODOS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] SUPER DEPTH</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="sdepth_98">
+			<rom type="file" offset="-1">BGML_98.EXE</rom>
+			<rom type="file" offset="-1">DEPTH.BGM</rom>
+			<rom type="conin" offset="0x10">DEPTH.BGM</rom>
+			<rom type="shell" offset="0">BGML_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0101">Bio_100%だだだ</title>
+			<title code="0x0002">SuperDepthのテーマ</title>
+			<title code="0x0003">凱旋の朝日</title>
+			<title code="0x0109">面クリア1</title>
+			<title code="0x0004">この腕の中で～</title>
+			<title code="0x010a">面クリア2</title>
+			<title code="0x0005">かうんとだうん</title>
+			<title code="0x000f">ボスアラート</title>
+			<title code="0x0006">爆笑超深どんとこい</title>
+			<title code="0x010b">ボスクリア1</title>
+			<title code="0x010c">ボスクリア2</title>
+			<title code="0x010d">ボスクリア3</title>
+			<title code="0x010e">地球 そして～</title>
+			<title code="0x0108">ういなは</title>
+			<title code="0x0107">ゲームオーバー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 蟹味噌</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="kanim_98">
+			<rom type="file" offset="-1">BGML_98.EXE</rom>
+			<rom type="file" offset="-1">KANI.BGM</rom>
+			<rom type="conin" offset="0x10">KANI.BGM</rom>
+			<rom type="shell" offset="0">BGML_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">リュート組曲第1番ホ短調第5曲ブーレ BWV 996</title>
+			<title code="0x0006">でろでろのテーマ</title>
+			<title code="0x0008">面セレクトのテーマ</title>
+			<title code="0x0102">チャプターテーマ</title>
+			<title code="0x0103">面クリテーマ</title>
+			<title code="0x0104">御臨終のテーマ</title>
+			<title code="0x0105">ゲームオーバーのテーマ</title>
+			<title code="0x0107">おめでとうのテーマ</title>
+			<!-- ver 1.23以上でないと以下は鳴りません -->
+			<title code="0x0109">Bio_100% TITLEだだだ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] NyaHaX'93</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="nx93_98">
+			<rom type="file" offset="-1">BGML_98.EXE</rom>
+			<rom type="file" offset="-1">NX93.BGM</rom>
+			<rom type="conin" offset="0x10">NX93.BGM</rom>
+			<rom type="shell" offset="0">BGML_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0002">Title</title>
+			<title code="0x0001">カーニバルだ!</title>
+			<title code="0x0103">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Carax'92</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="cx92_98">
+			<rom type="file" offset="-1">BGML_98.EXE</rom>
+			<rom type="file" offset="-1">CX92.BGM</rom>
+			<rom type="conin" offset="0x10">CX92.BGM</rom>
+			<rom type="shell" offset="0">BGML_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Super Depth 2 "Finalty"</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="finalty_98">
+			<rom type="file" offset="-1">BGML_98.EXE</rom>
+			<rom type="file" offset="-1">FINALTY.BGM</rom>
+			<rom type="conin" offset="0x10">FINALTY.BGM</rom>
+			<rom type="shell" offset="0">BGML_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0002">Start Up</title>
+			<title code="0x0001">Stage BGM</title>
+			<title code="0x0004">この腕の中で～</title>
+			<title code="0x0003">弩轟(どごう)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] POY</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="poy_98">
+			<rom type="file" offset="-1">BGML_98.EXE</rom>
+			<rom type="file" offset="-1">POY.BGM</rom>
+			<rom type="conin" offset="0x10">POY.BGM</rom>
+			<rom type="shell" offset="0">BGML_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">subliminal bleeps</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] MOGLER</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mogler_98">
+			<rom type="file" offset="-1">BGML_98.EXE</rom>
+			<rom type="file" offset="-1">MOGLER.BGM</rom>
+			<rom type="conin" offset="0x10">MOGLER.BGM</rom>
+			<rom type="shell" offset="0">BGML_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">Wind Of Spring</title>
+			<title code="0x0002">ほぽぺぴ</title>
+			<title code="0x0103">GAME OVER その壱</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] FLIXX</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="flixx_98">
+			<rom type="file" offset="-1">BGML_98.EXE</rom>
+			<rom type="file" offset="-1">FLIXX.BGM</rom>
+			<rom type="conin" offset="0x10">FLIXX.BGM</rom>
+			<rom type="shell" offset="0">BGML_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">Start Stage - for stage opening</title>
+			<title code="0x0003">Stage 1 ぷるぷる</title>
+			<title code="0x0004">Stage 2 for stage 2</title>
+			<title code="0x0005">Stage 3 そよそよ</title>
+			<title code="0x0002">Stage Clear</title>
+			<title code="0x0006">Naming Ethnican</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] metys's Snow Wars</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="metys_98">
+			<rom type="file" offset="-1">BGML_98.EXE</rom>
+			<rom type="file" offset="-1">METYS.BGM</rom>
+			<rom type="conin" offset="0x10">METYS.BGM</rom>
+			<rom type="shell" offset="0">BGML_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0101">Bio_100% TITLEだだだ</title>
+			<title code="0x0003">ころころ</title>
+			<title code="0x0002">いとしのめてたま</title>
+			<title code="0x0009">ありがとう</title>
+			<title code="0x0106">どんどこほい</title>
+			<title code="0x0008">ぐりぐり</title>
+			<title code="0x0104">GAME OVER 其の弐</title>
+			<title code="0x0105">GAME OVER m2 </title>
+			<title code="0x0007">うぃなは ver.2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] CarII GrandPrix</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="c2gp_98">
+			<rom type="file" offset="-1">BGML_98.EXE</rom>
+			<rom type="file" offset="-1">C2GP.BGM</rom>
+			<rom type="conin" offset="0x10">C2GP.BGM</rom>
+			<rom type="shell" offset="0">BGML_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0002">Circuit Vacance</title>
+			<title code="0x0004">Let's Power Danceing</title>
+			<title code="0x0001">Tail to Nose</title>
+			<title code="0x0003">Checker Flag</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PECKER</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Bio_100%</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pecker_98">
+			<rom type="file" offset="-1">BGML_98.EXE</rom>
+			<rom type="file" offset="-1">PECKER.BGM</rom>
+			<rom type="conin" offset="0x10">PECKER.BGM</rom>
+			<rom type="shell" offset="0">BGML_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">TITLE</title>
+			<title code="0x0102">ROUND START</title>
+			<title code="0x0104">MISS</title>
+			<title code="0x0103">GAME OVER</title>
+		</titlelist>
+	</game>
+</gamelist>

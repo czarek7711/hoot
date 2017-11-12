@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //jaleco -->
+	<game>
+		<name>[Argus] Argus (アーガス)</name>
+		<driver type="argus">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opn_mix" value="0x100"/>
+		</options>
+		<romlist archive="argus">
+			<rom type="code" offset="0x0000">ag_01.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x23">Demo</title>
+			<title code="0x25">Credit</title>
+			<title code="0x0c">Start</title>
+			<title code="0x0d">BGM 1</title>
+			<title code="0x2f">Stage Clear</title>
+			<title code="0x0b">Landing</title>
+			<title code="0x19">Landing 成功</title>
+			<title code="0x21">BGM 2</title>
+			<title code="0x2d">攻防戦 (Boss BGM)</title>
+			<title code="0x1c">Game Over</title>
+			<title code="0x24">Hiscore 1位</title>
+			<title code="0x10">Hiscore 2位～7位</title>
+			<title code="0x27">Ranking</title>
+			<title code="0x16">未使用ジングル</title>
+			<title code="0x2a">未使用曲</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Argus] Valtric (バルトリック)</name>
+		<driver type="valtric">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opn_mix" value="0x100"/>
+		</options>
+		<romlist archive="valtric">
+			<rom type="code" offset="0x0000">vt_01.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x25">Credit</title>
+			<title code="0x11">Stage Start</title>
+			<title code="0x05">Area 1</title>
+			<title code="0x03">Area 2</title>
+			<title code="0x0b">Area 3</title>
+			<title code="0x0d">Area 4</title>
+			<title code="0x1a">Middle Boss</title>
+			<title code="0x0f">Boss</title>
+			<title code="0x26">Stage Clear</title>
+			<title code="0x27">Game End</title>
+			<title code="0x28">High Score 1位</title>
+			<title code="0x29">High Score 2位～7位</title>
+			<title code="0x01">Unknown #1 (未使用曲1) ([p]で止めて再生してください。)</title>
+			<title code="0x07">Unknown #2 (未使用曲2) ([p]で止めて再生してください。)</title>
+			<title code="0x2d">Unknown #3 (未使用曲3) ([p]で止めて再生してください。)</title>
+			<title code="0x09">Genzoh のテーマ(バルトリックVER.)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Argus] Butasan (ぶたさん)</name>
+		<driver type="butasan">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="fm_mix" value="0x1f"/>
+			<option name="ssg_mix" value="0x1f"/>
+		</options>
+		<romlist archive="butasan">
+			<rom type="code" offset="0x0000">buta-01.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Argus] Bombs Away</name>
+		<driver type="butasan">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="fm_mix" value="0x1f"/>
+			<option name="ssg_mix" value="0x1f"/>
+		</options>
+		<romlist archive="bombsa">
+			<rom type="code" offset="0x0000">1.3a</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x30">BGM #30</title>
+			<title code="0x31">BGM #31</title>
+			<title code="0x32">BGM #32</title>
+			<title code="0x33">BGM #33</title>
+			<title code="0x34">BGM #34</title>
+			<title code="0x35">BGM #35</title>
+			<title code="0x36">BGM #36</title>
+			<title code="0x37">BGM #37</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Field Combat] Field Combat (フィールドコンバット)</name>
+		<driver type="fcombat">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<romlist archive="fcombat">
+			<rom type="code" offset="0x0000">fcombat1.t5</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x21">Credit</title>
+			<title code="0x05">Main Theme 1 (Field 1-4)</title>
+			<title code="0x06">Main Theme 2 (Field 5-8)</title>
+			<title code="0x08">Main Theme 3 (Field 9-12)</title>
+			<title code="0x03">Main Theme 4 (Field 13-16)</title>
+			<title code="0x02">Field Clear</title>
+			<title code="0x10">Field Clear (alt)</title>
+			<title code="0x04">Unused 1</title>
+			<title code="0x07">Unused 2</title>
+			<title code="0x09">Unused 3</title>
+			<title code="0x0A">Unused 4</title>
+			<title code="0x0B">Unused 5</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Momoko 120%] Momoko 120% (モモコ120%)</name>
+		<driver type="momoko">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="fm_mix" value="0x1f"/>
+			<option name="ssg_mix" value="0x1f"/>
+		</options>
+		<romlist archive="momoko">
+			<rom type="code" offset="0x0000">momoko01.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">ステージBGM</title>
+			<title code="0x07">ボーナスステージBGM</title>
+			<title code="0x04">ピンチBGM</title>
+			<title code="0x06">パターンクリア</title>
+			<title code="0x05">オールクリア</title>
+			<title code="0x08">ネームエントリー</title>
+			<title code="0x02">未使用曲1</title>
+			<title code="0x03">未使用曲2</title>
+			<title code="0x0b">未使用曲3</title>
+			<title code="0x0c">未使用曲4</title>
+			<title code="0x0d">未使用曲5</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Ginga NinkyouDen] Ginga NinkyouDen (銀河任侠伝)</name>
+		<driver type="ginganin">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<romlist archive="ginganin">
+			<rom type="code" offset="0x00000">gn_05.bin</rom>
+			<rom type="pcm" offset="0x00000">gn_04.bin</rom>
+			<rom type="pcm" offset="0x10000">gn_03.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xa1">Demo</title>
+			<title code="0xa2">Title Back</title>
+			<title code="0xbd">Credit</title>
+			<title code="0xa6">Player Start</title>
+			<title code="0xa9">Round 1, 4-2</title>
+			<title code="0xbf">Round 1-2 </title>
+			<title code="0xb4">Round 1 Boss</title>
+			<title code="0xb5">Round 1, 4 Clear</title>
+			<title code="0xb6">Bridge A</title>
+			<title code="0xab">Round 2, 5</title>
+			<title code="0xb2">Bridge B</title>
+			<title code="0xb9">Eye Catch</title>
+			<title code="0xaa">Round 3, 6-1</title>
+			<title code="0xb8">Round 3-2</title>
+			<title code="0xad">Round 3 Boss</title>
+			<title code="0xb3">Bridge C</title>
+			<title code="0x83">Jaleco!</title>
+			<title code="0xac">Round 4-1</title>
+			<title code="0xbe">Round 4 Boss</title>
+			<title code="0xba">Round 5 Clear</title>
+			<title code="0xc4">Round 6-2</title>
+			<title code="0xae">Round 6 Boss</title>
+			<title code="0xbb">Round 7-1</title>
+			<title code="0xc3">Round 7-2</title>
+			<title code="0xc5">Round 7-3</title>
+			<title code="0xaf">Round 7 Boss</title>
+			<title code="0xc9">Bridge D</title>
+			<title code="0xb0">Round 8</title>
+			<title code="0xbc">Power Up</title>
+			<title code="0xa4">Miss</title>
+			<title code="0xa7">Continue</title>
+			<title code="0xa5">Game Over</title>
+			<title code="0xa8">Name Entry</title>
+			<title code="0xa3">Ending ~ Staff Roll</title>
+			<title code="0xb1">Unknown #1</title>
+			<title code="0xb7">Unknown #2</title>
+			<title code="0xc1">Unknown #3</title>
+			<title code="0xc2">Unknown #4</title>
+			<title code="0xca">Unknown #5</title>
+			<title code="0xc6">Staff Roll</title>
+			<title code="0xc8">Name Entry (Long Version)</title>
+			<title code="0xc7">Name Entry (Completion)</title>
+			<title code="0x83">Voice #83</title>
+			<title code="0x81">Voice #81</title>
+			<title code="0x82">Voice #82</title>
+			<title code="0x84">Voice #84</title>
+			<title code="0x85">Voice #85</title>
+			<title code="0x86">Voice #86</title>
+			<title code="0x87">Voice #87</title>
+			<title code="0x88">Voice #88</title>
+			<title code="0x89">Voice #89</title>
+			<title code="0x8a">Voice #8a</title>
+			<title code="0x8b">Voice #8b</title>
+			<title code="0x8c">Voice #8c</title>
+			<title code="0x8d">Voice #8d</title>
+			<title code="0x95">Voice #95</title>
+			<title code="0x97">Voice #97</title>
+			<title code="0x96">Voice #96</title>
+			<title code="0x98">Voice #98</title>
+			<title code="0x9c">Voice #9c</title>
+			<title code="0x9d">Voice #9d</title>
+			<title code="0x8e">Voice #8e</title>
+			<title code="0x8f">Voice #8f</title>
+			<title code="0x90">Voice #90</title>
+			<title code="0x94">Voice #94</title>
+			<title code="0x92">Voice #92</title>
+			<title code="0x91">Voice #91</title>
+			<title code="0x93">Voice #93</title>
+			<title code="0x99">Voice #99</title>
+			<title code="0x9a">Voice #9a</title>
+			<title code="0x9b">Voice #9b</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Iga Ninjyutsuden (伊賀忍術伝 -五神の書-)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="iganinju">
+			<rom type="code" offset="0x00000">iga_05.bin</rom>
+			<rom type="code" offset="0x10000">iga_06.bin</rom>
+			<rom type="pcm1" offset="0x00000">iga_10.bin</rom>
+			<rom type="pcm2" offset="0x00000">iga_08.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x04">Title Demo</title>
+			<title code="0x53">Credit</title>
+			<title code="0x01">Map Preview</title>
+			<title code="0x02">Round 1 (America)</title>
+			<title code="0x03">Lao-Tse (Weapon Power Up)</title>
+			<title code="0x08">Round Clear</title>
+			<title code="0x05">Round 2 (South Africa)</title>
+			<title code="0x07">Round 2 Boss (Totem Pole)</title>
+			<title code="0x04">Round 3 (Greece)</title>
+			<title code="0x0c">Round 3 Boss (Centaur)</title>
+			<title code="0x0b">Round 4 (India)</title>
+			<title code="0x06">Round 4 Boss (Asura)</title>
+			<title code="0x0d">Round 5 (Japan 1)</title>
+			<title code="0x09">Round 6 (Japan 2)</title>
+			<title code="0x10">Last Boss</title>
+			<title code="0x0f">Ending</title>
+			<title code="0x0a">Game Over / Name Entry</title>
+			<title code="0x0e">Unknown #1</title>
+			<title code="0x11">Unknown #2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Kick Off (キックオフ)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="kickoff">
+			<rom type="code" offset="0x00000">kioff09.rom</rom>
+			<rom type="code" offset="0x10000">kioff19.rom</rom>
+			<rom type="pcm1" offset="0x00000">kioff20.rom</rom>
+			<rom type="pcm1" offset="0x20000">kioff21.rom</rom>
+			<rom type="pcm2" offset="0x00000">kioff20.rom</rom>
+			<rom type="pcm2" offset="0x20000">kioff21.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Opening</title>
+			<title code="0x03">Congratulation (Continue)</title>
+			<title code="0x05">Goal In</title>
+			<title code="0x0b">Human Dance (Break BGM)</title>
+			<title code="0x04">Sunset Seaside (Scene Select)</title>
+			<title code="0x0a">Unknown</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Legend of Makai (魔魁伝説)</name>
+		<driver type="lomakai">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<romlist archive="lomakai">
+			<rom type="code" offset="0x00000">lom_01.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x20">Credit</title>
+			<title code="0x02">Start</title>
+			<title code="0x03">Forest [Area 1, 5]</title>
+			<title code="0x23">Unicorn</title>
+			<title code="0x07">Boss BGM</title>
+			<title code="0x21">Go to Next!</title>
+			<title code="0x02">Start</title>
+			<title code="0x26">Cave Forest [Area 2, 6]</title>
+			<title code="0x22">[SFX] Red Fluid</title>
+			<title code="0x04">Village of Dwarf</title>
+			<title code="0x02">Start</title>
+			<title code="0x24">Waterfall [Area 3]</title>
+			<title code="0x1C">Time is Running Up</title>
+			<title code="0x0D">Miss</title>
+			<title code="0x09">Miss 2</title>
+			<title code="0x0A">Continue?</title>
+			<title code="0x0C">Castle with a Human Face [Area 3]</title>
+			<title code="0x02">Start</title>
+			<title code="0x25">Cave of Anger, Forest of Human Bone [Area 4]</title>
+			<title code="0x02">Start</title>
+			<title code="0x05">Last Castle [Area 7]</title>
+			<title code="0x02">Start</title>
+			<title code="0x06">Area 8</title>
+			<title code="0x0E">Showdown</title>
+			<title code="0x08">Wizard</title>
+			<title code="0x0F">Ending</title>
+			<title code="0x0B">Name Entry</title>
+			<title code="0x28">Area 1, 5 (alt) (Unused)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] P-47: The Phantom Fighter</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="p47">
+			<rom type="code" offset="0x00000">p47j_9.bin</rom>
+			<rom type="code" offset="0x10000">p47j_19.bin</rom>
+			<rom type="pcm1" offset="0x00000">p47j_20.bin</rom>
+			<rom type="pcm1" offset="0x20000">p47j_21.bin</rom>
+			<rom type="pcm2" offset="0x00000">p47j_10.bin</rom>
+			<rom type="pcm2" offset="0x20000">p47j_11.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x18">Title (1)</title>
+			<title code="0x20">Title (2)</title>
+			<title code="0x0f">Credit</title>
+			<title code="0x06">Area 1</title>
+			<title code="0x05">Archrival 1, 5</title>
+			<title code="0x04">Area 2</title>
+			<title code="0x02">Archrival 2</title>
+			<title code="0x08">Area 3, 7</title>
+			<title code="0x1f">Archrival 3</title>
+			<title code="0x0a">Area 4, 8</title>
+			<title code="0x0b">Theme of Bismarck</title>
+			<title code="0x1d">Bismarck Exploded</title>
+			<title code="0x0d">Area 5</title>
+			<title code="0x09">Area 6</title>
+			<title code="0x22">Archrival 6</title>
+			<title code="0x23">Archrival 7</title>
+			<title code="0x13">Got Shot</title>
+			<title code="0x01">Ranking</title>
+			<title code="0x07">Game Over</title>
+			<title code="0x03">Area 2 (Alt.)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Takeda Shingen (武田信玄)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="tshingen">
+			<rom type="code" offset="0x00000">takeda5.bin</rom>
+			<rom type="code" offset="0x10000">takeda6.bin</rom>
+			<rom type="pcm1" offset="0x00000">takeda9.bin</rom>
+			<rom type="pcm1" offset="0x20000">takeda10.bin</rom>
+			<rom type="pcm2" offset="0x00000">shing_07.rom</rom>
+			<rom type="pcm2" offset="0x20000">shing_08.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x32">BGM #32</title>
+			<title code="0x30">SFX #30</title>
+			<title code="0x31">SFX #31</title>
+			<title code="0x33">SFX #33</title>
+			<title code="0x34">SFX #34</title>
+			<title code="0x35">SFX #35</title>
+			<title code="0x38">SFX #38</title>
+			<title code="0x39">SFX #39</title>
+			<title code="0x43">SFX #43</title>
+			<title code="0x44">SFX #44</title>
+			<title code="0x45">SFX #45</title>
+			<title code="0x46">SFX #46</title>
+			<title code="0x47">SFX #47</title>
+			<title code="0x48">SFX #48</title>
+			<title code="0x50">SFX #50</title>
+			<title code="0x51">SFX #51</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Hachoo! (破兆！)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="hachoo">
+			<rom type="code" offset="0x00000">hacho05.rom</rom>
+			<rom type="code" offset="0x10000">hacho06.rom</rom>
+			<rom type="pcm1" offset="0x00000">hacho09.rom</rom>
+			<rom type="pcm1" offset="0x20000">hacho10.rom</rom>
+			<rom type="pcm2" offset="0x00000">hacho07.rom</rom>
+			<rom type="pcm2" offset="0x20000">hacho08.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Attract Mode</title>
+			<title code="0x0c">Title Screen</title>
+			<title code="0x01">Stage 1 - Sky</title>
+			<title code="0x02">Stage 2 - Cliffside</title>
+			<title code="0x03">Stage 3 - Descending</title>
+			<title code="0x04">Stage 4 - Cave</title>
+			<title code="0x05">Stage 5 - Ascending</title>
+			<title code="0x06">Stage 6 - Temple</title>
+			<title code="0x08">Ending</title>
+			<title code="0x0b">Game Over</title>
+			<title code="0x0a">Ending Ver.2</title>
+			<title code="0x07">Unused</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Plus Alpha (プラスアルファ)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="plusalph">
+			<rom type="code" offset="0x00000">pa-rom5.bin</rom>
+			<rom type="code" offset="0x10000">pa-rom6.bin</rom>
+			<rom type="pcm1" offset="0x00000">pa-rom9.bin</rom>
+			<rom type="pcm1" offset="0x20000">pa-rom10.bin</rom>
+			<rom type="pcm2" offset="0x00000">pa-rom7.bin</rom>
+			<rom type="pcm2" offset="0x20000">pa-rom8.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x08">Prelude to Triumph [Title]</title>
+			<title code="0x1c">Credit</title>
+			<title code="0x0d">Game Start 1</title>
+			<title code="0x01">Dancing Girl in the Wind [Stage 1: Wind Country]</title>
+			<title code="0x11">Extra Game</title>
+			<title code="0x02">Into Blue [Stage 2: Sea Colony]</title>
+			<title code="0x04">Bird Island [Stage 3: Flower Town]</title>
+			<title code="0x0a">Sun Colors [Stage 4: Snow Country]</title>
+			<title code="0x05">Last Heart [Stage 5: Sand City]</title>
+			<title code="0x0b">Alborada [Stage 6: Dark Sodom]</title>
+			<title code="0x0c">Neo Baroque [Stage 7: Eden]</title>
+			<title code="0x0e">Game Start 2</title>
+			<title code="0x03">Boss Stage</title>
+			<title code="0x09">Explosion</title>
+			<title code="0x0f">Ending Theme</title>
+			<title code="0x07">Continue</title>
+			<title code="0x06">Game Over</title>
+			<title code="0x10">Harmonica for Peace [Unused]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Saint Dragon (天聖龍)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="stdragon">
+			<rom type="code" offset="0x00000">jsd-05.bin</rom>
+			<rom type="code" offset="0x10000">jsd-06.bin</rom>
+			<rom type="pcm1" offset="0x00000">jsd-09.bin</rom>
+			<rom type="pcm1" offset="0x20000">jsd-10.bin</rom>
+			<rom type="pcm2" offset="0x00000">jsd-07.bin</rom>
+			<rom type="pcm2" offset="0x20000">jsd-08.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Title</title>
+			<title code="0x0F">Credit</title>
+			<title code="0x01">Metal Planet [Area 1]</title>
+			<title code="0x02">Dark Subterranean Cave "La Danse Magnetique" [Area 2]</title>
+			<title code="0x03">Argent Inside of the Fort [Area 3]</title>
+			<title code="0x04">Pleiads [Area 4]</title>
+			<title code="0x05">Huge Artificial Planet [Area 5]</title>
+			<title code="0x06">Inside of the Planet [Area 6]</title>
+			<title code="0x07">Arch Fore [Boss]</title>
+			<title code="0x08">Final Thrust [Last Boss]</title>
+			<title code="0x0C">Ending</title>
+			<title code="0x0B">Continue</title>
+			<title code="0x0A">Name Entry</title>
+			<title code="0x3D">Unknown</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] The Astyanax (ザ・ロードオブキング)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="astyanax">
+			<rom type="code" offset="0x00000">astyan5.bin</rom>
+			<rom type="code" offset="0x10000">astyan6.bin</rom>
+			<rom type="pcm2" offset="0x00000">astyan7.bin</rom>
+			<rom type="pcm2" offset="0x20000">astyan8.bin</rom>
+			<rom type="pcm1" offset="0x00000">astyan9.bin</rom>
+			<rom type="pcm1" offset="0x20000">astyan10.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x34">Credit</title>
+			<title code="0x31">[SFX] Thunder</title>
+			<title code="0x39">Stage 1 - In the Forest</title>
+			<title code="0x36">Stage 1 - Boss</title>
+			<title code="0x42">Stage Clear</title>
+			<title code="0x3a">Stage 2 - In the Cave</title>
+			<title code="0x3c">Stage 2 - Boss</title>
+			<title code="0x42">Stage Clear</title>
+			<title code="0x3b">Stage 3 - On the Lake</title>
+			<title code="0x0b">[Voice] Don't you give up playing the game?</title>
+			<title code="0x0a">[Voice] Hahahaha</title>
+			<title code="0x43">Continue</title>
+			<title code="0x37">Stage 3 - Boss</title>
+			<title code="0x42">Stage Clear</title>
+			<title code="0x3f">Stage 4 - On the Lift</title>
+			<title code="0x38">Stage 4 - In the Gate</title>
+			<title code="0x3d">Stage 5 - In the Castle</title>
+			<title code="0x38">Stage 5 - Boss</title>
+			<title code="0x06">[Voice]</title>
+			<title code="0x3e">Last Stage</title>
+			<title code="0x35">Last Boss</title>
+			<title code="0x26">[SFX] Flash</title>
+			<title code="0x1a">[SFX] Tower breaking down</title>
+			<title code="0x41">Ending</title>
+			<title code="0x40">Name Entry</title>
+			<title code="0x44">Game Over</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Rod-Land (妖精物語 ロッドランド)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="rodland">
+			<rom type="code" offset="0x00000">rl_05.rom</rom>
+			<rom type="code" offset="0x10000">rl_06.rom</rom>
+			<rom type="pcm1" offset="0x00000">rl_10.rom</rom>
+			<rom type="pcm2" offset="0x00000">rl_08.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1a">Demonstration</title>
+			<title code="0x1f">Credit</title>
+			<title code="0x01">Chapter 1 - Opening 1</title>
+			<title code="0x02">Chapter 1 - Opening 2</title>
+			<title code="0x14">Secene of the Forest "Morning Has Come to the Forest"</title>
+			<title code="0x07">Chapter 1 - Song 1 "Let's Sing Gaily"</title>
+			<title code="0x03">Chapter 1 - Interval 1</title>
+			<title code="0x08">Chapter 1 - Song 2 "Duet of Birds"</title>
+			<title code="0x0d">Extra Game</title>
+			<title code="0x0e">When I'm Encouraged (Extend)</title>
+			<title code="0x15">Chapter 1 - Song 3 "Dance on Maple Leaf"</title>
+			<title code="0x04">Chapter 1 - Interval 2</title>
+			<title code="0x10">Theme of Boss 1</title>
+			<title code="0x12">Chapter 1 - Ending</title>
+			<title code="0x16">Chapter 2 - Song 1 "What the Auster Encountered"</title>
+			<title code="0x17">Chapter 2 - Interval (unused)</title>
+			<title code="0x09">Chapter 2 - Song 2 "Waltz of the Ants"</title>
+			<title code="0x19">Chapter 2 - Interval</title>
+			<title code="0x06">Chapter 2 - Song 3 "March"</title>
+			<title code="0x13">Theme of Boss 2</title>
+			<title code="0x05">Chapter 2 - Ending</title>
+			<title code="0x18">Theme of Boss 3</title>
+			<title code="0x0f">Credits Roll "Harmonica of Peace"</title>
+			<title code="0x0a">When I'm Discouraged (unused)</title>
+			<title code="0x0b">Continue</title>
+			<title code="0x0c">Game Over</title>
+			<title code="0x11">Name Entry "Memory of the Old Flautist"</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] 64th. Street: A Detective Story (64番街)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="64street">
+			<rom type="code" offset="0x00000">64th_08.rom</rom>
+			<rom type="code" offset="0x10000">64th_07.rom</rom>
+			<rom type="pcm1" offset="0x00000">64th_11.rom</rom>
+			<rom type="pcm2" offset="0x00000">64th_10.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0A">Case of the Rich Man's Kidnapped Daughter [Opening Demo]</title>
+			<title code="0x09">Player Select</title>
+			<title code="0x01">64th Street [Stage 1]</title>
+			<title code="0x11">Eye Catch</title>
+			<title code="0x07">Boss</title>
+			<title code="0x10">Probe Next Hideout [Stage Clear]</title>
+			<title code="0x03">Smuggler's Wharf [Stage 2]</title>
+			<title code="0x02">Railroad Yard Part 1 [Stage 3]</title>
+			<title code="0x08">Railroad Yard Part 2 [Stage 3]</title>
+			<title code="0x04">Secret Factory [Stage 4]</title>
+			<title code="0x06">The Headquarters [Stage 5]</title>
+			<title code="0x0F">Chase and Arrest [Insert Cut]</title>
+			<title code="0x05">Last Level [Stage 6]</title>
+			<title code="0x0B">Ending</title>
+			<title code="0x0D">Name Entry</title>
+			<title code="0x0E">Unused 1 [Stage Start]</title>
+			<title code="0x0C">Unused 2 [Continue]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Avenging Spirit (ファンタズム)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="avspirit">
+			<rom type="code" offset="0x00000">spirit01.rom</rom>
+			<rom type="code" offset="0x10000">spirit02.rom</rom>
+			<rom type="pcm1" offset="0x00000">spirit14.rom</rom>
+			<rom type="pcm2" offset="0x00000">spirit13.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">Credit</title>
+			<title code="0x01">Main BGM</title>
+			<title code="0x02">Boss BGM</title>
+			<title code="0x03">Kichi</title>
+			<title code="0x04">Guesuido</title>
+			<title code="0x05">Warning</title>
+			<title code="0x06">Last Boss BGM</title>
+			<title code="0x07">Stage Clear</title>
+			<title code="0x08">Trick Room</title>
+			<title code="0x09">Knaojyo</title>
+			<title code="0x0A">Continue</title>
+			<title code="0x0B">Ending</title>
+			<title code="0x0C">Name Regist</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] E.D.F.: Earth Defense Force (E.D.F ＜アースディフェンスフォース＞)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="edf">
+			<rom type="code" offset="0x00000">edf1.f5</rom>
+			<rom type="code" offset="0x10000">edf2.f3</rom>
+			<rom type="pcm1" offset="0x00000">edf_m02.rom</rom>
+			<rom type="pcm2" offset="0x00000">edf_m01.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0f">Prologue #1</title>
+			<title code="0x08">Prologue #2</title>
+			<title code="0x03">Stage 1 "First Encounter" (from Big-Challange Dogfight Spirits)</title>
+			<title code="0x05">Stage 2 "Midnight Intercept"</title>
+			<title code="0x07">Boss Attack</title>
+			<title code="0x06">Clear</title>
+			<title code="0x0d">Stage 3 "Deep Cave" #1</title>
+			<title code="0x0e">Stage 3 "Deep Cave" #2</title>
+			<title code="0x01">Stage 4 "Naval Battle"</title>
+			<title code="0x04">Stage 5 "Fortress Charge"</title>
+			<title code="0x0b">Stage 6 "Armed Satellite"</title>
+			<title code="0x0c">Escape "Escape Road"</title>
+			<title code="0x0a">Ending "Peace Maker"</title>
+			<title code="0x02">Name Entry</title>
+			<title code="0x09">Unknown</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Big Striker (ビッグストライカー)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="bigstrik">
+			<rom type="code" offset="0x00000">91105v10.8</rom>
+			<rom type="code" offset="0x10000">91105v10.7</rom>
+			<rom type="pcm1" offset="0x00000">91105v10.11</rom>
+			<rom type="pcm2" offset="0x00000">91105v10.10</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Soldam (ソルダム)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="soldamj">
+			<rom type="code" offset="0x00000">soldam5.bin</rom>
+			<rom type="code" offset="0x10000">soldam6.bin</rom>
+			<rom type="pcm1" offset="0x00000">soldam10.bin</rom>
+			<rom type="pcm2" offset="0x00000">soldam8.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x07">Title</title>
+			<title code="0x11">Mode Select</title>
+			<title code="0x14">Mode Selected</title>
+			<title code="0x01">Morning in the Fairies' Forest (Soldam Mode 1)</title>
+			<title code="0x05">Look for the "Missing Berry"! (Soldam Mode 2)</title>
+			<title code="0x06">Hurry-Scurry under the Tree (Soldam Mode 3)</title>
+			<title code="0x03">VS. Mode</title>
+			<title code="0x0f">Victorious Fanfare (VS Mode Finished)</title>
+			<title code="0x02">Theme of Sekiero (Sekiero Mode 1)</title>
+			<title code="0x08">Forest at Sundown (Sekiero Mode 2)</title>
+			<title code="0x09">Fairies Awaiting Spring (Sekiero Mode 3)</title>
+			<title code="0x0a">Sounds of the Trees (Sekiero Mode 4)</title>
+			<title code="0x17">Boss Appearing</title>
+			<title code="0x0b">Boss Music (Sekiero Mode Boss)</title>
+			<title code="0x12">Extra Fanfare (Sekiero Mode Extra)</title>
+			<title code="0x18">Extra "Fairy Samba"</title>
+			<title code="0x13">Continue</title>
+			<title code="0x0c">Ending (Sekiero Mode Ending)</title>
+			<title code="0x0e">Game Over</title>
+			<title code="0x19">Result (Sekiero Mode Result)</title>
+			<title code="0x04">Name Entry</title>
+			<title code="0x10">Unused #1</title>
+			<title code="0x16">Unused #2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Chimera Beast (キメラビースト)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="chimerab">
+			<rom type="code" offset="0x00000">prg8.bin</rom>
+			<rom type="code" offset="0x10000">prg7.bin</rom>
+			<rom type="pcm1" offset="0x00000">voi11.bin</rom>
+			<rom type="pcm2" offset="0x00000">voi10.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Jaleco Mega System 1] Hayaoshi Quiz Ouza Ketteisen: The King Of Quiz (早押しクイズ 王座決定戦)</name>
+		<driver type="megasys1">jaleco</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0xcd"/>
+			<option name="pcm_mix" value="0x43"/>
+		</options>
+		<romlist archive="hayaosi1">
+			<rom type="code" offset="0x00000">1</rom>
+			<rom type="code" offset="0x10000">2</rom>
+			<rom type="pcm1" offset="0x00000">3</rom>
+			<rom type="pcm2" offset="0x00000">4</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+		</titlelist>
+	</game>
+	<game>
+  	<name>[Irem M92] World PK Soccer (ワールドPKサッカー)</name>
+  	<driver type="m92">irem</driver>
+		<driveralias type="Arcade">jaleco</driveralias>
+		<options>
+			<option name="opm_mix" value="0x120"/>
+			<option name="pcm_mix" value="0x2D0"/>
+			<option name="subtype" value="0x09"/>
+		</options>  	
+		<romlist archive="wpksoc">	
+  		<rom type="code" offset="0x0000">pkos.sl0</rom>
+  		<rom type="code" offset="0x0001">pkos.sh0</rom>
+  		<rom type="pcm" offset="0x0000">pk.da0</rom>
+  	</romlist>
+  	<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+  	</titlelist>   
+  </game>
+  <game>
+    <name>[Model 2B] Super GT 24h (スーパーＧＴ２４Ｈ)</name>
+    <driver type="model2a">sega</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+    <options>
+      <option name="pcm_mix" value="0x80"/>
+      <option name="pcm_size" value="0x400000"/>
+    </options>
+    <romlist archive="sgt24h">
+      <rom type="code" offset="0x80000">epr-19157.31</rom>
+      <rom type="pcm" offset="0x000000">mpr-19154.32</rom>
+    </romlist>
+    <titlelist>
+      <title code="0x00">BGM #00</title>
+      <title code="0x01">BGM #01</title>
+      <title code="0x02">BGM #02</title>
+      <title code="0x03">BGM #03</title>
+      <title code="0x04">BGM #04</title>
+      <title code="0x05">BGM #05</title>
+      <title code="0x06">BGM #06</title>
+    </titlelist>
+  </game>
+  <game>
+    <name>[Model 2B] Overrev (オーバーレブ)</name>
+    <driver type="model2a">sega</driver>
+    <driveralias type="Arcade">jaleco</driveralias>
+    <options>
+      <option name="pcm_mix" value="0x200"/>
+      <option name="pcm_size" value="0x800000"/>
+    </options>
+    <romlist archive="overrev">
+      <rom type="code" offset="0x80000">epr-20002.31</rom>
+      <rom type="pcm" offset="0x000000">mpr-20003.32</rom>
+      <rom type="pcm" offset="0x400000">mpr-20004.34</rom>
+    </romlist>
+    <titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+    </titlelist>
+  </game>
+</gamelist>

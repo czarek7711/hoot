@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //SHARP -->
+	<game>
+		<name>[X68000] GRADIUS</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<romlist archive="gra68snd">
+			<rom type="code">gra68snd.bin</rom>
+			<rom type="code" offset="0x08000">OPMX68.68K</rom>
+			<rom type="code" offset="0x10000">BGM.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">演奏停止</title>
+			<title code="0x0b">Creadit</title>
+			<title code="0x01">Beginning Of The History</title>
+			<title code="0x02">Challenger 1985</title>
+			<title code="0x03">Beat Back</title>
+			<title code="0x04">Blank Mask</title>
+			<title code="0x05">Free Flyer</title>
+			<title code="0x06">Mazed Music</title>
+			<title code="0x07">Mechanical Globule</title>
+			<title code="0x08">Final Attack</title>
+			<title code="0x09">Aircraft Carrier</title>
+			<title code="0x0a">Game Over</title>
+			<title code="0x0c">Historic Soldier</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] NEW PrintShop PRO-68K</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<romlist archive="nps68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">MU_SOUND.OPM</rom>
+			<rom type="code" offset="0x2c000">ps_banner.opm</rom>
+			<rom type="code" offset="0x30000">ps_envelope.opm</rom>
+			<rom type="code" offset="0x34000">ps_gedit.opm</rom>
+			<rom type="code" offset="0x38000">ps_greet.opm</rom>
+			<rom type="code" offset="0x3c000">ps_letter.opm</rom>
+			<rom type="code" offset="0x40000">ps_post.opm</rom>
+			<rom type="code" offset="0x44000">ps_print.opm</rom>
+			<rom type="code" offset="0x48000">ps_screen.opm</rom>
+			<rom type="code" offset="0x4c000">ps_sign.opm</rom>
+			<rom type="code" offset="0x50000">ps_title.opm</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0204">ps_banner.opm</title>
+			<title code="0x0205">ps_envelope.opm</title>
+			<title code="0x0206">ps_gedit.opm</title>
+			<title code="0x0207">ps_greet.opm</title>
+			<title code="0x0208">ps_letter.opm</title>
+			<title code="0x0209">ps_post.opm</title>
+			<title code="0x020a">ps_print.opm</title>
+			<title code="0x020b">ps_screen.opm</title>
+			<title code="0x020c">ps_sign.opm</title>
+			<title code="0x020d">ps_title.opm</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] NEW PrintShop PRO-68K Ver2.0</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<romlist archive="nps268snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">MU_SOUND.OPM</rom>
+			<rom type="code" offset="0x2c000">PS_BANNER.OPM</rom>
+			<rom type="code" offset="0x30000">PS_CALENDAR.OPM</rom>
+			<rom type="code" offset="0x34000">PS_CASSETTE.OPM</rom>
+			<rom type="code" offset="0x38000">PS_ENVELOPE.OPM</rom>
+			<rom type="code" offset="0x3c000">PS_GEDIT.OPM</rom>
+			<rom type="code" offset="0x40000">PS_GREETING.OPM</rom>
+			<rom type="code" offset="0x44000">PS_LETTER.OPM</rom>
+			<rom type="code" offset="0x48000">PS_POST.OPM</rom>
+			<rom type="code" offset="0x4c000">PS_PRINT.OPM</rom>
+			<rom type="code" offset="0x50000">PS_SIGN.OPM</rom>
+			<rom type="code" offset="0x54000">PS_TEDIT.OPM</rom>
+			<rom type="code" offset="0x58000">PS_TITLE.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0204">PS_BANNER.OPM</title>
+			<title code="0x0205">PS_CALENDAR.OPM</title>
+			<title code="0x0206">PS_CASSETTE.OPM</title>
+			<title code="0x0207">PS_ENVELOPE.OPM</title>
+			<title code="0x0208">PS_GEDIT.OPM</title>
+			<title code="0x0209">PS_GREETING.OPM</title>
+			<title code="0x020a">PS_LETTER.OPM</title>
+			<title code="0x020b">PS_POST.OPM</title>
+			<title code="0x020c">PS_PRINT.OPM</title>
+			<title code="0x020d">PS_SIGN.OPM</title>
+			<title code="0x020e">PS_TEDIT.OPM</title>
+			<title code="0x020f">PS_TITLE.OPM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] SX-WINDOW</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="opm_mix" value="0xe0"/>
+		</options>
+		<romlist archive="sxwin68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">X68K.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">X68K.OPM : X68000のテーマ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] BONANZA BROS</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="bnzabros68snd">
+			<rom type="code">bnzabros68snd.bin</rom>
+			<rom type="x"    offset="0x10000">BB.X</rom>
+			<rom type="code" offset="0x537cc">MUSIC.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x08">摩天楼のテーマ</title>
+			<title code="0x0a">STAGE CLEAR</title>
+			<title code="0x06">GAME OVER</title>
+			<title code="0x02">ボナンザ兄弟仁義</title>
+			<title code="0x04">ボナンザ哀歌</title>
+			<title code="0x0c">ボナンザ・サスペンス劇場</title>
+			<title code="0x0e">ボナンザ・ゴーゴー</title>
+			<title code="0x14">BONUS TITLE</title>
+			<title code="0x10">スリルなボナンザ</title>
+			<title code="0x16">PERFECT</title>
+			<title code="0x18">MISS</title>
+			<title code="0x12">ボナンザ・セレナーデ</title>
+			<range min="0x0102" max="0x0137" extcode="1">SE 0x%02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] ダッシュ野郎</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="rallybik68snd">
+			<rom type="code" offset="0x000000">dash68snd.bin</rom>
+			<rom type="x"    offset="0x010000">DASH.X</rom>
+			<rom type="code" offset="0xe68000">DH.SND</rom>
+			<rom type="code" offset="0xe6b600">DHSND.SND</rom>
+			<rom type="code" offset="0xe6c000">DHPCM.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x101">MACOSA</title>
+			<title code="0x102">SOUTH WIND</title>
+			<title code="0x103">DIXIE LINE</title>
+			<title code="0x104">SAND STORM</title>
+			<title code="0x105">DEN</title>
+			<title code="0x107">BLACK TEA</title>
+			<title code="0x108">SECOND LINE</title>
+			<title code="0x10d">SUN SET</title>
+			<title code="0x10e">AMERICA BYE BYE</title>
+			<title code="0x10f">CONGRA</title>
+			<title code="0x111">CUT OFF</title>
+			<title code="0x10b">やられ</title>
+			<title code="0x109">CD未収録曲</title>
+			<title code="0x10c">CD未収録曲</title>
+			<title code="0x110">CD未収録曲</title>
+			<range min="0x13" max="0x2e" extcode="1">SE %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 中華大仙</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="chukatai68snd">
+			<rom type="code" offset="0x000000">chukatai68snd.bin</rom>
+			<rom type="x"    offset="0x010000">TAI.X</rom>
+			<rom type="code" offset="0x045000">TAI.SND</rom>
+			<rom type="code" offset="0x047000">TAISND.SND</rom>
+			<rom type="code" offset="0x060000">EFC1.SND</rom>
+			<rom type="code" offset="0x065000">EFC2.SND</rom>
+			<rom type="code" offset="0x074E70">EFC3.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">LOADING</title>
+			<title code="0x01">天上界</title>
+			<title code="0x02">五行山</title>
+			<title code="0x03">黄河</title>
+			<title code="0x04">万里長上</title>
+			<title code="0x06">法術セレクト</title>
+			<title code="0x07">ボス</title>
+			<title code="0x09">GAME OVER</title>
+			<title code="0x0a">ENDING</title>
+			<title code="0x0b">NAME ENTRY</title>
+			<title code="0x0d">1UP</title>
+			<title code="0x08">CREDIT (未使用)</title>
+			<range min="0x0c" max="0x0c" extcode="1">SE %02x</range>
+			<range min="0x0f" max="0x2f" extcode="1">SE %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] ダウンタウン熱血物語</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp"    value="0x01"/>
+			<option name="dmaint" value="0x01"/>
+		</options>
+		<romlist archive="dwntwn68snd">
+			<rom type="code" offset="0x000000">dwntwn68snd.bin</rom>
+			<rom type="x"    offset="0x010000">DTW.X</rom>
+			<rom type="code" offset="0x050000">DTW.SND</rom>
+			<rom type="code" offset="0xe78000">DTWSND.SND</rom>
+			<rom type="code" offset="0xe6b920">PCMDAT.SND</rom>
+			<rom type="code" offset="0xe50000">EFFECT1.SND</rom>
+			<rom type="code" offset="0xe5dbb0">EFFECT2.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0e">オープニング</title>
+			<title code="0x03">タイトル</title>
+			<title code="0x02">ストーリー</title>
+			<title code="0x04">ダウンタウン熱血物語のテーマ</title>
+			<title code="0x05">公園/河原にて～ひとときのやすらぎ～</title>
+			<title code="0x06">中ボスのテーマ</title>
+			<title code="0x07">長谷部～愛のメロディー～</title>
+			<title code="0x08">倉庫/工場～小林登場～</title>
+			<title code="0x09">お買い物ソング</title>
+			<title code="0x0a">大ボスのテーマ～五代/豪田登場～</title>
+			<title code="0x0b">冷峰学園～対決!!～</title>
+			<title code="0x0c">ダブドラ兄弟のテーマ～竜一・竜二登場～</title>
+			<title code="0x0d">大決闘～最後の闘い～</title>
+			<title code="0x0f">勝利(未使用)</title>
+			<title code="0x10">レベルアップ(未使用)</title>
+			<title code="0x11">敗北(未使用)</title>
+			<title code="0x12">エンディング・テーマ1(未使用)</title>
+			<title code="0x13">エンディング・テーマ2～おちゃらけ～(未使用)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] U.S. CHAMPIONSHIP V'BALL</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp"    value="0x01"/>
+			<option name="dmaint" value="0x01"/>
+		</options>
+		<romlist archive="vball68snd">
+			<rom type="code" offset="0x000000">vball68snd.bin</rom>
+			<rom type="x"    offset="0x010000">VBL.X</rom>
+			<rom type="code" offset="0x030000">VBDEMO.SND</rom>
+			<rom type="code" offset="0x038000">VBSND.SND</rom>
+			<rom type="code" offset="0x040000">PCMDAT.SND</rom>
+			<rom type="code" offset="0x052000">VBPCM1.SND</rom>
+			<rom type="code" offset="0x060000">VBPCM2.SND</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x03" max="0x0b" extcode="1">BGM %02x</range>
+			<range min="0x0d" max="0x16" extcode="1">BGM %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 熱血高校ドッヂボール部 サッカー編</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="nksoccer68snd">
+			<rom type="code" offset="0x000000">nksoccer68snd.bin</rom>
+			<rom type="x"    offset="0x010000">SOC.X</rom>
+			<rom type="code" offset="0x040000">SOCSND.SND</rom>
+			<rom type="code" offset="0x048000">SOC1.SND</rom>
+			<rom type="code" offset="0x050000">SOC2.SND</rom>
+			<rom type="code" offset="0x058000">PCMDAT.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x21">テクノスジャパンロゴ</title>
+			<title code="0x02">イントロ</title>
+			<title code="0x17">イントロ2</title>
+			<title code="0x03">タイトル</title>
+			<title code="0x0b">対優秀院附属高校のテーマ</title>
+			<title code="0x04">ポジション選択</title>
+			<title code="0x05">第1回戦</title>
+			<title code="0x18">ハーフタイム</title>
+			<title code="0x1b">クリア</title>
+			<title code="0x1d">幕間</title>
+			<title code="0x0c">対七福学園高校のテーマ</title>
+			<title code="0x0d">対死愚魔高校のテーマ</title>
+			<title code="0x1a">敗北</title>
+			<title code="0x1c">再挑戦</title>
+			<title code="0x0e">対マタギ学園のテーマ</title>
+			<title code="0x0f">対吉本工業高校のテーマ</title>
+			<title code="0x10">対江戸華高校のテーマ</title>
+			<title code="0x06">第4回戦</title>
+			<title code="0x11">対一本釣水産高校のテーマ</title>
+			<title code="0x12">対恐山商業高校のテーマ</title>
+			<title code="0x13">対山本興業高校のテーマ</title>
+			<title code="0x07">第7回戦</title>
+			<title code="0x14">対堀々学園のテーマ</title>
+			<title code="0x15">対服部学園のテーマ</title>
+			<title code="0x08">第10回戦</title>
+			<title code="0x16">対四満忠実業高校のテーマ</title>
+			<title code="0x09">決勝戦</title>
+			<title code="0x19">ハーフタイム(決勝戦)</title>
+			<title code="0x1e">オールクリア(キスシーン)</title>
+			<title code="0x20">キャスト</title>
+			<title code="0x0a">練習試合</title>
+			<title code="0x1f">ゲームオーバー</title>
+			<range min="0x22" max="0x24" extcode="1">BGM %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] ARKANOID -REVENGE OF DOH-</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="arknoid268snd">
+			<rom type="code" offset="0x00000">doh68snd.bin</rom>
+			<rom type="code" offset="0x10000">MUX.R</rom>
+			<rom type="code" offset="0x20000">ARK1</rom>
+			<rom type="code" offset="0x21000">ARK2</rom>
+			<rom type="code" offset="0x22000">ARK3</rom>
+			<rom type="code" offset="0x23000">ARK4</rom>
+			<rom type="code" offset="0x24000">ARK5</rom>
+			<rom type="code" offset="0x25000">ARK6</rom>
+			<rom type="code" offset="0x26000">ARK7</rom>
+			<rom type="code" offset="0x27000">ARK8</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x08">ARK8 : Loading</title>
+			<title code="0x01">ARK1 : Start Demo</title>
+			<title code="0x02">ARK2 : Round Start</title>
+			<title code="0x03">ARK3 : 1up</title>
+			<title code="0x06">ARK6 : Boss Start</title>
+			<title code="0x07">ARK7 : DOH</title>
+			<title code="0x05">ARK5 : Game Over</title>
+			<title code="0x04">ARK4 : Ending / Name Entry</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] FULL THROTTLE</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="fullthrl68snd">
+			<rom type="code" offset="0x00000">fullthrl68snd.bin</rom>
+			<rom type="x"    offset="0x10000">MUX.X</rom>
+			<rom type="code" offset="0x20000">SND1/FTHS1.SND</rom>
+			<rom type="code" offset="0x20800">SND1/FTHS2.SND</rom>
+			<rom type="code" offset="0x21000">SND2/FTHSND3.SND</rom>
+			<rom type="code" offset="0x21800">SND2/FTHSND4.SND</rom>
+			<rom type="code" offset="0x30000">SND1/FTH1.SND</rom>
+			<rom type="code" offset="0x32000">SND1/FTH2.SND</rom>
+			<rom type="code" offset="0x34000">SND1/FTH3.SND</rom>
+			<rom type="code" offset="0x36000">SND1/FTH4.SND</rom>
+			<rom type="code" offset="0x38000">SND1/FTH5.SND</rom>
+			<rom type="code" offset="0x3a000">SND1/FTHE.SND</rom>
+			<rom type="code" offset="0x3c000">SND1/FTHN.SND</rom>
+			<rom type="code" offset="0x3e000">SND1/FTHO.SND</rom>
+			<rom type="code" offset="0x40000">SND2/FTH1.SND</rom>
+			<rom type="code" offset="0x42000">SND2/FTH2.SND</rom>
+			<rom type="code" offset="0x44000">SND2/FTH3.SND</rom>
+			<rom type="code" offset="0x46000">SND2/FTH4.SND</rom>
+			<rom type="code" offset="0x48000">SND2/FTH5.SND</rom>
+			<rom type="code" offset="0x4a000">SND2/FTHE.SND</rom>
+			<rom type="code" offset="0x4c000">SND2/FTHN.SND</rom>
+			<rom type="code" offset="0x4e000">SND2/FTHO.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">HIT AND RUN</title>
+			<title code="0x0002">RUN A RED LIGHT</title>
+			<title code="0x0003">O・N・D・O</title>
+			<title code="0x0004">SLEEPING THE PIKE MAN</title>
+			<title code="0x0005">I JUST LOSE ONE'S SENSES</title>
+			<title code="0x0006">TIME SAVING</title>
+			<title code="0x0007">ACCEL #1</title>
+			<title code="0x0008">GAME OVER</title>
+			<!--
+			<title code="0x0101">HIT AND RUN (未使用 音色違い)</title>
+			<title code="0x0102">RUN A RED LIGHT (未使用 音色違い)</title>
+			<title code="0x0103">O・N・D・O (未使用 音色違い)</title>
+			<title code="0x0104">SLEEPING THE PIKE MAN (未使用 音色違い)</title>
+			<title code="0x0105">I JUST LOSE ONE'S SENSES (未使用 音色違い)</title>
+			<title code="0x0106">TIME SAVING (未使用 音色違い)</title>
+			<title code="0x0107">ACCEL #1 (未使用 音色違い)</title>
+			<title code="0x0108">GAME OVER (未使用 音色違い)</title>
+			  -->
+			<title code="0x0209">HIT AND RUN (未使用 Stereo)</title>
+			<title code="0x020a">RUN A RED LIGHT (未使用 Stereo)</title>
+			<title code="0x020b">O・N・D・O (未使用 Stereo)</title>
+			<title code="0x020c">SLEEPING THE PIKE MAN (未使用 Stereo)</title>
+			<title code="0x020d">I JUST LOSE ONE'S SENSES (未使用 Stereo)</title>
+			<title code="0x020e">TIME SAVING (未使用 Stereo)</title>
+			<title code="0x020f">ACCEL #1 (未使用 Stereo)</title>
+			<title code="0x0210">GAME OVER (未使用 Stereo)</title>
+			<!--
+			<title code="0x0309">HIT AND RUN (未使用 Stereo音色違い)</title>
+			<title code="0x030a">RUN A RED LIGHT (未使用 Stereo音色違い)</title>
+			<title code="0x030b">O・N・D・O (未使用 Stereo音色違い)</title>
+			<title code="0x030c">SLEEPING THE PIKE MAN (未使用 Stereo音色違い)</title>
+			<title code="0x030d">I JUST LOSE ONE'S SENSES (未使用 Stereo音色違い)</title>
+			<title code="0x030e">TIME SAVING (未使用 Stereo音色違い)</title>
+			<title code="0x030f">ACCEL #1 (未使用 Stereo音色違い)</title>
+			<title code="0x0310">GAME OVER (未使用 Stereo音色違い)</title>
+			  -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] TwinBee</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="twinbee68snd">
+			<rom type="code" offset="0x00000">twb68snd.bin</rom>
+			<rom type="code" offset="0x10000">MUX.R</rom>
+			<rom type="code" offset="0x20000">TBBGM.BLK</rom>
+			<rom type="code" offset="0x2a000">TBSE.BLK</rom>
+			<rom type="code" offset="0x30000">TBPCM20.BLK</rom>
+			<rom type="code" offset="0x40000">TBPCM30.BLK</rom>
+			<rom type="code" offset="0x50000">TBPCM40.BLK</rom>
+			<rom type="code" offset="0x60000">TBPCM50.BLK</rom>
+			<rom type="code" offset="0x70000">TBPCM60.BLK</rom>
+			<rom type="code" offset="0x80000">TWINBEE.68K</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Start</title>
+			<title code="0x01">Twinbee's Home Town Song</title>
+			<title code="0x06">Power Up</title>
+			<title code="0x0d">Fantastic Power</title>
+			<title code="0x0c">BOSS BGM A-1</title>
+			<title code="0x09">BOSS BGM A-2</title>
+			<title code="0x07">BOSS BGM B</title>
+			<title code="0x04">1up</title>
+			<title code="0x03">Clear</title>
+			<title code="0x0a">Game Over</title>
+			<title code="0x08">Key Assign</title>
+			<title code="0x05">Ranking (未使用)</title>
+			<title code="0x0b">Credit (未使用)</title>
+			<range min="0x41" max="0x48" extcode="1">SE 0x%02x</range>
+			<range min="0x150" max="0x162" extcode="1">SE 0x%02x</range>
+			<range min="0x120" max="0x13c" extcode="1">VOICE 0x%02x</range>
+			<range min="0x140" max="0x144" extcode="1">VOICE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 沙羅曼蛇</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="salamand68snd">
+			<rom type="code" offset="0x00000">sala68snd.bin</rom>
+			<rom type="x"    offset="0x10000">MUX.X</rom>
+			<rom type="code" offset="0x20000">SOUNDPRM.SAL</rom>
+			<rom type="code" offset="0x30000">BGMDATA.SAL</rom>
+			<rom type="code" offset="0x38000">PCMTBL.SAL</rom>
+			<rom type="code" offset="0x40000">PCM20.SAL</rom>
+			<rom type="code" offset="0x60000">PCM30.SAL</rom>
+			<rom type="code" offset="0x80000">PCM80.SAL</rom>
+			<rom type="code" offset="0xa0000">PCM90.SAL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0f">Loading</title>
+			<title code="0x01">Credit</title>
+			<title code="0x07">Power of Anger</title>
+			<title code="0x0a">Fly High</title>
+			<title code="0x17">Planet RATIS</title>
+			<title code="0x04">Starfield</title>
+			<title code="0x03">Burn the Wind</title>
+			<title code="0x1d">Destroy Them All(1)</title>
+			<title code="0x11">Destroy Them All(2)</title>
+			<title code="0x16">Poison of Snake</title>
+			<title code="0x0d">Aircraft Carrier</title>
+			<title code="0x18">Crystal Forever</title>
+			<title code="0x08">Peace Again</title>
+			<title code="0x02">未使用曲</title>
+			<title code="0x05">未使用曲</title>
+			<title code="0x06">未使用曲</title>
+			<title code="0x09">未使用曲</title>
+			<title code="0x0b">未使用曲</title>
+			<title code="0x0c">未使用曲</title>
+			<title code="0x0e">未使用曲</title>
+			<title code="0x10">未使用曲</title>
+			<title code="0x12">未使用曲</title>
+			<title code="0x13">未使用曲</title>
+			<title code="0x14">未使用曲</title>
+			<title code="0x15">未使用曲</title>
+			<title code="0x19">未使用曲</title>
+			<title code="0x1a">未使用曲</title>
+			<title code="0x1b">未使用曲</title>
+			<title code="0x1c">未使用曲</title>
+			<title code="0x1e">未使用曲</title>
+			<title code="0x1f">未使用曲</title>
+			<range min="0x80" max="0x94" extcode="1">SE 0x%02x</range>
+			<range min="0xa0" max="0xbe" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 熱血高校ドッジボール部</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+			<option name="dmaint"  value="0x01"/>
+		</options>
+		<romlist archive="nkdodge68snd">
+			<rom type="code" offset="0x00000">nkdodge68snd.bin</rom>
+			<rom type="x"    offset="0x10000">MUX.X</rom>
+			<rom type="code" offset="0x20000">DBSND.DAT</rom>
+			<rom type="code" offset="0x28000">S_PCM.DAT</rom>
+			<rom type="code" offset="0x30000">DBMUSIC.DAT</rom>
+			<rom type="code" offset="0x40000">ADPCM1.DAT</rom>
+			<rom type="code" offset="0x70000">ADPCM2.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">タイトル</title>
+			<title code="0x02">オープニング・テーマ</title>
+			<title code="0x03">「まて！このやろー！」</title>
+			<title code="0x04">ゲームスタート</title>
+			<title code="0x05">日本選手権～宿敵りきとの対決</title>
+			<title code="0x0f">勝利</title>
+			<title code="0x0b">世界進出！！</title>
+			<title code="0x06">対イギリス・チームのテーマ</title>
+			<title code="0x07">対アイスランド・チームのテーマ</title>
+			<title code="0x08">対中国・チームのテーマ</title>
+			<title code="0x09">対アフリカ・チームのテーマ</title>
+			<title code="0x0a">対アメリカ・チームのテーマ</title>
+			<title code="0x0c">表彰式</title>
+			<title code="0x0d">ゲーム・オーバー</title>
+			<title code="0x0e">ネームエントリー</title>
+			<range min="0x10" max="0x11" extcode="1">SE 0x%02X</range>
+			<range min="0x80" max="0x95" extcode="1">VOICE 0x%02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] PAC-MANIA</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="pacmania68snd">
+			<rom type="code" offset="0x000000">pacmania68snd.bin</rom>
+			<rom type="x"    offset="0x010000">PMDEMO.X</rom>
+			<rom type="code" offset="0x01c028">PMDEMO.DAT</rom>
+			<rom type="code" offset="0x040e10">PM_JPN.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">[USA mode]</title>
+			<title code="0x0001">GAME START</title>
+			<title code="0x0003">BLOCK TOWN</title>
+			<title code="0x0004">PACMAN'S PARK</title>
+			<title code="0x0008">SANDBOX LAND</title>
+			<title code="0x0007">JUNGLY STEPS</title>
+			<title code="0x0005">GAME OVER</title>
+			<title code="0x0002">DEMO 1</title>
+			<title code="0x000a">DEMO 2</title>
+			<title code="0x000c">DEMO 3</title>
+			<title code="0x0006">ALL CLEAR</title>
+			<title code="0x0009">CONGRATULATION</title>
+			<title code="0x000d">NAME ENTRY</title>
+			<title code="0x000e">NAME ENTRY'</title>
+			<title code="0x000b">SPEAKER TEST</title>
+			<title code="0x0000">[JAPAN mode]</title>
+			<title code="0x0101">GAME START</title>
+			<title code="0x0103">BLOCK TOWN</title>
+			<title code="0x0104">PACMAN'S PARK</title>
+			<title code="0x0108">SANDBOX LAND</title>
+			<title code="0x0107">JUNGLY STEPS</title>
+			<title code="0x0105">GAME OVER</title>
+			<title code="0x0102">DEMO 1</title>
+			<title code="0x010a">DEMO 2</title>
+			<title code="0x010c">DEMO 3</title>
+			<title code="0x0106">ALL CLEAR</title>
+			<title code="0x0109">CONGRATULATION</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] SYVALION</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SHARP</driveralias>
+		<options>
+			<option name="mfp"    value="0x01"/>
+			<option name="dmaint" value="0x01"/>
+		</options>
+		<romlist archive="syvalion68snd">
+			<rom type="code" offset="0x000000">syvalion68snd.bin</rom>
+			<rom type="x" offset="0x010000">M2.X</rom>
+			<rom type="x" offset="0x012000">SEQ2.X</rom>
+			<rom type="x" offset="0x014000">OPM2SVL.X</rom>
+			<rom type="x" offset="0x018000">M2MOP.X</rom>
+			<rom type="x" offset="0x01d000">MOPV.X</rom>
+			<rom type="code" offset="0x01e000">MOPDATA.SVL</rom>
+			<rom type="code" offset="0x02b000">SVL38.SQ2</rom>
+			<rom type="code" offset="0x02d000">SVL39.SQ2</rom>
+			<rom type="code" offset="0x02f000">SVL3A.SQ2</rom>
+			<rom type="code" offset="0x031000">SVL3B.SQ2</rom>
+			<rom type="code" offset="0x033000">SVL3C.SQ2</rom>
+			<rom type="code" offset="0x035000">SVL3D.SQ2</rom>
+			<rom type="code" offset="0x037000">SVL3E.SQ2</rom>
+			<rom type="code" offset="0x039000">SVL3F.SQ2</rom>
+			<rom type="code" offset="0x03b000">SVL40.SQ2</rom>
+			<rom type="code" offset="0x03d000">SVL41.SQ2</rom>
+			<rom type="code" offset="0x03f000">SVL42.SQ2</rom>
+			<rom type="code" offset="0x041000">SVL43.SQ2</rom>
+			<rom type="code" offset="0x043000">SVL44.SQ2</rom>
+			<rom type="code" offset="0x045000">SVL45.SQ2</rom>
+			<rom type="code" offset="0x047000">SVL46.SQ2</rom>
+			<rom type="code" offset="0x049000">SVL47.SQ2</rom>
+			<rom type="code" offset="0x04b000">SVL48.SQ2</rom>
+			<rom type="code" offset="0x04d000">SVL49.SQ2</rom>
+			<rom type="code" offset="0x04f000">SVL4B.SQ2</rom>
+			<rom type="code" offset="0x051000">SVL4C.SQ2</rom>
+			<rom type="code" offset="0x053000">ADAV13.ADP</rom>
+			<rom type="code" offset="0x055000">ADAV14.ADP</rom>
+			<rom type="code" offset="0x057000">ADAV15.ADP</rom>
+			<rom type="code" offset="0x059000">ADAV24.ADP</rom>
+			<rom type="code" offset="0x05b000">ADAV27.ADP</rom>
+			<rom type="code" offset="0x05d000">ADAV28.ADP</rom>
+			<rom type="code" offset="0x05f000">ADAV30.ADP</rom>
+			<rom type="code" offset="0x061000">ADAV31.ADP</rom>
+			<rom type="code" offset="0x063000">ADAV33.ADP</rom>
+			<rom type="code" offset="0x065000">ADAV34.ADP</rom>
+			<rom type="code" offset="0x068000">ADAV35.ADP</rom>
+			<rom type="code" offset="0x06b000">ADAV37.ADP</rom>
+			<rom type="code" offset="0x06d000">ADAV41.ADP</rom>
+			<rom type="code" offset="0x06f000">ADBV00.ADP</rom>
+			<rom type="code" offset="0x075000">ADBV02.ADP</rom>
+			<rom type="code" offset="0x077000">ADBV03.ADP</rom>
+			<rom type="code" offset="0x079000">ADBV06.ADP</rom>
+			<rom type="code" offset="0x07c000">ADBV07.ADP</rom>
+			<rom type="code" offset="0x07e000">ADBV08.ADP</rom>
+			<rom type="code" offset="0x081000">ADBV09.ADP</rom>
+			<rom type="code" offset="0x083000">ADBV16.ADP</rom>
+			<rom type="code" offset="0x08f000">ADBV17.ADP</rom>
+			<rom type="code" offset="0x094000">ADBV19.ADP</rom>
+			<rom type="code" offset="0x096000">ADBV20.ADP</rom>
+		</romlist>
+		<titlelist>
+			<title code="100">Main Theme</title>
+			<title code="101">Universe (Theme 2)</title>
+			<title code="102">Fine! Fine! Fine! (Theme 3)</title>
+			<title code="103">Larful (Theme 4)</title>
+			<title code="104">--so easy (Theme 5)</title>
+			<title code="105">Confusion (Theme 6)</title>
+			<title code="106">Ja Fraw (Theme 7)</title>
+			<title code="107">Boss 1</title>
+			<title code="108">Boss 2</title>
+			<title code="109">Boss 3</title>
+			<title code="110">Boss 4</title>
+			<title code="111">Boss 5</title>
+			<title code="112">Hurry</title>
+			<title code="113">Credit</title>
+			<title code="114">Beginning of the end (Ending)</title>
+			<title code="115">Stand-bye! (Story 1)</title>
+			<title code="116">Next Area (Story 2)</title>
+			<title code="117">Contact (Story 3)</title>
+			<title code="118">See you again (Name Entry)</title>
+			<title code="119">Boss 5 (イントロ無し)</title>
+			<range min="201" max="204" extcode="1">SE %03d</range>
+			<range min="206" max="206" extcode="1">SE %03d</range>
+			<range min="208" max="212" extcode="1">SE %03d</range>
+			<range min="216" max="216" extcode="1">SE %03d</range>
+			<range min="300" max="323" extcode="1">SE %03d</range>
+		</titlelist>
+	</game>
+</gamelist>

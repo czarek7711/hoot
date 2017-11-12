@@ -1,0 +1,1941 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //KSS -->
+	<game>
+		<name>[PC-9801] Inocent Tour</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="inocent_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">FP.EFC</rom>
+			<rom type="file" offset="0x10">FP01.M</rom>
+			<rom type="file" offset="0x11">FP02.M</rom>
+			<rom type="file" offset="0x12">FP03.M</rom>
+			<rom type="file" offset="0x13">FP04.M</rom>
+			<rom type="file" offset="0x14">FP05.M</rom>
+			<rom type="file" offset="0x15">FP06.M</rom>
+			<rom type="file" offset="0x16">FP07.M</rom>
+			<rom type="file" offset="0x17">FP08.M</rom>
+			<rom type="file" offset="0x18">FP09.M</rom>
+			<rom type="file" offset="0x19">FP10.M</rom>
+			<rom type="file" offset="0x1A">FP11.M</rom>
+			<rom type="file" offset="0x1B">FP12.M</rom>
+			<rom type="file" offset="0x1C">FP13.M</rom>
+			<rom type="file" offset="0x1D">FP14.M</rom>
+			<rom type="file" offset="0x1E">FP15.M</rom>
+			<rom type="file" offset="0x1F">FP16.M</rom>
+			<rom type="file" offset="0x20">FP17.M</rom>
+			<rom type="file" offset="0x21">FP18.M</rom>
+			<rom type="file" offset="0x22">FP19.M</rom>
+			<rom type="file" offset="0x23">FP20.M</rom>
+			<rom type="shell" offset="0">pmd # /K /M6 /E1 /V1</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">FP01.M : Opening for Valkyrie</title>
+			<title code="0x11">FP02.M : Opening for Elf</title>
+			<title code="0x12">FP03.M : Opening for Black Knight</title>
+			<title code="0x13">FP04.M : Normal Map for Valkyrie</title>
+			<title code="0x14">FP05.M : Normal Map for Elf</title>
+			<title code="0x15">FP06.M : Normal Map for Black Knight</title>
+			<title code="0x16">FP07.M : Last Map for Valkyrie</title>
+			<title code="0x17">FP08.M : Last Map for Elf</title>
+			<title code="0x18">FP09.M : Last Map for Black Knight</title>
+			<title code="0x19">FP10.M : ザコ戦闘</title>
+			<title code="0x1A">FP11.M : BOSS戦闘</title>
+			<title code="0x1B">FP12.M : 会話シーン用</title>
+			<title code="0x1C">FP13.M : ショップ、宿屋、交換、ステータス表示</title>
+			<title code="0x1D">FP14.M : 休息の暗転</title>
+			<title code="0x1E">FP15.M : 章クリア画面用(Hシーン)</title>
+			<title code="0x1F">FP16.M : End Story for Valkyrie</title>
+			<title code="0x20">FP17.M : End Story for Elf</title>
+			<title code="0x21">FP18.M : End Story for Black Knight</title>
+			<title code="0x22">FP19.M : End Scroll</title>
+			<title code="0x23">FP20.M : ゲームオーバー</title>
+			<range min="0x0801" max="0x0807" extcode="1">FP.EFC : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] STAR STRIDERS(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="striders_98">
+			<rom type="file" offset="-1">IBGM.EXE</rom>
+			<rom type="file" offset="-1">IBGMP.COM</rom>
+			<rom type="file" offset="0x10">BGF001.MID</rom>
+			<rom type="file" offset="0x11">BGF002.MID</rom>
+			<rom type="file" offset="0x12">BGF003.MID</rom>
+			<rom type="file" offset="0x13">BGF004.MID</rom>
+			<rom type="file" offset="0x14">BGF005.MID</rom>
+			<rom type="file" offset="0x15">BGF006.MID</rom>
+			<rom type="file" offset="0x16">BGF007.MID</rom>
+			<rom type="file" offset="0x17">BGF008.MID</rom>
+			<rom type="file" offset="0x18">BGF009.MID</rom>
+			<rom type="file" offset="0x19">BGF010.MID</rom>
+			<rom type="file" offset="0x1A">BGF011.MID</rom>
+			<rom type="file" offset="0x1B">BGF012.MID</rom>
+			<rom type="file" offset="0x1C">BGF013.MID</rom>
+			<rom type="file" offset="0x1D">BGF014.MID</rom>
+			<rom type="file" offset="0x1E">BGF015.MID</rom>
+			<rom type="file" offset="0x1F">BGF016.MID</rom>
+			<rom type="file" offset="0x20">BGF017.MID</rom>
+			<rom type="file" offset="0x21">BGF018.MID</rom>
+			<rom type="file" offset="0x22">BGF019.MID</rom>
+			<rom type="file" offset="0x23">BGF020.MID</rom>
+			<rom type="file" offset="0x24">BGF021.MID</rom>
+			<rom type="file" offset="0x25">BGF022.MID</rom>
+			<rom type="file" offset="0x26">BGF023.MID</rom>
+			<rom type="file" offset="0x27">BGF024.MID</rom>
+			<rom type="file" offset="0x28">BGF025.MID</rom>
+			<rom type="file" offset="0x29">BGF026.MID</rom>
+			<rom type="file" offset="0x2A">BGF027.MID</rom>
+			<rom type="file" offset="0x2B">BGF028.MID</rom>
+			<rom type="shell" offset="0">IBGM -J</rom>
+			<rom type="shell" offset="0">IBGMP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGF001.MID</title>
+			<title code="0x11">BGF002.MID</title>
+			<title code="0x12">BGF003.MID</title>
+			<title code="0x13">BGF004.MID</title>
+			<title code="0x14">BGF005.MID</title>
+			<title code="0x15">BGF006.MID</title>
+			<title code="0x16">BGF007.MID</title>
+			<title code="0x17">BGF008.MID</title>
+			<title code="0x18">BGF009.MID</title>
+			<title code="0x19">BGF010.MID</title>
+			<title code="0x1A">BGF011.MID</title>
+			<title code="0x1B">BGF012.MID</title>
+			<title code="0x1C">BGF013.MID</title>
+			<title code="0x1D">BGF014.MID</title>
+			<title code="0x1E">BGF015.MID</title>
+			<title code="0x1F">BGF016.MID</title>
+			<title code="0x20">BGF017.MID</title>
+			<title code="0x21">BGF018.MID</title>
+			<title code="0x22">BGF019.MID</title>
+			<title code="0x23">BGF020.MID</title>
+			<title code="0x24">BGF021.MID</title>
+			<title code="0x25">BGF022.MID</title>
+			<title code="0x26">BGF023.MID</title>
+			<title code="0x27">BGF024.MID</title>
+			<title code="0x28">BGF025.MID</title>
+			<title code="0x29">BGF026.MID</title>
+			<title code="0x2A">BGF027.MID</title>
+			<title code="0x2B">BGF028.MID</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] STAR STRIDERS(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="striders_98">
+			<rom type="file" offset="-1">IBGM.EXE</rom>
+			<rom type="file" offset="-1">IBGMP.COM</rom>
+			<rom type="file" offset="0x10">BGF001.MID</rom>
+			<rom type="file" offset="0x11">BGF002.MID</rom>
+			<rom type="file" offset="0x12">BGF003.MID</rom>
+			<rom type="file" offset="0x13">BGF004.MID</rom>
+			<rom type="file" offset="0x14">BGF005.MID</rom>
+			<rom type="file" offset="0x15">BGF006.MID</rom>
+			<rom type="file" offset="0x16">BGF007.MID</rom>
+			<rom type="file" offset="0x17">BGF008.MID</rom>
+			<rom type="file" offset="0x18">BGF009.MID</rom>
+			<rom type="file" offset="0x19">BGF010.MID</rom>
+			<rom type="file" offset="0x1A">BGF011.MID</rom>
+			<rom type="file" offset="0x1B">BGF012.MID</rom>
+			<rom type="file" offset="0x1C">BGF013.MID</rom>
+			<rom type="file" offset="0x1D">BGF014.MID</rom>
+			<rom type="file" offset="0x1E">BGF015.MID</rom>
+			<rom type="file" offset="0x1F">BGF016.MID</rom>
+			<rom type="file" offset="0x20">BGF017.MID</rom>
+			<rom type="file" offset="0x21">BGF018.MID</rom>
+			<rom type="file" offset="0x22">BGF019.MID</rom>
+			<rom type="file" offset="0x23">BGF020.MID</rom>
+			<rom type="file" offset="0x24">BGF021.MID</rom>
+			<rom type="file" offset="0x25">BGF022.MID</rom>
+			<rom type="file" offset="0x26">BGF023.MID</rom>
+			<rom type="file" offset="0x27">BGF024.MID</rom>
+			<rom type="file" offset="0x28">BGF025.MID</rom>
+			<rom type="file" offset="0x29">BGF026.MID</rom>
+			<rom type="file" offset="0x2A">BGF027.MID</rom>
+			<rom type="file" offset="0x2B">BGF028.MID</rom>
+			<rom type="shell" offset="0">IBGM -J</rom>
+			<rom type="shell" offset="0">IBGMP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGF001.MID</title>
+			<title code="0x11">BGF002.MID</title>
+			<title code="0x12">BGF003.MID</title>
+			<title code="0x13">BGF004.MID</title>
+			<title code="0x14">BGF005.MID</title>
+			<title code="0x15">BGF006.MID</title>
+			<title code="0x16">BGF007.MID</title>
+			<title code="0x17">BGF008.MID</title>
+			<title code="0x18">BGF009.MID</title>
+			<title code="0x19">BGF010.MID</title>
+			<title code="0x1A">BGF011.MID</title>
+			<title code="0x1B">BGF012.MID</title>
+			<title code="0x1C">BGF013.MID</title>
+			<title code="0x1D">BGF014.MID</title>
+			<title code="0x1E">BGF015.MID</title>
+			<title code="0x1F">BGF016.MID</title>
+			<title code="0x20">BGF017.MID</title>
+			<title code="0x21">BGF018.MID</title>
+			<title code="0x22">BGF019.MID</title>
+			<title code="0x23">BGF020.MID</title>
+			<title code="0x24">BGF021.MID</title>
+			<title code="0x25">BGF022.MID</title>
+			<title code="0x26">BGF023.MID</title>
+			<title code="0x27">BGF024.MID</title>
+			<title code="0x28">BGF025.MID</title>
+			<title code="0x29">BGF026.MID</title>
+			<title code="0x2A">BGF027.MID</title>
+			<title code="0x2B">BGF028.MID</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] STAR STRIDERS(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="striders_98">
+			<rom type="file" offset="-1">IBGM.EXE</rom>
+			<rom type="file" offset="-1">IBGMPM.COM</rom>
+			<rom type="file" offset="0x10">BGM001.MID</rom>
+			<rom type="file" offset="0x11">BGM002.MID</rom>
+			<rom type="file" offset="0x12">BGM003.MID</rom>
+			<rom type="file" offset="0x13">BGM004.MID</rom>
+			<rom type="file" offset="0x14">BGM005.MID</rom>
+			<rom type="file" offset="0x15">BGM006.MID</rom>
+			<rom type="file" offset="0x16">BGM007.MID</rom>
+			<rom type="file" offset="0x17">BGM008.MID</rom>
+			<rom type="file" offset="0x18">BGM009.MID</rom>
+			<rom type="file" offset="0x19">BGM010.MID</rom>
+			<rom type="file" offset="0x1A">BGM011.MID</rom>
+			<rom type="file" offset="0x1B">BGM012.MID</rom>
+			<rom type="file" offset="0x1C">BGM013.MID</rom>
+			<rom type="file" offset="0x1D">BGM014.MID</rom>
+			<rom type="file" offset="0x1E">BGM015.MID</rom>
+			<rom type="file" offset="0x1F">BGM016.MID</rom>
+			<rom type="file" offset="0x20">BGM017.MID</rom>
+			<rom type="file" offset="0x21">BGM018.MID</rom>
+			<rom type="file" offset="0x22">BGM019.MID</rom>
+			<rom type="file" offset="0x23">BGM020.MID</rom>
+			<rom type="file" offset="0x24">BGM021.MID</rom>
+			<rom type="file" offset="0x25">BGM022.MID</rom>
+			<rom type="file" offset="0x26">BGM023.MID</rom>
+			<rom type="file" offset="0x27">BGM024.MID</rom>
+			<rom type="file" offset="0x28">BGM025.MID</rom>
+			<rom type="file" offset="0x29">BGM026.MID</rom>
+			<rom type="file" offset="0x2A">BGM027.MID</rom>
+			<rom type="file" offset="0x2B">BGM028.MID</rom>
+			<rom type="shell" offset="0">IBGM -J</rom>
+			<rom type="shell" offset="0">IBGMPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM001.MID</title>
+			<title code="0x11">BGM002.MID</title>
+			<title code="0x12">BGM003.MID</title>
+			<title code="0x13">BGM004.MID</title>
+			<title code="0x14">BGM005.MID</title>
+			<title code="0x15">BGM006.MID</title>
+			<title code="0x16">BGM007.MID</title>
+			<title code="0x17">BGM008.MID</title>
+			<title code="0x18">BGM009.MID</title>
+			<title code="0x19">BGM010.MID</title>
+			<title code="0x1A">BGM011.MID</title>
+			<title code="0x1B">BGM012.MID</title>
+			<title code="0x1C">BGM013.MID</title>
+			<title code="0x1D">BGM014.MID</title>
+			<title code="0x1E">BGM015.MID</title>
+			<title code="0x1F">BGM016.MID</title>
+			<title code="0x20">BGM017.MID</title>
+			<title code="0x21">BGM018.MID</title>
+			<title code="0x22">BGM019.MID</title>
+			<title code="0x23">BGM020.MID</title>
+			<title code="0x24">BGM021.MID</title>
+			<title code="0x25">BGM022.MID</title>
+			<title code="0x26">BGM023.MID</title>
+			<title code="0x27">BGM024.MID</title>
+			<title code="0x28">BGM025.MID</title>
+			<title code="0x29">BGM026.MID</title>
+			<title code="0x2A">BGM027.MID</title>
+			<title code="0x2B">BGM028.MID</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] アイドルプロジェクト</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="idol_p_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">IP00001.NAX</rom>
+			<rom type="file" offset="0x11">IP00002.NAX</rom>
+			<rom type="file" offset="0x12">IP00003.NAX</rom>
+			<rom type="file" offset="0x13">IP00004.NAX</rom>
+			<rom type="file" offset="0x14">IP00005.NAX</rom>
+			<rom type="file" offset="0x15">IP00006.NAX</rom>
+			<rom type="file" offset="0x16">IP00007.NAX</rom>
+			<rom type="file" offset="0x17">IP00008.NAX</rom>
+			<rom type="file" offset="0x18">IP00009.NAX</rom>
+			<rom type="file" offset="0x19">IP00010.NAX</rom>
+			<rom type="file" offset="0x1A">IP00011.NAX</rom>
+			<rom type="file" offset="0x1B">IP00012.NAX</rom>
+			<rom type="file" offset="0x1C">IP00013.NAX</rom>
+			<rom type="file" offset="0x1D">IP00014.NAX</rom>
+			<rom type="file" offset="0x1E">IP00015.NAX</rom>
+			<rom type="file" offset="0x1F">IP00016.NAX</rom>
+			<rom type="file" offset="0x20">IP00017.NAX</rom>
+			<rom type="file" offset="0x21">IP00018.NAX</rom>
+			<rom type="file" offset="0x22">IP00019.NAX</rom>
+			<rom type="file" offset="0x23">IP00020.NAX</rom>
+			<rom type="file" offset="0x24">IP00021.NAX</rom>
+			<rom type="file" offset="0x25">IP00022.NAX</rom>
+			<rom type="file" offset="0x26">IP00023.NAX</rom>
+			<rom type="file" offset="0x27">IP00024.NAX</rom>
+			<rom type="file" offset="0x28">IP00025.NAX</rom>
+			<rom type="file" offset="0x29">IP00026.NAX</rom>
+			<rom type="file" offset="0x2A">IP00027.NAX</rom>
+			<rom type="file" offset="0x2B">IP00028.NAX</rom>
+			<rom type="file" offset="0x2C">IP00029.NAX</rom>
+			<rom type="file" offset="0x2D">IP00030.NAX</rom>
+			<rom type="file" offset="0x2E">IP00031.NAX</rom>
+			<rom type="file" offset="0x2F">IP00032.NAX</rom>
+			<rom type="shell" offset="0">NAX -T</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">IP00001.NAX</title>
+			<title code="0x11">IP00002.NAX</title>
+			<title code="0x12">IP00003.NAX</title>
+			<title code="0x13">IP00004.NAX</title>
+			<title code="0x14">IP00005.NAX</title>
+			<title code="0x15">IP00006.NAX</title>
+			<title code="0x16">IP00007.NAX</title>
+			<title code="0x17">IP00008.NAX</title>
+			<title code="0x18">IP00009.NAX</title>
+			<title code="0x19">IP00010.NAX</title>
+			<title code="0x1A">IP00011.NAX</title>
+			<title code="0x1B">IP00012.NAX</title>
+			<title code="0x1C">IP00013.NAX</title>
+			<title code="0x1D">IP00014.NAX</title>
+			<title code="0x1E">IP00015.NAX</title>
+			<title code="0x1F">IP00016.NAX</title>
+			<title code="0x20">IP00017.NAX</title>
+			<title code="0x21">IP00018.NAX</title>
+			<title code="0x22">IP00019.NAX</title>
+			<title code="0x23">IP00020.NAX</title>
+			<title code="0x24">IP00021.NAX</title>
+			<title code="0x25">IP00022.NAX</title>
+			<title code="0x26">IP00023.NAX</title>
+			<title code="0x27">IP00024.NAX</title>
+			<title code="0x28">IP00025.NAX</title>
+			<title code="0x29">IP00026.NAX</title>
+			<title code="0x2A">IP00027.NAX</title>
+			<title code="0x2B">IP00028.NAX</title>
+			<title code="0x2C">IP00029.NAX</title>
+			<title code="0x2D">IP00030.NAX</title>
+			<title code="0x2E">IP00031.NAX</title>
+			<title code="0x2F">IP00032.NAX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ウェディングピーチ(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="weding_p_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">WP01B.O</rom>
+			<rom type="file" offset="0x11">WP02B.O</rom>
+			<rom type="file" offset="0x12">WP03B.O</rom>
+			<rom type="file" offset="0x13">WP04B.O</rom>
+			<rom type="file" offset="0x14">WP05B.O</rom>
+			<rom type="file" offset="0x15">WP06B.O</rom>
+			<rom type="file" offset="0x16">WP07B.O</rom>
+			<rom type="file" offset="0x17">WP08B.O</rom>
+			<rom type="file" offset="0x18">WP09B.O</rom>
+			<rom type="file" offset="0x19">WP10B.O</rom>
+			<rom type="file" offset="0x1A">WP11B.O</rom>
+			<rom type="file" offset="0x1B">WP12B.O</rom>
+			<rom type="file" offset="0x1C">WP13B.O</rom>
+			<rom type="file" offset="0x1D">WP14B.O</rom>
+			<rom type="file" offset="0x1E">WP15B.O</rom>
+			<rom type="file" offset="0x1F">WP16B.O</rom>
+			<rom type="file" offset="0x20">WP17B.O</rom>
+			<rom type="file" offset="0x21">WP18B.O</rom>
+			<rom type="file" offset="0x22">WP19B.O</rom>
+			<rom type="file" offset="0x23">WP20B.O</rom>
+			<rom type="file" offset="0x24">WP21B.O</rom>
+			<rom type="file" offset="0x25">WP22B.O</rom>
+			<rom type="file" offset="0x26">WP23B.O</rom>
+			<rom type="file" offset="0x27">WP24B.O</rom>
+			<rom type="file" offset="0x28">SE16.O</rom>
+			<rom type="file" offset="0x29">SE24.O</rom>
+			<rom type="shell" offset="0">NAX</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WP01B.O：アバンタイトル</title>
+			<title code="0x11">WP02B.O：夢見る愛天使</title>
+			<title code="0x12">WP03B.O：世界観紹介</title>
+			<title code="0x13">WP04B.O：土曜の午後</title>
+			<title code="0x14">WP05B.O：戦闘</title>
+			<title code="0x15">WP06B.O：変身</title>
+			<title code="0x16">WP07B.O：変身省略</title>
+			<title code="0x17">WP08B.O：カ～ドバトル</title>
+			<title code="0x18">WP09B.O：負けパタ～ン</title>
+			<title code="0x19">WP10B.O：勝ちパタ～ン</title>
+			<title code="0x1A">WP11B.O：超必殺技</title>
+			<title code="0x1B">WP12B.O：黒羽兄妹</title>
+			<title code="0x1C">WP13B.O：ももこ・愛のテ～マ</title>
+			<title code="0x1D">WP14B.O：ゆり・愛のテ～マ</title>
+			<title code="0x1E">WP15B.O：ひなぎく・愛のテ～マ</title>
+			<title code="0x1F">WP16B.O：四天王を追って</title>
+			<title code="0x20">WP17B.O：日曜日の午前</title>
+			<title code="0x21">WP18B.O：学校という名のダンジョン</title>
+			<title code="0x22">WP19B.O：クライマックス</title>
+			<title code="0x23">WP20B.O：リモ～ネ登場</title>
+			<title code="0x24">WP21B.O：ミルクで乾杯</title>
+			<title code="0x25">WP22B.O：エピロ～グ</title>
+			<title code="0x26">WP23B.O：クレジットタイトル</title>
+			<title code="0x27">WP24B.O</title>
+			<title code="0x28">SE16.O：</title>
+			<title code="0x29">SE24.O：</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ウェディングピーチ(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="weding_p_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">WP01B.O</rom>
+			<rom type="file" offset="0x11">WP02B.O</rom>
+			<rom type="file" offset="0x12">WP03B.O</rom>
+			<rom type="file" offset="0x13">WP04B.O</rom>
+			<rom type="file" offset="0x14">WP05B.O</rom>
+			<rom type="file" offset="0x15">WP06B.O</rom>
+			<rom type="file" offset="0x16">WP07B.O</rom>
+			<rom type="file" offset="0x17">WP08B.O</rom>
+			<rom type="file" offset="0x18">WP09B.O</rom>
+			<rom type="file" offset="0x19">WP10B.O</rom>
+			<rom type="file" offset="0x1A">WP11B.O</rom>
+			<rom type="file" offset="0x1B">WP12B.O</rom>
+			<rom type="file" offset="0x1C">WP13B.O</rom>
+			<rom type="file" offset="0x1D">WP14B.O</rom>
+			<rom type="file" offset="0x1E">WP15B.O</rom>
+			<rom type="file" offset="0x1F">WP16B.O</rom>
+			<rom type="file" offset="0x20">WP17B.O</rom>
+			<rom type="file" offset="0x21">WP18B.O</rom>
+			<rom type="file" offset="0x22">WP19B.O</rom>
+			<rom type="file" offset="0x23">WP20B.O</rom>
+			<rom type="file" offset="0x24">WP21B.O</rom>
+			<rom type="file" offset="0x25">WP22B.O</rom>
+			<rom type="file" offset="0x26">WP23B.O</rom>
+			<rom type="file" offset="0x27">WP24B.O</rom>
+			<rom type="file" offset="0x28">SE16.O</rom>
+			<rom type="file" offset="0x29">SE24.O</rom>
+			<rom type="shell" offset="0">NAX</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WP01B.O : アバンタイトル</title>
+			<title code="0x11">WP02B.O : 夢見る愛天使</title>
+			<title code="0x12">WP03B.O : 世界観紹介</title>
+			<title code="0x13">WP04B.O : 土曜の午後</title>
+			<title code="0x14">WP05B.O : 戦闘</title>
+			<title code="0x15">WP06B.O : 変身</title>
+			<title code="0x16">WP07B.O : 変身省略</title>
+			<title code="0x17">WP08B.O : カ～ドバトル</title>
+			<title code="0x18">WP09B.O : 負けパタ～ン</title>
+			<title code="0x19">WP10B.O : 勝ちパタ～ン</title>
+			<title code="0x1A">WP11B.O : 超必殺技</title>
+			<title code="0x1B">WP12B.O : 黒羽兄妹</title>
+			<title code="0x1C">WP13B.O : ももこ・愛のテ～マ</title>
+			<title code="0x1D">WP14B.O : ゆり・愛のテ～マ</title>
+			<title code="0x1E">WP15B.O : ひなぎく・愛のテ～マ</title>
+			<title code="0x1F">WP16B.O : 四天王を追って</title>
+			<title code="0x20">WP17B.O : 日曜日の午前</title>
+			<title code="0x21">WP18B.O : 学校という名のダンジョン</title>
+			<title code="0x22">WP19B.O : クライマックス</title>
+			<title code="0x23">WP20B.O : リモ～ネ登場</title>
+			<title code="0x24">WP21B.O : ミルクで乾杯</title>
+			<title code="0x25">WP22B.O : エピロ～グ</title>
+			<title code="0x26">WP23B.O : クレジットタイトル</title>
+			<title code="0x27">WP24B.O</title>
+			<title code="0x28">SE16.O</title>
+			<title code="0x29">SE24.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] レッスルエンジェルスV1</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="wa_v1_98">
+			<rom type="file" offset="-1">NA.COM</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">WVM02.O</rom>
+			<rom type="file" offset="0x11">WVM03.O</rom>
+			<rom type="file" offset="0x12">WVM04.O</rom>
+			<rom type="file" offset="0x13">WVM05.O</rom>
+			<rom type="file" offset="0x14">WVM06.O</rom>
+			<rom type="file" offset="0x15">WVM07.O</rom>
+			<rom type="file" offset="0x16">WVM08.O</rom>
+			<rom type="file" offset="0x17">WVM09.O</rom>
+			<rom type="file" offset="0x18">WVM10.O</rom>
+			<rom type="file" offset="0x19">WVM11.O</rom>
+			<rom type="file" offset="0x1A">WVM12.O</rom>
+			<rom type="file" offset="0x1B">WVM13.O</rom>
+			<rom type="file" offset="0x1C">WVM14.O</rom>
+			<rom type="file" offset="0x1D">WVM15.O</rom>
+			<rom type="file" offset="0x1E">WVM16.O</rom>
+			<rom type="file" offset="0x1F">WVM17.O</rom>
+			<rom type="file" offset="0x20">WVM19.O</rom>
+			<rom type="file" offset="0x21">WVM20.O</rom>
+			<rom type="file" offset="0x22">WVM21.O</rom>
+			<rom type="file" offset="0x23">WVM22.O</rom>
+			<rom type="file" offset="0x24">WVM23.O</rom>
+			<rom type="file" offset="0x25">WVM24.O</rom>
+			<rom type="file" offset="0x26">WVM25.O</rom>
+			<rom type="file" offset="0x27">WVM26.O</rom>
+			<rom type="file" offset="0x28">WVM27.O</rom>
+			<rom type="file" offset="0x29">WVM28.O</rom>
+			<rom type="file" offset="0x2A">WVM29.O</rom>
+			<rom type="file" offset="0x2B">WVM30.O</rom>
+			<rom type="file" offset="0x2C">WVM32.O</rom>
+			<rom type="file" offset="0x2D">WVM33.O</rom>
+			<rom type="file" offset="0x2E">WVM34.O</rom>
+			<rom type="file" offset="0x2F">WVM35.O</rom>
+			<rom type="file" offset="0x30">WVM40.O</rom>
+			<rom type="file" offset="0x31">WVM51.O</rom>
+			<rom type="file" offset="0x32">WVM52.O</rom>
+			<rom type="file" offset="0x33">WVM53.O</rom>
+			<rom type="file" offset="0x34">WVM54.O</rom>
+			<rom type="file" offset="0x35">WVM55.O</rom>
+			<rom type="file" offset="0x36">WVM56.O</rom>
+			<rom type="file" offset="0x37">WVM57.O</rom>
+			<rom type="file" offset="0x38">WVM58.O</rom>
+			<rom type="file" offset="0x39">WVM59.O</rom>
+			<rom type="file" offset="0x3A">WVM60.O</rom>
+			<rom type="file" offset="0x3B">WVM61.O</rom>
+			<rom type="file" offset="0x3C">WVM71.O</rom>
+			<rom type="file" offset="0x3D">WVM72.O</rom>
+			<rom type="file" offset="0x3E">WVM73.O</rom>
+			<rom type="file" offset="0x3F">WVM74.O</rom>
+			<rom type="file" offset="0x40">WVM75.O</rom>
+			<rom type="file" offset="0x41">WVM76.O</rom>
+			<rom type="file" offset="0x42">WVM77.O</rom>
+			<rom type="file" offset="0x43">WVM78.O</rom>
+			<rom type="file" offset="0x44">WVM79.O</rom>
+			<rom type="file" offset="0x45">WVM79_1.O</rom>
+			<rom type="file" offset="0x46">WVM80.O</rom>
+			<rom type="file" offset="0x47">WVM81.O</rom>
+			<rom type="file" offset="0x48">WVM82.O</rom>
+			<rom type="file" offset="0x49">WVM83.O</rom>
+			<rom type="file" offset="0x4A">WVM84.O</rom>
+			<rom type="file" offset="0x4B">WVM85.O</rom>
+			<rom type="file" offset="0x4C">WVM90.O</rom>
+			<rom type="file" offset="0x4D">WVM91.O</rom>
+			<rom type="file" offset="0x4E">WVM92.O</rom>
+			<rom type="file" offset="0x4F">WVM93.O</rom>
+			<rom type="file" offset="0x50">WVM96.O</rom>
+			<rom type="file" offset="0x51">WVM97.O</rom>
+			<rom type="shell" offset="0">NA -FI</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WVM02.O</title>
+			<title code="0x11">WVM03.O</title>
+			<title code="0x12">WVM04.O</title>
+			<title code="0x13">WVM05.O</title>
+			<title code="0x14">WVM06.O</title>
+			<title code="0x15">WVM07.O</title>
+			<title code="0x16">WVM08.O</title>
+			<title code="0x17">WVM09.O</title>
+			<title code="0x18">WVM10.O</title>
+			<title code="0x19">WVM11.O</title>
+			<title code="0x1A">WVM12.O</title>
+			<title code="0x1B">WVM13.O</title>
+			<title code="0x1C">WVM14.O</title>
+			<title code="0x1D">WVM15.O</title>
+			<title code="0x1E">WVM16.O</title>
+			<title code="0x1F">WVM17.O</title>
+			<title code="0x20">WVM19.O</title>
+			<title code="0x21">WVM20.O</title>
+			<title code="0x22">WVM21.O</title>
+			<title code="0x23">WVM22.O</title>
+			<title code="0x24">WVM23.O</title>
+			<title code="0x25">WVM24.O</title>
+			<title code="0x26">WVM25.O</title>
+			<title code="0x27">WVM26.O</title>
+			<title code="0x28">WVM27.O</title>
+			<title code="0x29">WVM28.O</title>
+			<title code="0x2A">WVM29.O</title>
+			<title code="0x2B">WVM30.O</title>
+			<title code="0x2C">WVM32.O</title>
+			<title code="0x2D">WVM33.O</title>
+			<title code="0x2E">WVM34.O</title>
+			<title code="0x2F">WVM35.O</title>
+			<title code="0x30">WVM40.O</title>
+			<title code="0x31">WVM51.O</title>
+			<title code="0x32">WVM52.O</title>
+			<title code="0x33">WVM53.O</title>
+			<title code="0x34">WVM54.O</title>
+			<title code="0x35">WVM55.O</title>
+			<title code="0x36">WVM56.O</title>
+			<title code="0x37">WVM57.O</title>
+			<title code="0x38">WVM58.O</title>
+			<title code="0x39">WVM59.O</title>
+			<title code="0x3A">WVM60.O</title>
+			<title code="0x3B">WVM61.O</title>
+			<title code="0x3C">WVM71.O</title>
+			<title code="0x3D">WVM72.O</title>
+			<title code="0x3E">WVM73.O</title>
+			<title code="0x3F">WVM74.O</title>
+			<title code="0x40">WVM75.O</title>
+			<title code="0x41">WVM76.O</title>
+			<title code="0x42">WVM77.O</title>
+			<title code="0x43">WVM78.O</title>
+			<title code="0x44">WVM79.O</title>
+			<title code="0x45">WVM79_1.O</title>
+			<title code="0x46">WVM80.O</title>
+			<title code="0x47">WVM81.O</title>
+			<title code="0x48">WVM82.O</title>
+			<title code="0x49">WVM83.O</title>
+			<title code="0x4A">WVM84.O</title>
+			<title code="0x4B">WVM85.O</title>
+			<title code="0x4C">WVM90.O</title>
+			<title code="0x4D">WVM91.O</title>
+			<title code="0x4E">WVM92.O</title>
+			<title code="0x4F">WVM93.O</title>
+			<title code="0x50">WVM96.O</title>
+			<title code="0x51">WVM97.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] レッスルエンジェルスV2</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="wa_v2_98">
+			<rom type="file" offset="-1">NA.COM</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">WVM02.O</rom>
+			<rom type="file" offset="0x11">WVM03.O</rom>
+			<rom type="file" offset="0x12">WVM04.O</rom>
+			<rom type="file" offset="0x13">WVM05.O</rom>
+			<rom type="file" offset="0x14">WVM06.O</rom>
+			<rom type="file" offset="0x15">WVM07.O</rom>
+			<rom type="file" offset="0x16">WVM08.O</rom>
+			<rom type="file" offset="0x17">WVM09.O</rom>
+			<rom type="file" offset="0x18">WVM10.O</rom>
+			<rom type="file" offset="0x19">WVM11.O</rom>
+			<rom type="file" offset="0x1A">WVM12.O</rom>
+			<rom type="file" offset="0x1B">WVM13.O</rom>
+			<rom type="file" offset="0x1C">WVM14.O</rom>
+			<rom type="file" offset="0x1D">WVM15.O</rom>
+			<rom type="file" offset="0x1E">WVM16.O</rom>
+			<rom type="file" offset="0x1F">WVM17.O</rom>
+			<rom type="file" offset="0x20">WVM19.O</rom>
+			<rom type="file" offset="0x21">WVM20.O</rom>
+			<rom type="file" offset="0x22">WVM201.O</rom>
+			<rom type="file" offset="0x23">WVM202.O</rom>
+			<rom type="file" offset="0x24">WVM203.O</rom>
+			<rom type="file" offset="0x25">WVM204.O</rom>
+			<rom type="file" offset="0x26">WVM206.O</rom>
+			<rom type="file" offset="0x27">WVM207.O</rom>
+			<rom type="file" offset="0x28">WVM208.O</rom>
+			<rom type="file" offset="0x29">WVM209.O</rom>
+			<rom type="file" offset="0x2A">WVM21.O</rom>
+			<rom type="file" offset="0x2B">WVM210.O</rom>
+			<rom type="file" offset="0x2C">WVM211.O</rom>
+			<rom type="file" offset="0x2D">WVM212.O</rom>
+			<rom type="file" offset="0x2E">WVM213.O</rom>
+			<rom type="file" offset="0x2F">WVM215.O</rom>
+			<rom type="file" offset="0x30">WVM216.O</rom>
+			<rom type="file" offset="0x31">WVM217.O</rom>
+			<rom type="file" offset="0x32">WVM218.O</rom>
+			<rom type="file" offset="0x33">WVM219.O</rom>
+			<rom type="file" offset="0x34">WVM22.O</rom>
+			<rom type="file" offset="0x35">WVM220.O</rom>
+			<rom type="file" offset="0x36">WVM23.O</rom>
+			<rom type="file" offset="0x37">WVM24.O</rom>
+			<rom type="file" offset="0x38">WVM25.O</rom>
+			<rom type="file" offset="0x39">WVM250.O</rom>
+			<rom type="file" offset="0x3A">WVM251.O</rom>
+			<rom type="file" offset="0x3B">WVM252.O</rom>
+			<rom type="file" offset="0x3C">WVM253.O</rom>
+			<rom type="file" offset="0x3D">WVM254.O</rom>
+			<rom type="file" offset="0x3E">WVM255.O</rom>
+			<rom type="file" offset="0x3F">WVM26.O</rom>
+			<rom type="file" offset="0x40">WVM27.O</rom>
+			<rom type="file" offset="0x41">WVM28.O</rom>
+			<rom type="file" offset="0x42">WVM29.O</rom>
+			<rom type="file" offset="0x43">WVM30.O</rom>
+			<rom type="file" offset="0x44">WVM32.O</rom>
+			<rom type="file" offset="0x45">WVM33.O</rom>
+			<rom type="file" offset="0x46">WVM34.O</rom>
+			<rom type="file" offset="0x47">WVM35.O</rom>
+			<rom type="file" offset="0x48">WVM40.O</rom>
+			<rom type="file" offset="0x49">WVM51.O</rom>
+			<rom type="file" offset="0x4A">WVM52.O</rom>
+			<rom type="file" offset="0x4B">WVM53.O</rom>
+			<rom type="file" offset="0x4C">WVM54.O</rom>
+			<rom type="file" offset="0x4D">WVM55.O</rom>
+			<rom type="file" offset="0x4E">WVM56.O</rom>
+			<rom type="file" offset="0x4F">WVM57.O</rom>
+			<rom type="file" offset="0x50">WVM58.O</rom>
+			<rom type="file" offset="0x51">WVM59.O</rom>
+			<rom type="file" offset="0x52">WVM60.O</rom>
+			<rom type="file" offset="0x53">WVM61.O</rom>
+			<rom type="file" offset="0x54">WVM71.O</rom>
+			<rom type="file" offset="0x55">WVM72.O</rom>
+			<rom type="file" offset="0x56">WVM73.O</rom>
+			<rom type="file" offset="0x57">WVM74.O</rom>
+			<rom type="file" offset="0x58">WVM75.O</rom>
+			<rom type="file" offset="0x59">WVM76.O</rom>
+			<rom type="file" offset="0x5A">WVM77.O</rom>
+			<rom type="file" offset="0x5B">WVM78.O</rom>
+			<rom type="file" offset="0x5C">WVM79.O</rom>
+			<rom type="file" offset="0x5D">WVM79_1.O</rom>
+			<rom type="file" offset="0x5E">WVM80.O</rom>
+			<rom type="file" offset="0x5F">WVM81.O</rom>
+			<rom type="file" offset="0x60">WVM82.O</rom>
+			<rom type="file" offset="0x61">WVM83.O</rom>
+			<rom type="file" offset="0x62">WVM84.O</rom>
+			<rom type="file" offset="0x63">WVM85.O</rom>
+			<rom type="file" offset="0x64">WVM90.O</rom>
+			<rom type="file" offset="0x65">WVM91.O</rom>
+			<rom type="file" offset="0x66">WVM92.O</rom>
+			<rom type="file" offset="0x67">WVM93.O</rom>
+			<rom type="file" offset="0x68">WVM96.O</rom>
+			<rom type="file" offset="0x69">WVM97.O</rom>
+			<rom type="shell" offset="0">NA</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WVM02.O</title>
+			<title code="0x11">WVM03.O</title>
+			<title code="0x12">WVM04.O</title>
+			<title code="0x13">WVM05.O</title>
+			<title code="0x14">WVM06.O</title>
+			<title code="0x15">WVM07.O</title>
+			<title code="0x16">WVM08.O</title>
+			<title code="0x17">WVM09.O</title>
+			<title code="0x18">WVM10.O</title>
+			<title code="0x19">WVM11.O</title>
+			<title code="0x1A">WVM12.O</title>
+			<title code="0x1B">WVM13.O</title>
+			<title code="0x1C">WVM14.O</title>
+			<title code="0x1D">WVM15.O</title>
+			<title code="0x1E">WVM16.O</title>
+			<title code="0x1F">WVM17.O</title>
+			<title code="0x20">WVM19.O</title>
+			<title code="0x21">WVM20.O</title>
+			<title code="0x22">WVM201.O</title>
+			<title code="0x23">WVM202.O</title>
+			<title code="0x24">WVM203.O</title>
+			<title code="0x25">WVM204.O</title>
+			<title code="0x26">WVM206.O</title>
+			<title code="0x27">WVM207.O</title>
+			<title code="0x28">WVM208.O</title>
+			<title code="0x29">WVM209.O</title>
+			<title code="0x2A">WVM21.O</title>
+			<title code="0x2B">WVM210.O</title>
+			<title code="0x2C">WVM211.O</title>
+			<title code="0x2D">WVM212.O</title>
+			<title code="0x2E">WVM213.O</title>
+			<title code="0x2F">WVM215.O</title>
+			<title code="0x30">WVM216.O</title>
+			<title code="0x31">WVM217.O</title>
+			<title code="0x32">WVM218.O</title>
+			<title code="0x33">WVM219.O</title>
+			<title code="0x34">WVM22.O</title>
+			<title code="0x35">WVM220.O</title>
+			<title code="0x36">WVM23.O</title>
+			<title code="0x37">WVM24.O</title>
+			<title code="0x38">WVM25.O</title>
+			<title code="0x39">WVM250.O</title>
+			<title code="0x3A">WVM251.O</title>
+			<title code="0x3B">WVM252.O</title>
+			<title code="0x3C">WVM253.O</title>
+			<title code="0x3D">WVM254.O</title>
+			<title code="0x3E">WVM255.O</title>
+			<title code="0x3F">WVM26.O</title>
+			<title code="0x40">WVM27.O</title>
+			<title code="0x41">WVM28.O</title>
+			<title code="0x42">WVM29.O</title>
+			<title code="0x43">WVM30.O</title>
+			<title code="0x44">WVM32.O</title>
+			<title code="0x45">WVM33.O</title>
+			<title code="0x46">WVM34.O</title>
+			<title code="0x47">WVM35.O</title>
+			<title code="0x48">WVM40.O</title>
+			<title code="0x49">WVM51.O</title>
+			<title code="0x4A">WVM52.O</title>
+			<title code="0x4B">WVM53.O</title>
+			<title code="0x4C">WVM54.O</title>
+			<title code="0x4D">WVM55.O</title>
+			<title code="0x4E">WVM56.O</title>
+			<title code="0x4F">WVM57.O</title>
+			<title code="0x50">WVM58.O</title>
+			<title code="0x51">WVM59.O</title>
+			<title code="0x52">WVM60.O</title>
+			<title code="0x53">WVM61.O</title>
+			<title code="0x54">WVM71.O</title>
+			<title code="0x55">WVM72.O</title>
+			<title code="0x56">WVM73.O</title>
+			<title code="0x57">WVM74.O</title>
+			<title code="0x58">WVM75.O</title>
+			<title code="0x59">WVM76.O</title>
+			<title code="0x5A">WVM77.O</title>
+			<title code="0x5B">WVM78.O</title>
+			<title code="0x5C">WVM79.O</title>
+			<title code="0x5D">WVM79_1.O</title>
+			<title code="0x5E">WVM80.O</title>
+			<title code="0x5F">WVM81.O</title>
+			<title code="0x60">WVM82.O</title>
+			<title code="0x61">WVM83.O</title>
+			<title code="0x62">WVM84.O</title>
+			<title code="0x63">WVM85.O</title>
+			<title code="0x64">WVM90.O</title>
+			<title code="0x65">WVM91.O</title>
+			<title code="0x66">WVM92.O</title>
+			<title code="0x67">WVM93.O</title>
+			<title code="0x68">WVM96.O</title>
+			<title code="0x69">WVM97.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] レッスルエンジェルスV3</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="wa_v3_98">
+			<rom type="file" offset="-1">NA.COM</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">WVM02.O</rom>
+			<rom type="file" offset="0x11">WVM03.O</rom>
+			<rom type="file" offset="0x12">WVM04.O</rom>
+			<rom type="file" offset="0x13">WVM05.O</rom>
+			<rom type="file" offset="0x14">WVM06.O</rom>
+			<rom type="file" offset="0x15">WVM07.O</rom>
+			<rom type="file" offset="0x16">WVM08.O</rom>
+			<rom type="file" offset="0x17">WVM09.O</rom>
+			<rom type="file" offset="0x18">WVM10.O</rom>
+			<rom type="file" offset="0x19">WVM101.O</rom>
+			<rom type="file" offset="0x1A">WVM102.O</rom>
+			<rom type="file" offset="0x1B">WVM103.O</rom>
+			<rom type="file" offset="0x1C">WVM104.O</rom>
+			<rom type="file" offset="0x1D">WVM105.O</rom>
+			<rom type="file" offset="0x1E">WVM106.O</rom>
+			<rom type="file" offset="0x1F">WVM107.O</rom>
+			<rom type="file" offset="0x20">WVM108.O</rom>
+			<rom type="file" offset="0x21">WVM109.O</rom>
+			<rom type="file" offset="0x22">WVM11.O</rom>
+			<rom type="file" offset="0x23">WVM110.O</rom>
+			<rom type="file" offset="0x24">WVM111.O</rom>
+			<rom type="file" offset="0x25">WVM112.O</rom>
+			<rom type="file" offset="0x26">WVM113.O</rom>
+			<rom type="file" offset="0x27">WVM114.O</rom>
+			<rom type="file" offset="0x28">WVM115.O</rom>
+			<rom type="file" offset="0x29">WVM116.O</rom>
+			<rom type="file" offset="0x2A">WVM117.O</rom>
+			<rom type="file" offset="0x2B">WVM118.O</rom>
+			<rom type="file" offset="0x2C">WVM119.O</rom>
+			<rom type="file" offset="0x2D">WVM12.O</rom>
+			<rom type="file" offset="0x2E">WVM120.O</rom>
+			<rom type="file" offset="0x2F">WVM121.O</rom>
+			<rom type="file" offset="0x30">WVM122.O</rom>
+			<rom type="file" offset="0x31">WVM123.O</rom>
+			<rom type="file" offset="0x32">WVM124.O</rom>
+			<rom type="file" offset="0x33">WVM125.O</rom>
+			<rom type="file" offset="0x34">WVM13.O</rom>
+			<rom type="file" offset="0x35">WVM14.O</rom>
+			<rom type="file" offset="0x36">WVM15.O</rom>
+			<rom type="file" offset="0x37">WVM16.O</rom>
+			<rom type="file" offset="0x38">WVM17.O</rom>
+			<rom type="file" offset="0x39">WVM19.O</rom>
+			<rom type="file" offset="0x3A">WVM20.O</rom>
+			<rom type="file" offset="0x3B">WVM201.O</rom>
+			<rom type="file" offset="0x3C">WVM202.O</rom>
+			<rom type="file" offset="0x3D">WVM203.O</rom>
+			<rom type="file" offset="0x3E">WVM204.O</rom>
+			<rom type="file" offset="0x3F">WVM206.O</rom>
+			<rom type="file" offset="0x40">WVM207.O</rom>
+			<rom type="file" offset="0x41">WVM208.O</rom>
+			<rom type="file" offset="0x42">WVM209.O</rom>
+			<rom type="file" offset="0x43">WVM21.O</rom>
+			<rom type="file" offset="0x44">WVM210.O</rom>
+			<rom type="file" offset="0x45">WVM211.O</rom>
+			<rom type="file" offset="0x46">WVM212.O</rom>
+			<rom type="file" offset="0x47">WVM213.O</rom>
+			<rom type="file" offset="0x48">WVM215.O</rom>
+			<rom type="file" offset="0x49">WVM216.O</rom>
+			<rom type="file" offset="0x4A">WVM217.O</rom>
+			<rom type="file" offset="0x4B">WVM218.O</rom>
+			<rom type="file" offset="0x4C">WVM219.O</rom>
+			<rom type="file" offset="0x4D">WVM22.O</rom>
+			<rom type="file" offset="0x4E">WVM220.O</rom>
+			<rom type="file" offset="0x4F">WVM23.O</rom>
+			<rom type="file" offset="0x50">WVM24.O</rom>
+			<rom type="file" offset="0x51">WVM25.O</rom>
+			<rom type="file" offset="0x52">WVM250.O</rom>
+			<rom type="file" offset="0x53">WVM251.O</rom>
+			<rom type="file" offset="0x54">WVM252.O</rom>
+			<rom type="file" offset="0x55">WVM253.O</rom>
+			<rom type="file" offset="0x56">WVM254.O</rom>
+			<rom type="file" offset="0x57">WVM255.O</rom>
+			<rom type="file" offset="0x58">WVM26.O</rom>
+			<rom type="file" offset="0x59">WVM27.O</rom>
+			<rom type="file" offset="0x5A">WVM28.O</rom>
+			<rom type="file" offset="0x5B">WVM29.O</rom>
+			<rom type="file" offset="0x5C">WVM30.O</rom>
+			<rom type="file" offset="0x5D">WVM32.O</rom>
+			<rom type="file" offset="0x5E">WVM33.O</rom>
+			<rom type="file" offset="0x5F">WVM34.O</rom>
+			<rom type="file" offset="0x60">WVM35.O</rom>
+			<rom type="file" offset="0x61">WVM40.O</rom>
+			<rom type="file" offset="0x62">WVM51.O</rom>
+			<rom type="file" offset="0x63">WVM52.O</rom>
+			<rom type="file" offset="0x64">WVM53.O</rom>
+			<rom type="file" offset="0x65">WVM54.O</rom>
+			<rom type="file" offset="0x66">WVM55.O</rom>
+			<rom type="file" offset="0x67">WVM56.O</rom>
+			<rom type="file" offset="0x68">WVM57.O</rom>
+			<rom type="file" offset="0x69">WVM58.O</rom>
+			<rom type="file" offset="0x6A">WVM59.O</rom>
+			<rom type="file" offset="0x6B">WVM60.O</rom>
+			<rom type="file" offset="0x6C">WVM61.O</rom>
+			<rom type="file" offset="0x6D">WVM71.O</rom>
+			<rom type="file" offset="0x6E">WVM72.O</rom>
+			<rom type="file" offset="0x6F">WVM73.O</rom>
+			<rom type="file" offset="0x70">WVM74.O</rom>
+			<rom type="file" offset="0x71">WVM75.O</rom>
+			<rom type="file" offset="0x72">WVM76.O</rom>
+			<rom type="file" offset="0x73">WVM77.O</rom>
+			<rom type="file" offset="0x74">WVM78.O</rom>
+			<rom type="file" offset="0x75">WVM79.O</rom>
+			<rom type="file" offset="0x76">WVM79_1.O</rom>
+			<rom type="file" offset="0x77">WVM80.O</rom>
+			<rom type="file" offset="0x78">WVM81.O</rom>
+			<rom type="file" offset="0x79">WVM82.O</rom>
+			<rom type="file" offset="0x7A">WVM83.O</rom>
+			<rom type="file" offset="0x7B">WVM84.O</rom>
+			<rom type="file" offset="0x7C">WVM85.O</rom>
+			<rom type="file" offset="0x7D">WVM90.O</rom>
+			<rom type="file" offset="0x7E">WVM91.O</rom>
+			<rom type="file" offset="0x7F">WVM92.O</rom>
+			<rom type="file" offset="0x80">WVM93.O</rom>
+			<rom type="file" offset="0x81">WVM96.O</rom>
+			<rom type="file" offset="0x82">WVM97.O</rom>
+			<rom type="shell" offset="0">NA -Z1 -FI</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WVM02.O</title>
+			<title code="0x11">WVM03.O</title>
+			<title code="0x12">WVM04.O</title>
+			<title code="0x13">WVM05.O</title>
+			<title code="0x14">WVM06.O</title>
+			<title code="0x15">WVM07.O</title>
+			<title code="0x16">WVM08.O</title>
+			<title code="0x17">WVM09.O</title>
+			<title code="0x18">WVM10.O</title>
+			<title code="0x19">WVM101.O</title>
+			<title code="0x1A">WVM102.O</title>
+			<title code="0x1B">WVM103.O</title>
+			<title code="0x1C">WVM104.O</title>
+			<title code="0x1D">WVM105.O</title>
+			<title code="0x1E">WVM106.O</title>
+			<title code="0x1F">WVM107.O</title>
+			<title code="0x20">WVM108.O</title>
+			<title code="0x21">WVM109.O</title>
+			<title code="0x22">WVM11.O</title>
+			<title code="0x23">WVM110.O</title>
+			<title code="0x24">WVM111.O</title>
+			<title code="0x25">WVM112.O</title>
+			<title code="0x26">WVM113.O</title>
+			<title code="0x27">WVM114.O</title>
+			<title code="0x28">WVM115.O</title>
+			<title code="0x29">WVM116.O</title>
+			<title code="0x2A">WVM117.O</title>
+			<title code="0x2B">WVM118.O</title>
+			<title code="0x2C">WVM119.O</title>
+			<title code="0x2D">WVM12.O</title>
+			<title code="0x2E">WVM120.O</title>
+			<title code="0x2F">WVM121.O</title>
+			<title code="0x30">WVM122.O</title>
+			<title code="0x31">WVM123.O</title>
+			<title code="0x32">WVM124.O</title>
+			<title code="0x33">WVM125.O</title>
+			<title code="0x34">WVM13.O</title>
+			<title code="0x35">WVM14.O</title>
+			<title code="0x36">WVM15.O</title>
+			<title code="0x37">WVM16.O</title>
+			<title code="0x38">WVM17.O</title>
+			<title code="0x39">WVM19.O</title>
+			<title code="0x3A">WVM20.O</title>
+			<title code="0x3B">WVM201.O</title>
+			<title code="0x3C">WVM202.O</title>
+			<title code="0x3D">WVM203.O</title>
+			<title code="0x3E">WVM204.O</title>
+			<title code="0x3F">WVM206.O</title>
+			<title code="0x40">WVM207.O</title>
+			<title code="0x41">WVM208.O</title>
+			<title code="0x42">WVM209.O</title>
+			<title code="0x43">WVM21.O</title>
+			<title code="0x44">WVM210.O</title>
+			<title code="0x45">WVM211.O</title>
+			<title code="0x46">WVM212.O</title>
+			<title code="0x47">WVM213.O</title>
+			<title code="0x48">WVM215.O</title>
+			<title code="0x49">WVM216.O</title>
+			<title code="0x4A">WVM217.O</title>
+			<title code="0x4B">WVM218.O</title>
+			<title code="0x4C">WVM219.O</title>
+			<title code="0x4D">WVM22.O</title>
+			<title code="0x4E">WVM220.O</title>
+			<title code="0x4F">WVM23.O</title>
+			<title code="0x50">WVM24.O</title>
+			<title code="0x51">WVM25.O</title>
+			<title code="0x52">WVM250.O</title>
+			<title code="0x53">WVM251.O</title>
+			<title code="0x54">WVM252.O</title>
+			<title code="0x55">WVM253.O</title>
+			<title code="0x56">WVM254.O</title>
+			<title code="0x57">WVM255.O</title>
+			<title code="0x58">WVM26.O</title>
+			<title code="0x59">WVM27.O</title>
+			<title code="0x5A">WVM28.O</title>
+			<title code="0x5B">WVM29.O</title>
+			<title code="0x5C">WVM30.O</title>
+			<title code="0x5D">WVM32.O</title>
+			<title code="0x5E">WVM33.O</title>
+			<title code="0x5F">WVM34.O</title>
+			<title code="0x60">WVM35.O</title>
+			<title code="0x61">WVM40.O</title>
+			<title code="0x62">WVM51.O</title>
+			<title code="0x63">WVM52.O</title>
+			<title code="0x64">WVM53.O</title>
+			<title code="0x65">WVM54.O</title>
+			<title code="0x66">WVM55.O</title>
+			<title code="0x67">WVM56.O</title>
+			<title code="0x68">WVM57.O</title>
+			<title code="0x69">WVM58.O</title>
+			<title code="0x6A">WVM59.O</title>
+			<title code="0x6B">WVM60.O</title>
+			<title code="0x6C">WVM61.O</title>
+			<title code="0x6D">WVM71.O</title>
+			<title code="0x6E">WVM72.O</title>
+			<title code="0x6F">WVM73.O</title>
+			<title code="0x70">WVM74.O</title>
+			<title code="0x71">WVM75.O</title>
+			<title code="0x72">WVM76.O</title>
+			<title code="0x73">WVM77.O</title>
+			<title code="0x74">WVM78.O</title>
+			<title code="0x75">WVM79.O</title>
+			<title code="0x76">WVM79_1.O</title>
+			<title code="0x77">WVM80.O</title>
+			<title code="0x78">WVM81.O</title>
+			<title code="0x79">WVM82.O</title>
+			<title code="0x7A">WVM83.O</title>
+			<title code="0x7B">WVM84.O</title>
+			<title code="0x7C">WVM85.O</title>
+			<title code="0x7D">WVM90.O</title>
+			<title code="0x7E">WVM91.O</title>
+			<title code="0x7F">WVM92.O</title>
+			<title code="0x80">WVM93.O</title>
+			<title code="0x81">WVM96.O</title>
+			<title code="0x82">WVM97.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 女子校制服物語</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="seifuku_98">
+			<rom type="file" offset="-1">NA.COM</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">NO01.O</rom>
+			<rom type="file" offset="0x11">NO02.O</rom>
+			<rom type="file" offset="0x12">NO03.O</rom>
+			<rom type="file" offset="0x13">NO04.O</rom>
+			<rom type="file" offset="0x14">NO05.O</rom>
+			<rom type="file" offset="0x15">NO06.O</rom>
+			<rom type="file" offset="0x16">NO07.O</rom>
+			<rom type="file" offset="0x17">NO08.O</rom>
+			<rom type="file" offset="0x18">NO09.O</rom>
+			<rom type="file" offset="0x19">NO10.O</rom>
+			<rom type="file" offset="0x1A">NO11.O</rom>
+			<rom type="file" offset="0x1B">NO12.O</rom>
+			<rom type="file" offset="0x1C">NO13.O</rom>
+			<rom type="file" offset="0x1D">NO14.O</rom>
+			<rom type="file" offset="0x1E">NO15.O</rom>
+			<rom type="file" offset="0x1F">NO16.O</rom>
+			<rom type="file" offset="0x20">NO17.O</rom>
+			<rom type="file" offset="0x21">NO18.O</rom>
+			<rom type="shell" offset="0">NA</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">NO01.O</title>
+			<title code="0x11">NO02.O</title>
+			<title code="0x12">NO03.O</title>
+			<title code="0x13">NO04.O</title>
+			<title code="0x14">NO05.O</title>
+			<title code="0x15">NO06.O</title>
+			<title code="0x16">NO07.O</title>
+			<title code="0x17">NO08.O</title>
+			<title code="0x18">NO09.O</title>
+			<title code="0x19">NO10.O</title>
+			<title code="0x1A">NO11.O</title>
+			<title code="0x1B">NO12.O</title>
+			<title code="0x1C">NO13.O</title>
+			<title code="0x1D">NO14.O</title>
+			<title code="0x1E">NO15.O</title>
+			<title code="0x1F">NO16.O</title>
+			<title code="0x20">NO17.O</title>
+			<title code="0x21">NO18.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 竜機伝承 -ドラグーン-(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="dragoon_98">
+			<rom type="file" offset="-1">hhd.com</rom>
+			<rom type="file" offset="-1">hhd_98.com</rom>
+			<rom type="file" offset="1" >BGM0001.HMD</rom>
+			<rom type="file" offset="2" >BGM0002.HMD</rom>
+			<rom type="file" offset="3" >BGM0003.HMD</rom>
+			<rom type="file" offset="4" >BGM0004.HMD</rom>
+			<rom type="file" offset="5" >BGM0005.HMD</rom>
+			<rom type="file" offset="6" >BGM0006.HMD</rom>
+			<rom type="file" offset="7" >BGM0007.HMD</rom>
+			<rom type="file" offset="8" >BGM0008.HMD</rom>
+			<rom type="file" offset="9" >BGM0009.HMD</rom>
+			<rom type="file" offset="10">BGM0010.HMD</rom>
+			<rom type="file" offset="11">BGM0011.HMD</rom>
+			<rom type="file" offset="12">BGM0012.HMD</rom>
+			<rom type="file" offset="13">BGM0013.HMD</rom>
+			<rom type="file" offset="14">BGM0014.HMD</rom>
+			<rom type="file" offset="15">BGM0015.HMD</rom>
+			<rom type="file" offset="16">BGM0016.HMD</rom>
+			<rom type="file" offset="17">BGM0017.HMD</rom>
+			<rom type="file" offset="18">BGM0018.HMD</rom>
+			<rom type="file" offset="19">BGM0019.HMD</rom>
+			<rom type="file" offset="20">BGM0020.HMD</rom>
+			<rom type="file" offset="21">BGM0021.HMD</rom>
+			<rom type="file" offset="22">BGM0022.HMD</rom>
+			<rom type="file" offset="23">BGM0023.HMD</rom>
+			<rom type="file" offset="24">BGM0024.HMD</rom>
+			<rom type="file" offset="25">BGM0025.HMD</rom>
+			<rom type="file" offset="26">BGM0026.HMD</rom>
+			<rom type="file" offset="27">BGM0027.HMD</rom>
+			<rom type="file" offset="28">BGM0028.HMD</rom>
+			<rom type="shell" offset="0">hhd /M8 /E0 /S</rom>
+			<rom type="shell" offset="0">hhd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >BGM0001.HMD : 雪の降る村</title>
+			<title code="2" >BGM0002.HMD : 賑わう街角</title>
+			<title code="3" >BGM0003.HMD : 沈む町並み</title>
+			<title code="4" >BGM0004.HMD : 王宮のメロディ</title>
+			<title code="5" >BGM0005.HMD : 軍事帝国ガルバード</title>
+			<title code="6" >BGM0006.HMD : 蒼竜の神殿</title>
+			<title code="7" >BGM0007.HMD : 未知の洞窟</title>
+			<title code="8" >BGM0008.HMD : 旅立ちの唄</title>
+			<title code="9" >BGM0009.HMD : レジスタンス</title>
+			<title code="10">BGM0010.HMD : BATTLE!</title>
+			<title code="11">BGM0011.HMD : 解放への一歩</title>
+			<title code="12">BGM0012.HMD : 強大なる敵</title>
+			<title code="13">BGM0013.HMD : 未知なる戦い</title>
+			<title code="14">BGM0014.HMD : 動き出す伝説</title>
+			<title code="15">BGM0015.HMD : 竜機伝承</title>
+			<title code="16">BGM0016.HMD : ミュウのテーマ</title>
+			<title code="17">BGM0017.HMD : ミュウのテーマ2</title>
+			<title code="18">BGM0018.HMD : 時を越えて</title>
+			<title code="19">BGM0019.HMD : それぞれの未来</title>
+			<title code="20">BGM0020.HMD : エンディング</title>
+			<title code="21">BGM0021.HMD : 竜機伝承のテーマ2</title>
+			<title code="22">BGM0022.HMD : 悲しみにくれて</title>
+			<title code="23">BGM0023.HMD : 楽しいひととき</title>
+			<title code="24">BGM0024.HMD : 時にはしくじる時もある</title>
+			<title code="25">BGM0025.HMD : ラブストーリー</title>
+			<title code="26">BGM0026.HMD : ファンファーレ</title>
+			<title code="27">BGM0027.HMD : ファンファーレ2</title>
+			<title code="28">BGM0028.HMD : 軍事帝国ガルバード帝国</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 竜機伝承 -ドラグーン-(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="dragoon_98">
+			<rom type="file" offset="-1">hhd.com</rom>
+			<rom type="file" offset="-1">hhd_98.com</rom>
+			<rom type="file" offset="1" >BGM0001.HMD</rom>
+			<rom type="file" offset="2" >BGM0002.HMD</rom>
+			<rom type="file" offset="3" >BGM0003.HMD</rom>
+			<rom type="file" offset="4" >BGM0004.HMD</rom>
+			<rom type="file" offset="5" >BGM0005.HMD</rom>
+			<rom type="file" offset="6" >BGM0006.HMD</rom>
+			<rom type="file" offset="7" >BGM0007.HMD</rom>
+			<rom type="file" offset="8" >BGM0008.HMD</rom>
+			<rom type="file" offset="9" >BGM0009.HMD</rom>
+			<rom type="file" offset="10">BGM0010.HMD</rom>
+			<rom type="file" offset="11">BGM0011.HMD</rom>
+			<rom type="file" offset="12">BGM0012.HMD</rom>
+			<rom type="file" offset="13">BGM0013.HMD</rom>
+			<rom type="file" offset="14">BGM0014.HMD</rom>
+			<rom type="file" offset="15">BGM0015.HMD</rom>
+			<rom type="file" offset="16">BGM0016.HMD</rom>
+			<rom type="file" offset="17">BGM0017.HMD</rom>
+			<rom type="file" offset="18">BGM0018.HMD</rom>
+			<rom type="file" offset="19">BGM0019.HMD</rom>
+			<rom type="file" offset="20">BGM0020.HMD</rom>
+			<rom type="file" offset="21">BGM0021.HMD</rom>
+			<rom type="file" offset="22">BGM0022.HMD</rom>
+			<rom type="file" offset="23">BGM0023.HMD</rom>
+			<rom type="file" offset="24">BGM0024.HMD</rom>
+			<rom type="file" offset="25">BGM0025.HMD</rom>
+			<rom type="file" offset="26">BGM0026.HMD</rom>
+			<rom type="file" offset="27">BGM0027.HMD</rom>
+			<rom type="file" offset="28">BGM0028.HMD</rom>
+			<rom type="shell" offset="0">hhd /M8 /E0 /S</rom>
+			<rom type="shell" offset="0">hhd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >BGM0001.HMD : 雪の降る村</title>
+			<title code="2" >BGM0002.HMD : 賑わう街角</title>
+			<title code="3" >BGM0003.HMD : 沈む町並み</title>
+			<title code="4" >BGM0004.HMD : 王宮のメロディ</title>
+			<title code="5" >BGM0005.HMD : 軍事帝国ガルバード</title>
+			<title code="6" >BGM0006.HMD : 蒼竜の神殿</title>
+			<title code="7" >BGM0007.HMD : 未知の洞窟</title>
+			<title code="8" >BGM0008.HMD : 旅立ちの唄</title>
+			<title code="9" >BGM0009.HMD : レジスタンス</title>
+			<title code="10">BGM0010.HMD : BATTLE!</title>
+			<title code="11">BGM0011.HMD : 解放への一歩</title>
+			<title code="12">BGM0012.HMD : 強大なる敵</title>
+			<title code="13">BGM0013.HMD : 未知なる戦い</title>
+			<title code="14">BGM0014.HMD : 動き出す伝説</title>
+			<title code="15">BGM0015.HMD : 竜機伝承</title>
+			<title code="16">BGM0016.HMD : ミュウのテーマ</title>
+			<title code="17">BGM0017.HMD : ミュウのテーマ2</title>
+			<title code="18">BGM0018.HMD : 時を越えて</title>
+			<title code="19">BGM0019.HMD : それぞれの未来</title>
+			<title code="20">BGM0020.HMD : エンディング</title>
+			<title code="21">BGM0021.HMD : 竜機伝承のテーマ2</title>
+			<title code="22">BGM0022.HMD : 悲しみにくれて</title>
+			<title code="23">BGM0023.HMD : 楽しいひととき</title>
+			<title code="24">BGM0024.HMD : 時にはしくじる時もある</title>
+			<title code="25">BGM0025.HMD : ラブストーリー</title>
+			<title code="26">BGM0026.HMD : ファンファーレ</title>
+			<title code="27">BGM0027.HMD : ファンファーレ2</title>
+			<title code="28">BGM0028.HMD : 軍事帝国ガルバード帝国</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 竜機伝承 -ドラグーン-(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="dragoon_98">
+			<rom type="file" offset="-1">hhd_98.com</rom>
+			<rom type="file" offset="-1">HMM.COM</rom>
+			<rom type="file" offset="11">BGM0001.HMM</rom>
+			<rom type="file" offset="12">BGM0002.HMM</rom>
+			<rom type="file" offset="13">BGM0003.HMM</rom>
+			<rom type="file" offset="14">BGM0004.HMM</rom>
+			<rom type="file" offset="15">BGM0005.HMM</rom>
+			<rom type="file" offset="16">BGM0006.HMM</rom>
+			<rom type="file" offset="17">BGM0007.HMM</rom>
+			<rom type="file" offset="18">BGM0008.HMM</rom>
+			<rom type="file" offset="19">BGM0009.HMM</rom>
+			<rom type="file" offset="20">BGM0010.HMM</rom>
+			<rom type="file" offset="21">BGM0011.HMM</rom>
+			<rom type="file" offset="22">BGM0012.HMM</rom>
+			<rom type="file" offset="23">BGM0013.HMM</rom>
+			<rom type="file" offset="24">BGM0014.HMM</rom>
+			<rom type="file" offset="25">BGM0015.HMM</rom>
+			<rom type="file" offset="26">BGM0016.HMM</rom>
+			<rom type="file" offset="27">BGM0017.HMM</rom>
+			<rom type="file" offset="28">BGM0018.HMM</rom>
+			<rom type="file" offset="29">BGM0019.HMM</rom>
+			<rom type="file" offset="30">BGM0020.HMM</rom>
+			<rom type="file" offset="31">BGM0021.HMM</rom>
+			<rom type="file" offset="32">BGM0022.HMM</rom>
+			<rom type="file" offset="33">BGM0023.HMM</rom>
+			<rom type="file" offset="34">BGM0024.HMM</rom>
+			<rom type="file" offset="35">BGM0025.HMM</rom>
+			<rom type="file" offset="36">BGM0026.HMM</rom>
+			<rom type="file" offset="37">BGM0027.HMM</rom>
+			<rom type="file" offset="38">BGM0028.HMM</rom>
+			<rom type="shell" offset="0">hmm /M /B16</rom>
+			<rom type="shell" offset="0">hhd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">BGM0001.HMM : 雪の降る村</title>
+			<title code="12">BGM0002.HMM : 賑わう街角</title>
+			<title code="13">BGM0003.HMM : 沈む町並み</title>
+			<title code="14">BGM0004.HMM : 王宮のメロディ</title>
+			<title code="15">BGM0005.HMM : 軍事帝国ガルバード</title>
+			<title code="16">BGM0006.HMM : 蒼竜の神殿</title>
+			<title code="17">BGM0007.HMM : 未知の洞窟</title>
+			<title code="18">BGM0008.HMM : 旅立ちの唄</title>
+			<title code="19">BGM0009.HMM : レジスタンス</title>
+			<title code="20">BGM0010.HMM : BATTLE!</title>
+			<title code="21">BGM0011.HMM : 解放への一歩</title>
+			<title code="22">BGM0012.HMM : 強大なる敵</title>
+			<title code="23">BGM0013.HMM : 未知なる戦い</title>
+			<title code="24">BGM0014.HMM : 動き出す伝説</title>
+			<title code="25">BGM0015.HMM : 竜機伝承</title>
+			<title code="26">BGM0016.HMM : ミュウのテーマ</title>
+			<title code="27">BGM0017.HMM : ミュウのテーマ2</title>
+			<title code="28">BGM0018.HMM : 時を越えて</title>
+			<title code="29">BGM0019.HMM : それぞれの未来</title>
+			<title code="30">BGM0020.HMM : エンディング</title>
+			<title code="31">BGM0021.HMM : 竜機伝承のテーマ2</title>
+			<title code="32">BGM0022.HMM : 悲しみにくれて</title>
+			<title code="33">BGM0023.HMM : 楽しいひととき</title>
+			<title code="34">BGM0024.HMM : 時にはしくじる時もある</title>
+			<title code="35">BGM0025.HMM : ラブストーリー</title>
+			<title code="36">BGM0026.HMM : ファンファーレ</title>
+			<title code="37">BGM0027.HMM : ファンファーレ2</title>
+			<title code="38">BGM0028.HMM : 軍事帝国ガルバード帝国</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] なんば金融伝 ミナミの帝王</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="minateio_98">
+			<rom type="file" offset="-1">NA.COM</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">M001.O</rom>
+			<rom type="file" offset="0x11">M002.O</rom>
+			<rom type="file" offset="0x12">M003.O</rom>
+			<rom type="file" offset="0x13">M004.O</rom>
+			<rom type="file" offset="0x14">M005.O</rom>
+			<rom type="file" offset="0x15">M006.O</rom>
+			<rom type="file" offset="0x16">M007.O</rom>
+			<rom type="file" offset="0x17">M008.O</rom>
+			<rom type="file" offset="0x18">M010.O</rom>
+			<rom type="file" offset="0x19">M011.O</rom>
+			<rom type="file" offset="0x1a">M012.O</rom>
+			<rom type="file" offset="0x1b">M013.O</rom>
+			<rom type="file" offset="0x1c">M014.O</rom>
+			<rom type="file" offset="0x1d">M015.O</rom>
+			<rom type="file" offset="0x1e">M018.O</rom>
+			<rom type="file" offset="0x1f">M019.O</rom>
+			<rom type="file" offset="0x20">M020.O</rom>
+			<rom type="file" offset="0x21">M021.O</rom>
+			<rom type="file" offset="0x22">M022.O</rom>
+			<rom type="file" offset="0x23">M023.O</rom>
+			<rom type="file" offset="0x24">M024.O</rom>
+			<rom type="file" offset="0x25">M025.O</rom>
+			<rom type="file" offset="0x26">M026.O</rom>
+			<rom type="file" offset="0x27">M028.O</rom>
+			<rom type="file" offset="0x28">M031.O</rom>
+			<rom type="file" offset="0x29">M033.O</rom>
+			<rom type="file" offset="0x2a">M034.O</rom>
+			<rom type="file" offset="0x2b">M035.O</rom>
+			<rom type="file" offset="0x2c">M036.O</rom>
+			<rom type="file" offset="0x2d">M037.O</rom>
+			<rom type="file" offset="0x2e">M038.O</rom>
+			<rom type="file" offset="0x2f">M041.O</rom>
+			<rom type="file" offset="0x30">M060.O</rom>
+			<rom type="file" offset="0x31">M100.O</rom>
+			<rom type="file" offset="0x32">M101.O</rom>
+			<rom type="file" offset="0x33">M102.O</rom>
+			<rom type="file" offset="0x34">M103.O</rom>
+			<rom type="file" offset="0x35">M104.O</rom>
+			<rom type="file" offset="0x36">M105.O</rom>
+			<rom type="file" offset="0x37">M106.O</rom>
+			<rom type="file" offset="0x38">M107.O</rom>
+			<rom type="file" offset="0x39">M108.O</rom>
+			<rom type="file" offset="0x3a">M109.O</rom>
+			<rom type="file" offset="0x3b">M110.O</rom>
+			<rom type="file" offset="0x3c">M111.O</rom>
+			<rom type="file" offset="0x3d">M112.O</rom>
+			<rom type="file" offset="0x3e">M113.O</rom>
+			<rom type="file" offset="0x3f">M114.O</rom>
+			<rom type="file" offset="0x40">M115.O</rom>
+			<rom type="file" offset="0x41">M116.O</rom>
+			<rom type="file" offset="0x42">M117.O</rom>
+			<rom type="file" offset="0x43">M118.O</rom>
+			<rom type="file" offset="0x44">M119.O</rom>
+			<rom type="file" offset="0x45">M120.O</rom>
+			<rom type="file" offset="0x46">M997.O</rom>
+			<rom type="file" offset="0x47">M998.O</rom>
+			<rom type="file" offset="0x48">M999.O</rom>
+			<rom type="shell" offset="0">na</rom>
+			<rom type="shell" offset="0">nlp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">M001.O : </title>
+			<title code="0x11">M002.O : </title>
+			<title code="0x12">M003.O : </title>
+			<title code="0x13">M004.O : </title>
+			<title code="0x14">M005.O : </title>
+			<title code="0x15">M006.O : </title>
+			<title code="0x16">M007.O : </title>
+			<title code="0x17">M008.O : </title>
+			<title code="0x18">M010.O : </title>
+			<title code="0x19">M011.O : </title>
+			<title code="0x1a">M012.O : </title>
+			<title code="0x1b">M013.O : </title>
+			<title code="0x1c">M014.O : </title>
+			<title code="0x1d">M015.O : </title>
+			<title code="0x1e">M018.O : </title>
+			<title code="0x1f">M019.O : </title>
+			<title code="0x20">M020.O : </title>
+			<title code="0x21">M021.O : </title>
+			<title code="0x22">M022.O : </title>
+			<title code="0x23">M023.O : </title>
+			<title code="0x24">M024.O : </title>
+			<title code="0x25">M025.O : </title>
+			<title code="0x26">M026.O : </title>
+			<title code="0x27">M028.O : </title>
+			<title code="0x28">M031.O : </title>
+			<title code="0x29">M033.O : </title>
+			<title code="0x2a">M034.O : </title>
+			<title code="0x2b">M035.O : </title>
+			<title code="0x2c">M036.O : </title>
+			<title code="0x2d">M037.O : </title>
+			<title code="0x2e">M038.O : </title>
+			<title code="0x2f">M041.O : </title>
+			<title code="0x30">M060.O : SE</title>
+			<title code="0x31">M100.O : SE</title>
+			<title code="0x32">M101.O : </title>
+			<title code="0x33">M102.O : </title>
+			<title code="0x34">M103.O : </title>
+			<title code="0x35">M104.O : SE</title>
+			<title code="0x36">M105.O : SE</title>
+			<title code="0x37">M106.O : SE</title>
+			<title code="0x38">M107.O : SE</title>
+			<title code="0x39">M108.O : SE</title>
+			<title code="0x3a">M109.O : SE</title>
+			<title code="0x3b">M110.O : SE</title>
+			<title code="0x3c">M111.O : SE</title>
+			<title code="0x3d">M112.O : SE</title>
+			<title code="0x3e">M113.O : SE</title>
+			<title code="0x3f">M114.O : SE</title>
+			<title code="0x40">M115.O : SE</title>
+			<title code="0x41">M116.O : SE</title>
+			<title code="0x42">M117.O : SE</title>
+			<title code="0x43">M118.O : SE</title>
+			<title code="0x44">M119.O : SE</title>
+			<title code="0x45">M120.O : SE</title>
+			<title code="0x46">M997.O : SE</title>
+			<title code="0x47">M998.O : SE</title>
+			<title code="0x48">M999.O : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 無人島物語</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<!-- 制作:日本ソフテック -->
+		<romlist archive="mujintou_98">
+			<rom type="file" offset="-1">mujintou.com</rom>
+			<rom type="file" offset="-1">T.EXE</rom>
+			<rom type="file" offset="0x05">FM_TONE.SND</rom>
+			<rom type="shell" offset="0">mujintou</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM 01 (無音)</title>
+			<title code="0x02">BGM 02</title>
+			<title code="0x03">BGM 03</title>
+			<title code="0x04">BGM 04</title>
+			<title code="0x05">BGM 05</title>
+			<title code="0x06">BGM 06</title>
+			<title code="0x07">BGM 07</title>
+			<title code="0x08">BGM 08</title>
+			<title code="0x09">BGM 09</title>
+			<title code="0x0a">BGM 10</title>
+			<title code="0x0b">BGM 11</title>
+			<title code="0x0c">BGM 12</title>
+			<title code="0x0d">BGM 13</title>
+			<title code="0x0e">BGM 14</title>
+			<title code="0x0f">BGM 15</title>
+			<title code="0x10">BGM 16</title>
+			<title code="0x11">BGM 17</title>
+			<title code="0x12">BGM 18</title>
+			<title code="0x13">BGM 19</title>
+			<title code="0x14">BGM 20</title>
+			<title code="0x15">BGM 21</title>
+			<title code="0x16">BGM 22</title>
+			<title code="0x17">BGM 23</title>
+			<title code="0x18">BGM 24</title>
+			<title code="0x19">BGM 25</title>
+			<title code="0xff">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 無人島物語2</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mujinto2_98">
+			<rom type="file" offset="-1">OPNDRV.SYS</rom>
+			<rom type="file" offset="-1">MUJN2_98.COM</rom>
+			<rom type="file" offset="-1">FM_TONE.SND</rom>
+			<rom type="file" offset="0x10">S.01</rom>
+			<rom type="file" offset="0x11">S.02</rom>
+			<rom type="file" offset="0x12">S.03</rom>
+			<rom type="file" offset="0x13">S.04</rom>
+			<rom type="file" offset="0x14">S.05</rom>
+			<rom type="file" offset="0x15">S.06</rom>
+			<rom type="file" offset="0x16">S.07</rom>
+			<rom type="file" offset="0x17">S.08</rom>
+			<rom type="file" offset="0x18">S.09</rom>
+			<rom type="file" offset="0x19">S.0A</rom>
+			<rom type="file" offset="0x1a">S.0B</rom>
+			<rom type="file" offset="0x1b">S.0C</rom>
+			<rom type="file" offset="0x1c">S.0D</rom>
+			<rom type="file" offset="0x1d">S.0E</rom>
+			<rom type="file" offset="0x1e">S.0F</rom>
+			<rom type="file" offset="0x1f">S.0G</rom>
+			<rom type="file" offset="0x20">S.0H</rom>
+			<rom type="file" offset="0x21">S.0I</rom>
+			<rom type="file" offset="0x22">S.0J</rom>
+			<rom type="file" offset="0x23">S.0K</rom>
+			<rom type="file" offset="0x24">S.0L</rom>
+			<rom type="file" offset="0x25">S.0M</rom>
+			<rom type="file" offset="0x26">S.0N</rom>
+			<rom type="device" offset="0">opndrv.sys</rom>
+			<rom type="shell" offset="0">mujn2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">S.01 : </title>
+			<title code="0x11">S.02 : </title>
+			<title code="0x12">S.03 : </title>
+			<title code="0x13">S.04 : </title>
+			<title code="0x14">S.05 : </title>
+			<title code="0x15">S.06 : </title>
+			<title code="0x16">S.07 : </title>
+			<title code="0x17">S.08 : </title>
+			<title code="0x18">S.09 : </title>
+			<title code="0x19">S.0A : </title>
+			<title code="0x1a">S.0B : </title>
+			<title code="0x1b">S.0C : </title>
+			<title code="0x1c">S.0D : </title>
+			<title code="0x1d">S.0E : </title>
+			<title code="0x1e">S.0F : </title>
+			<title code="0x1f">S.0G : </title>
+			<title code="0x20">S.0H : </title>
+			<title code="0x21">S.0I : </title>
+			<title code="0x22">S.0J : </title>
+			<title code="0x23">S.0K : </title>
+			<title code="0x24">S.0L : </title>
+			<title code="0x25">S.0M : </title>
+			<title code="0x26">S.0N : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] アイドルプロジェクト2(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="idol_p2_98">
+			<rom type="file" offset="-1">IP2_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="11">1065.DAT</rom>
+			<rom type="file" offset="12">1066.DAT</rom>
+			<rom type="file" offset="13">1067.DAT</rom>
+			<rom type="file" offset="14">1068.DAT</rom>
+			<rom type="file" offset="15">1069.DAT</rom>
+			<rom type="file" offset="16">1070.DAT</rom>
+			<rom type="file" offset="17">1071.DAT</rom>
+			<rom type="file" offset="18">1072.DAT</rom>
+			<rom type="file" offset="19">1073.DAT</rom>
+			<rom type="file" offset="20">1074.DAT</rom>
+			<rom type="file" offset="21">1075.DAT</rom>
+			<rom type="file" offset="22">1076.DAT</rom>
+			<rom type="file" offset="23">1077.DAT</rom>
+			<rom type="file" offset="24">1078.DAT</rom>
+			<rom type="file" offset="25">1079.DAT</rom>
+			<rom type="file" offset="26">1080.DAT</rom>
+			<rom type="file" offset="27">1081.DAT</rom>
+			<rom type="file" offset="28">1082.DAT</rom>
+			<rom type="file" offset="29">1083.DAT</rom>
+			<rom type="file" offset="30">1084.DAT</rom>
+			<rom type="file" offset="31">1085.DAT</rom>
+			<rom type="file" offset="32">1086.DAT</rom>
+			<rom type="file" offset="33">1087.DAT</rom>
+			<rom type="file" offset="34">1088.DAT</rom>
+			<rom type="file" offset="35">1089.DAT</rom>
+			<rom type="file" offset="36">1090.DAT</rom>
+			<rom type="file" offset="37">1091.DAT</rom>
+			<rom type="file" offset="38">1092.DAT</rom>
+			<rom type="file" offset="39">1093.DAT</rom>
+			<rom type="file" offset="40">1094.DAT</rom>
+			<rom type="file" offset="41">1095.DAT</rom>
+			<rom type="file" offset="42">1096.DAT</rom>
+			<rom type="file" offset="43">1097.DAT</rom>
+			<rom type="file" offset="44">1098.DAT</rom>
+			<rom type="file" offset="45">1099.DAT</rom>
+			<rom type="file" offset="46">1100.DAT</rom>
+			<rom type="file" offset="47">1101.DAT</rom>
+			<rom type="file" offset="48">1102.DAT</rom>
+			<rom type="shell" offset="0">PMD #</rom>
+			<rom type="shell" offset="0">IP2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">1065.DAT : </title>
+			<title code="12">1066.DAT : </title>
+			<title code="13">1067.DAT : </title>
+			<title code="14">1068.DAT : </title>
+			<title code="15">1069.DAT : </title>
+			<title code="16">1070.DAT : </title>
+			<title code="17">1071.DAT : </title>
+			<title code="18">1072.DAT : </title>
+			<title code="19">1073.DAT : </title>
+			<title code="20">1074.DAT : </title>
+			<title code="21">1075.DAT : </title>
+			<title code="22">1076.DAT : </title>
+			<title code="23">1077.DAT : </title>
+			<title code="24">1078.DAT : </title>
+			<title code="25">1079.DAT : </title>
+			<title code="26">1080.DAT : </title>
+			<title code="27">1081.DAT : </title>
+			<title code="28">1082.DAT : </title>
+			<title code="29">1083.DAT : </title>
+			<title code="30">1084.DAT : </title>
+			<title code="31">1085.DAT : </title>
+			<title code="32">1086.DAT : </title>
+			<title code="33">1087.DAT : </title>
+			<title code="34">1088.DAT : </title>
+			<title code="35">1089.DAT : </title>
+			<title code="36">1090.DAT : </title>
+			<title code="37">1091.DAT : </title>
+			<title code="38">1092.DAT : </title>
+			<title code="39">1093.DAT : </title>
+			<title code="40">1094.DAT : </title>
+			<title code="41">1095.DAT : </title>
+			<title code="42">1096.DAT : </title>
+			<title code="43">1097.DAT : </title>
+			<title code="44">1098.DAT : </title>
+			<title code="45">1099.DAT : </title>
+			<title code="46">1100.DAT : </title>
+			<title code="47">1101.DAT : </title>
+			<title code="48">1102.DAT : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] アイドルプロジェクト2(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="idol_p2_98">
+			<rom type="file" offset="-1">IP2_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="11">1103.DAT</rom>
+			<rom type="file" offset="12">1104.DAT</rom>
+			<rom type="file" offset="13">1105.DAT</rom>
+			<rom type="file" offset="14">1106.DAT</rom>
+			<rom type="file" offset="15">1107.DAT</rom>
+			<rom type="file" offset="16">1108.DAT</rom>
+			<rom type="file" offset="17">1109.DAT</rom>
+			<rom type="file" offset="18">1110.DAT</rom>
+			<rom type="file" offset="19">1111.DAT</rom>
+			<rom type="file" offset="20">1112.DAT</rom>
+			<rom type="file" offset="21">1113.DAT</rom>
+			<rom type="file" offset="22">1114.DAT</rom>
+			<rom type="file" offset="23">1115.DAT</rom>
+			<rom type="file" offset="24">1116.DAT</rom>
+			<rom type="file" offset="25">1117.DAT</rom>
+			<rom type="file" offset="26">1118.DAT</rom>
+			<rom type="file" offset="27">1119.DAT</rom>
+			<rom type="file" offset="28">1120.DAT</rom>
+			<rom type="file" offset="29">1121.DAT</rom>
+			<rom type="file" offset="30">1122.DAT</rom>
+			<rom type="file" offset="31">1123.DAT</rom>
+			<rom type="file" offset="32">1124.DAT</rom>
+			<rom type="file" offset="33">1125.DAT</rom>
+			<rom type="file" offset="34">1126.DAT</rom>
+			<rom type="file" offset="35">1127.DAT</rom>
+			<rom type="file" offset="36">1128.DAT</rom>
+			<rom type="file" offset="37">1129.DAT</rom>
+			<rom type="file" offset="38">1130.DAT</rom>
+			<rom type="file" offset="39">1131.DAT</rom>
+			<rom type="file" offset="40">1132.DAT</rom>
+			<rom type="file" offset="41">1133.DAT</rom>
+			<rom type="file" offset="42">1134.DAT</rom>
+			<rom type="file" offset="43">1135.DAT</rom>
+			<rom type="file" offset="44">1136.DAT</rom>
+			<rom type="file" offset="45">1137.DAT</rom>
+			<rom type="file" offset="46">1138.DAT</rom>
+			<rom type="file" offset="47">1139.DAT</rom>
+			<rom type="file" offset="48">1140.DAT</rom>
+			<rom type="shell" offset="0">PMDB2 #</rom>
+			<rom type="shell" offset="0">IP2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">1103.DAT : </title>
+			<title code="12">1104.DAT : </title>
+			<title code="13">1105.DAT : </title>
+			<title code="14">1106.DAT : </title>
+			<title code="15">1107.DAT : </title>
+			<title code="16">1108.DAT : </title>
+			<title code="17">1109.DAT : </title>
+			<title code="18">1110.DAT : </title>
+			<title code="19">1111.DAT : </title>
+			<title code="20">1112.DAT : </title>
+			<title code="21">1113.DAT : </title>
+			<title code="22">1114.DAT : </title>
+			<title code="23">1115.DAT : </title>
+			<title code="24">1116.DAT : </title>
+			<title code="25">1117.DAT : </title>
+			<title code="26">1118.DAT : </title>
+			<title code="27">1119.DAT : </title>
+			<title code="28">1120.DAT : </title>
+			<title code="29">1121.DAT : </title>
+			<title code="30">1122.DAT : </title>
+			<title code="31">1123.DAT : </title>
+			<title code="32">1124.DAT : </title>
+			<title code="33">1125.DAT : </title>
+			<title code="34">1126.DAT : </title>
+			<title code="35">1127.DAT : </title>
+			<title code="36">1128.DAT : </title>
+			<title code="37">1129.DAT : </title>
+			<title code="38">1130.DAT : </title>
+			<title code="39">1131.DAT : </title>
+			<title code="40">1132.DAT : </title>
+			<title code="41">1133.DAT : </title>
+			<title code="42">1134.DAT : </title>
+			<title code="43">1135.DAT : </title>
+			<title code="44">1136.DAT : </title>
+			<title code="45">1137.DAT : </title>
+			<title code="46">1138.DAT : </title>
+			<title code="47">1139.DAT : </title>
+			<title code="48">1140.DAT : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] アイドルプロジェクト2(SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="idol_p2_98">
+			<rom type="file" offset="-1">IP2_98.COM</rom>
+			<rom type="file" offset="-1">IP2DRV.EXE</rom>
+			<rom type="conin" offset="5">IP2DRV.EXE</rom>
+			<rom type="file" offset="11">1141.DAT</rom>
+			<rom type="file" offset="12">1142.DAT</rom>
+			<rom type="file" offset="13">1143.DAT</rom>
+			<rom type="file" offset="14">1144.DAT</rom>
+			<rom type="file" offset="15">1145.DAT</rom>
+			<rom type="file" offset="16">1146.DAT</rom>
+			<rom type="file" offset="17">1147.DAT</rom>
+			<rom type="file" offset="18">1148.DAT</rom>
+			<rom type="file" offset="19">1149.DAT</rom>
+			<rom type="file" offset="20">1150.DAT</rom>
+			<rom type="file" offset="21">1151.DAT</rom>
+			<rom type="file" offset="22">1152.DAT</rom>
+			<rom type="file" offset="23">1153.DAT</rom>
+			<rom type="file" offset="24">1154.DAT</rom>
+			<rom type="file" offset="25">1155.DAT</rom>
+			<rom type="file" offset="26">1156.DAT</rom>
+			<rom type="file" offset="27">1157.DAT</rom>
+			<rom type="file" offset="28">1158.DAT</rom>
+			<rom type="file" offset="29">1159.DAT</rom>
+			<rom type="file" offset="30">1160.DAT</rom>
+			<rom type="file" offset="31">1161.DAT</rom>
+			<rom type="file" offset="32">1162.DAT</rom>
+			<rom type="file" offset="33">1163.DAT</rom>
+			<rom type="file" offset="34">1164.DAT</rom>
+			<rom type="file" offset="35">1165.DAT</rom>
+			<rom type="file" offset="36">1166.DAT</rom>
+			<rom type="file" offset="37">1167.DAT</rom>
+			<rom type="file" offset="38">1168.DAT</rom>
+			<rom type="file" offset="39">1169.DAT</rom>
+			<rom type="file" offset="40">1170.DAT</rom>
+			<rom type="file" offset="41">1171.DAT</rom>
+			<rom type="file" offset="42">1172.DAT</rom>
+			<rom type="file" offset="43">1173.DAT</rom>
+			<rom type="file" offset="44">1174.DAT</rom>
+			<rom type="file" offset="45">1175.DAT</rom>
+			<rom type="file" offset="46">1176.DAT</rom>
+			<rom type="file" offset="47">1177.DAT</rom>
+			<rom type="file" offset="48">1178.DAT</rom>
+			<rom type="shell" offset="0">IP2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">1141.DAT : </title>
+			<title code="12">1142.DAT : </title>
+			<title code="13">1143.DAT : </title>
+			<title code="14">1144.DAT : </title>
+			<title code="15">1145.DAT : </title>
+			<title code="16">1146.DAT : </title>
+			<title code="17">1147.DAT : </title>
+			<title code="18">1148.DAT : </title>
+			<title code="19">1149.DAT : </title>
+			<title code="20">1150.DAT : </title>
+			<title code="21">1151.DAT : </title>
+			<title code="22">1152.DAT : </title>
+			<title code="23">1153.DAT : </title>
+			<title code="24">1154.DAT : </title>
+			<title code="25">1155.DAT : </title>
+<!--		<title code="26">1156.DAT : </title>	-->
+			<title code="27">1157.DAT : </title>
+			<title code="28">1158.DAT : </title>
+			<title code="29">1159.DAT : </title>
+			<title code="30">1160.DAT : </title>
+			<title code="31">1161.DAT : </title>
+			<title code="32">1162.DAT : </title>
+			<title code="33">1163.DAT : </title>
+<!--		<title code="34">1164.DAT : </title>	-->
+			<title code="35">1165.DAT : </title>
+			<title code="36">1166.DAT : </title>
+			<title code="37">1167.DAT : </title>
+			<title code="38">1168.DAT : </title>
+			<title code="39">1169.DAT : </title>
+			<title code="40">1170.DAT : </title>
+			<title code="41">1171.DAT : </title>
+			<title code="42">1172.DAT : </title>
+			<title code="43">1173.DAT : </title>
+			<title code="44">1174.DAT : </title>
+			<title code="45">1175.DAT : </title>
+			<title code="46">1176.DAT : </title>
+			<title code="47">1177.DAT : </title>
+			<title code="48">1178.DAT : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 無人島物語3 A.D.1999 TOKYO.</name>
+		<driver type="opn">pc9821dos</driver>
+		<driveralias type="NEC PC-9801">KSS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mujinto3_98">
+			<rom type="file" offset="-1">FM26K.COM</rom>
+			<rom type="file" offset="-1">MUJN3_98.COM</rom>
+			<rom type="file" offset="0x10">BGM00.MUS</rom>
+			<rom type="file" offset="0x11">BGM01.MUS</rom>
+			<rom type="file" offset="0x12">BGM02.MUS</rom>
+			<rom type="file" offset="0x13">BGM03.MUS</rom>
+			<rom type="file" offset="0x14">BGM04.MUS</rom>
+			<rom type="file" offset="0x15">BGM05.MUS</rom>
+			<rom type="shell" offset="0">FM26K</rom>
+			<rom type="shell" offset="0">MUJN3_98</rom>
+		</romlist>
+		<titlelist>
+		<!--	<title code="0x10">BGM00.MUS : [STOP]</title> -->
+			<title code="0x11">BGM01.MUS : </title>
+			<title code="0x12">BGM02.MUS : </title>
+			<title code="0x13">BGM03.MUS : </title>
+			<title code="0x14">BGM04.MUS : </title>
+			<title code="0x15">BGM05.MUS : </title>
+		</titlelist>
+	</game>
+</gamelist>

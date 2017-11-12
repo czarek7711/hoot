@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<game>
+		<name>[PC-88] Kaseijin (歌声人)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">pack_in_video</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb800"/>
+			<option name="use_pcmx8" value="0x01"/>
+		</options>
+		<romlist archive="kaseijin">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0140">MAIN1-.COM</rom>
+			<rom type="code" offset="0x8a00">MAIN2-.COM</rom>
+			<rom type="adpcm" offset="0x00000">VOIB01.PDT</rom>
+			<rom type="adpcm" offset="0x04000">VOIB02.PDT</rom>
+			<rom type="adpcm" offset="0x08000">VOIB03.PDT</rom>
+			<rom type="adpcm" offset="0x0c000">VOIB04.PDT</rom>
+			<rom type="adpcm" offset="0x10000">VOIB05.PDT</rom>
+			<rom type="adpcm" offset="0x14000">VOIB06.PDT</rom>
+			<rom type="adpcm" offset="0x18000">VOIB07.PDT</rom>
+			<rom type="adpcm" offset="0x1c000">VOIB08.PDT</rom>
+			<rom type="adpcm" offset="0x20000">VOIB09.PDT</rom>
+			<rom type="adpcm" offset="0x24000">VOIB10.PDT</rom>
+			<rom type="adpcm" offset="0x28000">VOIB11.PDT</rom>
+			<rom type="adpcm" offset="0x2c000">VOIB12.PDT</rom>
+			<rom type="adpcm" offset="0x30000">VOIB13.PDT</rom>
+			<rom type="adpcm" offset="0x34000">VOIB14.PDT</rom>
+			<rom type="adpcm" offset="0x38000">VOIB15.PDT</rom>
+			<rom type="adpcm" offset="0x3c000">VOIB16.PDT</rom>
+			<rom type="bgm" offset="0x00">DEMO01.MEL</rom>
+			<rom type="bgm" offset="0x01">DEMO02.MEL</rom>
+			<rom type="bgm" offset="0x02">DEMO03.MEL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">赤いスイートピー</title>
+			<title code="0x01">悲しみよ こんにちは</title>
+			<title code="0x02">彼女とTIP ON DUO</title>
+		</titlelist>
+	</game>
+	<game>
+  	<name>[MSX2] Labyrinth -Maou no Meikyuu- (ラビリンス 魔王の迷宮) (MSX Audio)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">pack_in_video</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+  	<romlist archive="labyr_msx">
+			<rom type="code">Labyrinth - Maou no Meikyuu (1987)(Pack-In-Video).kss</rom>
+  	</romlist>
+  	<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+  	</titlelist>
+	</game>
+	<game>
+  	<name>[MSX2] Labyrinth -Maou no Meikyuu- (ラビリンス 魔王の迷宮) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">pack_in_video</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+  	<romlist archive="labyr_msx">
+			<rom type="code">Labyrinth - Maou no Meikyuu (1987)(Pack-In-Video).kss</rom>
+  	</romlist>
+  	<titlelist>
+			<title code="0x80">BGM #80</title>
+			<title code="0x81">BGM #81</title>
+			<title code="0x82">BGM #82</title>
+			<title code="0x83">BGM #83</title>
+			<title code="0x84">BGM #84</title>
+			<title code="0x85">BGM #85</title>
+			<title code="0x86">BGM #86</title>
+			<title code="0x87">BGM #87</title>
+			<title code="0x88">BGM #88</title>
+			<title code="0x89">BGM #89</title>
+			<title code="0x8a">BGM #8a</title>
+			<title code="0x8b">BGM #8b</title>
+			<title code="0x8c">BGM #8c</title>
+			<title code="0x8d">BGM #8d</title>
+  	</titlelist>
+	</game>
+	<game>
+  	<name>[MSX2] Predator (プレデター)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">pack_in_video</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+  	<romlist archive="predator_msx">
+			<rom type="code">Predator (1988)(Pack-In-Video).kss</rom>
+  	</romlist>
+  	<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+  	</titlelist>
+	</game>
+	<game>
+  	<name>[MSX2] Silviana (シルヴィアーナ) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">pack_in_video</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+  	<romlist archive="silviana_msx">
+			<rom type="code">Silviana (1989)(Pack-In-Video).kss</rom>
+  	</romlist>
+  	<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+  	</titlelist>
+	</game>
+	<game>
+  	<name>[MSX2] Silviana (シルヴィアーナ) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">pack_in_video</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+  	<romlist archive="silviana_msx">
+			<rom type="code">Silviana (1989)(Pack-In-Video).kss</rom>
+  	</romlist>
+  	<titlelist>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+  	</titlelist>
+	</game>
+</gamelist>

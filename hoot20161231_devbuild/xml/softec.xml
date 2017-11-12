@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //日本ソフテック -->
+	<game>
+		<name>[X68000] eXOn(OPM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">日本ソフテック</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="exon68snd">
+			<rom type="code">exon68snd.bin</rom>
+			<rom type="x"    offset="0x10000">OPMDRV2.X</rom>
+			<rom type="x"    offset="0x30000">exong.x</rom>
+			<rom type="x"    offset="0x50000">exmenu.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">exmenu.x : タイトル</title>
+			<title code="0x01">exong.x  : ゲーム</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] eXOn(MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">日本ソフテック</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="exon68snd">
+			<rom type="code">exon68mid.bin</rom>
+			<rom type="x"    offset="0x10000">OPMDRV2.X</rom>
+			<rom type="x"    offset="0x30000">exong.x</rom>
+			<rom type="x"    offset="0x50000">exmenu.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">exmenu.x : タイトル</title>
+			<title code="0x01">exong.x  : ゲーム</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] eXOn(MT-32 Emulation)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">日本ソフテック</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="exon68snd">
+			<rom type="code">exon68mid.bin</rom>
+			<rom type="x"    offset="0x10000">OPMDRV2.X</rom>
+			<rom type="x"    offset="0x30000">exong.x</rom>
+			<rom type="x"    offset="0x50000">exmenu.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">exmenu.x : タイトル</title>
+			<title code="0x01">exong.x  : ゲーム</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] LUCY SHOT</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">日本ソフテック</driveralias>
+		<romlist archive="lucyshot68snd">
+			<rom type="code">lucy68snd.bin</rom>
+			<rom type="x" offset="0x010000">OPMDRV.X</rom>
+			<rom type="x" offset="0x030000">PINSP.X</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x001" max="0x009" extcode="1">BGM 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] テニス・テニス</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">日本ソフテック</driveralias>
+		<romlist archive="tennis98">
+			<rom type="file" offset="-1">tennis.com</rom>
+			<rom type="file" offset="-1">T.EXE</rom>
+			<rom type="file" offset="0x05">FM_TONE.SND</rom>
+			<rom type="shell" offset="0">tennis</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01f8">00 : (無音)</title>
+			<title code="0x020a">01 : BGM 1</title>
+			<title code="0x021c">02 : BGM 2</title>
+			<title code="0x022e">03 : BGM 3</title>
+			<title code="0x0240">04 : BGM 4</title>
+			<title code="0x0252">05 : BGM 5</title>
+			<title code="0x0264">06 : BGM 6</title>
+			<title code="0x0276">07 : BGM 7</title>
+			<title code="0xffff">   : FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] めざせ！トッププレイヤー テニス・テニス2</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">日本ソフテック</driveralias>
+		<romlist archive="tennis2_98">
+			<rom type="file" offset="-1">tennis2.com</rom>
+			<rom type="file" offset="-1">T.EXE</rom>
+			<rom type="file" offset="0x05">FM_TONE.SND</rom>
+			<rom type="shell" offset="0">tennis2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM 01 (効果音)</title>
+			<title code="0x01">BGM 02 (無音)</title>
+			<title code="0x02">BGM 03</title>
+			<title code="0x03">BGM 04</title>
+			<title code="0x04">BGM 05</title>
+			<title code="0x05">BGM 06</title>
+			<title code="0x06">BGM 07</title>
+			<title code="0x07">BGM 08</title>
+			<title code="0x08">BGM 09</title>
+			<title code="0x09">BGM 10</title>
+			<title code="0x0a">BGM 11</title>
+			<title code="0x0b">BGM 12</title>
+			<title code="0x0c">BGM 13</title>
+			<title code="0xff">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 義経</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">日本ソフテック</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+		</options>
+		<romlist archive="yositune98">
+			<rom type="file" offset="-1">yositune.com</rom>
+			<rom type="file" offset="-1">ADV.EXE</rom>
+			<rom type="file" offset="-1">DEM.EXE</rom>
+			<rom type="file" offset="-1">SIM.EXE</rom>
+			<rom type="file" offset="0x05">FM_TONE.SND</rom>
+			<rom type="shell" offset="0">yositune</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01f100">DEM.EXE : BGM 01</title>
+			<title code="0x020300">DEM.EXE : BGM 02</title>
+			<title code="0x01F101">ADV.EXE : BGM 01</title>
+			<title code="0x020301">ADV.EXE : BGM 02</title>
+			<title code="0x021501">ADV.EXE : BGM 03</title>
+			<title code="0x022701">ADV.EXE : BGM 04</title>
+			<title code="0x023901">ADV.EXE : BGM 05</title>
+			<title code="0x024B01">ADV.EXE : BGM 06</title>
+			<title code="0x025D01">ADV.EXE : BGM 07</title>
+			<title code="0x026F01">ADV.EXE : BGM 08</title>
+			<title code="0x028101">ADV.EXE : BGM 09</title>
+			<title code="0x029301">ADV.EXE : BGM 10</title>
+			<title code="0x02A501">ADV.EXE : BGM 11</title>
+			<title code="0x02B701">ADV.EXE : BGM 12</title>
+			<title code="0x01f102">SIM.EXE : BGM 01</title>
+			<title code="0x020302">SIM.EXE : BGM 02</title>
+			<title code="0x021502">SIM.EXE : BGM 03</title>
+			<title code="0x022702">SIM.EXE : BGM 04</title>
+			<title code="0x0000ff">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 雀風</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">日本ソフテック</driveralias>
+		<romlist archive="janpu_98">
+			<rom type="file" offset="-1">janpu.com</rom>
+			<rom type="file" offset="-1">J.EXE</rom>
+			<rom type="file" offset="-1">FM_TONE.SND</rom>
+			<rom type="file" offset="-1">OPNDRV.SYS</rom>
+			<rom type="device" offset="0">opndrv.sys</rom>
+			<rom type="shell" offset="0">janpu</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010000">BGM 01</title>
+			<title code="0x020000">BGM 02</title>
+			<title code="0x030000">BGM 03</title>
+			<title code="0x040000">BGM 04</title>
+			<title code="0x050000">BGM 05</title>
+			<title code="0x060000">(無音)</title>
+			<title code="0x00fffe">EFFECT 00</title>
+			<title code="0x01fffe">EFFECT 01</title>
+			<title code="0x02fffe">EFFECT 02</title>
+			<title code="0x03fffe">EFFECT 03</title>
+			<title code="0x04fffe">EFFECT 04</title>
+			<title code="0x05fffe">EFFECT 05</title>
+			<title code="0x06fffe">EFFECT 06</title>
+			<title code="0x07fffe">EFFECT 07</title>
+			<title code="0x08fffe">EFFECT 08</title>
+			<title code="0x09fffe">EFFECT 09</title>
+			<title code="0x0afffe">EFFECT 0A</title>
+			<title code="0x0bfffe">EFFECT 0B</title>
+			<title code="0x0cfffe">EFFECT 0C</title>
+			<title code="0x0dfffe">EFFECT 0D</title>
+			<title code="0x0efffe">EFFECT 0E</title>
+			<title code="0x0ffffe">EFFECT 0F</title>
+			<title code="0x10fffe">EFFECT 10</title>
+			<title code="0x11fffe">EFFECT 11</title>
+			<title code="0x12fffe">EFFECT 12</title>
+			<title code="0x13fffe">EFFECT 13</title>
+			<title code="0x14fffe">EFFECT 14</title>
+		<!--	<title code="0x15fffe">EFFECT 15</title> -->
+		<!--	<title code="0x16fffe">EFFECT 16</title> -->
+			<title code="0x17fffe">EFFECT 17</title>
+		<!--	<title code="0x18fffe">EFFECT 18</title> -->
+			<title code="0x00ffff">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 98スタジアム</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="pc98dos">softec</driveralias>
+		<driveralias type="NEC PC-9801">日本ソフテック</driveralias>
+		<romlist archive="98stdium">
+			<rom type="file" offset="-1">98stdium.com</rom>
+			<rom type="file" offset="-1">BAS.EXE</rom>
+			<rom type="file" offset="0x05">FM_TONE.SND</rom>
+			<rom type="shell" offset="0">98stdium</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">BGM 00</title>
+			<title code="0x0001">BGM 01</title>
+			<title code="0x0002">BGM 02</title>
+			<title code="0x0003">BGM 03</title>
+			<title code="0x0004">BGM 04</title>
+			<title code="0x0005">BGM 05</title>
+			<title code="0x0006">BGM 06 (無音)</title>
+			<title code="0x0007">BGM 07</title>
+			<title code="0xffff">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] NET JACK</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">日本ソフテック</driveralias>
+		<romlist archive="netjack98">
+			<rom type="file" offset="-1">netjack.com</rom>
+			<rom type="file" offset="-1">OPN.EXE</rom>
+			<rom type="file" offset="-1">COA1.EXE</rom>
+			<rom type="file" offset="0x05">FM_TONE.SND</rom>
+			<rom type="shell" offset="0">netjack</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01f800">OPN.EXE  : BGM 01</title>
+			<title code="0x01f801">COA1.EXE : BGM 01 (無音)</title>
+			<title code="0x020a01">COA1.EXE : BGM 02</title>
+			<title code="0x021c01">COA1.EXE : BGM 03</title>
+			<title code="0x022e01">COA1.EXE : BGM 04</title>
+			<title code="0x024001">COA1.EXE : BGM 05</title>
+			<title code="0x0000ff">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] AMIDA EXTRA</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">日本ソフテック</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+		</options>
+		<romlist archive="amidaex98">
+			<rom type="file" offset="-1">amidaex.com</rom>
+			<rom type="file" offset="-1">AMIDA.EXE</rom>
+			<rom type="file" offset="0x05">FM_TONE.SND</rom>
+			<rom type="shell" offset="0">amidaex</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01f1">BGM 01</title>
+			<title code="0x0203">BGM 02</title>
+			<title code="0x0215">BGM 03</title>
+			<title code="0x0227">BGM 04</title>
+			<title code="0x0239">BGM 05</title>
+			<title code="0x024b">BGM 06</title>
+			<title code="0x025d">BGM 07</title>
+			<title code="0x026f">BGM 08</title>
+			<title code="0xffff">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 神話の島 ISLAND OF MYTH</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">日本ソフテック</driveralias>
+		<romlist archive="sinwa98">
+			<rom type="file" offset="-1">sinwa98.com</rom>
+			<rom type="file" offset="-1">SINWA.EXE</rom>
+			<rom type="file" offset="0x05">FM_TONE.SND</rom>
+			<rom type="shell" offset="0">sinwa98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01f8">BGM 01</title>
+			<title code="0x020a">BGM 02</title>
+			<title code="0x021c">BGM 03</title>
+			<title code="0x022e">BGM 04</title>
+			<title code="0x0240">BGM 05</title>
+			<title code="0x0252">BGM 06</title>
+			<title code="0x0264">BGM 07</title>
+			<title code="0x0276">BGM 08</title>
+			<title code="0xffff">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] うさぎなパニック</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">日本ソフテック</driveralias>
+		<romlist archive="usagi_98">
+			<rom type="file" offset="-1">usagi.com</rom>
+			<rom type="file" offset="-1">T.EXE</rom>
+			<rom type="file" offset="-1">FM_TONE.SND</rom>
+			<rom type="file" offset="-1">OPNDRV.SYS</rom>
+			<rom type="device" offset="0">opndrv.sys</rom>
+			<rom type="shell" offset="0">usagi</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010000">BGM 01</title>
+			<title code="0x020000">BGM 02</title>
+			<title code="0x030000">BGM 03</title>
+			<title code="0x040000">BGM 04</title>
+			<title code="0x050000">BGM 05</title>
+			<title code="0x060000">BGM 06</title>
+			<title code="0x070000">BGM 07</title>
+			<title code="0x080000">BGM 08</title>
+			<title code="0x090000">BGM 09</title>
+			<title code="0x0a0000">BGM 10</title>
+			<title code="0x0b0000">BGM 11</title>
+			<title code="0x0c0000">BGM 12</title>
+			<title code="0x0d0000">BGM 13</title>
+			<title code="0x0e0000">BGM 14</title>
+			<title code="0x0f0000">BGM 15</title>
+			<title code="0x100000">BGM 16</title>
+			<title code="0x110000">BGM 17</title>
+			<title code="0x120000">BGM 18</title>
+			<title code="0x130000">BGM 19</title>
+			<title code="0x140000">BGM 20</title>
+			<title code="0x150000">BGM 21</title>
+			<title code="0x00fffe">EFFECT 00</title>
+			<title code="0x01fffe">EFFECT 01</title>
+			<title code="0x02fffe">EFFECT 02</title>
+			<title code="0x03fffe">EFFECT 03</title>
+			<title code="0x04fffe">EFFECT 04</title>
+			<title code="0x05fffe">EFFECT 05</title>
+			<title code="0x06fffe">EFFECT 06</title>
+			<title code="0x07fffe">EFFECT 07</title>
+			<title code="0x08fffe">EFFECT 08</title>
+			<title code="0x09fffe">EFFECT 09</title>
+			<title code="0x0afffe">EFFECT 0A</title>
+			<title code="0x0bfffe">EFFECT 0B</title>
+			<title code="0x0cfffe">EFFECT 0C</title>
+			<title code="0x0dfffe">EFFECT 0D</title>
+			<title code="0x0efffe">EFFECT 0E</title>
+			<title code="0x0ffffe">EFFECT 0F</title>
+			<title code="0x10fffe">EFFECT 10</title>
+			<title code="0x11fffe">EFFECT 11</title>
+			<title code="0x12fffe">EFFECT 12</title>
+			<title code="0x13fffe">EFFECT 13</title>
+		<!--	<title code="0x14fffe">EFFECT 14</title> -->
+		<!--	<title code="0x15fffe">EFFECT 15</title> -->
+		<!--	<title code="0x16fffe">EFFECT 16</title> -->
+		<!--	<title code="0x17fffe">EFFECT 17</title> -->
+		<!--	<title code="0x18fffe">EFFECT 18</title> -->
+			<title code="0x00ffff">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] うさぎなパニック2 -ペンペン島の秘宝-</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">日本ソフテック</driveralias>
+		<romlist archive="usagi2_98">
+			<rom type="file" offset="-1">usagi2.com</rom>
+			<rom type="file" offset="-1">T.EXE</rom>
+			<rom type="file" offset="0x05">FM_TONE.SND</rom>
+			<rom type="file" offset="0x10">MUS.000</rom>
+			<rom type="file" offset="0x11">MUS.001</rom>
+			<rom type="file" offset="0x12">MUS.002</rom>
+			<rom type="file" offset="0x13">MUS.003</rom>
+			<rom type="file" offset="0x14">MUS.004</rom>
+			<rom type="file" offset="0x15">MUS.005</rom>
+			<rom type="file" offset="0x16">MUS.006</rom>
+			<rom type="file" offset="0x17">MUS.007</rom>
+			<rom type="file" offset="0x18">MUS.008</rom>
+			<rom type="file" offset="0x19">MUS.009</rom>
+			<rom type="file" offset="0x1a">MUS.010</rom>
+			<rom type="file" offset="0x1b">MUS.011</rom>
+			<rom type="file" offset="0x1c">MUS.012</rom>
+			<rom type="file" offset="0x1d">MUS.013</rom>
+			<rom type="file" offset="0x1e">MUS.014</rom>
+			<rom type="file" offset="0x1f">MUS.015</rom>
+			<rom type="file" offset="0x20">MUS.016</rom>
+			<rom type="file" offset="0x21">MUS.017</rom>
+			<rom type="file" offset="0x22">MUS.018</rom>
+			<rom type="file" offset="0x23">MUS.019</rom>
+			<rom type="file" offset="0x24">MUS.020</rom>
+			<rom type="shell" offset="0">usagi2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000010">MUS.000</title>
+			<title code="0x000011">MUS.001</title>
+			<title code="0x000012">MUS.002</title>
+			<title code="0x000013">MUS.003</title>
+			<title code="0x000014">MUS.004</title>
+			<title code="0x000015">MUS.005</title>
+			<title code="0x000016">MUS.006</title>
+			<title code="0x000017">MUS.007</title>
+			<title code="0x000018">MUS.008</title>
+			<title code="0x000019">MUS.009</title>
+			<title code="0x00001a">MUS.010</title>
+			<title code="0x00001b">MUS.011</title>
+			<title code="0x00001c">MUS.012</title>
+			<title code="0x00001d">MUS.013</title>
+			<title code="0x00001e">MUS.014</title>
+			<title code="0x00001f">MUS.015</title>
+			<title code="0x000020">MUS.016</title>
+			<title code="0x000021">MUS.017</title>
+			<title code="0x000022">MUS.018</title>
+			<title code="0x000023">MUS.019</title>
+			<title code="0x000024">MUS.020</title>
+		<!--	<title code="0x01fffe">STOP</title> -->
+		<!--	<title code="0x02fffe">REPLAY</title> -->
+			<title code="0x00ffff">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 天下大乱</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">日本ソフテック</driveralias>
+		<romlist archive="ttairan_98">
+			<rom type="file" offset="-1">ttairan.com</rom>
+			<rom type="file" offset="-1">ENDO.EXE</rom>
+			<rom type="file" offset="-1">JAP.EXE</rom>
+			<rom type="file" offset="-1">OPN.EXE</rom>
+			<rom type="file" offset="-1">PED.EXE</rom>
+			<rom type="file" offset="-1">SIM.EXE</rom>
+			<rom type="file" offset="0x05">FM_TONE.SND</rom>
+			<rom type="shell" offset="0">ttairan</rom>
+		</romlist>
+		<titlelist>
+		<!--	<title code="0x01f800">ENDO.EXE : BGM 01 (無音)</title> -->
+			<title code="0x020a00">ENDO.EXE : BGM 02</title>
+			<title code="0x021c00">ENDO.EXE : BGM 03</title>
+			<title code="0x022e00">ENDO.EXE : BGM 04</title>
+			<title code="0x01f801">JAP.EXE  : BGM 01</title>
+			<title code="0x01f802">OPN.EXE  : BGM 01</title>
+			<title code="0x020a02">OPN.EXE  : BGM 02</title>
+		<!--	<title code="0x021c02">OPN.EXE  : BGM 03 (無音)</title> -->
+		<!--	<title code="0x01f803">PED.EXE  : BGM 01 (無音)</title> -->
+			<title code="0x020a03">PED.EXE  : BGM 02</title>
+			<title code="0x021c03">PED.EXE  : BGM 03</title>
+			<title code="0x022e03">PED.EXE  : BGM 04</title>
+		<!--	<title code="0x01f804">SIM.EXE  : BGM 01 (無音)</title> -->
+			<title code="0x020a04">SIM.EXE  : BGM 02</title>
+			<title code="0x021c04">SIM.EXE  : BGM 03</title>
+			<title code="0x022e04">SIM.EXE  : BGM 04</title>
+			<title code="0x0000ff">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Pinball Pinball</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">日本ソフテック</driveralias>
+		<romlist archive="pinbpinb68snd">
+			<rom type="code">pbpb68snd.bin</rom>
+			<rom type="x" offset="0x010000">OPMDRV.X</rom>
+			<rom type="x" offset="0x030000">PINSP.X</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x001" max="0x004" extcode="1">BGM 0x%02x</range>
+		</titlelist>
+	</game>
+</gamelist>

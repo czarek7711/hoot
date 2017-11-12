@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //ハート電子産業 -->
+	<game>
+		<name>[PC-8801] HEAVY ARMED STORMING VEHICLE - VAXOL -</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">ハート電子産業</driveralias>
+		<options>
+			<option name="init_pc" value="0x0100"/>
+		</options>
+		<romlist archive="vaxol">
+			<rom type="code" offset="0x0100">PATCH</rom>
+			<rom type="code" offset="0xe000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x08">MUS06</rom>
+			<rom type="bgm" offset="0x09">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">OPENING TITLE</title>
+			<title code="0x00000001">STAGE 1</title>
+			<title code="0x01000001">STAGE 1 BOSS</title>
+			<title code="0x00000002">STAGE 2</title>
+			<title code="0x00000003">STAGE 3</title>
+			<title code="0x00000004">BGM #4-1</title>
+			<title code="0x01000004">BGM #4-2</title>
+			<title code="0x00000005">BGM #5</title>
+			<title code="0x00000008">BGM #6-1</title>
+			<title code="0x01000008">BGM #6-2</title>
+			<title code="0x02000008">BGM #6-3</title>
+			<title code="0x00000009">BGM #7</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 探偵団X</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">ハート電子産業</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="tanteix">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">N88_3.ROM</rom>
+			<rom type="code" offset="0xf000">PLY88.B</rom>
+			<rom type="bgm" offset="0x00">BATTLE.X</rom>
+			<rom type="bgm" offset="0x01">BEAR1.X</rom>
+			<rom type="bgm" offset="0x02">BEAR2.X</rom>
+			<rom type="bgm" offset="0x03">BEAR3.X</rom>
+			<rom type="bgm" offset="0x04">BLIGHT.X</rom>
+			<rom type="bgm" offset="0x05">BUSY.X</rom>
+			<rom type="bgm" offset="0x06">CAT1.X</rom>
+			<rom type="bgm" offset="0x07">CAT2.X</rom>
+			<rom type="bgm" offset="0x08">FEAR.X</rom>
+			<rom type="bgm" offset="0x09">KING1.X</rom>
+			<rom type="bgm" offset="0x0a">KING2.X</rom>
+			<rom type="bgm" offset="0x0b">KING3.X</rom>
+			<rom type="bgm" offset="0x0c">KOHMON.X</rom>
+			<rom type="bgm" offset="0x0d">RIDER.X</rom>
+			<rom type="bgm" offset="0x0e">SE1.X</rom>
+			<rom type="bgm" offset="0x0f">SE2.X</rom>
+			<rom type="bgm" offset="0x10">SE3.X</rom>
+			<rom type="bgm" offset="0x11">SE5.X</rom>
+			<rom type="bgm" offset="0x12">TABU.X</rom>
+			<rom type="bgm" offset="0x13">THEME.X</rom>
+			<rom type="bgm" offset="0x14">XEND.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BATTLE.X : </title>
+			<title code="0x01">BEAR1.X  : </title>
+			<title code="0x02">BEAR2.X  : </title>
+			<title code="0x03">BEAR3.X  : </title>
+			<title code="0x04">BLIGHT.X : </title>
+			<title code="0x05">BUSY.X   : </title>
+			<title code="0x06">CAT1.X   : </title>
+			<title code="0x07">CAT2.X   : </title>
+			<title code="0x08">FEAR.X   : </title>
+			<title code="0x09">KING1.X  : </title>
+			<title code="0x0a">KING2.X  : </title>
+			<title code="0x0b">KING3.X  : </title>
+			<title code="0x0c">KOHMON.X : </title>
+			<title code="0x0d">RIDER.X  : </title>
+			<title code="0x0e">SE1.X    : </title>
+			<title code="0x0f">SE2.X    : </title>
+			<title code="0x10">SE3.X    : </title>
+			<title code="0x11">SE5.X    : </title>
+			<title code="0x12">TABU.X   : </title>
+			<title code="0x13">THEME.X  : </title>
+			<title code="0x14">XEND.X   : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 帰ってきた探偵団X</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">ハート電子産業</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="tanteix2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">N88_3.ROM</rom>
+			<rom type="code" offset="0xf000">PLY88</rom>
+			<rom type="bgm" offset="0x00">BGM1.X</rom>
+			<rom type="bgm" offset="0x01">BGM2.X</rom>
+			<rom type="bgm" offset="0x02">BGM3.X</rom>
+			<rom type="bgm" offset="0x03">CURRY.X</rom>
+			<rom type="bgm" offset="0x04">DOMEST.X</rom>
+			<rom type="bgm" offset="0x05">ENDING.X</rom>
+			<rom type="bgm" offset="0x06">F1A.X</rom>
+			<rom type="bgm" offset="0x07">F1B.X</rom>
+			<rom type="bgm" offset="0x08">F1C.X</rom>
+			<rom type="bgm" offset="0x09">FIGHT.X</rom>
+			<rom type="bgm" offset="0x0a">GMOVER.X</rom>
+			<rom type="bgm" offset="0x0b">HEART.X</rom>
+			<rom type="bgm" offset="0x0c">INSIDE.X</rom>
+			<rom type="bgm" offset="0x0d">JAIL.X</rom>
+			<rom type="bgm" offset="0x0e">MARIN.X</rom>
+			<rom type="bgm" offset="0x0f">SAKE.X</rom>
+			<rom type="bgm" offset="0x10">SE1.X</rom>
+			<rom type="bgm" offset="0x11">SE2.X</rom>
+			<rom type="bgm" offset="0x12">SHARK.X</rom>
+			<rom type="bgm" offset="0x13">TITLE.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM1.X   : </title>
+			<title code="0x01">BGM2.X   : </title>
+			<title code="0x02">BGM3.X   : </title>
+			<title code="0x03">CURRY.X  : </title>
+			<title code="0x04">DOMEST.X : </title>
+			<title code="0x05">ENDING.X : </title>
+			<title code="0x06">F1A.X    : </title>
+			<title code="0x07">F1B.X    : </title>
+			<title code="0x08">F1C.X    : </title>
+			<title code="0x09">FIGHT.X  : </title>
+			<title code="0x0a">GMOVER.X : </title>
+			<title code="0x0b">HEART.X  : </title>
+			<title code="0x0c">INSIDE.X : </title>
+			<title code="0x0d">JAIL.X   : </title>
+			<title code="0x0e">MARIN.X  : </title>
+			<title code="0x0f">SAKE.X   : </title>
+			<title code="0x10">SE1.X    : </title>
+			<title code="0x11">SE2.X    : </title>
+			<title code="0x12">SHARK.X  : </title>
+			<title code="0x13">TITLE.X  : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 陽炎迷宮</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">ハート電子産業</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="kagerou">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">N88_3.ROM</rom>
+			<rom type="code" offset="0xf000">PLY88.B</rom>
+			<rom type="bgm" offset="0x00">XA</rom>
+			<rom type="bgm" offset="0x01">XB</rom>
+			<rom type="bgm" offset="0x02">XC</rom>
+			<rom type="bgm" offset="0x03">XD</rom>
+			<rom type="bgm" offset="0x04">XE</rom>
+			<rom type="bgm" offset="0x05">XF</rom>
+			<rom type="bgm" offset="0x06">XG</rom>
+			<rom type="bgm" offset="0x07">XH</rom>
+			<rom type="bgm" offset="0x08">XI</rom>
+			<rom type="bgm" offset="0x09">XJ</rom>
+			<rom type="bgm" offset="0x0a">XK</rom>
+			<rom type="bgm" offset="0x0b">XL</rom>
+			<rom type="bgm" offset="0x0c">XM</rom>
+			<rom type="bgm" offset="0x0d">XN</rom>
+			<rom type="bgm" offset="0x0e">XO</rom>
+			<rom type="bgm" offset="0x0f">XP</rom>
+			<rom type="bgm" offset="0x10">XQ</rom>
+			<rom type="bgm" offset="0x11">XR</rom>
+			<rom type="bgm" offset="0x12">XS</rom>
+			<rom type="bgm" offset="0x13">XT</rom>
+			<rom type="bgm" offset="0x14">XU</rom>
+			<rom type="bgm" offset="0x15">XV</rom>
+			<rom type="bgm" offset="0x16">XW</rom>
+			<rom type="bgm" offset="0x17">XX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">XA : </title>
+			<title code="0x01">XB : </title>
+			<title code="0x02">XC : </title>
+			<title code="0x03">XD : </title>
+			<title code="0x04">XE : </title>
+			<title code="0x05">XF : </title>
+			<title code="0x06">XG : </title>
+			<title code="0x07">XH : </title>
+			<title code="0x08">XI : </title>
+			<title code="0x09">XJ : </title>
+			<title code="0x0a">XK : </title>
+			<title code="0x0b">XL : </title>
+			<title code="0x0c">XM : </title>
+			<title code="0x0d">XN : </title>
+			<title code="0x0e">XO : </title>
+			<title code="0x0f">XP : </title>
+			<title code="0x10">XQ : </title>
+			<title code="0x11">XR : </title>
+			<title code="0x12">XS : </title>
+			<title code="0x13">XT : </title>
+			<title code="0x14">XU : </title>
+			<title code="0x15">XV : </title>
+			<title code="0x16">XW : </title>
+			<title code="0x17">XX : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] PARAGON SEXA DOLL</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">ハート電子産業</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="doll">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">N88_3.ROM</rom>
+			<rom type="code" offset="0xf000">PLY88.B</rom>
+			<rom type="bgm" offset="0x00">D1.X</rom>
+			<rom type="bgm" offset="0x01">D2.X</rom>
+			<rom type="bgm" offset="0x02">DIV.X</rom>
+			<rom type="bgm" offset="0x03">DOLL.X</rom>
+			<rom type="bgm" offset="0x04">END1.X</rom>
+			<rom type="bgm" offset="0x05">END2.X</rom>
+			<rom type="bgm" offset="0x06">END3.X</rom>
+			<rom type="bgm" offset="0x07">KILLY.X</rom>
+			<rom type="bgm" offset="0x08">NANCY.X</rom>
+			<rom type="bgm" offset="0x09">SAD.X</rom>
+			<rom type="bgm" offset="0x0a">TEESE.X</rom>
+			<rom type="bgm" offset="0x0b">TINA.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">D1.X    : </title>
+			<title code="0x01">D2.X    : </title>
+			<title code="0x02">DIV.X   : </title>
+			<title code="0x03">DOLL.X  : </title>
+			<title code="0x04">END1.X  : </title>
+			<title code="0x05">END2.X  : </title>
+			<title code="0x06">END3.X  : </title>
+			<title code="0x07">KILLY.X : </title>
+			<title code="0x08">NANCY.X : </title>
+			<title code="0x09">SAD.X   : </title>
+			<title code="0x09">TEESE.X : </title>
+			<title code="0x09">TINA.X  : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] ファーラの時結界</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">ハート電子産業</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="farla">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">N88_3.ROM</rom>
+			<rom type="code" offset="0xf000">PLY88.B</rom>
+			<rom type="bgm" offset="0x00">X0</rom>
+			<rom type="bgm" offset="0x01">X1</rom>
+			<rom type="bgm" offset="0x02">X2</rom>
+			<rom type="bgm" offset="0x03">X3</rom>
+			<rom type="bgm" offset="0x04">X4</rom>
+			<rom type="bgm" offset="0x05">X5</rom>
+			<rom type="bgm" offset="0x06">X6</rom>
+			<rom type="bgm" offset="0x07">X7</rom>
+			<rom type="bgm" offset="0x08">X8</rom>
+			<rom type="bgm" offset="0x09">X9</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0400">X0 : </title>
+			<title code="0x0401">X1 : </title>
+			<title code="0x0402">X2 : </title>
+			<title code="0x0403">X3 : </title>
+			<title code="0x0404">X4 : </title>
+			<title code="0x0405">X5 : </title>
+			<title code="0x0406">X6 : </title>
+			<title code="0x0407">X7 : </title>
+			<title code="0x0408">X8 : </title>
+			<title code="0x0409">X9 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 死体置場で夕食を</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">ハート電子産業</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="shitai88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">N88_3.ROM</rom>
+			<rom type="code" offset="0xf000">PLY88.B</rom>
+			<rom type="bgm" offset="0x00">2CHO1.X</rom>
+			<rom type="bgm" offset="0x01">2CHO2.X</rom>
+			<rom type="bgm" offset="0x02">JAZZ1.X</rom>
+			<rom type="bgm" offset="0x03">JAZZ2.X</rom>
+			<rom type="bgm" offset="0x04">MARD1.X</rom>
+			<rom type="bgm" offset="0x05">MARD2A.X</rom>
+			<rom type="bgm" offset="0x06">MARD2B.X</rom>
+			<rom type="bgm" offset="0x07">MINOR1.X</rom>
+			<rom type="bgm" offset="0x08">MINOR2.X</rom>
+			<rom type="bgm" offset="0x09">MINOR3.X</rom>
+			<rom type="bgm" offset="0x0a">POPS1.X</rom>
+			<rom type="bgm" offset="0x0b">POPS2.X</rom>
+			<rom type="bgm" offset="0x0c">POPS3.X</rom>
+			<rom type="bgm" offset="0x0d">POPS4.X</rom>
+			<rom type="bgm" offset="0x0e">POPS5.X</rom>
+			<rom type="bgm" offset="0x0f">POPS6.X</rom>
+			<rom type="bgm" offset="0x12">POPS7.X</rom>
+			<rom type="bgm" offset="0x13">POPS8.X</rom>
+			<rom type="bgm" offset="0x14">POPS9.X</rom>
+			<rom type="bgm" offset="0x15">POPS10.X</rom>
+			<rom type="bgm" offset="0x16">POPS11.X</rom>
+			<rom type="bgm" offset="0x18">POPS12.X</rom>
+			<rom type="bgm" offset="0x19">POPS13.X</rom>
+			<rom type="bgm" offset="0x1a">POPS14.X</rom>
+			<rom type="bgm" offset="0x1c">POPS15.X</rom>
+			<rom type="bgm" offset="0x1d">POPS16.X</rom>
+			<rom type="bgm" offset="0x1e">POPS17.X</rom>
+			<rom type="bgm" offset="0x1f">POPS18.X</rom>
+			<rom type="bgm" offset="0x20">POPS19.X</rom>
+			<rom type="bgm" offset="0x21">POPS20.X</rom>
+			<rom type="bgm" offset="0x22">ROCK1.X</rom>
+			<rom type="bgm" offset="0x23">ROCK2.X</rom>
+			<rom type="bgm" offset="0x24">ROCK3.X</rom>
+			<rom type="bgm" offset="0x25">ROCK4.X</rom>
+			<rom type="bgm" offset="0x26">ROCK5.X</rom>
+			<rom type="bgm" offset="0x28">ROCK6.X</rom>
+			<rom type="bgm" offset="0x29">ROCK7.X</rom>
+			<rom type="bgm" offset="0x2a">STRANG.X</rom>
+			<rom type="bgm" offset="0x2c">TEL.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">2CHO1.X</title>
+			<title code="0x01">2CHO2.X</title>
+			<title code="0x02">JAZZ1.X</title>
+			<title code="0x03">JAZZ2.X</title>
+			<title code="0x04">MARD1.X</title>
+			<title code="0x05">MARD2A.X</title>
+			<title code="0x06">MARD2B.X</title>
+			<title code="0x07">MINOR1.X</title>
+			<title code="0x08">MINOR2.X</title>
+			<title code="0x09">MINOR3.X</title>
+			<title code="0x0a">POPS1.X</title>
+			<title code="0x0b">POPS2.X</title>
+			<title code="0x0c">POPS3.X</title>
+			<title code="0x0d">POPS4.X</title>
+			<title code="0x0e">POPS5.X</title>
+			<title code="0x0f">POPS6.X</title>
+			<title code="0x12">POPS7.X</title>
+			<title code="0x13">POPS8.X</title>
+			<title code="0x14">POPS9.X</title>
+			<title code="0x15">POPS10.X</title>
+			<title code="0x16">POPS11.X</title>
+			<title code="0x18">POPS12.X</title>
+			<title code="0x19">POPS13.X</title>
+			<title code="0x1a">POPS14.X</title>
+			<title code="0x1c">POPS15.X</title>
+			<title code="0x1d">POPS16.X</title>
+			<title code="0x1e">POPS17.X</title>
+			<title code="0x1f">POPS18.X</title>
+			<title code="0x20">POPS19.X</title>
+			<title code="0x21">POPS20.X</title>
+			<title code="0x22">ROCK1.X</title>
+			<title code="0x23">ROCK2.X</title>
+			<title code="0x24">ROCK3.X</title>
+			<title code="0x25">ROCK4.X</title>
+			<title code="0x26">ROCK5.X</title>
+			<title code="0x28">ROCK6.X</title>
+			<title code="0x29">ROCK7.X</title>
+			<title code="0x2a">STRANG.X</title>
+			<title code="0x2c">TEL.X</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] キサントゲノス 魔性甦る時</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ハート電子産業</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="xantgeno_98">
+			<rom type="file" offset="-1">SDN_98.COM</rom>
+			<rom type="file" offset="0x09">SDN.COM</rom>
+			<rom type="file" offset="0x10">WXA</rom>
+			<rom type="file" offset="0x11">WXB</rom>
+			<rom type="file" offset="0x12">WXC</rom>
+			<rom type="file" offset="0x13">WXD</rom>
+			<rom type="file" offset="0x14">WXE</rom>
+			<rom type="file" offset="0x15">WXF</rom>
+			<rom type="file" offset="0x16">WXG</rom>
+			<rom type="file" offset="0x17">WXH</rom>
+			<rom type="file" offset="0x18">WXI</rom>
+			<rom type="file" offset="0x19">WXJ</rom>
+			<rom type="file" offset="0x1a">WXK</rom>
+			<rom type="file" offset="0x1b">WXL</rom>
+			<rom type="file" offset="0x1c">WXM</rom>
+			<rom type="file" offset="0x1d">WXN</rom>
+			<rom type="file" offset="0x1e">WXO</rom>
+			<rom type="file" offset="0x1f">WXP</rom>
+			<rom type="file" offset="0x20">WXEF</rom>
+			<rom type="shell" offset="0">SDN_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WXA</title>
+			<title code="0x11">WXB</title>
+			<title code="0x12">WXC</title>
+			<title code="0x13">WXD</title>
+			<title code="0x14">WXE</title>
+			<title code="0x15">WXF</title>
+			<title code="0x16">WXG</title>
+			<title code="0x17">WXH</title>
+			<title code="0x18">WXI</title>
+			<title code="0x19">WXJ</title>
+			<title code="0x1a">WXK</title>
+			<title code="0x1b">WXL</title>
+			<title code="0x1c">WXM</title>
+			<title code="0x1d">WXN</title>
+			<title code="0x1e">WXO</title>
+			<title code="0x1f">WXP</title>
+			<title code="0x20">WXEF</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GIDDY2</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ハート電子産業</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="giddy2_98">
+			<rom type="file" offset="-1">SDN_98.COM</rom>
+			<rom type="file" offset="0x09">SDN.COM</rom>
+			<rom type="file" offset="0x10">BGM00.X</rom>
+			<rom type="file" offset="0x11">BGM01.X</rom>
+			<rom type="file" offset="0x12">BGM02.X</rom>
+			<rom type="file" offset="0x13">BGM03.X</rom>
+			<rom type="file" offset="0x14">BGM04.X</rom>
+			<rom type="file" offset="0x15">BGM05.X</rom>
+			<rom type="file" offset="0x16">BGM06.X</rom>
+			<rom type="file" offset="0x17">BGM07.X</rom>
+			<rom type="file" offset="0x18">BGM08.X</rom>
+			<rom type="file" offset="0x19">BGM09.X</rom>
+			<rom type="file" offset="0x1a">BGM10.X</rom>
+			<rom type="file" offset="0x1b">BGM11.X</rom>
+			<rom type="file" offset="0x1c">BGM12.X</rom>
+			<rom type="file" offset="0x1d">BGM13.X</rom>
+			<rom type="file" offset="0x1e">BGM14.X</rom>
+			<rom type="file" offset="0x1f">BGM15.X</rom>
+			<rom type="file" offset="0x20">BGM16.X</rom>
+			<rom type="file" offset="0x21">BGM17.X</rom>
+			<rom type="file" offset="0x22">BGM18.X</rom>
+			<rom type="file" offset="0x23">BGM19.X</rom>
+			<rom type="file" offset="0x24">SE1</rom>
+			<rom type="file" offset="0x25">SE2</rom>
+			<rom type="file" offset="0x26">SE3</rom>
+			<rom type="file" offset="0x27">SE4</rom>
+			<rom type="file" offset="0x28">SE5</rom>
+			<rom type="file" offset="0x29">SE6</rom>
+			<rom type="file" offset="0x2a">SE7</rom>
+			<rom type="file" offset="0x2b">SE8</rom>
+			<rom type="shell" offset="0">SDN_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM00.X</title>
+			<title code="0x11">BGM01.X</title>
+			<title code="0x12">BGM02.X</title>
+			<title code="0x13">BGM03.X</title>
+			<title code="0x14">BGM04.X</title>
+			<title code="0x15">BGM05.X</title>
+			<title code="0x16">BGM06.X</title>
+			<title code="0x17">BGM07.X</title>
+			<title code="0x18">BGM08.X</title>
+			<title code="0x19">BGM09.X</title>
+			<title code="0x1a">BGM10.X</title>
+			<title code="0x1b">BGM11.X</title>
+			<title code="0x1c">BGM12.X</title>
+			<title code="0x1d">BGM13.X</title>
+			<title code="0x1e">BGM14.X</title>
+			<title code="0x1f">BGM15.X</title>
+			<title code="0x20">BGM16.X</title>
+			<title code="0x21">BGM17.X</title>
+			<title code="0x22">BGM18.X</title>
+			<title code="0x23">BGM19.X</title>
+			<title code="0x24">SE1</title>
+			<title code="0x25">SE2</title>
+			<title code="0x26">SE3</title>
+			<title code="0x27">SE4</title>
+			<title code="0x28">SE5</title>
+			<title code="0x29">SE6</title>
+			<title code="0x2a">SE7</title>
+			<title code="0x2b">SE8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] シャレイドマジック</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ハート電子産業</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="sharedem_98">
+			<rom type="file" offset="-1">SDN_98.COM</rom>
+			<rom type="file" offset="0x09">SDN.COM</rom>
+			<rom type="file" offset="0x10">BGM00.X</rom>
+			<rom type="file" offset="0x11">BGM01.X</rom>
+			<rom type="file" offset="0x12">BGM02.X</rom>
+			<rom type="file" offset="0x13">BGM03.X</rom>
+			<rom type="file" offset="0x14">BGM04.X</rom>
+			<rom type="file" offset="0x15">BGM05.X</rom>
+			<rom type="file" offset="0x16">BGM06.X</rom>
+			<rom type="file" offset="0x17">BGM07.X</rom>
+			<rom type="file" offset="0x18">BGM08.X</rom>
+			<rom type="file" offset="0x19">BGM09.X</rom>
+			<rom type="file" offset="0x1a">BGM10.X</rom>
+			<rom type="file" offset="0x1b">BGM11.X</rom>
+			<rom type="file" offset="0x1c">BGM12.X</rom>
+			<rom type="file" offset="0x1d">BGM13.X</rom>
+			<rom type="file" offset="0x1e">BGM14.X</rom>
+			<rom type="file" offset="0x1f">BGM15.X</rom>
+			<rom type="file" offset="0x20">BGM99.X</rom>
+			<rom type="file" offset="0x21">CAT.X</rom>
+			<rom type="shell" offset="0">SDN_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM00.X</title>
+			<title code="0x11">BGM01.X</title>
+			<title code="0x12">BGM02.X</title>
+			<title code="0x13">BGM03.X</title>
+			<title code="0x14">BGM04.X</title>
+			<title code="0x15">BGM05.X</title>
+			<title code="0x16">BGM06.X</title>
+			<title code="0x17">BGM07.X</title>
+			<title code="0x18">BGM08.X</title>
+			<title code="0x19">BGM09.X</title>
+			<title code="0x1a">BGM10.X</title>
+			<title code="0x1b">BGM11.X</title>
+			<title code="0x1c">BGM12.X</title>
+			<title code="0x1d">BGM13.X</title>
+			<title code="0x1e">BGM14.X</title>
+			<title code="0x1f">BGM15.X</title>
+			<title code="0x20">BGM99.X</title>
+			<title code="0x21">CAT.X</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 帰ってきた 探偵団X</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">ハート電子産業</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8000"/>
+			<option name="mdata_size" value="0x3000"/>
+			<option name="mfile_size" value="0x3000"/>
+			<option name="mdata_num"  value="0x40"/>
+			<option name="psg_mix"    value="0x60"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="tantexr_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xd000">PSGDRV.SYS</rom>
+			<rom type="bgm" offset="0x00">X000.EXE</rom>
+			<rom type="bgm" offset="0x01">X001.EXE</rom>
+			<rom type="bgm" offset="0x02">X002.EXE</rom>
+			<rom type="bgm" offset="0x03">X101.EXE</rom>
+			<rom type="bgm" offset="0x04">X300.EXE</rom>
+			<rom type="bgm" offset="0x05">X301.EXE</rom>
+			<rom type="bgm" offset="0x06">X302.EXE</rom>
+			<rom type="bgm" offset="0x07">X303.EXE</rom>
+			<rom type="bgm" offset="0x08">X304.EXE</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x239d0000">X000.EXE  : 00 :</title>
+			<title code="0x239d0100">X000.EXE  : 01 :</title>
+			<title code="0x239d0200">X000.EXE  : 02 :</title>
+			<title code="0x239d0300">X000.EXE  : 03 :</title>
+			<title code="0x239d0400">X000.EXE  : 04 :</title>
+			<title code="0x11b00001">X001.EXE  : 00 :</title>
+			<title code="0x11b00101">X001.EXE  : 01 :</title>
+			<title code="0x1c0b0002">X002.EXE  : 00 :</title>
+			<title code="0x224d0003">X101.EXE  : 00 :</title>
+			<title code="0x224d0503">X101.EXE  : 05 :</title>
+			<title code="0x18570004">X300.EXE  : 00 :</title>
+			<title code="0x27c00005">X301.EXE  : 00 :</title>
+			<title code="0x27c00105">X301.EXE  : 01 :</title>
+			<title code="0x1afb0006">X302.EXE  : 00 :</title>
+			<title code="0x1afb0106">X302.EXE  : 01 :</title>
+			<title code="0x15de0007">X303.EXE  : 00 :</title>
+			<title code="0x15de0107">X303.EXE  : 01 :</title>
+			<title code="0x15de0207">X303.EXE  : 02 :</title>
+			<title code="0x26c00008">X304.EXE  : 00 :</title>
+			<title code="0x26c00108">X304.EXE  : 01 :</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 陽炎迷宮(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">ハート電子産業</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="kagerou_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xc3f9">PSGDRV.SYS</rom>
+			<rom type="bgm" offset="0x00">PSG_01.BGX</rom>
+			<rom type="bgm" offset="0x01">PSG_02.BGX</rom>
+			<rom type="bgm" offset="0x02">PSG_03.BGX</rom>
+			<rom type="bgm" offset="0x03">PSG_04.BGX</rom>
+			<rom type="bgm" offset="0x04">PSG_05.BGX</rom>
+			<rom type="bgm" offset="0x05">PSG_06.BGX</rom>
+			<rom type="bgm" offset="0x06">PSG_07.BGX</rom>
+			<rom type="bgm" offset="0x07">PSG_08.BGX</rom>
+			<rom type="bgm" offset="0x08">PSG_09.BGX</rom>
+			<rom type="bgm" offset="0x09">PSG_10.BGX</rom>
+			<rom type="bgm" offset="0x0a">PSG_11.BGX</rom>
+			<rom type="bgm" offset="0x0b">PSG_12.BGX</rom>
+			<rom type="bgm" offset="0x0c">PSG_13.BGX</rom>
+			<rom type="bgm" offset="0x0d">PSG_14.BGX</rom>
+			<rom type="bgm" offset="0x0e">PSG_15.BGX</rom>
+			<rom type="bgm" offset="0x0f">PSG_16.BGX</rom>
+			<rom type="bgm" offset="0x10">PSG_17.BGX</rom>
+			<rom type="bgm" offset="0x11">PSG_18.BGX</rom>
+			<rom type="bgm" offset="0x12">PSG_19.BGX</rom>
+			<rom type="bgm" offset="0x13">PSG_20.BGX</rom>
+			<rom type="bgm" offset="0x14">PSG_21.BGX</rom>
+			<rom type="bgm" offset="0x15">PSG_22.BGX</rom>
+			<rom type="bgm" offset="0x16">PSG_23.BGX</rom>
+			<rom type="bgm" offset="0x17">PSG_24.BGX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">PSG_01.BGX</title>
+			<title code="0x01">PSG_02.BGX</title>
+			<title code="0x02">PSG_03.BGX</title>
+			<title code="0x03">PSG_04.BGX</title>
+			<title code="0x04">PSG_05.BGX</title>
+			<title code="0x05">PSG_06.BGX</title>
+			<title code="0x06">PSG_07.BGX</title>
+			<title code="0x07">PSG_08.BGX</title>
+			<title code="0x08">PSG_09.BGX</title>
+			<title code="0x09">PSG_10.BGX</title>
+			<title code="0x0a">PSG_11.BGX</title>
+			<title code="0x0b">PSG_12.BGX</title>
+			<title code="0x0c">PSG_13.BGX</title>
+			<title code="0x0d">PSG_14.BGX</title>
+			<title code="0x0e">PSG_15.BGX</title>
+			<title code="0x0f">PSG_16.BGX</title>
+			<title code="0x10">PSG_17.BGX</title>
+			<title code="0x11">PSG_18.BGX</title>
+			<title code="0x12">PSG_19.BGX</title>
+			<title code="0x13">PSG_20.BGX</title>
+			<title code="0x14">PSG_21.BGX</title>
+			<title code="0x15">PSG_22.BGX</title>
+			<title code="0x16">PSG_23.BGX</title>
+			<title code="0x17">PSG_24.BGX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 陽炎迷宮(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">ハート電子産業</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="use_opll"   value="0x01"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="kagerou_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4000">fmpac.rom</rom>
+			<rom type="bgm" offset="0x00">FM_01.BGX</rom>
+			<rom type="bgm" offset="0x01">FM_02.BGX</rom>
+			<rom type="bgm" offset="0x02">FM_03.BGX</rom>
+			<rom type="bgm" offset="0x03">FM_04.BGX</rom>
+			<rom type="bgm" offset="0x04">FM_05.BGX</rom>
+			<rom type="bgm" offset="0x05">FM_06.BGX</rom>
+			<rom type="bgm" offset="0x06">FM_07.BGX</rom>
+			<rom type="bgm" offset="0x07">FM_08.BGX</rom>
+			<rom type="bgm" offset="0x08">FM_09.BGX</rom>
+			<rom type="bgm" offset="0x09">FM_10.BGX</rom>
+			<rom type="bgm" offset="0x0a">FM_11.BGX</rom>
+			<rom type="bgm" offset="0x0b">FM_12.BGX</rom>
+			<rom type="bgm" offset="0x0c">FM_13.BGX</rom>
+			<rom type="bgm" offset="0x0d">FM_14.BGX</rom>
+			<rom type="bgm" offset="0x0e">FM_15.BGX</rom>
+			<rom type="bgm" offset="0x0f">FM_16.BGX</rom>
+			<rom type="bgm" offset="0x10">FM_17.BGX</rom>
+			<rom type="bgm" offset="0x11">FM_18.BGX</rom>
+			<rom type="bgm" offset="0x12">FM_19.BGX</rom>
+			<rom type="bgm" offset="0x13">FM_20.BGX</rom>
+			<rom type="bgm" offset="0x14">FM_21.BGX</rom>
+			<rom type="bgm" offset="0x15">FM_22.BGX</rom>
+			<rom type="bgm" offset="0x16">FM_23.BGX</rom>
+			<rom type="bgm" offset="0x17">FM_24.BGX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">FM_01.BGX</title>
+			<title code="0x01">FM_02.BGX</title>
+			<title code="0x02">FM_03.BGX</title>
+			<title code="0x03">FM_04.BGX</title>
+			<title code="0x04">FM_05.BGX</title>
+			<title code="0x05">FM_06.BGX</title>
+			<title code="0x06">FM_07.BGX</title>
+			<title code="0x07">FM_08.BGX</title>
+			<title code="0x08">FM_09.BGX</title>
+			<title code="0x09">FM_10.BGX</title>
+			<title code="0x0a">FM_11.BGX</title>
+			<title code="0x0b">FM_12.BGX</title>
+			<title code="0x0c">FM_13.BGX</title>
+			<title code="0x0d">FM_14.BGX</title>
+			<title code="0x0e">FM_15.BGX</title>
+			<title code="0x0f">FM_16.BGX</title>
+			<title code="0x10">FM_17.BGX</title>
+			<title code="0x11">FM_18.BGX</title>
+			<title code="0x12">FM_19.BGX</title>
+			<title code="0x13">FM_20.BGX</title>
+			<title code="0x14">FM_21.BGX</title>
+			<title code="0x15">FM_22.BGX</title>
+			<title code="0x16">FM_23.BGX</title>
+			<title code="0x17">FM_24.BGX</title>
+		</titlelist>
+	</game>
+</gamelist>

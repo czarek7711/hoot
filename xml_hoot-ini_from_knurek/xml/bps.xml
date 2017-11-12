@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //bps -->
+	<game>
+		<name>[PC-88] Archon</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bps</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="archon">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xa000">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x04">Stop the Music (演奏停止)</title>
+			<title code="0x00">Opening</title>
+			<title code="0x01">Main BGM</title>
+			<title code="0x02">Combat Arena</title>
+			<title code="0x03">Game End</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] M.U.L.E.</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bps</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb000"/>
+			<option name="mdata_size" value="0x0900"/>
+			<option name="use_vrtc"   value="0x01"/>
+			<option name="clock_mul"  value="0x00"/>
+		</options>
+		<romlist archive="mule">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">PROG</rom>
+			<rom type="code" offset="0xb000">MUS00</rom>
+			<rom type="code" offset="0xb900">MUS01</rom>
+			<rom type="code" offset="0xbb00">MUS02</rom>
+			<rom type="code" offset="0xbc00">MUS03</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000000">Command (メインテーマ)</title>
+			<title code="0x00000001">Pub</title>
+			<title code="0x00000002">Command II (ラッキーイベント)</title>
+			<title code="0x00000003">Bad Event (バッドイベント)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Tetris (テトリス)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bps</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1000"/>
+		</options>
+		<romlist archive="tetris">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x30">PCM00</rom>
+			<rom type="bgm" offset="0x31">PCM01</rom>
+			<rom type="bgm" offset="0x32">PCM02</rom>
+			<rom type="bgm" offset="0x33">PCM03</rom>
+			<rom type="bgm" offset="0x34">PCM04</rom>
+			<rom type="bgm" offset="0x35">PCM05</rom>
+			<rom type="bgm" offset="0x36">PCM06</rom>
+			<rom type="bgm" offset="0x37">PCM07</rom>
+			<rom type="bgm" offset="0x38">PCM08</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">Strolling Player</title>
+			<title code="0x00000001">Technotris</title>
+			<title code="0x01000001">Karinka</title>
+			<title code="0x02000001">Troika</title>
+			<title code="0x00000002">Heroes</title>
+			<title code="0x00000003">Peddler</title>
+			<title code="0x00000004">Celebration 1</title>
+			<title code="0x01000004">Celebration 2</title>
+			<title code="0x00000030">"Keep it up!"</title>
+			<title code="0x00000031">"You made it!"</title>
+			<title code="0x00000032">"Way to go!"</title>
+			<title code="0x00000033">"Bullet-Proof Software."</title>
+			<title code="0x00000034">"Right on!"</title>
+			<title code="0x00000035">"Congratulations!"</title>
+			<title code="0x00000036">"You got a high score!"</title>
+			<title code="0x00000037">"Oops... Too bad.</title>
+			<title code="0x00000038">"This is your last chance!"</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Go Yuugi (碁・遊・技)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bps</driveralias>
+		<romlist archive="goyugi">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x2800">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Pipe Dream (パイプドリーム) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">bps</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="pipedrm88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">VOICE</rom>
+			<rom type="code" offset="0x8400">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+			<rom type="bgm" offset="0x0f">MUS15</rom>
+			<rom type="bgm" offset="0x10">MUS16</rom>
+			<rom type="bgm" offset="0x11">MUS17</rom>
+			<rom type="bgm" offset="0x12">MUS18</rom>
+			<rom type="bgm" offset="0x13">MUS19</rom>
+			<rom type="bgm" offset="0x14">MUS20</rom>
+			<rom type="bgm" offset="0x15">MUS21</rom>
+			<rom type="bgm" offset="0x16">MUS22</rom>
+			<rom type="bgm" offset="0x17">MUS23</rom>
+			<rom type="bgm" offset="0x18">MUS24</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00</title>
+			<title code="0x01">MUS01</title>
+			<title code="0x02">MUS02</title>
+			<title code="0x03">MUS03</title>
+			<title code="0x04">MUS04</title>
+			<title code="0x05">MUS05</title>
+			<title code="0x06">MUS06</title>
+			<title code="0x07">MUS07</title>
+			<title code="0x08">MUS08</title>
+			<title code="0x09">MUS09</title>
+			<title code="0x0a">MUS10</title>
+			<title code="0x0b">MUS11</title>
+			<title code="0x0c">MUS12</title>
+			<title code="0x0d">MUS13</title>
+			<title code="0x0e">MUS14</title>
+			<title code="0x0f">MUS15</title>
+			<title code="0x10">MUS16</title>
+			<title code="0x11">MUS17</title>
+			<title code="0x12">MUS18</title>
+			<title code="0x13">MUS19</title>
+			<title code="0x14">MUS20</title>
+			<title code="0x15">MUS21</title>
+			<title code="0x16">MUS22</title>
+			<title code="0x17">MUS23</title>
+			<title code="0x18">MUS24</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Pipe Dream (パイプドリーム) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bps</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="pipedrm88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">VOICE</rom>
+			<rom type="code" offset="0x8400">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+			<rom type="bgm" offset="0x0f">MUS15</rom>
+			<rom type="bgm" offset="0x10">MUS16</rom>
+			<rom type="bgm" offset="0x11">MUS17</rom>
+			<rom type="bgm" offset="0x12">MUS18</rom>
+			<rom type="bgm" offset="0x13">MUS19</rom>
+			<rom type="bgm" offset="0x14">MUS20</rom>
+			<rom type="bgm" offset="0x15">MUS21</rom>
+			<rom type="bgm" offset="0x16">MUS22</rom>
+			<rom type="bgm" offset="0x17">MUS23</rom>
+			<rom type="bgm" offset="0x18">MUS24</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00</title>
+			<title code="0x01">MUS01</title>
+			<title code="0x02">MUS02</title>
+			<title code="0x03">MUS03</title>
+			<title code="0x04">MUS04</title>
+			<title code="0x05">MUS05</title>
+			<title code="0x06">MUS06</title>
+			<title code="0x07">MUS07</title>
+			<title code="0x08">MUS08</title>
+			<title code="0x09">MUS09</title>
+			<title code="0x0a">MUS10</title>
+			<title code="0x0b">MUS11</title>
+			<title code="0x0c">MUS12</title>
+			<title code="0x0d">MUS13</title>
+			<title code="0x0e">MUS14</title>
+			<title code="0x0f">MUS15</title>
+			<title code="0x10">MUS16</title>
+			<title code="0x11">MUS17</title>
+			<title code="0x12">MUS18</title>
+			<title code="0x13">MUS19</title>
+			<title code="0x14">MUS20</title>
+			<title code="0x15">MUS21</title>
+			<title code="0x16">MUS22</title>
+			<title code="0x17">MUS23</title>
+			<title code="0x18">MUS24</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Frontier Universe (フロンティアユニヴァース) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">bps</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="frnunv98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">F_FM.EFC</rom>
+			<rom type="file" offset="0x10">BADEVENT.FM</rom>
+			<rom type="file" offset="0x11">BATTLE1.FM</rom>
+			<rom type="file" offset="0x12">BATTLE2.FM</rom>
+			<rom type="file" offset="0x13">CLEAR.FM</rom>
+			<rom type="file" offset="0x14">COMU.FM</rom>
+			<rom type="file" offset="0x15">ENDING.FM</rom>
+			<rom type="file" offset="0x16">ENDMES.FM</rom>
+			<rom type="file" offset="0x17">GAMEOVER.FM</rom>
+			<rom type="file" offset="0x18">KAIGI.FM</rom>
+			<rom type="file" offset="0x19">LOGO.FM</rom>
+			<rom type="file" offset="0x1a">MAP1.FM</rom>
+			<rom type="file" offset="0x1b">MAP2.FM</rom>
+			<rom type="file" offset="0x1c">MAP3.FM</rom>
+			<rom type="file" offset="0x1d">MENU.FM</rom>
+			<rom type="file" offset="0x1e">OPENING.FM</rom>
+			<rom type="file" offset="0x1f">PROTECT.FM</rom>
+			<rom type="file" offset="0x20">SALOON.FM</rom>
+			<rom type="file" offset="0x21">SEIZOU.FM</rom>
+			<rom type="file" offset="0x22">SION.FM</rom>
+			<rom type="file" offset="0x23">SIREN.FM</rom>
+			<rom type="file" offset="0x24">WAKUSEI.FM</rom>
+			<rom type="file" offset="0x25">YOUSAI1.FM</rom>
+			<rom type="file" offset="0x26">YOUSAI2.FM</rom>
+			<rom type="shell" offset="0">pmd /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BADEVENT.FM</title>
+			<title code="0x11">BATTLE1.FM</title>
+			<title code="0x12">BATTLE2.FM</title>
+			<title code="0x13">CLEAR.FM</title>
+			<title code="0x14">COMU.FM</title>
+			<title code="0x15">ENDING.FM</title>
+			<title code="0x16">ENDMES.FM</title>
+			<title code="0x17">GAMEOVER.FM</title>
+			<title code="0x18">KAIGI.FM</title>
+			<title code="0x19">LOGO.FM</title>
+			<title code="0x1a">MAP1.FM</title>
+			<title code="0x1b">MAP2.FM</title>
+			<title code="0x1c">MAP3.FM</title>
+			<title code="0x1d">MENU.FM</title>
+			<title code="0x1e">OPENING.FM</title>
+			<title code="0x1f">PROTECT.FM</title>
+			<title code="0x20">SALOON.FM</title>
+			<title code="0x21">SEIZOU.FM</title>
+			<title code="0x22">SION.FM</title>
+			<title code="0x23">SIREN.FM</title>
+			<title code="0x24">WAKUSEI.FM</title>
+			<title code="0x25">YOUSAI1.FM</title>
+			<title code="0x26">YOUSAI2.FM</title>
+			<range min="0x0801" max="0x0819" extcode="1">F_FM.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Frontier Universe (フロンティアユニヴァース) (BEEP)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">bps</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+		</options>
+		<romlist archive="frnunv98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB.COM</rom>
+			<rom type="file" offset="0x08">F_BP.EFC</rom>
+			<rom type="file" offset="0x10">BADEVENT.BEP</rom>
+			<rom type="file" offset="0x11">BATTLE1.BEP</rom>
+			<rom type="file" offset="0x12">BATTLE2.BEP</rom>
+			<rom type="file" offset="0x13">CLEAR.BEP</rom>
+			<rom type="file" offset="0x14">COMU.BEP</rom>
+			<rom type="file" offset="0x15">ENDING.BEP</rom>
+			<rom type="file" offset="0x16">ENDMES.BEP</rom>
+			<rom type="file" offset="0x17">GAMEOVER.BEP</rom>
+			<rom type="file" offset="0x18">KAIGI.BEP</rom>
+			<rom type="file" offset="0x19">MAP1.BEP</rom>
+			<rom type="file" offset="0x1a">MAP2.BEP</rom>
+			<rom type="file" offset="0x1b">MAP3.BEP</rom>
+			<rom type="file" offset="0x1c">MENU.BEP</rom>
+			<rom type="file" offset="0x1d">OPENING.BEP</rom>
+			<rom type="file" offset="0x1e">PROTECT.BEP</rom>
+			<rom type="file" offset="0x1f">SALOON.BEP</rom>
+			<rom type="file" offset="0x20">SEIZOU.BEP</rom>
+			<rom type="file" offset="0x21">SION.BEP</rom>
+			<rom type="file" offset="0x22">SIREN.BEP</rom>
+			<rom type="file" offset="0x23">YOUSAI1.BEP</rom>
+			<rom type="file" offset="0x24">YOUSAI2.BEP</rom>
+			<rom type="shell" offset="0">pmdb /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BADEVENT.BEP</title>
+			<title code="0x11">BATTLE1.BEP</title>
+			<title code="0x12">BATTLE2.BEP</title>
+			<title code="0x13">CLEAR.BEP</title>
+			<title code="0x14">COMU.BEP</title>
+			<title code="0x15">ENDING.BEP</title>
+			<title code="0x16">ENDMES.BEP</title>
+			<title code="0x17">GAMEOVER.BEP</title>
+			<title code="0x18">KAIGI.BEP</title>
+			<title code="0x19">MAP1.BEP</title>
+			<title code="0x1a">MAP2.BEP</title>
+			<title code="0x1b">MAP3.BEP</title>
+			<title code="0x1c">MENU.BEP</title>
+			<title code="0x1d">OPENING.BEP</title>
+			<title code="0x1e">PROTECT.BEP</title>
+			<title code="0x1f">SALOON.BEP</title>
+			<title code="0x20">SEIZOU.BEP</title>
+			<title code="0x21">SION.BEP</title>
+			<title code="0x22">SIREN.BEP</title>
+			<title code="0x23">YOUSAI1.BEP</title>
+			<title code="0x24">YOUSAI2.BEP</title>
+			<range min="0x0801" max="0x0814" extcode="1">F_BP.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Frontier Universe (フロンティアユニヴァース) (MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">bps</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="frnunv98">
+			<rom type="file" offset="-1">mmp_hoot.com</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">PUTEX.EXE</rom>
+			<rom type="file" offset="-1">MT32_ROM</rom>
+			<rom type="file" offset="0x10">BADEVENT.32</rom>
+			<rom type="file" offset="0x11">BATTLE1.32</rom>
+			<rom type="file" offset="0x12">BATTLE2.32</rom>
+			<rom type="file" offset="0x13">CLEAR.32</rom>
+			<rom type="file" offset="0x14">COMU.32</rom>
+			<rom type="file" offset="0x15">ENDING.32</rom>
+			<rom type="file" offset="0x16">ENDMES.32</rom>
+			<rom type="file" offset="0x17">GAMEOVER.32</rom>
+			<rom type="file" offset="0x18">KAIGI.32</rom>
+			<rom type="file" offset="0x19">LOGO.32</rom>
+			<rom type="file" offset="0x1a">MAP1.32</rom>
+			<rom type="file" offset="0x1b">MAP2.32</rom>
+			<rom type="file" offset="0x1c">MAP3.32</rom>
+			<rom type="file" offset="0x1d">MENU.32</rom>
+			<rom type="file" offset="0x1e">OPENING.32</rom>
+			<rom type="file" offset="0x1f">PROTECT.32</rom>
+			<rom type="file" offset="0x20">SALOON.32</rom>
+			<rom type="file" offset="0x21">SEIZOU.32</rom>
+			<rom type="file" offset="0x22">SION.32</rom>
+			<rom type="file" offset="0x23">SIREN.32</rom>
+			<rom type="file" offset="0x24">WAKUSEI.32</rom>
+			<rom type="file" offset="0x25">YOUSAI1.32</rom>
+			<rom type="file" offset="0x26">YOUSAI2.32</rom>
+			<rom type="shell" offset="0">putex</rom>
+			<rom type="shell" offset="0">mmd /K</rom>
+			<rom type="shell" offset="0">mmp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BADEVENT.32</title>
+			<title code="0x11">BATTLE1.32</title>
+			<title code="0x12">BATTLE2.32</title>
+			<title code="0x13">CLEAR.32</title>
+			<title code="0x14">COMU.32</title>
+			<title code="0x15">ENDING.32</title>
+			<title code="0x16">ENDMES.32</title>
+			<title code="0x17">GAMEOVER.32</title>
+			<title code="0x18">KAIGI.32</title>
+			<title code="0x19">LOGO.32</title>
+			<title code="0x1a">MAP1.32</title>
+			<title code="0x1b">MAP2.32</title>
+			<title code="0x1c">MAP3.32</title>
+			<title code="0x1d">MENU.32</title>
+			<title code="0x1e">OPENING.32</title>
+			<title code="0x1f">PROTECT.32</title>
+			<title code="0x20">SALOON.32</title>
+			<title code="0x21">SEIZOU.32</title>
+			<title code="0x22">SION.32</title>
+			<title code="0x23">SIREN.32</title>
+			<title code="0x24">WAKUSEI.32</title>
+			<title code="0x25">YOUSAI1.32</title>
+			<title code="0x26">YOUSAI2.32</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Frontier Universe (フロンティアユニヴァース) (MT-32 EMU)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">bps</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="frnunv98">
+			<rom type="file" offset="-1">mmp_hoot.com</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">PUTEX.EXE</rom>
+			<rom type="file" offset="-1">MT32_ROM</rom>
+			<rom type="file" offset="0x10">BADEVENT.32</rom>
+			<rom type="file" offset="0x11">BATTLE1.32</rom>
+			<rom type="file" offset="0x12">BATTLE2.32</rom>
+			<rom type="file" offset="0x13">CLEAR.32</rom>
+			<rom type="file" offset="0x14">COMU.32</rom>
+			<rom type="file" offset="0x15">ENDING.32</rom>
+			<rom type="file" offset="0x16">ENDMES.32</rom>
+			<rom type="file" offset="0x17">GAMEOVER.32</rom>
+			<rom type="file" offset="0x18">KAIGI.32</rom>
+			<rom type="file" offset="0x19">LOGO.32</rom>
+			<rom type="file" offset="0x1a">MAP1.32</rom>
+			<rom type="file" offset="0x1b">MAP2.32</rom>
+			<rom type="file" offset="0x1c">MAP3.32</rom>
+			<rom type="file" offset="0x1d">MENU.32</rom>
+			<rom type="file" offset="0x1e">OPENING.32</rom>
+			<rom type="file" offset="0x1f">PROTECT.32</rom>
+			<rom type="file" offset="0x20">SALOON.32</rom>
+			<rom type="file" offset="0x21">SEIZOU.32</rom>
+			<rom type="file" offset="0x22">SION.32</rom>
+			<rom type="file" offset="0x23">SIREN.32</rom>
+			<rom type="file" offset="0x24">WAKUSEI.32</rom>
+			<rom type="file" offset="0x25">YOUSAI1.32</rom>
+			<rom type="file" offset="0x26">YOUSAI2.32</rom>
+			<rom type="shell" offset="0">putex</rom>
+			<rom type="shell" offset="0">mmd /K</rom>
+			<rom type="shell" offset="0">mmp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BADEVENT.32</title>
+			<title code="0x11">BATTLE1.32</title>
+			<title code="0x12">BATTLE2.32</title>
+			<title code="0x13">CLEAR.32</title>
+			<title code="0x14">COMU.32</title>
+			<title code="0x15">ENDING.32</title>
+			<title code="0x16">ENDMES.32</title>
+			<title code="0x17">GAMEOVER.32</title>
+			<title code="0x18">KAIGI.32</title>
+			<title code="0x19">LOGO.32</title>
+			<title code="0x1a">MAP1.32</title>
+			<title code="0x1b">MAP2.32</title>
+			<title code="0x1c">MAP3.32</title>
+			<title code="0x1d">MENU.32</title>
+			<title code="0x1e">OPENING.32</title>
+			<title code="0x1f">PROTECT.32</title>
+			<title code="0x20">SALOON.32</title>
+			<title code="0x21">SEIZOU.32</title>
+			<title code="0x22">SION.32</title>
+			<title code="0x23">SIREN.32</title>
+			<title code="0x24">WAKUSEI.32</title>
+			<title code="0x25">YOUSAI1.32</title>
+			<title code="0x26">YOUSAI2.32</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Frontier Universe (フロンティアユニヴァース) (CM-64)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">bps</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="3"/>
+		</options>
+		<romlist archive="frnunv98">
+			<rom type="file" offset="-1">mmp_hoot.com</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">PUTEX.EXE</rom>
+			<rom type="file" offset="-1">MT32_ROM</rom>
+			<rom type="file" offset="0x10">BADEVENT.64</rom>
+			<rom type="file" offset="0x11">BATTLE1.64</rom>
+			<rom type="file" offset="0x12">BATTLE2.64</rom>
+			<rom type="file" offset="0x13">CLEAR.64</rom>
+			<rom type="file" offset="0x14">COMU.64</rom>
+			<rom type="file" offset="0x15">ENDING.64</rom>
+			<rom type="file" offset="0x16">ENDMES.64</rom>
+			<rom type="file" offset="0x17">GAMEOVER.64</rom>
+			<rom type="file" offset="0x18">KAIGI.64</rom>
+			<rom type="file" offset="0x19">LOGO.64</rom>
+			<rom type="file" offset="0x1a">MAP1.64</rom>
+			<rom type="file" offset="0x1b">MAP2.64</rom>
+			<rom type="file" offset="0x1c">MAP3.64</rom>
+			<rom type="file" offset="0x1d">MENU.64</rom>
+			<rom type="file" offset="0x1e">OPENING.64</rom>
+			<rom type="file" offset="0x1f">PROTECT.64</rom>
+			<rom type="file" offset="0x20">SALOON.64</rom>
+			<rom type="file" offset="0x21">SEIZOU.64</rom>
+			<rom type="file" offset="0x22">SION.64</rom>
+			<rom type="file" offset="0x23">SIREN.64</rom>
+			<rom type="file" offset="0x24">WAKUSEI.64</rom>
+			<rom type="file" offset="0x25">YOUSAI1.64</rom>
+			<rom type="file" offset="0x26">YOUSAI2.64</rom>
+			<rom type="shell" offset="0">putex</rom>
+			<rom type="shell" offset="0">mmd /K</rom>
+			<rom type="shell" offset="0">mmp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BADEVENT.64</title>
+			<title code="0x11">BATTLE1.64</title>
+			<title code="0x12">BATTLE2.64</title>
+			<title code="0x13">CLEAR.64</title>
+			<title code="0x14">COMU.64</title>
+			<title code="0x15">ENDING.64</title>
+			<title code="0x16">ENDMES.64</title>
+			<title code="0x17">GAMEOVER.64</title>
+			<title code="0x18">KAIGI.64</title>
+			<title code="0x19">LOGO.64</title>
+			<title code="0x1a">MAP1.64</title>
+			<title code="0x1b">MAP2.64</title>
+			<title code="0x1c">MAP3.64</title>
+			<title code="0x1d">MENU.64</title>
+			<title code="0x1e">OPENING.64</title>
+			<title code="0x1f">PROTECT.64</title>
+			<title code="0x20">SALOON.64</title>
+			<title code="0x21">SEIZOU.64</title>
+			<title code="0x22">SION.64</title>
+			<title code="0x23">SIREN.64</title>
+			<title code="0x24">WAKUSEI.64</title>
+			<title code="0x25">YOUSAI1.64</title>
+			<title code="0x26">YOUSAI2.64</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Frontier Universe (フロンティアユニヴァース) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">bps</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="frnunv98">
+			<rom type="file" offset="-1">mmp_hoot.com</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="0x10">BADEVENT.GS</rom>
+			<rom type="file" offset="0x11">BATTLE1.GS</rom>
+			<rom type="file" offset="0x12">BATTLE2.GS</rom>
+			<rom type="file" offset="0x13">CLEAR.GS</rom>
+			<rom type="file" offset="0x14">COMU.GS</rom>
+			<rom type="file" offset="0x15">ENDING.GS</rom>
+			<rom type="file" offset="0x16">ENDMES.GS</rom>
+			<rom type="file" offset="0x17">GAMEOVER.GS</rom>
+			<rom type="file" offset="0x18">KAIGI.GS</rom>
+			<rom type="file" offset="0x19">LOGO.GS</rom>
+			<rom type="file" offset="0x1a">MAP1.GS</rom>
+			<rom type="file" offset="0x1b">MAP2.GS</rom>
+			<rom type="file" offset="0x1c">MAP3.GS</rom>
+			<rom type="file" offset="0x1d">MENU.GS</rom>
+			<rom type="file" offset="0x1e">OPENING.GS</rom>
+			<rom type="file" offset="0x1f">PROTECT.GS</rom>
+			<rom type="file" offset="0x20">SALOON.GS</rom>
+			<rom type="file" offset="0x21">SEIZOU.GS</rom>
+			<rom type="file" offset="0x22">SION.GS</rom>
+			<rom type="file" offset="0x23">SIREN.GS</rom>
+			<rom type="file" offset="0x24">WAKUSEI.GS</rom>
+			<rom type="file" offset="0x25">YOUSAI1.GS</rom>
+			<rom type="file" offset="0x26">YOUSAI2.GS</rom>
+			<rom type="shell" offset="0">mmd /K</rom>
+			<rom type="shell" offset="0">mmp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BADEVENT.GS</title>
+			<title code="0x11">BATTLE1.GS</title>
+			<title code="0x12">BATTLE2.GS</title>
+			<title code="0x13">CLEAR.GS</title>
+			<title code="0x14">COMU.GS</title>
+			<title code="0x15">ENDING.GS</title>
+			<title code="0x16">ENDMES.GS</title>
+			<title code="0x17">GAMEOVER.GS</title>
+			<title code="0x18">KAIGI.GS</title>
+			<title code="0x19">LOGO.GS</title>
+			<title code="0x1a">MAP1.GS</title>
+			<title code="0x1b">MAP2.GS</title>
+			<title code="0x1c">MAP3.GS</title>
+			<title code="0x1d">MENU.GS</title>
+			<title code="0x1e">OPENING.GS</title>
+			<title code="0x1f">PROTECT.GS</title>
+			<title code="0x20">SALOON.GS</title>
+			<title code="0x21">SEIZOU.GS</title>
+			<title code="0x22">SION.GS</title>
+			<title code="0x23">SIREN.GS</title>
+			<title code="0x24">WAKUSEI.GS</title>
+			<title code="0x25">YOUSAI1.GS</title>
+			<title code="0x26">YOUSAI2.GS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Frontier Universe (フロンティアユニヴァース) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">bps</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x80"/>
+		</options>
+		<romlist archive="frnunv98">
+			<rom type="file" offset="-1">mmp_hoot.com</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="0x10">BADEVENT.GS</rom>
+			<rom type="file" offset="0x11">BATTLE1.GS</rom>
+			<rom type="file" offset="0x12">BATTLE2.GS</rom>
+			<rom type="file" offset="0x13">CLEAR.GS</rom>
+			<rom type="file" offset="0x14">COMU.GS</rom>
+			<rom type="file" offset="0x15">ENDING.GS</rom>
+			<rom type="file" offset="0x16">ENDMES.GS</rom>
+			<rom type="file" offset="0x17">GAMEOVER.GS</rom>
+			<rom type="file" offset="0x18">KAIGI.GS</rom>
+			<rom type="file" offset="0x19">LOGO.GS</rom>
+			<rom type="file" offset="0x1a">MAP1.GS</rom>
+			<rom type="file" offset="0x1b">MAP2.GS</rom>
+			<rom type="file" offset="0x1c">MAP3.GS</rom>
+			<rom type="file" offset="0x1d">MENU.GS</rom>
+			<rom type="file" offset="0x1e">OPENING.GS</rom>
+			<rom type="file" offset="0x1f">PROTECT.GS</rom>
+			<rom type="file" offset="0x20">SALOON.GS</rom>
+			<rom type="file" offset="0x21">SEIZOU.GS</rom>
+			<rom type="file" offset="0x22">SION.GS</rom>
+			<rom type="file" offset="0x23">SIREN.GS</rom>
+			<rom type="file" offset="0x24">WAKUSEI.GS</rom>
+			<rom type="file" offset="0x25">YOUSAI1.GS</rom>
+			<rom type="file" offset="0x26">YOUSAI2.GS</rom>
+			<rom type="shell" offset="0">mmd /K</rom>
+			<rom type="shell" offset="0">mmp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BADEVENT.GS</title>
+			<title code="0x11">BATTLE1.GS</title>
+			<title code="0x12">BATTLE2.GS</title>
+			<title code="0x13">CLEAR.GS</title>
+			<title code="0x14">COMU.GS</title>
+			<title code="0x15">ENDING.GS</title>
+			<title code="0x16">ENDMES.GS</title>
+			<title code="0x17">GAMEOVER.GS</title>
+			<title code="0x18">KAIGI.GS</title>
+			<title code="0x19">LOGO.GS</title>
+			<title code="0x1a">MAP1.GS</title>
+			<title code="0x1b">MAP2.GS</title>
+			<title code="0x1c">MAP3.GS</title>
+			<title code="0x1d">MENU.GS</title>
+			<title code="0x1e">OPENING.GS</title>
+			<title code="0x1f">PROTECT.GS</title>
+			<title code="0x20">SALOON.GS</title>
+			<title code="0x21">SEIZOU.GS</title>
+			<title code="0x22">SION.GS</title>
+			<title code="0x23">SIREN.GS</title>
+			<title code="0x24">WAKUSEI.GS</title>
+			<title code="0x25">YOUSAI1.GS</title>
+			<title code="0x26">YOUSAI2.GS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tetris (テトリス)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-98">bps</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5c00"/>
+			<option name="use_vrtc"  value="0x01"/>
+			<option name="clock_mul" value="0x00"/>
+		</options>
+		<romlist archive="tetris_98">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">VDMAIN</rom>
+			<rom type="bgm" offset="0x01">3HISC.S</rom>
+			<rom type="bgm" offset="0x02">3KARI.S</rom>
+			<rom type="bgm" offset="0x03">3REA.S</rom>
+			<rom type="bgm" offset="0x04">3REB.S</rom>
+			<rom type="bgm" offset="0x05">3T1.S</rom>
+			<rom type="bgm" offset="0x06">3T2.S</rom>
+			<rom type="bgm" offset="0x07">3TEC.S</rom>
+			<rom type="bgm" offset="0x08">3TRO.S</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000001">Heroes</title>
+			<title code="0x000002">Karinka</title>
+			<title code="0x000007">Technotris</title>
+			<title code="0x000008">Troika</title>
+			<title code="0x000003">Celebration 1</title>
+			<title code="0x000004">Celebration 2</title>
+			<title code="0x000005">3T1.S</title>
+			<title code="0x000006">3T2.S</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Pipe Dream (パイプドリーム) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">bps</driveralias>
+		<options>
+			<option name="fm_mix"  value="19"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="pipedrm98">
+			<rom type="file" offset="-1">ppd.com</rom>
+			<rom type="file" offset="-1">STAY.COM</rom>
+			<rom type="file" offset="0x10">PIPBG1.BIN</rom>
+			<rom type="file" offset="0x11">PIPBG2.BIN</rom>
+			<rom type="file" offset="0x12">PIPBG3.BIN</rom>
+			<rom type="file" offset="0x13">PIPBG4.BIN</rom>
+			<rom type="file" offset="0x14">PIPBG5.BIN</rom>
+			<rom type="file" offset="0x15">PIPBG6.BIN</rom>
+			<rom type="file" offset="0x16">PIPBG7.BIN</rom>
+			<rom type="file" offset="0x17">PIPBG8.BIN</rom>
+			<rom type="file" offset="0x18">PIPBON.BIN</rom>
+			<rom type="file" offset="0x19">PIPCF1.BIN</rom>
+			<rom type="file" offset="0x1a">PIPCF2.BIN</rom>
+			<rom type="file" offset="0x1b">PIPCF3.BIN</rom>
+			<rom type="file" offset="0x1c">PIPCF4.BIN</rom>
+			<rom type="file" offset="0x1d">PIPCLR.BIN</rom>
+			<rom type="file" offset="0x1e">PIPDMO.BIN</rom>
+			<rom type="file" offset="0x1f">PIPED1.BIN</rom>
+			<rom type="file" offset="0x20">PIPED2.BIN</rom>
+			<rom type="file" offset="0x21">PIPED3.BIN</rom>
+			<rom type="file" offset="0x22">PIPMNU.BIN</rom>
+			<rom type="file" offset="0x23">PIPNAM.BIN</rom>
+			<rom type="file" offset="0x24">PIPOVR.BIN</rom>
+			<rom type="file" offset="0x25">PIPRNK.BIN</rom>
+			<rom type="file" offset="0x26">PIPTIT.BIN</rom>
+			<rom type="shell" offset="0">stay</rom>
+			<rom type="shell" offset="0">ppd</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PIPBG1.BIN</title>
+			<title code="0x11">PIPBG2.BIN</title>
+			<title code="0x12">PIPBG3.BIN</title>
+			<title code="0x13">PIPBG4.BIN</title>
+			<title code="0x14">PIPBG5.BIN</title>
+			<title code="0x15">PIPBG6.BIN</title>
+			<title code="0x16">PIPBG7.BIN</title>
+			<title code="0x17">PIPBG8.BIN</title>
+			<title code="0x18">PIPBON.BIN</title>
+			<title code="0x19">PIPCF1.BIN</title>
+			<title code="0x1a">PIPCF2.BIN</title>
+			<title code="0x1b">PIPCF3.BIN</title>
+			<title code="0x1c">PIPCF4.BIN</title>
+			<title code="0x1d">PIPCLR.BIN</title>
+			<title code="0x1e">PIPDMO.BIN</title>
+			<title code="0x1f">PIPED1.BIN</title>
+			<title code="0x20">PIPED2.BIN</title>
+			<title code="0x21">PIPED3.BIN</title>
+			<title code="0x22">PIPMNU.BIN</title>
+			<title code="0x23">PIPNAM.BIN</title>
+			<title code="0x24">PIPOVR.BIN</title>
+			<title code="0x25">PIPRNK.BIN</title>
+			<title code="0x26">PIPTIT.BIN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Pipe Dream (パイプドリーム) (BEEP)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">bps</driveralias>
+		<romlist archive="pipedrm98">
+			<rom type="file" offset="-1">bp.com</rom>
+			<rom type="file" offset="-1">BDRV.COM</rom>
+			<rom type="file" offset="-1">BEPBG1.BIN</rom>
+			<rom type="file" offset="-1">BEPBG2.BIN</rom>
+			<rom type="file" offset="-1">BEPBG3.BIN</rom>
+			<rom type="file" offset="-1">BEPBG4.BIN</rom>
+			<rom type="file" offset="-1">BEPBG5.BIN</rom>
+			<rom type="file" offset="-1">BEPBG6.BIN</rom>
+			<rom type="file" offset="-1">BEPBG7.BIN</rom>
+			<rom type="file" offset="-1">BEPBG8.BIN</rom>
+			<rom type="file" offset="-1">BEPBON.BIN</rom>
+			<rom type="file" offset="-1">BEPCF1.BIN</rom>
+			<rom type="file" offset="-1">BEPCF2.BIN</rom>
+			<rom type="file" offset="-1">BEPCF3.BIN</rom>
+			<rom type="file" offset="-1">BEPCF4.BIN</rom>
+			<rom type="file" offset="-1">BEPCLR.BIN</rom>
+			<rom type="file" offset="-1">BEPDBG.BIN</rom>
+			<rom type="file" offset="-1">BEPDMO.BIN</rom>
+			<rom type="file" offset="-1">BEPED1.BIN</rom>
+			<rom type="file" offset="-1">BEPED2.BIN</rom>
+			<rom type="file" offset="-1">BEPED3.BIN</rom>
+			<rom type="file" offset="-1">BEPMNU.BIN</rom>
+			<rom type="file" offset="-1">BEPNAM.BIN</rom>
+			<rom type="file" offset="-1">BEPOVR.BIN</rom>
+			<rom type="file" offset="-1">BEPRNK.BIN</rom>
+			<rom type="file" offset="-1">BEPTIT.BIN</rom>
+			<rom type="conin" offset="0x10">BEPBG1.BIN</rom>
+			<rom type="conin" offset="0x11">BEPBG2.BIN</rom>
+			<rom type="conin" offset="0x12">BEPBG3.BIN</rom>
+			<rom type="conin" offset="0x13">BEPBG4.BIN</rom>
+			<rom type="conin" offset="0x14">BEPBG5.BIN</rom>
+			<rom type="conin" offset="0x15">BEPBG6.BIN</rom>
+			<rom type="conin" offset="0x16">BEPBG7.BIN</rom>
+			<rom type="conin" offset="0x17">BEPBG8.BIN</rom>
+			<rom type="conin" offset="0x18">BEPBON.BIN</rom>
+			<rom type="conin" offset="0x19">BEPCF1.BIN</rom>
+			<rom type="conin" offset="0x1a">BEPCF2.BIN</rom>
+			<rom type="conin" offset="0x1b">BEPCF3.BIN</rom>
+			<rom type="conin" offset="0x1c">BEPCF4.BIN</rom>
+			<rom type="conin" offset="0x1d">BEPCLR.BIN</rom>
+			<rom type="conin" offset="0x1e">BEPDBG.BIN</rom>
+			<rom type="conin" offset="0x1f">BEPDMO.BIN</rom>
+			<rom type="conin" offset="0x20">BEPED1.BIN</rom>
+			<rom type="conin" offset="0x21">BEPED2.BIN</rom>
+			<rom type="conin" offset="0x22">BEPED3.BIN</rom>
+			<rom type="conin" offset="0x23">BEPMNU.BIN</rom>
+			<rom type="conin" offset="0x24">BEPNAM.BIN</rom>
+			<rom type="conin" offset="0x25">BEPOVR.BIN</rom>
+			<rom type="conin" offset="0x26">BEPRNK.BIN</rom>
+			<rom type="conin" offset="0x27">BEPTIT.BIN</rom>
+			<rom type="shell" offset="0">bdrv</rom>
+			<rom type="shell" offset="0">bp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BEPBG1.BIN</title>
+			<title code="0x11">BEPBG2.BIN</title>
+			<title code="0x12">BEPBG3.BIN</title>
+			<title code="0x13">BEPBG4.BIN</title>
+			<title code="0x14">BEPBG5.BIN</title>
+			<title code="0x15">BEPBG6.BIN</title>
+			<title code="0x16">BEPBG7.BIN</title>
+			<title code="0x17">BEPBG8.BIN</title>
+			<title code="0x18">BEPBON.BIN</title>
+			<title code="0x19">BEPCF1.BIN</title>
+			<title code="0x1a">BEPCF2.BIN</title>
+			<title code="0x1b">BEPCF3.BIN</title>
+			<title code="0x1c">BEPCF4.BIN</title>
+			<title code="0x1d">BEPCLR.BIN</title>
+			<title code="0x1e">BEPDBG.BIN</title>
+			<title code="0x1f">BEPDMO.BIN</title>
+			<title code="0x20">BEPED1.BIN</title>
+			<title code="0x21">BEPED2.BIN</title>
+			<title code="0x22">BEPED3.BIN</title>
+			<title code="0x23">BEPMNU.BIN</title>
+			<title code="0x24">BEPNAM.BIN</title>
+			<title code="0x25">BEPOVR.BIN</title>
+			<title code="0x26">BEPRNK.BIN</title>
+			<title code="0x27">BEPTIT.BIN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Tetris (テトリス) (OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="X1">bps</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5000"/>
+			<option name="mfile_size" value="0x4400"/>
+			<option name="mdata_size" value="0x4400"/>
+		</options>
+		<romlist archive="x1tetris">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xa000">PROG</rom>
+			<rom type="bgm"  offset="0x00">MUSFM0</rom>
+			<rom type="bgm"  offset="0x01">MUSFM1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000000">Technotris</title>
+			<title code="0x02000000">Karinka</title>
+			<title code="0x03000000">Troika</title>
+			<title code="0x04000000">Russian Waltz</title>
+			<title code="0x05000001">Peddler</title>
+			<title code="0x06000001">Heroes</title>
+			<title code="0x07000001">Strolling Player</title>
+			<title code="0x08000001">Celebration 1</title>
+			<title code="0x09000001">Celebration 2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Tetris (テトリス) (PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">bps</driveralias>
+		<options>
+			<option name="use_ctc3" value="0x80"/>
+		</options>
+		<romlist archive="x1tetris">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x5000">MUSPSG</rom>
+			<rom type="code" offset="0xa000">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Technotris</title>
+			<title code="0x02">Karinka</title>
+			<title code="0x03">Troika</title>
+			<title code="0x05">Peddler</title>
+			<title code="0x06">Heroes</title>
+			<title code="0x07">Strolling Player</title>
+			<title code="0x08">Celebration 1</title>
+			<title code="0x09">Celebration 2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Pipe Dream (パイプドリーム)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">bps</driveralias>
+		<options>
+			<option name="opm_mix" value="0x60"/>
+			<option name="pcm_mix" value="0x70"/>
+		</options>
+		<romlist archive="ppd68snd">
+			<rom type="code" offset="0x00000">axd68snd.bin</rom>
+			<rom type="x" offset="0x10000">AXDRIVE.X</rom>
+			<rom type="code" offset="0x13000">PIPE.PDX</rom>
+			<rom type="code" offset="0x34000">PD01.ADX</rom>
+			<rom type="code" offset="0x38000">PD02.ADX</rom>
+			<rom type="code" offset="0x3C000">PD03.ADX</rom>
+			<rom type="code" offset="0x40000">PD04.ADX</rom>
+			<rom type="code" offset="0x44000">PD05.ADX</rom>
+			<rom type="code" offset="0x48000">PD06.ADX</rom>
+			<rom type="code" offset="0x4C000">PD07.ADX</rom>
+			<rom type="code" offset="0x50000">PD08.ADX</rom>
+			<rom type="code" offset="0x54000">PD09.ADX</rom>
+			<rom type="code" offset="0x58000">PD10.ADX</rom>
+			<rom type="code" offset="0x5C000">PD11.ADX</rom>
+			<rom type="code" offset="0x60000">PD12.ADX</rom>
+			<rom type="code" offset="0x64000">PD13.ADX</rom>
+			<rom type="code" offset="0x68000">PD14.ADX</rom>
+			<rom type="code" offset="0x6C000">PD15.ADX</rom>
+			<rom type="code" offset="0x70000">PD16.ADX</rom>
+			<rom type="code" offset="0x74000">PD17.ADX</rom>
+			<rom type="code" offset="0x78000">PD18.ADX</rom>
+			<rom type="code" offset="0x7C000">PD19.ADX</rom>
+			<rom type="code" offset="0x80000">PD20.ADX</rom>
+			<rom type="code" offset="0x84000">PD21.ADX</rom>
+			<rom type="code" offset="0x88000">PD22.ADX</rom>
+			<rom type="code" offset="0x8C000">PD23.ADX</rom>
+			<rom type="code" offset="0x90000">PD24.ADX</rom>
+			<rom type="code" offset="0x94000">PD25.ADX</rom>
+			<rom type="code" offset="0x98000">PD26.ADX</rom>
+			<rom type="code" offset="0x9C000">PD27.ADX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Title</title>
+			<title code="0x02">Demo</title>
+			<title code="0x03">Menu</title>
+			<title code="0x04">BGM #01</title>
+			<title code="0x05">BGM #02</title>
+			<title code="0x06">BGM #03</title>
+			<title code="0x07">BGM #04</title>
+			<title code="0x08">BGM #05</title>
+			<title code="0x09">BGM #06</title>
+			<title code="0x0a">BGM #07</title>
+			<title code="0x0b">BGM #08</title>
+			<title code="0x0c">Game Over</title>
+			<title code="0x0d">Name</title>
+			<title code="0x0e">Ranking</title>
+			<title code="0x0f">Break #01</title>
+			<title code="0x10">Break #02</title>
+			<title code="0x11">Break #03</title>
+			<title code="0x12">Break #04</title>
+			<title code="0x13">Break #05</title>
+			<title code="0x14">Break #06</title>
+			<title code="0x15">Break #07</title>
+			<title code="0x16">Break #08</title>
+			<title code="0x18">Ending #01</title>
+			<title code="0x19">Ending #02</title>
+			<title code="0x17">Ending #03</title>
+			<title code="0x1a">Clear</title>
+			<title code="0x1b">Perfect</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Tetris (テトリス)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">bps</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="tetris68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">WALT8.MML</rom>
+			<rom type="code" offset="0x28000">XHISCORE.MML</rom>
+			<rom type="code" offset="0x2c000">XKARINKA.MML</rom>
+			<rom type="code" offset="0x30000">XREWA_A.MML</rom>
+			<rom type="code" offset="0x34000">XREWA_B.MML</rom>
+			<rom type="code" offset="0x38000">XTECHNO.MML</rom>
+			<rom type="code" offset="0x3c000">XTITLE1.MML</rom>
+			<rom type="code" offset="0x40000">XTITLE1_LOOP.MML</rom>
+			<rom type="code" offset="0x44000">XTITLE2.MML</rom>
+			<rom type="code" offset="0x48000">XTROIKA.MML</rom>
+			<rom type="code" offset="0x4c000">TETRIS.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0c08">Strolling Player</title>
+			<title code="0x0c09">Strolling Player (Loop)</title>
+			<title code="0x0c07">Technotris</title>
+			<title code="0x0c04">Karinka</title>
+			<title code="0x0c0b">Troika</title>
+			<title code="0x0c02">Russian Waltz</title>
+			<title code="0x0c0a">Peddler</title>
+			<title code="0x0c03">Heroes</title>
+			<title code="0x0c05">Celebration 1</title>
+			<title code="0x0c06">Celebration 2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Tetris (テトリス) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">bps</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="tetris_msx">
+			<rom type="code">Tetris (1988)(Bullet Proof Software).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Tetris (テトリス) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">bps</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="tetris_msx">
+			<rom type="code">Tetris (1988)(Bullet Proof Software).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80">BGM #80</title>
+			<title code="0x81">BGM #81</title>
+			<title code="0x82">BGM #82</title>
+			<title code="0x83">BGM #83</title>
+			<title code="0x84">BGM #84</title>
+			<title code="0x85">BGM #85</title>
+			<title code="0x86">BGM #86</title>
+			<title code="0x87">BGM #87</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,1541 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //呉ソフトウェア工房 -->
+	<game>
+		<name>[PC-8801] ARGO</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa600"/>
+			<option name="use_rtc"    value="0x01"/>
+			<option name="use_vrtc"   value="0x01"/>
+		</options>
+		<romlist archive="argo">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MUS00 : </title>
+			<title code="0x00000001">MUS01 : タイトル</title>
+			<title code="0x00000002">MUS02 : </title>
+			<title code="0x00000003">MUS03 : デカキャラ戦闘</title>
+			<title code="0x00000004">MUS04 : 街</title>
+			<title code="0x00000005">MUS05 : </title>
+			<title code="0x00000006">MUS06 : </title>
+			<title code="0x01000007">MUS07 : ユーザーディスク作成</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] SILVER GHOST</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb000"/>
+		</options>
+		<romlist archive="svghost">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xb000">MUS02</rom>
+			<rom type="bgm"  offset="0x00">MUS00</rom>
+			<rom type="bgm"  offset="0x01">MUS01</rom>
+			<rom type="bgm"  offset="0x02">MUS02</rom>
+			<rom type="bgm"  offset="0x03">MUS03</rom>
+			<rom type="bgm"  offset="0x04">MUS04</rom>
+			<rom type="bgm"  offset="0x05">MUS05</rom>
+			<rom type="bgm"  offset="0x06">MUS06</rom>
+			<rom type="bgm"  offset="0x07">MUS07</rom>
+			<rom type="bgm"  offset="0x08">MUS08</rom>
+			<rom type="bgm"  offset="0x09">MUS09</rom>
+			<rom type="bgm"  offset="0x0a">MUS10</rom>
+			<rom type="bgm"  offset="0x0b">MUS11</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00 : オープニング</title>
+			<title code="0x03">MUS03 : クラレンスの村</title>
+			<title code="0x09">MUS09 : トレント草原</title>
+			<title code="0x04">MUS04 : とりで</title>
+			<title code="0x07">MUS07 : ドーバー海岸</title>
+			<title code="0x08">MUS08 : ログリス海岸</title>
+			<title code="0x02">MUS02 : 青い沼</title>
+			<title code="0x05">MUS05 : ゴラの遺跡</title>
+			<title code="0x06">MUS06 : ウェルズ山地</title>
+			<title code="0x0a">MUS10 : バルバラの山</title>
+			<title code="0x0b">MUS11 : キャメロット城内</title>
+			<title code="0x01">MUS01 : エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] DUEL</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1000"/>
+			<option name="mdata_num"  value="0x50"/>
+		</options>
+		<romlist archive="duel">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0c00">INTDRV</rom>
+			<rom type="code" offset="0xd000">OP1</rom>
+			<rom type="code" offset="0xf000">MUSDRV</rom>
+			<rom type="bgm" offset="0x00">OP1</rom>
+			<rom type="bgm" offset="0x01">OP2</rom>
+			<rom type="bgm" offset="0x20">CHR1A</rom>
+			<rom type="bgm" offset="0x21">CHR1B</rom>
+			<rom type="bgm" offset="0x22">CHR2A</rom>
+			<rom type="bgm" offset="0x23">CHR2B</rom>
+			<rom type="bgm" offset="0x30">MUS100</rom>
+			<rom type="bgm" offset="0x31">MUS101</rom>
+			<rom type="bgm" offset="0x32">MUS102</rom>
+			<rom type="bgm" offset="0x33">MUS103</rom>
+			<rom type="bgm" offset="0x34">MUS104</rom>
+			<rom type="bgm" offset="0x35">MUS105</rom>
+			<rom type="bgm" offset="0x36">MUS106</rom>
+			<rom type="bgm" offset="0x37">MUS200</rom>
+			<rom type="bgm" offset="0x38">MUS201</rom>
+			<rom type="bgm" offset="0x39">MUS202</rom>
+			<rom type="bgm" offset="0x3a">MUS203</rom>
+			<rom type="bgm" offset="0x3b">MUS204</rom>
+			<rom type="bgm" offset="0x3c">MUS205</rom>
+			<rom type="bgm" offset="0x3d">MUS206</rom>
+			<rom type="bgm" offset="0x3e">MUS207</rom>
+			<rom type="bgm" offset="0x3f">MUS300</rom>
+			<rom type="bgm" offset="0x40">MUS301</rom>
+			<rom type="bgm" offset="0x41">MUS302</rom>
+			<rom type="bgm" offset="0x42">MUS303</rom>
+			<rom type="bgm" offset="0x43">MUS304</rom>
+			<rom type="bgm" offset="0x44">MUS305</rom>
+			<rom type="bgm" offset="0x45">MUS306</rom>
+			<rom type="bgm" offset="0x46">MUS307</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xd0000000">OP1    : </title>
+			<title code="0xd7000001">OP2    : DUEL</title>
+			<title code="0xb0000020">CHR1A  : MASAKI</title>
+			<title code="0xb0000021">CHR1B  : THE SOLDIERS ALIGNE (別アレンジ)</title>
+			<title code="0xb0000022">CHR2A  : タヌキのO-SANPO</title>
+			<title code="0xb0000023">CHR2B  : THE SOLDIERS ALIGNE</title>
+			<title code="0xba000030">MUS100 : I'M FULL OF BEART</title>
+			<title code="0xba000031">MUS101 : REQUIEM</title>
+			<title code="0xba000032">MUS102 : A FLOOD OF WATER</title>
+			<title code="0xba000033">MUS103 : </title>
+			<title code="0xba000034">MUS104 : A MARE RUIN</title>
+			<title code="0xba000035">MUS105 : STORY OF STAR FIELD</title>
+			<title code="0xba000036">MUS106 : A DESPRATE FIGHT</title>
+		<!--	<title code="0xba000037">MUS200 : I'M FULL OF BEART</title> -->
+		<!--	<title code="0xba000038">MUS201 : REQUIEM</title> -->
+		<!--	<title code="0xba000039">MUS202 : A FLOOD OF WATER</title> -->
+			<title code="0xba00003a">MUS203 : MUD AND MARSH</title>
+			<title code="0xba00003b">MUS204 : DEFEND A CASTLE OF BALT</title>
+			<title code="0xba00003c">MUS205 : AT THE HOWLING WIND</title>
+			<title code="0xba00003d">MUS206 : IN FRONT OF CHIFF</title>
+			<title code="0xba00003e">MUS207 : A DEER FOREST</title>
+		<!--	<title code="0xba00003f">MUS300 : I'M FULL OF BEART</title> -->
+		<!--	<title code="0xba000040">MUS301 : REQUIEM</title> -->
+		<!--	<title code="0xba000041">MUS302 : A DEER FOREST</title> -->
+			<title code="0xba000042">MUS303 : SLOPING UPWARD</title>
+			<title code="0xba000043">MUS304 : BULLET THE FELLOW!</title>
+			<title code="0xba000044">MUS305 : THE VALLEY OF THE SHADOW OF DEATH</title>
+			<title code="0xba000045">MUS306 : MOON HILL</title>
+		<!--	<title code="0xba000046">MUS307 : BULLET THE FELLOW!</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] SILVER GHOST(OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="SHARP X1">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+			<option name="mdata_addr" value="0xb000"/>
+			<option name="mdata_size" value="0x0c00"/>
+		</options>
+		<romlist archive="x1sghost">
+			<rom type="code" offset="0x1000">OPDEMO</rom>
+			<rom type="code" offset="0x4400">OPMDRV</rom>
+			<rom type="code" offset="0xe000">BACKUP</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MA000</rom>
+			<rom type="bgm" offset="0x01">MA001</rom>
+			<rom type="bgm" offset="0x02">MA002</rom>
+			<rom type="bgm" offset="0x03">MA003</rom>
+			<rom type="bgm" offset="0x04">MA004</rom>
+			<rom type="bgm" offset="0x05">MA005</rom>
+			<rom type="bgm" offset="0x06">MA006</rom>
+			<rom type="bgm" offset="0x07">MA007</rom>
+			<rom type="bgm" offset="0x08">MA008</rom>
+			<rom type="bgm" offset="0x09">MA009</rom>
+			<rom type="bgm" offset="0x0a">OPDEMO</rom>
+			<rom type="bgm" offset="0x0b">EDDEMO</rom>
+			<rom type="bgm" offset="0x0c">BACKUP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0100000a">Prince of palace (オープニング)</title>
+			<title code="0x00000000">In a Row</title>
+			<title code="0x00000001">Nuts about the girl</title>
+			<title code="0x00000002">A Martial Spirit</title>
+			<title code="0x00000003">Halo</title>
+			<title code="0x00000004">Attack on him</title>
+			<title code="0x00000005">Lie?</title>
+			<title code="0x00000006">Curse Beat</title>
+			<title code="0x00000007">ただみつめている</title>
+			<title code="0x00000008">(バルバラの山)</title>
+			<title code="0x00000009">Prince of palace (キャメロット城内)</title>
+			<title code="0x0100000b">(エンディング)</title>
+			<title code="0x0200000c">タヌキのO-SANPO (バックアップ)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] SILVER GHOST(PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+			<option name="mdata_addr" value="0xb000"/>
+			<option name="mdata_size" value="0x0c00"/>
+		</options>
+		<romlist archive="x1sghost">
+			<rom type="code" offset="0x1000">OPDEMO</rom>
+			<rom type="code" offset="0x4400">PSGDRV</rom>
+			<rom type="code" offset="0xe000">BACKUP</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MB000</rom>
+			<rom type="bgm" offset="0x01">MB001</rom>
+			<rom type="bgm" offset="0x02">MB002</rom>
+			<rom type="bgm" offset="0x03">MB003</rom>
+			<rom type="bgm" offset="0x04">MB004</rom>
+			<rom type="bgm" offset="0x05">MB005</rom>
+			<rom type="bgm" offset="0x06">MB006</rom>
+			<rom type="bgm" offset="0x07">MB007</rom>
+			<rom type="bgm" offset="0x08">MB008</rom>
+			<rom type="bgm" offset="0x09">MB009</rom>
+			<rom type="bgm" offset="0x0a">OPDEMO</rom>
+			<rom type="bgm" offset="0x0b">EDDEMO</rom>
+			<rom type="bgm" offset="0x0c">BACKUP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0100000a">Prince of palace (オープニング)</title>
+			<title code="0x00000000">In a Row</title>
+			<title code="0x00000001">Nuts about the girl</title>
+			<title code="0x00000002">A Martial Spirit</title>
+			<title code="0x00000003">Halo</title>
+			<title code="0x00000004">Attack on him</title>
+			<title code="0x00000005">Lie?</title>
+			<title code="0x00000006">Curse Beat</title>
+			<title code="0x00000007">ただみつめている</title>
+			<title code="0x00000008">(バルバラの山)</title>
+			<title code="0x00000009">Prince of palace (キャメロット城内)</title>
+			<title code="0x0100000b">(エンディング)</title>
+			<title code="0x0200000c">タヌキのO-SANPO (バックアップ)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] FIRST QUEEN -オルニック戦記-</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x1b00"/>
+			<option name="filesize" value="0x0d00"/>
+			<option name="datamax" value="0x17"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="fq1_98">
+			<rom type="code" offset="0x00600">fq.bin</rom>
+			<rom type="code" offset="0x01000">DRIVER</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+			<rom type="bgm" offset="0x0a">MUS09</rom>
+			<rom type="bgm" offset="0x0b">MUS10</rom>
+			<rom type="bgm" offset="0x0c">MUS11</rom>
+			<rom type="bgm" offset="0x0d">MUS12</rom>
+			<rom type="bgm" offset="0x0e">MUS13</rom>
+			<rom type="bgm" offset="0x0f">MUS14</rom>
+			<rom type="bgm" offset="0x10">MUS15</rom>
+			<rom type="bgm" offset="0x11">MUS16</rom>
+			<rom type="bgm" offset="0x12">MUS17</rom>
+			<rom type="bgm" offset="0x13">MUS18</rom>
+			<rom type="bgm" offset="0x14">MUS19</rom>
+			<rom type="bgm" offset="0x15">MUS20</rom>
+			<rom type="bgm" offset="0x16">MUS21</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">MUS00 : Prince of palace</title>
+			<title code="0x02">MUS01 : </title>
+			<title code="0x03">MUS02 : Nuts About the girl</title>
+			<title code="0x04">MUS03 : In A Row</title>
+			<title code="0x05">MUS04 : A Martial Spirit</title>
+			<title code="0x06">MUS05 : Halo</title>
+			<title code="0x07">MUS06 : Attack On Him</title>
+			<title code="0x08">MUS07 : Lie ?</title>
+			<title code="0x09">MUS08 : Curse Beat</title>
+			<title code="0x0a">MUS09 : ただみつめている</title>
+			<title code="0x0b">MUS10 : Sheaf Of Arrows</title>
+			<title code="0x0c">MUS11 : Melee</title>
+			<title code="0x0d">MUS12 : Money Maker</title>
+			<title code="0x0e">MUS13 : 丘の向こうへ</title>
+			<title code="0x0f">MUS14 : Returned Soldier</title>
+			<title code="0x10">MUS15 : (another version) ただみつめている</title>
+			<title code="0x11">MUS16 : (another version) Sheaf Of Arrows</title>
+			<title code="0x12">MUS17 : (another version) Melee</title>
+			<title code="0x13">MUS18 : (another version) </title>
+			<title code="0x14">MUS19 : (another version) Monery Maker</title>
+			<title code="0x15">MUS20 : (another version) 丘のむこうへ</title>
+			<title code="0x16">MUS21 : (another version) Returned Soldier</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] FIRST QUEEN II -砂漠の女王-</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x30a00"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x14"/>
+		</options>
+		<romlist archive="fq2_98">
+			<rom type="code" offset="0x00600">fq2.bin</rom>
+			<rom type="code" offset="0x30000">DRIVER</rom>
+			<rom type="bgm" offset="0x01">MUS000</rom>
+			<rom type="bgm" offset="0x02">MUS001</rom>
+			<rom type="bgm" offset="0x03">MUS002</rom>
+			<rom type="bgm" offset="0x04">MUS100</rom>
+			<rom type="bgm" offset="0x05">MUS101</rom>
+			<rom type="bgm" offset="0x06">MUS102</rom>
+			<rom type="bgm" offset="0x07">MUS103</rom>
+			<rom type="bgm" offset="0x08">MUS104</rom>
+			<rom type="bgm" offset="0x09">MUS105</rom>
+			<rom type="bgm" offset="0x0a">MUS106</rom>
+			<rom type="bgm" offset="0x0b">MUS107</rom>
+			<rom type="bgm" offset="0x0c">MUS108</rom>
+			<rom type="bgm" offset="0x0d">MUS109</rom>
+			<rom type="bgm" offset="0x0e">MUS110</rom>
+			<rom type="bgm" offset="0x0f">MUS111</rom>
+			<rom type="bgm" offset="0x10">MUS112</rom>
+			<rom type="bgm" offset="0x11">MUS113</rom>
+			<rom type="bgm" offset="0x12">MUS114</rom>
+			<rom type="bgm" offset="0x13">MUS115</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000001">MUS000 : </title>
+			<title code="0x000002">MUS001 : </title>
+			<title code="0x000003">MUS002 : </title>
+			<title code="0x000004">MUS100 : </title>
+			<title code="0x000005">MUS101 : </title>
+			<title code="0x000006">MUS102 : </title>
+			<title code="0x000007">MUS103 : </title>
+			<title code="0x000008">MUS104 : </title>
+			<title code="0x000009">MUS105 : </title>
+			<title code="0x00000a">MUS106 : </title>
+			<title code="0x00000b">MUS107 : </title>
+			<title code="0x00000c">MUS108 : </title>
+			<title code="0x00000d">MUS109 : </title>
+			<title code="0x00000e">MUS110 : </title>
+			<title code="0x00000f">MUS111 : </title>
+			<title code="0x000010">MUS112 : </title>
+			<title code="0x000011">MUS113 : </title>
+			<title code="0x000012">MUS114 : </title>
+			<title code="0x000013">MUS115 : </title>
+			<title code="0x01ffff">EFC001 : </title>
+			<title code="0x02ffff">EFC002 : </title>
+			<title code="0x03ffff">EFC003 : </title>
+			<title code="0x04ffff">EFC004 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] FIRST QUEEN III</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="filesize" value="0x1000"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x26"/>
+		</options>
+		<romlist archive="fq3_98">
+			<rom type="code" offset="0x00600">fq3.bin</rom>
+			<rom type="code" offset="0x35000">BGMDRV.BIN</rom>
+			<rom type="bgm" offset="0x00">FQ3-00.BIN</rom>
+			<rom type="bgm" offset="0x01">FQ3-01.BIN</rom>
+			<rom type="bgm" offset="0x02">FQ3-02.BIN</rom>
+			<rom type="bgm" offset="0x03">FQ3-03.BIN</rom>
+			<rom type="bgm" offset="0x04">FQ3-04.BIN</rom>
+			<rom type="bgm" offset="0x05">FQ3-05.BIN</rom>
+			<rom type="bgm" offset="0x06">FQ3-06.BIN</rom>
+			<rom type="bgm" offset="0x07">FQ3-07.BIN</rom>
+			<rom type="bgm" offset="0x08">FQ3-08.BIN</rom>
+			<rom type="bgm" offset="0x09">FQ3-09.BIN</rom>
+			<rom type="bgm" offset="0x0a">FQ3-10.BIN</rom>
+			<rom type="bgm" offset="0x0b">FQ3-11.BIN</rom>
+			<rom type="bgm" offset="0x0c">FQ3-12.BIN</rom>
+			<rom type="bgm" offset="0x0d">FQ3-13.BIN</rom>
+			<rom type="bgm" offset="0x0e">FQ3-14.BIN</rom>
+			<rom type="bgm" offset="0x0f">FQ3-15.BIN</rom>
+			<rom type="bgm" offset="0x10">FQ3-16.BIN</rom>
+			<rom type="bgm" offset="0x11">FQ3-17.BIN</rom>
+			<rom type="bgm" offset="0x12">FQ3-18.BIN</rom>
+			<rom type="bgm" offset="0x13">FQ3-19.BIN</rom>
+			<rom type="bgm" offset="0x14">FQ3-20.BIN</rom>
+			<rom type="bgm" offset="0x15">FQ3-21.BIN</rom>
+			<rom type="bgm" offset="0x16">FQ3-22.BIN</rom>
+			<rom type="bgm" offset="0x17">FQ3-23.BIN</rom>
+			<rom type="bgm" offset="0x18">FQ3-24.BIN</rom>
+			<rom type="bgm" offset="0x19">FQ3-25.BIN</rom>
+			<rom type="bgm" offset="0x1a">FQ3-26.BIN</rom>
+			<rom type="bgm" offset="0x1b">FQ3-27.BIN</rom>
+			<rom type="bgm" offset="0x1c">FQ3-28.BIN</rom>
+			<rom type="bgm" offset="0x1d">FQ3-29.BIN</rom>
+			<rom type="bgm" offset="0x1e">FQ3-30.BIN</rom>
+			<rom type="bgm" offset="0x1f">FQ3-31.BIN</rom>
+			<rom type="bgm" offset="0x20">FQ3-32.BIN</rom>
+			<rom type="bgm" offset="0x21">FQ3-33.BIN</rom>
+			<rom type="bgm" offset="0x22">FQ3-34.BIN</rom>
+			<rom type="bgm" offset="0x23">FQ3-35.BIN</rom>
+			<rom type="bgm" offset="0x24">FQ3-36.BIN</rom>
+			<rom type="bgm" offset="0x25">FQ3-37.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010001">FQ3-01.BIN : </title>
+			<title code="0x010002">FQ3-02.BIN : </title>
+			<title code="0x010003">FQ3-03.BIN : </title>
+			<title code="0x010004">FQ3-04.BIN : </title>
+			<title code="0x010005">FQ3-05.BIN : </title>
+			<title code="0x010006">FQ3-06.BIN : </title>
+			<title code="0x010007">FQ3-07.BIN : </title>
+			<title code="0x010008">FQ3-08.BIN : </title>
+			<title code="0x010009">FQ3-09.BIN : </title>
+			<title code="0x01000a">FQ3-10.BIN : </title>
+			<title code="0x01000b">FQ3-11.BIN : </title>
+			<title code="0x01000c">FQ3-12.BIN : </title>
+			<title code="0x01000d">FQ3-13.BIN : </title>
+			<title code="0x01000e">FQ3-14.BIN : </title>
+			<title code="0x01000f">FQ3-15.BIN : </title>
+			<title code="0x010010">FQ3-16.BIN : </title>
+			<title code="0x010011">FQ3-17.BIN : </title>
+			<title code="0x010012">FQ3-18.BIN : </title>
+			<title code="0x010013">FQ3-19.BIN : </title>
+			<title code="0x010014">FQ3-20.BIN : </title>
+			<title code="0x010015">FQ3-21.BIN : </title>
+			<title code="0x010016">FQ3-22.BIN : </title>
+			<title code="0x010017">FQ3-23.BIN : </title>
+			<title code="0x010018">FQ3-24.BIN : </title>
+			<title code="0x010019">FQ3-25.BIN : </title>
+			<title code="0x01001a">FQ3-26.BIN : </title>
+			<title code="0x01001b">FQ3-27.BIN : </title>
+			<title code="0x01001c">FQ3-28.BIN : </title>
+			<title code="0x01001d">FQ3-29.BIN : </title>
+			<title code="0x01001e">FQ3-30.BIN : </title>
+			<title code="0x01001f">FQ3-31.BIN : </title>
+			<title code="0x010020">FQ3-32.BIN : </title>
+			<title code="0x010021">FQ3-33.BIN : </title>
+			<title code="0x010022">FQ3-34.BIN : </title>
+			<title code="0x010023">FQ3-35.BIN : </title>
+			<title code="0x010024">FQ3-36.BIN : </title>
+			<title code="0x010025">FQ3-37.BIN : </title>
+			<title code="0x01ffff">EFC001 : </title>
+			<title code="0x02ffff">EFC002 : </title>
+			<title code="0x03ffff">EFC003 : </title>
+			<title code="0x04ffff">EFC004 : </title>
+			<title code="0x05ffff">EFC005 : </title>
+			<title code="0x06ffff">EFC006 : </title>
+			<title code="0x07ffff">EFC007 : </title>
+			<title code="0x08ffff">EFC008 : </title>
+			<title code="0x09ffff">EFC009 : </title>
+			<title code="0x0affff">EFC010 : </title>
+			<title code="0x0bffff">EFC011 : </title>
+			<title code="0x0cffff">EFC012 : </title>
+			<title code="0x0dffff">EFC013 : </title>
+			<title code="0x0effff">EFC014 : </title>
+			<title code="0x0fffff">EFC015 : </title>
+			<title code="0x10ffff">EFC016 : </title>
+			<title code="0x11ffff">EFC017 : </title>
+			<title code="0x12ffff">EFC018 : </title>
+			<title code="0x13ffff">EFC019 : </title>
+			<title code="0x14ffff">EFC020 : </title>
+			<title code="0x15ffff">EFC021 : </title>
+			<title code="0x16ffff">EFC022 : </title>
+			<title code="0x17ffff">EFC023 : </title>
+			<title code="0x18ffff">EFC024 : </title>
+			<title code="0x19ffff">EFC025 : </title>
+			<title code="0x1affff">EFC026 : </title>
+			<title code="0x1bffff">EFC027 : </title>
+			<title code="0x1cffff">EFC028 : </title>
+			<title code="0x1dffff">EFC029 : </title>
+			<title code="0x1effff">EFC030 : </title>
+			<title code="0x1fffff">EFC031 : </title>
+			<title code="0x20ffff">EFC032 : </title>
+			<title code="0x21ffff">EFC033 : </title>
+			<title code="0x22ffff">EFC034 : </title>
+			<title code="0x23ffff">EFC035 : </title>
+			<title code="0x24ffff">EFC036 : </title>
+			<title code="0x25ffff">EFC037 : </title>
+			<title code="0x26ffff">EFC038 : </title>
+			<title code="0x27ffff">EFC039 : </title>
+			<title code="0x28ffff">EFC040 : </title>
+			<title code="0x29ffff">EFC041 : </title>
+			<title code="0x2affff">EFC042 : </title>
+			<title code="0x2bffff">EFC043 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] DUEL98</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x31000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x13"/>
+		</options>
+		<romlist archive="duel98">
+			<rom type="code" offset="0x00600">duel98.bin</rom>
+			<rom type="code" offset="0x30100">DRIVER</rom>
+			<rom type="bgm" offset="0x01">OP1</rom>
+			<rom type="bgm" offset="0x02">OP2</rom>
+			<rom type="bgm" offset="0x03">MUS000</rom>
+			<rom type="bgm" offset="0x04">MUS001</rom>
+			<rom type="bgm" offset="0x05">MUS002</rom>
+			<rom type="bgm" offset="0x06">MUS003</rom>
+			<rom type="bgm" offset="0x07">MUS004</rom>
+			<rom type="bgm" offset="0x08">MUS005</rom>
+			<rom type="bgm" offset="0x09">MUS006</rom>
+			<rom type="bgm" offset="0x0a">MUS007</rom>
+			<rom type="bgm" offset="0x0b">MUS008</rom>
+			<rom type="bgm" offset="0x0c">MUS009</rom>
+			<rom type="bgm" offset="0x0d">MUS010</rom>
+			<rom type="bgm" offset="0x0e">MUS011</rom>
+			<rom type="bgm" offset="0x0f">MUS012</rom>
+			<rom type="bgm" offset="0x10">MUS013</rom>
+			<rom type="bgm" offset="0x11">MUS014</rom>
+			<rom type="bgm" offset="0x12">MUS015</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000001">OP1    : </title>
+			<title code="0x000002">OP2    : DUEL</title>
+			<title code="0x000003">MUS000 : </title>
+			<title code="0x000004">MUS001 : A FLOOD OF WATER</title>
+			<title code="0x000005">MUS002 : </title>
+			<title code="0x000006">MUS003 : SLOPING UPWARD</title>
+			<title code="0x000007">MUS004 : </title>
+			<title code="0x000008">MUS005 : MUD AND MARSH</title>
+			<title code="0x000009">MUS006 : A MARE RUIN</title>
+			<title code="0x00000a">MUS007 : DEFEND A CASTLE OF BALT</title>
+			<title code="0x00000b">MUS008 : STORY OF STAR FIELD</title>
+			<title code="0x00000c">MUS009 : BULLET THE FELLOW!</title>
+			<title code="0x00000d">MUS010 : A DESPRATE FIGHT</title>
+			<title code="0x00000e">MUS011 : AT THE HOWLING WIND</title>
+			<title code="0x00000f">MUS012 : THE VALLEY OF THE SHADOW OF DEATH</title>
+			<title code="0x000010">MUS013 : I'M FULL OF BEART</title>
+			<title code="0x000011">MUS014 : THE SOLDIERS ALIGNE</title>
+			<title code="0x000012">MUS015 : IN FRONT OF CHIFF</title>
+			<title code="0x01ffff">EFC001 : </title>
+			<title code="0x02ffff">EFC002 : </title>
+			<title code="0x03ffff">EFC003 : </title>
+			<title code="0x04ffff">EFC004 : </title>
+			<title code="0x05ffff">EFC005 : </title>
+			<title code="0x06ffff">EFC006 : </title>
+			<title code="0x07ffff">EFC007 : </title>
+			<title code="0x08ffff">EFC008 : </title>
+			<title code="0x09ffff">EFC009 : </title>
+			<title code="0x0affff">EFC010 : </title>
+			<title code="0x0bffff">EFC011 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] DUEL 川中島シナリオ</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x08a00"/>
+			<option name="filesize" value="0x0800"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x15"/>
+		</options>
+		<romlist archive="duelkn98">
+			<rom type="code" offset="0x00600">duelkn98.bin</rom>
+			<rom type="code" offset="0x08000">DRIVER2</rom>
+			<rom type="bgm" offset="0x01">MUS100</rom>
+			<rom type="bgm" offset="0x02">MUS101</rom>
+			<rom type="bgm" offset="0x03">MUS102</rom>
+			<rom type="bgm" offset="0x04">MUS103</rom>
+			<rom type="bgm" offset="0x05">MUS104</rom>
+			<rom type="bgm" offset="0x06">MUS105</rom>
+			<rom type="bgm" offset="0x07">MUS106</rom>
+			<rom type="bgm" offset="0x08">MUS107</rom>
+			<rom type="bgm" offset="0x09">MUS108</rom>
+			<rom type="bgm" offset="0x0a">MUS109</rom>
+			<rom type="bgm" offset="0x0b">MUS110</rom>
+			<rom type="bgm" offset="0x0c">MUS111</rom>
+			<rom type="bgm" offset="0x0d">MUS112</rom>
+			<rom type="bgm" offset="0x0e">MUS113</rom>
+			<rom type="bgm" offset="0x0f">MUS114</rom>
+			<rom type="bgm" offset="0x10">MUS115</rom>
+			<rom type="bgm" offset="0x11">MUS116</rom>
+			<rom type="bgm" offset="0x12">MUS117</rom>
+			<rom type="bgm" offset="0x13">MUS118</rom>
+			<rom type="bgm" offset="0x14">MUS119</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000001">MUS100 : </title>
+			<title code="0x000002">MUS101 : </title>
+			<title code="0x000003">MUS102 : </title>
+			<title code="0x000004">MUS103 : </title>
+			<title code="0x000005">MUS104 : </title>
+			<title code="0x000006">MUS105 : </title>
+			<title code="0x000007">MUS106 : </title>
+			<title code="0x000008">MUS107 : </title>
+			<title code="0x000009">MUS108 : </title>
+			<title code="0x00000a">MUS109 : </title>
+			<title code="0x00000b">MUS110 : </title>
+			<title code="0x00000c">MUS111 : </title>
+			<title code="0x00000d">MUS112 : </title>
+			<title code="0x00000e">MUS113 : </title>
+			<title code="0x00000f">MUS114 : </title>
+			<title code="0x000010">MUS115 : </title>
+			<title code="0x000011">MUS116 : </title>
+			<title code="0x000012">MUS117 : </title>
+			<title code="0x000013">MUS118 : </title>
+			<title code="0x000014">MUS119 : </title>
+			<title code="0x01ffff">EFC001 : </title>
+			<title code="0x02ffff">EFC002 : </title>
+			<title code="0x03ffff">EFC003 : </title>
+			<title code="0x04ffff">EFC004 : </title>
+			<title code="0x05ffff">EFC005 : </title>
+			<title code="0x06ffff">EFC006 : </title>
+			<title code="0x07ffff">EFC007 : </title>
+			<title code="0x08ffff">EFC008 : </title>
+			<title code="0x09ffff">EFC009 : </title>
+			<title code="0x0affff">EFC010 : </title>
+			<title code="0x0bffff">EFC011 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 川中島異聞録</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x3ce00"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x19"/>
+		</options>
+		<romlist archive="kibun98">
+			<rom type="code" offset="0x00600">kibun98.bin</rom>
+			<rom type="code" offset="0x3c000">DRIVER3</rom>
+			<rom type="bgm" offset="0x01">OPNMUS</rom>
+			<rom type="bgm" offset="0x02">MUS200</rom>
+			<rom type="bgm" offset="0x03">MUS201</rom>
+			<rom type="bgm" offset="0x04">MUS202</rom>
+			<rom type="bgm" offset="0x05">MUS203</rom>
+			<rom type="bgm" offset="0x06">MUS204</rom>
+			<rom type="bgm" offset="0x07">MUS205</rom>
+			<rom type="bgm" offset="0x08">MUS206</rom>
+			<rom type="bgm" offset="0x09">MUS207</rom>
+			<rom type="bgm" offset="0x0a">MUS208</rom>
+			<rom type="bgm" offset="0x0b">MUS209</rom>
+			<rom type="bgm" offset="0x0c">MUS210</rom>
+			<rom type="bgm" offset="0x0d">MUS211</rom>
+			<rom type="bgm" offset="0x0e">MUS212</rom>
+			<rom type="bgm" offset="0x0f">MUS213</rom>
+			<rom type="bgm" offset="0x10">MUS214</rom>
+			<rom type="bgm" offset="0x11">MUS215</rom>
+			<rom type="bgm" offset="0x12">MUS216</rom>
+			<rom type="bgm" offset="0x13">MUS217</rom>
+			<rom type="bgm" offset="0x14">MUS218</rom>
+			<rom type="bgm" offset="0x15">MUS219</rom>
+			<rom type="bgm" offset="0x16">MUS220</rom>
+			<rom type="bgm" offset="0x17">MUS221</rom>
+			<rom type="bgm" offset="0x18">MUS222</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000001">OPNMUS-00 : </title>
+			<title code="0x010001">OPNMUS-01 : </title>
+		<!--	<title code="0x020001">OPNMUS-02 : </title> -->
+		<!--	<title code="0x030001">OPNMUS-03 : </title> -->
+		<!--	<title code="0x040001">OPNMUS-04 : </title> -->
+			<title code="0x090002">MUS200-09 : </title>
+			<title code="0x090003">MUS201-09 : </title>
+			<title code="0x090004">MUS202-09 : </title>
+			<title code="0x090005">MUS203-09 : </title>
+			<title code="0x090006">MUS204-09 : </title>
+			<title code="0x090007">MUS205-09 : </title>
+			<title code="0x090008">MUS206-09 : </title>
+			<title code="0x090009">MUS207-09 : </title>
+			<title code="0x09000a">MUS208-09 : </title>
+			<title code="0x09000b">MUS209-09 : </title>
+			<title code="0x09000c">MUS210-09 : </title>
+			<title code="0x09000d">MUS211-09 : </title>
+			<title code="0x09000e">MUS212-09 : </title>
+			<title code="0x09000f">MUS213-09 : </title>
+			<title code="0x090010">MUS214-09 : </title>
+			<title code="0x090011">MUS215-09 : </title>
+			<title code="0x090012">MUS216-09 : </title>
+			<title code="0x090013">MUS217-09 : </title>
+			<title code="0x090014">MUS218-09 : </title>
+			<title code="0x090015">MUS219-09 : </title>
+			<title code="0x090016">MUS220-09 : </title>
+			<title code="0x090017">MUS221-09 : </title>
+			<title code="0x090018">MUS222-09 : </title>
+			<title code="0x000018">MUS222-00 : </title>
+			<title code="0x010018">MUS222-01 : </title>
+			<title code="0x020018">MUS222-02 : </title>
+			<title code="0x030018">MUS222-03 : </title>
+			<title code="0x040018">MUS222-04 : </title>
+			<title code="0x050018">MUS222-05 : </title>
+			<title code="0x060018">MUS222-06 : </title>
+			<title code="0x070018">MUS222-07 : </title>
+			<title code="0x080018">MUS222-08 : </title>
+			<title code="0x01ffff">EFC001    : </title>
+			<title code="0x02ffff">EFC002    : </title>
+			<title code="0x03ffff">EFC003    : </title>
+			<title code="0x04ffff">EFC004    : </title>
+			<title code="0x05ffff">EFC005    : </title>
+			<title code="0x06ffff">EFC006    : </title>
+			<title code="0x07ffff">EFC007    : </title>
+			<title code="0x08ffff">EFC008    : </title>
+			<title code="0x09ffff">EFC009    : </title>
+			<title code="0x0affff">EFC010    : </title>
+			<title code="0x0bffff">EFC011    : </title>
+			<title code="0x0cffff">EFC012    : </title>
+			<title code="0x0dffff">EFC013    : </title>
+			<title code="0x0effff">EFC014    : </title>
+			<title code="0x0fffff">EFC015    : </title>
+			<title code="0x10ffff">EFC016    : </title>
+			<title code="0x11ffff">EFC017    : </title>
+			<title code="0x12ffff">EFC018    : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] FIRST QUEEN IV -バルシア戦記-(OPN)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="filesize" value="0x1000"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x2a"/>
+		</options>
+		<romlist archive="fq4_98">
+			<rom type="code" offset="0x00600">dks.bin</rom>
+			<rom type="code" offset="0x35000">BGMFQ4.BIN</rom>
+			<rom type="bgm" offset="0x00">BGM-00.BIN</rom>
+			<rom type="bgm" offset="0x01">BGM-01.BIN</rom>
+			<rom type="bgm" offset="0x02">BGM-02.BIN</rom>
+			<rom type="bgm" offset="0x03">BGM-03.BIN</rom>
+			<rom type="bgm" offset="0x04">BGM-04.BIN</rom>
+			<rom type="bgm" offset="0x05">BGM-05.BIN</rom>
+			<rom type="bgm" offset="0x06">BGM-06.BIN</rom>
+			<rom type="bgm" offset="0x07">BGM-07.BIN</rom>
+			<rom type="bgm" offset="0x08">BGM-08.BIN</rom>
+			<rom type="bgm" offset="0x09">BGM-09.BIN</rom>
+			<rom type="bgm" offset="0x0a">BGM-10.BIN</rom>
+			<rom type="bgm" offset="0x0b">BGM-11.BIN</rom>
+			<rom type="bgm" offset="0x0c">BGM-12.BIN</rom>
+			<rom type="bgm" offset="0x0d">BGM-13.BIN</rom>
+			<rom type="bgm" offset="0x0e">BGM-14.BIN</rom>
+			<rom type="bgm" offset="0x0f">BGM-15.BIN</rom>
+			<rom type="bgm" offset="0x10">BGM-16.BIN</rom>
+			<rom type="bgm" offset="0x11">BGM-17.BIN</rom>
+			<rom type="bgm" offset="0x12">BGM-18.BIN</rom>
+			<rom type="bgm" offset="0x13">BGM-19.BIN</rom>
+			<rom type="bgm" offset="0x14">BGM-20.BIN</rom>
+			<rom type="bgm" offset="0x15">BGM-21.BIN</rom>
+			<rom type="bgm" offset="0x16">BGM-22.BIN</rom>
+			<rom type="bgm" offset="0x17">BGM-23.BIN</rom>
+			<rom type="bgm" offset="0x18">BGM-24.BIN</rom>
+			<rom type="bgm" offset="0x19">BGM-25.BIN</rom>
+			<rom type="bgm" offset="0x1a">BGM-26.BIN</rom>
+			<rom type="bgm" offset="0x1b">BGM-27.BIN</rom>
+			<rom type="bgm" offset="0x1c">BGM-28.BIN</rom>
+			<rom type="bgm" offset="0x1d">BGM-29.BIN</rom>
+			<rom type="bgm" offset="0x1e">BGM-30.BIN</rom>
+			<rom type="bgm" offset="0x1f">BGM-31.BIN</rom>
+			<rom type="bgm" offset="0x20">BGM-32.BIN</rom>
+			<rom type="bgm" offset="0x21">BGM-33.BIN</rom>
+			<rom type="bgm" offset="0x22">BGM-34.BIN</rom>
+			<rom type="bgm" offset="0x23">BGM-35.BIN</rom>
+			<rom type="bgm" offset="0x24">BGM-36.BIN</rom>
+			<rom type="bgm" offset="0x25">BGM-37.BIN</rom>
+			<rom type="bgm" offset="0x26">BGM-38.BIN</rom>
+			<rom type="bgm" offset="0x27">BGM-39.BIN</rom>
+			<rom type="bgm" offset="0x28">BGM-40.BIN</rom>
+			<rom type="bgm" offset="0x29">FQ4OM_FM.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010001">BGM-01.BIN   : </title>
+			<title code="0x010002">BGM-02.BIN   : </title>
+			<title code="0x010003">BGM-03.BIN   : </title>
+			<title code="0x010004">BGM-04.BIN   : </title>
+			<title code="0x010005">BGM-05.BIN   : </title>
+			<title code="0x010006">BGM-06.BIN   : </title>
+			<title code="0x010007">BGM-07.BIN   : </title>
+			<title code="0x010008">BGM-08.BIN   : </title>
+			<title code="0x010009">BGM-09.BIN   : </title>
+			<title code="0x01000a">BGM-10.BIN   : </title>
+			<title code="0x01000b">BGM-11.BIN   : </title>
+			<title code="0x01000c">BGM-12.BIN   : </title>
+			<title code="0x01000d">BGM-13.BIN   : </title>
+			<title code="0x01000e">BGM-14.BIN   : </title>
+			<title code="0x01000f">BGM-15.BIN   : </title>
+			<title code="0x010010">BGM-16.BIN   : </title>
+			<title code="0x010011">BGM-17.BIN   : </title>
+			<title code="0x010012">BGM-18.BIN   : </title>
+			<title code="0x010013">BGM-19.BIN   : </title>
+			<title code="0x010014">BGM-20.BIN   : </title>
+			<title code="0x010015">BGM-21.BIN   : </title>
+			<title code="0x010016">BGM-22.BIN   : </title>
+			<title code="0x010017">BGM-23.BIN   : </title>
+			<title code="0x010018">BGM-24.BIN   : </title>
+			<title code="0x010019">BGM-25.BIN   : </title>
+			<title code="0x01001a">BGM-26.BIN   : </title>
+		<!--	<title code="0x01001b">BGM-27.BIN   : </title> -->
+			<title code="0x01001c">BGM-28.BIN   : </title>
+			<title code="0x01001d">BGM-29.BIN   : </title>
+			<title code="0x01001e">BGM-30.BIN   : </title>
+			<title code="0x01001f">BGM-31.BIN   : </title>
+			<title code="0x010020">BGM-32.BIN   : </title>
+			<title code="0x010021">BGM-33.BIN   : </title>
+			<title code="0x010022">BGM-34.BIN   : </title>
+			<title code="0x010023">BGM-35.BIN   : </title>
+			<title code="0x010024">BGM-36.BIN   : </title>
+			<title code="0x010025">BGM-37.BIN   : </title>
+			<title code="0x010026">BGM-38.BIN   : </title>
+			<title code="0x010027">BGM-39.BIN   : </title>
+			<title code="0x010028">BGM-40.BIN   : </title>
+			<title code="0x020029">FQ4OM_FM.BIN : </title>
+			<title code="0x01ffff">EFC001       : </title>
+			<title code="0x02ffff">EFC002       : </title>
+			<title code="0x03ffff">EFC003       : </title>
+			<title code="0x04ffff">EFC004       : </title>
+			<title code="0x05ffff">EFC005       : </title>
+			<title code="0x06ffff">EFC006       : </title>
+			<title code="0x07ffff">EFC007       : </title>
+			<title code="0x08ffff">EFC008       : </title>
+			<title code="0x09ffff">EFC009       : </title>
+			<title code="0x0affff">EFC010       : </title>
+			<title code="0x0bffff">EFC011       : </title>
+			<title code="0x0cffff">EFC012       : </title>
+			<title code="0x0dffff">EFC013       : </title>
+			<title code="0x0effff">EFC014       : </title>
+			<title code="0x0fffff">EFC015       : </title>
+			<title code="0x10ffff">EFC016       : </title>
+			<title code="0x11ffff">EFC017       : </title>
+			<title code="0x12ffff">EFC018       : </title>
+			<title code="0x13ffff">EFC019       : </title>
+			<title code="0x14ffff">EFC020       : </title>
+			<title code="0x15ffff">EFC021       : </title>
+			<title code="0x16ffff">EFC022       : </title>
+			<title code="0x17ffff">EFC023       : </title>
+			<title code="0x18ffff">EFC024       : </title>
+			<title code="0x19ffff">EFC025       : </title>
+			<title code="0x1affff">EFC026       : </title>
+			<title code="0x1bffff">EFC027       : </title>
+			<title code="0x1cffff">EFC028       : </title>
+			<title code="0x1dffff">EFC029       : </title>
+			<title code="0x1effff">EFC030       : </title>
+			<title code="0x1fffff">EFC031       : </title>
+			<title code="0x20ffff">EFC032       : </title>
+			<title code="0x21ffff">EFC033       : </title>
+			<title code="0x22ffff">EFC034       : </title>
+			<title code="0x23ffff">EFC035       : </title>
+			<title code="0x24ffff">EFC036       : </title>
+			<title code="0x25ffff">EFC037       : </title>
+			<title code="0x26ffff">EFC038       : </title>
+			<title code="0x27ffff">EFC039       : </title>
+			<title code="0x28ffff">EFC040       : </title>
+			<title code="0x29ffff">EFC041       : </title>
+			<title code="0x2affff">EFC042       : </title>
+			<title code="0x2bffff">EFC043       : </title>
+			<title code="0x2cffff">EFC044       : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] FIRST QUEEN IV -バルシア戦記-(SC-55)</name>
+		<driver type="beep">pc98vx</driver>
+		<driveralias type="NEC PC-9801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="filesize" value="0x1000"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x2a"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="fq4_98">
+			<rom type="code" offset="0x00600">fq4.bin</rom>
+			<rom type="code" offset="0x35000">MIDIFQ4.BIN</rom>
+			<rom type="bgm" offset="0x00">BGM-00.BIN</rom>
+			<rom type="bgm" offset="0x01">MID-01.BIN</rom>
+			<rom type="bgm" offset="0x02">MID-02.BIN</rom>
+			<rom type="bgm" offset="0x03">MID-03.BIN</rom>
+			<rom type="bgm" offset="0x04">MID-04.BIN</rom>
+			<rom type="bgm" offset="0x05">MID-05.BIN</rom>
+			<rom type="bgm" offset="0x06">MID-06.BIN</rom>
+			<rom type="bgm" offset="0x07">MID-07.BIN</rom>
+			<rom type="bgm" offset="0x08">MID-08.BIN</rom>
+			<rom type="bgm" offset="0x09">MID-09.BIN</rom>
+			<rom type="bgm" offset="0x0a">MID-10.BIN</rom>
+			<rom type="bgm" offset="0x0b">MID-11.BIN</rom>
+			<rom type="bgm" offset="0x0c">MID-12.BIN</rom>
+			<rom type="bgm" offset="0x0d">MID-13.BIN</rom>
+			<rom type="bgm" offset="0x0e">MID-14.BIN</rom>
+			<rom type="bgm" offset="0x0f">MID-15.BIN</rom>
+			<rom type="bgm" offset="0x10">MID-16.BIN</rom>
+			<rom type="bgm" offset="0x11">MID-17.BIN</rom>
+			<rom type="bgm" offset="0x12">MID-18.BIN</rom>
+			<rom type="bgm" offset="0x13">MID-19.BIN</rom>
+			<rom type="bgm" offset="0x14">MID-20.BIN</rom>
+			<rom type="bgm" offset="0x15">MID-21.BIN</rom>
+			<rom type="bgm" offset="0x16">MID-22.BIN</rom>
+			<rom type="bgm" offset="0x17">MID-23.BIN</rom>
+			<rom type="bgm" offset="0x18">MID-24.BIN</rom>
+			<rom type="bgm" offset="0x19">MID-25.BIN</rom>
+			<rom type="bgm" offset="0x1a">MID-26.BIN</rom>
+			<rom type="bgm" offset="0x1b">MID-27.BIN</rom>
+			<rom type="bgm" offset="0x1c">MID-28.BIN</rom>
+			<rom type="bgm" offset="0x1d">MID-29.BIN</rom>
+			<rom type="bgm" offset="0x1e">MID-30.BIN</rom>
+			<rom type="bgm" offset="0x1f">MID-31.BIN</rom>
+			<rom type="bgm" offset="0x20">MID-32.BIN</rom>
+			<rom type="bgm" offset="0x21">MID-33.BIN</rom>
+			<rom type="bgm" offset="0x22">MID-34.BIN</rom>
+			<rom type="bgm" offset="0x23">MID-35.BIN</rom>
+			<rom type="bgm" offset="0x24">MID-36.BIN</rom>
+			<rom type="bgm" offset="0x25">MID-37.BIN</rom>
+			<rom type="bgm" offset="0x26">MID-38.BIN</rom>
+			<rom type="bgm" offset="0x27">MID-39.BIN</rom>
+			<rom type="bgm" offset="0x28">MID-40.BIN</rom>
+			<rom type="bgm" offset="0x29">FQ4OM_MD.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010001">MID-01.BIN   : </title>
+			<title code="0x010002">MID-02.BIN   : </title>
+			<title code="0x010003">MID-03.BIN   : </title>
+			<title code="0x010004">MID-04.BIN   : </title>
+			<title code="0x010005">MID-05.BIN   : </title>
+			<title code="0x010006">MID-06.BIN   : </title>
+			<title code="0x010007">MID-07.BIN   : </title>
+			<title code="0x010008">MID-08.BIN   : </title>
+			<title code="0x010009">MID-09.BIN   : </title>
+			<title code="0x01000a">MID-10.BIN   : </title>
+			<title code="0x01000b">MID-11.BIN   : </title>
+			<title code="0x01000c">MID-12.BIN   : </title>
+			<title code="0x01000d">MID-13.BIN   : </title>
+			<title code="0x01000e">MID-14.BIN   : </title>
+			<title code="0x01000f">MID-15.BIN   : </title>
+			<title code="0x010010">MID-16.BIN   : </title>
+			<title code="0x010011">MID-17.BIN   : </title>
+			<title code="0x010012">MID-18.BIN   : </title>
+			<title code="0x010013">MID-19.BIN   : </title>
+			<title code="0x010014">MID-20.BIN   : </title>
+			<title code="0x010015">MID-21.BIN   : </title>
+			<title code="0x010016">MID-22.BIN   : </title>
+			<title code="0x010017">MID-23.BIN   : </title>
+			<title code="0x010018">MID-24.BIN   : </title>
+			<title code="0x010019">MID-25.BIN   : </title>
+			<title code="0x01001a">MID-26.BIN   : </title>
+		<!--	<title code="0x01001b">MID-27.BIN   : </title> -->
+			<title code="0x01001c">MID-28.BIN   : </title>
+			<title code="0x01001d">MID-29.BIN   : </title>
+			<title code="0x01001e">MID-30.BIN   : </title>
+			<title code="0x01001f">MID-31.BIN   : </title>
+			<title code="0x010020">MID-32.BIN   : </title>
+			<title code="0x010021">MID-33.BIN   : </title>
+			<title code="0x010022">MID-34.BIN   : </title>
+			<title code="0x010023">MID-35.BIN   : </title>
+			<title code="0x010024">MID-36.BIN   : </title>
+			<title code="0x010025">MID-37.BIN   : </title>
+			<title code="0x010026">MID-38.BIN   : </title>
+			<title code="0x010027">MID-39.BIN   : </title>
+			<title code="0x010028">MID-40.BIN   : </title>
+			<title code="0x020029">FQ4OM_MD.BIN : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] DARK SERAPHIM</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="filesize" value="0x1000"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x26"/>
+		</options>
+		<romlist archive="dks_98">
+			<rom type="code" offset="0x00600">dks.bin</rom>
+			<rom type="code" offset="0x35000">BGMDK.BIN</rom>
+			<rom type="bgm" offset="0x00">BGM-00.BIN</rom>
+			<rom type="bgm" offset="0x01">BGM-01.BIN</rom>
+			<rom type="bgm" offset="0x02">BGM-02.BIN</rom>
+			<rom type="bgm" offset="0x03">BGM-03.BIN</rom>
+			<rom type="bgm" offset="0x04">BGM-04.BIN</rom>
+			<rom type="bgm" offset="0x05">BGM-05.BIN</rom>
+			<rom type="bgm" offset="0x06">BGM-06.BIN</rom>
+			<rom type="bgm" offset="0x07">BGM-07.BIN</rom>
+			<rom type="bgm" offset="0x08">BGM-08.BIN</rom>
+			<rom type="bgm" offset="0x09">BGM-09.BIN</rom>
+			<rom type="bgm" offset="0x0a">BGM-10.BIN</rom>
+			<rom type="bgm" offset="0x0b">BGM-11.BIN</rom>
+			<rom type="bgm" offset="0x0c">BGM-12.BIN</rom>
+			<rom type="bgm" offset="0x0d">BGM-13.BIN</rom>
+			<rom type="bgm" offset="0x0e">BGM-14.BIN</rom>
+			<rom type="bgm" offset="0x0f">BGM-15.BIN</rom>
+			<rom type="bgm" offset="0x10">BGM-16.BIN</rom>
+			<rom type="bgm" offset="0x11">BGM-17.BIN</rom>
+			<rom type="bgm" offset="0x12">BGM-18.BIN</rom>
+			<rom type="bgm" offset="0x13">BGM-19.BIN</rom>
+			<rom type="bgm" offset="0x14">BGM-20.BIN</rom>
+			<rom type="bgm" offset="0x15">BGM-21.BIN</rom>
+			<rom type="bgm" offset="0x16">BGM-22.BIN</rom>
+			<rom type="bgm" offset="0x17">BGM-23.BIN</rom>
+			<rom type="bgm" offset="0x18">BGM-24.BIN</rom>
+			<rom type="bgm" offset="0x19">BGM-25.BIN</rom>
+			<rom type="bgm" offset="0x1a">BGM-26.BIN</rom>
+			<rom type="bgm" offset="0x1b">BGM-27.BIN</rom>
+			<rom type="bgm" offset="0x1c">BGM-28.BIN</rom>
+			<rom type="bgm" offset="0x1d">BGM-29.BIN</rom>
+			<rom type="bgm" offset="0x1e">BGM-30.BIN</rom>
+			<rom type="bgm" offset="0x1f">BGM-31.BIN</rom>
+			<rom type="bgm" offset="0x20">BGM-32.BIN</rom>
+			<rom type="bgm" offset="0x21">BGM-33.BIN</rom>
+			<rom type="bgm" offset="0x22">BGM-34.BIN</rom>
+			<rom type="bgm" offset="0x23">BGM-35.BIN</rom>
+			<rom type="bgm" offset="0x24">BGM-36.BIN</rom>
+			<rom type="bgm" offset="0x25">BGM-37.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010001">BGM-01.BIN : </title>
+			<title code="0x010002">BGM-02.BIN : </title>
+			<title code="0x010003">BGM-03.BIN : </title>
+			<title code="0x010004">BGM-04.BIN : </title>
+			<title code="0x010005">BGM-05.BIN : </title>
+			<title code="0x010006">BGM-06.BIN : </title>
+			<title code="0x010007">BGM-07.BIN : </title>
+			<title code="0x010008">BGM-08.BIN : </title>
+			<title code="0x010009">BGM-09.BIN : </title>
+			<title code="0x01000a">BGM-10.BIN : </title>
+			<title code="0x01000b">BGM-11.BIN : </title>
+			<title code="0x01000c">BGM-12.BIN : </title>
+			<title code="0x01000d">BGM-13.BIN : </title>
+			<title code="0x01000e">BGM-14.BIN : </title>
+			<title code="0x01000f">BGM-15.BIN : </title>
+			<title code="0x010010">BGM-16.BIN : </title>
+			<title code="0x010011">BGM-17.BIN : </title>
+			<title code="0x010012">BGM-18.BIN : </title>
+			<title code="0x010013">BGM-19.BIN : </title>
+			<title code="0x010014">BGM-20.BIN : </title>
+			<title code="0x010015">BGM-21.BIN : </title>
+			<title code="0x010016">BGM-22.BIN : </title>
+			<title code="0x010017">BGM-23.BIN : </title>
+			<title code="0x010018">BGM-24.BIN : </title>
+			<title code="0x010019">BGM-25.BIN : </title>
+			<title code="0x01001a">BGM-26.BIN : </title>
+			<title code="0x01001b">BGM-27.BIN : </title>
+			<title code="0x01001c">BGM-28.BIN : </title>
+			<title code="0x01001d">BGM-29.BIN : </title>
+			<title code="0x01001e">BGM-30.BIN : </title>
+			<title code="0x01001f">BGM-31.BIN : </title>
+			<title code="0x010020">BGM-32.BIN : </title>
+			<title code="0x010021">BGM-33.BIN : </title>
+			<title code="0x010022">BGM-34.BIN : </title>
+			<title code="0x010023">BGM-35.BIN : </title>
+			<title code="0x010024">BGM-36.BIN : </title>
+			<title code="0x010025">BGM-37.BIN : </title>
+			<title code="0x01ffff">EFC001     : </title>
+			<title code="0x02ffff">EFC002     : </title>
+			<title code="0x03ffff">EFC003     : </title>
+			<title code="0x04ffff">EFC004     : </title>
+			<title code="0x05ffff">EFC005     : </title>
+			<title code="0x06ffff">EFC006     : </title>
+			<title code="0x07ffff">EFC007     : </title>
+			<title code="0x08ffff">EFC008     : </title>
+			<title code="0x09ffff">EFC009     : </title>
+			<title code="0x0affff">EFC010     : </title>
+			<title code="0x0bffff">EFC011     : </title>
+			<title code="0x0cffff">EFC012     : </title>
+			<title code="0x0dffff">EFC013     : </title>
+			<title code="0x0effff">EFC014     : </title>
+			<title code="0x0fffff">EFC015     : </title>
+			<title code="0x10ffff">EFC016     : </title>
+			<title code="0x11ffff">EFC017     : </title>
+			<title code="0x12ffff">EFC018     : </title>
+			<title code="0x13ffff">EFC019     : </title>
+			<title code="0x14ffff">EFC020     : </title>
+			<title code="0x15ffff">EFC021     : </title>
+			<title code="0x16ffff">EFC022     : </title>
+			<title code="0x17ffff">EFC023     : </title>
+			<title code="0x18ffff">EFC024     : </title>
+			<title code="0x19ffff">EFC025     : </title>
+			<title code="0x1affff">EFC026     : </title>
+			<title code="0x1bffff">EFC027     : </title>
+			<title code="0x1cffff">EFC028     : </title>
+			<title code="0x1dffff">EFC029     : </title>
+			<title code="0x1effff">EFC030     : </title>
+			<title code="0x1fffff">EFC031     : </title>
+			<title code="0x20ffff">EFC032     : </title>
+			<title code="0x21ffff">EFC033     : </title>
+			<title code="0x22ffff">EFC034     : </title>
+			<title code="0x23ffff">EFC035     : </title>
+			<title code="0x24ffff">EFC036     : </title>
+			<title code="0x25ffff">EFC037     : </title>
+			<title code="0x26ffff">EFC038     : </title>
+			<title code="0x27ffff">EFC039     : </title>
+			<title code="0x28ffff">EFC040     : </title>
+			<title code="0x29ffff">EFC041     : </title>
+			<title code="0x2affff">EFC042     : </title>
+			<title code="0x2bffff">EFC043     : </title>
+			<title code="0x2cffff">EFC044     : </title>
+			<title code="0x2dffff">EFC045     : </title>
+			<title code="0x2effff">EFC046     : </title>
+			<title code="0x2fffff">EFC047     : </title>
+			<title code="0x30ffff">EFC048     : </title>
+			<title code="0x31ffff">EFC049     : </title>
+			<title code="0x32ffff">EFC050     : </title>
+			<title code="0x33ffff">EFC051     : </title>
+			<title code="0x34ffff">EFC052     : </title>
+			<title code="0x35ffff">EFC053     : </title>
+			<title code="0x36ffff">EFC054     : </title>
+			<title code="0x37ffff">EFC055     : </title>
+			<title code="0x38ffff">EFC056     : </title>
+			<title code="0x39ffff">EFC057     : </title>
+			<title code="0x3affff">EFC058     : </title>
+			<title code="0x3bffff">EFC059     : </title>
+			<title code="0x3cffff">EFC060     : </title>
+			<title code="0x3dffff">EFC061     : </title>
+			<title code="0x3effff">EFC062     : </title>
+			<title code="0x3fffff">EFC063     : </title>
+			<title code="0x40ffff">EFC064     : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] DUEL SUCCESSION</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="filesize" value="0x1000"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x22"/>
+		</options>
+		<romlist archive="duelsc98">
+			<rom type="code" offset="0x00600">dks.bin</rom>
+			<rom type="code" offset="0x35000">BGM_DS.BIN</rom>
+			<rom type="bgm" offset="0x00">BGM-00.BIN</rom>
+			<rom type="bgm" offset="0x01">BGM-01.BIN</rom>
+			<rom type="bgm" offset="0x02">BGM-02.BIN</rom>
+			<rom type="bgm" offset="0x03">BGM-03.BIN</rom>
+			<rom type="bgm" offset="0x04">BGM-04.BIN</rom>
+			<rom type="bgm" offset="0x05">BGM-05.BIN</rom>
+			<rom type="bgm" offset="0x06">BGM-06.BIN</rom>
+			<rom type="bgm" offset="0x07">BGM-07.BIN</rom>
+			<rom type="bgm" offset="0x08">BGM-08.BIN</rom>
+			<rom type="bgm" offset="0x09">BGM-09.BIN</rom>
+			<rom type="bgm" offset="0x0a">BGM-10.BIN</rom>
+			<rom type="bgm" offset="0x0b">BGM-11.BIN</rom>
+			<rom type="bgm" offset="0x0c">BGM-12.BIN</rom>
+			<rom type="bgm" offset="0x0d">BGM-13.BIN</rom>
+			<rom type="bgm" offset="0x0e">BGM-14.BIN</rom>
+			<rom type="bgm" offset="0x0f">BGM-15.BIN</rom>
+			<rom type="bgm" offset="0x10">BGM-16.BIN</rom>
+			<rom type="bgm" offset="0x11">BGM-17.BIN</rom>
+			<rom type="bgm" offset="0x12">BGM-18.BIN</rom>
+			<rom type="bgm" offset="0x13">BGM-19.BIN</rom>
+			<rom type="bgm" offset="0x14">BGM-20.BIN</rom>
+			<rom type="bgm" offset="0x15">BGM-21.BIN</rom>
+			<rom type="bgm" offset="0x16">BGM-22.BIN</rom>
+			<rom type="bgm" offset="0x17">BGM-23.BIN</rom>
+			<rom type="bgm" offset="0x18">BGM-24.BIN</rom>
+			<rom type="bgm" offset="0x19">BGM-25.BIN</rom>
+			<rom type="bgm" offset="0x1a">BGM-26.BIN</rom>
+			<rom type="bgm" offset="0x1b">BGM-27.BIN</rom>
+			<rom type="bgm" offset="0x1c">BGM-28.BIN</rom>
+			<rom type="bgm" offset="0x1d">BGM-29.BIN</rom>
+			<rom type="bgm" offset="0x1e">BGM-30.BIN</rom>
+			<rom type="bgm" offset="0x1f">BGM-31.BIN</rom>
+			<rom type="bgm" offset="0x20">BGM-32.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010001">BGM-01.BIN : Reconnoiter</title>
+			<title code="0x010002">BGM-02.BIN : </title>
+			<title code="0x010003">BGM-03.BIN : 希望の先へ</title>
+			<title code="0x010004">BGM-04.BIN : </title>
+			<title code="0x010005">BGM-05.BIN : 解放の時</title>
+			<title code="0x010006">BGM-06.BIN : </title>
+			<title code="0x010007">BGM-07.BIN : </title>
+			<title code="0x010008">BGM-08.BIN : </title>
+			<title code="0x010009">BGM-09.BIN : </title>
+			<title code="0x01000a">BGM-10.BIN : </title>
+			<title code="0x01000b">BGM-11.BIN : </title>
+			<title code="0x01000c">BGM-12.BIN : </title>
+			<title code="0x01000d">BGM-13.BIN : PICO PICO Story</title>
+			<title code="0x01000e">BGM-14.BIN : Dance to Dance</title>
+		<!--	<title code="0x01000f">BGM-15.BIN : </title> -->
+		<!--	<title code="0x010010">BGM-16.BIN : </title> -->
+		<!--	<title code="0x010011">BGM-17.BIN : </title> -->
+			<title code="0x010012">BGM-18.BIN : </title>
+		<!--	<title code="0x010013">BGM-19.BIN : </title> -->
+			<title code="0x010014">BGM-20.BIN : </title>
+			<title code="0x010015">BGM-21.BIN : </title>
+		<!--	<title code="0x010016">BGM-22.BIN : </title> -->
+			<title code="0x010017">BGM-23.BIN : </title>
+			<title code="0x010018">BGM-24.BIN : </title>
+			<title code="0x010019">BGM-25.BIN : </title>
+			<title code="0x01001a">BGM-26.BIN : </title>
+			<title code="0x01001b">BGM-27.BIN : </title>
+			<title code="0x01001c">BGM-28.BIN : </title>
+		<!--	<title code="0x01001d">BGM-29.BIN : </title> -->
+			<title code="0x01001e">BGM-30.BIN : </title>
+			<title code="0x01001f">BGM-31.BIN : </title>
+			<title code="0x010020">BGM-32.BIN : </title>
+			<title code="0x01ffff">EFC001     : </title>
+			<title code="0x02ffff">EFC002     : </title>
+			<title code="0x03ffff">EFC003     : </title>
+			<title code="0x04ffff">EFC004     : </title>
+			<title code="0x05ffff">EFC005     : </title>
+			<title code="0x06ffff">EFC006     : </title>
+			<title code="0x07ffff">EFC007     : </title>
+			<title code="0x08ffff">EFC008     : </title>
+			<title code="0x09ffff">EFC009     : </title>
+			<title code="0x0affff">EFC010     : </title>
+			<title code="0x0bffff">EFC011     : </title>
+			<title code="0x0cffff">EFC012     : </title>
+			<title code="0x0dffff">EFC013     : </title>
+			<title code="0x0effff">EFC014     : </title>
+			<title code="0x0fffff">EFC015     : </title>
+			<title code="0x10ffff">EFC016     : </title>
+			<title code="0x11ffff">EFC017     : </title>
+			<title code="0x12ffff">EFC018     : </title>
+			<title code="0x13ffff">EFC019     : </title>
+			<title code="0x14ffff">EFC020     : </title>
+			<title code="0x15ffff">EFC021     : </title>
+			<title code="0x16ffff">EFC022     : </title>
+			<title code="0x17ffff">EFC023     : </title>
+			<title code="0x18ffff">EFC024     : </title>
+			<title code="0x19ffff">EFC025     : </title>
+			<title code="0x1affff">EFC026     : </title>
+			<title code="0x1bffff">EFC027     : </title>
+			<title code="0x1cffff">EFC028     : </title>
+			<title code="0x1dffff">EFC029     : </title>
+			<title code="0x1effff">EFC030     : </title>
+			<title code="0x1fffff">EFC031     : </title>
+			<title code="0x20ffff">EFC032     : </title>
+			<title code="0x21ffff">EFC033     : </title>
+			<title code="0x22ffff">EFC034     : </title>
+			<title code="0x23ffff">EFC035     : </title>
+			<title code="0x24ffff">EFC036     : </title>
+			<title code="0x25ffff">EFC037     : </title>
+			<title code="0x26ffff">EFC038     : </title>
+			<title code="0x27ffff">EFC039     : </title>
+			<title code="0x28ffff">EFC040     : </title>
+			<title code="0x29ffff">EFC041     : </title>
+			<title code="0x2affff">EFC042     : </title>
+			<title code="0x2bffff">EFC043     : </title>
+			<title code="0x2cffff">EFC044     : </title>
+			<title code="0x2dffff">EFC045     : </title>
+			<title code="0x2effff">EFC046     : </title>
+			<title code="0x2fffff">EFC047     : </title>
+			<title code="0x30ffff">EFC048     : </title>
+			<title code="0x31ffff">EFC049     : </title>
+			<title code="0x32ffff">EFC050     : </title>
+			<title code="0x33ffff">EFC051     : </title>
+			<title code="0x34ffff">EFC052     : </title>
+			<title code="0x35ffff">EFC053     : </title>
+			<title code="0x36ffff">EFC054     : </title>
+			<title code="0x37ffff">EFC055     : </title>
+			<title code="0x38ffff">EFC056     : </title>
+			<title code="0x39ffff">EFC057     : </title>
+			<title code="0x3affff">EFC058     : </title>
+			<title code="0x3bffff">EFC059     : </title>
+			<title code="0x3cffff">EFC060     : </title>
+			<title code="0x3dffff">EFC061     : </title>
+			<title code="0x3effff">EFC062     : </title>
+			<title code="0x3fffff">EFC063     : </title>
+			<title code="0x40ffff">EFC064     : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] EARLY KINGDOM</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="earlyk98">
+			<rom type="file" offset="-1">BGMDRV.COM</rom>
+			<rom type="file" offset="-1">bgmplay.com</rom>
+			<rom type="file" offset="0x05">EFFDAT.BIN</rom>
+			<rom type="file" offset="0x10">EK00.BIN</rom>
+			<rom type="file" offset="0x11">EK01.BIN</rom>
+			<rom type="file" offset="0x12">EK02.BIN</rom>
+			<rom type="file" offset="0x13">EK03.BIN</rom>
+			<rom type="file" offset="0x14">EK04.BIN</rom>
+			<rom type="file" offset="0x15">EK05.BIN</rom>
+			<rom type="file" offset="0x16">EK06.BIN</rom>
+			<rom type="file" offset="0x17">EK07.BIN</rom>
+			<rom type="file" offset="0x18">EK08.BIN</rom>
+			<rom type="file" offset="0x19">EK09.BIN</rom>
+			<rom type="file" offset="0x1a">EK10.BIN</rom>
+			<rom type="file" offset="0x1b">EK11.BIN</rom>
+			<rom type="file" offset="0x1c">EK12.BIN</rom>
+			<rom type="file" offset="0x1d">EK13.BIN</rom>
+			<rom type="file" offset="0x1e">EK14.BIN</rom>
+			<rom type="file" offset="0x1f">EK15.BIN</rom>
+			<rom type="file" offset="0x20">EK16.BIN</rom>
+			<rom type="file" offset="0x21">EK17.BIN</rom>
+			<rom type="file" offset="0x22">EK18.BIN</rom>
+			<rom type="file" offset="0x23">EK19.BIN</rom>
+			<rom type="file" offset="0x24">EK20.BIN</rom>
+			<rom type="file" offset="0x25">EK21.BIN</rom>
+			<rom type="shell" offset="0">BGMDRV -M2048 -E768</rom>
+			<rom type="shell" offset="0">bgmplay</rom>
+		</romlist>
+		<titlelist>
+		<!--	<title code="0x000010">EK00.BIN : 演奏停止</title> -->
+			<title code="0x000011">EK01.BIN : </title>
+			<title code="0x000012">EK02.BIN : </title>
+			<title code="0x000013">EK03.BIN : </title>
+			<title code="0x000014">EK04.BIN : </title>
+			<title code="0x000015">EK05.BIN : </title>
+			<title code="0x000016">EK06.BIN : </title>
+			<title code="0x000017">EK07.BIN : </title>
+			<title code="0x000018">EK08.BIN : </title>
+			<title code="0x000019">EK09.BIN : </title>
+			<title code="0x00001a">EK10.BIN : </title>
+			<title code="0x00001b">EK11.BIN : </title>
+			<title code="0x00001c">EK12.BIN : </title>
+			<title code="0x00001d">EK13.BIN : </title>
+			<title code="0x00001e">EK14.BIN : </title>
+			<title code="0x00001f">EK15.BIN : </title>
+			<title code="0x000020">EK16.BIN : </title>
+			<title code="0x000021">EK17.BIN : </title>
+			<title code="0x000022">EK18.BIN : </title>
+			<title code="0x000023">EK19.BIN : </title>
+			<title code="0x000024">EK20.BIN : </title>
+			<title code="0x000025">EK21.BIN : </title>
+			<title code="0x01ffff">効果音#01</title>
+			<title code="0x02ffff">効果音#02</title>
+			<title code="0x03ffff">効果音#03</title>
+			<title code="0x04ffff">効果音#04</title>
+			<title code="0x05ffff">効果音#05</title>
+			<title code="0x06ffff">効果音#06</title>
+			<title code="0x07ffff">効果音#07</title>
+			<title code="0x08ffff">効果音#08</title>
+			<title code="0x09ffff">効果音#09</title>
+			<title code="0x0affff">効果音#0A</title>
+			<title code="0x0bffff">効果音#0B</title>
+			<title code="0x0cffff">効果音#0C</title>
+			<title code="0x0dffff">効果音#0D</title>
+			<title code="0x0effff">効果音#0E</title>
+			<title code="0x0fffff">効果音#0F</title>
+			<title code="0x10ffff">効果音#10</title>
+			<title code="0x11ffff">効果音#11</title>
+			<title code="0x12ffff">効果音#12</title>
+			<title code="0x13ffff">効果音#13</title>
+			<title code="0x14ffff">効果音#14</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88VA] FIRST QUEEN －オルニック戦記－</name>
+		<driver type="opn">pc88va</driver>
+		<driveralias type="NEC PC-88VA">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x1b00"/>
+			<option name="filesize" value="0x0d00"/>
+			<option name="datamax" value="0x17"/>
+		</options>
+		<romlist archive="fqva">
+			<rom type="code" offset="0x00600">fq.bin</rom>
+			<rom type="code" offset="0x01100">DRIVER</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+			<rom type="bgm" offset="0x0a">MUS09</rom>
+			<rom type="bgm" offset="0x0b">MUS10</rom>
+			<rom type="bgm" offset="0x0c">MUS11</rom>
+			<rom type="bgm" offset="0x0d">MUS12</rom>
+			<rom type="bgm" offset="0x0e">MUS13</rom>
+			<rom type="bgm" offset="0x0f">MUS14</rom>
+			<rom type="bgm" offset="0x10">MUS15</rom>
+			<rom type="bgm" offset="0x11">MUS16</rom>
+			<rom type="bgm" offset="0x12">MUS17</rom>
+			<rom type="bgm" offset="0x13">MUS18</rom>
+			<rom type="bgm" offset="0x14">MUS19</rom>
+			<rom type="bgm" offset="0x15">MUS20</rom>
+			<rom type="bgm" offset="0x16">MUS21</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">MUS00 : Prince of palace</title>
+			<title code="0x02">MUS01 : </title>
+			<title code="0x03">MUS02 : Nuts About The Girl</title>
+			<title code="0x04">MUS03 : In A Row</title>
+			<title code="0x05">MUS04 : A Martial Spirit</title>
+			<title code="0x06">MUS05 : Halo</title>
+			<title code="0x07">MUS06 : Attack On Him</title>
+			<title code="0x08">MUS07 : Lie ?</title>
+			<title code="0x09">MUS08 : Curse Beat</title>
+			<title code="0x0a">MUS09 : ただみつめている</title>
+			<title code="0x0b">MUS10 : Sheaf Of Arrows</title>
+			<title code="0x0c">MUS11 : Melee</title>
+			<title code="0x0d">MUS12 : Money Maker</title>
+			<title code="0x0e">MUS13 : 丘の向こうへ</title>
+			<title code="0x0f">MUS14 : Returned Soldier</title>
+			<title code="0x10">MUS15 : (another version) ただみつめている</title>
+			<title code="0x11">MUS16 : (another version) Sheaf Of Arrows</title>
+			<title code="0x12">MUS17 : (another version) Melee</title>
+			<title code="0x13">MUS18 : (another version) </title>
+			<title code="0x14">MUS19 : (another version) Monery Maker</title>
+			<title code="0x15">MUS20 : (another version) 丘のむこうへ</title>
+			<title code="0x16">MUS21 : (another version) Returned Soldier</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] FIRST QUEEN -オルニック戦記-</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="mfp"    value="0x01"/>
+		</options>
+		<romlist archive="fq168snd">
+			<rom type="code" offset="0x000000">fq168snd.bin</rom>
+			<rom type="code" offset="0x0fbc00">driver.bin</rom>
+			<rom type="code" offset="0x040000">music00.bin</rom>
+			<rom type="code" offset="0x041000">music01.bin</rom>
+			<rom type="code" offset="0x042000">music02.bin</rom>
+			<rom type="code" offset="0x043000">music03.bin</rom>
+			<rom type="code" offset="0x044000">music04.bin</rom>
+			<rom type="code" offset="0x045000">music05.bin</rom>
+			<rom type="code" offset="0x046000">music06.bin</rom>
+			<rom type="code" offset="0x047000">music07.bin</rom>
+			<rom type="code" offset="0x048000">music08.bin</rom>
+			<rom type="code" offset="0x049000">music09.bin</rom>
+			<rom type="code" offset="0x04a000">music10.bin</rom>
+			<rom type="code" offset="0x04b000">music11.bin</rom>
+			<rom type="code" offset="0x04c000">music12.bin</rom>
+			<rom type="code" offset="0x04d000">music13.bin</rom>
+			<rom type="code" offset="0x04e000">music14.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0a">Prince of palace</title>
+			<title code="0x03">Nuts About the girl</title>
+			<title code="0x02">In A Row</title>
+			<title code="0x04">A Martial Spirit</title>
+			<title code="0x05">Halo</title>
+			<title code="0x06">Attack On Him</title>
+			<title code="0x07">Lie ?</title>
+			<title code="0x08">Curse Beat</title>
+			<title code="0x09">ただみつめている</title>
+			<title code="0x0b">Sheaf Of Arrows</title>
+			<title code="0x0c">Melee</title>
+			<title code="0x0d">Money Maker</title>
+			<title code="0x0e">丘の向こうへ</title>
+			<title code="0x0f">Returned Soldier</title>
+			<title code="0x01">曲名不明</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] FIRST QUEEN II -砂漠の女王-</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">呉ソフトウェア工房</driveralias>
+		<options>
+			<option name="mfp"    value="0x01"/>
+		</options>
+		<romlist archive="fq268snd">
+			<rom type="code" offset="0x000000">fq268snd.bin</rom>
+			<rom type="code" offset="0x003000">init.bin</rom>
+			<rom type="code" offset="0x0c0000">driver.bin</rom>
+			<rom type="code" offset="0x0c3000">se.bin</rom>
+			<rom type="code" offset="0x0c4000">adpcm.bin</rom>
+			<rom type="code" offset="0xc40000">music.bin</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x01" max="0x0d" extcode="1">BGM 0x%02x</range>
+			<title code="0x0e">Nuts About the girl</title>
+			<title code="0x0f">Lie ?</title>
+			<title code="0x10">Halo</title>
+			<range min="0x11" max="0x13" extcode="1">BGM 0x%02x</range>
+			<title code="0x14">Prince of palace</title>
+			<title code="0x15">Attack On Him</title>
+			<range min="0x101" max="0x111" extcode="0">SE 0x%02x</range>
+			<range min="0x201" max="0x201" extcode="0">VOICE 0x%02x</range>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2006/06/19">
+	<!-- //DATAWEST -->
+	<game>
+		<name>[PC-8801] THE 4TH UNIT</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">DATAWEST</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7000"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="4thunit">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">PROG</rom>
+			<rom type="code" offset="0x6a75">VOICE</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000000">MUS00</title>
+			<title code="0x01000001">MUS01</title>
+			<title code="0x01000002">MUS02</title>
+			<title code="0x00000003">MUS03</title>
+			<title code="0x00000005">MUS05</title>
+			<title code="0x00000006">MUS06</title>
+			<title code="0x00000007">MUS07</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] THE 4TH UNIT 2</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">DATAWEST</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb000"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="4thunit2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x2000">PROG</rom>
+			<rom type="code" offset="0xfa00">VOICE</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+			<rom type="bgm" offset="0x0f">MUS15</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MUS00</title>
+			<title code="0x01000001">MUS01</title>
+			<title code="0x01000002">MUS02</title>
+			<title code="0x00000003">MUS03</title>
+			<title code="0x00000004">MUS04</title>
+			<title code="0x00000005">MUS05</title>
+			<title code="0x01000006">MUS06</title>
+			<title code="0x00000007">MUS07</title>
+			<title code="0x00000008">MUS08</title>
+			<title code="0x00000009">MUS09</title>
+			<title code="0x0000000a">MUS10</title>
+			<title code="0x0000000b">MUS11</title>
+			<title code="0x0000000c">MUS12</title>
+			<title code="0x0100000d">MUS13</title>
+			<title code="0x0000000e">MUS14</title>
+			<title code="0x0000000f">MUS15</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] DUAL TARGETS - THE 4th UNIT ACT.3(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">DATAWEST</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="4thunit3_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x5000">FM.DAT</rom>
+			<rom type="code" offset="0x7500">TFU3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">FM.DAT : 00 : Opening</title>
+			<title code="0x0004">FM.DAT : 04 : Battle</title>
+			<title code="0x0001">FM.DAT : 01 : </title>
+			<title code="0x0003">FM.DAT : 03 : </title>
+			<title code="0x0005">FM.DAT : 05 : </title>
+			<title code="0x0002">FM.DAT : 02 : Staff Roll</title>
+			<title code="0x0106">FM.DAT : 06 : Game Over</title>
+			<title code="0x0107">FM.DAT : 07 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] DUAL TARGETS - THE 4th UNIT ACT.3(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">DATAWEST</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="4thunit3_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x5000">PSG.DAT</rom>
+			<rom type="code" offset="0x7500">TFU3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">PSG.DAT : 00 : Opening</title>
+			<title code="0x0004">PSG.DAT : 04 : Battle</title>
+			<title code="0x0001">PSG.DAT : 01 : </title>
+			<title code="0x0003">PSG.DAT : 03 : </title>
+			<title code="0x0005">PSG.DAT : 05 : </title>
+			<title code="0x0002">PSG.DAT : 02 : Staff Roll</title>
+			<title code="0x0106">PSG.DAT : 06 : Game Over</title>
+			<title code="0x0107">PSG.DAT : 07 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Zero - THE 4th UNIT ACT.4(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">DATAWEST</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="4thunit4_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x6400">MAIN.COM</rom>
+			<rom type="code" offset="0xC700">MUSIC.DAT</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x00" max="0x03" extcode="1">MUSIC.DAT : 0x%02x</range>
+			<title code="0x0104">MUSIC.DAT : 0x04</title>
+			<range min="0x05" max="0x07" extcode="1">MUSIC.DAT : 0x%02x</range>
+			<title code="0x0108">MUSIC.DAT : 0x08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Zero - THE 4th UNIT ACT.4(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">DATAWEST</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="4thunit4_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x6400">MAIN.COM</rom>
+			<rom type="code" offset="0xC700">MUSIC.DAT</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x09" max="0x0c" extcode="1">MUSIC.DAT : 0x%02x</range>
+			<title code="0x010d">MUSIC.DAT : 0x0d</title>
+			<range min="0x0e" max="0x10" extcode="1">MUSIC.DAT : 0x%02x</range>
+			<title code="0x0111">MUSIC.DAT : 0x11</title>
+		</titlelist>
+	</game>
+</gamelist>

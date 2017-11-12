@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //sps -->
+	<game>
+		<name>[PC-88] Re Birth (リ・バース)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sps</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6900"/>
+			<option name="init_pc"    value="0xef00"/>
+		</options>
+		<romlist archive="rebirth">
+			<rom type="code" offset="0x0000">SAMPLEP.COM</rom>
+			<rom type="code" offset="0xef00">PATCH</rom>
+			<rom type="bgm" offset="0x00">PROLOG.COM</rom>
+			<rom type="bgm" offset="0x01">BEPSUB.COM</rom>
+			<rom type="bgm" offset="0x02">EPILOG.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Prologue</title>
+			<title code="0x01">BGM</title>
+			<title code="0x02">Epilogue</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] The Return of Ishtar (イシターの復活 ザ リターン オブ イシター)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sps</driveralias>
+		<options>
+			<option name="init_pc"    value="0xf000"/>
+			<option name="mfile_size" value="0x4000"/>
+		</options>
+		<romlist archive="ishtar88">
+			<rom type="code" offset="0x0000">SYS88.Z80</rom>
+			<rom type="code" offset="0xc680">OPN88.Z80</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">IBGM1.COM</rom>
+			<rom type="bgm" offset="0x01">IBGM2.COM</rom>
+			<rom type="bgm" offset="0x02">IBGM3.COM</rom>
+			<rom type="bgm" offset="0x03">IBGM4.COM</rom>
+			<rom type="bgm" offset="0x04">IBGM5.COM</rom>
+			<rom type="bgm" offset="0x05">IBGM6.COM</rom>
+			<rom type="bgm" offset="0x06">ISED.COM</rom>
+			<rom type="bgm" offset="0x07">ISGATE.COM</rom>
+			<rom type="bgm" offset="0x08">ISSD.COM</rom>
+			<rom type="bgm" offset="0x09">MAINGATE.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00028408">Credit (クレジット音)</title>
+			<title code="0x00028000">Opening Theme</title>
+			<title code="0x00000000">Main Theme</title>
+			<title code="0x00000005">Druaga A</title>
+			<title code="0x00000003">Quox</title>
+			<title code="0x000cac07">Round Clear</title>
+			<title code="0x00000008">Round Start</title>
+			<title code="0x00000001">Roper</title>
+			<title code="0x00000002">Succubus</title>
+			<title code="0x00000004">Druaga B</title>
+			<title code="0x00000406">Miss</title>
+			<title code="0x0000f606">Game Over</title>
+			<title code="0x00310809">All Round Clear</title>
+			<title code="0x00321c09">Congratulations!</title>
+			<title code="0x00017805">Druaga Name Entry</title>
+			<title code="0x00007e08">SFX #01</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] The Return of Ishtar (イシターの復活 ザ リターン オブ イシター)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sps</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="fm_mix"  value="8"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="ishtar98">
+			<rom type="file" offset="-1">MU.EXE</rom>
+			<rom type="file" offset="-1">MUPLAY.COM</rom>
+			<rom type="file" offset="0x05">SDATA.COM</rom>
+			<rom type="file" offset="0x06">IBGM1.COM</rom>
+			<rom type="file" offset="0x07">IBGM2.COM</rom>
+			<rom type="file" offset="0x08">IBGM3.COM</rom>
+			<rom type="file" offset="0x09">IBGM4.COM</rom>
+			<rom type="file" offset="0x0a">IBGM5.COM</rom>
+			<rom type="file" offset="0x0b">IBGM6.COM</rom>
+			<rom type="file" offset="0x0c">ISED.COM</rom>
+			<rom type="file" offset="0x0d">ISSD.COM</rom>
+			<rom type="file" offset="0x0e">ISGATE.EXE</rom>
+			<rom type="file" offset="0x0f">MAINGATE.DAT</rom>
+			<rom type="shell" offset="0">mu</rom>
+			<rom type="shell" offset="0">muplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0284000d">Credit</title>
+			<title code="0x02800006">Opening Theme</title>
+			<title code="0x00000006">Main Theme</title>
+			<title code="0x0000000b">Druaga A</title>
+			<title code="0x00000009">Quox</title>
+			<title code="0x10d6000e">Round Clear</title>
+			<title code="0x0000000d">Round Start</title>
+			<title code="0x00000007">Roper</title>
+			<title code="0x00000008">Succubus</title>
+			<title code="0x0000000a">Druaga B</title>
+			<title code="0x0004000c">Miss</title>
+			<title code="0x00f6000c">Game Over</title>
+			<title code="0x3108000f">All Round Clear</title>
+			<title code="0x321c000f">Congratulations!</title>
+			<title code="0x0178000b">Druaga Name Entry</title>
+			<title code="0x007e000d">SFX #01</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Re Birth (リ・バース) (OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="X1">sps</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6900"/>
+			<option name="init_pc"    value="0xef00"/>
+			<option name="use_ctc0"   value="0x01"/>
+			<option name="use_ctc3"   value="0x00"/>
+		</options>
+		<romlist archive="rebirthx1">
+			<rom type="code" offset="0x0000">SAMPLEX.COM</rom>
+			<rom type="code" offset="0xef00">PATCHX</rom>
+			<rom type="bgm" offset="0x00">PROLOG.COM</rom>
+			<rom type="bgm" offset="0x01">BEPSUB.COM</rom>
+			<rom type="bgm" offset="0x02">EPILOG.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Prologue</title>
+			<title code="0x01">BGM</title>
+			<title code="0x02">Epilogue</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Re Birth (リ・バース) (PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">sps</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6900"/>
+			<option name="init_pc"    value="0xef00"/>
+			<option name="use_ctc0"   value="0x01"/>
+			<option name="use_ctc3"   value="0x00"/>
+		</options>
+		<romlist archive="rebirthx1">
+			<rom type="code" offset="0x0000">SAMPLEX.COM</rom>
+			<rom type="code" offset="0xef00">PATCHX</rom>
+			<rom type="bgm" offset="0x00">PROLOG.COM</rom>
+			<rom type="bgm" offset="0x01">BEPSUB.COM</rom>
+			<rom type="bgm" offset="0x02">EPILOG.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Prologue</title>
+			<title code="0x01">BGM</title>
+			<title code="0x02">Epilogue</title>
+		</titlelist>
+	</game>
+</gamelist>

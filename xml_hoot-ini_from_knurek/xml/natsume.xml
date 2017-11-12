@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //NATSUME -->
+	<game>
+		<name>[PC-98] Kagake Kira Kira Senshi Risky Jewel (輝け！キラキラ戦士 リスキージュエル)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">natsume</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="risky_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">RQJ_1.M</rom>
+			<rom type="file" offset="0x11">RQJ_2.M</rom>
+			<rom type="file" offset="0x12">RQJ_3.M</rom>
+			<rom type="file" offset="0x13">RQJ_5.M</rom>
+			<rom type="file" offset="0x14">RQJ_S2.M</rom>
+			<rom type="file" offset="0x15">RQJ_S6.M</rom>
+			<rom type="shell" offset="0">pmd /V0 /E0 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">RQJ_1.M</title>
+			<title code="0x11">RQJ_2.M</title>
+			<title code="0x12">RQJ_3.M</title>
+			<title code="0x13">RQJ_5.M</title>
+			<title code="0x14">RQJ_S2.M</title>
+			<title code="0x15">RQJ_S6.M</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Majoriko Inbikai Inbizoon (魔浄理子 淫靡界 インビゾーン) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">natsume</driveralias>
+		<options>
+			<option name="clockmul" value="2"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+			<option name="dummysndrom" value="1"/>
+		</options>
+		<romlist archiver="majoriko_98">
+			<rom type="file" offset="-1">ODQ_98.COM</rom>
+			<rom type="file" offset="-1">MJSND.COM</rom>
+			<rom type="shell" offset="0">mjsnd</rom>
+			<rom type="shell" offset="0">odq_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x80">SFX #80</title>
+			<title code="0x81">SFX #81</title>
+			<title code="0x82">SFX #82</title>
+			<title code="0x83">SFX #83</title>
+			<title code="0x84">SFX #84</title>
+			<title code="0x85">SFX #85</title>
+			<title code="0x86">SFX #86</title>
+			<title code="0x87">SFX #87</title>
+			<title code="0x88">SFX #88</title>
+			<title code="0x89">SFX #89</title>
+			<title code="0x8a">SFX #8a</title>
+			<title code="0x8b">SFX #8b</title>
+			<title code="0x8c">SFX #8c</title>
+			<title code="0x8d">SFX #8d</title>
+			<title code="0x8e">SFX #8e</title>
+			<title code="0x8f">SFX #8f</title>
+			<title code="0x90">SFX #90</title>
+			<title code="0x91">SFX #91</title>
+			<title code="0x92">SFX #92</title>
+			<title code="0x93">SFX #93</title>
+			<title code="0x94">SFX #94</title>
+			<title code="0x95">SFX #95</title>
+			<title code="0x96">SFX #96</title>
+			<title code="0x97">SFX #97</title>
+			<title code="0x98">SFX #98</title>
+			<title code="0x99">SFX #99</title>
+			<title code="0x9a">SFX #9a</title>
+			<title code="0x9b">SFX #9b</title>
+			<title code="0x9c">SFX #9c</title>
+			<title code="0x9d">SFX #9d</title>
+			<title code="0x9e">SFX #9e</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Majoriko Inbikai Inbizoon (魔浄理子 淫靡界 インビゾーン) (MT-32)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">natsume</driveralias>
+		<options>
+			<option name="clockmul" value="2"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+			<option name="dummysndrom" value="1"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archiver="majoriko_98">
+			<rom type="file" offset="-1">ODQ_98.COM</rom>
+			<rom type="file" offset="-1">MJSND.COM</rom>
+			<rom type="shell" offset="0">mjsnd</rom>
+			<rom type="shell" offset="0">odq_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x80">SFX #80</title>
+			<title code="0x81">SFX #81</title>
+			<title code="0x82">SFX #82</title>
+			<title code="0x83">SFX #83</title>
+			<title code="0x84">SFX #84</title>
+			<title code="0x85">SFX #85</title>
+			<title code="0x86">SFX #86</title>
+			<title code="0x87">SFX #87</title>
+			<title code="0x88">SFX #88</title>
+			<title code="0x89">SFX #89</title>
+			<title code="0x8a">SFX #8a</title>
+			<title code="0x8b">SFX #8b</title>
+			<title code="0x8c">SFX #8c</title>
+			<title code="0x8d">SFX #8d</title>
+			<title code="0x8e">SFX #8e</title>
+			<title code="0x8f">SFX #8f</title>
+			<title code="0x90">SFX #90</title>
+			<title code="0x91">SFX #91</title>
+			<title code="0x92">SFX #92</title>
+			<title code="0x93">SFX #93</title>
+			<title code="0x94">SFX #94</title>
+			<title code="0x95">SFX #95</title>
+			<title code="0x96">SFX #96</title>
+			<title code="0x97">SFX #97</title>
+			<title code="0x98">SFX #98</title>
+			<title code="0x99">SFX #99</title>
+			<title code="0x9a">SFX #9a</title>
+			<title code="0x9b">SFX #9b</title>
+			<title code="0x9c">SFX #9c</title>
+			<title code="0x9d">SFX #9d</title>
+			<title code="0x9e">SFX #9e</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Majoriko Inbikai Inbizoon (魔浄理子 淫靡界 インビゾーン) (MT-32 EMU)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">natsume</driveralias>
+		<options>
+			<option name="clockmul" value="2"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+			<option name="dummysndrom" value="1"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+			<option name="midiout_mix" value="0xa0"/>
+		</options>
+		<romlist archiver="majoriko_98">
+			<rom type="file" offset="-1">ODQ_98.COM</rom>
+			<rom type="file" offset="-1">MJSND.COM</rom>
+			<rom type="shell" offset="0">mjsnd</rom>
+			<rom type="shell" offset="0">odq_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x80">SFX #80</title>
+			<title code="0x81">SFX #81</title>
+			<title code="0x82">SFX #82</title>
+			<title code="0x83">SFX #83</title>
+			<title code="0x84">SFX #84</title>
+			<title code="0x85">SFX #85</title>
+			<title code="0x86">SFX #86</title>
+			<title code="0x87">SFX #87</title>
+			<title code="0x88">SFX #88</title>
+			<title code="0x89">SFX #89</title>
+			<title code="0x8a">SFX #8a</title>
+			<title code="0x8b">SFX #8b</title>
+			<title code="0x8c">SFX #8c</title>
+			<title code="0x8d">SFX #8d</title>
+			<title code="0x8e">SFX #8e</title>
+			<title code="0x8f">SFX #8f</title>
+			<title code="0x90">SFX #90</title>
+			<title code="0x91">SFX #91</title>
+			<title code="0x92">SFX #92</title>
+			<title code="0x93">SFX #93</title>
+			<title code="0x94">SFX #94</title>
+			<title code="0x95">SFX #95</title>
+			<title code="0x96">SFX #96</title>
+			<title code="0x97">SFX #97</title>
+			<title code="0x98">SFX #98</title>
+			<title code="0x99">SFX #99</title>
+			<title code="0x9a">SFX #9a</title>
+			<title code="0x9b">SFX #9b</title>
+			<title code="0x9c">SFX #9c</title>
+			<title code="0x9d">SFX #9d</title>
+			<title code="0x9e">SFX #9e</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Mitsume ga Tooru (三つ目がとおる)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">natsume</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="mitsume_msx">
+			<rom type="code">Mitsume ga Tooru (1989)(Natsume).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+		</titlelist>
+	</game>
+</gamelist>

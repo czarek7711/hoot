@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //onion_soft -->
+	<game>
+		<name>[PC-88] Wanderers from Super Scheme (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5600"/>
+		</options>
+		<romlist archive="wfss">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x4000">music.com</rom>
+			<rom type="code" offset="0x5500">pcm.adr</rom>
+			<rom type="adpcm" offset="0x00000">voice.1</rom>
+			<rom type="adpcm" offset="0x007b0">voice.2</rom>
+			<rom type="adpcm" offset="0x01440">voice.3</rom>
+			<rom type="adpcm" offset="0x01e90">voice.4</rom>
+			<rom type="adpcm" offset="0x026c0">voice.5</rom>
+			<rom type="adpcm" offset="0x030e0">voice.6</rom>
+			<rom type="adpcm" offset="0x039c0">voice.7</rom>
+			<rom type="adpcm" offset="0x05958">voice.8</rom>
+			<rom type="adpcm" offset="0x07f30">voice.9</rom>
+			<rom type="adpcm" offset="0x09a98">voice.10</rom>
+			<rom type="adpcm" offset="0x0a6f8">voice.11</rom>
+			<rom type="adpcm" offset="0x0b380">voice.12</rom>
+			<rom type="adpcm" offset="0x0bd30">voice.13</rom>
+			<rom type="adpcm" offset="0x0c1b0">voice.14</rom>
+			<rom type="adpcm" offset="0x0dc00">voice.15</rom>
+			<rom type="adpcm" offset="0x0e090">voice.16</rom>
+			<rom type="adpcm" offset="0x0f350">voice.17</rom>
+			<rom type="bgm" offset="0x00">music.001</rom>
+			<rom type="bgm" offset="0x01">music.002</rom>
+			<rom type="bgm" offset="0x02">music.003</rom>
+			<rom type="bgm" offset="0x03">music.004</rom>
+			<rom type="bgm" offset="0x04">music.005</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">「すきーむ音頭」作曲：古代祐三</title>
+			<title code="0x01">「幽霊ロック」作曲：古代祐三</title>
+			<title code="0x02">「タコリスのテーマ」作曲：古代祐三</title>
+			<title code="0x03">「ウィンクロマネスク」作曲：鈴木さると</title>
+			<title code="0x04">「ゲロピョンボスのテーマ」作曲：古代祐三</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Wanderers from Super Scheme (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5600"/>
+		</options>
+		<romlist archive="wfss">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x4000">music.com</rom>
+			<rom type="bgm" offset="0x00">music.001</rom>
+			<rom type="bgm" offset="0x01">music.002</rom>
+			<rom type="bgm" offset="0x02">music.003</rom>
+			<rom type="bgm" offset="0x03">music.004</rom>
+			<rom type="bgm" offset="0x04">music.005</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">「すきーむ音頭」作曲：古代祐三</title>
+			<title code="0x01">「幽霊ロック」作曲：古代祐三</title>
+			<title code="0x02">「タコリスのテーマ」作曲：古代祐三</title>
+			<title code="0x03">「ウィンクロマネスク」作曲：鈴木さると</title>
+			<title code="0x04">「ゲロピョンボスのテーマ」作曲：古代祐三</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.2</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6e00"/>
+		</options>
+		<romlist archive="100yen2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">mucom.obj</rom>
+			<rom type="bgm" offset="0x00">ongaku</rom>
+			<rom type="bgm" offset="0x01">ongaku.2</rom>
+			<rom type="bgm" offset="0x02">ongaku.3</rom>
+			<rom type="bgm" offset="0x03">ongaku.4</rom>
+			<rom type="bgm" offset="0x04">ongaku.5</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x31000000">Fantasy Zone Boss Music   / KOSHIRON</title>
+			<title code="0x32000000">Salamander Boss Music     / KOSHIRON</title>
+			<title code="0x33000000">Dragon Spirit Boss Music  / KOSHIRON</title>
+			<title code="0x34000000">Rambo Main BGM 1          / KOSHIRON</title>
+			<title code="0x31000001">Arkanoid Game Over Music  / KOSHIRON</title>
+			<title code="0x32000001">Arkanoid High Score Music / KOSHIRON</title>
+			<title code="0x33000001">Dairessya Go To Round Clr / KOSHIRON</title>
+			<title code="0x34000001">Hot Rock BGM              / KOSHIRON</title>
+			<title code="0x31000002">Devos Endlesss Night      / ONION</title>
+			<title code="0x32000002">Steps Break Down          / GOD</title>
+			<title code="0x33000002">Morning Star              / ONION</title>
+			<title code="0x34000002">Rolling Balls             / GOD</title>
+			<title code="0x31000003">Otiteyuku                 / ONION</title>
+			<title code="0x32000003">Dangerous Dark            / GOD</title>
+			<title code="0x33000003">Shanode Shu               / C.A.TEAM SHANO</title>
+			<title code="0x34000003">Wild Western              / XKD</title>
+			<title code="0x31000004">Darius BGM 1              / GOD</title>
+			<title code="0x32000004">Valis Arrange             / GOD</title>
+			<title code="0x33000004">Darius BGM 2              / GOD</title>
+			<title code="0x34000004">Broken Factory            / GOD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.2 (Jumper2)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<romlist archive="100yen2">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x6000">sound.yk2</rom>
+			<rom type="code" offset="0xc000">mus</rom>
+			<rom type="code" offset="0xd000">spl</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xc6">Title</title>
+			<title code="0xc8">BGM #01</title>
+			<title code="0xc3">BGM #02</title>
+			<title code="0xc0">BGM #03</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.3</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="vdata_addr" value="0xe200"/>
+		</options>
+		<romlist archive="100yen3">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xd000">music2</rom>
+			<rom type="bgm"   offset="0x00">BARCH.mus</rom>
+			<rom type="voice" offset="0x00">BARCH.oto</rom>
+			<rom type="bgm"   offset="0x01">buta.mus</rom>
+			<rom type="voice" offset="0x01">buta.oto</rom>
+			<rom type="bgm"   offset="0x02">MENU.mus</rom>
+			<rom type="voice" offset="0x02">MENU.oto</rom>
+			<rom type="bgm"   offset="0x03">sayoko.mus</rom>
+			<rom type="voice" offset="0x03">sayoko.oto</rom>
+			<rom type="bgm"   offset="0x04">Y-S.mus</rom>
+			<rom type="voice" offset="0x04">Y-S.oto</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">メニュー</title>
+			<title code="0x03">SAYOKOボツグラフィック集</title>
+			<title code="0x00">秋田お婆さんの詩</title>
+			<title code="0x01">豚さんゲーむ</title>
+			<title code="0x04">100円ディスクデモ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.4</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6e00"/>
+		</options>
+		<romlist archive="100yen4">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">split</rom>
+			<rom type="code" offset="0xda00">koka1</rom>
+			<rom type="bgm" offset="0x00">cat1.mus</rom>
+			<rom type="bgm" offset="0x01">god1.mus</rom>
+			<rom type="bgm" offset="0x02">god2.mus</rom>
+			<rom type="bgm" offset="0x03">oni0.mus</rom>
+			<rom type="bgm" offset="0x04">oni1.mus</rom>
+			<rom type="bgm" offset="0x05">oni2.mus</rom>
+			<rom type="bgm" offset="0x06">tech1.mus</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x31000003">sea storm                       作編曲/onion</title>
+			<title code="0x32000003">Haruma gameのテーマ             作編曲/onion</title>
+			<title code="0x33000003">FINAL DANGEROUS                 作曲/god 編曲/onion</title>
+			<title code="0x31000000">うん、そう、それでしゅ。        作編曲/c.a team</title>
+			<title code="0x32000000">もうねたいでしゅ。              作編曲/c.a team</title>
+			<title code="0x31000001">うっかりエジプト                作編曲/god</title>
+			<title code="0x32000001">ギガイコツのテーマ              作編曲/god</title>
+			<title code="0x33000001">夜明けのマンホール              作編曲/god</title>
+			<title code="0x34000001">悪魔のフルート                  作編曲/god</title>
+			<title code="0x31000002">水の止まらないホース            作編曲/god</title>
+			<title code="0x32000002">スケルトンの左足                作編曲/god</title>
+			<title code="0x35000002">あなたにハートブレイク          作編曲/god</title>
+			<title code="0x31000004">お祭りの用意                    作編曲/onion</title>
+			<title code="0x32000004">ONE WAY                         作編曲/onion</title>
+			<title code="0x33000004">お寺だ、踊れ                    作編曲/onion</title>
+			<title code="0x34000004">MONKEYまわし                    作編曲/onion</title>
+			<title code="0x31000005">名人が町にやってきた            作編曲/onion</title>
+			<title code="0x32000005">ゴーゴー カミタマー             作編曲/onion</title>
+			<title code="0x33000005">雄大なのは空だけじゃないよ      作編曲/onion</title>
+			<title code="0x34000005">最後の大きな壁                  作編曲/c.a team</title>
+			<title code="0x31000006">TECHNOPOのテーマ                作編曲/TAMAGO</title>
+			<title code="0x32000006">sunrise of the zoujyouji temple 作編曲/onion</title>
+		<!--	<title code="0x33000006">tech1.mus : お寺だ、踊れ                    作編曲/onion</title> -->
+			<title code="0x34000006">飛び出せやむちん                作編曲/onion</title>
+			<title code="0x35000006">走れやむちん                    作編曲/onion</title>
+			<title code="0x36000006">帰りの坂道には……              作編曲/onion</title>
+			<title code="0x37000006">開発ROOMは謎だらけ              作編曲/onion</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.4 (splitn)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+		</options>
+		<romlist archive="100yen4">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">splitn</rom>
+			<rom type="bgm" offset="0x00">fafa1</rom>
+			<rom type="bgm" offset="0x01">music5</rom>
+			<rom type="bgm" offset="0x02">No1.mus</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x31000000">お金なんかちょっとでふわふわ  作曲/神たま 作詞/OSS</title>
+			<title code="0x34000002">GOKILOGEAEL オープニング</title>
+			<title code="0x31000001">music5</title>
+			<title code="0x32000001">music5</title>
+			<title code="0x31000002">No1.mus</title>
+			<title code="0x32000002">No1.mus</title>
+			<title code="0x33000002">No1.mus</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.5</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<romlist archive="100yen5">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">musica</rom>
+			<rom type="code" offset="0xdb00">egpcm</rom>
+			<rom type="adpcm" offset="0x00000">No10.pcm</rom>
+			<rom type="adpcm" offset="0x06000">No11.pcm</rom>
+			<rom type="bgm" offset="0x00">No1.mcd</rom>
+			<rom type="bgm" offset="0x01">No2.mcd</rom>
+			<rom type="bgm" offset="0x02">No3.mcd</rom>
+			<rom type="bgm" offset="0x03">No4.mcd</rom>
+			<rom type="bgm" offset="0x04">No5.mcd</rom>
+			<rom type="bgm" offset="0x05">No6.mcd</rom>
+			<rom type="bgm" offset="0x06">No7.mcd</rom>
+			<rom type="bgm" offset="0x07">No8.mcd</rom>
+			<rom type="bgm" offset="0x08">No9.mcd</rom>
+			<rom type="bgm" offset="0x09">No10.mcd</rom>
+			<rom type="bgm" offset="0x0a">No11.mcd</rom>
+			<rom type="bgm" offset="0x0b">No12.mcd</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Coffee Break Time             / KAMITAMA</title>
+			<title code="0x01">Sushi Paradise                / KAMITAMA</title>
+			<title code="0x02">Stage 1 BGM [ Fa.Dato.Henyo ] / MEGATEN</title>
+			<title code="0x03">Stage 2 BGM                   / ONITAMA</title>
+			<title code="0x04">Stage 3 BGM                   / TENTEKO</title>
+			<title code="0x05">Stage 4 BGM                   / YUZO KOSHIRO</title>
+			<title code="0x06">Boss Theme 1                  / ONITAMA</title>
+			<title code="0x07">Boss Theme 2                  / YUZO KOSHIRO</title>
+			<title code="0x08">Ending Theme                  / ONITAMA</title>
+			<title code="0x09">Opening Theme                 / ONITAMA</title>
+			<title code="0x0a">Sushi Game Ending             / ONITAMA</title>
+			<title code="0x0b">Omake                         / YUZO KOSHIRO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.5 (JP-3/Wanderers from Jumpper)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+		</options>
+		<romlist archive="100yen5">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x9000">splitn.2</rom>
+			<rom type="bgm" offset="0x00">No1.mus</rom>
+			<rom type="bgm" offset="0x01">No2.mus</rom>
+			<rom type="bgm" offset="0x02">No3.mus</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x31000000">No1.mus</title>
+			<title code="0x31000001">No2.mus</title>
+			<title code="0x31000002">No3.mus</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.5 (風船)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<romlist archive="100yen5">
+			<rom type="code" offset="0x0000">PATCH3</rom>
+			<rom type="code" offset="0x6000">NEIRO</rom>
+			<rom type="code" offset="0xb000">splitg</rom>
+			<rom type="code" offset="0xc000">HYAKU.2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">風船 / HK-7</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.6</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+		</options>
+		<romlist archive="100yen6">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">splitn.2</rom>
+			<rom type="bgm" offset="0x00">No1.mus</rom>
+			<rom type="bgm" offset="0x01">No2.mus</rom>
+			<rom type="bgm" offset="0x02">No3.mus</rom>
+			<rom type="bgm" offset="0x03">No4.mus</rom>
+			<rom type="bgm" offset="0x04">No5.mus</rom>
+			<rom type="bgm" offset="0x05">No6.mus</rom>
+			<rom type="bgm" offset="0x06">No7.mus</rom>
+			<rom type="bgm" offset="0x07">No8.mus</rom>
+			<rom type="bgm" offset="0x08">No9.mus</rom>
+			<rom type="bgm" offset="0x09">No10.mus</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x31000009">Love, Love Brua Chan            / YACK.</title>
+			<title code="0x31000000">Fantastic Ruin                  / KAMITAMA</title>
+			<title code="0x31000001">Here Comes... Ebes              / TENTEKO</title>
+			<title code="0x31000002">Dancing in the Back of the Moon / KAMITAMA</title>
+			<title code="0x31000004">Ebes Step                       / KAMITAMA</title>
+			<title code="0x31000005">Further                         / KAMITAMA</title>
+			<title code="0x31000007">The Last Day                    / ONITAMA</title>
+			<title code="0x31000003">U.F.O. Sounds                   / KAMITAMA</title>
+			<title code="0x31000006">Night of the Ranch              / ONITAMA</title>
+			<title code="0x32000003">Take Me Home, Ebes              / ONITAMA</title>
+			<title code="0x31000008">Mutilated City                  / YACK.</title>
+			<title code="0x33000000">Mutilation Over                 / YACK.</title>
+			<title code="0x32000000">Explode                         / ONITAMA</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.6 (今夜も朝までパワフルバタフライ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+		</options>
+		<romlist archive="100yen6">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x6000">NEIRO</rom>
+			<rom type="code" offset="0x9000">sample</rom>
+			<rom type="code" offset="0xb000">split.fr</rom>
+			<rom type="bgm" offset="0x00">OPEN.mus</rom>
+			<rom type="bgm" offset="0x01">MEN.mus</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">OPEN.mus</title>
+			<title code="0x01">MEN.mus</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.7</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<romlist archive="100yen7">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">musica</rom>
+			<rom type="adpcm" offset="0x00000">P1.pcm</rom>
+			<rom type="adpcm" offset="0x04d00">P2.pcm</rom>
+			<rom type="bgm" offset="0x00">No1.mus</rom>
+			<rom type="bgm" offset="0x01">No2.mus</rom>
+			<rom type="bgm" offset="0x02">No3.mus</rom>
+			<rom type="bgm" offset="0x03">No4.mus</rom>
+			<rom type="bgm" offset="0x04">No5.mus</rom>
+			<rom type="bgm" offset="0x05">No6.mus</rom>
+			<rom type="bgm" offset="0x06">No7.mus</rom>
+			<rom type="bgm" offset="0x07">No8.mus</rom>
+			<rom type="bgm" offset="0x08">No9.mus</rom>
+			<rom type="bgm" offset="0x09">No10.mus</rom>
+			<rom type="bgm" offset="0x0a">No11.mus</rom>
+			<rom type="bgm" offset="0x0b">No12.mus</rom>
+			<rom type="bgm" offset="0x0c">No13.mus</rom>
+			<rom type="bgm" offset="0x0d">No14.mus</rom>
+			<rom type="bgm" offset="0x0e">No15.mus</rom>
+			<rom type="bgm" offset="0x0f">No16.mus</rom>
+			<rom type="bgm" offset="0x10">No17.mus</rom>
+			<rom type="bgm" offset="0x11">No18.mus</rom>
+			<rom type="bgm" offset="0x12">No19.mus</rom>
+			<rom type="bgm" offset="0x13">No20.mus</rom>
+			<rom type="bgm" offset="0x14">No21.mus</rom>
+			<rom type="bgm" offset="0x15">No22.mus</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music #1    作曲/編曲 HIR</title>
+			<title code="0x01">Music #2    作曲/編曲 MIU</title>
+			<title code="0x02">Music #3    作曲/編曲 HIR</title>
+			<title code="0x03">Music #4    作曲/編曲 MIU</title>
+			<title code="0x04">Music #5    作曲/編曲 TENTEKO</title>
+			<title code="0x05">Music #6    作曲/編曲 KAJA</title>
+			<title code="0x06">Music #7    作曲/編曲 DRIPDROP</title>
+			<title code="0x07">Music #8    作曲/編曲 おにたま</title>
+			<title code="0x08">Music #9    作曲/編曲 かみたま</title>
+			<title code="0x09">Music #10   作曲/編曲 おにたま</title>
+			<title code="0x0a">Music #11   作曲/編曲 HIR</title>
+			<title code="0x0b">Music #12   作曲/編曲 HIR</title>
+			<title code="0x0c">Music #13   作曲/編曲 MIU</title>
+			<title code="0x0d">Music #14   作曲/編曲 おにたま</title>
+			<title code="0x0e">Music #15   作曲/編曲 HIR</title>
+			<title code="0x0f">Music #16   作曲/編曲 おにたま</title>
+			<title code="0x10">Music #17   作曲/編曲 MIU</title>
+			<title code="0x11">Music #18   作曲/編曲 HIR</title>
+			<title code="0x12">Music #19   作曲/編曲 HIR</title>
+			<title code="0x13">Music #20   作曲/編曲 HIR</title>
+			<title code="0x14">Music #21   作曲/編曲 DRIPDROP</title>
+			<title code="0x15">Music #22   作曲/編曲 おにたま</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.7 (OPNA) (SPACE花ずきんちゃん)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+		</options>
+		<romlist archive="100yen7">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x7000">split.ir</rom>
+			<rom type="code" offset="0x8f00">space.dat</rom>
+			<rom type="code" offset="0xb200">split</rom>
+			<rom type="code" offset="0xd500">SOUND.SB2</rom>
+			<rom type="bgm" offset="0x00">SK-1.SB2</rom>
+			<rom type="bgm" offset="0x01">SK-5.SB2</rom>
+			<rom type="bgm" offset="0x02">SK-10.SB2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">SK-1.SB2</title>
+			<title code="0x01">SK-5.SB2</title>
+			<title code="0x02">SK-10.SB2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] 100Yen Disk No.7 (OPN) (SPACE花ずきんちゃん)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">onion_soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+		</options>
+		<romlist archive="100yen7">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x7000">split.gr</rom>
+			<rom type="code" offset="0x8f00">space.dat</rom>
+			<rom type="code" offset="0xb200">split</rom>
+			<rom type="code" offset="0xd500">SOUND.SB1</rom>
+			<rom type="bgm" offset="0x00">SK-1.SB1</rom>
+			<rom type="bgm" offset="0x01">SK-5.SB1</rom>
+			<rom type="bgm" offset="0x02">SK-10.SB1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">SK-1.SB1</title>
+			<title code="0x01">SK-5.SB1</title>
+			<title code="0x02">SK-10.SB1</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Cattle Mutilation</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="cattlem_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">CM.EXE</rom>
+			<rom type="conin" offset="5">CM.EXE</rom>
+			<rom type="file" offset="0x10">UFO0.AXO</rom>
+			<rom type="file" offset="0x11">UFO1.AXO</rom>
+			<rom type="file" offset="0x12">UFO2.AXO</rom>
+			<rom type="file" offset="0x13">UFO3.AXO</rom>
+			<rom type="file" offset="0x14">UFO5.AXO</rom>
+			<rom type="file" offset="0x15">UFO6.AXO</rom>
+			<rom type="file" offset="0x16">UFO7.AXO</rom>
+			<rom type="file" offset="0x17">UFO8.AXO</rom>
+			<rom type="file" offset="0x18">UFO9.AXO</rom>
+			<rom type="file" offset="0x19">UFOA.AXO</rom>
+			<rom type="file" offset="0x1a">UFOB.AXO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Mutilated City</title>
+			<title code="0x11">Here comes... Ebes!!</title>
+			<title code="0x12">Fantastic Ruin</title>
+			<title code="0x13">Night of Ranch</title>
+			<title code="0x14">Further</title>
+			<title code="0x15">Ebes Step</title>
+			<title code="0x16">Dancing in the Back of the Moon</title>
+			<title code="0x17">The Last Day</title>
+			<title code="0x18">Take Me Home, Ebes</title>
+			<title code="0x19">Mutilation Over</title>
+			<title code="0x1a">Explode</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Compargar (コンパルガ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="comparga_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">CPG.EXE</rom>
+			<rom type="conin" offset="5">CPG.EXE</rom>
+			<rom type="file" offset="0x10">DRIP01.MLO</rom>
+			<rom type="file" offset="0x11">DRIP02.MLO</rom>
+			<rom type="file" offset="0x12">DRIP03.MLO</rom>
+			<rom type="file" offset="0x13">GT014.MLO</rom>
+			<rom type="file" offset="0x14">L2ARR.MLO</rom>
+			<rom type="file" offset="0x15">OH01.MLO</rom>
+			<rom type="file" offset="0x16">OH02.MLO</rom>
+			<rom type="file" offset="0x17">OH03.MLO</rom>
+			<rom type="file" offset="0x18">OH05.MLO</rom>
+			<rom type="file" offset="0x19">OH08.MLO</rom>
+			<rom type="file" offset="0x1a">OH09.MLO</rom>
+			<rom type="file" offset="0x1b">OH10.MLO</rom>
+			<rom type="file" offset="0x1c">OH12.MLO</rom>
+			<rom type="file" offset="0x1d">OH13.MLO</rom>
+			<rom type="file" offset="0x1e">OH14.MLO</rom>
+			<rom type="file" offset="0x1f">OH15.MLO</rom>
+			<rom type="file" offset="0x20">OH16.MLO</rom>
+			<rom type="file" offset="0x21">OH17.MLO</rom>
+			<rom type="file" offset="0x22">OH18.MLO</rom>
+			<rom type="file" offset="0x23">OH19.MLO</rom>
+			<rom type="file" offset="0x24">OH20.MLO</rom>
+			<rom type="file" offset="0x25">OH19_.MLO</rom>
+			<rom type="file" offset="0x26">OH20_.MLO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x15">breeze time</title>
+			<title code="0x16">Cards99</title>
+			<title code="0x17">A.D.T.</title>
+			<title code="0x18">ice castle</title>
+			<title code="0x19">matsuri</title>
+			<title code="0x1a">wired trouble</title>
+			<title code="0x1b">Dawn of Rome</title>
+			<title code="0x1c">Space Cray</title>
+			<title code="0x1d">Tiny Toy</title>
+			<title code="0x1e">old days</title>
+			<title code="0x1f">lion heli</title>
+			<title code="0x20">Dogs won't go</title>
+			<title code="0x14">あふれる風呂桶</title>
+			<title code="0x13">友好的な宇宙人</title>
+			<title code="0x10">どりっぷタイム</title>
+			<title code="0x11">ほんわか志向</title>
+			<title code="0x12">あの世の果て</title>
+			<title code="0x21">OH17.MLO</title>
+			<title code="0x22">OH18.MLO</title>
+			<title code="0x23">OH19.MLO</title>
+			<title code="0x24">OH20.MLO</title>
+			<title code="0x25">OH19_.MLO</title>
+			<title code="0x26">OH20_.MLO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tower of Zarbartz (ザルバールの蒸留塔)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="zarbatz_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">ZAR.EXE</rom>
+			<rom type="conin" offset="5">ZAR.EXE</rom>
+			<rom type="file" offset="0x10">CASC06.MLO</rom>
+			<rom type="file" offset="0x11">GODZAR.MLO</rom>
+			<rom type="file" offset="0x12">GT014.MLO</rom>
+			<rom type="file" offset="0x13">L2ARR.MLO</rom>
+			<rom type="file" offset="0x14">OH01.MLO</rom>
+			<rom type="file" offset="0x15">OH02.MLO</rom>
+			<rom type="file" offset="0x16">OH03.MLO</rom>
+			<rom type="file" offset="0x17">OH05.MLO</rom>
+			<rom type="file" offset="0x18">OH08.MLO</rom>
+			<rom type="file" offset="0x19">OH09.MLO</rom>
+			<rom type="file" offset="0x1a">OH10.MLO</rom>
+			<rom type="file" offset="0x1b">OH12.MLO</rom>
+			<rom type="file" offset="0x1c">OH13.MLO</rom>
+			<rom type="file" offset="0x1d">OH14.MLO</rom>
+			<rom type="file" offset="0x1e">OH15.MLO</rom>
+			<rom type="file" offset="0x1f">OH16.MLO</rom>
+			<rom type="file" offset="0x20">OH17.MLO</rom>
+			<rom type="file" offset="0x21">OH18.MLO</rom>
+			<rom type="file" offset="0x22">OH19.MLO</rom>
+			<rom type="file" offset="0x23">OH20.MLO</rom>
+			<rom type="file" offset="0x24">OK11.MLO</rom>
+			<rom type="file" offset="0x25">OK4.MLO</rom>
+			<rom type="file" offset="0x26">TA04.MLO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x14">breeze time</title>
+			<title code="0x15">Cards99</title>
+			<title code="0x16">A.D.T.</title>
+			<title code="0x17">ice castle</title>
+			<title code="0x18">matsuri</title>
+			<title code="0x19">wired trouble</title>
+			<title code="0x1a">Dawn of Rome</title>
+			<title code="0x1b">Space Cray</title>
+			<title code="0x1c">Tiny Toy</title>
+			<title code="0x1d">old days</title>
+			<title code="0x1e">lion heli</title>
+			<title code="0x1f">Dogs won't go</title>
+			<title code="0x13">あふれる風呂桶</title>
+			<title code="0x12">友好的な宇宙人</title>
+			<title code="0x20">OH17.MLO</title>
+			<title code="0x21">OH18.MLO</title>
+			<title code="0x22">good work</title>
+			<title code="0x23">oh my good</title>
+			<title code="0x10">summer carnival</title>
+			<title code="0x11">fallin' colors</title>
+			<title code="0x25">night of Senegal</title>
+			<title code="0x24">practice time</title>
+			<title code="0x26">joy of segregation</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Treasure Hunter Daniel (ダニエルの宝探し)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="daniel_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">DN.EXE</rom>
+			<rom type="conin" offset="5">DN.EXE</rom>
+			<rom type="file" offset="0x10">CASC05.MLO</rom>
+			<rom type="file" offset="0x11">CASC08.MLO</rom>
+			<rom type="file" offset="0x12">OH13.MLO</rom>
+			<rom type="file" offset="0x13">OH19.MLO</rom>
+			<rom type="file" offset="0x14">OH20.MLO</rom>
+			<rom type="file" offset="0x15">OK11.MLO</rom>
+			<rom type="file" offset="0x16">TA01.MLO</rom>
+			<rom type="file" offset="0x17">TA04.MLO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">CASC05.MLO</title>
+			<title code="0x11">CASC08.MLO</title>
+			<title code="0x12">OH13.MLO</title>
+			<title code="0x13">OH19.MLO</title>
+			<title code="0x14">OH20.MLO</title>
+			<title code="0x15">OK11.MLO</title>
+			<title code="0x16">TA01.MLO</title>
+			<title code="0x17">TA04.MLO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Looking for the Niigata Yuuen (新潟遊園を探して…)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="yuen_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">YUEN.EXE</rom>
+			<rom type="conin" offset="5">YUEN.EXE</rom>
+			<rom type="file" offset="0x10">OF6.MLO</rom>
+			<rom type="file" offset="0x11">OI3.MLO</rom>
+			<rom type="file" offset="0x12">OI6.MLO</rom>
+			<rom type="file" offset="0x13">OI9.MLO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">OF6.MLO</title>
+			<title code="0x11">ポートタワー物語のテーマ</title>
+			<title code="0x12">温泉地のテーマ</title>
+			<title code="0x13">バスが来ないから歩いてみよう</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Light Soup Processor Sample</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="lsp_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">LSP.EXE</rom>
+			<rom type="conin" offset="5">LSP.EXE</rom>
+			<rom type="file" offset="0x10">MUSAMP1.MLO</rom>
+			<rom type="file" offset="0x11">MUSAMP2.MLO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MUSAMP1.MLO</title>
+			<title code="0x11">MUSAMP2.MLO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Jumper 4 (ジャンパー4)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="jp4_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">JP4.EXE</rom>
+			<rom type="conin" offset="5">JP4.EXE</rom>
+			<rom type="file" offset="0x10">GO024.MLO</rom>
+			<rom type="file" offset="0x11">GO031.MLO</rom>
+			<rom type="file" offset="0x12">GO032.MLO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">明日に駆けるJumper [Title]</title>
+			<title code="0x11">X'mas Jumper [BGM]</title>
+			<title code="0x12">Fantastic dreaming [Result]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Natsu Shock Adventure (夏色アバンチュール)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="natuava_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">NATU.EXE</rom>
+			<rom type="conin" offset="5">NATU.EXE</rom>
+			<rom type="file" offset="0x10">OK1.MLO</rom>
+			<rom type="file" offset="0x11">OK2.MLO</rom>
+			<rom type="file" offset="0x12">OS1.MLO</rom>
+			<rom type="file" offset="0x13">OS3.MLO</rom>
+			<rom type="file" offset="0x14">OS4.MLO</rom>
+			<rom type="file" offset="0x15">OS6.MLO</rom>
+			<rom type="file" offset="0x16">OS7.MLO</rom>
+			<rom type="file" offset="0x17">OS8.MLO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">sweep</title>
+			<title code="0x16">Sea side avenue</title>
+			<title code="0x15">Water garden</title>
+			<title code="0x14">Carnival Alternative</title>
+			<title code="0x13">Travernt</title>
+			<title code="0x12">Floating power</title>
+			<title code="0x17">No return</title>
+			<title code="0x11">woomwoom</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] PC's TV</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="pctv_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">MENU.EXE</rom>
+			<rom type="conin" offset="5">MENU.EXE</rom>
+			<rom type="file" offset="0x10">CASC01.MLO</rom>
+			<rom type="file" offset="0x11">CASC05.MLO</rom>
+			<rom type="file" offset="0x12">CASC06.MLO</rom>
+			<rom type="file" offset="0x13">CASC08.MLO</rom>
+			<rom type="file" offset="0x14">FAFA2.MLO</rom>
+			<rom type="file" offset="0x15">GT2.MLO</rom>
+			<rom type="file" offset="0x16">KK1.MLO</rom>
+			<rom type="file" offset="0x17">KK3.MLO</rom>
+			<rom type="file" offset="0x18">KK4.MLO</rom>
+			<rom type="file" offset="0x19">KK6.MLO</rom>
+			<rom type="file" offset="0x1a">KK7.MLO</rom>
+			<rom type="file" offset="0x1b">OK11.MLO</rom>
+			<rom type="file" offset="0x1c">OK19.MLO</rom>
+			<rom type="file" offset="0x1d">TA01.MLO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">CASC01.MLO</title>
+			<title code="0x11">CASC05.MLO</title>
+			<title code="0x12">CASC06.MLO</title>
+			<title code="0x13">CASC08.MLO</title>
+			<title code="0x14">FAFA2.MLO</title>
+			<title code="0x15">GT2.MLO</title>
+			<title code="0x16">Night Running</title>
+			<title code="0x17">KK3.MLO</title>
+			<title code="0x18">KK4.MLO</title>
+			<title code="0x19">悪魔のフルート (devil mix)</title>
+			<title code="0x1a">Lucky Time</title>
+			<title code="0x1b">OK11.MLO</title>
+			<title code="0x1c">OK19.MLO</title>
+			<title code="0x1d">TA01.MLO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Takorageru (たこらげーる)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="tg2_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">TG2.EXE</rom>
+			<rom type="conin" offset="5">TG2.EXE</rom>
+			<rom type="file" offset="0x10">TG_FM0.MLO</rom>
+			<rom type="file" offset="0x11">TG_FM1.MLO</rom>
+			<rom type="file" offset="0x12">TG_FM2.MLO</rom>
+			<rom type="file" offset="0x13">TG_FM3.MLO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">fantastic dreaming [Title]</title>
+			<title code="0x11">Box Express [Opening]</title>
+			<title code="0x12">Night Running [Main BGM]</title>
+			<title code="0x13">NETにはまったサル人 [Ending]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Fire Chase</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="firechase_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">FIRE.EXE</rom>
+			<rom type="conin" offset="5">FIRE.EXE</rom>
+			<rom type="file" offset="0x10">ANA1.MLO</rom>
+			<rom type="file" offset="0x11">ANA2.MLO</rom>
+			<rom type="file" offset="0x12">CS006.MLO</rom>
+			<rom type="file" offset="0x13">CS014'''.MLO</rom>
+			<rom type="file" offset="0x14">CS015'.MLO</rom>
+			<rom type="file" offset="0x15">CS017.MLO</rom>
+			<rom type="file" offset="0x16">GT.MLO</rom>
+			<rom type="file" offset="0x17">GT'.MLO</rom>
+			<rom type="file" offset="0x18">KK1.MLO</rom>
+			<rom type="file" offset="0x19">KK2.MLO</rom>
+			<rom type="file" offset="0x1a">KK5.MLO</rom>
+			<rom type="file" offset="0x1b">KK6.MLO</rom>
+			<rom type="file" offset="0x1c">KK7.MLO</rom>
+			<rom type="file" offset="0x1d">OF6.MLO</rom>
+			<rom type="file" offset="0x1e">OF9.MLO</rom>
+			<rom type="file" offset="0x1f">OH12.MLO</rom>
+			<rom type="file" offset="0x20">OI3.MLO</rom>
+			<rom type="file" offset="0x21">OI6.MLO</rom>
+			<rom type="file" offset="0x22">OI9.MLO</rom>
+			<rom type="file" offset="0x23">OK10.MLO</rom>
+			<rom type="file" offset="0x24">OK12.MLO</rom>
+			<rom type="file" offset="0x25">OK19.MLO</rom>
+			<rom type="file" offset="0x26">OK21.MLO</rom>
+			<rom type="file" offset="0x27">TDEAD.MLO</rom>
+			<rom type="file" offset="0x28">TSTS2.MLO</rom>
+			<rom type="file" offset="0x29">TSTS8.MLO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">進め! プー太郎!</title>
+			<title code="0x11">マイ・ペース</title>
+			<title code="0x12">トリップしましゅ</title>
+			<title code="0x13">軍艦でしゅ</title>
+			<title code="0x14">妹の誕生日</title>
+			<title code="0x15">神たまが町にやってきた</title>
+			<title code="0x16">異星人来襲!</title>
+			<title code="0x17">move your hands up'n down</title>
+			<title code="0x18">Night Running</title>
+			<title code="0x19">KK2.MLO</title>
+			<title code="0x1a">Cry At Singapore</title>
+			<title code="0x1b">悪魔のフルート( devil mix )</title>
+			<title code="0x1c">Lucky Time</title>
+			<title code="0x1d">OF6.MLO</title>
+			<title code="0x1e">Remembrance</title>
+			<title code="0x1f">Space Cray</title>
+			<title code="0x20">ポートタワー物語のテーマ</title>
+			<title code="0x21">温泉地のテーマ</title>
+			<title code="0x22">バスが来ないから歩いてみよう</title>
+			<title code="0x23">theme of cheetar</title>
+			<title code="0x24">Only Little Hope</title>
+			<title code="0x25">the jungle sky</title>
+			<title code="0x26">Car&amp;Horn</title>
+			<title code="0x27">TDEAD.MLO</title>
+			<title code="0x28">TSTS2.MLO</title>
+			<title code="0x29">TSTS8.MLO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Disk Bit 4</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">onion_soft</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archiver="bit4_98">
+			<rom type="file" offset="-1">onion_98.com</rom>
+			<rom type="file" offset="-1">CM.EXE</rom>
+			<rom type="conin" offset="5">CM.EXE</rom>
+			<rom type="file" offset="0x10">ANA1.MLO</rom>
+			<rom type="file" offset="0x11">ANA2.MLO</rom>
+			<rom type="file" offset="0x12">CS006.MLO</rom>
+			<rom type="file" offset="0x13">CS014'''.MLO</rom>
+			<rom type="file" offset="0x14">CS015'.MLO</rom>
+			<rom type="file" offset="0x15">CS017.MLO</rom>
+			<rom type="file" offset="0x16">GT.MLO</rom>
+			<rom type="file" offset="0x17">GT'.MLO</rom>
+			<rom type="file" offset="0x18">KK1.MLO</rom>
+			<rom type="file" offset="0x19">KK2.MLO</rom>
+			<rom type="file" offset="0x1a">KK5.MLO</rom>
+			<rom type="file" offset="0x1b">KK6.MLO</rom>
+			<rom type="file" offset="0x1c">KK7.MLO</rom>
+			<rom type="file" offset="0x1d">OF6.MLO</rom>
+			<rom type="file" offset="0x1e">OF9.MLO</rom>
+			<rom type="file" offset="0x1f">OI3.MLO</rom>
+			<rom type="file" offset="0x20">OI6.MLO</rom>
+			<rom type="file" offset="0x21">OI9.MLO</rom>
+			<rom type="file" offset="0x22">OK10.MLO</rom>
+			<rom type="file" offset="0x23">OK12.MLO</rom>
+			<rom type="file" offset="0x24">OK19.MLO</rom>
+			<rom type="file" offset="0x25">OK21.MLO</rom>
+			<rom type="file" offset="0x26">TDEAD.MLO</rom>
+			<rom type="file" offset="0x27">TSTS2.MLO</rom>
+			<rom type="file" offset="0x28">TSTS8.MLO</rom>
+			<rom type="file" offset="0x29">UFO0.AXO</rom>
+			<rom type="file" offset="0x2a">UFO1.AXO</rom>
+			<rom type="file" offset="0x2b">UFO2.AXO</rom>
+			<rom type="file" offset="0x2c">UFO3.AXO</rom>
+			<rom type="file" offset="0x2d">UFO5.AXO</rom>
+			<rom type="file" offset="0x2e">UFO6.AXO</rom>
+			<rom type="file" offset="0x2f">UFO7.AXO</rom>
+			<rom type="file" offset="0x30">UFO8.AXO</rom>
+			<rom type="file" offset="0x31">UFO9.AXO</rom>
+			<rom type="file" offset="0x32">UFOA.AXO</rom>
+			<rom type="file" offset="0x33">UFOB.AXO</rom>
+			<rom type="shell" offset="0">onion_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">進め! プー太郎!</title>
+			<title code="0x11">マイ・ペース</title>
+			<title code="0x12">トリップしましゅ</title>
+			<title code="0x13">軍艦でしゅ</title>
+			<title code="0x14">妹の誕生日</title>
+			<title code="0x15">神たまが町にやってきた</title>
+			<title code="0x16">異星人来襲！</title>
+			<title code="0x17">move your hands up'n down</title>
+			<title code="0x18">Night Running</title>
+			<title code="0x19">KK2.MLO</title>
+			<title code="0x1a">Cry At Singapore</title>
+			<title code="0x1b">悪魔のフルート( devil mix )</title>
+			<title code="0x1c">Lucky Time</title>
+			<title code="0x1d">OF6.MLO</title>
+			<title code="0x1e">Remembrance</title>
+			<title code="0x1f">ポートタワー物語のテーマ</title>
+			<title code="0x20">温泉地のテーマ</title>
+			<title code="0x21">バスが来ないから歩いてみよう</title>
+			<title code="0x22">theme of cheetar</title>
+			<title code="0x23">Only Little Hope</title>
+			<title code="0x24">the jungle sky</title>
+			<title code="0x25">Car&amp;Horn</title>
+			<title code="0x26">TDEAD.MLO</title>
+			<title code="0x27">TSTS2.MLO</title>
+			<title code="0x28">Fire Chase Opening</title>
+			<title code="0x29">Mutilated City</title>
+			<title code="0x2a">Here Comes... Ebes</title>
+			<title code="0x2b">Fantastic Ruin</title>
+			<title code="0x2c">Night Of The Ranch</title>
+			<title code="0x2d">Further</title>
+			<title code="0x2e">Ebes Step</title>
+			<title code="0x2f">Dancing In The Back Of The Moon</title>
+			<title code="0x30">The Last Day</title>
+			<title code="0x31">Take Me Home, Ebes</title>
+			<title code="0x32">Mutilation Over</title>
+			<title code="0x33">Explode</title>
+		</titlelist>
+	</game>
+</gamelist>

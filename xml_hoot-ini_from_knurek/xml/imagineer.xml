@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //imagineer -->
+	<game>
+		<name>[PC-98] Lemmings (レミングス)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">imagineer</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="leming98">
+			<rom type="file" offset="-1">lemm_98.com</rom>
+			<rom type="file" offset="-1">LEMMINGS.EXE</rom>
+			<rom type="conin" offset="5">LEMMINGS.EXE</rom>
+			<rom type="shell" offset="0">lemm_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #10</title>
+			<title code="0x0b">BGM #11</title>
+			<title code="0x0c">BGM #12</title>
+			<title code="0x0d">BGM #13</title>
+			<title code="0x0e">BGM #14</title>
+			<title code="0x0f">BGM #15</title>
+			<title code="0x10">BGM #16</title>
+			<title code="0x11">BGM #17</title>
+			<title code="0x12">BGM #18</title>
+			<title code="0x13">BGM #19</title>
+			<title code="0x14">BGM #20</title>
+			<title code="0x15">BGM #21</title>
+			<title code="0x16">BGM #22</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Populous (ポピュラス プロミストランド)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">imagineer</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x03"/>
+		</options>
+		<romlist archive="poplus98">
+			<rom type="code" offset="0x00600">poplus98.bin</rom>
+			<rom type="code" offset="0x10100">OPNDRV.COM</rom>
+			<rom type="bgm" offset="0x01">TITLE.BIN</rom>
+			<rom type="bgm" offset="0x02">POPBGM.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">TITLE.BIN</title>
+			<title code="0x02">POPBGM.BIN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Populous II (ポピュラス２ エキスパート,ポピュラス)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">imagineer</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="poplus2_98">
+			<rom type="file" offset="-1">OPNDRV.COM</rom>
+			<rom type="file" offset="-1">OPNDR_98.COM</rom>
+			<rom type="file" offset="0x10">P_OPEN.BIN</rom>
+			<rom type="file" offset="0x11">P_END.BIN</rom>
+			<rom type="shell" offset="0">opndrv</rom>
+			<rom type="shell" offset="0">opndr_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">P_OPEN.BIN</title>
+			<title code="0x11">P_END.BIN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Powermonger (パワーモンガー)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">imagineer</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="powerm_98">
+			<rom type="file" offset="-1">OPNDRV.COM</rom>
+			<rom type="file" offset="-1">OPNDR_98.COM</rom>
+			<rom type="file" offset="0x10">TIT98.BIN</rom>
+			<rom type="shell" offset="0">opndrv</rom>
+			<rom type="shell" offset="0">opndr_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">TIT98.BIN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Melty Lancer (メルティランサー)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">imagineer</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="mlancer_98">
+			<rom type="file" offset="-1">mdzsplay.com</rom>
+			<rom type="file" offset="-1">MDZ86.COM</rom>
+			<rom type="file" offset="6" >MLEFFECT.EFZ</rom>
+			<rom type="file" offset="11">MLTY_01.MDZ</rom>
+			<rom type="file" offset="12">MLTY_01I.MDZ</rom>
+			<rom type="file" offset="13">MLTY_02.MDZ</rom>
+			<rom type="file" offset="14">MLTY_03.MDZ</rom>
+			<rom type="file" offset="15">MLTY_03B.MDZ</rom>
+			<rom type="file" offset="16">MLTY_04.MDZ</rom>
+			<rom type="file" offset="17">MLTY_04B.MDZ</rom>
+			<rom type="file" offset="18">MLTY_05.MDZ</rom>
+			<rom type="file" offset="19">MLTY_06.MDZ</rom>
+			<rom type="file" offset="20">MLTY_07.MDZ</rom>
+			<rom type="file" offset="21">MLTY_08.MDZ</rom>
+			<rom type="file" offset="22">MLTY_09.MDZ</rom>
+			<rom type="file" offset="23">MLTY_10.MDZ</rom>
+			<rom type="file" offset="24">MLTY_11.MDZ</rom>
+			<rom type="file" offset="25">MLTY_12.MDZ</rom>
+			<rom type="file" offset="26">MLTY_13.MDZ</rom>
+			<rom type="file" offset="27">MLTY_14.MDZ</rom>
+			<rom type="file" offset="28">MLTY_15.MDZ</rom>
+			<rom type="file" offset="29">MLTY_16.MDZ</rom>
+			<rom type="file" offset="30">MLTY_17.MDZ</rom>
+			<rom type="file" offset="31">MLTY_18.MDZ</rom>
+			<rom type="file" offset="32">MLTY_19.MDZ</rom>
+			<rom type="file" offset="33">MLTY_20.MDZ</rom>
+			<rom type="shell" offset="0">mdz86 s /#8 /e10 /t0</rom>
+			<rom type="shell" offset="0">mdzsplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">MLTY_01.MDZ</title>
+			<title code="12">MLTY_01I.MDZ</title>
+			<title code="13">MLTY_02.MDZ</title>
+			<title code="14">MLTY_03.MDZ</title>
+			<title code="15">MLTY_03B.MDZ</title>
+			<title code="16">MLTY_04.MDZ</title>
+			<title code="17">MLTY_04B.MDZ</title>
+			<title code="18">MLTY_05.MDZ</title>
+			<title code="19">MLTY_06.MDZ</title>
+			<title code="20">MLTY_07.MDZ</title>
+			<title code="21">MLTY_08.MDZ</title>
+			<title code="22">MLTY_09.MDZ</title>
+			<title code="23">MLTY_10.MDZ</title>
+			<title code="24">MLTY_11.MDZ</title>
+			<title code="25">MLTY_12.MDZ</title>
+			<title code="26">MLTY_13.MDZ</title>
+			<title code="27">MLTY_14.MDZ</title>
+			<title code="28">MLTY_15.MDZ</title>
+			<title code="29">MLTY_16.MDZ</title>
+			<title code="30">MLTY_17.MDZ</title>
+			<title code="31">MLTY_18.MDZ</title>
+			<title code="32">MLTY_19.MDZ</title>
+			<title code="33">MLTY_20.MDZ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Lemmings (レミングス)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">imagineer</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="lem68snd">
+			<rom type="code">lem68snd.bin</rom>
+			<rom type="x" offset="0x8000">lemmings.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+				<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Populous (ポピュラス プロミストランド)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">imagineer</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="poplus68snd">
+			<rom type="code" offset="0x00000">pop68snd.bin</rom>
+			<rom type="x" offset="0x10000">OPMDRV.X</rom>
+			<rom type="code" offset="0x13000">POPBGM.BIN</rom>
+			<rom type="code" offset="0x15000">TITLE.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">TITLE.BIN</title>
+			<title code="0x01">POPBGM.BIN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Populous II (ポピュラス２ エキスパート,ポピュラス)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">imagineer</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="poplus268snd">
+			<rom type="code" offset="0x00000">pop268snd.bin</rom>
+			<rom type="x" offset="0x10000">OPMDRV.X</rom>
+			<rom type="code" offset="0x13000">DESERT.BIN</rom>
+			<rom type="code" offset="0x15000">END.BIN</rom>
+			<rom type="code" offset="0x17000">GRASS.BIN</rom>
+			<rom type="code" offset="0x19000">LOGO.BIN</rom>
+			<rom type="code" offset="0x1b000">SNOW.BIN</rom>
+			<rom type="code" offset="0x1d000">TIT.BIN</rom>
+			<rom type="code" offset="0x1f000">VOLCANO.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x04">LOGO.BIN</title>
+			<title code="0x06">TIT.BIN</title>
+			<title code="0x01">DESERT.BIN</title>
+			<title code="0x03">GRASS.BIN</title>
+			<title code="0x05">SNOW.BIN</title>
+			<title code="0x07">VOLCANO.BIN</title>
+			<title code="0x02">END.BIN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Powermonger (パワーモンガー)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">imagineer</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="powerm68snd">
+			<rom type="code" offset="0x00000">powerm68snd.bin</rom>
+			<rom type="x" offset="0x10000">OPMDRV.X</rom>
+			<rom type="code" offset="0x13000">TIT68.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">TIT68.BIN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Mega lo Mania (メガロマニア)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">imagineer</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mlm68snd">
+			<rom type="code" offset="0x00000">mlm68snd.bin</rom>
+			<rom type="x" offset="0x10000">MUSDRV4.X</rom>
+			<rom type="code" offset="0x12d72">SOUND.DAT</rom>
+			<rom type="code" offset="0x14000">xop.DAT</rom>
+			<rom type="code" offset="0x16000">XPM.DAT</rom>
+			<rom type="code" offset="0x18000">XPS.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">xop.DAT</title>
+			<title code="0x02">XPM.DAT</title>
+			<title code="0x03">XPS.DAT</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //f2 system -->
+	<game>
+  	<name>[Cross Pang] Cross Pang</name>
+  	<driver type="crospang">f2system</driver>
+		<driveralias type="Arcade">f2system</driveralias>
+  	<romlist archive="crospang">
+  		<rom type="code" offset="0x0000">s1.bin</rom>
+  		<rom type="pcm" offset="0x0000">s2.bin</rom>
+  	</romlist>
+  	<titlelist>
+			<title code="0x40">BGM #40</title>
+			<title code="0x41">BGM #41</title>
+			<title code="0x42">BGM #42</title>
+			<title code="0x43">BGM #43</title>
+			<title code="0x44">BGM #44</title>
+			<title code="0x45">BGM #45</title>
+			<title code="0x46">BGM #46</title>
+			<title code="0x47">BGM #47</title>
+  	</titlelist>
+  </game>
+	<game>
+  	<name>[Cross Pang] Heuk Sun Baek Sa</name>
+  	<driver type="crospang">f2system</driver>
+		<driveralias type="Arcade">f2system</driveralias>
+  	<romlist archive="heuksun">
+  		<rom type="code" offset="0x0000">us02.r4</rom>
+  		<rom type="pcm" offset="0x0000">us08.u7</rom>
+  	</romlist>
+  	<titlelist>
+			<title code="0x40">BGM #40</title>
+			<title code="0x41">BGM #41</title>
+			<title code="0x42">BGM #42</title>
+			<title code="0x43">BGM #43</title>
+			<title code="0x44">BGM #44</title>
+			<title code="0x45">BGM #45</title>
+			<title code="0x46">BGM #46</title>
+			<title code="0x47">BGM #47</title>
+			<title code="0x48">BGM #48</title>
+			<title code="0x49">BGM #49</title>
+			<title code="0x4a">BGM #4a</title>
+			<title code="0x4b">BGM #4b</title>
+			<title code="0x4c">BGM #4c</title>
+  	</titlelist>
+  </game>
+</gamelist>

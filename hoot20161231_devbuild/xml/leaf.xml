@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Leaf -->
+	<game>
+		<name>[PC-9801] DR^2ナイト雀鬼(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Leaf</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="dr^2_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">MRJ_EFFC.EFC</rom>
+			<rom type="file" offset="0x10">LEF_LOGO.M</rom>
+			<rom type="file" offset="0x11">MRJ_2601.M</rom>
+			<rom type="file" offset="0x12">MRJ_2602.M</rom>
+			<rom type="file" offset="0x13">MRJ_2603.M</rom>
+			<rom type="file" offset="0x14">MRJ_2604.M</rom>
+			<rom type="file" offset="0x15">MRJ_2605.M</rom>
+			<rom type="file" offset="0x16">MRJ_2606.M</rom>
+			<rom type="file" offset="0x17">MRJ_2607.M</rom>
+			<rom type="file" offset="0x18">MRJ_2608.M</rom>
+			<rom type="file" offset="0x19">MRJ_2609.M</rom>
+			<rom type="file" offset="0x1a">MRJ_2610.M</rom>
+			<rom type="file" offset="0x1b">MRJ_2611.M</rom>
+			<rom type="file" offset="0x1c">MRJ_2612.M</rom>
+			<rom type="file" offset="0x1d">MRJ_2613.M</rom>
+			<rom type="file" offset="0x1e">MRJ_JGL1.M</rom>
+			<rom type="file" offset="0x1f">MRJ_JGL2.M</rom>
+			<rom type="file" offset="0x20">MRJ_JGL3.M</rom>
+			<rom type="file" offset="0x21">MRJ_JGL4.M</rom>
+			<rom type="shell" offset="0">pmd</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LEF_LOGO.M    : ブランドロゴ</title>
+			<title code="0x11">MRJ_2601.M    : Trance Mind</title>
+			<title code="0x12">MRJ_2602.M    : MAIDO OKINI!!</title>
+			<title code="0x13">MRJ_2603.M    : Spirit Rhythm</title>
+			<title code="0x14">MRJ_2604.M    : 幻影</title>
+			<title code="0x15">MRJ_2605.M    : Attack the time</title>
+			<title code="0x16">MRJ_2606.M    : Hard 2 Ghost</title>
+			<title code="0x17">MRJ_2607.M    : Do' it Groovin</title>
+			<title code="0x18">MRJ_2608.M    : Chinese Heaven</title>
+			<title code="0x19">MRJ_2609.M    : Out Hall</title>
+			<title code="0x1a">MRJ_2610.M    : Now</title>
+			<title code="0x1b">MRJ_2611.M    : Fly jacket</title>
+			<title code="0x1c">MRJ_2612.M    : Kick Out!!</title>
+			<title code="0x1d">MRJ_2613.M    : Peace for Memory</title>
+			<title code="0x1e">MRJ_JGL1.M    : GAME OVER</title>
+			<title code="0x1f">MRJ_JGL2.M    : PLAYER WIN !!</title>
+			<title code="0x20">MRJ_JGL3.M    : PLAYER LOST</title>
+			<title code="0x21">MRJ_JGL4.M    : 登場!!</title>
+			<range min="0x0801" max="0x080c" extcode="0">MRJ_EFFC.EFC  : SE %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] DR^2ナイト雀鬼(86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Leaf</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="dr^2_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD86.COM</rom>
+			<rom type="file" offset="0x08">MRJ_EFFC.EFC</rom>
+			<rom type="file" offset="0x10">LEF_LOGO.M</rom>
+			<rom type="file" offset="0x11">MRJ_8601.M</rom>
+			<rom type="file" offset="0x12">MRJ_8602.M</rom>
+			<rom type="file" offset="0x13">MRJ_8603.M</rom>
+			<rom type="file" offset="0x14">MRJ_8604.M</rom>
+			<rom type="file" offset="0x15">MRJ_8605.M</rom>
+			<rom type="file" offset="0x16">MRJ_8606.M</rom>
+			<rom type="file" offset="0x17">MRJ_8607.M</rom>
+			<rom type="file" offset="0x18">MRJ_8608.M</rom>
+			<rom type="file" offset="0x19">MRJ_8609.M</rom>
+			<rom type="file" offset="0x1a">MRJ_8610.M</rom>
+			<rom type="file" offset="0x1b">MRJ_8611.M</rom>
+			<rom type="file" offset="0x1c">MRJ_8612.M</rom>
+			<rom type="file" offset="0x1d">MRJ_8613.M</rom>
+			<rom type="file" offset="0x1e">MRJ_JGL1.M</rom>
+			<rom type="file" offset="0x1f">MRJ_JGL2.M</rom>
+			<rom type="file" offset="0x20">MRJ_JGL3.M</rom>
+			<rom type="file" offset="0x21">MRJ_JGL4.M</rom>
+			<rom type="shell" offset="0">pmd86</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LEF_LOGO.M    : ブランドロゴ</title>
+			<title code="0x11">MRJ_8601.M    : Trance Mind</title>
+			<title code="0x12">MRJ_8602.M    : MAIDO OKINI!!</title>
+			<title code="0x13">MRJ_8603.M    : Spirit Rhythm</title>
+			<title code="0x14">MRJ_8604.M    : 幻影</title>
+			<title code="0x15">MRJ_8605.M    : Attack the time</title>
+			<title code="0x16">MRJ_8606.M    : Hard 2 Ghost</title>
+			<title code="0x17">MRJ_8607.M    : Do' it Groovin</title>
+			<title code="0x18">MRJ_8608.M    : Chinese Heaven</title>
+			<title code="0x19">MRJ_8609.M    : Out Hall</title>
+			<title code="0x1a">MRJ_8610.M    : Now</title>
+			<title code="0x1b">MRJ_8611.M    : Fly jacket</title>
+			<title code="0x1c">MRJ_8612.M    : Kick Out!!</title>
+			<title code="0x1d">MRJ_8613.M    : Peace for Memory</title>
+			<title code="0x1e">MRJ_JGL1.M    : GAME OVER</title>
+			<title code="0x1f">MRJ_JGL2.M    : PLAYER WIN !!</title>
+			<title code="0x20">MRJ_JGL3.M    : PLAYER LOST</title>
+			<title code="0x21">MRJ_JGL4.M    : 登場!!</title>
+			<range min="0x0801" max="0x080c" extcode="0">MRJ_EFFC.EFC  : SE %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] DR^2ナイト雀鬼(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Leaf</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="dr^2_98">
+			<rom type="file" offset="-1">ms_98.com</rom>
+			<rom type="file" offset="-1">MS.COM</rom>
+			<rom type="file" offset="0x10">LEF_GSLG.MID</rom>
+			<rom type="file" offset="0x11">MRJ_GS01.MID</rom>
+			<rom type="file" offset="0x12">MRJ_GS02.MID</rom>
+			<rom type="file" offset="0x13">MRJ_GS03.MID</rom>
+			<rom type="file" offset="0x14">MRJ_GS04.MID</rom>
+			<rom type="file" offset="0x15">MRJ_GS05.MID</rom>
+			<rom type="file" offset="0x16">MRJ_GS06.MID</rom>
+			<rom type="file" offset="0x17">MRJ_GS07.MID</rom>
+			<rom type="file" offset="0x18">MRJ_GS08.MID</rom>
+			<rom type="file" offset="0x19">MRJ_GS09.MID</rom>
+			<rom type="file" offset="0x1a">MRJ_GS10.MID</rom>
+			<rom type="file" offset="0x1b">MRJ_GS11.MID</rom>
+			<rom type="file" offset="0x1c">MRJ_GS12.MID</rom>
+			<rom type="file" offset="0x1d">MRJ_GS13.MID</rom>
+			<rom type="file" offset="0x1e">MRJ_GSG1.MID</rom>
+			<rom type="file" offset="0x1f">MRJ_GSG2.MID</rom>
+			<rom type="file" offset="0x20">MRJ_GSG3.MID</rom>
+			<rom type="file" offset="0x21">MRJ_GSG4.MID</rom>
+			<rom type="shell" offset="0">ms</rom>
+			<rom type="shell" offset="0">ms_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LEF_LOGO.MID : ブランドロゴ</title>
+			<title code="0x11">MRJ_GS01.MID : Trance Mind</title>
+			<title code="0x12">MRJ_GS02.MID : MAIDO OKINI!!</title>
+			<title code="0x13">MRJ_GS03.MID : Spirit Rhythm</title>
+			<title code="0x14">MRJ_GS04.MID : 幻影</title>
+			<title code="0x15">MRJ_GS05.MID : Attack the time</title>
+			<title code="0x16">MRJ_GS06.MID : Hard 2 Ghost</title>
+			<title code="0x17">MRJ_GS07.MID : Do' it Groovin</title>
+			<title code="0x18">MRJ_GS08.MID : Chinese Heaven</title>
+			<title code="0x19">MRJ_GS09.MID : Out Hall</title>
+			<title code="0x1a">MRJ_GS10.MID : Now</title>
+			<title code="0x1b">MRJ_GS11.MID : Fly jacket</title>
+			<title code="0x1c">MRJ_GS12.MID : Kick Out!!</title>
+			<title code="0x1d">MRJ_GS13.MID : Peace for Memory</title>
+			<title code="0x1e">MRJ_GSG1.MID : GAME OVER</title>
+			<title code="0x1f">MRJ_GSG2.MID : PLAYER WIN !!</title>
+			<title code="0x20">MRJ_GSG3.MID : PLAYER LOST</title>
+			<title code="0x21">MRJ_GSG4.MID : 登場!!</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Filsnown -光と刻-(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Leaf</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="filsnown_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">FLEF.EFC</rom>
+			<rom type="file" offset="0x10">FR_FM00.M</rom>
+			<rom type="file" offset="0x11">FR_FM01.M</rom>
+			<rom type="file" offset="0x12">FR_FM02.M</rom>
+			<rom type="file" offset="0x13">FR_FM03.M</rom>
+			<rom type="file" offset="0x14">FR_FM04.M</rom>
+			<rom type="file" offset="0x15">FR_FM05.M</rom>
+			<rom type="file" offset="0x16">FR_FM06.M</rom>
+			<rom type="file" offset="0x17">FR_FM07.M</rom>
+			<rom type="file" offset="0x18">FR_FM08.M</rom>
+			<rom type="file" offset="0x19">FR_FM09.M</rom>
+			<rom type="file" offset="0x1a">FR_FM10.M</rom>
+			<rom type="file" offset="0x1b">FR_FM11.M</rom>
+			<rom type="file" offset="0x1c">FR_FM12.M</rom>
+			<rom type="file" offset="0x1d">FR_FM13.M</rom>
+			<rom type="file" offset="0x1e">FR_FM14.M</rom>
+			<rom type="file" offset="0x1f">FR_FM15.M</rom>
+			<rom type="file" offset="0x20">FR_FM16.M</rom>
+			<rom type="file" offset="0x21">FR_FM17.M</rom>
+			<rom type="file" offset="0x22">FR_FM18.M</rom>
+			<rom type="file" offset="0x23">FR_FM19.M</rom>
+			<rom type="file" offset="0x24">FR_FM20.M</rom>
+			<rom type="file" offset="0x25">FR_FM21.M</rom>
+			<rom type="file" offset="0x26">FR_FM22.M</rom>
+			<rom type="file" offset="0x27">FR_FM23.M</rom>
+			<rom type="file" offset="0x28">FR_FM24.M</rom>
+			<rom type="file" offset="0x29">FR_FM25.M</rom>
+			<rom type="file" offset="0x2a">FR_FM26.M</rom>
+			<rom type="file" offset="0x2b">FR_FM27.M</rom>
+			<rom type="file" offset="0x2c">FR_FM28.M</rom>
+			<rom type="file" offset="0x2d">FR_FM29.M</rom>
+			<rom type="file" offset="0x2e">FR_FM30.M</rom>
+			<rom type="file" offset="0x2f">FR_FM31.M</rom>
+			<rom type="file" offset="0x30">FR_FM32.M</rom>
+			<rom type="file" offset="0x31">FR_FM33.M</rom>
+			<rom type="file" offset="0x32">FR_FM34.M</rom>
+			<rom type="file" offset="0x33">FR_FM35.M</rom>
+			<rom type="file" offset="0x33">FR_FM36.M</rom>
+			<rom type="file" offset="0x34">FR_FM37.M</rom>
+			<rom type="file" offset="0x35">FR_FM38.M</rom>
+			<rom type="file" offset="0x36">FR_FM39.M</rom>
+			<rom type="file" offset="0x37">FR_FM40.M</rom>
+			<rom type="file" offset="0x38">FR_FM41.M</rom>
+			<rom type="file" offset="0x39">FR_FM42.M</rom>
+			<rom type="shell" offset="0">pmd # /M12 /V0 /E2 /DF32 /DS0 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">FR_FM00.M : ブランドロゴ</title>
+			<title code="0x11">FR_FM01.M : Opening 1</title>
+			<title code="0x12">FR_FM02.M : Opening 2</title>
+			<title code="0x13">FR_FM03.M : メインフィールド</title>
+			<title code="0x14">FR_FM04.M : 城 1</title>
+			<title code="0x15">FR_FM05.M : 城 2</title>
+			<title code="0x16">FR_FM06.M : 町 1</title>
+			<title code="0x17">FR_FM07.M : 町 2</title>
+			<title code="0x18">FR_FM08.M : 村</title>
+			<title code="0x19">FR_FM09.M : Nomal Battle</title>
+			<title code="0x1a">FR_FM10.M : Boss Battle 1</title>
+			<title code="0x1b">FR_FM11.M : Boss Battle 2</title>
+			<title code="0x1c">FR_FM12.M : Boss Battle 3</title>
+			<title code="0x1d">FR_FM13.M : 神殿 1</title>
+			<title code="0x1e">FR_FM14.M : 神殿 2</title>
+			<title code="0x1f">FR_FM15.M : 森・廃虚</title>
+			<title code="0x20">FR_FM16.M : 洞窟</title>
+			<title code="0x21">FR_FM17.M : 森の泉</title>
+			<title code="0x22">FR_FM18.M : 雪の大陸</title>
+			<title code="0x23">FR_FM19.M : ピラミッド</title>
+			<title code="0x24">FR_FM20.M : フィールド 1</title>
+			<title code="0x25">FR_FM21.M : フィールド 2</title>
+			<title code="0x26">FR_FM22.M : フィールド 3</title>
+			<title code="0x27">FR_FM23.M : 危機一髪</title>
+			<title code="0x28">FR_FM24.M : 過去の世界</title>
+			<title code="0x29">FR_FM25.M : イベント 1</title>
+			<title code="0x2a">FR_FM26.M : イベント 2</title>
+			<title code="0x2b">FR_FM27.M : イベント 3</title>
+			<title code="0x2c">FR_FM28.M : イベント 4</title>
+			<title code="0x2d">FR_FM29.M : イベント 5</title>
+			<title code="0x2e">FR_FM30.M : カジノ・酒場</title>
+			<title code="0x2f">FR_FM31.M : テッド</title>
+			<title code="0x30">FR_FM32.M : 海</title>
+			<title code="0x31">FR_FM33.M : 飛翼艇インディ</title>
+			<title code="0x32">FR_FM34.M : 邪悪なる影</title>
+			<title code="0x33">FR_FM35.M : Bad End</title>
+			<title code="0x33">FR_FM36.M : Happy End</title>
+			<title code="0x34">FR_FM37.M : 勝利</title>
+			<title code="0x35">FR_FM38.M : レクイエム</title>
+			<title code="0x36">FR_FM39.M : 宿屋</title>
+			<title code="0x37">FR_FM40.M : 宝箱</title>
+			<title code="0x38">FR_FM41.M : LEVEL UP</title>
+			<title code="0x39">FR_FM42.M : テッドの笛</title>
+			<range min="0x0801" max="0x080c" extcode="0">FLEF.EFC  : SE %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Filsnown -光と刻-(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Leaf</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="filsnown_98">
+			<rom type="file" offset="-1">MS_98.COM</rom>
+			<rom type="file" offset="-1">MS.COM</rom>
+			<rom type="file" offset="0x10">FR_GS00.MD</rom>
+			<rom type="file" offset="0x11">FR_GS01.MD</rom>
+			<rom type="file" offset="0x12">FR_GS02.MD</rom>
+			<rom type="file" offset="0x13">FR_GS03.MD</rom>
+			<rom type="file" offset="0x14">FR_GS04.MD</rom>
+			<rom type="file" offset="0x15">FR_GS05.MD</rom>
+			<rom type="file" offset="0x16">FR_GS06.MD</rom>
+			<rom type="file" offset="0x17">FR_GS07.MD</rom>
+			<rom type="file" offset="0x18">FR_GS08.MD</rom>
+			<rom type="file" offset="0x19">FR_GS09.MD</rom>
+			<rom type="file" offset="0x1a">FR_GS10.MD</rom>
+			<rom type="file" offset="0x1b">FR_GS11.MD</rom>
+			<rom type="file" offset="0x1c">FR_GS12.MD</rom>
+			<rom type="file" offset="0x1d">FR_GS13.MD</rom>
+			<rom type="file" offset="0x1e">FR_GS14.MD</rom>
+			<rom type="file" offset="0x1f">FR_GS15.MD</rom>
+			<rom type="file" offset="0x20">FR_GS16.MD</rom>
+			<rom type="file" offset="0x21">FR_GS17.MD</rom>
+			<rom type="file" offset="0x22">FR_GS18.MD</rom>
+			<rom type="file" offset="0x23">FR_GS19.MD</rom>
+			<rom type="file" offset="0x24">FR_GS20.MD</rom>
+			<rom type="file" offset="0x25">FR_GS21.MD</rom>
+			<rom type="file" offset="0x26">FR_GS22.MD</rom>
+			<rom type="file" offset="0x27">FR_GS23.MD</rom>
+			<rom type="file" offset="0x28">FR_GS24.MD</rom>
+			<rom type="file" offset="0x29">FR_GS25.MD</rom>
+			<rom type="file" offset="0x2a">FR_GS26.MD</rom>
+			<rom type="file" offset="0x2b">FR_GS27.MD</rom>
+			<rom type="file" offset="0x2c">FR_GS28.MD</rom>
+			<rom type="file" offset="0x2d">FR_GS29.MD</rom>
+			<rom type="file" offset="0x2e">FR_GS30.MD</rom>
+			<rom type="file" offset="0x2f">FR_GS31.MD</rom>
+			<rom type="file" offset="0x30">FR_GS32.MD</rom>
+			<rom type="file" offset="0x31">FR_GS33.MD</rom>
+			<rom type="file" offset="0x32">FR_GS34.MD</rom>
+			<rom type="file" offset="0x33">FR_GS35.MD</rom>
+			<rom type="file" offset="0x33">FR_GS36.MD</rom>
+			<rom type="file" offset="0x34">FR_GS37.MD</rom>
+			<rom type="file" offset="0x35">FR_GS38.MD</rom>
+			<rom type="file" offset="0x36">FR_GS39.MD</rom>
+			<rom type="file" offset="0x37">FR_GS40.MD</rom>
+			<rom type="file" offset="0x38">FR_GS41.MD</rom>
+			<rom type="file" offset="0x39">FR_GS42.MD</rom>
+			<rom type="shell" offset="0">MS</rom>
+			<rom type="shell" offset="0">MS_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">FR_GS00.MD : ブランドロゴ</title>
+			<title code="0x11">FR_GS01.MD : Opening 1</title>
+			<title code="0x12">FR_GS02.MD : Opening 2</title>
+			<title code="0x13">FR_GS03.MD : メインフィールド</title>
+			<title code="0x14">FR_GS04.MD : 城 1</title>
+			<title code="0x15">FR_GS05.MD : 城 2</title>
+			<title code="0x16">FR_GS06.MD : 町 1</title>
+			<title code="0x17">FR_GS07.MD : 町 2</title>
+			<title code="0x18">FR_GS08.MD : 村</title>
+			<title code="0x19">FR_GS09.MD : Nomal Battle</title>
+			<title code="0x1a">FR_GS10.MD : Boss Battle 1</title>
+			<title code="0x1b">FR_GS11.MD : Boss Battle 2</title>
+			<title code="0x1c">FR_GS12.MD : Boss Battle 3</title>
+			<title code="0x1d">FR_GS13.MD : 神殿 1</title>
+			<title code="0x1e">FR_GS14.MD : 神殿 2</title>
+			<title code="0x1f">FR_GS15.MD : 森・廃虚</title>
+			<title code="0x20">FR_GS16.MD : 洞窟</title>
+			<title code="0x21">FR_GS17.MD : 森の泉</title>
+			<title code="0x22">FR_GS18.MD : 雪の大陸</title>
+			<title code="0x23">FR_GS19.MD : ピラミッド</title>
+			<title code="0x24">FR_GS20.MD : フィールド 1</title>
+			<title code="0x25">FR_GS21.MD : フィールド 2</title>
+			<title code="0x26">FR_GS22.MD : フィールド 3</title>
+			<title code="0x27">FR_GS23.MD : 危機一髪</title>
+			<title code="0x28">FR_GS24.MD : 過去の世界</title>
+			<title code="0x29">FR_GS25.MD : イベント 1</title>
+			<title code="0x2a">FR_GS26.MD : イベント 2</title>
+			<title code="0x2b">FR_GS27.MD : イベント 3</title>
+			<title code="0x2c">FR_GS28.MD : イベント 4</title>
+			<title code="0x2d">FR_GS29.MD : イベント 5</title>
+			<title code="0x2e">FR_GS30.MD : カジノ・酒場</title>
+			<title code="0x2f">FR_GS31.MD : テッド</title>
+			<title code="0x30">FR_GS32.MD : 海</title>
+			<title code="0x31">FR_GS33.MD : 飛翼艇インディ</title>
+			<title code="0x32">FR_GS34.MD : 邪悪なる影</title>
+			<title code="0x33">FR_GS35.MD : Bad End</title>
+			<title code="0x33">FR_GS36.MD : Happy End</title>
+			<title code="0x34">FR_GS37.MD : 勝利</title>
+			<title code="0x35">FR_GS38.MD : レクイエム</title>
+			<title code="0x36">FR_GS39.MD : 宿屋</title>
+			<title code="0x37">FR_GS40.MD : 宝箱</title>
+			<title code="0x38">FR_GS41.MD : LEVEL UP</title>
+			<title code="0x39">FR_GS42.MD : テッドの笛</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 痕 -きずあと-(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Leaf</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="kizuato_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">KZEF.EFC</rom>
+			<rom type="file" offset="0x10">FM00.FM</rom>
+			<rom type="file" offset="0x11">FM01.FM</rom>
+			<rom type="file" offset="0x12">FM02.FM</rom>
+			<rom type="file" offset="0x13">FM03.FM</rom>
+			<rom type="file" offset="0x14">FM04.FM</rom>
+			<rom type="file" offset="0x15">FM05.FM</rom>
+			<rom type="file" offset="0x16">FM06.FM</rom>
+			<rom type="file" offset="0x17">FM07.FM</rom>
+			<rom type="file" offset="0x18">FM08.FM</rom>
+			<rom type="file" offset="0x19">FM09.FM</rom>
+			<rom type="file" offset="0x1a">FM10.FM</rom>
+			<rom type="file" offset="0x1b">FM11.FM</rom>
+			<rom type="file" offset="0x1c">FM12.FM</rom>
+			<rom type="file" offset="0x1d">FM13.FM</rom>
+			<rom type="file" offset="0x1e">FM14.FM</rom>
+			<rom type="file" offset="0x1f">FM15.FM</rom>
+			<rom type="file" offset="0x20">FM16.FM</rom>
+			<rom type="file" offset="0x21">FM17.FM</rom>
+			<rom type="file" offset="0x22">FM18.FM</rom>
+			<rom type="file" offset="0x23">FM19.FM</rom>
+			<rom type="file" offset="0x24">FM20.FM</rom>
+			<rom type="file" offset="0x25">FM21.FM</rom>
+			<rom type="file" offset="0x26">FM22.FM</rom>
+			<rom type="file" offset="0x27">FM23.FM</rom>
+			<rom type="file" offset="0x28">FM24.FM</rom>
+			<rom type="file" offset="0x29">FM25.FM</rom>
+			<rom type="shell" offset="0">pmd # /M12 /V0 /E2 /DF16 /DS10 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">FM00.FM  : リーフ</title>
+			<title code="0x11">FM01.FM  : 寝覚月</title>
+			<title code="0x12">FM02.FM  : ためいき</title>
+			<title code="0x13">FM03.FM  : 夏の追憶</title>
+			<title code="0x14">FM04.FM  : 千鶴</title>
+			<title code="0x15">FM05.FM  : 梓</title>
+			<title code="0x16">FM06.FM  : 楓</title>
+			<title code="0x17">FM07.FM  : 初音</title>
+			<title code="0x18">FM08.FM  : 日のあたる場所</title>
+			<title code="0x19">FM09.FM  : 長瀬刑事</title>
+			<title code="0x1a">FM10.FM  : もう一人の自分</title>
+			<title code="0x1b">FM11.FM  : 迷妄</title>
+			<title code="0x1c">FM12.FM  : 見えない月</title>
+			<title code="0x1d">FM13.FM  : 光の粒</title>
+			<title code="0x1e">FM14.FM  : 夜の風</title>
+			<title code="0x1f">FM15.FM  : UKIUKI気分</title>
+			<title code="0x20">FM16.FM  : スト3</title>
+			<title code="0x21">FM17.FM  : 鬼の伝説</title>
+			<title code="0x22">FM18.FM  : 見えざる敵</title>
+			<title code="0x23">FM19.FM  : 鬼神楽</title>
+			<title code="0x24">FM20.FM  : つつまれて</title>
+			<title code="0x25">FM21.FM  : 醒めない夢</title>
+			<title code="0x26">FM22.FM  : やすらぎ</title>
+			<title code="0x27">FM23.FM  : それは…現実</title>
+			<title code="0x28">FM24.FM  : 終わりそして始まり</title>
+			<title code="0x29">FM25.FM  : まだ癒えぬ痕</title>
+			<range min="0x0801" max="0x080c" extcode="0">KZEF.EFC : SE %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 痕 -きずあと-(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Leaf</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="kizuato_98">
+			<rom type="file" offset="-1">MMDR_98.COM</rom>
+			<rom type="file" offset="-1">MMDR.COM</rom>
+			<rom type="file" offset="0x10">GS00.MD</rom>
+			<rom type="file" offset="0x11">GS01.MD</rom>
+			<rom type="file" offset="0x12">GS02.MD</rom>
+			<rom type="file" offset="0x13">GS03.MD</rom>
+			<rom type="file" offset="0x14">GS04.MD</rom>
+			<rom type="file" offset="0x15">GS05.MD</rom>
+			<rom type="file" offset="0x16">GS06.MD</rom>
+			<rom type="file" offset="0x17">GS07.MD</rom>
+			<rom type="file" offset="0x18">GS08.MD</rom>
+			<rom type="file" offset="0x19">GS09.MD</rom>
+			<rom type="file" offset="0x1a">GS10.MD</rom>
+			<rom type="file" offset="0x1b">GS11.MD</rom>
+			<rom type="file" offset="0x1c">GS12.MD</rom>
+			<rom type="file" offset="0x1d">GS13.MD</rom>
+			<rom type="file" offset="0x1e">GS14.MD</rom>
+			<rom type="file" offset="0x1f">GS15.MD</rom>
+			<rom type="file" offset="0x20">GS16.MD</rom>
+			<rom type="file" offset="0x21">GS17.MD</rom>
+			<rom type="file" offset="0x22">GS18.MD</rom>
+			<rom type="file" offset="0x23">GS19.MD</rom>
+			<rom type="file" offset="0x24">GS20.MD</rom>
+			<rom type="file" offset="0x25">GS21.MD</rom>
+			<rom type="file" offset="0x26">GS22.MD</rom>
+			<rom type="file" offset="0x27">GS23.MD</rom>
+			<rom type="file" offset="0x28">GS24.MD</rom>
+			<rom type="file" offset="0x29">GS25.MD</rom>
+			<rom type="shell" offset="0">MMDR</rom>
+			<rom type="shell" offset="0">MMDR_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GS00.MD : リーフ</title>
+			<title code="0x11">GS01.MD : 寝覚月</title>
+			<title code="0x12">GS02.MD : ためいき</title>
+			<title code="0x13">GS03.MD : 夏の追憶</title>
+			<title code="0x14">GS04.MD : 千鶴</title>
+			<title code="0x15">GS05.MD : 梓</title>
+			<title code="0x16">GS06.MD : 楓</title>
+			<title code="0x17">GS07.MD : 初音</title>
+			<title code="0x18">GS08.MD : 日のあたる場所</title>
+			<title code="0x19">GS09.MD : 長瀬刑事</title>
+			<title code="0x1a">GS10.MD : もう一人の自分</title>
+			<title code="0x1b">GS11.MD : 迷妄</title>
+			<title code="0x1c">GS12.MD : 見えない月</title>
+			<title code="0x1d">GS13.MD : 光の粒</title>
+			<title code="0x1e">GS14.MD : 夜の風</title>
+			<title code="0x1f">GS15.MD : UKIUKI気分</title>
+			<title code="0x20">GS16.MD : スト3</title>
+			<title code="0x21">GS17.MD : 鬼の伝説</title>
+			<title code="0x22">GS18.MD : 見えざる敵</title>
+			<title code="0x23">GS19.MD : 鬼神楽</title>
+			<title code="0x24">GS20.MD : つつまれて</title>
+			<title code="0x25">GS21.MD : 醒めない夢</title>
+			<title code="0x26">GS22.MD : やすらぎ</title>
+			<title code="0x27">GS23.MD : それは…現実</title>
+			<title code="0x28">GS24.MD : 終わりそして始まり</title>
+			<title code="0x29">GS25.MD : まだ癒えぬ痕</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 雫 -しずく-(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Leaf</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="sizuku_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">SZEF.EFC</rom>
+			<rom type="file" offset="0x10">SZ_FM00.FM</rom>
+			<rom type="file" offset="0x11">SZ_FM01.FM</rom>
+			<rom type="file" offset="0x12">SZ_FM02.FM</rom>
+			<rom type="file" offset="0x13">SZ_FM03.FM</rom>
+			<rom type="file" offset="0x14">SZ_FM04.FM</rom>
+			<rom type="file" offset="0x15">SZ_FM05.FM</rom>
+			<rom type="file" offset="0x16">SZ_FM06.FM</rom>
+			<rom type="file" offset="0x17">SZ_FM07.FM</rom>
+			<rom type="file" offset="0x18">SZ_FM08.FM</rom>
+			<rom type="file" offset="0x19">SZ_FM09.FM</rom>
+			<rom type="file" offset="0x1a">SZ_FM10.FM</rom>
+			<rom type="file" offset="0x1b">SZ_FM11.FM</rom>
+			<rom type="file" offset="0x1c">SZ_FM12.FM</rom>
+			<rom type="file" offset="0x1d">SZ_FM13.FM</rom>
+			<rom type="file" offset="0x1e">SZ_FM14.FM</rom>
+			<rom type="file" offset="0x1f">SZ_FM15.FM</rom>
+			<rom type="file" offset="0x20">SZ_FM16.FM</rom>
+			<rom type="file" offset="0x21">SZ_FM17.FM</rom>
+			<rom type="file" offset="0x22">SZ_FM18.FM</rom>
+			<rom type="file" offset="0x23">SZ_FM19.FM</rom>
+			<rom type="file" offset="0x24">SZ_FM20.FM</rom>
+			<rom type="file" offset="0x25">SZ_FM21.FM</rom>
+			<rom type="file" offset="0x26">SZ_FM22.FM</rom>
+			<rom type="file" offset="0x27">SZ_FM23.FM</rom>
+			<rom type="file" offset="0x28">SZ_FM24.FM</rom>
+			<rom type="shell" offset="0">pmd # /M12 /V0 /E2 /DF32 /DS0 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">SZ_FM00.FM : ブランドロゴ</title>
+			<title code="0x11">SZ_FM01.FM : 精神世界</title>
+			<title code="0x12">SZ_FM02.FM : 授業中</title>
+			<title code="0x13">SZ_FM03.FM : 学園生活</title>
+			<title code="0x14">SZ_FM04.FM : 叔父さん</title>
+			<title code="0x15">SZ_FM05.FM : 推理・憶測</title>
+			<title code="0x16">SZ_FM06.FM : 瑞穂</title>
+			<title code="0x17">SZ_FM07.FM : 沙織</title>
+			<title code="0x18">SZ_FM08.FM : 瑠璃子</title>
+			<title code="0x19">SZ_FM09.FM : 調査</title>
+			<title code="0x1a">SZ_FM10.FM : 回想</title>
+			<title code="0x1b">SZ_FM11.FM : 捜索</title>
+			<title code="0x1c">SZ_FM12.FM : Hシーン1</title>
+			<title code="0x1d">SZ_FM13.FM : Hシーン2</title>
+			<title code="0x1e">SZ_FM14.FM : ブランドロゴ</title>
+			<title code="0x1f">SZ_FM15.FM : バッドエンド</title>
+			<title code="0x20">SZ_FM16.FM : トゥルーエンド</title>
+			<title code="0x21">SZ_FM17.FM : ハッピーエンド</title>
+			<title code="0x22">SZ_FM18.FM : オープニング</title>
+			<title code="0x23">SZ_FM19.FM : 敵</title>
+			<title code="0x24">SZ_FM20.FM : バトル</title>
+			<title code="0x25">SZ_FM21.FM : 狂気</title>
+			<title code="0x26">SZ_FM22.FM : オルゴール1</title>
+			<title code="0x27">SZ_FM23.FM : オルゴール2</title>
+			<title code="0x28">SZ_FM24.FM : </title>
+			<range min="0x0801" max="0x080c" extcode="0">SZEF.EFC   : SE %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 雫 -しずく-(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Leaf</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="sizuku_98">
+			<rom type="file" offset="-1">MMDR_98.COM</rom>
+			<rom type="file" offset="-1">MMDR.COM</rom>
+			<rom type="file" offset="0x10">SZ_GS00.MD</rom>
+			<rom type="file" offset="0x11">SZ_GS01.MD</rom>
+			<rom type="file" offset="0x12">SZ_GS02.MD</rom>
+			<rom type="file" offset="0x13">SZ_GS03.MD</rom>
+			<rom type="file" offset="0x14">SZ_GS04.MD</rom>
+			<rom type="file" offset="0x15">SZ_GS05.MD</rom>
+			<rom type="file" offset="0x16">SZ_GS06.MD</rom>
+			<rom type="file" offset="0x17">SZ_GS07.MD</rom>
+			<rom type="file" offset="0x18">SZ_GS08.MD</rom>
+			<rom type="file" offset="0x19">SZ_GS09.MD</rom>
+			<rom type="file" offset="0x1a">SZ_GS10.MD</rom>
+			<rom type="file" offset="0x1b">SZ_GS11.MD</rom>
+			<rom type="file" offset="0x1c">SZ_GS12.MD</rom>
+			<rom type="file" offset="0x1d">SZ_GS13.MD</rom>
+			<rom type="file" offset="0x1e">SZ_GS14.MD</rom>
+			<rom type="file" offset="0x1f">SZ_GS15.MD</rom>
+			<rom type="file" offset="0x20">SZ_GS16.MD</rom>
+			<rom type="file" offset="0x21">SZ_GS17.MD</rom>
+			<rom type="file" offset="0x22">SZ_GS18.MD</rom>
+			<rom type="file" offset="0x23">SZ_GS19.MD</rom>
+			<rom type="file" offset="0x24">SZ_GS20.MD</rom>
+			<rom type="file" offset="0x25">SZ_GS21.MD</rom>
+			<rom type="file" offset="0x26">SZ_GS22.MD</rom>
+			<rom type="file" offset="0x27">SZ_GS23.MD</rom>
+			<rom type="file" offset="0x28">SZ_GS24.MD</rom>
+			<rom type="shell" offset="0">MMDR</rom>
+			<rom type="shell" offset="0">MMDR_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">SZ_GS00.MD : ブランドロゴ</title>
+			<title code="0x11">SZ_GS01.MD : 精神世界</title>
+			<title code="0x12">SZ_GS02.MD : 授業中</title>
+			<title code="0x13">SZ_GS03.MD : 学園生活</title>
+			<title code="0x14">SZ_GS04.MD : 叔父さん</title>
+			<title code="0x15">SZ_GS05.MD : 推理・憶測</title>
+			<title code="0x16">SZ_GS06.MD : 瑞穂</title>
+			<title code="0x17">SZ_GS07.MD : 沙織</title>
+			<title code="0x18">SZ_GS08.MD : 瑠璃子</title>
+			<title code="0x19">SZ_GS09.MD : 調査</title>
+			<title code="0x1a">SZ_GS10.MD : 回想</title>
+			<title code="0x1b">SZ_GS11.MD : 捜索</title>
+			<title code="0x1c">SZ_GS12.MD : Hシーン1</title>
+			<title code="0x1d">SZ_GS13.MD : Hシーン2</title>
+			<title code="0x1e">SZ_GS14.MD : ブランドロゴ</title>
+			<title code="0x1f">SZ_GS15.MD : バッドエンド</title>
+			<title code="0x20">SZ_GS16.MD : トゥルーエンド</title>
+			<title code="0x21">SZ_GS17.MD : ハッピーエンド</title>
+			<title code="0x22">SZ_GS18.MD : オープニング</title>
+			<title code="0x23">SZ_GS19.MD : 敵</title>
+			<title code="0x24">SZ_GS20.MD : バトル</title>
+			<title code="0x25">SZ_GS21.MD : 狂気</title>
+			<title code="0x26">SZ_GS22.MD : オルゴール1</title>
+			<title code="0x27">SZ_GS23.MD : オルゴール2</title>
+			<title code="0x28">SZ_GS24.MD : </title>
+		</titlelist>
+	</game>
+</gamelist>

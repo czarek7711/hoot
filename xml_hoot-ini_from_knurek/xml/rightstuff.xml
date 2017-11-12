@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //rightstuff -->
+	<game>
+		<name>[PC-98] Alshark (アルシャーク)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">rightstuff</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="addressing" value="1"/>
+			<option name="dataaddr" value="0"/>
+			<option name="filesize" value="0"/>
+			<option name="datamax" value="0"/>
+		</options>
+		<romlist archive="alshrk98">
+			<rom type="code" offset="0x00600000">alshrk98.bin</rom>
+			<rom type="code" offset="0x10000000">0000.bin</rom>
+			<rom type="code" offset="0x1000a000">a000.bin</rom>
+			<rom type="code" offset="0x1000c000">c000.bin</rom>
+			<rom type="code" offset="0x20000000">bgm00.bin</rom>
+			<rom type="code" offset="0x30000000">bgm01.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">Stop the Music (演奏停止)</title>
+			<title code="0x20000000">AlsharK</title>
+			<title code="0x20000001">Salad Days</title>
+			<title code="0x20000002">Call!! 大地</title>
+			<title code="0x20000003">Empire</title>
+			<title code="0x20000004">Sand Ocean</title>
+			<title code="0x20000005">試練‥‥の果てに!</title>
+			<title code="0x20000006">Fire Field</title>
+			<title code="0x20000007">Battle Buggy</title>
+			<title code="0x20000008">Next Journey</title>
+			<title code="0x20000009">出撃! タスクバトラー</title>
+			<title code="0x2000000a">サイレント サテライト</title>
+			<title code="0x2000000b">町 Old Times</title>
+			<title code="0x2000000c">Peacefulな日々</title>
+			<title code="0x2000000d">Sadness City</title>
+			<title code="0x2000000e">ナイスだね!ミュントス人</title>
+			<title code="0x2000000f">潜入! 宇宙要塞バルバス</title>
+			<title code="0x20000010">Palace Wulia</title>
+			<title code="0x20000011">Chaw-Snomu</title>
+			<title code="0x20000012">RusselGeiyer</title>
+			<title code="0x20000013">Public パブ</title>
+			<title code="0x20000014">SMaaaSH!!</title>
+			<title code="0x20000015">Beast Bayden</title>
+			<title code="0x30000000">死の洗礼 そして‥‥</title>
+			<title code="0x30000001">Act'Fighting</title>
+			<title code="0x30000002">ColonialShip</title>
+			<title code="0x30000003">Dark Shadow</title>
+			<title code="0x30000004">意志を継ぎし者への序曲</title>
+			<title code="0x30000005">星のTerminal</title>
+			<title code="0x30000006">また会おうね、必ず!</title>
+			<title code="0x30000007">Buy!バイ!ダーリン</title>
+			<title code="0x30000008">Joe s No.1</title>
+			<title code="0x30000009">Can a See Me</title>
+			<title code="0x3000000a">Funny</title>
+			<title code="0x3000000b">Dush!!</title>
+			<title code="0x3000000c">Feer</title>
+			<title code="0x3000000d">湖の遺跡</title>
+			<title code="0x3000000e">Psycho</title>
+			<title code="0x3000000f">ファイティング ジョー</title>
+			<title code="0x30000010">Finish</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Revery (レヴァリィ ～いざないの魔水晶～) (OPN)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">rightstuff</driveralias>
+		<options>
+			<option name="dataaddr" value="0x25000"/>
+			<option name="filesize" value="16384"/>
+			<option name="datamax" value="80"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="revery_98">
+			<rom type="code" offset="0x600">rever_98.bin</rom>
+			<rom type="code" offset="0x1C000">1_01.bin</rom>
+			<rom type="code" offset="0x20000">1_04.bin</rom>
+			<rom type="code" offset="0x21800">1_02.bin</rom>
+			<rom type="code" offset="0x22800">1_03.bin</rom>
+			<rom type="bgm" offset="1">2_01.bin</rom>
+			<rom type="bgm" offset="2">2_02.bin</rom>
+			<rom type="bgm" offset="3">2_03.bin</rom>
+			<rom type="bgm" offset="4">2_04.bin</rom>
+			<rom type="bgm" offset="5">2_05.bin</rom>
+			<rom type="bgm" offset="31">3_31.bin</rom>
+			<rom type="bgm" offset="32">3_32.bin</rom>
+			<rom type="bgm" offset="33">3_33.bin</rom>
+			<rom type="bgm" offset="34">3_34.bin</rom>
+			<rom type="bgm" offset="35">3_35.bin</rom>
+			<rom type="bgm" offset="36">3_36.bin</rom>
+			<rom type="bgm" offset="37">3_37.bin</rom>
+			<rom type="bgm" offset="38">3_38.bin</rom>
+			<rom type="bgm" offset="39">3_39.bin</rom>
+			<rom type="bgm" offset="40">3_40.bin</rom>
+			<rom type="bgm" offset="41">3_41.bin</rom>
+			<rom type="bgm" offset="42">3_42.bin</rom>
+			<rom type="bgm" offset="43">3_43.bin</rom>
+			<rom type="bgm" offset="44">3_44.bin</rom>
+			<rom type="bgm" offset="45">3_45.bin</rom>
+			<rom type="bgm" offset="46">3_46.bin</rom>
+			<rom type="bgm" offset="47">3_47.bin</rom>
+			<rom type="bgm" offset="48">3_48.bin</rom>
+			<rom type="bgm" offset="49">3_49.bin</rom>
+			<rom type="bgm" offset="50">3_50.bin</rom>
+			<rom type="bgm" offset="51">3_51.bin</rom>
+			<rom type="bgm" offset="52">3_52.bin</rom>
+			<rom type="bgm" offset="53">3_53.bin</rom>
+			<rom type="bgm" offset="54">3_54.bin</rom>
+			<rom type="bgm" offset="55">3_55.bin</rom>
+			<rom type="bgm" offset="56">3_56.bin</rom>
+			<rom type="bgm" offset="57">3_57.bin</rom>
+			<rom type="bgm" offset="58">3_58.bin</rom>
+			<rom type="bgm" offset="64">6_64.bin</rom>
+			<rom type="bgm" offset="65">6_65.bin</rom>
+			<rom type="bgm" offset="66">6_66.bin</rom>
+			<rom type="bgm" offset="67">6_67.bin</rom>
+			<rom type="bgm" offset="68">3_68.bin</rom>
+			<rom type="bgm" offset="69">3_69.bin</rom>
+			<rom type="bgm" offset="70">3_70.bin</rom>
+			<rom type="bgm" offset="71">3_71.bin</rom>
+			<rom type="bgm" offset="72">3_72.bin</rom>
+			<rom type="bgm" offset="73">3_73.bin</rom>
+			<rom type="bgm" offset="74">3_74.bin</rom>
+			<rom type="bgm" offset="75">3_75.bin</rom>
+			<rom type="bgm" offset="76">3_76.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="1">オープニング</title>
+			<title code="2">プロローグ１</title>
+			<title code="3">プロローグ２</title>
+			<title code="4">プロローグ３</title>
+			<title code="5">プロローグ５</title>
+			<title code="31">3_31</title>
+			<title code="32">森</title>
+			<title code="33">訪問</title>
+			<title code="34">かってに城 (解放前)</title>
+			<title code="35">いいかげんに城 (解放後)</title>
+			<title code="36">ヴェリアス山道</title>
+			<title code="37">地下洞窟</title>
+			<title code="38">ルーズの森</title>
+			<title code="39">バーフォーク山岳地帯</title>
+			<title code="40">バーフォーク神殿</title>
+			<title code="41">アルトゥール砂漠</title>
+			<title code="42">地下空洞</title>
+			<title code="43">エイブラム島</title>
+			<title code="44">エイブラム島洞窟</title>
+			<title code="45">ボス戦闘</title>
+			<title code="46">中ボス戦闘</title>
+			<title code="47">大ボス戦闘</title>
+			<title code="48">超ボス戦闘</title>
+			<title code="49">GoGo! ヴォルファング!</title>
+			<title code="50">女神様とおよび!</title>
+			<title code="51">「ブルートルネード」アデム・カシム!</title>
+			<title code="52">「浮遊霊と呼ばれて…」(アルフレド)</title>
+			<title code="53">とべっ！オヤジモード！</title>
+			<title code="54">ギャグ</title>
+			<title code="55">とうさん、あたしも来ちゃった…</title>
+			<title code="56">えぃっ! やぁっ! 塔ーっ!</title>
+			<title code="57">Oh! 女神様</title>
+			<title code="58">どこかの街</title>
+			<title code="64">6_64</title>
+			<title code="65">6_65</title>
+			<title code="66">6_66</title>
+			<title code="67">6_67</title>
+			<title code="68">おろおろ</title>
+			<title code="69">うわーっ!</title>
+			<title code="70">なんだかやすらぐなぁ</title>
+			<title code="71">なんだか希望だなぁ</title>
+			<title code="72">うっしゃーっ!</title>
+			<title code="73">しくしく…</title>
+			<title code="74">どきどき</title>
+			<title code="75">おらおらーっ!</title>
+			<title code="76">いやんいやん</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Revery (レヴァリィ ～いざないの魔水晶～) (SC-55)</name>
+		<driver type="beep">pc98vx</driver>
+		<driveralias type="PC-98">rightstuff</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="dataaddr" value="0x25000"/>
+			<option name="filesize" value="16384"/>
+			<option name="datamax" value="80"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="revery_98">
+			<rom type="code" offset="0x600">rever_98.bin</rom>
+			<rom type="code" offset="0x1C000">1_05.bin</rom>
+			<rom type="code" offset="0x20000">1_04.bin</rom>
+			<rom type="bgm" offset="1" >4_01.bin</rom>
+			<rom type="bgm" offset="2" >4_02.bin</rom>
+			<rom type="bgm" offset="3" >4_03.bin</rom>
+			<rom type="bgm" offset="4" >4_04.bin</rom>
+			<rom type="bgm" offset="5" >4_05.bin</rom>
+			<rom type="bgm" offset="31">5_31.bin</rom>
+			<rom type="bgm" offset="32">5_32.bin</rom>
+			<rom type="bgm" offset="33">5_33.bin</rom>
+			<rom type="bgm" offset="34">5_34.bin</rom>
+			<rom type="bgm" offset="35">5_35.bin</rom>
+			<rom type="bgm" offset="36">5_36.bin</rom>
+			<rom type="bgm" offset="37">5_37.bin</rom>
+			<rom type="bgm" offset="38">5_38.bin</rom>
+			<rom type="bgm" offset="39">5_39.bin</rom>
+			<rom type="bgm" offset="40">5_40.bin</rom>
+			<rom type="bgm" offset="41">5_41.bin</rom>
+			<rom type="bgm" offset="42">5_42.bin</rom>
+			<rom type="bgm" offset="43">5_43.bin</rom>
+			<rom type="bgm" offset="44">5_44.bin</rom>
+			<rom type="bgm" offset="45">5_45.bin</rom>
+			<rom type="bgm" offset="46">5_46.bin</rom>
+			<rom type="bgm" offset="47">5_47.bin</rom>
+			<rom type="bgm" offset="48">5_48.bin</rom>
+			<rom type="bgm" offset="49">5_49.bin</rom>
+			<rom type="bgm" offset="50">5_50.bin</rom>
+			<rom type="bgm" offset="51">5_51.bin</rom>
+			<rom type="bgm" offset="52">5_52.bin</rom>
+			<rom type="bgm" offset="53">5_53.bin</rom>
+			<rom type="bgm" offset="54">5_54.bin</rom>
+			<rom type="bgm" offset="55">5_55.bin</rom>
+			<rom type="bgm" offset="56">5_56.bin</rom>
+			<rom type="bgm" offset="57">5_57.bin</rom>
+			<rom type="bgm" offset="58">5_58.bin</rom>
+			<rom type="bgm" offset="64">7_64.bin</rom>
+			<rom type="bgm" offset="65">7_65.bin</rom>
+			<rom type="bgm" offset="66">7_66.bin</rom>
+			<rom type="bgm" offset="67">7_67.bin</rom>
+			<rom type="bgm" offset="68">5_68.bin</rom>
+			<rom type="bgm" offset="69">5_69.bin</rom>
+			<rom type="bgm" offset="70">5_70.bin</rom>
+			<rom type="bgm" offset="71">5_71.bin</rom>
+			<rom type="bgm" offset="72">5_72.bin</rom>
+			<rom type="bgm" offset="73">5_73.bin</rom>
+			<rom type="bgm" offset="74">5_74.bin</rom>
+			<rom type="bgm" offset="75">5_75.bin</rom>
+			<rom type="bgm" offset="76">5_76.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >オープニング</title>
+			<title code="2" >プロローグ１</title>
+			<title code="3" >プロローグ２</title>
+			<title code="4" >プロローグ３</title>
+			<title code="5" >プロローグ５</title>
+			<title code="31">5_31.bin</title>
+			<title code="32">森</title>
+			<title code="33">訪問</title>
+			<title code="34">かってに城 (解放前)</title>
+			<title code="35">いいかげんに城 (解放後)</title>
+			<title code="36">ヴェリアス山道</title>
+			<title code="37">地下洞窟</title>
+			<title code="38">ルーズの森</title>
+			<title code="39">バーフォーク山岳地帯</title>
+			<title code="40">バーフォーク神殿</title>
+			<title code="41">アルトゥール砂漠</title>
+			<title code="42">地下空洞</title>
+			<title code="43">エイブラム島</title>
+			<title code="44">エイブラム島洞窟</title>
+			<title code="45">ボス戦闘</title>
+			<title code="46">中ボス戦闘</title>
+			<title code="47">大ボス戦闘</title>
+			<title code="48">超ボス戦闘</title>
+			<title code="49">GoGo! ヴォルファング!</title>
+			<title code="50">女神様とおよび!</title>
+			<title code="51">「ブルートルネード」アデム・カシム!</title>
+			<title code="52">「浮遊霊と呼ばれて…」(アルフレド)</title>
+			<title code="53">とべっ! オヤジモード!</title>
+			<title code="54">ギャグ</title>
+			<title code="55">とうさん、あたしも来ちゃった…</title>
+			<title code="56">えぃっ! やぁっ! 塔ーっ!</title>
+			<title code="57">Oh! 女神様</title>
+			<title code="58">どこかの街</title>
+			<title code="64">7_64.bin</title>
+			<title code="65">7_65.bin</title>
+			<title code="66">7_66.bin</title>
+			<title code="67">7_67.bin</title>
+			<title code="68">おろおろ</title>
+			<title code="69">うわーっ!</title>
+			<title code="70">なんだかやすらぐなぁ</title>
+			<title code="71">なんだか希望だなぁ</title>
+			<title code="72">うっしゃーっ!</title>
+			<title code="73">しくしく…</title>
+			<title code="74">どきどき</title>
+			<title code="75">おらおらーっ!</title>
+			<title code="76">いやんいやん</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Revery (レヴァリィ ～いざないの魔水晶～) (Vermouth)</name>
+		<driver type="beep">pc98vx</driver>
+		<driveralias type="PC-98">rightstuff</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="dataaddr" value="0x25000"/>
+			<option name="filesize" value="16384"/>
+			<option name="datamax" value="80"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="revery_98">
+			<rom type="code" offset="0x600">rever_98.bin</rom>
+			<rom type="code" offset="0x1C000">1_05.bin</rom>
+			<rom type="code" offset="0x20000">1_04.bin</rom>
+			<rom type="bgm" offset="1" >4_01.bin</rom>
+			<rom type="bgm" offset="2" >4_02.bin</rom>
+			<rom type="bgm" offset="3" >4_03.bin</rom>
+			<rom type="bgm" offset="4" >4_04.bin</rom>
+			<rom type="bgm" offset="5" >4_05.bin</rom>
+			<rom type="bgm" offset="31">5_31.bin</rom>
+			<rom type="bgm" offset="32">5_32.bin</rom>
+			<rom type="bgm" offset="33">5_33.bin</rom>
+			<rom type="bgm" offset="34">5_34.bin</rom>
+			<rom type="bgm" offset="35">5_35.bin</rom>
+			<rom type="bgm" offset="36">5_36.bin</rom>
+			<rom type="bgm" offset="37">5_37.bin</rom>
+			<rom type="bgm" offset="38">5_38.bin</rom>
+			<rom type="bgm" offset="39">5_39.bin</rom>
+			<rom type="bgm" offset="40">5_40.bin</rom>
+			<rom type="bgm" offset="41">5_41.bin</rom>
+			<rom type="bgm" offset="42">5_42.bin</rom>
+			<rom type="bgm" offset="43">5_43.bin</rom>
+			<rom type="bgm" offset="44">5_44.bin</rom>
+			<rom type="bgm" offset="45">5_45.bin</rom>
+			<rom type="bgm" offset="46">5_46.bin</rom>
+			<rom type="bgm" offset="47">5_47.bin</rom>
+			<rom type="bgm" offset="48">5_48.bin</rom>
+			<rom type="bgm" offset="49">5_49.bin</rom>
+			<rom type="bgm" offset="50">5_50.bin</rom>
+			<rom type="bgm" offset="51">5_51.bin</rom>
+			<rom type="bgm" offset="52">5_52.bin</rom>
+			<rom type="bgm" offset="53">5_53.bin</rom>
+			<rom type="bgm" offset="54">5_54.bin</rom>
+			<rom type="bgm" offset="55">5_55.bin</rom>
+			<rom type="bgm" offset="56">5_56.bin</rom>
+			<rom type="bgm" offset="57">5_57.bin</rom>
+			<rom type="bgm" offset="58">5_58.bin</rom>
+			<rom type="bgm" offset="64">7_64.bin</rom>
+			<rom type="bgm" offset="65">7_65.bin</rom>
+			<rom type="bgm" offset="66">7_66.bin</rom>
+			<rom type="bgm" offset="67">7_67.bin</rom>
+			<rom type="bgm" offset="68">5_68.bin</rom>
+			<rom type="bgm" offset="69">5_69.bin</rom>
+			<rom type="bgm" offset="70">5_70.bin</rom>
+			<rom type="bgm" offset="71">5_71.bin</rom>
+			<rom type="bgm" offset="72">5_72.bin</rom>
+			<rom type="bgm" offset="73">5_73.bin</rom>
+			<rom type="bgm" offset="74">5_74.bin</rom>
+			<rom type="bgm" offset="75">5_75.bin</rom>
+			<rom type="bgm" offset="76">5_76.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >オープニング</title>
+			<title code="2" >プロローグ１</title>
+			<title code="3" >プロローグ２</title>
+			<title code="4" >プロローグ３</title>
+			<title code="5" >プロローグ５</title>
+			<title code="31">5_31.bin</title>
+			<title code="32">森</title>
+			<title code="33">訪問</title>
+			<title code="34">かってに城 (解放前)</title>
+			<title code="35">いいかげんに城 (解放後)</title>
+			<title code="36">ヴェリアス山道</title>
+			<title code="37">地下洞窟</title>
+			<title code="38">ルーズの森</title>
+			<title code="39">バーフォーク山岳地帯</title>
+			<title code="40">バーフォーク神殿</title>
+			<title code="41">アルトゥール砂漠</title>
+			<title code="42">地下空洞</title>
+			<title code="43">エイブラム島</title>
+			<title code="44">エイブラム島洞窟</title>
+			<title code="45">ボス戦闘</title>
+			<title code="46">中ボス戦闘</title>
+			<title code="47">大ボス戦闘</title>
+			<title code="48">超ボス戦闘</title>
+			<title code="49">GoGo! ヴォルファング!</title>
+			<title code="50">女神様とおよび!</title>
+			<title code="51">「ブルートルネード」アデム・カシム!</title>
+			<title code="52">「浮遊霊と呼ばれて…」(アルフレド)</title>
+			<title code="53">とべっ! オヤジモード!</title>
+			<title code="54">ギャグ</title>
+			<title code="55">とうさん、あたしも来ちゃった…</title>
+			<title code="56">えぃっ! やぁっ! 塔ーっ!</title>
+			<title code="57">Oh! 女神様</title>
+			<title code="58">どこかの街</title>
+			<title code="64">7_64.bin</title>
+			<title code="65">7_65.bin</title>
+			<title code="66">7_66.bin</title>
+			<title code="67">7_67.bin</title>
+			<title code="68">おろおろ</title>
+			<title code="69">うわーっ!</title>
+			<title code="70">なんだかやすらぐなぁ</title>
+			<title code="71">なんだか希望だなぁ</title>
+			<title code="72">うっしゃーっ!</title>
+			<title code="73">しくしく…</title>
+			<title code="74">どきどき</title>
+			<title code="75">おらおらーっ!</title>
+			<title code="76">いやんいやん</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Foresight Dolly (フォーサイト・ドリィ) (OPN)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">rightstuff</driveralias>
+		<options>
+			<option name="dataaddr" value="0x25000"/>
+			<option name="filesize" value="16384"/>
+			<option name="datamax" value="74"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="dolly_98">
+			<rom type="code" offset="0x600">rever_98.bin</rom>
+			<rom type="code" offset="0x1C000">_01.bin</rom>
+			<rom type="code" offset="0x20000">_05.bin</rom>
+			<rom type="code" offset="0x21800">_03.bin</rom>
+			<rom type="code" offset="0x22800">_04.bin</rom>
+			<rom type="bgm" offset="09">_09.bin</rom>
+			<rom type="bgm" offset="10">_10.bin</rom>
+			<rom type="bgm" offset="19">_19.bin</rom>
+			<rom type="bgm" offset="20">_20.bin</rom>
+			<rom type="bgm" offset="21">_21.bin</rom>
+			<rom type="bgm" offset="22">_22.bin</rom>
+			<rom type="bgm" offset="23">_23.bin</rom>
+			<rom type="bgm" offset="24">_24.bin</rom>
+			<rom type="bgm" offset="25">_25.bin</rom>
+			<rom type="bgm" offset="26">_26.bin</rom>
+			<rom type="bgm" offset="27">_27.bin</rom>
+			<rom type="bgm" offset="28">_28.bin</rom>
+			<rom type="bgm" offset="29">_29.bin</rom>
+			<rom type="bgm" offset="30">_30.bin</rom>
+			<rom type="bgm" offset="31">_31.bin</rom>
+			<rom type="bgm" offset="39">_39.bin</rom>
+			<rom type="bgm" offset="40">_40.bin</rom>
+			<rom type="bgm" offset="41">_41.bin</rom>
+			<rom type="bgm" offset="42">_42.bin</rom>
+			<rom type="bgm" offset="43">_43.bin</rom>
+			<rom type="bgm" offset="44">_44.bin</rom>
+			<rom type="bgm" offset="45">_45.bin</rom>
+			<rom type="bgm" offset="46">_46.bin</rom>
+			<rom type="bgm" offset="47">_47.bin</rom>
+			<rom type="bgm" offset="48">_48.bin</rom>
+			<rom type="bgm" offset="49">_49.bin</rom>
+			<rom type="bgm" offset="50">_50.bin</rom>
+			<rom type="bgm" offset="51">_51.bin</rom>
+			<rom type="bgm" offset="52">_52.bin</rom>
+			<rom type="bgm" offset="53">_53.bin</rom>
+			<rom type="bgm" offset="54">_54.bin</rom>
+			<rom type="bgm" offset="55">_55.bin</rom>
+			<rom type="bgm" offset="56">_56.bin</rom>
+			<rom type="bgm" offset="59">_59.bin</rom>
+			<rom type="bgm" offset="60">_60.bin</rom>
+			<rom type="bgm" offset="61">_61.bin</rom>
+			<rom type="bgm" offset="62">_62.bin</rom>
+			<rom type="bgm" offset="63">_63.bin</rom>
+			<rom type="bgm" offset="64">_64.bin</rom>
+			<rom type="bgm" offset="69">_69.bin</rom>
+			<rom type="bgm" offset="70">_70.bin</rom>
+			<rom type="bgm" offset="71">_71.bin</rom>
+			<rom type="bgm" offset="72">_72.bin</rom>
+			<rom type="bgm" offset="73">_73.bin</rom>
+			<rom type="bgm" offset="74">_74.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="09">_09</title>
+			<title code="10">_10</title>
+			<title code="19">_19</title>
+			<title code="20">_20</title>
+			<title code="21">_21</title>
+			<title code="22">_22</title>
+			<title code="23">_23</title>
+			<title code="24">_24</title>
+			<title code="25">_25</title>
+			<title code="26">_26</title>
+			<title code="27">_27</title>
+			<title code="28">_28</title>
+			<title code="29">_29</title>
+			<title code="30">_30</title>
+			<title code="31">_31</title>
+			<title code="39">_39</title>
+			<title code="40">_40</title>
+			<title code="41">_41</title>
+			<title code="42">_42</title>
+			<title code="43">_43</title>
+			<title code="44">_44</title>
+			<title code="45">_45</title>
+			<title code="46">_46</title>
+			<title code="47">_47</title>
+			<title code="48">_48</title>
+			<title code="49">_49</title>
+			<title code="50">_50</title>
+			<title code="51">_51</title>
+			<title code="52">_52</title>
+			<title code="53">_53</title>
+			<title code="54">_54</title>
+			<title code="55">_55</title>
+			<title code="56">_56</title>
+			<title code="59">_59</title>
+			<title code="60">_60</title>
+			<title code="61">_61</title>
+			<title code="62">_62</title>
+			<title code="63">_63</title>
+			<title code="64">_64</title>
+			<title code="69">_69</title>
+			<title code="70">_70</title>
+			<title code="71">_71</title>
+			<title code="72">_72</title>
+			<title code="73">_73</title>
+			<title code="74">_74</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Foresight Dolly (フォーサイト・ドリィ) (SC-55)</name>
+		<driver type="beep">pc98vx</driver>
+		<driveralias type="PC-98">rightstuff</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="dataaddr" value="0x25000"/>
+			<option name="filesize" value="16384"/>
+			<option name="datamax" value="150"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="dolly_98">
+			<rom type="code" offset="0x600">rever_98.bin</rom>
+			<rom type="code" offset="0x1C000">_02.bin</rom>
+			<rom type="code" offset="0x20000">_05.bin</rom>
+			<rom type="bgm" offset="77">_77.bin</rom>
+			<rom type="bgm" offset="78">_78.bin</rom>
+			<rom type="bgm" offset="87">_87.bin</rom>
+			<rom type="bgm" offset="88">_88.bin</rom>
+			<rom type="bgm" offset="89">_89.bin</rom>
+			<rom type="bgm" offset="90">_90.bin</rom>
+			<rom type="bgm" offset="91">_91.bin</rom>
+			<rom type="bgm" offset="92">_92.bin</rom>
+			<rom type="bgm" offset="93">_93.bin</rom>
+			<rom type="bgm" offset="94">_94.bin</rom>
+			<rom type="bgm" offset="95">_95.bin</rom>
+			<rom type="bgm" offset="96">_96.bin</rom>
+			<rom type="bgm" offset="97">_97.bin</rom>
+			<rom type="bgm" offset="98">_98.bin</rom>
+			<rom type="bgm" offset="99">_99.bin</rom>
+			<rom type="bgm" offset="107">_107.bin</rom>
+			<rom type="bgm" offset="108">_108.bin</rom>
+			<rom type="bgm" offset="109">_109.bin</rom>
+			<rom type="bgm" offset="110">_110.bin</rom>
+			<rom type="bgm" offset="111">_111.bin</rom>
+			<rom type="bgm" offset="112">_112.bin</rom>
+			<rom type="bgm" offset="113">_113.bin</rom>
+			<rom type="bgm" offset="114">_114.bin</rom>
+			<rom type="bgm" offset="115">_115.bin</rom>
+			<rom type="bgm" offset="116">_116.bin</rom>
+			<rom type="bgm" offset="117">_117.bin</rom>
+			<rom type="bgm" offset="118">_118.bin</rom>
+			<rom type="bgm" offset="119">_119.bin</rom>
+			<rom type="bgm" offset="120">_120.bin</rom>
+			<rom type="bgm" offset="121">_121.bin</rom>
+			<rom type="bgm" offset="122">_122.bin</rom>
+			<rom type="bgm" offset="123">_123.bin</rom>
+			<rom type="bgm" offset="124">_124.bin</rom>
+			<rom type="bgm" offset="127">_127.bin</rom>
+			<rom type="bgm" offset="128">_128.bin</rom>
+			<rom type="bgm" offset="129">_129.bin</rom>
+			<rom type="bgm" offset="130">_130.bin</rom>
+			<rom type="bgm" offset="131">_131.bin</rom>
+			<rom type="bgm" offset="132">_132.bin</rom>
+			<rom type="bgm" offset="137">_137.bin</rom>
+			<rom type="bgm" offset="138">_138.bin</rom>
+			<rom type="bgm" offset="139">_139.bin</rom>
+			<rom type="bgm" offset="140">_140.bin</rom>
+			<rom type="bgm" offset="141">_141.bin</rom>
+			<rom type="bgm" offset="142">_142.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="77">_77</title>
+			<title code="78">_78</title>
+			<title code="87">_87</title>
+			<title code="88">_88</title>
+			<title code="89">_89</title>
+			<title code="90">_90</title>
+			<title code="91">_91</title>
+			<title code="92">_92</title>
+			<title code="93">_93</title>
+			<title code="94">_94</title>
+			<title code="95">_95</title>
+			<title code="96">_96</title>
+			<title code="97">_97</title>
+			<title code="98">_98</title>
+			<title code="99">_99</title>
+			<title code="107">_107</title>
+			<title code="108">_108</title>
+			<title code="109">_109</title>
+			<title code="110">_110</title>
+			<title code="111">_111</title>
+			<title code="112">_112</title>
+			<title code="113">_113</title>
+			<title code="114">_114</title>
+			<title code="115">_115</title>
+			<title code="116">_116</title>
+			<title code="117">_117</title>
+			<title code="118">_118</title>
+			<title code="119">_119</title>
+			<title code="120">_120</title>
+			<title code="121">_121</title>
+			<title code="122">_122</title>
+			<title code="123">_123</title>
+			<title code="124">_124</title>
+			<title code="127">_127</title>
+			<title code="128">_128</title>
+			<title code="129">_129</title>
+			<title code="130">_130</title>
+			<title code="131">_131</title>
+			<title code="132">_132</title>
+			<title code="137">_137</title>
+			<title code="138">_138</title>
+			<title code="139">_139</title>
+			<title code="140">_140</title>
+			<title code="141">_141</title>
+			<title code="142">_142</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Foresight Dolly (フォーサイト・ドリィ) (Vermouth)</name>
+		<driver type="beep">pc98vx</driver>
+		<driveralias type="PC-98">rightstuff</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="dataaddr" value="0x25000"/>
+			<option name="filesize" value="16384"/>
+			<option name="datamax" value="150"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="dolly_98">
+			<rom type="code" offset="0x600">rever_98.bin</rom>
+			<rom type="code" offset="0x1C000">_02.bin</rom>
+			<rom type="code" offset="0x20000">_05.bin</rom>
+			<rom type="bgm" offset="77">_77.bin</rom>
+			<rom type="bgm" offset="78">_78.bin</rom>
+			<rom type="bgm" offset="87">_87.bin</rom>
+			<rom type="bgm" offset="88">_88.bin</rom>
+			<rom type="bgm" offset="89">_89.bin</rom>
+			<rom type="bgm" offset="90">_90.bin</rom>
+			<rom type="bgm" offset="91">_91.bin</rom>
+			<rom type="bgm" offset="92">_92.bin</rom>
+			<rom type="bgm" offset="93">_93.bin</rom>
+			<rom type="bgm" offset="94">_94.bin</rom>
+			<rom type="bgm" offset="95">_95.bin</rom>
+			<rom type="bgm" offset="96">_96.bin</rom>
+			<rom type="bgm" offset="97">_97.bin</rom>
+			<rom type="bgm" offset="98">_98.bin</rom>
+			<rom type="bgm" offset="99">_99.bin</rom>
+			<rom type="bgm" offset="107">_107.bin</rom>
+			<rom type="bgm" offset="108">_108.bin</rom>
+			<rom type="bgm" offset="109">_109.bin</rom>
+			<rom type="bgm" offset="110">_110.bin</rom>
+			<rom type="bgm" offset="111">_111.bin</rom>
+			<rom type="bgm" offset="112">_112.bin</rom>
+			<rom type="bgm" offset="113">_113.bin</rom>
+			<rom type="bgm" offset="114">_114.bin</rom>
+			<rom type="bgm" offset="115">_115.bin</rom>
+			<rom type="bgm" offset="116">_116.bin</rom>
+			<rom type="bgm" offset="117">_117.bin</rom>
+			<rom type="bgm" offset="118">_118.bin</rom>
+			<rom type="bgm" offset="119">_119.bin</rom>
+			<rom type="bgm" offset="120">_120.bin</rom>
+			<rom type="bgm" offset="121">_121.bin</rom>
+			<rom type="bgm" offset="122">_122.bin</rom>
+			<rom type="bgm" offset="123">_123.bin</rom>
+			<rom type="bgm" offset="124">_124.bin</rom>
+			<rom type="bgm" offset="127">_127.bin</rom>
+			<rom type="bgm" offset="128">_128.bin</rom>
+			<rom type="bgm" offset="129">_129.bin</rom>
+			<rom type="bgm" offset="130">_130.bin</rom>
+			<rom type="bgm" offset="131">_131.bin</rom>
+			<rom type="bgm" offset="132">_132.bin</rom>
+			<rom type="bgm" offset="137">_137.bin</rom>
+			<rom type="bgm" offset="138">_138.bin</rom>
+			<rom type="bgm" offset="139">_139.bin</rom>
+			<rom type="bgm" offset="140">_140.bin</rom>
+			<rom type="bgm" offset="141">_141.bin</rom>
+			<rom type="bgm" offset="142">_142.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="77">_77</title>
+			<title code="78">_78</title>
+			<title code="87">_87</title>
+			<title code="88">_88</title>
+			<title code="89">_89</title>
+			<title code="90">_90</title>
+			<title code="91">_91</title>
+			<title code="92">_92</title>
+			<title code="93">_93</title>
+			<title code="94">_94</title>
+			<title code="95">_95</title>
+			<title code="96">_96</title>
+			<title code="97">_97</title>
+			<title code="98">_98</title>
+			<title code="99">_99</title>
+			<title code="107">_107</title>
+			<title code="108">_108</title>
+			<title code="109">_109</title>
+			<title code="110">_110</title>
+			<title code="111">_111</title>
+			<title code="112">_112</title>
+			<title code="113">_113</title>
+			<title code="114">_114</title>
+			<title code="115">_115</title>
+			<title code="116">_116</title>
+			<title code="117">_117</title>
+			<title code="118">_118</title>
+			<title code="119">_119</title>
+			<title code="120">_120</title>
+			<title code="121">_121</title>
+			<title code="122">_122</title>
+			<title code="123">_123</title>
+			<title code="124">_124</title>
+			<title code="127">_127</title>
+			<title code="128">_128</title>
+			<title code="129">_129</title>
+			<title code="130">_130</title>
+			<title code="131">_131</title>
+			<title code="132">_132</title>
+			<title code="137">_137</title>
+			<title code="138">_138</title>
+			<title code="139">_139</title>
+			<title code="140">_140</title>
+			<title code="141">_141</title>
+			<title code="142">_142</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //LUNAR SOFT -->
+	<game>
+		<name>[PC-9801] リザレクト</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">LUNAR SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="resulect_98">
+			<rom type="file" offset="-1">magic_98.com</rom>
+			<rom type="file" offset="-1">MUSIC_.EXE</rom>
+			<rom type="file" offset="0x06">_42.DAT</rom>
+			<rom type="file" offset="0x10">_00.DAT</rom>
+			<rom type="file" offset="0x11">_01.DAT</rom>
+			<rom type="file" offset="0x12">_02.DAT</rom>
+			<rom type="file" offset="0x13">_03.DAT</rom>
+			<rom type="file" offset="0x14">_04.DAT</rom>
+			<rom type="file" offset="0x15">_05.DAT</rom>
+			<rom type="file" offset="0x16">_06.DAT</rom>
+			<rom type="file" offset="0x17">_07.DAT</rom>
+			<rom type="file" offset="0x18">_08.DAT</rom>
+			<rom type="file" offset="0x19">_09.DAT</rom>
+			<rom type="file" offset="0x1a">_10.DAT</rom>
+			<rom type="file" offset="0x1b">_11.DAT</rom>
+			<rom type="file" offset="0x1c">_12.DAT</rom>
+			<rom type="file" offset="0x1d">_13.DAT</rom>
+			<rom type="file" offset="0x1e">_14.DAT</rom>
+			<rom type="file" offset="0x1f">_15.DAT</rom>
+			<rom type="file" offset="0x20">_16.DAT</rom>
+			<rom type="file" offset="0x21">_17.DAT</rom>
+			<rom type="file" offset="0x22">_18.DAT</rom>
+			<rom type="file" offset="0x23">_19.DAT</rom>
+			<rom type="file" offset="0x24">_20.DAT</rom>
+			<rom type="file" offset="0x25">_21.DAT</rom>
+			<rom type="file" offset="0x26">_22.DAT</rom>
+			<rom type="file" offset="0x27">_23.DAT</rom>
+			<rom type="file" offset="0x28">_24.DAT</rom>
+			<rom type="file" offset="0x29">_25.DAT</rom>
+			<rom type="file" offset="0x2a">_26.DAT</rom>
+			<rom type="file" offset="0x2b">_27.DAT</rom>
+			<rom type="file" offset="0x2c">_28.DAT</rom>
+			<rom type="file" offset="0x2d">_29.DAT</rom>
+			<rom type="file" offset="0x2e">_30.DAT</rom>
+			<rom type="file" offset="0x2f">_31.DAT</rom>
+			<rom type="file" offset="0x30">_32.DAT</rom>
+			<rom type="file" offset="0x31">_33.DAT</rom>
+			<rom type="file" offset="0x32">_34.DAT</rom>
+			<rom type="file" offset="0x33">_35.DAT</rom>
+			<rom type="file" offset="0x34">_36.DAT</rom>
+			<rom type="file" offset="0x35">_37.DAT</rom>
+			<rom type="file" offset="0x36">_38.DAT</rom>
+			<rom type="file" offset="0x37">_39.DAT</rom>
+			<rom type="file" offset="0x38">_40.DAT</rom>
+			<rom type="file" offset="0x39">_41.DAT</rom>
+			<rom type="file" offset="0x3a">_43.DAT</rom>
+			<rom type="file" offset="0x3b">_44.DAT</rom>
+			<rom type="shell" offset="0">MUSIC_</rom>
+			<rom type="shell" offset="0">magic_98</rom>
+		</romlist>
+		<titlelist>
+		<!-- 奇数番目が内蔵音源用,偶数番目がその他音源用 -->
+<!--
+			<title code="0x610">_00.DAT : まことステージ</title>
+		 	<title code="0x612">_02.DAT : 千亜紀ステージ</title>
+		 	<title code="0x614">_04.DAT : あいちゃんステージ</title>
+		 	<title code="0x616">_06.DAT : 覗き見ステージ</title>
+		 	<title code="0x618">_08.DAT : アイコンバトル</title>
+		 	<title code="0x61a">_10.DAT : 朋子ステージ</title>
+		 	<title code="0x61c">_12.DAT : アイコンバトルII</title>
+		 	<title code="0x61e">_14.DAT : オープニング</title>
+		 	<title code="0x620">_16.DAT : さくらステージ</title>
+		 	<title code="0x622">_18.DAT : エンディング</title>
+		 	<title code="0x624">_20.DAT : 詩織ステージ</title>
+		 	<title code="0x626">_22.DAT : 朋子ステージII</title>
+		 	<title code="0x628">_24.DAT : スタッフロール</title>
+		 	<title code="0x62a">_26.DAT : 綾子ステージ</title>
+		 	<title code="0x62c">_28.DAT : 廊下でやんす</title>
+		 	<title code="0x62e">_30.DAT : 未使用</title>
+		 	<title code="0x630">_32.DAT : 未使用</title>
+		 	<title code="0x632">_34.DAT : 未使用</title>
+		 	<title code="0x634">_36.DAT : 未使用</title>
+		 	<title code="0x636">_38.DAT : 未使用</title>
+		 	<title code="0x638">_40.DAT : 未使用</title>
+		 	<title code="0x63a">_43.DAT : [STOP]</title>
+			<title code="0x63b">_44.DAT : [STOP]</title>
+-->
+			<title code="0x611">_01.DAT : まことステージ</title>
+			<title code="0x613">_03.DAT : 千亜紀ステージ</title>
+			<title code="0x615">_05.DAT : あいちゃんステージ</title>
+			<title code="0x617">_07.DAT : 覗き見ステージ</title>
+			<title code="0x619">_09.DAT : アイコンバトル</title>
+			<title code="0x61b">_11.DAT : 朋子ステージ</title>
+			<title code="0x61d">_13.DAT : アイコンバトルII</title>
+			<title code="0x61f">_15.DAT : オープニング</title>
+			<title code="0x621">_17.DAT : さくらステージ</title>
+			<title code="0x623">_19.DAT : エンディング</title>
+			<title code="0x625">_21.DAT : 詩織ステージ</title>
+			<title code="0x627">_23.DAT : 朋子ステージII</title>
+			<title code="0x629">_25.DAT : スタッフロール</title>
+			<title code="0x62b">_27.DAT : 綾子ステージ</title>
+			<title code="0x62d">_29.DAT : 廊下でやんす</title>
+			<title code="0x62f">_31.DAT : 未使用</title>
+			<title code="0x631">_33.DAT : 未使用</title>
+			<title code="0x633">_35.DAT : 未使用</title>
+			<title code="0x635">_37.DAT : 未使用</title>
+			<title code="0x637">_39.DAT : 未使用</title>
+			<title code="0x639">_41.DAT : 未使用</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 聖エレミヤ学園</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">LUNAR SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="stelemy_98">
+			<rom type="file" offset="-1">magic_98.com</rom>
+			<rom type="file" offset="-1">MUSIC_.EXE</rom>
+			<rom type="file" offset="0x06">ADV.SND</rom>
+			<rom type="file" offset="0x10">MUS0.SD</rom>
+			<rom type="file" offset="0x11">MUS1.SD</rom>
+			<rom type="file" offset="0x12">MUS11.SD</rom>
+			<rom type="file" offset="0x13">MUS12.SD</rom>
+			<rom type="file" offset="0x14">MUS2.SD</rom>
+			<rom type="file" offset="0x15">MUS3.SD</rom>
+			<rom type="file" offset="0x16">MUS4.SD</rom>
+			<rom type="file" offset="0x17">MUS5.SD</rom>
+			<rom type="file" offset="0x18">MUS6.SD</rom>
+			<rom type="file" offset="0x19">MUS7.SD</rom>
+			<rom type="file" offset="0x1a">MUS8.SD</rom>
+			<rom type="file" offset="0x1b">MUS9.SD</rom>
+			<rom type="file" offset="0x1c">MUSA.SD</rom>
+			<rom type="shell" offset="0">MUSIC_</rom>
+			<rom type="shell" offset="0">magic_98</rom>
+		</romlist>
+		<titlelist>
+<!--
+			<title code="0x610">MUS0.SD  : STOP</title>
+-->
+			<title code="0x611">MUS1.SD  : </title>
+			<title code="0x614">MUS2.SD  : </title>
+			<title code="0x615">MUS3.SD  : </title>
+			<title code="0x616">MUS4.SD  : </title>
+			<title code="0x617">MUS5.SD  : </title>
+			<title code="0x618">MUS6.SD  : </title>
+			<title code="0x619">MUS7.SD  : </title>
+			<title code="0x61a">MUS8.SD  : </title>
+			<title code="0x61b">MUS9.SD  : </title>
+			<title code="0x61c">MUSA.SD  : </title>
+			<title code="0x612">MUS11.SD : </title>
+			<title code="0x613">MUS12.SD : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] マージナル・ポイント</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">LUNAR SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mrgnlpnt_98">
+			<rom type="file" offset="-1">magic_98.com</rom>
+			<rom type="file" offset="-1">MUSIC_.EXE</rom>
+			<rom type="file" offset="0x06">_00.DAT</rom>
+			<rom type="file" offset="0x10">_01.DAT</rom>
+			<rom type="file" offset="0x11">_02.DAT</rom>
+			<rom type="file" offset="0x12">_03.DAT</rom>
+			<rom type="file" offset="0x13">_04.DAT</rom>
+			<rom type="file" offset="0x14">_05.DAT</rom>
+			<rom type="file" offset="0x15">_06.DAT</rom>
+			<rom type="file" offset="0x16">_07.DAT</rom>
+			<rom type="file" offset="0x17">_08.DAT</rom>
+			<rom type="file" offset="0x18">_09.DAT</rom>
+			<rom type="file" offset="0x19">_10.DAT</rom>
+			<rom type="file" offset="0x1a">_11.DAT</rom>
+			<rom type="file" offset="0x1b">_12.DAT</rom>
+			<rom type="file" offset="0x1c">_13.DAT</rom>
+			<rom type="file" offset="0x1d">_14.DAT</rom>
+			<rom type="file" offset="0x1e">_15.DAT</rom>
+			<rom type="file" offset="0x1f">_16.DAT</rom>
+			<rom type="file" offset="0x20">_17.DAT</rom>
+			<rom type="file" offset="0x21">_18.DAT</rom>
+			<rom type="file" offset="0x22">_19.DAT</rom>
+			<rom type="file" offset="0x23">_20.DAT</rom>
+			<rom type="file" offset="0x24">_21.DAT</rom>
+			<rom type="file" offset="0x25">_22.DAT</rom>
+			<rom type="file" offset="0x26">_23.DAT</rom>
+			<rom type="file" offset="0x27">_24.DAT</rom>
+			<rom type="file" offset="0x28">_25.DAT</rom>
+			<rom type="file" offset="0x29">_26.DAT</rom>
+			<rom type="file" offset="0x2a">_27.DAT</rom>
+			<rom type="file" offset="0x2b">_28.DAT</rom>
+			<rom type="file" offset="0x2c">_29.DAT</rom>
+			<rom type="file" offset="0x2d">_30.DAT</rom>
+			<rom type="file" offset="0x2e">_31.DAT</rom>
+			<rom type="file" offset="0x2f">_32.DAT</rom>
+			<rom type="file" offset="0x30">_33.DAT</rom>
+			<rom type="file" offset="0x31">_34.DAT</rom>
+			<rom type="file" offset="0x32">_35.DAT</rom>
+			<rom type="file" offset="0x33">_36.DAT</rom>
+			<rom type="file" offset="0x34">_37.DAT</rom>
+			<rom type="file" offset="0x35">_38.DAT</rom>
+			<rom type="shell" offset="0">MUSIC_</rom>
+			<rom type="shell" offset="0">magic_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x610">_01.DAT : </title>
+			<title code="0x611">_02.DAT : </title>
+			<title code="0x612">_03.DAT : </title>
+			<title code="0x613">_04.DAT : </title>
+			<title code="0x614">_05.DAT : </title>
+			<title code="0x615">_06.DAT : </title>
+			<title code="0x616">_07.DAT : </title>
+			<title code="0x617">_08.DAT : </title>
+			<title code="0x618">_09.DAT : </title>
+			<title code="0x619">_10.DAT : </title>
+			<title code="0x61a">_11.DAT : </title>
+			<title code="0x61b">_12.DAT : </title>
+			<title code="0x61c">_13.DAT : </title>
+			<title code="0x61d">_14.DAT : </title>
+			<title code="0x61e">_15.DAT : </title>
+			<title code="0x61f">_16.DAT : </title>
+			<title code="0x620">_17.DAT : </title>
+			<title code="0x621">_18.DAT : </title>
+			<title code="0x622">_19.DAT : </title>
+			<title code="0x623">_20.DAT : </title>
+			<title code="0x624">_21.DAT : </title>
+			<title code="0x625">_22.DAT : </title>
+			<title code="0x626">_23.DAT : </title>
+			<title code="0x627">_24.DAT : </title>
+			<title code="0x628">_25.DAT : </title>
+			<title code="0x629">_26.DAT : </title>
+			<title code="0x62a">_27.DAT : </title>
+			<title code="0x62b">_28.DAT : </title>
+			<title code="0x62c">_29.DAT : </title>
+			<title code="0x62d">_30.DAT : </title>
+			<title code="0x62e">_31.DAT : </title>
+			<title code="0x62f">_32.DAT : </title>
+			<title code="0x630">_33.DAT : </title>
+			<title code="0x631">_34.DAT : </title>
+			<title code="0x632">_35.DAT : </title>
+			<title code="0x633">_36.DAT : </title>
+			<title code="0x634">_37.DAT : </title>
+			<title code="0x635">_38.DAT : </title>
+		</titlelist>
+	</game>
+</gamelist>

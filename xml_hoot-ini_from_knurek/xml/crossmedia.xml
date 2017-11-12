@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //crossmedia -->
+	<game>
+		<name>[PC-88] Dwelling -Maou no Kan- (デウリング ～魔王の館～)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">crossmedia</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x2000"/>
+			<option name="mdata_size" value="0x1a00"/>
+			<option name="use_rtc"    value="0x01"/>
+		</options>
+		<romlist archive="dwelling">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x3a00">MSCRUN</rom>
+			<rom type="bgm" offset="0x00">M-1A.C</rom>
+			<rom type="bgm" offset="0x01">M-2B.C</rom>
+			<rom type="bgm" offset="0x02">M-5.C</rom>
+			<rom type="bgm" offset="0x03">BGM-2.C</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">M-1A.C</title>
+			<title code="0x01">M-2B.C</title>
+			<title code="0x02">M-5.C</title>
+			<title code="0x03">BGM-2.C</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Star Symphony (スターシンフォニー)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">crossmedia</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x4c00"/>
+			<option name="vdata_addr" value="0x6200"/>
+			<option name="vdata_size" value="0x8200"/>
+			<option name="vfile_size" value="0x8200"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="ssymphony">
+			<rom type="code"  offset="0x0000">PATCH</rom>
+			<rom type="code"  offset="0x6200">STAR0.COM</rom>
+			<rom type="bgm"   offset="0x00">S1.M</rom>
+			<rom type="voice" offset="0x00">STAR1.COM</rom>
+			<rom type="bgm"   offset="0x01">S1.M</rom>
+			<rom type="voice" offset="0x01">STAR0.COM</rom>
+			<rom type="bgm"   offset="0x02">S2.M</rom>
+			<rom type="voice" offset="0x02">STAR0.COM</rom>
+			<rom type="bgm"   offset="0x03">S3.M</rom>
+			<rom type="voice" offset="0x03">STAR0.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000001">S1.M</title>
+			<title code="0x00000002">S2.M</title>
+			<title code="0x00000003">S3.M</title>
+			<title code="0x01000000">BGM #01</title>
+			<title code="0x02000000">BGM #02</title>
+			<title code="0x03000000">BGM #03</title>
+			<title code="0x04000000">BGM #04</title>
+		</titlelist>
+	</game>
+</gamelist>

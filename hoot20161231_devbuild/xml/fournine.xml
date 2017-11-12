@@ -1,0 +1,2267 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Four･Nine -->
+	<game>
+		<name>[PC-9801] GAOGAO! 1st ラジカルシークエンス(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="gao1_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">ICM.LSP</rom>
+			<rom type="file" offset="0x11">RSM01.LSP</rom>
+			<rom type="file" offset="0x12">RSM02.LSP</rom>
+			<rom type="file" offset="0x13">RSM04.LSP</rom>
+			<rom type="file" offset="0x14">RSM05.LSP</rom>
+			<rom type="file" offset="0x15">RSM06.LSP</rom>
+			<rom type="file" offset="0x16">RSM07.LSP</rom>
+			<rom type="file" offset="0x17">RSM08.LSP</rom>
+			<rom type="file" offset="0x18">RSM09.LSP</rom>
+			<rom type="file" offset="0x19">RSM10.LSP</rom>
+			<rom type="file" offset="0x1a">RSM11.LSP</rom>
+			<rom type="file" offset="0x1b">RSM14.LSP</rom>
+			<rom type="file" offset="0x1c">RSM15.LSP</rom>
+			<rom type="file" offset="0x1d">RSM18.LSP</rom>
+			<rom type="file" offset="0x1e">RSM19.LSP</rom>
+			<rom type="file" offset="0x1f">RSM20.LSP</rom>
+			<rom type="file" offset="0x20">RSM30.LSP</rom>
+			<rom type="shell" offset="0">PMD /DF20 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">RSM01.LSP : ラジカルシークエンス</title>
+			<title code="0x12">RSM02.LSP : 冬の日だまりの中で</title>
+			<title code="0x13">RSM04.LSP : お嬢様参上!</title>
+			<title code="0x14">RSM05.LSP : WALK&amp;WALK</title>
+			<title code="0x15">RSM06.LSP : 闇の予感</title>
+			<title code="0x16">RSM07.LSP : 戦闘のテーマ</title>
+			<title code="0x17">RSM08.LSP : 真冬の盆踊り</title>
+			<title code="0x18">RSM09.LSP : メロディライン</title>
+			<title code="0x19">RSM10.LSP : レクイエム</title>
+			<title code="0x1a">RSM11.LSP : トルコマーチ</title>
+			<title code="0x1b">RSM14.LSP : アルファ</title>
+			<title code="0x1c">RSM15.LSP : 世界はバラ色</title>
+			<title code="0x1d">RSM18.LSP : ホワイトクリスマスチェイス</title>
+			<title code="0x1e">RSM19.LSP : さよならは言わない</title>
+			<title code="0x1f">RSM20.LSP : SEE YOU AGAIN</title>
+			<title code="0x10">ICM.LSP   : アイキャッチ</title>
+			<title code="0x20">RSM30.LSP : わくわくフォア・ナイン</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAOGAO! 1st ラジカルシークエンス(SPB)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-13"/>
+		</options>
+		<romlist archive="gao1_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="-1">PMDPCM.EXE</rom>
+			<rom type="file" offset="-1">GAOGAO.PPC</rom>
+			<rom type="file" offset="0x10">ICMB2.LSP</rom>
+			<rom type="file" offset="0x11">RSM01B2.LSP</rom>
+			<rom type="file" offset="0x12">RSM02B2.LSP</rom>
+			<rom type="file" offset="0x13">RSM04B2.LSP</rom>
+			<rom type="file" offset="0x14">RSM05B2.LSP</rom>
+			<rom type="file" offset="0x15">RSM06B2.LSP</rom>
+			<rom type="file" offset="0x16">RSM07B2.LSP</rom>
+			<rom type="file" offset="0x17">RSM08B2.LSP</rom>
+			<rom type="file" offset="0x18">RSM09B2.LSP</rom>
+			<rom type="file" offset="0x19">RSM10B2.LSP</rom>
+			<rom type="file" offset="0x1a">RSM11B2.LSP</rom>
+			<rom type="file" offset="0x1b">RSM14B2.LSP</rom>
+			<rom type="file" offset="0x1c">RSM15B2.LSP</rom>
+			<rom type="file" offset="0x1d">RSM18B2.LSP</rom>
+			<rom type="file" offset="0x1e">RSM19B2.LSP</rom>
+			<rom type="file" offset="0x1f">RSM20B2.LSP</rom>
+			<rom type="file" offset="0x20">RSM30.LSP</rom>
+			<rom type="shell" offset="0">PMDB2 /DF16 /DS0 /DP144 /DR48 /K</rom>
+			<rom type="shell" offset="0">PMDPCM /l GAOGAO.PPC</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">RSM01B2.LSP : ラジカルシークエンス</title>
+			<title code="0x12">RSM02B2.LSP : 冬の日だまりの中で</title>
+			<title code="0x13">RSM04B2.LSP : お嬢様参上!</title>
+			<title code="0x14">RSM05B2.LSP : WALK&amp;WALK</title>
+			<title code="0x15">RSM06B2.LSP : 闇の予感</title>
+			<title code="0x16">RSM07B2.LSP : 戦闘のテーマ</title>
+			<title code="0x17">RSM08B2.LSP : 真冬の盆踊り</title>
+			<title code="0x18">RSM09B2.LSP : メロディライン</title>
+			<title code="0x19">RSM10B2.LSP : レクイエム</title>
+			<title code="0x1a">RSM11B2.LSP : トルコマーチ</title>
+			<title code="0x1b">RSM14B2.LSP : アルファ</title>
+			<title code="0x1c">RSM15B2.LSP : 世界はバラ色</title>
+			<title code="0x1d">RSM18B2.LSP : ホワイトクリスマスチェイス</title>
+			<title code="0x1e">RSM19B2.LSP : さよならは言わない</title>
+			<title code="0x1f">RSM20B2.LSP : SEE YOU AGAIN</title>
+			<title code="0x10">ICMB2.LSP   : アイキャッチ</title>
+			<title code="0x20">RSM30.LSP   : わくわくフォア・ナイン</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAOGAO! 2nd パンドラの森(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="gao2_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">PW01.LSP</rom>
+			<rom type="file" offset="0x11">PW02.LSP</rom>
+			<rom type="file" offset="0x12">PW03.LSP</rom>
+			<rom type="file" offset="0x13">PW04.LSP</rom>
+			<rom type="file" offset="0x14">PW05.LSP</rom>
+			<rom type="file" offset="0x15">PW06.LSP</rom>
+			<rom type="file" offset="0x16">PW07.LSP</rom>
+			<rom type="file" offset="0x17">PW08.LSP</rom>
+			<rom type="file" offset="0x18">PW09.LSP</rom>
+			<rom type="file" offset="0x19">PW10.LSP</rom>
+			<rom type="file" offset="0x1a">PW11.LSP</rom>
+			<rom type="file" offset="0x1b">PW13.LSP</rom>
+			<rom type="file" offset="0x1c">PW14.LSP</rom>
+			<rom type="file" offset="0x1d">PW16.LSP</rom>
+			<rom type="file" offset="0x1e">PW17.LSP</rom>
+			<rom type="file" offset="0x1f">PW90.LSP</rom>
+			<rom type="file" offset="0x20">PW91.LSP</rom>
+			<rom type="file" offset="0x21">PW99.LSP</rom>
+			<rom type="file" offset="0x22">RS08.LSP</rom>
+			<rom type="shell" offset="0">PMD /DF32 /DS32 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">PW02.LSP : パンドラの森</title>
+			<title code="0x12">PW03.LSP : ドーム・シティ</title>
+			<title code="0x13">PW04.LSP : ライラ</title>
+			<title code="0x14">PW05.LSP : ロイのテーマ</title>
+			<title code="0x15">PW06.LSP : 樹海</title>
+			<title code="0x16">PW07.LSP : ガール☆</title>
+			<title code="0x18">PW09.LSP : センチメンタル</title>
+			<title code="0x19">PW10.LSP : ハートビート(旧タイトル α)</title>
+			<title code="0x1a">PW11.LSP : ラボラトリー</title>
+			<title code="0x22">RS08.LSP : 真冬の盆踊り</title>
+			<title code="0x1b">PW13.LSP : エマージェンシー</title>
+			<title code="0x1c">PW14.LSP : 愛の儀式</title>
+			<title code="0x1d">PW16.LSP : フィナーレ</title>
+			<title code="0x1e">PW17.LSP : そして時は流れ僕達は生きていく</title>
+			<title code="0x10">PW01.LSP : </title>
+			<title code="0x17">PW08.LSP : </title>
+			<title code="0x1f">PW90.LSP : </title>
+			<title code="0x20">PW91.LSP : </title>
+			<title code="0x21">PW99.LSP : わくわくフォア・ナイン</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAOGAO! 2nd パンドラの森(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="gao2_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x10">PW01B2.LSP</rom>
+			<rom type="file" offset="0x11">PW02B2.LSP</rom>
+			<rom type="file" offset="0x12">PW03B2.LSP</rom>
+			<rom type="file" offset="0x13">PW04B2.LSP</rom>
+			<rom type="file" offset="0x14">PW05B2.LSP</rom>
+			<rom type="file" offset="0x15">PW06B2.LSP</rom>
+			<rom type="file" offset="0x16">PW07B2.LSP</rom>
+			<rom type="file" offset="0x17">PW08B2.LSP</rom>
+			<rom type="file" offset="0x18">PW09B2.LSP</rom>
+			<rom type="file" offset="0x19">PW10B2.LSP</rom>
+			<rom type="file" offset="0x1a">PW11B2.LSP</rom>
+			<rom type="file" offset="0x1b">PW13B2.LSP</rom>
+			<rom type="file" offset="0x1c">PW14B2.LSP</rom>
+			<rom type="file" offset="0x1d">PW16B2.LSP</rom>
+			<rom type="file" offset="0x1e">PW17B2.LSP</rom>
+			<rom type="file" offset="0x1f">PW90B2.LSP</rom>
+			<rom type="file" offset="0x20">PW91.LSP</rom>
+			<rom type="file" offset="0x21">PW99B2.LSP</rom>
+			<rom type="file" offset="0x22">RS08B2.LSP</rom>
+			<rom type="shell" offset="0">PMDB2 /DF36 /DS32 /DP144 /DR64 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">PW02B2.LSP : パンドラの森</title>
+			<title code="0x12">PW03B2.LSP : ドーム・シティ</title>
+			<title code="0x13">PW04B2.LSP : ライラ</title>
+			<title code="0x14">PW05B2.LSP : ロイのテーマ</title>
+			<title code="0x15">PW06B2.LSP : 樹海</title>
+			<title code="0x16">PW07B2.LSP : ガール☆</title>
+			<title code="0x18">PW09B2.LSP : センチメンタル</title>
+			<title code="0x19">PW10B2.LSP : ハートビート(旧タイトル α)</title>
+			<title code="0x1a">PW11B2.LSP : ラボラトリー</title>
+			<title code="0x22">RS08B2.LSP : 真冬の盆踊り</title>
+			<title code="0x1b">PW13B2.LSP : エマージェンシー</title>
+			<title code="0x1c">PW14B2.LSP : 愛の儀式</title>
+			<title code="0x1d">PW16B2.LSP : フィナーレ</title>
+			<title code="0x1e">PW17B2.LSP : そして時は流れ僕達は生きていく</title>
+			<title code="0x10">PW01B2.LSP : </title>
+			<title code="0x17">PW08B2.LSP : </title>
+			<title code="0x1f">PW90B2.LSP : </title>
+			<title code="0x20">PW91.LSP   : </title>
+			<title code="0x21">PW99B2.LSP : わくわくフォア・ナイン</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAOGAO! 3rd ワイルドフォース(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="gao3_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">WFM02.LSP</rom>
+			<rom type="file" offset="0x11">WFM03.LSP</rom>
+			<rom type="file" offset="0x12">WFM04.LSP</rom>
+			<rom type="file" offset="0x13">WFM05.LSP</rom>
+			<rom type="file" offset="0x14">WFM06.LSP</rom>
+			<rom type="file" offset="0x15">WFM07.LSP</rom>
+			<rom type="file" offset="0x16">WFM08.LSP</rom>
+			<rom type="file" offset="0x17">WFM09.LSP</rom>
+			<rom type="file" offset="0x18">WFM10.LSP</rom>
+			<rom type="file" offset="0x19">WFM11.LSP</rom>
+			<rom type="file" offset="0x1a">WFM12.LSP</rom>
+			<rom type="file" offset="0x1b">WFM13.LSP</rom>
+			<rom type="file" offset="0x1c">WFM14.LSP</rom>
+			<rom type="file" offset="0x1d">WFM15.LSP</rom>
+			<rom type="file" offset="0x1e">WFM16.LSP</rom>
+			<rom type="file" offset="0x1f">WFM17.LSP</rom>
+			<rom type="file" offset="0x20">WFM18.LSP</rom>
+			<rom type="file" offset="0x21">WFM19.LSP</rom>
+			<rom type="file" offset="0x22">WFM20.LSP</rom>
+			<rom type="file" offset="0x23">WFM21.LSP</rom>
+			<rom type="file" offset="0x24">WFM22.LSP</rom>
+			<rom type="file" offset="0x25">WFM23.LSP</rom>
+			<rom type="shell" offset="0">PMD /DF20 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x25">WFM23.LSP : アイキャッチ</title>
+			<title code="0x10">WFM02.LSP : CAN☆CAN☆CAN☆</title>
+			<title code="0x11">WFM03.LSP : ミラクル☆ガール</title>
+			<title code="0x12">WFM04.LSP : ペシミスト達の憂鬱</title>
+			<title code="0x13">WFM05.LSP : ミステリアス</title>
+			<title code="0x14">WFM06.LSP : ニューアリストにようこそ</title>
+			<title code="0x15">WFM07.LSP : 難産の緊迫</title>
+			<title code="0x16">WFM08.LSP : アンダーグラウンド</title>
+			<title code="0x17">WFM09.LSP : ワイルドフォース</title>
+			<title code="0x18">WFM10.LSP : FIGHT!</title>
+			<title code="0x19">WFM11.LSP : DARK EATER</title>
+			<title code="0x1a">WFM12.LSP : ブルーのテーマ</title>
+			<title code="0x1b">WFM13.LSP : LOVE DREAMING</title>
+			<title code="0x1c">WFM14.LSP : サイレンスがいっぱい</title>
+			<title code="0x1d">WFM15.LSP : ETERNAL BLUE</title>
+			<title code="0x1e">WFM16.LSP : デュエット</title>
+			<title code="0x1f">WFM17.LSP : パーティに行こう</title>
+			<title code="0x20">WFM18.LSP : エンディングテーマ「NEXT」</title>
+			<title code="0x21">WFM19.LSP : レクイエムより～怒りの日</title>
+			<title code="0x22">WFM20.LSP : 真冬の盆踊り</title>
+			<title code="0x23">WFM21.LSP : ハートビート</title>
+			<title code="0x24">WFM22.LSP : わくわくフォア・ナイン</title>
+			<range min="0x0801" max="0x0804" extcode="0">SE.EFC    : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAOGAO! 3rd ワイルドフォース(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="gao3_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">WFMB02.LSP</rom>
+			<rom type="file" offset="0x11">WFMB03.LSP</rom>
+			<rom type="file" offset="0x12">WFMB04.LSP</rom>
+			<rom type="file" offset="0x13">WFMB05.LSP</rom>
+			<rom type="file" offset="0x14">WFMB06.LSP</rom>
+			<rom type="file" offset="0x15">WFMB07.LSP</rom>
+			<rom type="file" offset="0x16">WFMB08.LSP</rom>
+			<rom type="file" offset="0x17">WFMB09.LSP</rom>
+			<rom type="file" offset="0x18">WFMB10.LSP</rom>
+			<rom type="file" offset="0x19">WFMB11.LSP</rom>
+			<rom type="file" offset="0x1a">WFMB12.LSP</rom>
+			<rom type="file" offset="0x1b">WFMB13.LSP</rom>
+			<rom type="file" offset="0x1c">WFMB14.LSP</rom>
+			<rom type="file" offset="0x1d">WFMB15.LSP</rom>
+			<rom type="file" offset="0x1e">WFMB16.LSP</rom>
+			<rom type="file" offset="0x1f">WFMB17.LSP</rom>
+			<rom type="file" offset="0x20">WFMB18.LSP</rom>
+			<rom type="file" offset="0x21">WFMB19.LSP</rom>
+			<rom type="file" offset="0x22">WFMB20.LSP</rom>
+			<rom type="file" offset="0x23">WFMB21.LSP</rom>
+			<rom type="file" offset="0x24">WFMB22.LSP</rom>
+			<rom type="file" offset="0x25">WFMB23.LSP</rom>
+			<rom type="shell" offset="0">PMDB2 /DF10 /DS0 /DR16 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x25">WFMB23.LSP : アイキャッチ</title>
+			<title code="0x10">WFMB02.LSP : CAN☆CAN☆CAN☆</title>
+			<title code="0x11">WFMB03.LSP : ミラクル☆ガール</title>
+			<title code="0x12">WFMB04.LSP : ペシミスト達の憂鬱</title>
+			<title code="0x13">WFMB05.LSP : ミステリアス</title>
+			<title code="0x14">WFMB06.LSP : ニューアリストにようこそ</title>
+			<title code="0x15">WFMB07.LSP : 難産の緊迫</title>
+			<title code="0x16">WFMB08.LSP : アンダーグラウンド</title>
+			<title code="0x17">WFMB09.LSP : ワイルドフォース</title>
+			<title code="0x18">WFMB10.LSP : FIGHT!</title>
+			<title code="0x19">WFMB11.LSP : DARK EATER</title>
+			<title code="0x1a">WFMB12.LSP : ブルーのテーマ</title>
+			<title code="0x1b">WFMB13.LSP : LOVE DREAMING</title>
+			<title code="0x1c">WFMB14.LSP : サイレンスがいっぱい</title>
+			<title code="0x1d">WFMB15.LSP : ETERNAL BLUE</title>
+			<title code="0x1e">WFMB16.LSP : デュエット</title>
+			<title code="0x1f">WFMB17.LSP : パーティに行こう</title>
+			<title code="0x20">WFMB18.LSP : エンディングテーマ「NEXT」</title>
+			<title code="0x21">WFMB19.LSP : レクイエムより～怒りの日</title>
+			<title code="0x22">WFMB20.LSP : 真冬の盆踊り</title>
+			<title code="0x23">WFMB21.LSP : ハートビート</title>
+			<title code="0x24">WFMB22.LSP : わくわくフォア・ナイン</title>
+			<range min="0x0801" max="0x0804" extcode="0">SE.EFC     : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAOGAO! 3rd ワイルドフォース(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="gao3_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">WFMG02.LSP</rom>
+			<rom type="file" offset="0x11">WFMG03.LSP</rom>
+			<rom type="file" offset="0x12">WFMG04.LSP</rom>
+			<rom type="file" offset="0x13">WFMG05.LSP</rom>
+			<rom type="file" offset="0x14">WFMG06.LSP</rom>
+			<rom type="file" offset="0x15">WFMG07.LSP</rom>
+			<rom type="file" offset="0x16">WFMG08.LSP</rom>
+			<rom type="file" offset="0x17">WFMG09.LSP</rom>
+			<rom type="file" offset="0x18">WFMG10.LSP</rom>
+			<rom type="file" offset="0x19">WFMG11.LSP</rom>
+			<rom type="file" offset="0x1a">WFMG12.LSP</rom>
+			<rom type="file" offset="0x1b">WFMG13.LSP</rom>
+			<rom type="file" offset="0x1c">WFMG14.LSP</rom>
+			<rom type="file" offset="0x1d">WFMG15.LSP</rom>
+			<rom type="file" offset="0x1e">WFMG16.LSP</rom>
+			<rom type="file" offset="0x1f">WFMG17.LSP</rom>
+			<rom type="file" offset="0x20">WFMG18.LSP</rom>
+			<rom type="file" offset="0x21">WFMG19.LSP</rom>
+			<rom type="file" offset="0x22">WFMG20.LSP</rom>
+			<rom type="file" offset="0x23">WFMG21.LSP</rom>
+			<rom type="file" offset="0x24">WFMG22.LSP</rom>
+			<rom type="file" offset="0x25">WFMG23.LSP</rom>
+			<rom type="shell" offset="0">MMD /M47 /K</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x25">WFMG23.LSP : アイキャッチ</title>
+			<title code="0x10">WFMG02.LSP : CAN☆CAN☆CAN☆</title>
+			<title code="0x11">WFMG03.LSP : ミラクル☆ガール</title>
+			<title code="0x12">WFMG04.LSP : ペシミスト達の憂鬱</title>
+			<title code="0x13">WFMG05.LSP : ミステリアス</title>
+			<title code="0x14">WFMG06.LSP : ニューアリストにようこそ</title>
+			<title code="0x15">WFMG07.LSP : 難産の緊迫</title>
+			<title code="0x16">WFMG08.LSP : アンダーグラウンド</title>
+			<title code="0x17">WFMG09.LSP : ワイルドフォース</title>
+			<title code="0x18">WFMG10.LSP : FIGHT!</title>
+			<title code="0x19">WFMG11.LSP : DARK EATER</title>
+			<title code="0x1a">WFMG12.LSP : ブルーのテーマ</title>
+			<title code="0x1b">WFMG13.LSP : LOVE DREAMING</title>
+			<title code="0x1c">WFMG14.LSP : サイレンスがいっぱい</title>
+			<title code="0x1d">WFMG15.LSP : ETERNAL BLUE</title>
+			<title code="0x1e">WFMG16.LSP : デュエット</title>
+			<title code="0x1f">WFMG17.LSP : パーティに行こう</title>
+			<title code="0x20">WFMG18.LSP : エンディングテーマ「NEXT」</title>
+			<title code="0x21">WFMG19.LSP : レクイエムより～怒りの日</title>
+			<title code="0x22">WFMG20.LSP : 真冬の盆踊り</title>
+			<title code="0x23">WFMG21.LSP : ハートビート</title>
+			<title code="0x24">WFMG22.LSP : わくわくフォア・ナイン</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAOGAO! 4th カナン ～約束の地～(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="gao4_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">G400_26.M</rom>
+			<rom type="file" offset="0x11">G401_26.M</rom>
+			<rom type="file" offset="0x12">G402_26.M</rom>
+			<rom type="file" offset="0x13">G403_26.M</rom>
+			<rom type="file" offset="0x14">G404_26.M</rom>
+			<rom type="file" offset="0x15">G405_26.M</rom>
+			<rom type="file" offset="0x16">G406_26.M</rom>
+			<rom type="file" offset="0x17">G407_26.M</rom>
+			<rom type="file" offset="0x18">G408_26.M</rom>
+			<rom type="file" offset="0x19">G409_26.M</rom>
+			<rom type="file" offset="0x1a">G410_26.M</rom>
+			<rom type="file" offset="0x1b">G411_26.M</rom>
+			<rom type="file" offset="0x1c">G412_26.M</rom>
+			<rom type="file" offset="0x1d">G413_26.M</rom>
+			<rom type="file" offset="0x1e">G414_26.M</rom>
+			<rom type="file" offset="0x1f">G415_26.M</rom>
+			<rom type="file" offset="0x20">G416_26.M</rom>
+			<rom type="file" offset="0x21">G417_26.M</rom>
+			<rom type="file" offset="0x22">G418_26.M</rom>
+			<rom type="file" offset="0x23">G419_26.M</rom>
+			<rom type="file" offset="0x24">G420_26.M</rom>
+			<rom type="file" offset="0x25">G421_26.M</rom>
+			<rom type="file" offset="0x26">G422_26.M</rom>
+			<rom type="file" offset="0x27">G423_26.M</rom>
+			<rom type="file" offset="0x28">G424_26.M</rom>
+			<rom type="shell" offset="0">PMD # /DF20 /K /M20</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G400_26.M : Prologue</title>
+			<title code="0x11">G401_26.M : オープニング</title>
+			<title code="0x12">G402_26.M : Like a Light Wind</title>
+			<title code="0x13">G403_26.M : お気軽に行こう。</title>
+			<title code="0x14">G404_26.M : Cheerful people</title>
+			<title code="0x15">G405_26.M : あっち向いて、ほい!</title>
+			<title code="0x16">G406_26.M : memories</title>
+			<title code="0x17">G407_26.M : Hollowness</title>
+			<title code="0x18">G408_26.M : 8番</title>
+			<title code="0x19">G409_26.M : Shadow chaser</title>
+			<title code="0x1a">G410_26.M : 追憶</title>
+			<title code="0x1b">G411_26.M : 届かぬ願い</title>
+			<title code="0x1c">G412_26.M : 絆</title>
+			<title code="0x1d">G413_26.M : Cry out!</title>
+			<title code="0x1e">G414_26.M : Don't leave me</title>
+			<title code="0x1f">G415_26.M : 守護せし者</title>
+			<title code="0x20">G416_26.M : Seeker</title>
+			<title code="0x21">G417_26.M : Cool sky blue</title>
+			<title code="0x22">G418_26.M : Ruins</title>
+			<title code="0x23">G419_26.M : Call</title>
+			<title code="0x24">G420_26.M : True</title>
+			<title code="0x25">G421_26.M : Burst of flame</title>
+			<title code="0x26">G422_26.M : いつか、きっと。</title>
+			<title code="0x27">G423_26.M : 約束</title>
+			<title code="0x28">G424_26.M : </title>
+			<range min="0x801" max="0x804" extcode="0">SE.EFC    : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAOGAO! 4th カナン ～約束の地～(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="gao4_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">G400_86.M</rom>
+			<rom type="file" offset="0x11">G401_86.M</rom>
+			<rom type="file" offset="0x12">G402_86.M</rom>
+			<rom type="file" offset="0x13">G403_86.M</rom>
+			<rom type="file" offset="0x14">G404_86.M</rom>
+			<rom type="file" offset="0x15">G405_86.M</rom>
+			<rom type="file" offset="0x16">G406_86.M</rom>
+			<rom type="file" offset="0x17">G407_86.M</rom>
+			<rom type="file" offset="0x18">G408_86.M</rom>
+			<rom type="file" offset="0x19">G409_86.M</rom>
+			<rom type="file" offset="0x1a">G410_86.M</rom>
+			<rom type="file" offset="0x1b">G411_86.M</rom>
+			<rom type="file" offset="0x1c">G412_86.M</rom>
+			<rom type="file" offset="0x1d">G413_86.M</rom>
+			<rom type="file" offset="0x1e">G414_86.M</rom>
+			<rom type="file" offset="0x1f">G415_86.M</rom>
+			<rom type="file" offset="0x20">G416_86.M</rom>
+			<rom type="file" offset="0x21">G417_86.M</rom>
+			<rom type="file" offset="0x22">G418_86.M</rom>
+			<rom type="file" offset="0x23">G419_86.M</rom>
+			<rom type="file" offset="0x24">G420_86.M</rom>
+			<rom type="file" offset="0x25">G421_86.M</rom>
+			<rom type="file" offset="0x26">G422_86.M</rom>
+			<rom type="file" offset="0x27">G423_86.M</rom>
+			<rom type="file" offset="0x28">G424_86.M</rom>
+			<rom type="shell" offset="0">PMDB2 # /DF10 /DS0 /DR16 /K /M20</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G400_86.M : Prologue</title>
+			<title code="0x11">G401_86.M : オープニング</title>
+			<title code="0x12">G402_86.M : Like a Light Wind</title>
+			<title code="0x13">G403_86.M : お気軽に行こう。</title>
+			<title code="0x14">G404_86.M : Cheerful people</title>
+			<title code="0x15">G405_86.M : あっち向いて、ほい!</title>
+			<title code="0x16">G406_86.M : memories</title>
+			<title code="0x17">G407_86.M : Hollowness</title>
+			<title code="0x18">G408_86.M : 8番</title>
+			<title code="0x19">G409_86.M : Shadow chaser</title>
+			<title code="0x1a">G410_86.M : 追憶</title>
+			<title code="0x1b">G411_86.M : 届かぬ願い</title>
+			<title code="0x1c">G412_86.M : 絆</title>
+			<title code="0x1d">G413_86.M : Cry out!</title>
+			<title code="0x1e">G414_86.M : Don't leave me</title>
+			<title code="0x1f">G415_86.M : 守護せし者</title>
+			<title code="0x20">G416_86.M : Seeker</title>
+			<title code="0x21">G417_86.M : Cool sky blue</title>
+			<title code="0x22">G418_86.M : Ruins</title>
+			<title code="0x23">G419_86.M : Call</title>
+			<title code="0x24">G420_86.M : True</title>
+			<title code="0x25">G421_86.M : Burst of flame</title>
+			<title code="0x26">G422_86.M : いつか、きっと。</title>
+			<title code="0x27">G423_86.M : 約束</title>
+			<title code="0x28">G424_86.M : </title>
+			<range min="0x801" max="0x804" extcode="0">SE.EFC    : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAOGAO! 4th カナン ～約束の地～(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="gao4_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">G400_GS.M</rom>
+			<rom type="file" offset="0x11">G401_GS.M</rom>
+			<rom type="file" offset="0x12">G402_GS.M</rom>
+			<rom type="file" offset="0x13">G403_GS.M</rom>
+			<rom type="file" offset="0x14">G404_GS.M</rom>
+			<rom type="file" offset="0x15">G405_GS.M</rom>
+			<rom type="file" offset="0x16">G406_GS.M</rom>
+			<rom type="file" offset="0x17">G407_GS.M</rom>
+			<rom type="file" offset="0x18">G408_GS.M</rom>
+			<rom type="file" offset="0x19">G409_GS.M</rom>
+			<rom type="file" offset="0x1a">G410_GS.M</rom>
+			<rom type="file" offset="0x1b">G411_GS.M</rom>
+			<rom type="file" offset="0x1c">G412_GS.M</rom>
+			<rom type="file" offset="0x1d">G413_GS.M</rom>
+			<rom type="file" offset="0x1e">G414_GS.M</rom>
+			<rom type="file" offset="0x1f">G415_GS.M</rom>
+			<rom type="file" offset="0x20">G416_GS.M</rom>
+			<rom type="file" offset="0x21">G417_GS.M</rom>
+			<rom type="file" offset="0x22">G418_GS.M</rom>
+			<rom type="file" offset="0x23">G419_GS.M</rom>
+			<rom type="file" offset="0x24">G420_GS.M</rom>
+			<rom type="file" offset="0x25">G421_GS.M</rom>
+			<rom type="file" offset="0x26">G422_GS.M</rom>
+			<rom type="file" offset="0x27">G423_GS.M</rom>
+			<rom type="file" offset="0x28">G424_GS.M</rom>
+			<rom type="shell" offset="0">MMD /M24 /K /D-</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G400_GS.M : Prologue</title>
+			<title code="0x11">G401_GS.M : オープニング</title>
+			<title code="0x12">G402_GS.M : Like a Light Wind</title>
+			<title code="0x13">G403_GS.M : お気軽に行こう。</title>
+			<title code="0x14">G404_GS.M : Cheerful people</title>
+			<title code="0x15">G405_GS.M : あっち向いて、ほい!</title>
+			<title code="0x16">G406_GS.M : memories</title>
+			<title code="0x17">G407_GS.M : Hollowness</title>
+			<title code="0x18">G408_GS.M : 8番</title>
+			<title code="0x19">G409_GS.M : Shadow chaser</title>
+			<title code="0x1a">G410_GS.M : 追憶</title>
+			<title code="0x1b">G411_GS.M : 届かぬ願い</title>
+			<title code="0x1c">G412_GS.M : 絆</title>
+			<title code="0x1d">G413_GS.M : Cry out!</title>
+			<title code="0x1e">G414_GS.M : Don't leave me</title>
+			<title code="0x1f">G415_GS.M : 守護せし者</title>
+			<title code="0x20">G416_GS.M : Seeker</title>
+			<title code="0x21">G417_GS.M : Cool sky blue</title>
+			<title code="0x22">G418_GS.M : Ruins</title>
+			<title code="0x23">G419_GS.M : Call</title>
+			<title code="0x24">G420_GS.M : True</title>
+			<title code="0x25">G421_GS.M : Burst of flame</title>
+			<title code="0x26">G422_GS.M : いつか、きっと。</title>
+			<title code="0x27">G423_GS.M : 約束</title>
+			<title code="0x28">G424_GS.M : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAOGAO! オプショナルディスク</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="gao_opt_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">PW05.M</rom>
+			<rom type="file" offset="0x11">PW07.M</rom>
+			<rom type="file" offset="0x12">PW08.M</rom>
+			<rom type="file" offset="0x13">PW09.M</rom>
+			<rom type="file" offset="0x14">PW14.M</rom>
+			<rom type="file" offset="0x15">PW16.M</rom>
+			<rom type="file" offset="0x16">RSM01.M</rom>
+			<rom type="file" offset="0x17">RSM02.M</rom>
+			<rom type="file" offset="0x18">RSM04.M</rom>
+			<rom type="file" offset="0x19">RSM05.M</rom>
+			<rom type="file" offset="0x1a">RSM06.M</rom>
+			<rom type="file" offset="0x1b">RSM11.M</rom>
+			<rom type="file" offset="0x1c">RSM19.M</rom>
+			<rom type="file" offset="0x1d">WFM02.M</rom>
+			<rom type="file" offset="0x1e">WFM03.M</rom>
+			<rom type="file" offset="0x1f">WFM04.M</rom>
+			<rom type="file" offset="0x20">WFM05.M</rom>
+			<rom type="file" offset="0x21">WFM06.M</rom>
+			<rom type="file" offset="0x22">WFM07.M</rom>
+			<rom type="file" offset="0x23">WFM12.M</rom>
+			<rom type="file" offset="0x24">WFM17.M</rom>
+			<rom type="file" offset="0x25">WFM20.M</rom>
+			<rom type="file" offset="0x26">WFM22.M</rom>
+			<rom type="shell" offset="0">PMD # /M8 /V2 /E2 /DF20 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PW05.M  : ロイのテーマ</title>
+			<title code="0x11">PW07.M  : ガール☆</title>
+			<title code="0x12">PW08.M  : </title>
+			<title code="0x13">PW09.M  : センチメンタル</title>
+			<title code="0x14">PW14.M  : 愛の儀式</title>
+			<title code="0x15">PW16.M  : フィナーレ</title>
+			<title code="0x16">RSM01.M : ラジカルシークエンス</title>
+			<title code="0x17">RSM02.M : 冬の日だまりの中で</title>
+			<title code="0x18">RSM04.M : お嬢様参上!</title>
+			<title code="0x19">RSM05.M : WALK&amp;WALK</title>
+			<title code="0x1a">RSM06.M : 闇の予感</title>
+			<title code="0x1b">RSM11.M : トルコマーチ</title>
+			<title code="0x1c">RSM19.M : さよならは言わない</title>
+			<title code="0x1d">WFM02.M : CAN☆CAN☆CAN☆</title>
+			<title code="0x1e">WFM03.M : ミラクル☆ガール</title>
+			<title code="0x1f">WFM04.M : ペシミスト達の憂鬱</title>
+			<title code="0x20">WFM05.M : ミステリアス</title>
+			<title code="0x21">WFM06.M : ニューアリストにようこそ</title>
+			<title code="0x22">WFM07.M : 難産の緊迫</title>
+			<title code="0x23">WFM12.M : ブルーのテーマ</title>
+			<title code="0x24">WFM17.M : パーティに行こう</title>
+			<title code="0x25">WFM20.M : 真冬の盆踊り</title>
+			<title code="0x26">WFM22.M : わくわくフォア・ナイン</title>
+			<range min="0x801" max="0x804" extcode="0">SE.EFC  : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] えんじぇる☆ないと ～闇夜を翔ける天使たちの物語～(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="angel_n_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">MSE.EFC</rom>
+			<rom type="file" offset="0x10">ASE01.M</rom>
+			<rom type="file" offset="0x11">ASE02.M</rom>
+			<rom type="file" offset="0x12">ASE03.M</rom>
+			<rom type="file" offset="0x13">ASE04.M</rom>
+			<rom type="file" offset="0x14">MK004.M</rom>
+			<rom type="file" offset="0x15">MK005.M</rom>
+			<rom type="file" offset="0x16">MK006.M</rom>
+			<rom type="file" offset="0x17">MK007.M</rom>
+			<rom type="file" offset="0x18">MK008.M</rom>
+			<rom type="file" offset="0x19">MK009.M</rom>
+			<rom type="file" offset="0x1a">MK010.M</rom>
+			<rom type="file" offset="0x1b">MK011.M</rom>
+			<rom type="file" offset="0x1c">MK012.M</rom>
+			<rom type="file" offset="0x1d">MK013.M</rom>
+			<rom type="file" offset="0x1e">MK015.M</rom>
+			<rom type="file" offset="0x1f">MK016.M</rom>
+			<rom type="file" offset="0x20">MK017.M</rom>
+			<rom type="file" offset="0x21">MK018.M</rom>
+			<rom type="file" offset="0x22">MK019.M</rom>
+			<rom type="file" offset="0x23">MK020.M</rom>
+			<rom type="file" offset="0x24">MK021.M</rom>
+			<rom type="file" offset="0x25">WAKU.M</rom>
+			<rom type="shell" offset="0">PMD # /M8 /V0 /E2 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x25">WAKU.M  : わくわくフォア・ナイン</title>
+			<title code="0x14">MK004.M : 楽しいお茶会</title>
+			<title code="0x15">MK005.M : ときめく心</title>
+			<title code="0x16">MK006.M : 逃走のテーマ</title>
+			<title code="0x17">MK007.M : 晴れた日には森へ行こう</title>
+			<title code="0x18">MK008.M : 涙こぼれて</title>
+			<title code="0x19">MK009.M : 戦いの刻</title>
+			<title code="0x1a">MK010.M : 2人の渚</title>
+			<title code="0x1b">MK011.M : 時のない世界</title>
+			<title code="0x1c">MK012.M : 夜の帳の中で…</title>
+			<title code="0x1d">MK013.M : いつかあの人と</title>
+			<title code="0x1e">MK015.M : 麗しの王宮</title>
+			<title code="0x1f">MK016.M : 孤独な魂</title>
+			<title code="0x20">MK017.M : ぱ～てぃ気分</title>
+			<title code="0x21">MK018.M : 突撃ぃ～!</title>
+			<title code="0x22">MK019.M : あなたと踊りたい</title>
+			<title code="0x23">MK020.M : ベッドでデート</title>
+			<title code="0x24">MK021.M : 天使の舞う夜</title>
+			<title code="0x10">ASE01.M : </title>
+			<title code="0x11">ASE02.M : </title>
+			<title code="0x12">ASE03.M : </title>
+			<title code="0x13">ASE04.M : </title>
+			<range min="0x801" max="0x82A" extcode="0">MSE.EFC : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] えんじぇる☆ないと ～闇夜を翔ける天使たちの物語～(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="angel_n_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x08">MSE.EFC</rom>
+			<rom type="file" offset="0x10">ASE01.M2</rom>
+			<rom type="file" offset="0x11">ASE02.M2</rom>
+			<rom type="file" offset="0x12">ASE03.M2</rom>
+			<rom type="file" offset="0x13">ASE04.M2</rom>
+			<rom type="file" offset="0x14">MK004.M2</rom>
+			<rom type="file" offset="0x15">MK005.M2</rom>
+			<rom type="file" offset="0x16">MK006.M2</rom>
+			<rom type="file" offset="0x17">MK007.M2</rom>
+			<rom type="file" offset="0x18">MK008.M2</rom>
+			<rom type="file" offset="0x19">MK009.M2</rom>
+			<rom type="file" offset="0x1a">MK010.M2</rom>
+			<rom type="file" offset="0x1b">MK011.M2</rom>
+			<rom type="file" offset="0x1c">MK012.M2</rom>
+			<rom type="file" offset="0x1d">MK013.M2</rom>
+			<rom type="file" offset="0x1e">MK015.M2</rom>
+			<rom type="file" offset="0x1f">MK016.M2</rom>
+			<rom type="file" offset="0x20">MK017.M2</rom>
+			<rom type="file" offset="0x21">MK018.M2</rom>
+			<rom type="file" offset="0x22">MK019.M2</rom>
+			<rom type="file" offset="0x23">MK020.M2</rom>
+			<rom type="file" offset="0x24">MK021.M2</rom>
+			<rom type="file" offset="0x25">WAKU.M2</rom>
+			<rom type="shell" offset="0">PMDB2 # /M8 /V0 /E2 /DF16 /DR48 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x25">WAKU.M2  : わくわくフォア・ナイン</title>
+			<title code="0x14">MK004.M2 : 楽しいお茶会</title>
+			<title code="0x15">MK005.M2 : ときめく心</title>
+			<title code="0x16">MK006.M2 : 逃走のテーマ</title>
+			<title code="0x17">MK007.M2 : 晴れた日には森へ行こう</title>
+			<title code="0x18">MK008.M2 : 涙こぼれて</title>
+			<title code="0x19">MK009.M2 : 戦いの刻</title>
+			<title code="0x1a">MK010.M2 : 2人の渚</title>
+			<title code="0x1b">MK011.M2 : 時のない世界</title>
+			<title code="0x1c">MK012.M2 : 夜の帳の中で…</title>
+			<title code="0x1d">MK013.M2 : いつかあの人と</title>
+			<title code="0x1e">MK015.M2 : 麗しの王宮</title>
+			<title code="0x1f">MK016.M2 : 孤独な魂</title>
+			<title code="0x20">MK017.M2 : ぱ～てぃ気分</title>
+			<title code="0x21">MK018.M2 : 突撃ぃ～!</title>
+			<title code="0x22">MK019.M2 : あなたと踊りたい</title>
+			<title code="0x23">MK020.M2 : ベッドでデート</title>
+			<title code="0x24">MK021.M2 : 天使の舞う夜</title>
+			<title code="0x10">ASE01.M2 : </title>
+			<title code="0x11">ASE02.M2 : </title>
+			<title code="0x12">ASE03.M2 : </title>
+			<title code="0x13">ASE04.M2 : </title>
+			<range min="0x801" max="0x82A" extcode="0">MSE.EFC  : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] えんじぇる☆ないと ～闇夜を翔ける天使たちの物語～(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="angel_n_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">ASE01.MMD</rom>
+			<rom type="file" offset="0x11">ASE02.MMD</rom>
+			<rom type="file" offset="0x12">ASE03.MMD</rom>
+			<rom type="file" offset="0x13">ASE04.MMD</rom>
+			<rom type="file" offset="0x14">MK004.MMD</rom>
+			<rom type="file" offset="0x15">MK005.MMD</rom>
+			<rom type="file" offset="0x16">MK006.MMD</rom>
+			<rom type="file" offset="0x17">MK007.MMD</rom>
+			<rom type="file" offset="0x18">MK008.MMD</rom>
+			<rom type="file" offset="0x19">MK009.MMD</rom>
+			<rom type="file" offset="0x1a">MK010.MMD</rom>
+			<rom type="file" offset="0x1b">MK011.MMD</rom>
+			<rom type="file" offset="0x1c">MK012.MMD</rom>
+			<rom type="file" offset="0x1d">MK013.MMD</rom>
+			<rom type="file" offset="0x1e">MK015.MMD</rom>
+			<rom type="file" offset="0x1f">MK016.MMD</rom>
+			<rom type="file" offset="0x20">MK017.MMD</rom>
+			<rom type="file" offset="0x21">MK018.MMD</rom>
+			<rom type="file" offset="0x22">MK019.MMD</rom>
+			<rom type="file" offset="0x23">MK020.MMD</rom>
+			<rom type="file" offset="0x24">MK021.MMD</rom>
+			<rom type="file" offset="0x25">WAKU.MMD</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x25">WAKU.MMD  : わくわくフォア・ナイン</title>
+			<title code="0x14">MK004.MMD : 楽しいお茶会</title>
+			<title code="0x15">MK005.MMD : ときめく心</title>
+			<title code="0x16">MK006.MMD : 逃走のテーマ</title>
+			<title code="0x17">MK007.MMD : 晴れた日には森へ行こう</title>
+			<title code="0x18">MK008.MMD : 涙こぼれて</title>
+			<title code="0x19">MK009.MMD : 戦いの刻</title>
+			<title code="0x1a">MK010.MMD : 2人の渚</title>
+			<title code="0x1b">MK011.MMD : 時のない世界</title>
+			<title code="0x1c">MK012.MMD : 夜の帳の中で…</title>
+			<title code="0x1d">MK013.MMD : いつかあの人と</title>
+			<title code="0x1e">MK015.MMD : 麗しの王宮</title>
+			<title code="0x1f">MK016.MMD : 孤独な魂</title>
+			<title code="0x20">MK017.MMD : ぱ～てぃ気分</title>
+			<title code="0x21">MK018.MMD : 突撃ぃ～!</title>
+			<title code="0x22">MK019.MMD : あなたと踊りたい</title>
+			<title code="0x23">MK020.MMD : ベッドでデート</title>
+			<title code="0x24">MK021.MMD : 天使の舞う夜</title>
+			<title code="0x10">ASE01.MMD : </title>
+			<title code="0x11">ASE02.MMD : </title>
+			<title code="0x12">ASE03.MMD : </title>
+			<title code="0x13">ASE04.MMD : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ねこまんまEX(BEEP)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+		</options>
+		<romlist archive="nekoex_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB.COM</rom>
+			<rom type="file" offset="0x08">MDAT/GAOT.FN1</rom>
+			<rom type="file" offset="0x10">MDAT/ARIA001.FN1</rom>
+			<rom type="file" offset="0x11">MDAT/ARIA002.FN1</rom>
+			<rom type="file" offset="0x12">MDAT/ARIA003.FN1</rom>
+			<rom type="file" offset="0x13">MDAT/BATTLE01.FN1</rom>
+			<rom type="file" offset="0x14">MDAT/BATTLE02.FN1</rom>
+			<rom type="file" offset="0x15">MDAT/BATTLE03.FN1</rom>
+			<rom type="file" offset="0x16">MDAT/BATTLE04.FN1</rom>
+			<rom type="file" offset="0x17">MDAT/DBBET.FN1</rom>
+			<rom type="file" offset="0x18">MDAT/DBF2.FN1</rom>
+			<rom type="file" offset="0x19">MDAT/DBFUN.FN1</rom>
+			<rom type="file" offset="0x1a">MDAT/DBINF.FN1</rom>
+			<rom type="file" offset="0x1b">MDAT/DBOPN.FN1</rom>
+			<rom type="file" offset="0x1c">MDAT/DBRAC.FN1</rom>
+			<rom type="file" offset="0x1d">MDAT/KAJA01.FN1</rom>
+			<rom type="file" offset="0x1e">MDAT/LIX003A.FN1</rom>
+			<rom type="file" offset="0x1f">MDAT/LIX005.FN1</rom>
+			<rom type="file" offset="0x20">MDAT/LIX006.FN1</rom>
+			<rom type="file" offset="0x21">MDAT/LIX007.FN1</rom>
+			<rom type="file" offset="0x22">MDAT/LIX008.FN1</rom>
+			<rom type="file" offset="0x23">MDAT/LIX010.FN1</rom>
+			<rom type="file" offset="0x24">MDAT/LIX011.FN1</rom>
+			<rom type="file" offset="0x25">MDAT/LIX012.FN1</rom>
+			<rom type="file" offset="0x26">MDAT/LIX013.FN1</rom>
+			<rom type="file" offset="0x27">MDAT/LIX016.FN1</rom>
+			<rom type="file" offset="0x28">MDAT/LIX017.FN1</rom>
+			<rom type="file" offset="0x29">MDAT/LIX019.FN1</rom>
+			<rom type="file" offset="0x2a">MDAT/LIX021.FN1</rom>
+			<rom type="file" offset="0x2b">MDAT/LIX024.FN1</rom>
+			<rom type="file" offset="0x2c">MDAT/LIX029.FN1</rom>
+			<rom type="file" offset="0x2d">MDAT/LIX030.FN1</rom>
+			<rom type="file" offset="0x2e">MDAT/LIX033.FN1</rom>
+			<rom type="file" offset="0x2f">MDAT/NEKO1.FN1</rom>
+			<rom type="file" offset="0x30">MDAT/NEKO2.FN1</rom>
+			<rom type="file" offset="0x31">MDAT/QNEKO.FN1</rom>
+			<rom type="file" offset="0x32">MDAT/QNEKO3.FN1</rom>
+			<rom type="file" offset="0x33">MDAT/QUIZ001.FN1</rom>
+			<rom type="file" offset="0x34">MDAT/QUIZ002.FN1</rom>
+			<rom type="file" offset="0x35">MDAT/QUIZ003F.FN1</rom>
+			<rom type="file" offset="0x36">MDAT/QUIZ004A.FN1</rom>
+			<rom type="file" offset="0x37">MDAT/QUIZ004B.FN1</rom>
+			<rom type="file" offset="0x38">MDAT/RPG001.FN1</rom>
+			<rom type="file" offset="0x39">MDAT/RPG002.FN1</rom>
+			<rom type="file" offset="0x3a">MDAT/RPG003.FN1</rom>
+			<rom type="file" offset="0x3b">MDAT/RPG004.FN1</rom>
+			<rom type="file" offset="0x3c">MDAT/RPG005.FN1</rom>
+			<rom type="file" offset="0x3d">MDAT/RPG006.FN1</rom>
+			<rom type="file" offset="0x3e">MDAT/RPG007.FN1</rom>
+			<rom type="file" offset="0x3f">MDAT/RPG008.FN1</rom>
+			<rom type="file" offset="0x40">MDAT/RPG009.FN1</rom>
+			<rom type="file" offset="0x41">MDAT/RPG010.FN1</rom>
+			<rom type="file" offset="0x42">MDAT/RPG011.FN1</rom>
+			<rom type="file" offset="0x43">MDAT/RPG012.FN1</rom>
+			<rom type="file" offset="0x44">MDAT/RPG013.FN1</rom>
+			<rom type="file" offset="0x45">MDAT/RPG014.FN1</rom>
+			<rom type="file" offset="0x46">MDAT/RPG015.FN1</rom>
+			<rom type="file" offset="0x47">MDAT/RPG016.FN1</rom>
+			<rom type="file" offset="0x48">MDAT/RPG017.FN1</rom>
+			<rom type="file" offset="0x49">MDAT/RPG018.FN1</rom>
+			<rom type="file" offset="0x4a">MDAT/RPG019.FN1</rom>
+			<rom type="file" offset="0x4b">MDAT/RPG020.FN1</rom>
+			<rom type="file" offset="0x4c">MDAT/RPG022.FN1</rom>
+			<rom type="file" offset="0x4d">MDAT/RPGCAMP.FN1</rom>
+			<rom type="file" offset="0x4e">MDAT/SILENCE.FN1</rom>
+			<rom type="shell" offset="0">PMDB</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x4e">SILENCE.FN1  : [STOP]</title>
+			<title code="0x2f">NEKO1.FN1    : ねこまんま</title>
+			<title code="0x30">NEKO2.FN1    : わくわくフォアナイン</title>
+			<title code="0x10">ARIA001.FN1  : Lonley Memories</title>
+			<title code="0x11">ARIA002.FN1  : 鏡の国のありあ</title>
+			<title code="0x12">ARIA003.FN1  : 星降る夜に…</title>
+			<title code="0x31">QNEKO.FN1    : 猫娘のテーマ</title>
+			<title code="0x17">DBBET.FN1    : さあ、出発だ★ワクワク</title>
+			<title code="0x19">DBFUN.FN1    : ふぁんふぁ～れ☆</title>
+			<title code="0x1a">DBINF.FN1    : ひとやすみ…☆</title>
+			<title code="0x1b">DBOPN.FN1    : ダービー、開幕!</title>
+			<title code="0x1c">DBRAC.FN1    : よ～い、すたーと!(^^)</title>
+			<title code="0x33">QUIZ001.FN1  : バトルトライアル</title>
+			<title code="0x34">QUIZ002.FN1  : バトルトライアル</title>
+			<title code="0x35">QUIZ003F.FN1 : バトルトライアル</title>
+			<title code="0x36">QUIZ004A.FN1 : 木もれ日の午後</title>
+			<title code="0x37">QUIZ004B.FN1 : ティーカップのダンス(^^;</title>
+			<title code="0x13">BATTLE01.FN1 : バトルその1</title>
+			<title code="0x14">BATTLE02.FN1 : バトルその2</title>
+			<title code="0x15">BATTLE03.FN1 : バトルその3</title>
+			<title code="0x16">BATTLE04.FN1 : </title>
+			<title code="0x38">RPG001.FN1   : </title>
+			<title code="0x39">RPG002.FN1   : </title>
+			<title code="0x3a">RPG003.FN1   : </title>
+			<title code="0x3b">RPG004.FN1   : </title>
+			<title code="0x3c">RPG005.FN1   : </title>
+			<title code="0x3d">RPG006.FN1   : </title>
+			<title code="0x3e">RPG007.FN1   : </title>
+			<title code="0x3f">RPG008.FN1   : </title>
+			<title code="0x40">RPG009.FN1   : </title>
+			<title code="0x41">RPG010.FN1   : </title>
+			<title code="0x42">RPG011.FN1   : </title>
+			<title code="0x43">RPG012.FN1   : Tear Drops</title>
+			<title code="0x44">RPG013.FN1   : </title>
+			<title code="0x45">RPG014.FN1   : 万華鏡の夜</title>
+			<title code="0x46">RPG015.FN1   : </title>
+			<title code="0x47">RPG016.FN1   : </title>
+			<title code="0x48">RPG017.FN1   : 精霊の集い(^^;)</title>
+			<title code="0x49">RPG018.FN1   : </title>
+			<title code="0x4a">RPG019.FN1   : </title>
+			<title code="0x4b">RPG020.FN1   : </title>
+			<title code="0x4c">RPG022.FN1   : </title>
+			<title code="0x4d">RPGCAMP.FN1  : RPGキャンプ</title>
+			<title code="0x1d">KAJA01.FN1   : ???</title>
+			<title code="0x1e">LIX003A.FN1  : </title>
+			<title code="0x1f">LIX005.FN1   : </title>
+			<title code="0x20">LIX006.FN1   : </title>
+			<title code="0x21">LIX007.FN1   : </title>
+			<title code="0x22">LIX008.FN1   : </title>
+			<title code="0x23">LIX010.FN1   : </title>
+			<title code="0x24">LIX011.FN1   : </title>
+			<title code="0x25">LIX012.FN1   : </title>
+			<title code="0x26">LIX013.FN1   : </title>
+			<title code="0x27">LIX016.FN1   : </title>
+			<title code="0x28">LIX017.FN1   : </title>
+			<title code="0x29">LIX019.FN1   : </title>
+			<title code="0x2a">LIX021.FN1   : </title>
+			<title code="0x2b">LIX024.FN1   : </title>
+			<title code="0x2c">LIX029.FN1   : </title>
+			<title code="0x2d">LIX030.FN1   : </title>
+			<title code="0x2e">LIX033.FN1   : </title>
+			<title code="0x32">QNEKO3.FN1   : </title>
+			<title code="0x18">DBF2.FN1     : </title>
+			<range min="0x801" max="0x808" extcode="0">GAOT.FN1    : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ねこまんまEX(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="nekoex_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">MDAT/GAOT.FN1</rom>
+			<rom type="file" offset="0x10">MDAT/ARIA001.FN1</rom>
+			<rom type="file" offset="0x11">MDAT/ARIA002.FN1</rom>
+			<rom type="file" offset="0x12">MDAT/ARIA003.FN1</rom>
+			<rom type="file" offset="0x13">MDAT/BATTLE01.FN1</rom>
+			<rom type="file" offset="0x14">MDAT/BATTLE02.FN1</rom>
+			<rom type="file" offset="0x15">MDAT/BATTLE03.FN1</rom>
+			<rom type="file" offset="0x16">MDAT/BATTLE04.FN1</rom>
+			<rom type="file" offset="0x17">MDAT/DBBET.FN1</rom>
+			<rom type="file" offset="0x18">MDAT/DBF2.FN1</rom>
+			<rom type="file" offset="0x19">MDAT/DBFUN.FN1</rom>
+			<rom type="file" offset="0x1a">MDAT/DBINF.FN1</rom>
+			<rom type="file" offset="0x1b">MDAT/DBOPN.FN1</rom>
+			<rom type="file" offset="0x1c">MDAT/DBRAC.FN1</rom>
+			<rom type="file" offset="0x1d">MDAT/KAJA01.FN1</rom>
+			<rom type="file" offset="0x1e">MDAT/LIX003A.FN1</rom>
+			<rom type="file" offset="0x1f">MDAT/LIX005.FN1</rom>
+			<rom type="file" offset="0x20">MDAT/LIX006.FN1</rom>
+			<rom type="file" offset="0x21">MDAT/LIX007.FN1</rom>
+			<rom type="file" offset="0x22">MDAT/LIX008.FN1</rom>
+			<rom type="file" offset="0x23">MDAT/LIX010.FN1</rom>
+			<rom type="file" offset="0x24">MDAT/LIX011.FN1</rom>
+			<rom type="file" offset="0x25">MDAT/LIX012.FN1</rom>
+			<rom type="file" offset="0x26">MDAT/LIX013.FN1</rom>
+			<rom type="file" offset="0x27">MDAT/LIX016.FN1</rom>
+			<rom type="file" offset="0x28">MDAT/LIX017.FN1</rom>
+			<rom type="file" offset="0x29">MDAT/LIX019.FN1</rom>
+			<rom type="file" offset="0x2a">MDAT/LIX021.FN1</rom>
+			<rom type="file" offset="0x2b">MDAT/LIX024.FN1</rom>
+			<rom type="file" offset="0x2c">MDAT/LIX029.FN1</rom>
+			<rom type="file" offset="0x2d">MDAT/LIX030.FN1</rom>
+			<rom type="file" offset="0x2e">MDAT/LIX033.FN1</rom>
+			<rom type="file" offset="0x2f">MDAT/NEKO1.FN1</rom>
+			<rom type="file" offset="0x30">MDAT/NEKO2.FN1</rom>
+			<rom type="file" offset="0x31">MDAT/QNEKO.FN1</rom>
+			<rom type="file" offset="0x32">MDAT/QNEKO3.FN1</rom>
+			<rom type="file" offset="0x33">MDAT/QUIZ001.FN1</rom>
+			<rom type="file" offset="0x34">MDAT/QUIZ002.FN1</rom>
+			<rom type="file" offset="0x35">MDAT/QUIZ003F.FN1</rom>
+			<rom type="file" offset="0x36">MDAT/QUIZ004A.FN1</rom>
+			<rom type="file" offset="0x37">MDAT/QUIZ004B.FN1</rom>
+			<rom type="file" offset="0x38">MDAT/RPG001.FN1</rom>
+			<rom type="file" offset="0x39">MDAT/RPG002.FN1</rom>
+			<rom type="file" offset="0x3a">MDAT/RPG003.FN1</rom>
+			<rom type="file" offset="0x3b">MDAT/RPG004.FN1</rom>
+			<rom type="file" offset="0x3c">MDAT/RPG005.FN1</rom>
+			<rom type="file" offset="0x3d">MDAT/RPG006.FN1</rom>
+			<rom type="file" offset="0x3e">MDAT/RPG007.FN1</rom>
+			<rom type="file" offset="0x3f">MDAT/RPG008.FN1</rom>
+			<rom type="file" offset="0x40">MDAT/RPG009.FN1</rom>
+			<rom type="file" offset="0x41">MDAT/RPG010.FN1</rom>
+			<rom type="file" offset="0x42">MDAT/RPG011.FN1</rom>
+			<rom type="file" offset="0x43">MDAT/RPG012.FN1</rom>
+			<rom type="file" offset="0x44">MDAT/RPG013.FN1</rom>
+			<rom type="file" offset="0x45">MDAT/RPG014.FN1</rom>
+			<rom type="file" offset="0x46">MDAT/RPG015.FN1</rom>
+			<rom type="file" offset="0x47">MDAT/RPG016.FN1</rom>
+			<rom type="file" offset="0x48">MDAT/RPG017.FN1</rom>
+			<rom type="file" offset="0x49">MDAT/RPG018.FN1</rom>
+			<rom type="file" offset="0x4a">MDAT/RPG019.FN1</rom>
+			<rom type="file" offset="0x4b">MDAT/RPG020.FN1</rom>
+			<rom type="file" offset="0x4c">MDAT/RPG022.FN1</rom>
+			<rom type="file" offset="0x4d">MDAT/RPGCAMP.FN1</rom>
+			<rom type="file" offset="0x4e">MDAT/SILENCE.FN1</rom>
+			<rom type="shell" offset="0">PMD /ds48 /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x4e">SILENCE.FN1  : [STOP]</title>
+			<title code="0x2f">NEKO1.FN1    : ねこまんま</title>
+			<title code="0x30">NEKO2.FN1    : わくわくフォアナイン</title>
+			<title code="0x10">ARIA001.FN1  : Lonley Memories</title>
+			<title code="0x11">ARIA002.FN1  : 鏡の国のありあ</title>
+			<title code="0x12">ARIA003.FN1  : 星降る夜に…</title>
+			<title code="0x31">QNEKO.FN1    : 猫娘のテーマ</title>
+			<title code="0x17">DBBET.FN1    : さあ、出発だ★ワクワク</title>
+			<title code="0x19">DBFUN.FN1    : ふぁんふぁ～れ☆</title>
+			<title code="0x1a">DBINF.FN1    : ひとやすみ…☆</title>
+			<title code="0x1b">DBOPN.FN1    : ダービー、開幕!</title>
+			<title code="0x1c">DBRAC.FN1    : よ～い、すたーと!(^^)</title>
+			<title code="0x33">QUIZ001.FN1  : バトルトライアル</title>
+			<title code="0x34">QUIZ002.FN1  : バトルトライアル</title>
+			<title code="0x35">QUIZ003F.FN1 : バトルトライアル</title>
+			<title code="0x36">QUIZ004A.FN1 : 木もれ日の午後</title>
+			<title code="0x37">QUIZ004B.FN1 : ティーカップのダンス(^^;</title>
+			<title code="0x13">BATTLE01.FN1 : バトルその1</title>
+			<title code="0x14">BATTLE02.FN1 : バトルその2</title>
+			<title code="0x15">BATTLE03.FN1 : バトルその3</title>
+			<title code="0x16">BATTLE04.FN1 : </title>
+			<title code="0x38">RPG001.FN1   : </title>
+			<title code="0x39">RPG002.FN1   : </title>
+			<title code="0x3a">RPG003.FN1   : </title>
+			<title code="0x3b">RPG004.FN1   : </title>
+			<title code="0x3c">RPG005.FN1   : </title>
+			<title code="0x3d">RPG006.FN1   : </title>
+			<title code="0x3e">RPG007.FN1   : </title>
+			<title code="0x3f">RPG008.FN1   : </title>
+			<title code="0x40">RPG009.FN1   : </title>
+			<title code="0x41">RPG010.FN1   : </title>
+			<title code="0x42">RPG011.FN1   : </title>
+			<title code="0x43">RPG012.FN1   : Tear Drops</title>
+			<title code="0x44">RPG013.FN1   : </title>
+			<title code="0x45">RPG014.FN1   : 万華鏡の夜</title>
+			<title code="0x46">RPG015.FN1   : </title>
+			<title code="0x47">RPG016.FN1   : </title>
+			<title code="0x48">RPG017.FN1   : 精霊の集い(^^;)</title>
+			<title code="0x49">RPG018.FN1   : </title>
+			<title code="0x4a">RPG019.FN1   : </title>
+			<title code="0x4b">RPG020.FN1   : </title>
+			<title code="0x4c">RPG022.FN1   : </title>
+			<title code="0x4d">RPGCAMP.FN1  : RPGキャンプ</title>
+			<title code="0x1d">KAJA01.FN1   : ???</title>
+			<title code="0x1e">LIX003A.FN1  : </title>
+			<title code="0x1f">LIX005.FN1   : </title>
+			<title code="0x20">LIX006.FN1   : </title>
+			<title code="0x21">LIX007.FN1   : </title>
+			<title code="0x22">LIX008.FN1   : </title>
+			<title code="0x23">LIX010.FN1   : </title>
+			<title code="0x24">LIX011.FN1   : </title>
+			<title code="0x25">LIX012.FN1   : </title>
+			<title code="0x26">LIX013.FN1   : </title>
+			<title code="0x27">LIX016.FN1   : </title>
+			<title code="0x28">LIX017.FN1   : </title>
+			<title code="0x29">LIX019.FN1   : </title>
+			<title code="0x2a">LIX021.FN1   : </title>
+			<title code="0x2b">LIX024.FN1   : </title>
+			<title code="0x2c">LIX029.FN1   : </title>
+			<title code="0x2d">LIX030.FN1   : </title>
+			<title code="0x2e">LIX033.FN1   : </title>
+			<title code="0x32">QNEKO3.FN1   : </title>
+			<title code="0x18">DBF2.FN1     : </title>
+			<range min="0x801" max="0x808" extcode="0">GAOT.FN1    : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ねこまんまEX(OPNA)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="nekoex_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x08">MDAT/GAOT.FN1</rom>
+			<rom type="file" offset="0x10">MDAT/ARIA001.FN1</rom>
+			<rom type="file" offset="0x11">MDAT/ARIA002.FN1</rom>
+			<rom type="file" offset="0x12">MDAT/ARIA003.FN1</rom>
+			<rom type="file" offset="0x13">MDAT/BATTLE01.FN1</rom>
+			<rom type="file" offset="0x14">MDAT/BATTLE02.FN1</rom>
+			<rom type="file" offset="0x15">MDAT/BATTLE03.FN1</rom>
+			<rom type="file" offset="0x16">MDAT/BATTLE04.FN1</rom>
+			<rom type="file" offset="0x17">MDAT/DBBET.FN1</rom>
+			<rom type="file" offset="0x18">MDAT/DBF2.FN1</rom>
+			<rom type="file" offset="0x19">MDAT/DBFUN.FN1</rom>
+			<rom type="file" offset="0x1a">MDAT/DBINF.FN1</rom>
+			<rom type="file" offset="0x1b">MDAT/DBOPN.FN1</rom>
+			<rom type="file" offset="0x1c">MDAT/DBRAC.FN1</rom>
+			<rom type="file" offset="0x1d">MDAT/KAJA01.FN1</rom>
+			<rom type="file" offset="0x1e">MDAT/LIX003A.FN1</rom>
+			<rom type="file" offset="0x1f">MDAT/LIX005.FN1</rom>
+			<rom type="file" offset="0x20">MDAT/LIX006.FN1</rom>
+			<rom type="file" offset="0x21">MDAT/LIX007.FN1</rom>
+			<rom type="file" offset="0x22">MDAT/LIX008.FN1</rom>
+			<rom type="file" offset="0x23">MDAT/LIX010.FN1</rom>
+			<rom type="file" offset="0x24">MDAT/LIX011.FN1</rom>
+			<rom type="file" offset="0x25">MDAT/LIX012.FN1</rom>
+			<rom type="file" offset="0x26">MDAT/LIX013.FN1</rom>
+			<rom type="file" offset="0x27">MDAT/LIX016.FN1</rom>
+			<rom type="file" offset="0x28">MDAT/LIX017.FN1</rom>
+			<rom type="file" offset="0x29">MDAT/LIX019.FN1</rom>
+			<rom type="file" offset="0x2a">MDAT/LIX021.FN1</rom>
+			<rom type="file" offset="0x2b">MDAT/LIX024.FN1</rom>
+			<rom type="file" offset="0x2c">MDAT/LIX029.FN1</rom>
+			<rom type="file" offset="0x2d">MDAT/LIX030.FN1</rom>
+			<rom type="file" offset="0x2e">MDAT/LIX033.FN1</rom>
+			<rom type="file" offset="0x2f">MDAT/NEKO1.FN1</rom>
+			<rom type="file" offset="0x30">MDAT/NEKO2.FN1</rom>
+			<rom type="file" offset="0x31">MDAT/QNEKO.FN1</rom>
+			<rom type="file" offset="0x32">MDAT/QNEKO3.FN1</rom>
+			<rom type="file" offset="0x33">MDAT/QUIZ001.FN1</rom>
+			<rom type="file" offset="0x34">MDAT/QUIZ002.FN1</rom>
+			<rom type="file" offset="0x35">MDAT/QUIZ003F.FN1</rom>
+			<rom type="file" offset="0x36">MDAT/QUIZ004A.FN1</rom>
+			<rom type="file" offset="0x37">MDAT/QUIZ004B.FN1</rom>
+			<rom type="file" offset="0x38">MDAT/RPG001.FN1</rom>
+			<rom type="file" offset="0x39">MDAT/RPG002.FN1</rom>
+			<rom type="file" offset="0x3a">MDAT/RPG003.FN1</rom>
+			<rom type="file" offset="0x3b">MDAT/RPG004.FN1</rom>
+			<rom type="file" offset="0x3c">MDAT/RPG005.FN1</rom>
+			<rom type="file" offset="0x3d">MDAT/RPG006.FN1</rom>
+			<rom type="file" offset="0x3e">MDAT/RPG007.FN1</rom>
+			<rom type="file" offset="0x3f">MDAT/RPG008.FN1</rom>
+			<rom type="file" offset="0x40">MDAT/RPG009.FN1</rom>
+			<rom type="file" offset="0x41">MDAT/RPG010.FN1</rom>
+			<rom type="file" offset="0x42">MDAT/RPG011.FN1</rom>
+			<rom type="file" offset="0x43">MDAT/RPG012.FN1</rom>
+			<rom type="file" offset="0x44">MDAT/RPG013.FN1</rom>
+			<rom type="file" offset="0x45">MDAT/RPG014.FN1</rom>
+			<rom type="file" offset="0x46">MDAT/RPG015.FN1</rom>
+			<rom type="file" offset="0x47">MDAT/RPG016.FN1</rom>
+			<rom type="file" offset="0x48">MDAT/RPG017.FN1</rom>
+			<rom type="file" offset="0x49">MDAT/RPG018.FN1</rom>
+			<rom type="file" offset="0x4a">MDAT/RPG019.FN1</rom>
+			<rom type="file" offset="0x4b">MDAT/RPG020.FN1</rom>
+			<rom type="file" offset="0x4c">MDAT/RPG022.FN1</rom>
+			<rom type="file" offset="0x4d">MDAT/RPGCAMP.FN1</rom>
+			<rom type="file" offset="0x4e">MDAT/SILENCE.FN1</rom>
+			<rom type="shell" offset="0">PMDB2 /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x4e">SILENCE.FN1  : [STOP]</title>
+			<title code="0x2f">NEKO1.FN1    : ねこまんま</title>
+			<title code="0x30">NEKO2.FN1    : わくわくフォアナイン</title>
+			<title code="0x10">ARIA001.FN1  : Lonley Memories</title>
+			<title code="0x11">ARIA002.FN1  : 鏡の国のありあ</title>
+			<title code="0x12">ARIA003.FN1  : 星降る夜に…</title>
+			<title code="0x31">QNEKO.FN1    : 猫娘のテーマ</title>
+			<title code="0x17">DBBET.FN1    : さあ、出発だ★ワクワク</title>
+			<title code="0x19">DBFUN.FN1    : ふぁんふぁ～れ☆</title>
+			<title code="0x1a">DBINF.FN1    : ひとやすみ…☆</title>
+			<title code="0x1b">DBOPN.FN1    : ダービー、開幕!</title>
+			<title code="0x1c">DBRAC.FN1    : よ～い、すたーと!(^^)</title>
+			<title code="0x33">QUIZ001.FN1  : バトルトライアル</title>
+			<title code="0x34">QUIZ002.FN1  : バトルトライアル</title>
+			<title code="0x35">QUIZ003F.FN1 : バトルトライアル</title>
+			<title code="0x36">QUIZ004A.FN1 : 木もれ日の午後</title>
+			<title code="0x37">QUIZ004B.FN1 : ティーカップのダンス(^^;</title>
+			<title code="0x13">BATTLE01.FN1 : バトルその1</title>
+			<title code="0x14">BATTLE02.FN1 : バトルその2</title>
+			<title code="0x15">BATTLE03.FN1 : バトルその3</title>
+			<title code="0x16">BATTLE04.FN1 : </title>
+			<title code="0x38">RPG001.FN1   : </title>
+			<title code="0x39">RPG002.FN1   : </title>
+			<title code="0x3a">RPG003.FN1   : </title>
+			<title code="0x3b">RPG004.FN1   : </title>
+			<title code="0x3c">RPG005.FN1   : </title>
+			<title code="0x3d">RPG006.FN1   : </title>
+			<title code="0x3e">RPG007.FN1   : </title>
+			<title code="0x3f">RPG008.FN1   : </title>
+			<title code="0x40">RPG009.FN1   : </title>
+			<title code="0x41">RPG010.FN1   : </title>
+			<title code="0x42">RPG011.FN1   : </title>
+			<title code="0x43">RPG012.FN1   : Tear Drops</title>
+			<title code="0x44">RPG013.FN1   : </title>
+			<title code="0x45">RPG014.FN1   : 万華鏡の夜</title>
+			<title code="0x46">RPG015.FN1   : </title>
+			<title code="0x47">RPG016.FN1   : </title>
+			<title code="0x48">RPG017.FN1   : 精霊の集い(^^;)</title>
+			<title code="0x49">RPG018.FN1   : </title>
+			<title code="0x4a">RPG019.FN1   : </title>
+			<title code="0x4b">RPG020.FN1   : </title>
+			<title code="0x4c">RPG022.FN1   : </title>
+			<title code="0x4d">RPGCAMP.FN1  : RPGキャンプ</title>
+			<title code="0x1d">KAJA01.FN1   : ???</title>
+			<title code="0x1e">LIX003A.FN1  : </title>
+			<title code="0x1f">LIX005.FN1   : </title>
+			<title code="0x20">LIX006.FN1   : </title>
+			<title code="0x21">LIX007.FN1   : </title>
+			<title code="0x22">LIX008.FN1   : </title>
+			<title code="0x23">LIX010.FN1   : </title>
+			<title code="0x24">LIX011.FN1   : </title>
+			<title code="0x25">LIX012.FN1   : </title>
+			<title code="0x26">LIX013.FN1   : </title>
+			<title code="0x27">LIX016.FN1   : </title>
+			<title code="0x28">LIX017.FN1   : </title>
+			<title code="0x29">LIX019.FN1   : </title>
+			<title code="0x2a">LIX021.FN1   : </title>
+			<title code="0x2b">LIX024.FN1   : </title>
+			<title code="0x2c">LIX029.FN1   : </title>
+			<title code="0x2d">LIX030.FN1   : </title>
+			<title code="0x2e">LIX033.FN1   : </title>
+			<title code="0x32">QNEKO3.FN1   : </title>
+			<title code="0x18">DBF2.FN1     : </title>
+			<range min="0x801" max="0x808" extcode="0">GAOT.FN1    : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ねこまんまEX(SPB)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-13"/>
+		</options>
+		<romlist archive="nekoex_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="-1">PCMSET.EXE</rom>
+			<rom type="file" offset="-1">PCM/CORUSA.FN1</rom>
+			<rom type="file" offset="-1">PCM/CRUSH2.FN1</rom>
+			<rom type="file" offset="-1">PCM/EGTO2.FN1</rom>
+			<rom type="file" offset="-1">PCM/EGTO4.FN1</rom>
+			<rom type="file" offset="-1">PCM/GR_SD2.FN1</rom>
+			<rom type="file" offset="-1">PCM/HCLAP.FN1</rom>
+			<rom type="file" offset="-1">PCM/JB_CYM.FN1</rom>
+			<rom type="file" offset="-1">PCM/JB_HC1.FN1</rom>
+			<rom type="file" offset="-1">PCM/JB_HO1.FN1</rom>
+			<rom type="file" offset="-1">PCM/KASSAI.FN1</rom>
+			<rom type="file" offset="-1">PCM/OCHIT1.FN1</rom>
+			<rom type="file" offset="-1">PCM/OCHIT3.FN1</rom>
+			<rom type="file" offset="-1">PCM/PERC2.FN1</rom>
+			<rom type="file" offset="-1">PCM/PERC4.FN1</rom>
+			<rom type="file" offset="-1">PCM/SD1.FN1</rom>
+			<rom type="file" offset="-1">PCM/TOM1.FN1</rom>
+			<rom type="file" offset="-1">PCM/TOM2.FN1</rom>
+			<rom type="file" offset="-1">PCM/TOM3.FN1</rom>
+			<rom type="file" offset="-1">PCM/TVCRUS.FN1</rom>
+			<rom type="file" offset="-1">PCM/VTIMPN.FN1</rom>
+			<rom type="file" offset="0x08">MDAT/GAOT.FN1</rom>
+			<rom type="file" offset="0x10">MDAT/ARIA001.FN1</rom>
+			<rom type="file" offset="0x11">MDAT/ARIA002.FN1</rom>
+			<rom type="file" offset="0x12">MDAT/ARIA003.FN1</rom>
+			<rom type="file" offset="0x13">MDAT/BATTLE01.FN1</rom>
+			<rom type="file" offset="0x14">MDAT/BATTLE02.FN1</rom>
+			<rom type="file" offset="0x15">MDAT/BATTLE03.FN1</rom>
+			<rom type="file" offset="0x16">MDAT/BATTLE04.FN1</rom>
+			<rom type="file" offset="0x17">MDAT/DBBET.FN1</rom>
+			<rom type="file" offset="0x18">MDAT/DBF2.FN1</rom>
+			<rom type="file" offset="0x19">MDAT/DBFUN.FN1</rom>
+			<rom type="file" offset="0x1a">MDAT/DBINF.FN1</rom>
+			<rom type="file" offset="0x1b">MDAT/DBOPN.FN1</rom>
+			<rom type="file" offset="0x1c">MDAT/DBRAC.FN1</rom>
+			<rom type="file" offset="0x1d">MDAT/KAJA01.FN1</rom>
+			<rom type="file" offset="0x1e">MDAT/LIX003A.FN1</rom>
+			<rom type="file" offset="0x1f">MDAT/LIX005.FN1</rom>
+			<rom type="file" offset="0x20">MDAT/LIX006.FN1</rom>
+			<rom type="file" offset="0x21">MDAT/LIX007.FN1</rom>
+			<rom type="file" offset="0x22">MDAT/LIX008.FN1</rom>
+			<rom type="file" offset="0x23">MDAT/LIX010.FN1</rom>
+			<rom type="file" offset="0x24">MDAT/LIX011.FN1</rom>
+			<rom type="file" offset="0x25">MDAT/LIX012.FN1</rom>
+			<rom type="file" offset="0x26">MDAT/LIX013.FN1</rom>
+			<rom type="file" offset="0x27">MDAT/LIX016.FN1</rom>
+			<rom type="file" offset="0x28">MDAT/LIX017.FN1</rom>
+			<rom type="file" offset="0x29">MDAT/LIX019.FN1</rom>
+			<rom type="file" offset="0x2a">MDAT/LIX021.FN1</rom>
+			<rom type="file" offset="0x2b">MDAT/LIX024.FN1</rom>
+			<rom type="file" offset="0x2c">MDAT/LIX029.FN1</rom>
+			<rom type="file" offset="0x2d">MDAT/LIX030.FN1</rom>
+			<rom type="file" offset="0x2e">MDAT/LIX033.FN1</rom>
+			<rom type="file" offset="0x2f">MDAT/NEKO1.FN1</rom>
+			<rom type="file" offset="0x30">MDAT/NEKO2.FN1</rom>
+			<rom type="file" offset="0x31">MDAT/QNEKO.FN1</rom>
+			<rom type="file" offset="0x32">MDAT/QNEKO3.FN1</rom>
+			<rom type="file" offset="0x33">MDAT/QUIZ001.FN1</rom>
+			<rom type="file" offset="0x34">MDAT/QUIZ002.FN1</rom>
+			<rom type="file" offset="0x35">MDAT/QUIZ003F.FN1</rom>
+			<rom type="file" offset="0x36">MDAT/QUIZ004A.FN1</rom>
+			<rom type="file" offset="0x37">MDAT/QUIZ004B.FN1</rom>
+			<rom type="file" offset="0x38">MDAT/RPG001.FN1</rom>
+			<rom type="file" offset="0x39">MDAT/RPG002.FN1</rom>
+			<rom type="file" offset="0x3a">MDAT/RPG003.FN1</rom>
+			<rom type="file" offset="0x3b">MDAT/RPG004.FN1</rom>
+			<rom type="file" offset="0x3c">MDAT/RPG005.FN1</rom>
+			<rom type="file" offset="0x3d">MDAT/RPG006.FN1</rom>
+			<rom type="file" offset="0x3e">MDAT/RPG007.FN1</rom>
+			<rom type="file" offset="0x3f">MDAT/RPG008.FN1</rom>
+			<rom type="file" offset="0x40">MDAT/RPG009.FN1</rom>
+			<rom type="file" offset="0x41">MDAT/RPG010.FN1</rom>
+			<rom type="file" offset="0x42">MDAT/RPG011.FN1</rom>
+			<rom type="file" offset="0x43">MDAT/RPG012.FN1</rom>
+			<rom type="file" offset="0x44">MDAT/RPG013.FN1</rom>
+			<rom type="file" offset="0x45">MDAT/RPG014.FN1</rom>
+			<rom type="file" offset="0x46">MDAT/RPG015.FN1</rom>
+			<rom type="file" offset="0x47">MDAT/RPG016.FN1</rom>
+			<rom type="file" offset="0x48">MDAT/RPG017.FN1</rom>
+			<rom type="file" offset="0x49">MDAT/RPG018.FN1</rom>
+			<rom type="file" offset="0x4a">MDAT/RPG019.FN1</rom>
+			<rom type="file" offset="0x4b">MDAT/RPG020.FN1</rom>
+			<rom type="file" offset="0x4c">MDAT/RPG022.FN1</rom>
+			<rom type="file" offset="0x4d">MDAT/RPGCAMP.FN1</rom>
+			<rom type="file" offset="0x4e">MDAT/SILENCE.FN1</rom>
+			<rom type="shell" offset="0">PMDB2</rom>
+			<rom type="shell" offset="0">PCMSET /c</rom>
+			<rom type="shell" offset="0">PCMSET 0 PCM/KASSAI.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 1 PCM/VTIMPN.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 2 PCM/CORUSA.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 3 PCM/CRUSH2.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 4 PCM/TVCRUS.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 5 PCM/EGTO2.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 6 PCM/EGTO4.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 7 PCM/OCHIT1.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 8 PCM/OCHIT3.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 9 PCM/HCLAP.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 10 PCM/JB_HC1.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 11 PCM/JB_HO1.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 12 PCM/PERC2.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 13 PCM/PERC4.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 14 PCM/TOM1.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 15 PCM/TOM2.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 16 PCM/TOM3.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 17 PCM/SD1.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 18 PCM/GR_SD2.FN1</rom>
+			<rom type="shell" offset="0">PCMSET 19 PCM/JB_CYM.FN1</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x4e">SILENCE.FN1  : [STOP] ※最初PCM定義に10秒程度かかります</title>
+			<title code="0x2f">NEKO1.FN1    : ねこまんま</title>
+			<title code="0x30">NEKO2.FN1    : わくわくフォアナイン</title>
+			<title code="0x10">ARIA001.FN1  : Lonley Memories</title>
+			<title code="0x11">ARIA002.FN1  : 鏡の国のありあ</title>
+			<title code="0x12">ARIA003.FN1  : 星降る夜に…</title>
+			<title code="0x31">QNEKO.FN1    : 猫娘のテーマ</title>
+			<title code="0x17">DBBET.FN1    : さあ、出発だ★ワクワク</title>
+			<title code="0x19">DBFUN.FN1    : ふぁんふぁ～れ☆</title>
+			<title code="0x1a">DBINF.FN1    : ひとやすみ…☆</title>
+			<title code="0x1b">DBOPN.FN1    : ダービー、開幕!</title>
+			<title code="0x1c">DBRAC.FN1    : よ～い、すたーと!(^^)</title>
+			<title code="0x33">QUIZ001.FN1  : バトルトライアル</title>
+			<title code="0x34">QUIZ002.FN1  : バトルトライアル</title>
+			<title code="0x35">QUIZ003F.FN1 : バトルトライアル</title>
+			<title code="0x36">QUIZ004A.FN1 : 木もれ日の午後</title>
+			<title code="0x37">QUIZ004B.FN1 : ティーカップのダンス(^^;</title>
+			<title code="0x13">BATTLE01.FN1 : バトルその1</title>
+			<title code="0x14">BATTLE02.FN1 : バトルその2</title>
+			<title code="0x15">BATTLE03.FN1 : バトルその3</title>
+			<!-- <title code="0x16">BATTLE04.FN1 : </title> -->
+			<title code="0x38">RPG001.FN1   : </title>
+			<title code="0x39">RPG002.FN1   : </title>
+			<title code="0x3a">RPG003.FN1   : </title>
+			<title code="0x3b">RPG004.FN1   : </title>
+			<title code="0x3c">RPG005.FN1   : </title>
+			<title code="0x3d">RPG006.FN1   : </title>
+			<title code="0x3e">RPG007.FN1   : </title>
+			<title code="0x3f">RPG008.FN1   : </title>
+			<title code="0x40">RPG009.FN1   : </title>
+			<title code="0x41">RPG010.FN1   : </title>
+			<title code="0x42">RPG011.FN1   : </title>
+			<title code="0x43">RPG012.FN1   : Tear Drops</title>
+			<title code="0x44">RPG013.FN1   : </title>
+			<title code="0x45">RPG014.FN1   : 万華鏡の夜</title>
+			<title code="0x46">RPG015.FN1   : </title>
+			<title code="0x47">RPG016.FN1   : </title>
+			<title code="0x48">RPG017.FN1   : 精霊の集い(^^;)</title>
+			<title code="0x49">RPG018.FN1   : </title>
+			<!-- <title code="0x4a">RPG019.FN1   : </title> -->
+			<title code="0x4b">RPG020.FN1   : </title>
+			<title code="0x4c">RPG022.FN1   : </title>
+			<title code="0x4d">RPGCAMP.FN1  : RPGキャンプ</title>
+			<title code="0x1d">KAJA01.FN1   : ???</title>
+			<title code="0x1e">LIX003A.FN1  : </title>
+			<title code="0x1f">LIX005.FN1   : </title>
+			<title code="0x20">LIX006.FN1   : </title>
+			<title code="0x21">LIX007.FN1   : </title>
+			<title code="0x22">LIX008.FN1   : </title>
+			<title code="0x23">LIX010.FN1   : </title>
+			<title code="0x24">LIX011.FN1   : </title>
+			<title code="0x25">LIX012.FN1   : </title>
+			<title code="0x26">LIX013.FN1   : </title>
+			<title code="0x27">LIX016.FN1   : </title>
+			<title code="0x28">LIX017.FN1   : </title>
+			<title code="0x29">LIX019.FN1   : </title>
+			<title code="0x2a">LIX021.FN1   : </title>
+			<title code="0x2b">LIX024.FN1   : </title>
+			<title code="0x2c">LIX029.FN1   : </title>
+			<title code="0x2d">LIX030.FN1   : </title>
+			<title code="0x2e">LIX033.FN1   : </title>
+			<title code="0x32">QNEKO3.FN1   : </title>
+			<title code="0x18">DBF2.FN1     : </title>
+			<range min="0x801" max="0x808" extcode="0">GAOT.FN1    : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] わくわく麻雀パニック! ～式神伝承～(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="wakpani_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">MSE.EFC</rom>
+			<rom type="file" offset="0x10">WMPN01.LSP</rom>
+			<rom type="file" offset="0x11">WMPN02.LSP</rom>
+			<rom type="file" offset="0x12">WMPN04.LSP</rom>
+			<rom type="file" offset="0x13">WMPN05.LSP</rom>
+			<rom type="file" offset="0x14">WMPN06.LSP</rom>
+			<rom type="file" offset="0x15">WMPN07.LSP</rom>
+			<rom type="file" offset="0x16">WMPN08.LSP</rom>
+			<rom type="file" offset="0x17">WMPN09.LSP</rom>
+			<rom type="file" offset="0x18">WMPN10.LSP</rom>
+			<rom type="file" offset="0x19">WMPN11.LSP</rom>
+			<rom type="file" offset="0x1a">WMPN12.LSP</rom>
+			<rom type="file" offset="0x1b">WMPN13.LSP</rom>
+			<rom type="file" offset="0x1c">WMPN14.LSP</rom>
+			<rom type="file" offset="0x1d">WMPN15.LSP</rom>
+			<rom type="file" offset="0x1e">WMPN16.LSP</rom>
+			<rom type="file" offset="0x1f">WMPN17.LSP</rom>
+			<rom type="file" offset="0x20">WMPN18.LSP</rom>
+			<rom type="file" offset="0x21">WMPN20.LSP</rom>
+			<rom type="file" offset="0x22">WMPN21.LSP</rom>
+			<rom type="shell" offset="0">PMD # /DF20 /E8 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WMPN01.LSP : オープニング</title>
+			<title code="0x11">WMPN02.LSP : 選択</title>
+			<title code="0x12">WMPN04.LSP : やすらぎ</title>
+			<title code="0x13">WMPN05.LSP : 感傷</title>
+			<title code="0x14">WMPN06.LSP : 移動</title>
+			<title code="0x15">WMPN07.LSP : 緊迫</title>
+			<title code="0x16">WMPN08.LSP : ピンチ</title>
+			<title code="0x17">WMPN09.LSP : 麻雀BATTLE</title>
+			<title code="0x18">WMPN10.LSP : 闘蛮雀</title>
+			<title code="0x19">WMPN11.LSP : パネル麻雀スマッシュ25</title>
+			<title code="0x1a">WMPN12.LSP : 二人打ち 脱衣</title>
+			<title code="0x1b">WMPN13.LSP : 四人打ち 脱衣</title>
+			<title code="0x1c">WMPN14.LSP : エンディングテーマ</title>
+			<title code="0x1d">WMPN15.LSP : 勝利</title>
+			<title code="0x1e">WMPN16.LSP : 敗北</title>
+			<title code="0x1f">WMPN17.LSP : 予感</title>
+			<title code="0x22">WMPN21.LSP : わくわくフォア・ナイン</title>
+			<title code="0x20">WMPN18.LSP : </title>
+			<title code="0x21">WMPN20.LSP : </title>
+			<range min="0x801" max="0x809" extcode="0">MSE.EFC    : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] わくわく麻雀パニック! ～式神伝承～(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="wakpani_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x08">MSE.EFC</rom>
+			<rom type="file" offset="0x10">WMPB01.LSP</rom>
+			<rom type="file" offset="0x11">WMPB02.LSP</rom>
+			<rom type="file" offset="0x12">WMPB04.LSP</rom>
+			<rom type="file" offset="0x13">WMPB05.LSP</rom>
+			<rom type="file" offset="0x14">WMPB06.LSP</rom>
+			<rom type="file" offset="0x15">WMPB07.LSP</rom>
+			<rom type="file" offset="0x16">WMPB08.LSP</rom>
+			<rom type="file" offset="0x17">WMPB09.LSP</rom>
+			<rom type="file" offset="0x18">WMPB10.LSP</rom>
+			<rom type="file" offset="0x19">WMPB11.LSP</rom>
+			<rom type="file" offset="0x1a">WMPB12.LSP</rom>
+			<rom type="file" offset="0x1b">WMPB13.LSP</rom>
+			<rom type="file" offset="0x1c">WMPB14.LSP</rom>
+			<rom type="file" offset="0x1d">WMPB15.LSP</rom>
+			<rom type="file" offset="0x1e">WMPB16.LSP</rom>
+			<rom type="file" offset="0x1f">WMPB17.LSP</rom>
+			<rom type="file" offset="0x20">WMPB18.LSP</rom>
+			<rom type="file" offset="0x21">WMPB20.LSP</rom>
+			<rom type="file" offset="0x22">WMPN21.LSP</rom>
+			<rom type="shell" offset="0">PMDB2 # /DF10 /DS0 /DR16 /E8 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WMPB01.LSP : オープニング</title>
+			<title code="0x11">WMPB02.LSP : 選択</title>
+			<title code="0x12">WMPB04.LSP : やすらぎ</title>
+			<title code="0x13">WMPB05.LSP : 感傷</title>
+			<title code="0x14">WMPB06.LSP : 移動</title>
+			<title code="0x15">WMPB07.LSP : 緊迫</title>
+			<title code="0x16">WMPB08.LSP : ピンチ</title>
+			<title code="0x17">WMPB09.LSP : 麻雀BATTLE</title>
+			<title code="0x18">WMPB10.LSP : 闘蛮雀</title>
+			<title code="0x19">WMPB11.LSP : パネル麻雀スマッシュ25</title>
+			<title code="0x1a">WMPB12.LSP : 二人打ち 脱衣</title>
+			<title code="0x1b">WMPB13.LSP : 四人打ち 脱衣</title>
+			<title code="0x1c">WMPB14.LSP : エンディングテーマ</title>
+			<title code="0x1d">WMPB15.LSP : 勝利</title>
+			<title code="0x1e">WMPB16.LSP : 敗北</title>
+			<title code="0x1f">WMPB17.LSP : 予感</title>
+			<title code="0x22">WMPN21.LSP : わくわくフォア・ナイン</title>
+			<title code="0x20">WMPB18.LSP : </title>
+			<title code="0x21">WMPB20.LSP : </title>
+			<range min="0x801" max="0x809" extcode="0">MSE.EFC    : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] わくわく麻雀パニック! ～式神伝承～(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="wakpani_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">WMPG01.LSP</rom>
+			<rom type="file" offset="0x11">WMPG02.LSP</rom>
+			<rom type="file" offset="0x12">WMPG04.LSP</rom>
+			<rom type="file" offset="0x13">WMPG05.LSP</rom>
+			<rom type="file" offset="0x14">WMPG06.LSP</rom>
+			<rom type="file" offset="0x15">WMPG07.LSP</rom>
+			<rom type="file" offset="0x16">WMPG08.LSP</rom>
+			<rom type="file" offset="0x17">WMPG09.LSP</rom>
+			<rom type="file" offset="0x18">WMPG10.LSP</rom>
+			<rom type="file" offset="0x19">WMPG11.LSP</rom>
+			<rom type="file" offset="0x1a">WMPG12.LSP</rom>
+			<rom type="file" offset="0x1b">WMPG13.LSP</rom>
+			<rom type="file" offset="0x1c">WMPG14.LSP</rom>
+			<rom type="file" offset="0x1d">WMPG15.LSP</rom>
+			<rom type="file" offset="0x1e">WMPG16.LSP</rom>
+			<rom type="file" offset="0x1f">WMPG17.LSP</rom>
+			<rom type="file" offset="0x20">WMPG20.LSP</rom>
+			<rom type="file" offset="0x21">WMPG21.LSP</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WMPG01.LSP</title>
+			<title code="0x11">WMPG02.LSP</title>
+			<title code="0x12">WMPG04.LSP</title>
+			<title code="0x13">WMPG05.LSP</title>
+			<title code="0x14">WMPG06.LSP</title>
+			<title code="0x15">WMPG07.LSP</title>
+			<title code="0x16">WMPG08.LSP</title>
+			<title code="0x17">WMPG09.LSP</title>
+			<title code="0x18">WMPG10.LSP</title>
+			<title code="0x19">WMPG11.LSP</title>
+			<title code="0x1a">WMPG12.LSP</title>
+			<title code="0x1b">WMPG13.LSP</title>
+			<title code="0x1c">WMPG14.LSP</title>
+			<title code="0x1d">WMPG15.LSP</title>
+			<title code="0x1e">WMPG16.LSP</title>
+			<title code="0x1f">WMPG17.LSP</title>
+			<title code="0x20">WMPG20.LSP</title>
+			<title code="0x21">WMPG21.LSP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] わくわく麻雀パニック! 2 ～刻視夢想～(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="wakpani2_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">MSE.EFC</rom>
+			<rom type="file" offset="0x10">N01.M</rom>
+			<rom type="file" offset="0x11">N02.M</rom>
+			<rom type="file" offset="0x12">N03.M</rom>
+			<rom type="file" offset="0x13">N04.M</rom>
+			<rom type="file" offset="0x14">N05.M</rom>
+			<rom type="file" offset="0x15">N06.M</rom>
+			<rom type="file" offset="0x16">N07.M</rom>
+			<rom type="file" offset="0x17">N08.M</rom>
+			<rom type="file" offset="0x18">N09.M</rom>
+			<rom type="file" offset="0x19">N10.M</rom>
+			<rom type="file" offset="0x1a">N11.M</rom>
+			<rom type="file" offset="0x1b">N12.M</rom>
+			<rom type="file" offset="0x1c">N13.M</rom>
+			<rom type="file" offset="0x1d">N14.M</rom>
+			<rom type="file" offset="0x1e">N15.M</rom>
+			<rom type="file" offset="0x1f">N16.M</rom>
+			<rom type="file" offset="0x20">N17.M</rom>
+			<rom type="file" offset="0x21">N18.M</rom>
+			<rom type="file" offset="0x22">N19.M</rom>
+			<rom type="file" offset="0x23">N20.M</rom>
+			<rom type="file" offset="0x24">N21.M</rom>
+			<rom type="file" offset="0x25">N22.M</rom>
+			<rom type="file" offset="0x26">N30.M</rom>
+			<rom type="shell" offset="0">PMD # /DF20 /E8 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">N01.M   : オープニングテーマ</title>
+			<title code="0x11">N02.M   : 選択シーン</title>
+			<title code="0x12">N03.M   : 麻雀しようよ</title>
+			<title code="0x13">N04.M   : 闘蛮雀のテーマ</title>
+			<title code="0x14">N05.M   : ピンチ!!</title>
+			<title code="0x15">N06.M   : 勝利はこの手に</title>
+			<title code="0x16">N07.M   : 麻雀の神秘</title>
+			<title code="0x17">N08.M   : 想い出</title>
+			<title code="0x18">N09.M   : 嬉しい予感</title>
+			<title code="0x19">N10.M   : 戦いへの序曲</title>
+			<title code="0x1a">N11.M   : 雀士の休息</title>
+			<title code="0x1b">N12.M   : 悲しみと哀しみ</title>
+			<title code="0x1c">N13.M   : 非常警報</title>
+			<title code="0x1d">N14.M   : 戦闘</title>
+			<title code="0x1e">N15.M   : 亜空間</title>
+			<title code="0x1f">N16.M   : 聖域</title>
+			<title code="0x20">N17.M   : 両面宿儺</title>
+			<title code="0x21">N18.M   : TOKYOへの帰還</title>
+			<title code="0x22">N19.M   : れっつBINGO</title>
+			<title code="0x23">N20.M   : 勝者への贈り物</title>
+			<title code="0x24">N21.M   : 式神使い阿部雀悟</title>
+			<title code="0x25">N22.M   : わくわくフォア・ナイン</title>
+			<title code="0x26">N30.M   : </title>
+			<range min="0x801" max="0x832" extcode="1">MSE.EFC : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] わくわく麻雀パニック! 2 ～刻視夢想～(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="wakpani2_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x08">MSE.EFC</rom>
+			<rom type="file" offset="0x10">B01.M</rom>
+			<rom type="file" offset="0x11">B02.M</rom>
+			<rom type="file" offset="0x12">B03.M</rom>
+			<rom type="file" offset="0x13">B04.M</rom>
+			<rom type="file" offset="0x14">B05.M</rom>
+			<rom type="file" offset="0x15">B06.M</rom>
+			<rom type="file" offset="0x16">B07.M</rom>
+			<rom type="file" offset="0x17">B08.M</rom>
+			<rom type="file" offset="0x18">B09.M</rom>
+			<rom type="file" offset="0x19">B10.M</rom>
+			<rom type="file" offset="0x1a">B11.M</rom>
+			<rom type="file" offset="0x1b">B12.M</rom>
+			<rom type="file" offset="0x1c">B13.M</rom>
+			<rom type="file" offset="0x1d">B14.M</rom>
+			<rom type="file" offset="0x1e">B15.M</rom>
+			<rom type="file" offset="0x1f">B16.M</rom>
+			<rom type="file" offset="0x20">B17.M</rom>
+			<rom type="file" offset="0x21">B18.M</rom>
+			<rom type="file" offset="0x22">B19.M</rom>
+			<rom type="file" offset="0x23">B20.M</rom>
+			<rom type="file" offset="0x24">B21.M</rom>
+			<rom type="file" offset="0x25">B22.M</rom>
+			<rom type="file" offset="0x26">B30.M</rom>
+			<rom type="shell" offset="0">PMDB2 # /DF10 /DS0 /DR16 /E8 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">B01.M   : オープニングテーマ</title>
+			<title code="0x11">B02.M   : 選択シーン</title>
+			<title code="0x12">B03.M   : 麻雀しようよ</title>
+			<title code="0x13">B04.M   : 闘蛮雀のテーマ</title>
+			<title code="0x14">B05.M   : ピンチ!!</title>
+			<title code="0x15">B06.M   : 勝利はこの手に</title>
+			<title code="0x16">B07.M   : 麻雀の神秘</title>
+			<title code="0x17">B08.M   : 想い出</title>
+			<title code="0x18">B09.M   : 嬉しい予感</title>
+			<title code="0x19">B10.M   : 戦いへの序曲</title>
+			<title code="0x1a">B11.M   : 雀士の休息</title>
+			<title code="0x1b">B12.M   : 悲しみと哀しみ</title>
+			<title code="0x1c">B13.M   : 非常警報</title>
+			<title code="0x1d">B14.M   : 戦闘</title>
+			<title code="0x1e">B15.M   : 亜空間</title>
+			<title code="0x1f">B16.M   : 聖域</title>
+			<title code="0x20">B17.M   : 両面宿儺</title>
+			<title code="0x21">B18.M   : TOKYOへの帰還</title>
+			<title code="0x22">B19.M   : れっつBINGO</title>
+			<title code="0x23">B20.M   : 勝者への贈り物</title>
+			<title code="0x24">B21.M   : 式神使い阿部雀悟</title>
+			<title code="0x25">B22.M   : わくわくフォア・ナイン</title>
+			<title code="0x26">B30.M   : </title>
+			<range min="0x801" max="0x832" extcode="0">MSE.EFC : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] わくわく麻雀パニック! 2 ～刻視夢想～(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="wakpani2_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">G01.M</rom>
+			<rom type="file" offset="0x11">G02.M</rom>
+			<rom type="file" offset="0x12">G03.M</rom>
+			<rom type="file" offset="0x13">G04.M</rom>
+			<rom type="file" offset="0x14">G05.M</rom>
+			<rom type="file" offset="0x15">G06.M</rom>
+			<rom type="file" offset="0x16">G07.M</rom>
+			<rom type="file" offset="0x17">G08.M</rom>
+			<rom type="file" offset="0x18">G09.M</rom>
+			<rom type="file" offset="0x19">G10.M</rom>
+			<rom type="file" offset="0x1a">G11.M</rom>
+			<rom type="file" offset="0x1b">G12.M</rom>
+			<rom type="file" offset="0x1c">G13.M</rom>
+			<rom type="file" offset="0x1d">G14.M</rom>
+			<rom type="file" offset="0x1e">G15.M</rom>
+			<rom type="file" offset="0x1f">G16.M</rom>
+			<rom type="file" offset="0x20">G17.M</rom>
+			<rom type="file" offset="0x21">G18.M</rom>
+			<rom type="file" offset="0x22">G19.M</rom>
+			<rom type="file" offset="0x23">G20.M</rom>
+			<rom type="file" offset="0x24">G21.M</rom>
+			<rom type="file" offset="0x25">G22.M</rom>
+			<rom type="file" offset="0x26">G30.M</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G01.M   : オープニングテーマ</title>
+			<title code="0x11">G02.M   : 選択シーン</title>
+			<title code="0x12">G03.M   : 麻雀しようよ</title>
+			<title code="0x13">G04.M   : 闘蛮雀のテーマ</title>
+			<title code="0x14">G05.M   : ピンチ!!</title>
+			<title code="0x15">G06.M   : 勝利はこの手に</title>
+			<title code="0x16">G07.M   : 麻雀の神秘</title>
+			<title code="0x17">G08.M   : 想い出</title>
+			<title code="0x18">G09.M   : 嬉しい予感</title>
+			<title code="0x19">G10.M   : 戦いへの序曲</title>
+			<title code="0x1a">G11.M   : 雀士の休息</title>
+			<title code="0x1b">G12.M   : 悲しみと哀しみ</title>
+			<title code="0x1c">G13.M   : 非常警報</title>
+			<title code="0x1d">G14.M   : 戦闘</title>
+			<title code="0x1e">G15.M   : 亜空間</title>
+			<title code="0x1f">G16.M   : 聖域</title>
+			<title code="0x20">G17.M   : 両面宿儺</title>
+			<title code="0x21">G18.M   : TOKYOへの帰還</title>
+			<title code="0x22">G19.M   : れっつBINGO</title>
+			<title code="0x23">G20.M   : 勝者への贈り物</title>
+			<title code="0x24">G21.M   : 式神使い阿部雀悟</title>
+			<title code="0x25">G22.M   : わくわくフォア・ナイン</title>
+			<title code="0x26">G30.M</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ナイトシフター(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="nightsft_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">NEKO2.LSP</rom>
+			<rom type="file" offset="0x11">NS01.LSP</rom>
+			<rom type="file" offset="0x12">NS03.LSP</rom>
+			<rom type="file" offset="0x13">NS04.LSP</rom>
+			<rom type="file" offset="0x14">NS05.LSP</rom>
+			<rom type="file" offset="0x15">NS06.LSP</rom>
+			<rom type="file" offset="0x16">NS07.LSP</rom>
+			<rom type="file" offset="0x17">NS08.LSP</rom>
+			<rom type="file" offset="0x18">NS10.LSP</rom>
+			<rom type="file" offset="0x19">NS11.LSP</rom>
+			<rom type="file" offset="0x1a">NS12.LSP</rom>
+			<rom type="file" offset="0x1b">NS13.LSP</rom>
+			<rom type="file" offset="0x1c">NS19.LSP</rom>
+			<rom type="file" offset="0x1d">NS21.LSP</rom>
+			<rom type="file" offset="0x1e">NS22.LSP</rom>
+			<rom type="file" offset="0x1f">NS23A.LSP</rom>
+			<rom type="file" offset="0x20">NS23B.LSP</rom>
+			<rom type="file" offset="0x21">NS24.LSP</rom>
+			<rom type="file" offset="0x22">NS25.LSP</rom>
+			<rom type="file" offset="0x23">NS26.LSP</rom>
+			<rom type="shell" offset="0">PMD /DF20</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">NEKO2.LSP</title>
+			<title code="0x11">NS01.LSP</title>
+			<title code="0x12">NS03.LSP</title>
+			<title code="0x13">NS04.LSP</title>
+			<title code="0x14">NS05.LSP</title>
+			<title code="0x15">NS06.LSP</title>
+			<title code="0x16">NS07.LSP</title>
+			<title code="0x17">NS08.LSP</title>
+			<title code="0x18">NS10.LSP</title>
+			<title code="0x19">NS11.LSP</title>
+			<title code="0x1a">NS12.LSP</title>
+			<title code="0x1b">NS13.LSP</title>
+			<title code="0x1c">NS19.LSP</title>
+			<title code="0x1d">NS21.LSP</title>
+			<title code="0x1e">NS22.LSP</title>
+			<title code="0x1f">NS23A.LSP</title>
+			<title code="0x20">NS23B.LSP</title>
+			<title code="0x21">NS24.LSP</title>
+			<title code="0x22">NS25.LSP</title>
+			<title code="0x23">NS26.LSP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ナイトシフター(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="nightsft_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x10">NEKO2.LSP</rom>
+			<rom type="file" offset="0x11">NS01.LSP</rom>
+			<rom type="file" offset="0x12">NS03.LSP</rom>
+			<rom type="file" offset="0x13">NS04.LSP</rom>
+			<rom type="file" offset="0x14">NS05.LSP</rom>
+			<rom type="file" offset="0x15">NS06.LSP</rom>
+			<rom type="file" offset="0x16">NS07.LSP</rom>
+			<rom type="file" offset="0x17">NS08.LSP</rom>
+			<rom type="file" offset="0x18">NS10.LSP</rom>
+			<rom type="file" offset="0x19">NS11.LSP</rom>
+			<rom type="file" offset="0x1a">NS12.LSP</rom>
+			<rom type="file" offset="0x1b">NS13.LSP</rom>
+			<rom type="file" offset="0x1c">NS19.LSP</rom>
+			<rom type="file" offset="0x1d">NS21.LSP</rom>
+			<rom type="file" offset="0x1e">NS22.LSP</rom>
+			<rom type="file" offset="0x1f">NS23A.LSP</rom>
+			<rom type="file" offset="0x20">NS23B.LSP</rom>
+			<rom type="file" offset="0x21">NS24.LSP</rom>
+			<rom type="file" offset="0x22">NS25.LSP</rom>
+			<rom type="file" offset="0x23">NS26.LSP</rom>
+			<rom type="shell" offset="0">PMDB2 /DF16 /DS0 /DP144 /DR48</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">NEKO2.LSP</title>
+			<title code="0x11">NS01.LSP</title>
+			<title code="0x12">NS03.LSP</title>
+			<title code="0x13">NS04.LSP</title>
+			<title code="0x14">NS05.LSP</title>
+			<title code="0x15">NS06.LSP</title>
+			<title code="0x16">NS07.LSP</title>
+			<title code="0x17">NS08.LSP</title>
+			<title code="0x18">NS10.LSP</title>
+			<title code="0x19">NS11.LSP</title>
+			<title code="0x1a">NS12.LSP</title>
+			<title code="0x1b">NS13.LSP</title>
+			<title code="0x1c">NS19.LSP</title>
+			<title code="0x1d">NS21.LSP</title>
+			<title code="0x1e">NS22.LSP</title>
+			<title code="0x1f">NS23A.LSP</title>
+			<title code="0x20">NS23B.LSP</title>
+			<title code="0x21">NS24.LSP</title>
+			<title code="0x22">NS25.LSP</title>
+			<title code="0x23">NS26.LSP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] リクサス</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="lixus_98">
+			<rom type="file" offset="-1">mlalf_98.com</rom>
+			<rom type="file" offset="-1">SYS98A.EXE</rom>
+			<rom type="conin" offset="5">SYS98A.EXE</rom>
+			<rom type="file" offset="0x11">LIX002A.MLO</rom>
+			<rom type="file" offset="0x12">LIX002B.MLO</rom>
+			<rom type="file" offset="0x13">LIX003A.MLO</rom>
+			<rom type="file" offset="0x14">LIX004A.MLO</rom>
+			<rom type="file" offset="0x15">LIX005.MLO</rom>
+			<rom type="file" offset="0x16">LIX006.MLO</rom>
+			<rom type="file" offset="0x17">LIX007.MLO</rom>
+			<rom type="file" offset="0x18">LIX008.MLO</rom>
+			<rom type="file" offset="0x19">LIX009A.MLO</rom>
+			<rom type="file" offset="0x1A">LIX009B.MLO</rom>
+			<rom type="file" offset="0x1B">LIX010.MLO</rom>
+			<rom type="file" offset="0x1C">LIX011.MLO</rom>
+			<rom type="file" offset="0x1D">LIX012.MLO</rom>
+			<rom type="file" offset="0x1E">LIX013.MLO</rom>
+			<rom type="file" offset="0x1F">LIX014.MLO</rom>
+			<rom type="file" offset="0x20">LIX015.MLO</rom>
+			<rom type="file" offset="0x21">LIX016.MLO</rom>
+			<rom type="file" offset="0x22">LIX017.MLO</rom>
+			<rom type="file" offset="0x23">LIX018.MLO</rom>
+			<rom type="file" offset="0x24">LIX019.MLO</rom>
+			<rom type="file" offset="0x25">LIX020.MLO</rom>
+			<rom type="file" offset="0x26">LIX021.MLO</rom>
+			<rom type="file" offset="0x27">LIX022.MLO</rom>
+			<rom type="file" offset="0x28">LIX023.MLO</rom>
+			<rom type="file" offset="0x29">LIX024.MLO</rom>
+			<rom type="file" offset="0x2a">LIX026A.MLO</rom>
+			<rom type="file" offset="0x2b">LIX026C.MLO</rom>
+			<rom type="file" offset="0x2c">LIX026D.MLO</rom>
+			<rom type="file" offset="0x2d">LIX027.MLO</rom>
+			<rom type="file" offset="0x2e">LIX028.MLO</rom>
+			<rom type="file" offset="0x2f">LIX029.MLO</rom>
+			<rom type="file" offset="0x30">LIX030.MLO</rom>
+			<rom type="file" offset="0x31">LIX031.MLO</rom>
+			<rom type="file" offset="0x32">LIX032.MLO</rom>
+			<rom type="file" offset="0x33">LIX033.MLO</rom>
+			<rom type="file" offset="0x34">LIX286.MLO</rom>
+			<rom type="file" offset="0x35">LIX700.MLO</rom>
+			<rom type="file" offset="0x36">LIX985.MLO</rom>
+			<rom type="file" offset="0x37">LIX985B.MLO</rom>
+			<rom type="file" offset="0x38">LIX986.MLO</rom>
+			<rom type="file" offset="0x39">LIX987.MLO</rom>
+			<rom type="file" offset="0x3a">LIX988A.MLO</rom>
+			<rom type="file" offset="0x3b">LIX988B.MLO</rom>
+			<rom type="shell" offset="0">mlalf_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">LIX002A.MLO : 静寂を破るもの</title>
+			<title code="0x12">LIX002B.MLO : レトロポピュラー</title>
+			<title code="0x13">LIX003A.MLO : PRODRIVE</title>
+			<title code="0x14">LIX004A.MLO : 行けー!やれー!殺せー!</title>
+			<title code="0x15">LIX005.MLO  : ファイトだ!すかちゃん</title>
+			<title code="0x16">LIX006.MLO  : モンスターに中指立てよう</title>
+			<title code="0x17">LIX007.MLO  : モノクロム・シティ</title>
+			<title code="0x18">LIX008.MLO  : Tea Time</title>
+			<title code="0x19">LIX009A.MLO : 変な曲</title>
+			<title code="0x1A">LIX009B.MLO : 迷路だこあいよぅ</title>
+			<title code="0x1B">LIX010.MLO  : It is The B.G.M.</title>
+			<title code="0x1C">LIX011.MLO  : とらっぷにぃはまりぃこぉめぇ</title>
+			<title code="0x1D">LIX012.MLO  : The volcanic bomb.</title>
+			<title code="0x1E">LIX013.MLO  : いきおいがない曲。</title>
+			<title code="0x1F">LIX014.MLO  : 鉱石にはまれ!!</title>
+			<title code="0x20">LIX015.MLO  : 愛しのマンドラゴラ</title>
+			<title code="0x21">LIX016.MLO  : 1分59秒代への道</title>
+			<title code="0x22">LIX017.MLO  : PARTY!</title>
+			<title code="0x23">LIX018.MLO  : ツートンカラーのシルビー</title>
+			<title code="0x24">LIX019.MLO  : イリュージョン</title>
+			<title code="0x25">LIX020.MLO  : 神々しかろ?そうでもないぞ</title>
+			<title code="0x26">LIX021.MLO  : にんぎょひめ☆</title>
+			<title code="0x27">LIX022.MLO  : わんだほう</title>
+			<title code="0x28">LIX023.MLO  : URU君作ってよぉ</title>
+			<title code="0x29">LIX024.MLO  : ジェシカ、危篤!</title>
+			<title code="0x2a">LIX026A.MLO : あーあって感じ</title>
+			<title code="0x2b">LIX026C.MLO : はずしてる。</title>
+			<title code="0x2d">LIX027.MLO  : Last summer memory.</title>
+			<title code="0x2e">LIX028.MLO  : そこのサ○エさん</title>
+			<title code="0x2f">LIX029.MLO  : Misty Lovers</title>
+			<title code="0x30">LIX030.MLO  : ねむたくなるのぅ</title>
+			<title code="0x31">LIX031.MLO  : 「暁のプレリュード」</title>
+			<title code="0x32">LIX032.MLO  : キャンプ、キャンプ～</title>
+			<title code="0x2c">LIX026D.MLO : </title>
+			<title code="0x33">LIX033.MLO  : </title>
+			<title code="0x34">LIX286.MLO  : </title>
+			<title code="0x35">LIX700.MLO  : </title>
+			<title code="0x36">LIX985.MLO  : </title>
+			<title code="0x37">LIX985B.MLO : </title>
+			<title code="0x38">LIX986.MLO  : </title>
+			<title code="0x39">LIX987.MLO  : </title>
+			<title code="0x3a">LIX988A.MLO : </title>
+			<title code="0x3b">LIX988B.MLO : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] リリス(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="lilith_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">N02.M</rom>
+			<rom type="file" offset="0x11">N03.M</rom>
+			<rom type="file" offset="0x12">N04.M</rom>
+			<rom type="file" offset="0x13">N05.M</rom>
+			<rom type="file" offset="0x14">N06.M</rom>
+			<rom type="file" offset="0x15">N07.M</rom>
+			<rom type="file" offset="0x16">N08.M</rom>
+			<rom type="file" offset="0x17">N09.M</rom>
+			<rom type="file" offset="0x18">N10.M</rom>
+			<rom type="file" offset="0x19">N11.M</rom>
+			<rom type="file" offset="0x1a">N12.M</rom>
+			<rom type="file" offset="0x1b">N13.M</rom>
+			<rom type="file" offset="0x1c">N14.M</rom>
+			<rom type="file" offset="0x1d">N15.M</rom>
+			<rom type="file" offset="0x1e">N16.M</rom>
+			<rom type="file" offset="0x1f">N17.M</rom>
+			<rom type="file" offset="0x20">N18.M</rom>
+			<rom type="shell" offset="0">PMD # /M15 /V1 /DF20 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">N02.M  : LILITH</title>
+			<title code="0x11">N03.M  : SORROW</title>
+			<title code="0x12">N04.M  : OPENING</title>
+			<title code="0x13">N05.M  : TENSION</title>
+			<title code="0x14">N06.M  : FUN</title>
+			<title code="0x15">N07.M  : FIELD</title>
+			<title code="0x16">N08.M  : UNEASY</title>
+			<title code="0x17">N09.M  : FIELD2</title>
+			<title code="0x18">N10.M  : MIDNIGHT</title>
+			<title code="0x19">N11.M  : PEACE</title>
+			<title code="0x1a">N12.M  : MAKELOVE</title>
+			<title code="0x1b">N13.M  : FINALE</title>
+			<title code="0x1c">N14.M  : ENDING</title>
+			<title code="0x1d">N15.M  : FIGHT</title>
+			<title code="0x1e">N16.M  : FIELD3</title>
+			<title code="0x1f">N17.M  : FIELD4</title>
+			<title code="0x20">N18.M  : </title>
+			<range min="0x801" max="0x824" extcode="1">SE.EFC : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] リリス(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="lilith_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">B02.M</rom>
+			<rom type="file" offset="0x11">B03.M</rom>
+			<rom type="file" offset="0x12">B04.M</rom>
+			<rom type="file" offset="0x13">B05.M</rom>
+			<rom type="file" offset="0x14">B06.M</rom>
+			<rom type="file" offset="0x15">B07.M</rom>
+			<rom type="file" offset="0x16">B08.M</rom>
+			<rom type="file" offset="0x17">B09.M</rom>
+			<rom type="file" offset="0x18">B10.M</rom>
+			<rom type="file" offset="0x19">B11.M</rom>
+			<rom type="file" offset="0x1a">B12.M</rom>
+			<rom type="file" offset="0x1b">B13.M</rom>
+			<rom type="file" offset="0x1c">B14.M</rom>
+			<rom type="file" offset="0x1d">B15.M</rom>
+			<rom type="file" offset="0x1e">B16.M</rom>
+			<rom type="file" offset="0x1f">B17.M</rom>
+			<rom type="file" offset="0x20">B18.M</rom>
+			<rom type="shell" offset="0">PMDB2 # /M10 /V1 /DF10 /DS0 /DR16 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">B02.M  : LILITH</title>
+			<title code="0x11">B03.M  : SORROW</title>
+			<title code="0x12">B04.M  : OPENING</title>
+			<title code="0x13">B05.M  : TENSION</title>
+			<title code="0x14">B06.M  : FUN</title>
+			<title code="0x15">B07.M  : FIELD</title>
+			<title code="0x16">B08.M  : UNEASY</title>
+			<title code="0x17">B09.M  : FIELD2</title>
+			<title code="0x18">B10.M  : MIDNIGHT</title>
+			<title code="0x19">B11.M  : PEACE</title>
+			<title code="0x1a">B12.M  : MAKELOVE</title>
+			<title code="0x1b">B13.M  : FINALE</title>
+			<title code="0x1c">B14.M  : ENDING</title>
+			<title code="0x1d">B15.M  : FIGHT</title>
+			<title code="0x1e">B16.M  : FIELD3</title>
+			<title code="0x1f">B17.M  : FIELD4</title>
+			<title code="0x20">B18.M  : </title>
+			<range min="0x801" max="0x824" extcode="1">SE.EFC : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] リリス(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Four･Nine</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="lilith_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">G02.M</rom>
+			<rom type="file" offset="0x11">G03.M</rom>
+			<rom type="file" offset="0x12">G04.M</rom>
+			<rom type="file" offset="0x13">G05.M</rom>
+			<rom type="file" offset="0x14">G06.M</rom>
+			<rom type="file" offset="0x15">G07.M</rom>
+			<rom type="file" offset="0x16">G08.M</rom>
+			<rom type="file" offset="0x17">G09.M</rom>
+			<rom type="file" offset="0x18">G10.M</rom>
+			<rom type="file" offset="0x19">G11.M</rom>
+			<rom type="file" offset="0x1a">G12.M</rom>
+			<rom type="file" offset="0x1b">G13.M</rom>
+			<rom type="file" offset="0x1c">G14.M</rom>
+			<rom type="file" offset="0x1d">G15.M</rom>
+			<rom type="file" offset="0x1e">G16.M</rom>
+			<rom type="file" offset="0x1f">G17.M</rom>
+			<rom type="file" offset="0x20">G18.M</rom>
+			<rom type="shell" offset="0">MMD /M32</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G02.M : LILITH</title>
+			<title code="0x11">G03.M : SORROW</title>
+			<title code="0x12">G04.M : OPENING</title>
+			<title code="0x13">G05.M : TENSION</title>
+			<title code="0x14">G06.M : FUN</title>
+			<title code="0x15">G07.M : FIELD</title>
+			<title code="0x16">G08.M : UNEASY</title>
+			<title code="0x17">G09.M : FIELD2</title>
+			<title code="0x18">G10.M : MIDNIGHT</title>
+			<title code="0x19">G11.M : PEACE</title>
+			<title code="0x1a">G12.M : MAKELOVE</title>
+			<title code="0x1b">G13.M : FINALE</title>
+			<title code="0x1c">G14.M : ENDING</title>
+			<title code="0x1d">G15.M : FIGHT</title>
+			<title code="0x1e">G16.M : FIELD3</title>
+			<title code="0x1f">G17.M : FIELD4</title>
+			<title code="0x20">G18.M : </title>
+		</titlelist>
+	</game>
+</gamelist>

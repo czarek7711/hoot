@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //EXACT -->
+	<game>
+		<name>[X68000] エトワール・プリンセス(OPM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">EXACT</driveralias>
+		<romlist archive="epsnd">
+			<rom type="code">epsnd.bin</rom>
+			<rom type="code" offset="0x100000">EMDRV</rom>
+			<rom type="code" offset="0x110000">EPPLK</rom>
+			<rom type="code" offset="0x120000">EPOPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">演奏停止</title>
+			<title code="0x200">フェードアウト</title>
+			<title code="0x100">ウルト草原</title>
+			<title code="0x101">フウの水車村</title>
+			<title code="0x102">溶岩洞窟</title>
+			<title code="0x103">ドラグ火山</title>
+			<title code="0x104">エレミヤの塔</title>
+			<title code="0x105">ノムリア洞窟</title>
+			<title code="0x106">テミス神殿</title>
+			<title code="0x107">メネアの森</title>
+			<title code="0x108">ハイトの谷</title>
+			<title code="0x109">リアン湖</title>
+			<title code="0x10a">ア・レイク城</title>
+			<title code="0x10b">鏡の世界</title>
+			<title code="0x10c">太陽王宮</title>
+			<title code="0x10d">水没遺跡</title>
+			<title code="0x10e">天空城</title>
+			<title code="0x10f">エンペラーX</title>
+			<title code="0x015">ボス～その1～</title>
+			<title code="0x016">ボス～その2～</title>
+			<title code="0x017">ボス～その3～</title>
+			<title code="0x110">オープニング</title>
+			<title code="0x111">メンバーセレクト</title>
+			<title code="0x112">エンディング</title>
+			<title code="0x028">アイテムを手に入れた</title>
+			<title code="0x029">封印解除</title>
+			<title code="0x02a">ステージクリア</title>
+			<title code="0x02b">ゲームオーバー</title>
+			<!-- <title code="0x02d">バランステスト</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] エトワール・プリンセス(OPM+SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">EXACT</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="epsnd">
+			<rom type="code">epsnd.bin</rom>
+			<rom type="code" offset="0x100000">EMDRV</rom>
+			<rom type="code" offset="0x110000">EPPLK</rom>
+			<rom type="code" offset="0x120000">EPMIDI</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">演奏停止</title>
+			<title code="0x200">フェードアウト</title>
+			<title code="0x100">ウルト草原</title>
+			<title code="0x101">フウの水車村</title>
+			<title code="0x102">溶岩洞窟</title>
+			<title code="0x103">ドラグ火山</title>
+			<title code="0x104">エレミヤの塔</title>
+			<title code="0x105">ノムリア洞窟</title>
+			<title code="0x106">テミス神殿</title>
+			<title code="0x107">メネアの森</title>
+			<title code="0x108">ハイトの谷</title>
+			<title code="0x109">リアン湖</title>
+			<title code="0x10a">ア・レイク城</title>
+			<title code="0x10b">鏡の世界</title>
+			<title code="0x10c">太陽王宮</title>
+			<title code="0x10d">水没遺跡</title>
+			<title code="0x10e">天空城</title>
+			<title code="0x10f">エンペラーX</title>
+			<title code="0x015">ボス～その1～</title>
+			<title code="0x016">ボス～その2～</title>
+			<title code="0x017">ボス～その3～</title>
+			<title code="0x110">オープニング</title>
+			<title code="0x111">メンバーセレクト</title>
+			<title code="0x112">エンディング</title>
+			<title code="0x028">アイテムを手に入れた</title>
+			<title code="0x029">封印解除</title>
+			<title code="0x02a">ステージクリア</title>
+			<title code="0x02b">ゲームオーバー</title>
+			<title code="0x02d">バランステスト</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] エトワール・プリンセス(OPM+Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">EXACT</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="epsnd">
+			<rom type="code">epsnd.bin</rom>
+			<rom type="code" offset="0x100000">EMDRV</rom>
+			<rom type="code" offset="0x110000">EPPLK</rom>
+			<rom type="code" offset="0x120000">EPMIDI</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">演奏停止</title>
+			<title code="0x200">フェードアウト</title>
+			<title code="0x100">ウルト草原</title>
+			<title code="0x101">フウの水車村</title>
+			<title code="0x102">溶岩洞窟</title>
+			<title code="0x103">ドラグ火山</title>
+			<title code="0x104">エレミヤの塔</title>
+			<title code="0x105">ノムリア洞窟</title>
+			<title code="0x106">テミス神殿</title>
+			<title code="0x107">メネアの森</title>
+			<title code="0x108">ハイトの谷</title>
+			<title code="0x109">リアン湖</title>
+			<title code="0x10a">ア・レイク城</title>
+			<title code="0x10b">鏡の世界</title>
+			<title code="0x10c">太陽王宮</title>
+			<title code="0x10d">水没遺跡</title>
+			<title code="0x10e">天空城</title>
+			<title code="0x10f">エンペラーX</title>
+			<title code="0x015">ボス～その1～</title>
+			<title code="0x016">ボス～その2～</title>
+			<title code="0x017">ボス～その3～</title>
+			<title code="0x110">オープニング</title>
+			<title code="0x111">メンバーセレクト</title>
+			<title code="0x112">エンディング</title>
+			<title code="0x028">アイテムを手に入れた</title>
+			<title code="0x029">封印解除</title>
+			<title code="0x02a">ステージクリア</title>
+			<title code="0x02b">ゲームオーバー</title>
+			<title code="0x02d">バランステスト</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] AQUALES</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">EXACT</driveralias>
+		<options>
+			<option name="mfp"    value="0x01"/>
+			<option name="dmaint" value="0x01"/>
+		</options>
+		<romlist archive="aquales68snd">
+			<rom type="code" offset="0x000000">aquales68snd.bin</rom>
+			<rom type="x"    offset="0x006800">EXDOSSYS</rom>
+			<rom type="code" offset="0x080000">EMDEXDOS</rom>
+			<rom type="code" offset="0x0a0000">AQUAGSNG</rom>
+			<rom type="code" offset="0x0c0000">AQUAGPCM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x18">PCM TEST</title>
+			<title code="0x01">INTRO</title>
+			<title code="0x02">OPENING</title>
+			<title code="0x04">STAGE 1</title>
+			<title code="0x07">STAGE 2</title>
+			<title code="0x08">STAGE 3</title>
+			<title code="0x0a">STAGE 4-1</title>
+			<title code="0x06">STAGE 4-2</title>
+			<title code="0x03">STAGE 5</title>
+			<title code="0x05">STAGE 6</title>
+			<title code="0x09">STAGE 7</title>
+			<title code="0x0b">STAGE 8</title>
+			<title code="0x12">BOSS 1</title>
+			<title code="0x10">BOSS 2</title>
+			<title code="0x11">BOSS 3</title>
+			<title code="0x0f">BOSS 4</title>
+			<title code="0x0c">BOSS 5</title>
+			<title code="0x0e">BOSS 6</title>
+			<title code="0x0d">BOSS 7</title>
+			<title code="0x13">STAGE CLEAR</title>
+			<title code="0x14">GAME OVER</title>
+			<title code="0x15">VISUAL 1</title>
+			<title code="0x16">VISUAL 2</title>
+			<title code="0x17">ENDING</title>
+			<range min="0x164" max="0x195" extcode="1">SE %02x</range>
+			<range min="0x1c8" max="0x1c8" extcode="1">SE %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Geograph Seal(OPM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">EXACT</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+			<option name="dmaint" value="0x01"/>
+		</options>
+		<romlist archive="geogseal68snd">
+			<rom type="code" offset="0x000000">gs68snd.bin</rom>
+			<rom type="x"    offset="0x010000">SMIDRV.X</rom>
+			<rom type="x"    offset="0x020000">PCMDRV.X</rom>
+			<rom type="x"    offset="0x030000">FMDRV.X</rom>
+			<rom type="x"    offset="0x040000">MDIDRV.X</rom>
+			<rom type="x"    offset="0x060000">MPP.X</rom>
+			<rom type="code" offset="0x060798">GS_MUSE.EAR</rom>
+			<rom type="code" offset="0x080000">GSPCM.PLK</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">INTRO</title>
+			<title code="0x02">OPENING</title>
+			<title code="0x05">MISSION</title>
+			<title code="0x0F">STAGE 1</title>
+			<title code="0x0B">STAGE 2</title>
+			<title code="0x0C">STAGE 3</title>
+			<title code="0x10">STAGE 4</title>
+			<title code="0x0A">STAGE 5</title>
+			<title code="0x0D">STAGE 6</title>
+			<title code="0x0E">STAGE 7</title>
+			<title code="0x14">STAGE 8</title>
+			<title code="0x15">BOSS 1</title>
+			<title code="0x16">BOSS 2</title>
+			<title code="0x03">STAGE CLEAR</title>
+			<title code="0x07">GAME OVER</title>
+			<title code="0x06">NAME ENTRY</title>
+			<title code="0x04">V.S. MENU</title>
+			<title code="0x08">V.S. BATTLE</title>
+			<title code="0x09">ENDING</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Geograph Seal(GS)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">EXACT</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+			<option name="dmaint" value="0x01"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="geogseal68snd">
+			<rom type="code" offset="0x000000">gs68snd.bin</rom>
+			<rom type="x"    offset="0x010000">SMIDRV.X</rom>
+			<rom type="x"    offset="0x020000">PCMDRV.X</rom>
+			<rom type="x"    offset="0x030000">FMDRV.X</rom>
+			<rom type="x"    offset="0x040000">MDIDRV.X</rom>
+			<rom type="x"    offset="0x060000">MPP.X</rom>
+			<rom type="code" offset="0x060798">GS_MUSE.EAR</rom>
+			<rom type="code" offset="0x080000">GSPCM.PLK</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x19">BALANCE</title>
+			<title code="0x01">INTRO</title>
+			<title code="0x02">OPENING</title>
+			<title code="0x05">MISSION</title>
+			<title code="0x0F">STAGE 1</title>
+			<title code="0x0B">STAGE 2</title>
+			<title code="0x0C">STAGE 3</title>
+			<title code="0x10">STAGE 4</title>
+			<title code="0x0A">STAGE 5</title>
+			<title code="0x0D">STAGE 6</title>
+			<title code="0x0E">STAGE 7</title>
+			<title code="0x14">STAGE 8</title>
+			<title code="0x15">BOSS 1</title>
+			<title code="0x16">BOSS 2</title>
+			<title code="0x03">STAGE CLEAR</title>
+			<title code="0x07">GAME OVER</title>
+			<title code="0x06">NAME ENTRY</title>
+			<title code="0x04">V.S. MENU</title>
+			<title code="0x08">V.S. BATTLE</title>
+			<title code="0x09">ENDING</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] NAIOUS</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">EXACT</driveralias>
+		<options>
+			<option name="mfp"    value="0x01"/>
+		</options>
+		<romlist archive="naious68snd">
+			<rom type="code" offset="0x000000">naious68snd.bin</rom>
+			<rom type="code" offset="0x00ffe4">EMDEX</rom>
+			<rom type="code" offset="0x012000">EMDDAT</rom>
+			<rom type="code" offset="0x034000">PCMDAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x17">OPENING</title>
+		<!--	<title code="0x19">OPENING</title> -->
+			<title code="0x12">DEMO 1</title>
+		<!--	<title code="0x16">DEMO 1</title> -->
+			<title code="0x01">STAGE 1</title>
+			<title code="0x08">BOSS 1</title>
+			<title code="0x1c">STAGE CLEAR</title>
+			<title code="0x11">DEMO 2</title>
+			<title code="0x02">STAGE 2</title>
+			<title code="0x0e">BOSS 2</title>
+		<!--	<title code="0x0f">BOSS 2</title> -->
+			<title code="0x10">DEMO 3</title>
+		<!--	<title code="0x13">DEMO 3</title>
+			<title code="0x15">DEMO 3</title> -->
+			<title code="0x03">STAGE 3</title>
+			<title code="0x0a">BOSS 3</title>
+			<title code="0x14">DEMO 4</title>
+			<title code="0x04">STAGE 4</title>
+			<title code="0x0b">BOSS 4</title>
+			<title code="0x05">STAGE 5</title>
+			<title code="0x0c">BOSS 5</title>
+			<title code="0x06">STAGE 6</title>
+			<title code="0x0d">BOSS 6</title>
+			<title code="0x07">STAGE 7</title>
+			<title code="0x09">BOSS 7</title>
+			<title code="0x18">ENDING</title>
+			<title code="0x1d">GAME OVER</title>
+			<title code="0x1a">OPENING?</title>
+			<title code="0x1b">GAME OVER?</title>
+			<range min="0x122" max="0x132" extcode="1">SE %02x</range>
+			<range min="0x124" max="0x134" extcode="1">SE %02x</range>
+			<range min="0x35" max="0x45" extcode="1">SE %02x</range>
+		</titlelist>
+	</game>
+</gamelist>

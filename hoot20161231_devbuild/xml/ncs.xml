@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //NCS -->
+	<game>
+		<name>[PC-9801] ライトニングバッカス - THE KNIGHT of IRON -</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">NCS</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dummysndrom" value="1"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="lvaccus98">
+			<rom type="code" offset="0x01000">lvaccus.bin</rom>
+			<rom type="code" offset="0x01100">COMMAND.COM</rom>
+		</romlist>
+		<titlelist>
+			<!-- crc32 = 0x869327d7 (1st version) -->
+			<title code="0xa58f0000">演奏停止</title>
+			<title code="0xa5aa0000">MUSIC #01</title>
+			<title code="0xa5c50000">MUSIC #02</title>
+			<title code="0xa5e00000">MUSIC #03</title>
+			<title code="0xa5fb0000">MUSIC #04</title>
+			<title code="0xa6160000">MUSIC #05</title>
+			<!-- crc32 = 0xcada4e5e (another version) -->
+		<!--	<title code="0xa64f0000">演奏停止</title>
+			<title code="0xa66a0000">MUSIC #01</title>
+			<title code="0xa6850000">MUSIC #02</title>
+			<title code="0xa6a00000">MUSIC #03</title>
+			<title code="0xa6bb0000">MUSIC #04</title>
+			<title code="0xa6d60000">MUSIC #05</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] Mr.BUMP</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">NCS</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xe7fd"/>
+			<option name="mdata_size" value="0x1600"/>
+		</options>
+		<romlist archive="bump">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MDAT01</rom>
+			<rom type="bgm" offset="0x01">MDAT02</rom>
+			<rom type="bgm" offset="0x02">MDAT03</rom>
+			<rom type="bgm" offset="0x03">MDAT04</rom>
+			<rom type="bgm" offset="0x04">MDAT05</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">MUS01 : Opening</title>
+			<title code="0x02">MUS02 : Area</title>
+			<title code="0x00">MUS03 : Demo?</title>
+			<title code="0x03">MUS04 : Demo?</title>
+			<title code="0x04">MUS05 : GameOver</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] エルスリード</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">NCS</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+			<option name="mdata_size" value="0x2400"/>
+			<option name="mfile_size" value="0x2400"/>
+		</options>
+		<romlist archive="elthlead">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xa000">DRIVER1</rom>
+			<rom type="code" offset="0xa800">DRIVER2</rom>
+			<rom type="bgm"  offset="0x00">MUS00</rom>
+			<rom type="bgm"  offset="0x01">MUS01</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x18000000">演奏停止</title>
+			<title code="0x00000000">オープニング</title>
+			<title code="0x02000001">エルスリード軍BGM</title>
+			<title code="0x03000001">ヴェルゼリア軍BGM</title>
+			<title code="0x04000001">エルスリード軍BGM2</title>
+			<title code="0x01000000">エンディング</title>
+			<title code="0x05000001">効果音#00</title>
+			<title code="0x06000001">効果音#01</title>
+			<title code="0x07000001">効果音#02</title>
+			<title code="0x0b000001">効果音#03</title>
+			<title code="0x0c000001">効果音#04</title>
+			<title code="0x0d000001">効果音#05</title>
+			<title code="0x0e000001">効果音#06</title>
+			<title code="0x0f000001">効果音#07</title>
+			<title code="0x10000001">効果音#08</title>
+			<title code="0x11000001">効果音#09</title>
+			<title code="0x12000001">効果音#10</title>
+			<title code="0x13000001">効果音#11</title>
+			<title code="0x14000001">効果音#12</title>
+			<title code="0x15000001">効果音#13</title>
+			<title code="0x16000001">効果音#14</title>
+			<title code="0x17000001">効果音#15</title>
+			<title code="0x19000001">効果音#16</title>
+			<title code="0x1a000001">効果音#17</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] ガイアの紋章</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">NCS</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+		</options>
+		<romlist archive="gaia88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xa000">DRIVER1</rom>
+			<rom type="code" offset="0xa800">DRIVER2</rom>
+			<rom type="bgm"  offset="0x00">MUS00</rom>
+			<rom type="bgm"  offset="0x01">MUS01</rom>
+			<rom type="bgm"  offset="0x02">MUS02</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x31000000">演奏停止</title>
+		<!--	<title code="0x30000002">効果音停止</title> -->
+			<title code="0x02000001">オープニング</title>
+			<title code="0x03000001">メニュー</title>
+			<title code="0x00000000">勝利</title>
+			<title code="0x04000001">敗北</title>
+			<title code="0x06000002">BGM 1</title>
+			<title code="0x07000002">BGM 2</title>
+			<title code="0x08000002">BGM 3</title>
+			<title code="0x01000000">エンディング</title>
+			<title code="0x09000002">効果音#00</title>
+			<title code="0x0a000002">効果音#01</title>
+			<title code="0x0b000002">効果音#02</title>
+			<title code="0x0c000002">効果音#03</title>
+			<title code="0x0d000002">効果音#04</title>
+			<title code="0x0e000002">効果音#05</title>
+			<title code="0x0f000002">効果音#06</title>
+			<title code="0x10000002">効果音#07</title>
+			<title code="0x11000002">効果音#08</title>
+			<title code="0x12000002">効果音#09</title>
+			<title code="0x13000002">効果音#10</title>
+			<title code="0x19000002">効果音#11</title>
+			<title code="0x20000002">効果音#12</title>
+			<title code="0x21000002">効果音#13</title>
+			<title code="0x22000002">効果音#14</title>
+			<title code="0x25000002">効果音#15</title>
+			<title code="0x26000002">効果音#16</title>
+			<title code="0x27000002">効果音#17</title>
+			<title code="0x28000002">効果音#18</title>
+			<title code="0x29000002">効果音#19</title>
+			<title code="0x2d000002">効果音#20</title>
+			<title code="0x2e000002">効果音#21</title>
+		<!--	<title code="0x32000002">効果音#22</title> -->
+		<!--	<title code="0x33000002">効果音#23</title> -->
+		<!--	<title code="0x34000002">効果音#24</title> -->
+		<!--	<title code="0x38000002">効果音#25</title> -->
+		<!--	<title code="0x39000002">効果音#26</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] ガイフレーム</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">NCS</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1000"/>
+		</options>
+		<romlist archive="guyframe">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0500">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x10">MUS03</rom>
+			<rom type="bgm" offset="0x11">MUS04</rom>
+			<rom type="bgm" offset="0x12">MUS05</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000000">MUS00</title>
+			<title code="0x02000000">MUS00</title>
+			<title code="0x01000001">MUS01</title>
+			<title code="0x01000002">MUS02</title>
+			<title code="0x06000010">MUS03</title>
+			<title code="0x06000011">MUS04</title>
+			<title code="0x01000012">MUS05</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] ライトニングバッカス - THE KNIGHT of IRON -</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">NCS</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa200"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="lvaccus">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">N88_3.ROM</rom>
+			<rom type="code" offset="0x9800">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000000">MUS00-01 : MUSIC 1</title>
+			<title code="0x01000001">MUS01-01 : MUSIC 2</title>
+			<title code="0x01000002">MUS02-01 : MUSIC 3</title>
+			<title code="0x01000003">MUS03-01 : MUSIC 4</title>
+			<title code="0x01000004">MUS04-00 : MUSIC 5</title>
+			<title code="0x02000001">MUS01-02 : 爆発音</title>
+			<title code="0x0b000001">MUS01-0b : 効果音#1</title>
+			<title code="0x0c000001">MUS01-0c : 効果音#2</title>
+			<title code="0x0d000001">MUS01-0d : 効果音#3</title>
+		<!--	<title code="0x02000004">MUS04-01 : 爆発音</title> -->
+		<!--	<title code="0x0b000004">MUS04-0b : 効果音#1</title> -->
+		<!--	<title code="0x0c000004">MUS04-0c : 効果音#2</title> -->
+		<!--	<title code="0x0d000004">MUS04-0d : 効果音#3</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] ガイアの紋章(OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="SHARP X1">NCS</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+			<option name="mdata_size" value="0x3000"/>
+			<option name="mfile_size" value="0x3000"/>
+		</options>
+		<romlist archive="x1gaia">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xa000">DRIVER1</rom>
+			<rom type="code" offset="0xa800">DRIVER2</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x06000001">#01-06 オープニング</title>
+			<title code="0x03000001">#01-03 メニュー</title>
+			<title code="0x05000002">#02-05 BGM 1</title>
+			<title code="0x07000002">#02-07 BGM 2</title>
+			<title code="0x08000002">#02-08 BGM 3</title>
+			<title code="0x00000000">#00-00 勝利</title>
+		<!--	<title code="0x02000000">#00-02 勝利</title> -->
+			<title code="0x04000001">#01-04 敗北</title>
+			<title code="0x01000000">#00-01 エンディング</title>
+			<title code="0x09000002">#02-09 効果音</title>
+			<title code="0x0a000002">#02-0a 効果音</title>
+			<title code="0x0b000002">#02-0b 効果音</title>
+			<title code="0x0c000002">#02-0c 効果音</title>
+			<title code="0x0d000002">#02-0d 効果音</title>
+			<title code="0x0e000002">#02-0e 効果音</title>
+			<title code="0x0f000002">#02-0f 効果音</title>
+			<title code="0x10000002">#02-10 効果音</title>
+			<title code="0x11000002">#02-11 効果音</title>
+			<title code="0x12000002">#02-12 効果音</title>
+			<title code="0x13000002">#02-13 効果音</title>
+			<title code="0x19000002">#02-19 効果音</title>
+			<title code="0x1a000002">#02-1a 効果音</title>
+			<title code="0x1b000002">#02-1b 効果音</title>
+			<title code="0x1c000002">#02-1c 効果音</title>
+			<title code="0x1d000002">#02-1d 効果音</title>
+			<title code="0x1e000002">#02-1e 効果音</title>
+			<title code="0x1f000002">#02-1f 効果音</title>
+			<title code="0x20000002">#02-20 効果音</title>
+			<title code="0x21000002">#02-21 効果音</title>
+			<title code="0x25000002">#02-25 効果音</title>
+			<title code="0x26000002">#02-26 効果音</title>
+			<title code="0x27000002">#02-27 効果音</title>
+			<title code="0x28000002">#02-28 効果音</title>
+			<title code="0x29000002">#02-29 効果音</title>
+			<title code="0x2d000002">#02-2d 効果音</title>
+			<title code="0x2e000002">#02-2e 効果音</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] ガイアの紋章(PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">NCS</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+			<option name="mdata_size" value="0x2a00"/>
+			<option name="mfile_size" value="0x2a00"/>
+		</options>
+		<romlist archive="x1gaia">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xa000">DRIVER1</rom>
+			<rom type="code" offset="0xa800">DRIVER2</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x06000001">#01-06 オープニング</title>
+			<title code="0x03000001">#01-03 メニュー</title>
+			<title code="0x05000002">#02-05 BGM 1</title>
+			<title code="0x07000002">#02-07 BGM 2</title>
+			<title code="0x08000002">#02-08 BGM 3</title>
+			<title code="0x00000000">#00-00 勝利</title>
+		<!--	<title code="0x02000000">#00-02 勝利</title> -->
+			<title code="0x04000001">#01-04 敗北</title>
+			<title code="0x01000000">#00-01 エンディング</title>
+			<title code="0x09000002">#02-09 効果音</title>
+			<title code="0x0a000002">#02-0a 効果音</title>
+			<title code="0x0b000002">#02-0b 効果音</title>
+			<title code="0x0c000002">#02-0c 効果音</title>
+			<title code="0x0d000002">#02-0d 効果音</title>
+			<title code="0x0e000002">#02-0e 効果音</title>
+			<title code="0x0f000002">#02-0f 効果音</title>
+			<title code="0x10000002">#02-10 効果音</title>
+			<title code="0x11000002">#02-11 効果音</title>
+			<title code="0x12000002">#02-12 効果音</title>
+			<title code="0x13000002">#02-13 効果音</title>
+			<title code="0x19000002">#02-19 効果音</title>
+			<title code="0x1a000002">#02-1a 効果音</title>
+			<title code="0x1b000002">#02-1b 効果音</title>
+			<title code="0x1c000002">#02-1c 効果音</title>
+			<title code="0x1d000002">#02-1d 効果音</title>
+			<title code="0x1e000002">#02-1e 効果音</title>
+			<title code="0x1f000002">#02-1f 効果音</title>
+			<title code="0x20000002">#02-20 効果音</title>
+			<title code="0x21000002">#02-21 効果音</title>
+			<title code="0x25000002">#02-25 効果音</title>
+			<title code="0x26000002">#02-26 効果音</title>
+			<title code="0x27000002">#02-27 効果音</title>
+			<title code="0x28000002">#02-28 効果音</title>
+			<title code="0x29000002">#02-29 効果音</title>
+			<title code="0x2d000002">#02-2d 効果音</title>
+			<title code="0x2e000002">#02-2e 効果音</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] History of Elthlead</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">NCS</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="hofe68snd">
+			<rom type="code">els68snd.bin</rom>
+			<rom type="x"    offset="0x010000">OPMDRV.X</rom>
+			<rom type="x"    offset="0x030000">dum.x</rom>
+			<rom type="code" offset="0x0c0000">tk1.dat</rom>
+			<rom type="code" offset="0x0c1000">tk2.dat</rom>
+			<rom type="code" offset="0x0c2000">tk3.dat</rom>
+			<rom type="code" offset="0x0c3000">tk4.dat</rom>
+			<rom type="code" offset="0x0c4000">tk5.dat</rom>
+			<rom type="code" offset="0x0c5000">tk6.dat</rom>
+			<rom type="code" offset="0x0c6000">tk10.dat</rom>
+			<rom type="code" offset="0x0c7000">tk11.dat</rom>
+			<rom type="code" offset="0x0c8000">tk13.dat</rom>
+			<rom type="code" offset="0x0c9000">tk15.dat</rom>
+			<rom type="code" offset="0x0ca000">tk16.dat</rom>
+			<rom type="code" offset="0x0cb000">tk17.dat</rom>
+			<rom type="code" offset="0x0cc000">tk18.dat</rom>
+			<rom type="code" offset="0x0cd000">tk19.dat</rom>
+			<rom type="code" offset="0x0ce000">tk20.dat</rom>
+			<rom type="x"    offset="0x0d0000">load.x</rom>
+			<rom type="x"    offset="0x120000">make1.x</rom>
+			<rom type="x"    offset="0x140000">win1.x</rom>
+			<rom type="x"    offset="0x190000">win2.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">load.x   : (演奏まで時間かかります)</title>
+			<title code="0x01">tk1.dat  : </title>
+			<title code="0x02">tk2.dat  : </title>
+			<title code="0x03">tk3.dat  : </title>
+			<title code="0x04">tk4.dat  : </title>
+			<title code="0x05">tk5.dat  : </title>
+			<title code="0x06">tk6.dat  : </title>
+			<title code="0x07">tk10.dat : </title>
+			<title code="0x08">tk11.dat : </title>
+			<title code="0x09">tk13.dat : </title>
+			<title code="0x0a">tk15.dat : </title>
+			<title code="0x0b">tk16.dat : </title>
+			<title code="0x0c">tk17.dat : </title>
+			<title code="0x0d">tk18.dat : </title>
+			<title code="0x0e">tk19.dat : </title>
+			<title code="0x0f">tk20.dat : </title>
+			<title code="0x11">make1.x  : </title>
+			<title code="0x12">win1.x   : </title>
+			<title code="0x13">win2.x   : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] SIGNATORY -調印者-</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">NCS</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="sig68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x2c000">BYON.ONG</rom>
+			<rom type="code" offset="0x30000">M_00B.ONG</rom>
+			<rom type="code" offset="0x34000">M_01.ONG</rom>
+			<rom type="code" offset="0x38000">M_01B.ONG</rom>
+			<rom type="code" offset="0x3c000">M_02.ONG</rom>
+			<rom type="code" offset="0x40000">M_03B.ONG</rom>
+			<rom type="code" offset="0x44000">M_04.ONG</rom>
+			<rom type="code" offset="0x48000">M_05.ONG</rom>
+			<rom type="code" offset="0x4c000">M_06.ONG</rom>
+			<rom type="code" offset="0x50000">M_06B.ONG</rom>
+			<rom type="code" offset="0x54000">M_07.ONG</rom>
+			<rom type="code" offset="0x58000">M_08.ONG</rom>
+			<rom type="code" offset="0x5c000">M_09.ONG</rom>
+			<rom type="code" offset="0x60000">M_10B.ONG</rom>
+			<rom type="code" offset="0x64000">M_11.ONG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0004">BYON.ONG  : NCSロゴ</title>
+			<title code="0x0005">M_00B.ONG : シグナトリーのテーマ</title>
+			<title code="0x0007">M_01B.ONG : NYのテーマ</title>
+			<title code="0x0008">M_02.ONG  : 夜のセントラルパーク</title>
+			<title code="0x0009">M_03B.ONG : 1945・ベルリン</title>
+			<title code="0x000a">M_04.ONG  : 2039・Gキャニオン</title>
+			<title code="0x000b">M_05.ONG  : チリ基地を攻撃せよ</title>
+			<title code="0x000c">M_06.ONG  : ヒトラー去る</title>
+			<title code="0x000e">M_07.ONG  : 戦闘/BGM</title>
+			<title code="0x000f">M_08.ONG  : 戦闘/負けた...</title>
+			<title code="0x0010">M_09.ONG  : 戦闘/勝った!!!</title>
+			<title code="0x0011">M_10B.ONG : ムード曲(笑)</title>
+			<title code="0x0012">M_11.ONG  : ワープ!!</title>
+			<title code="0x0006">M_01.ONG  : LNのテーマ</title>
+			<title code="0x000d">M_06B.ONG : エンディングクレジット</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] ライトニングバッカス - THE KNIGHT of IRON -</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">NCS</driveralias>
+		<romlist archive="lb68snd">
+			<rom type="code">lb68snd.bin</rom>
+			<rom type="code" offset="0x08000">bsound.r</rom>
+			<rom type="code" offset="0x10000">music.dta</rom>
+			<rom type="code" offset="0x30000">adpcm.dta</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x101">オープニング</title>
+			<title code="0x103">デモ</title>
+			<title code="0x102">部隊編成モード</title>
+			<title code="0x105">メインテーマ</title>
+			<title code="0x104">シナリオクリア</title>
+			<title code="0x106">ゲームオーバー</title>
+			<title code="0x107">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] ガイアの紋章</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">NCS</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="gaia_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x2000">BGMDAT.COM</rom>
+			<rom type="code" offset="0x4000">MSXG4.DAT</rom>
+			<rom type="code" offset="0x8000">MSXG5.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x06">オープニング</title>
+			<title code="0x03">メニュー</title>
+			<title code="0x08">BGM 1</title>
+			<title code="0x07">BGM 2</title>
+			<title code="0x02">BGM 3</title>
+		<!--	<title code="0x05">BGM 3</title> -->
+			<title code="0x00">勝利</title>
+			<title code="0x04">敗北</title>
+			<title code="0x01">エンディング</title>
+			<range min="0x108" max="0x113" extcode="1">SE 0x%03x</range>
+		</titlelist>
+	</game>
+</gamelist>

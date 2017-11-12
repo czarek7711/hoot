@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //dbsoft -->
+	<game>
+		<name>[PC-88] Laptick (らぷてっく)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">db-soft</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+			<option name="baseclock" value="0x04"/>
+		</options>
+		<romlist archive="laptick">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0800">OP</rom>
+			<rom type="code" offset="0x1000">CAST</rom>
+			<rom type="code" offset="0x4740">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">Title (タイトル)</title>
+			<title code="0x00">Main BGM (メインBGM)</title>
+			<title code="0x01">Team Super Vicky (1) (すーぱーびっきぃ君のテーマ(1))</title>
+			<title code="0x02">Team Super Vicky (2) (すーぱーびっきぃ君のテーマ(2))</title>
+			<title code="0x03">Miss (ミス)</title>
+			<title code="0x04">Round Clear (ラウンドクリア)</title>
+			<title code="0x06">Ranking (ランキング)</title>
+			<title code="0x07">Cast (キャスト)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Laptick (らぷてっく) (PC-8801-10)</name>
+		<driver type="8801-10">pc88</driver>
+		<driveralias type="PC-88">db-soft</driveralias>
+		<romlist archive="laptick">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x0800">OP</rom>
+			<rom type="code" offset="0x1000">CAST</rom>
+			<rom type="code" offset="0x4740">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">Title (タイトル)</title>
+			<title code="0x00">Main BGM (メインBGM)</title>
+			<title code="0x01">Team Super Vicky (1) (すーぱーびっきぃ君のテーマ(1))</title>
+			<title code="0x02">Team Super Vicky (2) (すーぱーびっきぃ君のテーマ(2))</title>
+			<title code="0x03">Miss (ミス)</title>
+			<title code="0x04">Round Clear (ラウンドクリア)</title>
+			<title code="0x06">Ranking (ランキング)</title>
+			<title code="0x07">Cast (キャスト)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Woody Poco (うっでいぽこ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">db-soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5800"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="wpoko">
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="bgm" offset="0x00">PROG</rom>
+			<rom type="bgm" offset="0x01">PROG</rom>
+			<rom type="bgm" offset="0x02">PROG</rom>
+			<rom type="bgm" offset="0x03">PROG</rom>
+			<rom type="bgm" offset="0x04">OP</rom>
+			<rom type="bgm" offset="0x05">OP</rom>
+			<rom type="bgm" offset="0x06">OP</rom>
+			<rom type="bgm" offset="0x07">MUS00</rom>
+			<rom type="bgm" offset="0x08">MUS01</rom>
+			<rom type="bgm" offset="0x09">MUS02</rom>
+			<rom type="bgm" offset="0x0a">MUS03</rom>
+			<rom type="bgm" offset="0x0b">MUS04</rom>
+			<rom type="bgm" offset="0x0c">MUS05</rom>
+			<rom type="bgm" offset="0x0d">DEMO2</rom>
+			<rom type="bgm" offset="0x0e">ZAP</rom>
+			<rom type="bgm" offset="0x0f">END</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x04">Title (たいとる)</title>
+			<title code="0x00">Opening (お～ぷにんぐ)</title>
+			<title code="0x06">Demo 1 (でも１)</title>
+			<title code="0x07">Spring (はる)</title>
+			<title code="0x08">Summer (なつ)</title>
+			<title code="0x09">Fall (あき)</title>
+			<title code="0x0a">Winter (ふゆ)</title>
+			<title code="0x03">Dungeon (だんじょん)</title>
+			<title code="0x01">Command Mode (こまんども～ど)</title>
+			<title code="0x02">Boss (ぼす)</title>
+			<title code="0x0d">Demo 2 (でも２)</title>
+			<title code="0x0b">Amusement Park (ゆうえんち)</title>
+			<title code="0x0c">The Devil's Castle (まおうのしろ)</title>
+			<title code="0x0e">Zap (ざっぷ)</title>
+			<title code="0x0f">Ending (えんでぃんぐ)</title>
+			<title code="0x05">The End (おしまい。)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Konya mo Asa made Powerful (今夜も朝までPOWERFULまぁじゃん)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">db-soft</driveralias>
+		<options>
+			<option name="init_pc"    value="0xf000"/>
+			<option name="mdata_addr" value="0x6800"/>
+			<option name="mdata_size" value="0x8800"/>
+			<option name="mfile_size" value="0x8800"/>
+			<option name="use_rtc"    value="0x01"/>
+		</options>
+		<romlist archive="pwmajan">
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x3800">PROG2</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x02">PROG2</rom>
+			<rom type="bgm" offset="0x03">NORMAL</rom>
+			<rom type="bgm" offset="0x04">SASURAI</rom>
+			<rom type="bgm" offset="0x05">POCO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02000002">dB-SOFTロゴ (最初に演奏してください)</title>
+			<title code="0x00000002">オープニング</title>
+			<title code="0x01000002">名前の変更</title>
+			<title code="0x00000001">エキサイト麻雀</title>
+			<title code="0x01000001">ロード中</title>
+			<title code="0x00000003">ゲーム中BGM #00</title>
+			<title code="0x01000003">ゲーム中BGM #01</title>
+			<title code="0x02000003">ゲーム中BGM #02</title>
+			<title code="0x03000003">ゲーム中BGM #03</title>
+			<title code="0x04000003">ゲーム中BGM #04</title>
+			<title code="0x05000003">ゲーム中BGM #05</title>
+			<title code="0x06000003">ゲーム中BGM #06</title>
+			<title code="0x07000003">ゲーム中BGM #07</title>
+			<title code="0x08000003">ゲーム中BGM #08</title>
+			<title code="0x00000004">さすらい麻雀 #00</title>
+			<title code="0x01000004">さすらい麻雀 #01</title>
+			<title code="0x02000004">さすらい麻雀 #02</title>
+			<title code="0x03000004">さすらい麻雀 #03</title>
+			<title code="0x04000004">さすらい麻雀 #04</title>
+			<title code="0x05000004">さすらい麻雀 #05</title>
+			<title code="0x06000004">さすらい麻雀 #06</title>
+			<title code="0x07000004">さすらい麻雀 #07</title>
+			<title code="0x08000004">さすらい麻雀 #08</title>
+			<title code="0x09000004">さすらい麻雀 #09</title>
+			<title code="0x0a000004">さすらい麻雀 #0a</title>
+			<title code="0x0b000004">さすらい麻雀 #0b</title>
+			<title code="0x0c000004">さすらい麻雀 #0c</title>
+			<title code="0x0d000004">さすらい麻雀 #0d</title>
+			<title code="0x0e000004">さすらい麻雀 #0e</title>
+			<title code="0x00000005">ぽこ麻雀 #00</title>
+			<title code="0x01000005">ぽこ麻雀 #01</title>
+			<title code="0x02000005">ぽこ麻雀 #02</title>
+			<title code="0x03000005">ぽこ麻雀 #03</title>
+			<title code="0x04000005">ぽこ麻雀 #04</title>
+			<title code="0x00000000">効果音#00</title>
+			<title code="0x01000000">効果音#01</title>
+			<title code="0x02000000">効果音#02</title>
+			<title code="0x03000000">効果音#03</title>
+			<title code="0x04000000">効果音#04</title>
+			<title code="0x05000000">効果音#05</title>
+			<title code="0x06000000">効果音#06</title>
+			<title code="0x07000000">効果音#07</title>
+			<title code="0x08000000">効果音#08</title>
+			<title code="0x09000000">効果音#09</title>
+			<title code="0x0a000000">効果音#0A</title>
+			<title code="0x0b000000">効果音#0B</title>
+			<title code="0x0c000000">効果音#0C</title>
+			<title code="0x0d000000">効果音#0D</title>
+			<title code="0x0e000000">効果音#0E</title>
+			<title code="0x0f000000">効果音#0F</title>
+			<title code="0x10000000">効果音#10</title>
+			<title code="0x11000000">効果音#11</title>
+			<title code="0x12000000">効果音#12</title>
+			<title code="0x13000000">効果音#13</title>
+			<title code="0x14000000">効果音#14</title>
+			<title code="0x15000000">効果音#15</title>
+			<title code="0x16000000">効果音#16</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Konya mo Asa made Powerful 2 (今夜も朝までPOWERFULまぁじゃん2)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">db-soft</driveralias>
+		<options>
+			<option name="init_pc"    value="0xf000"/>
+			<option name="mdata_addr" value="0x3000"/>
+			<option name="mdata_size" value="0xc000"/>
+			<option name="mfile_size" value="0xc000"/>
+			<option name="use_rtc"    value="0x01"/>
+		</options>
+		<romlist archive="pwmajan2">
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x2000">PROG2</rom>
+			<rom type="code" offset="0x3000">PROG3</rom>
+			<rom type="code" offset="0x9000">PROG4</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x02">PROG3</rom>
+			<rom type="bgm" offset="0x03">NORMAL1</rom>
+			<rom type="bgm" offset="0x04">NORMAL2</rom>
+			<rom type="bgm" offset="0x05">EXCITE1</rom>
+			<rom type="bgm" offset="0x06">EXCITE2</rom>
+			<rom type="bgm" offset="0x07">EXCITE3</rom>
+			<rom type="bgm" offset="0x08">EXCITE3</rom>
+			<rom type="bgm" offset="0x09">POCO1</rom>
+			<rom type="bgm" offset="0x0a">POCO2</rom>
+			<rom type="bgm" offset="0x0b">POCO3</rom>
+			<rom type="bgm" offset="0x0c">SASURAI1</rom>
+			<rom type="bgm" offset="0x0d">SASURAI2</rom>
+			<rom type="bgm" offset="0x0e">SASURAI3</rom>
+			<rom type="bgm" offset="0x0f">SASURAI3</rom>
+			<rom type="bgm" offset="0x10">SASURAI4</rom>
+			<rom type="bgm" offset="0x11">SASURAI5</rom>
+			<rom type="bgm" offset="0x12">SASURAI6</rom>
+			<rom type="bgm" offset="0x13">SASURAI7</rom>
+			<rom type="bgm" offset="0x14">SASURAI8</rom>
+			<rom type="bgm" offset="0x15">SASURAI9</rom>
+			<rom type="bgm" offset="0x16">SASURAI10</rom>
+			<rom type="bgm" offset="0x17">SASURAI11</rom>
+			<rom type="bgm" offset="0x18">SASURAI12</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02000002">dB-SOFTロゴ</title>
+			<title code="0x00000002">オープニング</title>
+			<title code="0x03000002">オープニング (HAPPY BIRTHDAY)</title>
+			<title code="0x04000002">オープニング (A HAPPY NEW YEAR)</title>
+			<title code="0x05000002">オープニング (MERRY CHRISTMAS)</title>
+			<title code="0x01000002">名前登録</title>
+			<title code="0x00000001">ロード中</title>
+			<title code="0x00000003">ノーマル麻雀Excellent      : タイトル</title>
+			<title code="0x01000003">ノーマル麻雀Excellent      : 半荘終了</title>
+			<title code="0x00000004">ノーマル麻雀Excellent      : ゲーム中</title>
+			<title code="0x01000004">ノーマル麻雀Excellent      : リーチ</title>
+			<title code="0x02000004">ノーマル麻雀Excellent      : アガり</title>
+			<title code="0x03000004">ノーマル麻雀Excellent      : アガられた</title>
+			<title code="0x04000004">ノーマル麻雀Excellent      : 役満</title>
+			<title code="0x00000005">エキサイト麻雀お姉さん組   : タイトル</title>
+			<title code="0x00000006">エキサイト麻雀お姉さん組   : 脱衣デモ</title>
+			<title code="0x00000007">エキサイト麻雀お姉さん組   : ゲーム中</title>
+		<!--	<title code="0x00000008">エキサイト麻雀お姉さん組   : 演奏停止</title> -->
+			<title code="0x01000008">エキサイト麻雀お姉さん組   : リーチ</title>
+			<title code="0x02000008">エキサイト麻雀お姉さん組   : アガり</title>
+			<title code="0x03000008">エキサイト麻雀お姉さん組   : アガられた</title>
+			<title code="0x04000008">エキサイト麻雀お姉さん組   : 役満</title>
+			<title code="0x00000009">ぽこまぁじゃんフェステバァ : タイトル</title>
+			<title code="0x01000009">ぽこまぁじゃんフェステバァ : デモ</title>
+			<title code="0x02000009">ぽこまぁじゃんフェステバァ : エンディング</title>
+			<title code="0x0000000a">ぽこまぁじゃんフェステバァ : トーナメント表</title>
+			<title code="0x0100000a">ぽこまぁじゃんフェステバァ : GAMEOVER</title>
+			<title code="0x0100000b">ぽこまぁじゃんフェステバァ : (未使用・冬)</title>
+			<title code="0x0200000b">ぽこまぁじゃんフェステバァ : (未使用・春)</title>
+			<title code="0x0300000b">ぽこまぁじゃんフェステバァ : (未使用・夏)</title>
+			<title code="0x0000000b">ぽこまぁじゃんフェステバァ : ゲーム中</title>
+			<title code="0x0400000b">ぽこまぁじゃんフェステバァ : リーチ</title>
+			<title code="0x0500000b">ぽこまぁじゃんフェステバァ : アガり</title>
+			<title code="0x0600000b">ぽこまぁじゃんフェステバァ : アガられた</title>
+			<title code="0x0000000c">さすらい麻雀The World      : デモ</title>
+			<title code="0x0100000c">さすらい麻雀The World      : #01?</title>
+			<title code="0x0200000c">さすらい麻雀The World      : #02?</title>
+			<title code="0x0000000d">さすらい麻雀The World      : ミニゲームはずれ</title>
+			<title code="0x0100000d">さすらい麻雀The World      : ミニゲームあたり</title>
+			<title code="0x0200000d">さすらい麻雀The World      : すごろくシーン</title>
+			<title code="0x0300000d">さすらい麻雀The World      : ミニゲーム</title>
+		<!--	<title code="0x0000000e">さすらい麻雀The World      : 演奏停止</title> -->
+			<title code="0x0100000e">さすらい麻雀The World      : リーチ</title>
+			<title code="0x0200000e">さすらい麻雀The World      : アガり</title>
+			<title code="0x0300000e">さすらい麻雀The World      : アガられた</title>
+			<title code="0x0400000e">さすらい麻雀The World      : 役満</title>
+			<title code="0x0500000e">さすらい麻雀The World      : GAME OVER</title>
+			<title code="0x0000000f">さすらい麻雀The World      : ザコ対戦</title>
+			<title code="0x00000010">さすらい麻雀The World      : 台湾         / キム・キム</title>
+			<title code="0x00000011">さすらい麻雀The World      : シドニー     / パティ・マクドォ</title>
+			<title code="0x00000012">さすらい麻雀The World      : デリー       / アマホナ・ルー</title>
+			<title code="0x00000013">さすらい麻雀The World      : モスクワ     / スルノワ・コメノフ</title>
+			<title code="0x00000014">さすらい麻雀The World      : カイロ       / インカ・ニカニカ</title>
+			<title code="0x00000015">さすらい麻雀The World      : ハバナ       / ヘラコレ・マック・Jr</title>
+			<title code="0x00000016">さすらい麻雀The World      : ヒューストン / キャサリン・ブラウン</title>
+			<title code="0x00000017">さすらい麻雀The World      : アンカレッジ / タム・タム</title>
+			<title code="0x00000018">さすらい麻雀The World      : 札幌         / 伊賀仁長助</title>
+			<title code="0x00000000">効果音#00</title>
+			<title code="0x01000000">効果音#01</title>
+			<title code="0x02000000">効果音#02</title>
+			<title code="0x03000000">効果音#03</title>
+			<title code="0x04000000">効果音#04</title>
+			<title code="0x05000000">効果音#05</title>
+			<title code="0x06000000">効果音#06</title>
+			<title code="0x07000000">効果音#07</title>
+			<title code="0x08000000">効果音#08</title>
+			<title code="0x09000000">効果音#09</title>
+			<title code="0x0a000000">効果音#0A</title>
+			<title code="0x0b000000">効果音#0B</title>
+			<title code="0x0c000000">効果音#0C</title>
+			<title code="0x0d000000">効果音#0D</title>
+			<title code="0x0e000000">効果音#0E</title>
+			<title code="0x0f000000">効果音#0F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] King Flappy (キングフラッピー)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">db-soft</driveralias>
+		<romlist archive="kflappy">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0x6f00">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x08000000">BGM #01</title>
+			<title code="0x10000001">BGM #02</title>
+			<title code="0x0e000002">BGM #03</title>
+			<title code="0x10000003">BGM #04</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Woody Poco (うっでいぽこ) (OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="X1">db-soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+			<option name="init_pc"    value="0xf000"/>
+			<option name="use_ctc0"   value="0x01"/>
+			<option name="use_ctc3"   value="0x00"/>
+		</options>
+		<romlist archive="x1poco">
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0x6000">FMDRV</rom>
+			<rom type="code" offset="0x9100">MA000</rom>
+			<rom type="code" offset="0xc000">MA007</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MA000</rom>
+			<rom type="bgm" offset="0x01">MA001</rom>
+			<rom type="bgm" offset="0x02">MA002</rom>
+			<rom type="bgm" offset="0x03">MA003</rom>
+			<rom type="bgm" offset="0x04">MA004</rom>
+			<rom type="bgm" offset="0x05">MA005</rom>
+			<rom type="bgm" offset="0x06">MA006</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x06000000">Title (たいとる)</title>
+			<title code="0x04000000">Demo 1 (でも１)</title>
+			<title code="0x00000001">Spring (はる)</title>
+			<title code="0x00000002">Summer (なつ)</title>
+			<title code="0x00000003">Fall (あき)</title>
+			<title code="0x00000004">Winter (ふゆ)</title>
+			<title code="0x02000000">Dungeon (だんじょん)</title>
+			<title code="0x03000000">Command Mode (こまんども～ど)</title>
+			<title code="0x01000000">Boss (ぼす)</title>
+			<title code="0x05000000">Demo 2 (でも２)</title>
+			<title code="0x00000005">Amusement Park (ゆうえんち)</title>
+			<title code="0x00000006">The Devil's Castle (まおうのしろ)</title>
+			<title code="0x08000000">Zap (ざっぷ)</title>
+			<title code="0x09000000">Ending (えんでぃんぐ)</title>
+			<title code="0x07000000">The End (おしまい。)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Woody Poco (うっでいぽこ) (PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">db-soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+			<option name="init_pc"    value="0xf000"/>
+			<option name="use_ctc0"   value="0x01"/>
+			<option name="use_ctc3"   value="0x00"/>
+		</options>
+		<romlist archive="x1poco">
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0x6000">PSGDRV</rom>
+			<rom type="code" offset="0x9100">MB000</rom>
+			<rom type="code" offset="0xc000">MB007</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MB000</rom>
+			<rom type="bgm" offset="0x01">MB001</rom>
+			<rom type="bgm" offset="0x02">MB002</rom>
+			<rom type="bgm" offset="0x03">MB003</rom>
+			<rom type="bgm" offset="0x04">MB004</rom>
+			<rom type="bgm" offset="0x05">MB005</rom>
+			<rom type="bgm" offset="0x06">MB006</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x06000000">Title (たいとる)</title>                 
+			<title code="0x04000000">Demo 1 (でも１)</title>                  
+			<title code="0x00000001">Spring (はる)</title>                    
+			<title code="0x00000002">Summer (なつ)</title>                    
+			<title code="0x00000003">Fall (あき)</title>                      
+			<title code="0x00000004">Winter (ふゆ)</title>                    
+			<title code="0x02000000">Dungeon (だんじょん)</title>             
+			<title code="0x03000000">Command Mode (こまんども～ど)</title>    
+			<title code="0x01000000">Boss (ぼす)</title>                      
+			<title code="0x05000000">Demo 2 (でも２)</title>                  
+			<title code="0x00000005">Amusement Park (ゆうえんち)</title>      
+			<title code="0x00000006">The Devil's Castle (まおうのしろ)</title>
+			<title code="0x08000000">Zap (ざっぷ)</title>                     
+			<title code="0x09000000">Ending (えんでぃんぐ)</title>            
+			<title code="0x07000000">The End (おしまい。)</title>             
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Konya mo Asa made Powerful (今夜も朝までPOWERFULまぁじゃん) (OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="X1">db-soft</driveralias>
+		<options>
+			<option name="init_pc"   value="0xf000"/>
+			<option name="use_ctc0"  value="0x80"/>
+			<option name="mdata_addr" value="0x6000"/>
+			<option name="mdata_size" value="0x9000"/>
+			<option name="mfile_size" value="0x9000"/>
+		</options>ｓ
+		<romlist archive="x1pwmajan">
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x3000">OPMDRV</rom>
+			<rom type="code" offset="0x3800">PROG2</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x02">PROG2</rom>
+			<rom type="bgm" offset="0x03">NORMAL</rom>
+			<rom type="bgm" offset="0x04">SASURAI</rom>
+			<rom type="bgm" offset="0x05">POCO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02000002">dB-SOFTロゴ</title>
+			<title code="0x00000002">オープニング</title>
+			<title code="0x01000002">名前の変更</title>
+			<title code="0x00000001">エキサイト麻雀</title>
+			<title code="0x01000001">ロード中</title>
+			<title code="0x00000003">ゲーム中BGM #00</title>
+			<title code="0x01000003">ゲーム中BGM #01</title>
+			<title code="0x02000003">ゲーム中BGM #02</title>
+			<title code="0x03000003">ゲーム中BGM #03</title>
+			<title code="0x04000003">ゲーム中BGM #04</title>
+			<title code="0x05000003">ゲーム中BGM #05</title>
+			<title code="0x06000003">ゲーム中BGM #06</title>
+			<title code="0x07000003">ゲーム中BGM #07</title>
+			<title code="0x08000003">ゲーム中BGM #08</title>
+			<title code="0x00000004">さすらい麻雀 #00</title>
+			<title code="0x01000004">さすらい麻雀 #01</title>
+			<title code="0x02000004">さすらい麻雀 #02</title>
+			<title code="0x03000004">さすらい麻雀 #03</title>
+			<title code="0x04000004">さすらい麻雀 #04</title>
+			<title code="0x05000004">さすらい麻雀 #05</title>
+			<title code="0x06000004">さすらい麻雀 #06</title>
+			<title code="0x07000004">さすらい麻雀 #07</title>
+			<title code="0x08000004">さすらい麻雀 #08</title>
+			<title code="0x09000004">さすらい麻雀 #09</title>
+			<title code="0x0a000004">さすらい麻雀 #0a</title>
+			<title code="0x0b000004">さすらい麻雀 #0b</title>
+			<title code="0x0c000004">さすらい麻雀 #0c</title>
+			<title code="0x0d000004">さすらい麻雀 #0d</title>
+			<title code="0x0e000004">さすらい麻雀 #0e</title>
+			<title code="0x00000005">ぽこ麻雀 #00</title>
+			<title code="0x01000005">ぽこ麻雀 #01</title>
+			<title code="0x02000005">ぽこ麻雀 #02</title>
+			<title code="0x03000005">ぽこ麻雀 #03</title>
+			<title code="0x04000005">ぽこ麻雀 #04</title>
+			<title code="0x00000000">効果音#00</title>
+			<title code="0x01000000">効果音#01</title>
+			<title code="0x02000000">効果音#02</title>
+			<title code="0x03000000">効果音#03</title>
+			<title code="0x04000000">効果音#04</title>
+			<title code="0x05000000">効果音#05</title>
+			<title code="0x06000000">効果音#06</title>
+			<title code="0x07000000">効果音#07</title>
+			<title code="0x08000000">効果音#08</title>
+			<title code="0x09000000">効果音#09</title>
+			<title code="0x0a000000">効果音#0A</title>
+			<title code="0x0b000000">効果音#0B</title>
+			<title code="0x0c000000">効果音#0C</title>
+			<title code="0x0d000000">効果音#0D</title>
+			<title code="0x0e000000">効果音#0E</title>
+			<title code="0x0f000000">効果音#0F</title>
+			<title code="0x10000000">効果音#10</title>
+			<title code="0x11000000">効果音#11</title>
+			<title code="0x12000000">効果音#12</title>
+			<title code="0x13000000">効果音#13</title>
+			<title code="0x14000000">効果音#14</title>
+			<title code="0x15000000">効果音#15</title>
+			<title code="0x16000000">効果音#16</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Konya mo Asa made Powerful (今夜も朝までPOWERFULまぁじゃん) (PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">db-soft</driveralias>
+		<options>
+			<option name="init_pc"   value="0xf000"/>
+			<option name="use_ctc0"  value="0x80"/>
+			<option name="mdata_addr" value="0x6000"/>
+			<option name="mdata_size" value="0x9000"/>
+			<option name="mfile_size" value="0x9000"/>
+			<option name="psg_mix"    value="0x40"/>
+		</options>
+		<romlist archive="x1pwmajan">
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x3800">PROG2</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x02">PROG2</rom>
+			<rom type="bgm" offset="0x03">NORMAL</rom>
+			<rom type="bgm" offset="0x04">SASURAI</rom>
+			<rom type="bgm" offset="0x05">POCO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02000002">dB-SOFTロゴ</title>
+			<title code="0x00000002">オープニング</title>
+			<title code="0x01000002">名前の変更</title>
+			<title code="0x00000001">エキサイト麻雀</title>
+			<title code="0x01000001">ロード中</title>
+			<title code="0x00000003">ゲーム中BGM #00</title>
+			<title code="0x01000003">ゲーム中BGM #01</title>
+			<title code="0x02000003">ゲーム中BGM #02</title>
+			<title code="0x03000003">ゲーム中BGM #03</title>
+			<title code="0x04000003">ゲーム中BGM #04</title>
+			<title code="0x05000003">ゲーム中BGM #05</title>
+			<title code="0x06000003">ゲーム中BGM #06</title>
+			<title code="0x07000003">ゲーム中BGM #07</title>
+			<title code="0x08000003">ゲーム中BGM #08</title>
+			<title code="0x00000004">さすらい麻雀 #00</title>
+			<title code="0x01000004">さすらい麻雀 #01</title>
+			<title code="0x02000004">さすらい麻雀 #02</title>
+			<title code="0x03000004">さすらい麻雀 #03</title>
+			<title code="0x04000004">さすらい麻雀 #04</title>
+			<title code="0x05000004">さすらい麻雀 #05</title>
+			<title code="0x06000004">さすらい麻雀 #06</title>
+			<title code="0x07000004">さすらい麻雀 #07</title>
+			<title code="0x08000004">さすらい麻雀 #08</title>
+			<title code="0x09000004">さすらい麻雀 #09</title>
+			<title code="0x0a000004">さすらい麻雀 #0a</title>
+			<title code="0x0b000004">さすらい麻雀 #0b</title>
+			<title code="0x0c000004">さすらい麻雀 #0c</title>
+			<title code="0x0d000004">さすらい麻雀 #0d</title>
+			<title code="0x0e000004">さすらい麻雀 #0e</title>
+			<title code="0x00000005">ぽこ麻雀 #00</title>
+			<title code="0x01000005">ぽこ麻雀 #01</title>
+			<title code="0x02000005">ぽこ麻雀 #02</title>
+			<title code="0x03000005">ぽこ麻雀 #03</title>
+			<title code="0x04000005">ぽこ麻雀 #04</title>
+			<title code="0x00000000">効果音#00</title>
+			<title code="0x01000000">効果音#01</title>
+			<title code="0x02000000">効果音#02</title>
+			<title code="0x03000000">効果音#03</title>
+			<title code="0x04000000">効果音#04</title>
+			<title code="0x05000000">効果音#05</title>
+			<title code="0x06000000">効果音#06</title>
+			<title code="0x07000000">効果音#07</title>
+			<title code="0x08000000">効果音#08</title>
+			<title code="0x09000000">効果音#09</title>
+			<title code="0x0a000000">効果音#0A</title>
+			<title code="0x0b000000">効果音#0B</title>
+			<title code="0x0c000000">効果音#0C</title>
+			<title code="0x0d000000">効果音#0D</title>
+			<title code="0x0e000000">効果音#0E</title>
+			<title code="0x0f000000">効果音#0F</title>
+			<title code="0x10000000">効果音#10</title>
+			<title code="0x11000000">効果音#11</title>
+			<title code="0x12000000">効果音#12</title>
+			<title code="0x13000000">効果音#13</title>
+			<title code="0x14000000">効果音#14</title>
+			<title code="0x15000000">効果音#15</title>
+			<title code="0x16000000">効果音#16</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Flappy 2: Blue Star Fukkatsu No Hi (FLAPPY2 ブルースター復活の日)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">db-soft</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="flappy268snd">
+			<rom type="code" offset="0x00000">flp268snd.bin</rom>
+			<rom type="x" offset="0x10000">FLAPPY2.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #10</title>
+			<title code="0x0b">BGM #11</title>
+			<title code="0x0c">BGM #12</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Cross Blaim (クロスブレイム)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">db-soft</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="crossb_msx">
+			<rom type="code">Cross Blaim (1986)(dB-Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Start Screen</title>
+			<title code="0x01">Main BGM</title>
+			<title code="0x02">Infant of Evil</title>
+			<title code="0x03">The End</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Zexas Limited (ゼクサスリミテッド)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">db-soft</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="zexas_msx">
+			<rom type="code">Zexas Limited (1985)(dB-Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Intro Screen</title>
+			<title code="0x01">Game Start</title>
+			<title code="0x02">Game Over</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Strategic Mars (マース)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">db-soft</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="smars_msx">
+			<rom type="code">Strategic Mars (1988)(dB-Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+		</titlelist>
+	</game>
+</gamelist>

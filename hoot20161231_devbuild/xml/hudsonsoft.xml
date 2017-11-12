@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2006/05/26">
+	<!-- //HUDSON SOFT -->
+	<game>
+		<name>[PC-8801] ICE CLIMBER</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">HUDSON SOFT</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="iceclimb88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7100">ICE2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">演奏停止</title>
+			<title code="0x05">タイトル</title>
+			<title code="0x01">ラウンド紹介</title>
+			<title code="0x02">通常BGM</title>
+			<title code="0x04">ボーナスステージ</title>
+			<title code="0x03">ラウンドクリア</title>
+			<title code="0x06">ポーズ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] デゼニワールド</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">HUDSON SOFT</driveralias>
+		<romlist archive="dezeniw">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">MAIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">01</title>
+			<title code="0x02">02</title>
+			<title code="0x03">03</title>
+			<title code="0x04">04</title>
+			<title code="0x05">05</title>
+			<title code="0x06">06</title>
+			<title code="0x07">07</title>
+			<title code="0x08">08</title>
+			<title code="0x09">09</title>
+			<title code="0x0a">0A</title>
+			<title code="0x0b">0B</title>
+			<title code="0x0c">0C</title>
+			<title code="0x0d">0D</title>
+			<title code="0x0e">0E デゼニワールド</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] LAMIA1999</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">HUDSON SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1a00"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="lamia">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+			<rom type="bgm" offset="0x0a">MUS09</rom>
+			<rom type="bgm" offset="0x0b">MUS10</rom>
+			<rom type="bgm" offset="0x0c">MUS11</rom>
+			<rom type="bgm" offset="0x0d">MUS12</rom>
+			<rom type="bgm" offset="0x0e">MUS13</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">MUS00</title>
+			<title code="0x02">MUS01</title>
+			<title code="0x03">MUS02</title>
+			<title code="0x04">MUS03</title>
+			<title code="0x05">MUS04</title>
+			<title code="0x06">MUS05</title>
+			<title code="0x07">MUS06</title>
+			<title code="0x08">MUS07</title>
+			<title code="0x09">MUS08</title>
+			<title code="0x0a">MUS09</title>
+			<title code="0x0b">MUS10</title>
+			<title code="0x0c">MUS11</title>
+			<title code="0x0d">MUS12</title>
+			<title code="0x0e">MUS13</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] SUPER MARIO BROS. Special</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">HUDSON SOFT</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="smariosp">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">BGM00 : 演奏停止</title>
+			<title code="0x00000001">BGM01 : 地上</title>
+			<title code="0x00000002">BGM02 : 地下</title>
+			<title code="0x00000003">BGM03 : 海</title>
+			<title code="0x00000004">BGM04 : 城</title>
+			<title code="0x00000005">BGM05 : 無敵</title>
+			<title code="0x00000006">BGM06 : Hurry up!</title>
+			<title code="0x00000007">BGM07 : ラウンドクリア</title>
+			<title code="0x00000008">BGM08 : ワールドクリア</title>
+			<title code="0x00000009">BGM09 : オールラウンドクリア</title>
+			<title code="0x0000000a">BGM0A : ミス</title>
+			<title code="0x0000000b">BGM0B : ゲームオーバー</title>
+			<title code="0x01000000">EFC01 : </title>
+			<title code="0x02000000">EFC02 : </title>
+			<title code="0x03000000">EFC03 : </title>
+			<title code="0x04000000">EFC04 : </title>
+			<title code="0x05000000">EFC05 : </title>
+			<title code="0x06000000">EFC06 : </title>
+			<title code="0x07000000">EFC07 : </title>
+			<title code="0x08000000">EFC08 : </title>
+			<title code="0x09000000">EFC09 : </title>
+			<title code="0x0a000000">EFC0A : </title>
+			<title code="0x0b000000">EFC0B : </title>
+			<title code="0x0c000000">EFC0C : </title>
+			<title code="0x0d000000">EFC0D : </title>
+			<title code="0x0e000000">EFC0E : </title>
+			<title code="0x0f000000">EFC0F : </title>
+			<title code="0x10000000">EFC10 : </title>
+			<title code="0x11000000">EFC11 : </title>
+			<title code="0x12000000">EFC12 : </title>
+			<title code="0x13000000">EFC13 : </title>
+			<title code="0x14000000">EFC14 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] DIONE</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">HUDSON SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1000"/>
+			<option name="vdata_addr" value="0x0800"/>
+			<option name="vdata_size" value="0x0800"/>
+			<option name="vfile_size" value="0x0800"/>
+		</options>
+		<romlist archive="dione">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0800">DRIVER2</rom>
+			<rom type="bgm"   offset="0x00">MUS00</rom>
+			<rom type="voice" offset="0x00">DRIVER1</rom>
+			<rom type="bgm"   offset="0x01">MUS01</rom>
+			<rom type="voice" offset="0x01">DRIVER2</rom>
+			<rom type="bgm"   offset="0x02">MUS02</rom>
+			<rom type="voice" offset="0x02">DRIVER1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">#00 STOP</title>
+			<title code="0x01000000">#01 EFFECT</title>
+			<title code="0x02000000">#02 EFFECT</title>
+		<!--	<title code="0x03000002">#03 </title> -->
+			<title code="0x04000000">#04 EFFECT</title>
+			<title code="0x05000000">#05 EFFECT</title>
+			<title code="0x06000000">#06 EFFECT</title>
+			<title code="0x07000000">#07 EFFECT</title>
+			<title code="0x08000000">#08 EFFECT</title>
+			<title code="0x09000000">#09 EFFECT</title>
+			<title code="0x0a000000">#0A EFFECT</title>
+			<title code="0x0b000000">#0B EFFECT STOP</title>
+			<title code="0x0c000000">#0C MUSIC</title>
+			<title code="0x0d000000">#0D MUSIC</title>
+			<title code="0x0e000001">#0E MUSIC</title>
+			<title code="0x0f000001">#0F MUSIC</title>
+			<title code="0x10000000">#10 MUSIC</title>
+			<title code="0x11000002">#11 MUSIC</title>
+		<!--	<title code="0x12000002">#12</title> -->
+		<!--	<title code="0x13000002">#13</title> -->
+		<!--	<title code="0x14000002">#14</title> -->
+		<!--	<title code="0x15000002">#15</title> -->
+		<!--	<title code="0x16000002">#16</title> -->
+		<!--	<title code="0x17000002">#17</title> -->
+		<!--	<title code="0x18000002">#18</title> -->
+		<!--	<title code="0x19000002">#19</title> -->
+		<!--	<title code="0x1a000002">#1a</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] Hilanipla</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">HUDSON SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xe000"/>
+			<option name="mdata_size" value="0x1800"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="hilani88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">PROG</rom>
+			<rom type="code" offset="0xf900">VOICE2</rom>
+			<rom type="code" offset="0xfa00">VOICE1</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+			<rom type="bgm" offset="0x0f">MUS15</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MUS00 : タイトル</title>
+			<title code="0x00000001">MUS01 : フィールド</title>
+			<title code="0x00000002">MUS02 : 街</title>
+			<title code="0x00000003">MUS03 : </title>
+			<title code="0x00000004">MUS04 : </title>
+			<title code="0x00000005">MUS05 : </title>
+			<title code="0x00000006">MUS06 : 戦闘</title>
+			<title code="0x01000007">MUS07 : 戦闘終了</title>
+			<title code="0x01000008">MUS08 : </title>
+			<title code="0x00000009">MUS09 : ゲームオーバー</title>
+			<title code="0x0000000a">MUS10 : </title>
+			<title code="0x0100000b">MUS11 : ラッキー</title>
+			<title code="0x0100000c">MUS12 : </title>
+			<title code="0x0100000d">MUS13 : </title>
+			<title code="0x0000000e">MUS14 : </title>
+			<title code="0x0100000f">MUS15 : レベルアップ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 桃太郎伝説</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">HUDSON SOFT</driveralias>
+		<romlist archive="momoden68snd">
+			<rom type="code">momoden68snd.bin</rom>
+			<rom type="x" offset="0x010000">MOMO.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1a">タイトルデモ</title>
+			<title code="0x03">オープニング</title>
+			<title code="0x1b">桃太郎の家</title>
+			<title code="0x07">村</title>
+			<title code="0x1c">愛と勇気のマーチ</title>
+			<title code="0x14">戦闘1</title>
+			<title code="0x0e">戦闘終了</title>
+			<title code="0x05">仙人のテーマ</title>
+			<title code="0x06">仙人の修行</title>
+			<title code="0x0d">レベルアップ</title>
+			<title code="0x04">ユキのテーマ</title>
+			<title code="0x0a">貧乏神のテーマ</title>
+			<title code="0x17">戦闘2</title>
+			<title code="0x13">力つきて</title>
+			<title code="0x18">天の声</title>
+			<title code="0x11">村祭り</title>
+			<title code="0x10">BGM11</title>
+			<title code="0x19">竜宮千年の舞</title>
+			<title code="0x08">微笑みの村</title>
+			<title code="0x0c">月へ</title>
+			<title code="0x09">かぐや姫との対面</title>
+			<title code="0x02">あやかしの洞窟</title>
+			<title code="0x0b">決戦!エンマ大王</title>
+			<title code="0x12">みんなが待っている</title>
+			<title code="0x0f">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 上海II</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">HUDSON SOFT</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="shang268snd">
+			<rom type="code">shan268snd.bin</rom>
+			<rom type="x" offset="0x010000">SH.X</rom>
+			<rom type="code" offset="0x014b4a">MUSIC.PAC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">01 : </title>
+			<title code="0x03">02 : </title>
+			<title code="0x04">03 : </title>
+			<title code="0x05">04 : </title>
+			<title code="0x06">05 : </title>
+			<title code="0x07">06 : </title>
+			<title code="0x08">07 : </title>
+			<title code="0x09">08 : </title>
+			<title code="0x0a">09 : </title>
+			<title code="0x0b">0A : </title>
+			<title code="0x0c">0B : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] POWER LEAGUE</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">HUDSON SOFT</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="pwrlg68snd">
+			<rom type="code">pl68snd.bin</rom>
+			<rom type="x" offset="0x010000">PL.X</rom>
+			<rom type="code" offset="0x03846c">PL.OVL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : </title>
+			<title code="0x02">01 : </title>
+			<title code="0x03">02 : </title>
+			<title code="0x04">03 : </title>
+			<title code="0x05">04 : </title>
+			<title code="0x06">05 : </title>
+			<title code="0x07">06 : </title>
+			<title code="0x08">07 : </title>
+			<title code="0x09">08 : </title>
+			<title code="0x0a">09 : </title>
+			<title code="0x0b">0A : </title>
+			<title code="0x0c">0B : </title>
+			<title code="0x0d">0C : </title>
+			<title code="0x0e">0D : </title>
+			<title code="0x0f">0E : </title>
+			<title code="0x10">0F : </title>
+			<title code="0x11">10 : SE</title>
+			<title code="0x12">11 : SE</title>
+			<title code="0x13">12 : SE</title>
+			<title code="0x14">13 : SE</title>
+			<title code="0x15">14 : SE</title>
+			<title code="0x16">15 : SE</title>
+			<title code="0x17">16 : SE</title>
+			<title code="0x18">17 : SE</title>
+			<title code="0x19">18 : SE</title>
+			<title code="0x1a">19 : SE</title>
+			<title code="0x1b">1A : SE</title>
+			<title code="0x1c">1B : SE</title>
+			<title code="0x1d">1C : SE</title>
+			<title code="0x1e">1D : SE</title>
+			<title code="0x1f">1E : SE</title>
+			<title code="0x20">1F : SE</title>
+		</titlelist>
+	</game>
+</gamelist>

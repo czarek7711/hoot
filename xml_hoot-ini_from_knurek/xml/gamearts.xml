@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //gamearts -->
+	<game>
+		<name>[PC-88] Thexder (SR) (テグザー)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="thexder">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">N88_3.ROM</rom>
+			<rom type="code" offset="0x9000">DEMOM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Thexder &lt;H.Godai&gt;</title>
+			<title code="0x01">Moonlight Sonata &lt;Ludwig van Beethoven&gt;</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Thexder (88) (テグザー)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="thexder88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">fmdtex</rom>
+			<rom type="code" offset="0x9000">DEMOM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Thexder &lt;H.Godai&gt;</title>
+			<title code="0x01">Moonlight Sonata &lt;Ludwig van Beethoven&gt;</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Cuby Panic</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="use_vrtc"  value="0x01"/>
+		</options>
+		<romlist archive="cubypanic">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">N88_3.ROM</rom>
+			<rom type="code" offset="0xc000">MUSQB</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Main BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Silpheed</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="use_rtc"    value="0x01"/>
+			<option name="mdata_size" value="0x2300"/>
+			<option name="mfile_size" value="0x2300"/>
+		</options>
+		<romlist archive="silpheed">
+			<rom type="code" offset="0x0000">PATCH88</rom>
+			<rom type="code" offset="0xe600">MDEMO.M</rom>
+			<rom type="bgm" offset="0x00">GLR.M</rom>
+			<rom type="bgm" offset="0x01">MDEMO.M</rom>
+			<rom type="bgm" offset="0x02">NEKO.M</rom>
+			<rom type="bgm" offset="0x03">SIL1.M</rom>
+			<rom type="bgm" offset="0x04">SIL2.M</rom>
+			<rom type="bgm" offset="0x05">SIL3.M</rom>
+			<rom type="bgm" offset="0x06">SIL4.M</rom>
+			<rom type="bgm" offset="0x07">SILH1.M</rom>
+			<rom type="bgm" offset="0x08">SILH2.M</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000001">The Legend of Silpheed</title>
+			<title code="0x01000007">Silf of Wind I</title>
+			<title code="0x01000008">Silf of Wind II</title>
+			<title code="0x01000003">Battle on Orbit</title>
+			<title code="0x01000002">Landing Base</title>
+			<title code="0x01000004">Asteroid</title>
+			<title code="0x01000005">Going in Fortress</title>
+			<title code="0x02000002">Double Star</title>
+			<title code="0x02000007">Battlestar Olleyus (1)</title>
+			<title code="0x02000003">Battlestar Olleyus (2)</title>
+			<title code="0x03000002">King Jupiter</title>
+			<title code="0x01000000">Return of Xacalite</title>
+			<title code="0x81000006">Little Moment Peace</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Zeliard (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="zeliard">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x2c00">MUSMOD</rom>
+			<rom type="code" offset="0xe400">MUS00</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+			<rom type="bgm" offset="0x0f">MUS15</rom>
+			<rom type="bgm" offset="0x10">MUS16</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">エスメサンテの輝き</title>
+			<title code="0x01">旅立ち</title>
+			<title code="0x02">束の間の休息</title>
+			<title code="0x03">地下の街</title>
+			<title code="0x04">閉ざされた街</title>
+			<title code="0x05">闇の世界へ</title>
+			<title code="0x06">洞窟を越えて</title>
+			<title code="0x07">樹の世界</title>
+			<title code="0x08">氷の世界</title>
+			<title code="0x09">腐土の世界</title>
+			<title code="0x0a">黄金の世界</title>
+			<title code="0x0b">炎の世界</title>
+			<title code="0x0c">不思議の世界</title>
+			<title code="0x0d">闇の使者</title>
+			<title code="0x0e">魔王</title>
+			<title code="0x0f">勝利</title>
+			<title code="0x10">新たなる冒険へ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Zeliard (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="zeliard">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x2c00">MUSMOD</rom>
+			<rom type="code" offset="0xe400">MUS00B</rom>
+			<rom type="bgm" offset="0x00">MUS00B</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+			<rom type="bgm" offset="0x0f">MUS15</rom>
+			<rom type="bgm" offset="0x10">MUS16B</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">エスメサンテの輝き</title>
+			<title code="0x01">旅立ち</title>
+			<title code="0x02">束の間の休息</title>
+			<title code="0x03">地下の街</title>
+			<title code="0x04">閉ざされた街</title>
+			<title code="0x05">闇の世界へ</title>
+			<title code="0x06">洞窟を越えて</title>
+			<title code="0x07">樹の世界</title>
+			<title code="0x08">氷の世界</title>
+			<title code="0x09">腐土の世界</title>
+			<title code="0x0a">黄金の世界</title>
+			<title code="0x0b">炎の世界</title>
+			<title code="0x0c">不思議の世界</title>
+			<title code="0x0d">闇の使者</title>
+			<title code="0x0e">魔王</title>
+			<title code="0x0f">勝利</title>
+			<title code="0x10">新たなる冒険へ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Solitaire Royale</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="solitair">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">PLAY88</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+			<rom type="bgm" offset="0x0f">MUS15</rom>
+			<rom type="bgm" offset="0x10">MUS16</rom>
+			<rom type="bgm" offset="0x11">MUS17</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x08">Title</title>
+			<title code="0x0e">Pyramid</title>
+			<title code="0x0f">Golf</title>
+			<title code="0x10">Klondike</title>
+			<title code="0x0a">Canfield</title>
+			<title code="0x0b">Corners</title>
+			<title code="0x0c">Calculation</title>
+			<title code="0x11">Shuffle &amp; Draw</title>
+			<title code="0x0d">Reno</title>
+			<title code="0x00">MUS00</title>
+			<title code="0x01">MUS01</title>
+			<title code="0x02">MUS02</title>
+			<title code="0x03">MUS03</title>
+			<title code="0x04">MUS04</title>
+			<title code="0x05">MUS05</title>
+			<title code="0x06">MUS06</title>
+			<title code="0x07">MUS07</title>
+			<title code="0x09">MUS09</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Tactical Gladiator Veigues</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="veigues">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0400">DEMO.SYS</rom>
+			<rom type="code" offset="0xd000">FMDRV</rom>
+			<rom type="bgm"  offset="0x00">MUS00</rom>
+			<rom type="bgm"  offset="0x02">MUS02</rom>
+			<rom type="bgm"  offset="0x03">MUS03</rom>
+			<rom type="bgm"  offset="0x04">MUS04</rom>
+			<rom type="bgm"  offset="0x05">MUS05</rom>
+			<rom type="bgm"  offset="0x06">MUS06</rom>
+			<rom type="bgm"  offset="0x07">MUS07</rom>
+			<rom type="bgm"  offset="0x08">MUS08</rom>
+			<rom type="bgm"  offset="0x09">MUS09</rom>
+			<rom type="bgm"  offset="0x0a">MUS10</rom>
+			<rom type="bgm"  offset="0x0b">MUS11</rom>
+			<rom type="bgm"  offset="0x0c">MUS12</rom>
+			<rom type="bgm"  offset="0x0d">MUS13</rom>
+			<rom type="bgm"  offset="0x0e">MUS14</rom>
+			<rom type="bgm"  offset="0x0f">MUS15</rom>
+			<rom type="bgm"  offset="0x10">MUS16</rom>
+			<rom type="bgm"  offset="0x11">MUS17</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x02">ミッション１，エリア１【市街地】</title>
+			<title code="0x04">ミッション１，エリア２【荒地】</title>
+			<title code="0x03">ミッション１，エリア３【砂漠】</title>
+			<title code="0x05">ミッション１，エリア４【湿地帯】</title>
+			<title code="0x06">ミッション１，エリア５【森林】</title>
+			<title code="0x02">ミッション２，エリア１【洞窟入口】</title>
+			<title code="0x07">ミッション２，エリア２【クリスタル】</title>
+			<title code="0x03">ミッション２，エリア３【地底湖】</title>
+			<title code="0x08">ミッション２，エリア４【地底火山】</title>
+			<title code="0x09">ミッション２，エリア５【海底通路】</title>
+			<title code="0x02">ミッション３，エリア１【通路１】</title>
+			<title code="0x0a">ミッション３，エリア２【集積所】</title>
+			<title code="0x03">ミッション３，エリア３【通路２】</title>
+			<title code="0x0b">ミッション３，エリア４【プラント】</title>
+			<title code="0x0c">ミッション３，エリア５【コア】</title>
+			<title code="0x0d">ボス</title>
+			<title code="0x0f">中間デモ（仮エンディング）</title>
+			<title code="0x11">追撃準備（中間デモ）～ミッション４，エリア１</title>
+			<title code="0x0e">ミッション４，エリア２</title>
+			<title code="0x10">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Fire Hawk -Thexder The Second Contact- (ファイアーホークテクザー２) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+		</options>
+		<romlist archive="firehawk">
+			<rom type="code" offset="0x0000">TSYS</rom>
+			<rom type="code" offset="0x04c7">TPY2</rom>
+			<rom type="code" offset="0x4000">OM12</rom>
+			<rom type="code" offset="0xf000">PATCH88</rom>
+			<rom type="adpcm">ADPCM</rom>
+			<rom type="bgm" offset="0x00">OM02</rom>
+			<rom type="bgm" offset="0x01">OM12</rom>
+			<rom type="bgm" offset="0x02">OM22</rom>
+			<rom type="bgm" offset="0x03">MM12</rom>
+			<rom type="bgm" offset="0x04">MM22</rom>
+			<rom type="bgm" offset="0x05">MM32</rom>
+			<rom type="bgm" offset="0x06">MM42</rom>
+			<rom type="bgm" offset="0x07">MM52</rom>
+			<rom type="bgm" offset="0x08">MM62</rom>
+			<rom type="bgm" offset="0x09">MM72</rom>
+			<rom type="bgm" offset="0x0a">MM82</rom>
+			<rom type="bgm" offset="0x0b">MM92</rom>
+			<rom type="bgm" offset="0x0c">MMA2</rom>
+			<rom type="bgm" offset="0x0d">EM02</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening 1</title>
+			<title code="0x02">Opening 2</title>
+			<title code="0x01">Opening 3 (Moon Light Sonata)</title>
+			<title code="0x03">Stage 1</title>
+			<title code="0x04">Stage 2</title>
+			<title code="0x05">Stage 3</title>
+			<title code="0x06">Stage 4</title>
+			<title code="0x07">Stage 5</title>
+			<title code="0x08">Stage 6</title>
+			<title code="0x09">Stage 7</title>
+			<title code="0x0a">Stage 8</title>
+			<title code="0x0b">Stage 9</title>
+			<title code="0x0c">Last Boss</title>
+			<title code="0x0d">Ending</title>
+			<title code="0xff">To Boss BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Fire Hawk -Thexder The Second Contact- (ファイアーホークテクザー２) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+		</options>
+		<romlist archive="firehawk">
+			<rom type="code" offset="0x0000">TSYS</rom>
+			<rom type="code" offset="0x04c7">TPY1</rom>
+			<rom type="code" offset="0x4000">OM11</rom>
+			<rom type="code" offset="0xf000">PATCH88</rom>
+			<rom type="bgm" offset="0x00">OM01</rom>
+			<rom type="bgm" offset="0x01">OM11</rom>
+			<rom type="bgm" offset="0x02">OM21</rom>
+			<rom type="bgm" offset="0x03">MM11</rom>
+			<rom type="bgm" offset="0x04">MM21</rom>
+			<rom type="bgm" offset="0x05">MM31</rom>
+			<rom type="bgm" offset="0x06">MM41</rom>
+			<rom type="bgm" offset="0x07">MM51</rom>
+			<rom type="bgm" offset="0x08">MM61</rom>
+			<rom type="bgm" offset="0x09">MM71</rom>
+			<rom type="bgm" offset="0x0a">MM81</rom>
+			<rom type="bgm" offset="0x0b">MM91</rom>
+			<rom type="bgm" offset="0x0c">MMA1</rom>
+			<rom type="bgm" offset="0x0d">EM01</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening 1</title>
+			<title code="0x02">Opening 2</title>
+			<title code="0x01">Opening 3 (Moon Light Sonata)</title>
+			<title code="0x03">Stage 1</title>
+			<title code="0x04">Stage 2</title>
+			<title code="0x05">Stage 3</title>
+			<title code="0x06">Stage 4</title>
+			<title code="0x07">Stage 5</title>
+			<title code="0x08">Stage 6</title>
+			<title code="0x09">Stage 7</title>
+			<title code="0x0a">Stage 8</title>
+			<title code="0x0b">Stage 9</title>
+			<title code="0x0c">Last Boss</title>
+			<title code="0x0d">Ending</title>
+			<title code="0xff">To Boss BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Gambler Jiko Chushin Ha (ぎゅわんぶらあ自己中心派)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="jikochu1">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xc000">GOPEN1._S</rom>
+			<rom type="bgm" offset="0x00">GOPEN1._S</rom>
+			<rom type="bgm" offset="0x01">GOPEN2._S</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニングデモ１</title>
+			<title code="0x01">オープニングデモ２ (デモ１後に演奏のこと)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Gambler Jiko Chushin Ha 2 (ぎゅわんぶらあ自己中心派２ 自称！強豪雀士編)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="jikochu2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xc000">GOPEN1._S</rom>
+			<rom type="bgm" offset="0x00">GOPEN1._S</rom>
+			<rom type="bgm" offset="0x01">GEND1_.S</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">オープニングデモ１</title>
+			<title code="0x01000001">オープニングデモ２</title>
+			<title code="0x00000001">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Gambler Jiko Chushin Ha 3 (ぎゅわんぶらあ自己中心派３ 望郷さすらい)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="jikochu3">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xc000">GANPLA.M</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニングデモ１</title>
+			<title code="0x01">オープニングデモ２</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Gambler Jiko Chushin Ha Mahjong Puzzle Collection (麻雀パズルコレクション) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+		</options>
+		<romlist archive="jikopzl">
+			<rom type="code" offset="0x0000">BIOS</rom>
+			<rom type="code" offset="0x1250">FMDRV</rom>
+			<rom type="code" offset="0xe200">CSM</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="adpcm" offset="0x00010">ADPCM</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x01">メニュー</title>
+			<title code="0x02">トレーニングモード ゲームスタート</title>
+			<title code="0x06">BGM 1 (初級)</title>
+			<title code="0x07">BGM 2 (中級)</title>
+			<title code="0x08">BGM 3 (上級)</title>
+			<title code="0x04">ステージクリア</title>
+			<title code="0x05">ゲームオーバー</title>
+			<title code="0x03">ツアーモード ゲームスタート</title>
+			<title code="0x09">ツアーモード デモ1</title>
+			<title code="0x0a">ツアーモード デモ2</title>
+			<title code="0x0b">ツアーモード デモ3</title>
+			<title code="0x0c">ツアーモード デモ4</title>
+			<title code="0x0d">最終面前デモ</title>
+			<title code="0x0e">エンディング</title>
+			<title code="0xf0">「カン」</title>
+			<title code="0xf1">「それチャイね」</title>
+			<title code="0xf2">「えー、それとるのか～？」</title>
+			<title code="0xf3">「えー、それとるの～？」</title>
+			<title code="0xf4">「おめでとう！」</title>
+			<title code="0xf5">「え～ん」</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Gambler Jiko Chushin Ha Mahjong Puzzle Collection (麻雀パズルコレクション) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+		</options>
+		<romlist archive="jikopzl">
+			<rom type="code" offset="0x0000">BIOS</rom>
+			<rom type="code" offset="0x1250">FMDRV2</rom>
+			<rom type="code" offset="0xe200">CSM</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x01">メニュー</title>
+			<title code="0x02">トレーニングモード ゲームスタート</title>
+			<title code="0x06">BGM 1 (初級)</title>
+			<title code="0x07">BGM 2 (中級)</title>
+			<title code="0x08">BGM 3 (上級)</title>
+			<title code="0x04">ステージクリア</title>
+			<title code="0x05">ゲームオーバー</title>
+			<title code="0x03">ツアーモード ゲームスタート</title>
+			<title code="0x09">ツアーモード デモ1</title>
+			<title code="0x0a">ツアーモード デモ2</title>
+			<title code="0x0b">ツアーモード デモ3</title>
+			<title code="0x0c">ツアーモード デモ4</title>
+			<title code="0x0d">最終面前デモ</title>
+			<title code="0x0e">エンディング</title>
+			<title code="0xf0">「カン」</title>
+			<title code="0xf1">「それチャイね」</title>
+			<title code="0xf2">「えー、それとるのか～？」</title>
+			<title code="0xf3">「えー、それとるの～？」</title>
+			<title code="0xf4">「おめでとう！」</title>
+			<title code="0xf5">「え～ん」</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Harakiri</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">gamearts</driveralias>
+		<options>
+			<option name="vdata_addr" value="0xc000"/>
+			<option name="vdata_size" value="0x1000"/>
+			<option name="vfile_size" value="0x1000"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="harakiri">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0710">PROG</rom>
+			<rom type="code" offset="0xc000">FMDRV</rom>
+			<rom type="adpcm" offset="0x00010">ADPCM</rom>
+			<rom type="voice" offset="0x00">FMDRV</rom>
+			<rom type="bgm"   offset="0x00">MOPEN</rom>
+			<rom type="voice" offset="0x01">FMDRV</rom>
+			<rom type="bgm"   offset="0x01">MEND</rom>
+			<rom type="voice" offset="0x02">FMDRV2</rom>
+			<rom type="bgm"   offset="0x02">MOPEN2</rom>
+			<rom type="voice" offset="0x03">FMDRV2</rom>
+			<rom type="bgm"   offset="0x03">MEND2</rom>
+			<rom type="voice" offset="0x04">FMDRV2</rom>
+			<rom type="bgm"   offset="0x04">MBADE</rom>
+			<rom type="voice" offset="0x05">MPLAY</rom>
+			<rom type="bgm"   offset="0x05">MCHINA</rom>
+			<rom type="voice" offset="0x06">MPLAY</rom>
+			<rom type="bgm"   offset="0x06">MHEXD</rom>
+			<rom type="voice" offset="0x07">MPLAY</rom>
+			<rom type="bgm"   offset="0x07">MHEXO</rom>
+			<rom type="voice" offset="0x08">MPLAY</rom>
+			<rom type="bgm"   offset="0x08">MIKKI</rom>
+			<rom type="voice" offset="0x09">MPLAY</rom>
+			<rom type="bgm"   offset="0x09">MJAPAN</rom>
+			<rom type="voice" offset="0x0a">MPLAY</rom>
+			<rom type="bgm"   offset="0x0a">MKOJO</rom>
+			<rom type="voice" offset="0x0b">MPLAY</rom>
+			<rom type="bgm"   offset="0x0b">MMAIN</rom>
+			<rom type="voice" offset="0x0c">MPLAY</rom>
+			<rom type="bgm"   offset="0x0c">MMIKADO</rom>
+			<rom type="voice" offset="0x0d">MPLAY</rom>
+			<rom type="bgm"   offset="0x0d">MNINJA</rom>
+			<rom type="voice" offset="0x0e">MPLAY</rom>
+			<rom type="bgm"   offset="0x0e">MROJO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング (OPNA)</title>
+			<title code="0x02">オープニング (OPN)</title>
+			<title code="0x0b">大河ドラマ風</title>
+			<title code="0x09">日本風</title>
+			<title code="0x05">中国風</title>
+			<title code="0x07">野戦(攻撃)</title>
+			<title code="0x06">野戦(防衛)</title>
+			<title code="0x08">一騎討ち</title>
+			<title code="0x0a">攻城戦</title>
+			<title code="0x0e">籠城戦</title>
+			<title code="0x0d">忍者</title>
+			<title code="0x0c">帝</title>
+			<title code="0x04">バッドエンド</title>
+			<title code="0x01">エンディング (OPNA)</title>
+			<title code="0x03">エンディング (OPN)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88VA] Famista '89 (プロ野球ファミリースタジアム 89年度ペナントレース版) (OPNA)</name>
+		<driver type="opna">pc88vados</driver>
+		<driveralias type="PC-88VA">gamearts</driveralias>
+		<options>
+			<option name="fm_mix"   value="5"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="famista89va">
+			<rom type="file" offset="-1">famista.com</rom>
+			<rom type="file" offset="-1">FSMDRV.COM</rom>
+			<rom type="file" offset="0x10">FMUS1.DAT</rom>
+			<rom type="file" offset="0x11">FMUS2.DAT</rom>
+			<rom type="file" offset="0x12">FMUS3.DAT</rom>
+			<rom type="file" offset="0x13">FMUS4.DAT</rom>
+			<rom type="file" offset="0x14">FMUS5.DAT</rom>
+			<rom type="file" offset="0x15">FMUS6.DAT</rom>
+			<rom type="file" offset="0x16">FMUS7.DAT</rom>
+			<rom type="file" offset="0x17">FMUS8.DAT</rom>
+			<rom type="file" offset="0x18">FMUS9.DAT</rom>
+			<rom type="file" offset="0x19">FMUSA.DAT</rom>
+			<rom type="shell" offset="0">fsmdrv</rom>
+			<rom type="shell" offset="0">famista</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">FMUS1.DAT</title>
+			<title code="0x11">FMUS2.DAT</title>
+			<title code="0x12">FMUS3.DAT</title>
+			<title code="0x13">FMUS4.DAT</title>
+			<title code="0x14">FMUS5.DAT</title>
+			<title code="0x15">FMUS6.DAT</title>
+			<title code="0x16">FMUS7.DAT</title>
+			<title code="0x17">FMUS8.DAT</title>
+			<title code="0x18">FMUS9.DAT</title>
+			<title code="0x19">FMUSA.DAT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88VA] Famista '89 (プロ野球ファミリースタジアム 89年度ペナントレース版) (OPN)</name>
+		<driver type="opn">pc88vados</driver>
+		<driveralias type="PC-88VA">gamearts</driveralias>
+		<options>
+			<option name="fm_mix"   value="5"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="famista89va">
+			<rom type="file" offset="-1">famista.com</rom>
+			<rom type="file" offset="-1">FSMDRV.COM</rom>
+			<rom type="file" offset="0x10">FMUS1.DAT</rom>
+			<rom type="file" offset="0x11">FMUS2.DAT</rom>
+			<rom type="file" offset="0x12">FMUS3.DAT</rom>
+			<rom type="file" offset="0x13">FMUS4.DAT</rom>
+			<rom type="file" offset="0x14">FMUS5.DAT</rom>
+			<rom type="file" offset="0x15">FMUS6.DAT</rom>
+			<rom type="file" offset="0x16">FMUS7.DAT</rom>
+			<rom type="file" offset="0x17">FMUS8.DAT</rom>
+			<rom type="file" offset="0x18">FMUS9.DAT</rom>
+			<rom type="file" offset="0x19">FMUSA.DAT</rom>
+			<rom type="shell" offset="0">fsmdrv</rom>
+			<rom type="shell" offset="0">famista</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">FMUS1.DAT</title>
+			<title code="0x11">FMUS2.DAT</title>
+			<title code="0x12">FMUS3.DAT</title>
+			<title code="0x13">FMUS4.DAT</title>
+			<title code="0x14">FMUS5.DAT</title>
+			<title code="0x15">FMUS6.DAT</title>
+			<title code="0x16">FMUS7.DAT</title>
+			<title code="0x17">FMUS8.DAT</title>
+			<title code="0x18">FMUS9.DAT</title>
+			<title code="0x19">FMUSA.DAT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Zeliard (OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="X1">gamearts</driveralias>
+		<options>
+			<option name="mdata_size" value="0x2700"/>
+			<option name="mfile_size" value="0x2700"/>
+			<option name="use_ctc0"   value="0x01"/>
+			<option name="use_ctc3"   value="0x00"/>
+		</options>
+		<romlist archive="x1zeliard">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0500">MUSG</rom>
+			<rom type="bgm"  offset="0x01">MA000</rom>
+			<rom type="bgm"  offset="0x11">MA001</rom>
+			<rom type="bgm"  offset="0x02">MA002</rom>
+			<rom type="bgm"  offset="0x03">MA003</rom>
+			<rom type="bgm"  offset="0x04">MA004</rom>
+			<rom type="bgm"  offset="0x05">MA005</rom>
+			<rom type="bgm"  offset="0x06">MUS1</rom>
+			<rom type="bgm"  offset="0x07">MUS2</rom>
+			<rom type="bgm"  offset="0x08">MUS3</rom>
+			<rom type="bgm"  offset="0x09">MUS4</rom>
+			<rom type="bgm"  offset="0x0a">MA006</rom>
+			<rom type="bgm"  offset="0x0b">MA007</rom>
+			<rom type="bgm"  offset="0x0c">MA008</rom>
+			<rom type="bgm"  offset="0x0d">MA009</rom>
+			<rom type="bgm"  offset="0x0e">MA010</rom>
+			<rom type="bgm"  offset="0x0f">MMAO</rom>
+			<rom type="bgm"  offset="0x10">MA011</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">エスメサンテの輝き</title>
+			<title code="0x02">旅立ち</title>
+			<title code="0x03">束の間の休息</title>
+			<title code="0x04">地下の街</title>
+			<title code="0x05">閉ざされた街</title>
+			<title code="0x06">闇の世界へ</title>
+			<title code="0x07">洞窟を越えて</title>
+			<title code="0x08">樹の世界</title>
+			<title code="0x09">氷の世界</title>
+			<title code="0x0a">腐土の世界</title>
+			<title code="0x0b">黄金の世界</title>
+			<title code="0x0c">炎の世界</title>
+			<title code="0x0d">不思議の世界</title>
+			<title code="0x0e">闇の使者</title>
+			<title code="0x0f">魔王</title>
+			<title code="0x10">勝利</title>
+			<title code="0x11">新たなる冒険へ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Zeliard (PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">gamearts</driveralias>
+		<options>
+			<option name="use_ctc0"   value="0x01"/>
+			<option name="use_ctc3"   value="0x00"/>
+		</options>
+		<romlist archive="x1zeliard">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x0500">MUSG</rom>
+			<rom type="bgm"  offset="0x01">MB000</rom>
+			<rom type="bgm"  offset="0x11">MB001</rom>
+			<rom type="bgm"  offset="0x02">MA002</rom>
+			<rom type="bgm"  offset="0x03">MA003</rom>
+			<rom type="bgm"  offset="0x04">MA004</rom>
+			<rom type="bgm"  offset="0x05">MA005</rom>
+			<rom type="bgm"  offset="0x06">MUS1</rom>
+			<rom type="bgm"  offset="0x07">MUS2</rom>
+			<rom type="bgm"  offset="0x08">MUS3</rom>
+			<rom type="bgm"  offset="0x09">MUS4</rom>
+			<rom type="bgm"  offset="0x0a">MA006</rom>
+			<rom type="bgm"  offset="0x0b">MA007</rom>
+			<rom type="bgm"  offset="0x0c">MA008</rom>
+			<rom type="bgm"  offset="0x0d">MA009</rom>
+			<rom type="bgm"  offset="0x0e">MA010</rom>
+			<rom type="bgm"  offset="0x0f">MMAO</rom>
+			<rom type="bgm"  offset="0x10">MA011</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">エスメサンテの輝き</title>
+			<title code="0x10">勝利</title>
+			<title code="0x11">新たなる冒険へ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Solitaire Royale (OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="X1">gamearts</driveralias>
+		<options>
+			<option name="init_pc"  value="0xf000"/>
+			<option name="use_ctc0" value="0x01"/>
+			<option name="use_ctc3" value="0x00"/>
+		</options>
+		<romlist archive="x1sr">
+			<rom type="code" offset="0x0500">SOLMAIN</rom>
+			<rom type="code" offset="0x3700">OPEN</rom>
+			<rom type="code" offset="0x5220">FMMUSIC</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">00 title</title>
+			<title code="0x07">07 pyramid</title>
+			<title code="0x08">08 golf</title>
+			<title code="0x05">05 klondike</title>
+			<title code="0x04">04 canfield</title>
+			<title code="0x03">03 corners</title>
+			<title code="0x06">06 calculation</title>
+			<title code="0x01">01 shuffle &amp; draw</title>
+			<title code="0x02">02 reno</title>
+			<title code="0x09">09 </title>
+			<title code="0x0a">0a </title>
+			<title code="0x0b">0b </title>
+			<title code="0x0c">0c shuffle &amp; draw clear</title>
+			<title code="0x0d">0d </title>
+			<title code="0x0e">0e </title>
+			<title code="0x0f">0f </title>
+			<title code="0x10">10 </title>
+			<title code="0x11">11 </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Solitaire Royale (PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">gamearts</driveralias>
+		<options>
+			<option name="init_pc"  value="0xf000"/>
+			<option name="use_ctc0" value="0x01"/>
+			<option name="use_ctc3" value="0x00"/>
+		</options>
+		<romlist archive="x1sr">
+			<rom type="code" offset="0x0500">SOLMAIN</rom>
+			<rom type="code" offset="0x3700">OPEN</rom>
+			<rom type="code" offset="0x5220">PLAYX1</rom>
+			<rom type="code" offset="0xf000">PATCH2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">00 title</title>
+			<title code="0x07">07 pyramid</title>
+			<title code="0x08">08 golf</title>
+			<title code="0x05">05 klondike</title>
+			<title code="0x04">04 canfield</title>
+			<title code="0x03">03 corners</title>
+			<title code="0x06">06 calculation</title>
+			<title code="0x01">01 shuffle &amp; draw</title>
+			<title code="0x02">02 reno</title>
+			<title code="0x09">09 </title>
+			<title code="0x0a">0a </title>
+			<title code="0x0b">0b </title>
+			<title code="0x0c">0c shuffle &amp; draw clear</title>
+			<title code="0x0d">0d </title>
+			<title code="0x0e">0e </title>
+			<title code="0x0f">0f </title>
+			<title code="0x10">10 </title>
+			<title code="0x11">11 </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Thexder (テグザー)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">gamearts</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="thexder_msx">
+			<rom type="code">Thexder (1986)(GameArts).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Thexder &lt;H.Godai&gt;</title>
+			<title code="0x05">Moonlight Sonata &lt;Ludwig van Beethoven&gt;</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Fire Hawk -Thexder The Second Contact- (ファイアーホークテクザー２) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">gamearts</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="firehawk_msx">
+			<rom type="code">Fire Hawk - Thexder The Second Contact (1989)(GameArts).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening A</title>
+			<title code="0x01">Opening B</title>
+			<title code="0x02">Mission 1</title>
+			<title code="0x42">Mission 1 Boss</title>
+			<title code="0x03">Mission 2</title>
+			<title code="0x43">Mission 2 Boss</title>
+			<title code="0x04">Mission 3</title>
+			<title code="0x44">Mission 3 Boss</title>
+			<title code="0x05">Mission 4</title>
+			<title code="0x45">Mission 4 Boss</title>
+			<title code="0x06">Mission 5</title>
+			<title code="0x46">Mission 5 Boss</title>
+			<title code="0x07">Mission 6</title>
+			<title code="0x47">Mission 6 Boss</title>
+			<title code="0x08">Mission 7</title>
+			<title code="0x48">Mission 7 Boss</title>
+			<title code="0x09">Mission 8</title>
+			<title code="0x49">Mission 8 Boss</title>
+			<title code="0x0A">Mission 9</title>
+			<title code="0x4A">Mission 9 Boss</title>
+			<title code="0x0B">Mission 10</title>
+			<title code="0x0C">Ending</title>
+			<title code="0x0D">Moon Light Sonata</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Fire Hawk -Thexder The Second Contact- (ファイアーホークテクザー２) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">gamearts</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="firehawk_msx">
+			<rom type="code">Fire Hawk - Thexder The Second Contact (1989)(GameArts).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80">Opening A</title>
+			<title code="0x81">Opening B</title>
+			<title code="0x82">Mission 1</title>
+			<title code="0xC2">Mission 1 Boss</title>
+			<title code="0x83">Mission 2</title>
+			<title code="0xC3">Mission 2 Boss</title>
+			<title code="0x84">Mission 3</title>
+			<title code="0xC4">Mission 3 Boss</title>
+			<title code="0x85">Mission 4</title>
+			<title code="0xC5">Mission 4 Boss</title>
+			<title code="0x86">Mission 5</title>
+			<title code="0xC6">Mission 5 Boss</title>
+			<title code="0x87">Mission 6</title>
+			<title code="0xC7">Mission 6 Boss</title>
+			<title code="0x88">Mission 7</title>
+			<title code="0xC8">Mission 7 Boss</title>
+			<title code="0x89">Mission 8</title>
+			<title code="0xC9">Mission 8 Boss</title>
+			<title code="0x8A">Mission 9</title>
+			<title code="0xCA">Mission 9 Boss</title>
+			<title code="0x8B">Mission 10</title>
+			<title code="0x8C">Ending</title>
+			<title code="0x8D">Moon Light Sonata</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2008/02/26">
+	<!--//VING -->
+	<game>
+		<name>[PC-98] Super Real Mahjong PIV (スーパーリアル麻雀PIV)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">ving</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="srmp4_98">
+			<rom type="file" offset="-1">SRMP4_98.COM</rom>
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="7">P4.MDP</rom>
+			<rom type="file" offset="8">OPN2.DAT</rom>
+			<rom type="file" offset="9">SSG2.DAT</rom>
+			<rom type="shell" offset="0">music</rom>
+			<rom type="shell" offset="0">srmp4_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">P4.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Super Real Mahjong PII &amp; PIII (スーパーリアル麻雀PII&amp;PIII)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">ving</driveralias>
+		<options>
+			<option name="opm_mix" value="0x70"/>
+			<option name="pcm_mix" value="0x82"/>
+		</options>
+		<romlist archive="srmp2368snd">
+			<rom type="code" offset="0x00000">p368snd.bin</rom>
+			<rom type="x" offset="0x10000">AXDRIVE.X</rom>
+			<rom type="code" offset="0x13000">PCMDATA.PDX</rom>
+			<rom type="code" offset="0x34000">P01.MDX</rom>
+			<rom type="code" offset="0x38000">P02.MDX</rom>
+			<rom type="code" offset="0x3C000">P03.MDX</rom>
+			<rom type="code" offset="0x40000">P04.MDX</rom>
+			<rom type="code" offset="0x44000">P05.MDX</rom>
+			<rom type="code" offset="0x48000">P06.MDX</rom>
+			<rom type="code" offset="0x4C000">P08.MDX</rom>
+			<rom type="code" offset="0x50000">P09.MDX</rom>
+			<rom type="code" offset="0x54000">P10.MDX</rom>
+			<rom type="code" offset="0x58000">P11.MDX</rom>
+			<rom type="code" offset="0x5C000">P12.MDX</rom>
+			<rom type="code" offset="0x60000">P13.MDX</rom>
+			<rom type="code" offset="0x64000">P16.MDX</rom>
+			<rom type="code" offset="0x68000">PO00.MDX</rom>
+			<rom type="code" offset="0x6C000">PO05.MDX</rom>
+			<rom type="code" offset="0x70000">PO06.MDX</rom>
+			<rom type="code" offset="0x74000">PO08.MDX</rom>
+			<rom type="code" offset="0x78000">PO09.MDX</rom>
+			<rom type="code" offset="0x7C000">PO10.MDX</rom>
+			<rom type="code" offset="0x80000">PO11.MDX</rom>
+			<rom type="code" offset="0x84000">PO12.MDX</rom>
+			<rom type="code" offset="0x88000">PO13.MDX</rom>
+			<rom type="code" offset="0x8C000">PO14.MDX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">P01.MDX</title>
+			<title code="0x02">P02.MDX</title>
+			<title code="0x03">P03.MDX</title>
+			<title code="0x04">P04.MDX</title>
+			<title code="0x05">P05.MDX</title>
+			<title code="0x06">P06.MDX</title>
+			<title code="0x07">P08.MDX</title>
+			<title code="0x08">P09.MDX</title>
+			<title code="0x09">P10.MDX</title>
+			<title code="0x0a">P11.MDX</title>
+			<title code="0x0b">P12.MDX</title>
+			<title code="0x0c">P13.MDX</title>
+			<title code="0x0d">P16.MDX</title>
+			<title code="0x0e">PO00.MDX</title>
+			<title code="0x0f">PO05.MDX</title>
+			<title code="0x10">PO06.MDX</title>
+			<title code="0x11">PO08.MDX</title>
+			<title code="0x12">PO09.MDX</title>
+			<title code="0x13">PO10.MDX</title>
+			<title code="0x14">PO11.MDX</title>
+			<title code="0x15">PO12.MDX</title>
+			<title code="0x16">PO13.MDX</title>
+			<title code="0x17">PO14.MDX</title>
+		</titlelist>
+	</game>
+</gamelist>

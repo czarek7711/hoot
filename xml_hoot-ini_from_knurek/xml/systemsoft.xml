@@ -1,0 +1,2892 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //systemsoft -->
+	<game>
+		<name>[PC-88] SeeNa</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">systemsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="seena">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x5800">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Function Area</title>
+			<title code="0x01">Balance in the Maze</title>
+			<title code="0x02">Side-B Stage 8</title>
+			<title code="0x03">MUS03</title>
+			<title code="0x04">Side-B Stage 1,3,5,7</title>
+			<title code="0x05">Side-B Stage 2</title>
+			<title code="0x06">MUS06</title>
+			<title code="0x07">MUS07</title>
+			<title code="0x08">MUS08</title>
+			<title code="0x09">Side-B ステージクリア</title>
+			<title code="0x0a">Side-B オールクリア</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Kawaisou Monogatari (かわいそう物語)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">systemsoft</driveralias>
+		<romlist archive="kawaisou">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">WEDG.bin</rom>
+			<rom type="code" offset="0xdff0">MUSDAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">平野　Field</title>
+			<title code="0x01">街　　Town</title>
+			<title code="0x02">地下　Dungeon</title>
+			<title code="0x03">城　　Castle</title>
+			<title code="0x04">お店　Shop</title>
+			<title code="0x05">神現れる！</title>
+			<title code="0x06">神をたおしたぞ</title>
+			<title code="0x07">宝箱　うれしいにゃ</title>
+			<title code="0x08">CD</title>
+			<title code="0x09">Fieldで敵に会う</title>
+			<title code="0x0a">地下で敵に会う</title>
+			<title code="0x0b">逃げる</title>
+			<title code="0x0c">プレイヤーを選ぶ</title>
+			<title code="0x0d">オープニング１</title>
+			<title code="0x0e">オープニング２</title>
+			<title code="0x0f">Field Part 2</title>
+			<title code="0x10">味方　Part 2</title>
+			<title code="0x11">敵　Part 2</title>
+			<title code="0x12">ミサイル発射</title>
+			<title code="0x13">本当に勝ったぞ</title>
+			<title code="0x14">エンディング１</title>
+			<title code="0x15">黒幕登場</title>
+			<title code="0x16">Ending 2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Ginga (銀河)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">systemsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xe000"/>
+			<option name="mdata_size" value="0x1000"/>
+		</options>
+		<romlist archive="ginga">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8400">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00</title>
+			<title code="0x01">MUS01</title>
+			<title code="0x02">MUS02</title>
+			<title code="0x03">MUS03</title>
+			<title code="0x04">MUS04</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Bouken Roman (冒険浪漫)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">systemsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="init_pc" value="0x2000"/>
+		</options>
+		<romlist archive="boken">
+			<rom type="code" offset="0x2000">PATCH</rom>
+			<rom type="code" offset="0x0100">DRIVER.BIN</rom>
+			<rom type="bgm" offset="0x00">MDAT1</rom>
+			<rom type="bgm" offset="0x01">MDAT2</rom>
+			<rom type="bgm" offset="0x02">MDAT3</rom>
+			<rom type="bgm" offset="0x03">MDAT4</rom>
+			<rom type="bgm" offset="0x04">MDAT5</rom>
+			<rom type="bgm" offset="0x05">MDAT6</rom>
+			<rom type="bgm" offset="0x06">MDAT7</rom>
+			<rom type="bgm" offset="0x07">MDAT8</rom>
+			<rom type="bgm" offset="0x08">MDAT9</rom>
+			<rom type="bgm" offset="0x09">MDAT10</rom>
+			<rom type="bgm" offset="0x0a">MDAT11</rom>
+			<rom type="bgm" offset="0x0b">MDAT12</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0a">Title</title>
+			<title code="0x09">Title 2</title>
+			<title code="0x00">Action #1</title>
+			<title code="0x01">Action #2</title>
+			<title code="0x02">Action #3</title>
+			<title code="0x03">Action #4</title>
+			<title code="0x04">Action #5?</title>
+			<title code="0x05">Action #6?</title>
+			<title code="0x06">Action #7?</title>
+			<title code="0x07">Action #8?</title>
+			<title code="0x08">Action #9?</title>
+			<title code="0x0b">Action #10?</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Super Daisenryaku (SUPER大戦略)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">systemsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5100"/>
+			<option name="mdata_size" value="0x2400"/>
+			<option name="mfile_size" value="0x2400"/>
+		</options>
+		<romlist archive="sdaisen">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x4c00">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x01">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Campaign ban Daisenryaku 2 (キャンペーン版大戦略Ⅱ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">systemsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9b00"/>
+		</options>
+		<romlist archive="daisen2c">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9600">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03000000">オープニング</title>
+			<title code="0x00000001">エンディング(マップモード)</title>
+			<title code="0x03000002">エンディング(キャンペーンモード)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Acrojet</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">systemsoft</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="acrojet">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0x8000">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Master of Monsters (マスター・オブ・モンスターズ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">systemsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5000"/>
+			<option name="mdata_size" value="0x2a00"/>
+			<option name="mfile_size" value="0x2a00"/>
+		</options>
+		<romlist archive="mofm">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x4a00">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x01">エンディング(マップモード)</title>
+			<title code="0x02">エンディング(キャンペーン)</title>
+			<title code="0x03">エンディング(マップコレクション・キャンペーン)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Shanghai 2 (上海Ⅱ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">systemsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5eef"/>
+			<option name="mdata_size" value="0x3000"/>
+			<option name="mfile_size" value="0x3000"/>
+		</options>
+		<romlist archive="shnghai2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xa7af">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000006">オープニング</title>
+			<title code="0x01000000">帝配列</title>
+			<title code="0x01000001">蠍配列</title>
+			<title code="0x01000002">猿配列</title>
+			<title code="0x01000003">蛇配列</title>
+			<title code="0x01000004">豹配列</title>
+			<title code="0x01000005">龍配列</title>
+			<title code="0x01000007">ソリティアモードクリア</title>
+			<title code="0x00000008">キャンペーンモード 帝/蠍/猿配列クリア</title>
+			<title code="0x00000009">キャンペーンモード 蛇/豹配列クリア</title>
+			<title code="0x0000000a">キャンペーンモード 龍配列クリア</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] F-15 Strike Eagle (Ｆ－１５ ストライクイーグル)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">systemsoft</driveralias>
+		<romlist archive="f15eagle">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x2000">VOICEF15.M88</rom>
+			<rom type="code" offset="0x3000">MUSICF15.M88</rom>
+			<rom type="code" offset="0x74a0">MUSIC88.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Tir-nan-og -The Forbidden Tower- (ティル・ナ・ノーグ ダーナの末裔)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">systemsoft</driveralias>
+		<options>
+			<option name="init_pc"    value="0xf000"/>
+			<option name="mdata_addr" value="0x3000"/>
+			<option name="mdata_size" value="0x5000"/>
+			<option name="mfile_size" value="0x5000"/>
+		</options>
+		<romlist archive="tirnan88">
+			<rom type="code" offset="0x0000">DRIVER</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80000000">オープニング －ティルナノーグのテーマ－</title>
+			<title code="0x00000004">メインメニュー</title>
+			<title code="0x00000005">シナリオ作成</title>
+			<title code="0x00000001">フィールド</title>
+			<title code="0x00000002">戦闘</title>
+			<title code="0x00000003">街</title>
+			<title code="0x00000006">キャンプメニュー</title>
+			<title code="0x00000007">MUS07</title>
+			<title code="0x00000008">ダンジョン</title>
+			<title code="0x00000009">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88VA] Shanghai (上海)</name>
+		<driver type="opna">pc88vados</driver>
+		<driveralias type="PC-88VA">systemsoft</driveralias>
+		<options>
+			<option name="fm_mix"   value="5"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="shangva">
+			<rom type="file" offset="-1">MUSIC.SYS</rom>
+			<rom type="file" offset="-1">shangva.com</rom>
+			<rom type="device" offset="0">MUSIC.SYS</rom>
+			<rom type="shell" offset="0">shangva</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Kawaisou Monogatari (かわいそう物語)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="ssg_mix"  value="-2"/>
+		</options>
+		<romlist archive="kawais98">
+			<rom type="code" offset="0x00600">kawaisou.bin</rom>
+			<rom type="code" offset="0x01100">MUSIC.MAC</rom>
+			<rom type="code" offset="0x01800">MSCDAT.MAC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">平野　Field</title>
+			<title code="0x010000">街　　Town</title>
+			<title code="0x020000">地下　Dungeon</title>
+			<title code="0x030000">城　　Castle</title>
+			<title code="0x040000">お店　Shop</title>
+			<title code="0x050000">神現れる！</title>
+			<title code="0x060000">神をたおしたぞ</title>
+			<title code="0x070000">宝箱　うれしいにゃ</title>
+			<title code="0x080000">CD</title>
+			<title code="0x090000">Fieldで敵に会う</title>
+			<title code="0x0a0000">地下で敵に会う</title>
+			<title code="0x0b0000">逃げる</title>
+			<title code="0x0c0000">プレイヤーを選ぶ</title>
+			<title code="0x0d0000">オープニング１</title>
+			<title code="0x0e0000">オープニング２</title>
+			<title code="0x0f0000">Field Part 2</title>
+			<title code="0x100000">味方　Part 2</title>
+			<title code="0x110000">敵　Part 2</title>
+			<title code="0x120000">ミサイル発射</title>
+			<title code="0x130000">本当に勝ったぞ</title>
+			<title code="0x140000">エンディング１</title>
+			<title code="0x150000">黒幕登場</title>
+			<title code="0x160000">Ending 2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Ginga (銀河)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="ssg_mix"  value="-2"/>
+		</options>
+		<romlist archive="ginga98">
+			<rom type="code" offset="0x00600">ginga.bin</rom>
+			<rom type="code" offset="0x01200">MUSIC.MAC</rom>
+			<rom type="code" offset="0x02000">NEIRO.DAT</rom>
+			<rom type="code" offset="0x03900">MUSIC.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">BGM #01</title>
+			<title code="0x010000">BGM #02</title>
+			<title code="0x020000">BGM #03</title>
+			<title code="0x030000">BGM #04</title>
+			<title code="0x040000">BGM #05</title>
+			<title code="0x050000">BGM #06</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Yoshigahara Nobuyuki's Puzzletopia (芦ヶ原信之のパズルトピア)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x80100"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="datamax" value="0x22"/>
+			<option name="opn_mix" value="0x200"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="pzltp98">
+			<rom type="code" offset="0x00600">pzltp98.bin</rom>
+			<rom type="code" offset="0x01100">MUSIC.COM</rom>
+			<rom type="bgm" offset="0x01">BGM1A.MSC</rom>
+			<rom type="bgm" offset="0x02">BGM1B.MSC</rom>
+			<rom type="bgm" offset="0x03">BGM2A.MSC</rom>
+			<rom type="bgm" offset="0x04">BGM2B.MSC</rom>
+			<rom type="bgm" offset="0x05">BGM3A.MSC</rom>
+			<rom type="bgm" offset="0x06">BGM3B.MSC</rom>
+			<rom type="bgm" offset="0x07">BGM4A.MSC</rom>
+			<rom type="bgm" offset="0x08">BGM4B.MSC</rom>
+			<rom type="bgm" offset="0x09">BGM5A.MSC</rom>
+			<rom type="bgm" offset="0x0a">BGM5B.MSC</rom>
+			<rom type="bgm" offset="0x0b">CHECK.MSC</rom>
+			<rom type="bgm" offset="0x0c">COLOR.MSC</rom>
+			<rom type="bgm" offset="0x0d">EIGHT.MSC</rom>
+			<rom type="bgm" offset="0x0e">END1.MSC</rom>
+			<rom type="bgm" offset="0x0f">END2.MSC</rom>
+			<rom type="bgm" offset="0x10">END3.MSC</rom>
+			<rom type="bgm" offset="0x11">END4.MSC</rom>
+			<rom type="bgm" offset="0x12">END5.MSC</rom>
+			<rom type="bgm" offset="0x13">FOUR.MSC</rom>
+			<rom type="bgm" offset="0x14">LOPE.MSC</rom>
+			<rom type="bgm" offset="0x15">MENU.MSC</rom>
+			<rom type="bgm" offset="0x16">PEND1.MSC</rom>
+			<rom type="bgm" offset="0x17">PEND2.MSC</rom>
+			<rom type="bgm" offset="0x18">PEND3.MSC</rom>
+			<rom type="bgm" offset="0x19">PEND4.MSC</rom>
+			<rom type="bgm" offset="0x1a">PEND5.MSC</rom>
+			<rom type="bgm" offset="0x1b">PENDING.MSC</rom>
+			<rom type="bgm" offset="0x1c">PLA.MSC</rom>
+			<rom type="bgm" offset="0x1d">PMAZE1.MSC</rom>
+			<rom type="bgm" offset="0x1e">PSPA1.MSC</rom>
+			<rom type="bgm" offset="0x1f">SUN.MSC</rom>
+			<rom type="bgm" offset="0x20">TARE.MSC</rom>
+			<rom type="bgm" offset="0x21">TITLE.MSC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x21">オープニングタイトル</title>
+			<title code="0x15">プレイヤー登録</title>
+			<title code="0x05">花畑からの脱出</title>
+			<title code="0x08">魔物退治</title>
+			<title code="0x06">カエルのジャンプ</title>
+			<title code="0x20">風船売り</title>
+			<title code="0x1d">迷路</title>
+			<title code="0x02">カップパズル</title>
+			<title code="0x13">フォアスクエアー</title>
+			<title code="0x04">Ｌパズル</title>
+			<title code="0x14">ザ・ロープ</title>
+			<title code="0x07">タンク</title>
+			<title code="0x09">転車台パズル</title>
+			<title code="0x1c">プラザマップ</title>
+			<title code="0x03">ダビデの星</title>
+			<title code="0x0b">チェッカーボード</title>
+			<title code="0x1e">平面ルービック</title>
+			<title code="0x0c">カラートライアングル</title>
+			<title code="0x1f">ザ・太陽</title>
+			<title code="0x0a">イカリパズル</title>
+			<title code="0x01">ニュー１４－１５パズル</title>
+			<title code="0x0d">エイトクイーンズ</title>
+			<title code="0x0e">完成 (その１)</title>
+			<title code="0x0f">完成 (その２)</title>
+			<title code="0x10">完成 (その３)</title>
+			<title code="0x11">完成 (その４)</title>
+			<title code="0x12">完成 (その５)</title>
+			<title code="0x16">完成 (その６)</title>
+			<title code="0x17">完成 (その７)</title>
+			<title code="0x18">完成 (その８)</title>
+			<title code="0x19">完成 (その９)</title>
+			<title code="0x1a">完成 (その10)</title>
+			<title code="0x1b">全パズルクリア(エンディング)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Japan Bashing (ジャパンバッシング)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x80100"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="datamax" value="0x0a"/>
+			<option name="opn_mix" value="0x200"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="jpbash98">
+			<rom type="code" offset="0x00600">pzltp98.bin</rom>
+			<rom type="code" offset="0x01100">MUSIC.COM</rom>
+			<rom type="bgm" offset="0x01">BGM.MSC</rom>
+			<rom type="bgm" offset="0x02">ENDING1.MSC</rom>
+			<rom type="bgm" offset="0x03">ENDING2.MSC</rom>
+			<rom type="bgm" offset="0x04">ENDING3.MSC</rom>
+			<rom type="bgm" offset="0x05">FLAG.MSC</rom>
+			<rom type="bgm" offset="0x06">MENU.MSC</rom>
+			<rom type="bgm" offset="0x07">NEWS.MSC</rom>
+			<rom type="bgm" offset="0x08">OPENING.MSC</rom>
+			<rom type="bgm" offset="0x09">YEAR.MSC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x08">OPENING.MSC</title>
+			<title code="0x06">MENU.MSC</title>
+			<title code="0x01">BGM.MSC</title>
+			<title code="0x05">FLAG.MSC</title>
+			<title code="0x07">NEWS.MSC</title>
+			<title code="0x09">YEAR.MSC</title>
+			<title code="0x02">ENDING1.MSC</title>
+			<title code="0x03">ENDING2.MSC</title>
+			<title code="0x04">ENDING3.MSC</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Solid Lancer (ソリッドランサー)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x80100"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="datamax" value="0x5"/>
+			<option name="opn_mix" value="0x200"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="slancer98">
+			<rom type="code" offset="0x00600">pzltp98.bin</rom>
+			<rom type="code" offset="0x01100">SOUND.COM</rom>
+			<rom type="bgm" offset="0x01">ENDING.SND</rom>
+			<rom type="bgm" offset="0x02">HIGHBGM.SND</rom>
+			<rom type="bgm" offset="0x03">KOUKAON.SND</rom>
+			<rom type="bgm" offset="0x04">OPENING.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x04">OPENING.SND</title>
+			<title code="0x02">HIGHBGM.SND</title>
+			<title code="0x03">KOUKAON.SND</title>
+			<title code="0x01">ENDING.SND</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Art Jigsaw - Pretty Girl (アートジグソー)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x3100"/>
+			<option name="mfile_size" value="0x3100"/>
+			<option name="use_vrtc"   value="0x01"/>
+			<option name="clock_mul"  value="0x00"/>
+		</options>
+		<romlist archive="artjig98">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">EDMAIN</rom>
+			<rom type="bgm" offset="0x00">DEFAULT.S</rom>
+			<rom type="bgm" offset="0x01">TITLE.S</rom>
+			<rom type="bgm" offset="0x02">file001.S</rom>
+			<rom type="bgm" offset="0x03">file002.S</rom>
+			<rom type="bgm" offset="0x04">file003.S</rom>
+			<rom type="bgm" offset="0x05">file004.S</rom>
+			<rom type="bgm" offset="0x06">file005.S</rom>
+			<rom type="bgm" offset="0x07">file006.S</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">DEFAULT.S</title>
+			<title code="0x01">TITLE.S</title>
+			<title code="0x02">ｸﾞﾘｰｸﾞ.S</title>
+			<title code="0x03">ｻﾃｨ.S</title>
+			<title code="0x04">ｼｮﾊﾟﾝ.S</title>
+			<title code="0x05">ﾁｬｲｺﾌｽｷｰ.S</title>
+			<title code="0x06">ﾊﾟｯﾍﾙﾍﾞﾙ.S</title>
+			<title code="0x07">ﾏｽﾈ.S</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Air Combat (エアーコンバット 遊撃王２)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0003"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x360"/>
+			<option name="data2addr" value="0x21000"/>
+			<option name="file2size" value="0x4000"/>
+			<option name="datamax" value="0x6"/>
+		</options>
+		<romlist archive="airc1_98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm"  offset="0x01">BACK.MUD</rom>
+			<rom type="bgm2" offset="0x01">BACK.MUS</rom>
+			<rom type="bgm"  offset="0x02">CRASH.MUD</rom>
+			<rom type="bgm2" offset="0x02">CRASH.MUS</rom>
+			<rom type="bgm"  offset="0x03">MENU.MUD</rom>
+			<rom type="bgm2" offset="0x03">MENU.MUS</rom>
+			<rom type="bgm"  offset="0x04">TITLE.MUD</rom>
+			<rom type="bgm2" offset="0x04">TITLE.MUS</rom>
+			<rom type="bgm"  offset="0x05">ENDING.MUD</rom>
+			<rom type="bgm2" offset="0x05">ENDING.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x04">タイトル</title>
+			<title code="0x03">メニュー</title>
+			<title code="0x01">任務成功</title>
+			<title code="0x02">任務失敗</title>
+			<title code="0x05">Ending</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Air Combat Ⅱ (エアーコンバット２)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0002"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x3"/>
+		</options>
+		<romlist archive="airc2_98">
+			<rom type="code" offset="0x00600">persia98.bin</rom>
+			<rom type="code" offset="0x10000">OPNDRV.SYS</rom>
+			<rom type="bgm" offset="0x01">OPENING.MUS</rom>
+			<rom type="bgm" offset="0x02">MENU.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">OPENING.MUS</title>
+			<title code="0x02">MENU.MUS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Air Combat Ⅲ (エアーコンバット３)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0002"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x6"/>
+		</options>
+		<romlist archive="airc3_98">
+			<rom type="code" offset="0x00600">persia98.bin</rom>
+			<rom type="code" offset="0x0fe00">OPNDRVX.DRV</rom>
+			<rom type="bgm" offset="0x01">OPENING.MUS</rom>
+			<rom type="bgm" offset="0x02">MISSION.MUS</rom>
+			<rom type="bgm" offset="0x03">CLEAR.MUS</rom>
+			<rom type="bgm" offset="0x04">FATAL.MUS</rom>
+			<rom type="bgm" offset="0x05">ENDING.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">OPENING.MUS</title>
+			<title code="0x02">MISSION.MUS</title>
+			<title code="0x03">CLEAR.MUS</title>
+			<title code="0x04">FATAL.MUS</title>
+			<title code="0x05">ENDING.MUS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Shanghai 2 (上海Ⅱ)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0003"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x360"/>
+			<option name="data2addr" value="0x21000"/>
+			<option name="file2size" value="0x4000"/>
+			<option name="datamax" value="0xd"/>
+		</options>
+		<romlist archive="shngh298">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm"  offset="0x01">CEND1.MUD</rom>
+			<rom type="bgm2" offset="0x01">CEND1.MUS</rom>
+			<rom type="bgm"  offset="0x02">CEND2.MUD</rom>
+			<rom type="bgm2" offset="0x02">CEND2.MUS</rom>
+			<rom type="bgm"  offset="0x03">CEND3.MUD</rom>
+			<rom type="bgm2" offset="0x03">CEND3.MUS</rom>
+			<rom type="bgm"  offset="0x04">DRAGON.MUD</rom>
+			<rom type="bgm2" offset="0x04">DRAGON.MUS</rom>
+			<rom type="bgm"  offset="0x05">GINGA.MUD</rom>
+			<rom type="bgm2" offset="0x05">GINGA.MUS</rom>
+			<rom type="bgm"  offset="0x06">MONKEY.MUD</rom>
+			<rom type="bgm2" offset="0x06">MONKEY.MUS</rom>
+			<rom type="bgm"  offset="0x07">OPEN.MUD</rom>
+			<rom type="bgm2" offset="0x07">OPEN.MUS</rom>
+			<rom type="bgm"  offset="0x08">PANTHER.MUD</rom>
+			<rom type="bgm2" offset="0x08">PANTHER.MUS</rom>
+			<rom type="bgm"  offset="0x09">SCORPION.MUD</rom>
+			<rom type="bgm2" offset="0x09">SCORPION.MUS</rom>
+			<rom type="bgm"  offset="0x0a">SEND.MUD</rom>
+			<rom type="bgm2" offset="0x0a">SEND.MUS</rom>
+			<rom type="bgm"  offset="0x0b">SNAKE.MUD</rom>
+			<rom type="bgm2" offset="0x0b">SNAKE.MUS</rom>
+			<rom type="bgm"  offset="0x0c">TIGER.MUD</rom>
+			<rom type="bgm2" offset="0x0c">TIGER.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x07">オープニング</title>
+			<title code="0x0c">帝配列</title>
+			<title code="0x09">蠍配列</title>
+			<title code="0x06">猿配列</title>
+			<title code="0x0b">蛇配列</title>
+			<title code="0x08">豹配列</title>
+			<title code="0x04">龍配列</title>
+			<title code="0x01">キャンペーンモード 帝/蠍/猿配列クリア</title>
+			<title code="0x02">キャンペーンモード 蛇/豹配列クリア</title>
+			<title code="0x03">キャンペーンモード 龍配列クリア</title>
+			<title code="0x0a">ソリティアモードクリア</title>
+			<title code="0x05">GINGA.MUS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lode Runner (保存版ロードランナー)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0009"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="datamax" value="0x10"/>
+		</options>
+		<romlist archive="lodrun98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">LEN7.MSD</rom>
+			<rom type="bgm" offset="0x02">LODE11.MSD</rom>
+			<rom type="bgm" offset="0x03">LODE133.MSD</rom>
+			<rom type="bgm" offset="0x04">LODE143.MSD</rom>
+			<rom type="bgm" offset="0x05">LODE23.MSD</rom>
+			<rom type="bgm" offset="0x06">LODE31.MSD</rom>
+			<rom type="bgm" offset="0x07">LODE72.MSD</rom>
+			<rom type="bgm" offset="0x08">LODE94.MSD</rom>
+			<rom type="bgm" offset="0x09">LODEOP3.MSD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x09">Opening</title>
+			<title code="0x02">Ze･B･Ra!</title>
+			<title code="0x03">Great Go</title>
+			<title code="0x05">Dead Set</title>
+			<title code="0x06">The Fallen</title>
+			<title code="0x07">Jungle-dangling</title>
+			<title code="0x08">Slyboots</title>
+			<title code="0x04">LODE143.MSD</title>
+			<title code="0x01">LEN7.MSD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Master of Monsters (マスター・オブ・モンスターズ)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0003"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x360"/>
+			<option name="data2addr" value="0x21000"/>
+			<option name="file2size" value="0x4000"/>
+			<option name="datamax" value="0x3"/>
+		</options>
+		<romlist archive="mofm98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm"  offset="0x01">OPEN.MUD</rom>
+			<rom type="bgm2" offset="0x01">MOMOP.MUS</rom>
+			<rom type="bgm"  offset="0x02">END.MUD</rom>
+			<rom type="bgm2" offset="0x02">MOMED.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">オープニング</title>
+			<title code="0x02">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Master of Monsters Ⅱ (マスター・オブ・モンスターズ２)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0003"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x360"/>
+			<option name="data2addr" value="0x21000"/>
+			<option name="file2size" value="0x4000"/>
+			<option name="datamax" value="0x4"/>
+		</options>
+		<romlist archive="mofm298">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm"  offset="0x01">MM2OP.MUD</rom>
+			<rom type="bgm2" offset="0x01">MM2OP.MUS</rom>
+			<rom type="bgm"  offset="0x02">MM2ED.MUD</rom>
+			<rom type="bgm2" offset="0x02">MM2ED.MUS</rom>
+			<rom type="bgm"  offset="0x03">MWIN.MUD</rom>
+			<rom type="bgm2" offset="0x03">MWIN.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">オープニング</title>
+			<title code="0x02">エンディング</title>
+			<title code="0x03">MWIN.MUS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Master of Monsters Final (マスター・オブ・モンスターズ ファイナル 黄昏の指輪)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="datamax" value="0x14"/>
+		</options>
+		<romlist archive="mofmf98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<!-- MUSDRV2.SYS は IMPERIAL FORCE等より流用 -->
+			<rom type="bgm" offset="0x01">BAD_END.MBL</rom>
+			<rom type="bgm" offset="0x02">CAMPMODE.MBL</rom>
+			<rom type="bgm" offset="0x03">C_CHANGE.MBL</rom>
+			<rom type="bgm" offset="0x04">DEAD.MBL</rom>
+			<rom type="bgm" offset="0x05">ENDING1.MBL</rom>
+			<rom type="bgm" offset="0x06">ENDING2.MBL</rom>
+			<rom type="bgm" offset="0x07">ENDING3.MBL</rom>
+			<rom type="bgm" offset="0x08">ENDING4.MBL</rom>
+			<rom type="bgm" offset="0x09">GAMEBGM.MBL</rom>
+			<rom type="bgm" offset="0x0a">LEVELUP.MBL</rom>
+			<rom type="bgm" offset="0x0b">MAP_MODE.MBL</rom>
+			<rom type="bgm" offset="0x0c">MMFTITLE.MBL</rom>
+			<rom type="bgm" offset="0x0d">SHIKOU1.MBL</rom>
+			<rom type="bgm" offset="0x0e">SHIKOU2.MBL</rom>
+			<rom type="bgm" offset="0x0f">SHIKOU3.MBL</rom>
+			<rom type="bgm" offset="0x10">SHIKOU4.MBL</rom>
+			<rom type="bgm" offset="0x11">STAFF.MBL</rom>
+			<rom type="bgm" offset="0x12">S_END.MBL</rom>
+			<rom type="bgm" offset="0x13">S_OPEN.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BAD_END.MBL</title>
+			<title code="0x02">CAMPMODE.MBL</title>
+			<title code="0x03">C_CHANGE.MBL</title>
+			<title code="0x04">DEAD.MBL</title>
+			<title code="0x05">ENDING1.MBL</title>
+			<title code="0x06">ENDING2.MBL</title>
+			<title code="0x07">ENDING3.MBL</title>
+			<title code="0x08">ENDING4.MBL</title>
+			<title code="0x09">GAMEBGM.MBL</title>
+			<title code="0x0a">LEVELUP.MBL</title>
+			<title code="0x0b">MAP_MODE.MBL</title>
+			<title code="0x0c">MMFTITLE.MBL</title>
+			<title code="0x0d">SHIKOU1.MBL</title>
+			<title code="0x0e">SHIKOU2.MBL</title>
+			<title code="0x0f">SHIKOU3.MBL</title>
+			<title code="0x10">SHIKOU4.MBL</title>
+			<title code="0x11">STAFF.MBL</title>
+			<title code="0x12">S_END.MBL</title>
+			<title code="0x13">S_OPEN.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Bretonne Lays (ブルトン・レイ)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="filesize" value="0"/>
+			<option name="datamax" value="0"/>
+		</options>
+		<romlist archive="brtnly98">
+			<rom type="code" offset="0x00600">brtnly98.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="code" offset="0x20000">OPENING.MBL</rom>
+			<rom type="code" offset="0x30000">BR1000M</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">Stop the Music (演奏停止)</title>
+			<title code="0x0100">オープニング</title>
+			<title code="0x0200">BGM #00</title>
+			<title code="0x0201">BGM #01</title>
+			<title code="0x0202">BGM #02</title>
+			<title code="0x0203">BGM #03</title>
+			<title code="0x0204">BGM #04</title>
+			<title code="0x0205">BGM #05</title>
+			<title code="0x0206">BGM #06</title>
+			<title code="0x0207">BGM #07</title>
+			<title code="0x0208">BGM #08</title>
+			<title code="0x0209">BGM #09</title>
+			<title code="0x020a">BGM #10</title>
+			<title code="0x020b">BGM #11</title>
+			<title code="0x020c">BGM #12</title>
+			<title code="0x020d">BGM #13</title>
+			<title code="0x020e">BGM #14</title>
+			<title code="0x020f">BGM #15</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Yu To Den (遊兎伝)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="datamax" value="0x10"/>
+		</options>
+		<romlist archive="yuuto98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">CONGRA.MBL</rom>
+			<rom type="bgm" offset="0x02">CREDIT.MBL</rom>
+			<rom type="bgm" offset="0x03">DARUMA.MBL</rom>
+			<rom type="bgm" offset="0x04">DISK.MBL</rom>
+			<rom type="bgm" offset="0x05">IJIME.MBL</rom>
+			<rom type="bgm" offset="0x06">ODORI.MBL</rom>
+			<rom type="bgm" offset="0x07">ROBOT.MBL</rom>
+			<rom type="bgm" offset="0x08">ROOM.MBL</rom>
+			<rom type="bgm" offset="0x09">ST1BGM1A.MBL</rom>
+			<rom type="bgm" offset="0x0a">ST1BGM1B.MBL</rom>
+			<rom type="bgm" offset="0x0b">ST1BGM2A.MBL</rom>
+			<rom type="bgm" offset="0x0c">ST1BGM2B.MBL</rom>
+			<rom type="bgm" offset="0x0d">ST2BGM1.MBL</rom>
+			<rom type="bgm" offset="0x0e">ST3BGM1.MBL</rom>
+			<rom type="bgm" offset="0x0f">TITLE.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">CONGRA.MBL</title>
+			<title code="0x02">CREDIT.MBL</title>
+			<title code="0x03">DARUMA.MBL</title>
+			<title code="0x04">DISK.MBL</title>
+			<title code="0x05">IJIME.MBL</title>
+			<title code="0x06">ODORI.MBL</title>
+			<title code="0x07">ROBOT.MBL</title>
+			<title code="0x08">ROOM.MBL</title>
+			<title code="0x09">ST1BGM1A.MBL</title>
+			<title code="0x0a">ST1BGM1B.MBL</title>
+			<title code="0x0b">ST1BGM2A.MBL</title>
+			<title code="0x0c">ST1BGM2B.MBL</title>
+			<title code="0x0d">ST2BGM1.MBL</title>
+			<title code="0x0e">ST3BGM1.MBL</title>
+			<title code="0x0f">TITLE.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Imperial Force (インペリアルフォース)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x06"/>
+		</options>
+		<romlist archive="impfrc98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">OPENING.MBL</rom>
+			<rom type="bgm" offset="0x02">GAME.MBL</rom>
+			<rom type="bgm" offset="0x03">BATTLE.MBL</rom>
+			<rom type="bgm" offset="0x04">END1.MBL</rom>
+			<rom type="bgm" offset="0x05">END2.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">OPENING.MBL</title>
+			<title code="0x02">GAME.MBL</title>
+			<title code="0x03">BATTLE.MBL</title>
+			<title code="0x04">END1.MBL</title>
+			<title code="0x05">END2.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Stradia (ストラディア)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x8000"/>
+			<option name="datamax" value="0x09"/>
+		</options>
+		<romlist archive="strad98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">IMP2_1.MBL</rom>
+			<rom type="bgm" offset="0x02">IMP2_2.MBL</rom>
+			<rom type="bgm" offset="0x03">IMP2_3.MBL</rom>
+			<rom type="bgm" offset="0x04">IMP2_4.MBL</rom>
+			<rom type="bgm" offset="0x05">IMP2_5.MBL</rom>
+			<rom type="bgm" offset="0x06">IMP2_6.MBL</rom>
+			<rom type="bgm" offset="0x07">IMP2_8.MBL</rom>
+			<rom type="bgm" offset="0x08">IMP2_9.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">IMP2_1.MBL</title>
+			<title code="0x02">IMP2_2.MBL</title>
+			<title code="0x03">IMP2_3.MBL</title>
+			<title code="0x04">IMP2_4.MBL</title>
+			<title code="0x05">IMP2_5.MBL</title>
+			<title code="0x06">IMP2_6.MBL</title>
+			<title code="0x07">IMP2_8.MBL</title>
+			<title code="0x08">IMP2_9.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tenka Toitsu (天下統一)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="datamax" value="0x0d"/>
+		</options>
+		<romlist archive="tenk1_98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">BAD.MBL</rom>
+			<rom type="bgm" offset="0x02">CHOUTEI.MBL</rom>
+			<rom type="bgm" offset="0x03">DAIMYO.MBL</rom>
+			<rom type="bgm" offset="0x04">ENDING.MBL</rom>
+			<rom type="bgm" offset="0x05">GOOD.MBL</rom>
+			<rom type="bgm" offset="0x06">GOUZOKU.MBL</rom>
+			<rom type="bgm" offset="0x07">JIMAKU.MBL</rom>
+			<rom type="bgm" offset="0x08">KASSEN.MBL</rom>
+			<rom type="bgm" offset="0x09">KOUSIN.MBL</rom>
+			<rom type="bgm" offset="0x0a">MAKE.MBL</rom>
+			<rom type="bgm" offset="0x0b">SENGOKU.MBL</rom>
+			<rom type="bgm" offset="0x0c">TITLE.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BAD.MBL</title>
+			<title code="0x02">CHOUTEI.MBL</title>
+			<title code="0x03">DAIMYO.MBL</title>
+			<title code="0x04">ENDING.MBL</title>
+			<title code="0x05">GOOD.MBL</title>
+			<title code="0x06">GOUZOKU.MBL</title>
+			<title code="0x07">JIMAKU.MBL</title>
+			<title code="0x08">KASSEN.MBL</title>
+			<title code="0x09">KOUSIN.MBL</title>
+			<title code="0x0a">MAKE.MBL</title>
+			<title code="0x0b">SENGOKU.MBL</title>
+			<title code="0x0c">TITLE.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tenka Toitsu 2 (天下統一Ⅱ －乱世の覇者－)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="datamax" value="0x0f"/>
+		</options>
+		<romlist archive="tenk2_98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">BAD.MBL</rom>
+			<rom type="bgm" offset="0x02">CHOUTEI.MBL</rom>
+			<rom type="bgm" offset="0x03">DAIMYO.MBL</rom>
+			<rom type="bgm" offset="0x04">ENDING.MBL</rom>
+			<rom type="bgm" offset="0x05">GOOD.MBL</rom>
+			<rom type="bgm" offset="0x06">GOUZOKU.MBL</rom>
+			<rom type="bgm" offset="0x07">HASHA.MBL</rom>
+			<rom type="bgm" offset="0x08">JIMAKU.MBL</rom>
+			<rom type="bgm" offset="0x09">KASSEN.MBL</rom>
+			<rom type="bgm" offset="0x0a">KOUSHIN.MBL</rom>
+			<rom type="bgm" offset="0x0b">MAKE.MBL</rom>
+			<rom type="bgm" offset="0x0c">OPEN.MBL</rom>
+			<rom type="bgm" offset="0x0d">SENGOKU.MBL</rom>
+			<rom type="bgm" offset="0x0e">TENBITO.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BAD.MBL</title>
+			<title code="0x02">CHOUTEI.MBL</title>
+			<title code="0x03">DAIMYO.MBL</title>
+			<title code="0x04">ENDING.MBL</title>
+			<title code="0x05">GOOD.MBL</title>
+			<title code="0x06">GOUZOKU.MBL</title>
+			<title code="0x07">HASHA.MBL</title>
+			<title code="0x08">JIMAKU.MBL</title>
+			<title code="0x09">KASSEN.MBL</title>
+			<title code="0x0a">KOUSHIN.MBL</title>
+			<title code="0x0b">MAKE.MBL</title>
+			<title code="0x0c">OPEN.MBL</title>
+			<title code="0x0d">SENGOKU.MBL</title>
+			<title code="0x0e">TENBITO.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tir-nan-og Ⅱ －The Sign of Chaos－ (ティル・ナ・ノーグ２ カオスの警鐘)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0006"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x6000"/>
+			<option name="datamax" value="0x0b"/>
+		</options>
+		<romlist archive="tir2_98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">TIR2014B</rom>
+			<rom type="bgm" offset="0x02">TIR2015B</rom>
+			<rom type="bgm" offset="0x03">TIR2016B</rom>
+			<rom type="bgm" offset="0x04">TIR2017B</rom>
+			<rom type="bgm" offset="0x05">TIR2018B</rom>
+			<rom type="bgm" offset="0x06">TIR2019B</rom>
+			<rom type="bgm" offset="0x07">TIR2020B</rom>
+			<rom type="bgm" offset="0x08">TIR2021B</rom>
+			<rom type="bgm" offset="0x09">TIR2022B</rom>
+			<rom type="bgm" offset="0x0a">TIR2023B</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">TIR2014B</title>
+			<title code="0x02">TIR2015B</title>
+			<title code="0x03">TIR2016B</title>
+			<title code="0x04">TIR2017B</title>
+			<title code="0x05">TIR2018B</title>
+			<title code="0x06">TIR2019B</title>
+			<title code="0x07">TIR2020B</title>
+			<title code="0x08">TIR2021B</title>
+			<title code="0x09">TIR2022B</title>
+			<title code="0x0a">TIR2023B</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Super Daisenryaku (SUPER大戦略98)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0003"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x360"/>
+			<option name="data2addr" value="0x21000"/>
+			<option name="file2size" value="0x2000"/>
+			<option name="datamax" value="0x3"/>
+		</options>
+		<romlist archive="sdsen98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm"  offset="0x01">SP98OP2.MUD</rom>
+			<rom type="bgm2" offset="0x01">OPENING.MUS</rom>
+			<rom type="bgm"  offset="0x02">SP98E2.MUD</rom>
+			<rom type="bgm2" offset="0x02">ENDING.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">オープニング</title>
+			<title code="0x02">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Campaign ban Daisenryaku 2 (キャンペーン版大戦略 II)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0003"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x360"/>
+			<option name="data2addr" value="0x21000"/>
+			<option name="file2size" value="0x2000"/>
+			<option name="datamax" value="0x4"/>
+			<option name="fm_mix"   value="14"/>
+			<option name="ssg_mix"  value="-4"/>
+		</options>
+		<romlist archive="daisen2c_98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm"  offset="0x01">LAST.MUD</rom>
+			<rom type="bgm2" offset="0x01">END1.MUS</rom>
+			<rom type="bgm"  offset="0x02">ENDING.MUD</rom>
+			<rom type="bgm2" offset="0x02">END2.MUS</rom>
+			<rom type="bgm"  offset="0x03">TITLE.MUD</rom>
+			<rom type="bgm2" offset="0x03">TITLE.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03">オープニング</title>
+			<title code="0x01">エンディング(マップモード)</title>
+			<title code="0x02">エンディング(キャンペーンモード)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Daisenryaku 3 '90 (大戦略Ⅲ'90)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x03"/>
+		</options>
+		<romlist archive="dsen90">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">TITLE.MBL</rom>
+			<rom type="bgm" offset="0x02">ENDING.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">TITLE.MBL</title>
+			<title code="0x02">ENDING.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Daisenryaku 4 (大戦略Ⅳ)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="datamax" value="0x07"/>
+		</options>
+		<romlist archive="dsen498">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">D4BGM1.MBL</rom>
+			<rom type="bgm" offset="0x02">D4BGM2.MBL</rom>
+			<rom type="bgm" offset="0x03">D4BGM3.MBL</rom>
+			<rom type="bgm" offset="0x04">D4BGM4.MBL</rom>
+			<rom type="bgm" offset="0x05">D4BGM5.MBL</rom>
+			<rom type="bgm" offset="0x06">D4BGM6.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">D4BGM1.MBL</title>
+			<title code="0x02">D4BGM2.MBL</title>
+			<title code="0x03">D4BGM3.MBL</title>
+			<title code="0x04">D4BGM4.MBL</title>
+			<title code="0x05">D4BGM5.MBL</title>
+			<title code="0x06">D4BGM6.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Kuugun Daisenryaku (空軍大戦略)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x0e"/>
+		</options>
+		<romlist archive="kgds98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<!-- MUSDRV2.SYS は IMPERIAL FORCE等より流用 -->
+			<rom type="bgm" offset="0x01">BRITAIN.MBL</rom>
+			<rom type="bgm" offset="0x02">DAY.MBL</rom>
+			<rom type="bgm" offset="0x03">END1.MBL</rom>
+			<rom type="bgm" offset="0x04">END2.MBL</rom>
+			<rom type="bgm" offset="0x05">END3.MBL</rom>
+			<rom type="bgm" offset="0x06">FANFALE.MBL</rom>
+			<rom type="bgm" offset="0x07">GERMAN.MBL</rom>
+			<rom type="bgm" offset="0x08">JAPAN.MBL</rom>
+			<rom type="bgm" offset="0x09">MENUBGM.MBL</rom>
+			<rom type="bgm" offset="0x0a">NIGHT.MBL</rom>
+			<rom type="bgm" offset="0x0b">OPENNING.MBL</rom>
+			<rom type="bgm" offset="0x0c">RUSSIA.MBL</rom>
+			<rom type="bgm" offset="0x0d">USA.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BRITAIN.MBL</title>
+			<title code="0x02">DAY.MBL</title>
+			<title code="0x03">END1.MBL</title>
+			<title code="0x04">END2.MBL</title>
+			<title code="0x05">END3.MBL</title>
+			<title code="0x06">FANFALE.MBL</title>
+			<title code="0x07">GERMAN.MBL</title>
+			<title code="0x08">JAPAN.MBL</title>
+			<title code="0x09">MENUBGM.MBL</title>
+			<title code="0x0a">NIGHT.MBL</title>
+			<title code="0x0b">OPENNING.MBL</title>
+			<title code="0x0c">RUSSIA.MBL</title>
+			<title code="0x0d">USA.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Daisenryaku EX (現代大戦略EX)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="datamax" value="0x1d"/>
+		</options>
+		<romlist archive="dsenex98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">DSBGM01.MBL</rom>
+			<rom type="bgm" offset="0x02">DSBGM02.MBL</rom>
+			<rom type="bgm" offset="0x03">DSBGM03.MBL</rom>
+			<rom type="bgm" offset="0x04">DSBGM04.MBL</rom>
+			<rom type="bgm" offset="0x05">DSBGM05.MBL</rom>
+			<rom type="bgm" offset="0x06">DSBGM06.MBL</rom>
+			<rom type="bgm" offset="0x07">DSBGM07.MBL</rom>
+			<rom type="bgm" offset="0x08">DSBGM08.MBL</rom>
+			<rom type="bgm" offset="0x09">DSBGM09.MBL</rom>
+			<rom type="bgm" offset="0x0a">DSBGM10.MBL</rom>
+			<rom type="bgm" offset="0x0b">DSBGM21.MBL</rom>
+			<rom type="bgm" offset="0x0c">DSBGM22.MBL</rom>
+			<rom type="bgm" offset="0x0d">DSBGM23.MBL</rom>
+			<rom type="bgm" offset="0x0e">EXSE01.MBL</rom>
+			<rom type="bgm" offset="0x0f">EXSE02.MBL</rom>
+			<rom type="bgm" offset="0x10">EXSE03.MBL</rom>
+			<rom type="bgm" offset="0x11">EXSE04.MBL</rom>
+			<rom type="bgm" offset="0x12">EXSE05.MBL</rom>
+			<rom type="bgm" offset="0x13">EXSE06.MBL</rom>
+			<rom type="bgm" offset="0x14">EXSE07.MBL</rom>
+			<rom type="bgm" offset="0x15">EXSE08.MBL</rom>
+			<rom type="bgm" offset="0x16">EXSE09.MBL</rom>
+			<rom type="bgm" offset="0x17">EXSE10.MBL</rom>
+			<rom type="bgm" offset="0x18">EXSE11.MBL</rom>
+			<rom type="bgm" offset="0x19">EXSE12.MBL</rom>
+			<rom type="bgm" offset="0x1a">EXSE13.MBL</rom>
+			<rom type="bgm" offset="0x1b">EXSE14.MBL</rom>
+			<rom type="bgm" offset="0x1c">EXSE15.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">DSBGM01.MBL</title>
+			<title code="0x02">DSBGM02.MBL</title>
+			<title code="0x03">DSBGM03.MBL</title>
+			<title code="0x04">DSBGM04.MBL</title>
+			<title code="0x05">DSBGM05.MBL</title>
+			<title code="0x06">DSBGM06.MBL</title>
+			<title code="0x07">DSBGM07.MBL</title>
+			<title code="0x08">DSBGM08.MBL</title>
+			<title code="0x09">DSBGM09.MBL</title>
+			<title code="0x0a">DSBGM10.MBL</title>
+			<title code="0x0b">DSBGM21.MBL</title>
+			<title code="0x0c">DSBGM22.MBL</title>
+			<title code="0x0d">DSBGM23.MBL</title>
+			<title code="0x0e">EXSE01.MBL</title>
+			<title code="0x0f">EXSE02.MBL</title>
+			<title code="0x10">EXSE03.MBL</title>
+			<title code="0x11">EXSE04.MBL</title>
+			<title code="0x12">EXSE05.MBL</title>
+			<title code="0x13">EXSE06.MBL</title>
+			<title code="0x14">EXSE07.MBL</title>
+			<title code="0x15">EXSE08.MBL</title>
+			<title code="0x16">EXSE09.MBL</title>
+			<title code="0x17">EXSE10.MBL</title>
+			<title code="0x18">EXSE11.MBL</title>
+			<title code="0x19">EXSE12.MBL</title>
+			<title code="0x1a">EXSE13.MBL</title>
+			<title code="0x1b">EXSE14.MBL</title>
+			<title code="0x1c">EXSE15.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Blitzkrieg (ブリッツクリーク 東部戦線 １９４１－４５)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0003"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x361"/>
+			<option name="data2addr" value="0x21000"/>
+			<option name="file2size" value="0x5000"/>
+			<option name="datamax" value="0x5"/>
+		</options>
+		<romlist archive="bltzkr98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm"  offset="0x01">BK_OPEN.MUD</rom>
+			<rom type="bgm2" offset="0x01">BK_NOPEN.MUS</rom>
+			<rom type="bgm"  offset="0x02">BK_BGM.MUD</rom>
+			<rom type="bgm2" offset="0x02">BK_BGM.MUS</rom>
+			<rom type="bgm"  offset="0x03">BK_BATTL.MUD</rom>
+			<rom type="bgm2" offset="0x03">BK_BATTL.MUS</rom>
+			<rom type="bgm"  offset="0x04">BK_END.MUD</rom>
+			<rom type="bgm2" offset="0x04">BK_END.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BK_NOPEN.MUS</title>
+			<title code="0x02">BK_BGM</title>
+			<title code="0x03">BK_BATTL.MUS</title>
+			<title code="0x04">BK_END.MUS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Panzer Keil: Blitzkrieg Ⅱ (パンツァーカイル ＜ブリッツクリーク２＞)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="datamax" value="0x11"/>
+		</options>
+		<romlist archive="pnzrkl98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">BK2_1.MBL</rom>
+			<rom type="bgm" offset="0x02">BK2_10.MBL</rom>
+			<rom type="bgm" offset="0x03">BK2_11.MBL</rom>
+			<rom type="bgm" offset="0x04">BK2_2.MBL</rom>
+			<rom type="bgm" offset="0x05">BK2_3.MBL</rom>
+			<rom type="bgm" offset="0x06">BK2_4.MBL</rom>
+			<rom type="bgm" offset="0x07">BK2_5.MBL</rom>
+			<rom type="bgm" offset="0x08">BK2_6.MBL</rom>
+			<rom type="bgm" offset="0x09">BK2_7.MBL</rom>
+			<rom type="bgm" offset="0x0a">BK2_8.MBL</rom>
+			<rom type="bgm" offset="0x0b">BK2_9.MBL</rom>
+			<rom type="bgm" offset="0x0c">BK2_B.MBL</rom>
+			<rom type="bgm" offset="0x0d">BK2_G.MBL</rom>
+			<rom type="bgm" offset="0x0e">BK2_L.MBL</rom>
+			<rom type="bgm" offset="0x0f">BK2_L2.MBL</rom>
+			<rom type="bgm" offset="0x10">BK2_P.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BK2_1.MBL</title>
+			<title code="0x02">BK2_10.MBL</title>
+			<title code="0x03">BK2_11.MBL</title>
+			<title code="0x04">BK2_2.MBL</title>
+			<title code="0x05">BK2_3.MBL</title>
+			<title code="0x06">BK2_4.MBL</title>
+			<title code="0x07">BK2_5.MBL</title>
+			<title code="0x08">BK2_6.MBL</title>
+			<title code="0x09">BK2_7.MBL</title>
+			<title code="0x0a">BK2_8.MBL</title>
+			<title code="0x0b">BK2_9.MBL</title>
+			<title code="0x0c">BK2_B.MBL</title>
+			<title code="0x0d">BK2_G.MBL</title>
+			<title code="0x0e">BK2_L.MBL</title>
+			<title code="0x0f">BK2_L2.MBL</title>
+			<title code="0x10">BK2_P.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] War Game Construction Kit (ウォーゲームコンストラクション)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="datamax" value="0x11"/>
+		</options>
+		<romlist archive="wconst98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">BGM00.MBL</rom>
+			<rom type="bgm" offset="0x02">BGM01.MBL</rom>
+			<rom type="bgm" offset="0x03">BGM02.MBL</rom>
+			<rom type="bgm" offset="0x04">BGM03.MBL</rom>
+			<rom type="bgm" offset="0x05">BGM04.MBL</rom>
+			<rom type="bgm" offset="0x06">BGM05.MBL</rom>
+			<rom type="bgm" offset="0x07">BGM06.MBL</rom>
+			<rom type="bgm" offset="0x08">BGM07.MBL</rom>
+			<rom type="bgm" offset="0x09">BGM08.MBL</rom>
+			<rom type="bgm" offset="0x0a">BGM09.MBL</rom>
+			<rom type="bgm" offset="0x0b">BGM10.MBL</rom>
+			<rom type="bgm" offset="0x0c">BGM11.MBL</rom>
+			<rom type="bgm" offset="0x0d">BGM12.MBL</rom>
+			<rom type="bgm" offset="0x0e">BGM13.MBL</rom>
+			<rom type="bgm" offset="0x0f">BGM14.MBL</rom>
+			<rom type="bgm" offset="0x10">BGM15.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BGM00.MBL</title>
+			<title code="0x02">BGM01.MBL</title>
+			<title code="0x03">BGM02.MBL</title>
+			<title code="0x04">BGM03.MBL</title>
+			<title code="0x05">BGM04.MBL</title>
+			<title code="0x06">BGM05.MBL</title>
+			<title code="0x07">BGM06.MBL</title>
+			<title code="0x08">BGM07.MBL</title>
+			<title code="0x09">BGM08.MBL</title>
+			<title code="0x0a">BGM09.MBL</title>
+			<title code="0x0b">BGM10.MBL</title>
+			<title code="0x0c">BGM11.MBL</title>
+			<title code="0x0d">BGM12.MBL</title>
+			<title code="0x0e">BGM13.MBL</title>
+			<title code="0x0f">BGM14.MBL</title>
+			<title code="0x10">BGM15.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Robo Crash 98 (ロボクラッシュ９８)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="datamax" value="0x13"/>
+		</options>
+		<romlist archive="robocr98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">CHAMPION.MBL</rom>
+			<rom type="bgm" offset="0x02">CIRCUIT.MBL</rom>
+			<rom type="bgm" offset="0x03">CLEAR.MBL</rom>
+			<rom type="bgm" offset="0x04">CONST.MBL</rom>
+			<rom type="bgm" offset="0x05">ENDING.MBL</rom>
+			<rom type="bgm" offset="0x06">FIGHT0.MBL</rom>
+			<rom type="bgm" offset="0x07">FIGHT1.MBL</rom>
+			<rom type="bgm" offset="0x08">FIGHT2.MBL</rom>
+			<rom type="bgm" offset="0x09">FIGHT3.MBL</rom>
+			<rom type="bgm" offset="0x0a">FIGHT4.MBL</rom>
+			<rom type="bgm" offset="0x0b">FIGHT5.MBL</rom>
+			<rom type="bgm" offset="0x0c">FIGHT6.MBL</rom>
+			<rom type="bgm" offset="0x0d">FIGHT7.MBL</rom>
+			<rom type="bgm" offset="0x0e">FIGHT8.MBL</rom>
+			<rom type="bgm" offset="0x0f">FIGHT9.MBL</rom>
+			<rom type="bgm" offset="0x10">GALAXY.MBL</rom>
+			<rom type="bgm" offset="0x11">OPENING.MBL</rom>
+			<rom type="bgm" offset="0x12">TMODE.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">CHAMPION.MBL</title>
+			<title code="0x02">CIRCUIT.MBL</title>
+			<title code="0x03">CLEAR.MBL</title>
+			<title code="0x04">CONST.MBL</title>
+			<title code="0x05">ENDING.MBL</title>
+			<title code="0x06">FIGHT0.MBL</title>
+			<title code="0x07">FIGHT1.MBL</title>
+			<title code="0x08">FIGHT2.MBL</title>
+			<title code="0x09">FIGHT3.MBL</title>
+			<title code="0x0a">FIGHT4.MBL</title>
+			<title code="0x0b">FIGHT5.MBL</title>
+			<title code="0x0c">FIGHT6.MBL</title>
+			<title code="0x0d">FIGHT7.MBL</title>
+			<title code="0x0e">FIGHT8.MBL</title>
+			<title code="0x0f">FIGHT9.MBL</title>
+			<title code="0x10">GALAXY.MBL</title>
+			<title code="0x11">OPENING.MBL</title>
+			<title code="0x12">TMODE.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Robo Crash 2 (ロボクラッシュ２ 熱波の王者)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="datamax" value="0x1f"/>
+		</options>
+		<romlist archive="roboc298">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">BAD_END.MBL</rom>
+			<rom type="bgm" offset="0x02">BAD_EV01.MBL</rom>
+			<rom type="bgm" offset="0x03">BAD_EV02.MBL</rom>
+			<rom type="bgm" offset="0x04">BAD_EV03.MBL</rom>
+			<rom type="bgm" offset="0x05">BAD_EV04.MBL</rom>
+			<rom type="bgm" offset="0x06">CIRCUIT.MBL</rom>
+			<rom type="bgm" offset="0x07">CSBATTLE.MBL</rom>
+			<rom type="bgm" offset="0x08">C_STRUCT.MBL</rom>
+			<rom type="bgm" offset="0x09">GOOD_END.MBL</rom>
+			<rom type="bgm" offset="0x0a">GOOD_EV1.MBL</rom>
+			<rom type="bgm" offset="0x0b">GOOD_EV2.MBL</rom>
+			<rom type="bgm" offset="0x0c">GOOD_EV3.MBL</rom>
+			<rom type="bgm" offset="0x0d">GOOD_EV4.MBL</rom>
+			<rom type="bgm" offset="0x0e">GOOD_EV5.MBL</rom>
+			<rom type="bgm" offset="0x0f">GOOD_EV6.MBL</rom>
+			<rom type="bgm" offset="0x10">NEPPA.MBL</rom>
+			<rom type="bgm" offset="0x11">PBATTLE.MBL</rom>
+			<rom type="bgm" offset="0x12">RC2RF1.MBL</rom>
+			<rom type="bgm" offset="0x13">RC2RF10.MBL</rom>
+			<rom type="bgm" offset="0x14">RC2RF2.MBL</rom>
+			<rom type="bgm" offset="0x15">RC2RF3.MBL</rom>
+			<rom type="bgm" offset="0x16">RC2RF4.MBL</rom>
+			<rom type="bgm" offset="0x17">RC2RF5.MBL</rom>
+			<rom type="bgm" offset="0x18">RC2RF6.MBL</rom>
+			<rom type="bgm" offset="0x19">RC2RF7.MBL</rom>
+			<rom type="bgm" offset="0x1a">RC2RF8.MBL</rom>
+			<rom type="bgm" offset="0x1b">RC2RF9.MBL</rom>
+			<rom type="bgm" offset="0x1c">RC2_MENU.MBL</rom>
+			<rom type="bgm" offset="0x1d">RC2_OPEN.MBL</rom>
+			<rom type="bgm" offset="0x1e">STAFF.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BAD_END.MBL</title>
+			<title code="0x02">BAD_EV01.MBL</title>
+			<title code="0x03">BAD_EV02.MBL</title>
+			<title code="0x04">BAD_EV03.MBL</title>
+			<title code="0x05">BAD_EV04.MBL</title>
+			<title code="0x06">CIRCUIT.MBL</title>
+			<title code="0x07">CSBATTLE.MBL</title>
+			<title code="0x08">C_STRUCT.MBL</title>
+			<title code="0x09">GOOD_END.MBL</title>
+			<title code="0x0a">GOOD_EV1.MBL</title>
+			<title code="0x0b">GOOD_EV2.MBL</title>
+			<title code="0x0c">GOOD_EV3.MBL</title>
+			<title code="0x0d">GOOD_EV4.MBL</title>
+			<title code="0x0e">GOOD_EV5.MBL</title>
+			<title code="0x0f">GOOD_EV6.MBL</title>
+			<title code="0x10">NEPPA.MBL</title>
+			<title code="0x11">PBATTLE.MBL</title>
+			<title code="0x12">RC2RF1.MBL</title>
+			<title code="0x13">RC2RF10.MBL</title>
+			<title code="0x14">RC2RF2.MBL</title>
+			<title code="0x15">RC2RF3.MBL</title>
+			<title code="0x16">RC2RF4.MBL</title>
+			<title code="0x17">RC2RF5.MBL</title>
+			<title code="0x18">RC2RF6.MBL</title>
+			<title code="0x19">RC2RF7.MBL</title>
+			<title code="0x1a">RC2RF8.MBL</title>
+			<title code="0x1b">RC2RF9.MBL</title>
+			<title code="0x1c">RC2_MENU.MBL</title>
+			<title code="0x1d">RC2_OPEN.MBL</title>
+			<title code="0x1e">STAFF.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Final Breaker (ファイナルブレイカー)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x14"/>
+		</options>
+		<romlist archive="finalb98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">ENDING1.MBL</rom>
+			<rom type="bgm" offset="0x02">ENDING2.MBL</rom>
+			<rom type="bgm" offset="0x03">ENDING3.MBL</rom>
+			<rom type="bgm" offset="0x04">ENDING4.MBL</rom>
+			<rom type="bgm" offset="0x05">FB_OPEN.MBL</rom>
+			<rom type="bgm" offset="0x06">STAFF.MBL</rom>
+			<rom type="bgm" offset="0x07">BAD_END.MBL</rom>
+			<rom type="bgm" offset="0x08">CAMP.MBL</rom>
+			<rom type="bgm" offset="0x09">CHIJO.MBL</rom>
+			<rom type="bgm" offset="0x0a">COMPLEX.MBL</rom>
+			<rom type="bgm" offset="0x0b">C_CHANGE.MBL</rom>
+			<rom type="bgm" offset="0x0c">DEAD.MBL</rom>
+			<rom type="bgm" offset="0x0d">LEVELUP.MBL</rom>
+			<rom type="bgm" offset="0x0e">MAP.MBL</rom>
+			<rom type="bgm" offset="0x0f">PLAYER.MBL</rom>
+			<rom type="bgm" offset="0x10">STATION.MBL</rom>
+			<rom type="bgm" offset="0x11">S_END.MBL</rom>
+			<rom type="bgm" offset="0x12">S_OPEN.MBL</rom>
+			<rom type="bgm" offset="0x13">U-GROUND.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">ENDING1.MBL</title>
+			<title code="0x02">ENDING2.MBL</title>
+			<title code="0x03">ENDING3.MBL</title>
+			<title code="0x04">ENDING4.MBL</title>
+			<title code="0x05">FB_OPEN.MBL</title>
+			<title code="0x06">STAFF.MBL</title>
+			<title code="0x07">BAD_END.MBL</title>
+			<title code="0x08">CAMP.MBL</title>
+			<title code="0x09">CHIJO.MBL</title>
+			<title code="0x0a">COMPLEX.MBL</title>
+			<title code="0x0b">C_CHANGE.MBL</title>
+			<title code="0x0c">DEAD.MBL</title>
+			<title code="0x0d">LEVELUP.MBL</title>
+			<title code="0x0e">MAP.MBL</title>
+			<title code="0x0f">PLAYER.MBL</title>
+			<title code="0x10">STATION.MBL</title>
+			<title code="0x11">S_END.MBL</title>
+			<title code="0x12">S_OPEN.MBL</title>
+			<title code="0x13">U-GROUND.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Hatena no Daibouken (ハテナの大冒険)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="datamax" value="0x24"/>
+		</options>
+		<romlist archive="hatena98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">ENDING.MBL</rom>
+			<rom type="bgm" offset="0x02">GSTART.MBL</rom>
+			<rom type="bgm" offset="0x03">HATENA1.MBL</rom>
+			<rom type="bgm" offset="0x04">HATENA2.MBL</rom>
+			<rom type="bgm" offset="0x05">HATENA3.MBL</rom>
+			<rom type="bgm" offset="0x06">HATENA4.MBL</rom>
+			<rom type="bgm" offset="0x07">HATENA5.MBL</rom>
+			<rom type="bgm" offset="0x08">HATENA6.MBL</rom>
+			<rom type="bgm" offset="0x09">MAP1.MBL</rom>
+			<rom type="bgm" offset="0x0a">MAP2.MBL</rom>
+			<rom type="bgm" offset="0x0b">MAP3.MBL</rom>
+			<rom type="bgm" offset="0x0c">MAP4.MBL</rom>
+			<rom type="bgm" offset="0x0d">MAP5.MBL</rom>
+			<rom type="bgm" offset="0x0e">MAP6.MBL</rom>
+			<rom type="bgm" offset="0x0f">MAP7.MBL</rom>
+			<rom type="bgm" offset="0x10">MBOSC.MBL</rom>
+			<rom type="bgm" offset="0x11">MBOSS.MBL</rom>
+			<rom type="bgm" offset="0x12">OBSTC.MBL</rom>
+			<rom type="bgm" offset="0x13">OBSTS.MBL</rom>
+			<rom type="bgm" offset="0x14">OTEBGM.MBL</rom>
+			<rom type="bgm" offset="0x15">QBGMA1.MBL</rom>
+			<rom type="bgm" offset="0x16">QBGMA3.MBL</rom>
+			<rom type="bgm" offset="0x17">QBGMB1.MBL</rom>
+			<rom type="bgm" offset="0x18">QBGMB4.MBL</rom>
+			<rom type="bgm" offset="0x19">QBGMC1.MBL</rom>
+			<rom type="bgm" offset="0x1a">QBGMC3.MBL</rom>
+			<rom type="bgm" offset="0x1b">QBGMD1.MBL</rom>
+			<rom type="bgm" offset="0x1c">QBGMD5.MBL</rom>
+			<rom type="bgm" offset="0x1d">QBGMMB1.MBL</rom>
+			<rom type="bgm" offset="0x1e">QBGMMB4.MBL</rom>
+			<rom type="bgm" offset="0x1f">QBGMOB1.MBL</rom>
+			<rom type="bgm" offset="0x20">QBGMOB4.MBL</rom>
+			<rom type="bgm" offset="0x21">QOUT.MBL</rom>
+			<rom type="bgm" offset="0x22">QUIZC.MBL</rom>
+			<rom type="bgm" offset="0x23">STAFF.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">ENDING.MBL</title>
+			<title code="0x02">GSTART.MBL</title>
+			<title code="0x03">HATENA1.MBL</title>
+			<title code="0x04">HATENA2.MBL</title>
+			<title code="0x05">HATENA3.MBL</title>
+			<title code="0x06">HATENA4.MBL</title>
+			<title code="0x07">HATENA5.MBL</title>
+			<title code="0x08">HATENA6.MBL</title>
+			<title code="0x09">MAP1.MBL</title>
+			<title code="0x0a">MAP2.MBL</title>
+			<title code="0x0b">MAP3.MBL</title>
+			<title code="0x0c">MAP4.MBL</title>
+			<title code="0x0d">MAP5.MBL</title>
+			<title code="0x0e">MAP6.MBL</title>
+			<title code="0x0f">MAP7.MBL</title>
+			<title code="0x10">MBOSC.MBL</title>
+			<title code="0x11">MBOSS.MBL</title>
+			<title code="0x12">OBSTC.MBL</title>
+			<title code="0x13">OBSTS.MBL</title>
+			<title code="0x14">OTEBGM.MBL</title>
+			<title code="0x15">QBGMA1.MBL</title>
+			<title code="0x16">QBGMA3.MBL</title>
+			<title code="0x17">QBGMB1.MBL</title>
+			<title code="0x18">QBGMB4.MBL</title>
+			<title code="0x19">QBGMC1.MBL</title>
+			<title code="0x1a">QBGMC3.MBL</title>
+			<title code="0x1b">QBGMD1.MBL</title>
+			<title code="0x1c">QBGMD5.MBL</title>
+			<title code="0x1d">QBGMMB1.MBL</title>
+			<title code="0x1e">QBGMMB4.MBL</title>
+			<title code="0x1f">QBGMOB1.MBL</title>
+			<title code="0x20">QBGMOB4.MBL</title>
+			<title code="0x21">QOUT.MBL</title>
+			<title code="0x22">QUIZC.MBL</title>
+			<title code="0x23">STAFF.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Quiz Tonosama no Yabo (クイズ殿様の野望 全国版)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="datamax" value="0x26"/>
+		</options>
+		<romlist archive="qztono98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<!-- MUSDRV2.SYS は IMPERIAL FORCE等より流用 -->
+			<rom type="bgm" offset="0x01">TONO1.MBL</rom>
+			<rom type="bgm" offset="0x02">TONO2.MBL</rom>
+			<rom type="bgm" offset="0x03">TONO3.MBL</rom>
+			<rom type="bgm" offset="0x04">TONO4.MBL</rom>
+			<rom type="bgm" offset="0x05">TONO5.MBL</rom>
+			<rom type="bgm" offset="0x06">TONO6.MBL</rom>
+			<rom type="bgm" offset="0x07">TONO7.MBL</rom>
+			<rom type="bgm" offset="0x08">TONO8.MBL</rom>
+			<rom type="bgm" offset="0x09">TONO9.MBL</rom>
+			<rom type="bgm" offset="0x0a">TONO10.MBL</rom>
+			<rom type="bgm" offset="0x0b">TONO11.MBL</rom>
+			<rom type="bgm" offset="0x0c">TONO12.MBL</rom>
+			<rom type="bgm" offset="0x0d">TONO13.MBL</rom>
+			<rom type="bgm" offset="0x0e">TONO14.MBL</rom>
+			<rom type="bgm" offset="0x0f">TONO15.MBL</rom>
+			<rom type="bgm" offset="0x10">TONO16.MBL</rom>
+			<rom type="bgm" offset="0x11">TONO17.MBL</rom>
+			<rom type="bgm" offset="0x12">TONO18.MBL</rom>
+			<rom type="bgm" offset="0x13">TONO19.MBL</rom>
+			<rom type="bgm" offset="0x14">TONO20.MBL</rom>
+			<rom type="bgm" offset="0x15">TONO21.MBL</rom>
+			<rom type="bgm" offset="0x16">TONO22.MBL</rom>
+			<rom type="bgm" offset="0x17">TONO23.MBL</rom>
+			<rom type="bgm" offset="0x18">TONO24.MBL</rom>
+			<rom type="bgm" offset="0x19">TONO25.MBL</rom>
+			<rom type="bgm" offset="0x1a">TONO26.MBL</rom>
+			<rom type="bgm" offset="0x1b">TONO27.MBL</rom>
+			<rom type="bgm" offset="0x1c">TONO28.MBL</rom>
+			<rom type="bgm" offset="0x1d">TONO29.MBL</rom>
+			<rom type="bgm" offset="0x1e">TONO30.MBL</rom>
+			<rom type="bgm" offset="0x1f">TONO31.MBL</rom>
+			<rom type="bgm" offset="0x20">TONO32.MBL</rom>
+			<rom type="bgm" offset="0x21">TONO33.MBL</rom>
+			<rom type="bgm" offset="0x22">TONO34.MBL</rom>
+			<rom type="bgm" offset="0x23">TONO35.MBL</rom>
+			<rom type="bgm" offset="0x24">TONO36.MBL</rom>
+			<rom type="bgm" offset="0x25">TONO37.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">TONO1.MBL</title>
+			<title code="0x02">TONO2.MBL</title>
+			<title code="0x03">TONO3.MBL</title>
+			<title code="0x04">TONO4.MBL</title>
+			<title code="0x05">TONO5.MBL</title>
+			<title code="0x06">TONO6.MBL</title>
+			<title code="0x07">TONO7.MBL</title>
+			<title code="0x08">TONO8.MBL</title>
+			<title code="0x09">TONO9.MBL</title>
+			<title code="0x0a">TONO10.MBL</title>
+			<title code="0x0b">TONO11.MBL</title>
+			<title code="0x0c">TONO12.MBL</title>
+			<title code="0x0d">TONO13.MBL</title>
+			<title code="0x0e">TONO14.MBL</title>
+			<title code="0x0f">TONO15.MBL</title>
+			<title code="0x10">TONO16.MBL</title>
+			<title code="0x11">TONO17.MBL</title>
+			<title code="0x12">TONO18.MBL</title>
+			<title code="0x13">TONO19.MBL</title>
+			<title code="0x14">TONO20.MBL</title>
+			<title code="0x15">TONO21.MBL</title>
+			<title code="0x16">TONO22.MBL</title>
+			<title code="0x17">TONO23.MBL</title>
+			<title code="0x18">TONO24.MBL</title>
+			<title code="0x19">TONO25.MBL</title>
+			<title code="0x1a">TONO26.MBL</title>
+			<title code="0x1b">TONO27.MBL</title>
+			<title code="0x1c">TONO28.MBL</title>
+			<title code="0x1d">TONO29.MBL</title>
+			<title code="0x1e">TONO30.MBL</title>
+			<title code="0x1f">TONO31.MBL</title>
+			<title code="0x20">TONO32.MBL</title>
+			<title code="0x21">TONO33.MBL</title>
+			<title code="0x22">TONO34.MBL</title>
+			<title code="0x23">TONO35.MBL</title>
+			<title code="0x24">TONO36.MBL</title>
+			<title code="0x25">TONO37.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Quiz Chiryaku no Hasya - Sangokushi Kitan (クイズ知略の覇者 三国志奇譚)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<romlist archive="qsangk98">
+			<rom type="file" offset="-1">qsangk98.com</rom>
+			<rom type="file" offset="-1">MUSDRV.COM</rom>
+			<rom type="shell" offset="0">musdrv</rom>
+			<rom type="shell" offset="0">qsangk98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">BGM #01</title>
+			<title code="0x0002">BGM #02</title>
+			<title code="0x0003">BGM #03</title>
+			<title code="0x0004">BGM #04</title>
+			<title code="0x0005">BGM #05</title>
+			<title code="0x0006">BGM #06</title>
+			<title code="0x0007">BGM #07</title>
+			<title code="0x0008">BGM #08</title>
+			<title code="0x0009">BGM #09</title>
+			<title code="0x000a">BGM #0a</title>
+			<title code="0x000b">BGM #0b</title>
+			<title code="0x000c">BGM #0c</title>
+			<title code="0x000d">BGM #0d</title>
+			<title code="0x000e">BGM #0e</title>
+			<title code="0x000f">BGM #0f</title>
+			<title code="0x0010">BGM #10</title>
+			<title code="0x0011">BGM #11</title>
+			<title code="0x0012">BGM #12</title>
+			<title code="0x0013">BGM #13</title>
+			<title code="0x0014">BGM #14</title>
+			<title code="0x0015">BGM #15</title>
+			<title code="0x0016">BGM #16</title>
+			<title code="0x0017">BGM #17</title>
+			<title code="0x0018">BGM #18</title>
+			<title code="0x0019">BGM #19</title>
+			<title code="0x001a">BGM #1a</title>
+			<title code="0x001b">BGM #1b</title>
+			<title code="0x001c">BGM #1c</title>
+			<title code="0x001d">BGM #1d</title>
+			<title code="0x001e">BGM #1e</title>
+			<title code="0x001f">BGM #1f</title>
+			<title code="0x0020">BGM #20</title>
+			<title code="0x0021">BGM #21</title>
+			<title code="0x0022">BGM #22</title>
+			<title code="0x0023">BGM #23</title>
+			<title code="0x0101">SFX #01</title>
+			<title code="0x0102">SFX #02</title>
+			<title code="0x0103">SFX #03</title>
+			<title code="0x0104">SFX #04</title>
+			<title code="0x0106">SFX #06</title>
+			<title code="0x0108">SFX #08</title>
+			<title code="0x010a">SFX #0A</title>
+			<title code="0x010b">SFX #0B</title>
+			<title code="0x010c">SFX #0C</title>
+			<title code="0x010f">SFX #0F</title>
+			<title code="0x0111">SFX #11</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Mahjong Sangokushi Engi (麻雀三国志演義)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="datamax" value="0x0b"/>
+		</options>
+		<romlist archive="mj3gok98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">MJ01.MBL</rom>
+			<rom type="bgm" offset="0x02">MJ02.MBL</rom>
+			<rom type="bgm" offset="0x03">MJ03.MBL</rom>
+			<rom type="bgm" offset="0x04">MJ04.MBL</rom>
+			<rom type="bgm" offset="0x05">MJ05.MBL</rom>
+			<rom type="bgm" offset="0x06">MJ06.MBL</rom>
+			<rom type="bgm" offset="0x07">MJ07.MBL</rom>
+			<rom type="bgm" offset="0x08">MJ08.MBL</rom>
+			<rom type="bgm" offset="0x09">MJ09.MBL</rom>
+			<rom type="bgm" offset="0x0a">MJ10.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">MJ01.MBL</title>
+			<title code="0x02">MJ02.MBL</title>
+			<title code="0x03">MJ03.MBL</title>
+			<title code="0x04">MJ04.MBL</title>
+			<title code="0x05">MJ05.MBL</title>
+			<title code="0x06">MJ06.MBL</title>
+			<title code="0x07">MJ07.MBL</title>
+			<title code="0x08">MJ08.MBL</title>
+			<title code="0x09">MJ09.MBL</title>
+			<title code="0x0a">MJ10.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Columns (コラムス【対戦モード付】)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="datamax" value="0x14"/>
+		</options>
+		<romlist archive="columns98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">90OP2.MBL</rom>
+			<rom type="bgm" offset="0x02">ATROPOS2.MBL</rom>
+			<rom type="bgm" offset="0x03">BGM1.MBL</rom>
+			<rom type="bgm" offset="0x04">BGM4A.MBL</rom>
+			<rom type="bgm" offset="0x05">BONUS.MBL</rom>
+			<rom type="bgm" offset="0x06">CLEAR.MBL</rom>
+			<rom type="bgm" offset="0x07">CLOTHO.MBL</rom>
+			<rom type="bgm" offset="0x08">COEND2.MBL</rom>
+			<rom type="bgm" offset="0x09">COOPEN.MBL</rom>
+			<rom type="bgm" offset="0x0a">DARUMA.MBL</rom>
+			<rom type="bgm" offset="0x0b">E-LONE.MBL</rom>
+			<rom type="bgm" offset="0x0c">KASSEN.MBL</rom>
+			<rom type="bgm" offset="0x0d">LATHESIS.MBL</rom>
+			<rom type="bgm" offset="0x0e">LODE94.MBL</rom>
+			<rom type="bgm" offset="0x0f">MAHJONG.MBL</rom>
+			<rom type="bgm" offset="0x10">NAME.MBL</rom>
+			<rom type="bgm" offset="0x11">OVER.MBL</rom>
+			<rom type="bgm" offset="0x12">OVER6.MBL</rom>
+			<rom type="bgm" offset="0x13">START.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">90OP2.MBL</title>
+			<title code="0x02">ATROPOS2.MBL</title>
+			<title code="0x03">BGM1.MBL</title>
+			<title code="0x04">BGM4A.MBL</title>
+			<title code="0x05">BONUS.MBL</title>
+			<title code="0x06">CLEAR.MBL</title>
+			<title code="0x07">CLOTHO.MBL</title>
+			<title code="0x08">COEND2.MBL</title>
+			<title code="0x09">COOPEN.MBL</title>
+			<title code="0x0a">DARUMA.MBL</title>
+			<title code="0x0b">E-LONE.MBL</title>
+			<title code="0x0c">KASSEN.MBL</title>
+			<title code="0x0d">LATHESIS.MBL</title>
+			<title code="0x0e">LODE94.MBL</title>
+			<title code="0x0f">MAHJONG.MBL</title>
+			<title code="0x10">NAME.MBL</title>
+			<title code="0x11">OVER.MBL</title>
+			<title code="0x12">OVER6.MBL</title>
+			<title code="0x13">START.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Godzilla (ゴジラ)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="datamax" value="0x0b"/>
+		</options>
+		<romlist archive="godzla98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">GOJI01.MBL</rom>
+			<rom type="bgm" offset="0x02">GOJI02.MBL</rom>
+			<rom type="bgm" offset="0x03">GOJI03.MBL</rom>
+			<rom type="bgm" offset="0x04">GOJI04.MBL</rom>
+			<rom type="bgm" offset="0x05">GOJI05.MBL</rom>
+			<rom type="bgm" offset="0x06">GOJI06.MBL</rom>
+			<rom type="bgm" offset="0x07">GOJI07.MBL</rom>
+			<rom type="bgm" offset="0x08">GOJI08.MBL</rom>
+			<rom type="bgm" offset="0x09">GOJI09.MBL</rom>
+			<rom type="bgm" offset="0x0a">GOJI10.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">GOJI01.MBL</title>
+			<title code="0x02">GOJI02.MBL</title>
+			<title code="0x03">GOJI03.MBL</title>
+			<title code="0x04">GOJI04.MBL</title>
+			<title code="0x05">GOJI05.MBL</title>
+			<title code="0x06">GOJI06.MBL</title>
+			<title code="0x07">GOJI07.MBL</title>
+			<title code="0x08">GOJI08.MBL</title>
+			<title code="0x09">GOJI09.MBL</title>
+			<title code="0x0a">GOJI10.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Playmaker Football (プレイメーカー フットボール)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0002"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="datamax" value="0x2"/>
+		</options>
+		<romlist archive="pmfoot98">
+			<rom type="code" offset="0x00600">persia98.bin</rom>
+			<rom type="code" offset="0x10000">OPNDRV.SYS</rom>
+			<rom type="bgm" offset="0x01">OPENING.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">OPENING.MUS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tuned Heart (チューンドハート)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x17"/>
+		</options>
+		<romlist archive="th98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV6.COM</rom>
+			<rom type="bgm" offset="0x01">BATTLE.MBL</rom>
+			<rom type="bgm" offset="0x02">BATTLE0.MBL</rom>
+			<rom type="bgm" offset="0x03">CLEAR.MBL</rom>
+			<rom type="bgm" offset="0x04">C_CHANGE.MBL</rom>
+			<rom type="bgm" offset="0x05">DATE.MBL</rom>
+			<rom type="bgm" offset="0x06">ENDING.MBL</rom>
+			<rom type="bgm" offset="0x07">ENEMY.MBL</rom>
+			<rom type="bgm" offset="0x08">E_THINK.MBL</rom>
+			<rom type="bgm" offset="0x09">FINISH.MBL</rom>
+			<rom type="bgm" offset="0x0a">GAMEOVER.MBL</rom>
+			<rom type="bgm" offset="0x0b">HENSEI.MBL</rom>
+			<rom type="bgm" offset="0x0c">ITEM.MBL</rom>
+			<rom type="bgm" offset="0x0d">LAST.MBL</rom>
+			<rom type="bgm" offset="0x0e">LOSE.MBL</rom>
+			<rom type="bgm" offset="0x0f">L_UP.MBL</rom>
+			<rom type="bgm" offset="0x10">MAP1.MBL</rom>
+			<rom type="bgm" offset="0x11">MENU.MBL</rom>
+			<rom type="bgm" offset="0x12">OPEN.MBL</rom>
+			<rom type="bgm" offset="0x13">STUFF.MBL</rom>
+			<rom type="bgm" offset="0x14">TEAM.MBL</rom>
+			<rom type="bgm" offset="0x15">UNHAPPY.MBL</rom>
+			<rom type="bgm" offset="0x16">WIN.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BATTLE.MBL</title>
+			<title code="0x02">BATTLE0.MBL</title>
+			<title code="0x03">CLEAR.MBL</title>
+			<title code="0x04">C_CHANGE.MBL</title>
+			<title code="0x05">DATE.MBL</title>
+			<title code="0x06">ENDING.MBL</title>
+			<title code="0x07">ENEMY.MBL</title>
+			<title code="0x08">E_THINK.MBL</title>
+			<title code="0x09">FINISH.MBL</title>
+			<title code="0x0a">GAMEOVER.MBL</title>
+			<title code="0x0b">HENSEI.MBL</title>
+			<title code="0x0c">ITEM.MBL</title>
+			<title code="0x0d">LAST.MBL</title>
+			<title code="0x0e">LOSE.MBL</title>
+			<title code="0x0f">L_UP.MBL</title>
+			<title code="0x10">MAP1.MBL</title>
+			<title code="0x11">MENU.MBL</title>
+			<title code="0x12">OPEN.MBL</title>
+			<title code="0x13">STUFF.MBL</title>
+			<title code="0x14">TEAM.MBL</title>
+			<title code="0x15">UNHAPPY.MBL</title>
+			<title code="0x16">WIN.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Megaton Arms (メガトンアームズ 鋼鉄の武闘界)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="datamax" value="0x10"/>
+		</options>
+		<romlist archive="mgarms98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV4.COM</rom>
+			<rom type="bgm" offset="0x01">END.MBL</rom>
+			<rom type="bgm" offset="0x02">ENDING.MBL</rom>
+			<rom type="bgm" offset="0x03">FLAIR.MBL</rom>
+			<rom type="bgm" offset="0x04">GOGMAGOG.MBL</rom>
+			<rom type="bgm" offset="0x05">HILANDER.MBL</rom>
+			<rom type="bgm" offset="0x06">MEGA_ARM.MBL</rom>
+			<rom type="bgm" offset="0x07">NADINE.MBL</rom>
+			<rom type="bgm" offset="0x08">OPENING.MBL</rom>
+			<rom type="bgm" offset="0x09">PANZER.MBL</rom>
+			<rom type="bgm" offset="0x0a">PYOTR.MBL</rom>
+			<rom type="bgm" offset="0x0b">REPPUOH.MBL</rom>
+			<rom type="bgm" offset="0x0c">SELECT1.MBL</rom>
+			<rom type="bgm" offset="0x0d">SELECT2.MBL</rom>
+			<rom type="bgm" offset="0x0e">SOLOMON.MBL</rom>
+			<rom type="bgm" offset="0x0f">YUNMO.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">END.MBL</title>
+			<title code="0x02">ENDING.MBL</title>
+			<title code="0x03">FLAIR.MBL</title>
+			<title code="0x04">GOGMAGOG.MBL</title>
+			<title code="0x05">HILANDER.MBL</title>
+			<title code="0x06">MEGA_ARM.MBL</title>
+			<title code="0x07">NADINE.MBL</title>
+			<title code="0x08">OPENING.MBL</title>
+			<title code="0x09">PANZER.MBL</title>
+			<title code="0x0a">PYOTR.MBL</title>
+			<title code="0x0b">REPPUOH.MBL</title>
+			<title code="0x0c">SELECT1.MBL</title>
+			<title code="0x0d">SELECT2.MBL</title>
+			<title code="0x0e">SOLOMON.MBL</title>
+			<title code="0x0f">YUNMO.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Finish Hold (フィニッシュホールド)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="datamax" value="0x0f"/>
+		</options>
+		<romlist archive="fh98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV6.COM</rom>
+			<rom type="bgm" offset="0x01">M1.MBL</rom>
+			<rom type="bgm" offset="0x02">M3.MBL</rom>
+			<rom type="bgm" offset="0x03">M4.MBL</rom>
+			<rom type="bgm" offset="0x04">M5.MBL</rom>
+			<rom type="bgm" offset="0x05">M7.MBL</rom>
+			<rom type="bgm" offset="0x06">M8.MBL</rom>
+			<rom type="bgm" offset="0x07">M10.MBL</rom>
+			<rom type="bgm" offset="0x08">M11.MBL</rom>
+			<rom type="bgm" offset="0x09">M12.MBL</rom>
+			<rom type="bgm" offset="0x0a">M13.MBL</rom>
+			<rom type="bgm" offset="0x0b">M14.MBL</rom>
+			<rom type="bgm" offset="0x0c">M15.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">M1.MBL</title>
+			<title code="0x02">M3.MBL</title>
+			<title code="0x03">M4.MBL</title>
+			<title code="0x04">M5.MBL</title>
+			<title code="0x05">M7.MBL</title>
+			<title code="0x06">M8.MBL</title>
+			<title code="0x07">M10.MBL</title>
+			<title code="0x08">M11.MBL</title>
+			<title code="0x09">M12.MBL</title>
+			<title code="0x0a">M13.MBL</title>
+			<title code="0x0b">M14.MBL</title>
+			<title code="0x0c">M15.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Finish Hold 2 Tag (フィニッシュホールド2TAG)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x26"/>
+		</options>
+		<romlist archive="fh2tag98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV6.COM</rom>
+			<rom type="bgm" offset="0x01">FH2BGM0.MBL</rom>
+			<rom type="bgm" offset="0x02">FH2BGM1.MBL</rom>
+			<rom type="bgm" offset="0x03">FH2BGM2.MBL</rom>
+			<rom type="bgm" offset="0x04">FH2BGM3.MBL</rom>
+			<rom type="bgm" offset="0x05">FH2BGM4.MBL</rom>
+			<rom type="bgm" offset="0x06">FH2BGM5.MBL</rom>
+			<rom type="bgm" offset="0x07">FH2BGM6.MBL</rom>
+			<rom type="bgm" offset="0x08">FH2BGM7.MBL</rom>
+			<rom type="bgm" offset="0x09">FH2BGM8.MBL</rom>
+			<rom type="bgm" offset="0x0a">FH2BGM9.MBL</rom>
+			<rom type="bgm" offset="0x0b">FH2BGM10.MBL</rom>
+			<rom type="bgm" offset="0x0c">FH2BGM11.MBL</rom>
+			<rom type="bgm" offset="0x0d">FH2BGM12.MBL</rom>
+			<rom type="bgm" offset="0x0e">FH2BGM13.MBL</rom>
+			<rom type="bgm" offset="0x0f">FH2BGM14.MBL</rom>
+			<rom type="bgm" offset="0x10">FH2BGM15.MBL</rom>
+			<rom type="bgm" offset="0x11">FH2BGM16.MBL</rom>
+			<rom type="bgm" offset="0x12">FH2BGM17.MBL</rom>
+			<rom type="bgm" offset="0x13">FH2BGM18.MBL</rom>
+			<rom type="bgm" offset="0x14">FH2BGM19.MBL</rom>
+			<rom type="bgm" offset="0x15">FH2BGM20.MBL</rom>
+			<rom type="bgm" offset="0x16">FH2BGM21.MBL</rom>
+			<rom type="bgm" offset="0x17">FH2BGM22.MBL</rom>
+			<rom type="bgm" offset="0x18">FH2BGM23.MBL</rom>
+			<rom type="bgm" offset="0x19">FH2BGM24.MBL</rom>
+			<rom type="bgm" offset="0x1a">FH2BGM25.MBL</rom>
+			<rom type="bgm" offset="0x1b">FH2BGM26.MBL</rom>
+			<rom type="bgm" offset="0x1c">FH2BGM27.MBL</rom>
+			<rom type="bgm" offset="0x1d">FH2BGM28.MBL</rom>
+			<rom type="bgm" offset="0x1e">FH2BGM29.MBL</rom>
+			<rom type="bgm" offset="0x1f">FH2BGM30.MBL</rom>
+			<rom type="bgm" offset="0x20">FH2BGM31.MBL</rom>
+			<rom type="bgm" offset="0x21">FH2BGM32.MBL</rom>
+			<rom type="bgm" offset="0x22">FH2BGM33.MBL</rom>
+			<rom type="bgm" offset="0x23">FH2_24.MBL</rom>
+			<rom type="bgm" offset="0x24">FH2_27.MBL</rom>
+			<rom type="bgm" offset="0x25">FH2_29.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">FH2BGM0.MBL</title>
+			<title code="0x02">FH2BGM1.MBL</title>
+			<title code="0x03">FH2BGM2.MBL</title>
+			<title code="0x04">FH2BGM3.MBL</title>
+			<title code="0x05">FH2BGM4.MBL</title>
+			<title code="0x06">FH2BGM5.MBL</title>
+			<title code="0x07">FH2BGM6.MBL</title>
+			<title code="0x08">FH2BGM7.MBL</title>
+			<title code="0x09">FH2BGM8.MBL</title>
+			<title code="0x0a">FH2BGM9.MBL</title>
+			<title code="0x0b">FH2BGM10.MBL</title>
+			<title code="0x0c">FH2BGM11.MBL</title>
+			<title code="0x0d">FH2BGM12.MBL</title>
+			<title code="0x0e">FH2BGM13.MBL</title>
+			<title code="0x0f">FH2BGM14.MBL</title>
+			<title code="0x10">FH2BGM15.MBL</title>
+			<title code="0x11">FH2BGM16.MBL</title>
+			<title code="0x12">FH2BGM17.MBL</title>
+			<title code="0x13">FH2BGM18.MBL</title>
+			<title code="0x14">FH2BGM19.MBL</title>
+			<title code="0x15">FH2BGM20.MBL</title>
+			<title code="0x16">FH2BGM21.MBL</title>
+			<title code="0x17">FH2BGM22.MBL</title>
+			<title code="0x18">FH2BGM23.MBL</title>
+			<title code="0x19">FH2BGM24.MBL</title>
+			<title code="0x1a">FH2BGM25.MBL</title>
+			<title code="0x1b">FH2BGM26.MBL</title>
+			<title code="0x1c">FH2BGM27.MBL</title>
+			<title code="0x1d">FH2BGM28.MBL</title>
+			<title code="0x1e">FH2BGM29.MBL</title>
+			<title code="0x1f">FH2BGM30.MBL</title>
+			<title code="0x20">FH2BGM31.MBL</title>
+			<title code="0x21">FH2BGM32.MBL</title>
+			<title code="0x22">FH2BGM33.MBL</title>
+			<title code="0x23">FH2_24.MBL</title>
+			<title code="0x24">FH2_27.MBL</title>
+			<title code="0x25">FH2_29.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Shinou Densetsu Crystania (神王伝説クリスタニア)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x23"/>
+		</options>
+		<romlist archive="crys98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV6.COM</rom>
+			<rom type="bgm" offset="0x01">CRBGM001.MBL</rom>
+			<rom type="bgm" offset="0x02">CRBGM002.MBL</rom>
+			<rom type="bgm" offset="0x03">CRBGM003.MBL</rom>
+			<rom type="bgm" offset="0x04">CRBGM004.MBL</rom>
+			<rom type="bgm" offset="0x05">CRBGM005.MBL</rom>
+			<rom type="bgm" offset="0x06">CRBGM006.MBL</rom>
+			<rom type="bgm" offset="0x07">CRBGM007.MBL</rom>
+			<rom type="bgm" offset="0x08">CRBGM008.MBL</rom>
+			<rom type="bgm" offset="0x09">CRBGM009.MBL</rom>
+			<rom type="bgm" offset="0x0a">CRBGM010.MBL</rom>
+			<rom type="bgm" offset="0x0b">CRBGM011.MBL</rom>
+			<rom type="bgm" offset="0x0c">CRBGM012.MBL</rom>
+			<rom type="bgm" offset="0x0d">CRBGM013.MBL</rom>
+			<rom type="bgm" offset="0x0e">CRBGM014.MBL</rom>
+			<rom type="bgm" offset="0x0f">CRBGM015.MBL</rom>
+			<rom type="bgm" offset="0x10">CRBGM016.MBL</rom>
+			<rom type="bgm" offset="0x11">CRBGM017.MBL</rom>
+			<rom type="bgm" offset="0x12">CRBGM018.MBL</rom>
+			<rom type="bgm" offset="0x13">CRBGM019.MBL</rom>
+			<rom type="bgm" offset="0x14">CRBGM020.MBL</rom>
+			<rom type="bgm" offset="0x15">CRBGM021.MBL</rom>
+			<rom type="bgm" offset="0x16">CRBGM022.MBL</rom>
+			<rom type="bgm" offset="0x17">CRBGM023.MBL</rom>
+			<rom type="bgm" offset="0x18">CRBGM024.MBL</rom>
+			<rom type="bgm" offset="0x19">CRBGM025.MBL</rom>
+			<rom type="bgm" offset="0x1a">CRBGM026.MBL</rom>
+			<rom type="bgm" offset="0x1b">CRBGM027.MBL</rom>
+			<rom type="bgm" offset="0x1e">CRBGM030.MBL</rom>
+			<rom type="bgm" offset="0x1f">CRBGM031.MBL</rom>
+			<rom type="bgm" offset="0x20">CRBGM032.MBL</rom>
+			<rom type="bgm" offset="0x21">CRBGM033.MBL</rom>
+			<rom type="bgm" offset="0x22">CRBGM034.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">CRBGM001.MBL</title>
+			<title code="0x02">CRBGM002.MBL</title>
+			<title code="0x03">CRBGM003.MBL</title>
+			<title code="0x04">CRBGM004.MBL</title>
+			<title code="0x05">CRBGM005.MBL</title>
+			<title code="0x06">CRBGM006.MBL</title>
+			<title code="0x07">CRBGM007.MBL</title>
+			<title code="0x08">CRBGM008.MBL</title>
+			<title code="0x09">CRBGM009.MBL</title>
+			<title code="0x0a">CRBGM010.MBL</title>
+			<title code="0x0b">CRBGM011.MBL</title>
+			<title code="0x0c">CRBGM012.MBL</title>
+			<title code="0x0d">CRBGM013.MBL</title>
+			<title code="0x0e">CRBGM014.MBL</title>
+			<title code="0x0f">CRBGM015.MBL</title>
+			<title code="0x10">CRBGM016.MBL</title>
+			<title code="0x11">CRBGM017.MBL</title>
+			<title code="0x12">CRBGM018.MBL</title>
+			<title code="0x13">CRBGM019.MBL</title>
+			<title code="0x14">CRBGM020.MBL</title>
+			<title code="0x15">CRBGM021.MBL</title>
+			<title code="0x16">CRBGM022.MBL</title>
+			<title code="0x17">CRBGM023.MBL</title>
+			<title code="0x18">CRBGM024.MBL</title>
+			<title code="0x19">CRBGM025.MBL</title>
+			<title code="0x1a">CRBGM026.MBL</title>
+			<title code="0x1b">CRBGM027.MBL</title>
+			<title code="0x1e">CRBGM030.MBL</title>
+			<title code="0x1f">CRBGM031.MBL</title>
+			<title code="0x20">CRBGM032.MBL</title>
+			<title code="0x21">CRBGM033.MBL</title>
+			<title code="0x22">CRBGM034.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Nectaris (ネクタリス)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="nectrs98">
+			<rom type="file" offset="-1">nectrs98.com</rom>
+			<rom type="file" offset="-1">OPNDRV.COM</rom>
+			<rom type="file" offset="-1">NECT_CBG.BIN</rom>
+			<rom type="file" offset="-1">NECT_CFI.BIN</rom>
+			<rom type="file" offset="-1">NECT_CIN.BIN</rom>
+			<rom type="file" offset="-1">NECT_CLE.BIN</rom>
+			<rom type="file" offset="-1">NECT_CSU.BIN</rom>
+			<rom type="file" offset="-1">NECT_END.BIN</rom>
+			<rom type="file" offset="-1">NECT_MAN.BIN</rom>
+			<rom type="file" offset="-1">NECT_MAP.BIN</rom>
+			<rom type="file" offset="-1">NECT_OCC.BIN</rom>
+			<rom type="file" offset="-1">NECT_OPE.BIN</rom>
+			<rom type="file" offset="-1">NECT_OVE.BIN</rom>
+			<rom type="file" offset="-1">NECT_PAS.BIN</rom>
+			<rom type="file" offset="-1">NECT_T_E.BIN</rom>
+			<rom type="file" offset="-1">NECT_TIT.BIN</rom>
+			<rom type="file" offset="-1">NECT_UBG.BIN</rom>
+			<rom type="file" offset="-1">NECT_UFI.BIN</rom>
+			<rom type="file" offset="-1">NECT_UIN.BIN</rom>
+			<rom type="file" offset="-1">NECT_USU.BIN</rom>
+			<rom type="file" offset="-1">SEDAT.PAC</rom>
+			<rom type="shell" offset="0">opndrv</rom>
+			<rom type="shell" offset="0">nectrs98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">BGM #01</title>
+			<title code="0x0002">BGM #02</title>
+			<title code="0x0003">BGM #03</title>
+			<title code="0x0004">BGM #04</title>
+			<title code="0x0005">BGM #05</title>
+			<title code="0x0006">BGM #06</title>
+			<title code="0x0007">BGM #07</title>
+			<title code="0x0008">BGM #08</title>
+			<title code="0x0009">BGM #09</title>
+			<title code="0x000a">BGM #0a</title>
+			<title code="0x000b">BGM #0b</title>
+			<title code="0x000c">BGM #0c</title>
+			<title code="0x000d">BGM #0d</title>
+			<title code="0x000e">BGM #0e</title>
+			<title code="0x000f">BGM #0f</title>
+			<title code="0x0010">BGM #10</title>
+			<title code="0x0011">BGM #11</title>
+			<title code="0x0012">BGM #12</title>
+			<title code="0x0013">BGM #13</title>
+			<title code="0x0014">BGM #14</title>
+			<title code="0x0015">BGM #15</title>
+			<title code="0x0016">BGM #16</title>
+			<title code="0x0017">BGM #17</title>
+			<title code="0x0018">BGM #18</title>
+			<title code="0x0101">SFX #01</title>
+			<title code="0x0102">SFX #02</title>
+			<title code="0x0103">SFX #03</title>
+			<title code="0x0105">SFX #05</title>
+			<title code="0x0106">SFX #06</title>
+			<title code="0x0107">SFX #07</title>
+			<title code="0x0108">SFX #08</title>
+			<title code="0x0109">SFX #09</title>
+			<title code="0x010a">SFX #0a</title>
+			<title code="0x010b">SFX #0b</title>
+			<title code="0x010c">SFX #0c</title>
+			<title code="0x010d">SFX #0d</title>
+			<title code="0x010e">SFX #0e</title>
+			<title code="0x010f">SFX #0f</title>
+			<title code="0x0110">SFX #10</title>
+			<title code="0x0111">SFX #11</title>
+			<title code="0x0112">SFX #12</title>
+			<title code="0x0113">SFX #13</title>
+			<title code="0x0114">SFX #14</title>
+			<title code="0x0115">SFX #15</title>
+			<title code="0x0116">SFX #16</title>
+			<title code="0x0117">SFX #17</title>
+			<title code="0x0118">SFX #18</title>
+			<title code="0x0119">SFX #19</title>
+			<title code="0x011a">SFX #1a</title>
+			<title code="0x011b">SFX #1b</title>
+			<title code="0x011c">SFX #1c</title>
+			<title code="0x011d">SFX #1d</title>
+			<title code="0x011e">SFX #1e</title>
+			<title code="0x011f">SFX #1f</title>
+			<title code="0x0120">SFX #20</title>
+			<title code="0x0121">SFX #21</title>
+			<title code="0x0122">SFX #22</title>
+			<title code="0x0123">SFX #23</title>
+			<title code="0x0124">SFX #24</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Enchanter (エンチャンタ ～若き魔導士の試練～)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="datamax" value="0x03"/>
+		</options>
+		<romlist archive="ench98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">ENCH_OPE.MBL</rom>
+			<rom type="bgm" offset="0x02">ENCH_END.MBL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">ENCH_OPE.MBL</title>
+			<title code="0x02">ENCH_END.MBL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lord of Panzers (ロード・オブ・パンツァーズ)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">systemsoft</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="datamax" value="0x22"/>
+		</options>
+		<romlist archive="lord98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm" offset="0x01">CANNON.MBL</rom>
+			<rom type="bgm" offset="0x02">CAR_L.MBL</rom>
+			<rom type="bgm" offset="0x03">CAR_S.MBL</rom>
+			<rom type="bgm" offset="0x04">CHAKUDAN.MBL</rom>
+			<rom type="bgm" offset="0x05">ENDLOOP.MBL</rom>
+			<rom type="bgm" offset="0x06">EXPL1.MBL</rom>
+			<rom type="bgm" offset="0x07">FAN1.MBL</rom>
+			<rom type="bgm" offset="0x08">FAN2.MBL</rom>
+			<rom type="bgm" offset="0x09">FAN3.MBL</rom>
+			<rom type="bgm" offset="0x0a">FAN4.MBL</rom>
+			<rom type="bgm" offset="0x0b">HAZURE.MBL</rom>
+			<rom type="bgm" offset="0x0c">HELI.MBL</rom>
+			<rom type="bgm" offset="0x0d">KAO.MBL</rom>
+			<rom type="bgm" offset="0x0e">LAST.MBL</rom>
+			<rom type="bgm" offset="0x0f">LEVUP_SE.MBL</rom>
+			<rom type="bgm" offset="0x10">LW2END.MBL</rom>
+			<rom type="bgm" offset="0x11">LW2LOSE.MBL</rom>
+			<rom type="bgm" offset="0x12">LW2OPN.MBL</rom>
+			<rom type="bgm" offset="0x13">LW2WIN.MBL</rom>
+			<rom type="bgm" offset="0x14">OLDEND.MBL</rom>
+			<rom type="bgm" offset="0x15">OLDENDLP.MBL</rom>
+			<rom type="bgm" offset="0x16">OLDFAN1.MBL</rom>
+			<rom type="bgm" offset="0x17">OLDFAN2.MBL</rom>
+			<rom type="bgm" offset="0x18">OLDFAN3.MBL</rom>
+			<rom type="bgm" offset="0x19">OLDFAN4.MBL</rom>
+			<rom type="bgm" offset="0x1a">OLDLOSE.MBL</rom>
+			<rom type="bgm" offset="0x1b">OLDOPEN.MBL</rom>
+			<rom type="bgm" offset="0x1c">OLDWIN.MBL</rom>
+			<rom type="bgm" offset="0x1d">OPEN.MBL</rom>
+			<rom type="bgm" offset="0x1e">PWROFF.MBL</rom>
+			<rom type="bgm" offset="0x1f">TAMASORE.MBL</rom>
+			<rom type="bgm" offset="0x20">TOKUSHU.MBL</rom>
+			<rom type="bgm" offset="0x21">YUDODAN.MBL</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x05">ENDLOOP.MBL</title> 
+			<title code="0x07">FAN1.MBL</title>    
+			<title code="0x08">FAN2.MBL</title>    
+			<title code="0x09">FAN3.MBL</title>    
+			<title code="0x0a">FAN4.MBL</title>    
+			<title code="0x0e">LAST.MBL</title>    
+			<title code="0x10">LW2END.MBL</title>  
+			<title code="0x11">LW2LOSE.MBL</title> 
+			<title code="0x12">LW2OPN.MBL</title>  
+			<title code="0x13">LW2WIN.MBL</title>  
+			<title code="0x14">OLDEND.MBL</title>  
+			<title code="0x15">OLDENDLP.MBL</title>
+			<title code="0x16">OLDFAN1.MBL</title> 
+			<title code="0x17">OLDFAN2.MBL</title> 
+			<title code="0x18">OLDFAN3.MBL</title> 
+			<title code="0x19">OLDFAN4.MBL</title> 
+			<title code="0x1a">OLDLOSE.MBL</title> 
+			<title code="0x1b">OLDOPEN.MBL</title> 
+			<title code="0x1c">OLDWIN.MBL</title>  
+			<title code="0x1d">OPEN.MBL</title>    
+			<title code="0x01">CANNON.MBL</title>  
+			<title code="0x02">CAR_L.MBL</title>   
+			<title code="0x03">CAR_S.MBL</title>   
+			<title code="0x04">CHAKUDAN.MBL</title>
+			<title code="0x06">EXPL1.MBL</title>   
+			<title code="0x0b">HAZURE.MBL</title>  
+			<title code="0x0c">HELI.MBL</title>    
+			<title code="0x0d">KAO.MBL</title>     
+			<title code="0x0f">LEVUP_SE.MBL</title>
+			<title code="0x1e">PWROFF.MBL</title>  
+			<title code="0x1f">TAMASORE.MBL</title>
+			<title code="0x20">TOKUSHU.MBL</title> 
+			<title code="0x21">YUDODAN.MBL</title> 
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Campaign ban Daisenryaku 2 (キャンペーン版大戦略Ⅱ)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">systemsoft</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="daisen2c68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">MU_SOUND.OPM</rom>
+			<rom type="code" offset="0x2c000">TITLE.OPM</rom>
+			<rom type="code" offset="0x30000">ENDING1.OPM</rom>
+			<rom type="code" offset="0x34000">ENDING2.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0204">TITLE.OPM</title>
+			<title code="0x0205">ENDING1.OPM</title>
+			<title code="0x0206">ENDING2.OPM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bretonne Lays (ブルトン・レイ)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">systemsoft</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="brtnly68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">OPENING.OPM</rom>
+			<rom type="code" offset="0x28000">BR1000M0.OPM</rom>
+			<rom type="code" offset="0x2c000">BR1000M1.OPM</rom>
+			<rom type="code" offset="0x34000">BR1000M2.OPM</rom>
+			<rom type="code" offset="0x38000">BR1000M3.OPM</rom>
+			<rom type="code" offset="0x3c000">BR1000M4.OPM</rom>
+			<rom type="code" offset="0x40000">BR1000M5.OPM</rom>
+			<rom type="code" offset="0x44000">BR1000M6.OPM</rom>
+			<rom type="code" offset="0x48000">BR1000M7.OPM</rom>
+			<rom type="code" offset="0x50000">BR1000M8.OPM</rom>
+			<rom type="code" offset="0x54000">BR1000M9.OPM</rom>
+			<rom type="code" offset="0x58000">BR1000MA.OPM</rom>
+			<rom type="code" offset="0x5c000">BR1000MB.OPM</rom>
+			<rom type="code" offset="0x60000">BR1000MC.OPM</rom>
+			<rom type="code" offset="0x64000">BR1000MD.OPM</rom>
+			<rom type="code" offset="0x68000">BR1000ME.OPM</rom>
+			<rom type="code" offset="0x6c000">BR1000MF.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1602">OPENING.OPM</title>
+			<title code="0x1603">BR1000M0.OPM</title>
+			<title code="0x1604">BR1000M1.OPM</title>
+			<title code="0x1305">BR1000M2.OPM</title>
+			<title code="0x1606">BR1000M3.OPM</title>
+			<title code="0x1607">BR1000M4.OPM</title>
+			<title code="0x1608">BR1000M5.OPM</title>
+			<title code="0x1609">BR1000M6.OPM</title>
+			<title code="0x160a">BR1000M7.OPM</title>
+			<title code="0x160b">BR1000M8.OPM</title>
+			<title code="0x130c">BR1000M9.OPM</title>
+			<title code="0x160d">BR1000MA.OPM</title>
+			<title code="0x160e">BR1000MB.OPM</title>
+			<title code="0x160f">BR1000MC.OPM</title>
+			<title code="0x1610">BR1000MD.OPM</title>
+			<title code="0x1611">BR1000ME.OPM</title>
+			<title code="0x1612">BR1000MF.OPM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Bouken Roman (冒険浪漫)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">systemsoft</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="bouken_msx">
+			<rom type="code">Bouken Roman (1986)(System Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Campaign ban Daisenryaku 2 (キャンペーン版大戦略Ⅱ)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">systemsoft</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="daisen2c_msx">
+			<rom type="code">Daisenryaku 2 - Campaign Version (1992)(System Soft, Microcabin).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x16">BGM #16</title>
+		</titlelist>
+	</game>
+</gamelist>

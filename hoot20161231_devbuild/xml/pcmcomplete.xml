@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //PCMコンプリート -->
+	<game>
+		<name>[PC-9801] GODS 神となる男の伝説(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">PCMコンプリート</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="gods98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">GEFF.EFC</rom>
+			<rom type="file" offset="0x10">BOSS.M</rom>
+			<rom type="file" offset="0x11">E.M</rom>
+			<rom type="file" offset="0x12">ENDING.M</rom>
+			<rom type="file" offset="0x13">INTRO.M</rom>
+			<rom type="file" offset="0x14">INTRO2.M</rom>
+			<rom type="file" offset="0x15">ROUND1.M</rom>
+			<rom type="file" offset="0x16">ROUND2.M</rom>
+			<rom type="file" offset="0x17">ROUND3.M</rom>
+			<rom type="file" offset="0x18">ROUND4.M</rom>
+			<rom type="file" offset="0x19">SHOP.M</rom>
+			<rom type="shell" offset="0">pmd</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x13">INTRO.M  : </title>
+			<title code="0x14">INTRO2.M : </title>
+			<title code="0x15">ROUND1.M : </title>
+			<title code="0x16">ROUND2.M : </title>
+			<title code="0x17">ROUND3.M : </title>
+			<title code="0x18">ROUND4.M : </title>
+			<title code="0x19">SHOP.M   : </title>
+			<title code="0x10">BOSS.M   : </title>
+			<title code="0x12">ENDING.M : </title>
+			<title code="0x11">E.M      : </title>
+			<range min="0x0801" max="0x083d" extcode="1">GEFF.EFC : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GODS 神となる男の伝説(MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">PCMコンプリート</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="gods98">
+			<rom type="file" offset="-1">mmp_hoot.com</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">PUTEX.EXE</rom>
+			<rom type="file" offset="-1">MT32_ROM</rom>
+			<rom type="file" offset="0x10">BOSS.MMD</rom>
+			<rom type="file" offset="0x11">E.MMD</rom>
+			<rom type="file" offset="0x12">ENDING.MMD</rom>
+			<rom type="file" offset="0x13">INTRO.MMD</rom>
+			<rom type="file" offset="0x14">INTRO2.MMD</rom>
+			<rom type="file" offset="0x15">ROUND1.MMD</rom>
+			<rom type="file" offset="0x16">ROUND2.MMD</rom>
+			<rom type="file" offset="0x17">ROUND3.MMD</rom>
+			<rom type="file" offset="0x18">ROUND4.MMD</rom>
+			<rom type="file" offset="0x19">SHOP.MMD</rom>
+			<rom type="shell" offset="0">putex</rom>
+			<rom type="shell" offset="0">mmd /m30</rom>
+			<rom type="shell" offset="0">mmp_hoot</rom>
+		</romlist>
+		<!-- 可能な限り最新のMMDとPUTEXを使用する事を推奨 -->
+		<titlelist>
+			<title code="0x13">INTRO.MMD</title>
+			<title code="0x14">INTRO2.MMD</title>
+			<title code="0x15">ROUND1.MMD</title>
+			<title code="0x16">ROUND2.MMD</title>
+			<title code="0x17">ROUND3.MMD</title>
+			<title code="0x18">ROUND4.MMD</title>
+			<title code="0x19">SHOP.MMD</title>
+			<title code="0x10">BOSS.MMD</title>
+			<title code="0x12">ENDING.MMD</title>
+			<title code="0x11">E.MMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GODS 神となる男の伝説(MT-32 Emulation)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">PCMコンプリート</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="gods98">
+			<rom type="file" offset="-1">mmp_hoot.com</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">PUTEX.EXE</rom>
+			<rom type="file" offset="-1">MT32_ROM</rom>
+			<rom type="file" offset="0x10">BOSS.MMD</rom>
+			<rom type="file" offset="0x11">E.MMD</rom>
+			<rom type="file" offset="0x12">ENDING.MMD</rom>
+			<rom type="file" offset="0x13">INTRO.MMD</rom>
+			<rom type="file" offset="0x14">INTRO2.MMD</rom>
+			<rom type="file" offset="0x15">ROUND1.MMD</rom>
+			<rom type="file" offset="0x16">ROUND2.MMD</rom>
+			<rom type="file" offset="0x17">ROUND3.MMD</rom>
+			<rom type="file" offset="0x18">ROUND4.MMD</rom>
+			<rom type="file" offset="0x19">SHOP.MMD</rom>
+			<rom type="shell" offset="0">putex</rom>
+			<rom type="shell" offset="0">mmd /m30</rom>
+			<rom type="shell" offset="0">mmp_hoot</rom>
+		</romlist>
+		<!-- 可能な限り最新のMMDとPUTEXを使用する事を推奨 -->
+		<titlelist>
+			<title code="0x13">INTRO.MMD</title>
+			<title code="0x14">INTRO2.MMD</title>
+			<title code="0x15">ROUND1.MMD</title>
+			<title code="0x16">ROUND2.MMD</title>
+			<title code="0x17">ROUND3.MMD</title>
+			<title code="0x18">ROUND4.MMD</title>
+			<title code="0x19">SHOP.MMD</title>
+			<title code="0x10">BOSS.MMD</title>
+			<title code="0x12">ENDING.MMD</title>
+			<title code="0x11">E.MMD</title>
+		</titlelist>
+	</game>
+</gamelist>

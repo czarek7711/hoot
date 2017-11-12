@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //technogrard -->
+	<game>
+		<name>[PC-88] Final Crisis</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">technogrard</driveralias>
+		<romlist archive="f_crisis">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8a00">MUSIC.OBJ</rom>
+			<rom type="code" offset="0x9a00">MMLEX</rom>
+			<rom type="bgm" offset="0x01">MMLOP</rom>
+			<rom type="bgm" offset="0x02">MMLD1</rom>
+			<rom type="bgm" offset="0x03">MMLD2</rom>
+			<rom type="bgm" offset="0x04">MMLD3</rom>
+			<rom type="bgm" offset="0x05">MMLD4</rom>
+			<rom type="bgm" offset="0x06">MMLD5</rom>
+			<rom type="bgm" offset="0x07">MMLD6</rom>
+			<rom type="bgm" offset="0x08">BOSS.MUS</rom>
+			<rom type="bgm" offset="0x09">CLEAR.MUS</rom>
+			<rom type="bgm" offset="0x0a">GAMEO.MUS</rom>
+			<rom type="bgm" offset="0x0b">YOUDID.IT</rom>
+			<rom type="bgm" offset="0x0c">REALIT.Y</rom>
+			<rom type="bgm" offset="0x0d">INTRIG.A</rom>
+			<rom type="bgm" offset="0x0e">STAFFR.OLL</rom>
+			<rom type="bgm" offset="0x0f">CONTIN.UE</rom>
+			<rom type="bgm" offset="0x10">MMLN1</rom>
+			<rom type="bgm" offset="0x11">MMLED</rom>
+			<rom type="bgm" offset="0x12">TITLE.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">Open Title</title>
+			<title code="0x01">Opening</title>
+			<title code="0x02">Space</title>
+			<title code="0x03">Plant</title>
+			<title code="0x04">Asteroids</title>
+			<title code="0x05">Out Space</title>
+			<title code="0x06">X-Range!</title>
+			<title code="0x07">Base</title>
+			<title code="0x08">Crisis!!</title>
+			<title code="0x09">Complete</title>
+			<title code="0x0a">Game Over</title>
+			<title code="0x0b">You Did It</title>
+			<title code="0x0c">Reality</title>
+			<title code="0x0d">Intriga</title>
+			<title code="0x0e">Staff Roll</title>
+			<title code="0x0f">Continue</title>
+			<title code="0x10">Name Entry</title>
+			<title code="0x11">Ending</title>
+			<title code="0xff000000">SFX Stop</title>
+			<title code="0x00000000">SFX #00</title>
+			<title code="0x01000000">SFX #01</title>
+			<title code="0x02000000">SFX #02</title>
+			<title code="0x03000000">SFX #03</title>
+			<title code="0x04000000">SFX #04</title>
+			<title code="0x05000000">SFX #05</title>
+			<title code="0x06000000">SFX #06</title>
+			<title code="0x07000000">SFX #07</title>
+			<title code="0x08000000">SFX #08</title>
+			<title code="0x09000000">SFX #09</title>
+			<title code="0x0a000000">SFX #0A</title>
+			<title code="0x0b000000">SFX #0B</title>
+			<title code="0x0c000000">SFX #0C</title>
+			<title code="0x0d000000">SFX #0D</title>
+			<title code="0x0e000000">SFX #0E</title>
+			<title code="0x0f000000">SFX #0F</title>
+			<title code="0x10000000">SFX #10</title>
+			<title code="0x11000000">SFX #11</title>
+			<title code="0x12000000">SFX #12</title>
+			<title code="0x13000000">SFX #13</title>
+			<title code="0x14000000">SFX #14</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Final Crisis</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">technogrard</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="f_crisis_98">
+			<rom type="file" offset="-1">FMPP.COM</rom>
+			<rom type="file" offset="-1">FMP.COM</rom>
+			<rom type="file" offset="0x10">FCRSS_01.OPI</rom>
+			<rom type="file" offset="0x11">FCRSS_02.OPI</rom>
+			<rom type="file" offset="0x12">FCRSS_03.OPI</rom>
+			<rom type="file" offset="0x13">FCRSS_04.OPI</rom>
+			<rom type="file" offset="0x14">FCRSS_05.OPI</rom>
+			<rom type="file" offset="0x15">FCRSS_06.OPI</rom>
+			<rom type="file" offset="0x16">FCRSS_07.OPI</rom>
+			<rom type="file" offset="0x17">FCRSS_08.OPI</rom>
+			<rom type="file" offset="0x18">FCRSS_09.OPI</rom>
+			<rom type="file" offset="0x19">FCRSS_10.OPI</rom>
+			<rom type="file" offset="0x1a">FCRSS_11.OPI</rom>
+			<rom type="file" offset="0x1b">FCRSS_12.OPI</rom>
+			<rom type="file" offset="0x1c">FCRSS_13.OPI</rom>
+			<rom type="file" offset="0x1d">FCRSS_14.OPI</rom>
+			<rom type="file" offset="0x1e">FCRSS_15.OPI</rom>
+			<rom type="file" offset="0x1f">FCRSS_16.OPI</rom>
+			<rom type="file" offset="0x20">FCRSS_17.OPI</rom>
+			<rom type="file" offset="0x21">FCRSS_18.OPI</rom>
+			<rom type="file" offset="0x22">FCRSS_19.OPI</rom>
+			<rom type="shell" offset="0">FMP S /#12 /S</rom>
+			<rom type="shell" offset="0">FMPP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">FCRSS_01.OPI</title>
+			<title code="0x11">FCRSS_02.OPI</title>
+			<title code="0x12">FCRSS_03.OPI</title>
+			<title code="0x13">FCRSS_04.OPI</title>
+			<title code="0x14">FCRSS_05.OPI</title>
+			<title code="0x15">FCRSS_06.OPI</title>
+			<title code="0x16">FCRSS_07.OPI</title>
+			<title code="0x17">FCRSS_08.OPI</title>
+			<title code="0x18">FCRSS_09.OPI</title>
+			<title code="0x19">FCRSS_10.OPI</title>
+			<title code="0x1a">FCRSS_11.OPI</title>
+			<title code="0x1b">FCRSS_12.OPI</title>
+			<title code="0x1c">FCRSS_13.OPI</title>
+			<title code="0x1d">FCRSS_14.OPI</title>
+			<title code="0x1e">FCRSS_15.OPI</title>
+			<title code="0x1f">FCRSS_16.OPI</title>
+			<title code="0x20">FCRSS_17.OPI</title>
+			<title code="0x21">FCRSS_18.OPI</title>
+			<title code="0x22">FCRSS_19.OPI</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- /HuLinks -->
+	<game>
+		<name>[PC-9801] スターコマンド 暗闇の侵略者</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">HuLinks</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="starcmd_98">
+			<rom type="file" offset="-1">46.com</rom>
+			<rom type="file" offset="-1">fakecall.com</rom>
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="shell" offset="0">fakecall</rom>
+			<rom type="shell" offset="0">music</rom>
+			<rom type="shell" offset="0">46</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">プロローグ:はじめに闇ありき</title>
+			<title code="0x01">暗闇にたたずむもの</title>
+			<title code="0x02">星々の誘い</title>
+			<title code="0x03">閃光をつらぬいて</title>
+			<title code="0x04">火を吹く銃口</title>
+			<title code="0x05">勝利</title>
+			<title code="0x06">潜入</title>
+			<title code="0x07">ドスネビアン・ブランデーに乾杯</title>
+			<title code="0x08">異星迷宮</title>
+			<title code="0x09">暗闇の侵略者</title>
+			<title code="0x0a">ミッションクリア～ひとときの休息</title>
+			<title code="0x0b">戦士達に捧ぐ</title>
+			<title code="0x0c">エピローグ:銀河よ永遠なれ</title>
+			<title code="0x27">ひとときの休息</title>
+			<title code="0x28">不明</title>
+			<title code="0x0d">SE A</title>
+			<title code="0x0e">SE B</title>
+			<title code="0x0f">SE C</title>
+			<title code="0x10">SE D</title>
+			<title code="0x11">SE E</title>
+			<title code="0x12">SE F</title>
+			<title code="0x13">SE G</title>
+			<title code="0x14">SE H</title>
+			<title code="0x15">SE I</title>
+			<title code="0x16">SE J</title>
+			<title code="0x17">SE K</title>
+			<title code="0x18">SE L</title>
+			<title code="0x19">SE M</title>
+			<title code="0x1a">SE N</title>
+			<title code="0x1b">SE O</title>
+			<title code="0x1c">SE P</title>
+			<title code="0x1d">SE Q</title>
+			<title code="0x1e">SE R</title>
+			<title code="0x1f">SE S</title>
+			<title code="0x20">SE T</title>
+			<title code="0x21">SE U</title>
+			<title code="0x22">SE V</title>
+			<title code="0x23">SE W</title>
+			<title code="0x24">SE X</title>
+			<title code="0x25">SE Y</title>
+			<title code="0x26">SE 停止</title>
+			<title code="0xff">フェードアウト</title>
+		</titlelist>
+	</game>
+</gamelist>

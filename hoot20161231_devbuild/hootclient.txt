@@ -1,0 +1,61 @@
+hootserv.dllにコマンドラインで指定した命令を送ります。
+
+
+hootclient override
+	hootのキーボード操作を禁止します。
+
+hootclient release
+	hootのキーボード操作を許可します。
+
+hootclient list <filename>
+	起動中のhootで演奏可能な曲データタイトルの一覧をテキストファイル<filename>に出力します。
+
+hootclient title="<タイトル文字列>" major="<ドライバのメジャータイプ>" sub="<ドライバのサブタイプ>"
+	指定タイトルのドライバーを起動します。起動後はhootclient.exeで外部から演奏可能です。
+	XMLで指定された文字列によって識別しています。
+
+	ex.)	hootclient title="[X68000] Knight Arms" major="Arsys Software" sub="SHARP X68000"
+
+	<game>
+		<name>[X68000] Knight Arms</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Arsys Software</driveralias>
+
+
+	driveraliasが指定されてないXMLの場合の指定方法は以下の通り。
+
+	ex.)	hootclient title="[PC-8801] The Scheme(OPNA)" major="pc88" sub="opna"
+
+	<game>
+		<name>[PC-8801] The Scheme(OPNA)</name>
+		<driver type="opna">pc88</driver>
+
+hootclient code <n>
+	サウンドコードn番を発行します。
+
+	ex.)	hootclient code 1
+
+hootclient stop
+	演奏を停止させます。
+
+hootclient file <filename>
+	Drag and Dropと同等です。
+
+hootclient volume <n>
+	音量を指定します。
+	チップ毎ではなく全体音量(xmlのtotal_mix)の値になります。
+	0x100で等倍になります。
+
+	ex.)	hootclient volume 0x180
+
+hootclient load <device,address,offset,length,filename>
+	(予約:対応済ドライバでのみ動作予定)
+	addressで指定された仮想マシンのメモリ番地に
+	ファイルfilenameの先頭からoffsetバイトシークした位置から
+	lengthバイトのデータを読み込みます。(deviceは予約、とりあえず0を指定)
+
+	ex.)	hootclient load 0,0x8000,0x100,0x2000,hoge.bin
+
+hootclient reset
+	(予約:対応済ドライバでのみ動作予定)
+	仮想マシンをリセットします。

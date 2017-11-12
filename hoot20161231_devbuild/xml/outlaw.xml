@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Outlaw -->
+	<game>
+		<name>[PC-9801] 性鬼 ～凌辱の仮面～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Outlaw</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="seiki_98">
+			<rom type="file" offset="-1">NA.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">LOGO.O</rom>
+			<rom type="file" offset="0x11">NO1.O</rom>
+			<rom type="file" offset="0x12">NO2.O</rom>
+			<rom type="file" offset="0x13">NO3.O</rom>
+			<rom type="file" offset="0x14">NO4.O</rom>
+			<rom type="file" offset="0x15">NO5.O</rom>
+			<rom type="file" offset="0x16">NO6.O</rom>
+			<rom type="file" offset="0x17">NO7.O</rom>
+			<rom type="file" offset="0x18">NO8.O</rom>
+			<rom type="file" offset="0x19">NO9.O</rom>
+			<rom type="file" offset="0x1A">NO10.O</rom>
+			<rom type="file" offset="0x1B">NO11.O</rom>
+			<rom type="file" offset="0x1C">NO12.O</rom>
+			<rom type="file" offset="0x1D">NO13.O</rom>
+			<rom type="file" offset="0x1E">NO98.O</rom>
+			<rom type="file" offset="0x1F">NO99.O</rom>
+			<rom type="file" offset="0x20">NOEX1.O</rom>
+			<rom type="file" offset="0x21">CHAIM.O</rom>
+			<rom type="file" offset="0x22">UPPER.O</rom>
+			<rom type="shell" offset="0">NA</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LOGO.O</title>
+			<title code="0x11">NO1.O</title>
+			<title code="0x12">NO2.O</title>
+			<title code="0x13">NO3.O</title>
+			<title code="0x14">NO4.O</title>
+			<title code="0x15">NO5.O</title>
+			<title code="0x16">NO6.O</title>
+			<title code="0x17">NO7.O</title>
+			<title code="0x18">NO8.O</title>
+			<title code="0x19">NO9.O</title>
+			<title code="0x1A">NO10.O</title>
+			<title code="0x1B">NO11.O</title>
+			<title code="0x1C">NO12.O</title>
+			<title code="0x1D">NO13.O</title>
+			<title code="0x1E">NO98.O</title>
+			<title code="0x1F">NO99.O</title>
+			<title code="0x20">NOEX1.O</title>
+			<title code="0x21">CHAIM.O</title>
+			<title code="0x22">UPPER.O</title>
+		</titlelist>
+	</game>
+</gamelist>

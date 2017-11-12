@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //ウィンキーソフト -->
+	<game>
+		<name>[X68000] OLTEUS2</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">ウィンキーソフト</driveralias>
+		<romlist archive="olt268snd">
+			<rom type="code">olt268snd.bin</rom>
+			<rom type="x" offset="0x8000">OLT_DRV2.X</rom>
+			<rom type="code" offset="0xc82a">MUSIC.DAT</rom>
+			<rom type="code" offset="0x20000">OLT.PCM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">STOP</title>
+			<title code="0x01">SOUND 01</title>
+			<title code="0x02">SOUND 02</title>
+			<title code="0x03">SOUND 03</title>
+			<title code="0x04">SOUND 04</title>
+			<title code="0x05">SOUND 05</title>
+			<title code="0x06">SOUND 06</title>
+			<title code="0x07">SOUND 07</title>
+			<title code="0x08">SOUND 08</title>
+			<title code="0x09">SOUND 09</title>
+			<title code="0x0a">SOUND 10</title>
+			<title code="0x0b">SOUND 11</title>
+			<title code="0x0c">SOUND 12</title>
+			<title code="0x0d">SOUND 13</title>
+			<title code="0x0e">SOUND 14</title>
+			<title code="0x0f">SOUND 15</title>
+			<title code="0x10">SOUND 16</title>
+			<title code="0x11">SOUND 17</title>
+			<title code="0x12">SOUND 18</title>
+			<title code="0x13">SOUND 19</title>
+			<title code="0x14">SOUND 20</title>
+			<title code="0x15">SOUND 21</title>
+			<title code="0x16">SOUND 22</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] LOST POWER</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">ウィンキーソフト</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="lostpwr">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">MUSIC</rom>
+			<rom type="code" offset="0x9000">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x01">ゲーム中BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 天地を喰らう －魔界三国志－</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">ウィンキーソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7000"/>
+			<option name="mdata_size" value="0x0500"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="tenchi">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7500">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS100</rom>
+			<rom type="bgm" offset="0x01">MUS101</rom>
+			<rom type="bgm" offset="0x02">MUS102</rom>
+			<rom type="bgm" offset="0x03">MUS103</rom>
+			<rom type="bgm" offset="0x04">MUS104</rom>
+			<rom type="bgm" offset="0x05">MUS105</rom>
+			<rom type="bgm" offset="0x06">MUS106</rom>
+			<rom type="bgm" offset="0x07">MUS107</rom>
+			<rom type="bgm" offset="0x08">MUS108</rom>
+			<rom type="bgm" offset="0x09">MUS200</rom>
+			<rom type="bgm" offset="0x0a">MUS201</rom>
+			<rom type="bgm" offset="0x0b">MUS202</rom>
+			<rom type="bgm" offset="0x0c">MUS203</rom>
+			<rom type="bgm" offset="0x0d">MUS204</rom>
+			<rom type="bgm" offset="0x0e">MUS205</rom>
+			<rom type="bgm" offset="0x0f">MUS206</rom>
+			<rom type="bgm" offset="0x10">MUS300</rom>
+			<rom type="bgm" offset="0x11">MUS301</rom>
+			<rom type="bgm" offset="0x12">MUS302</rom>
+			<rom type="bgm" offset="0x13">MUS303</rom>
+			<rom type="bgm" offset="0x14">MUS304</rom>
+			<rom type="bgm" offset="0x15">MUS305</rom>
+			<rom type="bgm" offset="0x16">MUS306</rom>
+			<rom type="bgm" offset="0x17">MUS307</rom>
+			<rom type="bgm" offset="0x18">MUS308</rom>
+			<rom type="bgm" offset="0x19">MUS309</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x41000000">MUS100</title>
+			<title code="0x41000001">MUS101</title>
+			<title code="0x41000002">MUS102</title>
+			<title code="0x41000003">MUS103</title>
+		<!--	<title code="0x04000003">EFFECT 04</title> -->
+		<!--	<title code="0x05000003">EFFECT 05</title> -->
+			<title code="0x41000004">MUS104</title>
+		<!--	<title code="0x03000004">EFFECT 03</title> -->
+		<!--	<title code="0x04000004">EFFECT 04</title> -->
+		<!--	<title code="0x05000004">EFFECT 05</title> -->
+			<title code="0x41000005">MUS105</title>
+			<title code="0x41000006">MUS106</title>
+		<!--	<title code="0x03000006">EFFECT 03</title> -->
+		<!--	<title code="0x04000006">EFFECT 04</title> -->
+			<title code="0x41000007">MUS107</title>
+		<!--	<title code="0x03000007">EFFECT 03</title> -->
+		<!--	<title code="0x04000007">EFFECT 04</title> -->
+			<title code="0x41000008">MUS108</title>
+		<!--	<title code="0x03000008">EFFECT 03</title> -->
+			<title code="0x41000009">MUS200</title>
+		<!--	<title code="0x0a000009">EFFECT 0A</title> -->
+			<title code="0x4100000a">MUS201</title>
+		<!--	<title code="0x0100000a">EFFECT 01</title> -->
+		<!--	<title code="0x0200000a">EFFECT 02</title> -->
+		<!--	<title code="0x0500000a">EFFECT 05</title> -->
+		<!--	<title code="0x0a00000a">EFFECT 0A</title> -->
+			<title code="0x4100000b">MUS202</title>
+		<!--	<title code="0x0100000b">EFFECT 01</title> -->
+		<!--	<title code="0x0200000b">EFFECT 02</title> -->
+		<!--	<title code="0x0300000b">EFFECT 03</title> -->
+		<!--	<title code="0x0400000b">EFFECT 04</title> -->
+		<!--	<title code="0x0a00000b">EFFECT 0A</title> -->
+			<title code="0x4100000c">MUS203</title>
+		<!--	<title code="0x0200000c">EFFECT 02</title> -->
+		<!--	<title code="0x0300000c">EFFECT 03</title> -->
+		<!--	<title code="0x0a00000c">EFFECT 0A</title> -->
+			<title code="0x4100000d">MUS204</title>
+			<title code="0x4100000e">MUS205</title>
+			<title code="0x4100000f">MUS206</title>
+			<title code="0x41000010">MUS300</title>
+			<title code="0x41000011">MUS301</title>
+			<title code="0x41000012">MUS302</title>
+			<title code="0x41000013">MUS303</title>
+		<!--	<title code="0x04000013">EFFECT 04</title> -->
+		<!--	<title code="0x05000013">EFFECT 05</title> -->
+			<title code="0x41000014">MUS304</title>
+		<!--	<title code="0x03000014">EFFECT 03</title> -->
+		<!--	<title code="0x04000014">EFFECT 04</title> -->
+		<!--	<title code="0x05000014">EFFECT 05</title> -->
+			<title code="0x41000015">MUS305</title>
+			<title code="0x41000016">MUS306</title>
+		<!--	<title code="0x03000016">EFFECT 03</title> -->
+		<!--	<title code="0x04000016">EFFECT 04</title> -->
+			<title code="0x41000017">MUS307</title>
+		<!--	<title code="0x03000017">EFFECT 03</title> -->
+		<!--	<title code="0x04000017">EFFECT 04</title> -->
+			<title code="0x41000018">MUS308</title>
+		<!--	<title code="0x03000018">EFFECT 03</title> -->
+			<title code="0x41000019">MUS309</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88VA] OLTEUS (initial version)(OPNA)</name>
+		<driver type="opna">pc88vados</driver>
+		<driveralias type="NEC PC-88VA">ウィンキーソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="olteus0_va">
+			<rom type="file" offset="-1">olteus0.com</rom>
+			<rom type="file" offset="-1">MAP.EXE</rom>
+			<rom type="file" offset="0x05">PCM.DAT</rom>
+			<rom type="file" offset="-1">NEWBOS.FMS</rom>
+			<rom type="file" offset="-1">NORMAL.FMS</rom>
+			<rom type="file" offset="-1">PRISET.FMS</rom>
+			<rom type="file" offset="-1">MUSIC0F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC0F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC1F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC1F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC2F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC2F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC3F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC3F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC4F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC4F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC5F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC5F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC6F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC6F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC7F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC7F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC8F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC8F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC9F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC9F.MUS</rom>
+			<rom type="file" offset="-1">MUSICAF.MTB</rom>
+			<rom type="file" offset="-1">MUSICAF.MUS</rom>
+			<rom type="file" offset="-1">MUSICBF.MTB</rom>
+			<rom type="file" offset="-1">MUSICBF.MUS</rom>
+			<rom type="file" offset="-1">MUSICCF.MTB</rom>
+			<rom type="file" offset="-1">MUSICCF.MUS</rom>
+			<rom type="file" offset="-1">MUSICDF.MTB</rom>
+			<rom type="file" offset="-1">MUSICDF.MUS</rom>
+			<rom type="file" offset="-1">MUSICEF.MTB</rom>
+			<rom type="file" offset="-1">MUSICEF.MUS</rom>
+			<rom type="shell" offset="0">olteus0</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">MUSIC 00</title>
+			<title code="0x0001">MUSIC 01</title>
+			<title code="0x0002">MUSIC 02</title>
+			<title code="0x0003">MUSIC 03</title>
+			<title code="0x0004">MUSIC 04</title>
+			<title code="0x0005">MUSIC 05</title>
+			<title code="0x0006">MUSIC 06</title>
+			<title code="0x0007">MUSIC 07</title>
+			<title code="0x0008">MUSIC 08</title>
+			<title code="0x0009">MUSIC 09</title>
+			<title code="0x000a">MUSIC 0A</title>
+			<title code="0x000b">MUSIC 0B</title>
+			<title code="0x000c">MUSIC 0C</title>
+			<title code="0x000d">MUSIC 0D</title>
+			<title code="0x000e">MUSIC 0E</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88VA] OLTEUS (initial version)(OPN)</name>
+		<driver type="opn">pc88vados</driver>
+		<driveralias type="NEC PC-88VA">ウィンキーソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="olteus0_va">
+			<rom type="file" offset="-1">olteus0.com</rom>
+			<rom type="file" offset="-1">MAP.EXE</rom>
+			<rom type="file" offset="-1">NEWBOS.FMS</rom>
+			<rom type="file" offset="-1">NORMAL.FMS</rom>
+			<rom type="file" offset="-1">PRISET.FMS</rom>
+			<rom type="file" offset="-1">MUSIC0P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC0P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC1P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC1P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC2P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC2P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC3P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC3P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC4P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC4P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC5P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC5P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC6P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC6P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC7P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC7P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC8P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC8P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC9P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC9P.MUS</rom>
+			<rom type="file" offset="-1">MUSICAP.MTB</rom>
+			<rom type="file" offset="-1">MUSICAP.MUS</rom>
+			<rom type="file" offset="-1">MUSICBP.MTB</rom>
+			<rom type="file" offset="-1">MUSICBP.MUS</rom>
+			<rom type="file" offset="-1">MUSICCP.MTB</rom>
+			<rom type="file" offset="-1">MUSICCP.MUS</rom>
+			<rom type="file" offset="-1">MUSICDP.MTB</rom>
+			<rom type="file" offset="-1">MUSICDP.MUS</rom>
+			<rom type="file" offset="-1">MUSICEP.MTB</rom>
+			<rom type="file" offset="-1">MUSICEP.MUS</rom>
+			<rom type="shell" offset="0">olteus0</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">MUSIC 00</title>
+			<title code="0x0001">MUSIC 01</title>
+			<title code="0x0002">MUSIC 02</title>
+			<title code="0x0003">MUSIC 03</title>
+			<title code="0x0004">MUSIC 04</title>
+			<title code="0x0005">MUSIC 05</title>
+			<title code="0x0006">MUSIC 06</title>
+			<title code="0x0007">MUSIC 07</title>
+			<title code="0x0008">MUSIC 08</title>
+			<title code="0x0009">MUSIC 09</title>
+			<title code="0x000a">MUSIC 0A</title>
+			<title code="0x000b">MUSIC 0B</title>
+			<title code="0x000c">MUSIC 0C</title>
+			<title code="0x000d">MUSIC 0D</title>
+			<title code="0x000e">MUSIC 0E</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88VA] OLTEUS (bugfix version)(OPNA)</name>
+		<driver type="opna">pc88vados</driver>
+		<driveralias type="NEC PC-88VA">ウィンキーソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="olteus_va">
+			<rom type="file" offset="-1">olteus.com</rom>
+			<rom type="file" offset="-1">MAP.EXE</rom>
+			<rom type="file" offset="-1">MUSIC.EXE</rom>
+			<rom type="file" offset="-1">PCM2.P01</rom>
+			<rom type="file" offset="-1">PCM2.P02</rom>
+			<rom type="file" offset="-1">PCM2.P03</rom>
+			<rom type="file" offset="-1">PCM2.P04</rom>
+			<rom type="file" offset="-1">PCM2.P05</rom>
+			<rom type="file" offset="-1">PCM2.P06</rom>
+			<rom type="file" offset="-1">NEWBOS.FMS</rom>
+			<rom type="file" offset="-1">NORMAL.FMS</rom>
+			<rom type="file" offset="-1">PRISET.FMS</rom>
+			<rom type="file" offset="-1">MUSIC0F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC0F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC1F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC1F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC2F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC2F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC3F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC3F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC4F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC4F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC5F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC5F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC6F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC6F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC7F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC7F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC8F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC8F.MUS</rom>
+			<rom type="file" offset="-1">MUSIC9F.MTB</rom>
+			<rom type="file" offset="-1">MUSIC9F.MUS</rom>
+			<rom type="file" offset="-1">MUSICAF.MTB</rom>
+			<rom type="file" offset="-1">MUSICAF.MUS</rom>
+			<rom type="file" offset="-1">MUSICBF.MTB</rom>
+			<rom type="file" offset="-1">MUSICBF.MUS</rom>
+			<rom type="file" offset="-1">MUSICCF.MTB</rom>
+			<rom type="file" offset="-1">MUSICCF.MUS</rom>
+			<rom type="file" offset="-1">MUSICDF.MTB</rom>
+			<rom type="file" offset="-1">MUSICDF.MUS</rom>
+			<rom type="file" offset="-1">MUSICEF.MTB</rom>
+			<rom type="file" offset="-1">MUSICEF.MUS</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">olteus</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">MUSIC 00</title>
+			<title code="0x0001">MUSIC 01</title>
+			<title code="0x0002">MUSIC 02</title>
+			<title code="0x0003">MUSIC 03</title>
+			<title code="0x0004">MUSIC 04</title>
+			<title code="0x0005">MUSIC 05</title>
+			<title code="0x0006">MUSIC 06</title>
+			<title code="0x0007">MUSIC 07</title>
+			<title code="0x0008">MUSIC 08</title>
+			<title code="0x0009">MUSIC 09</title>
+			<title code="0x000a">MUSIC 0A</title>
+			<title code="0x000b">MUSIC 0B</title>
+			<title code="0x000c">MUSIC 0C</title>
+			<title code="0x000d">MUSIC 0D</title>
+			<title code="0x000e">MUSIC 0E</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88VA] OLTEUS (bugfix version)(OPN)</name>
+		<driver type="opn">pc88vados</driver>
+		<driveralias type="NEC PC-88VA">ウィンキーソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="olteus_va">
+			<rom type="file" offset="-1">olteus.com</rom>
+			<rom type="file" offset="-1">MAP.EXE</rom>
+			<rom type="file" offset="-1">MUSIC.EXE</rom>
+			<rom type="file" offset="-1">NEWBOS.FMS</rom>
+			<rom type="file" offset="-1">NORMAL.FMS</rom>
+			<rom type="file" offset="-1">PRISET.FMS</rom>
+			<rom type="file" offset="-1">MUSIC0P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC0P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC1P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC1P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC2P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC2P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC3P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC3P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC4P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC4P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC5P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC5P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC6P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC6P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC7P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC7P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC8P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC8P.MUS</rom>
+			<rom type="file" offset="-1">MUSIC9P.MTB</rom>
+			<rom type="file" offset="-1">MUSIC9P.MUS</rom>
+			<rom type="file" offset="-1">MUSICAP.MTB</rom>
+			<rom type="file" offset="-1">MUSICAP.MUS</rom>
+			<rom type="file" offset="-1">MUSICBP.MTB</rom>
+			<rom type="file" offset="-1">MUSICBP.MUS</rom>
+			<rom type="file" offset="-1">MUSICCP.MTB</rom>
+			<rom type="file" offset="-1">MUSICCP.MUS</rom>
+			<rom type="file" offset="-1">MUSICDP.MTB</rom>
+			<rom type="file" offset="-1">MUSICDP.MUS</rom>
+			<rom type="file" offset="-1">MUSICEP.MTB</rom>
+			<rom type="file" offset="-1">MUSICEP.MUS</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">olteus</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">MUSIC 00</title>
+			<title code="0x0001">MUSIC 01</title>
+			<title code="0x0002">MUSIC 02</title>
+			<title code="0x0003">MUSIC 03</title>
+			<title code="0x0004">MUSIC 04</title>
+			<title code="0x0005">MUSIC 05</title>
+			<title code="0x0006">MUSIC 06</title>
+			<title code="0x0007">MUSIC 07</title>
+			<title code="0x0008">MUSIC 08</title>
+			<title code="0x0009">MUSIC 09</title>
+			<title code="0x000a">MUSIC 0A</title>
+			<title code="0x000b">MUSIC 0B</title>
+			<title code="0x000c">MUSIC 0C</title>
+			<title code="0x000d">MUSIC 0D</title>
+			<title code="0x000e">MUSIC 0E</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] アメリカンサクセス(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">ウィンキーソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7000"/>
+			<option name="mdata_size" value="0x0300"/>
+			<option name="mfile_size" value="0x0300"/>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="asuccess_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x74C0">DRIVER.BIN</rom>
+			<rom type="code" offset="0x8000">DRIVER2.BIN</rom>
+			<rom type="bgm"  offset="0x00">MUS0.BIN</rom>
+			<rom type="bgm"  offset="0x01">MUS1.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">タイトル</title>
+			<title code="0x00">メインBGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] アメリカンサクセス(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">ウィンキーソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7000"/>
+			<option name="mdata_size" value="0x0300"/>
+			<option name="mfile_size" value="0x0300"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="asuccess_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x74C0">DRIVER.BIN</rom>
+			<rom type="code" offset="0x8000">DRIVER2.BIN</rom>
+			<rom type="bgm"  offset="0x00">MUS0.BIN</rom>
+			<rom type="bgm"  offset="0x01">MUS1.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">タイトル</title>
+			<title code="0x00">メインBGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] あかんべドラゴン(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">ウィンキーソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+			<option name="mdata_size" value="0x1800"/>
+			<option name="mfile_size" value="0x1800"/>
+			<option name="init_pc"    value="0x08500"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="akbdragn_msx">
+			<rom type="code" offset="0x0100">AKANBE.COM</rom>
+			<rom type="code" offset="0x8500">patch</rom>
+			<rom type="code" offset="0xb800">SOUND.SUB</rom>
+			<rom type="bgm"  offset="0x00">BGM00.GID</rom>
+			<rom type="bgm"  offset="0x01">BGM01.GID</rom>
+			<rom type="bgm"  offset="0x02">BGM02.GID</rom>
+			<rom type="bgm"  offset="0x03">BGM03.GID</rom>
+			<rom type="bgm"  offset="0x04">BGM04.GID</rom>
+			<rom type="bgm"  offset="0x05">BGM05.GID</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x000" max="0x001" extcode="1">BGM 0x%03x</range>
+			<range min="0x100" max="0x107" extcode="1">BGM 0x%03x</range>
+			<range min="0x109" max="0x10c" extcode="1">BGM 0x%03x</range>
+			<range min="0x200" max="0x207" extcode="1">BGM 0x%03x</range>
+			<range min="0x209" max="0x20c" extcode="1">BGM 0x%03x</range>
+			<range min="0x300" max="0x307" extcode="1">BGM 0x%03x</range>
+			<range min="0x309" max="0x30c" extcode="1">BGM 0x%03x</range>
+			<range min="0x400" max="0x407" extcode="1">BGM 0x%03x</range>
+			<range min="0x409" max="0x40c" extcode="1">BGM 0x%03x</range>
+			<range min="0x500" max="0x507" extcode="1">BGM 0x%03x</range>
+			<range min="0x509" max="0x50c" extcode="1">BGM 0x%03x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] あかんべドラゴン(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">ウィンキーソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+			<option name="mdata_size" value="0x1800"/>
+			<option name="mfile_size" value="0x1800"/>
+			<option name="init_pc"    value="0x08500"/>
+		</options>
+		<romlist archive="akbdragn_msx">
+			<rom type="code" offset="0x0100">AKANBE.COM</rom>
+			<rom type="code" offset="0x8500">patch</rom>
+			<rom type="code" offset="0xb800">SOUND.SUB</rom>
+			<rom type="bgm"  offset="0x00">BGM00.GID</rom>
+			<rom type="bgm"  offset="0x01">BGM01.GID</rom>
+			<rom type="bgm"  offset="0x02">BGM02.GID</rom>
+			<rom type="bgm"  offset="0x03">BGM03.GID</rom>
+			<rom type="bgm"  offset="0x04">BGM04.GID</rom>
+			<rom type="bgm"  offset="0x05">BGM05.GID</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x000" max="0x001" extcode="1">BGM 0x%03x</range>
+			<range min="0x100" max="0x107" extcode="1">BGM 0x%03x</range>
+			<range min="0x109" max="0x10c" extcode="1">BGM 0x%03x</range>
+			<range min="0x200" max="0x207" extcode="1">BGM 0x%03x</range>
+			<range min="0x209" max="0x20c" extcode="1">BGM 0x%03x</range>
+			<range min="0x300" max="0x307" extcode="1">BGM 0x%03x</range>
+			<range min="0x309" max="0x30c" extcode="1">BGM 0x%03x</range>
+			<range min="0x400" max="0x407" extcode="1">BGM 0x%03x</range>
+			<range min="0x409" max="0x40c" extcode="1">BGM 0x%03x</range>
+			<range min="0x500" max="0x507" extcode="1">BGM 0x%03x</range>
+			<range min="0x509" max="0x50c" extcode="1">BGM 0x%03x</range>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //ムービック -->
+	<game>
+		<name>[PC-9801] 鉄甲旗艦アトラゴン</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ムービック</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="atragon_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">ATEFC.EFC</rom>
+			<rom type="file" offset="0x10">BR01.M</rom>
+			<rom type="file" offset="0x11">BR02.M</rom>
+			<rom type="file" offset="0x12">BR03.M</rom>
+			<rom type="file" offset="0x13">BR04.M</rom>
+			<rom type="file" offset="0x14">BR05.M</rom>
+			<rom type="file" offset="0x15">BR06.M</rom>
+			<rom type="file" offset="0x16">BR07.M</rom>
+			<rom type="file" offset="0x17">BR08.M</rom>
+			<rom type="file" offset="0x18">BR09.M</rom>
+			<rom type="file" offset="0x19">BR10.M</rom>
+			<rom type="file" offset="0x1a">BR11.M</rom>
+			<rom type="file" offset="0x1b">BR12.M</rom>
+			<rom type="file" offset="0x1c">BR13.M</rom>
+			<rom type="file" offset="0x1d">BR14.M</rom>
+			<rom type="file" offset="0x1e">BR15.M</rom>
+			<rom type="file" offset="0x1f">MU01.M</rom>
+			<rom type="file" offset="0x20">MU02.M</rom>
+			<rom type="file" offset="0x21">MU03.M</rom>
+			<rom type="file" offset="0x22">MU04.M</rom>
+			<rom type="file" offset="0x23">MU05.M</rom>
+			<rom type="file" offset="0x24">MU06.M</rom>
+			<rom type="file" offset="0x25">MU07.M</rom>
+			<rom type="file" offset="0x26">MU08.M</rom>
+			<rom type="file" offset="0x27">MU09.M</rom>
+			<rom type="file" offset="0x28">MU10.M</rom>
+			<rom type="file" offset="0x29">MU11.M</rom>
+			<rom type="file" offset="0x2a">MU12.M</rom>
+			<rom type="file" offset="0x2b">MU13.M</rom>
+			<rom type="file" offset="0x2c">MU14.M</rom>
+			<rom type="file" offset="0x2d">MU15.M</rom>
+			<rom type="file" offset="0x2e">MU16.M</rom>
+			<rom type="shell" offset="0">PMD # /C</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BR01.M    : 海賊                                        / Ryu Umemoto</title>
+			<title code="0x11">BR02.M    : 怪獣                                        / Ryu Umemoto</title>
+			<title code="0x12">BR03.M    : UFO                                         / Ryu Umemoto</title>
+			<title code="0x13">BR04.M    : ピンチ1                                     / Ryu Umemoto</title>
+			<title code="0x14">BR05.M    : ピンチ2                                     / Ryu Umemoto</title>
+			<title code="0x15">BR06.M    : ピンチ3                                     / Ryu Umemoto</title>
+			<title code="0x16">BR07.M    : 発見 : 良いもの                             / Ryu Umemoto</title>
+			<title code="0x17">BR08.M    : 発見 : 悪い物                               / Ryu Umemoto</title>
+			<title code="0x18">BR09.M    : 志気がアップ!                               / Ryu Umemoto</title>
+			<title code="0x19">BR10.M    : 志気がダウン!                               / Ryu Umemoto</title>
+			<title code="0x1a">BR11.M    : 敵艦降伏                                    / Ryu Umemoto</title>
+			<title code="0x1b">BR12.M    : 故障発生                                    / Ryu Umemoto</title>
+			<title code="0x1c">BR13.M    : 弾薬庫誘爆 / 大ダメージ発生                 / Ryu Umemoto</title>
+			<title code="0x1d">BR14.M    : 救援到着                                    / Ryu Umemoto</title>
+			<title code="0x1e">BR15.M    : 勝利のふぁんふぁあれ(コナミ炒め)            / Ryu Umemoto</title>
+			<title code="0x1f">MU01.M    : 戦闘 : 通常                                 / M.Kajihara</title>
+			<title code="0x20">MU02.M    : 戦闘 : VSギラドース戦 / 帝国のテーマ        / M.Kajihara</title>
+			<title code="0x21">MU03.M    : 戦闘 : VS黄金艦船戦 / タミアラのテーマ      / M.Kajihara</title>
+			<title code="0x22">MU04.M    : 港モード : 味方の町 / やすらぎ・安心        / M.Kajihara</title>
+			<title code="0x23">MU05.M    : 港モード : 敵の町 / 疑惑                    / M.Kajihara</title>
+			<title code="0x24">MU06.M    : 海上移動 : 通常海域 / アトラゴンのテーマ    / M.Kajihara</title>
+			<title code="0x25">MU07.M    : 海上移動 : 危険海域 / 不安                  / M.Kajihara</title>
+			<title code="0x26">MU08.M    : 艦内モード                                  / M.Kajihara</title>
+			<title code="0x27">MU09.M    : 戦い終わって～束の間の平和                  / HUMI</title>
+			<title code="0x28">MU10.M    : アトラゴン Arranged from Main theme.        / KAJA / Ryu Umemoto</title>
+			<title code="0x29">MU11.M    : 出港式                                      / HUMI</title>
+			<title code="0x2a">MU12.M    : 迫る危機                                    / Ryu Umemoto</title>
+			<title code="0x2b">MU13.M    : シャンカ族                                  / M.Kajihara</title>
+			<title code="0x2c">MU14.M    : ミヨイ神殿                                  / Ryu Umemoto</title>
+			<title code="0x2d">MU15.M    : エンディング                                / HUMI</title>
+			<title code="0x2e">MU16.M    : アトラゴン16                                / 荒川憲一</title>
+			<range min="0x0801" max="0x0810" extcode="1">ATEFC.EFC : %2X</range>
+		</titlelist>
+	</game>
+</gamelist>

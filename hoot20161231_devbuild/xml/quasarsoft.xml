@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+
+	<!-- //QUASAR SOFT -->
+	<game>
+		<name>[PC-8801] ASHE</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">QUASAR SOFT</driveralias>
+		<romlist archive="ashe">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7800">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11000009">MUS09 : ロゴ～オープニング1</title>
+			<title code="0x10000000">MUS00 : オープニング2～オープニング3</title>
+			<title code="0x10000001">MUS01 : オープニング2～オープニング3(別アレンジ:未使用)</title>
+			<title code="0x1100000a">MUS10 : 討魔隊のテーマ</title>
+			<title code="0x11000002">MUS02 : メインBGM1</title>
+			<title code="0x11000005">MUS05 : メインBGM2</title>
+			<title code="0x11000006">MUS06 : 奈落の滝</title>
+			<title code="0x11000007">MUS07 : ガブロンの巣</title>
+			<title code="0x11000008">MUS08 : ユキコのテーマ</title>
+			<title code="0x11000004">MUS04 : ラストダンジョン～ラスボス</title>
+			<title code="0x1100000b">MUS11 : エンディング1～エンディング2</title>
+			<title code="0x11000003">MUS03 : ゲームオーバー</title>
+			<title code="0x0000001f">演奏停止</title>
+			<title code="0x00000020">EFFECT #00</title>
+			<title code="0x00000021">EFFECT #01</title>
+			<title code="0x00000022">EFFECT #02</title>
+			<title code="0x00000023">EFFECT #03</title>
+			<title code="0x00000024">EFFECT #04</title>
+			<title code="0x00000025">EFFECT #05</title>
+			<title code="0x00000026">EFFECT #06</title>
+			<title code="0x00000027">EFFECT #07</title>
+			<title code="0x00000028">EFFECT #08</title>
+			<title code="0x00000029">EFFECT #09</title>
+			<title code="0x0000002a">EFFECT #10</title>
+			<title code="0x0000002b">EFFECT #11</title>
+			<title code="0x0000002c">EFFECT #12</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] Legend</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">QUASAR SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa900"/>
+		</options>
+		<romlist archive="legend88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9330">legend2</rom>
+			<rom type="bgm" offset="0x00">cry</rom>
+			<rom type="bgm" offset="0x01">ooomer</rom>
+			<rom type="bgm" offset="0x02">meme22</rom>
+			<rom type="bgm" offset="0x03">rock</rom>
+			<rom type="bgm" offset="0x04">legend1</rom>
+			<rom type="bgm" offset="0x05">bach</rom>
+			<rom type="bgm" offset="0x06">gogo</rom>
+			<rom type="bgm" offset="0x07">runba</rom>
+			<rom type="bgm" offset="0x08">pol</rom>
+			<rom type="bgm" offset="0x09">baba</rom>
+			<rom type="bgm" offset="0x0a">final</rom>
+			<rom type="bgm" offset="0x0b">didi</rom>
+			<rom type="bgm" offset="0x0c">heart</rom>
+			<rom type="bgm" offset="0x0d">bl</rom>
+			<rom type="bgm" offset="0x0e">samb2</rom>
+			<rom type="bgm" offset="0x0f">openn</rom>
+			<rom type="bgm" offset="0x10">big</rom>
+			<rom type="bgm" offset="0x11">koz</rom>
+			<rom type="bgm" offset="0x12">leoo1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">cry</title>
+			<title code="0x01">ooomer</title>
+			<title code="0x02">meme22</title>
+			<title code="0x03">rock</title>
+			<title code="0x04">legend</title>
+			<title code="0x05">bach</title>
+			<title code="0x06">gogo</title>
+			<title code="0x07">runba</title>
+			<title code="0x08">pol</title>
+			<title code="0x09">baba</title>
+			<title code="0x0a">final</title>
+			<title code="0x0b">didi</title>
+			<title code="0x0c">heart</title>
+			<title code="0x0d">bl</title>
+			<title code="0x0e">samb2</title>
+			<title code="0x0f">openn</title>
+			<title code="0x10">big</title>
+			<title code="0x11">koz</title>
+			<title code="0x12">leoo1</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] どろろ(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">QUASAR SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8c00"/>
+			<option name="use_rtc"    value="0x01"/>
+		</options>
+		<romlist archive="dororo">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7800">DRIVER</rom>
+			<rom type="bgm"  offset="0x00">MA100</rom>
+			<rom type="bgm"  offset="0x01">MA101</rom>
+			<rom type="bgm"  offset="0x02">MA102</rom>
+			<rom type="bgm"  offset="0x03">MA103</rom>
+			<rom type="bgm"  offset="0x04">MA104</rom>
+			<rom type="bgm"  offset="0x05">MA105</rom>
+			<rom type="bgm"  offset="0x06">MA106</rom>
+			<rom type="bgm"  offset="0x07">MA107</rom>
+			<rom type="bgm"  offset="0x08">MB107</rom>
+			<rom type="bgm"  offset="0x09">MA200</rom>
+			<rom type="bgm"  offset="0x0a">MA300</rom>
+			<rom type="bgm"  offset="0x0b">MA301</rom>
+			<rom type="bgm"  offset="0x0c">MA302</rom>
+			<rom type="bgm"  offset="0x0d">MA400</rom>
+			<rom type="bgm"  offset="0x0e">MA401</rom>
+			<rom type="bgm"  offset="0x0f">MA402</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MA100 : オープニング ～地獄堂～ ／ 夜叉王</title>
+			<title code="0x07">MA107 : オープニング ～タイトル～ ／ 戦闘(クヌギ・水晶鬼・どどめ)</title>
+			<title code="0x08">MB107 : 再会 ／ エンディングロール</title>
+			<title code="0x04">MA104 : 探索</title>
+			<title code="0x02">MA102 : 戦闘 (野盗)</title>
+			<title code="0x06">MA106 : 戦闘 (ミンツチカムイ・おどろび)</title>
+			<title code="0x09">MA200 : おどろび出現</title>
+			<title code="0x05">MA105 : うま</title>
+			<title code="0x0c">MA302 : 戦闘 (役人)</title>
+			<title code="0x0a">MA300 : 戦闘 (ハチヤドリ)</title>
+			<title code="0x0b">MA301 : 砦への抜け穴</title>
+			<title code="0x0e">MA401 : 色ふすまの部屋</title>
+			<title code="0x01">MA101 : 季節の部屋 ～ 春の間・夏の間・冬の間・秋の間</title>
+			<title code="0x0d">MA400 : 戦闘 (夜叉王)</title>
+			<title code="0x03">MA103 : ゲームオーバー</title>
+			<title code="0x0f">MA402 : エンディング</title>
+			<title code="0x81">EFC01 : 効果音#01</title>
+			<title code="0x82">EFC02 : 効果音#02</title>
+			<title code="0x83">EFC03 : 効果音#03</title>
+			<title code="0x84">EFC04 : 効果音#04</title>
+			<title code="0x85">EFC05 : 効果音#05</title>
+			<title code="0x86">EFC06 : 効果音#06</title>
+			<title code="0x87">EFC07 : 効果音#07</title>
+			<title code="0x88">EFC08 : 効果音#08</title>
+			<title code="0x89">EFC09 : 効果音#09</title>
+			<title code="0x8a">EFC10 : 効果音#10</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] どろろ(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">QUASAR SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8c00"/>
+			<option name="use_rtc"    value="0x01"/>
+		</options>
+		<romlist archive="dororo">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7800">DRIVER</rom>
+			<rom type="bgm"  offset="0x00">MB100</rom>
+			<rom type="bgm"  offset="0x01">MB101</rom>
+			<rom type="bgm"  offset="0x02">MB102</rom>
+			<rom type="bgm"  offset="0x03">MB103</rom>
+			<rom type="bgm"  offset="0x04">MB104</rom>
+			<rom type="bgm"  offset="0x05">MB105</rom>
+			<rom type="bgm"  offset="0x06">MB106</rom>
+			<rom type="bgm"  offset="0x07">MB107</rom>
+			<rom type="bgm"  offset="0x08">MB108</rom>
+			<rom type="bgm"  offset="0x09">MB200</rom>
+			<rom type="bgm"  offset="0x0a">MB300</rom>
+			<rom type="bgm"  offset="0x0b">MB301</rom>
+			<rom type="bgm"  offset="0x0c">MB302</rom>
+			<rom type="bgm"  offset="0x0d">MB400</rom>
+			<rom type="bgm"  offset="0x0e">MB401</rom>
+			<rom type="bgm"  offset="0x0f">MB402</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">MB101 : オープニング ～地獄堂～ ／ 夜叉王</title>
+			<title code="0x03">MB103 : オープニング ～タイトル～ ／ 戦闘(クヌギ・水晶鬼・どどめ)</title>
+			<title code="0x07">MB107 : 再会 ／ エンディングロール</title>
+			<title code="0x06">MB106 : 探索</title>
+			<title code="0x05">MB105 : 戦闘(野盗)</title>
+			<title code="0x02">MB102 : 戦闘 (ミンツチカムイ・おどろび)</title>
+			<title code="0x09">MB200 : おどろび出現</title>
+			<title code="0x00">MB100 : うま</title>
+			<title code="0x0c">MB302 : 戦闘 (役人)</title>
+			<title code="0x0b">MB301 : 戦闘 (ハチヤドリ)</title>
+			<title code="0x0a">MB300 : 砦への抜け穴</title>
+			<title code="0x0e">MB401 : 色ふすまの部屋</title>
+			<title code="0x04">MB104 : 季節の部屋 ～ 春の間・夏の間・冬の間・秋の間</title>
+			<title code="0x0d">MB400 : 戦闘 (夜叉王)</title>
+			<title code="0x08">MB108 : ゲームオーバー</title>
+			<title code="0x0f">MB402 : エンディング</title>
+			<title code="0x81">EFC01 : 効果音#01</title>
+			<title code="0x82">EFC02 : 効果音#02</title>
+			<title code="0x83">EFC03 : 効果音#03</title>
+			<title code="0x84">EFC04 : 効果音#04</title>
+			<title code="0x85">EFC05 : 効果音#05</title>
+			<title code="0x86">EFC06 : 効果音#06</title>
+			<title code="0x87">EFC07 : 効果音#07</title>
+			<title code="0x88">EFC08 : 効果音#08</title>
+			<title code="0x89">EFC09 : 効果音#09</title>
+			<title code="0x8a">EFC10 : 効果音#10</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Legend(OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="SHARP X1">QUASAR SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf9a0"/>
+			<option name="mdata_size" value="0x0600"/>
+		</options>
+		<romlist archive="x1legend">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xe800">BIOS</rom>
+			<rom type="code" offset="0xf400">81</rom>
+			<rom type="bgm" offset="0x00">82</rom>
+			<rom type="bgm" offset="0x01">90</rom>
+			<rom type="bgm" offset="0x02">92</rom>
+			<rom type="bgm" offset="0x03">99</rom>
+			<rom type="bgm" offset="0x04">9C</rom>
+			<rom type="bgm" offset="0x05">A3</rom>
+			<rom type="bgm" offset="0x06">A5</rom>
+			<rom type="bgm" offset="0x07">AC</rom>
+			<rom type="bgm" offset="0x08">AE</rom>
+			<rom type="bgm" offset="0x09">B6</rom>
+			<rom type="bgm" offset="0x0a">B9</rom>
+			<rom type="bgm" offset="0x0b">BA</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">82 LEOO1</title>
+			<title code="0x00000001">90 DIDI</title>
+			<title code="0x00000002">92 MEME11</title>
+			<title code="0x00000003">99 POL</title>
+			<title code="0x00000004">9C BIG1</title>
+			<title code="0x00000005">A3 BABA</title>
+			<title code="0x00000006">A5 BACH</title>
+			<title code="0x00000007">AC BL</title>
+			<title code="0x00000008">AE BIG2</title>
+			<title code="0x00000009">B6 HEART</title>
+			<title code="0x0000000a">B9 OPENN</title>
+			<title code="0x0000000b">BA CRY</title>
+		<!--	<title code="0x000000ff">EFFECT #00</title> -->
+			<title code="0x010000ff">EFFECT #01</title>
+			<title code="0x020000ff">EFFECT #02</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Legend(PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">QUASAR SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf9a0"/>
+			<option name="mdata_size" value="0x0600"/>
+		</options>
+		<romlist archive="x1legend">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xe800">BIOS</rom>
+			<rom type="code" offset="0xf400">80</rom>
+			<rom type="bgm" offset="0x00">82</rom>
+			<rom type="bgm" offset="0x01">90</rom>
+			<rom type="bgm" offset="0x02">92</rom>
+			<rom type="bgm" offset="0x03">99</rom>
+			<rom type="bgm" offset="0x04">9C</rom>
+			<rom type="bgm" offset="0x05">A3</rom>
+			<rom type="bgm" offset="0x06">A5</rom>
+			<rom type="bgm" offset="0x07">AC</rom>
+			<rom type="bgm" offset="0x08">AE</rom>
+			<rom type="bgm" offset="0x09">B6</rom>
+			<rom type="bgm" offset="0x0a">B9</rom>
+			<rom type="bgm" offset="0x0b">BA</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">82 LEOO1</title>
+			<title code="0x00000001">90 DIDI</title>
+			<title code="0x00000002">92 MEME11</title>
+			<title code="0x00000003">99 POL</title>
+			<title code="0x00000004">9C BIG1</title>
+			<title code="0x00000005">A3 BABA</title>
+			<title code="0x00000006">A5 BACH</title>
+			<title code="0x00000007">AC BL</title>
+			<title code="0x00000008">AE BIG2</title>
+			<title code="0x00000009">B6 HEART</title>
+			<title code="0x0000000a">B9 OPENN</title>
+			<title code="0x0000000b">BA CRY</title>
+		<!--	<title code="0x000000ff">EFFECT #00</title> -->
+			<title code="0x010000ff">EFFECT #01</title>
+			<title code="0x020000ff">EFFECT #02</title>
+		</titlelist>
+	</game>
+</gamelist>

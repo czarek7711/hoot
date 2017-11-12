@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //exact -->
+	<game>
+		<name>[X68000] Etoile Princesse (エトワール・プリンセス) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">exact</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="epsnd">
+			<rom type="code">epsnd.bin</rom>
+			<rom type="code" offset="0x100000">EMDRV</rom>
+			<rom type="code" offset="0x110000">EPPLK</rom>
+			<rom type="code" offset="0x120000">EPOPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">Stop the Music(演奏停止)</title>
+			<title code="0x200">Fade Out (フェードアウト)</title>
+			<title code="0x100">Ulto Grasslands (ウルト草原)</title>
+			<title code="0x101">Waterwheel Town of Fuu (フウの水車村)</title>
+			<title code="0x102">Lava Cave (溶岩洞窟)</title>
+			<title code="0x103">Dragu Volcano (ドラグ火山)</title>
+			<title code="0x104">Tower of Elemia (エレミヤの塔)</title>
+			<title code="0x105">Nomuria Cave (ノムリア洞窟)</title>
+			<title code="0x106">Temple of Temis (テミス神殿)</title>
+			<title code="0x107">Menea Forest (メネアの森)</title>
+			<title code="0x108">Hait Valley (ハイトの谷)</title>
+			<title code="0x109">Rian Lake (リアン湖)</title>
+			<title code="0x10a">A'Leik Castle (ア・レイク城)</title>
+			<title code="0x10b">Mirror World (鏡の世界)</title>
+			<title code="0x10c">Sun Palace (太陽王宮)</title>
+			<title code="0x10d">Underwater Ruins (水没遺跡)</title>
+			<title code="0x10e">Sky Castle (天空城)</title>
+			<title code="0x10f">Emperor X (エンペラーＸ)</title>
+			<title code="0x015">Boss 1 (ボス　～その１～)</title>
+			<title code="0x016">Boss 2 (ボス　～その２～)</title>
+			<title code="0x017">Boss 3 (ボス　～その３～)</title>
+			<title code="0x110">Opening (オープニング)</title>
+			<title code="0x111">Member Select (メンバーセレクト)</title>
+			<title code="0x112">Ending (エンディング)</title>
+			<title code="0x028">Getting an Item (アイテムを手に入れた)</title>
+			<title code="0x029">Breaking the Seal (封印解除)</title>
+			<title code="0x02a">Stage Clear (ステージクリア)</title>
+			<title code="0x02b">Game Over (ゲームオーバー)</title>
+			<!-- <title code="0x02d">バランステスト　　　</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Etoile Princesse (エトワール・プリンセス) (with SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">exact</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+			<option name="midiout_mix" value="0x220"/>
+		</options>
+		<romlist archive="epsnd">
+			<rom type="code">epsnd.bin</rom>
+			<rom type="code" offset="0x100000">EMDRV</rom>
+			<rom type="code" offset="0x110000">EPPLK</rom>
+			<rom type="code" offset="0x120000">EPMIDI</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">Stop the Music(演奏停止)</title>
+			<title code="0x200">Fade Out (フェードアウト)</title>
+			<title code="0x100">Ulto Grasslands (ウルト草原)</title>
+			<title code="0x101">Waterwheel Town of Fuu (フウの水車村)</title>
+			<title code="0x102">Lava Cave (溶岩洞窟)</title>
+			<title code="0x103">Dragu Volcano (ドラグ火山)</title>
+			<title code="0x104">Tower of Elemia (エレミヤの塔)</title>
+			<title code="0x105">Nomuria Cave (ノムリア洞窟)</title>
+			<title code="0x106">Temple of Temis (テミス神殿)</title>
+			<title code="0x107">Menea Forest (メネアの森)</title>
+			<title code="0x108">Hait Valley (ハイトの谷)</title>
+			<title code="0x109">Rian Lake (リアン湖)</title>
+			<title code="0x10a">A'Leik Castle (ア・レイク城)</title>
+			<title code="0x10b">Mirror World (鏡の世界)</title>
+			<title code="0x10c">Sun Palace (太陽王宮)</title>
+			<title code="0x10d">Underwater Ruins (水没遺跡)</title>
+			<title code="0x10e">Sky Castle (天空城)</title>
+			<title code="0x10f">Emperor X (エンペラーＸ)</title>
+			<title code="0x015">Boss 1 (ボス　～その１～)</title>
+			<title code="0x016">Boss 2 (ボス　～その２～)</title>
+			<title code="0x017">Boss 3 (ボス　～その３～)</title>
+			<title code="0x110">Opening (オープニング)</title>
+			<title code="0x111">Member Select (メンバーセレクト)</title>
+			<title code="0x112">Ending (エンディング)</title>
+			<title code="0x028">Getting an Item (アイテムを手に入れた)</title>
+			<title code="0x029">Breaking the Seal (封印解除)</title>
+			<title code="0x02a">Stage Clear (ステージクリア)</title>
+			<title code="0x02b">Game Over (ゲームオーバー)</title>
+			<title code="0x02d">Balance Test (バランステスト)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Etoile Princesse (エトワール・プリンセス) (with Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">exact</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="epsnd">
+			<rom type="code">epsnd.bin</rom>
+			<rom type="code" offset="0x100000">EMDRV</rom>
+			<rom type="code" offset="0x110000">EPPLK</rom>
+			<rom type="code" offset="0x120000">EPMIDI</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">Stop the Music(演奏停止)</title>
+			<title code="0x200">Fade Out (フェードアウト)</title>
+			<title code="0x100">Ulto Grasslands (ウルト草原)</title>
+			<title code="0x101">Waterwheel Town of Fuu (フウの水車村)</title>
+			<title code="0x102">Lava Cave (溶岩洞窟)</title>
+			<title code="0x103">Dragu Volcano (ドラグ火山)</title>
+			<title code="0x104">Tower of Elemia (エレミヤの塔)</title>
+			<title code="0x105">Nomuria Cave (ノムリア洞窟)</title>
+			<title code="0x106">Temple of Temis (テミス神殿)</title>
+			<title code="0x107">Menea Forest (メネアの森)</title>
+			<title code="0x108">Hait Valley (ハイトの谷)</title>
+			<title code="0x109">Rian Lake (リアン湖)</title>
+			<title code="0x10a">A'Leik Castle (ア・レイク城)</title>
+			<title code="0x10b">Mirror World (鏡の世界)</title>
+			<title code="0x10c">Sun Palace (太陽王宮)</title>
+			<title code="0x10d">Underwater Ruins (水没遺跡)</title>
+			<title code="0x10e">Sky Castle (天空城)</title>
+			<title code="0x10f">Emperor X (エンペラーＸ)</title>
+			<title code="0x015">Boss 1 (ボス　～その１～)</title>
+			<title code="0x016">Boss 2 (ボス　～その２～)</title>
+			<title code="0x017">Boss 3 (ボス　～その３～)</title>
+			<title code="0x110">Opening (オープニング)</title>
+			<title code="0x111">Member Select (メンバーセレクト)</title>
+			<title code="0x112">Ending (エンディング)</title>
+			<title code="0x028">Getting an Item (アイテムを手に入れた)</title>
+			<title code="0x029">Breaking the Seal (封印解除)</title>
+			<title code="0x02a">Stage Clear (ステージクリア)</title>
+			<title code="0x02b">Game Over (ゲームオーバー)</title>
+			<title code="0x02d">Balance Test (バランステスト)</title>
+		</titlelist>
+	</game>
+</gamelist>

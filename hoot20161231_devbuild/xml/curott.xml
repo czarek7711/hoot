@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //きゅろっと -->
+	<game>
+		<name>[PC-9801] Oh!きつねさま☆(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">きゅろっと</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="ohkitune_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">DM.O26</rom>
+			<rom type="file" offset="0x11">FOX_01.O26</rom>
+			<rom type="file" offset="0x12">FOX_02.O26</rom>
+			<rom type="file" offset="0x13">FOX_02_.O26</rom>
+			<rom type="file" offset="0x14">FOX_04.O26</rom>
+			<rom type="file" offset="0x15">FOX_05.O26</rom>
+			<rom type="file" offset="0x16">FOX_07.O26</rom>
+			<rom type="file" offset="0x17">FOX_08.O26</rom>
+			<rom type="file" offset="0x18">FOX_09.O26</rom>
+			<rom type="file" offset="0x19">FOX_10.O26</rom>
+			<rom type="file" offset="0x1A">FOX_11.O26</rom>
+			<rom type="file" offset="0x1B">FOX_12.O26</rom>
+			<rom type="file" offset="0x1C">FOX_13.O26</rom>
+			<rom type="file" offset="0x1D">FOX_13_.O26</rom>
+			<rom type="file" offset="0x1E">FOX_H1.O26</rom>
+			<rom type="file" offset="0x1F">FOX_H2.O26</rom>
+			<rom type="file" offset="0x20">FOX_H3.O26</rom>
+			<rom type="file" offset="0x21">FOX_H4.O26</rom>
+			<rom type="file" offset="0x22">FOX_SCN.O26</rom>
+			<rom type="file" offset="0x23">FOX_SDG.O26</rom>
+			<rom type="shell" offset="0">NAX -T -F7</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">DM.O26      : [STOP]</title>
+			<title code="0x11">FOX_01.O26  : ポコポコ</title>
+			<title code="0x12">FOX_02.O26  : シッポネワルツ</title>
+			<title code="0x13">FOX_02_.O26 : シッポネワルツ(波あり)</title>
+			<title code="0x14">FOX_04.O26  : 四川の思い出</title>
+			<title code="0x15">FOX_05.O26  : 霊媒師ふたたび</title>
+			<title code="0x16">FOX_07.O26  : 神々のトライラブ</title>
+			<title code="0x17">FOX_08.O26  : きつねの伝説</title>
+			<title code="0x18">FOX_09.O26  : 悲しき運命</title>
+			<title code="0x19">FOX_10.O26  : Oh!きつねさま</title>
+			<title code="0x1A">FOX_11.O26  : すっぱい稲荷寿司</title>
+			<title code="0x1B">FOX_12.O26  : エンディングテーマ</title>
+			<title code="0x1C">FOX_13.O26  : 雨にぬれても…。(雨付き)</title>
+			<title code="0x1D">FOX_13_.O26 : 雨にぬれても…。(雨なし)</title>
+			<title code="0x1E">FOX_H1.O26  : 恋はきつね色</title>
+			<title code="0x1F">FOX_H2.O26  : 宇宙を駆けろ</title>
+			<title code="0x20">FOX_H3.O26  : スリップトリップ</title>
+			<title code="0x21">FOX_H4.O26  : 倒せ中ボス!</title>
+			<title code="0x23">FOX_SDG.O26 : </title>
+			<title code="0x22">FOX_SCN.O26 : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Oh!きつねさま☆(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">きゅろっと</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ohkitune_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">DM.O86</rom>
+			<rom type="file" offset="0x11">FOX_01.O86</rom>
+			<rom type="file" offset="0x12">FOX_02.O86</rom>
+			<rom type="file" offset="0x13">FOX_02_.O86</rom>
+			<rom type="file" offset="0x14">FOX_04.O86</rom>
+			<rom type="file" offset="0x15">FOX_05.O86</rom>
+			<rom type="file" offset="0x16">FOX_07.O86</rom>
+			<rom type="file" offset="0x17">FOX_08.O86</rom>
+			<rom type="file" offset="0x18">FOX_09.O86</rom>
+			<rom type="file" offset="0x19">FOX_10.O86</rom>
+			<rom type="file" offset="0x1A">FOX_11.O86</rom>
+			<rom type="file" offset="0x1B">FOX_12.O86</rom>
+			<rom type="file" offset="0x1C">FOX_13.O86</rom>
+			<rom type="file" offset="0x1D">FOX_13_.O86</rom>
+			<rom type="file" offset="0x1E">FOX_H1.O86</rom>
+			<rom type="file" offset="0x1F">FOX_H2.O86</rom>
+			<rom type="file" offset="0x20">FOX_H3.O86</rom>
+			<rom type="file" offset="0x21">FOX_H4.O86</rom>
+			<rom type="file" offset="0x22">FOX_SCN.O86</rom>
+			<rom type="file" offset="0x23">FOX_SDG.O86</rom>
+			<rom type="shell" offset="0">NAX -T -3 -F7</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">DM.O86      : [STOP]</title>
+			<title code="0x11">FOX_01.O86  : ポコポコ</title>
+			<title code="0x12">FOX_02.O86  : シッポネワルツ</title>
+			<title code="0x13">FOX_02_.O86 : シッポネワルツ(波あり)</title>
+			<title code="0x14">FOX_04.O86  : 四川の思い出</title>
+			<title code="0x15">FOX_05.O86  : 霊媒師ふたたび</title>
+			<title code="0x16">FOX_07.O86  : 神々のトライラブ</title>
+			<title code="0x17">FOX_08.O86  : きつねの伝説</title>
+			<title code="0x18">FOX_09.O86  : 悲しき運命</title>
+			<title code="0x19">FOX_10.O86  : Oh!きつねさま</title>
+			<title code="0x1A">FOX_11.O86  : すっぱい稲荷寿司</title>
+			<title code="0x1B">FOX_12.O86  : エンディングテーマ</title>
+			<title code="0x1C">FOX_13.O86  : 雨にぬれても…。(雨付き)</title>
+			<title code="0x1D">FOX_13_.O86 : 雨にぬれても…。(雨なし)</title>
+			<title code="0x1E">FOX_H1.O86  : 恋はきつね色</title>
+			<title code="0x1F">FOX_H2.O86  : 宇宙を駆けろ</title>
+			<title code="0x20">FOX_H3.O86  : スリップトリップ</title>
+			<title code="0x21">FOX_H4.O86  : 倒せ中ボス!</title>
+			<title code="0x23">FOX_SDG.O86 : </title>
+			<title code="0x22">FOX_SCN.O86 : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Oh!きつねさま☆(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">きゅろっと</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="ohkitune_98">
+			<rom type="file" offset="-1">MINT.com</rom>
+			<rom type="file" offset="-1">NMISYS55.INS</rom>
+			<rom type="file" offset="-1">SC_55.TDF</rom>
+			<rom type="file" offset="-1">SC_55DRM.TDF</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">DM.INT</rom>
+			<rom type="file" offset="0x11">FOX_01.INT</rom>
+			<rom type="file" offset="0x12">FOX_02.INT</rom>
+			<rom type="file" offset="0x13">FOX_02_.INT</rom>
+			<rom type="file" offset="0x14">FOX_04.INT</rom>
+			<rom type="file" offset="0x15">FOX_05.INT</rom>
+			<rom type="file" offset="0x16">FOX_07.INT</rom>
+			<rom type="file" offset="0x17">FOX_08.INT</rom>
+			<rom type="file" offset="0x18">FOX_09.INT</rom>
+			<rom type="file" offset="0x19">FOX_10.INT</rom>
+			<rom type="file" offset="0x1A">FOX_11.INT</rom>
+			<rom type="file" offset="0x1B">FOX_12.INT</rom>
+			<rom type="file" offset="0x1C">FOX_13.INT</rom>
+			<rom type="file" offset="0x1D">FOX_13_.INT</rom>
+			<rom type="file" offset="0x1E">FOX_H1.INT</rom>
+			<rom type="file" offset="0x1F">FOX_H2.INT</rom>
+			<rom type="file" offset="0x20">FOX_H3.INT</rom>
+			<rom type="file" offset="0x21">FOX_H4.INT</rom>
+			<rom type="file" offset="0x22">FOX_SCN.INT</rom>
+			<rom type="file" offset="0x23">FOX_SDG.INT</rom>
+			<rom type="file" offset="0x24">FOX_XX.INT</rom>
+			<rom type="shell" offset="0">MINT -F9 -NINMISYS55.INS</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">DM.INT      : [STOP]</title>
+			<title code="0x11">FOX_01.INT  : ポコポコ</title>
+			<title code="0x12">FOX_02.INT  : シッポネワルツ</title>
+			<title code="0x13">FOX_02_.INT : シッポネワルツ(波あり)</title>
+			<title code="0x14">FOX_04.INT  : 四川の思い出</title>
+			<title code="0x15">FOX_05.INT  : 霊媒師ふたたび</title>
+			<title code="0x16">FOX_07.INT  : 神々のトライラブ</title>
+			<title code="0x17">FOX_08.INT  : きつねの伝説</title>
+			<title code="0x18">FOX_09.INT  : 悲しき運命</title>
+			<title code="0x19">FOX_10.INT  : Oh!きつねさま</title>
+			<title code="0x1A">FOX_11.INT  : すっぱい稲荷寿司</title>
+			<title code="0x1B">FOX_12.INT  : エンディングテーマ</title>
+			<title code="0x1C">FOX_13.INT  : 雨にぬれても…。(雨付き)</title>
+			<title code="0x1D">FOX_13_.INT : 雨にぬれても…。(雨なし)</title>
+			<title code="0x1E">FOX_H1.INT  : 恋はきつね色</title>
+			<title code="0x1F">FOX_H2.INT  : 宇宙を駆けろ</title>
+			<title code="0x20">FOX_H3.INT  : スリップトリップ</title>
+			<title code="0x21">FOX_H4.INT  : 倒せ中ボス!</title>
+			<title code="0x23">FOX_SDG.INT : </title>
+			<title code="0x24">FOX_XX.INT  : </title>
+			<title code="0x22">FOX_SCN.INT : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Making Candy ～お気に召すまま～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">きゅろっと</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="mcandy_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">DM.O26</rom>
+			<rom type="file" offset="0x11">GAGAN.O26</rom>
+			<rom type="file" offset="0x12">MC_01.O26</rom>
+			<rom type="file" offset="0x13">MC_03.O26</rom>
+			<rom type="file" offset="0x14">MC_04.O26</rom>
+			<rom type="file" offset="0x15">MC_05.O26</rom>
+			<rom type="file" offset="0x16">MC_06.O26</rom>
+			<rom type="file" offset="0x17">MC_07.O26</rom>
+			<rom type="file" offset="0x18">MC_08.O26</rom>
+			<rom type="file" offset="0x19">MC_09.O26</rom>
+			<rom type="file" offset="0x1A">MC_10.O26</rom>
+			<rom type="file" offset="0x1B">MC_12.O26</rom>
+			<rom type="file" offset="0x1C">MC_13.O26</rom>
+			<rom type="file" offset="0x1D">MC_14.O26</rom>
+			<rom type="file" offset="0x1E">MC_15.O26</rom>
+			<rom type="file" offset="0x1F">MC_16.O26</rom>
+			<rom type="shell" offset="0">NAX -T</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">DM.O26    : [STOP]</title>
+			<title code="0x12">MC_01.O26 : 月光のノクターン</title>
+			<title code="0x13">MC_03.O26 : 旅立ちの朝</title>
+			<title code="0x14">MC_04.O26 : 深夜の大脱走</title>
+			<title code="0x15">MC_05.O26 : うららかな春の陽だまり</title>
+			<title code="0x16">MC_06.O26 : ファニーステップ</title>
+			<title code="0x17">MC_07.O26 : 激情</title>
+			<title code="0x18">MC_08.O26 : 果てしなき道のり</title>
+			<title code="0x19">MC_09.O26 : アラビアンナイト</title>
+			<title code="0x1A">MC_10.O26 : おもちゃの行進曲</title>
+			<title code="0x1B">MC_12.O26 : 失われし時を求めて</title>
+			<title code="0x1C">MC_13.O26 : ハッピーウェディング</title>
+			<title code="0x1D">MC_14.O26 : 猟奇の香り</title>
+			<title code="0x1E">MC_15.O26 : ロマンチック・クルーズ</title>
+			<title code="0x1F">MC_16.O26 : あの日僕は…</title>
+			<title code="0x11">GAGAN.O26 : ガガーン</title>
+		</titlelist>
+	</game>
+</gamelist>

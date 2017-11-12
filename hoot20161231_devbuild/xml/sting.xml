@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //STING -->
+	<game>
+		<name>[X68000] LAST BATTALION</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">STING</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="lastbt68snd">
+			<rom type="code" offset="0x000000">lastb68snd.bin</rom>
+			<rom type="x"    offset="0x010000">lb.x</rom>
+			<rom type="code" offset="0x0427e8">lb.pcm</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0e">OPENING</title>
+			<title code="0x0f">OPENING 2</title>
+			<title code="0x01">TITLE</title>
+			<title code="0x02">STAGE 1</title>
+			<title code="0x03">STAGE 2</title>
+			<title code="0x04">STAGE 3</title>
+			<title code="0x05">STAGE 4</title>
+			<title code="0x06">STAGE 5</title>
+			<title code="0x07">STAGE 6</title>
+			<title code="0x09">BOSS 1</title>
+			<title code="0x08">BOSS 2</title>
+			<title code="0x0a">BOSS 3</title>
+			<title code="0x0c">STAGE CLEAR</title>
+			<title code="0x0b">GAME OVER</title>
+			<title code="0x10">ENDING</title>
+			<title code="0x0d">ENDING 2</title>
+			<range min="0x11" max="0x22" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+</gamelist>

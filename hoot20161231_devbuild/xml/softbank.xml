@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //SoftBank -->
+	<game>
+		<name>[PC-8801] BOMB JACK</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">SoftBank</driveralias>
+		<options>
+			<option name="baseclock" value="0x04"/>
+		</options>
+		<romlist archive="bmjack88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">00 : STOP</title>
+			<title code="0x09">09 : OPENING TITLE</title>
+			<title code="0x01">01 : Stage 1 / リンゴの森の子猫たち (飯島真理)</title>
+			<title code="0x02">02 : Stage 2 / Lady Madonna (Beatles)</title>
+			<title code="0x03">03 : Stage 3 </title>
+			<title code="0x08">08 : POWER BALL出現</title>
+			<title code="0x07">07 : POWER UP</title>
+			<title code="0x04">04 : ROUND CLEAR</title>
+			<title code="0x05">05 : BONUS</title>
+			<title code="0x06">06 : GAME OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] SION II The First Attack.(OPM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SoftBank</driveralias>
+		<romlist archive="sion268snd">
+			<rom type="code" offset="0x000000">sion268snd.bin</rom>
+			<rom type="code" offset="0x010000">NEIRO.ZMD</rom>
+			<rom type="code" offset="0x011000">AMOUNT_FM.ZMD</rom>
+			<rom type="code" offset="0x013000">ASTERO_FM.ZMD</rom>
+			<rom type="code" offset="0x014000">BOSS_FM.ZMD</rom>
+			<rom type="code" offset="0x015000">LEGEND_FM.ZMD</rom>
+			<rom type="code" offset="0x019000">OLD_FM.ZMD</rom>
+			<rom type="code" offset="0x01a000">SIGH_FM.ZMD</rom>
+			<rom type="code" offset="0x01c000">SMART2_FM.ZMD</rom>
+			<rom type="code" offset="0x01e000">WAY1_FM.ZMD</rom>
+			<rom type="code" offset="0x020000">SION2.ZPD</rom>
+			<rom type="x"    offset="0x080000">zmusic.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x04">LEGEND_FM.ZMD : LEGEND</title>
+			<title code="0x08">WAY1_FM.ZMD   : GATHER WAY!</title>
+			<title code="0x02">ASTERO_FM.ZMD : THE SEA OF ASTEROIDS</title>
+			<title code="0x01">AMOUNT_FM.ZMD : IT DOESN'T AMOUNT TO ANYTHING.</title>
+			<title code="0x07">SMART2_FM.ZMD : SMART BOMBER2</title>
+			<title code="0x03">BOSS_FM.ZMD   : I DON'T KNOW WHO SHE IS.</title>
+			<title code="0x05">OLD_FM.ZMD    : AN OLD PICTURE</title>
+			<title code="0x06">SIGH_FM.ZMD   : SIGHING IN THE WIND</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] SION II The First Attack.(GS)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SoftBank</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="sion268snd">
+			<rom type="code" offset="0x000000">sion268mid.bin</rom>
+			<rom type="code" offset="0x010000">AMOUNT.ZMD</rom>
+			<rom type="code" offset="0x014000">ASTERO.ZMD</rom>
+			<rom type="code" offset="0x015000">CLEAN_SHOT.ZMD</rom>
+			<rom type="code" offset="0x017000">DUST_IN_SPACE.ZMD</rom>
+			<rom type="code" offset="0x018000">HEADQUATERS.ZMD</rom>
+			<rom type="code" offset="0x01c000">HESPERUS.ZMD</rom>
+			<rom type="code" offset="0x01e000">LEGEND.ZMD</rom>
+			<rom type="code" offset="0x022000">METEOR.ZMD</rom>
+			<rom type="code" offset="0x023000">MIND_CONTROL.ZMD</rom>
+			<rom type="code" offset="0x026000">OLD.ZMD</rom>
+			<rom type="code" offset="0x027000">ON_THE_HOP.ZMD</rom>
+			<rom type="code" offset="0x02a000">PEACE.ZMD</rom>
+			<rom type="code" offset="0x02c000">SHOOTING_MASTER.ZMD</rom>
+			<rom type="code" offset="0x02f000">SIGH.ZMD</rom>
+			<rom type="code" offset="0x032000">sion2_ed.zmd</rom>
+			<rom type="code" offset="0x03a000">SION2_OP.ZMD</rom>
+			<rom type="code" offset="0x03d000">SMART2.ZMD</rom>
+			<rom type="code" offset="0x040000">TRY.ZMD</rom>
+			<rom type="code" offset="0x043000">WAY1.ZMD</rom>
+			<rom type="x"    offset="0x080000">zmusic.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x06">HESPERUS.ZMD : HESPERUS</title>
+			<title code="0x13">WAY1.ZMD     : GATHER WAY!</title>
+			<title code="0x02">ASTERO.ZMD   : THE SEA OF ASTEROIDS</title>
+			<title code="0x01">AMOUNT.ZMD   : IT DOESN'T AMOUNT TO ANYTHING.</title>
+			<title code="0x11">SMART2.ZMD   : SMART BOMBER2</title>
+			<title code="0x0a">OLD.ZMD      : AN OLD PICTURE</title>
+			<title code="0x0e">SIGH.ZMD     : SIGHING IN THE WIND</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] SION II The First Attack.(MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SoftBank</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="sion268snd">
+			<rom type="code" offset="0x000000">sion268mid.bin</rom>
+			<rom type="code" offset="0x010000">AMOUNT.ZMD</rom>
+			<rom type="code" offset="0x014000">ASTERO.ZMD</rom>
+			<rom type="code" offset="0x015000">CLEAN_SHOT.ZMD</rom>
+			<rom type="code" offset="0x017000">DUST_IN_SPACE.ZMD</rom>
+			<rom type="code" offset="0x018000">HEADQUATERS.ZMD</rom>
+			<rom type="code" offset="0x01c000">HESPERUS.ZMD</rom>
+			<rom type="code" offset="0x01e000">LEGEND.ZMD</rom>
+			<rom type="code" offset="0x022000">METEOR.ZMD</rom>
+			<rom type="code" offset="0x023000">MIND_CONTROL.ZMD</rom>
+			<rom type="code" offset="0x026000">OLD.ZMD</rom>
+			<rom type="code" offset="0x027000">ON_THE_HOP.ZMD</rom>
+			<rom type="code" offset="0x02a000">PEACE.ZMD</rom>
+			<rom type="code" offset="0x02c000">SHOOTING_MASTER.ZMD</rom>
+			<rom type="code" offset="0x02f000">SIGH.ZMD</rom>
+			<rom type="code" offset="0x032000">sion2_ed.zmd</rom>
+			<rom type="code" offset="0x03a000">SION2_OP.ZMD</rom>
+			<rom type="code" offset="0x03d000">SMART2.ZMD</rom>
+			<rom type="code" offset="0x040000">TRY.ZMD</rom>
+			<rom type="code" offset="0x043000">WAY1.ZMD</rom>
+			<rom type="x"    offset="0x080000">zmusic.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x07">LEGEND.ZMD          : LEGEND</title>
+			<title code="0x0b">ON_THE_HOP.ZMD      : ON THE HOP!</title>
+			<title code="0x08">METEOR.ZMD          : METEOR</title>
+			<title code="0x12">TRY.ZMD             : TRY</title>
+			<title code="0x03">CLEAN_SHOT.ZMD      : CLEAN SHOT</title>
+			<title code="0x0d">SHOOTING_MASTER.ZMD : SHOOTING MASTER</title>
+			<title code="0x05">HEADQUATERS.ZMD     : HEADQUATERS</title>
+			<title code="0x09">MIND_CONTROL.ZMD    : MIND CONTROL</title>
+			<title code="0x04">DUST_IN_SPACE.ZMD   : DUST IN SPACE</title>
+			<title code="0x0c">PEACE.ZMD           : PEACE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] SION II The First Attack.(MT-32 Emulation)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SoftBank</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="sion268snd">
+			<rom type="code" offset="0x000000">sion268mid.bin</rom>
+			<rom type="code" offset="0x010000">AMOUNT.ZMD</rom>
+			<rom type="code" offset="0x014000">ASTERO.ZMD</rom>
+			<rom type="code" offset="0x015000">CLEAN_SHOT.ZMD</rom>
+			<rom type="code" offset="0x017000">DUST_IN_SPACE.ZMD</rom>
+			<rom type="code" offset="0x018000">HEADQUATERS.ZMD</rom>
+			<rom type="code" offset="0x01c000">HESPERUS.ZMD</rom>
+			<rom type="code" offset="0x01e000">LEGEND.ZMD</rom>
+			<rom type="code" offset="0x022000">METEOR.ZMD</rom>
+			<rom type="code" offset="0x023000">MIND_CONTROL.ZMD</rom>
+			<rom type="code" offset="0x026000">OLD.ZMD</rom>
+			<rom type="code" offset="0x027000">ON_THE_HOP.ZMD</rom>
+			<rom type="code" offset="0x02a000">PEACE.ZMD</rom>
+			<rom type="code" offset="0x02c000">SHOOTING_MASTER.ZMD</rom>
+			<rom type="code" offset="0x02f000">SIGH.ZMD</rom>
+			<rom type="code" offset="0x032000">sion2_ed.zmd</rom>
+			<rom type="code" offset="0x03a000">SION2_OP.ZMD</rom>
+			<rom type="code" offset="0x03d000">SMART2.ZMD</rom>
+			<rom type="code" offset="0x040000">TRY.ZMD</rom>
+			<rom type="code" offset="0x043000">WAY1.ZMD</rom>
+			<rom type="x"    offset="0x080000">zmusic.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x07">LEGEND.ZMD          : LEGEND</title>
+			<title code="0x0b">ON_THE_HOP.ZMD      : ON THE HOP!</title>
+			<title code="0x08">METEOR.ZMD          : METEOR</title>
+			<title code="0x12">TRY.ZMD             : TRY</title>
+			<title code="0x03">CLEAN_SHOT.ZMD      : CLEAN SHOT</title>
+			<title code="0x0d">SHOOTING_MASTER.ZMD : SHOOTING MASTER</title>
+			<title code="0x05">HEADQUATERS.ZMD     : HEADQUATERS</title>
+			<title code="0x09">MIND_CONTROL.ZMD    : MIND CONTROL</title>
+			<title code="0x04">DUST_IN_SPACE.ZMD   : DUST IN SPACE</title>
+			<title code="0x0c">PEACE.ZMD           : PEACE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] SION II The First Attack.(CM-64)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SoftBank</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="3"/>
+		</options>
+		<romlist archive="sion268snd">
+			<rom type="code" offset="0x000000">sion268mid.bin</rom>
+			<rom type="code" offset="0x010000">AMOUNT.ZMD</rom>
+			<rom type="code" offset="0x014000">ASTERO.ZMD</rom>
+			<rom type="code" offset="0x015000">CLEAN_SHOT.ZMD</rom>
+			<rom type="code" offset="0x017000">DUST_IN_SPACE.ZMD</rom>
+			<rom type="code" offset="0x018000">HEADQUATERS.ZMD</rom>
+			<rom type="code" offset="0x01c000">HESPERUS.ZMD</rom>
+			<rom type="code" offset="0x01e000">LEGEND.ZMD</rom>
+			<rom type="code" offset="0x022000">METEOR.ZMD</rom>
+			<rom type="code" offset="0x023000">MIND_CONTROL.ZMD</rom>
+			<rom type="code" offset="0x026000">OLD.ZMD</rom>
+			<rom type="code" offset="0x027000">ON_THE_HOP.ZMD</rom>
+			<rom type="code" offset="0x02a000">PEACE.ZMD</rom>
+			<rom type="code" offset="0x02c000">SHOOTING_MASTER.ZMD</rom>
+			<rom type="code" offset="0x02f000">SIGH.ZMD</rom>
+			<rom type="code" offset="0x032000">sion2_ed.zmd</rom>
+			<rom type="code" offset="0x03a000">SION2_OP.ZMD</rom>
+			<rom type="code" offset="0x03d000">SMART2.ZMD</rom>
+			<rom type="code" offset="0x040000">TRY.ZMD</rom>
+			<rom type="code" offset="0x043000">WAY1.ZMD</rom>
+			<rom type="x"    offset="0x080000">zmusic.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">SOPN2_OP.ZMD        : THE SHIRIVE APPLE</title>
+			<title code="0x0b">ON_THE_HOP.ZMD      : ON THE HOP!</title>
+			<title code="0x08">METEOR.ZMD          : METEOR</title>
+			<title code="0x12">TRY.ZMD             : TRY</title>
+			<title code="0x03">CLEAN_SHOT.ZMD      : CLEAN SHOT</title>
+			<title code="0x0d">SHOOTING_MASTER.ZMD : SHOOTING MASTER</title>
+			<title code="0x05">HEADQUATERS.ZMD     : HEADQUATERS</title>
+			<title code="0x09">MIND_CONTROL.ZMD    : MIND CONTROL</title>
+			<title code="0x04">DUST_IN_SPACE.ZMD   : DUST IN SPACE</title>
+			<title code="0x0f">SION2_ED.ZMD        : LONLY CHIRLDREN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] SION IV(OPM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SoftBank</driveralias>
+		<romlist archive="sion468snd">
+			<rom type="code" offset="0x000000">sion468snd.bin</rom>
+			<rom type="code" offset="0x010000">SION4_SE.ZMD</rom>
+			<rom type="code" offset="0x011000">ALART.ZMD</rom>
+			<rom type="code" offset="0x012000">FIN.ZMD</rom>
+			<rom type="code" offset="0x014000">G_O.ZMD</rom>
+			<rom type="code" offset="0x015000">HUGE5.ZMD</rom>
+			<rom type="code" offset="0x016000">INSEKI2.ZMD</rom>
+			<rom type="code" offset="0x017000">l_boss2.ZMD</rom>
+			<rom type="code" offset="0x019000">MISSION.ZMD</rom>
+			<rom type="code" offset="0x01a000">M_BOSS2.ZMD</rom>
+			<rom type="code" offset="0x01b000">OPTION2.ZMD</rom>
+			<rom type="code" offset="0x01c000">rest.ZMD</rom>
+			<rom type="code" offset="0x01d000">SELECT.ZMD</rom>
+			<rom type="code" offset="0x01e000">SELECT2.ZMD</rom>
+			<rom type="code" offset="0x01f000">SLIDE3.ZMD</rom>
+			<rom type="code" offset="0x022000">SPACE4.ZMD</rom>
+			<rom type="code" offset="0x024000">SS2.ZMD</rom>
+			<rom type="code" offset="0x026000">SION4.ZPD</rom>
+			<rom type="x"    offset="0x040000">zmusic.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0a">rest.ZMD    : [STOP]</title>
+			<title code="0x0c">SELECT2.ZMD : WEAPON SELECT</title>
+			<title code="0x07">MISSION.ZMD : MISSION DEMO</title>
+			<title code="0x0e">SPACE4.ZMD  : MISSION 1</title>
+			<title code="0x05">INSEKI2.ZMD : MISSION 2</title>
+			<title code="0x04">HUGE5.ZMD   : MISSION 3</title>
+			<title code="0x0d">SLIDE3.ZMD  : MISSION 4</title>
+			<title code="0x0f">SS2.ZMD     : MISSION 5</title>
+			<title code="0x01">ALART.ZMD   : BOSS WARNING</title>
+			<title code="0x08">M_BOSS2.ZMD : BOSS</title>
+			<title code="0x06">l_boss2.ZMD : LAST BOSS</title>
+			<title code="0x02">FIN.ZMD     : ENDING</title>
+			<title code="0x03">G_O.ZMD     : GAME OVER</title>
+			<title code="0x09">OPTION2.ZMD : NAME ENTRY</title>
+			<title code="0x0b">SELECT.ZMD  : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] SION IV(GS)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">SoftBank</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="3"/>
+		</options>
+		<romlist archive="sion468snd">
+			<rom type="code" offset="0x000000">sion468mid.bin</rom>
+			<rom type="code" offset="0x010000">SION4_SE.ZMD</rom>
+			<rom type="code" offset="0x011000">ALART.ZMD</rom>
+			<rom type="code" offset="0x012000">SC_FIN.ZMD</rom>
+			<rom type="code" offset="0x014000">SC_G_O.ZMD</rom>
+			<rom type="code" offset="0x016000">SC_HUGE5.ZMD</rom>
+			<rom type="code" offset="0x017000">SC_INSEKI2.ZMD</rom>
+			<rom type="code" offset="0x018000">sc_l_boss2.ZMD</rom>
+			<rom type="code" offset="0x01a000">sc_mission.ZMD</rom>
+			<rom type="code" offset="0x01b000">SC_M_BOSS2.ZMD</rom>
+			<rom type="code" offset="0x01c000">SC_OPTION2.ZMD</rom>
+			<rom type="code" offset="0x01e000">rest.ZMD</rom>
+			<rom type="code" offset="0x01f000">SELECT.ZMD</rom>
+			<rom type="code" offset="0x020000">SC_SELECT2.ZMD</rom>
+			<rom type="code" offset="0x021000">sc_slide3.ZMD</rom>
+			<rom type="code" offset="0x024000">SC_SPACE4.ZMD</rom>
+			<rom type="code" offset="0x026000">SC_SS2.ZMD</rom>
+			<rom type="code" offset="0x028000">SION4.ZPD</rom>
+			<rom type="x"    offset="0x040000">zmusic.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0a">rest.ZMD       : [STOP]</title>
+			<title code="0x0c">SC_SELECT2.ZMD : WEAPON SELECT</title>
+			<title code="0x07">sc_mission.ZMD : MISSION DEMO</title>
+			<title code="0x0e">SC_SPACE4.ZMD  : MISSION 1</title>
+			<title code="0x05">SC_INSEKI2.ZMD : MISSION 2</title>
+			<title code="0x04">SC_HUGE5.ZMD   : MISSION 3</title>
+			<title code="0x0d">SC_SLIDE3.ZMD  : MISSION 4</title>
+			<title code="0x0f">SC_SS2.ZMD     : MISSION 5</title>
+			<title code="0x01">ALART.ZMD      : BOSS WARNING</title>
+			<title code="0x08">SC_M_BOSS2.ZMD : BOSS</title>
+			<title code="0x06">sc_l_boss2.ZMD : LAST BOSS</title>
+			<title code="0x02">SC_FIN.ZMD     : ENDING</title>
+			<title code="0x03">SC_G_O.ZMD     : GAME OVER</title>
+			<title code="0x09">SC_OPTION2.ZMD : NAME ENTRY</title>
+		</titlelist>
+	</game>
+</gamelist>

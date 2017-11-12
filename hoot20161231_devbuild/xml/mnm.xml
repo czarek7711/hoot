@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2006/08/11">
+	<!--//M.N.M Software -->
+	<game>
+		<name>[X68000] ALGARNA</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">M.N.M Software</driveralias>
+		<romlist archive="alg68snd">
+			<rom type="code">alg_mus.bin</rom>
+			<rom type="code" offset="0x10000">alg_mus.mdt</rom>
+			<rom type="code" offset="0x20000">alg_mus.smp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">00 : </title>
+			<title code="0x01">01 : </title>
+			<title code="0x02">02 : VISUAL SCENE</title>
+			<title code="0x03">03 : BOSS 1</title>
+			<title code="0x04">04 : </title>
+			<title code="0x05">05 : BOSS 2</title>
+			<title code="0x06">06 : HOLY PLACE</title>
+			<title code="0x07">07 : TOWN</title>
+			<title code="0x08">08 : BGM 1</title>
+			<title code="0x09">09 : BGM 4</title>
+			<title code="0x0a">0a : </title>
+			<title code="0x0b">0b : </title>
+			<title code="0x0c">0c : DUNGEON</title>
+			<title code="0x0d">0d : OPENING</title>
+			<title code="0x0e">0e : BOSS 3</title>
+			<title code="0x0f">0f : CASTLE</title>
+			<title code="0x10">10 : BGM 2</title>
+			<title code="0x11">11 : </title>
+			<title code="0x12">12 : BGM 3</title>
+			<title code="0x13">13 : ENDING</title>
+			<title code="0x14">14 : LABYRINTH</title>
+			<title code="0x15">15 : </title>
+			<title code="0x16">16 : </title>
+			<title code="0x17">17 : SE</title>
+			<title code="0x18">18 : SE</title>
+			<title code="0x19">19 : SE</title>
+			<title code="0x1a">1a : SE</title>
+			<title code="0x1b">1b : SE</title>
+			<title code="0x1c">1c : SE</title>
+			<title code="0x1d">1d : SE</title>
+			<title code="0x1e">1e : SE</title>
+			<title code="0x1f">1f : SE</title>
+			<title code="0x20">20 : SE</title>
+			<title code="0x21">21 : SE</title>
+			<title code="0x22">22 : SE</title>
+			<title code="0x23">23 : SE</title>
+			<title code="0x24">24 : SE</title>
+			<title code="0x25">25 : SE</title>
+			<title code="0x26">26 : SE</title>
+			<title code="0x27">27 : SE</title>
+			<title code="0x28">28 : SE</title>
+			<title code="0x29">29 : JINGLE #1</title>
+			<title code="0x2a">2a : JINGLE #2</title>
+			<title code="0x2b">2b : JINGLE #3</title>
+			<title code="0x2c">2c : EFFECT #1</title>
+			<title code="0x2d">2d : EFFECT #2</title>
+			<title code="0x2e">2e : </title>
+			<title code="0x2f">2f : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] ALGARNA</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">M.N.M Software</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xec00"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="ctc3"       value="0x82"/>
+			<option name="psg_mix"    value="0x60"/>
+		</options>
+		<romlist archive="x1algarna">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x2400">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS000</rom>
+			<rom type="bgm" offset="0x01">MUS100</rom>
+			<rom type="bgm" offset="0x02">MUS101</rom>
+			<rom type="bgm" offset="0x03">MUS102</rom>
+			<rom type="bgm" offset="0x04">MUS103</rom>
+			<rom type="bgm" offset="0x05">MUS104</rom>
+			<rom type="bgm" offset="0x06">MUS105</rom>
+			<rom type="bgm" offset="0x07">MUS106</rom>
+			<rom type="bgm" offset="0x08">MUS107</rom>
+			<rom type="bgm" offset="0x09">MUS200</rom>
+			<rom type="bgm" offset="0x0a">MUS201</rom>
+			<rom type="bgm" offset="0x0b">MUS202</rom>
+			<rom type="bgm" offset="0x0c">MUS203</rom>
+			<rom type="bgm" offset="0x0d">MUS204</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">00-00 : JINGLE #1</title>
+			<title code="0x01000000">00-01 : JINGLE #2</title>
+			<title code="0x02000000">00-02 : JINGLE #3</title>
+			<title code="0x03000000">00-03 : EFFECT #1</title>
+			<title code="0x04000000">00-04 : EFFECT #2</title>
+			<title code="0x05000000">00-05 : VISUAL SCENE</title>
+			<title code="0x06000000">00-06 : OPENING</title>
+			<title code="0x07000000">00-07 : ENDING</title>
+		<!--	<title code="0x00000001">01-00 : JINGLE #1</title> -->
+		<!--	<title code="0x01000001">01-01 : JINGLE #2</title> -->
+		<!--	<title code="0x02000001">01-02 : JINGLE #3</title> -->
+		<!--	<title code="0x03000001">01-03 : EFFECT #1</title> -->
+		<!--	<title code="0x04000001">01-04 : EFFECT #2</title> -->
+			<title code="0x05000001">01-05 : BGM 1</title>
+			<title code="0x06000001">01-06 : TOWN</title>
+		<!--	<title code="0x00000002">02-00 : JINGLE #1</title> -->
+		<!--	<title code="0x01000002">02-01 : JINGLE #2</title> -->
+		<!--	<title code="0x02000002">02-02 : JINGLE #3</title> -->
+		<!--	<title code="0x03000002">02-03 : EFFECT #1</title> -->
+		<!--	<title code="0x04000002">02-04 : EFFECT #2</title> -->
+			<title code="0x05000002">02-05 : BGM 2</title>
+			<title code="0x06000002">02-06 : BGM 3</title>
+		<!--	<title code="0x00000003">03-00 : JINGLE #1</title> -->
+		<!--	<title code="0x01000003">03-01 : JINGLE #2</title> -->
+		<!--	<title code="0x02000003">03-02 : JINGLE #3</title> -->
+		<!--	<title code="0x03000003">03-03 : EFFECT #1</title> -->
+		<!--	<title code="0x04000003">03-04 : EFFECT #2</title> -->
+			<title code="0x05000003">03-05 : LABYRINTH</title>
+			<title code="0x06000003">03-06 : BOSS 1</title>
+		<!--	<title code="0x07000003">03-07 : BGM 3</title> -->
+		<!--	<title code="0x00000004">04-00 : JINGLE #1</title> -->
+		<!--	<title code="0x01000004">04-01 : JINGLE #2</title> -->
+		<!--	<title code="0x02000004">04-02 : JINGLE #3</title> -->
+		<!--	<title code="0x03000004">04-03 : EFFECT #1</title> -->
+		<!--	<title code="0x04000004">04-04 : EFFECT #2</title> -->
+			<title code="0x05000004">04-05 : CASTLE</title>
+		<!--	<title code="0x00000005">05-00 : JINGLE #1</title> -->
+		<!--	<title code="0x01000005">05-01 : JINGLE #2</title> -->
+		<!--	<title code="0x02000005">05-02 : JINGLE #3</title> -->
+		<!--	<title code="0x03000005">05-03 : EFFECT #1</title> -->
+		<!--	<title code="0x04000005">05-04 : EFFECT #2</title> -->
+		<!--	<title code="0x05000005">05-05 : VISUAL SCENE</title> -->
+		<!--	<title code="0x00000006">06-00 : JINGLE #1</title> -->
+		<!--	<title code="0x01000006">06-01 : JINGLE #2</title> -->
+		<!--	<title code="0x02000006">06-02 : JINGLE #3</title> -->
+		<!--	<title code="0x03000006">06-03 : EFFECT #1</title> -->
+		<!--	<title code="0x04000006">06-04 : EFFECT #2</title> -->
+			<title code="0x05000006">06-05 : BGM 4</title>
+			<title code="0x06000006">06-06 : BOSS 2</title>
+		<!--	<title code="0x00000007">07-00 : JINGLE #1</title> -->
+		<!--	<title code="0x01000007">07-01 : JINGLE #2</title> -->
+		<!--	<title code="0x02000007">07-02 : JINGLE #3</title> -->
+		<!--	<title code="0x03000007">07-03 : EFFECT #1</title> -->
+		<!--	<title code="0x04000007">07-04 : EFFECT #2</title> -->
+			<title code="0x05000007">07-05 : HOLY PLACE</title>
+		<!--	<title code="0x06000007">07-06 : BGM 3</title> -->
+		<!--	<title code="0x07000007">07-07 : TOWN</title> -->
+		<!--	<title code="0x08000007">07-08 : BGM 1</title> -->
+		<!--	<title code="0x00000008">08-00 : JINGLE #1</title> -->
+		<!--	<title code="0x01000008">08-01 : JINGLE #2</title> -->
+		<!--	<title code="0x02000008">08-02 : JINGLE #3</title> -->
+		<!--	<title code="0x03000008">08-03 : EFFECT #1</title> -->
+		<!--	<title code="0x04000008">08-04 : EFFECT #2</title> -->
+		<!--	<title code="0x05000008">08-05 : VISUAL SCENE</title> -->
+		<!--	<title code="0x06000008">08-06 : OPENING</title> -->
+		<!--	<title code="0x07000008">08-07 : ENDING</title> -->
+		<!--	<title code="0x00000009">09-00 : JINGLE #1</title> -->
+		<!--	<title code="0x01000009">09-01 : JINGLE #2</title> -->
+		<!--	<title code="0x02000009">09-02 : JINGLE #3</title> -->
+		<!--	<title code="0x03000009">09-03 : EFFECT #1</title> -->
+		<!--	<title code="0x04000009">09-04 : EFFECT #2</title> -->
+		<!--	<title code="0x05000009">09-05 : BGM 2</title> -->
+		<!--	<title code="0x06000009">09-06 : BGM 3</title> -->
+		<!--	<title code="0x0000000a">0A-00 : JINGLE #1</title> -->
+		<!--	<title code="0x0100000a">0A-01 : JINGLE #2</title> -->
+		<!--	<title code="0x0200000a">0A-02 : JINGLE #3</title> -->
+		<!--	<title code="0x0300000a">0A-03 : EFFECT #1</title> -->
+		<!--	<title code="0x0400000a">0A-04 : EFFECT #2</title> -->
+		<!--	<title code="0x0500000a">0A-05 : BGM 1</title> -->
+		<!--	<title code="0x0600000a">0A-06 : TOWN</title> -->
+		<!--	<title code="0x0000000b">0B-00 : JINGLE #1</title> -->
+		<!--	<title code="0x0100000b">0B-01 : JINGLE #2</title> -->
+		<!--	<title code="0x0200000b">0B-02 : JINGLE #3</title> -->
+		<!--	<title code="0x0300000b">0B-03 : EFFECT #1</title> -->
+		<!--	<title code="0x0400000b">0B-04 : EFFECT #2</title> -->
+		<!--	<title code="0x0500000b">0B-05 : VISUAL SCENE</title> -->
+		<!--	<title code="0x0600000b">0B-06 : BOSS 1</title> -->
+		<!--	<title code="0x0000000c">0C-00 : JINGLE #1</title> -->
+		<!--	<title code="0x0100000c">0C-01 : JINGLE #2</title> -->
+		<!--	<title code="0x0200000c">0C-02 : JINGLE #3</title> -->
+		<!--	<title code="0x0300000c">0C-03 : EFFECT #1</title> -->
+		<!--	<title code="0x0400000c">0C-04 : EFFECT #2</title> -->
+		<!--	<title code="0x0500000c">0C-05 : LABYRINTH</title> -->
+		<!--	<title code="0x0600000c">0C-06 : BGM 2</title> -->
+		<!--	<title code="0x0000000d">0D-00 : JINGLE #1</title> -->
+		<!--	<title code="0x0100000d">0D-01 : JINGLE #2</title> -->
+		<!--	<title code="0x0200000d">0D-02 : JINGLE #3</title> -->
+		<!--	<title code="0x0300000d">0D-03 : EFFECT #1</title> -->
+		<!--	<title code="0x0400000d">0D-04 : EFFECT #2</title> -->
+			<title code="0x0500000d">0D-05 : DUNGEON</title>
+			<title code="0x0600000d">0D-06 : BOSS 3</title>
+		<!--	<title code="0x0700000d">0D-07 : VISUAL SCENE</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAGE(OPNA)</name>
+		<driver type="opna">pc98vx</driver>
+		<driveralias type="NEC PC-9801">M.N.M Software</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x0a"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="gage98">
+			<rom type="code" offset="0x00600">mlfplay.bin</rom>
+			<rom type="code" offset="0x01000">MUSIC98.BIN</rom>
+			<rom type="code" offset="0x10000">EFD.OBJ</rom>
+			<rom type="bgm" offset="0x02">GAGE1.OBJ</rom>
+			<rom type="bgm" offset="0x03">GAGE2.OBJ</rom>
+			<rom type="bgm" offset="0x04">GAGE3.OBJ</rom>
+			<rom type="bgm" offset="0x05">GAGE4.OBJ</rom>
+			<rom type="bgm" offset="0x06">GAGE5.OBJ</rom>
+			<rom type="bgm" offset="0x07">GAGE6.OBJ</rom>
+			<rom type="bgm" offset="0x08">GAGE7.OBJ</rom>
+			<rom type="bgm" offset="0x09">GAGE8.OBJ</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000002">GAGE1.OBJ</title>
+			<title code="0x000003">GAGE2.OBJ</title>
+			<title code="0x000004">GAGE3.OBJ</title>
+			<title code="0x000005">GAGE4.OBJ</title>
+			<title code="0x000006">GAGE5.OBJ</title>
+			<title code="0x000007">GAGE6.OBJ</title>
+			<title code="0x000008">GAGE7.OBJ</title>
+			<title code="0x000009">GAGE8.OBJ</title>
+			<title code="0x010001">EFFECT #01</title>
+			<title code="0x020001">EFFECT #02</title>
+			<title code="0x030001">EFFECT #03</title>
+			<title code="0x040001">EFFECT #04</title>
+			<title code="0x050001">EFFECT #05</title>
+			<title code="0x060001">EFFECT #06</title>
+			<title code="0x070001">EFFECT #07</title>
+			<title code="0x080001">EFFECT #08</title>
+			<title code="0x090001">EFFECT #09</title>
+			<title code="0x0a0001">EFFECT #0A</title>
+			<title code="0x0b0001">EFFECT #0B</title>
+			<title code="0x0c0001">EFFECT #0C</title>
+			<title code="0x0d0001">EFFECT #0D</title>
+			<title code="0x0e0001">EFFECT #0E</title>
+			<title code="0x0f0001">EFFECT #0F</title>
+			<title code="0x100001">EFFECT #10</title>
+			<title code="0x110001">EFFECT #11</title>
+			<title code="0x120001">EFFECT #12</title>
+			<title code="0x130001">EFFECT #13</title>
+			<title code="0x140001">EFFECT #14</title>
+			<title code="0x150001">EFFECT #15</title>
+			<title code="0x160001">EFFECT #16</title>
+			<title code="0x170001">EFFECT #17</title>
+			<title code="0x180001">EFFECT #18</title>
+			<title code="0x190001">EFFECT #19</title>
+			<title code="0x1a0001">EFFECT #1A</title>
+			<title code="0x1b0001">EFFECT #1B</title>
+			<title code="0x1c0001">EFFECT #1C</title>
+			<title code="0x1d0001">EFFECT #1D</title>
+			<title code="0x1e0001">EFFECT #1E</title>
+			<title code="0x1f0001">EFFECT #1F</title>
+			<title code="0x200001">EFFECT #20</title>
+			<title code="0x210001">EFFECT #21</title>
+			<title code="0x220001">EFFECT #22</title>
+			<title code="0x230001">EFFECT #23</title>
+			<title code="0x240001">EFFECT #24</title>
+			<title code="0x250001">EFFECT #25</title>
+			<title code="0x260001">EFFECT #26</title>
+			<title code="0x270001">EFFECT #27</title>
+			<title code="0x280001">EFFECT #28</title>
+			<title code="0x290001">EFFECT #29</title>
+			<title code="0x2a0001">EFFECT #2A</title>
+			<title code="0x2b0001">EFFECT #2B</title>
+			<title code="0x2c0001">EFFECT #2C</title>
+			<title code="0x2d0001">EFFECT #2D</title>
+			<title code="0x2e0001">EFFECT #2E</title>
+			<title code="0x2f0001">EFFECT #2F</title>
+			<title code="0x300001">EFFECT #30</title>
+			<title code="0x310001">EFFECT #31</title>
+			<title code="0x320001">EFFECT #32</title>
+			<title code="0x330001">EFFECT #33</title>
+			<title code="0x340001">EFFECT #34</title>
+			<title code="0x350001">EFFECT #35</title>
+			<title code="0x360001">EFFECT #36</title>
+			<title code="0x370001">EFFECT #37</title>
+			<title code="0x380001">EFFECT #38</title>
+			<title code="0x390001">EFFECT #39</title>
+			<title code="0x3a0001">EFFECT #3A</title>
+			<title code="0x3b0001">EFFECT #3B</title>
+			<title code="0x3c0001">EFFECT #3C</title>
+			<title code="0x3d0001">EFFECT #3D</title>
+			<title code="0x3e0001">EFFECT #3E</title>
+			<title code="0x3f0001">EFFECT #3F</title>
+			<title code="0x400001">EFFECT #40</title>
+			<title code="0x410001">EFFECT #41</title>
+			<title code="0x420001">EFFECT #42</title>
+			<title code="0x430001">EFFECT #43</title>
+			<title code="0x440001">EFFECT #44</title>
+			<title code="0x450001">EFFECT #45</title>
+			<title code="0x460001">EFFECT #46</title>
+			<title code="0x470001">EFFECT #47</title>
+			<title code="0x480001">EFFECT #48</title>
+			<title code="0x490001">EFFECT #49</title>
+			<title code="0x4a0001">EFFECT #4A</title>
+			<title code="0x4b0001">EFFECT #4B</title>
+			<title code="0x4c0001">EFFECT #4C</title>
+			<title code="0x4d0001">EFFECT #4D</title>
+			<title code="0x4e0001">EFFECT #4E</title>
+			<title code="0x4f0001">EFFECT #4F</title>
+			<title code="0x500001">EFFECT #50</title>
+			<title code="0x510001">EFFECT #51</title>
+			<title code="0x520001">EFFECT #52</title>
+			<title code="0x530001">EFFECT #53</title>
+			<title code="0x540001">EFFECT #54</title>
+			<title code="0x550001">EFFECT #55</title>
+			<title code="0x560001">EFFECT #56</title>
+			<title code="0x570001">EFFECT #57</title>
+			<title code="0x580001">EFFECT #58</title>
+			<title code="0x590001">EFFECT #59</title>
+			<title code="0x5a0001">EFFECT #5A</title>
+			<title code="0x5b0001">EFFECT #5B</title>
+			<title code="0x5c0001">EFFECT #5C</title>
+			<title code="0x5d0001">EFFECT #5D</title>
+			<title code="0x5e0001">EFFECT #5E</title>
+			<title code="0x5f0001">EFFECT #5F</title>
+			<title code="0x600001">EFFECT #60</title>
+			<title code="0x610001">EFFECT #61</title>
+			<title code="0x620001">EFFECT #62</title>
+			<title code="0x630001">EFFECT #63</title>
+			<title code="0x640001">EFFECT #64</title>
+			<title code="0x650001">EFFECT #65</title>
+			<title code="0x660001">EFFECT #66</title>
+			<title code="0x670001">EFFECT #67</title>
+			<title code="0x680001">EFFECT #68</title>
+			<title code="0x690001">EFFECT #69</title>
+			<title code="0x6a0001">EFFECT #6A</title>
+			<title code="0x6b0001">EFFECT #6B</title>
+			<title code="0x6c0001">EFFECT #6C</title>
+			<title code="0x6d0001">EFFECT #6D</title>
+			<title code="0x6e0001">EFFECT #6E</title>
+			<title code="0x6f0001">EFFECT #6F</title>
+			<title code="0x700001">EFFECT #70</title>
+			<title code="0x710001">EFFECT #71</title>
+			<title code="0x720001">EFFECT #72</title>
+			<title code="0x730001">EFFECT #73</title>
+			<title code="0x740001">EFFECT #74</title>
+			<title code="0x750001">EFFECT #75</title>
+			<title code="0x760001">EFFECT #76</title>
+			<title code="0x770001">EFFECT #77</title>
+			<title code="0x780001">EFFECT #78</title>
+			<title code="0x790001">EFFECT #79</title>
+			<title code="0x7a0001">EFFECT #7A</title>
+			<title code="0x7b0001">EFFECT #7B</title>
+			<title code="0x7c0001">EFFECT #7C</title>
+			<title code="0x7d0001">EFFECT #7D</title>
+			<title code="0x7e0001">EFFECT #7E</title>
+			<title code="0x7f0001">EFFECT #7F</title>
+			<title code="0x800001">EFFECT #80</title>
+			<title code="0x810001">EFFECT #81</title>
+			<title code="0x820001">EFFECT #82</title>
+			<title code="0x830001">EFFECT #83</title>
+			<title code="0x840001">EFFECT #84</title>
+			<title code="0x850001">EFFECT #85</title>
+			<title code="0x860001">EFFECT #86</title>
+			<title code="0x870001">EFFECT #87</title>
+			<title code="0x880001">EFFECT #88</title>
+			<title code="0x890001">EFFECT #89</title>
+			<title code="0x8a0001">EFFECT #8A</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] GAGE(OPN)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">M.N.M Software</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x0a"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="gage98">
+			<rom type="code" offset="0x00600">mlfplay.bin</rom>
+			<rom type="code" offset="0x01000">MUSIC98.BIN</rom>
+			<rom type="code" offset="0x10000">EFD.OBJ</rom>
+			<rom type="bgm" offset="0x02">GAGE1.OBJ</rom>
+			<rom type="bgm" offset="0x03">GAGE2.OBJ</rom>
+			<rom type="bgm" offset="0x04">GAGE3.OBJ</rom>
+			<rom type="bgm" offset="0x05">GAGE4.OBJ</rom>
+			<rom type="bgm" offset="0x06">GAGE5.OBJ</rom>
+			<rom type="bgm" offset="0x07">GAGE6.OBJ</rom>
+			<rom type="bgm" offset="0x08">GAGE7.OBJ</rom>
+			<rom type="bgm" offset="0x09">GAGE8.OBJ</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000002">GAGE1.OBJ</title>
+			<title code="0x000003">GAGE2.OBJ</title>
+			<title code="0x000004">GAGE3.OBJ</title>
+			<title code="0x000005">GAGE4.OBJ</title>
+			<title code="0x000006">GAGE5.OBJ</title>
+			<title code="0x000007">GAGE6.OBJ</title>
+			<title code="0x000008">GAGE7.OBJ</title>
+			<title code="0x000009">GAGE8.OBJ</title>
+			<title code="0x010001">EFFECT #01</title>
+			<title code="0x020001">EFFECT #02</title>
+			<title code="0x030001">EFFECT #03</title>
+			<title code="0x040001">EFFECT #04</title>
+			<title code="0x050001">EFFECT #05</title>
+			<title code="0x060001">EFFECT #06</title>
+			<title code="0x070001">EFFECT #07</title>
+			<title code="0x080001">EFFECT #08</title>
+			<title code="0x090001">EFFECT #09</title>
+			<title code="0x0a0001">EFFECT #0A</title>
+			<title code="0x0b0001">EFFECT #0B</title>
+			<title code="0x0c0001">EFFECT #0C</title>
+			<title code="0x0d0001">EFFECT #0D</title>
+			<title code="0x0e0001">EFFECT #0E</title>
+			<title code="0x0f0001">EFFECT #0F</title>
+			<title code="0x100001">EFFECT #10</title>
+			<title code="0x110001">EFFECT #11</title>
+			<title code="0x120001">EFFECT #12</title>
+			<title code="0x130001">EFFECT #13</title>
+			<title code="0x140001">EFFECT #14</title>
+			<title code="0x150001">EFFECT #15</title>
+			<title code="0x160001">EFFECT #16</title>
+			<title code="0x170001">EFFECT #17</title>
+			<title code="0x180001">EFFECT #18</title>
+			<title code="0x190001">EFFECT #19</title>
+			<title code="0x1a0001">EFFECT #1A</title>
+			<title code="0x1b0001">EFFECT #1B</title>
+			<title code="0x1c0001">EFFECT #1C</title>
+			<title code="0x1d0001">EFFECT #1D</title>
+			<title code="0x1e0001">EFFECT #1E</title>
+			<title code="0x1f0001">EFFECT #1F</title>
+			<title code="0x200001">EFFECT #20</title>
+			<title code="0x210001">EFFECT #21</title>
+			<title code="0x220001">EFFECT #22</title>
+			<title code="0x230001">EFFECT #23</title>
+			<title code="0x240001">EFFECT #24</title>
+			<title code="0x250001">EFFECT #25</title>
+			<title code="0x260001">EFFECT #26</title>
+			<title code="0x270001">EFFECT #27</title>
+			<title code="0x280001">EFFECT #28</title>
+			<title code="0x290001">EFFECT #29</title>
+			<title code="0x2a0001">EFFECT #2A</title>
+			<title code="0x2b0001">EFFECT #2B</title>
+			<title code="0x2c0001">EFFECT #2C</title>
+			<title code="0x2d0001">EFFECT #2D</title>
+			<title code="0x2e0001">EFFECT #2E</title>
+			<title code="0x2f0001">EFFECT #2F</title>
+			<title code="0x300001">EFFECT #30</title>
+			<title code="0x310001">EFFECT #31</title>
+			<title code="0x320001">EFFECT #32</title>
+			<title code="0x330001">EFFECT #33</title>
+			<title code="0x340001">EFFECT #34</title>
+			<title code="0x350001">EFFECT #35</title>
+			<title code="0x360001">EFFECT #36</title>
+			<title code="0x370001">EFFECT #37</title>
+			<title code="0x380001">EFFECT #38</title>
+			<title code="0x390001">EFFECT #39</title>
+			<title code="0x3a0001">EFFECT #3A</title>
+			<title code="0x3b0001">EFFECT #3B</title>
+			<title code="0x3c0001">EFFECT #3C</title>
+			<title code="0x3d0001">EFFECT #3D</title>
+			<title code="0x3e0001">EFFECT #3E</title>
+			<title code="0x3f0001">EFFECT #3F</title>
+			<title code="0x400001">EFFECT #40</title>
+			<title code="0x410001">EFFECT #41</title>
+			<title code="0x420001">EFFECT #42</title>
+			<title code="0x430001">EFFECT #43</title>
+			<title code="0x440001">EFFECT #44</title>
+			<title code="0x450001">EFFECT #45</title>
+			<title code="0x460001">EFFECT #46</title>
+			<title code="0x470001">EFFECT #47</title>
+			<title code="0x480001">EFFECT #48</title>
+			<title code="0x490001">EFFECT #49</title>
+			<title code="0x4a0001">EFFECT #4A</title>
+			<title code="0x4b0001">EFFECT #4B</title>
+			<title code="0x4c0001">EFFECT #4C</title>
+			<title code="0x4d0001">EFFECT #4D</title>
+			<title code="0x4e0001">EFFECT #4E</title>
+			<title code="0x4f0001">EFFECT #4F</title>
+			<title code="0x500001">EFFECT #50</title>
+			<title code="0x510001">EFFECT #51</title>
+			<title code="0x520001">EFFECT #52</title>
+			<title code="0x530001">EFFECT #53</title>
+			<title code="0x540001">EFFECT #54</title>
+			<title code="0x550001">EFFECT #55</title>
+			<title code="0x560001">EFFECT #56</title>
+			<title code="0x570001">EFFECT #57</title>
+			<title code="0x580001">EFFECT #58</title>
+			<title code="0x590001">EFFECT #59</title>
+			<title code="0x5a0001">EFFECT #5A</title>
+			<title code="0x5b0001">EFFECT #5B</title>
+			<title code="0x5c0001">EFFECT #5C</title>
+			<title code="0x5d0001">EFFECT #5D</title>
+			<title code="0x5e0001">EFFECT #5E</title>
+			<title code="0x5f0001">EFFECT #5F</title>
+			<title code="0x600001">EFFECT #60</title>
+			<title code="0x610001">EFFECT #61</title>
+			<title code="0x620001">EFFECT #62</title>
+			<title code="0x630001">EFFECT #63</title>
+			<title code="0x640001">EFFECT #64</title>
+			<title code="0x650001">EFFECT #65</title>
+			<title code="0x660001">EFFECT #66</title>
+			<title code="0x670001">EFFECT #67</title>
+			<title code="0x680001">EFFECT #68</title>
+			<title code="0x690001">EFFECT #69</title>
+			<title code="0x6a0001">EFFECT #6A</title>
+			<title code="0x6b0001">EFFECT #6B</title>
+			<title code="0x6c0001">EFFECT #6C</title>
+			<title code="0x6d0001">EFFECT #6D</title>
+			<title code="0x6e0001">EFFECT #6E</title>
+			<title code="0x6f0001">EFFECT #6F</title>
+			<title code="0x700001">EFFECT #70</title>
+			<title code="0x710001">EFFECT #71</title>
+			<title code="0x720001">EFFECT #72</title>
+			<title code="0x730001">EFFECT #73</title>
+			<title code="0x740001">EFFECT #74</title>
+			<title code="0x750001">EFFECT #75</title>
+			<title code="0x760001">EFFECT #76</title>
+			<title code="0x770001">EFFECT #77</title>
+			<title code="0x780001">EFFECT #78</title>
+			<title code="0x790001">EFFECT #79</title>
+			<title code="0x7a0001">EFFECT #7A</title>
+			<title code="0x7b0001">EFFECT #7B</title>
+			<title code="0x7c0001">EFFECT #7C</title>
+			<title code="0x7d0001">EFFECT #7D</title>
+			<title code="0x7e0001">EFFECT #7E</title>
+			<title code="0x7f0001">EFFECT #7F</title>
+			<title code="0x800001">EFFECT #80</title>
+			<title code="0x810001">EFFECT #81</title>
+			<title code="0x820001">EFFECT #82</title>
+			<title code="0x830001">EFFECT #83</title>
+			<title code="0x840001">EFFECT #84</title>
+			<title code="0x850001">EFFECT #85</title>
+			<title code="0x860001">EFFECT #86</title>
+			<title code="0x870001">EFFECT #87</title>
+			<title code="0x880001">EFFECT #88</title>
+			<title code="0x890001">EFFECT #89</title>
+			<title code="0x8a0001">EFFECT #8A</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] FSS ティグナスの冒険</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">M.N.M Software</driveralias>
+		<romlist archive="fss68snd">
+			<rom type="code" offset="0x00000">fss68snd.bin</rom>
+			<rom type="code" offset="0x10000">FSSMYU.R</rom>
+			<rom type="code" offset="0x10d74">FSSMUS.MDT</rom>
+			<rom type="code" offset="0x14ca8">FSSMUS.PCM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">001 : </title>
+			<title code="0x02">002 : </title>
+			<title code="0x03">003 : </title>
+			<title code="0x04">004 : </title>
+			<title code="0x05">005 : </title>
+			<title code="0x06">006 : </title>
+			<title code="0x07">007 : </title>
+			<title code="0x08">008 : </title>
+			<title code="0x101">101 : SE</title>
+			<title code="0x102">102 : SE</title>
+			<title code="0x103">103 : SE</title>
+			<title code="0x104">104 : SE</title>
+			<title code="0x105">105 : SE</title>
+			<title code="0x106">106 : SE</title>
+			<title code="0x107">107 : SE</title>
+			<title code="0x108">108 : SE</title>
+			<title code="0x109">109 : SE</title>
+			<title code="0x10a">10a : SE</title>
+			<title code="0x10b">10b : SE</title>
+			<title code="0x10c">10c : SE</title>
+			<title code="0x10d">10d : SE</title>
+			<title code="0x10e">10e : SE</title>
+			<title code="0x10f">10f : SE</title>
+			<title code="0x110">110 : SE</title>
+			<title code="0x111">111 : SE</title>
+			<title code="0x112">112 : SE</title>
+			<title code="0x113">113 : SE</title>
+			<title code="0x114">114 : SE</title>
+			<title code="0x115">115 : SE</title>
+			<title code="0x116">116 : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] MAGICAL SHOT</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">M.N.M Software</driveralias>
+		<romlist archive="mags68snd">
+			<rom type="code" offset="0x00000">mags68snd.bin</rom>
+			<rom type="x" offset="0x10000">MNMMUS.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">01 : visual</title>
+			<title code="0x02">02 : China</title>
+			<title code="0x03">03 : title</title>
+			<title code="0x04">04 : pub</title>
+			<title code="0x05">05 : last stage</title>
+			<title code="0x06">06 : ending</title>
+			<title code="0x07">07 : game over</title>
+			<title code="0x08">08 : last stage #2</title>
+			<title code="0x09">09 : boish</title>
+			<title code="0x0a">0a : black</title>
+			<title code="0x0b">0b : last visual</title>
+			<title code="0x0c">0c : soul</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Noah</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">M.N.M Software</driveralias>
+		<romlist archive="noah68snd">
+			<rom type="code" offset="0x00000">noah68snd.bin</rom>
+			<rom type="x" offset="0x10000">MDRV.X</rom>
+			<rom type="code" offset="0x13000">NOAH.MDT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">01 : </title>
+			<title code="0x02">02 : </title>
+			<title code="0x11">11 : SE</title>
+			<title code="0x12">12 : SE</title>
+			<title code="0x13">13 : SE</title>
+			<title code="0x14">14 : SE</title>
+			<title code="0x15">15 : SE</title>
+			<title code="0x16">16 : SE</title>
+			<title code="0x17">17 : SE</title>
+			<title code="0x18">18 : SE</title>
+			<title code="0x19">19 : SE</title>
+			<title code="0x1a">1a : SE</title>
+			<title code="0x1b">1b : SE</title>
+			<title code="0x1c">1c : SE</title>
+			<title code="0x1d">1d : SE</title>
+			<title code="0x1e">1e : SE</title>
+			<title code="0x1f">1f : SE</title>
+			<title code="0x20">20 : SE</title>
+			<title code="0x21">21 : SE</title>
+			<title code="0x22">22 : SE</title>
+			<title code="0x23">23 : SE</title>
+			<title code="0x25">25 : SE</title>
+			<title code="0x26">26 : SE</title>
+			<title code="0x27">27 : SE</title>
+			<title code="0x28">28 : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] PIPYAN</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">M.N.M Software</driveralias>
+		<romlist archive="pipy68snd">
+			<rom type="code" offset="0x00000">pipy68snd.bin</rom>
+			<rom type="code" offset="0x10000">PIPMYU.R</rom>
+			<rom type="code" offset="0x115b6">PIPYAN.MDT</rom>
+			<rom type="code" offset="0x175f0">PIPYAN.SMP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">01 : </title>
+			<title code="0x02">02 : </title>
+			<title code="0x03">03 : </title>
+			<title code="0x04">04 : </title>
+			<title code="0x05">05 : </title>
+			<title code="0x06">06 : </title>
+			<title code="0x07">07 : </title>
+			<title code="0x08">08 : </title>
+			<title code="0x09">09 : </title>
+			<title code="0x0a">0a : </title>
+			<title code="0x0b">0b : </title>
+			<title code="0x0c">0c : </title>
+			<title code="0x0d">0d : </title>
+			<title code="0x0e">0e : </title>
+			<title code="0x0f">0f : </title>
+			<title code="0x10">10 : </title>
+			<title code="0x11">11 : SE</title>
+			<title code="0x12">12 : SE</title>
+			<title code="0x13">13 : SE</title>
+			<title code="0x14">14 : SE</title>
+			<title code="0x15">15 : SE</title>
+			<title code="0x16">16 : SE</title>
+			<title code="0x17">17 : SE</title>
+			<title code="0x18">18 : SE</title>
+			<title code="0x19">19 : SE</title>
+			<title code="0x1a">1a : SE</title>
+			<title code="0x1b">1b : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] STAR MOBILE</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">M.N.M Software</driveralias>
+		<romlist archive="starm68snd">
+			<rom type="code" offset="0x00000">starm68snd.bin</rom>
+			<rom type="code" offset="0x10000">stmyu.R</rom>
+			<rom type="code" offset="0x11558">StarMUS.MDT</rom>
+			<rom type="code" offset="0x16fba">StarPCM.SMP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">12 : </title>
+			<title code="0x13">13 : </title>
+			<title code="0x14">14 : </title>
+			<title code="0x15">15 : </title>
+			<title code="0x16">16 : </title>
+			<title code="0x17">17 : </title>
+			<title code="0x18">18 : </title>
+			<title code="0x19">19 : </title>
+			<title code="0x1a">1a : </title>
+			<title code="0x1b">1b : </title>
+			<title code="0x1c">1c : </title>
+			<title code="0x01">01 : SE</title>
+			<title code="0x02">02 : SE</title>
+			<title code="0x03">03 : SE</title>
+			<title code="0x04">04 : SE</title>
+			<title code="0x05">05 : SE</title>
+			<title code="0x06">06 : SE</title>
+			<title code="0x07">07 : SE</title>
+			<title code="0x08">08 : SE</title>
+			<title code="0x09">09 : SE</title>
+			<title code="0x0a">0a : SE</title>
+			<title code="0x0b">0b : SE</title>
+			<title code="0x0c">0c : SE</title>
+			<title code="0x0d">0d : SE</title>
+			<title code="0x0e">0e : SE</title>
+			<title code="0x0f">0f : SE</title>
+			<title code="0x10">10 : SE</title>
+			<title code="0x11">11 : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] STAR TRADER</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">M.N.M Software</driveralias>
+		<romlist archive="strader68snd">
+			<rom type="code" offset="0x00000">strader68snd.bin</rom>
+			<rom type="x"    offset="0x10000">pmd.x</rom>
+			<rom type="code" offset="0x2f000">startrader.p</rom>
+			<rom type="code" offset="0x70000">st01.m</rom>
+			<rom type="code" offset="0x71000">st02.m</rom>
+			<rom type="code" offset="0x78000">st03.m</rom>
+			<rom type="code" offset="0x7d000">st04.m</rom>
+			<rom type="code" offset="0x80000">st05.m</rom>
+			<rom type="code" offset="0x83000">st06.m</rom>
+			<rom type="code" offset="0x84000">st07.m</rom>
+			<rom type="code" offset="0x85000">st08.m</rom>
+			<rom type="code" offset="0x86000">st09.m</rom>
+			<rom type="code" offset="0x89000">st10.m</rom>
+			<rom type="code" offset="0x8b000">st11.m</rom>
+			<rom type="code" offset="0x8c000">st12.m</rom>
+			<rom type="code" offset="0x90000">trmyu.r</rom>
+			<rom type="code" offset="0x91524">stmyu.mdt</rom>
+			<rom type="code" offset="0x95252">startrader.p</rom>
+			<rom type="code" offset="0x95252">startrader.pat</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x04">st.mus    : 00 : 出撃        (タイトル)</title>
+			<title code="0x01">stmyu.mdt : 00 : [X68K版新曲] オープニングビジュアル</title>
+			<title code="0x0c">st.mus    : 02 : [X68K版新曲] ZONE SILVA</title>
+			<title code="0x1a">st.mus    : 08 : [X68K版新曲] ZONE OGUMA</title>
+			<title code="0x05">st.mus    : 01 : MOON SCAPE  (ZONE LUFA)</title>
+			<title code="0x1d">st.mus    : 09 : [X68K版新曲] ZONE VAHA</title>
+			<title code="0x11">st.mus    : 03 : [X68K版新曲] ZONE MOLGANA</title>
+			<title code="0x02">stmyu.mdt : 01 : [X68K版新曲] 中間ビジュアル</title>
+			<title code="0x14">st.mus    : 04 : [X68K版新曲] ZONE FIRE</title>
+			<title code="0x17">st.mus    : 05 : [X68K版新曲] ZONE HUGI</title>
+			<title code="0x03">stmyu.mdt : 02 : [X68K版新曲] エンディングビジュアル</title>
+			<title code="0x20">st.mus    : 0B : [X68K版新曲] スタッフロール</title>
+			<title code="0x18">st.mus    : 06 : [X68K版新曲] ゲームオーバー</title>
+			<title code="0x1f">st.mus    : 0A : [X68K版新曲] ゲームオーバー</title>
+			<title code="0x19">st.mus    : 07 : [X68K版新曲] 未使用曲</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] THRICE</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">M.N.M Software</driveralias>
+		<romlist archive="thrice68snd">
+			<rom type="code" offset="0x00000">thrice68snd.bin</rom>
+			<rom type="code" offset="0x10000">ECIRHT.r</rom>
+			<rom type="code" offset="0x115b6">THRICE.mdt</rom>
+			<rom type="code" offset="0x127d6">THRICE.pcm</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03">03 : WORLD WIDE</title>
+			<title code="0x01">01 : THAT'S THRICE</title>
+			<title code="0x02">02 : BLOCK TIME</title>
+			<title code="0x04">04 : SE</title>
+			<title code="0x05">05 : SE</title>
+			<title code="0x06">06 : SE</title>
+			<title code="0x07">07 : SE</title>
+			<title code="0x08">08 : SE</title>
+			<title code="0x09">09 : SE</title>
+			<title code="0x0a">0a : SE</title>
+			<title code="0x0b">0b : SE</title>
+			<title code="0x0c">0c : SE</title>
+			<title code="0x0d">0d : SE</title>
+			<title code="0x0e">0e : SE</title>
+			<title code="0x0f">0f : SE</title>
+			<title code="0x10">10 : SE</title>
+			<title code="0x11">11 : SE</title>
+			<title code="0x12">12 : SE</title>
+			<title code="0x13">13 : SE</title>
+			<title code="0x14">14 : SE</title>
+		</titlelist>
+	</game>
+</gamelist>

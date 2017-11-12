@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Scap Trust -->
+	<game>
+		<name>[PC-8801] GALL FORCE ETERNAL STORY 創世の序曲</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Scap Trust</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+		</options>
+		<romlist archive="gallforc">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">A00</rom>
+			<rom type="bgm" offset="0x01">A01</rom>
+			<rom type="bgm" offset="0x02">A03</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x04000001">A01 : オープニング</title>
+			<title code="0x00000000">A00 : BGM1</title>
+			<title code="0x01000000">A00 : BGM2</title>
+			<title code="0x02000000">A00 : BGM3</title>
+			<title code="0x03000000">A00 : BGM4</title>
+			<title code="0x05000002">A03 : エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] STAR/SHIP RENDEZVOUS(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">Scap Trust</driveralias>
+		<options>
+			<option name="init_pc" value="0xe000"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="starship">
+			<rom type="code" offset="0x8000">SUB88.COM</rom>
+			<rom type="code" offset="0xe000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MTIAM07.SND</rom>
+			<rom type="bgm" offset="0x01">MTYH04.SND</rom>
+			<rom type="bgm" offset="0x02">MTYH02.SND</rom>
+			<rom type="bgm" offset="0x03">MTIAM06.SND</rom>
+			<rom type="bgm" offset="0x04">MTYH05.SND</rom>
+			<rom type="bgm" offset="0x05">MTIAM02.SND</rom>
+			<rom type="bgm" offset="0x06">MTIAM05.SND</rom>
+			<rom type="bgm" offset="0x07">MTYH01.SND</rom>
+			<rom type="bgm" offset="0x08">MTIAM08.SND</rom>
+			<rom type="bgm" offset="0x09">MTYH03.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MTIAM07 : Operation in Unsteady Space</title>
+			<title code="0x00000001">MTYH04  : The Art of Noise</title>
+			<title code="0x00000002">MTYH02  : Madness and Its Synergistic Effect</title>
+			<title code="0x00000003">MTIAM06 : MAZE TRAP!!</title>
+			<title code="0x00000004">MTYH05  : Bass が ブ・リ・バ・リ</title>
+			<title code="0x00000005">MTIAM02 : The Outsider</title>
+			<title code="0x00000006">MTIAM05 : Work of Digging at Midnight</title>
+			<title code="0x00000007">MTYH01  : Mysticism</title>
+			<title code="0x00000008">MTIAM08 : The Sunset for The Sunrise</title>
+			<title code="0x00000009">MTYH03  : Don't Forget Your Wonderful Memory</title>
+			<title code="0x120000ff">EFFECT #12</title>
+			<title code="0x130000ff">EFFECT #13</title>
+			<title code="0x140000ff">EFFECT #14</title>
+			<title code="0x150000ff">EFFECT #15</title>
+			<title code="0x160000ff">EFFECT #16</title>
+			<title code="0x170000ff">EFFECT #17</title>
+			<title code="0x180000ff">EFFECT #18</title>
+			<title code="0x190000ff">EFFECT #19</title>
+			<title code="0x1a0000ff">EFFECT #1A</title>
+			<title code="0x1b0000ff">EFFECT #1B</title>
+			<title code="0x1c0000ff">EFFECT #1C</title>
+			<title code="0x1d0000ff">EFFECT #1D</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] STAR/SHIP RENDEZVOUS(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Scap Trust</driveralias>
+		<options>
+			<option name="init_pc" value="0xe000"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="starship">
+			<rom type="code" offset="0x8000">SUB88.COM</rom>
+			<rom type="code" offset="0xe000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MTIAM07.SND</rom>
+			<rom type="bgm" offset="0x01">MTYH04.SND</rom>
+			<rom type="bgm" offset="0x02">MTYH02.SND</rom>
+			<rom type="bgm" offset="0x03">MTIAM06.SND</rom>
+			<rom type="bgm" offset="0x04">MTYH05.SND</rom>
+			<rom type="bgm" offset="0x05">MTIAM02.SND</rom>
+			<rom type="bgm" offset="0x06">MTIAM05.SND</rom>
+			<rom type="bgm" offset="0x07">MTYH01.SND</rom>
+			<rom type="bgm" offset="0x08">MTIAM08.SND</rom>
+			<rom type="bgm" offset="0x09">MTYH03.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MTIAM07 : Operation in Unsteady Space</title>
+			<title code="0x00000001">MTYH04  : The Art of Noise</title>
+			<title code="0x00000002">MTYH02  : Madness and Its Synergistic Effect</title>
+			<title code="0x00000003">MTIAM06 : MAZE TRAP!!</title>
+			<title code="0x00000004">MTYH05  : Bass が ブ・リ・バ・リ</title>
+			<title code="0x00000005">MTIAM02 : The Outsider</title>
+			<title code="0x00000006">MTIAM05 : Work of Digging at Midnight</title>
+			<title code="0x00000007">MTYH01  : Mysticism</title>
+			<title code="0x00000008">MTIAM08 : The Sunset for The Sunrise</title>
+			<title code="0x00000009">MTYH03  : Don't Forget Your Wonderful Memory</title>
+			<title code="0x120000ff">EFFECT #12</title>
+			<title code="0x130000ff">EFFECT #13</title>
+			<title code="0x140000ff">EFFECT #14</title>
+			<title code="0x150000ff">EFFECT #15</title>
+			<title code="0x160000ff">EFFECT #16</title>
+			<title code="0x170000ff">EFFECT #17</title>
+			<title code="0x180000ff">EFFECT #18</title>
+			<title code="0x190000ff">EFFECT #19</title>
+			<title code="0x1a0000ff">EFFECT #1A</title>
+			<title code="0x1b0000ff">EFFECT #1B</title>
+			<title code="0x1c0000ff">EFFECT #1C</title>
+			<title code="0x1d0000ff">EFFECT #1D</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 紫禁城</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Scap Trust</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb000"/>
+			<option name="init_pc"    value="0xf000"/>
+		</options>
+		<romlist archive="shikinjo">
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MUSIC 00</title>
+			<title code="0x00000001">MUSIC 01</title>
+			<title code="0x00000002">MUSIC 02</title>
+			<title code="0x00000003">MUSIC 03</title>
+			<title code="0x00000004">MUSIC 04</title>
+			<title code="0x00000005">MUSIC 05</title>
+			<title code="0x00000006">MUSIC 06</title>
+			<title code="0x00000007">MUSIC 07</title>
+			<title code="0x000000ff">EFFECT 00</title>
+			<title code="0x010000ff">EFFECT 01</title>
+			<title code="0x020000ff">EFFECT 02</title>
+			<title code="0x030000ff">EFFECT 03</title>
+			<title code="0x040000ff">EFFECT 04</title>
+			<title code="0x050000ff">EFFECT 05</title>
+			<title code="0x060000ff">EFFECT 06</title>
+			<title code="0x070000ff">EFFECT 07</title>
+			<title code="0x0b0000ff">EFFECT 0B</title>
+			<title code="0x0c0000ff">EFFECT 0C</title>
+			<title code="0x0d0000ff">EFFECT 0D</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] STAR/SHIP RENDEZVOUS</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">Scap Trust</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0xb145"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="11"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="ssg_mix" value="-28"/>
+		</options>
+		<romlist archive="starship_98">
+			<rom type="code" offset="0x600">SPX</rom>
+			<rom type="code" offset="0x600">stars_98.bin</rom>
+			<rom type="binary" offset="0xa3fee">08</rom>
+			<rom type="bgm" offset="1" >MTIAM02.SND</rom>
+			<rom type="bgm" offset="2" >MTIAM05.SND</rom>
+			<rom type="bgm" offset="3" >MTIAM06.SND</rom>
+			<rom type="bgm" offset="4" >MTIAM07.SND</rom>
+			<rom type="bgm" offset="5" >MTIAM08.SND</rom>
+			<rom type="bgm" offset="6" >MTYH01.SND</rom>
+			<rom type="bgm" offset="7" >MTYH02.SND</rom>
+			<rom type="bgm" offset="8" >MTYH03.SND</rom>
+			<rom type="bgm" offset="9" >MTYH04.SND</rom>
+			<rom type="bgm" offset="10">MTYH05.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="4" >MTIAM07.SND : Operation in Unsteady Space</title>
+			<title code="9" >MTYH04.SND  : The Art of Noise</title>
+			<title code="7" >MTYH02.SND  : Madness and Its Synergistic Effect</title>
+			<title code="3" >MTIAM06.SND : MAZE TRAP!!</title>
+			<title code="10">MTYH05.SND  : Bass が ブ・リ・バ・リ</title>
+			<title code="1" >MTIAM02.SND : The Outsider</title>
+			<title code="2" >MTIAM05.SND : Work of Digging at Midnight</title>
+			<title code="6" >MTYH01.SND  : Mysticism</title>
+			<title code="5" >MTIAM08.SND : The Sunset for The Sunrise</title>
+			<title code="8" >MTYH03.SND  : Don't Forget Your Wonderful Memory</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 紫禁城</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Scap Trust</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="shikinjo_98">
+			<rom type="file" offset="-1">mmd2.com</rom>
+			<rom type="file" offset="-1">MMD2.SYS</rom>
+			<rom type="file" offset="0x08">SKM.YBV</rom>
+			<rom type="file" offset="0x09">SKF.YBF</rom>
+			<rom type="file" offset="0x10">SKF0.YBM</rom>
+			<rom type="file" offset="0x11">SKM0.YBM</rom>
+			<rom type="file" offset="0x12">SKM1.YBM</rom>
+			<rom type="file" offset="0x13">SKM10.YBM</rom>
+			<rom type="file" offset="0x14">SKM11.YBM</rom>
+			<rom type="file" offset="0x15">SKM12.YBM</rom>
+			<rom type="file" offset="0x16">SKM13.YBM</rom>
+			<rom type="file" offset="0x17">SKM14.YBM</rom>
+			<rom type="file" offset="0x18">SKM2.YBM</rom>
+			<rom type="file" offset="0x19">SKM3.YBM</rom>
+			<rom type="file" offset="0x1a">SKM4.YBM</rom>
+			<rom type="file" offset="0x1b">SKM5.YBM</rom>
+			<rom type="file" offset="0x1c">SKM6.YBM</rom>
+			<rom type="file" offset="0x1d">SKM7.YBM</rom>
+			<rom type="file" offset="0x1e">SKM8.YBM</rom>
+			<rom type="file" offset="0x1f">SKM9.YBM</rom>
+			<rom type="file" offset="0x20">SKM99.YBM</rom>
+			<rom type="device" offset="0">mmd2.sys 8000 1024</rom>
+			<rom type="shell" offset="0">mmd2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x080010">SKF0.YBM  : </title>
+			<title code="0x080011">SKM0.YBM  : </title>
+			<title code="0x080012">SKM1.YBM  : </title>
+			<title code="0x080018">SKM2.YBM  : </title>
+			<title code="0x080019">SKM3.YBM  : </title>
+			<title code="0x08001a">SKM4.YBM  : </title>
+			<title code="0x08001b">SKM5.YBM  : </title>
+			<title code="0x08001c">SKM6.YBM  : </title>
+			<title code="0x08001d">SKM7.YBM  : </title>
+			<title code="0x08001e">SKM8.YBM  : </title>
+			<title code="0x08001f">SKM9.YBM  : </title>
+			<title code="0x080013">SKM10.YBM : </title>
+			<title code="0x080014">SKM11.YBM : </title>
+			<title code="0x080015">SKM12.YBM : </title>
+			<title code="0x080016">SKM13.YBM : </title>
+			<title code="0x080017">SKM14.YBM : </title>
+			<!--
+			<title code="0x080020">SKM99.YBM : [STOP]</title>
+			  -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 紫禁城</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Scap Trust</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="shikinjo68snd">
+			<rom type="code">shikin68snd.bin</rom>
+			<rom type="x"    offset="0x10000">SKJ.X</rom>
+			<rom type="code" offset="0x50000">TONE_0.VTD</rom>
+			<rom type="code" offset="0x51000">TONE_1.VTD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">01 : </title>
+			<title code="0x04">04 : 柳緑花紅</title>
+			<title code="0x05">05 : 白夜の騎士</title>
+			<title code="0x06">06 : 茜の空の忍者</title>
+			<title code="0x02">02 : 銀河のロマンス</title>
+			<title code="0x03">03 : 復得返自然</title>
+			<title code="0x07">07 :</title>
+			<title code="0x08">08 :</title>
+			<title code="0x09">09 :</title>
+			<title code="0x0a">0A :</title>
+			<title code="0x0b">0B :</title>
+			<title code="0x0c">0C :</title>
+			<title code="0x0d">0D :</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] STAR/SHIP RENDEZVOUS(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Scap Trust</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xba00"/>
+			<option name="mdata_size" value="0x1900"/>
+			<option name="mfile_size" value="0x1900"/>
+			<option name="init_pc"    value="0x400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="starship_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x9400">SOUND.COM</rom>
+			<rom type="bgm" offset="0x00">MTIAM02.SND</rom>
+			<rom type="bgm" offset="0x01">MTIAM05.SND</rom>
+			<rom type="bgm" offset="0x02">MTIAM06.SND</rom>
+			<rom type="bgm" offset="0x03">MTIAM07.SND</rom>
+			<rom type="bgm" offset="0x04">MTIAM08.SND</rom>
+			<rom type="bgm" offset="0x05">MTYH01.SND</rom>
+			<rom type="bgm" offset="0x06">MTYH02.SND</rom>
+			<rom type="bgm" offset="0x07">MTYH03.SND</rom>
+			<rom type="bgm" offset="0x08">MTYH04.SND</rom>
+			<rom type="bgm" offset="0x09">MTYH05.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MTIAM02.SND : Operation in Unsteady Space</title>
+			<!--
+			<title code="0x03">MTIAM07.SND : Operation in Unsteady Space</title>
+			  -->
+			<title code="0x08">MTYH04.SND  : The Art of Noise</title>
+			<title code="0x06">MTYH02.SND  : Madness and Its Synergistic Effect</title>
+			<title code="0x09">MTYH05.SND  : MAZE TRAP!!</title>
+			<title code="0x02">MTIAM06.SND : Bass が ブ・リ・バ・リ</title>
+			<title code="0x01">MTIAM05.SND : Work of Digging at Midnight</title>
+			<title code="0x05">MTYH01.SND  : Mysticism</title>
+			<title code="0x04">MTIAM08.SND : The Sunset for The Sunrise</title>
+			<title code="0x07">MTYH03.SND  : Don't Forget Your Wonderful Memory</title>
+			<range min="0x80" max="0x8b" extcode="1">SE   : 0x%02x : </range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] STAR/SHIP RENDEZVOUS(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Scap Trust</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xba00"/>
+			<option name="mdata_size" value="0x1900"/>
+			<option name="mfile_size" value="0x1900"/>
+			<option name="init_pc"    value="0x400"/>
+		</options>
+		<romlist archive="starship_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x9400">SOUND.COM</rom>
+			<rom type="bgm" offset="0x00">MTIAM02.SND</rom>
+			<rom type="bgm" offset="0x01">MTIAM05.SND</rom>
+			<rom type="bgm" offset="0x02">MTIAM06.SND</rom>
+			<rom type="bgm" offset="0x03">MTIAM07.SND</rom>
+			<rom type="bgm" offset="0x04">MTIAM08.SND</rom>
+			<rom type="bgm" offset="0x05">MTYH01.SND</rom>
+			<rom type="bgm" offset="0x06">MTYH02.SND</rom>
+			<rom type="bgm" offset="0x07">MTYH03.SND</rom>
+			<rom type="bgm" offset="0x08">MTYH04.SND</rom>
+			<rom type="bgm" offset="0x09">MTYH05.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MTIAM02.SND : Operation in Unsteady Space</title>
+			<!--
+			<title code="0x03">MTIAM07.SND : Operation in Unsteady Space</title>
+			  -->
+			<title code="0x08">MTYH04.SND  : The Art of Noise</title>
+			<title code="0x06">MTYH02.SND  : Madness and Its Synergistic Effect</title>
+			<title code="0x09">MTYH05.SND  : MAZE TRAP!!</title>
+			<title code="0x02">MTIAM06.SND : Bass が ブ・リ・バ・リ</title>
+			<title code="0x01">MTIAM05.SND : Work of Digging at Midnight</title>
+			<title code="0x05">MTYH01.SND  : Mysticism</title>
+			<title code="0x04">MTIAM08.SND : The Sunset for The Sunrise</title>
+			<title code="0x07">MTYH03.SND  : Don't Forget Your Wonderful Memory</title>
+			<range min="0x80" max="0x8b" extcode="1">SE   : 0x%02x : </range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] クリムゾン(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Scap Trust</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="crimson_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4000">OPLL.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">00 : プロローグ</title>
+			<title code="0x01">01 : オーガ・バトル</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] クリムゾン(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Scap Trust</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xbcc0"/>
+			<option name="mdata_size" value="0x1d00"/>
+			<option name="mfile_size" value="0x1d00"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="crimson_msx">
+			<rom type="code" offset="0x0400">patch2</rom>
+			<rom type="code" offset="0x4000">OPEN.BIN</rom>
+			<rom type="code" offset="0x9330">MSCMAIN.BIN</rom>
+			<rom type="bgm" offset="0x02">D@.BIN</rom>
+			<rom type="bgm" offset="0x03">D{.BIN</rom>
+			<rom type="bgm" offset="0x04">D}.BIN</rom>
+			<rom type="bgm" offset="0x05">DA.BIN</rom>
+			<rom type="bgm" offset="0x06">DB.BIN</rom>
+			<rom type="bgm" offset="0x07">DC.BIN</rom>
+			<rom type="bgm" offset="0x08">DD.BIN</rom>
+			<rom type="bgm" offset="0x09">DE.BIN</rom>
+			<rom type="bgm" offset="0x0a">DF.BIN</rom>
+			<rom type="bgm" offset="0x0b">DG.BIN</rom>
+			<rom type="bgm" offset="0x0c">DH.BIN</rom>
+			<rom type="bgm" offset="0x0d">DI.BIN</rom>
+			<rom type="bgm" offset="0x0e">DJ.BIN</rom>
+			<rom type="bgm" offset="0x0f">DK.BIN</rom>
+			<rom type="bgm" offset="0x10">DL.BIN</rom>
+			<rom type="bgm" offset="0x11">DM.BIN</rom>
+			<rom type="bgm" offset="0x12">DN.BIN</rom>
+			<rom type="bgm" offset="0x13">DO.BIN</rom>
+			<rom type="bgm" offset="0x14">DP.BIN</rom>
+			<rom type="bgm" offset="0x15">DQ.BIN</rom>
+			<rom type="bgm" offset="0x16">DR.BIN</rom>
+			<rom type="bgm" offset="0x17">DS.BIN</rom>
+			<rom type="bgm" offset="0x18">DT.BIN</rom>
+			<rom type="bgm" offset="0x19">DU.BIN</rom>
+			<rom type="bgm" offset="0x1a">DV.BIN</rom>
+			<rom type="bgm" offset="0x1b">DW.BIN</rom>
+			<rom type="bgm" offset="0x1c">DX.BIN</rom>
+			<rom type="bgm" offset="0x1d">DZ.BIN</rom>
+			<rom type="bgm" offset="0x1e">DY.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">OPEN.BIN    : プロローグ</title>
+			<title code="0x02">D@.BIN      : 冒険者達</title>
+			<title code="0x0b">DG.BIN      : 遺跡の谷</title>
+			<!--
+			<title code="0x0c">DH.BIN      : 遺跡の谷</title>
+			<title code="0x0d">DI.BIN      : 遺跡の谷</title>
+			<title code="0x0e">DJ.BIN      : 遺跡の谷</title>
+			  -->
+			<title code="0x01">MSCMAIN.BIN : オーガ・バトル</title>
+			<title code="0x10">DL.BIN      : エロイア城</title>
+			<title code="0x12">DN.BIN      : しゃべらずの森</title>
+			<title code="0x1d">DZ.BIN      : レクイエム</title>
+			<title code="0x1a">DV.BIN      : インキュバス城</title>
+			<title code="0x14">DP.BIN      : 魔獣のつり橋</title>
+			<title code="0x11">DM.BIN      : モグネス山</title>
+			<title code="0x05">DA.BIN      : 哀しみの町</title>
+			<!--
+			<title code="0x06">DB.BIN      : 哀しみの町</title>
+			<title code="0x07">DC.BIN      : 哀しみの町</title>
+			<title code="0x08">DD.BIN      : 哀しみの町</title>
+			<title code="0x09">DE.BIN      : 哀しみの町</title>
+			<title code="0x0a">DF.BIN      : 哀しみの町</title>
+			<title code="0x13">DO.BIN      : 哀しみの町</title>
+			  -->
+			<title code="0x1c">DX.BIN      : 魔物の沼</title>
+			<title code="0x17">DS.BIN      : 火吹き山</title>
+			<!--
+			<title code="0x19">DU.BIN      : 火吹き山</title>
+			  -->
+			<title code="0x0f">DK.BIN      : 死霊の谷</title>
+			<title code="0x18">DT.BIN      : キャンプ場</title>
+			<title code="0x15">DQ.BIN      : 毒の沼</title>
+			<title code="0x1b">DW.BIN      : 幻の城</title>
+			<title code="0x16">DR.BIN      : コダール城</title>
+			<title code="0x1e">DY.BIN      : クリムゾン城</title>
+			<title code="0x03">D{.BIN      : クリムゾン様、永遠に…</title>
+			<title code="0x04">D}.BIN      : エピローグ</title>
+			<range min="0x100" max="0x112" extcode="1">SE  : 0x%02x : </range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 紫禁城(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Scap Trust</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb14e"/>
+			<option name="mdata_size" value="0x1500"/>
+			<option name="mfile_size" value="0x1500"/>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="shikinjo_msx,fmpac_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4000">FMPAC.ROM</rom>
+			<rom type="code" offset="0x8000">MAIN.COM</rom>
+			<rom type="code" offset="0xA000">SK.FMS</rom>
+			<rom type="code" offset="0xA020">SKP.YBV</rom>
+			<rom type="code" offset="0xA208">SIK.BGE</rom>
+			<rom type="bgm" offset="0x00">DORA.PMS</rom>
+			<rom type="bgm" offset="0x01">SKPAC0.PMS</rom>
+			<rom type="bgm" offset="0x02">SKPAC1.PMS</rom>
+			<rom type="bgm" offset="0x03">SKPAC10.PMS</rom>
+			<rom type="bgm" offset="0x04">SKPAC11.PMS</rom>
+			<rom type="bgm" offset="0x05">SKPAC12.PMS</rom>
+			<rom type="bgm" offset="0x06">SKPAC13.PMS</rom>
+			<rom type="bgm" offset="0x07">SKPAC14.PMS</rom>
+			<rom type="bgm" offset="0x08">SKPAC2.PMS</rom>
+			<rom type="bgm" offset="0x09">SKPAC3.PMS</rom>
+			<rom type="bgm" offset="0x0a">SKPAC4.PMS</rom>
+			<rom type="bgm" offset="0x0b">SKPAC5.PMS</rom>
+			<rom type="bgm" offset="0x0c">SKPAC6.PMS</rom>
+			<rom type="bgm" offset="0x0d">SKPAC7.PMS</rom>
+			<rom type="bgm" offset="0x0e">SKPAC8.PMS</rom>
+			<rom type="bgm" offset="0x0f">SKPAC9.PMS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">DORA.PMS    : </title>
+			<title code="0x01">SKPAC0.PMS  : </title>
+			<title code="0x02">SKPAC1.PMS  : </title>
+			<title code="0x08">SKPAC2.PMS  : </title>
+			<title code="0x09">SKPAC3.PMS  : </title>
+			<title code="0x0a">SKPAC4.PMS  : </title>
+			<title code="0x0b">SKPAC5.PMS  : </title>
+			<title code="0x0c">SKPAC6.PMS  : </title>
+			<title code="0x0d">SKPAC7.PMS  : </title>
+			<title code="0x0e">SKPAC8.PMS  : </title>
+			<title code="0x0f">SKPAC9.PMS  : </title>
+			<title code="0x03">SKPAC10.PMS : </title>
+			<title code="0x04">SKPAC11.PMS : </title>
+			<title code="0x05">SKPAC12.PMS : </title>
+			<title code="0x010006">SKPAC13.PMS : </title>
+			<title code="0x010007">SKPAC14.PMS : </title>
+			<range min="0x101" max="0x114" extcode="1">SE    0x%02x : </range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 紫禁城(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Scap Trust</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb14e"/>
+			<option name="mdata_size" value="0x1500"/>
+			<option name="mfile_size" value="0x1500"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="shikinjo_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x8000">MAIN.COM</rom>
+			<rom type="code" offset="0xA000">SK.FMS</rom>
+			<rom type="code" offset="0xA020">SKP.YBV</rom>
+			<rom type="code" offset="0xA208">SIK.BGE</rom>
+			<rom type="bgm" offset="0x00">DORA.YBM</rom>
+			<rom type="bgm" offset="0x01">SKP0.YBM</rom>
+			<rom type="bgm" offset="0x02">SKP1.YBM</rom>
+			<rom type="bgm" offset="0x03">SKP10.YBM</rom>
+			<rom type="bgm" offset="0x04">SKP11.YBM</rom>
+			<rom type="bgm" offset="0x05">SKP12.YBM</rom>
+			<rom type="bgm" offset="0x06">SKP13.YBM</rom>
+			<rom type="bgm" offset="0x07">SKP14.YBM</rom>
+			<rom type="bgm" offset="0x08">SKP2.YBM</rom>
+			<rom type="bgm" offset="0x09">SKP3.YBM</rom>
+			<rom type="bgm" offset="0x0a">SKP4.YBM</rom>
+			<rom type="bgm" offset="0x0b">SKP5.YBM</rom>
+			<rom type="bgm" offset="0x0c">SKP6.YBM</rom>
+			<rom type="bgm" offset="0x0d">SKP7.YBM</rom>
+			<rom type="bgm" offset="0x0e">SKP8.YBM</rom>
+			<rom type="bgm" offset="0x0f">SKP9.YBM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">DORA.YBM  : </title>
+			<title code="0x01">SKP0.YBM  : </title>
+			<title code="0x02">SKP1.YBM  : </title>
+			<title code="0x08">SKP2.YBM  : </title>
+			<title code="0x09">SKP3.YBM  : </title>
+			<title code="0x0a">SKP4.YBM  : </title>
+			<title code="0x0b">SKP5.YBM  : </title>
+			<title code="0x0c">SKP6.YBM  : </title>
+			<title code="0x0d">SKP7.YBM  : </title>
+			<title code="0x0e">SKP8.YBM  : </title>
+			<title code="0x0f">SKP9.YBM  : </title>
+			<title code="0x03">SKP10.YBM : </title>
+			<title code="0x04">SKP11.YBM : </title>
+			<title code="0x05">SKP12.YBM : </title>
+			<title code="0x06">SKP13.YBM : </title>
+			<title code="0x07">SKP14.YBM : </title>
+			<range min="0x101" max="0x114" extcode="1">SE  0x%02x : </range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] STAR/SHIP RENDEZVOUS</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Scap Trust</driveralias>
+		<romlist archive="starship68snd">
+			<rom type="code" offset="0x000000">ssr68snd.bin</rom>
+			<rom type="code" offset="0x010000">MUSIC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x01" max="0x05" extcode="1">BGM 0x%02x</range>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+]>
+<gamelist date="2005/02/13">
+	<bind>
+		<exts>
+			<ext>pce</ext>
+			<ext>hes</ext>
+		</exts>
+		<driver type="hes">pcengine</driver>
+		<options>
+		</options>
+	</bind>
+	<bind>
+		<exts>
+			<ext>kss</ext>
+		</exts>
+		<driver type="kss">msx</driver>
+		<options>
+			<option name="ay_mix" value="0x64"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0xcc"/>
+			<option name="fmunit_mix" value="0xcc"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+	</bind>
+	<bind>
+		<exts>
+			<ext>mdx</ext>
+		</exts>
+		<driver type="mxdrv">x68k</driver>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+	</bind>
+	<bind>
+		<exts>
+			<ext>nsf</ext>
+		</exts>
+		<driver type="nsf">nes</driver>
+		<options>
+			<option name="apu_mix" value="0x100"/>
+		</options>
+	</bind>
+	<bind>
+		<exts>
+			<ext>gbs</ext>
+		</exts>
+		<driver type="gbs">gb</driver>
+		<options>
+			<option name="dmg_mix" value="0x100"/>
+		</options>
+	</bind>
+
+	<childlists>
+		<!-- =============== 0-9 =============== -->
+		<list>xml/13cm.xml</list>
+		<list>xml/4x9.xml</list>
+		<!-- ================ A ================ -->
+		<list>xml/abogado_powers.xml</list>
+		<list>xml/acid_plan.xml</list>
+		<list>xml/active.xml</list>
+		<list>xml/adk.xml</list>
+		<list>xml/agumix.xml</list>
+		<list>xml/ail.xml</list>
+		<list>xml/aion.xml</list>
+		<list>xml/alicesoft.xml</list>
+		<list>xml/allex.xml</list>
+		<list>xml/allot.xml</list>
+		<list>xml/ange.xml</list>
+		<list>xml/anjin.xml</list>
+		<list>xml/apple_pie.xml</list>
+		<list>xml/apricot.xml</list>
+		<list>xml/arsys.xml</list>
+		<list>xml/artdink.xml</list>
+		<list>xml/artec.xml</list>
+		<list>xml/ascii.xml</list>
+		<list>xml/atlus.xml</list>
+		<list>xml/aypio.xml</list>
+		<!-- ================ B ================ -->
+		<list>xml/backspin.xml</list>
+		<list>xml/bandai.xml</list>
+		<list>xml/banpresto.xml</list>
+		<list>xml/basement.xml</list>
+		<list>xml/basho_house.xml</list>
+		<list>xml/birdy_soft.xml</list>
+		<list>xml/bit2.xml</list>
+		<list>xml/black_package.xml</list>
+		<list>xml/blucky.xml</list>
+		<list>xml/bonbeebonbon.xml</list>
+		<list>xml/bothtec.xml</list>
+		<list>xml/bps.xml</list>
+		<list>xml/braingray.xml</list>
+		<list>xml/broderbund.xml</list>
+		<!-- ================ C ================ -->
+		<list>xml/c-class.xml</list>
+		<list>xml/c-lab.xml</list>
+		<list>xml/c's_ware.xml</list>
+		<list>xml/capcom.xml</list>
+		<list>xml/catspro.xml</list>
+		<list>xml/chime.xml</list>
+		<list>xml/cocktailsoft.xml</list>
+		<list>xml/colossus.xml</list>
+		<list>xml/compile.xml</list>
+		<list>xml/cosmos_computer.xml</list>
+		<list>xml/crossmedia.xml</list>
+		<list>xml/crowd.xml</list>
+		<list>xml/cuisse.xml</list>
+		<list>xml/culotte.xml</list>
+		<list>xml/custom.xml</list>
+		<list>xml/cybelle.xml</list>
+		<!-- ================ D ================ -->
+		<list>xml/dataeast.xml</list>
+		<list>xml/datawest.xml</list>
+		<list>xml/dbsoft.xml</list>
+		<list>xml/dempa.xml</list>
+		<list>xml/desire.xml</list>
+		<list>xml/dezcrima.xml</list>
+		<list>xml/discovery.xml</list>
+		<list>xml/do.xml</list>
+		<list>xml/dot_plan.xml</list>
+		<list>xml/dynamicproduction.xml</list>
+		<!-- ================ E ================ -->
+		<list>xml/elf.xml</list>
+		<list>xml/enix.xml</list>
+		<list>xml/epic_sony.xml</list>
+		<list>xml/exact.xml</list>
+		<!-- ================ F ================ -->
+		<list>xml/f2system.xml</list>
+		<list>xml/fairydust.xml</list>
+		<list>xml/fairytale.xml</list>
+		<list>xml/falcom.xml</list>
+		<list>xml/family_soft.xml</list>
+		<list>xml/flat.xml</list>
+		<list>xml/fmc.xml</list>
+		<list>xml/foresight.xml</list>
+		<list>xml/forest.xml</list>
+		<list>xml/foster.xml</list>
+		<list>xml/frontier.xml</list>
+		<list>xml/fugasystem.xml</list>
+		<!-- ================ G ================ -->
+		<list>xml/gainax.xml</list>
+		<list>xml/gam.xml</list>
+		<list>xml/gamearts.xml</list>
+		<list>xml/gametechnopolis.xml</list>
+		<list>xml/garuda.xml</list>
+		<list>xml/giga.xml</list>
+		<list>xml/gimmick_house.xml</list>
+		<list>xml/glams.xml</list>
+		<list>xml/glodia.xml</list>
+		<list>xml/gloria.xml</list>
+		<list>xml/great.xml</list>
+		<list>xml/grocer.xml</list>
+		<list>xml/gust.xml</list>
+		<!-- ================ H ================ -->
+		<list>xml/hal_laboratory.xml</list>
+		<list>xml/hard.xml</list>
+		<list>xml/heartsoft.xml</list>
+		<list>xml/hertz.xml</list>
+		<list>xml/hervest.xml</list>
+		<list>xml/himeya.xml</list>
+		<list>xml/hobby_japan.xml</list>
+		<list>xml/hokusho.xml</list>
+		<list>xml/holywood.xml</list>
+		<list>xml/homedata.xml</list>
+		<list>xml/hot-b.xml</list>
+		<list>xml/hudsonsoft.xml</list>
+		<list>xml/human.xml</list>
+		<list>xml/hummingbird.xml</list>
+		<!-- ================ I ================ -->
+		<list>xml/ides.xml</list>
+		<list>xml/illusion.xml</list>
+		<list>xml/imagineer.xml</list>
+		<list>xml/inos.xml</list>
+		<list>xml/interheart.xml</list>
+		<list>xml/irem.xml</list>
+		<list>xml/isc.xml</list>
+		<!-- ================ J ================ -->
+		<list>xml/jaleco.xml</list>
+		<list>xml/jam.xml</list>
+		<list>xml/janis.xml</list>
+		<list>xml/japan_clary_business.xml</list>
+		<list>xml/japan_home_video.xml</list>
+		<list>xml/jast.xml</list>
+		<list>xml/juice.xml</list>
+		<!-- ================ K ================ -->
+		<list>xml/kaneko.xml</list>
+		<list>xml/katty.xml</list>
+		<list>xml/kinpukurin.xml</list>
+		<list>xml/koei.xml</list>
+		<list>xml/kogado.xml</list>
+		<list>xml/konami.xml</list>
+		<list>xml/ksk.xml</list>
+		<list>xml/kss.xml</list>
+    <!-- ================ L ================ -->
+		<list>xml/leaf.xml</list>
+		<list>xml/libido.xml</list>
+		<list>xml/lip_star.xml</list>
+		<list>xml/log.xml</list>
+		<list>xml/lovegun.xml</list>
+		<list>xml/lunar_soft.xml</list>
+		<!-- ================ M ================ -->
+		<list>xml/maesta7.xml</list>
+		<list>xml/magical.xml</list>
+		<list>xml/magicalzoo.xml</list>
+		<list>xml/matrix.xml</list>
+		<list>xml/maxima.xml</list>
+		<list>xml/may-be.xml</list>
+		<list>xml/mayfarsoft.xml</list>
+		<list>xml/mebio_software.xml</list>
+		<list>xml/megami.xml</list>
+		<list>xml/melody.xml</list>
+		<list>xml/miami_soft.xml</list>
+		<list>xml/microcabin.xml</list>
+		<list>xml/micronet.xml</list>
+		<list>xml/mink.xml</list>
+		<list>xml/mischief.xml</list>
+		<list>xml/misty.xml</list>
+		<list>xml/mix.xml</list>
+		<list>xml/mnm.xml</list>
+		<list>xml/movic.xml</list>
+		<list>xml/muap.xml</list>
+		<list>xml/mucom88.xml</list>
+		<list>xml/mugen.xml</list>
+		<list>xml/muppetbox.xml</list>
+		<!-- ================ N ================ -->
+		<list>xml/namco.xml</list>
+		<list>xml/natsume.xml</list>
+		<list>xml/ncs.xml</list>
+		<list>xml/nec.xml</list>
+		<list>xml/nec_interchannel.xml</list>
+		<list>xml/negative.xml</list>
+		<list>xml/nexus.xml</list>
+		<list>xml/nexton.xml</list>
+		<list>xml/nic.xml</list>
+		<list>xml/nichibutsu.xml</list>
+		<list>xml/nidecomcarry.xml</list>
+		<list>xml/nihoncreate.xml</list>
+		<list>xml/nihonplantech.xml</list>
+		<list>xml/nikukyuu.xml</list>
+		<list>xml/nintendo.xml</list>
+		<list>xml/nmk.xml</list>
+		<!-- ================ O ================ -->
+		<list>xml/outlaw.xml</list>
+		<!-- ================ P ================ -->
+		<list>xml/pack_in_video.xml</list>
+		<list>xml/palmtree_soft.xml</list>
+		<list>xml/panther.xml</list>
+		<list>xml/parsley.xml</list>
+		<list>xml/paxsoftnica.xml</list>
+		<list>xml/pcmcomplete.xml</list>
+		<list>xml/pearlsoft.xml</list>
+		<list>xml/pegasus_japan.xml</list>
+		<list>xml/peppermint_kids.xml</list>
+		<list>xml/persian_soft.xml</list>
+		<list>xml/petit.xml</list>
+		<list>xml/pil.xml</list>
+		<list>xml/piston_soft.xml</list>
+		<list>xml/plum.xml</list>
+		<list>xml/poisonbreath.xml</list>
+		<list>xml/ponyca.xml</list>
+		<list>xml/ponytail.xml</list>
+		<list>xml/pow.xml</list>
+		<list>xml/psd.xml</list>
+		<list>xml/psikyo.xml</list>
+		<!-- ================ Q ================ -->
+		<list>xml/quasarsoft.xml</list>
+		<list>xml/queen_soft.xml</list>
+		<!-- ================ R ================ -->
+		<list>xml/r.xml</list>
+		<list>xml/raizing.xml</list>
+		<list>xml/randomhouse.xml</list>
+		<list>xml/rforce.xml</list>
+		<list>xml/rightstuff.xml</list>
+		<list>xml/rihuri.xml</list>
+		<list>xml/ringer_bell.xml</list>
+		<list>xml/riverhillsoft.xml</list>
+		<!-- ================ S ================ -->
+		<list>xml/santa_fe.xml</list>
+		<list>xml/scaptrust.xml</list>
+		<list>xml/sea_lion.xml</list>
+		<list>xml/sega.xml</list>
+		<list>xml/seibu.xml</list>
+		<list>xml/sein.xml</list>
+		<list>xml/sharp.xml</list>
+		<list>xml/silence.xml</list>
+		<list>xml/silkys.xml</list>
+		<list>xml/snk.xml</list>
+		<list>xml/soft_plan.xml</list>
+		<list>xml/softbank.xml</list>
+		<list>xml/softpal.xml</list>
+		<list>xml/sogna.xml</list>
+		<list>xml/sorciere.xml</list>
+		<list>xml/space_project.xml</list>
+		<list>xml/splush_wave.xml</list>
+		<list>xml/sps.xml</list>
+		<list>xml/square.xml</list>
+		<list>xml/starcraft.xml</list>
+		<list>xml/striker.xml</list>
+		<list>xml/studio_b-room.xml</list>
+		<list>xml/studio_genmaitya.xml</list>
+		<list>xml/studio_mobius.xml</list>
+		<list>xml/studio_twinkle.xml</list>
+		<list>xml/succubus.xml</list>
+		<list>xml/sunsoft.xml</list>
+		<list>xml/sur_de_wave.xml</list>
+		<list>xml/swat.xml</list>
+		<list>xml/system_sacom.xml</list>
+		<list>xml/systemsoft.xml</list>
+		<!-- ================ T ================ -->
+		<list>xml/t2.xml</list>
+		<list>xml/tande.xml</list>
+		<list>xml/taito.xml</list>
+		<list>xml/tatsumi.xml</list>
+		<list>xml/tear_drop.xml</list>
+		<list>xml/technogrard.xml</list>
+		<list>xml/technos.xml</list>
+		<list>xml/tecmo.xml</list>
+		<list>xml/tecnosoft.xml</list>
+		<list>xml/telenet.xml</list>
+		<list>xml/tenshindo.xml</list>
+		<list>xml/tengupro.xml</list>
+		<list>xml/tetratech.xml</list>
+		<list>xml/tgl.xml</list>
+		<list>xml/thinkingrabbit.xml</list>
+		<list>xml/tiara.xml</list>
+		<list>xml/tierheit.xml</list>
+		<list>xml/tips.xml</list>
+		<list>xml/toaplan.xml</list>
+		<list>xml/toho.xml</list>
+		<list>xml/tomboy.xml</list>
+		<list>xml/tonkin_house.xml</list>
+		<list>xml/trush.xml</list>
+		<!-- ================ U ================ -->
+		<list>xml/u-mesoft.xml</list>
+		<list>xml/u-office.xml</list>
+		<list>xml/ucom.xml</list>
+		<list>xml/umizuki_productions.xml</list>
+		<list>xml/universal.xml</list>
+		<list>xml/upl.xml</list>
+		<!-- ================ V ================ -->
+		<list>xml/victor.xml</list>
+		<list>xml/video_system.xml</list>
+		<list>xml/ving.xml</list>
+		<list>xml/visco.xml</list>
+		<list>xml/vivian.xml</list>
+		<!-- ================ W ================ -->
+		<list>xml/wildlife.xml</list>
+		<list>xml/wing.xml</list>
+		<list>xml/winkysoft.xml</list>
+		<list>xml/wishbone.xml</list>
+		<list>xml/wiz.xml</list>
+		<list>xml/wolfteam.xml</list>
+		<!-- ================ X ================ -->
+		<list>xml/xtalsoft.xml</list>
+		<list>xml/xyz.xml</list>
+		<!-- ================ Y ================ -->
+		<list>xml/youentai.xml</list>
+		<list>xml/yunsung.xml</list>
+		<!-- ================ Z ================ -->
+		<list>xml/zoom.xml</list>
+		<list>xml/zyx.xml</list>
+		<list>xml/doujin.xml</list>
+	</childlists>
+<!-- ================ END ================ -->
+</gamelist>

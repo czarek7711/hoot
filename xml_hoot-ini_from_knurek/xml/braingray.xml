@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+  	<!-- //braingray -->
+	<game>
+		<name>[PC-88] Last Armageddon Demo (ラストハルマゲドン) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">braingray</driveralias>
+		<romlist archive="lastarmg">
+			<rom type="code" offset="0x0000">PATCHD</rom>
+			<rom type="code" offset="0x0100">DEMO</rom>
+			<rom type="bgm" offset="0x00">MUS000</rom>
+			<rom type="bgm" offset="0x01">MUS001</rom>
+			<rom type="bgm" offset="0x02">MUS002</rom>
+			<rom type="bgm" offset="0x03">MUS003</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening BGM #1</title>
+			<title code="0x01">Opening BGM #2</title>
+			<title code="0x03">Opening BGM #3</title>
+			<title code="0x02">Opening BGM #4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Last Armageddon Demo (ラストハルマゲドン) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">braingray</driveralias>
+		<romlist archive="lastarmg">
+			<rom type="code" offset="0x0000">PATCH2D</rom>
+			<rom type="code" offset="0x0100">DEMO</rom>
+			<rom type="bgm" offset="0x00">MUS000</rom>
+			<rom type="bgm" offset="0x01">MUS001</rom>
+			<rom type="bgm" offset="0x02">MUS002</rom>
+			<rom type="bgm" offset="0x03">MUS003</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening BGM #1</title>
+			<title code="0x01">Opening BGM #2</title>
+			<title code="0x03">Opening BGM #3</title>
+			<title code="0x02">Opening BGM #4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Last Armageddon (ラストハルマゲドン) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">braingray</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="lastarmg">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0xe000">MUSTBL</rom>
+			<rom type="code" offset="0xf000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS200</rom>
+			<rom type="bgm" offset="0x01">MUS201</rom>
+			<rom type="bgm" offset="0x03">MUS203</rom>
+			<rom type="bgm" offset="0x05">MUS205</rom>
+			<rom type="bgm" offset="0x06">MUS206</rom>
+			<rom type="bgm" offset="0x07">MUS300</rom>
+			<rom type="bgm" offset="0x08">MUS301</rom>
+			<rom type="bgm" offset="0x09">MUS302</rom>
+			<rom type="bgm" offset="0x0a">MUS303</rom>
+			<rom type="bgm" offset="0x0b">MUS304</rom>
+			<rom type="bgm" offset="0x0c">MUS305</rom>
+			<rom type="bgm" offset="0x0d">MUS306</rom>
+			<rom type="bgm" offset="0x0e">MUS307</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Command (コマンド)</title>
+			<title code="0x01">Command II (コマンドII)</title>
+			<title code="0x03">Battle (戦闘)</title>
+			<title code="0x05">Battle II (戦闘II)</title>
+			<title code="0x06">Character (キャラクター)</title>
+			<title code="0x07">Alien (エイリアン)</title>
+			<title code="0x08">The Bask Tree (バスクの樹)</title>
+			<title code="0x09">The 108 Tablets (108の石板)</title>
+			<title code="0x0a">ID Card Complete (IDカード完成)</title>
+			<title code="0x0b">Demon World BGM (魔界BGM)</title>
+			<title code="0x0c">Daytime Theme (昼の移動のテーマ)</title>
+			<title code="0x0d">Nighttime Theme (夜の移動のテーマ)</title>
+			<title code="0x0e">Sarban (サルバン)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Last Armageddon (ラストハルマゲドン) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">braingray</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="lastarmg">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0xe000">MUSTBL</rom>
+			<rom type="code" offset="0xf000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS200</rom>
+			<rom type="bgm" offset="0x01">MUS201</rom>
+			<rom type="bgm" offset="0x03">MUS203</rom>
+			<rom type="bgm" offset="0x05">MUS205</rom>
+			<rom type="bgm" offset="0x06">MUS206</rom>
+			<rom type="bgm" offset="0x07">MUS300</rom>
+			<rom type="bgm" offset="0x08">MUS301</rom>
+			<rom type="bgm" offset="0x09">MUS302</rom>
+			<rom type="bgm" offset="0x0a">MUS303</rom>
+			<rom type="bgm" offset="0x0b">MUS304</rom>
+			<rom type="bgm" offset="0x0c">MUS305</rom>
+			<rom type="bgm" offset="0x0d">MUS306</rom>
+			<rom type="bgm" offset="0x0e">MUS307</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Command (コマンド)</title>
+			<title code="0x01">Command II (コマンドII)</title>
+			<title code="0x03">Battle (戦闘)</title>
+			<title code="0x05">Battle II (戦闘II)</title>
+			<title code="0x06">Character (キャラクター)</title>
+			<title code="0x07">Alien (エイリアン)</title>
+			<title code="0x08">The Bask Tree (バスクの樹)</title>
+			<title code="0x09">The 108 Tablets (108の石板)</title>
+			<title code="0x0a">ID Card Complete (IDカード完成)</title>
+			<title code="0x0b">Demon World BGM (魔界BGM)</title>
+			<title code="0x0c">Daytime Theme (昼の移動のテーマ)</title>
+			<title code="0x0d">Nighttime Theme (夜の移動のテーマ)</title>
+			<title code="0x0e">Sarban (サルバン)</title>
+		</titlelist>
+	</game>
+</gamelist>

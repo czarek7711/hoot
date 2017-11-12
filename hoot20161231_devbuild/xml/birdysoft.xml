@@ -1,0 +1,3072 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //バーディーソフト -->
+	<game>
+		<name>[PC-8801] HOLE CHASER(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="init_pc"   value="0x1000"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="hchaser">
+			<rom type="code" offset="0x0000">SYS.COM</rom>
+			<rom type="code" offset="0x1000">PATCH</rom>
+			<rom type="code" offset="0xac00">PMD2.COM</rom>
+			<rom type="code" offset="0xbe00">PCMTBL</rom>
+			<rom type="code" offset="0xd800">VOICE</rom>
+			<rom type="code" offset="0xe000">EFFECT</rom>
+			<rom type="adpcm" offset="0x00000">NM2.V02</rom>
+			<rom type="adpcm" offset="0x01ffc">NM2.V04</rom>
+			<rom type="adpcm" offset="0x047f8">NM2.V09</rom>
+			<rom type="adpcm" offset="0x087f4">NM2.V10</rom>
+			<rom type="adpcm" offset="0x0c7f0">NM2.V13</rom>
+			<rom type="adpcm" offset="0x0e3ec">NM2.V14</rom>
+			<rom type="adpcm" offset="0x0fbe8">NM2.V15</rom>
+			<rom type="adpcm" offset="0x123e4">BD3</rom>
+			<rom type="adpcm" offset="0x137e0">SD1</rom>
+			<rom type="adpcm" offset="0x157dc">TOM1</rom>
+			<rom type="adpcm" offset="0x177d8">HHATCL</rom>
+			<rom type="adpcm" offset="0x17fd4">HHATOP</rom>
+			<rom type="adpcm" offset="0x18fd0">CRSCYM</rom>
+			<rom type="adpcm" offset="0x1bbcc">HCLAP</rom>
+			<rom type="adpcm" offset="0x1cbc8">OCHIT2</rom>
+			<rom type="bgm" offset="0x00">GOVER.M</rom>
+			<rom type="bgm" offset="0x01">BGM1.MB2</rom>
+			<rom type="bgm" offset="0x02">BGM2.MB2</rom>
+			<rom type="bgm" offset="0x03">BGM3.MB2</rom>
+			<rom type="bgm" offset="0x04">BGM4.MB2</rom>
+			<rom type="bgm" offset="0x05">BGM5.MB2</rom>
+			<rom type="bgm" offset="0x06">BGM6.MB2</rom>
+			<rom type="bgm" offset="0x07">CLR.MB2</rom>
+			<rom type="bgm" offset="0x08">END.MB2</rom>
+			<rom type="bgm" offset="0x09">OP.MB2</rom>
+			<rom type="bgm" offset="0x0a">VIS1.MB2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000009">OP.MB2   : オープニング</title>
+			<title code="0x00000001">BGM1.MB2 : BGM1</title>
+			<title code="0x00000002">BGM2.MB2 : BGM2</title>
+			<title code="0x00000003">BGM3.MB2 : BGM3</title>
+			<title code="0x00000004">BGM4.MB2 : BGM4</title>
+			<title code="0x00000005">BGM5.MB2 : BGM5</title>
+			<title code="0x00000006">BGM6.MB2 : BGM6</title>
+			<title code="0x0000000a">VIS1.MB2 : VISUAL</title>
+			<title code="0x00000008">END.MB2  : ENDING</title>
+			<title code="0x00000007">CLR.MB2  : ST.クリア</title>
+			<title code="0x00000000">GOVER.M  : G.OVER</title>
+			<title code="0x000000fe">効果音00 : </title>
+			<title code="0x010000fe">効果音01 : </title>
+			<title code="0x020000fe">効果音02 : </title>
+			<title code="0x030000fe">効果音03 : </title>
+			<title code="0x040000fe">効果音04 : </title>
+			<title code="0x050000fe">効果音05 : </title>
+			<title code="0x060000fe">効果音06 : </title>
+			<title code="0x070000fe">効果音07 : </title>
+			<title code="0x080000fe">効果音08 : </title>
+			<title code="0x090000fe">効果音09 : </title>
+			<title code="0x0a0000fe">効果音10 : </title>
+			<title code="0x0b0000fe">効果音11 : </title>
+			<title code="0x0c0000fe">効果音12 : </title>
+			<title code="0x020000ff">ADPCM02  : 「や、やめて!!」</title>
+			<title code="0x040000ff">ADPCM04  : 「いや! はなして!!」</title>
+			<title code="0x090000ff">ADPCM09  : 「来てくれたのね! うれしいわ!」</title>
+			<title code="0x0a0000ff">ADPCM10  : 「そんな‥‥‥私、できない‥‥」</title>
+			<title code="0x0d0000ff">ADPCM13  : 「見ないで!!」</title>
+			<title code="0x0e0000ff">ADPCM14  : 「来ないで..」</title>
+			<title code="0x0f0000ff">ADPCM15  : 「いやいやぁ‥‥」</title>
+			<title code="0x1e0000ff">ADPCM30  : Bass Drum</title>
+			<title code="0x1f0000ff">ADPCM31  : Snare</title>
+			<title code="0x200000ff">ADPCM32  : Tom</title>
+			<title code="0x210000ff">ADPCM33  : Hi-hat Close</title>
+			<title code="0x220000ff">ADPCM34  : Hi-hat Open</title>
+			<title code="0x230000ff">ADPCM35  : Crash Symbal</title>
+			<title code="0x240000ff">ADPCM36  : Hand Clap</title>
+			<title code="0x250000ff">ADPCM37  : Orchestra Hit</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] HOLE CHASER(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="init_pc"   value="0x1000"/>
+			<option name="use_vrtc"  value="0x01"/>
+		</options>
+		<romlist archive="hchaser">
+			<rom type="code" offset="0x1000">PATCH</rom>
+			<rom type="code" offset="0xac00">PMD.COM</rom>
+			<rom type="code" offset="0xd800">VOICE</rom>
+			<rom type="code" offset="0xe000">EFFECT</rom>
+			<rom type="bgm" offset="0x00">GOVER.M</rom>
+			<rom type="bgm" offset="0x01">BGM1.MN</rom>
+			<rom type="bgm" offset="0x02">BGM2.MN</rom>
+			<rom type="bgm" offset="0x03">BGM3.MN</rom>
+			<rom type="bgm" offset="0x04">BGM4.MN</rom>
+			<rom type="bgm" offset="0x05">BGM5.MN</rom>
+			<rom type="bgm" offset="0x06">BGM6.MN</rom>
+			<rom type="bgm" offset="0x07">CLR.MN</rom>
+			<rom type="bgm" offset="0x08">END.MN</rom>
+			<rom type="bgm" offset="0x09">OP.MN</rom>
+			<rom type="bgm" offset="0x0a">VIS1.MN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000009">OP.MN    : オープニング</title>
+			<title code="0x00000001">BGM1.MN  : BGM1</title>
+			<title code="0x00000002">BGM2.MN  : BGM2</title>
+			<title code="0x00000003">BGM3.MN  : BGM3</title>
+			<title code="0x00000004">BGM4.MN  : BGM4</title>
+			<title code="0x00000005">BGM5.MN  : BGM5</title>
+			<title code="0x00000006">BGM6.MN  : BGM6</title>
+			<title code="0x0000000a">VIS1.MN  : VISUAL</title>
+			<title code="0x00000008">END.MN   : ENDING</title>
+			<title code="0x00000007">CLR.MN   : ST.クリア</title>
+			<title code="0x00000000">GOVER.M  : G.OVER</title>
+			<title code="0x000000fe">効果音00 : </title>
+			<title code="0x010000fe">効果音01 : </title>
+			<title code="0x020000fe">効果音02 : </title>
+			<title code="0x030000fe">効果音03 : </title>
+			<title code="0x040000fe">効果音04 : </title>
+			<title code="0x050000fe">効果音05 : </title>
+			<title code="0x060000fe">効果音06 : </title>
+			<title code="0x070000fe">効果音07 : </title>
+			<title code="0x080000fe">効果音08 : </title>
+			<title code="0x090000fe">効果音09 : </title>
+			<title code="0x0a0000fe">効果音10 : </title>
+			<title code="0x0b0000fe">効果音11 : </title>
+			<title code="0x0c0000fe">効果音12 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] Rouge(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="init_pc"   value="0x1000"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="rouge88">
+			<rom type="code" offset="0x0000">SYS.COM</rom>
+			<rom type="code" offset="0x1000">PATCH</rom>
+			<rom type="code" offset="0xac00">PMD2.COM</rom>
+			<rom type="code" offset="0xbe00">PCMTBL</rom>
+			<rom type="code" offset="0xe000">EFFECT</rom>
+			<rom type="adpcm" offset="0x00000">BD3</rom>
+			<rom type="adpcm" offset="0x013fc">BD</rom>
+			<rom type="adpcm" offset="0x017f8">SD1</rom>
+			<rom type="adpcm" offset="0x037f4">TOM1</rom>
+			<rom type="adpcm" offset="0x057f0">SYNTOM</rom>
+			<rom type="adpcm" offset="0x063ec">CLOHH</rom>
+			<rom type="adpcm" offset="0x06be8">OPNHH2</rom>
+			<rom type="adpcm" offset="0x07fe4">CRSCYM</rom>
+			<rom type="adpcm" offset="0x0abe0">HCLAP</rom>
+			<rom type="adpcm" offset="0x0bbdc">CORUSU</rom>
+			<rom type="adpcm" offset="0x0cfd8">A1</rom>
+			<rom type="adpcm" offset="0x0e3d4">N1</rom>
+			<rom type="adpcm" offset="0x0fbd0">AA1</rom>
+			<rom type="adpcm" offset="0x11fcc">A2</rom>
+			<rom type="adpcm" offset="0x133c8">A&amp;N</rom>
+			<rom type="adpcm" offset="0x153c4">UN1</rom>
+			<rom type="adpcm" offset="0x15fc0">UN2</rom>
+			<rom type="adpcm" offset="0x173bc">AAN</rom>
+			<rom type="adpcm" offset="0x187b8">AN2</rom>
+			<rom type="adpcm" offset="0x197b4">AAN2</rom>
+			<rom type="adpcm" offset="0x1abb0">IYA</rom>
+			<rom type="adpcm" offset="0x1bfac">UNUN</rom>
+			<rom type="adpcm" offset="0x1dba8">AAN3</rom>
+			<rom type="adpcm" offset="0x1efa4">AA3</rom>
+			<rom type="adpcm" offset="0x1ffa0">AAN4</rom>
+			<rom type="adpcm" offset="0x21b9c">NNN</rom>
+			<rom type="bgm" offset="0x00">RB2.M</rom>
+			<rom type="bgm" offset="0x01">RB3.M</rom>
+			<rom type="bgm" offset="0x02">RB4.M</rom>
+			<rom type="bgm" offset="0x03">RB5.M</rom>
+			<rom type="bgm" offset="0x04">RB9.M</rom>
+			<rom type="bgm" offset="0x05">RB10.M</rom>
+			<rom type="bgm" offset="0x06">RB14.M</rom>
+			<rom type="bgm" offset="0x07">RB15.M</rom>
+			<rom type="bgm" offset="0x08">RB17.M</rom>
+			<rom type="bgm" offset="0x09">RB18.M</rom>
+			<rom type="bgm" offset="0x0a">RB22.M</rom>
+			<rom type="bgm" offset="0x0b">RB23.M</rom>
+			<rom type="bgm" offset="0x0c">RB24.M</rom>
+			<rom type="bgm" offset="0x0d">RB25.M</rom>
+			<rom type="bgm" offset="0x0e">RB26.M</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">RB2.M    : BGM 1</title>
+			<title code="0x00000001">RB3.M    : BGM 2</title>
+			<title code="0x00000002">RB4.M    : BGM 3</title>
+			<title code="0x00000003">RB5.M    : BGM 4</title>
+			<title code="0x00000004">RB9.M    : BGM 5</title>
+			<title code="0x00000005">RB10.M   : BGM 6</title>
+			<title code="0x00000006">RB14.M   : BGM 7</title>
+			<title code="0x00000007">RB15.M   : BGM 8</title>
+			<title code="0x00000008">RB17.M   : BGM 9</title>
+			<title code="0x00000009">RB18.M   : BGM 10</title>
+			<title code="0x0000000a">RB22.M   : BGM 11</title>
+			<title code="0x0000000b">RB23.M   : BGM 12</title>
+			<title code="0x0000000c">RB24.M   : BGM 13</title>
+			<title code="0x0000000d">RB25.M   : BGM 14</title>
+			<title code="0x0000000e">RB26.M   : BGM 15</title>
+			<title code="0x000000fe">効果音00 : </title>
+			<title code="0x010000fe">効果音01 : </title>
+			<title code="0x020000fe">効果音02 : </title>
+			<title code="0x030000fe">効果音03 : </title>
+			<title code="0x040000fe">効果音04 : </title>
+			<title code="0x050000fe">効果音05 : </title>
+			<title code="0x060000fe">効果音06 : </title>
+			<title code="0x070000fe">効果音07 : </title>
+			<title code="0x080000fe">効果音08 : </title>
+			<title code="0x090000fe">効果音09 : </title>
+			<title code="0x0a0000fe">効果音10 : </title>
+			<title code="0x0b0000fe">効果音11 : </title>
+			<title code="0x0c0000fe">効果音12 : </title>
+			<title code="0x020000ff">ADPCM    : BD3</title>
+			<title code="0x030000ff">ADPCM    : BD</title>
+			<title code="0x040000ff">ADPCM    : SD1</title>
+			<title code="0x070000ff">ADPCM    : TOM1</title>
+			<title code="0x090000ff">ADPCM    : SYNTOM</title>
+			<title code="0x0a0000ff">ADPCM    : CLOHH</title>
+			<title code="0x0b0000ff">ADPCM    : OPNHH2</title>
+			<title code="0x0d0000ff">ADPCM    : CRSCYM</title>
+			<title code="0x130000ff">ADPCM    : HCLAP</title>
+			<title code="0x140000ff">ADPCM    : CORUSU</title>
+			<title code="0x1e0000ff">ADPCM    : A1</title>
+			<title code="0x1f0000ff">ADPCM    : N1</title>
+			<title code="0x200000ff">ADPCM    : AA1</title>
+			<title code="0x210000ff">ADPCM    : A2</title>
+			<title code="0x220000ff">ADPCM    : A&amp;N</title>
+			<title code="0x230000ff">ADPCM    : UN1</title>
+			<title code="0x240000ff">ADPCM    : UN2</title>
+			<title code="0x250000ff">ADPCM    : AAN</title>
+			<title code="0x260000ff">ADPCM    : AN2</title>
+			<title code="0x270000ff">ADPCM    : AAN2</title>
+			<title code="0x280000ff">ADPCM    : IYA</title>
+			<title code="0x290000ff">ADPCM    : UNUN</title>
+			<title code="0x2a0000ff">ADPCM    : AAN3</title>
+			<title code="0x2b0000ff">ADPCM    : AA3</title>
+			<title code="0x2c0000ff">ADPCM    : AAN4</title>
+			<title code="0x2d0000ff">ADPCM    : NNN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] Rouge(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="init_pc"   value="0x1000"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="rouge88">
+			<rom type="code" offset="0x0000">SYS.COM</rom>
+			<rom type="code" offset="0x1000">PATCH</rom>
+			<rom type="code" offset="0xac00">PMD.COM</rom>
+			<rom type="code" offset="0xe000">EFFECT</rom>
+			<rom type="bgm" offset="0x00">RN2.M</rom>
+			<rom type="bgm" offset="0x01">RN3.M</rom>
+			<rom type="bgm" offset="0x02">RN4.M</rom>
+			<rom type="bgm" offset="0x03">RN5.M</rom>
+			<rom type="bgm" offset="0x04">RN9.M</rom>
+			<rom type="bgm" offset="0x05">RN10.M</rom>
+			<rom type="bgm" offset="0x06">RN14.M</rom>
+			<rom type="bgm" offset="0x07">RN15.M</rom>
+			<rom type="bgm" offset="0x08">RN17.M</rom>
+			<rom type="bgm" offset="0x09">RN18.M</rom>
+			<rom type="bgm" offset="0x0a">RN22.M</rom>
+			<rom type="bgm" offset="0x0b">RN23.M</rom>
+			<rom type="bgm" offset="0x0c">RN24.M</rom>
+			<rom type="bgm" offset="0x0d">RN25.M</rom>
+			<rom type="bgm" offset="0x0e">RN26.M</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">RN2.M    : BGM 1</title>
+			<title code="0x00000001">RN3.M    : BGM 2</title>
+			<title code="0x00000002">RN4.M    : BGM 3</title>
+			<title code="0x00000003">RN5.M    : BGM 4</title>
+			<title code="0x00000004">RN9.M    : BGM 5</title>
+			<title code="0x00000005">RN10.M   : BGM 6</title>
+			<title code="0x00000006">RN14.M   : BGM 7</title>
+			<title code="0x00000007">RN15.M   : BGM 8</title>
+			<title code="0x00000008">RN17.M   : BGM 9</title>
+			<title code="0x00000009">RN18.M   : BGM 10</title>
+			<title code="0x0000000a">RN22.M   : BGM 11</title>
+			<title code="0x0000000b">RN23.M   : BGM 12</title>
+			<title code="0x0000000c">RN24.M   : BGM 13</title>
+			<title code="0x0000000d">RN25.M   : BGM 14</title>
+			<title code="0x0000000e">RN26.M   : BGM 15</title>
+			<title code="0x000000fe">効果音00 : </title>
+			<title code="0x010000fe">効果音01 : </title>
+			<title code="0x020000fe">効果音02 : </title>
+			<title code="0x030000fe">効果音03 : </title>
+			<title code="0x040000fe">効果音04 : </title>
+			<title code="0x050000fe">効果音05 : </title>
+			<title code="0x060000fe">効果音06 : </title>
+			<title code="0x070000fe">効果音07 : </title>
+			<title code="0x080000fe">効果音08 : </title>
+			<title code="0x090000fe">効果音09 : </title>
+			<title code="0x0a0000fe">効果音10 : </title>
+			<title code="0x0b0000fe">効果音11 : </title>
+			<title code="0x0c0000fe">効果音12 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] PIAS(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="init_pc"   value="0x1000"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="pias88">
+			<rom type="code" offset="0x0000">SYS.COM</rom>
+			<rom type="code" offset="0x1000">PATCH</rom>
+			<rom type="code" offset="0xac00">PMD2.COM</rom>
+			<rom type="code" offset="0xbf00">PCMTBL</rom>
+			<rom type="code" offset="0xe000">EFFECT</rom>
+			<rom type="adpcm" offset="0x00000">BD3</rom>
+			<rom type="adpcm" offset="0x013fc">BD</rom>
+			<rom type="adpcm" offset="0x017f8">SD1</rom>
+			<rom type="adpcm" offset="0x037f4">TOM1</rom>
+			<rom type="adpcm" offset="0x057f0">SYNTOM</rom>
+			<rom type="adpcm" offset="0x063ec">CLOHH</rom>
+			<rom type="adpcm" offset="0x06be8">OPNHH2</rom>
+			<rom type="adpcm" offset="0x07fe4">CRSCYM</rom>
+			<rom type="adpcm" offset="0x0abe0">HCLAP</rom>
+			<rom type="adpcm" offset="0x0bbdc">CORUSU</rom>
+			<rom type="bgm" offset="0x00">P1.MB2</rom>
+			<rom type="bgm" offset="0x01">P2.MB2</rom>
+			<rom type="bgm" offset="0x02">P3.MB2</rom>
+			<rom type="bgm" offset="0x03">P4.MB2</rom>
+			<rom type="bgm" offset="0x04">P5.MB2</rom>
+			<rom type="bgm" offset="0x05">P6.MB2</rom>
+			<rom type="bgm" offset="0x06">P8.MB2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">P1.MB2   : BGM 1</title>
+			<title code="0x00000001">P2.MB2   : BGM 2</title>
+			<title code="0x00000002">P3.MB2   : BGM 3</title>
+			<title code="0x00000003">P4.MB2   : BGM 4</title>
+			<title code="0x00000004">P5.MB2   : BGM 5</title>
+			<title code="0x00000005">P6.MB2   : BGM 6</title>
+			<title code="0x00000006">P8.MB2   : BGM 7</title>
+			<title code="0x000000fe">効果音00 : </title>
+			<title code="0x010000fe">効果音01 : </title>
+			<title code="0x020000fe">効果音02 : </title>
+			<title code="0x030000fe">効果音03 : </title>
+			<title code="0x040000fe">効果音04 : </title>
+			<title code="0x050000fe">効果音05 : </title>
+			<title code="0x060000fe">効果音06 : </title>
+			<title code="0x070000fe">効果音07 : </title>
+			<title code="0x080000fe">効果音08 : </title>
+			<title code="0x090000fe">効果音09 : </title>
+			<title code="0x0a0000fe">効果音10 : </title>
+			<title code="0x0b0000fe">効果音11 : </title>
+			<title code="0x0c0000fe">効果音12 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] PIAS(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="init_pc"   value="0x1000"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="pias88">
+			<rom type="code" offset="0x0000">SYS.COM</rom>
+			<rom type="code" offset="0x1000">PATCH</rom>
+			<rom type="code" offset="0xac00">PMD.COM</rom>
+			<rom type="code" offset="0xe000">EFFECT</rom>
+			<rom type="bgm" offset="0x00">P1.M</rom>
+			<rom type="bgm" offset="0x01">P2.M</rom>
+			<rom type="bgm" offset="0x02">P3.M</rom>
+			<rom type="bgm" offset="0x03">P4.M</rom>
+			<rom type="bgm" offset="0x04">P5.M</rom>
+			<rom type="bgm" offset="0x05">P6.M</rom>
+			<rom type="bgm" offset="0x06">P8.M</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">P1.M     : BGM 1</title>
+			<title code="0x00000001">P2.M     : BGM 2</title>
+			<title code="0x00000002">P3.M     : BGM 3</title>
+			<title code="0x00000003">P4.M     : BGM 4</title>
+			<title code="0x00000004">P5.M     : BGM 5</title>
+			<title code="0x00000005">P6.M     : BGM 6</title>
+			<title code="0x00000006">P8.M     : BGM 7</title>
+			<title code="0x000000fe">効果音00 : </title>
+			<title code="0x010000fe">効果音01 : </title>
+			<title code="0x020000fe">効果音02 : </title>
+			<title code="0x030000fe">効果音03 : </title>
+			<title code="0x040000fe">効果音04 : </title>
+			<title code="0x050000fe">効果音05 : </title>
+			<title code="0x060000fe">効果音06 : </title>
+			<title code="0x070000fe">効果音07 : </title>
+			<title code="0x080000fe">効果音08 : </title>
+			<title code="0x090000fe">効果音09 : </title>
+			<title code="0x0a0000fe">効果音10 : </title>
+			<title code="0x0b0000fe">効果音11 : </title>
+			<title code="0x0c0000fe">効果音12 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ARTEMIS</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="artemis_98">
+			<rom type="file" offset="-1">artem_98.com</rom>
+			<rom type="file" offset="-1">ADVB.EXE</rom>
+			<rom type="conin" offset="5">ADVB.EXE</rom>
+			<rom type="file" offset="6" >AL.OPN</rom>
+			<rom type="file" offset="7" >AL.SSG</rom>
+			<rom type="file" offset="11">AL01.MU</rom>
+			<rom type="file" offset="12">AL01B.MU</rom>
+			<rom type="file" offset="13">AL02.MU</rom>
+			<rom type="file" offset="14">AL03A.MU</rom>
+			<rom type="file" offset="15">AL03B.MU</rom>
+			<rom type="file" offset="16">AL04.MU</rom>
+			<rom type="file" offset="17">AL05.MU</rom>
+			<rom type="file" offset="18">AL06.MU</rom>
+			<rom type="file" offset="19">AL07.MU</rom>
+			<rom type="file" offset="20">AL08.MU</rom>
+			<rom type="file" offset="21">AL09.MU</rom>
+			<rom type="file" offset="22">AL10A.MU</rom>
+			<rom type="file" offset="23">AL10B.MU</rom>
+			<rom type="file" offset="24">ALEND.MU</rom>
+			<rom type="shell" offset="0">artem_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">AL01.MU  : </title>
+			<title code="12">AL01B.MU : </title>
+			<title code="13">AL02.MU  : </title>
+			<title code="14">AL03A.MU : </title>
+			<title code="15">AL03B.MU : </title>
+			<title code="16">AL04.MU  : </title>
+			<title code="17">AL05.MU  : </title>
+			<title code="18">AL06.MU  : </title>
+			<title code="19">AL07.MU  : </title>
+			<title code="20">AL08.MU  : </title>
+			<title code="21">AL09.MU  : </title>
+			<title code="22">AL10A.MU : </title>
+			<title code="23">AL10B.MU : </title>
+			<title code="24">ALEND.MU : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] BEAST ～淫獣の館～</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0xf000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x8000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="11"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="beast_98">
+			<rom type="code" offset="0x01000">__02.DAT</rom>
+			<rom type="code" offset="0x10000">beast_98.bin</rom>
+			<rom type="code" offset="0x0e000">__3D.DAT</rom>
+			<rom type="code" offset="0x0f000">__3E.DAT</rom>
+			<rom type="code" offset="0x0f800">__3F.DAT</rom>
+			<rom type="bgm" offset="1" >__08.DAT</rom>
+			<rom type="bgm" offset="2" >__09.DAT</rom>
+			<rom type="bgm" offset="3" >__0A.DAT</rom>
+			<rom type="bgm" offset="4" >__0B.DAT</rom>
+			<rom type="bgm" offset="5" >__0C.DAT</rom>
+			<rom type="bgm" offset="6" >__0D.DAT</rom>
+			<rom type="bgm" offset="7" >__0E.DAT</rom>
+			<rom type="bgm" offset="8" >__0F.DAT</rom>
+			<rom type="bgm" offset="9" >__10.DAT</rom>
+			<rom type="bgm" offset="10">__11.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >__08.DAT      : </title>
+			<title code="2" >__09.DAT      : </title>
+			<title code="3" >__0A.DAT      : </title>
+			<title code="4" >__0B.DAT      : </title>
+			<title code="5" >__0C.DAT      : </title>
+			<title code="6" >__0D.DAT      : </title>
+			<title code="7" >__0E.DAT      : </title>
+			<title code="8" >__0F.DAT      : </title>
+			<title code="9" >__10.DAT      : </title>
+			<title code="10">__11.DAT      : </title>
+			<title code="0x124">__3E.DAT : 24 : </title>
+			<title code="0x125">__3E.DAT : 25 : </title>
+			<title code="0x126">__3E.DAT : 26 : </title>
+			<title code="0x127">__3E.DAT : 27 : </title>
+			<title code="0x128">__3E.DAT : 28 : </title>
+			<title code="0x129">__3E.DAT : 29 : </title>
+			<title code="0x12a">__3E.DAT : 2a : </title>
+			<title code="0x12d">__3E.DAT : 2d : </title>
+			<title code="0x12e">__3E.DAT : 2e : </title>
+			<title code="0x130">__3E.DAT : 30 : </title>
+			<title code="0x131">__3E.DAT : 31 : </title>
+			<title code="0x133">__3E.DAT : 33 : </title>
+			<title code="0x200">__3F.DAT : 00 : </title>
+			<title code="0x201">__3F.DAT : 01 : </title>
+			<title code="0x202">__3F.DAT : 02 : </title>
+			<title code="0x203">__3F.DAT : 03 : </title>
+			<title code="0x204">__3F.DAT : 04 : </title>
+			<title code="0x205">__3F.DAT : 05 : </title>
+			<title code="0x206">__3F.DAT : 06 : </title>
+			<title code="0x207">__3F.DAT : 07 : </title>
+			<title code="0x208">__3F.DAT : 08 : </title>
+			<title code="0x209">__3F.DAT : 09 : </title>
+			<title code="0x20a">__3F.DAT : 0a : </title>
+			<title code="0x20b">__3F.DAT : 0b : </title>
+			<title code="0x20c">__3F.DAT : 0c : </title>
+			<title code="0x20d">__3F.DAT : 0d : </title>
+			<title code="0x20e">__3F.DAT : 0e : </title>
+			<title code="0x20f">__3F.DAT : 0f : </title>
+			<title code="0x210">__3F.DAT : 10 : </title>
+			<title code="0x211">__3F.DAT : 11 : </title>
+			<title code="0x212">__3F.DAT : 12 : </title>
+			<title code="0x213">__3F.DAT : 13 : </title>
+			<title code="0x214">__3F.DAT : 14 : </title>
+			<title code="0x215">__3F.DAT : 15 : </title>
+			<title code="0x216">__3F.DAT : 16 : </title>
+			<title code="0x217">__3F.DAT : 17 : </title>
+			<title code="0x218">__3F.DAT : 18 : </title>
+			<title code="0x219">__3F.DAT : 19 : </title>
+			<title code="0x21a">__3F.DAT : 1a : </title>
+			<title code="0x21b">__3F.DAT : 1b : </title>
+			<title code="0x21c">__3F.DAT : 1c : </title>
+			<title code="0x21d">__3F.DAT : 1d : </title>
+			<title code="0x21e">__3F.DAT : 1e : </title>
+			<title code="0x21f">__3F.DAT : 1f : </title>
+			<title code="0x220">__3F.DAT : 20 : </title>
+			<title code="0x221">__3F.DAT : 21 : </title>
+			<title code="0x222">__3F.DAT : 22 : </title>
+			<title code="0x223">__3F.DAT : 23 : </title>
+			<title code="0x224">__3F.DAT : 24 : </title>
+			<title code="0x225">__3F.DAT : 25 : </title>
+			<title code="0x226">__3F.DAT : 26 : </title>
+			<title code="0x227">__3F.DAT : 27 : </title>
+			<title code="0x228">__3F.DAT : 28 : </title>
+			<title code="0x229">__3F.DAT : 29 : </title>
+			<title code="0x22a">__3F.DAT : 2a : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] BEAST2 ～インキュバスター～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="beast2_98">
+			<rom type="file" offset="-1">bst2_98.com</rom>
+			<rom type="file" offset="-1">BEAST2.EXE</rom>
+			<rom type="conin" offset="5">BEAST2.EXE</rom>
+			<rom type="file" offset="6" >BST2.OPN</rom>
+			<rom type="file" offset="7" >BST2.SSG</rom>
+			<rom type="file" offset="11">BST201.MUF</rom>
+			<rom type="file" offset="12">BST202.MUF</rom>
+			<rom type="file" offset="13">BST203.MUF</rom>
+			<rom type="file" offset="14">BST204.MUF</rom>
+			<rom type="file" offset="15">BST205.MUF</rom>
+			<rom type="file" offset="16">BST206.MUF</rom>
+			<rom type="file" offset="17">BST207.MUF</rom>
+			<rom type="file" offset="18">BST208.MUF</rom>
+			<rom type="file" offset="19">BST209.MUF</rom>
+			<rom type="file" offset="20">BST210.MUF</rom>
+			<rom type="file" offset="21">BST211.MUF</rom>
+			<rom type="shell" offset="0">bst2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="18">BST208.MUF : チャイム</title>
+			<title code="19">BST209.MUF : 水滴</title>
+			<title code="17">BST207.MUF : 村角の恐怖</title>
+			<title code="11">BST201.MUF : ダンジョン6人秋物語</title>
+			<title code="16">BST206.MUF : The TAKE</title>
+			<title code="12">BST202.MUF : 命ある限り…</title>
+			<title code="20">BST210.MUF : 静けさの中に</title>
+			<title code="15">BST205.MUF : 守るべきもの</title>
+			<title code="14">BST204.MUF : ラストバトル</title>
+			<title code="13">BST203.MUF : エンディング</title>
+<!--			<title code="21">BST211.MUF : チャイム</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] BEAST III</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x20cf0"/>
+			<option name="filesize" value="10240"/>
+			<option name="datamax" value="24"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="beast3_98">
+			<rom type="code" offset="0x00600">bst3_98.bin</rom>
+			<rom type="code" offset="0x0fc00">0FC00.BIN</rom>
+			<rom type="code" offset="0x19C1A">__119.DAT</rom>
+			<rom type="code" offset="0x1CC1A">__11A.DAT</rom>
+			<rom type="code" offset="0x1D61A">__12E.DAT</rom>
+			<rom type="bgm" offset="1" >__11B.DAT</rom>
+			<rom type="bgm" offset="2" >__11C.DAT</rom>
+			<rom type="bgm" offset="3" >__11D.DAT</rom>
+			<rom type="bgm" offset="4" >__11E.DAT</rom>
+			<rom type="bgm" offset="5" >__11F.DAT</rom>
+			<rom type="bgm" offset="6" >__120.DAT</rom>
+			<rom type="bgm" offset="7" >__121.DAT</rom>
+			<rom type="bgm" offset="8" >__122.DAT</rom>
+			<rom type="bgm" offset="9" >__123.DAT</rom>
+			<rom type="bgm" offset="10">__124.DAT</rom>
+			<rom type="bgm" offset="11">__125.DAT</rom>
+			<rom type="bgm" offset="12">__126.DAT</rom>
+			<rom type="bgm" offset="13">__127.DAT</rom>
+			<rom type="bgm" offset="14">__128.DAT</rom>
+			<rom type="bgm" offset="15">__129.DAT</rom>
+			<rom type="bgm" offset="16">__12A.DAT</rom>
+			<rom type="bgm" offset="17">__12B.DAT</rom>
+			<rom type="bgm" offset="18">__12C.DAT</rom>
+			<rom type="bgm" offset="19">__14C.DAT</rom>
+			<rom type="bgm" offset="20">__14D.DAT</rom>
+			<rom type="bgm" offset="21">__14E.DAT</rom>
+			<rom type="bgm" offset="22">__14F.DAT</rom>
+			<rom type="bgm" offset="23">__150.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >__11B.DAT : </title>
+			<title code="2" >__11C.DAT : </title>
+			<title code="3" >__11D.DAT : </title>
+			<title code="4" >__11E.DAT : </title>
+			<title code="5" >__11F.DAT : </title>
+			<title code="6" >__120.DAT : </title>
+			<title code="7" >__121.DAT : </title>
+			<title code="8" >__122.DAT : </title>
+			<title code="9" >__123.DAT : </title>
+			<title code="10">__124.DAT : </title>
+			<title code="11">__125.DAT : </title>
+			<title code="12">__126.DAT : </title>
+			<title code="13">__127.DAT : </title>
+			<title code="14">__128.DAT : </title>
+			<title code="15">__129.DAT : </title>
+			<title code="16">__12A.DAT : </title>
+			<title code="17">__12B.DAT : </title>
+			<title code="18">__12C.DAT : </title>
+			<title code="19">__14C.DAT : 命ある限り…</title>
+			<title code="20">__14D.DAT : 村角の恐怖</title>
+			<title code="21">__14E.DAT : ダンジョン6人秋物語</title>
+			<title code="22">__14F.DAT : 守るべきもの</title>
+			<title code="23">__150.DAT : </title>
+			<title code="0x101">__12E.DAT : 01 : </title>
+			<title code="0x102">__12E.DAT : 02 : </title>
+			<title code="0x103">__12E.DAT : 03 : </title>
+			<title code="0x104">__12E.DAT : 04 : </title>
+			<title code="0x105">__12E.DAT : 05 : </title>
+			<title code="0x106">__12E.DAT : 06 : </title>
+			<title code="0x107">__12E.DAT : 07 : </title>
+			<title code="0x108">__12E.DAT : 08 : </title>
+			<title code="0x109">__12E.DAT : 09 : </title>
+			<title code="0x10a">__12E.DAT : 0a : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] BIRDY WORLD</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="birdyw_98">
+			<rom type="file" offset="-1">bw_98.com</rom>
+			<rom type="file" offset="-1">BIRDY_WP.EXE</rom>
+			<rom type="conin" offset="5">BIRDY_WP.EXE</rom>
+			<rom type="file" offset="6" >BW.OP1</rom>
+			<rom type="file" offset="7" >BW.SS1</rom>
+			<rom type="file" offset="8" >BW.EF1</rom>
+			<rom type="file" offset="11">BW00.MF1</rom>
+			<rom type="file" offset="12">BW01.MF1</rom>
+			<rom type="file" offset="13">BW02.MF1</rom>
+			<rom type="file" offset="14">BW03.MF1</rom>
+			<rom type="file" offset="15">BW04.MF1</rom>
+			<rom type="file" offset="16">BW05.MF1</rom>
+			<rom type="file" offset="17">BW06.MF1</rom>
+			<rom type="file" offset="18">BW07.MF1</rom>
+			<rom type="file" offset="19">BW08.MF1</rom>
+			<rom type="file" offset="20">BW09.MF1</rom>
+			<rom type="file" offset="21">BW10.MF1</rom>
+			<rom type="file" offset="22">BW11.MF1</rom>
+			<rom type="file" offset="23">BW12.MF1</rom>
+			<rom type="file" offset="24">BW13.MF1</rom>
+			<rom type="file" offset="25">BW14.MF1</rom>
+			<rom type="file" offset="26">BW15.MF1</rom>
+			<rom type="file" offset="27">BW16.MF1</rom>
+			<rom type="file" offset="28">BW17.MF1</rom>
+			<rom type="shell" offset="0">bw_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">BW00.MF1 : </title>
+			<title code="12">BW01.MF1 : </title>
+			<title code="13">BW02.MF1 : </title>
+			<title code="14">BW03.MF1 : </title>
+			<title code="15">BW04.MF1 : </title>
+			<title code="16">BW05.MF1 : </title>
+			<title code="17">BW06.MF1 : </title>
+			<title code="18">BW07.MF1 : </title>
+			<title code="19">BW08.MF1 : </title>
+			<title code="20">BW09.MF1 : </title>
+			<title code="21">BW10.MF1 : </title>
+			<title code="22">BW11.MF1 : </title>
+			<title code="23">BW12.MF1 : </title>
+			<title code="24">BW13.MF1 : </title>
+			<title code="25">BW14.MF1 : </title>
+			<title code="26">BW15.MF1 : </title>
+			<title code="27">BW16.MF1 : </title>
+			<title code="28">BW17.MF1 : </title>
+			<title code="0xff00">BW.EF1   : 00 : </title>
+			<title code="0xff01">BW.EF1   : 01 : </title>
+			<title code="0xff02">BW.EF1   : 02 : </title>
+			<title code="0xff03">BW.EF1   : 03 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] CAL</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0xf000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x8000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="12"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="cal_98">
+			<rom type="code" offset="0x01000">__02.DAT</rom>
+			<rom type="code" offset="0x10000">cal_98.bin</rom>
+			<rom type="code" offset="0x0e000">__3D.DAT</rom>
+			<rom type="code" offset="0x0f000">__3E.DAT</rom>
+			<rom type="code" offset="0x0f800">__3F.DAT</rom>
+			<rom type="bgm" offset="1" >__30.DAT</rom>
+			<rom type="bgm" offset="2" >__31.DAT</rom>
+			<rom type="bgm" offset="3" >__32.DAT</rom>
+			<rom type="bgm" offset="4" >__33.DAT</rom>
+			<rom type="bgm" offset="5" >__34.DAT</rom>
+			<rom type="bgm" offset="6" >__35.DAT</rom>
+			<rom type="bgm" offset="7" >__36.DAT</rom>
+			<rom type="bgm" offset="8" >__37.DAT</rom>
+			<rom type="bgm" offset="9" >__38.DAT</rom>
+			<rom type="bgm" offset="10">__39.DAT</rom>
+			<rom type="bgm" offset="11">__3A.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="9" >結城美加</title>
+			<title code="5" >ヴィーナス</title>
+			<title code="3" >マッチ売りの少女</title>
+			<title code="2" >ラプンセル</title>
+			<title code="10">眠り姫</title>
+			<title code="4" >シンデレラ</title>
+			<title code="6" >赤ずきんさん</title>
+			<title code="7" >ウェンディ</title>
+			<title code="8" >人魚姫</title>
+			<title code="1" >アリス</title>
+			<title code="11">エンディング</title>
+			<title code="0x224">SE : 24</title>
+			<title code="0x225">SE : 25</title>
+			<title code="0x226">SE : 26</title>
+			<title code="0x227">SE : 27</title>
+			<title code="0x228">SE : 28</title>
+			<title code="0x229">SE : 29</title>
+			<title code="0x22a">SE : 2a</title>
+			<title code="0x22d">SE : 2d</title>
+			<title code="0x22e">SE : 2e</title>
+			<title code="0x230">SE : 30</title>
+			<title code="0x231">SE : 31</title>
+			<title code="0x233">SE : 33</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] CAL II</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0xc000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="20"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="cal2_98">
+			<rom type="code" offset="0x01000">__02.DAT</rom>
+			<rom type="code" offset="0x01000">cal2_98.bin</rom>
+			<rom type="code" offset="0x08000">__03.DAT</rom>
+			<rom type="code" offset="0x0e000">__07.DAT</rom>
+			<rom type="code" offset="0x0f000">__05.DAT</rom>
+			<rom type="code" offset="0x0f800">__06.DAT</rom>
+			<rom type="bgm" offset="1" >__1B.DAT</rom>
+			<rom type="bgm" offset="2" >__1C.DAT</rom>
+			<rom type="bgm" offset="3" >__1D.DAT</rom>
+			<rom type="bgm" offset="4" >__1E.DAT</rom>
+			<rom type="bgm" offset="5" >__1F.DAT</rom>
+			<rom type="bgm" offset="6" >__20.DAT</rom>
+			<rom type="bgm" offset="7" >__21.DAT</rom>
+			<rom type="bgm" offset="8" >__22.DAT</rom>
+			<rom type="bgm" offset="9" >__23.DAT</rom>
+			<rom type="bgm" offset="10">__24.DAT</rom>
+			<rom type="bgm" offset="11">__25.DAT</rom>
+			<rom type="bgm" offset="12">__26.DAT</rom>
+			<rom type="bgm" offset="13">__27.DAT</rom>
+			<rom type="bgm" offset="14">__28.DAT</rom>
+			<rom type="bgm" offset="15">__29.DAT</rom>
+			<rom type="bgm" offset="16">__2A.DAT</rom>
+			<rom type="bgm" offset="17">__2B.DAT</rom>
+			<rom type="bgm" offset="18">__2C.DAT</rom>
+			<rom type="bgm" offset="19">__2D.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >結城美加</title>
+			<title code="2" >オープニング</title>
+			<title code="3" >ヴィーナス</title>
+			<title code="4" >チェス</title>
+			<title code="5" >ブレーメル</title>
+			<title code="6" >アーシュロット</title>
+			<title code="7" >ジュリエット</title>
+			<title code="8" >ラベンナ</title>
+			<title code="9" >アルタミラ</title>
+			<title code="10">山吹皇女</title>
+			<title code="11">秀蘭</title>
+			<title code="12">リョーコ</title>
+			<title code="13">シェラザード</title>
+			<title code="14">キャロル</title>
+			<title code="15">クレオパトラ</title>
+			<title code="16">マップ</title>
+			<title code="17">アイオーン1</title>
+			<title code="18">アイオーン2</title>
+			<title code="19">エンディング</title>
+			<title code="0x224">SE1 : 24</title>
+			<title code="0x225">SE1 : 25</title>
+			<title code="0x226">SE1 : 26</title>
+			<title code="0x227">SE1 : 27</title>
+			<title code="0x228">SE1 : 28</title>
+			<title code="0x229">SE1 : 29</title>
+			<title code="0x22a">SE1 : 2a</title>
+			<title code="0x22c">SE1 : 2c</title>
+			<title code="0x22d">SE1 : 2d</title>
+			<title code="0x22e">SE1 : 2e</title>
+			<title code="0x230">SE1 : 30</title>
+			<title code="0x231">SE1 : 31</title>
+			<title code="0x233">SE1 : 33</title>
+			<title code="0x100">SE2 : 00</title>
+			<title code="0x101">SE2 : 01</title>
+			<title code="0x102">SE2 : 02</title>
+			<title code="0x103">SE2 : 03</title>
+			<title code="0x104">SE2 : 04</title>
+			<title code="0x105">SE2 : 05</title>
+			<title code="0x106">SE2 : 06</title>
+			<title code="0x107">SE2 : 07</title>
+			<title code="0x108">SE2 : 08</title>
+			<title code="0x109">SE2 : 09</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] CAL III ～完結編～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="cal3_98">
+			<rom type="file" offset="-1">cal3_98.com</rom>
+			<rom type="file" offset="-1">ACAL3.EXE</rom>
+			<rom type="conin" offset="5">ACAL3.EXE</rom>
+			<rom type="file" offset="6" >ASOUND.DAT</rom>
+			<rom type="file" offset="7" >AEFFECT.DAT</rom>
+			<rom type="file" offset="11">ACAL301.MUF</rom>
+			<rom type="file" offset="12">ACAL302.MUF</rom>
+			<rom type="file" offset="13">ACAL303.MUF</rom>
+			<rom type="file" offset="14">ACAL304.MUF</rom>
+			<rom type="file" offset="15">ACAL305.MUF</rom>
+			<rom type="file" offset="16">ACAL305B.MUF</rom>
+			<rom type="file" offset="17">ACAL306.MUF</rom>
+			<rom type="file" offset="18">ACAL307.MUF</rom>
+			<rom type="file" offset="19">ACAL307B.MUF</rom>
+			<rom type="file" offset="20">ACAL308.MUF</rom>
+			<rom type="file" offset="21">ACAL309.MUF</rom>
+			<rom type="file" offset="22">ACAL310.MUF</rom>
+			<rom type="file" offset="23">ACAL311.MUF</rom>
+			<rom type="file" offset="24">ACAL312.MUF</rom>
+			<rom type="file" offset="25">ACAL313.MUF</rom>
+			<rom type="file" offset="26">ACAL314.MUF</rom>
+			<rom type="file" offset="27">ACAL315.MUF</rom>
+			<rom type="file" offset="28">ACAL316.MUF</rom>
+			<rom type="file" offset="29">ACAL317.MUF</rom>
+			<rom type="file" offset="30">ACAL318.MUF</rom>
+			<rom type="file" offset="31">ACAL319.MUF</rom>
+			<rom type="file" offset="32">AKAMI1.MUF</rom>
+			<rom type="file" offset="33">AKAMI2.MUF</rom>
+			<rom type="file" offset="34">AKATA.MUF</rom>
+			<rom type="file" offset="35">AKYOUMEI.MUF</rom>
+			<rom type="file" offset="36">AREST.MUF</rom>
+			<rom type="file" offset="37">ATEL.MUF</rom>
+			<rom type="shell" offset="0">cal3_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">ACAL301.MUF       : </title>
+			<title code="12">ACAL302.MUF       : </title>
+			<title code="13">ACAL303.MUF       : </title>
+			<title code="14">ACAL304.MUF       : </title>
+			<title code="15">ACAL305.MUF       : </title>
+			<title code="16">ACAL305B.MUF      : </title>
+			<title code="17">ACAL306.MUF       : </title>
+			<title code="18">ACAL307.MUF       : </title>
+			<title code="19">ACAL307B.MUF      : </title>
+			<title code="20">ACAL308.MUF       : </title>
+			<title code="21">ACAL309.MUF       : </title>
+			<title code="22">ACAL310.MUF       : </title>
+			<title code="23">ACAL311.MUF       : </title>
+			<title code="24">ACAL312.MUF       : </title>
+			<title code="25">ACAL313.MUF       : </title>
+			<title code="26">ACAL314.MUF       : </title>
+			<title code="27">ACAL315.MUF       : </title>
+			<title code="28">ACAL316.MUF       : </title>
+			<title code="29">ACAL317.MUF       : </title>
+			<title code="30">ACAL318.MUF       : </title>
+			<title code="31">ACAL319.MUF       : </title>
+			<title code="32">AKAMI1.MUF        : </title>
+			<title code="33">AKAMI2.MUF        : </title>
+			<title code="34">AKATA.MUF         : </title>
+			<title code="35">AKYOUMEI.MUF      : </title>
+			<title code="36">AREST.MUF         : </title>
+			<title code="37">ATEL.MUF          : </title>
+			<title code="0x100">AEFFECT.DAT  : 00 : </title>
+			<title code="0x101">AEFFECT.DAT  : 01 : </title>
+			<title code="0x102">AEFFECT.DAT  : 02 : </title>
+			<title code="0x103">AEFFECT.DAT  : 03 : </title>
+			<title code="0x104">AEFFECT.DAT  : 04 : </title>
+			<title code="0x105">AEFFECT.DAT  : 05 : </title>
+			<title code="0x106">AEFFECT.DAT  : 06 : </title>
+			<title code="0x107">AEFFECT.DAT  : 07 : </title>
+			<title code="0x108">AEFFECT.DAT  : 08 : </title>
+			<title code="0x109">AEFFECT.DAT  : 09 : </title>
+			<title code="0x10a">AEFFECT.DAT  : 10 : </title>
+			<title code="0x10b">AEFFECT.DAT  : 11 : </title>
+			<title code="0x10c">AEFFECT.DAT  : 12 : </title>
+			<title code="0x10d">AEFFECT.DAT  : 13 : </title>
+			<title code="0x10e">AEFFECT.DAT  : 14 : </title>
+			<title code="0x10f">AEFFECT.DAT  : 15 : </title>
+			<title code="0x110">AEFFECT.DAT  : 16 : </title>
+			<title code="0x111">AEFFECT.DAT  : 17 : </title>
+			<title code="0x112">AEFFECT.DAT  : 18 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] CAL外伝 タイニィステップ</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="calg_98">
+			<rom type="file" offset="-1">calg_98.com</rom>
+			<rom type="file" offset="-1">TINY.EXE</rom>
+			<rom type="conin" offset="5">TINY.EXE</rom>
+			<rom type="file" offset="6" >SOUND.DAT</rom>
+			<rom type="file" offset="7" >EFFECT.DAT</rom>
+			<rom type="file" offset="11">CAL301B.MDT</rom>
+			<rom type="file" offset="12">GAN.MDT</rom>
+			<rom type="file" offset="13">TEL1.MDT</rom>
+			<rom type="file" offset="14">TEL2.MDT</rom>
+			<rom type="file" offset="15">TINY00.MDT</rom>
+			<rom type="file" offset="16">TINY01.MDT</rom>
+			<rom type="file" offset="17">TINY01B.MDT</rom>
+			<rom type="file" offset="18">TINY01C.MDT</rom>
+			<rom type="file" offset="19">TINY02.MDT</rom>
+			<rom type="file" offset="20">TINY03.MDT</rom>
+			<rom type="file" offset="21">TINY04.MDT</rom>
+			<rom type="file" offset="22">TINY05.MDT</rom>
+			<rom type="file" offset="23">TINY06.MDT</rom>
+			<rom type="file" offset="24">TINY07.MDT</rom>
+			<rom type="file" offset="25">TINY08.MDT</rom>
+			<rom type="file" offset="26">TINY09.MDT</rom>
+			<rom type="file" offset="27">TINY10.MDT</rom>
+			<rom type="file" offset="28">TINY11.MDT</rom>
+			<rom type="file" offset="29">TINY12.MDT</rom>
+			<rom type="file" offset="30">TINY13.MDT</rom>
+			<rom type="file" offset="31">TINY14.MDT</rom>
+			<rom type="file" offset="32">TINY15.MDT</rom>
+			<rom type="file" offset="33">TINY16.MDT</rom>
+			<rom type="file" offset="34">TINY17.MDT</rom>
+			<rom type="file" offset="35">TINY18.MDT</rom>
+			<rom type="file" offset="36">TINY19.MDT</rom>
+			<rom type="file" offset="37">TINY20.MDT</rom>
+			<rom type="file" offset="38">TINY21.MDT</rom>
+			<rom type="shell" offset="0">calg_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">CAL301B.MDT     : </title>
+		<!--	<title code="15">TINY00.MDT      : </title> -->
+			<title code="16">TINY01.MDT      : </title>
+			<title code="17">TINY01B.MDT     : </title>
+			<title code="18">TINY01C.MDT     : </title>
+			<title code="19">TINY02.MDT      : </title>
+			<title code="20">TINY03.MDT      : </title>
+			<title code="21">TINY04.MDT      : </title>
+			<title code="22">TINY05.MDT      : </title>
+			<title code="23">TINY06.MDT      : </title>
+			<title code="24">TINY07.MDT      : </title>
+			<title code="25">TINY08.MDT      : </title>
+			<title code="26">TINY09.MDT      : </title>
+			<title code="27">TINY10.MDT      : </title>
+			<title code="28">TINY11.MDT      : </title>
+			<title code="29">TINY12.MDT      : </title>
+			<title code="30">TINY13.MDT      : </title>
+			<title code="31">TINY14.MDT      : </title>
+			<title code="32">TINY15.MDT      : </title>
+			<title code="33">TINY16.MDT      : </title>
+			<title code="34">TINY17.MDT      : </title>
+			<title code="35">TINY18.MDT      : </title>
+			<title code="36">TINY19.MDT      : </title>
+			<title code="37">TINY20.MDT      : </title>
+			<title code="38">TINY21.MDT      : </title>
+			<title code="12">GAN.MDT         : </title>
+			<title code="13">TEL1.MDT        : </title>
+			<title code="14">TEL2.MDT        : </title>
+			<title code="0x100">EFFECT.DAT : 00 : </title>
+			<title code="0x101">EFFECT.DAT : 01 : </title>
+			<title code="0x102">EFFECT.DAT : 02 : </title>
+			<title code="0x103">EFFECT.DAT : 03 : </title>
+			<title code="0x104">EFFECT.DAT : 04 : </title>
+			<title code="0x105">EFFECT.DAT : 05 : </title>
+			<title code="0x106">EFFECT.DAT : 06 : </title>
+			<title code="0x107">EFFECT.DAT : 07 : </title>
+			<title code="0x108">EFFECT.DAT : 08 : </title>
+			<title code="0x109">EFFECT.DAT : 09 : </title>
+			<title code="0x10a">EFFECT.DAT : 10 : </title>
+			<title code="0x10b">EFFECT.DAT : 11 : </title>
+			<title code="0x10c">EFFECT.DAT : 12 : </title>
+			<title code="0x10d">EFFECT.DAT : 13 : </title>
+			<title code="0x10e">EFFECT.DAT : 14 : </title>
+			<title code="0x10f">EFFECT.DAT : 15 : </title>
+			<title code="0x110">EFFECT.DAT : 16 : </title>
+			<title code="0x111">EFFECT.DAT : 17 : </title>
+			<title code="0x112">EFFECT.DAT : 18 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] CAL リバイバル</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0xc000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="12"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="calr_98">
+			<rom type="code" offset="0x01000">__02.DAT</rom>
+			<rom type="code" offset="0x01000">calr_98.bin</rom>
+			<rom type="code" offset="0x08000">__03.DAT</rom>
+			<rom type="code" offset="0x0e000">__3D.DAT</rom>
+			<rom type="code" offset="0x0f000">__3E.DAT</rom>
+			<rom type="code" offset="0x0f800">__3F.DAT</rom>
+			<rom type="bgm" offset="1" >__30.DAT</rom>
+			<rom type="bgm" offset="2" >__31.DAT</rom>
+			<rom type="bgm" offset="3" >__32.DAT</rom>
+			<rom type="bgm" offset="4" >__33.DAT</rom>
+			<rom type="bgm" offset="5" >__34.DAT</rom>
+			<rom type="bgm" offset="6" >__35.DAT</rom>
+			<rom type="bgm" offset="7" >__36.DAT</rom>
+			<rom type="bgm" offset="8" >__37.DAT</rom>
+			<rom type="bgm" offset="9" >__38.DAT</rom>
+			<rom type="bgm" offset="10">__39.DAT</rom>
+			<rom type="bgm" offset="11">__3A.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="9" >結城美加</title>
+			<title code="5" >ヴィーナス</title>
+			<title code="3" >マッチ売りの少女</title>
+			<title code="2" >ラプンセル</title>
+			<title code="10">眠り姫</title>
+			<title code="4" >シンデレラ</title>
+			<title code="6" >赤ずきんさん</title>
+			<title code="7" >ウェンディ</title>
+			<title code="8" >人魚姫</title>
+			<title code="1" >アリス</title>
+			<title code="11">エンディング</title>
+			<title code="0x224">SE : 24</title>
+			<title code="0x225">SE : 25</title>
+			<title code="0x226">SE : 26</title>
+			<title code="0x227">SE : 27</title>
+			<title code="0x228">SE : 28</title>
+			<title code="0x229">SE : 29</title>
+			<title code="0x22a">SE : 2a</title>
+			<title code="0x22c">SE : 2c</title>
+			<title code="0x22d">SE : 2d</title>
+			<title code="0x22e">SE : 2e</title>
+			<title code="0x230">SE : 30</title>
+			<title code="0x231">SE : 31</title>
+			<title code="0x233">SE : 33</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] CAL II リバイバル</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0xc000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="20"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="cal2r_98">
+			<rom type="code" offset="0x01000">__02.DAT</rom>
+			<rom type="code" offset="0x01000">calr_98.bin</rom>
+			<rom type="code" offset="0x08000">__03.DAT</rom>
+			<rom type="code" offset="0x0e000">__07.DAT</rom>
+			<rom type="code" offset="0x0f000">__05.DAT</rom>
+			<rom type="code" offset="0x0f800">__06.DAT</rom>
+			<rom type="bgm" offset="1" >__1B.DAT</rom>
+			<rom type="bgm" offset="2" >__1C.DAT</rom>
+			<rom type="bgm" offset="3" >__1D.DAT</rom>
+			<rom type="bgm" offset="4" >__1E.DAT</rom>
+			<rom type="bgm" offset="5" >__1F.DAT</rom>
+			<rom type="bgm" offset="6" >__20.DAT</rom>
+			<rom type="bgm" offset="7" >__21.DAT</rom>
+			<rom type="bgm" offset="8" >__22.DAT</rom>
+			<rom type="bgm" offset="9" >__23.DAT</rom>
+			<rom type="bgm" offset="10">__24.DAT</rom>
+			<rom type="bgm" offset="11">__25.DAT</rom>
+			<rom type="bgm" offset="12">__26.DAT</rom>
+			<rom type="bgm" offset="13">__27.DAT</rom>
+			<rom type="bgm" offset="14">__28.DAT</rom>
+			<rom type="bgm" offset="15">__29.DAT</rom>
+			<rom type="bgm" offset="16">__2A.DAT</rom>
+			<rom type="bgm" offset="17">__2B.DAT</rom>
+			<rom type="bgm" offset="18">__2C.DAT</rom>
+			<rom type="bgm" offset="19">__2D.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >結城美加</title>
+			<title code="2" >オープニング</title>
+			<title code="3" >ヴィーナス</title>
+			<title code="4" >チェス</title>
+			<title code="5" >ブレーメル</title>
+			<title code="6" >アーシュロット</title>
+			<title code="7" >ジュリエット</title>
+			<title code="8" >ラベンナ</title>
+			<title code="9" >アルタミラ</title>
+			<title code="10">山吹皇女</title>
+			<title code="11">秀蘭</title>
+			<title code="12">リョーコ</title>
+			<title code="13">シェラザード</title>
+			<title code="14">キャロル</title>
+			<title code="15">クレオパトラ</title>
+			<title code="16">マップ</title>
+			<title code="17">アイオーン1</title>
+			<title code="18">アイオーン2</title>
+			<title code="19">エンディング</title>
+			<title code="0x224">SE1 : 24</title>
+			<title code="0x225">SE1 : 25</title>
+			<title code="0x226">SE1 : 26</title>
+			<title code="0x227">SE1 : 27</title>
+			<title code="0x228">SE1 : 28</title>
+			<title code="0x229">SE1 : 29</title>
+			<title code="0x22a">SE1 : 2a</title>
+			<title code="0x22c">SE1 : 2c</title>
+			<title code="0x22d">SE1 : 2d</title>
+			<title code="0x22e">SE1 : 2e</title>
+			<title code="0x230">SE1 : 30</title>
+			<title code="0x231">SE1 : 31</title>
+			<title code="0x233">SE1 : 33</title>
+			<title code="0x100">SE2 : 00</title>
+			<title code="0x101">SE2 : 01</title>
+			<title code="0x102">SE2 : 02</title>
+			<title code="0x103">SE2 : 03</title>
+			<title code="0x104">SE2 : 04</title>
+			<title code="0x105">SE2 : 05</title>
+			<title code="0x106">SE2 : 06</title>
+			<title code="0x107">SE2 : 07</title>
+			<title code="0x108">SE2 : 08</title>
+			<title code="0x109">SE2 : 09</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PAL リバイバル</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0xc000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="31"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="palr_98">
+			<rom type="code" offset="0x01000">__00.DAT</rom>
+			<rom type="code" offset="0x01000">pal_98.bin</rom>
+			<rom type="code" offset="0x07000">__02.DAT</rom>
+			<rom type="code" offset="0x0e000">__06.DAT</rom>
+			<rom type="code" offset="0x0f000">__04.DAT</rom>
+			<rom type="code" offset="0x0f400">__05.DAT</rom>
+			<rom type="bgm" offset="1" >__30.DAT</rom>
+			<rom type="bgm" offset="2" >__31.DAT</rom>
+			<rom type="bgm" offset="3" >__32.DAT</rom>
+			<rom type="bgm" offset="4" >__33.DAT</rom>
+			<rom type="bgm" offset="5" >__34.DAT</rom>
+			<rom type="bgm" offset="6" >__35.DAT</rom>
+			<rom type="bgm" offset="7" >__36.DAT</rom>
+			<rom type="bgm" offset="8" >__37.DAT</rom>
+			<rom type="bgm" offset="9" >__38.DAT</rom>
+			<rom type="bgm" offset="10">__39.DAT</rom>
+			<rom type="bgm" offset="11">__3A.DAT</rom>
+			<rom type="bgm" offset="12">__3B.DAT</rom>
+			<rom type="bgm" offset="13">__3C.DAT</rom>
+			<rom type="bgm" offset="14">__3D.DAT</rom>
+			<rom type="bgm" offset="15">__3E.DAT</rom>
+			<rom type="bgm" offset="16">__3F.DAT</rom>
+			<rom type="bgm" offset="17">__40.DAT</rom>
+			<rom type="bgm" offset="18">__41.DAT</rom>
+			<rom type="bgm" offset="19">__42.DAT</rom>
+			<rom type="bgm" offset="20">__43.DAT</rom>
+			<rom type="bgm" offset="21">__44.DAT</rom>
+			<rom type="bgm" offset="22">__45.DAT</rom>
+			<rom type="bgm" offset="23">__46.DAT</rom>
+			<rom type="bgm" offset="24">__47.DAT</rom>
+			<rom type="bgm" offset="25">__48.DAT</rom>
+			<rom type="bgm" offset="26">__49.DAT</rom>
+			<rom type="bgm" offset="27">__4A.DAT</rom>
+			<rom type="bgm" offset="28">__4B.DAT</rom>
+			<rom type="bgm" offset="29">__4C.DAT</rom>
+			<rom type="bgm" offset="30">__4D.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00001">アリス</title>
+			<title code="0x00002">ラプンセル</title>
+			<title code="0x00003">マッチ売りの少女</title>
+			<title code="0x00004">シンデレラ</title>
+			<title code="0x00005">ヴィーナス</title>
+			<title code="0x00006">赤ずきんさん</title>
+			<title code="0x00007">ウェンディ</title>
+			<title code="0x00008">人魚姫</title>
+			<title code="0x00009">結城美加</title>
+			<title code="0x0000a">眠り姫</title>
+			<title code="0x0000b">エンディング</title>
+			<title code="0x1000c">結城美加</title>
+			<title code="0x1000d">オープニング</title>
+			<title code="0x1000e">ヴィーナス</title>
+			<title code="0x1000f">チェス</title>
+			<title code="0x10010">ブレーメル</title>
+			<title code="0x10011">アーシュロット</title>
+			<title code="0x10012">ジュリエット</title>
+			<title code="0x10013">ラベンナ</title>
+			<title code="0x10014">アルタミラ</title>
+			<title code="0x10015">山吹皇女</title>
+			<title code="0x10016">秀蘭</title>
+			<title code="0x10017">リョーコ</title>
+			<title code="0x10018">シェラザード</title>
+			<title code="0x10019">キャロル</title>
+			<title code="0x1001a">クレオパトラ</title>
+			<title code="0x1001b">マップ</title>
+			<title code="0x1001c">アイオーン1</title>
+			<title code="0x1001d">アイオーン2</title>
+			<title code="0x1001e">エンディング</title>
+			<title code="0x224">SE : 24</title>
+			<title code="0x225">SE : 25</title>
+			<title code="0x226">SE : 26</title>
+			<title code="0x227">SE : 27</title>
+			<title code="0x228">SE : 28</title>
+			<title code="0x229">SE : 29</title>
+			<title code="0x22a">SE : 2a</title>
+			<title code="0x22c">SE : 2c</title>
+			<title code="0x22d">SE : 2d</title>
+			<title code="0x22e">SE : 2e</title>
+			<title code="0x230">SE : 30</title>
+			<title code="0x231">SE : 31</title>
+			<title code="0x233">SE : 33</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] JOKER</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="joker_98">
+			<rom type="file" offset="-1">joker_98.com</rom>
+			<rom type="file" offset="-1">ADVBP.EXE</rom>
+			<rom type="conin" offset="5">ADVBP.EXE</rom>
+			<rom type="file" offset="6" >JO.OPN</rom>
+			<rom type="file" offset="7" >JO.SSG</rom>
+			<rom type="file" offset="11">GARASU.MU</rom>
+			<rom type="file" offset="12">GUN.MU</rom>
+			<rom type="file" offset="13">GUN2.MU</rom>
+			<rom type="file" offset="14">JO01.MU</rom>
+			<rom type="file" offset="15">JO02.MU</rom>
+			<rom type="file" offset="16">JO02B.MU</rom>
+			<rom type="file" offset="17">JO03.MU</rom>
+			<rom type="file" offset="18">JO04.MU</rom>
+			<rom type="file" offset="19">JO05.MU</rom>
+			<rom type="file" offset="20">JO05B.MU</rom>
+			<rom type="file" offset="21">JO06.MU</rom>
+			<rom type="file" offset="22">JO06B.MU</rom>
+			<rom type="file" offset="23">JO06C.MU</rom>
+			<rom type="file" offset="24">JO07.MU</rom>
+			<rom type="file" offset="25">JO07B.MU</rom>
+			<rom type="file" offset="26">JO07C.MU</rom>
+			<rom type="file" offset="27">JO08.MU</rom>
+			<rom type="file" offset="28">JO09.MU</rom>
+			<rom type="file" offset="29">JO09B.MU</rom>
+			<rom type="file" offset="30">JO09C.MU</rom>
+			<rom type="file" offset="31">JO10.MU</rom>
+			<rom type="file" offset="32">JO10B.MU</rom>
+			<rom type="file" offset="33">JO11.MU</rom>
+			<rom type="file" offset="34">JO11B.MU</rom>
+			<rom type="file" offset="35">JO12.MU</rom>
+			<rom type="file" offset="36">JO12B.MU</rom>
+			<rom type="file" offset="37">JO13.MU</rom>
+			<rom type="file" offset="38">JO14.MU</rom>
+			<rom type="file" offset="39">JO15.MU</rom>
+			<rom type="file" offset="40">JO16.MU</rom>
+			<rom type="file" offset="41">KNIVES.MU</rom>
+			<rom type="file" offset="42">O_HIT.MU</rom>
+			<rom type="file" offset="43">TSUME.MU</rom>
+			<rom type="file" offset="44">WIND.MU</rom>
+			<rom type="shell" offset="0">joker_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="14">JO01.MU   : </title>
+			<title code="15">JO02.MU   : </title>
+			<title code="16">JO02B.MU  : </title>
+			<title code="17">JO03.MU   : </title>
+			<title code="18">JO04.MU   : </title>
+			<title code="19">JO05.MU   : </title>
+			<title code="20">JO05B.MU  : </title>
+			<title code="21">JO06.MU   : </title>
+			<title code="22">JO06B.MU  : </title>
+			<title code="23">JO06C.MU  : </title>
+			<title code="24">JO07.MU   : </title>
+			<title code="25">JO07B.MU  : </title>
+			<title code="26">JO07C.MU  : </title>
+			<title code="27">JO08.MU   : </title>
+			<title code="28">JO09.MU   : </title>
+			<title code="29">JO09B.MU  : </title>
+			<title code="30">JO09C.MU  : </title>
+			<title code="31">JO10.MU   : </title>
+			<title code="32">JO10B.MU  : </title>
+			<title code="33">JO11.MU   : </title>
+			<title code="34">JO11B.MU  : </title>
+			<title code="35">JO12.MU   : </title>
+			<title code="36">JO12B.MU  : </title>
+			<title code="37">JO13.MU   : </title>
+			<title code="38">JO14.MU   : </title>
+			<title code="39">JO15.MU   : </title>
+			<title code="40">JO16.MU   : </title>
+			<title code="11">GARASU.MU : </title>
+			<title code="12">GUN.MU    : </title>
+			<title code="13">GUN2.MU   : </title>
+			<title code="41">KNIVES.MU : </title>
+			<title code="42">O_HIT.MU  : </title>
+			<title code="43">TSUME.MU  : </title>
+			<title code="44">WIND.MU   : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] JOKER II</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="joker2_98">
+			<rom type="file" offset="-1">jo2_98.com</rom>
+			<rom type="file" offset="-1">JOKER2P.EXE</rom>
+			<rom type="conin" offset="5">JOKER2P.EXE</rom>
+			<rom type="file" offset="6" >JO2.OP1</rom>
+			<rom type="file" offset="7" >JO2.SS1</rom>
+			<rom type="file" offset="8" >POKER.EF1</rom>
+			<rom type="file" offset="11">JO102.MF1</rom>
+			<rom type="file" offset="12">JO104.MF1</rom>
+			<rom type="file" offset="13">JO105.MF1</rom>
+			<rom type="file" offset="14">JO106.MF1</rom>
+			<rom type="file" offset="15">JO107.MF1</rom>
+<!--
+			<rom type="file" offset="16">JO108.MF1</rom>
+-->
+			<rom type="file" offset="17">JO110.MF1</rom>
+			<rom type="file" offset="18">JO111.MF1</rom>
+			<rom type="file" offset="19">JO112.MF1</rom>
+			<rom type="file" offset="20">JO116.MF1</rom>
+			<rom type="file" offset="21">JO200.MF1</rom>
+			<rom type="file" offset="22">JO201.MF1</rom>
+			<rom type="file" offset="23">JO202.MF1</rom>
+			<rom type="file" offset="24">JO203.MF1</rom>
+			<rom type="file" offset="25">JO204.MF1</rom>
+			<rom type="file" offset="26">JO205.MF1</rom>
+			<rom type="file" offset="27">JO206.MF1</rom>
+			<rom type="file" offset="28">JO207.MF1</rom>
+			<rom type="file" offset="29">JO208.MF1</rom>
+			<rom type="file" offset="30">JO209.MF1</rom>
+			<rom type="file" offset="31">JO210.MF1</rom>
+			<rom type="file" offset="32">JO2EFF0.MF1</rom>
+			<rom type="file" offset="33">JO2EFF1.MF1</rom>
+			<rom type="file" offset="34">JO2EFF2.MF1</rom>
+			<rom type="file" offset="35">JO2EFF3.MF1</rom>
+			<rom type="shell" offset="0">jo2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">JO102.MF1        : Beretta's Bar</title>
+			<title code="12">JO104.MF1        : Little Lily Laura</title>
+			<title code="13">JO105.MF1        : Targe City</title>
+			<title code="14">JO106.MF1        : Gray's Bar</title>
+			<title code="15">JO107.MF1        : Female</title>
+<!--
+			<title code="16">JO108.MF1   : </title>
+-->
+			<title code="17">JO110.MF1        : Lady "S・Q"</title>
+			<title code="18">JO111.MF1        : So Far</title>
+			<title code="19">JO112.MF1        : Crisis</title>
+			<title code="20">JO116.MF1        : God Bless</title>
+			<title code="21">JO200.MF1        : Justice</title>
+			<title code="22">JO201.MF1        : Warrior</title>
+			<title code="23">JO202.MF1        : Lanie</title>
+			<title code="24">JO203.MF1        : Naughty Girl</title>
+			<title code="25">JO204.MF1        : She Dissolves Him</title>
+			<title code="26">JO205.MF1        : Luck &amp; Love</title>
+			<title code="27">JO206.MF1        : Blaze Blood Branca</title>
+			<title code="28">JO207.MF1        : Night Mare</title>
+			<title code="29">JO208.MF1        : Suspicious Solo</title>
+			<title code="31">JO210.MF1        : Joker</title>
+			<title code="30">JO209.MF1        : Whistle With Wind</title>
+			<title code="32">JO2EFF0.MF1      : </title>
+			<title code="33">JO2EFF1.MF1      : </title>
+			<title code="34">JO2EFF2.MF1      : </title>
+			<title code="35">JO2EFF3.MF1      : </title>
+			<title code="0xff00">POKER.EF1   : 00 : </title>
+			<title code="0xff01">POKER.EF1   : 01 : </title>
+			<title code="0xff02">POKER.EF1   : 02 : </title>
+			<title code="0xff03">POKER.EF1   : 03 : </title>
+			<title code="0xff04">POKER.EF1   : 04 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] キラキラ女・神・先・生</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x70000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="12"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="kira_98">
+			<rom type="code" offset="0x00600">kira_98.bin</rom>
+			<rom type="code" offset="0x0fc00">KIRA.EXE</rom>
+			<rom type="code" offset="0x80000">SOUND.DTP</rom>
+			<rom type="code" offset="0x81000">KIRA_E.DAT</rom>
+			<rom type="bgm" offset="01">KIRA00.MFP</rom>
+			<rom type="bgm" offset="02">KIRA01.MFP</rom>
+			<rom type="bgm" offset="03">KIRA02.MFP</rom>
+			<rom type="bgm" offset="04">KIRA03.MFP</rom>
+			<rom type="bgm" offset="05">KIRA04.MFP</rom>
+			<rom type="bgm" offset="06">KIRA05.MFP</rom>
+			<rom type="bgm" offset="07">KIRA06.MFP</rom>
+			<rom type="bgm" offset="08">KIRA07.MFP</rom>
+			<rom type="bgm" offset="09">KIRA08.MFP</rom>
+			<rom type="bgm" offset="10">KIRA09.MFP</rom>
+			<rom type="bgm" offset="11">KIRA10.MFP</rom>
+		</romlist>
+		<titlelist>
+			<title code="01">KIRA00.MFP      : </title>
+			<title code="02">KIRA01.MFP      : </title>
+			<title code="03">KIRA02.MFP      : </title>
+			<title code="04">KIRA03.MFP      : </title>
+			<title code="05">KIRA04.MFP      : </title>
+			<title code="06">KIRA05.MFP      : </title>
+			<title code="07">KIRA06.MFP      : </title>
+			<title code="08">KIRA07.MFP      : </title>
+			<title code="09">KIRA08.MFP      : </title>
+			<title code="10">KIRA09.MFP      : </title>
+			<title code="11">KIRA10.MFP      : </title>
+			<title code="0x100">KIRA_E.DAT : 00 : </title>
+			<title code="0x101">KIRA_E.DAT : 01 : </title>
+			<title code="0x102">KIRA_E.DAT : 02 : </title>
+			<title code="0x103">KIRA_E.DAT : 03 : </title>
+			<title code="0x104">KIRA_E.DAT : 04 : </title>
+			<title code="0x105">KIRA_E.DAT : 05 : </title>
+			<title code="0x106">KIRA_E.DAT : 06 : </title>
+			<title code="0x107">KIRA_E.DAT : 07 : </title>
+			<title code="0x108">KIRA_E.DAT : 08 : </title>
+			<title code="0x109">KIRA_E.DAT : 09 : </title>
+			<title code="0x10a">KIRA_E.DAT : 10 : </title>
+			<title code="0x10b">KIRA_E.DAT : 11 : </title>
+			<title code="0x10c">KIRA_E.DAT : 12 : </title>
+			<title code="0x10d">KIRA_E.DAT : 13 : </title>
+			<title code="0x10e">KIRA_E.DAT : 14 : </title>
+			<title code="0x10f">KIRA_E.DAT : 15 : </title>
+			<title code="0x110">KIRA_E.DAT : 16 : </title>
+			<title code="0x111">KIRA_E.DAT : 17 : </title>
+			<title code="0x112">KIRA_E.DAT : 18 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 魔天学園 ～地獄のラブラブ大作戦～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="maten_98">
+			<rom type="file" offset="-1">maten_98.com</rom>
+			<rom type="file" offset="-1">MATENHD.EXE</rom>
+			<rom type="conin" offset="5">MATENHD.EXE</rom>
+			<rom type="file" offset="6" >BSOUND.DAL</rom>
+			<rom type="file" offset="7" >BEFFECT.DAL</rom>
+			<rom type="file" offset="11">ABAKU0.MUL</rom>
+			<rom type="file" offset="12">ADEV01.MUL</rom>
+			<rom type="file" offset="13">ADEV02.MUL</rom>
+			<rom type="file" offset="14">ADEV03.MUL</rom>
+			<rom type="file" offset="15">ADEV04.MUL</rom>
+			<rom type="file" offset="16">ADEV05.MUL</rom>
+			<rom type="file" offset="17">ADEV06.MUL</rom>
+			<rom type="file" offset="18">ADEV07.MUL</rom>
+			<rom type="file" offset="19">ADEV08.MUL</rom>
+			<rom type="file" offset="20">ADEV09.MUL</rom>
+			<rom type="file" offset="21">ADEV10.MUL</rom>
+			<rom type="file" offset="22">ADEV11.MUL</rom>
+			<rom type="file" offset="23">ADEV12.MUL</rom>
+			<rom type="file" offset="24">ADEV13.MUL</rom>
+			<rom type="file" offset="25">ADEV14.MUL</rom>
+			<rom type="file" offset="26">ADEV15.MUL</rom>
+			<rom type="file" offset="27">ADEV16.MUL</rom>
+			<rom type="file" offset="28">ADEV17.MUL</rom>
+			<rom type="file" offset="29">ADEV18.MUL</rom>
+			<rom type="file" offset="30">ADEV19.MUL</rom>
+			<rom type="file" offset="31">ADEV20.MUL</rom>
+			<rom type="file" offset="32">ADEV21.MUL</rom>
+			<rom type="file" offset="33">AHUBUKI.MUL</rom>
+			<rom type="file" offset="34">AREST.MUL</rom>
+			<rom type="file" offset="35">ATEL00.MUL</rom>
+			<rom type="shell" offset="0">maten_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="12">ADEV01.MUL       : </title>
+			<title code="13">ADEV02.MUL       : </title>
+			<title code="14">ADEV03.MUL       : </title>
+			<title code="15">ADEV04.MUL       : </title>
+			<title code="16">ADEV05.MUL       : </title>
+			<title code="17">ADEV06.MUL       : </title>
+			<title code="18">ADEV07.MUL       : </title>
+			<title code="19">ADEV08.MUL       : </title>
+			<title code="20">ADEV09.MUL       : </title>
+			<title code="21">ADEV10.MUL       : </title>
+			<title code="22">ADEV11.MUL       : </title>
+			<title code="23">ADEV12.MUL       : </title>
+			<title code="24">ADEV13.MUL       : </title>
+			<title code="25">ADEV14.MUL       : </title>
+			<title code="26">ADEV15.MUL       : </title>
+			<title code="27">ADEV16.MUL       : </title>
+			<title code="28">ADEV17.MUL       : </title>
+			<title code="29">ADEV18.MUL       : </title>
+			<title code="30">ADEV19.MUL       : </title>
+			<title code="31">ADEV20.MUL       : </title>
+			<title code="32">ADEV21.MUL       : </title>
+			<title code="11">ABAKU0.MUL       : </title>
+			<title code="33">AHUBUKI.MUL      : </title>
+		<!--	<title code="34">AREST.MUL        : </title> -->
+			<title code="35">ATEL00.MUL       : </title>
+			<title code="0x100">BEFFECT.DAL : 00 : </title>
+			<title code="0x101">BEFFECT.DAL : 01 : </title>
+			<title code="0x102">BEFFECT.DAL : 02 : </title>
+			<title code="0x103">BEFFECT.DAL : 03 : </title>
+			<title code="0x104">BEFFECT.DAL : 04 : </title>
+			<title code="0x105">BEFFECT.DAL : 05 : </title>
+			<title code="0x106">BEFFECT.DAL : 06 : </title>
+			<title code="0x107">BEFFECT.DAL : 07 : </title>
+			<title code="0x108">BEFFECT.DAL : 08 : </title>
+			<title code="0x109">BEFFECT.DAL : 09 : </title>
+			<title code="0x10a">BEFFECT.DAL : 10 : </title>
+			<title code="0x10b">BEFFECT.DAL : 11 : </title>
+			<title code="0x10c">BEFFECT.DAL : 12 : </title>
+			<title code="0x10d">BEFFECT.DAL : 13 : </title>
+			<title code="0x10e">BEFFECT.DAL : 14 : </title>
+			<title code="0x10f">BEFFECT.DAL : 15 : </title>
+			<title code="0x110">BEFFECT.DAL : 16 : </title>
+			<title code="0x111">BEFFECT.DAL : 17 : </title>
+			<title code="0x112">BEFFECT.DAL : 18 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] My eyes!</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="myeyes_98">
+			<rom type="file" offset="-1">myeye_98.com</rom>
+			<rom type="file" offset="-1">MY_EYES!.EXE</rom>
+			<rom type="conin" offset="5">MY_EYES!.EXE</rom>
+			<rom type="file" offset="0x06">MY_OPN.OPN</rom>
+			<rom type="file" offset="0x07">MY_SSG.SSG</rom>
+			<rom type="file" offset="0x08">CALTW.OPN</rom>
+			<rom type="file" offset="0x09">CALTW.SSG</rom>
+			<rom type="file" offset="0x0a">JO2.OPN</rom>
+			<rom type="file" offset="0x0b">JO2.SSG</rom>
+			<rom type="file" offset="0x10">CAL203.MUS</rom>
+			<rom type="file" offset="0x11">JO110.MUS</rom>
+			<rom type="file" offset="0x12">MY01.MUS</rom>
+			<rom type="file" offset="0x13">MY02.MUS</rom>
+			<rom type="file" offset="0x14">MY03.MUS</rom>
+			<rom type="file" offset="0x15">MY04.MUS</rom>
+			<rom type="file" offset="0x16">MY06.MUS</rom>
+			<rom type="file" offset="0x17">MY07.MUS</rom>
+			<rom type="file" offset="0x18">MY08.MUS</rom>
+			<rom type="file" offset="0x19">MY09.MUS</rom>
+			<rom type="file" offset="0x1a">MY10.MUS</rom>
+			<rom type="file" offset="0x1b">MY11.MUS</rom>
+			<rom type="file" offset="0x1c">MY12.MUS</rom>
+			<rom type="file" offset="0x1d">MY13.MUS</rom>
+			<rom type="file" offset="0x1e">MY14.MUS</rom>
+			<rom type="file" offset="0x1f">MY15.MUS</rom>
+			<rom type="file" offset="0x20">MY16.MUS</rom>
+			<rom type="file" offset="0x21">MY17.MUS</rom>
+			<rom type="file" offset="0x22">MY18.MUS</rom>
+			<rom type="shell" offset="0">myeye_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">MY01.MUS   : </title>
+			<title code="0x13">MY02.MUS   : Air travel on my mind</title>
+			<title code="0x14">MY03.MUS   : Keen bayonet</title>
+			<title code="0x15">MY04.MUS   : Can I play with the fortune</title>
+			<title code="0x16">MY06.MUS   : Negative cure</title>
+			<title code="0x17">MY07.MUS   : Relics</title>
+			<title code="0x18">MY08.MUS   : Hands ON (FIRE &amp; FLOWER)</title>
+			<title code="0x19">MY09.MUS   : Geometric glow</title>
+			<title code="0x1a">MY10.MUS   : Swell trail</title>
+			<title code="0x1b">MY11.MUS   : Jaw breaker</title>
+			<title code="0x1c">MY12.MUS   : Touch of the EVIL</title>
+			<title code="0x1d">MY13.MUS   : Feel at so easy</title>
+			<title code="0x1e">MY14.MUS   : Take time to speak "1,2,3"</title>
+			<title code="0x1f">MY15.MUS   : The gigi's talks died away</title>
+			<title code="0x20">MY16.MUS   : Storm rider</title>
+			<title code="0x21">MY17.MUS   : Dome echo</title>
+			<title code="0x22">MY18.MUS   : Polka-dot sky</title>
+			<title code="0x080010">CAL203.MUS : チェス (CAL2)</title>
+			<title code="0x0a0011">JO110.MUS  : Lady "S・Q" (JOKER2)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PAL</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0xc000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="31"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pal_98">
+			<rom type="code" offset="0x01000">__00.DAT</rom>
+			<rom type="code" offset="0x01000">pal_98.bin</rom>
+			<rom type="code" offset="0x07000">__02.DAT</rom>
+			<rom type="code" offset="0x0e000">__06.DAT</rom>
+			<rom type="code" offset="0x0f000">__04.DAT</rom>
+			<rom type="code" offset="0x0f400">__05.DAT</rom>
+			<rom type="bgm" offset="1" >__30.DAT</rom>
+			<rom type="bgm" offset="2" >__31.DAT</rom>
+			<rom type="bgm" offset="3" >__32.DAT</rom>
+			<rom type="bgm" offset="4" >__33.DAT</rom>
+			<rom type="bgm" offset="5" >__34.DAT</rom>
+			<rom type="bgm" offset="6" >__35.DAT</rom>
+			<rom type="bgm" offset="7" >__36.DAT</rom>
+			<rom type="bgm" offset="8" >__37.DAT</rom>
+			<rom type="bgm" offset="9" >__38.DAT</rom>
+			<rom type="bgm" offset="10">__39.DAT</rom>
+			<rom type="bgm" offset="11">__3A.DAT</rom>
+			<rom type="bgm" offset="12">__3B.DAT</rom>
+			<rom type="bgm" offset="13">__3C.DAT</rom>
+			<rom type="bgm" offset="14">__3D.DAT</rom>
+			<rom type="bgm" offset="15">__3E.DAT</rom>
+			<rom type="bgm" offset="16">__3F.DAT</rom>
+			<rom type="bgm" offset="17">__40.DAT</rom>
+			<rom type="bgm" offset="18">__41.DAT</rom>
+			<rom type="bgm" offset="19">__42.DAT</rom>
+			<rom type="bgm" offset="20">__43.DAT</rom>
+			<rom type="bgm" offset="21">__44.DAT</rom>
+			<rom type="bgm" offset="22">__45.DAT</rom>
+			<rom type="bgm" offset="23">__46.DAT</rom>
+			<rom type="bgm" offset="24">__47.DAT</rom>
+			<rom type="bgm" offset="25">__48.DAT</rom>
+			<rom type="bgm" offset="26">__49.DAT</rom>
+			<rom type="bgm" offset="27">__4A.DAT</rom>
+			<rom type="bgm" offset="28">__4B.DAT</rom>
+			<rom type="bgm" offset="29">__4C.DAT</rom>
+			<rom type="bgm" offset="30">__4D.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00001">アリス</title>
+			<title code="0x00002">ラプンセル</title>
+			<title code="0x00003">マッチ売りの少女</title>
+			<title code="0x00004">シンデレラ</title>
+			<title code="0x00005">ヴィーナス</title>
+			<title code="0x00006">赤ずきんさん</title>
+			<title code="0x00007">ウェンディ</title>
+			<title code="0x00008">人魚姫</title>
+			<title code="0x00009">結城美加</title>
+			<title code="0x0000a">眠り姫</title>
+			<title code="0x0000b">エンディング</title>
+			<title code="0x1000c">結城美加</title>
+			<title code="0x1000d">オープニング</title>
+			<title code="0x1000e">ヴィーナス</title>
+			<title code="0x1000f">チェス</title>
+			<title code="0x10010">ブレーメル</title>
+			<title code="0x10011">アーシュロット</title>
+			<title code="0x10012">ジュリエット</title>
+			<title code="0x10013">ラベンナ</title>
+			<title code="0x10014">アルタミラ</title>
+			<title code="0x10015">山吹皇女</title>
+			<title code="0x10016">秀蘭</title>
+			<title code="0x10017">リョーコ</title>
+			<title code="0x10018">シェラザード</title>
+			<title code="0x10019">キャロル</title>
+			<title code="0x1001a">クレオパトラ</title>
+			<title code="0x1001b">マップ</title>
+			<title code="0x1001c">アイオーン1</title>
+			<title code="0x1001d">アイオーン2</title>
+			<title code="0x1001e">エンディング</title>
+			<title code="0x224">SE : 24</title>
+			<title code="0x225">SE : 25</title>
+			<title code="0x226">SE : 26</title>
+			<title code="0x227">SE : 27</title>
+			<title code="0x228">SE : 28</title>
+			<title code="0x229">SE : 29</title>
+			<title code="0x22a">SE : 2a</title>
+			<title code="0x22c">SE : 2c</title>
+			<title code="0x22d">SE : 2d</title>
+			<title code="0x22e">SE : 2e</title>
+			<title code="0x230">SE : 30</title>
+			<title code="0x231">SE : 31</title>
+			<title code="0x233">SE : 33</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PIAS</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x10000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="15"/>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="pias_98">
+			<rom type="code" offset="0x01000">pias_98.bin</rom>
+			<rom type="code" offset="0x08100">__01.DAT</rom>
+			<rom type="code" offset="0x0c000">__02.DAT</rom>
+			<rom type="bgm" offset="1" >__10.DAT</rom>
+			<rom type="bgm" offset="2" >__11.DAT</rom>
+			<rom type="bgm" offset="3" >__12.DAT</rom>
+			<rom type="bgm" offset="4" >__13.DAT</rom>
+			<rom type="bgm" offset="5" >__14.DAT</rom>
+			<rom type="bgm" offset="6" >__15.DAT</rom>
+			<rom type="bgm" offset="7" >__16.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00001">BGM 1</title>
+			<title code="0x00002">BGM 2</title>
+			<title code="0x00003">BGM 3</title>
+			<title code="0x00004">BGM 4</title>
+			<title code="0x00005">BGM 5</title>
+			<title code="0x00006">BGM 6</title>
+			<title code="0x00007">BGM 7</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Rouge</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x10000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="16"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="rouge_98">
+			<rom type="code" offset="0x01000">rouge_98.bin</rom>
+			<rom type="code" offset="0x20100">__00.DAT</rom>
+			<rom type="bgm" offset="1" >__01.DAT</rom>
+			<rom type="bgm" offset="2" >__02.DAT</rom>
+			<rom type="bgm" offset="3" >__03.DAT</rom>
+			<rom type="bgm" offset="4" >__04.DAT</rom>
+			<rom type="bgm" offset="5" >__05.DAT</rom>
+			<rom type="bgm" offset="6" >__06.DAT</rom>
+			<rom type="bgm" offset="7" >__07.DAT</rom>
+			<rom type="bgm" offset="8" >__08.DAT</rom>
+			<rom type="bgm" offset="9" >__09.DAT</rom>
+			<rom type="bgm" offset="10">__0A.DAT</rom>
+			<rom type="bgm" offset="11">__0B.DAT</rom>
+			<rom type="bgm" offset="12">__0C.DAT</rom>
+			<rom type="bgm" offset="13">__0D.DAT</rom>
+			<rom type="bgm" offset="14">__0E.DAT</rom>
+			<rom type="bgm" offset="15">__0F.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >BGM  1</title>
+			<title code="2" >BGM  2</title>
+			<title code="3" >BGM  3</title>
+			<title code="4" >BGM  4</title>
+			<title code="5" >BGM  5</title>
+			<title code="6" >BGM  6</title>
+			<title code="7" >BGM  7</title>
+			<title code="8" >BGM  8</title>
+			<title code="9" >BGM  9</title>
+			<title code="10">BGM 10</title>
+			<title code="11">BGM 11</title>
+			<title code="12">BGM 12</title>
+			<title code="13">BGM 13</title>
+			<title code="14">BGM 14</title>
+			<title code="15">BGM 15</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] SNOW MEMORY</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="snowm_98">
+			<rom type="file" offset="-1">snowm_98.com</rom>
+			<rom type="file" offset="-1">MAIN.EXE</rom>
+			<rom type="conin" offset="5">MAIN.EXE</rom>
+			<rom type="file" offset="6" >SND.DAT</rom>
+			<rom type="file" offset="7" >SE.EFF</rom>
+			<rom type="file" offset="11">REST.MUF</rom>
+			<rom type="file" offset="12">SM000A.MUF</rom>
+			<rom type="file" offset="13">SM001.MUF</rom>
+			<rom type="file" offset="14">SM002.MUF</rom>
+			<rom type="file" offset="15">SM003.MUF</rom>
+			<rom type="file" offset="16">SM004.MUF</rom>
+			<rom type="file" offset="17">SM005.MUF</rom>
+			<rom type="file" offset="18">SM006.MUF</rom>
+			<rom type="file" offset="19">SM008.MUF</rom>
+			<rom type="file" offset="20">SM010.MUF</rom>
+			<rom type="file" offset="21">SM011C.MUF</rom>
+			<rom type="file" offset="22">SM012.MUF</rom>
+			<rom type="file" offset="23">SM013.MUF</rom>
+			<rom type="file" offset="24">SM014.MUF</rom>
+			<rom type="file" offset="25">SM015A.MUF</rom>
+			<rom type="file" offset="26">SM016.MUF</rom>
+			<rom type="file" offset="27">SM017A.MUF</rom>
+			<rom type="file" offset="28">SM017B.MUF</rom>
+			<rom type="shell" offset="0">snowm_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">REST.MUF    : STOP</title>
+			<title code="12">SM000A.MUF  : オープニング</title>
+			<title code="13">SM001.MUF   : 美都のテーマ</title>
+			<title code="14">SM002.MUF   : 麗華のテーマ</title>
+			<title code="15">SM003.MUF   : 万理江のテーマ</title>
+			<title code="16">SM004.MUF   : 千秋のテーマ</title>
+			<title code="17">SM005.MUF   : しのびよる危険</title>
+			<title code="18">SM006.MUF   : オルゴール</title>
+			<title code="19">SM008.MUF   : 悲しみの少女</title>
+			<title code="20">SM010.MUF   : 沙夜理のテーマ</title>
+			<title code="21">SM011C.MUF  : 愛の交換</title>
+			<title code="22">SM012.MUF   : 別荘</title>
+			<title code="23">SM013.MUF   : ふれあい</title>
+			<title code="24">SM014.MUF   : 変身! 女王様</title>
+			<title code="25">SM015A.MUF  : 料理の鉄人</title>
+			<title code="26">SM016.MUF   : 3分クッキング</title>
+			<title code="27">SM017A.MUF  : エンディング</title>
+			<title code="28">SM017B.MUF  : スタッフロール</title>
+			<title code="0x101">SE.EFF : 01 : </title>
+			<title code="0x102">SE.EFF : 02 : </title>
+			<title code="0x103">SE.EFF : 03 : </title>
+			<title code="0x104">SE.EFF : 04 : </title>
+			<title code="0x105">SE.EFF : 05 : </title>
+			<title code="0x106">SE.EFF : 06 : </title>
+			<title code="0x107">SE.EFF : 07 : </title>
+			<title code="0x108">SE.EFF : 08 : </title>
+			<title code="0x109">SE.EFF : 09 : </title>
+			<title code="0x10a">SE.EFF : 10 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] THANATOS</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0xc000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="14"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="thanatos_98">
+			<rom type="code" offset="0x01000">__02.DAT</rom>
+			<rom type="code" offset="0x01000">calr_98.bin</rom>
+			<rom type="code" offset="0x08000">__03.DAT</rom>
+			<rom type="code" offset="0x0e000">__07.DAT</rom>
+			<rom type="code" offset="0x0f000">__05.DAT</rom>
+			<rom type="code" offset="0x0f800">__06.DAT</rom>
+			<rom type="bgm" offset="1" >__10.DAT</rom>
+			<rom type="bgm" offset="2" >__11.DAT</rom>
+			<rom type="bgm" offset="3" >__12.DAT</rom>
+			<rom type="bgm" offset="4" >__13.DAT</rom>
+			<rom type="bgm" offset="5" >__14.DAT</rom>
+			<rom type="bgm" offset="6" >__15.DAT</rom>
+			<rom type="bgm" offset="7" >__16.DAT</rom>
+			<rom type="bgm" offset="8" >__17.DAT</rom>
+			<rom type="bgm" offset="9" >__18.DAT</rom>
+			<rom type="bgm" offset="10">__19.DAT</rom>
+			<rom type="bgm" offset="11">__1A.DAT</rom>
+			<rom type="bgm" offset="12">__1B.DAT</rom>
+			<rom type="bgm" offset="13">__1C.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >__10.DAT      : </title>
+			<title code="2" >__11.DAT      : </title>
+			<title code="3" >__12.DAT      : </title>
+			<title code="4" >__13.DAT      : </title>
+			<title code="5" >__14.DAT      : </title>
+			<title code="6" >__15.DAT      : </title>
+			<title code="7" >__16.DAT      : </title>
+			<title code="8" >__17.DAT      : </title>
+			<title code="9" >__18.DAT      : </title>
+			<title code="10">__19.DAT      : </title>
+			<title code="11">__1A.DAT      : </title>
+			<title code="12">__1B.DAT      : </title>
+			<title code="13">__1C.DAT      : </title>
+			<title code="0x224">__05.DAT : 24 : </title>
+			<title code="0x225">__05.DAT : 25 : </title>
+			<title code="0x226">__05.DAT : 26 : </title>
+			<title code="0x227">__05.DAT : 27 : </title>
+			<title code="0x228">__05.DAT : 28 : </title>
+			<title code="0x229">__05.DAT : 29 : </title>
+			<title code="0x22a">__05.DAT : 2a : </title>
+			<title code="0x22d">__05.DAT : 2d : </title>
+			<title code="0x22e">__05.DAT : 2e : </title>
+			<title code="0x230">__05.DAT : 30 : </title>
+			<title code="0x231">__05.DAT : 31 : </title>
+			<title code="0x233">__05.DAT : 33 : </title>
+			<title code="0x100">__06.DAT : 00 : </title>
+			<title code="0x101">__06.DAT : 01 : </title>
+			<title code="0x102">__06.DAT : 02 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] JOKER II</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="joker268snd">
+			<rom type="code" offset="0x00000">jk268snd.bin</rom>
+			<rom type="x" offset="0x10000">JOKER2P.X</rom>
+			<rom type="code" offset="0xd5000">JO2.OP1</rom>
+			<rom type="code" offset="0xd7000">JO102.MF1</rom>
+			<rom type="code" offset="0xd9000">JO104.MF1</rom>
+			<rom type="code" offset="0xdb000">JO105.MF1</rom>
+			<rom type="code" offset="0xdd000">JO106.MF1</rom>
+			<rom type="code" offset="0xdf000">JO107.MF1</rom>
+			<rom type="code" offset="0xe1000">JO108.MF1</rom>
+			<rom type="code" offset="0xe3000">JO110.MF1</rom>
+			<rom type="code" offset="0xe5000">JO111.MF1</rom>
+			<rom type="code" offset="0xe7000">JO112.MF1</rom>
+			<rom type="code" offset="0xe9000">JO116.MF1</rom>
+			<rom type="code" offset="0xeb000">JO200.MF1</rom>
+			<rom type="code" offset="0xed000">JO201.MF1</rom>
+			<rom type="code" offset="0xef000">JO202.MF1</rom>
+			<rom type="code" offset="0xf1000">JO203.MF1</rom>
+			<rom type="code" offset="0xf3000">JO204.MF1</rom>
+			<rom type="code" offset="0xf5000">JO205.MF1</rom>
+			<rom type="code" offset="0xf7000">JO206.MF1</rom>
+			<rom type="code" offset="0xf9000">JO207.MF1</rom>
+			<rom type="code" offset="0xfb000">JO208.MF1</rom>
+			<rom type="code" offset="0xfd000">JO209.MF1</rom>
+			<rom type="code" offset="0xff000">JO210.MF1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">JO102.MF1 : Beretta's Bar</title>
+			<title code="0x02">JO104.MF1 : Little Lily Laura</title>
+			<title code="0x03">JO105.MF1 : Targe City</title>
+			<title code="0x04">JO106.MF1 : Gray's Bar</title>
+			<title code="0x05">JO107.MF1 : Female</title>
+			<title code="0x06">JO108.MF1 : </title>
+			<title code="0x07">JO110.MF1 : Lady "S・Q"</title>
+			<title code="0x08">JO111.MF1 : So Far</title>
+			<title code="0x09">JO112.MF1 : Crisis</title>
+			<title code="0x0a">JO116.MF1 : God Bless</title>
+			<title code="0x0b">JO200.MF1 : Justice</title>
+			<title code="0x0c">JO201.MF1 : Warrior</title>
+			<title code="0x0d">JO202.MF1 : Lanie</title>
+			<title code="0x0e">JO203.MF1 : Naughty Girl</title>
+			<title code="0x0f">JO204.MF1 : She Dissolves Him</title>
+			<title code="0x10">JO205.MF1 : Luck &amp; Love</title>
+			<title code="0x11">JO206.MF1 : Blaze Blood Branca</title>
+			<title code="0x12">JO207.MF1 : Night Mare</title>
+			<title code="0x13">JO208.MF1 : Suspicious Solo</title>
+			<title code="0x15">JO210.MF1 : Joker</title>
+			<title code="0x14">JO209.MF1 : Whistle With Wind</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] BIRDY WORLD</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="birdyw68snd">
+			<rom type="code" offset="0x00000">bwld68snd.bin</rom>
+			<rom type="x" offset="0x10000">birdy_w.x</rom>
+			<rom type="code" offset="0xd5000">BW.OP1</rom>
+			<rom type="code" offset="0xd7000">BW00.MF1</rom>
+			<rom type="code" offset="0xd9000">BW01.MF1</rom>
+			<rom type="code" offset="0xdb000">BW02.MF1</rom>
+			<rom type="code" offset="0xdd000">BW03.MF1</rom>
+			<rom type="code" offset="0xdf000">BW04.MF1</rom>
+			<rom type="code" offset="0xe1000">BW05.MF1</rom>
+			<rom type="code" offset="0xe3000">BW06.MF1</rom>
+			<rom type="code" offset="0xe5000">BW07.MF1</rom>
+			<rom type="code" offset="0xe7000">BW08.MF1</rom>
+			<rom type="code" offset="0xe9000">BW09.MF1</rom>
+			<rom type="code" offset="0xeb000">BW10.MF1</rom>
+			<rom type="code" offset="0xed000">BW11.MF1</rom>
+			<rom type="code" offset="0xef000">BW12.MF1</rom>
+			<rom type="code" offset="0xf1000">BW13.MF1</rom>
+			<rom type="code" offset="0xf3000">BW14.MF1</rom>
+			<rom type="code" offset="0xf5000">BW15.MF1</rom>
+			<rom type="code" offset="0xf7000">BW16.MF1</rom>
+			<rom type="code" offset="0xf9000">BW17.MF1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BW00.MF1 : </title>
+			<title code="0x02">BW01.MF1 : </title>
+			<title code="0x03">BW02.MF1 : </title>
+			<title code="0x04">BW03.MF1 : </title>
+			<title code="0x05">BW04.MF1 : </title>
+			<title code="0x06">BW05.MF1 : </title>
+			<title code="0x07">BW06.MF1 : </title>
+			<title code="0x08">BW07.MF1 : </title>
+			<title code="0x09">BW08.MF1 : </title>
+			<title code="0x0a">BW09.MF1 : </title>
+			<title code="0x0b">BW10.MF1 : </title>
+			<title code="0x0c">BW11.MF1 : </title>
+			<title code="0x0d">BW12.MF1 : </title>
+			<title code="0x0e">BW13.MF1 : </title>
+			<title code="0x0f">BW14.MF1 : </title>
+			<title code="0x10">BW15.MF1 : </title>
+			<title code="0x11">BW16.MF1 : </title>
+			<title code="0x12">BW17.MF1 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] JOKER</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="joker68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">jo.opm</rom>
+			<rom type="code" offset="0x2c000">jo01.mu</rom>
+			<rom type="code" offset="0x30000">jo02.mu</rom>
+			<rom type="code" offset="0x34000">jo02b.mu</rom>
+			<rom type="code" offset="0x38000">jo03.mu</rom>
+			<rom type="code" offset="0x3c000">jo04.mu</rom>
+			<rom type="code" offset="0x40000">jo05.mu</rom>
+			<rom type="code" offset="0x44000">jo05b.mu</rom>
+			<rom type="code" offset="0x48000">jo06.mu</rom>
+			<rom type="code" offset="0x4c000">jo06b.mu</rom>
+			<rom type="code" offset="0x50000">jo06c.mu</rom>
+			<rom type="code" offset="0x54000">jo07.mu</rom>
+			<rom type="code" offset="0x58000">jo07b.mu</rom>
+			<rom type="code" offset="0x5c000">jo07c.mu</rom>
+			<rom type="code" offset="0x60000">jo08.mu</rom>
+			<rom type="code" offset="0x64000">jo09.mu</rom>
+			<rom type="code" offset="0x68000">jo09b.mu</rom>
+			<rom type="code" offset="0x6c000">jo09c.mu</rom>
+			<rom type="code" offset="0x70000">jo10.mu</rom>
+			<rom type="code" offset="0x74000">jo10b.mu</rom>
+			<rom type="code" offset="0x78000">jo11.mu</rom>
+			<rom type="code" offset="0x7c000">jo11b.mu</rom>
+			<rom type="code" offset="0x80000">jo12.mu</rom>
+			<rom type="code" offset="0x84000">jo12b.mu</rom>
+			<rom type="code" offset="0x88000">jo13.mu</rom>
+			<rom type="code" offset="0x8c000">jo14.mu</rom>
+			<rom type="code" offset="0x90000">jo15.mu</rom>
+			<rom type="code" offset="0x94000">jo16.mu</rom>
+<!--
+			<rom type="code" offset="0x98000">garasu.mu</rom>
+			<rom type="code" offset="0x9c000">gun.mu</rom>
+			<rom type="code" offset="0xa0000">gun2.mu</rom>
+			<rom type="code" offset="0xa4000">knives.mu</rom>
+			<rom type="code" offset="0xa8000">o_hit.mu</rom>
+			<rom type="code" offset="0xac000">tsume.mu</rom>
+			<rom type="code" offset="0xb0000">wind.mu</rom>
+-->
+		</romlist>
+		<titlelist>
+			<title code="0x0204">jo01.mu   : </title>
+			<title code="0x0205">jo02.mu   : </title>
+			<title code="0x0206">jo02b.mu  : </title>
+			<title code="0x0207">jo03.mu   : </title>
+			<title code="0x0208">jo04.mu   : </title>
+			<title code="0x0209">jo05.mu   : </title>
+			<title code="0x020a">jo05b.mu  : </title>
+			<title code="0x020b">jo06.mu   : </title>
+			<title code="0x020c">jo06b.mu  : </title>
+			<title code="0x020d">jo07.mu   : </title>
+			<title code="0x020e">jo07b.mu  : </title>
+			<title code="0x020f">jo07c.mu  : </title>
+			<title code="0x0210">jo08.mu   : </title>
+			<title code="0x0211">jo09.mu   : </title>
+			<title code="0x0212">jo09b.mu  : </title>
+			<title code="0x0213">jo09c.mu  : </title>
+			<title code="0x0214">jo010.mu  : </title>
+			<title code="0x0215">jo010b.mu : </title>
+			<title code="0x0216">jo011.mu  : </title>
+			<title code="0x0217">jo011b.mu : </title>
+			<title code="0x0218">jo012.mu  : </title>
+			<title code="0x0219">jo012b.mu : </title>
+			<title code="0x021a">jo013.mu  : </title>
+			<title code="0x021b">jo014.mu  : </title>
+			<title code="0x021c">jo015.mu  : </title>
+			<title code="0x021d">jo016.mu  : </title>
+<!--
+			<title code="0x021e">garasu.mu</title>
+			<title code="0x021f">gun.mu</title>
+			<title code="0x0220">gun2.mu</title>
+			<title code="0x0221">knives.mu</title>
+			<title code="0x0222">o_hit.mu</title>
+			<title code="0x0223">tsume.mu</title>
+			<title code="0x0224">wind.mu</title>
+-->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] ARTEMIS</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="artemis68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">MUSIC.MU</rom>
+			<rom type="code" offset="0x2c000">al01.mu</rom>
+			<rom type="code" offset="0x30000">al01b.mu</rom>
+			<rom type="code" offset="0x34000">al02.mu</rom>
+			<rom type="code" offset="0x38000">al03a.mu</rom>
+			<rom type="code" offset="0x3c000">al03b.mu</rom>
+			<rom type="code" offset="0x40000">al04.mu</rom>
+			<rom type="code" offset="0x44000">al05.mu</rom>
+			<rom type="code" offset="0x48000">al06.mu</rom>
+			<rom type="code" offset="0x4c000">al07.mu</rom>
+			<rom type="code" offset="0x50000">al08.mu</rom>
+			<rom type="code" offset="0x54000">al09.mu</rom>
+			<rom type="code" offset="0x58000">al10a.mu</rom>
+			<rom type="code" offset="0x5c000">al10b.mu</rom>
+			<rom type="code" offset="0x60000">alend.mu</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0204">al01.mu  : </title>
+			<title code="0x0205">al01b.mu : </title>
+			<title code="0x0206">al02.mu  : </title>
+			<title code="0x0207">al03a.mu : </title>
+			<title code="0x0208">al03b.mu : </title>
+			<title code="0x0209">al04.mu  : </title>
+			<title code="0x020a">al05.mu  : </title>
+			<title code="0x020b">al06.mu  : </title>
+			<title code="0x020c">al07.mu  : </title>
+			<title code="0x020d">al08.mu  : </title>
+			<title code="0x020e">al09.mu  : </title>
+			<title code="0x020f">al10a.mu : </title>
+			<title code="0x0210">al10b.mu : </title>
+			<title code="0x0211">alend.mu : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] BEAST2 ～インキュバスター～</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<romlist archive="beast268snd">
+			<rom type="code" offset="0x00000">bst268snd.bin</rom>
+			<rom type="x" offset="0x10000">BEAST2.X</rom>
+			<rom type="code" offset="0xc6000">BST2.SSG</rom>
+			<rom type="code" offset="0xd5000">BST2.OPN</rom>
+			<rom type="code" offset="0xd7000">BST201.MUF</rom>
+			<rom type="code" offset="0xd9000">BST202.MUF</rom>
+			<rom type="code" offset="0xdb000">BST203.MUF</rom>
+			<rom type="code" offset="0xdd000">BST204.MUF</rom>
+			<rom type="code" offset="0xdf000">BST205.MUF</rom>
+			<rom type="code" offset="0xe1000">BST206.MUF</rom>
+			<rom type="code" offset="0xe3000">BST207.MUF</rom>
+			<rom type="code" offset="0xe5000">BST208.MUF</rom>
+			<rom type="code" offset="0xe7000">BST209.MUF</rom>
+			<rom type="code" offset="0xe9000">BST210.MUF</rom>
+			<rom type="code" offset="0xeb000">BST211.MUF</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x08">BST208.MUF : チャイム</title>
+			<title code="0x09">BST209.MUF : 水滴</title>
+			<title code="0x07">BST207.MUF : 村角の恐怖</title>
+			<title code="0x01">BST201.MUF : ダンジョン6人秋物語</title>
+			<title code="0x06">BST206.MUF : The TAKE</title>
+			<title code="0x02">BST202.MUF : 命ある限り…</title>
+			<title code="0x0a">BST210.MUF : 静けさの中に</title>
+			<title code="0x05">BST205.MUF : 守るべきもの</title>
+			<title code="0x04">BST204.MUF : ラストバトル</title>
+			<title code="0x03">BST203.MUF : エンディング</title>
+<!--
+			<title code="0x0b">BST211.MUF : チャイム</title>
+-->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] My eyes!</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<romlist archive="myeyes68snd">
+			<rom type="code" offset="0x00000">meyes68snd.bin</rom>
+			<rom type="x" offset="0x10000">my_eyes.x</rom>
+			<rom type="code" offset="0xc6000">MY_SSG.SSG</rom>
+			<rom type="code" offset="0xd5000">MY_OPN.OPN</rom>
+			<rom type="code" offset="0xd7000">MY01.MUS</rom>
+			<rom type="code" offset="0xd9000">MY02.MUS</rom>
+			<rom type="code" offset="0xdb000">MY03.MUS</rom>
+			<rom type="code" offset="0xdd000">MY04.MUS</rom>
+			<rom type="code" offset="0xdf000">MY06.MUS</rom>
+			<rom type="code" offset="0xe1000">MY07.MUS</rom>
+			<rom type="code" offset="0xe3000">MY08.MUS</rom>
+			<rom type="code" offset="0xe5000">MY09.MUS</rom>
+			<rom type="code" offset="0xe7000">MY10.MUS</rom>
+			<rom type="code" offset="0xe9000">MY11.MUS</rom>
+			<rom type="code" offset="0xeb000">MY12.MUS</rom>
+			<rom type="code" offset="0xed000">MY13.MUS</rom>
+			<rom type="code" offset="0xef000">MY14.MUS</rom>
+			<rom type="code" offset="0xf1000">MY15.MUS</rom>
+			<rom type="code" offset="0xf3000">MY16.MUS</rom>
+			<rom type="code" offset="0xf5000">MY17.MUS</rom>
+			<rom type="code" offset="0xf7000">MY18.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">MY01.MUS : </title>
+			<title code="0x02">MY02.MUS : Air travel on my mind</title>
+			<title code="0x03">MY03.MUS : Keen bayonet</title>
+			<title code="0x04">MY04.MUS : Can I play with the fortune</title>
+			<title code="0x05">MY06.MUS : Negative cure</title>
+			<title code="0x06">MY07.MUS : Relics</title>
+			<title code="0x07">MY08.MUS : Hands ON (FIRE &amp; FLOWER)</title>
+			<title code="0x08">MY09.MUS : Geometric glow</title>
+			<title code="0x09">MY10.MUS : Swell trail</title>
+			<title code="0x0a">MY11.MUS : Jaw breaker</title>
+			<title code="0x0b">MY12.MUS : Touch of the EVIL</title>
+			<title code="0x0c">MY13.MUS : Feel at so easy</title>
+			<title code="0x0d">MY14.MUS : Take time to speak "1,2,3"</title>
+			<title code="0x0e">MY15.MUS : The gigi's talks died away</title>
+			<title code="0x0f">MY16.MUS : Storm rider</title>
+			<title code="0x10">MY17.MUS : Dome echo</title>
+			<title code="0x11">MY18.MUS : Polka-dot sky</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] HOLE CHASER</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x10000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="16"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="hchaser_98">
+			<rom type="code" offset="0x01000">rouge_98.bin</rom>
+			<rom type="code" offset="0x20100">PMDG.COM</rom>
+			<rom type="code" offset="0x25318">VOICE.FF</rom>
+			<rom type="bgm" offset="1" >OP.M</rom>
+			<rom type="bgm" offset="2" >BGM1.M</rom>
+			<rom type="bgm" offset="3" >BGM2.M</rom>
+			<rom type="bgm" offset="4" >BGM3.M</rom>
+			<rom type="bgm" offset="5" >BGM4.M</rom>
+			<rom type="bgm" offset="6" >BGM5.M</rom>
+			<rom type="bgm" offset="7" >BGM6.M</rom>
+			<rom type="bgm" offset="8" >CLR.M</rom>
+			<rom type="bgm" offset="9" >END.M</rom>
+			<rom type="bgm" offset="10">GOVER.M</rom>
+			<rom type="bgm" offset="11">VIS1.M</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >OP.DAT  : オープニング</title>
+			<title code="2" >BGM1.M  : BGM1</title>
+			<title code="3" >BGM2.M  : BGM2</title>
+			<title code="4" >BGM3.M  : BGM3</title>
+			<title code="5" >BGM4.M  : BGM4</title>
+			<title code="6" >BGM5.M  : BGM5</title>
+			<title code="7" >BGM6.M  : BGM6</title>
+			<title code="8" >CLR.M   : VISUAL</title>
+			<title code="9" >END.M   : ENDING</title>
+			<title code="10">GOVER.M : ST.クリア</title>
+			<title code="11">VIS1.M  : G.OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] BIRDY WORLD</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa400"/>
+			<option name="mdata_size" value="0x800"/>
+			<option name="mfile_size" value="0x800"/>
+			<option name="init_pc"    value="0x8000"/>
+		</options>
+		<romlist archive="birdyw_msx">
+			<rom type="code" offset="0xAC00">TSTIM</rom>
+			<rom type="code" offset="0x8000">patch</rom>
+			<rom type="bgm" offset="0x00">BW00</rom>
+			<rom type="bgm" offset="0x01">BW01</rom>
+			<rom type="bgm" offset="0x02">BW02</rom>
+			<rom type="bgm" offset="0x03">BW03</rom>
+			<rom type="bgm" offset="0x04">BW04</rom>
+			<rom type="bgm" offset="0x05">BW05</rom>
+			<rom type="bgm" offset="0x06">BW06</rom>
+			<rom type="bgm" offset="0x07">BW07</rom>
+			<rom type="bgm" offset="0x08">BW08</rom>
+			<rom type="bgm" offset="0x09">BW10</rom>
+			<rom type="bgm" offset="0x0a">BW12</rom>
+			<rom type="bgm" offset="0x0b">BW13</rom>
+			<rom type="bgm" offset="0x0c">BW14</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BW00 : </title>
+			<title code="0x01">BW01 : </title>
+			<title code="0x02">BW02 : </title>
+			<title code="0x03">BW03 : </title>
+			<title code="0x04">BW04 : </title>
+			<title code="0x05">BW05 : </title>
+			<title code="0x06">BW06 : </title>
+			<title code="0x07">BW07 : </title>
+			<title code="0x08">BW08 : </title>
+			<title code="0x09">BW10 : </title>
+			<title code="0x0a">BW12 : </title>
+			<title code="0x0b">BW13 : </title>
+			<title code="0x0c">BW14 : </title>
+			<range min="0x0100" max="0x010c" extcode="0">SE : %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] CAL</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa400"/>
+			<option name="mdata_size" value="0x800"/>
+			<option name="mfile_size" value="0x800"/>
+			<option name="init_pc"    value="0x8000"/>
+		</options>
+		<romlist archive="cal_msx">
+			<rom type="code" offset="0xAC00">TSTIM</rom>
+			<rom type="code" offset="0x8000">patch</rom>
+			<rom type="bgm" offset="0x00">MU01</rom>
+			<rom type="bgm" offset="0x01">MU02</rom>
+			<rom type="bgm" offset="0x02">MU03</rom>
+			<rom type="bgm" offset="0x03">MU04</rom>
+			<rom type="bgm" offset="0x04">MU05</rom>
+			<rom type="bgm" offset="0x05">MU06</rom>
+			<rom type="bgm" offset="0x06">MU07</rom>
+			<rom type="bgm" offset="0x07">MU08</rom>
+			<rom type="bgm" offset="0x08">MU09</rom>
+			<rom type="bgm" offset="0x09">MU10</rom>
+			<rom type="bgm" offset="0x0a">MUHP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x08">MU09 : 結城美加</title>
+			<title code="0x04">MU05 : ヴィーナス</title>
+			<title code="0x02">MU03 : マッチ売りの少女</title>
+			<title code="0x01">MU02 : ラプンセル</title>
+			<title code="0x09">MU10 : 眠り姫</title>
+			<title code="0x03">MU04 : シンデレラ</title>
+			<title code="0x05">MU06 : 赤ずきんさん</title>
+			<title code="0x06">MU07 : ウェンディ</title>
+			<title code="0x07">MU08 : 人魚姫</title>
+			<title code="0x00">MU01 : アリス</title>
+			<title code="0x0a">MUHP : エンディング</title>
+			<range min="0x0100" max="0x010c" extcode="0">SE : %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] CAL II</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa400"/>
+			<option name="mdata_size" value="0x800"/>
+			<option name="mfile_size" value="0x800"/>
+			<option name="init_pc"    value="0x8000"/>
+		</options>
+		<romlist archive="cal2_msx">
+			<rom type="code" offset="0xAC00">TSTIM</rom>
+			<rom type="code" offset="0x8000">patch</rom>
+			<rom type="bgm" offset="0x00">MU00</rom>
+			<rom type="bgm" offset="0x01">MU01</rom>
+			<rom type="bgm" offset="0x02">MU02</rom>
+			<rom type="bgm" offset="0x03">MU03</rom>
+			<rom type="bgm" offset="0x04">MU04</rom>
+			<rom type="bgm" offset="0x05">MU05</rom>
+			<rom type="bgm" offset="0x06">MU06</rom>
+			<rom type="bgm" offset="0x07">MU07</rom>
+			<rom type="bgm" offset="0x08">MU08</rom>
+			<rom type="bgm" offset="0x09">MU09</rom>
+			<rom type="bgm" offset="0x0a">MU10</rom>
+			<rom type="bgm" offset="0x0b">MU11</rom>
+			<rom type="bgm" offset="0x0c">MU12</rom>
+			<rom type="bgm" offset="0x0d">MU13</rom>
+			<rom type="bgm" offset="0x0e">MU14</rom>
+			<rom type="bgm" offset="0x0f">MU15</rom>
+			<rom type="bgm" offset="0x10">MU16</rom>
+			<rom type="bgm" offset="0x11">MU17</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MU00 : 結城美加</title>
+			<title code="0x01">MU01 : オープニング</title>
+			<title code="0x02">MU02 : ヴィーナス</title>
+			<title code="0x03">MU03 : チェス</title>
+			<title code="0x04">MU04 : ブレーメル</title>
+			<title code="0x05">MU05 : アーシュロット</title>
+			<title code="0x06">MU06 : ジュリエット</title>
+			<title code="0x07">MU07 : ラベンナ</title>
+			<title code="0x08">MU08 : アルタミラ</title>
+			<title code="0x09">MU09 : 山吹皇女</title>
+			<title code="0x0a">MU10 : 秀蘭</title>
+			<title code="0x0b">MU11 : リョーコ</title>
+			<title code="0x0c">MU12 : シェラザード</title>
+			<title code="0x0d">MU13 : キャロル</title>
+			<title code="0x0e">MU14 : クレオパトラ</title>
+			<title code="0x0f">MU15 : マップ</title>
+			<title code="0x10">MU16 : アイオーン1</title>
+			<title code="0x11">MU17 : アイオーン2</title>
+			<range min="0x0100" max="0x010c" extcode="0">SE : %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] JOKER</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa400"/>
+			<option name="mdata_size" value="0x800"/>
+			<option name="mfile_size" value="0x800"/>
+			<option name="init_pc"    value="0x8000"/>
+		</options>
+		<romlist archive="joker_msx">
+			<rom type="code" offset="0xAC00">TSTIM</rom>
+			<rom type="code" offset="0x8000">patch</rom>
+			<rom type="bgm" offset="0x00">JO02</rom>
+			<rom type="bgm" offset="0x01">JO03</rom>
+			<rom type="bgm" offset="0x02">JO04</rom>
+			<rom type="bgm" offset="0x03">JO05</rom>
+			<rom type="bgm" offset="0x04">JO06</rom>
+			<rom type="bgm" offset="0x05">JO07</rom>
+			<rom type="bgm" offset="0x06">JO08</rom>
+			<rom type="bgm" offset="0x07">JO09</rom>
+			<rom type="bgm" offset="0x08">JO10</rom>
+			<rom type="bgm" offset="0x09">JO11</rom>
+			<rom type="bgm" offset="0x0a">JO12</rom>
+			<rom type="bgm" offset="0x0b">JO13</rom>
+			<rom type="bgm" offset="0x0c">JO14</rom>
+			<rom type="bgm" offset="0x0d">JO15</rom>
+			<rom type="bgm" offset="0x0e">JO16</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">JO02 : </title>
+			<title code="0x01">JO03 : </title>
+			<title code="0x02">JO04 : </title>
+			<title code="0x03">JO05 : </title>
+			<title code="0x04">JO06 : </title>
+			<title code="0x05">JO07 : </title>
+			<title code="0x06">JO08 : </title>
+			<title code="0x07">JO09 : </title>
+			<title code="0x08">JO10 : </title>
+			<title code="0x09">JO11 : </title>
+			<title code="0x0a">JO12 : </title>
+			<title code="0x0b">JO13 : </title>
+			<title code="0x0c">JO14 : </title>
+			<title code="0x0d">JO15 : </title>
+			<title code="0x0e">JO16 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] JOKER II</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa400"/>
+			<option name="mdata_size" value="0x800"/>
+			<option name="mfile_size" value="0x800"/>
+			<option name="init_pc"    value="0x8000"/>
+		</options>
+		<romlist archive="joker2_msx">
+			<rom type="code" offset="0xAC00">TSTIM</rom>
+			<rom type="code" offset="0x8000">patch</rom>
+			<rom type="bgm" offset="0x00">JO102</rom>
+			<rom type="bgm" offset="0x01">JO104</rom>
+			<rom type="bgm" offset="0x02">JO105</rom>
+			<rom type="bgm" offset="0x03">JO106</rom>
+			<rom type="bgm" offset="0x04">JO107</rom>
+			<rom type="bgm" offset="0x05">JO110</rom>
+			<rom type="bgm" offset="0x06">JO111</rom>
+			<rom type="bgm" offset="0x07">JO112</rom>
+			<rom type="bgm" offset="0x08">JO116</rom>
+			<rom type="bgm" offset="0x09">JO201</rom>
+			<rom type="bgm" offset="0x0a">JO202</rom>
+			<rom type="bgm" offset="0x0b">JO203</rom>
+			<rom type="bgm" offset="0x0c">JO204</rom>
+			<rom type="bgm" offset="0x0d">JO205</rom>
+			<rom type="bgm" offset="0x0e">JO206</rom>
+			<rom type="bgm" offset="0x0f">JO207</rom>
+			<rom type="bgm" offset="0x10">JO208</rom>
+			<rom type="bgm" offset="0x11">JO209</rom>
+			<rom type="bgm" offset="0x12">JO210</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">JO102 : Beretta's Bar</title>
+			<title code="0x01">JO104 : Little Lily Laura</title>
+			<title code="0x02">JO105 : Targe City</title>
+			<title code="0x03">JO106 : Gray's Bar</title>
+			<title code="0x04">JO107 : Female</title>
+			<title code="0x05">JO110 : Lady "S・Q"</title>
+			<title code="0x06">JO111 : So Far</title>
+			<title code="0x07">JO112 : Crisis</title>
+			<title code="0x08">JO116 : God Bless</title>
+			<title code="0x09">JO201 : Warrior</title>
+			<title code="0x0a">JO202 : Lanie</title>
+			<title code="0x0b">JO203 : Naughty Girl</title>
+			<title code="0x0c">JO204 : She Dissolves Him</title>
+			<title code="0x0d">JO205 : Luck &amp; Love</title>
+			<title code="0x0e">JO206 : Blaze Blood Branca</title>
+			<title code="0x0f">JO207 : Night Mare</title>
+			<title code="0x10">JO208 : Suspicious Solo</title>
+			<title code="0x12">JO210 : Joker</title>
+			<title code="0x11">JO209 : Whistle With Wind</title>
+			<range min="0x0100" max="0x010c" extcode="0">SE : %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] THANATOS</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa400"/>
+			<option name="mdata_size" value="0x800"/>
+			<option name="mfile_size" value="0x800"/>
+			<option name="init_pc"    value="0x8000"/>
+		</options>
+		<romlist archive="thanatos_msx">
+			<rom type="code" offset="0xAC00">TSTIM</rom>
+			<rom type="code" offset="0x8000">patch</rom>
+			<rom type="bgm" offset="0x00">M_RN00</rom>
+			<rom type="bgm" offset="0x01">M_RN01</rom>
+			<rom type="bgm" offset="0x02">M_RN02</rom>
+			<rom type="bgm" offset="0x03">M_RN03</rom>
+			<rom type="bgm" offset="0x04">M_RN04</rom>
+			<rom type="bgm" offset="0x05">M_RN05</rom>
+			<rom type="bgm" offset="0x06">M_RN06</rom>
+			<rom type="bgm" offset="0x07">M_RN07</rom>
+			<rom type="bgm" offset="0x08">M_RN08</rom>
+			<rom type="bgm" offset="0x09">M_RN09</rom>
+			<rom type="bgm" offset="0x0a">M_RN10</rom>
+			<rom type="bgm" offset="0x0b">M_RN11</rom>
+			<rom type="bgm" offset="0x0c">M_RN12</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">M_RN00 : </title>
+			<title code="0x01">M_RN01 : </title>
+			<title code="0x02">M_RN02 : </title>
+			<title code="0x03">M_RN03 : </title>
+			<title code="0x04">M_RN04 : </title>
+			<title code="0x05">M_RN05 : </title>
+			<title code="0x06">M_RN06 : </title>
+			<title code="0x07">M_RN07 : </title>
+			<title code="0x08">M_RN08 : </title>
+			<title code="0x09">M_RN09 : </title>
+			<title code="0x0a">M_RN10 : </title>
+			<title code="0x0b">M_RN11 : </title>
+			<title code="0x0c">M_RN12 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] PIAS</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa400"/>
+			<option name="mdata_size" value="0x800"/>
+			<option name="mfile_size" value="0x800"/>
+			<option name="init_pc"    value="0x8000"/>
+		</options>
+		<romlist archive="pias_msx">
+			<rom type="code" offset="0xAC00">TSTIM</rom>
+			<rom type="code" offset="0x8000">patch</rom>
+			<rom type="bgm" offset="0x00">M_P1</rom>
+			<rom type="bgm" offset="0x01">M_P2</rom>
+			<rom type="bgm" offset="0x02">M_P3</rom>
+			<rom type="bgm" offset="0x03">M_P4</rom>
+			<rom type="bgm" offset="0x04">M_P5</rom>
+			<rom type="bgm" offset="0x05">M_P6</rom>
+			<rom type="bgm" offset="0x06">M_P8</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">M_P1 : BGM 1</title>
+			<title code="0x01">M_P2 : BGM 2</title>
+			<title code="0x02">M_P3 : BGM 3</title>
+			<title code="0x03">M_P4 : BGM 4</title>
+			<title code="0x04">M_P5 : BGM 5</title>
+			<title code="0x05">M_P6 : BGM 6</title>
+			<title code="0x06">M_P8 : BGM 7</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] BEAST リバイバル</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">BIRDY SOFT</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0xc000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="11"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="beastr_98">
+			<rom type="code" offset="0x01000">__02.DAT</rom>
+			<rom type="code" offset="0x01000">calr_98.bin</rom>
+			<rom type="code" offset="0x08000">__03.DAT</rom>
+			<rom type="code" offset="0x0e000">__3D.DAT</rom>
+			<rom type="code" offset="0x0f000">__3E.DAT</rom>
+			<rom type="code" offset="0x0f800">__3F.DAT</rom>
+			<rom type="bgm" offset="1" >__08.DAT</rom>
+			<rom type="bgm" offset="2" >__09.DAT</rom>
+			<rom type="bgm" offset="3" >__0A.DAT</rom>
+			<rom type="bgm" offset="4" >__0B.DAT</rom>
+			<rom type="bgm" offset="5" >__0C.DAT</rom>
+			<rom type="bgm" offset="6" >__0D.DAT</rom>
+			<rom type="bgm" offset="7" >__0E.DAT</rom>
+			<rom type="bgm" offset="8" >__0F.DAT</rom>
+			<rom type="bgm" offset="9" >__10.DAT</rom>
+			<rom type="bgm" offset="10">__11.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >__08.DAT      : </title>
+			<title code="2" >__09.DAT      : </title>
+			<title code="3" >__0A.DAT      : </title>
+			<title code="4" >__0B.DAT      : </title>
+			<title code="5" >__0C.DAT      : </title>
+			<title code="6" >__0D.DAT      : </title>
+			<title code="7" >__0E.DAT      : </title>
+			<title code="8" >__0F.DAT      : </title>
+			<title code="9" >__10.DAT      : </title>
+			<title code="10">__11.DAT      : </title>
+			<title code="0x224">__3F.DAT : 24 : </title>
+			<title code="0x225">__3F.DAT : 25 : </title>
+			<title code="0x226">__3F.DAT : 26 : </title>
+			<title code="0x227">__3F.DAT : 27 : </title>
+			<title code="0x228">__3F.DAT : 28 : </title>
+			<title code="0x229">__3F.DAT : 29 : </title>
+			<title code="0x22a">__3F.DAT : 2a : </title>
+			<title code="0x22d">__3F.DAT : 2d : </title>
+			<title code="0x22e">__3F.DAT : 2e : </title>
+			<title code="0x230">__3F.DAT : 30 : </title>
+			<title code="0x231">__3F.DAT : 31 : </title>
+			<title code="0x233">__3F.DAT : 33 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] BEAST ～淫獣の館～</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa400"/>
+			<option name="mdata_size" value="0x800"/>
+			<option name="mfile_size" value="0x800"/>
+			<option name="init_pc"    value="0x8000"/>
+		</options>
+		<romlist archive="beast_msx">
+			<rom type="code" offset="0xAC00">TSTIM</rom>
+			<rom type="code" offset="0x8000">patch</rom>
+			<rom type="bgm" offset="0x00">MU01</rom>
+			<rom type="bgm" offset="0x01">MU02</rom>
+			<rom type="bgm" offset="0x02">MU03</rom>
+			<rom type="bgm" offset="0x03">MU04</rom>
+			<rom type="bgm" offset="0x04">MU05</rom>
+			<rom type="bgm" offset="0x05">MU06</rom>
+			<rom type="bgm" offset="0x06">MU07</rom>
+			<rom type="bgm" offset="0x07">MU08</rom>
+			<rom type="bgm" offset="0x08">MU09</rom>
+			<rom type="bgm" offset="0x09">MU10</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MU01 : </title>
+			<title code="0x01">MU02 : </title>
+			<title code="0x02">MU03 : </title>
+			<title code="0x03">MU04 : </title>
+			<title code="0x04">MU05 : </title>
+			<title code="0x05">MU06 : </title>
+			<title code="0x06">MU07 : </title>
+			<title code="0x07">MU08 : </title>
+			<title code="0x08">MU09 : </title>
+			<title code="0x09">MU10 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] BEAST2 ～インキュバスター～</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa400"/>
+			<option name="mdata_size" value="0x800"/>
+			<option name="mfile_size" value="0x800"/>
+			<option name="init_pc"    value="0x8000"/>
+		</options>
+		<romlist archive="beast2_msx">
+			<rom type="code" offset="0xAC00">TSTIM</rom>
+			<rom type="code" offset="0x8000">patch</rom>
+			<rom type="bgm" offset="0x00">BST201</rom>
+			<rom type="bgm" offset="0x01">BST202</rom>
+			<rom type="bgm" offset="0x02">BST203</rom>
+			<rom type="bgm" offset="0x03">BST204</rom>
+			<rom type="bgm" offset="0x04">BST205</rom>
+			<rom type="bgm" offset="0x05">BST206</rom>
+			<rom type="bgm" offset="0x06">BST207</rom>
+			<rom type="bgm" offset="0x07">BST208</rom>
+			<rom type="bgm" offset="0x08">BST209</rom>
+			<rom type="bgm" offset="0x09">BST210</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x08">BST209 : 水滴</title>
+			<title code="0x06">BST207 : 村角の恐怖</title>
+			<title code="0x00">BST201 : ダンジョン6人秋物語</title>
+			<title code="0x05">BST206 : The TAKE</title>
+			<title code="0x01">BST202 : 命ある限り…</title>
+			<title code="0x09">BST210 : 静けさの中に</title>
+			<title code="0x04">BST205 : 守るべきもの</title>
+			<title code="0x03">BST204 : ラストバトル</title>
+			<title code="0x02">BST203 : エンディング</title>
+			<!--
+			<title code="0x07">BST208 : チャイム</title>
+			  -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] BEAST ～淫獣の館～</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="beast68snd">
+			<rom type="code" offset="0x000000">beast68snd.bin</rom>
+			<rom type="code" offset="0x002400">BEAST_A02</rom>
+			<rom type="code" offset="0x028000">BEAST_B08</rom>
+			<rom type="code" offset="0x02a000">BEAST_B09</rom>
+			<rom type="code" offset="0x02c000">BEAST_B0A</rom>
+			<rom type="code" offset="0x02e000">BEAST_B0B</rom>
+			<rom type="code" offset="0x030000">BEAST_B0C</rom>
+			<rom type="code" offset="0x032000">BEAST_B0D</rom>
+			<rom type="code" offset="0x034000">BEAST_B0E</rom>
+			<rom type="code" offset="0x036000">BEAST_B0F</rom>
+			<rom type="code" offset="0x038000">BEAST_B10</rom>
+			<rom type="code" offset="0x03a000">BEAST_B11</rom>
+			<rom type="code" offset="0x095510">BEAST_B3E</rom>
+			<rom type="code" offset="0x097710">BEAST_B3F</rom>
+			<rom type="code" offset="0x097940">BEAST_B3B</rom>
+			<rom type="code" offset="0x0c8d90">BEAST_B3C</rom>
+			<rom type="code" offset="0x0c8f90">BEAST_B3D</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x01" max="0x0a" extcode="1">BGM %d</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] CAL</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="cal68snd">
+			<rom type="code" offset="0x000000">cal68snd.bin</rom>
+			<rom type="code" offset="0x002400">CAL_A02</rom>
+			<rom type="code" offset="0x028000">CAL_A30</rom>
+			<rom type="code" offset="0x02a000">CAL_A31</rom>
+			<rom type="code" offset="0x02c000">CAL_A32</rom>
+			<rom type="code" offset="0x02e000">CAL_A33</rom>
+			<rom type="code" offset="0x030000">CAL_A34</rom>
+			<rom type="code" offset="0x032000">CAL_A35</rom>
+			<rom type="code" offset="0x034000">CAL_A36</rom>
+			<rom type="code" offset="0x036000">CAL_A37</rom>
+			<rom type="code" offset="0x038000">CAL_A38</rom>
+			<rom type="code" offset="0x03a000">CAL_A39</rom>
+			<rom type="code" offset="0x03c000">CAL_A3A</rom>
+			<rom type="code" offset="0x03e000">CAL_AB0</rom>
+			<rom type="code" offset="0x040000">CAL_AB1</rom>
+			<rom type="code" offset="0x042000">CAL_AB2</rom>
+			<rom type="code" offset="0x044000">CAL_AB3</rom>
+			<rom type="code" offset="0x046000">CAL_AB4</rom>
+			<rom type="code" offset="0x048000">CAL_AB5</rom>
+			<rom type="code" offset="0x04a000">CAL_AB6</rom>
+			<rom type="code" offset="0x04c000">CAL_AB7</rom>
+			<rom type="code" offset="0x04e000">CAL_AB8</rom>
+			<rom type="code" offset="0x050000">CAL_AB9</rom>
+			<rom type="code" offset="0x059de0">CAL_A3C</rom>
+			<rom type="code" offset="0x05a010">CAL_A3D</rom>
+			<rom type="code" offset="0x087f50">CAL_A3E</rom>
+			<rom type="code" offset="0x0883b0">CAL_A3F</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">結城美加</title>
+			<title code="0x05">ヴィーナス</title>
+			<title code="0x03">マッチ売りの少女</title>
+			<title code="0x02">ラプンセル</title>
+			<title code="0x0a">眠り姫</title>
+			<title code="0x04">シンデレラ</title>
+			<title code="0x06">赤ずきんさん</title>
+			<title code="0x07">ウェンディ</title>
+			<title code="0x08">人魚姫</title>
+			<title code="0x01">アリス</title>
+			<title code="0x0b">エンディング</title>
+			<range min="0x0c" max="0x15" extcode="0">BEAST BGM %d</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] CAL II</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="cal268snd">
+			<rom type="code" offset="0x000000">cal268snd.bin</rom>
+			<rom type="code" offset="0x002400">CAL2_A02</rom>
+			<rom type="code" offset="0x028000">CAL2_A1B</rom>
+			<rom type="code" offset="0x02a000">CAL2_A1C</rom>
+			<rom type="code" offset="0x02c000">CAL2_A1D</rom>
+			<rom type="code" offset="0x02e000">CAL2_A1E</rom>
+			<rom type="code" offset="0x030000">CAL2_A1F</rom>
+			<rom type="code" offset="0x032000">CAL2_A20</rom>
+			<rom type="code" offset="0x034000">CAL2_A21</rom>
+			<rom type="code" offset="0x036000">CAL2_A22</rom>
+			<rom type="code" offset="0x038000">CAL2_A23</rom>
+			<rom type="code" offset="0x03a000">CAL2_A24</rom>
+			<rom type="code" offset="0x03c000">CAL2_A25</rom>
+			<rom type="code" offset="0x03e000">CAL2_A26</rom>
+			<rom type="code" offset="0x040000">CAL2_A27</rom>
+			<rom type="code" offset="0x042000">CAL2_A28</rom>
+			<rom type="code" offset="0x044000">CAL2_A29</rom>
+			<rom type="code" offset="0x046000">CAL2_A2A</rom>
+			<rom type="code" offset="0x048000">CAL2_A2B</rom>
+			<rom type="code" offset="0x04a000">CAL2_A2C</rom>
+			<rom type="code" offset="0x04c000">CAL2_A3E</rom>
+			<rom type="code" offset="0x05b900">CAL2_A04</rom>
+			<rom type="code" offset="0x06e9e0">CAL2_A03</rom>
+			<rom type="code" offset="0x06ecd0">CAL2_A06</rom>
+			<rom type="code" offset="0x08b450">CAL2_A05</rom>
+			<rom type="code" offset="0x08b8b0">CAL2_A07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">結城美加</title>
+			<title code="0x02">オープニング</title>
+			<title code="0x03">ヴィーナス</title>
+			<title code="0x04">チェス</title>
+			<title code="0x05">ブレーメル</title>
+			<title code="0x06">アーシュロット</title>
+			<title code="0x07">ジュリエット</title>
+			<title code="0x08">ラベンナ</title>
+			<title code="0x09">アルタミラ</title>
+			<title code="0x0a">山吹皇女</title>
+			<title code="0x0b">秀蘭</title>
+			<title code="0x0c">リョーコ</title>
+			<title code="0x0d">シェラザード</title>
+			<title code="0x0e">キャロル</title>
+			<title code="0x0f">クレオパトラ</title>
+			<title code="0x10">マップ</title>
+			<title code="0x11">アイオーン1</title>
+			<title code="0x12">アイオーン2</title>
+			<title code="0x13">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] PIAS</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="pias68snd">
+			<rom type="code" offset="0x000000">rouge68snd.bin</rom>
+			<rom type="code" offset="0x008000">PIAS_A03</rom>
+			<rom type="code" offset="0x080000">PIAS_A10</rom>
+			<rom type="code" offset="0x082000">PIAS_A11</rom>
+			<rom type="code" offset="0x084000">PIAS_A12</rom>
+			<rom type="code" offset="0x086000">PIAS_A13</rom>
+			<rom type="code" offset="0x088000">PIAS_A14</rom>
+			<rom type="code" offset="0x08a000">PIAS_A15</rom>
+			<rom type="code" offset="0x08c000">PIAS_A16</rom>
+			<rom type="code" offset="0x0a0000">PIAS_A05</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x01" max="0x07" extcode="1">BGM %d</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] THANATOS</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="thanatos68snd">
+			<rom type="code" offset="0x000000">thanatos68snd.bin</rom>
+			<rom type="code" offset="0x002400">THANATOS_A02</rom>
+			<rom type="code" offset="0x028000">THANATOS_A10</rom>
+			<rom type="code" offset="0x02a000">THANATOS_A11</rom>
+			<rom type="code" offset="0x02c000">THANATOS_A12</rom>
+			<rom type="code" offset="0x02e000">THANATOS_A13</rom>
+			<rom type="code" offset="0x030000">THANATOS_A14</rom>
+			<rom type="code" offset="0x032000">THANATOS_A15</rom>
+			<rom type="code" offset="0x034000">THANATOS_A16</rom>
+			<rom type="code" offset="0x036000">THANATOS_A17</rom>
+			<rom type="code" offset="0x038000">THANATOS_A18</rom>
+			<rom type="code" offset="0x03a000">THANATOS_A19</rom>
+			<rom type="code" offset="0x03c000">THANATOS_A1A</rom>
+			<rom type="code" offset="0x03e000">THANATOS_A1B</rom>
+			<rom type="code" offset="0x040000">THANATOS_A1C</rom>
+			<rom type="code" offset="0x095310">THANATOS_A03</rom>
+			<rom type="code" offset="0x095510">THANATOS_A04</rom>
+			<rom type="code" offset="0x095890">THANATOS_A05</rom>
+			<rom type="code" offset="0x09dc60">THANATOS_A06</rom>
+			<rom type="code" offset="0x09e0c0">THANATOS_A07</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x01" max="0x0d" extcode="1">BGM %02d</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Rouge</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">BIRDY SOFT</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="rouge68snd">
+			<rom type="code" offset="0x000000">rouge68snd.bin</rom>
+			<rom type="code" offset="0x008000">ROUGE_A03</rom>
+			<rom type="code" offset="0x080000">ROUGE_A11</rom>
+			<rom type="code" offset="0x082000">ROUGE_A12</rom>
+			<rom type="code" offset="0x084000">ROUGE_A13</rom>
+			<rom type="code" offset="0x086000">ROUGE_A14</rom>
+			<rom type="code" offset="0x088000">ROUGE_A15</rom>
+			<rom type="code" offset="0x08a000">ROUGE_A16</rom>
+			<rom type="code" offset="0x08c000">ROUGE_A17</rom>
+			<rom type="code" offset="0x08e000">ROUGE_A18</rom>
+			<rom type="code" offset="0x090000">ROUGE_A19</rom>
+			<rom type="code" offset="0x092000">ROUGE_A1A</rom>
+			<rom type="code" offset="0x094000">ROUGE_A1B</rom>
+			<rom type="code" offset="0x096000">ROUGE_A1C</rom>
+			<rom type="code" offset="0x098000">ROUGE_A1D</rom>
+			<rom type="code" offset="0x09a000">ROUGE_A1E</rom>
+			<rom type="code" offset="0x09c000">ROUGE_A1F</rom>
+			<rom type="code" offset="0x0a0000">ROUGE_A05</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x01" max="0x0f" extcode="1">BGM %d</range>
+		</titlelist>
+	</game>
+</gamelist>

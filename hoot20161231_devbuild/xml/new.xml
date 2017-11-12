@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2010/11/03">
+	<!-- //NEW -->
+	<game>
+		<name>[X68000] PRINCESS MAKER(OPM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">NEW</driveralias>
+		<options>
+			<option name="mfp"  value="1"/>
+			<option name="pcm8" value="1"/>
+		</options>
+		<romlist archive="pm68snd">
+			<rom type="code" offset="0x000000">pm68snd.bin</rom>
+			<rom type="x"    offset="0x010000">ZMSC.X</rom>
+			<rom type="code" offset="0x060000">PM.ZPD</rom>
+			<rom type="code" offset="0x080000">SETUP.ZMD</rom>
+			<rom type="code" offset="0x084000">BGM1FM.ZMD</rom>
+			<rom type="code" offset="0x088000">BGM2FM.ZMD</rom>
+			<rom type="code" offset="0x08c000">BGM3FM.ZMD</rom>
+			<rom type="code" offset="0x090000">BGM4FM.ZMD</rom>
+			<rom type="code" offset="0x094000">BGM5FM.ZMD</rom>
+			<rom type="code" offset="0x098000">BGM6FM.ZMD</rom>
+			<rom type="code" offset="0x09c000">BGM7FM.ZMD</rom>
+			<rom type="code" offset="0x0a0000">BGM8FM.ZMD</rom>
+			<rom type="code" offset="0x0a4000">BGM9FM.ZMD</rom>
+			<rom type="code" offset="0x0a8000">BGM10FM.ZMD</rom>
+			<rom type="code" offset="0x0ac000">BGM11FM.ZMD</rom>
+			<rom type="code" offset="0x0b0000">BGM12FM.ZMD</rom>
+			<rom type="code" offset="0x0b4000">BGM13FM.ZMD</rom>
+			<rom type="code" offset="0x0b8000">BGM14FM.ZMD</rom>
+			<rom type="code" offset="0x0bc000">BGM15FM.ZMD</rom>
+			<rom type="code" offset="0x0c0000">BGM16FM.ZMD</rom>
+			<rom type="code" offset="0x0c4000">BGM17FM.ZMD</rom>
+			<rom type="code" offset="0x0c8000">BGM18FM.ZMD</rom>
+			<rom type="code" offset="0x0cc000">BGM19FM.ZMD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM1FM.ZMD  : プロローグ</title>
+			<title code="0x02">BGM2FM.ZMD  : メインテーマ</title>
+			<title code="0x03">BGM3FM.ZMD  : 子育て</title>
+			<title code="0x04">BGM4FM.ZMD  : 病気</title>
+			<title code="0x05">BGM5FM.ZMD  : 非行化</title>
+			<title code="0x06">BGM6FM.ZMD  : 教育</title>
+			<title code="0x07">BGM7FM.ZMD  : 武者修行</title>
+			<title code="0x08">BGM8FM.ZMD  : アルバイト</title>
+			<title code="0x09">BGM9FM.ZMD  : お休み</title>
+			<title code="0x0a">BGM10FM.ZMD : バカンス</title>
+			<title code="0x0b">BGM11FM.ZMD : 収穫祭</title>
+			<title code="0x0c">BGM12FM.ZMD : ミスコン</title>
+			<title code="0x0d">BGM13FM.ZMD : 武闘会</title>
+			<title code="0x0e">BGM14FM.ZMD : バトル</title>
+			<title code="0x0f">BGM15FM.ZMD : お城</title>
+			<title code="0x10">BGM16FM.ZMD : 評判</title>
+			<title code="0x11">BGM17FM.ZMD : 親子の対話</title>
+			<title code="0x12">BGM18FM.ZMD : 買い物</title>
+			<title code="0x13">BGM19FM.ZMD : エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] PRINCESS MAKER(GM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">NEW</driveralias>
+		<options>
+			<option name="mfp"  value="1"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="pm68snd">
+			<rom type="code" offset="0x000000">pm68snd.bin</rom>
+			<rom type="x"    offset="0x010000">ZMSC.X</rom>
+			<rom type="code" offset="0x080000">SETUP.ZMD</rom>
+			<rom type="code" offset="0x084000">BGM1GM.ZMD</rom>
+			<rom type="code" offset="0x088000">BGM2GM.ZMD</rom>
+			<rom type="code" offset="0x08c000">BGM3GM.ZMD</rom>
+			<rom type="code" offset="0x090000">BGM4GM.ZMD</rom>
+			<rom type="code" offset="0x094000">BGM5GM.ZMD</rom>
+			<rom type="code" offset="0x098000">BGM6GM.ZMD</rom>
+			<rom type="code" offset="0x09c000">BGM7GM.ZMD</rom>
+			<rom type="code" offset="0x0a0000">BGM8GM.ZMD</rom>
+			<rom type="code" offset="0x0a4000">BGM9GM.ZMD</rom>
+			<rom type="code" offset="0x0a8000">BGM10GM.ZMD</rom>
+			<rom type="code" offset="0x0ac000">BGM11GM.ZMD</rom>
+			<rom type="code" offset="0x0b0000">BGM12GM.ZMD</rom>
+			<rom type="code" offset="0x0b4000">BGM13GM.ZMD</rom>
+			<rom type="code" offset="0x0b8000">BGM14GM.ZMD</rom>
+			<rom type="code" offset="0x0bc000">BGM15GM.ZMD</rom>
+			<rom type="code" offset="0x0c0000">BGM16GM.ZMD</rom>
+			<rom type="code" offset="0x0c4000">BGM17GM.ZMD</rom>
+			<rom type="code" offset="0x0c8000">BGM18GM.ZMD</rom>
+			<rom type="code" offset="0x0cc000">BGM19GM.ZMD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM1GM.ZMD  : プロローグ</title>
+			<title code="0x02">BGM2GM.ZMD  : メインテーマ</title>
+			<title code="0x03">BGM3GM.ZMD  : 子育て</title>
+			<title code="0x04">BGM4GM.ZMD  : 病気</title>
+			<title code="0x05">BGM5GM.ZMD  : 非行化</title>
+			<title code="0x06">BGM6GM.ZMD  : 教育</title>
+			<title code="0x07">BGM7GM.ZMD  : 武者修行</title>
+			<title code="0x08">BGM8GM.ZMD  : アルバイト</title>
+			<title code="0x09">BGM9GM.ZMD  : お休み</title>
+			<title code="0x0a">BGM10GM.ZMD : バカンス</title>
+			<title code="0x0b">BGM11GM.ZMD : 収穫祭</title>
+			<title code="0x0c">BGM12GM.ZMD : ミスコン</title>
+			<title code="0x0d">BGM13GM.ZMD : 武闘会</title>
+			<title code="0x0e">BGM14GM.ZMD : バトル</title>
+			<title code="0x0f">BGM15GM.ZMD : お城</title>
+			<title code="0x10">BGM16GM.ZMD : 評判</title>
+			<title code="0x11">BGM17GM.ZMD : 親子の対話</title>
+			<title code="0x12">BGM18GM.ZMD : 買い物</title>
+			<title code="0x13">BGM19GM.ZMD : エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] PRINCESS MAKER(SC-88)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">NEW</driveralias>
+		<options>
+			<option name="mfp"  value="1"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="7"/>
+		</options>
+		<romlist archive="pm68snd">
+			<rom type="code" offset="0x000000">pm68snd.bin</rom>
+			<rom type="x"    offset="0x010000">ZMSC.X</rom>
+			<rom type="code" offset="0x080000">SETUP.ZMD</rom>
+			<rom type="code" offset="0x084000">BGM1SC.ZMD</rom>
+			<rom type="code" offset="0x088000">BGM2SC.ZMD</rom>
+			<rom type="code" offset="0x08c000">BGM3SC.ZMD</rom>
+			<rom type="code" offset="0x090000">BGM4SC.ZMD</rom>
+			<rom type="code" offset="0x094000">BGM5SC.ZMD</rom>
+			<rom type="code" offset="0x098000">BGM6SC.ZMD</rom>
+			<rom type="code" offset="0x09c000">BGM7SC.ZMD</rom>
+			<rom type="code" offset="0x0a0000">BGM8SC.ZMD</rom>
+			<rom type="code" offset="0x0a4000">BGM9SC.ZMD</rom>
+			<rom type="code" offset="0x0a8000">BGM10SC.ZMD</rom>
+			<rom type="code" offset="0x0ac000">BGM11SC.ZMD</rom>
+			<rom type="code" offset="0x0b0000">BGM12SC.ZMD</rom>
+			<rom type="code" offset="0x0b4000">BGM13SC.ZMD</rom>
+			<rom type="code" offset="0x0b8000">BGM14SC.ZMD</rom>
+			<rom type="code" offset="0x0bc000">BGM15SC.ZMD</rom>
+			<rom type="code" offset="0x0c0000">BGM16SC.ZMD</rom>
+			<rom type="code" offset="0x0c4000">BGM17SC.ZMD</rom>
+			<rom type="code" offset="0x0c8000">BGM18SC.ZMD</rom>
+			<rom type="code" offset="0x0cc000">BGM19SC.ZMD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM1SC.ZMD  : プロローグ</title>
+			<title code="0x02">BGM2SC.ZMD  : メインテーマ</title>
+			<title code="0x03">BGM3SC.ZMD  : 子育て</title>
+			<title code="0x04">BGM4SC.ZMD  : 病気</title>
+			<title code="0x05">BGM5SC.ZMD  : 非行化</title>
+			<title code="0x06">BGM6SC.ZMD  : 教育</title>
+			<title code="0x07">BGM7SC.ZMD  : 武者修行</title>
+			<title code="0x08">BGM8SC.ZMD  : アルバイト</title>
+			<title code="0x09">BGM9SC.ZMD  : お休み</title>
+			<title code="0x0a">BGM10SC.ZMD : バカンス</title>
+			<title code="0x0b">BGM11SC.ZMD : 収穫祭</title>
+			<title code="0x0c">BGM12SC.ZMD : ミスコン</title>
+			<title code="0x0d">BGM13SC.ZMD : 武闘会</title>
+			<title code="0x0e">BGM14SC.ZMD : バトル</title>
+			<title code="0x0f">BGM15SC.ZMD : お城</title>
+			<title code="0x10">BGM16SC.ZMD : 評判</title>
+			<title code="0x11">BGM17SC.ZMD : 親子の対話</title>
+			<title code="0x12">BGM18SC.ZMD : 買い物</title>
+			<title code="0x13">BGM19SC.ZMD : エンディング</title>
+		</titlelist>
+	</game>
+</gamelist>

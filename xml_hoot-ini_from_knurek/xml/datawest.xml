@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //datawest -->
+	<game>
+		<name>[PC-88] The 4th Unit (第４のユニット)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">datawest</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7000"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="4thunit">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">PROG</rom>
+			<rom type="code" offset="0x6a75">VOICE</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000000">MUS00</title>
+			<title code="0x01000001">MUS01</title>
+			<title code="0x01000002">MUS02</title>
+			<title code="0x00000003">MUS03</title>
+			<title code="0x00000005">MUS05</title>
+			<title code="0x00000006">MUS06</title>
+			<title code="0x00000007">MUS07</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] The 4th Unit 2 (第４のユニット２)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">datawest</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb000"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="4thunit2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x2000">PROG</rom>
+			<rom type="code" offset="0xfa00">VOICE</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+			<rom type="bgm" offset="0x0f">MUS15</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MUS00</title>
+			<title code="0x01000001">MUS01</title>
+			<title code="0x01000002">MUS02</title>
+			<title code="0x00000003">MUS03</title>
+			<title code="0x00000004">MUS04</title>
+			<title code="0x00000005">MUS05</title>
+			<title code="0x01000006">MUS06</title>
+			<title code="0x00000007">MUS07</title>
+			<title code="0x00000008">MUS08</title>
+			<title code="0x00000009">MUS09</title>
+			<title code="0x0000000a">MUS10</title>
+			<title code="0x0000000b">MUS11</title>
+			<title code="0x0000000c">MUS12</title>
+			<title code="0x0100000d">MUS13</title>
+			<title code="0x0000000e">MUS14</title>
+			<title code="0x0000000f">MUS15</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] The 4th Unit 3: Dual Target (第４のユニット３デュアルターゲット) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">datawest</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="4thunit3_msx">
+			<rom type="code">The 4th Unit 3 - Dual Target (1989)(Data West).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0e">BGM #0e</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] The 4th Unit 3: Dual Target (第４のユニット３デュアルターゲット) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">datawest</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="4thunit3_msx">
+			<rom type="code">The 4th Unit 3 - Dual Target (1989)(Data West).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0f">BGM #0f</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] The 4th Unit 4: Zero (第４のユニット４ＺＥＲＯ) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">datawest</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="4thunit4_msx">
+			<rom type="code">The 4th Unit 4 - Zero (1990)(Data West).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] The 4th Unit 4: Zero (第４のユニット４ＺＥＲＯ) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">datawest</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="4thunit4_msx">
+			<rom type="code">The 4th Unit 4 - Zero (1990)(Data West).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+		</titlelist>
+	</game>
+</gamelist>

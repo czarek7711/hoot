@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //square -->
+	<game>
+		<name>[PC-88] Will -The Death Trap Ⅱ- (ウィル デストラップ２)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">square</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="will">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0800">PROG</rom>
+			<rom type="code" offset="0xc000">MUSIC</rom>
+			<rom type="bgm" offset="0x00">DUMMY</rom>
+			<rom type="bgm" offset="0x01">DUMMY</rom>
+			<rom type="bgm" offset="0x02">DUMMY</rom>
+			<rom type="bgm" offset="0x03">DUMMY</rom>
+			<rom type="bgm" offset="0x04">DUMMY</rom>
+			<rom type="bgm" offset="0x05">DUMMY</rom>
+			<rom type="bgm" offset="0x06">DUMMY</rom>
+			<rom type="bgm" offset="0x07">DUMMY</rom>
+			<rom type="bgm" offset="0x08">DUMMY</rom>
+			<rom type="bgm" offset="0x09">DUMMY</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x09">Main Theme</title>
+			<title code="0x01">SFX #01</title>
+			<title code="0x02">SFX #02</title>
+			<title code="0x03">SFX #03</title>
+			<title code="0x04">SFX #04</title>
+			<title code="0x05">SFX #05</title>
+			<title code="0x06">SFX #06</title>
+			<title code="0x07">SFX #07</title>
+			<title code="0x08">SFX #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Cruise Chaser Blassty (クルーズ チェイサー ブラスティー)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">square</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xd800"/>
+			<option name="mdata_size" value="0x0b00"/>
+		</options>
+		<romlist archive="blassty">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xe300">VOICE</rom>
+			<rom type="code" offset="0xe700">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">EFFECT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000001">Blassty Main Theme</title>
+			<title code="0x00000003">Anthem</title>
+			<title code="0x00000004">Space</title>
+			<title code="0x00000005">In the Maze</title>
+			<title code="0x00000000">Ending</title>
+			<title code="0x00000002">Finale</title>
+			<title code="0x00000006">SFX #00</title>
+			<title code="0x01000006">SFX #01</title>
+			<title code="0x02000006">SFX #02</title>
+			<title code="0x03000006">SFX #03</title>
+			<title code="0x04000006">SFX #04</title>
+			<title code="0x05000006">SFX #05</title>
+			<title code="0x06000006">SFX #06</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Alpha (アルファ α)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">square</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc300"/>
+			<option name="mdata_size" value="0x1400"/>
+		</options>
+		<romlist archive="alpha">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0800">PROG</rom>
+			<rom type="code" offset="0xdf00">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x07">Main Theme</title>
+			<title code="0x00">SFX #00</title>
+			<title code="0x01">SFX #01</title>
+			<title code="0x02">SFX #02</title>
+			<title code="0x03">SFX #03</title>
+			<title code="0x04">SFX #04</title>
+			<title code="0x05">SFX #05</title>
+			<title code="0x06">SFX #06</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] King' Knight Special</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">square</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x0100"/>
+			<option name="mdata_size" value="0x7000"/>
+			<option name="mfile_size" value="0x7000"/>
+		</options>
+		<romlist archive="kgknight">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">KMAIN.COM</rom>
+			<rom type="bgm" offset="0x00">KMAIN.COM</rom>
+			<rom type="bgm" offset="0x01">CMAIN.COM</rom>
+			<rom type="bgm" offset="0x02">DMAIN.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">BGM #01</title>
+			<title code="0x01000000">BGM #02</title>
+			<title code="0x02000000">BGM #03</title>
+			<title code="0x03000000">BGM #04</title>
+			<title code="0x04000000">BGM #05</title>
+			<title code="0x05000000">BGM #06</title>
+			<title code="0x00000001">BGM #07</title>
+			<title code="0x01000001">BGM #08</title>
+			<title code="0x02000001">BGM #09</title>
+			<title code="0x03000001">BGM #0a</title>
+			<title code="0x04000001">BGM #0b</title>
+			<title code="0x00000002">BGM #0c</title>
+			<title code="0x01000002">BGM #0d</title>
+			<title code="0x02000002">BGM #0e</title>
+			<title code="0x03000002">BGM #0f</title>
+			<title code="0x04000002">BGM #10</title>
+			<title code="0x05000002">BGM #11</title>
+			<title code="0x06000002">BGM #12</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] King' Knight Special (OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="X1">square</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x0100"/>
+			<option name="mdata_size" value="0x0a00"/>
+			<option name="init_pc"    value="0xf000"/>
+		</options>
+		<romlist archive="x1kingknight">
+			<rom type="code" offset="0x0b00">PROG</rom>
+			<rom type="code" offset="0x6000">LOGO</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">スクエアロゴ</title>
+			<title code="0x00000001">フィールドスタート</title>
+			<title code="0x01000001">フィールド</title>
+			<title code="0x02000001">ゲームオーバー</title>
+			<title code="0x03000001">フィールドクリア</title>
+			<title code="0x00000002">キャラクターセレクト</title>
+			<title code="0x01000002">ゲームオーバー</title>
+			<title code="0x02000002">フィールドクリア</title>
+			<title code="0x03000002">バッドエンド</title>
+			<title code="0x00000003">イザンデ城スタート</title>
+			<title code="0x01000003">イザンデ城１</title>
+			<title code="0x02000003">イザンデ城２</title>
+			<title code="0x03000003">ボス登場</title>
+			<title code="0x04000003">エンディング</title>
+			<title code="0x00000004">リーン城</title>
+			<title code="0x01000004">カーンの洞窟</title>
+			<title code="0x02000004">ベスの塔</title>
+			<title code="0x03000004">シルナスの街</title>
+			<title code="0x04000004">ヴァルの迷路</title>
+			<title code="0x05000004">タイロンの神殿</title>
+			<title code="0x00000005">ボルタクスの森</title>
+			<title code="0x01000005">ザックの谷</title>
+			<title code="0x02000005">グールの湖</title>
+			<title code="0x03000005">ジブジの幽霊船</title>
+			<title code="0x04000005">エール島</title>
+			<title code="0x05000005">ベルフォルンの巣</title>
+			<title code="0x00000006">リーン城</title>
+			<title code="0x01000006">カーンの洞窟</title>
+			<title code="0x02000006">ベスの塔</title>
+			<title code="0x03000006">ゲームオーバー</title>
+			<title code="0x00000007">シルナスの街</title>
+			<title code="0x01000007">ヴァルの迷路</title>
+			<title code="0x02000007">タイロンの神殿</title>
+			<title code="0x03000007">ゲームオーバー</title>
+			<title code="0x00000008">ボルタクスの森</title>
+			<title code="0x01000008">ザックの谷</title>
+			<title code="0x02000008">グールの湖</title>
+			<title code="0x03000008">ゲームオーバー</title>
+			<title code="0x00000009">ジブジの幽霊船</title>
+			<title code="0x01000009">エール島</title>
+			<title code="0x02000009">ベルフォルンの巣</title>
+			<title code="0x03000009">ゲームオーバー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] King' Knight Special (PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">square</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x0100"/>
+			<option name="mdata_size" value="0x0a00"/>
+			<option name="init_pc"    value="0xf000"/>
+		</options>
+		<romlist archive="x1kingknight">
+			<rom type="code" offset="0x0b00">PROG</rom>
+			<rom type="code" offset="0x6000">LOGO</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">スクエアロゴ</title>
+			<title code="0x00000001">フィールドスタート</title>
+			<title code="0x01000001">フィールド</title>
+			<title code="0x02000001">ゲームオーバー</title>
+			<title code="0x03000001">フィールドクリア</title>
+			<title code="0x00000002">キャラクターセレクト</title>
+			<title code="0x01000002">ゲームオーバー</title>
+			<title code="0x02000002">フィールドクリア</title>
+			<title code="0x03000002">バッドエンド</title>
+			<title code="0x00000003">イザンデ城スタート</title>
+			<title code="0x01000003">イザンデ城１</title>
+			<title code="0x02000003">イザンデ城２</title>
+			<title code="0x03000003">ボス登場</title>
+			<title code="0x04000003">エンディング</title>
+			<title code="0x00000004">リーン城</title>
+			<title code="0x01000004">カーンの洞窟</title>
+			<title code="0x02000004">ベスの塔</title>
+			<title code="0x03000004">シルナスの街</title>
+			<title code="0x04000004">ヴァルの迷路</title>
+			<title code="0x05000004">タイロンの神殿</title>
+			<title code="0x00000005">ボルタクスの森</title>
+			<title code="0x01000005">ザックの谷</title>
+			<title code="0x02000005">グールの湖</title>
+			<title code="0x03000005">ジブジの幽霊船</title>
+			<title code="0x04000005">エール島</title>
+			<title code="0x05000005">ベルフォルンの巣</title>
+			<title code="0x00000006">リーン城</title>
+			<title code="0x01000006">カーンの洞窟</title>
+			<title code="0x02000006">ベスの塔</title>
+			<title code="0x03000006">ゲームオーバー</title>
+			<title code="0x00000007">シルナスの街</title>
+			<title code="0x01000007">ヴァルの迷路</title>
+			<title code="0x02000007">タイロンの神殿</title>
+			<title code="0x03000007">ゲームオーバー</title>
+			<title code="0x00000008">ボルタクスの森</title>
+			<title code="0x01000008">ザックの谷</title>
+			<title code="0x02000008">グールの湖</title>
+			<title code="0x03000008">ゲームオーバー</title>
+			<title code="0x00000009">ジブジの幽霊船</title>
+			<title code="0x01000009">エール島</title>
+			<title code="0x02000009">ベルフォルンの巣</title>
+			<title code="0x03000009">ゲームオーバー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Aliens 2 (エイリアン２)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">square</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="alien2_msx">
+			<rom type="code">Aliens 2 (1987)(Square).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Stage 1</title>
+			<title code="0x02">Stage 2</title>
+			<title code="0x03">Stage 3</title>
+			<title code="0x04">Stage 4</title>
+			<title code="0x05">Stage 5</title>
+			<title code="0x06">Alien Boss</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">Death</title>
+			<title code="0x0a">BGM #0A</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Final Fantasy (ファイナルファンタジー) (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">square</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="ff1_msx">
+			<rom type="code">Final Fantasy (1989)(Microcabin, Square).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">プレリュード</title>
+			<title code="0x01">オープニング・テーマ</title>
+			<title code="0x02">コーネリア城</title>
+			<title code="0x03">メイン・テーマ</title>
+			<title code="0x04">カオスの神殿</title>
+			<title code="0x05">マトーヤの洞窟</title>
+			<title code="0x06">街</title>
+			<title code="0x07">店</title>
+			<title code="0x08">船</title>
+			<title code="0x09">海底神殿</title>
+			<title code="0x0A">ダンジョン</title>
+			<title code="0x0B">メニュー画面</title>
+			<title code="0x0C">飛空船</title>
+			<title code="0x0D">グルグ火山</title>
+			<title code="0x0E">浮遊城</title>
+			<title code="0x0F">戦闘シーン</title>
+			<title code="0x10">勝利</title>
+			<title code="0x11">エンディング・テーマ</title>
+			<title code="0x12">デッドミュージック</title>
+			<title code="0x13">セーブミュージック</title>
+			<title code="0x14">ファンファーレ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Final Fantasy (ファイナルファンタジー) (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">square</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="ff1_msx">
+			<rom type="code">Final Fantasy (1989)(Microcabin, Square).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80">プレリュード</title>
+			<title code="0x81">オープニング・テーマ</title>
+			<title code="0x82">コーネリア城</title>
+			<title code="0x83">メイン・テーマ</title>
+			<title code="0x84">カオスの神殿</title>
+			<title code="0x85">マトーヤの洞窟</title>
+			<title code="0x86">街</title>
+			<title code="0x87">店</title>
+			<title code="0x88">船</title>
+			<title code="0x89">海底神殿</title>
+			<title code="0x8A">ダンジョン</title>
+			<title code="0x8B">メニュー画面</title>
+			<title code="0x8C">飛空船</title>
+			<title code="0x8D">グルグ火山</title>
+			<title code="0x8E">浮遊城</title>
+			<title code="0x8F">戦闘シーン</title>
+			<title code="0x90">勝利</title>
+			<title code="0x91">エンディング・テーマ</title>
+			<title code="0x92">デッドミュージック</title>
+			<title code="0x93">セーブミュージック</title>
+			<title code="0x94">ファンファーレ</title>
+		</titlelist>
+	</game>
+</gamelist>

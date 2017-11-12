@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //apple_pie -->
+	<game>
+		<name>[PC-98] Charade (シャレード)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="chara">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">CHA_SE.EFC</rom>
+			<rom type="file" offset="0x10">CH_01.M</rom>
+			<rom type="file" offset="0x11">CH_02.M</rom>
+			<rom type="file" offset="0x12">CH_03.M</rom>
+			<rom type="file" offset="0x13">CH_04.M</rom>
+			<rom type="file" offset="0x14">CH_05.M</rom>
+			<rom type="file" offset="0x15">CH_06.M</rom>
+			<rom type="file" offset="0x16">CH_07.M</rom>
+			<rom type="file" offset="0x17">CH_08.M</rom>
+			<rom type="file" offset="0x18">CH_09.M</rom>
+			<rom type="file" offset="0x19">CH_10.M</rom>
+			<rom type="file" offset="0x1a">CH_11.M</rom>
+			<rom type="file" offset="0x1b">CH_12.M</rom>
+			<rom type="file" offset="0x1c">CH_13.M</rom>
+			<rom type="file" offset="0x1d">CH_14.M</rom>
+			<rom type="file" offset="0x1e">CH_15.M</rom>
+			<rom type="file" offset="0x1f">CH_16.M</rom>
+			<rom type="file" offset="0x20">CH_17.M</rom>
+			<rom type="file" offset="0x21">CH_18.M</rom>
+			<rom type="file" offset="0x22">CH_19.M</rom>
+			<rom type="file" offset="0x23">CH_20.M</rom>
+			<rom type="file" offset="0x24">CH_21.M</rom>
+			<rom type="file" offset="0x25">CH_22.M</rom>
+			<rom type="file" offset="0x26">CH_23.M</rom>
+			<rom type="file" offset="0x27">CH_24.M</rom>
+			<rom type="file" offset="0x28">CH_25.M</rom>
+			<rom type="file" offset="0x29">CH_26.M</rom>
+			<rom type="shell" offset="0">PMD /m8 /e2 /v0 /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">CH_01.M</title>
+			<title code="0x11">CH_02.M</title>
+			<title code="0x12">CH_03.M</title>
+			<title code="0x13">CH_04.M</title>
+			<title code="0x14">CH_05.M</title>
+			<title code="0x15">CH_06.M</title>
+			<title code="0x16">CH_07.M</title>
+			<title code="0x17">CH_08.M</title>
+			<title code="0x18">CH_09.M</title>
+			<title code="0x19">CH_10.M</title>
+			<title code="0x1a">CH_11.M</title>
+			<title code="0x1b">CH_12.M</title>
+			<title code="0x1c">CH_13.M</title>
+			<title code="0x1d">CH_14.M</title>
+			<title code="0x1e">CH_15.M</title>
+			<title code="0x1f">CH_16.M</title>
+			<title code="0x20">CH_17.M</title>
+			<title code="0x21">CH_18.M</title>
+			<title code="0x22">CH_19.M</title>
+			<title code="0x23">CH_20.M</title>
+			<title code="0x24">CH_21.M</title>
+			<title code="0x25">CH_22.M</title>
+			<title code="0x26">CH_23.M</title>
+			<title code="0x27">CH_24.M</title>
+			<title code="0x28">CH_25.M</title>
+			<title code="0x29">CH_26.M</title>
+			<range min="0x0801" max="0x080a" extcode="1">CHA_SE.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Dengeki Division (電撃領域 ～ＤＥＮＧＥＫＩ ＤＩＶＩＳＩＯＮ～)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="denge">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">DMM_SE.EFC</rom>
+			<rom type="file" offset="0x10">DMM_01.M</rom>
+			<rom type="file" offset="0x11">DMM_02.M</rom>
+			<rom type="file" offset="0x12">DMM_03.M</rom>
+			<rom type="file" offset="0x13">DMM_04.M</rom>
+			<rom type="file" offset="0x14">DMM_05.M</rom>
+			<rom type="file" offset="0x15">DMM_06.M</rom>
+			<rom type="file" offset="0x16">DMM_07.M</rom>
+			<rom type="file" offset="0x17">DMM_08.M</rom>
+			<rom type="file" offset="0x18">DMM_09.M</rom>
+			<rom type="file" offset="0x19">DMM_10.M</rom>
+			<rom type="file" offset="0x1a">DMM_11.M</rom>
+			<rom type="shell" offset="0">PMD /K /M11 /V0 /DF32 /DS0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Mates Cunningly [Title Logo]</title>
+			<title code="0x11">Groan of Energy [Opening, Last Stage]</title>
+			<title code="0x12">Forest [Stage 1, 3]</title>
+			<title code="0x13">Phenomenal Mirage [Stage 2]</title>
+			<title code="0x14">Hoax of Wyrm [Stage 4]</title>
+			<title code="0x15">Dark Silencer [Stage 5]</title>
+			<title code="0x16">Imperial Force [Stage 6]</title>
+			<title code="0x17">Secret Passage [Event for Beginning Stages]</title>
+			<title code="0x18">Stupid Request [Character Making, Winning Visuals]</title>
+			<title code="0x19">Destinate of Diary [Ending]</title>
+			<title code="0x1a">De Vision [Staff Roll]</title>
+			<range min="0x0801" max="0x0804" extcode="1">DMM_SE.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Dennou Garou (電脳画廊)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="dennou_g_98">
+			<rom type="file" offset="-1">mlalf_98.com</rom>
+			<rom type="file" offset="-1">DG.EXE</rom>
+			<rom type="conin" offset="5">DG.EXE</rom>
+			<rom type="file" offset="0x11">BGM1.MLO</rom>
+			<rom type="file" offset="0x12">BGM2.MLO</rom>
+			<rom type="file" offset="0x13">BGM5.MLO</rom>
+			<rom type="file" offset="0x14">BGM6.MLO</rom>
+			<rom type="file" offset="0x15">BGMB.MLO</rom>
+			<rom type="file" offset="0x16">BGME.MLO</rom>
+			<rom type="shell" offset="0">mlalf_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">BGM1.MLO</title>
+			<title code="0x12">BGM2.MLO</title>
+			<title code="0x13">BGM5.MLO</title>
+			<title code="0x14">BGM6.MLO</title>
+			<title code="0x15">BGMB.MLO</title>
+			<title code="0x16">BGME.MLO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Elemental O (えれめんたる王)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="elemo">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">ELE_01.M</rom>
+			<rom type="file" offset="0x11">ELE_02.M</rom>
+			<rom type="file" offset="0x12">ELE_03.M</rom>
+			<rom type="file" offset="0x13">ELE_04.M</rom>
+			<rom type="file" offset="0x14">ELE_05.M</rom>
+			<rom type="file" offset="0x15">ELE_06.M</rom>
+			<rom type="file" offset="0x16">ELE_07.M</rom>
+			<rom type="file" offset="0x17">ELE_08.M</rom>
+			<rom type="file" offset="0x18">ELE_09.M</rom>
+			<rom type="file" offset="0x19">ELE_10.M</rom>
+			<rom type="file" offset="0x1a">ELE_11.M</rom>
+			<rom type="file" offset="0x1b">ELE_12.M</rom>
+			<rom type="file" offset="0x1c">ELE_13.M</rom>
+			<rom type="file" offset="0x1d">ELE_14.M</rom>
+			<rom type="file" offset="0x1e">ELE_15.M</rom>
+			<rom type="file" offset="0x1f">ELE_16.M</rom>
+			<rom type="file" offset="0x20">ELE_17.M</rom>
+			<rom type="file" offset="0x21">ELE_18.M</rom>
+			<rom type="file" offset="0x22">ELE_19.M</rom>
+			<rom type="file" offset="0x23">ELE_20.M</rom>
+			<rom type="file" offset="0x24">ELE_21.M</rom>
+			<rom type="file" offset="0x25">ELE_22.M</rom>
+			<rom type="file" offset="0x26">ELE_23.M</rom>
+			<rom type="file" offset="0x27">ELE_24.M</rom>
+			<rom type="file" offset="0x28">ELE_25.M</rom>
+			<rom type="file" offset="0x29">ELE_26.M</rom>
+			<rom type="file" offset="0x2a">ELE_30.M</rom>
+			<rom type="shell" offset="0">PMD /M10 /K /V0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ELE_01.M</title>
+			<title code="0x11">ELE_02.M</title>
+			<title code="0x12">ELE_03.M</title>
+			<title code="0x13">ELE_04.M</title>
+			<title code="0x14">ELE_05.M</title>
+			<title code="0x15">ELE_06.M</title>
+			<title code="0x16">ELE_07.M</title>
+			<title code="0x17">ELE_08.M</title>
+			<title code="0x18">ELE_09.M</title>
+			<title code="0x19">ELE_10.M</title>
+			<title code="0x1a">ELE_11.M</title>
+			<title code="0x1b">ELE_12.M</title>
+			<title code="0x1c">ELE_13.M</title>
+			<title code="0x1d">ELE_14.M</title>
+			<title code="0x1e">ELE_15.M</title>
+			<title code="0x1f">ELE_16.M</title>
+			<title code="0x20">ELE_17.M</title>
+			<title code="0x21">ELE_18.M</title>
+			<title code="0x22">ELE_19.M</title>
+			<title code="0x23">ELE_20.M</title>
+			<title code="0x24">ELE_21.M</title>
+			<title code="0x25">ELE_22.M</title>
+			<title code="0x26">ELE_23.M</title>
+			<title code="0x27">ELE_24.M</title>
+			<title code="0x28">ELE_25.M</title>
+			<title code="0x29">ELE_26.M</title>
+			<title code="0x2a">ELE_30.M</title>
+			<range min="0x0801" max="0x081c" extcode="1">SE.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Seishoujo Sentai Lakers 1 (聖少女戦隊レイカーズ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="laker1">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">REI_SE.EFC</rom>
+			<rom type="file" offset="0x10">REY_01.M</rom>
+			<rom type="file" offset="0x11">REY_02.M</rom>
+			<rom type="file" offset="0x12">REY_03.M</rom>
+			<rom type="file" offset="0x13">REY_04.M</rom>
+			<rom type="file" offset="0x14">REY_05.M</rom>
+			<rom type="file" offset="0x15">REY_06.M</rom>
+			<rom type="file" offset="0x16">REY_07.M</rom>
+			<rom type="file" offset="0x17">REY_08.M</rom>
+			<rom type="file" offset="0x18">REY_09.M</rom>
+			<rom type="file" offset="0x19">REY_10.M</rom>
+			<rom type="file" offset="0x1a">REY_11.M</rom>
+			<rom type="file" offset="0x1b">REY_12.M</rom>
+			<rom type="file" offset="0x1c">REY_13.M</rom>
+			<rom type="file" offset="0x1d">REY_14.M</rom>
+			<rom type="file" offset="0x1e">REY_15.M</rom>
+			<rom type="file" offset="0x1f">REY_16.M</rom>
+			<rom type="file" offset="0x20">REY_17.M</rom>
+			<rom type="file" offset="0x21">REY_18.M</rom>
+			<rom type="file" offset="0x22">REY_19.M</rom>
+			<rom type="file" offset="0x23">REY_20.M</rom>
+			<rom type="shell" offset="0">PMD /m6 /e2 /v0 /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">REY_01.M</title>
+			<title code="0x11">REY_02.M</title>
+			<title code="0x12">REY_03.M</title>
+			<title code="0x13">REY_04.M</title>
+			<title code="0x14">REY_05.M</title>
+			<title code="0x15">REY_06.M</title>
+			<title code="0x16">REY_07.M</title>
+			<title code="0x17">REY_08.M</title>
+			<title code="0x18">REY_09.M</title>
+			<title code="0x19">REY_10.M</title>
+			<title code="0x1a">REY_11.M</title>
+			<title code="0x1b">REY_12.M</title>
+			<title code="0x1c">REY_13.M</title>
+			<title code="0x1d">REY_14.M</title>
+			<title code="0x1e">REY_15.M</title>
+			<title code="0x1f">REY_16.M</title>
+			<title code="0x20">REY_17.M</title>
+			<title code="0x21">REY_18.M</title>
+			<title code="0x22">REY_19.M</title>
+			<title code="0x23">REY_20.M</title>
+			<range min="0x0801" max="0x081e" extcode="1">REI_SE.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Seishoujo Sentai Lakers 2 (聖少女戦隊レイカーズ2)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="laker2">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">REI2_SE.EFC</rom>
+			<rom type="file" offset="0x10">REY_00.M</rom>
+			<rom type="file" offset="0x11">REY_01.M</rom>
+			<rom type="file" offset="0x12">REY_02.M</rom>
+			<rom type="file" offset="0x13">REY_03.M</rom>
+			<rom type="file" offset="0x14">REY_04.M</rom>
+			<rom type="file" offset="0x15">REY_05.M</rom>
+			<rom type="file" offset="0x16">REY_06.M</rom>
+			<rom type="file" offset="0x17">REY_07.M</rom>
+			<rom type="file" offset="0x18">REY_08.M</rom>
+			<rom type="file" offset="0x19">REY_09.M</rom>
+			<rom type="file" offset="0x1a">REY_10.M</rom>
+			<rom type="file" offset="0x1b">REY_11.M</rom>
+			<rom type="file" offset="0x1c">REY_12.M</rom>
+			<rom type="file" offset="0x1d">REY_13.M</rom>
+			<rom type="file" offset="0x1e">REY_14.M</rom>
+			<rom type="file" offset="0x1f">REY_15.M</rom>
+			<rom type="file" offset="0x20">REY_16.M</rom>
+			<rom type="file" offset="0x21">REY_17.M</rom>
+			<rom type="file" offset="0x22">REY_18.M</rom>
+			<rom type="file" offset="0x23">REY_19.M</rom>
+			<rom type="file" offset="0x24">REY_20.M</rom>
+			<rom type="file" offset="0x25">REY_21.M</rom>
+			<rom type="file" offset="0x26">REY_22.M</rom>
+			<rom type="file" offset="0x27">REY_23.M</rom>
+			<rom type="file" offset="0x28">REY_24.M</rom>
+			<rom type="file" offset="0x29">REY_25.M</rom>
+			<rom type="file" offset="0x2a">REY_26.M</rom>
+			<rom type="file" offset="0x2b">REY_27.M</rom>
+			<rom type="file" offset="0x2c">REY_28.M</rom>
+			<rom type="file" offset="0x2d">REY_29.M</rom>
+			<rom type="file" offset="0x2e">REY_30.M</rom>
+			<rom type="file" offset="0x2f">REY_31.M</rom>
+			<rom type="file" offset="0x30">file01.M</rom>
+			<rom type="shell" offset="0">PMD /m8 /e2 /v0 /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">REY_00.M</title>
+			<title code="0x11">REY_01.M</title>
+			<title code="0x12">REY_02.M</title>
+			<title code="0x13">REY_03.M</title>
+			<title code="0x14">REY_04.M</title>
+			<title code="0x15">REY_05.M</title>
+			<title code="0x16">REY_06.M</title>
+			<title code="0x17">REY_07.M</title>
+			<title code="0x18">REY_08.M</title>
+			<title code="0x19">REY_09.M</title>
+			<title code="0x1a">REY_10.M</title>
+			<title code="0x1b">REY_11.M</title>
+			<title code="0x1c">REY_12.M</title>
+			<title code="0x1d">REY_13.M</title>
+			<title code="0x1e">REY_14.M</title>
+			<title code="0x1f">REY_15.M</title>
+			<title code="0x20">REY_16.M</title>
+			<title code="0x21">REY_17.M</title>
+			<title code="0x22">REY_18.M</title>
+			<title code="0x23">REY_19.M</title>
+			<title code="0x24">REY_20.M</title>
+			<title code="0x25">REY_21.M</title>
+			<title code="0x26">REY_22.M</title>
+			<title code="0x27">REY_23.M</title>
+			<title code="0x28">REY_24.M</title>
+			<title code="0x29">REY_25.M</title>
+			<title code="0x2a">REY_26.M</title>
+			<title code="0x2b">REY_27.M</title>
+			<title code="0x2c">REY_28.M</title>
+			<title code="0x2d">REY_29.M</title>
+			<title code="0x2e">REY_30.M</title>
+			<title code="0x2f">REY_31.M</title>
+			<title code="0x30">ﾚｲｶ-ｽﾞ31.M</title>
+			<range min="0x0801" max="0x0822" extcode="1">REI2_SE.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Seishoujo Sentai Lakers 3 (聖少女戦隊レイカーズ3)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="laker3">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">LAKE_SE.EFC</rom>
+			<rom type="file" offset="0x10">LAKE_00.M</rom>
+			<rom type="file" offset="0x11">LAKE_01.M</rom>
+			<rom type="file" offset="0x12">LAKE_02.M</rom>
+			<rom type="file" offset="0x13">LAKE_03.M</rom>
+			<rom type="file" offset="0x14">LAKE_04.M</rom>
+			<rom type="file" offset="0x15">LAKE_05.M</rom>
+			<rom type="file" offset="0x16">LAKE_06.M</rom>
+			<rom type="file" offset="0x17">LAKE_07.M</rom>
+			<rom type="file" offset="0x18">LAKE_08.M</rom>
+			<rom type="file" offset="0x19">LAKE_09.M</rom>
+			<rom type="file" offset="0x1a">LAKE_10.M</rom>
+			<rom type="file" offset="0x1b">LAKE_11.M</rom>
+			<rom type="file" offset="0x1c">LAKE_11X.M</rom>
+			<rom type="file" offset="0x1d">LAKE_12.M</rom>
+			<rom type="file" offset="0x1e">LAKE_12X.M</rom>
+			<rom type="file" offset="0x1f">LAKE_13.M</rom>
+			<rom type="file" offset="0x20">LAKE_14.M</rom>
+			<rom type="file" offset="0x21">LAKE_15.M</rom>
+			<rom type="file" offset="0x22">LAKE_16.M</rom>
+			<rom type="file" offset="0x23">LAKE_17.M</rom>
+			<rom type="file" offset="0x24">LAKE_18.M</rom>
+			<rom type="file" offset="0x25">LAKE_19.M</rom>
+			<rom type="file" offset="0x26">LAKE_20.M</rom>
+			<rom type="file" offset="0x27">LAKE_21.M</rom>
+			<rom type="file" offset="0x28">LAKE_21X.M</rom>
+			<rom type="file" offset="0x29">LAKE_22.M</rom>
+			<rom type="file" offset="0x2a">LAKE_B1.M</rom>
+			<rom type="file" offset="0x2b">LAKE_B2.M</rom>
+			<rom type="file" offset="0x2c">LAKE_B3.M</rom>
+			<rom type="file" offset="0x2d">LAKE_B4.M</rom>
+			<rom type="file" offset="0x2e">LAKE_B5.M</rom>
+			<rom type="file" offset="0x2f">REY_00.M</rom>
+			<rom type="file" offset="0x30">REY_01.M</rom>
+			<rom type="file" offset="0x31">REY_02.M</rom>
+			<rom type="file" offset="0x32">REY_03.M</rom>
+			<rom type="file" offset="0x33">REY_04.M</rom>
+			<rom type="file" offset="0x34">REY_05.M</rom>
+			<rom type="file" offset="0x35">REY_06.M</rom>
+			<rom type="file" offset="0x36">REY_07.M</rom>
+			<rom type="file" offset="0x37">REY_08.M</rom>
+			<rom type="file" offset="0x38">REY_09.M</rom>
+			<rom type="file" offset="0x39">REY_10.M</rom>
+			<rom type="file" offset="0x3a">REY_11.M</rom>
+			<rom type="file" offset="0x3b">REY_12.M</rom>
+			<rom type="file" offset="0x3c">REY_13.M</rom>
+			<rom type="file" offset="0x3d">REY_14.M</rom>
+			<rom type="file" offset="0x3e">REY_15.M</rom>
+			<rom type="file" offset="0x3f">REY_16.M</rom>
+			<rom type="file" offset="0x40">REY_17.M</rom>
+			<rom type="file" offset="0x41">REY_18.M</rom>
+			<rom type="file" offset="0x42">REY_19.M</rom>
+			<rom type="file" offset="0x43">REY_20.M</rom>
+			<rom type="file" offset="0x44">REY_21.M</rom>
+			<rom type="file" offset="0x45">REY_22.M</rom>
+			<rom type="file" offset="0x46">REY_23.M</rom>
+			<rom type="file" offset="0x47">REY_24.M</rom>
+			<rom type="file" offset="0x48">REY_25.M</rom>
+			<rom type="file" offset="0x49">REY_26.M</rom>
+			<rom type="file" offset="0x4a">REY_27.M</rom>
+			<rom type="file" offset="0x4b">REY_28.M</rom>
+			<rom type="file" offset="0x4c">REY_29.M</rom>
+			<rom type="file" offset="0x4d">REY_30.M</rom>
+			<rom type="file" offset="0x4e">REY_31.M</rom>
+			<rom type="shell" offset="0">PMD /m8 /e2 /v0 /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LAKE_00.M</title>
+			<title code="0x11">LAKE_01.M</title>
+			<title code="0x12">LAKE_02.M</title>
+			<title code="0x13">LAKE_03.M</title>
+			<title code="0x14">LAKE_04.M</title>
+			<title code="0x15">LAKE_05.M</title>
+			<title code="0x16">LAKE_06.M</title>
+			<title code="0x17">LAKE_07.M</title>
+			<title code="0x18">LAKE_08.M</title>
+			<title code="0x19">LAKE_09.M</title>
+			<title code="0x1a">LAKE_10.M</title>
+			<title code="0x1b">LAKE_11.M</title>
+			<title code="0x1c">LAKE_11X.M</title>
+			<title code="0x1d">LAKE_12.M</title>
+			<title code="0x1e">LAKE_12X.M</title>
+			<title code="0x1f">LAKE_13.M</title>
+			<title code="0x20">LAKE_14.M</title>
+			<title code="0x21">LAKE_15.M</title>
+			<title code="0x22">LAKE_16.M</title>
+			<title code="0x23">LAKE_17.M</title>
+			<title code="0x24">LAKE_18.M</title>
+			<title code="0x25">LAKE_19.M</title>
+			<title code="0x26">LAKE_20.M</title>
+			<title code="0x27">LAKE_21.M</title>
+			<title code="0x28">LAKE_21X.M</title>
+			<title code="0x29">LAKE_22.M</title>
+			<title code="0x2a">LAKE_B1.M</title>
+			<title code="0x2b">LAKE_B2.M</title>
+			<title code="0x2c">LAKE_B3.M</title>
+			<title code="0x2d">LAKE_B4.M</title>
+			<title code="0x2e">LAKE_B5.M</title>
+			<title code="0x2f">REY_00.M</title>
+			<title code="0x30">REY_01.M</title>
+			<title code="0x31">REY_02.M</title>
+			<title code="0x32">REY_03.M</title>
+			<title code="0x33">REY_04.M</title>
+			<title code="0x34">REY_05.M</title>
+			<title code="0x35">REY_06.M</title>
+			<title code="0x36">REY_07.M</title>
+			<title code="0x37">REY_08.M</title>
+			<title code="0x38">REY_09.M</title>
+			<title code="0x39">REY_10.M</title>
+			<title code="0x3a">REY_11.M</title>
+			<title code="0x3b">REY_12.M</title>
+			<title code="0x3c">REY_13.M</title>
+			<title code="0x3d">REY_14.M</title>
+			<title code="0x3e">REY_15.M</title>
+			<title code="0x3f">REY_16.M</title>
+			<title code="0x40">REY_17.M</title>
+			<title code="0x41">REY_18.M</title>
+			<title code="0x42">REY_19.M</title>
+			<title code="0x43">REY_20.M</title>
+			<title code="0x44">REY_21.M</title>
+			<title code="0x45">REY_22.M</title>
+			<title code="0x46">REY_23.M</title>
+			<title code="0x47">REY_24.M</title>
+			<title code="0x48">REY_25.M</title>
+			<title code="0x49">REY_26.M</title>
+			<title code="0x4a">REY_27.M</title>
+			<title code="0x4b">REY_28.M</title>
+			<title code="0x4c">REY_29.M</title>
+			<title code="0x4d">REY_30.M</title>
+			<title code="0x4e">REY_31.M</title>
+			<range min="0x0800" max="0x0821" extcode="1">LAKE_SE.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Reijiyu - Twin Road (麗獣 Twin Road)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="reijiyu">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">BGM001.M</rom>
+			<rom type="file" offset="0x11">BGM002.M</rom>
+			<rom type="file" offset="0x12">BGM003.M</rom>
+			<rom type="file" offset="0x13">BGM004.M</rom>
+			<rom type="file" offset="0x14">BGM005.M</rom>
+			<rom type="file" offset="0x15">BGM006.M</rom>
+			<rom type="file" offset="0x16">BGM007.M</rom>
+			<rom type="file" offset="0x17">BGM008.M</rom>
+			<rom type="file" offset="0x18">BGM009.M</rom>
+			<rom type="file" offset="0x19">BGM010.M</rom>
+			<rom type="file" offset="0x1A">BGM011.M</rom>
+			<rom type="file" offset="0x1B">BGM012.M</rom>
+			<rom type="file" offset="0x1C">BGM013.M</rom>
+			<rom type="file" offset="0x1D">BGM014.M</rom>
+			<rom type="file" offset="0x1E">BGM015.M</rom>
+			<rom type="file" offset="0x1F">BGM016.M</rom>
+			<rom type="file" offset="0x20">BGM017.M</rom>
+			<rom type="file" offset="0x21">BGM018.M</rom>
+			<rom type="file" offset="0x22">BGM019.M</rom>
+			<rom type="file" offset="0x23">BGM020.M</rom>
+			<rom type="file" offset="0x24">BGM021.M</rom>
+			<rom type="shell" offset="0">PMD # /M8 /V0 /E2 /DF35 /DS5 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM001.M</title>
+			<title code="0x11">BGM002.M</title>
+			<title code="0x12">BGM003.M</title>
+			<title code="0x13">BGM004.M</title>
+			<title code="0x14">BGM005.M</title>
+			<title code="0x15">BGM006.M</title>
+			<title code="0x16">BGM007.M</title>
+			<title code="0x17">BGM008.M</title>
+			<title code="0x18">BGM009.M</title>
+			<title code="0x19">BGM010.M</title>
+			<title code="0x1A">BGM011.M</title>
+			<title code="0x1B">BGM012.M</title>
+			<title code="0x1C">BGM013.M</title>
+			<title code="0x1D">BGM014.M</title>
+			<title code="0x1E">BGM015.M</title>
+			<title code="0x1F">BGM016.M</title>
+			<title code="0x20">BGM017.M</title>
+			<title code="0x21">BGM018.M</title>
+			<title code="0x22">BGM019.M</title>
+			<title code="0x23">BGM020.M</title>
+			<title code="0x24">BGM021.M</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Bakuretsu Shoujotai T-bucks (爆裂少女隊Tバックス)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="tbacks_98">
+			<rom type="file" offset="-1">mlalf_98.com</rom>
+			<rom type="file" offset="-1">T_BACKS.EXE</rom>
+			<rom type="conin" offset="5">T_BACKS.EXE</rom>
+			<rom type="file" offset="0x11">BGM1.MLO</rom>
+			<rom type="file" offset="0x12">BGM2.MLO</rom>
+			<rom type="file" offset="0x13">BGM3.MLO</rom>
+			<rom type="file" offset="0x14">BGM4.MLO</rom>
+			<rom type="file" offset="0x15">BGM5.MLO</rom>
+			<rom type="file" offset="0x16">BGM6.MLO</rom>
+			<rom type="file" offset="0x17">BGM7.MLO</rom>
+			<rom type="file" offset="0x18">BGMA.MLO</rom>
+			<rom type="file" offset="0x19">BGMB.MLO</rom>
+			<rom type="file" offset="0x1A">BGMC.MLO</rom>
+			<rom type="file" offset="0x1B">BGMD.MLO</rom>
+			<rom type="file" offset="0x1C">BGME.MLO</rom>
+			<rom type="file" offset="0x1D">BGMF.MLO</rom>
+			<rom type="file" offset="0x1E">BGMG.MLO</rom>
+			<rom type="file" offset="0x1F">BGMH.MLO</rom>
+			<rom type="shell" offset="0">mlalf_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">BGM1.MLO</title>
+			<title code="0x12">BGM2.MLO</title>
+			<title code="0x13">BGM3.MLO</title>
+			<title code="0x14">BGM4.MLO</title>
+			<title code="0x15">BGM5.MLO</title>
+			<title code="0x16">BGM6.MLO</title>
+			<title code="0x17">BGM7.MLO</title>
+			<title code="0x18">BGMA.MLO</title>
+			<title code="0x19">BGMB.MLO</title>
+			<title code="0x1A">BGMC.MLO</title>
+			<title code="0x1B">BGMD.MLO</title>
+			<title code="0x1C">BGME.MLO</title>
+			<title code="0x1D">BGMF.MLO</title>
+			<title code="0x1E">BGMG.MLO</title>
+			<title code="0x1F">BGMH.MLO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Chou Baku (超･爆)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="chobaku_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">CB_BGM1.M</rom>
+			<rom type="file" offset="0x11">CB_BGM2.M</rom>
+			<rom type="file" offset="0x12">CB_BGM3.M</rom>
+			<rom type="file" offset="0x13">CB_BGM4.M</rom>
+			<rom type="file" offset="0x14">CB_BGM5.M</rom>
+			<rom type="file" offset="0x15">CB_BGM6.M</rom>
+			<rom type="file" offset="0x16">CB_BGM7.M</rom>
+			<rom type="file" offset="0x17">CB_BGM8.M</rom>
+			<rom type="shell" offset="0">PMD /V0 /E0 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Normal BGM</title>
+			<title code="0x11">Battle BGM</title>
+			<title code="0x12">Winning BGM</title>
+			<title code="0x13">Opening Logo</title>
+			<title code="0x14">ｸｲｽﾞ ｼﾞｼﾞｲ</title>
+			<title code="0x15">Opening</title>
+			<title code="0x16">Ending BGM</title>
+			<title code="0x17">Event BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Metamol Meena (メタモル･ミーナ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="metamol_98">
+			<rom type="file" offset="-1">mlalf_98.com</rom>
+			<rom type="file" offset="-1">MEENA1.EXE</rom>
+			<rom type="conin" offset="5">MEENA1.EXE</rom>
+			<rom type="file" offset="0x11">MINA00.MLO</rom>
+			<rom type="file" offset="0x12">MINA01.MLO</rom>
+			<rom type="file" offset="0x13">MINA02.MLO</rom>
+			<rom type="file" offset="0x14">MINA03.MLO</rom>
+			<rom type="file" offset="0x15">MINA04.MLO</rom>
+			<rom type="file" offset="0x16">MINA05.MLO</rom>
+			<rom type="file" offset="0x17">MINA06.MLO</rom>
+			<rom type="file" offset="0x18">MINA07.MLO</rom>
+			<rom type="file" offset="0x19">MINA08.MLO</rom>
+			<rom type="file" offset="0x1a">MINA09.MLO</rom>
+			<rom type="file" offset="0x1b">MINA10.MLO</rom>
+			<rom type="file" offset="0x1c">MINA11.MLO</rom>
+			<rom type="file" offset="0x1d">MINA12.MLO</rom>
+			<rom type="file" offset="0x1e">MINA13.MLO</rom>
+			<rom type="file" offset="0x1f">MINA14.MLO</rom>
+			<rom type="file" offset="0x20">MINA15.MLO</rom>
+			<rom type="file" offset="0x21">MINA16.MLO</rom>
+			<rom type="file" offset="0x22">MINA17.MLO</rom>
+			<rom type="file" offset="0x23">M_SE1.MLO</rom>
+			<rom type="file" offset="0x24">M_SE2.MLO</rom>
+			<rom type="file" offset="0x25">M_SE4.MLO</rom>
+			<rom type="file" offset="0x26">M_SE5.MLO</rom>
+			<rom type="file" offset="0x27">M_SE6.MLO</rom>
+			<rom type="file" offset="0x28">M_SE7.MLO</rom>
+			<rom type="shell" offset="0">mlalf_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">MINA00.MLO</title>
+			<title code="0x12">MINA01.MLO</title>
+			<title code="0x13">MINA02.MLO</title>
+			<title code="0x14">MINA03.MLO</title>
+			<title code="0x15">MINA04.MLO</title>
+			<title code="0x16">MINA05.MLO</title>
+			<title code="0x17">MINA06.MLO</title>
+			<title code="0x18">MINA07.MLO</title>
+			<title code="0x19">MINA08.MLO</title>
+			<title code="0x1a">MINA09.MLO</title>
+			<title code="0x1b">MINA10.MLO</title>
+			<title code="0x1c">MINA11.MLO</title>
+			<title code="0x1d">MINA12.MLO</title>
+			<title code="0x1e">MINA13.MLO</title>
+			<title code="0x1f">MINA14.MLO</title>
+			<title code="0x20">MINA15.MLO</title>
+			<title code="0x21">MINA16.MLO</title>
+			<title code="0x22">MINA17.MLO</title>
+			<title code="0x23">M_SE1.MLO</title>
+			<title code="0x24">M_SE2.MLO</title>
+			<title code="0x25">M_SE4.MLO</title>
+			<title code="0x26">M_SE5.MLO</title>
+			<title code="0x27">M_SE6.MLO</title>
+			<title code="0x28">M_SE7.MLO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Present Duo (プレゼントデュオ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="pduo_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PRE1_01.KMD</rom>
+			<rom type="file" offset="-1">PRE1_02.KMD</rom>
+			<rom type="file" offset="-1">PRE1_03.KMD</rom>
+			<rom type="file" offset="-1">PRE1_04.KMD</rom>
+			<rom type="file" offset="-1">PRE1_05.KMD</rom>
+			<rom type="file" offset="-1">PRE1_06.KMD</rom>
+			<rom type="file" offset="-1">PRE1_07.KMD</rom>
+			<rom type="file" offset="-1">PRE1_08.KMD</rom>
+			<rom type="file" offset="-1">PRE1_09.KMD</rom>
+			<rom type="file" offset="-1">PRE2_01.KMD</rom>
+			<rom type="file" offset="-1">PRE2_02.KMD</rom>
+			<rom type="file" offset="-1">PRE2_03.KMD</rom>
+			<rom type="file" offset="-1">PRE2_04.KMD</rom>
+			<rom type="file" offset="-1">PRE2_05.KMD</rom>
+			<rom type="file" offset="-1">PRE2_06.KMD</rom>
+			<rom type="file" offset="-1">PRE2_07.KMD</rom>
+			<rom type="file" offset="-1">PRE2_08.KMD</rom>
+			<rom type="file" offset="-1">PRE2_09.KMD</rom>
+			<rom type="file" offset="-1">PRE2_10.KMD</rom>
+			<rom type="file" offset="-1">PRE2_11.KMD</rom>
+			<rom type="conin" offset="0x10">PRE1_01.KMD</rom>
+			<rom type="conin" offset="0x11">PRE1_02.KMD</rom>
+			<rom type="conin" offset="0x12">PRE1_03.KMD</rom>
+			<rom type="conin" offset="0x13">PRE1_04.KMD</rom>
+			<rom type="conin" offset="0x14">PRE1_05.KMD</rom>
+			<rom type="conin" offset="0x15">PRE1_06.KMD</rom>
+			<rom type="conin" offset="0x16">PRE1_07.KMD</rom>
+			<rom type="conin" offset="0x17">PRE1_08.KMD</rom>
+			<rom type="conin" offset="0x18">PRE1_09.KMD</rom>
+			<rom type="conin" offset="0x19">PRE2_01.KMD</rom>
+			<rom type="conin" offset="0x1a">PRE2_02.KMD</rom>
+			<rom type="conin" offset="0x1b">PRE2_03.KMD</rom>
+			<rom type="conin" offset="0x1c">PRE2_04.KMD</rom>
+			<rom type="conin" offset="0x1d">PRE2_05.KMD</rom>
+			<rom type="conin" offset="0x1e">PRE2_06.KMD</rom>
+			<rom type="conin" offset="0x1f">PRE2_07.KMD</rom>
+			<rom type="conin" offset="0x20">PRE2_08.KMD</rom>
+			<rom type="conin" offset="0x21">PRE2_09.KMD</rom>
+			<rom type="conin" offset="0x22">PRE2_10.KMD</rom>
+			<rom type="conin" offset="0x23">PRE2_11.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PRE1_01.KMD</title>
+			<title code="0x11">PRE1_02.KMD</title>
+			<title code="0x12">PRE1_03.KMD</title>
+			<title code="0x13">PRE1_04.KMD</title>
+			<title code="0x14">PRE1_05.KMD</title>
+			<title code="0x15">PRE1_06.KMD</title>
+			<title code="0x16">PRE1_07.KMD</title>
+			<title code="0x17">PRE1_08.KMD</title>
+			<title code="0x18">PRE1_09.KMD</title>
+			<title code="0x19">PRE2_01.KMD</title>
+			<title code="0x1a">PRE2_02.KMD</title>
+			<title code="0x1b">PRE2_03.KMD</title>
+			<title code="0x1c">PRE2_04.KMD</title>
+			<title code="0x1d">PRE2_05.KMD</title>
+			<title code="0x1e">PRE2_06.KMD</title>
+			<title code="0x1f">PRE2_07.KMD</title>
+			<title code="0x20">PRE2_08.KMD</title>
+			<title code="0x21">PRE2_09.KMD</title>
+			<title code="0x22">PRE2_10.KMD</title>
+			<title code="0x23">PRE2_11.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Metal Mover Jastrike (メタルムーバー ジャストライク)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="mmj_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">JL001.KMD</rom>
+			<rom type="file" offset="-1">JL002.KMD</rom>
+			<rom type="file" offset="-1">JL003.KMD</rom>
+			<rom type="file" offset="-1">JL004.KMD</rom>
+			<rom type="file" offset="-1">JL005.KMD</rom>
+			<rom type="file" offset="-1">JL006.KMD</rom>
+			<rom type="file" offset="-1">JL007.KMD</rom>
+			<rom type="conin" offset="0x10">JL001.KMD</rom>
+			<rom type="conin" offset="0x11">JL002.KMD</rom>
+			<rom type="conin" offset="0x12">JL003.KMD</rom>
+			<rom type="conin" offset="0x13">JL004.KMD</rom>
+			<rom type="conin" offset="0x14">JL005.KMD</rom>
+			<rom type="conin" offset="0x15">JL006.KMD</rom>
+			<rom type="conin" offset="0x16">JL007.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">JL001.KMD</title>
+			<title code="0x11">JL002.KMD</title>
+			<title code="0x12">JL003.KMD</title>
+			<title code="0x13">JL004.KMD</title>
+			<title code="0x14">JL005.KMD</title>
+			<title code="0x15">JL006.KMD</title>
+			<title code="0x16">JL007.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Russian Mahjong Horosho (ろしあん マージャン ハラショー!) (OPN)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+			<option name="clockmul" value="0x04"/>
+		</options>
+		<romlist archive="khorosho_98">
+			<rom type="file" offset="-1">UD.COM</rom>
+			<rom type="file" offset="-1">UD_98.COM</rom>
+			<rom type="file" offset="0x11">H_00.MDT</rom>
+			<rom type="file" offset="0x12">H_01.MDT</rom>
+			<rom type="file" offset="0x13">H_02.MDT</rom>
+			<rom type="file" offset="0x14">H_03.MDT</rom>
+			<rom type="file" offset="0x15">H_04.MDT</rom>
+			<rom type="shell" offset="0">UD 2m10000e1000</rom>
+			<rom type="shell" offset="0">UD_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010011">H_00.MDT</title>
+			<title code="0x010012">H_01.MDT</title>
+			<title code="0x010013">H_02.MDT</title>
+			<title code="0x010014">H_03.MDT</title>
+			<title code="0x010015">H_04.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Russian Mahjong Horosho (ろしあん マージャン ハラショー!) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+			<option name="clockmul" value="0x04"/>
+		</options>
+		<romlist archive="khorosho_98">
+			<rom type="file" offset="-1">UD.COM</rom>
+			<rom type="file" offset="-1">UD_98.COM</rom>
+			<rom type="file" offset="0x11">H_00.MDT</rom>
+			<rom type="file" offset="0x12">H_01.MDT</rom>
+			<rom type="file" offset="0x13">H_02.MDT</rom>
+			<rom type="file" offset="0x14">H_03.MDT</rom>
+			<rom type="file" offset="0x15">H_04.MDT</rom>
+			<rom type="shell" offset="0">UD 4m10000e1000</rom>
+			<rom type="shell" offset="0">UD_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">H_00.MDT</title>
+			<title code="0x12">H_01.MDT</title>
+			<title code="0x13">H_02.MDT</title>
+			<title code="0x14">H_03.MDT</title>
+			<title code="0x15">H_04.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Russian Mahjong Horosho (ろしあん マージャン ハラショー!) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">apple_pie</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="clockmul" value="0x04"/>
+		</options>
+		<romlist archive="khorosho_98">
+			<rom type="file" offset="-1">UD.COM</rom>
+			<rom type="file" offset="-1">UD_98.COM</rom>
+			<rom type="file" offset="0x11">H_00.MDT</rom>
+			<rom type="file" offset="0x12">H_01.MDT</rom>
+			<rom type="file" offset="0x13">H_02.MDT</rom>
+			<rom type="file" offset="0x14">H_03.MDT</rom>
+			<rom type="file" offset="0x15">H_04.MDT</rom>
+			<rom type="shell" offset="0">UD 4m10000e1000</rom>
+			<rom type="shell" offset="0">UD_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">H_00.MDT</title>
+			<title code="0x12">H_01.MDT</title>
+			<title code="0x13">H_02.MDT</title>
+			<title code="0x14">H_03.MDT</title>
+			<title code="0x15">H_04.MDT</title>
+		</titlelist>
+	</game>
+</gamelist>

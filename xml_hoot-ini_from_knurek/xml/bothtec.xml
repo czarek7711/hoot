@@ -1,0 +1,1533 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //bothtec -->
+	<game>
+		<name>[PC-88] Relics (レリクス)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bothtec</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1000"/>
+			<option name="mdata_size" value="0x4000"/>
+			<option name="mfile_size" value="0x4000"/>
+		</options>
+		<romlist archive="relics">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x5600">PLAYER.COM</rom>
+			<rom type="code" offset="0x8400">SCEND1.COM</rom>
+			<rom type="bgm" offset="0x00">PLAYER.COM</rom>
+			<rom type="bgm" offset="0x01">SCEND1.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Woman</title>
+			<title code="0x01">Smile Again</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Topple Zip (トップルジップ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bothtec</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9e00"/>
+		</options>
+		<romlist archive="topple">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PMAIN.COM</rom>
+			<rom type="bgm" offset="0x00">PLAY01.COM</rom>
+			<rom type="bgm" offset="0x01">PLAY02.COM</rom>
+			<rom type="bgm" offset="0x02">PLAY03.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM 1</title>
+			<title code="0x01">BGM 2</title>
+			<title code="0x02">BGM 3</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Legend of Galactic Heroes (銀河英雄伝説)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bothtec</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5c00"/>
+		</options>
+		<romlist archive="gineiden">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0480">AMAIN.COM</rom>
+			<rom type="code" offset="0x0100">DEMO</rom>
+			<rom type="bgm"  offset="0x01">BGM_0.COM</rom>
+			<rom type="bgm"  offset="0x02">BGM_1.COM</rom>
+			<rom type="bgm"  offset="0x03">BGM_2.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Bolero (Opening) (ボレロ) (オープニング)</title>
+			<title code="0x01">Bolero ボレロ</title>
+			<title code="0x02">Hero (英  雄)</title>
+			<title code="0x03">Sadness (ひそう)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Legend of Galactic Heroes Power Up (銀河英雄伝説 パワーアップ＆シナリオ集)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bothtec</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5a00"/>
+			<option name="mdata_size" value="0x0600"/>
+			<option name="vdata_addr" value="0xc000"/>
+		</options>
+		<romlist archive="gineips">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0480">AMAIN.COM</rom>
+			<rom type="bgm"   offset="0x00">1_BGM_0.COM</rom>
+			<rom type="voice" offset="0x00">1_TONE.COM</rom>
+			<rom type="bgm"   offset="0x01">1_BGM_1.COM</rom>
+			<rom type="voice" offset="0x01">1_TONE.COM</rom>
+			<rom type="bgm"   offset="0x02">1_BGM_2.COM</rom>
+			<rom type="voice" offset="0x02">1_TONE.COM</rom>
+			<rom type="bgm"   offset="0x03">1_BGM_3.COM</rom>
+			<rom type="voice" offset="0x03">1_TONE.COM</rom>
+			<rom type="bgm"   offset="0x04">1_BGM_4.COM</rom>
+			<rom type="voice" offset="0x04">1_TONE.COM</rom>
+			<rom type="bgm"   offset="0x05">2_BGM_0.COM</rom>
+			<rom type="voice" offset="0x05">2_TONE.COM</rom>
+			<rom type="bgm"   offset="0x06">2_BGM_1.COM</rom>
+			<rom type="voice" offset="0x06">2_TONE.COM</rom>
+			<rom type="bgm"   offset="0x07">2_BGM_2.COM</rom>
+			<rom type="voice" offset="0x07">2_TONE.COM</rom>
+			<rom type="bgm"   offset="0x08">2_BGM_3.COM</rom>
+			<rom type="voice" offset="0x08">2_TONE.COM</rom>
+			<rom type="bgm"   offset="0x09">2_BGM_4.COM</rom>
+			<rom type="voice" offset="0x09">2_TONE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000000">[Disk-1] Bolero (ボレロ)</title>
+			<title code="0x00000001">[Disk-1] Hero (英  雄)</title>
+			<title code="0x00000002">[Disk-1] Sadness (ひそう)</title>
+			<title code="0x01000003">[Disk-1] Emperor (皇  帝)</title>
+			<title code="0x01000004">[Disk-1] Lohengrin (ローエングリン)</title>
+			<title code="0x00000005">[Disk-2] Bolero (ボレロ)</title>
+			<title code="0x00000006">[Disk-2] Hero (英  雄)</title>
+			<title code="0x00000007">[Disk-2] Sadness (ひそう)</title>
+			<title code="0x01000008">[Disk-2] Emperor (皇  帝)</title>
+			<title code="0x01000009">[Disk-2] Lohengrin (ローエングリン)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Legend of Galactic Heroes 2 (銀河英雄伝説Ⅱ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bothtec</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6390"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="vdata_addr" value="0x0400"/>
+			<option name="vdata_size" value="0x2000"/>
+			<option name="vfile_size" value="0x2000"/>
+			<option name="mdata_num"  value="0x60"/>
+		</options>
+		<romlist archive="ginei2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0400">ITEST.COM</rom>
+			<rom type="code" offset="0xf000">FMDATA.COM</rom>
+			<rom type="code" offset="0xf200">E_FMDATA.COM</rom>
+			<rom type="bgm"   offset="0x00">BGM_06F.COM</rom>
+			<rom type="bgm"   offset="0x01">BGM_07F.COM</rom>
+			<rom type="bgm"   offset="0x02">BGM_08F.COM</rom>
+			<rom type="bgm"   offset="0x03">BGM_09F.COM</rom>
+			<rom type="bgm"   offset="0x04">BGM_0AF.COM</rom>
+			<rom type="bgm"   offset="0x05">BGM_0BF.COM</rom>
+			<rom type="bgm"   offset="0x06">BGM_0CF.COM</rom>
+			<rom type="bgm"   offset="0x07">BGM_0DF.COM</rom>
+			<rom type="bgm"   offset="0x08">BGM_0EF.COM</rom>
+			<rom type="bgm"   offset="0x09">BGM_10F.COM</rom>
+			<rom type="bgm"   offset="0x0a">BGM_11F.COM</rom>
+			<rom type="bgm"   offset="0x20">GEDS01F.COM</rom>
+			<rom type="voice" offset="0x20">OPENING0.COM</rom>
+			<rom type="bgm"   offset="0x21">GEDS02F.COM</rom>
+			<rom type="voice" offset="0x20">OPENING0.COM</rom>
+			<rom type="bgm"   offset="0x22">GEDS03F.COM</rom>
+			<rom type="voice" offset="0x20">OPENING0.COM</rom>
+			<rom type="bgm"   offset="0x23">GEDS04F.COM</rom>
+			<rom type="voice" offset="0x20">OPENING0.COM</rom>
+			<rom type="bgm"   offset="0x24">GEDS05F.COM</rom>
+			<rom type="voice" offset="0x20">OPENING0.COM</rom>
+			<rom type="bgm"   offset="0x25">GEDS06F.COM</rom>
+			<rom type="voice" offset="0x20">OPENING0.COM</rom>
+			<rom type="bgm"   offset="0x40">E_GEDS00F.COM</rom>
+			<rom type="voice" offset="0x40">OPENING3.COM</rom>
+			<rom type="bgm"   offset="0x41">E_GEDS01F.COM</rom>
+			<rom type="voice" offset="0x41">OPENING3.COM</rom>
+			<rom type="bgm"   offset="0x42">E_GEDS02F.COM</rom>
+			<rom type="voice" offset="0x42">OPENING3.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x20">Opening 1 (オープニング1)</title>
+			<title code="0x21">Opening 2 (オープニング2)</title>
+			<title code="0x22">Opening 3 (オープニング3)</title>
+			<title code="0x23">Opening 4 (オープニング4)</title>
+			<title code="0x24">Opening 5 (オープニング5)</title>
+			<title code="0x25">Pre-Game Menu (初期メニュー)</title>
+			<title code="0x00">Beyond the Battle (戦いの彼方へ)</title>
+			<title code="0x01">Gotterdammerung (神々の黄昏)</title>
+			<title code="0x02">Battle from the Silence (沈黙からの戦い)</title>
+			<title code="0x03">The Voyage Far Away (遥かなる航海)</title>
+			<title code="0x04">The Warriors' Destiny (戦士達の宿命)</title>
+			<title code="0x05">A Brief Repose (つかのまの休息)</title>
+			<title code="0x06">Cerebral Solution (知性的なる解決)</title>
+			<title code="0x07">Battle on the Front Lines (最前線の攻防)</title>
+			<title code="0x08">The March to Victory (勝利への進軍)</title>
+			<title code="0x09">The Hero's Decision (英雄の決断)</title>
+			<title code="0x0a">All Ships Charge! (全艦突撃せよ)</title>
+			<title code="0x40">Ending 1 (エンディング1)</title>
+			<title code="0x41">Ending 2 (エンディング2)</title>
+			<title code="0x42">Ending 3 (エンディング3)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Legend of Galactic Heroes 2 DX kit (銀河英雄伝説ⅡDX)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bothtec</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x65a0"/>
+		</options>
+		<romlist archive="ginei2dx">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0400">GINV31.COM</rom>
+			<rom type="bgm" offset="0x00">BGM_06F.COM</rom>
+			<rom type="bgm" offset="0x01">BGM_07F.COM</rom>
+			<rom type="bgm" offset="0x02">BGM_08F.COM</rom>
+			<rom type="bgm" offset="0x03">BGM_09F.COM</rom>
+			<rom type="bgm" offset="0x04">BGM_0BF.COM</rom>
+			<rom type="bgm" offset="0x05">BGM_0CF.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Bolero (ボレロ)</title>
+			<title code="0x01">Hero (英雄)</title>
+			<title code="0x02">Beyond the Battle (戦いの彼方へ)</title>
+			<title code="0x03">March to Victory (勝利への進軍)</title>
+			<title code="0x04">The Hero's Decision (英雄の決断)</title>
+			<title code="0x05">All Ships Charge! (全艦突撃せよ)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] The Scheme (ザ・スキーム) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">bothtec</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+			<option name="use_rtc"  value="0x01"/>
+			<option name="clock_mul" value="0x00"/>
+		</options>
+		<romlist archive="scheme">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8350">INT2</rom>
+			<rom type="code" offset="0xc000">MS0A</rom>
+			<rom type="code" offset="0xed00">VEFC</rom>
+			<rom type="code" offset="0xef00">ADR_</rom>
+			<rom type="code" offset="0xf000">MUS2</rom>
+			<rom type="adpcm" offset="0x00000">V_A_</rom>
+			<rom type="adpcm" offset="0x00d78">V_B_</rom>
+			<rom type="adpcm" offset="0x01b48">V_C_</rom>
+			<rom type="adpcm" offset="0x027c8">V_D_</rom>
+			<rom type="adpcm" offset="0x02bc0">V_E_</rom>
+			<rom type="adpcm" offset="0x030b8">V_F_</rom>
+			<rom type="adpcm" offset="0x03408">V_G_</rom>
+			<rom type="adpcm" offset="0x04648">V_H_</rom>
+			<rom type="adpcm" offset="0x04fd0">V_I_</rom>
+			<rom type="adpcm" offset="0x05c18">V_J_</rom>
+			<rom type="adpcm" offset="0x063d0">V_K_</rom>
+			<rom type="adpcm" offset="0x06fc8">V_L_</rom>
+			<rom type="adpcm" offset="0x2bc28">V_M_</rom>
+			<rom type="adpcm" offset="0x1fd18">V_N_</rom>
+			<rom type="adpcm" offset="0x0d858">V_O_</rom>
+			<rom type="adpcm" offset="0x3e220">V_P_</rom>
+			<rom type="adpcm" offset="0x0efa8">V_Q_</rom>
+			<rom type="adpcm" offset="0x0f6d0">V_R_</rom>
+			<rom type="adpcm" offset="0x10028">V_S_</rom>
+			<rom type="adpcm" offset="0x10d98">V_T_</rom>
+			<rom type="adpcm" offset="0x13dd8">V_U_</rom>
+			<rom type="adpcm" offset="0x14840">V_V_</rom>
+			<rom type="adpcm" offset="0x15340">V_W_</rom>
+			<rom type="adpcm" offset="0x15b90">V_X_</rom>
+			<rom type="adpcm" offset="0x19560">V_Y_</rom>
+			<rom type="adpcm" offset="0x19ba0">V_Z_</rom>
+			<rom type="adpcm" offset="0x1a1a0">V_0_</rom>
+			<rom type="adpcm" offset="0x1a648">V_1_</rom>
+			<rom type="adpcm" offset="0x1ae20">V_2_</rom>
+			<rom type="bgm" offset="0x01">MS01</rom>
+			<rom type="bgm" offset="0x02">MS02</rom>
+			<rom type="bgm" offset="0x03">MS03</rom>
+			<rom type="bgm" offset="0x04">MS04</rom>
+			<rom type="bgm" offset="0x05">MS05</rom>
+			<rom type="bgm" offset="0x06">MS06</rom>
+			<rom type="bgm" offset="0x07">MS07</rom>
+			<rom type="bgm" offset="0x08">MS08</rom>
+			<rom type="bgm" offset="0x09">MS09</rom>
+			<rom type="bgm" offset="0x0a">MS0A</rom>
+			<rom type="bgm" offset="0x0b">MS0B</rom>
+			<rom type="bgm" offset="0x0c">MS0C</rom>
+			<rom type="bgm" offset="0x0d">MS0G</rom>
+			<rom type="bgm" offset="0x0e">MS0X</rom>
+			<rom type="bgm" offset="0x0f">MS0Y</rom>
+			<rom type="bgm" offset="0x10">MS0_</rom>
+			<rom type="bgm" offset="0x11">MS0;</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000000b">Into the Lair</title>
+			<title code="0x0000000a">Death World</title>
+			<title code="0x00000001">I'll Save You All My Justice</title>
+			<title code="0x00000003">Coward!</title>
+			<title code="0x00000009">Ha! Ha!</title>
+			<title code="0x00000007">Perpetual Dark</title>
+			<title code="0x00000002">Shout Down</title>
+			<title code="0x00000004">Thousand Eyes</title>
+			<title code="0x00000006">Nuclear Power</title>
+			<title code="0x00000011">Master of the Shooting</title>
+			<title code="0x00000008">Angry Fist</title>
+			<title code="0x00000005">The Force Rotted Away</title>
+			<title code="0x00000010">The Emperor Was Stepped in Vice</title>
+			<title code="0x0000000e">Hardy is the Strongest</title>
+			<title code="0x0000000f">Challenging Tomorrow</title>
+			<title code="0x0000000c">Game Over</title>
+			<title code="0x0000000d">Theme of the Gigaikotsu</title>
+			<title code="0x010000ff">SFX #01</title>
+			<title code="0x020000ff">SFX #02</title>
+			<title code="0x030000ff">SFX #03</title>
+			<title code="0x040000ff">SFX #04</title>
+			<title code="0x050000ff">SFX #05</title>
+			<title code="0x060000ff">SFX #06</title>
+			<title code="0x070000ff">SFX #07</title>
+			<title code="0x080000ff">SFX #08</title>
+			<title code="0x090000ff">SFX #09</title>
+			<title code="0x0a0000ff">SFX #0A</title>
+			<title code="0x0b0000ff">SFX #0B</title>
+			<title code="0x0c0000ff">SFX #0C</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] The Scheme (ザ・スキーム) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bothtec</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+			<option name="use_rtc"   value="0x01"/>
+			<option name="clock_mul" value="0x00"/>
+		</options>
+		<romlist archive="scheme">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8350">INT_</rom>
+			<rom type="code" offset="0xf000">MUS_</rom>
+			<rom type="bgm" offset="0x01">MD01</rom>
+			<rom type="bgm" offset="0x02">MD02</rom>
+			<rom type="bgm" offset="0x03">MD03</rom>
+			<rom type="bgm" offset="0x04">MD04</rom>
+			<rom type="bgm" offset="0x05">MD05</rom>
+			<rom type="bgm" offset="0x06">MD06</rom>
+			<rom type="bgm" offset="0x07">MD07</rom>
+			<rom type="bgm" offset="0x08">EFC_</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000001">Death World</title>
+			<title code="0x01000001">Promise Tomorrow!</title>
+			<title code="0x02000001">As Time Goes By (時の流れるままに)</title>
+			<title code="0x00000002">Dead-end Crisis</title>
+			<title code="0x01000002">The Ambition of Hard</title>
+			<title code="0x00000003">The Scheme</title>
+			<title code="0x01000003">Master of the Underground (地底の覇者)</title>
+			<title code="0x00000004">The Elegy of Battle</title>
+			<title code="0x01000004">Abandoned Mine</title>
+			<title code="0x02000004">A Leaden Sky</title>
+			<title code="0x00000005">Monster Carnival</title>
+			<title code="0x01000005">Graveyard (墓場)</title>
+			<title code="0x00000006">Mars the Valiant (勇者マルス)</title>
+			<title code="0x01000006">The Cursed Ice Cave (呪われた氷窟)</title>
+			<title code="0x00000007">Strange Field</title>
+			<title code="0x01000007">The Force Rotted Away</title>
+			<title code="0x00000008">SFX Switch</title>
+			<title code="0x010000ff">SFX #01</title>
+			<title code="0x020000ff">SFX #02</title>
+			<title code="0x030000ff">SFX #03</title>
+			<title code="0x040000ff">SFX #04</title>
+			<title code="0x050000ff">SFX #05</title>
+			<title code="0x060000ff">SFX #06</title>
+			<title code="0x070000ff">SFX #07</title>
+			<title code="0x080000ff">SFX #08</title>
+			<title code="0x090000ff">SFX #09</title>
+			<title code="0x0a0000ff">SFX #0A</title>
+			<title code="0x0b0000ff">SFX #0B</title>
+			<title code="0x0c0000ff">SFX #0C</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] The Scheme 80 Tunes Mode (ザ・スキーム 80曲ミュージックモード)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bothtec</driveralias>
+		<options>
+			<option name="mfile_size" value="0x3000"/>
+			<option name="vdata_addr" value="0x3000"/>
+		</options>
+		<romlist archive="scheme">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0xd000">DRV_</rom>
+			<rom type="bgm"   offset="0x00">XX00</rom>
+			<rom type="voice" offset="0x00">YY00</rom>
+			<rom type="bgm"   offset="0x01">XX01</rom>
+			<rom type="voice" offset="0x01">YY01</rom>
+			<rom type="bgm"   offset="0x02">XX02</rom>
+			<rom type="voice" offset="0x02">YY02</rom>
+			<rom type="bgm"   offset="0x03">XX03</rom>
+			<rom type="voice" offset="0x03">YY03</rom>
+			<rom type="bgm"   offset="0x04">XX04</rom>
+			<rom type="voice" offset="0x04">YY04</rom>
+			<rom type="bgm"   offset="0x05">XX05</rom>
+			<rom type="voice" offset="0x05">YY05</rom>
+			<rom type="bgm"   offset="0x06">XX06</rom>
+			<rom type="voice" offset="0x06">YY06</rom>
+			<rom type="bgm"   offset="0x07">XX07</rom>
+			<rom type="voice" offset="0x07">YY07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">Box Express Flying in the Sky</title>
+			<title code="0x00090000">Santa Train</title>
+			<title code="0x000c0000">Cross Over Gate</title>
+			<title code="0x00100000">Morning Star</title>
+			<title code="0x00130000">バイクで去って行く中国の人</title>
+			<title code="0x00150000">お寺だ、おどれ</title>
+			<title code="0x00180000">開発ROOMは謎だらけ</title>
+			<title code="0x001a0000">みゅー</title>
+			<title code="0x001c0000">街の人はねてるのに</title>
+			<title code="0x001e0000">One Way</title>
+			<title code="0x00000001">林のテーマ</title>
+			<title code="0x00050001">Deep in Grief</title>
+			<title code="0x00070001">名人が町にやってきた</title>
+			<title code="0x000a0001">神たまのすきな日ようび</title>
+			<title code="0x00100001">アジアの街 I</title>
+			<title code="0x00140001">Pom Pom Pom</title>
+			<title code="0x00160001">Oriental Gale</title>
+			<title code="0x00180001">雄大なのは空だけじゃないよ</title>
+			<title code="0x001a0001">Sunrise of the Zoujyouzi Temple</title>
+			<title code="0x001c0001">Monkeyまわし</title>
+			<title code="0x00000002">うっかりエジプト</title>
+			<title code="0x00020002">ギガイコツのテーマ</title>
+			<title code="0x00040002">アラビック ヤマト</title>
+			<title code="0x00070002">Sunset of the Zoujyouzi Temple</title>
+			<title code="0x000a0002">飛び出せやむちん</title>
+			<title code="0x000c0002">走れやむちん</title>
+			<title code="0x000f0002">Voice of Ghost</title>
+			<title code="0x00110002">ゴーゴー カミタマー</title>
+			<title code="0x00160002">アジアの街 II</title>
+			<title code="0x00190002">ローゼンの唄</title>
+			<title code="0x00000003">やっことかめども</title>
+			<title code="0x00030003">Amazing Disk Theme</title>
+			<title code="0x00050003">オニタマ カミタマ すごいのね</title>
+			<title code="0x00090003">What Humdrum Life</title>
+			<title code="0x000f0003">Amazing Silent</title>
+			<title code="0x00100003">ふねにのりおくれた！</title>
+			<title code="0x00140003">乱闘パーティー</title>
+			<title code="0x00170003">サンタがきましゅ</title>
+			<title code="0x001b0003">何故なの神たま</title>
+			<title code="0x00220003">美しいひびき</title>
+			<title code="0x00000004">夜明けのマンホール</title>
+			<title code="0x00020004">Fantastic Dreaming</title>
+			<title code="0x00060004">Jumpperのテーマ</title>
+			<title code="0x000a0004">悪魔のフルート</title>
+			<title code="0x000d0004">明日にかけるJumpper</title>
+			<title code="0x00100004">Reliable Thing</title>
+			<title code="0x00140004">雪がつもった朝</title>
+			<title code="0x00170004">スケルトンの左足</title>
+			<title code="0x001b0004">Haruma Gameのテーマ</title>
+			<title code="0x001f0004">水の止まらないホース</title>
+			<title code="0x00000005">帰りの坂道には‥‥</title>
+			<title code="0x00030005">Sea Storm</title>
+			<title code="0x00060005">One Night in Town</title>
+			<title code="0x00090005">うれしいでしゅ</title>
+			<title code="0x000b0005">宴のあとに</title>
+			<title code="0x000d0005">Arabic Numerals</title>
+			<title code="0x00130005">あなたにハートブレイク</title>
+			<title code="0x00160005">最後の大きな壁</title>
+			<title code="0x001e0005">Test 1</title>
+			<title code="0x00220005">機関車やえもん</title>
+			<title code="0x00000006">空中給油</title>
+			<title code="0x00040006">うん、そう。それでしゅ。</title>
+			<title code="0x00080006">100円ディスクのテーマ (98版)</title>
+			<title code="0x000d0006">もうねたいでしゅ</title>
+			<title code="0x00180006">意表をつかれたでしゅ</title>
+			<title code="0x001b0006">Yearend Festival</title>
+			<title code="0x001d0006">悪魔のささやき</title>
+			<title code="0x001e0006">“しゃのでしゅ”アレンジバージョン</title>
+			<title code="0x00220006">のどじまんにやってきたおじさんのテーマ</title>
+			<title code="0x00250006">“夜明けのマンホール”アレンジバージョン</title>
+			<title code="0x00000007">お祭りの用意</title>
+			<title code="0x00040007">Reflection of the Temple</title>
+			<title code="0x00070007">彩蒋花</title>
+			<title code="0x00090007">Sound Storm</title>
+			<title code="0x000b0007">Final Dangerous 2</title>
+			<title code="0x00120007">ろーはい</title>
+			<title code="0x00140007">With a Splash</title>
+			<title code="0x00160007">犬に吠えられたでしゅ</title>
+			<title code="0x001e0007">Devos Endless Night</title>
+			<title code="0x00200007">勝手にギガイコツ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Relics (レリクス) (OPN)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="bootcs" value="0x00c0"/>
+			<option name="bootip" value="0xdd00"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="fm_mix"   value="10"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="relics_98">
+			<rom type="code" offset="0x00c00">PROG</rom>
+			<rom type="code" offset="0x0e900">relics98.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Woman</title>
+			<title code="0x01">Smile Again</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Relics (レリクス) (AMD-98)</name>
+		<driver type="amd98">pc98vx</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="bootcs" value="0x00c0"/>
+			<option name="bootip" value="0xdd00"/>
+			<option name="funcvect" value="0x7f"/>
+		</options>
+		<romlist archive="relics_98">
+			<rom type="code" offset="0x00c00">PROG</rom>
+			<rom type="code" offset="0x0e900">relics98.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Woman</title> 
+			<title code="0x01">Smile Again</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 (銀河英雄伝説IV) (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ginei4_98">
+			<rom type="file" offset="-1">synup_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.A</rom>
+			<rom type="file" offset="0x12">BGM402.A</rom>
+			<rom type="file" offset="0x13">BGM403.A</rom>
+			<rom type="file" offset="0x14">BGM404.A</rom>
+			<rom type="file" offset="0x15">BGM405.A</rom>
+			<rom type="file" offset="0x16">BGM406.A</rom>
+			<rom type="file" offset="0x17">BGM407.A</rom>
+			<rom type="file" offset="0x18">BGM408.A</rom>
+			<rom type="file" offset="0x19">BGM409.A</rom>
+			<rom type="file" offset="0x1a">BGM410.A</rom>
+			<rom type="file" offset="0x1b">BGM410C.A</rom>
+			<rom type="file" offset="0x1c">BGM411.A</rom>
+			<rom type="file" offset="0x1d">BGM412.A</rom>
+			<rom type="file" offset="0x1e">BGM413.A</rom>
+			<rom type="file" offset="0x1f">BGM414.A</rom>
+			<rom type="file" offset="0x20">BGM415.A</rom>
+			<rom type="file" offset="0x21">BGM416.A</rom>
+			<rom type="file" offset="0x22">BGM417.A</rom>
+			<rom type="file" offset="0x23">BGM418.A</rom>
+			<rom type="file" offset="0x24">BGM419.A</rom>
+			<rom type="file" offset="0x25">NEW_F.A</rom>
+			<rom type="file" offset="0x26">VAL3E.A</rom>
+			<rom type="file" offset="0x27">ZENKAN.A</rom>
+			<rom type="shell" offset="0">synups</rom>
+			<rom type="shell" offset="0">synplay</rom>
+			<rom type="shell" offset="0">synup_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x26">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x25">新世界より(戦闘バージョン)</title>
+			<title code="0x27">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.A</title>
+			<title code="0x1b">BGM410C.A</title>
+			<title code="0x22">BGM417.A</title>
+			<title code="0x23">BGM418.A</title>
+			<title code="0x24">BGM419.A</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 (銀河英雄伝説IV) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ginei4_98">
+			<rom type="file" offset="-1">synup_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.N</rom>
+			<rom type="file" offset="0x12">BGM402.N</rom>
+			<rom type="file" offset="0x13">BGM403.N</rom>
+			<rom type="file" offset="0x14">BGM404.N</rom>
+			<rom type="file" offset="0x15">BGM405.N</rom>
+			<rom type="file" offset="0x16">BGM406.N</rom>
+			<rom type="file" offset="0x17">BGM407.N</rom>
+			<rom type="file" offset="0x18">BGM408.N</rom>
+			<rom type="file" offset="0x19">BGM409.N</rom>
+			<rom type="file" offset="0x1a">BGM410.N</rom>
+			<rom type="file" offset="0x1b">BGM410C.N</rom>
+			<rom type="file" offset="0x1c">BGM411.N</rom>
+			<rom type="file" offset="0x1d">BGM412.N</rom>
+			<rom type="file" offset="0x1e">BGM413.N</rom>
+			<rom type="file" offset="0x1f">BGM414.N</rom>
+			<rom type="file" offset="0x20">BGM415.N</rom>
+			<rom type="file" offset="0x21">BGM416.N</rom>
+			<rom type="file" offset="0x22">BGM417.N</rom>
+			<rom type="file" offset="0x23">BGM418.N</rom>
+			<rom type="file" offset="0x24">BGM419.N</rom>
+			<rom type="file" offset="0x25">NEW_F.N</rom>
+			<rom type="file" offset="0x26">VAL3E.N</rom>
+			<rom type="file" offset="0x27">ZENKAN.N</rom>
+			<rom type="shell" offset="0">synups</rom>
+			<rom type="shell" offset="0">synplay</rom>
+			<rom type="shell" offset="0">synup_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x26">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x25">新世界より(戦闘バージョン)</title>
+			<title code="0x27">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.N</title>
+			<title code="0x1b">BGM410C.N</title>
+			<title code="0x22">BGM417.N</title>
+			<title code="0x23">BGM418.N</title>
+			<title code="0x24">BGM419.N</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 (銀河英雄伝説IV) (MT-32)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="ginei4_98">
+			<rom type="file" offset="-1">synup_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.L</rom>
+			<rom type="file" offset="0x12">BGM402.L</rom>
+			<rom type="file" offset="0x13">BGM403.L</rom>
+			<rom type="file" offset="0x14">BGM404.L</rom>
+			<rom type="file" offset="0x15">BGM405.L</rom>
+			<rom type="file" offset="0x16">BGM406.L</rom>
+			<rom type="file" offset="0x17">BGM407.L</rom>
+			<rom type="file" offset="0x18">BGM408.L</rom>
+			<rom type="file" offset="0x19">BGM409.L</rom>
+			<rom type="file" offset="0x1a">BGM410.L</rom>
+			<rom type="file" offset="0x1b">BGM410C.L</rom>
+			<rom type="file" offset="0x1c">BGM411.L</rom>
+			<rom type="file" offset="0x1d">BGM412.L</rom>
+			<rom type="file" offset="0x1e">BGM413.L</rom>
+			<rom type="file" offset="0x1f">BGM414.L</rom>
+			<rom type="file" offset="0x20">BGM415.L</rom>
+			<rom type="file" offset="0x21">BGM416.L</rom>
+			<rom type="file" offset="0x22">BGM417.L</rom>
+			<rom type="file" offset="0x23">BGM418.L</rom>
+			<rom type="file" offset="0x24">BGM419.L</rom>
+			<rom type="file" offset="0x25">NEW_F.L</rom>
+			<rom type="file" offset="0x26">VAL3E.L</rom>
+			<rom type="file" offset="0x27">ZENKAN.L</rom>
+			<rom type="shell" offset="0">synups</rom>
+			<rom type="shell" offset="0">synplay</rom>
+			<rom type="shell" offset="0">synup_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x26">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x25">新世界より(戦闘バージョン)</title>
+			<title code="0x27">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.L</title>
+			<title code="0x1b">BGM410C.L</title>
+			<title code="0x22">BGM417.L</title>
+			<title code="0x23">BGM418.L</title>
+			<title code="0x24">BGM419.L</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 (銀河英雄伝説IV) (MT-32 EMU)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="ginei4_98">
+			<rom type="file" offset="-1">synup_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.L</rom>
+			<rom type="file" offset="0x12">BGM402.L</rom>
+			<rom type="file" offset="0x13">BGM403.L</rom>
+			<rom type="file" offset="0x14">BGM404.L</rom>
+			<rom type="file" offset="0x15">BGM405.L</rom>
+			<rom type="file" offset="0x16">BGM406.L</rom>
+			<rom type="file" offset="0x17">BGM407.L</rom>
+			<rom type="file" offset="0x18">BGM408.L</rom>
+			<rom type="file" offset="0x19">BGM409.L</rom>
+			<rom type="file" offset="0x1a">BGM410.L</rom>
+			<rom type="file" offset="0x1b">BGM410C.L</rom>
+			<rom type="file" offset="0x1c">BGM411.L</rom>
+			<rom type="file" offset="0x1d">BGM412.L</rom>
+			<rom type="file" offset="0x1e">BGM413.L</rom>
+			<rom type="file" offset="0x1f">BGM414.L</rom>
+			<rom type="file" offset="0x20">BGM415.L</rom>
+			<rom type="file" offset="0x21">BGM416.L</rom>
+			<rom type="file" offset="0x22">BGM417.L</rom>
+			<rom type="file" offset="0x23">BGM418.L</rom>
+			<rom type="file" offset="0x24">BGM419.L</rom>
+			<rom type="file" offset="0x25">NEW_F.L</rom>
+			<rom type="file" offset="0x26">VAL3E.L</rom>
+			<rom type="file" offset="0x27">ZENKAN.L</rom>
+			<rom type="shell" offset="0">synups</rom>
+			<rom type="shell" offset="0">synplay</rom>
+			<rom type="shell" offset="0">synup_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x26">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x25">新世界より(戦闘バージョン)</title>
+			<title code="0x27">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.L</title>
+			<title code="0x1b">BGM410C.L</title>
+			<title code="0x22">BGM417.L</title>
+			<title code="0x23">BGM418.L</title>
+			<title code="0x24">BGM419.L</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 (銀河英雄伝説IV) (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="ginei4_98">
+			<rom type="file" offset="-1">synup_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.G</rom>
+			<rom type="file" offset="0x12">BGM402.G</rom>
+			<rom type="file" offset="0x13">BGM403.G</rom>
+			<rom type="file" offset="0x14">BGM404.G</rom>
+			<rom type="file" offset="0x15">BGM405.G</rom>
+			<rom type="file" offset="0x16">BGM406.G</rom>
+			<rom type="file" offset="0x17">BGM407.G</rom>
+			<rom type="file" offset="0x18">BGM408.G</rom>
+			<rom type="file" offset="0x19">BGM409.G</rom>
+			<rom type="file" offset="0x1a">BGM410.G</rom>
+			<rom type="file" offset="0x1b">BGM410C.G</rom>
+			<rom type="file" offset="0x1c">BGM411.G</rom>
+			<rom type="file" offset="0x1d">BGM412.G</rom>
+			<rom type="file" offset="0x1e">BGM413.G</rom>
+			<rom type="file" offset="0x1f">BGM414.G</rom>
+			<rom type="file" offset="0x20">BGM415.G</rom>
+			<rom type="file" offset="0x21">BGM416.G</rom>
+			<rom type="file" offset="0x22">BGM417.G</rom>
+			<rom type="file" offset="0x23">BGM418.G</rom>
+			<rom type="file" offset="0x24">BGM419.G</rom>
+			<rom type="file" offset="0x25">NEW_F.G</rom>
+			<rom type="file" offset="0x26">VAL3E.G</rom>
+			<rom type="file" offset="0x27">ZENKAN.G</rom>
+			<rom type="shell" offset="0">synups</rom>
+			<rom type="shell" offset="0">synplay</rom>
+			<rom type="shell" offset="0">synup_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x26">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x25">新世界より(戦闘バージョン)</title>
+			<title code="0x27">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.G</title>
+			<title code="0x1b">BGM410C.G</title>
+			<title code="0x22">BGM417.G</title>
+			<title code="0x23">BGM418.G</title>
+			<title code="0x24">BGM419.G</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 (銀河英雄伝説IV) (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="ginei4_98">
+			<rom type="file" offset="-1">synup_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.G</rom>
+			<rom type="file" offset="0x12">BGM402.G</rom>
+			<rom type="file" offset="0x13">BGM403.G</rom>
+			<rom type="file" offset="0x14">BGM404.G</rom>
+			<rom type="file" offset="0x15">BGM405.G</rom>
+			<rom type="file" offset="0x16">BGM406.G</rom>
+			<rom type="file" offset="0x17">BGM407.G</rom>
+			<rom type="file" offset="0x18">BGM408.G</rom>
+			<rom type="file" offset="0x19">BGM409.G</rom>
+			<rom type="file" offset="0x1a">BGM410.G</rom>
+			<rom type="file" offset="0x1b">BGM410C.G</rom>
+			<rom type="file" offset="0x1c">BGM411.G</rom>
+			<rom type="file" offset="0x1d">BGM412.G</rom>
+			<rom type="file" offset="0x1e">BGM413.G</rom>
+			<rom type="file" offset="0x1f">BGM414.G</rom>
+			<rom type="file" offset="0x20">BGM415.G</rom>
+			<rom type="file" offset="0x21">BGM416.G</rom>
+			<rom type="file" offset="0x22">BGM417.G</rom>
+			<rom type="file" offset="0x23">BGM418.G</rom>
+			<rom type="file" offset="0x24">BGM419.G</rom>
+			<rom type="file" offset="0x25">NEW_F.G</rom>
+			<rom type="file" offset="0x26">VAL3E.G</rom>
+			<rom type="file" offset="0x27">ZENKAN.G</rom>
+			<rom type="shell" offset="0">synups</rom>
+			<rom type="shell" offset="0">synplay</rom>
+			<rom type="shell" offset="0">synup_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x26">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x25">新世界より(戦闘バージョン)</title>
+			<title code="0x27">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.G</title>
+			<title code="0x1b">BGM410C.G</title>
+			<title code="0x22">BGM417.G</title>
+			<title code="0x23">BGM418.G</title>
+			<title code="0x24">BGM419.G</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 EX (銀河英雄伝説IV EX) (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ginei4ex_98">
+			<rom type="file" offset="-1">synu2_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS2.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY2.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.A</rom>
+			<rom type="file" offset="0x12">BGM402.A</rom>
+			<rom type="file" offset="0x13">BGM403.A</rom>
+			<rom type="file" offset="0x14">BGM404.A</rom>
+			<rom type="file" offset="0x15">BGM405.A</rom>
+			<rom type="file" offset="0x16">BGM406.A</rom>
+			<rom type="file" offset="0x17">BGM407.A</rom>
+			<rom type="file" offset="0x18">BGM408.A</rom>
+			<rom type="file" offset="0x19">BGM409.A</rom>
+			<rom type="file" offset="0x1a">BGM410.A</rom>
+			<rom type="file" offset="0x1b">BGM410C.A</rom>
+			<rom type="file" offset="0x1c">BGM411.A</rom>
+			<rom type="file" offset="0x1d">BGM412.A</rom>
+			<rom type="file" offset="0x1e">BGM413.A</rom>
+			<rom type="file" offset="0x1f">BGM414.A</rom>
+			<rom type="file" offset="0x20">BGM415.A</rom>
+			<rom type="file" offset="0x21">BGM416.A</rom>
+			<rom type="file" offset="0x22">BGM417.A</rom>
+			<rom type="file" offset="0x23">BGM418.A</rom>
+			<rom type="file" offset="0x24">BGM419.A</rom>
+			<rom type="file" offset="0x25">BGM431.A</rom>
+			<rom type="file" offset="0x26">BGM432.A</rom>
+			<rom type="file" offset="0x27">BGM433.A</rom>
+			<rom type="file" offset="0x28">BGM434.A</rom>
+			<rom type="file" offset="0x29">BGM435.A</rom>
+			<rom type="file" offset="0x2a">BGM436.A</rom>
+			<rom type="file" offset="0x2b">NEW_F.A</rom>
+			<rom type="file" offset="0x2c">VAL3E.A</rom>
+			<rom type="file" offset="0x2d">ZENKAN.A</rom>
+			<rom type="file" offset="0x2e">FIGHT4.A</rom>
+			<rom type="shell" offset="0">synups2</rom>
+			<rom type="shell" offset="0">synplay2</rom>
+			<rom type="shell" offset="0">synu2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">BGM418.A</title>
+			<title code="0x29">BGM435.A</title>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x2c">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x25">悲愴</title>
+			<title code="0x26">ヴォカリーズ</title>
+			<title code="0x27">自由への脱出</title>
+			<title code="0x28">美しき謀略</title>
+			<title code="0x2a">勝利への進軍</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x2b">新世界より(戦闘バージョン)</title>
+			<title code="0x2d">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x2e">英雄の決断(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.A</title>
+			<title code="0x1b">BGM410C.A</title>
+			<title code="0x22">BGM417.A</title>
+			<title code="0x24">BGM419.A</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 EX (銀河英雄伝説IV EX) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ginei4ex_98">
+			<rom type="file" offset="-1">synu2_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS2.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY2.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.N</rom>
+			<rom type="file" offset="0x12">BGM402.N</rom>
+			<rom type="file" offset="0x13">BGM403.N</rom>
+			<rom type="file" offset="0x14">BGM404.N</rom>
+			<rom type="file" offset="0x15">BGM405.N</rom>
+			<rom type="file" offset="0x16">BGM406.N</rom>
+			<rom type="file" offset="0x17">BGM407.N</rom>
+			<rom type="file" offset="0x18">BGM408.N</rom>
+			<rom type="file" offset="0x19">BGM409.N</rom>
+			<rom type="file" offset="0x1a">BGM410.N</rom>
+			<rom type="file" offset="0x1b">BGM410C.N</rom>
+			<rom type="file" offset="0x1c">BGM411.N</rom>
+			<rom type="file" offset="0x1d">BGM412.N</rom>
+			<rom type="file" offset="0x1e">BGM413.N</rom>
+			<rom type="file" offset="0x1f">BGM414.N</rom>
+			<rom type="file" offset="0x20">BGM415.N</rom>
+			<rom type="file" offset="0x21">BGM416.N</rom>
+			<rom type="file" offset="0x22">BGM417.N</rom>
+			<rom type="file" offset="0x23">BGM418.N</rom>
+			<rom type="file" offset="0x24">BGM419.N</rom>
+			<rom type="file" offset="0x25">BGM431.N</rom>
+			<rom type="file" offset="0x26">BGM432.N</rom>
+			<rom type="file" offset="0x27">BGM433.N</rom>
+			<rom type="file" offset="0x28">BGM434.N</rom>
+			<rom type="file" offset="0x29">BGM435.N</rom>
+			<rom type="file" offset="0x2a">BGM436.N</rom>
+			<rom type="file" offset="0x2b">NEW_F.N</rom>
+			<rom type="file" offset="0x2c">VAL3E.N</rom>
+			<rom type="file" offset="0x2d">ZENKAN.N</rom>
+			<rom type="file" offset="0x2e">FIGHT4.N</rom>
+			<rom type="shell" offset="0">synups2</rom>
+			<rom type="shell" offset="0">synplay2</rom>
+			<rom type="shell" offset="0">synu2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">BGM418.N</title>
+			<title code="0x29">BGM435.N</title>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x2c">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x25">悲愴</title>
+			<title code="0x26">ヴォカリーズ</title>
+			<title code="0x27">自由への脱出</title>
+			<title code="0x28">美しき謀略</title>
+			<title code="0x2a">勝利への進軍</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x2b">新世界より(戦闘バージョン)</title>
+			<title code="0x2d">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x2e">英雄の決断(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.N</title>
+			<title code="0x1b">BGM410C.N</title>
+			<title code="0x22">BGM417.N</title>
+			<title code="0x24">BGM419.N</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 EX (銀河英雄伝説IV EX) (SB16)</name>
+		<driver type="soundblaster16">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="opl3_mix" value="0x100"/>
+		</options>
+		<romlist archive="ginei4ex_98">
+			<rom type="file" offset="-1">synu2_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS2.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY2.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.O</rom>
+			<rom type="file" offset="0x12">BGM402.O</rom>
+			<rom type="file" offset="0x13">BGM403.O</rom>
+			<rom type="file" offset="0x14">BGM404.O</rom>
+			<rom type="file" offset="0x15">BGM405.O</rom>
+			<rom type="file" offset="0x16">BGM406.O</rom>
+			<rom type="file" offset="0x17">BGM407.O</rom>
+			<rom type="file" offset="0x18">BGM408.O</rom>
+			<rom type="file" offset="0x19">BGM409.O</rom>
+			<rom type="file" offset="0x1a">BGM410.O</rom>
+			<rom type="file" offset="0x1b">BGM410C.O</rom>
+			<rom type="file" offset="0x1c">BGM411.O</rom>
+			<rom type="file" offset="0x1d">BGM412.O</rom>
+			<rom type="file" offset="0x1e">BGM413.O</rom>
+			<rom type="file" offset="0x1f">BGM414.O</rom>
+			<rom type="file" offset="0x20">BGM415.O</rom>
+			<rom type="file" offset="0x21">BGM416.O</rom>
+			<rom type="file" offset="0x22">BGM417.O</rom>
+			<rom type="file" offset="0x23">BGM418.O</rom>
+			<rom type="file" offset="0x24">BGM419.O</rom>
+			<rom type="file" offset="0x25">BGM431.O</rom>
+			<rom type="file" offset="0x26">BGM432.O</rom>
+			<rom type="file" offset="0x27">BGM433.O</rom>
+			<rom type="file" offset="0x28">BGM434.O</rom>
+			<rom type="file" offset="0x29">BGM435.O</rom>
+			<rom type="file" offset="0x2a">BGM436.O</rom>
+			<rom type="file" offset="0x2b">NEW_F.O</rom>
+			<rom type="file" offset="0x2c">VAL3E.O</rom>
+			<rom type="file" offset="0x2d">ZENKAN.O</rom>
+			<rom type="file" offset="0x2e">FIGHT4.O</rom>
+			<rom type="shell" offset="0">synups2</rom>
+			<rom type="shell" offset="0">synplay2</rom>
+			<rom type="shell" offset="0">synu2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">BGM418.O</title>
+			<title code="0x29">BGM435.O</title>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x2c">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x25">悲愴</title>
+			<title code="0x26">ヴォカリーズ</title>
+			<title code="0x27">自由への脱出</title>
+			<title code="0x28">美しき謀略</title>
+			<title code="0x2a">勝利への進軍</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x2b">新世界より(戦闘バージョン)</title>
+			<title code="0x2d">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x2e">英雄の決断(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.O</title>
+			<title code="0x1b">BGM410C.O</title>
+			<title code="0x22">BGM417.O</title>
+			<title code="0x24">BGM419.O</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 EX (銀河英雄伝説IV EX) (MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="ginei4ex_98">
+			<rom type="file" offset="-1">synu2_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS2.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY2.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.L</rom>
+			<rom type="file" offset="0x12">BGM402.L</rom>
+			<rom type="file" offset="0x13">BGM403.L</rom>
+			<rom type="file" offset="0x14">BGM404.L</rom>
+			<rom type="file" offset="0x15">BGM405.L</rom>
+			<rom type="file" offset="0x16">BGM406.L</rom>
+			<rom type="file" offset="0x17">BGM407.L</rom>
+			<rom type="file" offset="0x18">BGM408.L</rom>
+			<rom type="file" offset="0x19">BGM409.L</rom>
+			<rom type="file" offset="0x1a">BGM410.L</rom>
+			<rom type="file" offset="0x1b">BGM410C.L</rom>
+			<rom type="file" offset="0x1c">BGM411.L</rom>
+			<rom type="file" offset="0x1d">BGM412.L</rom>
+			<rom type="file" offset="0x1e">BGM413.L</rom>
+			<rom type="file" offset="0x1f">BGM414.L</rom>
+			<rom type="file" offset="0x20">BGM415.L</rom>
+			<rom type="file" offset="0x21">BGM416.L</rom>
+			<rom type="file" offset="0x22">BGM417.L</rom>
+			<rom type="file" offset="0x23">BGM418.L</rom>
+			<rom type="file" offset="0x24">BGM419.L</rom>
+			<rom type="file" offset="0x25">BGM431.L</rom>
+			<rom type="file" offset="0x26">BGM432.L</rom>
+			<rom type="file" offset="0x27">BGM433.L</rom>
+			<rom type="file" offset="0x28">BGM434.L</rom>
+			<rom type="file" offset="0x29">BGM435.L</rom>
+			<rom type="file" offset="0x2a">BGM436.L</rom>
+			<rom type="file" offset="0x2b">NEW_F.L</rom>
+			<rom type="file" offset="0x2c">VAL3E.L</rom>
+			<rom type="file" offset="0x2d">ZENKAN.L</rom>
+			<rom type="file" offset="0x2e">FIGHT4.L</rom>
+			<rom type="shell" offset="0">synups2</rom>
+			<rom type="shell" offset="0">synplay2</rom>
+			<rom type="shell" offset="0">synu2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">BGM418.L</title>
+			<title code="0x29">BGM435.L</title>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x2c">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x25">悲愴</title>
+			<title code="0x26">ヴォカリーズ</title>
+			<title code="0x27">自由への脱出</title>
+			<title code="0x28">美しき謀略</title>
+			<title code="0x2a">勝利への進軍</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x2b">新世界より(戦闘バージョン)</title>
+			<title code="0x2d">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x2e">英雄の決断(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.L</title>
+			<title code="0x1b">BGM410C.L</title>
+			<title code="0x22">BGM417.L</title>
+			<title code="0x24">BGM419.L</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 EX (銀河英雄伝説IV EX) (MT-32 EMU)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="ginei4ex_98">
+			<rom type="file" offset="-1">synu2_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS2.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY2.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.L</rom>
+			<rom type="file" offset="0x12">BGM402.L</rom>
+			<rom type="file" offset="0x13">BGM403.L</rom>
+			<rom type="file" offset="0x14">BGM404.L</rom>
+			<rom type="file" offset="0x15">BGM405.L</rom>
+			<rom type="file" offset="0x16">BGM406.L</rom>
+			<rom type="file" offset="0x17">BGM407.L</rom>
+			<rom type="file" offset="0x18">BGM408.L</rom>
+			<rom type="file" offset="0x19">BGM409.L</rom>
+			<rom type="file" offset="0x1a">BGM410.L</rom>
+			<rom type="file" offset="0x1b">BGM410C.L</rom>
+			<rom type="file" offset="0x1c">BGM411.L</rom>
+			<rom type="file" offset="0x1d">BGM412.L</rom>
+			<rom type="file" offset="0x1e">BGM413.L</rom>
+			<rom type="file" offset="0x1f">BGM414.L</rom>
+			<rom type="file" offset="0x20">BGM415.L</rom>
+			<rom type="file" offset="0x21">BGM416.L</rom>
+			<rom type="file" offset="0x22">BGM417.L</rom>
+			<rom type="file" offset="0x23">BGM418.L</rom>
+			<rom type="file" offset="0x24">BGM419.L</rom>
+			<rom type="file" offset="0x25">BGM431.L</rom>
+			<rom type="file" offset="0x26">BGM432.L</rom>
+			<rom type="file" offset="0x27">BGM433.L</rom>
+			<rom type="file" offset="0x28">BGM434.L</rom>
+			<rom type="file" offset="0x29">BGM435.L</rom>
+			<rom type="file" offset="0x2a">BGM436.L</rom>
+			<rom type="file" offset="0x2b">NEW_F.L</rom>
+			<rom type="file" offset="0x2c">VAL3E.L</rom>
+			<rom type="file" offset="0x2d">ZENKAN.L</rom>
+			<rom type="file" offset="0x2e">FIGHT4.L</rom>
+			<rom type="shell" offset="0">synups2</rom>
+			<rom type="shell" offset="0">synplay2</rom>
+			<rom type="shell" offset="0">synu2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">BGM418.L</title>
+			<title code="0x29">BGM435.L</title>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x2c">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x25">悲愴</title>
+			<title code="0x26">ヴォカリーズ</title>
+			<title code="0x27">自由への脱出</title>
+			<title code="0x28">美しき謀略</title>
+			<title code="0x2a">勝利への進軍</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x2b">新世界より(戦闘バージョン)</title>
+			<title code="0x2d">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x2e">英雄の決断(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.L  : </title>
+			<title code="0x1b">BGM410C.L : </title>
+			<title code="0x22">BGM417.L  : </title>
+			<title code="0x24">BGM419.L  : </title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 EX (銀河英雄伝説IV EX) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="ginei4ex_98">
+			<rom type="file" offset="-1">synu2_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS2.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY2.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.G</rom>
+			<rom type="file" offset="0x12">BGM402.G</rom>
+			<rom type="file" offset="0x13">BGM403.G</rom>
+			<rom type="file" offset="0x14">BGM404.G</rom>
+			<rom type="file" offset="0x15">BGM405.G</rom>
+			<rom type="file" offset="0x16">BGM406.G</rom>
+			<rom type="file" offset="0x17">BGM407.G</rom>
+			<rom type="file" offset="0x18">BGM408.G</rom>
+			<rom type="file" offset="0x19">BGM409.G</rom>
+			<rom type="file" offset="0x1a">BGM410.G</rom>
+			<rom type="file" offset="0x1b">BGM410C.G</rom>
+			<rom type="file" offset="0x1c">BGM411.G</rom>
+			<rom type="file" offset="0x1d">BGM412.G</rom>
+			<rom type="file" offset="0x1e">BGM413.G</rom>
+			<rom type="file" offset="0x1f">BGM414.G</rom>
+			<rom type="file" offset="0x20">BGM415.G</rom>
+			<rom type="file" offset="0x21">BGM416.G</rom>
+			<rom type="file" offset="0x22">BGM417.G</rom>
+			<rom type="file" offset="0x23">BGM418.G</rom>
+			<rom type="file" offset="0x24">BGM419.G</rom>
+			<rom type="file" offset="0x25">BGM431.G</rom>
+			<rom type="file" offset="0x26">BGM432.G</rom>
+			<rom type="file" offset="0x27">BGM433.G</rom>
+			<rom type="file" offset="0x28">BGM434.G</rom>
+			<rom type="file" offset="0x29">BGM435.G</rom>
+			<rom type="file" offset="0x2a">BGM436.G</rom>
+			<rom type="file" offset="0x2b">NEW_F.G</rom>
+			<rom type="file" offset="0x2c">VAL3E.G</rom>
+			<rom type="file" offset="0x2d">ZENKAN.G</rom>
+			<rom type="file" offset="0x2e">FIGHT4.G</rom>
+			<rom type="shell" offset="0">synups2</rom>
+			<rom type="shell" offset="0">synplay2</rom>
+			<rom type="shell" offset="0">synu2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">BGM418.G</title>
+			<title code="0x29">BGM435.G</title>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x2c">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x25">悲愴</title>
+			<title code="0x26">ヴォカリーズ</title>
+			<title code="0x27">自由への脱出</title>
+			<title code="0x28">美しき謀略</title>
+			<title code="0x2a">勝利への進軍</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x2b">新世界より(戦闘バージョン)</title>
+			<title code="0x2d">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x2e">英雄の決断(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.G</title>
+			<title code="0x1b">BGM410C.G</title>
+			<title code="0x22">BGM417.G</title>
+			<title code="0x24">BGM419.G</title>
+		</titlelist>
+	</game>
+	<game>
+	  <name>[PC-98] Legend of Galactic Heroes 4 EX (銀河英雄伝説IV EX) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">bothtec</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="ginei4ex_98">
+			<rom type="file" offset="-1">synu2_98.com</rom>
+			<rom type="file" offset="-1">SYNUPS2.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY2.EXE</rom>
+			<rom type="file" offset="0x11">BGM401.G</rom>
+			<rom type="file" offset="0x12">BGM402.G</rom>
+			<rom type="file" offset="0x13">BGM403.G</rom>
+			<rom type="file" offset="0x14">BGM404.G</rom>
+			<rom type="file" offset="0x15">BGM405.G</rom>
+			<rom type="file" offset="0x16">BGM406.G</rom>
+			<rom type="file" offset="0x17">BGM407.G</rom>
+			<rom type="file" offset="0x18">BGM408.G</rom>
+			<rom type="file" offset="0x19">BGM409.G</rom>
+			<rom type="file" offset="0x1a">BGM410.G</rom>
+			<rom type="file" offset="0x1b">BGM410C.G</rom>
+			<rom type="file" offset="0x1c">BGM411.G</rom>
+			<rom type="file" offset="0x1d">BGM412.G</rom>
+			<rom type="file" offset="0x1e">BGM413.G</rom>
+			<rom type="file" offset="0x1f">BGM414.G</rom>
+			<rom type="file" offset="0x20">BGM415.G</rom>
+			<rom type="file" offset="0x21">BGM416.G</rom>
+			<rom type="file" offset="0x22">BGM417.G</rom>
+			<rom type="file" offset="0x23">BGM418.G</rom>
+			<rom type="file" offset="0x24">BGM419.G</rom>
+			<rom type="file" offset="0x25">BGM431.G</rom>
+			<rom type="file" offset="0x26">BGM432.G</rom>
+			<rom type="file" offset="0x27">BGM433.G</rom>
+			<rom type="file" offset="0x28">BGM434.G</rom>
+			<rom type="file" offset="0x29">BGM435.G</rom>
+			<rom type="file" offset="0x2a">BGM436.G</rom>
+			<rom type="file" offset="0x2b">NEW_F.G</rom>
+			<rom type="file" offset="0x2c">VAL3E.G</rom>
+			<rom type="file" offset="0x2d">ZENKAN.G</rom>
+			<rom type="file" offset="0x2e">FIGHT4.G</rom>
+			<rom type="shell" offset="0">synups2</rom>
+			<rom type="shell" offset="0">synplay2</rom>
+			<rom type="shell" offset="0">synu2_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">BGM418.G</title>
+			<title code="0x29">BGM435.G</title>
+			<title code="0x11">Skies of Love</title>
+			<title code="0x12">帝国軍楽曲</title>
+			<title code="0x13">同盟国歌</title>
+			<title code="0x14">さまよえるオランダ人</title>
+			<title code="0x2c">ワルキューレ</title>
+			<title code="0x16">タンホイザー</title>
+			<title code="0x17">ニュルンベルクのマイスタージンガー</title>
+			<title code="0x18">神々の黄昏</title>
+			<title code="0x19">ボレロ</title>
+			<title code="0x1c">ローエングリン</title>
+			<title code="0x1d">アルビノーニのアダージョ</title>
+			<title code="0x1e">新世界より</title>
+			<title code="0x1f">ラインの黄金</title>
+			<title code="0x20">英雄</title>
+			<title code="0x21">パッヘルベルのカノン</title>
+			<title code="0x25">悲愴</title>
+			<title code="0x26">ヴォカリーズ</title>
+			<title code="0x27">自由への脱出</title>
+			<title code="0x28">美しき謀略</title>
+			<title code="0x2a">勝利への進軍</title>
+			<title code="0x15">ワルキューレ(戦闘バージョン)</title>
+			<title code="0x2b">新世界より(戦闘バージョン)</title>
+			<title code="0x2d">全艦攻撃(戦闘バージョン)</title>
+			<title code="0x2e">英雄の決断(戦闘バージョン)</title>
+			<title code="0x1a">BGM410.G</title>
+			<title code="0x1b">BGM410C.G</title>
+			<title code="0x22">BGM417.G</title>
+			<title code="0x24">BGM419.G</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Relics (レリクス)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">bothtec</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="relics68snd">
+			<rom type="code" offset="0x00000">relics68snd.bin</rom>
+			<rom type="x" offset="0x10000">DEMO.X</rom>
+			<rom type="x" offset="0x20000">ENDING.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Woman</title>
+			<title code="0x02">Smile Again</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Dires -Giger Loop- (ダイレス)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">bothtec</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="dires_msx">
+			<rom type="code">Dires -Giger Loop- (1987)(Bothtec).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+		</titlelist>
+	</game>
+</gamelist>

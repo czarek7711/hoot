@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Desire -->
+	<game>
+		<name>[PC-9801] H+(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Desire</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="h-plus_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">M01</rom>
+			<rom type="file" offset="0x11">M02</rom>
+			<rom type="file" offset="0x12">M03</rom>
+			<rom type="file" offset="0x13">M04</rom>
+			<rom type="file" offset="0x14">M05</rom>
+			<rom type="file" offset="0x15">M06</rom>
+			<rom type="file" offset="0x16">M07</rom>
+			<rom type="file" offset="0x17">M08</rom>
+			<rom type="file" offset="0x18">M09</rom>
+			<rom type="shell" offset="0">PMD /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">M01</title>
+			<title code="0x11">M02</title>
+			<title code="0x12">M03</title>
+			<title code="0x13">M04</title>
+			<title code="0x14">M05</title>
+			<title code="0x15">M06</title>
+			<title code="0x16">M07</title>
+			<title code="0x17">M08</title>
+			<title code="0x18">M09</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] H+(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Desire</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="h-plus_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x10">MB01</rom>
+			<rom type="file" offset="0x11">MB02</rom>
+			<rom type="file" offset="0x12">MB03</rom>
+			<rom type="file" offset="0x13">MB04</rom>
+			<rom type="file" offset="0x14">MB05</rom>
+			<rom type="file" offset="0x15">MB06</rom>
+			<rom type="file" offset="0x16">MB07</rom>
+			<rom type="file" offset="0x17">MB08</rom>
+			<rom type="file" offset="0x18">MB09</rom>
+			<rom type="shell" offset="0">PMDB2</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MB01</title>
+			<title code="0x11">MB02</title>
+			<title code="0x12">MB03</title>
+			<title code="0x13">MB04</title>
+			<title code="0x14">MB05</title>
+			<title code="0x15">MB06</title>
+			<title code="0x16">MB07</title>
+			<title code="0x17">MB08</title>
+			<title code="0x18">MB09</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] V.R.デート 五月倶楽部(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Desire</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="vr_date_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">N01.M</rom>
+			<rom type="file" offset="0x11">N02.M</rom>
+			<rom type="file" offset="0x12">N03.M</rom>
+			<rom type="file" offset="0x13">N04.M</rom>
+			<rom type="file" offset="0x14">N05.M</rom>
+			<rom type="file" offset="0x15">N06.M</rom>
+			<rom type="file" offset="0x16">N07.M</rom>
+			<rom type="file" offset="0x17">N08.M</rom>
+			<rom type="file" offset="0x18">N09.M</rom>
+			<rom type="file" offset="0x19">N10.M</rom>
+			<rom type="file" offset="0x1A">N11.M</rom>
+			<rom type="shell" offset="0">PMD # /M9 /V1 /DF20 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">N01.M  : May Club? Make Love?</title>
+			<title code="0x11">N02.M  : ティーブレイク</title>
+			<title code="0x12">N03.M  : メイフィールド</title>
+			<title code="0x13">N04.M  : 昼下がりわっしょい</title>
+			<title code="0x14">N05.M  : ネオンサイン</title>
+			<title code="0x15">N06.M  : 雨降っても………</title>
+			<title code="0x16">N07.M  : 激流の彼方</title>
+			<title code="0x17">N08.M  : 遙かなる旅路の果てに………</title>
+			<title code="0x18">N09.M  : Make May Club</title>
+			<title code="0x19">N10.M  : Goal or Start?</title>
+			<title code="0x1A">N11.M  : 永遠(トワ)の迷宮</title>
+			<range min="0x0801" max="0x0804" extcode="1">SE.EFC : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] V.R.デート 五月倶楽部(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Desire</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="vr_date_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">B01.M</rom>
+			<rom type="file" offset="0x11">B02.M</rom>
+			<rom type="file" offset="0x12">B03.M</rom>
+			<rom type="file" offset="0x13">B04.M</rom>
+			<rom type="file" offset="0x14">B05.M</rom>
+			<rom type="file" offset="0x15">B06.M</rom>
+			<rom type="file" offset="0x16">B07.M</rom>
+			<rom type="file" offset="0x17">B08.M</rom>
+			<rom type="file" offset="0x18">B09.M</rom>
+			<rom type="file" offset="0x19">B10.M</rom>
+			<rom type="file" offset="0x1A">B11.M</rom>
+			<rom type="shell" offset="0">PMDB2 # /M9 /V1 /DF10 /DS0 /DR16 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">B01.M  : May Club? Make Love?</title>
+			<title code="0x11">B02.M  : ティーブレイク</title>
+			<title code="0x12">B03.M  : メイフィールド</title>
+			<title code="0x13">B04.M  : 昼下がりわっしょい</title>
+			<title code="0x14">B05.M  : ネオンサイン</title>
+			<title code="0x15">B06.M  : 雨降っても………</title>
+			<title code="0x16">B07.M  : 激流の彼方</title>
+			<title code="0x17">B08.M  : 遙かなる旅路の果てに………</title>
+			<title code="0x18">B09.M  : Make May Club</title>
+			<title code="0x19">B10.M  : Goal or Start?</title>
+			<title code="0x1A">B11.M  : 永遠(トワ)の迷宮</title>
+			<range min="0x0801" max="0x0804" extcode="1">SE.EFC : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] V.R.デート 五月倶楽部(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Desire</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="vr_date_98">
+			<rom type="file" offset="-1">mmp_hoot.com</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="0x10">G01.M</rom>
+			<rom type="file" offset="0x11">G02.M</rom>
+			<rom type="file" offset="0x12">G03.M</rom>
+			<rom type="file" offset="0x13">G04.M</rom>
+			<rom type="file" offset="0x14">G05.M</rom>
+			<rom type="file" offset="0x15">G06.M</rom>
+			<rom type="file" offset="0x16">G07.M</rom>
+			<rom type="file" offset="0x17">G08.M</rom>
+			<rom type="file" offset="0x18">G09.M</rom>
+			<rom type="file" offset="0x19">G10.M</rom>
+			<rom type="file" offset="0x1A">G11.M</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">mmp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G01.M : May Club? Make Love?</title>
+			<title code="0x11">G02.M : ティーブレイク</title>
+			<title code="0x12">G03.M : メイフィールド</title>
+			<title code="0x13">G04.M : 昼下がりわっしょい</title>
+			<title code="0x14">G05.M : ネオンサイン</title>
+			<title code="0x15">G06.M : 雨降っても………</title>
+			<title code="0x16">G07.M : 激流の彼方</title>
+			<title code="0x17">G08.M : 遙かなる旅路の果てに………</title>
+			<title code="0x18">G09.M : Make May Club</title>
+			<title code="0x19">G10.M : Goal or Start?</title>
+			<title code="0x1A">G11.M : 永遠(トワ)の迷宮</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] せいんと☆だいあり …聖ちゃんの日記…(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Desire</driveralias>
+		<options>
+			<option name="showfm3ex" value="1"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="saintd_98">
+			<rom type="file" offset="-1">FMPP.COM</rom>
+			<rom type="file" offset="-1">FMP.COM</rom>
+			<rom type="file" offset="0x10">WL_00.OPI</rom>
+			<rom type="file" offset="0x11">WL_01.OPI</rom>
+			<rom type="file" offset="0x12">WL_02.OPI</rom>
+			<rom type="file" offset="0x13">WL_03.OPI</rom>
+			<rom type="file" offset="0x14">WL_04.OPI</rom>
+			<rom type="file" offset="0x15">WL_05.OPI</rom>
+			<rom type="file" offset="0x16">WL_06.OPI</rom>
+			<rom type="file" offset="0x17">WL_07.OPI</rom>
+			<rom type="file" offset="0x18">WL_08.OPI</rom>
+			<rom type="file" offset="0x19">WL_09.OPI</rom>
+			<rom type="shell" offset="0">FMP S /S /#12</rom>
+			<rom type="shell" offset="0">FMPP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WL_00.OPI : Opening《元気っっ!!》                      / R.Takami</title>
+			<title code="0x11">WL_01.OPI : デートのテーマ1《窓際の恋する乙女》        / H.Higuchi</title>
+			<title code="0x12">WL_02.OPI : デートのテーマ2《おしかけ純愛Girl》        / H.Higuchi</title>
+			<title code="0x13">WL_03.OPI : 日常1《恋模様、曇りのち晴れ》              / R.Takami</title>
+			<title code="0x14">WL_04.OPI : 日常テーマ2《きらきらな昼下がり》          / H.Higuchi</title>
+			<title code="0x15">WL_05.OPI : 救出のテーマ《その瞬間にときめいて…》     / R.Takami</title>
+			<title code="0x16">WL_06.OPI : Ending《初恋だいありぃ》(聖ちゃんのテーマ) / R.Takami</title>
+			<title code="0x17">WL_07.OPI : 汗じとのテーマ《ほわっつ・はぷんど?》      / H.Higuchi</title>
+			<title code="0x18">WL_08.OPI : 見送り《さよならが言えなくて…》           / R.Takami</title>
+			<title code="0x19">WL_09.OPI : モノローグ《出会い、別れ、そして…》       / R.Takami</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] せいんと☆だいあり …聖ちゃんの日記…(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Desire</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="saintd_98">
+			<rom type="file" offset="-1">FMPP.COM</rom>
+			<rom type="file" offset="-1">FMP.COM</rom>
+			<rom type="file" offset="0x10">WL_00.OVI</rom>
+			<rom type="file" offset="0x11">WL_01.OVI</rom>
+			<rom type="file" offset="0x12">WL_02.OVI</rom>
+			<rom type="file" offset="0x13">WL_03.OVI</rom>
+			<rom type="file" offset="0x14">WL_04.OVI</rom>
+			<rom type="file" offset="0x15">WL_05.OVI</rom>
+			<rom type="file" offset="0x16">WL_06.OVI</rom>
+			<rom type="file" offset="0x17">WL_07.OVI</rom>
+			<rom type="file" offset="0x18">WL_08.OVI</rom>
+			<rom type="file" offset="0x19">WL_09.OVI</rom>
+			<rom type="shell" offset="0">FMP S /S /#12</rom>
+			<rom type="shell" offset="0">FMPP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">WL_00.OVI : Opening《元気っっ!!》                      / R.Takami</title>
+			<title code="0x11">WL_01.OVI : デートのテーマ1《窓際の恋する乙女》        / H.Higuchi</title>
+			<title code="0x12">WL_02.OVI : デートのテーマ2《おしかけ純愛Girl》        / H.Higuchi</title>
+			<title code="0x13">WL_03.OVI : 日常1《恋模様、曇りのち晴れ》              / R.Takami</title>
+			<title code="0x14">WL_04.OVI : 日常テーマ2《きらきらな昼下がり》          / H.Higuchi</title>
+			<title code="0x15">WL_05.OVI : 救出のテーマ《その瞬間にときめいて…》     / R.Takami</title>
+			<title code="0x16">WL_06.OVI : Ending《初恋だいありぃ》(聖ちゃんのテーマ) / R.Takami</title>
+			<title code="0x17">WL_07.OVI : 汗じとのテーマ《ほわっつ・はぷんど?》      / H.Higuchi</title>
+			<title code="0x18">WL_08.OVI : 見送り《さよならが言えなくて…》           / R.Takami</title>
+			<title code="0x19">WL_09.OVI : モノローグ《出会い、別れ、そして…》       / R.Takami</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] せいんと☆だいあり …聖ちゃんの日記…(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Desire</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="saintd_98">
+			<rom type="file" offset="-1">HHD_98.com</rom>
+			<rom type="file" offset="-1">HMM.COM</rom>
+			<rom type="file" offset="11">WL_00.HMM</rom>
+			<rom type="file" offset="12">WL_01.HMM</rom>
+			<rom type="file" offset="13">WL_02.HMM</rom>
+			<rom type="file" offset="14">WL_03.HMM</rom>
+			<rom type="file" offset="15">WL_04.HMM</rom>
+			<rom type="file" offset="16">WL_05.HMM</rom>
+			<rom type="file" offset="17">WL_06.HMM</rom>
+			<rom type="file" offset="18">WL_07.HMM</rom>
+			<rom type="file" offset="19">WL_08.HMM</rom>
+			<rom type="file" offset="20">WL_09.HMM</rom>
+			<rom type="file" offset="21">GSINIT.HMM</rom>
+			<rom type="shell" offset="0">HMM /F- /GS</rom>
+			<rom type="shell" offset="0">HHD_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="21">[音源初期化]</title>
+			<title code="11">WL_00.HMM : Opening《元気っっ!!》                      / R.Takami</title>
+			<title code="12">WL_01.HMM : デートのテーマ1《窓際の恋する乙女》        / H.Higuchi</title>
+			<title code="13">WL_02.HMM : デートのテーマ2《おしかけ純愛Girl》        / H.Higuchi</title>
+			<title code="14">WL_03.HMM : 日常1《恋模様、曇りのち晴れ》              / R.Takami</title>
+			<title code="15">WL_04.HMM : 日常テーマ2《きらきらな昼下がり》          / H.Higuchi</title>
+			<title code="16">WL_05.HMM : 救出のテーマ《その瞬間にときめいて…》     / R.Takami</title>
+			<title code="17">WL_06.HMM : Ending《初恋だいありぃ》(聖ちゃんのテーマ) / R.Takami</title>
+			<title code="18">WL_07.HMM : 汗じとのテーマ《ほわっつ・はぷんど?》      / H.Higuchi</title>
+			<title code="19">WL_08.HMM : 見送り《さよならが言えなくて…》           / R.Takami</title>
+			<title code="20">WL_09.HMM : モノローグ《出会い、別れ、そして…》       / R.Takami</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 夕霧 …人形師の遺産…(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Desire</driveralias>
+		<options>
+			<option name="showfm3ex" value="1"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="yuugiri_98">
+			<rom type="file" offset="-1">FMPP.COM</rom>
+			<rom type="file" offset="-1">FMP.COM</rom>
+			<rom type="file" offset="0x10">DL_01.OPI</rom>
+			<rom type="file" offset="0x11">DL_02.OPI</rom>
+			<rom type="file" offset="0x12">DL_03.OPI</rom>
+			<rom type="file" offset="0x13">DL_04.OPI</rom>
+			<rom type="file" offset="0x14">DL_05.OPI</rom>
+			<rom type="file" offset="0x15">DL_06.OPI</rom>
+			<rom type="file" offset="0x16">DL_07.OPI</rom>
+			<rom type="file" offset="0x17">DL_08.OPI</rom>
+			<rom type="file" offset="0x18">DL_09.OPI</rom>
+			<rom type="file" offset="0x19">DL_SE01.OPI</rom>
+			<rom type="file" offset="0x1A">DL_SE02.OPI</rom>
+			<rom type="file" offset="0x1B">DL_SE02B.OPI</rom>
+			<rom type="file" offset="0x1C">DL_SE03.OPI</rom>
+			<rom type="file" offset="0x1D">DL_SE03B.OPI</rom>
+			<rom type="file" offset="0x1E">DL_SE04.OPI</rom>
+			<rom type="file" offset="0x1F">DL_SE05.OPI</rom>
+			<rom type="file" offset="0x20">DL_SE06.OPI</rom>
+			<rom type="file" offset="0x21">DL_SE07.OPI</rom>
+			<rom type="file" offset="0x22">DL_SE08.OPI</rom>
+			<rom type="file" offset="0x23">DL_SE09.OPI</rom>
+			<rom type="file" offset="0x24">DL_SE10.OPI</rom>
+			<rom type="file" offset="0x25">DL_SE11.OPI</rom>
+			<rom type="file" offset="0x26">DL_SE12.OPI</rom>
+			<rom type="file" offset="0x27">DL_SE13.OPI</rom>
+			<rom type="file" offset="0x28">DL_SE14.OPI</rom>
+			<rom type="file" offset="0x29">DL_SE15.OPI</rom>
+			<rom type="file" offset="0x2A">DL_SE16.OPI</rom>
+			<rom type="file" offset="0x2B">DL_SE17.OPI</rom>
+			<rom type="file" offset="0x2C">DL_SE18.OPI</rom>
+			<rom type="file" offset="0x2D">DL_SE19.OPI</rom>
+			<rom type="file" offset="0x2E">DL_SE20.OPI</rom>
+			<rom type="file" offset="0x2F">DL_SE21.OPI</rom>
+			<rom type="file" offset="0x30">DL_SE22.OPI</rom>
+			<rom type="file" offset="0x31">DL_SE23.OPI</rom>
+			<rom type="file" offset="0x32">DL_SE24.OPI</rom>
+			<rom type="file" offset="0x33">DL_SE25.OPI</rom>
+			<rom type="file" offset="0x34">DL_SE26.OPI</rom>
+			<rom type="file" offset="0x35">DL_SE27.OPI</rom>
+			<rom type="file" offset="0x36">DL_SE28.OPI</rom>
+			<rom type="shell" offset="0">FMP S /#32 /S /CX</rom>
+			<rom type="shell" offset="0">FMPP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">DL_01.OPI    : 懐古</title>
+			<title code="0x11">DL_02.OPI    : 暗愁</title>
+			<title code="0x12">DL_03.OPI    : 狂惑</title>
+			<title code="0x13">DL_04.OPI    : 残燭</title>
+			<title code="0x14">DL_05.OPI    : 終幕</title>
+			<title code="0x15">DL_06.OPI    : 香路</title>
+			<title code="0x16">DL_07.OPI    : 暁夢</title>
+			<title code="0x17">DL_08.OPI    : 夕霧</title>
+			<title code="0x18">DL_09.OPI    : 禁忌</title>
+			<title code="0x19">DL_SE01.OPI  : 耳鳴り</title>
+			<title code="0x1A">DL_SE02.OPI  : 空き缶に石ころ</title>
+			<title code="0x1B">DL_SE02B.OPI : 空き缶に石ころ</title>
+			<title code="0x1C">DL_SE03.OPI  : クラクション</title>
+			<title code="0x1D">DL_SE03B.OPI : クラクション</title>
+			<title code="0x1E">DL_SE04.OPI  : 遠雷</title>
+			<title code="0x1F">DL_SE05.OPI  : 落雷</title>
+			<title code="0x20">DL_SE06.OPI  : 雨1</title>
+			<title code="0x21">DL_SE07.OPI  : 雨2</title>
+			<title code="0x22">DL_SE08.OPI  : 雨3</title>
+			<title code="0x23">DL_SE09.OPI  : 風鈴</title>
+			<title code="0x24">DL_SE10.OPI  : 襖を閉める</title>
+			<title code="0x25">DL_SE11.OPI  : ブレーカー</title>
+			<title code="0x26">DL_SE12.OPI  : 水</title>
+			<title code="0x27">DL_SE13.OPI  : Hit!!</title>
+			<title code="0x28">DL_SE14.OPI  : ライター1</title>
+			<title code="0x29">DL_SE15.OPI  : ライター2</title>
+			<title code="0x2A">DL_SE16.OPI  : Hit!!</title>
+			<title code="0x2B">DL_SE17.OPI  : 廊下</title>
+			<title code="0x2C">DL_SE18.OPI  : 風</title>
+			<title code="0x2D">DL_SE19.OPI  : 襖を閉める</title>
+			<title code="0x2E">DL_SE20.OPI  : 炎</title>
+			<title code="0x2F">DL_SE21.OPI  : 怨霊</title>
+			<title code="0x30">DL_SE22.OPI  : Shock</title>
+			<title code="0x31">DL_SE23.OPI  : Hit</title>
+			<title code="0x32">DL_SE24.OPI  : Hit2</title>
+			<title code="0x33">DL_SE25.OPI  : Knock</title>
+			<title code="0x34">DL_SE26.OPI  : Clock</title>
+			<title code="0x35">DL_SE27.OPI  : Heart</title>
+			<title code="0x36">DL_SE28.OPI  : 風</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 夕霧 …人形師の遺産…(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Desire</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="yuugiri_98">
+			<rom type="file" offset="-1">FMPP.COM</rom>
+			<rom type="file" offset="-1">FMP.COM</rom>
+			<rom type="file" offset="0x10">DL_01.OVI</rom>
+			<rom type="file" offset="0x11">DL_02.OVI</rom>
+			<rom type="file" offset="0x12">DL_03.OVI</rom>
+			<rom type="file" offset="0x13">DL_04.OVI</rom>
+			<rom type="file" offset="0x14">DL_05.OVI</rom>
+			<rom type="file" offset="0x15">DL_06.OVI</rom>
+			<rom type="file" offset="0x16">DL_07.OVI</rom>
+			<rom type="file" offset="0x17">DL_08.OVI</rom>
+			<rom type="file" offset="0x18">DL_09.OVI</rom>
+			<rom type="shell" offset="0">FMP S /#32 /S /CX</rom>
+			<rom type="shell" offset="0">FMPP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">DL_01.OVI : 懐古</title>
+			<title code="0x11">DL_02.OVI : 暗愁</title>
+			<title code="0x12">DL_03.OVI : 狂惑</title>
+			<title code="0x13">DL_04.OVI : 残燭</title>
+			<title code="0x14">DL_05.OVI : 終幕</title>
+			<title code="0x15">DL_06.OVI : 香路</title>
+			<title code="0x16">DL_07.OVI : 暁夢</title>
+			<title code="0x17">DL_08.OVI : 夕霧</title>
+			<title code="0x18">DL_09.OVI : 禁忌</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 夕霧 …人形師の遺産…(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Desire</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="yuugiri_98">
+			<rom type="file" offset="-1">HHD_98.com</rom>
+			<rom type="file" offset="-1">HMM.COM</rom>
+			<rom type="file" offset="11">DL_01.HMM</rom>
+			<rom type="file" offset="12">DL_02.HMM</rom>
+			<rom type="file" offset="13">DL_03.HMM</rom>
+			<rom type="file" offset="14">DL_04.HMM</rom>
+			<rom type="file" offset="15">DL_05.HMM</rom>
+			<rom type="file" offset="16">DL_06.HMM</rom>
+			<rom type="file" offset="17">DL_07.HMM</rom>
+			<rom type="file" offset="18">DL_08.HMM</rom>
+			<rom type="file" offset="19">DL_09.HMM</rom>
+			<rom type="file" offset="20">GSINIT.HMM</rom>
+			<rom type="shell" offset="0">hmm /M /B10</rom>
+			<rom type="shell" offset="0">hhd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="20">[音源初期化]</title>
+			<title code="11">DL_01.HMM : 懐古</title>
+			<title code="12">DL_02.HMM : 暗愁</title>
+			<title code="13">DL_03.HMM : 狂惑</title>
+			<title code="14">DL_04.HMM : 残燭</title>
+			<title code="15">DL_05.HMM : 終幕</title>
+			<title code="16">DL_06.HMM : 香路</title>
+			<title code="17">DL_07.HMM : 暁夢</title>
+			<title code="18">DL_08.HMM : 夕霧</title>
+			<title code="19">DL_09.HMM : 禁忌</title>
+		</titlelist>
+	</game>
+</gamelist>

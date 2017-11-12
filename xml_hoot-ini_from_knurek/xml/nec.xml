@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //nec -->
+	<game>
+		<name>[PC-88] PC-8801mkIIFR Demonstration</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">nec</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+		</options>
+		<romlist archive="88frdemo">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">ハイスクールはダンステリア   / Cyndi Lauper</title>
+			<title code="0x05">ねこふんじゃった             / 作曲者未詳</title>
+			<title code="0x04">Material Girl                / Madonna</title>
+			<title code="0x00">クラリネットをこわしちゃった / フランス民謡</title>
+			<title code="0x02">Hotel California             / Eagles</title>
+			<title code="0x06">Zoom                         / Casiopea</title>
+			<title code="0x03">Blue Lagoon                  / 高中正義</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tanjo: Debut (誕生)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">nec_avenue</driveralias>
+		<options>
+			<option name="ssg_mix" value="-16"/>
+		</options>
+		<romlist archive="debut_98">
+			<rom type="file" offset="-1">rme2.com</rom>
+			<rom type="file" offset="-1">rme_98.com</rom>
+			<rom type="file" offset="0x01">DEBMU01.RME</rom>
+			<rom type="file" offset="0x02">DEBMU02.RME</rom>
+			<rom type="file" offset="0x03">DEBMU03.RME</rom>
+			<rom type="file" offset="0x04">DEBMU04.RME</rom>
+			<rom type="file" offset="0x05">DEBMU05.RME</rom>
+			<rom type="file" offset="0x06">DEBMU06.RME</rom>
+			<rom type="file" offset="0x07">DEBMU07.RME</rom>
+			<rom type="file" offset="0x08">DEBSO01.RME</rom>
+			<rom type="file" offset="0x09">DEBSO02.RME</rom>
+			<rom type="file" offset="0x0a">DEBSO03.RME</rom>
+			<rom type="file" offset="0x0b">DEB_FUZ1.RME</rom>
+			<rom type="file" offset="0x0c">DEB_FUZ3.RME</rom>
+			<rom type="file" offset="0x0d">DEB_FUZ4.RME</rom>
+			<rom type="file" offset="0x0e">DEB_ITO1.RME</rom>
+			<rom type="file" offset="0x0f">DEB_ITO3.RME</rom>
+			<rom type="file" offset="0x10">DEB_ITO4.RME</rom>
+			<rom type="file" offset="0x11">DEB_TAN1.RME</rom>
+			<rom type="file" offset="0x12">DEB_TAN3.RME</rom>
+			<rom type="file" offset="0x13">DEB_TAN4.RME</rom>
+			<rom type="file" offset="0x14">DEBME01A.RME</rom>
+			<rom type="file" offset="0x15">DEBME01B.RME</rom>
+			<rom type="file" offset="0x16">DEBME01C.RME</rom>
+			<rom type="file" offset="0x17">DEBME02A.RME</rom>
+			<rom type="file" offset="0x18">DEBME02B.RME</rom>
+			<rom type="file" offset="0x19">DEBME02C.RME</rom>
+			<rom type="file" offset="0x1a">DEBME02D.RME</rom>
+			<rom type="file" offset="0x1b">DEBME03.RME</rom>
+			<rom type="file" offset="0x1c">DEBME03B.RME</rom>
+			<rom type="file" offset="0x1d">DEBSE01.RME</rom>
+			<rom type="file" offset="0x1e">DEBSE02A.RME</rom>
+			<rom type="file" offset="0x1f">DEBSE02B.RME</rom>
+			<rom type="file" offset="0x20">DEBSE02C.RME</rom>
+			<rom type="file" offset="0x21">DEBSE02D.RME</rom>
+			<rom type="file" offset="0x22">DEBSE03.RME</rom>
+			<rom type="file" offset="0x23">DEBSE03A.RME</rom>
+			<rom type="file" offset="0x24">DEBSE04A.RME</rom>
+			<rom type="file" offset="0x25">DEBSE04B.RME</rom>
+			<rom type="file" offset="0x26">DEBSE04C.RME</rom>
+			<rom type="file" offset="0x27">DEBSE05A.RME</rom>
+			<rom type="file" offset="0x28">DEBSE05B.RME</rom>
+			<rom type="file" offset="0x29">DEBSE05C.RME</rom>
+			<rom type="shell" offset="0">rme2</rom>
+			<rom type="shell" offset="0">rme_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">DEBMU01.RME</title>
+			<title code="0x02">DEBMU02.RME</title>
+			<title code="0x03">DEBMU03.RME</title>
+			<title code="0x04">DEBMU04.RME</title>
+			<title code="0x05">DEBMU05.RME</title>
+			<title code="0x06">DEBMU06.RME</title>
+			<title code="0x07">DEBMU07.RME</title>
+			<title code="0x08">DEBSO01.RME</title>
+			<title code="0x09">DEBSO02.RME</title>
+			<title code="0x0a">DEBSO03.RME</title>
+			<title code="0x0b">DEB_FUZ1.RME</title>
+			<title code="0x0c">DEB_FUZ3.RME</title>
+			<title code="0x0d">DEB_FUZ4.RME</title>
+			<title code="0x0e">DEB_ITO1.RME</title>
+			<title code="0x0f">DEB_ITO3.RME</title>
+			<title code="0x10">DEB_ITO4.RME</title>
+			<title code="0x11">DEB_TAN1.RME</title>
+			<title code="0x12">DEB_TAN3.RME</title>
+			<title code="0x13">DEB_TAN4.RME</title>
+			<title code="0x14">DEBME01A.RME</title>
+			<title code="0x15">DEBME01B.RME</title>
+			<title code="0x16">DEBME01C.RME</title>
+			<title code="0x17">DEBME02A.RME</title>
+			<title code="0x18">DEBME02B.RME</title>
+			<title code="0x19">DEBME02C.RME</title>
+			<title code="0x1a">DEBME02D.RME</title>
+			<title code="0x1b">DEBME03.RME</title>
+			<title code="0x1c">DEBME03B.RME</title>
+			<title code="0x1d">DEBSE01.RME</title>
+			<title code="0x1e">DEBSE02A.RME</title>
+			<title code="0x1f">DEBSE02B.RME</title>
+			<title code="0x20">DEBSE02C.RME</title>
+			<title code="0x21">DEBSE02D.RME</title>
+			<title code="0x22">DEBSE03.RME</title>
+			<title code="0x23">DEBSE03A.RME</title>
+			<title code="0x24">DEBSE04A.RME</title>
+			<title code="0x25">DEBSE04B.RME</title>
+			<title code="0x26">DEBSE04C.RME</title>
+			<title code="0x27">DEBSE05A.RME</title>
+			<title code="0x28">DEBSE05B.RME</title>
+			<title code="0x29">DEBSE05C.RME</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Mercurius Pretty (メルクリウス・プリティ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">nec_avenue</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="mp_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSIC70.COM</rom>
+			<rom type="file" offset="0x10">MP01.MDB</rom>
+			<rom type="file" offset="0x11">MP02.MDB</rom>
+			<rom type="file" offset="0x12">MP03.MDB</rom>
+			<rom type="file" offset="0x13">MP04.MDB</rom>
+			<rom type="file" offset="0x14">MP05.MDB</rom>
+			<rom type="file" offset="0x15">MP06.MDB</rom>
+			<rom type="file" offset="0x16">MP07.MDB</rom>
+			<rom type="file" offset="0x17">MP08.MDB</rom>
+			<rom type="file" offset="0x18">MP09.MDB</rom>
+			<rom type="file" offset="0x19">MP10.MDB</rom>
+			<rom type="file" offset="0x1a">MP11.MDB</rom>
+			<rom type="file" offset="0x1b">MP12.MDB</rom>
+			<rom type="file" offset="0x1c">MP13.MDB</rom>
+			<rom type="file" offset="0x1d">MP14.MDB</rom>
+			<rom type="file" offset="0x1e">MP15.MDB</rom>
+			<rom type="file" offset="0x1f">MP16.MDB</rom>
+			<rom type="file" offset="0x20">MP17.MDB</rom>
+			<rom type="file" offset="0x21">MP18.MDB</rom>
+			<rom type="file" offset="0x22">MP19.MDB</rom>
+			<rom type="file" offset="0x23">MP20.MDB</rom>
+			<rom type="file" offset="0x24">MP21.MDB</rom>
+			<rom type="file" offset="0x25">MP22.MDB</rom>
+			<rom type="file" offset="0x26">MP23.MDB</rom>
+			<rom type="file" offset="0x27">MP24.MDB</rom>
+			<rom type="file" offset="0x28">MP25.MDB</rom>
+			<rom type="file" offset="0x29">MP26.MDB</rom>
+			<rom type="file" offset="0x2a">MP27.MDB</rom>
+			<rom type="file" offset="0x2b">MP28.MDB</rom>
+			<rom type="file" offset="0x2c">MP29.MDB</rom>
+			<rom type="file" offset="0x2d">MP30.MDB</rom>
+			<rom type="file" offset="0x2e">MP31.MDB</rom>
+			<rom type="file" offset="0x2f">MP32.MDB</rom>
+			<rom type="file" offset="0x30">MP33.MDB</rom>
+			<rom type="file" offset="0x31">MP34.MDB</rom>
+			<rom type="file" offset="0x32">MP35.MDB</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSIC70</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MP01.MDB</title>
+			<title code="0x11">MP02.MDB</title>
+			<title code="0x12">MP03.MDB</title>
+			<title code="0x13">MP04.MDB</title>
+			<title code="0x14">MP05.MDB</title>
+			<title code="0x15">MP06.MDB</title>
+			<title code="0x16">MP07.MDB</title>
+			<title code="0x17">MP08.MDB</title>
+			<title code="0x18">MP09.MDB</title>
+			<title code="0x19">MP10.MDB</title>
+			<title code="0x1a">MP11.MDB</title>
+			<title code="0x1b">MP12.MDB</title>
+			<title code="0x1c">MP13.MDB</title>
+			<title code="0x1d">MP14.MDB</title>
+			<title code="0x1e">MP15.MDB</title>
+			<title code="0x1f">MP16.MDB</title>
+			<title code="0x20">MP17.MDB</title>
+			<title code="0x21">MP18.MDB</title>
+			<title code="0x22">MP19.MDB</title>
+			<title code="0x23">MP20.MDB</title>
+			<title code="0x24">MP21.MDB</title>
+			<title code="0x25">MP22.MDB</title>
+			<title code="0x26">MP23.MDB</title>
+			<title code="0x27">MP24.MDB</title>
+			<title code="0x28">MP25.MDB</title>
+			<title code="0x29">MP26.MDB</title>
+			<title code="0x2a">MP27.MDB</title>
+			<title code="0x2b">MP28.MDB</title>
+			<title code="0x2c">MP29.MDB</title>
+			<title code="0x2d">MP30.MDB</title>
+			<title code="0x2e">MP31.MDB</title>
+			<title code="0x2f">MP32.MDB</title>
+			<title code="0x30">MP33.MDB</title>
+			<title code="0x31">MP34.MDB</title>
+			<title code="0x32">MP35.MDB</title>
+		</titlelist>
+	</game>
+</gamelist>

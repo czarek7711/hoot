@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //UCOM -->
+	<game>
+		<name>[PC-9801] Green Oasis</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="40"/>
+		</options>
+		<romlist archive="gr_oasis_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">SSGPCM.TBL</rom>
+			<rom type="file" offset="-1">SSGPCM.DTA</rom>
+			<rom type="file" offset="0x10">BGM001.O</rom>
+			<rom type="file" offset="0x11">BGM002.O</rom>
+			<rom type="file" offset="0x12">BGM003.O</rom>
+			<rom type="file" offset="0x13">BGM004.O</rom>
+			<rom type="file" offset="0x14">BGM005.O</rom>
+			<rom type="file" offset="0x15">BGM006.O</rom>
+			<rom type="file" offset="0x16">BGM007.O</rom>
+			<rom type="file" offset="0x17">BGM008.O</rom>
+			<rom type="file" offset="0x18">BGM009.O</rom>
+			<rom type="file" offset="0x19">BGM010.O</rom>
+			<rom type="file" offset="0x1A">BGM011.O</rom>
+			<rom type="file" offset="0x1B">BGM012.O</rom>
+			<rom type="file" offset="0x1C">BGM013.O</rom>
+			<rom type="file" offset="0x1D">BGM014.O</rom>
+			<rom type="file" offset="0x1E">BGM015.O</rom>
+			<rom type="file" offset="0x1F">BGM016.O</rom>
+			<rom type="file" offset="0x20">BGM017.O</rom>
+			<rom type="file" offset="0x21">BGM018.O</rom>
+			<rom type="file" offset="0x22">BGM019.O</rom>
+			<rom type="file" offset="0x23">BGM020.O</rom>
+			<rom type="file" offset="0x24">BGM021.O</rom>
+			<rom type="file" offset="0x25">BGM022.O</rom>
+			<rom type="file" offset="0x26">BGM023.O</rom>
+			<rom type="file" offset="0x27">BGM024.O</rom>
+			<rom type="file" offset="0x28">BGM025.O</rom>
+			<rom type="shell" offset="0">NAX -b10 -f9 -q -t</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM001.O : Main Theme</title>
+			<title code="0x11">BGM002.O : Opening I</title>
+			<title code="0x12">BGM003.O : Opening II</title>
+			<title code="0x13">BGM004.O : Event I</title>
+			<title code="0x14">BGM005.O : Menu</title>
+			<title code="0x15">BGM006.O : Strain</title>
+			<title code="0x16">BGM007.O : Graphit Test</title>
+			<title code="0x17">BGM008.O : Passage</title>
+			<title code="0x18">BGM009.O : Peeping Spot</title>
+			<title code="0x19">BGM010.O : Event III</title>
+			<title code="0x1A">BGM011.O : Party Floor</title>
+			<title code="0x1B">BGM012.O : Casino</title>
+			<title code="0x1C">BGM013.O : Casino II(Slot Machine &amp; Poker)</title>
+			<title code="0x1D">BGM014.O : Restaurant</title>
+			<title code="0x1E">BGM015.O : Secret of the Captain</title>
+			<title code="0x1F">BGM016.O : Ending I</title>
+			<title code="0x20">BGM017.O : Ending II</title>
+			<title code="0x21">BGM018.O : Event II</title>
+			<title code="0x22">BGM019.O : Climax!</title>
+			<title code="0x23">BGM020.O : Discovery</title>
+			<title code="0x24">BGM021.O : Explosion</title>
+			<title code="0x25">BGM022.O : Spaceship Going</title>
+			<title code="0x26">BGM023.O : Challenge Double Up</title>
+			<title code="0x27">BGM024.O : Fanfare</title>
+			<title code="0x28">BGM025.O : Count Coins</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Cross Changer(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="cross_ch_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">SEI.O</rom>
+			<rom type="file" offset="0x11">SM03.O</rom>
+			<rom type="file" offset="0x12">SM04.O</rom>
+			<rom type="file" offset="0x13">SM05.O</rom>
+			<rom type="file" offset="0x14">SM06.O</rom>
+			<rom type="file" offset="0x15">SM07.O</rom>
+			<rom type="file" offset="0x16">SM08.O</rom>
+			<rom type="file" offset="0x17">SM09.O</rom>
+			<rom type="file" offset="0x18">SM10.O</rom>
+			<rom type="file" offset="0x19">SM11.O</rom>
+			<rom type="file" offset="0x1A">SM12.O</rom>
+			<rom type="file" offset="0x1B">SM13.O</rom>
+			<rom type="file" offset="0x1C">SM14.O</rom>
+			<rom type="file" offset="0x1D">SM15.O</rom>
+			<rom type="file" offset="0x1E">SM16.O</rom>
+			<rom type="file" offset="0x1F">SM17.O</rom>
+			<rom type="file" offset="0x20">SM18.O</rom>
+			<rom type="file" offset="0x21">SM19.O</rom>
+			<rom type="file" offset="0x22">SM20.O</rom>
+			<rom type="file" offset="0x23">SM21.O</rom>
+			<rom type="file" offset="0x24">SED.O</rom>
+			<rom type="file" offset="0x25">SSE03.O</rom>
+			<rom type="file" offset="0x26">SSE04.O</rom>
+			<rom type="file" offset="0x27">SSE06.O</rom>
+			<rom type="shell" offset="0">NAX</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">SEI.O   : OPENING ﾃｰﾏ</title>
+			<title code="0x11">SM03.O  : アクション1</title>
+			<title code="0x12">SM04.O  : アクション2</title>
+			<title code="0x13">SM05.O  : アクション3</title>
+			<title code="0x14">SM06.O  : サスペンス1</title>
+			<title code="0x15">SM07.O  : サスペンス2</title>
+			<title code="0x16">SM08.O  : 喫茶サファリ 店内1</title>
+			<title code="0x17">SM09.O  : 喫茶サファリ 店内2</title>
+			<title code="0x18">SM10.O  : コミカル1</title>
+			<title code="0x19">SM11.O  : コミカル2</title>
+			<title code="0x1A">SM12.O  : 変身</title>
+			<title code="0x1B">SM13.O  : アイキャッチ1</title>
+			<title code="0x1C">SM14.O  : アイキャッチ2</title>
+			<title code="0x1D">SM15.O  : オープニングアレンジ1</title>
+			<title code="0x1E">SM16.O  : オープニングアレンジ2</title>
+			<title code="0x1F">SM17.O  : Hシーン1</title>
+			<title code="0x20">SM18.O  : Hシーン2</title>
+			<title code="0x21">SM19.O  : 異次元シーン1</title>
+			<title code="0x22">SM20.O  : 異次元シーン2</title>
+			<title code="0x23">SM21.O  : 必殺技を決める</title>
+			<title code="0x24">SED.O   : ENDING ﾃｰﾏ</title>
+			<title code="0x25">SSE03.O : レーザーガン</title>
+			<title code="0x26">SSE04.O : 異次元の電光</title>
+			<title code="0x27">SSE06.O : ヒロイン基地内部</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Cross Changer(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="cross_ch_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">SEI_S.O</rom>
+			<rom type="file" offset="0x11">SM03_S.O</rom>
+			<rom type="file" offset="0x12">SM04_S.O</rom>
+			<rom type="file" offset="0x13">SM05_S.O</rom>
+			<rom type="file" offset="0x14">SM06_S.O</rom>
+			<rom type="file" offset="0x15">SM07_S.O</rom>
+			<rom type="file" offset="0x16">SM08_S.O</rom>
+			<rom type="file" offset="0x17">SM09_S.O</rom>
+			<rom type="file" offset="0x18">SM10_S.O</rom>
+			<rom type="file" offset="0x19">SM11_S.O</rom>
+			<rom type="file" offset="0x1A">SM12_S.O</rom>
+			<rom type="file" offset="0x1B">SM13_S.O</rom>
+			<rom type="file" offset="0x1C">SM14_S.O</rom>
+			<rom type="file" offset="0x1D">SM15_S.O</rom>
+			<rom type="file" offset="0x1E">SM16_S.O</rom>
+			<rom type="file" offset="0x1F">SM17_S.O</rom>
+			<rom type="file" offset="0x20">SM18_S.O</rom>
+			<rom type="file" offset="0x21">SM19_S.O</rom>
+			<rom type="file" offset="0x22">SM20_S.O</rom>
+			<rom type="file" offset="0x23">SM21_S.O</rom>
+			<rom type="file" offset="0x24">SED_S.O</rom>
+			<rom type="file" offset="0x25">SSE03.O</rom>
+			<rom type="file" offset="0x26">SSE04.O</rom>
+			<rom type="file" offset="0x27">SSE06.O</rom>
+			<rom type="shell" offset="0">NAX</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">SEI_S.O   : OPENING ﾃｰﾏ</title>
+			<title code="0x11">SM03_S.O  : アクション1</title>
+			<title code="0x12">SM04_S.O  : アクション2</title>
+			<title code="0x13">SM05_S.O  : アクション3</title>
+			<title code="0x14">SM06_S.O  : サスペンス1</title>
+			<title code="0x15">SM07_S.O  : サスペンス2</title>
+			<title code="0x16">SM08_S.O  : 喫茶サファリ 店内1</title>
+			<title code="0x17">SM09_S.O  : 喫茶サファリ 店内2</title>
+			<title code="0x18">SM10_S.O  : コミカル1</title>
+			<title code="0x19">SM11_S.O  : コミカル2</title>
+			<title code="0x1A">SM12_S.O  : 変身</title>
+			<title code="0x1B">SM13_S.O  : アイキャッチ1</title>
+			<title code="0x1C">SM14_S.O  : アイキャッチ2</title>
+			<title code="0x1D">SM15_S.O  : オープニングアレンジ1</title>
+			<title code="0x1E">SM16_S.O  : オープニングアレンジ2</title>
+			<title code="0x1F">SM17_S.O  : Hシーン1</title>
+			<title code="0x20">SM18_S.O  : Hシーン2</title>
+			<title code="0x21">SM19_S.O  : 異次元シーン1</title>
+			<title code="0x22">SM20_S.O  : 異次元シーン2</title>
+			<title code="0x23">SM21_S.O  : 必殺技を決める</title>
+			<title code="0x24">SED_S.O   : ENDING ﾃｰﾏ</title>
+			<title code="0x25">SSE03.O   : レーザーガン</title>
+			<title code="0x26">SSE04.O   : 異次元の電光</title>
+			<title code="0x27">SSE06.O   : ヒロイン基地内部</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 人生クイズゲームだ</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="jin_quiz_98">
+			<rom type="file" offset="-1">NA.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">MQ_01.O</rom>
+			<rom type="file" offset="0x11">MQ_02.O</rom>
+			<rom type="file" offset="0x12">MQ_03.O</rom>
+			<rom type="file" offset="0x13">MQ_04.O</rom>
+			<rom type="file" offset="0x14">MQ_05.O</rom>
+			<rom type="file" offset="0x15">MQ_06.O</rom>
+			<rom type="file" offset="0x16">MQ_07.O</rom>
+			<rom type="file" offset="0x17">MQ_08.O</rom>
+			<rom type="file" offset="0x18">MQ_09.O</rom>
+			<rom type="file" offset="0x19">MQ_10.O</rom>
+			<rom type="file" offset="0x1A">MQ_11.O</rom>
+			<rom type="file" offset="0x1B">MQ_12.O</rom>
+			<rom type="file" offset="0x1C">MQ_B1.O</rom>
+			<rom type="file" offset="0x1D">MQ_B2.O</rom>
+			<rom type="file" offset="0x1E">MQ_B3.O</rom>
+			<rom type="file" offset="0x1F">MQ_B4.O</rom>
+			<rom type="file" offset="0x20">MQ_B5.O</rom>
+			<rom type="file" offset="0x21">MQ_B6.O</rom>
+			<rom type="file" offset="0x22">MQ_S1.O</rom>
+			<rom type="file" offset="0x23">MQ_S2.O</rom>
+			<rom type="file" offset="0x24">MQ_S4.O</rom>
+			<rom type="shell" offset="0">NA -Z1</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MQ_01.O : オープニング</title>
+			<title code="0x11">MQ_02.O : </title>
+			<title code="0x12">MQ_03.O : メイヤのテ－マ</title>
+			<title code="0x13">MQ_04.O : ヴァンプのテ－マ</title>
+			<title code="0x14">MQ_05.O : レディのテーマ</title>
+			<title code="0x15">MQ_06.O : キャラのテーマ</title>
+			<title code="0x16">MQ_07.O : ルファのテーマ</title>
+			<title code="0x17">MQ_08.O : お店のテーマ</title>
+			<title code="0x18">MQ_09.O : ゲームオーバー</title>
+			<title code="0x19">MQ_10.O : </title>
+			<title code="0x1A">MQ_11.O : </title>
+			<title code="0x1B">MQ_12.O : エンディング</title>
+			<title code="0x1C">MQ_B1.O : </title>
+			<title code="0x1D">MQ_B2.O : </title>
+			<title code="0x1E">MQ_B3.O : </title>
+			<title code="0x1F">MQ_B4.O : </title>
+			<title code="0x20">MQ_B5.O : </title>
+			<title code="0x21">MQ_B6.O : </title>
+			<title code="0x22">MQ_S1.O : 正解音</title>
+			<title code="0x23">MQ_S2.O : 不正解音</title>
+			<title code="0x24">MQ_S4.O : 雷の音</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 爆裂クイズ 戦え! マイティルナ</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mighty_l_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">MR01.O</rom>
+			<rom type="file" offset="0x11">MR02.O</rom>
+			<rom type="file" offset="0x12">MR03.O</rom>
+			<rom type="file" offset="0x13">MR04.O</rom>
+			<rom type="file" offset="0x14">MR05.O</rom>
+			<rom type="file" offset="0x15">MR06.O</rom>
+			<rom type="file" offset="0x16">MR07.O</rom>
+			<rom type="file" offset="0x17">MR08.O</rom>
+			<rom type="file" offset="0x18">MR09.O</rom>
+			<rom type="file" offset="0x19">MR10.O</rom>
+			<rom type="file" offset="0x1A">MR11.O</rom>
+			<rom type="file" offset="0x1B">MR12.O</rom>
+			<rom type="file" offset="0x1C">MR15.O</rom>
+			<rom type="file" offset="0x1D">MR16.O</rom>
+			<rom type="file" offset="0x1E">MR17.O</rom>
+			<rom type="file" offset="0x1F">MSE01.O</rom>
+			<rom type="file" offset="0x20">MSE02.O</rom>
+			<rom type="file" offset="0x21">MSE03.O</rom>
+			<rom type="file" offset="0x22">MSE04A.O</rom>
+			<rom type="file" offset="0x23">MSE04B.O</rom>
+			<rom type="file" offset="0x24">MSE06.O</rom>
+			<rom type="file" offset="0x25">MSE09.O</rom>
+			<rom type="shell" offset="0">NAX</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MR01.O   : 雰囲気</title>
+			<title code="0x11">MR02.O   : OPテーマ アイドル</title>
+			<title code="0x12">MR03.O   : るんるん☆</title>
+			<title code="0x13">MR04.O   : 戦いのテーマ</title>
+			<title code="0x14">MR05.O   : 最後の戦い</title>
+			<title code="0x15">MR06.O   : ラウンドクリア</title>
+			<title code="0x16">MR07.O   : ハーレムノクターン</title>
+			<title code="0x17">MR08.O   : へんしーーん</title>
+			<title code="0x18">MR09.O   : 暗黒指令の口惜しみ</title>
+			<title code="0x19">MR10.O   : ザ・スカウト</title>
+			<title code="0x1A">MR11.O   : Oこ決定</title>
+			<title code="0x1B">MR12.O   : 鳥人</title>
+			<title code="0x1C">MR15.O   : 海より深い・母の愛</title>
+			<title code="0x1D">MR16.O   : エクスプロージョン</title>
+			<title code="0x1E">MR17.O   : EDテーマ</title>
+			<title code="0x1F">MSE01.O  : 管制塔</title>
+			<title code="0x20">MSE02.O  : 爆発</title>
+			<title code="0x21">MSE03.O  : びんた</title>
+			<title code="0x22">MSE04A.O : 目覚まし タイプA</title>
+			<title code="0x23">MSE04B.O : 目覚まし タイプB</title>
+			<title code="0x24">MSE06.O  : 銃</title>
+			<title code="0x25">MSE09.O  : ジャンピングチャンス</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 文化祭(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="bunka_98">
+			<rom type="file" offset="-1">bunka_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">BM01.CMD</rom>
+			<rom type="file" offset="-1">BM02.CMD</rom>
+			<rom type="file" offset="-1">BM03.CMD</rom>
+			<rom type="file" offset="-1">BM04.CMD</rom>
+			<rom type="file" offset="-1">BM05.CMD</rom>
+			<rom type="file" offset="-1">BM06.CMD</rom>
+			<rom type="file" offset="-1">BM07.CMD</rom>
+			<rom type="file" offset="-1">BM08.CMD</rom>
+			<rom type="file" offset="-1">BM09.CMD</rom>
+			<rom type="file" offset="-1">PIRON.CMD</rom>
+			<rom type="file" offset="-1">SE01.CMD</rom>
+			<rom type="file" offset="-1">SE02.CMD</rom>
+			<rom type="file" offset="-1">SE03.CMD</rom>
+			<rom type="file" offset="-1">SE05.CMD</rom>
+			<rom type="shell" offset="0">bunka_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BM01.CMD : </title>
+			<title code="0x02">BM02.CMD : </title>
+			<title code="0x03">BM03.CMD : </title>
+			<title code="0x04">BM04.CMD : </title>
+			<title code="0x05">BM05.CMD : </title>
+			<title code="0x06">BM06.CMD : </title>
+			<title code="0x07">BM07.CMD : </title>
+			<title code="0x08">BM08.CMD : </title>
+			<title code="0x09">BM09.CMD : </title>
+			<title code="0x0b">SE01.CMD : </title>
+			<title code="0x0c">SE02.CMD : </title>
+			<title code="0x0d">SE03.CMD : </title>
+			<title code="0x0f">SE05.CMD : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 文化祭(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="bunka_98">
+			<rom type="file" offset="-1">bunka_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">BM01.CMD</rom>
+			<rom type="file" offset="-1">BM02.CMD</rom>
+			<rom type="file" offset="-1">BM03.CMD</rom>
+			<rom type="file" offset="-1">BM04.CMD</rom>
+			<rom type="file" offset="-1">BM05.CMD</rom>
+			<rom type="file" offset="-1">BM06.CMD</rom>
+			<rom type="file" offset="-1">BM07.CMD</rom>
+			<rom type="file" offset="-1">BM08.CMD</rom>
+			<rom type="file" offset="-1">BM09.CMD</rom>
+			<rom type="file" offset="-1">PIRON.CMD</rom>
+			<rom type="file" offset="-1">SE01.CMD</rom>
+			<rom type="file" offset="-1">SE02.CMD</rom>
+			<rom type="file" offset="-1">SE03.CMD</rom>
+			<rom type="file" offset="-1">SE05.CMD</rom>
+			<rom type="shell" offset="0">bunka_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BM01.CMD : </title>
+			<title code="0x02">BM02.CMD : </title>
+			<title code="0x03">BM03.CMD : </title>
+			<title code="0x04">BM04.CMD : </title>
+			<title code="0x05">BM05.CMD : </title>
+			<title code="0x06">BM06.CMD : </title>
+			<title code="0x07">BM07.CMD : </title>
+			<title code="0x08">BM08.CMD : </title>
+			<title code="0x09">BM09.CMD : </title>
+			<title code="0x0b">SE01.CMD : </title>
+			<title code="0x0c">SE02.CMD : </title>
+			<title code="0x0d">SE03.CMD : </title>
+			<title code="0x0f">SE05.CMD : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 文化祭(SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="bunka_98">
+			<rom type="file" offset="-1">bunka_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">BM01.MID</rom>
+			<rom type="file" offset="-1">BM02.MID</rom>
+			<rom type="file" offset="-1">BM03.MID</rom>
+			<rom type="file" offset="-1">BM04.MID</rom>
+			<rom type="file" offset="-1">BM05.MID</rom>
+			<rom type="file" offset="-1">BM06.MID</rom>
+			<rom type="file" offset="-1">BM07.MID</rom>
+			<rom type="file" offset="-1">BM08.MID</rom>
+			<rom type="file" offset="-1">BM09.MID</rom>
+			<rom type="file" offset="-1">SE01.MID</rom>
+			<rom type="file" offset="-1">SE02.MID</rom>
+			<rom type="file" offset="-1">SE03.MID</rom>
+			<rom type="file" offset="-1">SE05.MID</rom>
+			<rom type="shell" offset="0">bunka_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x101">BM01.MID : </title>
+			<title code="0x102">BM02.MID : </title>
+			<title code="0x103">BM03.MID : </title>
+			<title code="0x104">BM04.MID : </title>
+			<title code="0x105">BM05.MID : </title>
+			<title code="0x106">BM06.MID : </title>
+			<title code="0x107">BM07.MID : </title>
+			<title code="0x108">BM08.MID : </title>
+			<title code="0x109">BM09.MID : </title>
+			<title code="0x10b">SE01.MID : </title>
+			<title code="0x10c">SE02.MID : </title>
+			<title code="0x10d">SE03.MID : </title>
+			<title code="0x10f">SE05.MID : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] チェリーマドレット(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="cherrym_98">
+			<rom type="file" offset="-1">cmode_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">CM01.CMD</rom>
+			<rom type="file" offset="-1">CM02.CMD</rom>
+			<rom type="file" offset="-1">CM03.CMD</rom>
+			<rom type="file" offset="-1">CM04.CMD</rom>
+			<rom type="file" offset="-1">CM05.CMD</rom>
+			<rom type="file" offset="-1">CM06.CMD</rom>
+			<rom type="file" offset="-1">CM07.CMD</rom>
+			<rom type="file" offset="-1">CM08.CMD</rom>
+			<rom type="file" offset="-1">CM09.CMD</rom>
+			<rom type="file" offset="-1">CM10.CMD</rom>
+			<rom type="file" offset="-1">CM11.CMD</rom>
+			<rom type="file" offset="-1">CM12.CMD</rom>
+			<rom type="file" offset="-1">CM13.CMD</rom>
+			<rom type="file" offset="-1">CM14.CMD</rom>
+			<rom type="file" offset="-1">CM15.CMD</rom>
+			<rom type="file" offset="-1">CM16.CMD</rom>
+			<rom type="file" offset="-1">CM17.CMD</rom>
+			<rom type="file" offset="-1">CM18.CMD</rom>
+			<rom type="file" offset="-1">CM19.CMD</rom>
+			<rom type="file" offset="-1">CM20.CMD</rom>
+			<rom type="file" offset="-1">CM21.CMD</rom>
+			<rom type="file" offset="-1">CM22.CMD</rom>
+			<rom type="file" offset="-1">CM23.CMD</rom>
+			<rom type="file" offset="-1">CM24.CMD</rom>
+			<rom type="shell" offset="0">cmode_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">CM01.CMD : </title>
+			<title code="0x02">CM02.CMD : </title>
+			<title code="0x03">CM03.CMD : </title>
+			<title code="0x04">CM04.CMD : </title>
+			<title code="0x05">CM05.CMD : </title>
+			<title code="0x06">CM06.CMD : </title>
+			<title code="0x07">CM07.CMD : </title>
+			<title code="0x08">CM08.CMD : </title>
+			<title code="0x09">CM09.CMD : </title>
+			<title code="0x0a">CM10.CMD : </title>
+			<title code="0x0b">CM11.CMD : </title>
+			<title code="0x0c">CM12.CMD : </title>
+			<title code="0x0d">CM13.CMD : </title>
+			<title code="0x0e">CM14.CMD : </title>
+			<title code="0x0f">CM15.CMD : </title>
+			<title code="0x10">CM16.CMD : </title>
+			<title code="0x11">CM17.CMD : </title>
+			<title code="0x12">CM18.CMD : </title>
+			<title code="0x13">CM19.CMD : </title>
+			<title code="0x14">CM20.CMD : </title>
+			<title code="0x15">CM21.CMD : </title>
+			<title code="0x16">CM22.CMD : </title>
+			<title code="0x17">CM23.CMD : </title>
+			<title code="0x18">CM24.CMD : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] チェリーマドレット(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="cherrym_98">
+			<rom type="file" offset="-1">cmode_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">CM01.CMD</rom>
+			<rom type="file" offset="-1">CM02.CMD</rom>
+			<rom type="file" offset="-1">CM03.CMD</rom>
+			<rom type="file" offset="-1">CM04.CMD</rom>
+			<rom type="file" offset="-1">CM05.CMD</rom>
+			<rom type="file" offset="-1">CM06.CMD</rom>
+			<rom type="file" offset="-1">CM07.CMD</rom>
+			<rom type="file" offset="-1">CM08.CMD</rom>
+			<rom type="file" offset="-1">CM09.CMD</rom>
+			<rom type="file" offset="-1">CM10.CMD</rom>
+			<rom type="file" offset="-1">CM11.CMD</rom>
+			<rom type="file" offset="-1">CM12.CMD</rom>
+			<rom type="file" offset="-1">CM13.CMD</rom>
+			<rom type="file" offset="-1">CM14.CMD</rom>
+			<rom type="file" offset="-1">CM15.CMD</rom>
+			<rom type="file" offset="-1">CM16.CMD</rom>
+			<rom type="file" offset="-1">CM17.CMD</rom>
+			<rom type="file" offset="-1">CM18.CMD</rom>
+			<rom type="file" offset="-1">CM19.CMD</rom>
+			<rom type="file" offset="-1">CM20.CMD</rom>
+			<rom type="file" offset="-1">CM21.CMD</rom>
+			<rom type="file" offset="-1">CM22.CMD</rom>
+			<rom type="file" offset="-1">CM23.CMD</rom>
+			<rom type="file" offset="-1">CM24.CMD</rom>
+			<rom type="shell" offset="0">cmode_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">CM01.CMD : </title>
+			<title code="0x02">CM02.CMD : </title>
+			<title code="0x03">CM03.CMD : </title>
+			<title code="0x04">CM04.CMD : </title>
+			<title code="0x05">CM05.CMD : </title>
+			<title code="0x06">CM06.CMD : </title>
+			<title code="0x07">CM07.CMD : </title>
+			<title code="0x08">CM08.CMD : </title>
+			<title code="0x09">CM09.CMD : </title>
+			<title code="0x0a">CM10.CMD : </title>
+			<title code="0x0b">CM11.CMD : </title>
+			<title code="0x0c">CM12.CMD : </title>
+			<title code="0x0d">CM13.CMD : </title>
+			<title code="0x0e">CM14.CMD : </title>
+			<title code="0x0f">CM15.CMD : </title>
+			<title code="0x10">CM16.CMD : </title>
+			<title code="0x11">CM17.CMD : </title>
+			<title code="0x12">CM18.CMD : </title>
+			<title code="0x13">CM19.CMD : </title>
+			<title code="0x14">CM20.CMD : </title>
+			<title code="0x15">CM21.CMD : </title>
+			<title code="0x16">CM22.CMD : </title>
+			<title code="0x17">CM23.CMD : </title>
+			<title code="0x18">CM24.CMD : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] チェリーマドレット(SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="cherrym_98">
+			<rom type="file" offset="-1">cmode_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">CM01.MID</rom>
+			<rom type="file" offset="-1">CM02.MID</rom>
+			<rom type="file" offset="-1">CM03.MID</rom>
+			<rom type="file" offset="-1">CM04.MID</rom>
+			<rom type="file" offset="-1">CM05.MID</rom>
+			<rom type="file" offset="-1">CM06.MID</rom>
+			<rom type="file" offset="-1">CM07.MID</rom>
+			<rom type="file" offset="-1">CM08.MID</rom>
+			<rom type="file" offset="-1">CM09.MID</rom>
+			<rom type="file" offset="-1">CM10.MID</rom>
+			<rom type="file" offset="-1">CM11.MID</rom>
+			<rom type="file" offset="-1">CM12.MID</rom>
+			<rom type="file" offset="-1">CM13.MID</rom>
+			<rom type="file" offset="-1">CM14.MID</rom>
+			<rom type="file" offset="-1">CM15.MID</rom>
+			<rom type="file" offset="-1">CM16.MID</rom>
+			<rom type="file" offset="-1">CM17.MID</rom>
+			<rom type="file" offset="-1">CM18.MID</rom>
+			<rom type="file" offset="-1">CM19.MID</rom>
+			<rom type="file" offset="-1">CM20.MID</rom>
+			<rom type="file" offset="-1">CM21.MID</rom>
+			<rom type="file" offset="-1">CM22.MID</rom>
+			<rom type="file" offset="-1">CM23.MID</rom>
+			<rom type="file" offset="-1">CM24.MID</rom>
+			<rom type="shell" offset="0">cmode_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x101">CM01.MID : </title>
+			<title code="0x102">CM02.MID : </title>
+			<title code="0x103">CM03.MID : </title>
+			<title code="0x104">CM04.MID : </title>
+			<title code="0x105">CM05.MID : </title>
+			<title code="0x106">CM06.MID : </title>
+			<title code="0x107">CM07.MID : </title>
+			<title code="0x108">CM08.MID : </title>
+			<title code="0x109">CM09.MID : </title>
+			<title code="0x10a">CM10.MID : </title>
+			<title code="0x10b">CM11.MID : </title>
+			<title code="0x10c">CM12.MID : </title>
+			<title code="0x10d">CM13.MID : </title>
+			<title code="0x10e">CM14.MID : </title>
+			<title code="0x10f">CM15.MID : </title>
+			<title code="0x110">CM16.MID : </title>
+			<title code="0x111">CM17.MID : </title>
+			<title code="0x112">CM18.MID : </title>
+			<title code="0x113">CM19.MID : </title>
+			<title code="0x114">CM20.MID : </title>
+			<title code="0x115">CM21.MID : </title>
+			<title code="0x116">CM22.MID : </title>
+			<title code="0x117">CM23.MID : </title>
+			<title code="0x118">CM24.MID : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 放課後は別の顔(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="houkago_98">
+			<rom type="file" offset="-1">houka_98.com</rom>
+			<rom type="file" offset="-1">HOU.EXE</rom>
+			<rom type="conin" offset="5">HOU.EXE</rom>
+			<rom type="file" offset="-1">HA01.CMD</rom>
+			<rom type="file" offset="-1">HA02.CMD</rom>
+			<rom type="file" offset="-1">HA03.CMD</rom>
+			<rom type="file" offset="-1">HA04.CMD</rom>
+			<rom type="file" offset="-1">HA05.CMD</rom>
+			<rom type="file" offset="-1">HA06.CMD</rom>
+			<rom type="file" offset="-1">HA07.CMD</rom>
+			<rom type="file" offset="-1">HA08.CMD</rom>
+			<rom type="file" offset="-1">HA09.CMD</rom>
+			<rom type="file" offset="-1">PIRON.CMD</rom>
+			<rom type="conin" offset="11">HA01.CMD</rom>
+			<rom type="conin" offset="12">HA02.CMD</rom>
+			<rom type="conin" offset="13">HA03.CMD</rom>
+			<rom type="conin" offset="14">HA04.CMD</rom>
+			<rom type="conin" offset="15">HA05.CMD</rom>
+			<rom type="conin" offset="16">HA06.CMD</rom>
+			<rom type="conin" offset="17">HA07.CMD</rom>
+			<rom type="conin" offset="18">HA08.CMD</rom>
+			<rom type="conin" offset="19">HA09.CMD</rom>
+			<rom type="conin" offset="20">PIRON.CMD</rom>
+			<rom type="shell" offset="0">houka_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">HA01.CMD : </title>
+			<title code="12">HA02.CMD : </title>
+			<title code="13">HA03.CMD : </title>
+			<title code="14">HA04.CMD : </title>
+			<title code="15">HA05.CMD : </title>
+			<title code="16">HA06.CMD : </title>
+			<title code="17">HA07.CMD : </title>
+			<title code="18">HA08.CMD : </title>
+			<title code="19">HA09.CMD : </title>
+			<title code="20">PIRON.CMD : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 放課後は別の顔(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="houkago_98">
+			<rom type="file" offset="-1">houka_98.com</rom>
+			<rom type="file" offset="-1">HOU.EXE</rom>
+			<rom type="conin" offset="5">HOU.EXE</rom>
+			<rom type="file" offset="-1">HA01.CMD</rom>
+			<rom type="file" offset="-1">HA02.CMD</rom>
+			<rom type="file" offset="-1">HA03.CMD</rom>
+			<rom type="file" offset="-1">HA04.CMD</rom>
+			<rom type="file" offset="-1">HA05.CMD</rom>
+			<rom type="file" offset="-1">HA06.CMD</rom>
+			<rom type="file" offset="-1">HA07.CMD</rom>
+			<rom type="file" offset="-1">HA08.CMD</rom>
+			<rom type="file" offset="-1">HA09.CMD</rom>
+			<rom type="file" offset="-1">PIRON.CMD</rom>
+			<rom type="conin" offset="11">HA01.CMD</rom>
+			<rom type="conin" offset="12">HA02.CMD</rom>
+			<rom type="conin" offset="13">HA03.CMD</rom>
+			<rom type="conin" offset="14">HA04.CMD</rom>
+			<rom type="conin" offset="15">HA05.CMD</rom>
+			<rom type="conin" offset="16">HA06.CMD</rom>
+			<rom type="conin" offset="17">HA07.CMD</rom>
+			<rom type="conin" offset="18">HA08.CMD</rom>
+			<rom type="conin" offset="19">HA09.CMD</rom>
+			<rom type="conin" offset="20">PIRON.CMD</rom>
+			<rom type="shell" offset="0">houka_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">HA01.CMD : </title>
+			<title code="12">HA02.CMD : </title>
+			<title code="13">HA03.CMD : </title>
+			<title code="14">HA04.CMD : </title>
+			<title code="15">HA05.CMD : </title>
+			<title code="16">HA06.CMD : </title>
+			<title code="17">HA07.CMD : </title>
+			<title code="18">HA08.CMD : </title>
+			<title code="19">HA09.CMD : </title>
+			<title code="20">PIRON.CMD : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] パーフェクトブルー(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pblue_98">
+			<rom type="file" offset="-1">pblue_98.com</rom>
+			<rom type="file" offset="-1">ADVC.EXE</rom>
+			<rom type="conin" offset="5">ADVC.EXE</rom>
+			<rom type="file" offset="-1">H1_S.CMD</rom>
+			<rom type="file" offset="-1">H2_S.CMD</rom>
+			<rom type="file" offset="-1">H3_S.CMD</rom>
+			<rom type="file" offset="-1">H4_S.CMD</rom>
+			<rom type="file" offset="-1">HEYA_S.CMD</rom>
+			<rom type="file" offset="-1">HIAI_S.CMD</rom>
+			<rom type="file" offset="-1">MISA_S.CMD</rom>
+			<rom type="file" offset="-1">RANBU_S.CMD</rom>
+			<rom type="file" offset="-1">RIKA_S.CMD</rom>
+			<rom type="file" offset="-1">SHU_EN_S.CMD</rom>
+			<rom type="file" offset="-1">TISATO_S.CMD</rom>
+			<rom type="file" offset="-1">YAKU1_S.CMD</rom>
+			<rom type="file" offset="-1">YAKU2_S.CMD</rom>
+			<rom type="file" offset="-1">YUKA_S.CMD</rom>
+			<rom type="conin" offset="11">H1_S.CMD</rom>
+			<rom type="conin" offset="12">H2_S.CMD</rom>
+			<rom type="conin" offset="13">H3_S.CMD</rom>
+			<rom type="conin" offset="14">H4_S.CMD</rom>
+			<rom type="conin" offset="15">HEYA_S.CMD</rom>
+			<rom type="conin" offset="16">HIAI_S.CMD</rom>
+			<rom type="conin" offset="17">MISA_S.CMD</rom>
+			<rom type="conin" offset="18">RANBU_S.CMD</rom>
+			<rom type="conin" offset="19">RIKA_S.CMD</rom>
+			<rom type="conin" offset="20">SHU_EN_S.CMD</rom>
+			<rom type="conin" offset="21">TISATO_S.CMD</rom>
+			<rom type="conin" offset="22">YAKU1_S.CMD</rom>
+			<rom type="conin" offset="23">YAKU2_S.CMD</rom>
+			<rom type="conin" offset="24">YUKA_S.CMD</rom>
+			<rom type="shell" offset="0">pblue_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">H1_S.CMD     : </title>
+			<title code="12">H2_S.CMD     : </title>
+			<title code="13">H3_S.CMD     : </title>
+			<title code="14">H4_S.CMD     : </title>
+			<title code="15">HEYA_S.CMD   : </title>
+			<title code="16">HIAI_S.CMD   : </title>
+			<title code="17">MISA_S.CMD   : </title>
+			<title code="18">RANBU_S.CMD  : </title>
+			<title code="19">RIKA_S.CMD   : </title>
+			<title code="20">SHU_EN_S.CMD : </title>
+			<title code="21">TISATO_S.CMD : </title>
+			<title code="22">YAKU1_S.CMD  : </title>
+			<title code="23">YAKU2_S.CMD  : </title>
+			<title code="24">YUKA_S.CMD   : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] パーフェクトブルー(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">UCOM</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pblue_98">
+			<rom type="file" offset="-1">pblue_98.com</rom>
+			<rom type="file" offset="-1">ADVC.EXE</rom>
+			<rom type="conin" offset="5">ADVC.EXE</rom>
+			<rom type="file" offset="-1">H1_S.CMD</rom>
+			<rom type="file" offset="-1">H2_S.CMD</rom>
+			<rom type="file" offset="-1">H3_S.CMD</rom>
+			<rom type="file" offset="-1">H4_S.CMD</rom>
+			<rom type="file" offset="-1">HEYA_S.CMD</rom>
+			<rom type="file" offset="-1">HIAI_S.CMD</rom>
+			<rom type="file" offset="-1">MISA_S.CMD</rom>
+			<rom type="file" offset="-1">RANBU_S.CMD</rom>
+			<rom type="file" offset="-1">RIKA_S.CMD</rom>
+			<rom type="file" offset="-1">SHU_EN_S.CMD</rom>
+			<rom type="file" offset="-1">TISATO_S.CMD</rom>
+			<rom type="file" offset="-1">YAKU1_S.CMD</rom>
+			<rom type="file" offset="-1">YAKU2_S.CMD</rom>
+			<rom type="file" offset="-1">YUKA_S.CMD</rom>
+			<rom type="conin" offset="11">H1_S.CMD</rom>
+			<rom type="conin" offset="12">H2_S.CMD</rom>
+			<rom type="conin" offset="13">H3_S.CMD</rom>
+			<rom type="conin" offset="14">H4_S.CMD</rom>
+			<rom type="conin" offset="15">HEYA_S.CMD</rom>
+			<rom type="conin" offset="16">HIAI_S.CMD</rom>
+			<rom type="conin" offset="17">MISA_S.CMD</rom>
+			<rom type="conin" offset="18">RANBU_S.CMD</rom>
+			<rom type="conin" offset="19">RIKA_S.CMD</rom>
+			<rom type="conin" offset="20">SHU_EN_S.CMD</rom>
+			<rom type="conin" offset="21">TISATO_S.CMD</rom>
+			<rom type="conin" offset="22">YAKU1_S.CMD</rom>
+			<rom type="conin" offset="23">YAKU2_S.CMD</rom>
+			<rom type="conin" offset="24">YUKA_S.CMD</rom>
+			<rom type="shell" offset="0">pblue_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">H1_S.CMD     : </title>
+			<title code="12">H2_S.CMD     : </title>
+			<title code="13">H3_S.CMD     : </title>
+			<title code="14">H4_S.CMD     : </title>
+			<title code="15">HEYA_S.CMD   : </title>
+			<title code="16">HIAI_S.CMD   : </title>
+			<title code="17">MISA_S.CMD   : </title>
+			<title code="18">RANBU_S.CMD  : </title>
+			<title code="19">RIKA_S.CMD   : </title>
+			<title code="20">SHU_EN_S.CMD : </title>
+			<title code="21">TISATO_S.CMD : </title>
+			<title code="22">YAKU1_S.CMD  : </title>
+			<title code="23">YAKU2_S.CMD  : </title>
+			<title code="24">YUKA_S.CMD   : </title>
+		</titlelist>
+	</game>
+</gamelist>

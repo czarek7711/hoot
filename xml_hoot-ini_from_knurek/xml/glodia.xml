@@ -1,0 +1,3471 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //glodia -->
+	<game>
+		<name>[PC-88] Lyrane</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">glodia</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x0100"/>
+			<option name="mdata_size" value="0x4e00"/>
+			<option name="mfile_size" value="0x4e00"/>
+		</options>
+		<romlist archive="lyrane">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">OP</rom>
+			<rom type="code" offset="0x5000">ED1</rom>
+			<rom type="bgm" offset="0x00">OP</rom>
+			<rom type="bgm" offset="0x01">GAME</rom>
+			<rom type="bgm" offset="0x02">ED1</rom>
+			<rom type="bgm" offset="0x03">ED2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x01">メインBGM</title>
+			<title code="0x02">ゲームオーバー</title>
+			<title code="0x03">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Testament</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">glodia</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x4c00"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="testamnt">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">INFO</rom>
+			<rom type="bgm" offset="0x00">TS000</rom>
+			<rom type="bgm" offset="0x01">TS001</rom>
+			<rom type="bgm" offset="0x02">TS002</rom>
+			<rom type="bgm" offset="0x03">TS003</rom>
+			<rom type="bgm" offset="0x04">TS004</rom>
+			<rom type="bgm" offset="0x05">TS005</rom>
+			<rom type="bgm" offset="0x06">TS006</rom>
+			<rom type="bgm" offset="0x07">TS007</rom>
+			<rom type="bgm" offset="0x08">TS008</rom>
+			<rom type="bgm" offset="0x09">TS009</rom>
+			<rom type="bgm" offset="0x30">TS010</rom>
+			<rom type="bgm" offset="0x31">TS011</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80000000">オープニング</title>
+			<title code="0x00000001">BGM 1</title>
+			<title code="0x00000002">BGM 2</title>
+			<title code="0x00000003">BGM 3</title>
+			<title code="0x00000004">BGM 4</title>
+			<title code="0x00000005">中ボスBGM</title>
+			<title code="0x00000006">隠しステージBGM (Stage LSP &amp; RSP)</title>
+			<title code="0x00000007">隠しステージBGM (Stage IDOL)</title>
+			<title code="0x00000008">ペンタドラゴン</title>
+			<title code="0x00000009">エンディング</title>
+			<title code="0x80000030">ファンファーレ</title>
+			<title code="0x80000031">ゲームオーバー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Zavas (サバッシュ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">glodia</driveralias>
+		<options>
+			<option name="mfile_size" value="0x2100"/>
+			<option name="mdata_size" value="0x2100"/>
+			<option name="use_vrtc"   value="0x01"/>
+			<option name="clock_mul"  value="0x00"/>
+		</options>
+		<romlist archive="zavas">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">DRIVER</rom>
+			<rom type="bgm" offset="0x00">ZAOP01</rom>
+			<rom type="bgm" offset="0x01">ZAOP02</rom>
+			<rom type="bgm" offset="0x02">ZABG01</rom>
+			<rom type="bgm" offset="0x03">ZABG02</rom>
+			<rom type="bgm" offset="0x04">ZABG03</rom>
+			<rom type="bgm" offset="0x05">ZABG04</rom>
+			<rom type="bgm" offset="0x06">ZABG05</rom>
+			<rom type="bgm" offset="0x07">ZABG06</rom>
+			<rom type="bgm" offset="0x08">ZABG07</rom>
+			<rom type="bgm" offset="0x09">ZABG08</rom>
+			<rom type="bgm" offset="0x0a">ZABG09</rom>
+			<rom type="bgm" offset="0x0b">ZABG10</rom>
+			<rom type="bgm" offset="0x0c">ZABG11</rom>
+			<rom type="bgm" offset="0x0d">ZAOPBG</rom>
+			<rom type="bgm" offset="0x0e">ZAFIGH</rom>
+			<rom type="bgm" offset="0x0f">ZAED01</rom>
+			<rom type="bgm" offset="0x10">ZAFIT2</rom>
+			<rom type="bgm" offset="0x11">ZABIG</rom>
+			<rom type="bgm" offset="0x12">ZASHOP</rom>
+			<rom type="bgm" offset="0x13">ZACONG</rom>
+			<rom type="bgm" offset="0x14">ZAMINA</rom>
+			<rom type="bgm" offset="0x15">FAN1</rom>
+			<rom type="bgm" offset="0x16">FAN3</rom>
+			<rom type="bgm" offset="0x17">ZAGT01</rom>
+			<rom type="bgm" offset="0x18">ZAGT02</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80000000">サバッシュのテーマ (プロローグ)</title>
+			<title code="0x80000001">サバッシュ メイン・タイトル(オープニング)</title>
+			<title code="0x00000002">ファルガナ地方</title>
+			<title code="0x00000003">ファルガナ城</title>
+			<title code="0x00000004">カナートの財宝</title>
+			<title code="0x00000005">アルフールの大要塞</title>
+			<title code="0x00000006">カルムの塔</title>
+			<title code="0x00000007">マラメイヤ地方</title>
+			<title code="0x00000008">トマ村</title>
+			<title code="0x00000009">ドルゲスタン大陸</title>
+			<title code="0x0000000a">ドラゴン小国</title>
+			<title code="0x0000000b">グールの館</title>
+			<title code="0x0000000c">ブルバン要塞</title>
+			<title code="0x0000000d">ダルゾン帝国</title>
+			<title code="0x0000000e">モンスターバトル</title>
+			<title code="0x8000000f">エンドタイトル (エンディング)</title>
+			<title code="0x00000010">悲劇のテーマ</title>
+			<title code="0x00000011">ファイナルシューティング</title>
+			<title code="0x00000012">ショッピング</title>
+			<title code="0x00000013">きずな</title>
+			<title code="0x00000014">苦闘の果て</title>
+			<title code="0x80000015">ファンファーレ1</title>
+			<title code="0x80000016">ファンファーレ2</title>
+			<title code="0x80000017">残念賞1</title>
+			<title code="0x80000018">残念賞2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Zavas (サバッシュ)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="filesize" value="0x2200"/>
+			<option name="dataaddr" value="0x22060"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x1a"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+    </options>
+		<romlist archive="zavas98">
+			<rom type="code" offset="0x00600">zavas98.bin</rom>
+			<rom type="code" offset="0x10000">MAIN</rom>
+			<rom type="bgm" offset="0x01">ZAOP01.S</rom>
+			<rom type="bgm" offset="0x02">ZAOP02.S</rom>
+			<rom type="bgm" offset="0x03">ZABG01.S</rom>
+			<rom type="bgm" offset="0x04">ZABG02.S</rom>
+			<rom type="bgm" offset="0x05">ZABG03.S</rom>
+			<rom type="bgm" offset="0x06">ZABG04.S</rom>
+			<rom type="bgm" offset="0x07">ZABG05.S</rom>
+			<rom type="bgm" offset="0x08">ZABG06.S</rom>
+			<rom type="bgm" offset="0x09">ZABG07.S</rom>
+			<rom type="bgm" offset="0x0a">ZABG08.S</rom>
+			<rom type="bgm" offset="0x0b">ZABG09.S</rom>
+			<rom type="bgm" offset="0x0c">ZABG10.S</rom>
+			<rom type="bgm" offset="0x0d">ZABG11.S</rom>
+			<rom type="bgm" offset="0x0e">ZAOPBG.S</rom>
+			<rom type="bgm" offset="0x0f">ZAFIGH.S</rom>
+			<rom type="bgm" offset="0x10">ZAED01.S</rom>
+			<rom type="bgm" offset="0x11">ZAFIT2.S</rom>
+			<rom type="bgm" offset="0x12">ZABIG.S</rom>
+			<rom type="bgm" offset="0x13">ZASHOP.S</rom>
+			<rom type="bgm" offset="0x14">ZACONG.S</rom>
+			<rom type="bgm" offset="0x15">ZAMINA.S</rom>
+			<rom type="bgm" offset="0x16">ZAGT01.S</rom>
+			<rom type="bgm" offset="0x17">ZAGT02.S</rom>
+			<rom type="bgm" offset="0x18">FAN1.S</rom>
+			<rom type="bgm" offset="0x19">FAN3.S</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000001">サバッシュのテーマ (プロローグ)</title>
+			<title code="0x000002">サバッシュ メイン・タイトル(オープニング)</title>
+			<title code="0x010003">ファルガナ地方</title>
+			<title code="0x010004">ファルガナ城</title>
+			<title code="0x010005">カナートの財宝</title>
+			<title code="0x010006">アルフールの大要塞</title>
+			<title code="0x010007">カルムの塔</title>
+			<title code="0x010008">マラメイヤ地方</title>
+			<title code="0x010009">トマ村</title>
+			<title code="0x01000a">ドルゲスタン大陸</title>
+			<title code="0x01000b">ドラゴン小国</title>
+			<title code="0x01000c">グールの館</title>
+			<title code="0x01000d">ブルバン要塞</title>
+			<title code="0x01000e">ダルゾン帝国</title>
+			<title code="0x01000f">モンスターバトル</title>
+			<title code="0x000010">エンドタイトル (エンディング)</title>
+			<title code="0x010011">悲劇のテーマ</title>
+			<title code="0x010012">ファイナルシューティング</title>
+			<title code="0x010013">ショッピング</title>
+			<title code="0x010014">きずな</title>
+			<title code="0x010015">苦闘の果て</title>
+			<title code="0x000018">ファンファーレ</title>
+			<title code="0x000019">ファンファーレ2</title>
+			<title code="0x000016">効果音</title>
+			<title code="0x000017">効果音2</title>
+		</titlelist>
+  </game>
+	<game>
+		<name>[PC-88] Emerald Dragon (エメラルドドラゴン) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">glodia</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x3100"/>
+			<option name="mfile_size" value="0x3100"/>
+			<option name="use_vrtc"   value="0x01"/>
+			<option name="clock_mul"  value="0x00"/>
+		</options>
+		<romlist archive="emdr88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">EDMAIN</rom>
+			<rom type="bgm" offset="0x00">AMOP6X</rom>
+			<rom type="bgm" offset="0x01">AMOPX</rom>
+			<rom type="bgm" offset="0x02">BGM4</rom>
+			<rom type="bgm" offset="0x03">BIG</rom>
+			<rom type="bgm" offset="0x04">BIGDEA</rom>
+			<rom type="bgm" offset="0x05">EMBG01</rom>
+			<rom type="bgm" offset="0x06">EMBG03</rom>
+			<rom type="bgm" offset="0x07">EMBG04</rom>
+			<rom type="bgm" offset="0x08">EMBG05</rom>
+			<rom type="bgm" offset="0x09">EMBGD</rom>
+			<rom type="bgm" offset="0x0a">EMBGG2</rom>
+			<rom type="bgm" offset="0x0b">EMBGH</rom>
+			<rom type="bgm" offset="0x0c">EMBGM</rom>
+			<rom type="bgm" offset="0x0d">EMBGOP</rom>
+			<rom type="bgm" offset="0x0e">EMED6A</rom>
+			<rom type="bgm" offset="0x0f">EMEDA</rom>
+			<rom type="bgm" offset="0x10">EMEF1</rom>
+			<rom type="bgm" offset="0x11">EMFITB</rom>
+			<rom type="bgm" offset="0x12">EMFITC</rom>
+			<rom type="bgm" offset="0x13">EMFITD</rom>
+			<rom type="bgm" offset="0x14">EMOP6A</rom>
+			<rom type="bgm" offset="0x15">EMOP6B</rom>
+			<rom type="bgm" offset="0x16">EMOP6C</rom>
+			<rom type="bgm" offset="0x17">EMOP6D</rom>
+			<rom type="bgm" offset="0x18">EMOP6E</rom>
+			<rom type="bgm" offset="0x19">EMOPA</rom>
+			<rom type="bgm" offset="0x1a">EMOPB</rom>
+			<rom type="bgm" offset="0x1b">EMOPC</rom>
+			<rom type="bgm" offset="0x1c">EMOPD</rom>
+			<rom type="bgm" offset="0x1d">EMOPE</rom>
+			<rom type="bgm" offset="0x1e">EMSHP1</rom>
+			<rom type="bgm" offset="0x1f">EMSHP2</rom>
+			<rom type="bgm" offset="0x20">EMSHP3</rom>
+			<rom type="bgm" offset="0x21">EMSHP4</rom>
+			<rom type="bgm" offset="0x22">EMVI01</rom>
+			<rom type="bgm" offset="0x23">EMVI02</rom>
+			<rom type="bgm" offset="0x24">EMVI03</rom>
+			<rom type="bgm" offset="0x25">EMVI04</rom>
+			<rom type="bgm" offset="0x26">EMVI05</rom>
+			<rom type="bgm" offset="0x27">EMVI07</rom>
+			<rom type="bgm" offset="0x28">EMVI08</rom>
+			<rom type="bgm" offset="0x29">EMVI09</rom>
+			<rom type="bgm" offset="0x2a">EMVI10</rom>
+			<rom type="bgm" offset="0x2b">EMVI11</rom>
+			<rom type="bgm" offset="0x2c">FAN1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80000014">オープニング 序曲</title>
+			<title code="0x80000015">オープニング 天変地異</title>
+			<title code="0x00000000">オープニング 回想１</title>
+			<title code="0x00000016">オープニング 回想２</title>
+			<title code="0x00000017">オープニング 永久なるもの</title>
+			<title code="0x80000018">オープニング メインテーマ</title>
+			<title code="0x00000005">城内</title>
+			<title code="0x00000006">冒険開始</title>
+			<title code="0x00000007">洞窟</title>
+			<title code="0x00000008">試練</title>
+			<title code="0x0000001f">ショップ２</title>
+			<title code="0x0000001e">ショップ１</title>
+			<title code="0x00000023">キャンドル</title>
+			<title code="0x00000024">苦悩</title>
+			<title code="0x00000026">アクティブ</title>
+			<title code="0x00000021">ショップ３</title>
+			<title code="0x00000028">再会(エンディング)</title>
+			<title code="0x00000029">形勢不利</title>
+			<title code="0x0000002a">ピンチ</title>
+			<title code="0x0000002b">戦いの後に</title>
+			<title code="0x0000000a">ロック</title>
+			<title code="0x0000000b">街 １</title>
+			<title code="0x0000000c">街 ２</title>
+			<title code="0x00000009">黄昏</title>
+			<title code="0x00000013">戦闘 １</title>
+			<title code="0x00000012">戦闘 ２</title>
+			<title code="0x00000011">戦闘 ３</title>
+			<title code="0x8000000e">エンディング</title>
+			<title code="0x00000002">テスタメント BGM2</title>
+			<title code="0x00000003">テスタメント BOSS</title>
+			<title code="0x80000004">効果音</title>
+			<title code="0x0000000d">EMBGOP</title>
+			<title code="0x80000010">EMEF1</title>
+			<title code="0x00000020">EMSHP3</title>
+			<title code="0x00000022">EMVI01</title>
+			<title code="0x00000025">EMVI04</title>
+			<title code="0x00000027">EMVI07</title>
+			<title code="0x8000002c">FAN1</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Emerald Dragon (エメラルドドラゴン) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">glodia</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x3100"/>
+			<option name="mfile_size" value="0x3100"/>
+			<option name="use_vrtc"   value="0x01"/>
+			<option name="clock_mul"  value="0x00"/>
+		</options>
+		<romlist archive="emdr88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">EDMAIN</rom>
+			<rom type="bgm" offset="0x00">AMOP6X</rom>
+			<rom type="bgm" offset="0x01">AMOPX</rom>
+			<rom type="bgm" offset="0x02">BGM4</rom>
+			<rom type="bgm" offset="0x03">BIG</rom>
+			<rom type="bgm" offset="0x04">BIGDEA</rom>
+			<rom type="bgm" offset="0x05">EMBG01</rom>
+			<rom type="bgm" offset="0x06">EMBG03</rom>
+			<rom type="bgm" offset="0x07">EMBG04</rom>
+			<rom type="bgm" offset="0x08">EMBG05</rom>
+			<rom type="bgm" offset="0x09">EMBGD</rom>
+			<rom type="bgm" offset="0x0a">EMBGG2</rom>
+			<rom type="bgm" offset="0x0b">EMBGH</rom>
+			<rom type="bgm" offset="0x0c">EMBGM</rom>
+			<rom type="bgm" offset="0x0d">EMBGOP</rom>
+			<rom type="bgm" offset="0x0e">EMED6A</rom>
+			<rom type="bgm" offset="0x0f">EMEDA</rom>
+			<rom type="bgm" offset="0x10">EMEF1</rom>
+			<rom type="bgm" offset="0x11">EMFITB</rom>
+			<rom type="bgm" offset="0x12">EMFITC</rom>
+			<rom type="bgm" offset="0x13">EMFITD</rom>
+			<rom type="bgm" offset="0x14">EMOP6A</rom>
+			<rom type="bgm" offset="0x15">EMOP6B</rom>
+			<rom type="bgm" offset="0x16">EMOP6C</rom>
+			<rom type="bgm" offset="0x17">EMOP6D</rom>
+			<rom type="bgm" offset="0x18">EMOP6E</rom>
+			<rom type="bgm" offset="0x19">EMOPA</rom>
+			<rom type="bgm" offset="0x1a">EMOPB</rom>
+			<rom type="bgm" offset="0x1b">EMOPC</rom>
+			<rom type="bgm" offset="0x1c">EMOPD</rom>
+			<rom type="bgm" offset="0x1d">EMOPE</rom>
+			<rom type="bgm" offset="0x1e">EMSHP1</rom>
+			<rom type="bgm" offset="0x1f">EMSHP2</rom>
+			<rom type="bgm" offset="0x20">EMSHP3</rom>
+			<rom type="bgm" offset="0x21">EMSHP4</rom>
+			<rom type="bgm" offset="0x22">EMVI01</rom>
+			<rom type="bgm" offset="0x23">EMVI02</rom>
+			<rom type="bgm" offset="0x24">EMVI03</rom>
+			<rom type="bgm" offset="0x25">EMVI04</rom>
+			<rom type="bgm" offset="0x26">EMVI05</rom>
+			<rom type="bgm" offset="0x27">EMVI07</rom>
+			<rom type="bgm" offset="0x28">EMVI08</rom>
+			<rom type="bgm" offset="0x29">EMVI09</rom>
+			<rom type="bgm" offset="0x2a">EMVI10</rom>
+			<rom type="bgm" offset="0x2b">EMVI11</rom>
+			<rom type="bgm" offset="0x2c">FAN1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80000019">オープニング 序曲</title>
+			<title code="0x8000001a">オープニング 天変地異</title>
+			<title code="0x00000001">オープニング 回想１</title>
+			<title code="0x0000001b">オープニング 回想２</title>
+			<title code="0x0000001c">オープニング 永久なるもの</title>
+			<title code="0x8000001d">オープニング メインテーマ</title>
+			<title code="0x00000005">城内</title>
+			<title code="0x00000006">冒険開始</title>
+			<title code="0x00000007">洞窟</title>
+			<title code="0x00000008">試練</title>
+			<title code="0x0000001f">ショップ１</title>
+			<title code="0x0000001e">ショップ２</title>
+			<title code="0x00000023">キャンドル</title>
+			<title code="0x00000024">苦悩</title>
+			<title code="0x00000026">アクティブ</title>
+			<title code="0x00000021">ショップ３</title>
+			<title code="0x00000028">再会(エンディング)</title>
+			<title code="0x00000029">形勢不利</title>
+			<title code="0x0000002a">ピンチ</title>
+			<title code="0x0000002b">戦いの後に</title>
+			<title code="0x0000000a">ロック</title>
+			<title code="0x0000000b">街 １</title>
+			<title code="0x0000000c">街 ２</title>
+			<title code="0x00000009">黄昏</title>
+			<title code="0x00000013">戦闘 １</title>
+			<title code="0x00000012">戦闘 ２</title>
+			<title code="0x00000011">戦闘 ３</title>
+			<title code="0x8000000f">エンディング</title>
+			<title code="0x00000002">テスタメント BGM2</title>
+			<title code="0x00000003">テスタメント BOSS</title>
+			<title code="0x80000004">効果音</title>
+			<title code="0x0000000d">EMBGOP</title>
+			<title code="0x80000010">EMEF1</title>
+			<title code="0x00000020">EMSHP3</title>
+			<title code="0x00000022">EMVI01</title>
+			<title code="0x00000025">EMVI04</title>
+			<title code="0x00000027">EMVI07</title>
+			<title code="0x8000002c">FAN1</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Emerald Dragon Music Disc (エメラルドドラゴン ミュージックディスク) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">glodia</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x3100"/>
+			<option name="mfile_size" value="0x3100"/>
+			<option name="use_vrtc"   value="0x01"/>
+			<option name="clock_mul"  value="0x00"/>
+		</options>
+		<romlist archive="emdr88md">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">EDMAIN</rom>
+			<rom type="bgm" offset="0x00">AMOP6X</rom>
+			<rom type="bgm" offset="0x01">AMOPX</rom>
+			<rom type="bgm" offset="0x02">EMBG01</rom>
+			<rom type="bgm" offset="0x03">EMBG03</rom>
+			<rom type="bgm" offset="0x04">EMBG04</rom>
+			<rom type="bgm" offset="0x05">EMBG05</rom>
+			<rom type="bgm" offset="0x06">EMBG07</rom>
+			<rom type="bgm" offset="0x07">EMBG08</rom>
+			<rom type="bgm" offset="0x08">EMBG09</rom>
+			<rom type="bgm" offset="0x09">EMBGD</rom>
+			<rom type="bgm" offset="0x0a">EMBGG2</rom>
+			<rom type="bgm" offset="0x0b">EMBGH</rom>
+			<rom type="bgm" offset="0x0c">EMBGM</rom>
+			<rom type="bgm" offset="0x0d">EMBGOP</rom>
+			<rom type="bgm" offset="0x0e">EMED6A</rom>
+			<rom type="bgm" offset="0x0f">EMEDA</rom>
+			<rom type="bgm" offset="0x10">EMEF1</rom>
+			<rom type="bgm" offset="0x11">EMFITA</rom>
+			<rom type="bgm" offset="0x12">EMFITB</rom>
+			<rom type="bgm" offset="0x13">EMFITC</rom>
+			<rom type="bgm" offset="0x14">EMFITD</rom>
+			<rom type="bgm" offset="0x15">EMOP6A</rom>
+			<rom type="bgm" offset="0x16">EMOP6B</rom>
+			<rom type="bgm" offset="0x17">EMOP6C</rom>
+			<rom type="bgm" offset="0x18">EMOP6D</rom>
+			<rom type="bgm" offset="0x19">EMOP6E</rom>
+			<rom type="bgm" offset="0x1a">EMOPA</rom>
+			<rom type="bgm" offset="0x1b">EMOPB</rom>
+			<rom type="bgm" offset="0x1c">EMOPC</rom>
+			<rom type="bgm" offset="0x1d">EMOPD</rom>
+			<rom type="bgm" offset="0x1e">EMOPE</rom>
+			<rom type="bgm" offset="0x1f">EMSHP1</rom>
+			<rom type="bgm" offset="0x20">EMSHP2</rom>
+			<rom type="bgm" offset="0x21">EMSHP3</rom>
+			<rom type="bgm" offset="0x22">EMSHP4</rom>
+			<rom type="bgm" offset="0x23">EMVI01</rom>
+			<rom type="bgm" offset="0x24">EMVI02</rom>
+			<rom type="bgm" offset="0x25">EMVI03</rom>
+			<rom type="bgm" offset="0x26">EMVI04</rom>
+			<rom type="bgm" offset="0x27">EMVI05</rom>
+			<rom type="bgm" offset="0x28">EMVI07</rom>
+			<rom type="bgm" offset="0x29">EMVI08</rom>
+			<rom type="bgm" offset="0x2a">EMVI09</rom>
+			<rom type="bgm" offset="0x2b">EMVI10</rom>
+			<rom type="bgm" offset="0x2c">EMVI11</rom>
+			<rom type="bgm" offset="0x2d">EMVI64</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80000015">オープニング 序曲</title>
+			<title code="0x80000016">オープニング 天変地異</title>
+			<title code="0x00000000">オープニング 回想１</title>
+			<title code="0x00000017">オープニング 回想２</title>
+			<title code="0x00000018">オープニング 永久なるもの</title>
+			<title code="0x80000019">オープニング メインテーマ</title>
+			<title code="0x00000002">城内</title>
+			<title code="0x00000003">冒険開始</title>
+			<title code="0x00000004">洞窟</title>
+			<title code="0x00000005">試練</title>
+			<title code="0x00000020">ショップ１</title>
+			<title code="0x0000001f">ショップ２</title>
+			<title code="0x00000024">キャンドル</title>
+			<title code="0x00000025">苦悩</title>
+			<title code="0x00000027">アクティブ</title>
+			<title code="0x00000022">ショップ３</title>
+			<title code="0x00000029">再会(エンディング)</title>
+			<title code="0x0000002a">形勢不利</title>
+			<title code="0x0000002b">ピンチ</title>
+			<title code="0x0000002c">戦いの後に</title>
+			<title code="0x0000000a">ロック</title>
+			<title code="0x0000000b">街 １</title>
+			<title code="0x0000000c">街 ２</title>
+			<title code="0x00000009">黄昏</title>
+			<title code="0x00000014">戦闘 １</title>
+			<title code="0x00000013">戦闘 ２</title>
+			<title code="0x00000012">戦闘 ３</title>
+			<title code="0x8000000e">エンディング</title>
+			<title code="0x00000026">EMVI04</title>
+			<title code="0x00000006">EMBG07</title>
+			<title code="0x00000007">EMBG08</title>
+			<title code="0x00000008">EMBG09</title>
+			<title code="0x0000000d">EMBGOP</title>
+			<title code="0x80000010">EMEF1</title>
+			<title code="0x00000011">EMFITA</title>
+			<title code="0x00000023">EMVI01</title>
+			<title code="0x00000028">EMVI07</title>
+			<title code="0x0000002d">EMVI64</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Emerald Dragon Music Disc (エメラルドドラゴン ミュージックディスク) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">glodia</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x3100"/>
+			<option name="mfile_size" value="0x3100"/>
+			<option name="use_vrtc"   value="0x01"/>
+			<option name="clock_mul"  value="0x00"/>
+		</options>
+		<romlist archive="emdr88md">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">EDMAIN</rom>
+			<rom type="bgm" offset="0x00">AMOP6X</rom>
+			<rom type="bgm" offset="0x01">AMOPX</rom>
+			<rom type="bgm" offset="0x02">EMBG01</rom>
+			<rom type="bgm" offset="0x03">EMBG03</rom>
+			<rom type="bgm" offset="0x04">EMBG04</rom>
+			<rom type="bgm" offset="0x05">EMBG05</rom>
+			<rom type="bgm" offset="0x06">EMBG07</rom>
+			<rom type="bgm" offset="0x07">EMBG08</rom>
+			<rom type="bgm" offset="0x08">EMBG09</rom>
+			<rom type="bgm" offset="0x09">EMBGD</rom>
+			<rom type="bgm" offset="0x0a">EMBGG2</rom>
+			<rom type="bgm" offset="0x0b">EMBGH</rom>
+			<rom type="bgm" offset="0x0c">EMBGM</rom>
+			<rom type="bgm" offset="0x0d">EMBGOP</rom>
+			<rom type="bgm" offset="0x0e">EMED6A</rom>
+			<rom type="bgm" offset="0x0f">EMEDA</rom>
+			<rom type="bgm" offset="0x10">EMEF1</rom>
+			<rom type="bgm" offset="0x11">EMFITA</rom>
+			<rom type="bgm" offset="0x12">EMFITB</rom>
+			<rom type="bgm" offset="0x13">EMFITC</rom>
+			<rom type="bgm" offset="0x14">EMFITD</rom>
+			<rom type="bgm" offset="0x15">EMOP6A</rom>
+			<rom type="bgm" offset="0x16">EMOP6B</rom>
+			<rom type="bgm" offset="0x17">EMOP6C</rom>
+			<rom type="bgm" offset="0x18">EMOP6D</rom>
+			<rom type="bgm" offset="0x19">EMOP6E</rom>
+			<rom type="bgm" offset="0x1a">EMOPA</rom>
+			<rom type="bgm" offset="0x1b">EMOPB</rom>
+			<rom type="bgm" offset="0x1c">EMOPC</rom>
+			<rom type="bgm" offset="0x1d">EMOPD</rom>
+			<rom type="bgm" offset="0x1e">EMOPE</rom>
+			<rom type="bgm" offset="0x1f">EMSHP1</rom>
+			<rom type="bgm" offset="0x20">EMSHP2</rom>
+			<rom type="bgm" offset="0x21">EMSHP3</rom>
+			<rom type="bgm" offset="0x22">EMSHP4</rom>
+			<rom type="bgm" offset="0x23">EMVI01</rom>
+			<rom type="bgm" offset="0x24">EMVI02</rom>
+			<rom type="bgm" offset="0x25">EMVI03</rom>
+			<rom type="bgm" offset="0x26">EMVI04</rom>
+			<rom type="bgm" offset="0x27">EMVI05</rom>
+			<rom type="bgm" offset="0x28">EMVI07</rom>
+			<rom type="bgm" offset="0x29">EMVI08</rom>
+			<rom type="bgm" offset="0x2a">EMVI09</rom>
+			<rom type="bgm" offset="0x2b">EMVI10</rom>
+			<rom type="bgm" offset="0x2c">EMVI11</rom>
+		<!--	<rom type="bgm" offset="0x2d">EMVI64</rom> -->
+		</romlist>
+		<titlelist>
+			<title code="0x8000001a">オープニング 序曲</title>
+			<title code="0x8000001b">オープニング 天変地異</title>
+			<title code="0x00000001">オープニング 回想１</title>
+			<title code="0x0000001c">オープニング 回想２</title>
+			<title code="0x0000001d">オープニング 永久なるもの</title>
+			<title code="0x8000001e">オープニング メインテーマ</title>
+			<title code="0x00000002">城内</title>
+			<title code="0x00000003">冒険開始</title>
+			<title code="0x00000004">洞窟</title>
+			<title code="0x00000005">試練</title>
+			<title code="0x00000020">ショップ１</title>
+			<title code="0x0000001f">ショップ２</title>
+			<title code="0x00000024">キャンドル</title>
+			<title code="0x00000025">苦悩</title>
+			<title code="0x00000027">アクティブ</title>
+			<title code="0x00000022">ショップ３</title>
+			<title code="0x00000029">再会(エンディング)</title>
+			<title code="0x0000002a">形勢不利</title>
+			<title code="0x0000002b">ピンチ</title>
+			<title code="0x0000002c">戦いの後に</title>
+			<title code="0x0000000a">ロック</title>
+			<title code="0x0000000b">街 １</title>
+			<title code="0x0000000c">街 ２</title>
+			<title code="0x00000009">黄昏</title>
+			<title code="0x00000014">戦闘 １</title>
+			<title code="0x00000013">戦闘 ２</title>
+			<title code="0x00000012">戦闘 ３</title>
+			<title code="0x8000000f">エンディング</title>
+			<title code="0x00000026">EMVI04</title>
+			<title code="0x00000006">EMBG07</title>
+			<title code="0x00000007">EMBG08</title>
+			<title code="0x00000008">EMBG09</title>
+			<title code="0x0000000d">EMBGOP</title>
+			<title code="0x80000010">EMEF1</title>
+			<title code="0x00000011">EMFITA</title>
+			<title code="0x00000023">EMVI01</title>
+			<title code="0x00000028">EMVI07</title>
+		<!--	<title code="0x0000002d">EMVI64 : </title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Emerald Dragon (エメラルドドラゴン)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="dataaddr" value="0x15f10"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x2a"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="emdr98">
+			<rom type="code" offset="0x00600">emdr98.bin</rom>
+			<rom type="code" offset="0x12000">MAIN</rom>
+			<rom type="bgm" offset="0x01">AMOPX.S</rom>
+			<rom type="bgm" offset="0x02">BGM4.S</rom>
+			<rom type="bgm" offset="0x03">BGM5.S</rom>
+			<rom type="bgm" offset="0x04">BIG.S</rom>
+			<rom type="bgm" offset="0x05">EMBG01.S</rom>
+			<rom type="bgm" offset="0x06">EMBG03.S</rom>
+			<rom type="bgm" offset="0x07">EMBG04.S</rom>
+			<rom type="bgm" offset="0x08">EMBG05.S</rom>
+			<rom type="bgm" offset="0x09">EMBGD.S</rom>
+			<rom type="bgm" offset="0x0a">EMBGG2.S</rom>
+			<rom type="bgm" offset="0x0b">EMBGH.S</rom>
+			<rom type="bgm" offset="0x0c">EMBGM.S</rom>
+			<rom type="bgm" offset="0x0d">EMBGOP.S</rom>
+			<rom type="bgm" offset="0x0e">EMEDA.S</rom>
+			<rom type="bgm" offset="0x0f">EMEF1.S</rom>
+			<rom type="bgm" offset="0x10">EMFITA.S</rom>
+			<rom type="bgm" offset="0x11">EMFITB.S</rom>
+			<rom type="bgm" offset="0x12">EMFITC.S</rom>
+			<rom type="bgm" offset="0x13">EMFITD.S</rom>
+			<rom type="bgm" offset="0x14">EMOPA.S</rom>
+			<rom type="bgm" offset="0x15">EMOPB.S</rom>
+			<rom type="bgm" offset="0x16">EMOPC.S</rom>
+			<rom type="bgm" offset="0x17">EMOPD.S</rom>
+			<rom type="bgm" offset="0x18">EMOPE.S</rom>
+			<rom type="bgm" offset="0x19">EMSHP1.S</rom>
+			<rom type="bgm" offset="0x1a">EMSHP2.S</rom>
+			<rom type="bgm" offset="0x1b">EMSHP3.S</rom>
+			<rom type="bgm" offset="0x1c">EMSHP4.S</rom>
+			<rom type="bgm" offset="0x1d">EMVI01.S</rom>
+			<rom type="bgm" offset="0x1e">EMVI02.S</rom>
+			<rom type="bgm" offset="0x1f">EMVI03.S</rom>
+			<rom type="bgm" offset="0x20">EMVI04.S</rom>
+			<rom type="bgm" offset="0x21">EMVI05.S</rom>
+			<rom type="bgm" offset="0x22">EMVI07.S</rom>
+			<rom type="bgm" offset="0x23">EMVI08.S</rom>
+			<rom type="bgm" offset="0x24">EMVI09.S</rom>
+			<rom type="bgm" offset="0x25">EMVI10.S</rom>
+			<rom type="bgm" offset="0x26">EMVI11.S</rom>
+			<rom type="bgm" offset="0x27">EMVI64.S</rom>
+			<rom type="bgm" offset="0x28">FAN1.S</rom>
+			<rom type="bgm" offset="0x29">FAN3.S</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x800014">オープニング 序曲</title>
+			<title code="0x800015">オープニング 天変地異</title>
+			<title code="0x000001">オープニング 回想１</title>
+			<title code="0x000016">オープニング 回想２</title>
+			<title code="0x000017">オープニング 永久なるもの</title>
+			<title code="0x800018">オープニング メインテーマ</title>
+			<title code="0x000005">城内</title>
+			<title code="0x000006">冒険開始</title>
+			<title code="0x000007">洞窟</title>
+			<title code="0x000008">試練</title>
+			<title code="0x00001a">ショップ１</title>
+			<title code="0x000019">ショップ２</title>
+			<title code="0x00001e">キャンドル</title>
+			<title code="0x00001f">苦悩</title>
+			<title code="0x000021">アクティブ</title>
+			<title code="0x00001c">ショップ３</title>
+			<title code="0x000023">再会 (エンディング)</title>
+			<title code="0x000024">形勢不利</title>
+			<title code="0x000025">ピンチ</title>
+			<title code="0x000026">戦いの後に</title>
+			<title code="0x00000a">ロック</title>
+			<title code="0x00000b">街 １</title>
+			<title code="0x00000c">街 ２</title>
+			<title code="0x000009">黄昏</title>
+			<title code="0x000013">戦闘 １</title>
+			<title code="0x000012">戦闘 ２</title>
+			<title code="0x000011">戦闘 ３</title>
+			<title code="0x80000e">エンディング</title>
+			<title code="0x00000d">メインテーマ (BGMバージョン)</title>
+			<title code="0x000010">隠しデモ曲</title>
+			<title code="0x00001b">EMSHP3.S</title>
+			<title code="0x00001d">EMVI01.S</title>
+			<title code="0x000020">EMVI04.S</title>
+			<title code="0x000022">EMVI07.S</title>
+			<title code="0x800028">ファンファーレ１</title>
+			<title code="0x800029">ファンファーレ２</title>
+			<title code="0x80000f">ジングル</title>
+			<title code="0x000002">テスタメント BGM2</title>
+			<title code="0x000003">テスタメント LSP &amp; RSP</title>
+			<title code="0x000004">テスタメント BOSS</title>
+		<!--	<title code="0x000027">EMVI64.S : </title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Vain Dream (ヴェインドリーム) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">glodia</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5c00"/>
+			<option name="mdata_size" value="0x2800"/>
+			<option name="mfile_size" value="0x2800"/>
+			<option name="use_vrtc"   value="0x01"/>
+			<option name="clock_mul"  value="0x00"/>
+		</options>
+		<romlist archive="vd_88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">VDMAIN</rom>
+			<rom type="bgm" offset="0x00">EMBG07</rom>
+			<rom type="bgm" offset="0x01">EMBG09</rom>
+			<rom type="bgm" offset="0x02">FAN05</rom>
+			<rom type="bgm" offset="0x03">FAN09</rom>
+			<rom type="bgm" offset="0x04">FAN1</rom>
+			<rom type="bgm" offset="0x05">RAOPD6</rom>
+			<rom type="bgm" offset="0x06">VABG01</rom>
+			<rom type="bgm" offset="0x07">VABG02</rom>
+			<rom type="bgm" offset="0x08">VABG04</rom>
+			<rom type="bgm" offset="0x09">VABG06</rom>
+			<rom type="bgm" offset="0x0a">VADO01</rom>
+			<rom type="bgm" offset="0x0b">VADO05</rom>
+			<rom type="bgm" offset="0x0c">VAEF01</rom>
+			<rom type="bgm" offset="0x0d">VAEF02</rom>
+			<rom type="bgm" offset="0x0e">VAEF03</rom>
+			<rom type="bgm" offset="0x0f">VAEF05</rom>
+			<rom type="bgm" offset="0x10">VAEF06</rom>
+			<rom type="bgm" offset="0x11">VAEF07</rom>
+			<rom type="bgm" offset="0x12">VAEF08</rom>
+			<rom type="bgm" offset="0x13">VAEF10</rom>
+			<rom type="bgm" offset="0x14">VAEF11</rom>
+			<rom type="bgm" offset="0x15">VAHP</rom>
+			<rom type="bgm" offset="0x16">VAHP3</rom>
+			<rom type="bgm" offset="0x17">VAOPD</rom>
+			<rom type="bgm" offset="0x18">VAVI01</rom>
+			<rom type="bgm" offset="0x19">VAVI11</rom>
+			<rom type="bgm" offset="0x1a">VAVI23</rom>
+			<rom type="bgm" offset="0x1b">VD000</rom>
+			<rom type="bgm" offset="0x1c">VD001</rom>
+			<rom type="bgm" offset="0x1d">VD002</rom>
+			<rom type="bgm" offset="0x1e">VD003</rom>
+			<rom type="bgm" offset="0x1f">VNBG01</rom>
+			<rom type="bgm" offset="0x20">VNBG02</rom>
+			<rom type="bgm" offset="0x21">VNBG03</rom>
+			<rom type="bgm" offset="0x22">VNEF01</rom>
+			<rom type="bgm" offset="0x23">VNFI00</rom>
+			<rom type="bgm" offset="0x24">VNFI01</rom>
+			<rom type="bgm" offset="0x25">VNFI02</rom>
+			<rom type="bgm" offset="0x26">VNTW01</rom>
+			<rom type="bgm" offset="0x27">VNTW03</rom>
+			<rom type="bgm" offset="0x28">VNVI01</rom>
+			<rom type="bgm" offset="0x29">VOPE6L</rom>
+			<rom type="bgm" offset="0x2a">VOPE6U</rom>
+			<rom type="bgm" offset="0x2b">VOPEL</rom>
+			<rom type="bgm" offset="0x2c">VS2B02</rom>
+			<rom type="bgm" offset="0x2d">VS2B03</rom>
+			<rom type="bgm" offset="0x2e">VSSB01</rom>
+			<rom type="bgm" offset="0x2f">VSSB02</rom>
+			<rom type="bgm" offset="0x30">VSSD01</rom>
+			<rom type="bgm" offset="0x31">VSSF01</rom>
+			<rom type="bgm" offset="0x32">VSSF02</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000005">オープニング１</title>
+			<title code="0x0000002a">オープニング２</title>
+			<title code="0x00000029">オープニング３</title>
+			<title code="0x00000006">平原１</title>
+			<title code="0x00000007">平原２</title>
+			<title code="0x00000020">平原３</title>
+			<title code="0x00000026">のどかな街１</title>
+			<title code="0x00000001">のどかな街２</title>
+			<title code="0x0000001c">のどかな街３</title>
+			<title code="0x00000009">のどかな街４</title>
+			<title code="0x0000002f">のどかな街５</title>
+			<title code="0x0000002e">のどかな街６</title>
+			<title code="0x0000001f">静寂な街１</title>
+			<title code="0x00000028">静寂な街２</title>
+			<title code="0x0000001b">荒野１</title>
+			<title code="0x0000002d">荒野２</title>
+			<title code="0x0000000a">洞窟１</title>
+			<title code="0x00000000">洞窟２</title>
+			<title code="0x0000000b">洞窟３</title>
+			<title code="0x00000021">洞窟４</title>
+			<title code="0x0000002c">森１</title>
+			<title code="0x00000018">森２</title>
+			<title code="0x80000004">アイテム入手</title>
+			<title code="0x80000003">レベルアップ</title>
+			<title code="0x00000002">パーティー編成</title>
+			<title code="0x00000023">戦闘１</title>
+			<title code="0x00000031">戦闘２</title>
+			<title code="0x00000032">戦闘３</title>
+			<title code="0x00000022">ボス戦闘１</title>
+			<title code="0x00000024">ボス戦闘２</title>
+			<title code="0x00000025">ボス戦闘３</title>
+			<title code="0x00000008">凱旋</title>
+			<title code="0x0000000c">勇気</title>
+			<title code="0x0000000d">絶体絶命</title>
+			<title code="0x0000000e">失望</title>
+			<title code="0x00000010">戦闘展開</title>
+			<title code="0x00000011">迫りくる恐怖</title>
+			<title code="0x00000012">クライマックス</title>
+			<title code="0x00000019">古戦場跡</title>
+			<title code="0x00000030">幻想</title>
+			<title code="0x00000013">緊迫</title>
+			<title code="0x00000014">霊峰</title>
+			<title code="0x00000027">平和</title>
+			<title code="0x0000001a">決戦のボレロ</title>
+			<title code="0x0000000f">結末</title>
+			<title code="0x80000015">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Vain Dream (ヴェインドリーム) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">glodia</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5c00"/>
+			<option name="mdata_size" value="0x2800"/>
+			<option name="mfile_size" value="0x2800"/>
+			<option name="use_vrtc"   value="0x01"/>
+			<option name="clock_mul"  value="0x00"/>
+		</options>
+		<romlist archive="vd_88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">VDMAIN</rom>
+			<rom type="bgm" offset="0x00">EMBG07</rom>
+			<rom type="bgm" offset="0x01">EMBG09</rom>
+			<rom type="bgm" offset="0x02">FAN05</rom>
+			<rom type="bgm" offset="0x03">FAN09</rom>
+			<rom type="bgm" offset="0x04">FAN1</rom>
+			<rom type="bgm" offset="0x05">RAOPD6</rom>
+			<rom type="bgm" offset="0x06">VABG01</rom>
+			<rom type="bgm" offset="0x07">VABG02</rom>
+			<rom type="bgm" offset="0x08">VABG04</rom>
+			<rom type="bgm" offset="0x09">VABG06</rom>
+			<rom type="bgm" offset="0x0a">VADO01</rom>
+			<rom type="bgm" offset="0x0b">VADO05</rom>
+			<rom type="bgm" offset="0x0c">VAEF01</rom>
+			<rom type="bgm" offset="0x0d">VAEF02</rom>
+			<rom type="bgm" offset="0x0e">VAEF03</rom>
+			<rom type="bgm" offset="0x0f">VAEF05</rom>
+			<rom type="bgm" offset="0x10">VAEF06</rom>
+			<rom type="bgm" offset="0x11">VAEF07</rom>
+			<rom type="bgm" offset="0x12">VAEF08</rom>
+			<rom type="bgm" offset="0x13">VAEF10</rom>
+			<rom type="bgm" offset="0x14">VAEF11</rom>
+			<rom type="bgm" offset="0x15">VAHP</rom>
+			<rom type="bgm" offset="0x16">VAHP3</rom>
+			<rom type="bgm" offset="0x17">VAOPD</rom>
+			<rom type="bgm" offset="0x18">VAVI01</rom>
+			<rom type="bgm" offset="0x19">VAVI11</rom>
+			<rom type="bgm" offset="0x1a">VAVI23</rom>
+			<rom type="bgm" offset="0x1b">VD000</rom>
+			<rom type="bgm" offset="0x1c">VD001</rom>
+			<rom type="bgm" offset="0x1d">VD002</rom>
+			<rom type="bgm" offset="0x1e">VD003</rom>
+			<rom type="bgm" offset="0x1f">VNBG01</rom>
+			<rom type="bgm" offset="0x20">VNBG02</rom>
+			<rom type="bgm" offset="0x21">VNBG03</rom>
+			<rom type="bgm" offset="0x22">VNEF01</rom>
+			<rom type="bgm" offset="0x23">VNFI00</rom>
+			<rom type="bgm" offset="0x24">VNFI01</rom>
+			<rom type="bgm" offset="0x25">VNFI02</rom>
+			<rom type="bgm" offset="0x26">VNTW01</rom>
+			<rom type="bgm" offset="0x27">VNTW03</rom>
+			<rom type="bgm" offset="0x28">VNVI01</rom>
+			<rom type="bgm" offset="0x29">VOPE6L</rom>
+			<rom type="bgm" offset="0x2a">VOPE6U</rom>
+			<rom type="bgm" offset="0x2b">VOPEL</rom>
+			<rom type="bgm" offset="0x2c">VS2B02</rom>
+			<rom type="bgm" offset="0x2d">VS2B03</rom>
+			<rom type="bgm" offset="0x2e">VSSB01</rom>
+			<rom type="bgm" offset="0x2f">VSSB02</rom>
+			<rom type="bgm" offset="0x30">VSSD01</rom>
+			<rom type="bgm" offset="0x31">VSSF01</rom>
+			<rom type="bgm" offset="0x32">VSSF02</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000017">オープニング１</title>
+			<title code="0x0000002b">オープニング２</title>
+			<title code="0x0000001e">オープニング３</title>
+			<title code="0x0000001d">オープニング３ (Short loop)</title>
+			<title code="0x00000006">平原１</title>
+			<title code="0x00000007">平原２</title>
+			<title code="0x00000020">平原３</title>
+			<title code="0x00000026">のどかな街１</title>
+			<title code="0x00000001">のどかな街２</title>
+			<title code="0x0000001c">のどかな街３</title>
+			<title code="0x00000009">のどかな街４</title>
+			<title code="0x0000002f">のどかな街５</title>
+			<title code="0x0000002e">のどかな街６</title>
+			<title code="0x0000001f">静寂な街１</title>
+			<title code="0x00000028">静寂な街２</title>
+			<title code="0x0000001b">荒野１</title>
+			<title code="0x0000002d">荒野２</title>
+			<title code="0x0000000a">洞窟１</title>
+			<title code="0x00000000">洞窟２</title>
+			<title code="0x0000000b">洞窟３</title>
+			<title code="0x00000021">洞窟４</title>
+			<title code="0x0000002c">森１</title>
+			<title code="0x00000018">森２</title>
+			<title code="0x80000004">アイテム入手</title>
+			<title code="0x80000003">レベルアップ</title>
+			<title code="0x00000002">パーティー編成</title>
+			<title code="0x00000023">戦闘１</title>
+			<title code="0x00000031">戦闘２</title>
+			<title code="0x00000032">戦闘３</title>
+			<title code="0x00000022">ボス戦闘１</title>
+			<title code="0x00000024">ボス戦闘２</title>
+			<title code="0x00000025">ボス戦闘３</title>
+			<title code="0x00000008">凱旋</title>
+			<title code="0x0000000c">勇気</title>
+			<title code="0x0000000d">絶体絶命</title>
+			<title code="0x0000000e">失望</title>
+			<title code="0x00000010">戦闘展開</title>
+			<title code="0x00000011">迫りくる恐怖</title>
+			<title code="0x00000012">クライマックス</title>
+			<title code="0x00000019">古戦場跡</title>
+			<title code="0x00000030">幻想</title>
+			<title code="0x00000013">緊迫</title>
+			<title code="0x00000014">霊峰</title>
+			<title code="0x00000027">平和</title>
+			<title code="0x0000001a">決戦のボレロ</title>
+			<title code="0x0000000f">結末</title>
+			<title code="0x80000016">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Vain Dream (ヴェインドリーム)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs" value="0x1000"/>
+			<option name="bootip" value="0x4800"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="dataaddr" value="0x15000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x38"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="vd_98">
+			<rom type="code" offset="0x10000">MAIN</rom>
+			<rom type="code" offset="0x14800">vd98.bin</rom>
+			<rom type="bgm" offset="0x01">EMBG07.S</rom>
+			<rom type="bgm" offset="0x02">EMBG09.S</rom>
+			<rom type="bgm" offset="0x03">FAN05.S</rom>
+			<rom type="bgm" offset="0x04">FAN09.S</rom>
+			<rom type="bgm" offset="0x05">FAN1.S</rom>
+			<rom type="bgm" offset="0x06">RAOPD6.S</rom>
+			<rom type="bgm" offset="0x07">VABG01.S</rom>
+			<rom type="bgm" offset="0x08">VABG02.S</rom>
+			<rom type="bgm" offset="0x09">VABG04.S</rom>
+			<rom type="bgm" offset="0x0a">VABG06.S</rom>
+			<rom type="bgm" offset="0x0b">VADO01.S</rom>
+			<rom type="bgm" offset="0x0c">VADO05.S</rom>
+			<rom type="bgm" offset="0x0d">VAEF01.S</rom>
+			<rom type="bgm" offset="0x0e">VAEF02.S</rom>
+			<rom type="bgm" offset="0x0f">VAEF03.S</rom>
+			<rom type="bgm" offset="0x10">VAEF05.S</rom>
+			<rom type="bgm" offset="0x11">VAEF06.S</rom>
+			<rom type="bgm" offset="0x12">VAEF07.S</rom>
+			<rom type="bgm" offset="0x13">VAEF08.S</rom>
+			<rom type="bgm" offset="0x14">VAEF10.S</rom>
+			<rom type="bgm" offset="0x15">VAEF11.S</rom>
+			<rom type="bgm" offset="0x16">VAEF12.S</rom>
+			<rom type="bgm" offset="0x17">VAHP3.S</rom>
+			<rom type="bgm" offset="0x18">VAOPD.S</rom>
+			<rom type="bgm" offset="0x19">VAVI01.S</rom>
+			<rom type="bgm" offset="0x1a">VAVI11.S</rom>
+			<rom type="bgm" offset="0x1b">VAVI20.S</rom>
+			<rom type="bgm" offset="0x1c">VAVI22.S</rom>
+			<rom type="bgm" offset="0x1d">VAVI23.S</rom>
+			<rom type="bgm" offset="0x1e">VD000.S</rom>
+			<rom type="bgm" offset="0x1f">VD001.S</rom>
+			<rom type="bgm" offset="0x20">VD003.S</rom>
+			<rom type="bgm" offset="0x21">VD007.S</rom>
+			<rom type="bgm" offset="0x22">VNBG01.S</rom>
+			<rom type="bgm" offset="0x23">VNBG02.S</rom>
+			<rom type="bgm" offset="0x24">VNBG03.S</rom>
+			<rom type="bgm" offset="0x25">VNDO01.S</rom>
+			<rom type="bgm" offset="0x26">VNEF01.S</rom>
+			<rom type="bgm" offset="0x27">VNFI00.S</rom>
+			<rom type="bgm" offset="0x28">VNFI01.S</rom>
+			<rom type="bgm" offset="0x29">VNFI02.S</rom>
+			<rom type="bgm" offset="0x2a">VNTW01.S</rom>
+			<rom type="bgm" offset="0x2b">VNTW03.S</rom>
+			<rom type="bgm" offset="0x2c">VNTW07.S</rom>
+			<rom type="bgm" offset="0x2d">VNVI01.S</rom>
+			<rom type="bgm" offset="0x2e">VOPE6L.S</rom>
+			<rom type="bgm" offset="0x2f">VOPE6U.S</rom>
+			<rom type="bgm" offset="0x30">VOPEL.S</rom>
+			<rom type="bgm" offset="0x31">VS2B02.S</rom>
+			<rom type="bgm" offset="0x32">VS2B03.S</rom>
+			<rom type="bgm" offset="0x33">VSSB01.S</rom>
+			<rom type="bgm" offset="0x34">VSSB02.S</rom>
+			<rom type="bgm" offset="0x35">VSSD01.S</rom>
+			<rom type="bgm" offset="0x36">VSSF01.S</rom>
+			<rom type="bgm" offset="0x37">VSSF02.S</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000018">オープニング１</title>
+			<title code="0x000020">オープニング２</title>
+			<title code="0x000030">オープニング３</title>
+			<title code="0x000007">平原１</title>
+			<title code="0x000008">平原２</title>
+			<title code="0x000023">平原３</title>
+			<title code="0x00002a">のどかな街１</title>
+			<title code="0x000002">のどかな街２</title>
+			<title code="0x00001f">のどかな街３</title>
+			<title code="0x00000a">のどかな街４</title>
+			<title code="0x000034">のどかな街５</title>
+			<title code="0x000033">のどかな街６</title>
+			<title code="0x000022">静寂な街１</title>
+			<title code="0x00002d">静寂な街２</title>
+			<title code="0x00001e">荒野１</title>
+			<title code="0x000032">荒野２</title>
+			<title code="0x00000b">洞窟１</title>
+			<title code="0x000001">洞窟２</title>
+			<title code="0x00000c">洞窟３</title>
+			<title code="0x000024">洞窟４</title>
+			<title code="0x000031">森１</title>
+			<title code="0x000019">森２</title>
+			<title code="0x800005">アイテム入手</title>
+			<title code="0x800004">レベルアップ</title>
+			<title code="0x000003">パーティ編成</title>
+			<title code="0x000027">戦闘１</title>
+			<title code="0x000036">戦闘２</title>
+			<title code="0x000037">戦闘３</title>
+			<title code="0x000026">ボス戦闘１</title>
+			<title code="0x000028">ボス戦闘２</title>
+			<title code="0x000029">ボス戦闘３</title>
+			<title code="0x000009">凱旋</title>
+			<title code="0x00000d">勇気</title>
+			<title code="0x00000e">絶体絶命</title>
+			<title code="0x00000f">失望</title>
+			<title code="0x000011">戦闘展開</title>
+			<title code="0x000012">迫りくる恐怖</title>
+			<title code="0x000013">クライマックス</title>
+			<title code="0x00001a">古戦場跡</title>
+			<title code="0x000035">幻想</title>
+			<title code="0x000014">緊迫</title>
+			<title code="0x000015">霊峰</title>
+			<title code="0x00002b">平和</title>
+			<title code="0x00001d">決戦のボレロ</title>
+			<title code="0x000010">結末</title>
+			<title code="0x800017">エンディング</title>
+			<title code="0x000016">VAEF12.S</title>
+			<title code="0x00001b">VAVI20.S</title>
+			<title code="0x00001c">VAVI22.S</title>
+			<title code="0x000025">VNDO01.S</title>
+			<title code="0x00002c">VNTW07.S</title>
+		<!--	<title code="0x000021">VD007.S  : オープニング２</title> -->
+		<!--	<title code="0x000006">RAOPD6.S : (OPNA) オープニング１</title> -->
+		<!--	<title code="0x00002f">VOPE6U.S : (OPNA) オープニング２</title> -->
+		<!--	<title code="0x00002e">VOPE6L.S : (OPNA) オープニング３</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Vain Dream 2 (ヴェインドリームⅡ)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs" value="0x1000"/>
+			<option name="bootip" value="0x9e00"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="dataaddr" value="0x1a000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x2f"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="vd2_98">
+			<rom type="code" offset="0x0fe00">MAIN.EXE</rom>
+			<rom type="code" offset="0x19e00">vd2_98.bin</rom>
+			<rom type="bgm" offset="0x01">V2IK01.S</rom>
+			<rom type="bgm" offset="0x02">V2IK02.S</rom>
+			<rom type="bgm" offset="0x03">V2IK03.S</rom>
+			<rom type="bgm" offset="0x04">V2IK04.S</rom>
+			<rom type="bgm" offset="0x05">V2IK05.S</rom>
+			<rom type="bgm" offset="0x06">V2IK06.S</rom>
+			<rom type="bgm" offset="0x07">V2IK07.S</rom>
+			<rom type="bgm" offset="0x08">V2IK08.S</rom>
+			<rom type="bgm" offset="0x09">V2IK09.S</rom>
+			<rom type="bgm" offset="0x0a">V2IK10.S</rom>
+			<rom type="bgm" offset="0x0b">V2IK11.S</rom>
+			<rom type="bgm" offset="0x0c">V2IK12.S</rom>
+			<rom type="bgm" offset="0x0d">V2IK13.S</rom>
+			<rom type="bgm" offset="0x0e">V2IK14.S</rom>
+			<rom type="bgm" offset="0x0f">V2IK15.S</rom>
+			<rom type="bgm" offset="0x10">V2IK16.S</rom>
+			<rom type="bgm" offset="0x11">V2IK17.S</rom>
+			<rom type="bgm" offset="0x12">V2IK18.S</rom>
+			<rom type="bgm" offset="0x13">V2IK19.S</rom>
+			<rom type="bgm" offset="0x14">V2IK20.S</rom>
+			<rom type="bgm" offset="0x15">V2IK21.S</rom>
+			<rom type="bgm" offset="0x16">V2IK22.S</rom>
+			<rom type="bgm" offset="0x17">V2IK23.S</rom>
+			<rom type="bgm" offset="0x18">V2IK24.S</rom>
+			<rom type="bgm" offset="0x19">V2IK25.S</rom>
+			<rom type="bgm" offset="0x1a">V2IK26.S</rom>
+			<rom type="bgm" offset="0x1b">V2IK27.S</rom>
+			<rom type="bgm" offset="0x1c">V2IK28.S</rom>
+			<rom type="bgm" offset="0x1d">V2IK29.S</rom>
+			<rom type="bgm" offset="0x1e">V2IK30.S</rom>
+			<rom type="bgm" offset="0x1f">V2IK31.S</rom>
+			<rom type="bgm" offset="0x20">V2IK32.S</rom>
+			<rom type="bgm" offset="0x21">V2IK33.S</rom>
+			<rom type="bgm" offset="0x22">V2IK34.S</rom>
+			<rom type="bgm" offset="0x23">V2IK35.S</rom>
+			<rom type="bgm" offset="0x24">V2IK36.S</rom>
+			<rom type="bgm" offset="0x25">V2IK37.S</rom>
+			<rom type="bgm" offset="0x26">V2IK38.S</rom>
+			<rom type="bgm" offset="0x27">V2IK39.S</rom>
+			<rom type="bgm" offset="0x28">V2IK40.S</rom>
+			<rom type="bgm" offset="0x29">V2IK41.S</rom>
+			<rom type="bgm" offset="0x2a">V2IK42.S</rom>
+			<rom type="bgm" offset="0x2b">V2IK43.S</rom>
+			<rom type="bgm" offset="0x2c">V2IK44.S</rom>
+			<rom type="bgm" offset="0x2d">V2IK45.S</rom>
+			<rom type="bgm" offset="0x2e">V2IK46.S</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000001">V2IK01.S</title>
+			<title code="0x000002">V2IK02.S</title>
+			<title code="0x000003">V2IK03.S</title>
+			<title code="0x000004">V2IK04.S</title>
+			<title code="0x000005">V2IK05.S</title>
+			<title code="0x000006">V2IK06.S</title>
+			<title code="0x000007">V2IK07.S</title>
+			<title code="0x000008">V2IK08.S</title>
+			<title code="0x000009">V2IK09.S</title>
+			<title code="0x00000a">V2IK10.S</title>
+			<title code="0x00000b">V2IK11.S</title>
+			<title code="0x00000c">V2IK12.S</title>
+			<title code="0x00000d">V2IK13.S</title>
+			<title code="0x00000e">V2IK14.S</title>
+			<title code="0x00000f">V2IK15.S</title>
+			<title code="0x000010">V2IK16.S</title>
+			<title code="0x000011">V2IK17.S</title>
+			<title code="0x000012">V2IK18.S</title>
+			<title code="0x000013">V2IK19.S</title>
+			<title code="0x000014">V2IK20.S</title>
+			<title code="0x000015">V2IK21.S</title>
+			<title code="0x000016">V2IK22.S</title>
+			<title code="0x000017">V2IK23.S</title>
+			<title code="0x000018">V2IK24.S</title>
+			<title code="0x000019">V2IK25.S</title>
+			<title code="0x00001a">V2IK26.S</title>
+			<title code="0x00001b">V2IK27.S</title>
+			<title code="0x00001c">V2IK28.S</title>
+			<title code="0x00001d">V2IK29.S</title>
+			<title code="0x00001e">V2IK30.S</title>
+			<title code="0x00001f">V2IK31.S</title>
+			<title code="0x000020">V2IK32.S</title>
+			<title code="0x000021">V2IK33.S</title>
+			<title code="0x000022">V2IK34.S</title>
+			<title code="0x000023">V2IK35.S</title>
+			<title code="0x000024">V2IK36.S</title>
+			<title code="0x000025">V2IK37.S</title>
+			<title code="0x000026">V2IK38.S</title>
+			<title code="0x000027">V2IK39.S</title>
+			<title code="0x000028">V2IK40.S</title>
+			<title code="0x000029">V2IK41.S</title>
+			<title code="0x00002a">V2IK42.S</title>
+			<title code="0x00002b">V2IK43.S</title>
+			<title code="0x00002c">V2IK44.S</title>
+			<title code="0x00002d">V2IK45.S</title>
+			<title code="0x00002e">V2IK46.S</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Bible Master (バイブルマスター)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x1000"/>
+			<option name="bootip"   value="0xf000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x2c000"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x19"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="biblem">
+			<rom type="code" offset="0x0fe00">MAIN.EXE</rom>
+			<rom type="code" offset="0x1f000">mdrivep.bin</rom>
+			<rom type="code" offset="0x2b000">MDRIVE.BIN</rom>
+			<rom type="bgm" offset="0x01">MUS_00.S</rom>
+			<rom type="bgm" offset="0x02">MUS_01.S</rom>
+			<rom type="bgm" offset="0x03">MUS_02.S</rom>
+			<rom type="bgm" offset="0x04">MUS_04.S</rom>
+			<rom type="bgm" offset="0x05">MUS_05.S</rom>
+			<rom type="bgm" offset="0x06">MUS_06.S</rom>
+			<rom type="bgm" offset="0x07">MUS_07.S</rom>
+			<rom type="bgm" offset="0x08">MUS_08.S</rom>
+			<rom type="bgm" offset="0x09">MUS_09.S</rom>
+			<rom type="bgm" offset="0x0a">MUS_10.S</rom>
+			<rom type="bgm" offset="0x0b">MUS_11.S</rom>
+			<rom type="bgm" offset="0x0c">MUS_12.S</rom>
+			<rom type="bgm" offset="0x0d">MUS_13.S</rom>
+			<rom type="bgm" offset="0x0e">MUS_15.S</rom>
+			<rom type="bgm" offset="0x0f">MUS_16.S</rom>
+			<rom type="bgm" offset="0x10">MUS_17.S</rom>
+			<rom type="bgm" offset="0x11">MUS_19.S</rom>
+			<rom type="bgm" offset="0x12">MUS_20.S</rom>
+			<rom type="bgm" offset="0x13">MUS_21.S</rom>
+			<rom type="bgm" offset="0x14">MUS_22.S</rom>
+			<rom type="bgm" offset="0x15">MUS_23.S</rom>
+			<rom type="bgm" offset="0x16">MUS_24.S</rom>
+			<rom type="bgm" offset="0x17">MUS_25.S</rom>
+			<rom type="bgm" offset="0x18">MUS_26.S</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000001">MUS_00.S</title>
+			<title code="0x000002">MUS_01.S</title>
+			<title code="0x000003">MUS_02.S</title>
+			<title code="0x000004">MUS_04.S</title>
+			<title code="0x000005">MUS_05.S</title>
+			<title code="0x000006">MUS_06.S</title>
+			<title code="0x000007">MUS_07.S</title>
+			<title code="0x000008">MUS_08.S</title>
+			<title code="0x000009">MUS_09.S</title>
+			<title code="0x00000a">MUS_10.S</title>
+			<title code="0x00000b">MUS_11.S</title>
+			<title code="0x00000c">MUS_12.S</title>
+			<title code="0x00000d">MUS_13.S</title>
+			<title code="0x00000e">MUS_15.S</title>
+			<title code="0x00000f">MUS_16.S</title>
+			<title code="0x000010">MUS_17.S</title>
+			<title code="0x000011">MUS_19.S</title>
+			<title code="0x000012">MUS_20.S</title>
+			<title code="0x000013">MUS_21.S</title>
+			<title code="0x000014">MUS_22.S</title>
+			<title code="0x000015">MUS_23.S</title>
+			<title code="0x000016">MUS_24.S</title>
+			<title code="0x000017">MUS_25.S</title>
+			<title code="0x800018">MUS_26.S</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Zavas 2 (ZAVASⅡ メヒテの大予言) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="16"/>
+			<option name="ssg_mix"  value="8"/>
+		</options>
+		<romlist archive="zavas298">
+			<rom type="file" offset="-1">gbgmp.com</rom>
+			<rom type="file" offset="-1">GBGM.EXE</rom>
+			<rom type="file" offset="0x10">VAEF06.MID</rom>
+			<rom type="file" offset="0x11">Z1BG05.MID</rom>
+			<rom type="file" offset="0x12">Z1BG07.MID</rom>
+			<rom type="file" offset="0x13">Z1BG08.MID</rom>
+			<rom type="file" offset="0x14">Z1MEDE.MID</rom>
+			<rom type="file" offset="0x15">Z2BATATO.MID</rom>
+			<rom type="file" offset="0x16">Z2BG02.MID</rom>
+			<rom type="file" offset="0x17">Z2BG11.MID</rom>
+			<rom type="file" offset="0x18">Z2BG20.MID</rom>
+			<rom type="file" offset="0x19">Z2BG21.MID</rom>
+			<rom type="file" offset="0x1a">Z2BG22.MID</rom>
+			<rom type="file" offset="0x1b">Z2BG25.MID</rom>
+			<rom type="file" offset="0x1c">Z2BG27.MID</rom>
+			<rom type="file" offset="0x1d">Z2BG30.MID</rom>
+			<rom type="file" offset="0x1e">Z2BG32.MID</rom>
+			<rom type="file" offset="0x1f">Z2BIG.MID</rom>
+			<rom type="file" offset="0x20">Z2BOS.MID</rom>
+			<rom type="file" offset="0x21">Z2ED1.MID</rom>
+			<rom type="file" offset="0x22">Z2ED2.MID</rom>
+			<rom type="file" offset="0x23">Z2EFC1.MID</rom>
+			<rom type="file" offset="0x24">Z2EFC5.MID</rom>
+			<rom type="file" offset="0x25">Z2EFKA.MID</rom>
+			<rom type="file" offset="0x26">Z2FAN1.MID</rom>
+			<rom type="file" offset="0x27">Z2FAN2.MID</rom>
+			<rom type="file" offset="0x28">Z2FAN3.MID</rom>
+			<rom type="file" offset="0x29">Z2GT01.MID</rom>
+			<rom type="file" offset="0x2a">Z2GT02.MID</rom>
+			<rom type="file" offset="0x2b">Z2IKBG01.MID</rom>
+			<rom type="file" offset="0x2c">Z2IKBG02.MID</rom>
+			<rom type="file" offset="0x2d">Z2IKBG03.MID</rom>
+			<rom type="file" offset="0x2e">Z2IKBG04.MID</rom>
+			<rom type="file" offset="0x2f">Z2IKBG05.MID</rom>
+			<rom type="file" offset="0x30">Z2IKBG06.MID</rom>
+			<rom type="file" offset="0x31">Z2IKBG07.MID</rom>
+			<rom type="file" offset="0x32">Z2IKBG08.MID</rom>
+			<rom type="file" offset="0x33">Z2IKBG09.MID</rom>
+			<rom type="file" offset="0x34">Z2MTHEM.MID</rom>
+			<rom type="file" offset="0x35">Z2OPBG.MID</rom>
+			<rom type="file" offset="0x36">Z2OYASU.MID</rom>
+			<rom type="file" offset="0x37">Z2SHOP1.MID</rom>
+			<rom type="file" offset="0x38">Z2SINKA.MID</rom>
+			<rom type="shell" offset="0">gbgm -a</rom>
+			<rom type="shell" offset="0">gbgmp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000034">サバッシュⅡメインテーマ</title>
+			<title code="0x000035">サバッシュのテーマ</title>
+			<title code="0x000025">エフカのテーマ</title>
+			<title code="0x000037">ショップ</title>
+			<title code="0x000017">フィールド</title>
+			<title code="0x00001f">デカキャラ戦闘</title>
+			<title code="0x000016">ファルガナの町</title>
+			<title code="0x000018">砂漠の村</title>
+			<title code="0x000036">回想</title>
+			<title code="0x000019">観光採集地</title>
+			<title code="0x000038">神界</title>
+			<title code="0x00001a">働くマジョーン</title>
+			<title code="0x000023">悲劇のテーマ</title>
+			<title code="0x000010">戦闘展開</title>
+			<title code="0x00001d">秘境の静寂</title>
+			<title code="0x000024">メヒテの大予言</title>
+			<title code="0x000011">懐（ふところ）</title>
+			<title code="0x000012">霊船奪還</title>
+			<title code="0x000013">解放のテーマ</title>
+			<title code="0x00001b">レサのブルース</title>
+			<title code="0x00001c">フェイトリア</title>
+			<title code="0x00001e">鎮魂歌</title>
+			<title code="0x000014">苦悩の果て</title>
+			<title code="0x000015">戦いの後に</title>
+			<title code="0x000026">ファンファーレ おなじみ</title>
+			<title code="0x000027">ファンファーレ サバ１</title>
+			<title code="0x000028">ファンファーレ サバ２</title>
+			<title code="0x000029">残念賞１</title>
+			<title code="0x00002a">残念賞２</title>
+			<title code="0x00002d">ビューンのテーマ</title>
+			<title code="0x000032">陸戦</title>
+			<title code="0x000033">海戦</title>
+			<title code="0x000020">決戦</title>
+			<title code="0x00002b">町２</title>
+			<title code="0x00002c">町３</title>
+			<title code="0x00002e">家中</title>
+			<title code="0x00002f">敵国１</title>
+			<title code="0x000030">敵国２</title>
+			<title code="0x000031">敵国３</title>
+			<title code="0x000021">シマロンの祝宴</title>
+			<title code="0x000022">エンディングテーマ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Zavas 2 (ZAVASⅡ メヒテの大予言) (SC-55)</name>
+		<!-- GS/GM音源対応 -->
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="zavas298">
+			<rom type="file" offset="-1">gbgmp.com</rom>
+			<rom type="file" offset="-1">GBGM.EXE</rom>
+			<rom type="file" offset="0x10">VAEF06.MID</rom>
+			<rom type="file" offset="0x11">Z1BG05.MID</rom>
+			<rom type="file" offset="0x12">Z1BG07.MID</rom>
+			<rom type="file" offset="0x13">Z1BG08.MID</rom>
+			<rom type="file" offset="0x14">Z1MEDE.MID</rom>
+			<rom type="file" offset="0x15">Z2BATATO.MID</rom>
+			<rom type="file" offset="0x16">Z2BG02.MID</rom>
+			<rom type="file" offset="0x17">Z2BG11.MID</rom>
+			<rom type="file" offset="0x18">Z2BG20.MID</rom>
+			<rom type="file" offset="0x19">Z2BG21.MID</rom>
+			<rom type="file" offset="0x1a">Z2BG22.MID</rom>
+			<rom type="file" offset="0x1b">Z2BG25.MID</rom>
+			<rom type="file" offset="0x1c">Z2BG27.MID</rom>
+			<rom type="file" offset="0x1d">Z2BG30.MID</rom>
+			<rom type="file" offset="0x1e">Z2BG32.MID</rom>
+			<rom type="file" offset="0x1f">Z2BIG.MID</rom>
+			<rom type="file" offset="0x20">Z2BOS.MID</rom>
+			<rom type="file" offset="0x21">Z2ED1.MID</rom>
+			<rom type="file" offset="0x22">Z2ED2.MID</rom>
+			<rom type="file" offset="0x23">Z2EFC1.MID</rom>
+			<rom type="file" offset="0x24">Z2EFC5.MID</rom>
+			<rom type="file" offset="0x25">Z2EFKA.MID</rom>
+			<rom type="file" offset="0x26">Z2FAN1.MID</rom>
+			<rom type="file" offset="0x27">Z2FAN2.MID</rom>
+			<rom type="file" offset="0x28">Z2FAN3.MID</rom>
+			<rom type="file" offset="0x29">Z2GT01.MID</rom>
+			<rom type="file" offset="0x2a">Z2GT02.MID</rom>
+			<rom type="file" offset="0x2b">Z2IKBG01.MID</rom>
+			<rom type="file" offset="0x2c">Z2IKBG02.MID</rom>
+			<rom type="file" offset="0x2d">Z2IKBG03.MID</rom>
+			<rom type="file" offset="0x2e">Z2IKBG04.MID</rom>
+			<rom type="file" offset="0x2f">Z2IKBG05.MID</rom>
+			<rom type="file" offset="0x30">Z2IKBG06.MID</rom>
+			<rom type="file" offset="0x31">Z2IKBG07.MID</rom>
+			<rom type="file" offset="0x32">Z2IKBG08.MID</rom>
+			<rom type="file" offset="0x33">Z2IKBG09.MID</rom>
+			<rom type="file" offset="0x34">Z2MTHEM.MID</rom>
+			<rom type="file" offset="0x35">Z2OPBG.MID</rom>
+			<rom type="file" offset="0x36">Z2OYASU.MID</rom>
+			<rom type="file" offset="0x37">Z2SHOP1.MID</rom>
+			<rom type="file" offset="0x38">Z2SINKA.MID</rom>
+			<rom type="shell" offset="0">gbgm -a</rom>
+			<rom type="shell" offset="0">gbgmp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010034">サバッシュⅡメインテーマ</title>
+			<title code="0x010035">サバッシュのテーマ</title>
+			<title code="0x010025">エフカのテーマ</title>
+			<title code="0x010037">ショップ</title>
+			<title code="0x010017">フィールド</title>
+			<title code="0x01001f">デカキャラ戦闘</title>
+			<title code="0x010016">ファルガナの町</title>
+			<title code="0x010018">砂漠の村</title>
+			<title code="0x010036">回想</title>
+			<title code="0x010019">観光採集地</title>
+			<title code="0x010038">神界</title>
+			<title code="0x01001a">働くマジョーン</title>
+			<title code="0x010023">悲劇のテーマ</title>
+			<title code="0x010010">戦闘展開</title>
+			<title code="0x01001d">秘境の静寂</title>
+			<title code="0x010024">メヒテの大予言</title>
+			<title code="0x010011">懐（ふところ）</title>
+			<title code="0x010012">霊船奪還</title>
+			<title code="0x010013">解放のテーマ</title>
+			<title code="0x01001b">レサのブルース</title>
+			<title code="0x01001c">フェイトリア</title>
+			<title code="0x01001e">鎮魂歌</title>
+			<title code="0x010014">苦悩の果て</title>
+			<title code="0x010015">戦いの後に</title>
+			<title code="0x010026">ファンファーレ おなじみ</title>
+			<title code="0x010027">ファンファーレ サバ１</title>
+			<title code="0x010028">ファンファーレ サバ２</title>
+			<title code="0x010029">残念賞１</title>
+			<title code="0x01002a">残念賞２</title>
+			<title code="0x01002d">ビューンのテーマ</title>
+			<title code="0x010032">陸戦</title>
+			<title code="0x010033">海戦</title>
+			<title code="0x010020">決戦</title>
+			<title code="0x01002b">町２</title>
+			<title code="0x01002c">町３</title>
+			<title code="0x01002e">家中</title>
+			<title code="0x01002f">敵国１</title>
+			<title code="0x010030">敵国２</title>
+			<title code="0x010031">敵国３</title>
+			<title code="0x010021">シマロンの祝宴</title>
+			<title code="0x010022">エンディングテーマ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Zavas 2 (ZAVASⅡ メヒテの大予言) (Vermouth)</name>
+		<!-- GS/GM音源対応 -->
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="zavas298">
+			<rom type="file" offset="-1">gbgmp.com</rom>
+			<rom type="file" offset="-1">GBGM.EXE</rom>
+			<rom type="file" offset="0x10">VAEF06.MID</rom>
+			<rom type="file" offset="0x11">Z1BG05.MID</rom>
+			<rom type="file" offset="0x12">Z1BG07.MID</rom>
+			<rom type="file" offset="0x13">Z1BG08.MID</rom>
+			<rom type="file" offset="0x14">Z1MEDE.MID</rom>
+			<rom type="file" offset="0x15">Z2BATATO.MID</rom>
+			<rom type="file" offset="0x16">Z2BG02.MID</rom>
+			<rom type="file" offset="0x17">Z2BG11.MID</rom>
+			<rom type="file" offset="0x18">Z2BG20.MID</rom>
+			<rom type="file" offset="0x19">Z2BG21.MID</rom>
+			<rom type="file" offset="0x1a">Z2BG22.MID</rom>
+			<rom type="file" offset="0x1b">Z2BG25.MID</rom>
+			<rom type="file" offset="0x1c">Z2BG27.MID</rom>
+			<rom type="file" offset="0x1d">Z2BG30.MID</rom>
+			<rom type="file" offset="0x1e">Z2BG32.MID</rom>
+			<rom type="file" offset="0x1f">Z2BIG.MID</rom>
+			<rom type="file" offset="0x20">Z2BOS.MID</rom>
+			<rom type="file" offset="0x21">Z2ED1.MID</rom>
+			<rom type="file" offset="0x22">Z2ED2.MID</rom>
+			<rom type="file" offset="0x23">Z2EFC1.MID</rom>
+			<rom type="file" offset="0x24">Z2EFC5.MID</rom>
+			<rom type="file" offset="0x25">Z2EFKA.MID</rom>
+			<rom type="file" offset="0x26">Z2FAN1.MID</rom>
+			<rom type="file" offset="0x27">Z2FAN2.MID</rom>
+			<rom type="file" offset="0x28">Z2FAN3.MID</rom>
+			<rom type="file" offset="0x29">Z2GT01.MID</rom>
+			<rom type="file" offset="0x2a">Z2GT02.MID</rom>
+			<rom type="file" offset="0x2b">Z2IKBG01.MID</rom>
+			<rom type="file" offset="0x2c">Z2IKBG02.MID</rom>
+			<rom type="file" offset="0x2d">Z2IKBG03.MID</rom>
+			<rom type="file" offset="0x2e">Z2IKBG04.MID</rom>
+			<rom type="file" offset="0x2f">Z2IKBG05.MID</rom>
+			<rom type="file" offset="0x30">Z2IKBG06.MID</rom>
+			<rom type="file" offset="0x31">Z2IKBG07.MID</rom>
+			<rom type="file" offset="0x32">Z2IKBG08.MID</rom>
+			<rom type="file" offset="0x33">Z2IKBG09.MID</rom>
+			<rom type="file" offset="0x34">Z2MTHEM.MID</rom>
+			<rom type="file" offset="0x35">Z2OPBG.MID</rom>
+			<rom type="file" offset="0x36">Z2OYASU.MID</rom>
+			<rom type="file" offset="0x37">Z2SHOP1.MID</rom>
+			<rom type="file" offset="0x38">Z2SINKA.MID</rom>
+			<rom type="shell" offset="0">gbgm -a</rom>
+			<rom type="shell" offset="0">gbgmp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010034">サバッシュⅡメインテーマ</title>
+			<title code="0x010035">サバッシュのテーマ</title>
+			<title code="0x010025">エフカのテーマ</title>
+			<title code="0x010037">ショップ</title>
+			<title code="0x010017">フィールド</title>
+			<title code="0x01001f">デカキャラ戦闘</title>
+			<title code="0x010016">ファルガナの町</title>
+			<title code="0x010018">砂漠の村</title>
+			<title code="0x010036">回想</title>
+			<title code="0x010019">観光採集地</title>
+			<title code="0x010038">神界</title>
+			<title code="0x01001a">働くマジョーン</title>
+			<title code="0x010023">悲劇のテーマ</title>
+			<title code="0x010010">戦闘展開</title>
+			<title code="0x01001d">秘境の静寂</title>
+			<title code="0x010024">メヒテの大予言</title>
+			<title code="0x010011">懐（ふところ）</title>
+			<title code="0x010012">霊船奪還</title>
+			<title code="0x010013">解放のテーマ</title>
+			<title code="0x01001b">レサのブルース</title>
+			<title code="0x01001c">フェイトリア</title>
+			<title code="0x01001e">鎮魂歌</title>
+			<title code="0x010014">苦悩の果て</title>
+			<title code="0x010015">戦いの後に</title>
+			<title code="0x010026">ファンファーレ おなじみ</title>
+			<title code="0x010027">ファンファーレ サバ１</title>
+			<title code="0x010028">ファンファーレ サバ２</title>
+			<title code="0x010029">残念賞１</title>
+			<title code="0x01002a">残念賞２</title>
+			<title code="0x01002d">ビューンのテーマ</title>
+			<title code="0x010032">陸戦</title>
+			<title code="0x010033">海戦</title>
+			<title code="0x010020">決戦</title>
+			<title code="0x01002b">町２</title>
+			<title code="0x01002c">町３</title>
+			<title code="0x01002e">家中</title>
+			<title code="0x01002f">敵国１</title>
+			<title code="0x010030">敵国２</title>
+			<title code="0x010031">敵国３</title>
+			<title code="0x010021">シマロンの祝宴</title>
+			<title code="0x010022">エンディングテーマ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Different Realm (ディファレント・レルム 久遠の賢者) (86)</name>
+		<driver type="86">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x1e"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="difrlm98">
+			<rom type="code" offset="0x00600">mdplayd.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">MUS_01.MIV</rom>
+			<rom type="bgm" offset="0x02">MUS_02.MIV</rom>
+			<rom type="bgm" offset="0x03">MUS_03.MIV</rom>
+			<rom type="bgm" offset="0x04">MUS_04.MIV</rom>
+			<rom type="bgm" offset="0x05">MUS_05.MIV</rom>
+			<rom type="bgm" offset="0x06">MUS_06.MIV</rom>
+			<rom type="bgm" offset="0x07">MUS_07.MIV</rom>
+			<rom type="bgm" offset="0x08">MUS_08.MIV</rom>
+			<rom type="bgm" offset="0x09">MUS_09.MIV</rom>
+			<rom type="bgm" offset="0x0a">MUS_10.MIV</rom>
+			<rom type="bgm" offset="0x0b">MUS_11.MIV</rom>
+			<rom type="bgm" offset="0x0c">MUS_12.MIV</rom>
+			<rom type="bgm" offset="0x0d">MUS_13.MIV</rom>
+			<rom type="bgm" offset="0x0e">MUS_14.MIV</rom>
+			<rom type="bgm" offset="0x0f">MUS_15.MIV</rom>
+			<rom type="bgm" offset="0x10">MUS_16.MIV</rom>
+			<rom type="bgm" offset="0x11">MUS_17.MIV</rom>
+			<rom type="bgm" offset="0x12">MUS_18.MIV</rom>
+			<rom type="bgm" offset="0x13">MUS_19.MIV</rom>
+			<rom type="bgm" offset="0x14">MUS_20.MIV</rom>
+			<rom type="bgm" offset="0x15">MUS_21.MIV</rom>
+			<rom type="bgm" offset="0x16">MUS_22.MIV</rom>
+			<rom type="bgm" offset="0x17">MUS_23.MIV</rom>
+			<rom type="bgm" offset="0x18">MUS_24.MIV</rom>
+			<rom type="bgm" offset="0x19">MUS_25.MIV</rom>
+			<rom type="bgm" offset="0x1a">MUS_26.MIV</rom>
+			<rom type="bgm" offset="0x1b">MUS_27.MIV</rom>
+			<rom type="bgm" offset="0x1c">MUS_28.MIV</rom>
+			<rom type="bgm" offset="0x1d">MUS_29.MIV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x000001">RLPRO0</title>
+			<title code="0x000002">RLBG15</title>
+			<title code="0x000003">RLBG06 ほのぼの</title>
+			<title code="0x000004">RLMTE0 Main Theme</title>
+			<title code="0x000005">RLBTL2 Battle1(2)</title>
+			<title code="0x000006">RLBTL3 Battle6(3)</title>
+			<title code="0x000007">RLBTL4 Battle3(6)</title>
+			<title code="0x000008">RLBG18</title>
+			<title code="0x000009">RLBG30</title>
+			<title code="0x00000a">RLBG20</title>
+			<title code="0x00000b">RLBG47 Kanashii1(7)</title>
+			<title code="0x00000c">RLBG44 Fight1(4)</title>
+			<title code="0x00000d">RLBG04 は虫類</title>
+			<title code="0x00000e">RLBG01 ポンポン蒸気船</title>
+			<title code="0x00000f">RLBG08</title>
+			<title code="0x000010">RLBG22</title>
+			<title code="0x000011">RLBG49 Yabai2(9)</title>
+			<title code="0x000012">RLEF00 ローブナル</title>
+			<title code="0x000013">RLBG00 ラシム渓谷</title>
+			<title code="0x000014">RLBG57 BM17</title>
+			<title code="0x000015">RLBG15</title>
+			<title code="0x000016">RLBG45 Yabai1(5)</title>
+			<title code="0x000017">RLBG48 Field2(8)</title>
+			<title code="0x000018">RLBG50 Field3(10)</title>
+			<title code="0x000019">RLED00</title>
+			<title code="0x00001a">RLBG11</title>
+			<title code="0x00001b">RLBG02 村</title>
+			<title code="0x00001c">RLMTE1 Main Theme</title>
+			<title code="0x00001d">RLBTL1 Sento1(1)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Different Realm (ディファレント・レルム 久遠の賢者) (OPN)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x1e"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="difrlm98">
+			<rom type="code" offset="0x00600">mdplayd.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">MUS_01.MIV</rom>
+			<rom type="bgm" offset="0x02">MUS_02.MIV</rom>
+			<rom type="bgm" offset="0x03">MUS_03.MIV</rom>
+			<rom type="bgm" offset="0x04">MUS_04.MIV</rom>
+			<rom type="bgm" offset="0x05">MUS_05.MIV</rom>
+			<rom type="bgm" offset="0x06">MUS_06.MIV</rom>
+			<rom type="bgm" offset="0x07">MUS_07.MIV</rom>
+			<rom type="bgm" offset="0x08">MUS_08.MIV</rom>
+			<rom type="bgm" offset="0x09">MUS_09.MIV</rom>
+			<rom type="bgm" offset="0x0a">MUS_10.MIV</rom>
+			<rom type="bgm" offset="0x0b">MUS_11.MIV</rom>
+			<rom type="bgm" offset="0x0c">MUS_12.MIV</rom>
+			<rom type="bgm" offset="0x0d">MUS_13.MIV</rom>
+			<rom type="bgm" offset="0x0e">MUS_14.MIV</rom>
+			<rom type="bgm" offset="0x0f">MUS_15.MIV</rom>
+			<rom type="bgm" offset="0x10">MUS_16.MIV</rom>
+			<rom type="bgm" offset="0x11">MUS_17.MIV</rom>
+			<rom type="bgm" offset="0x12">MUS_18.MIV</rom>
+			<rom type="bgm" offset="0x13">MUS_19.MIV</rom>
+			<rom type="bgm" offset="0x14">MUS_20.MIV</rom>
+			<rom type="bgm" offset="0x15">MUS_21.MIV</rom>
+			<rom type="bgm" offset="0x16">MUS_22.MIV</rom>
+			<rom type="bgm" offset="0x17">MUS_23.MIV</rom>
+			<rom type="bgm" offset="0x18">MUS_24.MIV</rom>
+			<rom type="bgm" offset="0x19">MUS_25.MIV</rom>
+			<rom type="bgm" offset="0x1a">MUS_26.MIV</rom>
+			<rom type="bgm" offset="0x1b">MUS_27.MIV</rom>
+			<rom type="bgm" offset="0x1c">MUS_28.MIV</rom>
+			<rom type="bgm" offset="0x1d">MUS_29.MIV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x000001">RLPRO0</title>
+			<title code="0x000002">RLBG15</title>
+			<title code="0x000003">RLBG06 ほのぼの</title>
+			<title code="0x000004">RLMTE0 Main Theme</title>
+			<title code="0x000005">RLBTL2 Battle1(2)</title>
+			<title code="0x000006">RLBTL3 Battle6(3)</title>
+			<title code="0x000007">RLBTL4 Battle3(6)</title>
+			<title code="0x000008">RLBG18</title>
+			<title code="0x000009">RLBG30</title>
+			<title code="0x00000a">RLBG20</title>
+			<title code="0x00000b">RLBG47 Kanashii1(7)</title>
+			<title code="0x00000c">RLBG44 Fight1(4)</title>
+			<title code="0x00000d">RLBG04 は虫類</title>
+			<title code="0x00000e">RLBG01 ポンポン蒸気船</title>
+			<title code="0x00000f">RLBG08</title>
+			<title code="0x000010">RLBG22</title>
+			<title code="0x000011">RLBG49 Yabai2(9)</title>
+			<title code="0x000012">RLEF00 ローブナル</title>
+			<title code="0x000013">RLBG00 ラシム渓谷</title>
+			<title code="0x000014">RLBG57 BM17</title>
+			<title code="0x000015">RLBG15</title>
+			<title code="0x000016">RLBG45 Yabai1(5)</title>
+			<title code="0x000017">RLBG48 Field2(8)</title>
+			<title code="0x000018">RLBG50 Field3(10)</title>
+			<title code="0x000019">RLED00</title>
+			<title code="0x00001a">RLBG11</title>
+			<title code="0x00001b">RLBG02 村</title>
+			<title code="0x00001c">RLMTE1 Main Theme</title>
+			<title code="0x00001d">RLBTL1 Sento1(1)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Different Realm (ディファレント・レルム 久遠の賢者) (SC-55)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x1e"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="difrlm98">
+			<rom type="code" offset="0x00600">mdplayd.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">MUS_01.MIV</rom>
+			<rom type="bgm" offset="0x02">MUS_02.MIV</rom>
+			<rom type="bgm" offset="0x03">MUS_03.MIV</rom>
+			<rom type="bgm" offset="0x04">MUS_04.MIV</rom>
+			<rom type="bgm" offset="0x05">MUS_05.MIV</rom>
+			<rom type="bgm" offset="0x06">MUS_06.MIV</rom>
+			<rom type="bgm" offset="0x07">MUS_07.MIV</rom>
+			<rom type="bgm" offset="0x08">MUS_08.MIV</rom>
+			<rom type="bgm" offset="0x09">MUS_09.MIV</rom>
+			<rom type="bgm" offset="0x0a">MUS_10.MIV</rom>
+			<rom type="bgm" offset="0x0b">MUS_11.MIV</rom>
+			<rom type="bgm" offset="0x0c">MUS_12.MIV</rom>
+			<rom type="bgm" offset="0x0d">MUS_13.MIV</rom>
+			<rom type="bgm" offset="0x0e">MUS_14.MIV</rom>
+			<rom type="bgm" offset="0x0f">MUS_15.MIV</rom>
+			<rom type="bgm" offset="0x10">MUS_16.MIV</rom>
+			<rom type="bgm" offset="0x11">MUS_17.MIV</rom>
+			<rom type="bgm" offset="0x12">MUS_18.MIV</rom>
+			<rom type="bgm" offset="0x13">MUS_19.MIV</rom>
+			<rom type="bgm" offset="0x14">MUS_20.MIV</rom>
+			<rom type="bgm" offset="0x15">MUS_21.MIV</rom>
+			<rom type="bgm" offset="0x16">MUS_22.MIV</rom>
+			<rom type="bgm" offset="0x17">MUS_23.MIV</rom>
+			<rom type="bgm" offset="0x18">MUS_24.MIV</rom>
+			<rom type="bgm" offset="0x19">MUS_25.MIV</rom>
+			<rom type="bgm" offset="0x1a">MUS_26.MIV</rom>
+			<rom type="bgm" offset="0x1b">MUS_27.MIV</rom>
+			<rom type="bgm" offset="0x1c">MUS_28.MIV</rom>
+			<rom type="bgm" offset="0x1d">MUS_29.MIV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x010001">RLPRO0</title>
+			<title code="0x010002">RLBG15</title>
+			<title code="0x010003">RLBG06 ほのぼの</title>
+			<title code="0x010004">RLMTE0 Main Theme</title>
+			<title code="0x010005">RLBTL2 Battle1(2)</title>
+			<title code="0x010006">RLBTL3 Battle6(3)</title>
+			<title code="0x010007">RLBTL4 Battle3(6)</title>
+			<title code="0x010008">RLBG18</title>
+			<title code="0x010009">RLBG30</title>
+			<title code="0x01000a">RLBG20</title>
+			<title code="0x01000b">RLBG47 Kanashii1(7)</title>
+			<title code="0x01000c">RLBG44 Fight1(4)</title>
+			<title code="0x01000d">RLBG04 は虫類</title>
+			<title code="0x01000e">RLBG01 ポンポン蒸気船</title>
+			<title code="0x01000f">RLBG08</title>
+			<title code="0x010010">RLBG22</title>
+			<title code="0x010011">RLBG49 Yabai2(9)</title>
+			<title code="0x010012">RLEF00 ローブナル</title>
+			<title code="0x010013">RLBG00 ラシム渓谷</title>
+			<title code="0x010014">RLBG57 BM17</title>
+			<title code="0x010015">RLBG15</title>
+			<title code="0x010016">RLBG45 Yabai1(5)</title>
+			<title code="0x010017">RLBG48 Field2(8)</title>
+			<title code="0x010018">RLBG50 Field3(10)</title>
+			<title code="0x010019">RLED00</title>
+			<title code="0x01001a">RLBG11</title>
+			<title code="0x01001b">RLBG02 村</title>
+			<title code="0x01001c">RLMTE1 Main Theme</title>
+			<title code="0x01001d">RLBTL1 Sento1(1)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Different Realm (ディファレント・レルム 久遠の賢者) (Vermouth)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x1e"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="difrlm98">
+			<rom type="code" offset="0x00600">mdplayd.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">MUS_01.MIV</rom>
+			<rom type="bgm" offset="0x02">MUS_02.MIV</rom>
+			<rom type="bgm" offset="0x03">MUS_03.MIV</rom>
+			<rom type="bgm" offset="0x04">MUS_04.MIV</rom>
+			<rom type="bgm" offset="0x05">MUS_05.MIV</rom>
+			<rom type="bgm" offset="0x06">MUS_06.MIV</rom>
+			<rom type="bgm" offset="0x07">MUS_07.MIV</rom>
+			<rom type="bgm" offset="0x08">MUS_08.MIV</rom>
+			<rom type="bgm" offset="0x09">MUS_09.MIV</rom>
+			<rom type="bgm" offset="0x0a">MUS_10.MIV</rom>
+			<rom type="bgm" offset="0x0b">MUS_11.MIV</rom>
+			<rom type="bgm" offset="0x0c">MUS_12.MIV</rom>
+			<rom type="bgm" offset="0x0d">MUS_13.MIV</rom>
+			<rom type="bgm" offset="0x0e">MUS_14.MIV</rom>
+			<rom type="bgm" offset="0x0f">MUS_15.MIV</rom>
+			<rom type="bgm" offset="0x10">MUS_16.MIV</rom>
+			<rom type="bgm" offset="0x11">MUS_17.MIV</rom>
+			<rom type="bgm" offset="0x12">MUS_18.MIV</rom>
+			<rom type="bgm" offset="0x13">MUS_19.MIV</rom>
+			<rom type="bgm" offset="0x14">MUS_20.MIV</rom>
+			<rom type="bgm" offset="0x15">MUS_21.MIV</rom>
+			<rom type="bgm" offset="0x16">MUS_22.MIV</rom>
+			<rom type="bgm" offset="0x17">MUS_23.MIV</rom>
+			<rom type="bgm" offset="0x18">MUS_24.MIV</rom>
+			<rom type="bgm" offset="0x19">MUS_25.MIV</rom>
+			<rom type="bgm" offset="0x1a">MUS_26.MIV</rom>
+			<rom type="bgm" offset="0x1b">MUS_27.MIV</rom>
+			<rom type="bgm" offset="0x1c">MUS_28.MIV</rom>
+			<rom type="bgm" offset="0x1d">MUS_29.MIV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x010001">RLPRO0</title>
+			<title code="0x010002">RLBG15</title>
+			<title code="0x010003">RLBG06 ほのぼの</title>
+			<title code="0x010004">RLMTE0 Main Theme</title>
+			<title code="0x010005">RLBTL2 Battle1(2)</title>
+			<title code="0x010006">RLBTL3 Battle6(3)</title>
+			<title code="0x010007">RLBTL4 Battle3(6)</title>
+			<title code="0x010008">RLBG18</title>
+			<title code="0x010009">RLBG30</title>
+			<title code="0x01000a">RLBG20</title>
+			<title code="0x01000b">RLBG47 Kanashii1(7)</title>
+			<title code="0x01000c">RLBG44 Fight1(4)</title>
+			<title code="0x01000d">RLBG04 は虫類</title>
+			<title code="0x01000e">RLBG01 ポンポン蒸気船</title>
+			<title code="0x01000f">RLBG08</title>
+			<title code="0x010010">RLBG22</title>
+			<title code="0x010011">RLBG49 Yabai2(9)</title>
+			<title code="0x010012">RLEF00 ローブナル</title>
+			<title code="0x010013">RLBG00 ラシム渓谷</title>
+			<title code="0x010014">RLBG57 BM17</title>
+			<title code="0x010015">RLBG15</title>
+			<title code="0x010016">RLBG45 Yabai1(5)</title>
+			<title code="0x010017">RLBG48 Field2(8)</title>
+			<title code="0x010018">RLBG50 Field3(10)</title>
+			<title code="0x010019">RLED00</title>
+			<title code="0x01001a">RLBG11</title>
+			<title code="0x01001b">RLBG02 村</title>
+			<title code="0x01001c">RLMTE1 Main Theme</title>
+			<title code="0x01001d">RLBTL1 Sento1(1)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Alvareak Adventure Story (アルヴァリーク冒険記) (OPNA)</name>
+		<driver type="opna">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x53"/>
+			<option name="fm_mix"   value="4"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="alva98">
+			<rom type="code" offset="0x00600">mdzplay.bin</rom>
+			<rom type="code" offset="0x10000">MDZDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">ALVA00.MIV</rom>
+			<rom type="bgm" offset="0x02">ALVA01.MIV</rom>
+			<rom type="bgm" offset="0x03">ALVA02.MIV</rom>
+			<rom type="bgm" offset="0x04">ALVA03.MIV</rom>
+			<rom type="bgm" offset="0x05">ALVA04.MIV</rom>
+			<rom type="bgm" offset="0x06">ALVA05.MIV</rom>
+			<rom type="bgm" offset="0x07">ALVA06.MIV</rom>
+			<rom type="bgm" offset="0x08">ALVA07.MIV</rom>
+			<rom type="bgm" offset="0x09">ALVA08.MIV</rom>
+			<rom type="bgm" offset="0x0a">ALVA09.MIV</rom>
+			<rom type="bgm" offset="0x0b">ALVA10.MIV</rom>
+			<rom type="bgm" offset="0x0c">ALVA11.MIV</rom>
+			<rom type="bgm" offset="0x0d">ALVA12.MIV</rom>
+			<rom type="bgm" offset="0x0e">ALVA13.MIV</rom>
+			<rom type="bgm" offset="0x0f">ALVA14.MIV</rom>
+			<rom type="bgm" offset="0x10">ALVA15.MIV</rom>
+			<rom type="bgm" offset="0x11">ALVA16.MIV</rom>
+			<rom type="bgm" offset="0x12">ALVA17.MIV</rom>
+			<rom type="bgm" offset="0x13">ALVA18.MIV</rom>
+			<rom type="bgm" offset="0x14">ALVA19.MIV</rom>
+			<rom type="bgm" offset="0x15">ALVA20.MIV</rom>
+			<rom type="bgm" offset="0x16">ALVA21.MIV</rom>
+			<rom type="bgm" offset="0x17">ALVA22.MIV</rom>
+			<rom type="bgm" offset="0x18">ALVA23.MIV</rom>
+			<rom type="bgm" offset="0x19">ALVA24.MIV</rom>
+			<rom type="bgm" offset="0x1a">ALVA25.MIV</rom>
+			<rom type="bgm" offset="0x1b">ALVA26.MIV</rom>
+			<rom type="bgm" offset="0x1c">ALVA27.MIV</rom>
+			<rom type="bgm" offset="0x1d">ALVA28.MIV</rom>
+			<rom type="bgm" offset="0x1e">ALVA29.MIV</rom>
+			<rom type="bgm" offset="0x1f">ALVA30.MIV</rom>
+			<rom type="bgm" offset="0x20">ALVA31.MIV</rom>
+			<rom type="bgm" offset="0x21">ALVA32.MIV</rom>
+			<rom type="bgm" offset="0x22">ALVA33.MIV</rom>
+			<rom type="bgm" offset="0x23">ALVA34.MIV</rom>
+			<rom type="bgm" offset="0x24">ALVA35.MIV</rom>
+			<rom type="bgm" offset="0x25">ALVA36.MIV</rom>
+			<rom type="bgm" offset="0x26">ALVA37.MIV</rom>
+			<rom type="bgm" offset="0x27">ALVA38.MIV</rom>
+			<rom type="bgm" offset="0x28">ALVA39.MIV</rom>
+			<rom type="bgm" offset="0x29">ALVA40.MIV</rom>
+			<rom type="bgm" offset="0x2a">ALVA41.MIV</rom>
+			<rom type="bgm" offset="0x2b">ALVA42.MIV</rom>
+			<rom type="bgm" offset="0x31">ALVA00.PCM</rom>
+			<rom type="bgm" offset="0x32">ALVA01.PCM</rom>
+			<rom type="bgm" offset="0x33">ALVA02.PCM</rom>
+			<rom type="bgm" offset="0x34">ALVA03.PCM</rom>
+			<rom type="bgm" offset="0x35">ALVA04.PCM</rom>
+			<rom type="bgm" offset="0x36">ALVA05.PCM</rom>
+			<rom type="bgm" offset="0x37">ALVA06.PCM</rom>
+			<rom type="bgm" offset="0x38">ALVA07.PCM</rom>
+			<rom type="bgm" offset="0x39">ALVA08.PCM</rom>
+			<rom type="bgm" offset="0x3a">ALVA09.PCM</rom>
+			<rom type="bgm" offset="0x3b">ALVA10.PCM</rom>
+			<rom type="bgm" offset="0x3c">ALVA11.PCM</rom>
+			<rom type="bgm" offset="0x3d">ALVA12.PCM</rom>
+			<rom type="bgm" offset="0x3e">ALVA13.PCM</rom>
+			<rom type="bgm" offset="0x3f">ALVA14.PCM</rom>
+			<rom type="bgm" offset="0x40">ALVA15.PCM</rom>
+			<rom type="bgm" offset="0x41">ALVA16.PCM</rom>
+			<rom type="bgm" offset="0x42">ALVA17.PCM</rom>
+			<rom type="bgm" offset="0x43">ALVA18.PCM</rom>
+			<rom type="bgm" offset="0x44">ALVA19.PCM</rom>
+			<rom type="bgm" offset="0x45">ALVA20.PCM</rom>
+			<rom type="bgm" offset="0x46">ALVA21.PCM</rom>
+			<rom type="bgm" offset="0x47">ALVA22.PCM</rom>
+			<rom type="bgm" offset="0x48">ALVA23.PCM</rom>
+			<rom type="bgm" offset="0x49">ALVA24.PCM</rom>
+			<rom type="bgm" offset="0x4a">ALVA25.PCM</rom>
+			<rom type="bgm" offset="0x4b">ALVA26.PCM</rom>
+			<rom type="bgm" offset="0x4c">ALVA27.PCM</rom>
+			<rom type="bgm" offset="0x4d">ALVA28.PCM</rom>
+			<rom type="bgm" offset="0x4e">ALVA29.PCM</rom>
+			<rom type="bgm" offset="0x4f">ALVA30.PCM</rom>
+			<rom type="bgm" offset="0x50">ALVA31.PCM</rom>
+			<rom type="bgm" offset="0x51">ALVA32.PCM</rom>
+			<rom type="bgm" offset="0x52">ALVA33.PCM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x000001">探索</title>
+			<title code="0x000002">動揺</title>
+			<title code="0x000003">喧騒</title>
+			<title code="0x000004">そして、事もない日々</title>
+			<title code="0x000005">冒険者協会</title>
+			<title code="0x000006">楽園の葬送</title>
+			<title code="0x000007">抱擁</title>
+			<title code="0x000008">起死回生</title>
+			<title code="0x000009">洞窟１</title>
+			<title code="0x00000a">別離</title>
+			<title code="0x00000b">人魚の砦</title>
+			<title code="0x00000c">ショップ</title>
+			<title code="0x00000d">アウト・ア・フィールド</title>
+			<title code="0x00000e">３悪人のテーマ</title>
+			<title code="0x00000f">かかってきなさい！</title>
+			<title code="0x000010">コメディエッタ</title>
+			<title code="0x000011">シティ</title>
+			<title code="0x000012">残念賞</title>
+			<title code="0x000013">驚愕の事実</title>
+			<title code="0x000014">ドウクツー（洞窟２）</title>
+			<title code="0x000015">ビレッジ</title>
+			<title code="0x000016">のぞむところだ、長期戦！</title>
+			<title code="0x000017">最後の戦い</title>
+			<title code="0x000018">キャメラット城</title>
+			<title code="0x000019">あたいがチータだ！</title>
+			<title code="0x00001a">こける</title>
+			<title code="0x00001b">が～ん</title>
+			<title code="0x00001c">すたこら</title>
+			<title code="0x00001d">聞いてないよ～</title>
+			<title code="0x00001e">オチ</title>
+			<title code="0x00001f">こりゃ、なんだ？</title>
+			<title code="0x000020">ファンファーレ１</title>
+			<title code="0x000021">ファンファーレ２</title>
+			<title code="0x000022">ファンファーレ３</title>
+			<title code="0x000023">緊張</title>
+			<title code="0x000024">イオタのテーマ</title>
+			<title code="0x000025">古代遺跡</title>
+			<title code="0x000026">超近代迷宮</title>
+			<title code="0x000027">退廃の街</title>
+			<title code="0x000028">絶体絶命！PART2</title>
+			<title code="0x000029">帝国の出現</title>
+			<title code="0x00002a">そして、平和の訪れ</title>
+			<title code="0x00002b">愛のテーマ</title>
+			<title code="0x000031">ALVA00.PCM</title>
+			<title code="0x000032">ALVA01.PCM</title>
+			<title code="0x000033">ALVA02.PCM</title>
+			<title code="0x000034">ALVA03.PCM</title>
+			<title code="0x000035">ALVA04.PCM</title>
+			<title code="0x000036">ALVA05.PCM</title>
+			<title code="0x000037">ALVA06.PCM</title>
+			<title code="0x000038">ALVA07.PCM</title>
+			<title code="0x000039">ALVA08.PCM</title>
+			<title code="0x00003a">ALVA09.PCM</title>
+			<title code="0x00003b">ALVA10.PCM</title>
+			<title code="0x00003c">ALVA11.PCM</title>
+			<title code="0x00003d">ALVA12.PCM</title>
+			<title code="0x00003e">ALVA13.PCM</title>
+			<title code="0x00003f">ALVA14.PCM</title>
+			<title code="0x000040">ALVA15.PCM</title>
+			<title code="0x000041">ALVA16.PCM</title>
+			<title code="0x000042">ALVA17.PCM</title>
+			<title code="0x000043">ALVA18.PCM</title>
+			<title code="0x000044">ALVA19.PCM</title>
+			<title code="0x000045">ALVA20.PCM</title>
+			<title code="0x000046">ALVA21.PCM</title>
+			<title code="0x000047">ALVA22.PCM</title>
+			<title code="0x000048">ALVA23.PCM</title>
+			<title code="0x000049">ALVA24.PCM</title>
+			<title code="0x00004a">ALVA25.PCM</title>
+			<title code="0x00004b">ALVA26.PCM</title>
+			<title code="0x00004c">ALVA27.PCM</title>
+			<title code="0x00004d">ALVA28.PCM</title>
+			<title code="0x00004e">ALVA29.PCM</title>
+			<title code="0x00004f">ALVA30.PCM</title>
+			<title code="0x000050">ALVA31.PCM</title>
+			<title code="0x000051">ALVA32.PCM</title>
+			<title code="0x000052">ALVA33.PCM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Alvareak Adventure Story (アルヴァリーク冒険記) (OPN)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x53"/>
+			<option name="fm_mix"   value="4"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="alva98">
+			<rom type="code" offset="0x00600">mdzplay.bin</rom>
+			<rom type="code" offset="0x10000">MDZDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">ALVA00.MIV</rom>
+			<rom type="bgm" offset="0x02">ALVA01.MIV</rom>
+			<rom type="bgm" offset="0x03">ALVA02.MIV</rom>
+			<rom type="bgm" offset="0x04">ALVA03.MIV</rom>
+			<rom type="bgm" offset="0x05">ALVA04.MIV</rom>
+			<rom type="bgm" offset="0x06">ALVA05.MIV</rom>
+			<rom type="bgm" offset="0x07">ALVA06.MIV</rom>
+			<rom type="bgm" offset="0x08">ALVA07.MIV</rom>
+			<rom type="bgm" offset="0x09">ALVA08.MIV</rom>
+			<rom type="bgm" offset="0x0a">ALVA09.MIV</rom>
+			<rom type="bgm" offset="0x0b">ALVA10.MIV</rom>
+			<rom type="bgm" offset="0x0c">ALVA11.MIV</rom>
+			<rom type="bgm" offset="0x0d">ALVA12.MIV</rom>
+			<rom type="bgm" offset="0x0e">ALVA13.MIV</rom>
+			<rom type="bgm" offset="0x0f">ALVA14.MIV</rom>
+			<rom type="bgm" offset="0x10">ALVA15.MIV</rom>
+			<rom type="bgm" offset="0x11">ALVA16.MIV</rom>
+			<rom type="bgm" offset="0x12">ALVA17.MIV</rom>
+			<rom type="bgm" offset="0x13">ALVA18.MIV</rom>
+			<rom type="bgm" offset="0x14">ALVA19.MIV</rom>
+			<rom type="bgm" offset="0x15">ALVA20.MIV</rom>
+			<rom type="bgm" offset="0x16">ALVA21.MIV</rom>
+			<rom type="bgm" offset="0x17">ALVA22.MIV</rom>
+			<rom type="bgm" offset="0x18">ALVA23.MIV</rom>
+			<rom type="bgm" offset="0x19">ALVA24.MIV</rom>
+			<rom type="bgm" offset="0x1a">ALVA25.MIV</rom>
+			<rom type="bgm" offset="0x1b">ALVA26.MIV</rom>
+			<rom type="bgm" offset="0x1c">ALVA27.MIV</rom>
+			<rom type="bgm" offset="0x1d">ALVA28.MIV</rom>
+			<rom type="bgm" offset="0x1e">ALVA29.MIV</rom>
+			<rom type="bgm" offset="0x1f">ALVA30.MIV</rom>
+			<rom type="bgm" offset="0x20">ALVA31.MIV</rom>
+			<rom type="bgm" offset="0x21">ALVA32.MIV</rom>
+			<rom type="bgm" offset="0x22">ALVA33.MIV</rom>
+			<rom type="bgm" offset="0x23">ALVA34.MIV</rom>
+			<rom type="bgm" offset="0x24">ALVA35.MIV</rom>
+			<rom type="bgm" offset="0x25">ALVA36.MIV</rom>
+			<rom type="bgm" offset="0x26">ALVA37.MIV</rom>
+			<rom type="bgm" offset="0x27">ALVA38.MIV</rom>
+			<rom type="bgm" offset="0x28">ALVA39.MIV</rom>
+			<rom type="bgm" offset="0x29">ALVA40.MIV</rom>
+			<rom type="bgm" offset="0x2a">ALVA41.MIV</rom>
+			<rom type="bgm" offset="0x2b">ALVA42.MIV</rom>
+			<rom type="bgm" offset="0x31">ALVA00.PCM</rom>
+			<rom type="bgm" offset="0x32">ALVA01.PCM</rom>
+			<rom type="bgm" offset="0x33">ALVA02.PCM</rom>
+			<rom type="bgm" offset="0x34">ALVA03.PCM</rom>
+			<rom type="bgm" offset="0x35">ALVA04.PCM</rom>
+			<rom type="bgm" offset="0x36">ALVA05.PCM</rom>
+			<rom type="bgm" offset="0x37">ALVA06.PCM</rom>
+			<rom type="bgm" offset="0x38">ALVA07.PCM</rom>
+			<rom type="bgm" offset="0x39">ALVA08.PCM</rom>
+			<rom type="bgm" offset="0x3a">ALVA09.PCM</rom>
+			<rom type="bgm" offset="0x3b">ALVA10.PCM</rom>
+			<rom type="bgm" offset="0x3c">ALVA11.PCM</rom>
+			<rom type="bgm" offset="0x3d">ALVA12.PCM</rom>
+			<rom type="bgm" offset="0x3e">ALVA13.PCM</rom>
+			<rom type="bgm" offset="0x3f">ALVA14.PCM</rom>
+			<rom type="bgm" offset="0x40">ALVA15.PCM</rom>
+			<rom type="bgm" offset="0x41">ALVA16.PCM</rom>
+			<rom type="bgm" offset="0x42">ALVA17.PCM</rom>
+			<rom type="bgm" offset="0x43">ALVA18.PCM</rom>
+			<rom type="bgm" offset="0x44">ALVA19.PCM</rom>
+			<rom type="bgm" offset="0x45">ALVA20.PCM</rom>
+			<rom type="bgm" offset="0x46">ALVA21.PCM</rom>
+			<rom type="bgm" offset="0x47">ALVA22.PCM</rom>
+			<rom type="bgm" offset="0x48">ALVA23.PCM</rom>
+			<rom type="bgm" offset="0x49">ALVA24.PCM</rom>
+			<rom type="bgm" offset="0x4a">ALVA25.PCM</rom>
+			<rom type="bgm" offset="0x4b">ALVA26.PCM</rom>
+			<rom type="bgm" offset="0x4c">ALVA27.PCM</rom>
+			<rom type="bgm" offset="0x4d">ALVA28.PCM</rom>
+			<rom type="bgm" offset="0x4e">ALVA29.PCM</rom>
+			<rom type="bgm" offset="0x4f">ALVA30.PCM</rom>
+			<rom type="bgm" offset="0x50">ALVA31.PCM</rom>
+			<rom type="bgm" offset="0x51">ALVA32.PCM</rom>
+			<rom type="bgm" offset="0x52">ALVA33.PCM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x000001">探索</title>
+			<title code="0x000002">動揺</title>
+			<title code="0x000003">喧騒</title>
+			<title code="0x000004">そして、事もない日々</title>
+			<title code="0x000005">冒険者協会</title>
+			<title code="0x000006">楽園の葬送</title>
+			<title code="0x000007">抱擁</title>
+			<title code="0x000008">起死回生</title>
+			<title code="0x000009">洞窟１</title>
+			<title code="0x00000a">別離</title>
+			<title code="0x00000b">人魚の砦</title>
+			<title code="0x00000c">ショップ</title>
+			<title code="0x00000d">アウト・ア・フィールド</title>
+			<title code="0x00000e">３悪人のテーマ</title>
+			<title code="0x00000f">かかってきなさい！</title>
+			<title code="0x000010">コメディエッタ</title>
+			<title code="0x000011">シティ</title>
+			<title code="0x000012">残念賞</title>
+			<title code="0x000013">驚愕の事実</title>
+			<title code="0x000014">ドウクツー（洞窟２）</title>
+			<title code="0x000015">ビレッジ</title>
+			<title code="0x000016">のぞむところだ、長期戦！</title>
+			<title code="0x000017">最後の戦い</title>
+			<title code="0x000018">キャメラット城</title>
+			<title code="0x000019">あたいがチータだ！</title>
+			<title code="0x00001a">こける</title>
+			<title code="0x00001b">が～ん</title>
+			<title code="0x00001c">すたこら</title>
+			<title code="0x00001d">聞いてないよ～</title>
+			<title code="0x00001e">オチ</title>
+			<title code="0x00001f">こりゃ、なんだ？</title>
+			<title code="0x000020">ファンファーレ１</title>
+			<title code="0x000021">ファンファーレ２</title>
+			<title code="0x000022">ファンファーレ３</title>
+			<title code="0x000023">緊張</title>
+			<title code="0x000024">イオタのテーマ</title>
+			<title code="0x000025">古代遺跡</title>
+			<title code="0x000026">超近代迷宮</title>
+			<title code="0x000027">退廃の街</title>
+			<title code="0x000028">絶体絶命！PART2</title>
+			<title code="0x000029">帝国の出現</title>
+			<title code="0x00002a">そして、平和の訪れ</title>
+			<title code="0x00002b">愛のテーマ</title>
+			<title code="0x000031">ALVA00.PCM</title>
+			<title code="0x000032">ALVA01.PCM</title>
+			<title code="0x000033">ALVA02.PCM</title>
+			<title code="0x000034">ALVA03.PCM</title>
+			<title code="0x000035">ALVA04.PCM</title>
+			<title code="0x000036">ALVA05.PCM</title>
+			<title code="0x000037">ALVA06.PCM</title>
+			<title code="0x000038">ALVA07.PCM</title>
+			<title code="0x000039">ALVA08.PCM</title>
+			<title code="0x00003a">ALVA09.PCM</title>
+			<title code="0x00003b">ALVA10.PCM</title>
+			<title code="0x00003c">ALVA11.PCM</title>
+			<title code="0x00003d">ALVA12.PCM</title>
+			<title code="0x00003e">ALVA13.PCM</title>
+			<title code="0x00003f">ALVA14.PCM</title>
+			<title code="0x000040">ALVA15.PCM</title>
+			<title code="0x000041">ALVA16.PCM</title>
+			<title code="0x000042">ALVA17.PCM</title>
+			<title code="0x000043">ALVA18.PCM</title>
+			<title code="0x000044">ALVA19.PCM</title>
+			<title code="0x000045">ALVA20.PCM</title>
+			<title code="0x000046">ALVA21.PCM</title>
+			<title code="0x000047">ALVA22.PCM</title>
+			<title code="0x000048">ALVA23.PCM</title>
+			<title code="0x000049">ALVA24.PCM</title>
+			<title code="0x00004a">ALVA25.PCM</title>
+			<title code="0x00004b">ALVA26.PCM</title>
+			<title code="0x00004c">ALVA27.PCM</title>
+			<title code="0x00004d">ALVA28.PCM</title>
+			<title code="0x00004e">ALVA29.PCM</title>
+			<title code="0x00004f">ALVA30.PCM</title>
+			<title code="0x000050">ALVA31.PCM</title>
+			<title code="0x000051">ALVA32.PCM</title>
+			<title code="0x000052">ALVA33.PCM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Alvareak Adventure Story (アルヴァリーク冒険記) (SC-55)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x53"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="alva98">
+			<rom type="code" offset="0x00600">mdzplay.bin</rom>
+			<rom type="code" offset="0x10000">MDZDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">ALVA00.MIV</rom>
+			<rom type="bgm" offset="0x02">ALVA01.MIV</rom>
+			<rom type="bgm" offset="0x03">ALVA02.MIV</rom>
+			<rom type="bgm" offset="0x04">ALVA03.MIV</rom>
+			<rom type="bgm" offset="0x05">ALVA04.MIV</rom>
+			<rom type="bgm" offset="0x06">ALVA05.MIV</rom>
+			<rom type="bgm" offset="0x07">ALVA06.MIV</rom>
+			<rom type="bgm" offset="0x08">ALVA07.MIV</rom>
+			<rom type="bgm" offset="0x09">ALVA08.MIV</rom>
+			<rom type="bgm" offset="0x0a">ALVA09.MIV</rom>
+			<rom type="bgm" offset="0x0b">ALVA10.MIV</rom>
+			<rom type="bgm" offset="0x0c">ALVA11.MIV</rom>
+			<rom type="bgm" offset="0x0d">ALVA12.MIV</rom>
+			<rom type="bgm" offset="0x0e">ALVA13.MIV</rom>
+			<rom type="bgm" offset="0x0f">ALVA14.MIV</rom>
+			<rom type="bgm" offset="0x10">ALVA15.MIV</rom>
+			<rom type="bgm" offset="0x11">ALVA16.MIV</rom>
+			<rom type="bgm" offset="0x12">ALVA17.MIV</rom>
+			<rom type="bgm" offset="0x13">ALVA18.MIV</rom>
+			<rom type="bgm" offset="0x14">ALVA19.MIV</rom>
+			<rom type="bgm" offset="0x15">ALVA20.MIV</rom>
+			<rom type="bgm" offset="0x16">ALVA21.MIV</rom>
+			<rom type="bgm" offset="0x17">ALVA22.MIV</rom>
+			<rom type="bgm" offset="0x18">ALVA23.MIV</rom>
+			<rom type="bgm" offset="0x19">ALVA24.MIV</rom>
+			<rom type="bgm" offset="0x1a">ALVA25.MIV</rom>
+			<rom type="bgm" offset="0x1b">ALVA26.MIV</rom>
+			<rom type="bgm" offset="0x1c">ALVA27.MIV</rom>
+			<rom type="bgm" offset="0x1d">ALVA28.MIV</rom>
+			<rom type="bgm" offset="0x1e">ALVA29.MIV</rom>
+			<rom type="bgm" offset="0x1f">ALVA30.MIV</rom>
+			<rom type="bgm" offset="0x20">ALVA31.MIV</rom>
+			<rom type="bgm" offset="0x21">ALVA32.MIV</rom>
+			<rom type="bgm" offset="0x22">ALVA33.MIV</rom>
+			<rom type="bgm" offset="0x23">ALVA34.MIV</rom>
+			<rom type="bgm" offset="0x24">ALVA35.MIV</rom>
+			<rom type="bgm" offset="0x25">ALVA36.MIV</rom>
+			<rom type="bgm" offset="0x26">ALVA37.MIV</rom>
+			<rom type="bgm" offset="0x27">ALVA38.MIV</rom>
+			<rom type="bgm" offset="0x28">ALVA39.MIV</rom>
+			<rom type="bgm" offset="0x29">ALVA40.MIV</rom>
+			<rom type="bgm" offset="0x2a">ALVA41.MIV</rom>
+			<rom type="bgm" offset="0x2b">ALVA42.MIV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x010001">探索</title>
+			<title code="0x010002">動揺</title>
+			<title code="0x010003">喧騒</title>
+			<title code="0x010004">そして、事もない日々</title>
+			<title code="0x010005">冒険者協会</title>
+			<title code="0x010006">楽園の葬送</title>
+			<title code="0x010007">抱擁</title>
+			<title code="0x010008">起死回生</title>
+			<title code="0x010009">洞窟１</title>
+			<title code="0x01000a">別離</title>
+			<title code="0x01000b">人魚の砦</title>
+			<title code="0x01000c">ショップ</title>
+			<title code="0x01000d">アウト・ア・フィールド</title>
+			<title code="0x01000e">３悪人のテーマ</title>
+			<title code="0x01000f">かかってきなさい！</title>
+			<title code="0x010010">コメディエッタ</title>
+			<title code="0x010011">シティ</title>
+			<title code="0x010012">残念賞</title>
+			<title code="0x010013">驚愕の事実</title>
+			<title code="0x010014">ドウクツー（洞窟２）</title>
+			<title code="0x010015">ビレッジ</title>
+			<title code="0x010016">のぞむところだ、長期戦！</title>
+			<title code="0x010017">最後の戦い</title>
+			<title code="0x010018">キャメラット城</title>
+			<title code="0x010019">あたいがチータだ！</title>
+			<title code="0x01001a">こける</title>
+			<title code="0x01001b">が～ん</title>
+			<title code="0x01001c">すたこら</title>
+			<title code="0x01001d">聞いてないよ～</title>
+			<title code="0x01001e">オチ</title>
+			<title code="0x01001f">こりゃ、なんだ？</title>
+			<title code="0x010020">ファンファーレ１</title>
+			<title code="0x010021">ファンファーレ２</title>
+			<title code="0x010022">ファンファーレ３</title>
+			<title code="0x010023">緊張</title>
+			<title code="0x010024">イオタのテーマ</title>
+			<title code="0x010025">古代遺跡</title>
+			<title code="0x010026">超近代迷宮</title>
+			<title code="0x010027">退廃の街</title>
+			<title code="0x010028">絶体絶命！PART2</title>
+			<title code="0x010029">帝国の出現</title>
+			<title code="0x01002a">そして、平和の訪れ</title>
+			<title code="0x01002b">愛のテーマ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Alvareak Adventure Story (アルヴァリーク冒険記) (Vermouth)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x53"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="alva98">
+			<rom type="code" offset="0x00600">mdzplay.bin</rom>
+			<rom type="code" offset="0x10000">MDZDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">ALVA00.MIV</rom>
+			<rom type="bgm" offset="0x02">ALVA01.MIV</rom>
+			<rom type="bgm" offset="0x03">ALVA02.MIV</rom>
+			<rom type="bgm" offset="0x04">ALVA03.MIV</rom>
+			<rom type="bgm" offset="0x05">ALVA04.MIV</rom>
+			<rom type="bgm" offset="0x06">ALVA05.MIV</rom>
+			<rom type="bgm" offset="0x07">ALVA06.MIV</rom>
+			<rom type="bgm" offset="0x08">ALVA07.MIV</rom>
+			<rom type="bgm" offset="0x09">ALVA08.MIV</rom>
+			<rom type="bgm" offset="0x0a">ALVA09.MIV</rom>
+			<rom type="bgm" offset="0x0b">ALVA10.MIV</rom>
+			<rom type="bgm" offset="0x0c">ALVA11.MIV</rom>
+			<rom type="bgm" offset="0x0d">ALVA12.MIV</rom>
+			<rom type="bgm" offset="0x0e">ALVA13.MIV</rom>
+			<rom type="bgm" offset="0x0f">ALVA14.MIV</rom>
+			<rom type="bgm" offset="0x10">ALVA15.MIV</rom>
+			<rom type="bgm" offset="0x11">ALVA16.MIV</rom>
+			<rom type="bgm" offset="0x12">ALVA17.MIV</rom>
+			<rom type="bgm" offset="0x13">ALVA18.MIV</rom>
+			<rom type="bgm" offset="0x14">ALVA19.MIV</rom>
+			<rom type="bgm" offset="0x15">ALVA20.MIV</rom>
+			<rom type="bgm" offset="0x16">ALVA21.MIV</rom>
+			<rom type="bgm" offset="0x17">ALVA22.MIV</rom>
+			<rom type="bgm" offset="0x18">ALVA23.MIV</rom>
+			<rom type="bgm" offset="0x19">ALVA24.MIV</rom>
+			<rom type="bgm" offset="0x1a">ALVA25.MIV</rom>
+			<rom type="bgm" offset="0x1b">ALVA26.MIV</rom>
+			<rom type="bgm" offset="0x1c">ALVA27.MIV</rom>
+			<rom type="bgm" offset="0x1d">ALVA28.MIV</rom>
+			<rom type="bgm" offset="0x1e">ALVA29.MIV</rom>
+			<rom type="bgm" offset="0x1f">ALVA30.MIV</rom>
+			<rom type="bgm" offset="0x20">ALVA31.MIV</rom>
+			<rom type="bgm" offset="0x21">ALVA32.MIV</rom>
+			<rom type="bgm" offset="0x22">ALVA33.MIV</rom>
+			<rom type="bgm" offset="0x23">ALVA34.MIV</rom>
+			<rom type="bgm" offset="0x24">ALVA35.MIV</rom>
+			<rom type="bgm" offset="0x25">ALVA36.MIV</rom>
+			<rom type="bgm" offset="0x26">ALVA37.MIV</rom>
+			<rom type="bgm" offset="0x27">ALVA38.MIV</rom>
+			<rom type="bgm" offset="0x28">ALVA39.MIV</rom>
+			<rom type="bgm" offset="0x29">ALVA40.MIV</rom>
+			<rom type="bgm" offset="0x2a">ALVA41.MIV</rom>
+			<rom type="bgm" offset="0x2b">ALVA42.MIV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x010001">探索</title>
+			<title code="0x010002">動揺</title>
+			<title code="0x010003">喧騒</title>
+			<title code="0x010004">そして、事もない日々</title>
+			<title code="0x010005">冒険者協会</title>
+			<title code="0x010006">楽園の葬送</title>
+			<title code="0x010007">抱擁</title>
+			<title code="0x010008">起死回生</title>
+			<title code="0x010009">洞窟１</title>
+			<title code="0x01000a">別離</title>
+			<title code="0x01000b">人魚の砦</title>
+			<title code="0x01000c">ショップ</title>
+			<title code="0x01000d">アウト・ア・フィールド</title>
+			<title code="0x01000e">３悪人のテーマ</title>
+			<title code="0x01000f">かかってきなさい！</title>
+			<title code="0x010010">コメディエッタ</title>
+			<title code="0x010011">シティ</title>
+			<title code="0x010012">残念賞</title>
+			<title code="0x010013">驚愕の事実</title>
+			<title code="0x010014">ドウクツー（洞窟２）</title>
+			<title code="0x010015">ビレッジ</title>
+			<title code="0x010016">のぞむところだ、長期戦！</title>
+			<title code="0x010017">最後の戦い</title>
+			<title code="0x010018">キャメラット城</title>
+			<title code="0x010019">あたいがチータだ！</title>
+			<title code="0x01001a">こける</title>
+			<title code="0x01001b">が～ん</title>
+			<title code="0x01001c">すたこら</title>
+			<title code="0x01001d">聞いてないよ～</title>
+			<title code="0x01001e">オチ</title>
+			<title code="0x01001f">こりゃ、なんだ？</title>
+			<title code="0x010020">ファンファーレ１</title>
+			<title code="0x010021">ファンファーレ２</title>
+			<title code="0x010022">ファンファーレ３</title>
+			<title code="0x010023">緊張</title>
+			<title code="0x010024">イオタのテーマ</title>
+			<title code="0x010025">古代遺跡</title>
+			<title code="0x010026">超近代迷宮</title>
+			<title code="0x010027">退廃の街</title>
+			<title code="0x010028">絶体絶命！PART2</title>
+			<title code="0x010029">帝国の出現</title>
+			<title code="0x01002a">そして、平和の訪れ</title>
+			<title code="0x01002b">愛のテーマ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Bible Master Ⅱ -The Chaos of Aglia- (バイブルマスター・セカンド) (86)</name>
+		<driver type="86">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x19"/>
+			<option name="fm_mix"   value="4"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="biblem2">
+			<rom type="code" offset="0x00600">mdplay.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">BLM00.FMV</rom>
+			<rom type="bgm" offset="0x02">BLM01.FMV</rom>
+			<rom type="bgm" offset="0x03">BLM02.FMV</rom>
+			<rom type="bgm" offset="0x04">BLM03.FMV</rom>
+			<rom type="bgm" offset="0x05">BLM04.FMV</rom>
+			<rom type="bgm" offset="0x06">BLM05.FMV</rom>
+			<rom type="bgm" offset="0x07">BLM06.FMV</rom>
+			<rom type="bgm" offset="0x08">BLM07.FMV</rom>
+			<rom type="bgm" offset="0x09">BLM08.FMV</rom>
+			<rom type="bgm" offset="0x0a">BLM09.FMV</rom>
+			<rom type="bgm" offset="0x0b">BLM10.FMV</rom>
+			<rom type="bgm" offset="0x0c">BLM11.FMV</rom>
+			<rom type="bgm" offset="0x0d">BLM12.FMV</rom>
+			<rom type="bgm" offset="0x0e">BLM13.FMV</rom>
+			<rom type="bgm" offset="0x0f">BLM14.FMV</rom>
+			<rom type="bgm" offset="0x10">BLM15.FMV</rom>
+			<rom type="bgm" offset="0x11">BLM16.FMV</rom>
+			<rom type="bgm" offset="0x12">BLM17.FMV</rom>
+			<rom type="bgm" offset="0x13">BLM18.FMV</rom>
+			<rom type="bgm" offset="0x14">BLM19.FMV</rom>
+			<rom type="bgm" offset="0x15">BLM20.FMV</rom>
+			<rom type="bgm" offset="0x16">BLM21.FMV</rom>
+			<rom type="bgm" offset="0x17">BLM22.FMV</rom>
+			<rom type="bgm" offset="0x18">BLM23.FMV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BLM02A メインテーマ 前半</title>
+			<title code="0x02">BLM01  オープニング</title>
+			<title code="0x03">BLM02B メインテーマ 後半</title>
+			<title code="0x04">BL03   バイブルのテーマ</title>
+			<title code="0x05">BL04   スターティングマーチ</title>
+			<title code="0x06">BLM05  攻防戦のテーマ</title>
+			<title code="0x07">BL06   市街地戦のテーマ</title>
+			<title code="0x08">BLM07  局地戦のテーマ</title>
+			<title code="0x09">BLM08  拠点制圧のテーマ</title>
+			<title code="0x0a">BLM09  城内戦のテーマ</title>
+			<title code="0x0b">BLM10  ハーキュリーのテーマ</title>
+			<title code="0x0c">BLM11  バトル １</title>
+			<title code="0x0d">BLM12B バトル ２</title>
+			<title code="0x0e">BLM13B 召喚獣のテーマ</title>
+			<title code="0x0f">BLM14  勝利の予感のテーマ</title>
+			<title code="0x10">BLM15  最終戦闘のテーマ</title>
+			<title code="0x11">BLM16  お店のテーマ</title>
+			<title code="0x12">BLM17  解放のテーマ</title>
+			<title code="0x13">BLM18  エル＝ヴェドのテーマ</title>
+			<title code="0x14">BLM19  エンディング １</title>
+			<title code="0x15">BLM20  スタッフロール</title>
+			<title code="0x16">BLM21  能天気な曲</title>
+			<title code="0x17">BLM22  哀しみのテーマ</title>
+			<title code="0x18">BLM23  ファンファーレ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Bible Master Ⅱ -The Chaos of Aglia- (バイブルマスター・セカンド) (OPN)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x6000"/>
+			<option name="bootip"   value="0xf000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x1b"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="biblem2">
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="code" offset="0x5fe00">MAIN.EXE</rom>
+			<rom type="code" offset="0x6f000">mdplayb2.bin</rom>
+			<rom type="bgm" offset="0x01">BLM00.FMV</rom>
+			<rom type="bgm" offset="0x02">BLM01.FMV</rom>
+			<rom type="bgm" offset="0x03">BLM02.FMV</rom>
+			<rom type="bgm" offset="0x04">BLM03.FMV</rom>
+			<rom type="bgm" offset="0x05">BLM04.FMV</rom>
+			<rom type="bgm" offset="0x06">BLM05.FMV</rom>
+			<rom type="bgm" offset="0x07">BLM06.FMV</rom>
+			<rom type="bgm" offset="0x08">BLM07.FMV</rom>
+			<rom type="bgm" offset="0x09">BLM08.FMV</rom>
+			<rom type="bgm" offset="0x0a">BLM09.FMV</rom>
+			<rom type="bgm" offset="0x0b">BLM10.FMV</rom>
+			<rom type="bgm" offset="0x0c">BLM11.FMV</rom>
+			<rom type="bgm" offset="0x0d">BLM12.FMV</rom>
+			<rom type="bgm" offset="0x0e">BLM13.FMV</rom>
+			<rom type="bgm" offset="0x0f">BLM14.FMV</rom>
+			<rom type="bgm" offset="0x10">BLM15.FMV</rom>
+			<rom type="bgm" offset="0x11">BLM16.FMV</rom>
+			<rom type="bgm" offset="0x12">BLM17.FMV</rom>
+			<rom type="bgm" offset="0x13">BLM18.FMV</rom>
+			<rom type="bgm" offset="0x14">BLM19.FMV</rom>
+			<rom type="bgm" offset="0x15">BLM20.FMV</rom>
+			<rom type="bgm" offset="0x16">BLM21.FMV</rom>
+			<rom type="bgm" offset="0x17">BLM22.FMV</rom>
+			<rom type="bgm" offset="0x18">BLM23.FMV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BLM02A メインテーマ 前半</title>
+			<title code="0x02">BLM01  オープニング</title>
+			<title code="0x03">BLM02B メインテーマ 後半</title>
+			<title code="0x04">BL03   バイブルのテーマ</title>
+			<title code="0x05">BL04   スターティングマーチ</title>
+			<title code="0x06">BLM05  攻防戦のテーマ</title>
+			<title code="0x07">BL06   市街地戦のテーマ</title>
+			<title code="0x08">BLM07  局地戦のテーマ</title>
+			<title code="0x09">BLM08  拠点制圧のテーマ</title>
+			<title code="0x0a">BLM09  城内戦のテーマ</title>
+			<title code="0x0b">BLM10  ハーキュリーのテーマ</title>
+			<title code="0x0c">BLM11  バトル １</title>
+			<title code="0x0d">BLM12B バトル ２</title>
+			<title code="0x0e">BLM13B 召喚獣のテーマ</title>
+			<title code="0x0f">BLM14  勝利の予感のテーマ</title>
+			<title code="0x10">BLM15  最終戦闘のテーマ</title>
+			<title code="0x11">BLM16  お店のテーマ</title>
+			<title code="0x12">BLM17  解放のテーマ</title>
+			<title code="0x13">BLM18  エル＝ヴェドのテーマ</title>
+			<title code="0x14">BLM19  エンディング １</title>
+			<title code="0x15">BLM20  スタッフロール</title>
+			<title code="0x16">BLM21  能天気な曲</title>
+			<title code="0x17">BLM22  哀しみのテーマ</title>
+			<title code="0x18">BLM23  ファンファーレ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Bible Master Ⅱ -The Chaos of Aglia- (バイブルマスター・セカンド) (SC-55)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x19"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="biblem2">
+			<rom type="code" offset="0x00600">mdplay.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">BLM00.MID</rom>
+			<rom type="bgm" offset="0x02">BLM01.MID</rom>
+			<rom type="bgm" offset="0x03">BLM02.MID</rom>
+			<rom type="bgm" offset="0x04">BLM03.MID</rom>
+			<rom type="bgm" offset="0x05">BLM04.MID</rom>
+			<rom type="bgm" offset="0x06">BLM05.MID</rom>
+			<rom type="bgm" offset="0x07">BLM06.MID</rom>
+			<rom type="bgm" offset="0x08">BLM07.MID</rom>
+			<rom type="bgm" offset="0x09">BLM08.MID</rom>
+			<rom type="bgm" offset="0x0a">BLM09.MID</rom>
+			<rom type="bgm" offset="0x0b">BLM10.MID</rom>
+			<rom type="bgm" offset="0x0c">BLM11.MID</rom>
+			<rom type="bgm" offset="0x0d">BLM12.MID</rom>
+			<rom type="bgm" offset="0x0e">BLM13.MID</rom>
+			<rom type="bgm" offset="0x0f">BLM14.MID</rom>
+			<rom type="bgm" offset="0x10">BLM15.MID</rom>
+			<rom type="bgm" offset="0x11">BLM16.MID</rom>
+			<rom type="bgm" offset="0x12">BLM17.MID</rom>
+			<rom type="bgm" offset="0x13">BLM18.MID</rom>
+			<rom type="bgm" offset="0x14">BLM19.MID</rom>
+			<rom type="bgm" offset="0x15">BLM20.MID</rom>
+			<rom type="bgm" offset="0x16">BLM21.MID</rom>
+			<rom type="bgm" offset="0x17">BLM22.MID</rom>
+			<rom type="bgm" offset="0x18">BLM23.MID</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x010001">BLM02A メインテーマ 前半</title>
+			<title code="0x010002">BLM01  オープニング</title>
+			<title code="0x010003">BLM02B メインテーマ 後半</title>
+			<title code="0x010004">BL03   バイブルのテーマ</title>
+			<title code="0x010005">BL04   スターティングマーチ</title>
+			<title code="0x010006">BLM05  攻防戦のテーマ</title>
+			<title code="0x010007">BL06   市街地戦のテーマ</title>
+			<title code="0x010008">BLM07  局地戦のテーマ</title>
+			<title code="0x010009">BLM08  拠点制圧のテーマ</title>
+			<title code="0x01000a">BLM09  城内戦のテーマ</title>
+			<title code="0x01000b">BLM10  ハーキュリーのテーマ</title>
+			<title code="0x01000c">BLM11  バトル １</title>
+			<title code="0x01000d">BLM12B バトル ２</title>
+			<title code="0x01000e">BLM13B 召喚獣のテーマ</title>
+			<title code="0x01000f">BLM14  勝利の予感のテーマ</title>
+			<title code="0x010010">BLM15  最終戦闘のテーマ</title>
+			<title code="0x010011">BLM16  お店のテーマ</title>
+			<title code="0x010012">BLM17  解放のテーマ</title>
+			<title code="0x010013">BLM18  エル＝ヴェドのテーマ</title>
+			<title code="0x010014">BLM19  エンディング １</title>
+			<title code="0x010015">BLM20  スタッフロール</title>
+			<title code="0x010016">BLM21  能天気な曲</title>
+			<title code="0x010017">BLM22  哀しみのテーマ</title>
+			<title code="0x010018">BLM23  ファンファーレ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Bible Master Ⅱ -The Chaos of Aglia- (バイブルマスター・セカンド) (Vermouth)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x19"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="biblem2">
+			<rom type="code" offset="0x00600">mdplay.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">BLM00.MID</rom>
+			<rom type="bgm" offset="0x02">BLM01.MID</rom>
+			<rom type="bgm" offset="0x03">BLM02.MID</rom>
+			<rom type="bgm" offset="0x04">BLM03.MID</rom>
+			<rom type="bgm" offset="0x05">BLM04.MID</rom>
+			<rom type="bgm" offset="0x06">BLM05.MID</rom>
+			<rom type="bgm" offset="0x07">BLM06.MID</rom>
+			<rom type="bgm" offset="0x08">BLM07.MID</rom>
+			<rom type="bgm" offset="0x09">BLM08.MID</rom>
+			<rom type="bgm" offset="0x0a">BLM09.MID</rom>
+			<rom type="bgm" offset="0x0b">BLM10.MID</rom>
+			<rom type="bgm" offset="0x0c">BLM11.MID</rom>
+			<rom type="bgm" offset="0x0d">BLM12.MID</rom>
+			<rom type="bgm" offset="0x0e">BLM13.MID</rom>
+			<rom type="bgm" offset="0x0f">BLM14.MID</rom>
+			<rom type="bgm" offset="0x10">BLM15.MID</rom>
+			<rom type="bgm" offset="0x11">BLM16.MID</rom>
+			<rom type="bgm" offset="0x12">BLM17.MID</rom>
+			<rom type="bgm" offset="0x13">BLM18.MID</rom>
+			<rom type="bgm" offset="0x14">BLM19.MID</rom>
+			<rom type="bgm" offset="0x15">BLM20.MID</rom>
+			<rom type="bgm" offset="0x16">BLM21.MID</rom>
+			<rom type="bgm" offset="0x17">BLM22.MID</rom>
+			<rom type="bgm" offset="0x18">BLM23.MID</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x010001">BLM02A メインテーマ 前半</title>
+			<title code="0x010002">BLM01  オープニング</title>
+			<title code="0x010003">BLM02B メインテーマ 後半</title>
+			<title code="0x010004">BL03   バイブルのテーマ</title>
+			<title code="0x010005">BL04   スターティングマーチ</title>
+			<title code="0x010006">BLM05  攻防戦のテーマ</title>
+			<title code="0x010007">BL06   市街地戦のテーマ</title>
+			<title code="0x010008">BLM07  局地戦のテーマ</title>
+			<title code="0x010009">BLM08  拠点制圧のテーマ</title>
+			<title code="0x01000a">BLM09  城内戦のテーマ</title>
+			<title code="0x01000b">BLM10  ハーキュリーのテーマ</title>
+			<title code="0x01000c">BLM11  バトル １</title>
+			<title code="0x01000d">BLM12B バトル ２</title>
+			<title code="0x01000e">BLM13B 召喚獣のテーマ</title>
+			<title code="0x01000f">BLM14  勝利の予感のテーマ</title>
+			<title code="0x010010">BLM15  最終戦闘のテーマ</title>
+			<title code="0x010011">BLM16  お店のテーマ</title>
+			<title code="0x010012">BLM17  解放のテーマ</title>
+			<title code="0x010013">BLM18  エル＝ヴェドのテーマ</title>
+			<title code="0x010014">BLM19  エンディング １</title>
+			<title code="0x010015">BLM20  スタッフロール</title>
+			<title code="0x010016">BLM21  能天気な曲</title>
+			<title code="0x010017">BLM22  哀しみのテーマ</title>
+			<title code="0x010018">BLM23  ファンファーレ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Ragnar0kkr (ラグナレック) (86)</name>
+		<driver type="86">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x6000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x17"/>
+			<option name="fm_mix"   value="4"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="ragnrk98">
+			<rom type="code" offset="0x00600">mdplay.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">RAG000.MIV</rom>
+			<rom type="bgm" offset="0x02">RAG001.MIV</rom>
+			<rom type="bgm" offset="0x03">RAG002.MIV</rom>
+			<rom type="bgm" offset="0x04">RAG003.MIV</rom>
+			<rom type="bgm" offset="0x05">RAG004.MIV</rom>
+			<rom type="bgm" offset="0x06">RAG005.MIV</rom>
+			<rom type="bgm" offset="0x07">RAG006.MIV</rom>
+			<rom type="bgm" offset="0x08">RAG007.MIV</rom>
+			<rom type="bgm" offset="0x09">RAG008.MIV</rom>
+			<rom type="bgm" offset="0x0a">RAG009.MIV</rom>
+			<rom type="bgm" offset="0x0b">RAG010.MIV</rom>
+			<rom type="bgm" offset="0x0c">RAG011.MIV</rom>
+			<rom type="bgm" offset="0x0d">RAG012.MIV</rom>
+			<rom type="bgm" offset="0x0e">RAG013.MIV</rom>
+			<rom type="bgm" offset="0x0f">RAG014.MIV</rom>
+			<rom type="bgm" offset="0x10">RAG015.MIV</rom>
+			<rom type="bgm" offset="0x11">RAG016.MIV</rom>
+			<rom type="bgm" offset="0x12">RAG017.MIV</rom>
+			<rom type="bgm" offset="0x13">RAG018.MIV</rom>
+			<rom type="bgm" offset="0x14">RAG019.MIV</rom>
+			<rom type="bgm" offset="0x15">RAG020.MIV</rom>
+			<rom type="bgm" offset="0x16">RAG021.MIV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+		<!--	<title code="0x01">RAG000.MIV : </title> -->
+			<title code="0x02">偶像達の黙示録</title>
+			<title code="0x03">花香るあの日々</title>
+			<title code="0x04">決意～孤高の女王に永遠の忠誠を誓う～</title>
+			<title code="0x05">むっつの世界</title>
+			<title code="0x06">氷土は生命に輝く</title>
+			<title code="0x07">美しき死の花嫁～ヴァルキリアは勇者を愛す～</title>
+			<title code="0x08">名もない小さな魚の告白</title>
+			<title code="0x09">大地の賛歌</title>
+			<title code="0x0a">血と骨と肉の万華鏡</title>
+			<title code="0x0b">遥かなる聖地</title>
+			<title code="0x0c">抵抗～我らは無敵、我らが砦は不落なり～</title>
+			<title code="0x0d">ひとふりの古びた愛剣と共に</title>
+			<title code="0x0e">英雄達の鎮魂曲</title>
+			<title code="0x0f">死線～ヴァルハラの門は開かれた～</title>
+			<title code="0x10">百億の剣、百億の命</title>
+			<title code="0x11">白き太陽</title>
+			<title code="0x12">共に果てるまで～アンドラングは汝の血を欲する～</title>
+			<title code="0x13">皇帝</title>
+			<title code="0x14">至高の女王</title>
+			<title code="0x15">ひとつの世界</title>
+			<title code="0x16">Ragnarokkr</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Ragnar0kkr (ラグナレック) (OPN)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x6000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x17"/>
+			<option name="fm_mix"   value="4"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="ragnrk98">
+			<rom type="code" offset="0x00600">mdplay.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">RAG000.MIV</rom>
+			<rom type="bgm" offset="0x02">RAG001.MIV</rom>
+			<rom type="bgm" offset="0x03">RAG002.MIV</rom>
+			<rom type="bgm" offset="0x04">RAG003.MIV</rom>
+			<rom type="bgm" offset="0x05">RAG004.MIV</rom>
+			<rom type="bgm" offset="0x06">RAG005.MIV</rom>
+			<rom type="bgm" offset="0x07">RAG006.MIV</rom>
+			<rom type="bgm" offset="0x08">RAG007.MIV</rom>
+			<rom type="bgm" offset="0x09">RAG008.MIV</rom>
+			<rom type="bgm" offset="0x0a">RAG009.MIV</rom>
+			<rom type="bgm" offset="0x0b">RAG010.MIV</rom>
+			<rom type="bgm" offset="0x0c">RAG011.MIV</rom>
+			<rom type="bgm" offset="0x0d">RAG012.MIV</rom>
+			<rom type="bgm" offset="0x0e">RAG013.MIV</rom>
+			<rom type="bgm" offset="0x0f">RAG014.MIV</rom>
+			<rom type="bgm" offset="0x10">RAG015.MIV</rom>
+			<rom type="bgm" offset="0x11">RAG016.MIV</rom>
+			<rom type="bgm" offset="0x12">RAG017.MIV</rom>
+			<rom type="bgm" offset="0x13">RAG018.MIV</rom>
+			<rom type="bgm" offset="0x14">RAG019.MIV</rom>
+			<rom type="bgm" offset="0x15">RAG020.MIV</rom>
+			<rom type="bgm" offset="0x16">RAG021.MIV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+		<!--	<title code="0x01">RAG000.MIV : </title> -->
+			<title code="0x02">偶像達の黙示録</title>
+			<title code="0x03">花香るあの日々</title>
+			<title code="0x04">決意～孤高の女王に永遠の忠誠を誓う～</title>
+			<title code="0x05">むっつの世界</title>
+			<title code="0x06">氷土は生命に輝く</title>
+			<title code="0x07">美しき死の花嫁～ヴァルキリアは勇者を愛す～</title>
+			<title code="0x08">名もない小さな魚の告白</title>
+			<title code="0x09">大地の賛歌</title>
+			<title code="0x0a">血と骨と肉の万華鏡</title>
+			<title code="0x0b">遥かなる聖地</title>
+			<title code="0x0c">抵抗～我らは無敵、我らが砦は不落なり～</title>
+			<title code="0x0d">ひとふりの古びた愛剣と共に</title>
+			<title code="0x0e">英雄達の鎮魂曲</title>
+			<title code="0x0f">死線～ヴァルハラの門は開かれた～</title>
+			<title code="0x10">百億の剣、百億の命</title>
+			<title code="0x11">白き太陽</title>
+			<title code="0x12">共に果てるまで～アンドラングは汝の血を欲する～</title>
+			<title code="0x13">皇帝</title>
+			<title code="0x14">至高の女王</title>
+			<title code="0x15">ひとつの世界</title>
+			<title code="0x16">Ragnarokkr</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Ragnar0kkr (ラグナレック) (SC-55)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x6000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x17"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="ragnrk98">
+			<rom type="code" offset="0x00600">mdplay.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">RAG000.MID</rom>
+			<rom type="bgm" offset="0x02">RAG001.MID</rom>
+			<rom type="bgm" offset="0x03">RAG002.MID</rom>
+			<rom type="bgm" offset="0x04">RAG003.MID</rom>
+			<rom type="bgm" offset="0x05">RAG004.MID</rom>
+			<rom type="bgm" offset="0x06">RAG005.MID</rom>
+			<rom type="bgm" offset="0x07">RAG006.MID</rom>
+			<rom type="bgm" offset="0x08">RAG007.MID</rom>
+			<rom type="bgm" offset="0x09">RAG008.MID</rom>
+			<rom type="bgm" offset="0x0a">RAG009.MID</rom>
+			<rom type="bgm" offset="0x0b">RAG010.MID</rom>
+			<rom type="bgm" offset="0x0c">RAG011.MID</rom>
+			<rom type="bgm" offset="0x0d">RAG012.MID</rom>
+			<rom type="bgm" offset="0x0e">RAG013.MID</rom>
+			<rom type="bgm" offset="0x0f">RAG014.MID</rom>
+			<rom type="bgm" offset="0x10">RAG015.MID</rom>
+			<rom type="bgm" offset="0x11">RAG016.MID</rom>
+			<rom type="bgm" offset="0x12">RAG017.MID</rom>
+			<rom type="bgm" offset="0x13">RAG018.MID</rom>
+			<rom type="bgm" offset="0x14">RAG019.MID</rom>
+			<rom type="bgm" offset="0x15">RAG020.MID</rom>
+			<rom type="bgm" offset="0x16">RAG021.MID</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+		<!--	<title code="0x010001">RAG000.MID : </title> -->
+			<title code="0x010002">偶像達の黙示録</title>
+			<title code="0x010003">花香るあの日々</title>
+			<title code="0x010004">決意～孤高の女王に永遠の忠誠を誓う～</title>
+			<title code="0x010005">むっつの世界</title>
+			<title code="0x010006">氷土は生命に輝く</title>
+			<title code="0x010007">美しき死の花嫁～ヴァルキリアは勇者を愛す～</title>
+			<title code="0x010008">名もない小さな魚の告白</title>
+			<title code="0x010009">大地の賛歌</title>
+			<title code="0x01000a">血と骨と肉の万華鏡</title>
+			<title code="0x01000b">遥かなる聖地</title>
+			<title code="0x01000c">抵抗～我らは無敵、我らが砦は不落なり～</title>
+			<title code="0x01000d">ひとふりの古びた愛剣と共に</title>
+			<title code="0x01000e">英雄達の鎮魂曲</title>
+			<title code="0x01000f">死線～ヴァルハラの門は開かれた～</title>
+			<title code="0x010010">百億の剣、百億の命</title>
+			<title code="0x010011">白き太陽</title>
+			<title code="0x010012">共に果てるまで～アンドラングは汝の血を欲する～</title>
+			<title code="0x010013">皇帝</title>
+			<title code="0x010014">至高の女王</title>
+			<title code="0x010015">ひとつの世界</title>
+			<title code="0x010016">Ragnarokkr</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Ragnar0kkr (ラグナレック) (Vermouth)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x6000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x17"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="ragnrk98">
+			<rom type="code" offset="0x00600">mdplay.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">RAG000.MID</rom>
+			<rom type="bgm" offset="0x02">RAG001.MID</rom>
+			<rom type="bgm" offset="0x03">RAG002.MID</rom>
+			<rom type="bgm" offset="0x04">RAG003.MID</rom>
+			<rom type="bgm" offset="0x05">RAG004.MID</rom>
+			<rom type="bgm" offset="0x06">RAG005.MID</rom>
+			<rom type="bgm" offset="0x07">RAG006.MID</rom>
+			<rom type="bgm" offset="0x08">RAG007.MID</rom>
+			<rom type="bgm" offset="0x09">RAG008.MID</rom>
+			<rom type="bgm" offset="0x0a">RAG009.MID</rom>
+			<rom type="bgm" offset="0x0b">RAG010.MID</rom>
+			<rom type="bgm" offset="0x0c">RAG011.MID</rom>
+			<rom type="bgm" offset="0x0d">RAG012.MID</rom>
+			<rom type="bgm" offset="0x0e">RAG013.MID</rom>
+			<rom type="bgm" offset="0x0f">RAG014.MID</rom>
+			<rom type="bgm" offset="0x10">RAG015.MID</rom>
+			<rom type="bgm" offset="0x11">RAG016.MID</rom>
+			<rom type="bgm" offset="0x12">RAG017.MID</rom>
+			<rom type="bgm" offset="0x13">RAG018.MID</rom>
+			<rom type="bgm" offset="0x14">RAG019.MID</rom>
+			<rom type="bgm" offset="0x15">RAG020.MID</rom>
+			<rom type="bgm" offset="0x16">RAG021.MID</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+		<!--	<title code="0x010001">RAG000.MID : </title> -->
+			<title code="0x010002">偶像達の黙示録</title>
+			<title code="0x010003">花香るあの日々</title>
+			<title code="0x010004">決意～孤高の女王に永遠の忠誠を誓う～</title>
+			<title code="0x010005">むっつの世界</title>
+			<title code="0x010006">氷土は生命に輝く</title>
+			<title code="0x010007">美しき死の花嫁～ヴァルキリアは勇者を愛す～</title>
+			<title code="0x010008">名もない小さな魚の告白</title>
+			<title code="0x010009">大地の賛歌</title>
+			<title code="0x01000a">血と骨と肉の万華鏡</title>
+			<title code="0x01000b">遥かなる聖地</title>
+			<title code="0x01000c">抵抗～我らは無敵、我らが砦は不落なり～</title>
+			<title code="0x01000d">ひとふりの古びた愛剣と共に</title>
+			<title code="0x01000e">英雄達の鎮魂曲</title>
+			<title code="0x01000f">死線～ヴァルハラの門は開かれた～</title>
+			<title code="0x010010">百億の剣、百億の命</title>
+			<title code="0x010011">白き太陽</title>
+			<title code="0x010012">共に果てるまで～アンドラングは汝の血を欲する～</title>
+			<title code="0x010013">皇帝</title>
+			<title code="0x010014">至高の女王</title>
+			<title code="0x010015">ひとつの世界</title>
+			<title code="0x010016">Ragnarokkr</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Etemible (エテミブル ～天壌無窮～) (86)</name>
+		<driver type="86">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x24"/>
+			<option name="fm_mix"   value="4"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="etembl98">
+			<rom type="code" offset="0x00600">mdplay.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">ETMF01.MIV</rom>
+			<rom type="bgm" offset="0x02">ETMF02.MIV</rom>
+			<rom type="bgm" offset="0x03">ETMF03.MIV</rom>
+			<rom type="bgm" offset="0x04">ETMF04.MIV</rom>
+			<rom type="bgm" offset="0x05">ETMF05.MIV</rom>
+			<rom type="bgm" offset="0x06">ETMF06.MIV</rom>
+			<rom type="bgm" offset="0x07">ETMF07.MIV</rom>
+			<rom type="bgm" offset="0x08">ETMF08.MIV</rom>
+			<rom type="bgm" offset="0x09">ETMF09.MIV</rom>
+			<rom type="bgm" offset="0x0a">ETMF10.MIV</rom>
+			<rom type="bgm" offset="0x0b">ETMF11.MIV</rom>
+			<rom type="bgm" offset="0x0c">ETMF12.MIV</rom>
+			<rom type="bgm" offset="0x0d">ETMF13.MIV</rom>
+			<rom type="bgm" offset="0x0e">ETMF14.MIV</rom>
+			<rom type="bgm" offset="0x0f">ETMF15.MIV</rom>
+			<rom type="bgm" offset="0x10">ETMF16.MIV</rom>
+			<rom type="bgm" offset="0x11">ETMF17.MIV</rom>
+			<rom type="bgm" offset="0x12">ETMF18.MIV</rom>
+			<rom type="bgm" offset="0x13">ETMF19.MIV</rom>
+			<rom type="bgm" offset="0x14">ETMF20.MIV</rom>
+			<rom type="bgm" offset="0x15">ETMF21.MIV</rom>
+			<rom type="bgm" offset="0x16">ETMF22.MIV</rom>
+			<rom type="bgm" offset="0x17">ETMF23.MIV</rom>
+			<rom type="bgm" offset="0x18">ETMF24.MIV</rom>
+			<rom type="bgm" offset="0x19">ETMF25.MIV</rom>
+			<rom type="bgm" offset="0x1a">ETMF26.MIV</rom>
+			<rom type="bgm" offset="0x1b">ETMF27.MIV</rom>
+			<rom type="bgm" offset="0x1c">ETMF28.MIV</rom>
+			<rom type="bgm" offset="0x1d">ETMF29.MIV</rom>
+			<rom type="bgm" offset="0x1e">ETMF30.MIV</rom>
+			<rom type="bgm" offset="0x1f">ETMF31.MIV</rom>
+			<rom type="bgm" offset="0x20">ETMF32.MIV</rom>
+			<rom type="bgm" offset="0x21">ETMF33.MIV</rom>
+			<rom type="bgm" offset="0x22">ETMF34.MIV</rom>
+			<rom type="bgm" offset="0x23">ETMF95.MIV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">ETMM01  オープニングテーマ</title>
+			<title code="0x02">ETMM02  神々への鎮魂唄</title>
+			<title code="0x03">ETMM03  卑弥呼のテーマ</title>
+			<title code="0x04">ETMM04  八尺瓊勾玉のテーマ</title>
+			<title code="0x05">ETMM05  スサノオ登場</title>
+			<title code="0x06">ETMM06  ヤタノカガミ</title>
+			<title code="0x07">ETMM07  ツクヨミ</title>
+			<title code="0x08">ETMM08  クサナギノツルギ</title>
+			<title code="0x09">ETMM09  アマテラス</title>
+			<title code="0x0a">ETMM10  卑弥呼の子守唄</title>
+			<title code="0x0b">ETMM11  クラフツ ショップ ボーイ</title>
+			<title code="0x0c">ETMM12  I Am an Iron Man</title>
+			<title code="0x0d">ETMM13  機織娘の初恋</title>
+			<title code="0x0e">ETMM14  オールディーズ ラヴァーズ</title>
+			<title code="0x0f">ETMM15  宮殿のテーマ</title>
+			<title code="0x10">ETMM16  剣の舞 バトル１</title>
+			<title code="0x11">ETMM17  ボスバトル</title>
+			<title code="0x12">ETMM18  スサノオのテーマ</title>
+			<title code="0x13">ETMM19  VSツクヨミ</title>
+			<title code="0x14">ETMM20  神聖なる別れ</title>
+			<title code="0x15">ETMM21  スタッフロール</title>
+			<title code="0x16">ETMM22  ファンタジア</title>
+			<title code="0x17">ETMM23  アイキャッチ</title>
+			<title code="0x18">ETMM10B 卑弥呼の子守唄…夕暮れヴァージョン</title>
+			<title code="0x19">ETMM25  ステージ１ ME</title>
+			<title code="0x1a">ETMM26  ステージ２ ME</title>
+			<title code="0x1b">ETMM27  ステージ３ ME</title>
+			<title code="0x1c">ETMM28  ステージ４ ME</title>
+			<title code="0x1d">ETMM29  ステージ５ ME</title>
+			<title code="0x1e">ETMM30  ステージ６ ME</title>
+			<title code="0x1f">ETMM31  ステージクリア</title>
+			<title code="0x20">ETMF32  Game Over</title>
+			<title code="0x21">ETMM33  Dear My Friend</title>
+			<title code="0x22">ETMM34  Magic</title>
+			<title code="0x23">ETMF95.MIV</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Etemible (エテミブル ～天壌無窮～) (OPN)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x24"/>
+			<option name="fm_mix"   value="4"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="etembl98">
+			<rom type="code" offset="0x00600">mdplay.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">ETMF01.MIV</rom>
+			<rom type="bgm" offset="0x02">ETMF02.MIV</rom>
+			<rom type="bgm" offset="0x03">ETMF03.MIV</rom>
+			<rom type="bgm" offset="0x04">ETMF04.MIV</rom>
+			<rom type="bgm" offset="0x05">ETMF05.MIV</rom>
+			<rom type="bgm" offset="0x06">ETMF06.MIV</rom>
+			<rom type="bgm" offset="0x07">ETMF07.MIV</rom>
+			<rom type="bgm" offset="0x08">ETMF08.MIV</rom>
+			<rom type="bgm" offset="0x09">ETMF09.MIV</rom>
+			<rom type="bgm" offset="0x0a">ETMF10.MIV</rom>
+			<rom type="bgm" offset="0x0b">ETMF11.MIV</rom>
+			<rom type="bgm" offset="0x0c">ETMF12.MIV</rom>
+			<rom type="bgm" offset="0x0d">ETMF13.MIV</rom>
+			<rom type="bgm" offset="0x0e">ETMF14.MIV</rom>
+			<rom type="bgm" offset="0x0f">ETMF15.MIV</rom>
+			<rom type="bgm" offset="0x10">ETMF16.MIV</rom>
+			<rom type="bgm" offset="0x11">ETMF17.MIV</rom>
+			<rom type="bgm" offset="0x12">ETMF18.MIV</rom>
+			<rom type="bgm" offset="0x13">ETMF19.MIV</rom>
+			<rom type="bgm" offset="0x14">ETMF20.MIV</rom>
+			<rom type="bgm" offset="0x15">ETMF21.MIV</rom>
+			<rom type="bgm" offset="0x16">ETMF22.MIV</rom>
+			<rom type="bgm" offset="0x17">ETMF23.MIV</rom>
+			<rom type="bgm" offset="0x18">ETMF24.MIV</rom>
+			<rom type="bgm" offset="0x19">ETMF25.MIV</rom>
+			<rom type="bgm" offset="0x1a">ETMF26.MIV</rom>
+			<rom type="bgm" offset="0x1b">ETMF27.MIV</rom>
+			<rom type="bgm" offset="0x1c">ETMF28.MIV</rom>
+			<rom type="bgm" offset="0x1d">ETMF29.MIV</rom>
+			<rom type="bgm" offset="0x1e">ETMF30.MIV</rom>
+			<rom type="bgm" offset="0x1f">ETMF31.MIV</rom>
+			<rom type="bgm" offset="0x20">ETMF32.MIV</rom>
+			<rom type="bgm" offset="0x21">ETMF33.MIV</rom>
+			<rom type="bgm" offset="0x22">ETMF34.MIV</rom>
+			<rom type="bgm" offset="0x23">ETMF95.MIV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">ETMM01  オープニングテーマ</title>
+			<title code="0x02">ETMM02  神々への鎮魂唄</title>
+			<title code="0x03">ETMM03  卑弥呼のテーマ</title>
+			<title code="0x04">ETMM04  八尺瓊勾玉のテーマ</title>
+			<title code="0x05">ETMM05  スサノオ登場</title>
+			<title code="0x06">ETMM06  ヤタノカガミ</title>
+			<title code="0x07">ETMM07  ツクヨミ</title>
+			<title code="0x08">ETMM08  クサナギノツルギ</title>
+			<title code="0x09">ETMM09  アマテラス</title>
+			<title code="0x0a">ETMM10  卑弥呼の子守唄</title>
+			<title code="0x0b">ETMM11  クラフツ ショップ ボーイ</title>
+			<title code="0x0c">ETMM12  I Am an Iron Man</title>
+			<title code="0x0d">ETMM13  機織娘の初恋</title>
+			<title code="0x0e">ETMM14  オールディーズ ラヴァーズ</title>
+			<title code="0x0f">ETMM15  宮殿のテーマ</title>
+			<title code="0x10">ETMM16  剣の舞 バトル１</title>
+			<title code="0x11">ETMM17  ボスバトル</title>
+			<title code="0x12">ETMM18  スサノオのテーマ</title>
+			<title code="0x13">ETMM19  VSツクヨミ</title>
+			<title code="0x14">ETMM20  神聖なる別れ</title>
+			<title code="0x15">ETMM21  スタッフロール</title>
+			<title code="0x16">ETMM22  ファンタジア</title>
+			<title code="0x17">ETMM23  アイキャッチ</title>
+			<title code="0x18">ETMM10B 卑弥呼の子守唄…夕暮れヴァージョン</title>
+			<title code="0x19">ETMM25  ステージ１ ME</title>
+			<title code="0x1a">ETMM26  ステージ２ ME</title>
+			<title code="0x1b">ETMM27  ステージ３ ME</title>
+			<title code="0x1c">ETMM28  ステージ４ ME</title>
+			<title code="0x1d">ETMM29  ステージ５ ME</title>
+			<title code="0x1e">ETMM30  ステージ６ ME</title>
+			<title code="0x1f">ETMM31  ステージクリア</title>
+			<title code="0x20">ETMF32  Game Over</title>
+			<title code="0x21">ETMM33  Dear My Friend</title>
+			<title code="0x22">ETMM34  Magic</title>
+			<title code="0x23">ETMF95.MIV</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Etemible (エテミブル ～天壌無窮～) (SC-55)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x24"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="etembl98">
+			<rom type="code" offset="0x00600">mdplay.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">ETMM01.MID</rom>
+			<rom type="bgm" offset="0x02">ETMM02.MID</rom>
+			<rom type="bgm" offset="0x03">ETMM03.MID</rom>
+			<rom type="bgm" offset="0x04">ETMM04.MID</rom>
+			<rom type="bgm" offset="0x05">ETMM05.MID</rom>
+			<rom type="bgm" offset="0x06">ETMM06.MID</rom>
+			<rom type="bgm" offset="0x07">ETMM07.MID</rom>
+			<rom type="bgm" offset="0x08">ETMM08.MID</rom>
+			<rom type="bgm" offset="0x09">ETMM09.MID</rom>
+			<rom type="bgm" offset="0x0a">ETMM10.MID</rom>
+			<rom type="bgm" offset="0x0b">ETMM11.MID</rom>
+			<rom type="bgm" offset="0x0c">ETMM12.MID</rom>
+			<rom type="bgm" offset="0x0d">ETMM13.MID</rom>
+			<rom type="bgm" offset="0x0e">ETMM14.MID</rom>
+			<rom type="bgm" offset="0x0f">ETMM15.MID</rom>
+			<rom type="bgm" offset="0x10">ETMM16.MID</rom>
+			<rom type="bgm" offset="0x11">ETMM17.MID</rom>
+			<rom type="bgm" offset="0x12">ETMM18.MID</rom>
+			<rom type="bgm" offset="0x13">ETMM19.MID</rom>
+			<rom type="bgm" offset="0x14">ETMM20.MID</rom>
+			<rom type="bgm" offset="0x15">ETMM21.MID</rom>
+			<rom type="bgm" offset="0x16">ETMM22.MID</rom>
+			<rom type="bgm" offset="0x17">ETMM23.MID</rom>
+			<rom type="bgm" offset="0x18">ETMM24.MID</rom>
+			<rom type="bgm" offset="0x19">ETMM25.MID</rom>
+			<rom type="bgm" offset="0x1a">ETMM26.MID</rom>
+			<rom type="bgm" offset="0x1b">ETMM27.MID</rom>
+			<rom type="bgm" offset="0x1c">ETMM28.MID</rom>
+			<rom type="bgm" offset="0x1d">ETMM29.MID</rom>
+			<rom type="bgm" offset="0x1e">ETMM30.MID</rom>
+			<rom type="bgm" offset="0x1f">ETMM31.MID</rom>
+			<rom type="bgm" offset="0x20">ETMM32.MID</rom>
+			<rom type="bgm" offset="0x21">ETMM33.MID</rom>
+			<rom type="bgm" offset="0x22">ETMM34.MID</rom>
+			<rom type="bgm" offset="0x23">ETMM95.MID</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x010001">ETMM01  オープニングテーマ</title>
+			<title code="0x010002">ETMM02  神々への鎮魂唄</title>
+			<title code="0x010003">ETMM03  卑弥呼のテーマ</title>
+			<title code="0x010004">ETMM04  八尺瓊勾玉のテーマ</title>
+			<title code="0x010005">ETMM05  スサノオ登場</title>
+			<title code="0x010006">ETMM06  ヤタノカガミ</title>
+			<title code="0x010007">ETMM07  ツクヨミ</title>
+			<title code="0x010008">ETMM08  クサナギノツルギ</title>
+			<title code="0x010009">ETMM09  アマテラス</title>
+			<title code="0x01000a">ETMM10  卑弥呼の子守唄</title>
+			<title code="0x01000b">ETMM11  クラフツ ショップ ボーイ</title>
+			<title code="0x01000c">ETMM12  I Am An Iron Man</title>
+			<title code="0x01000d">ETMM13  機織娘の初恋</title>
+			<title code="0x01000e">ETMM14  オールディーズ ラヴァーズ</title>
+			<title code="0x01000f">ETMM15  宮殿のテーマ</title>
+			<title code="0x010010">ETMM16  剣の舞 バトル１</title>
+			<title code="0x010011">ETMM17  ボスバトル</title>
+			<title code="0x010012">ETMM18  スサノオのテーマ</title>
+			<title code="0x010013">ETMM19  VSツクヨミ</title>
+			<title code="0x010014">ETMM20  神聖なる別れ</title>
+			<title code="0x010015">ETMM21  スタッフロール</title>
+			<title code="0x010016">ETMM22  ファンタジア</title>
+			<title code="0x010017">ETMM23  アイキャッチ</title>
+			<title code="0x010018">ETMM10B 卑弥呼の子守唄…夕暮れヴァージョン</title>
+			<title code="0x010019">ETMM25  ステージ１ ME</title>
+			<title code="0x01001a">ETMM26  ステージ２ ME</title>
+			<title code="0x01001b">ETMM27  ステージ３ ME</title>
+			<title code="0x01001c">ETMM28  ステージ４ ME</title>
+			<title code="0x01001d">ETMM29  ステージ５ ME</title>
+			<title code="0x01001e">ETMM30  ステージ６ ME</title>
+			<title code="0x01001f">ETMM31  ステージクリア</title>
+			<title code="0x010020">ETMF32  Game Over</title>
+			<title code="0x010021">ETMM33  Dear My Friend</title>
+			<title code="0x010022">ETMM34  Magic</title>
+			<title code="0x010023">ETMM95.MID</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Etemible (エテミブル ～天壌無窮～) (Vermouth)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">glodia</driveralias>
+		<options>
+			<option name="bootcs"   value="0x0060"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x18000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax"  value="0x24"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="etembl98">
+			<rom type="code" offset="0x00600">mdplay.bin</rom>
+			<rom type="code" offset="0x10000">MDDRV.BIN</rom>
+			<rom type="bgm" offset="0x01">ETMM01.MID</rom>
+			<rom type="bgm" offset="0x02">ETMM02.MID</rom>
+			<rom type="bgm" offset="0x03">ETMM03.MID</rom>
+			<rom type="bgm" offset="0x04">ETMM04.MID</rom>
+			<rom type="bgm" offset="0x05">ETMM05.MID</rom>
+			<rom type="bgm" offset="0x06">ETMM06.MID</rom>
+			<rom type="bgm" offset="0x07">ETMM07.MID</rom>
+			<rom type="bgm" offset="0x08">ETMM08.MID</rom>
+			<rom type="bgm" offset="0x09">ETMM09.MID</rom>
+			<rom type="bgm" offset="0x0a">ETMM10.MID</rom>
+			<rom type="bgm" offset="0x0b">ETMM11.MID</rom>
+			<rom type="bgm" offset="0x0c">ETMM12.MID</rom>
+			<rom type="bgm" offset="0x0d">ETMM13.MID</rom>
+			<rom type="bgm" offset="0x0e">ETMM14.MID</rom>
+			<rom type="bgm" offset="0x0f">ETMM15.MID</rom>
+			<rom type="bgm" offset="0x10">ETMM16.MID</rom>
+			<rom type="bgm" offset="0x11">ETMM17.MID</rom>
+			<rom type="bgm" offset="0x12">ETMM18.MID</rom>
+			<rom type="bgm" offset="0x13">ETMM19.MID</rom>
+			<rom type="bgm" offset="0x14">ETMM20.MID</rom>
+			<rom type="bgm" offset="0x15">ETMM21.MID</rom>
+			<rom type="bgm" offset="0x16">ETMM22.MID</rom>
+			<rom type="bgm" offset="0x17">ETMM23.MID</rom>
+			<rom type="bgm" offset="0x18">ETMM24.MID</rom>
+			<rom type="bgm" offset="0x19">ETMM25.MID</rom>
+			<rom type="bgm" offset="0x1a">ETMM26.MID</rom>
+			<rom type="bgm" offset="0x1b">ETMM27.MID</rom>
+			<rom type="bgm" offset="0x1c">ETMM28.MID</rom>
+			<rom type="bgm" offset="0x1d">ETMM29.MID</rom>
+			<rom type="bgm" offset="0x1e">ETMM30.MID</rom>
+			<rom type="bgm" offset="0x1f">ETMM31.MID</rom>
+			<rom type="bgm" offset="0x20">ETMM32.MID</rom>
+			<rom type="bgm" offset="0x21">ETMM33.MID</rom>
+			<rom type="bgm" offset="0x22">ETMM34.MID</rom>
+			<rom type="bgm" offset="0x23">ETMM95.MID</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">Stop the Music (演奏停止)</title>
+			<title code="0x010001">ETMM01  オープニングテーマ</title>
+			<title code="0x010002">ETMM02  神々への鎮魂唄</title>
+			<title code="0x010003">ETMM03  卑弥呼のテーマ</title>
+			<title code="0x010004">ETMM04  八尺瓊勾玉のテーマ</title>
+			<title code="0x010005">ETMM05  スサノオ登場</title>
+			<title code="0x010006">ETMM06  ヤタノカガミ</title>
+			<title code="0x010007">ETMM07  ツクヨミ</title>
+			<title code="0x010008">ETMM08  クサナギノツルギ</title>
+			<title code="0x010009">ETMM09  アマテラス</title>
+			<title code="0x01000a">ETMM10  卑弥呼の子守唄</title>
+			<title code="0x01000b">ETMM11  クラフツ ショップ ボーイ</title>
+			<title code="0x01000c">ETMM12  I Am An Iron Man</title>
+			<title code="0x01000d">ETMM13  機織娘の初恋</title>
+			<title code="0x01000e">ETMM14  オールディーズ ラヴァーズ</title>
+			<title code="0x01000f">ETMM15  宮殿のテーマ</title>
+			<title code="0x010010">ETMM16  剣の舞 バトル１</title>
+			<title code="0x010011">ETMM17  ボスバトル</title>
+			<title code="0x010012">ETMM18  スサノオのテーマ</title>
+			<title code="0x010013">ETMM19  VSツクヨミ</title>
+			<title code="0x010014">ETMM20  神聖なる別れ</title>
+			<title code="0x010015">ETMM21  スタッフロール</title>
+			<title code="0x010016">ETMM22  ファンタジア</title>
+			<title code="0x010017">ETMM23  アイキャッチ</title>
+			<title code="0x010018">ETMM10B 卑弥呼の子守唄…夕暮れヴァージョン</title>
+			<title code="0x010019">ETMM25  ステージ１ ME</title>
+			<title code="0x01001a">ETMM26  ステージ２ ME</title>
+			<title code="0x01001b">ETMM27  ステージ３ ME</title>
+			<title code="0x01001c">ETMM28  ステージ４ ME</title>
+			<title code="0x01001d">ETMM29  ステージ５ ME</title>
+			<title code="0x01001e">ETMM30  ステージ６ ME</title>
+			<title code="0x01001f">ETMM31  ステージクリア</title>
+			<title code="0x010020">ETMF32  Game Over</title>
+			<title code="0x010021">ETMM33  Dear My Friend</title>
+			<title code="0x010022">ETMM34  Magic</title>
+			<title code="0x010023">ETMM95.MID</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Emerald Dragon (エメラルドドラゴン)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">glodia</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="emdr_msx">
+			<rom type="code">Emerald Dragon (1992)(Glodia).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x37">BGM #37</title>
+			<title code="0x38">BGM #38</title>
+			<title code="0x39">BGM #39</title>
+			<title code="0x3a">BGM #3a</title>
+			<title code="0x3b">BGM #3b</title>
+		</titlelist>
+	</game>
+</gamelist>

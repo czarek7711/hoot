@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //スペースプロジェクト -->
+	<game>
+		<name>[PC-9801] クローンドール 課外授業(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">スペースプロジェクト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="c_doll_98">
+			<rom type="file" offset="-1">TRPSCR98.COM</rom>
+			<rom type="file" offset="-1">TRPSCHRN.COM</rom>
+			<rom type="file" offset="0x10">ANE.MDT</rom>
+			<rom type="file" offset="0x11">BAD_E.MDT</rom>
+			<rom type="file" offset="0x12">DOUKYU1.MDT</rom>
+			<rom type="file" offset="0x13">DOUKYU2.MDT</rom>
+			<rom type="file" offset="0x14">GOOD_E.MDT</rom>
+			<rom type="file" offset="0x15">IMOUTO.MDT</rom>
+			<rom type="file" offset="0x16">KAISOU.MDT</rom>
+			<rom type="file" offset="0x17">NITIJYO.MDT</rom>
+			<rom type="file" offset="0x18">OPEN.MDT</rom>
+			<rom type="file" offset="0x19">TYOKYO.MDT</rom>
+			<rom type="shell" offset="0">TRPSCHRN</rom>
+			<rom type="shell" offset="0">TRPSCR98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ANE.MDT</title>
+			<title code="0x11">BAD_E.MDT</title>
+			<title code="0x12">DOUKYU1.MDT</title>
+			<title code="0x13">DOUKYU2.MDT</title>
+			<title code="0x14">GOOD_E.MDT</title>
+			<title code="0x15">IMOUTO.MDT</title>
+			<title code="0x16">KAISOU.MDT</title>
+			<title code="0x17">NITIJYO.MDT</title>
+			<title code="0x18">OPEN.MDT</title>
+			<title code="0x19">TYOKYO.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] クローンドール 課外授業(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">スペースプロジェクト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+			<option name="wstimer" value="2"/>
+		</options>
+		<romlist archive="c_doll_98">
+			<rom type="file" offset="-1">midrv_98.com</rom>
+			<rom type="file" offset="-1">MIDRV_LT.COM</rom>
+			<rom type="file" offset="11">ANE.RCP</rom>
+			<rom type="file" offset="12">BAD_E.RCP</rom>
+			<rom type="file" offset="13">DOUKYU1.RCP</rom>
+			<rom type="file" offset="14">DOUKYU2.RCP</rom>
+			<rom type="file" offset="15">GOOD_E.RCP</rom>
+			<rom type="file" offset="16">IMOUTO.RCP</rom>
+			<rom type="file" offset="17">KAISOU.RCP</rom>
+			<rom type="file" offset="18">NITIJYO.RCP</rom>
+			<rom type="file" offset="19">OPEN.RCP</rom>
+			<rom type="file" offset="20">TYOKYO.RCP</rom>
+			<rom type="shell" offset="0">midrv_lt</rom>
+			<rom type="shell" offset="0">midrv_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">ANE.RCP     : 姉 登場</title>
+			<title code="12">BAD_E.RCP   : BADエンディング</title>
+			<title code="13">DOUKYU1.RCP : 同級生登場</title>
+			<title code="14">DOUKYU2.RCP : 同級生変身</title>
+			<title code="15">GOOD_E.RCP  : Goodエンディング</title>
+			<title code="16">IMOUTO.RCP  : 妹登場</title>
+			<title code="17">KAISOU.RCP  : 回想</title>
+			<title code="18">NITIJYO.RCP : 日常風景</title>
+			<title code="19">OPEN.RCP    : オープニング</title>
+			<title code="20">TYOKYO.RCP  : 調教</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 転校生</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">スペースプロジェクト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="tenkousi_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">S00X_01.BIN</rom>
+			<rom type="file" offset="0x11">S00X_02.BIN</rom>
+			<rom type="file" offset="0x12">S00X_03.BIN</rom>
+			<rom type="file" offset="0x13">S00X_04.BIN</rom>
+			<rom type="file" offset="0x14">S01X_01.BIN</rom>
+<!--// S000の方と同じっぽい
+			<rom type="file" offset="0x15">S01X_02.BIN</rom>
+			<rom type="file" offset="0x16">S01X_03.BIN</rom>
+			<rom type="file" offset="0x17">S01X_04.BIN</rom>
+-->
+			<rom type="shell" offset="0">NAX</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">S00X_01.BIN</title>
+			<title code="0x11">S00X_02.BIN</title>
+			<title code="0x12">S00X_03.BIN</title>
+			<title code="0x13">S00X_04.BIN</title>
+			<title code="0x14">S01X_01.BIN</title>
+<!--
+			<title code="0x15">S01X_02.BIN</title>
+			<title code="0x16">S01X_03.BIN</title>
+			<title code="0x17">S01X_04.BIN</title>
+-->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 聖翼学園セラフィタ(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">スペースプロジェクト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="seraphit_98">
+			<rom type="file" offset="-1">TRPSCR98.COM</rom>
+			<rom type="file" offset="-1">TRPSCHRN.COM</rom>
+			<rom type="file" offset="11">01.MDT</rom>
+			<rom type="file" offset="12">02.MDT</rom>
+			<rom type="file" offset="13">03.MDT</rom>
+			<rom type="file" offset="14">04.MDT</rom>
+			<rom type="file" offset="15">05.MDT</rom>
+			<rom type="file" offset="16">06.MDT</rom>
+			<rom type="file" offset="17">07.MDT</rom>
+			<rom type="file" offset="18">08.MDT</rom>
+			<rom type="file" offset="19">09.MDT</rom>
+			<rom type="file" offset="20">10.MDT</rom>
+			<rom type="shell" offset="0">TRPSCHRN</rom>
+			<rom type="shell" offset="0">TRPSCR98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">01.MDT : </title>
+			<title code="12">02.MDT : </title>
+			<title code="13">03.MDT : </title>
+			<title code="14">04.MDT : </title>
+			<title code="15">05.MDT : </title>
+			<title code="16">06.MDT : </title>
+			<title code="17">07.MDT : </title>
+			<title code="18">08.MDT : </title>
+			<title code="19">09.MDT : </title>
+			<title code="20">10.MDT : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 聖翼学園セラフィタ(SC-88)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">スペースプロジェクト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="7"/>
+			<option name="wstimer" value="2"/>
+		</options>
+		<romlist archive="seraphit_98">
+			<rom type="file" offset="-1">midrv_98.com</rom>
+			<rom type="file" offset="-1">MIDRV_LT.COM</rom>
+			<rom type="file" offset="11">01.RCP</rom>
+			<rom type="file" offset="12">02.RCP</rom>
+			<rom type="file" offset="13">03.RCP</rom>
+			<rom type="file" offset="14">04.RCP</rom>
+			<rom type="file" offset="15">05.RCP</rom>
+			<rom type="file" offset="16">06.RCP</rom>
+			<rom type="file" offset="17">07.RCP</rom>
+			<rom type="file" offset="18">08.RCP</rom>
+			<rom type="file" offset="19">09.RCP</rom>
+			<rom type="file" offset="20">10.RCP</rom>
+			<rom type="shell" offset="0">midrv_lt</rom>
+			<rom type="shell" offset="0">midrv_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">01.RCP : ハメハメハ女王</title>
+			<title code="12">02.RCP : 河内のねーちゃんの唄</title>
+			<title code="13">03.RCP : なぞなぞ★クイズ</title>
+			<title code="14">04.RCP : 夢路の館</title>
+			<title code="15">05.RCP : つばさがほしい</title>
+			<title code="16">06.RCP : オレはりょーか</title>
+			<title code="17">07.RCP : シバの女王…</title>
+			<title code="18">08.RCP : クイーンorレズハーレム</title>
+			<title code="19">09.RCP : いんびり・マンぐり</title>
+			<title code="20">10.RCP : 愛のかたち</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] バトルクィーン 最強ファイターズ列伝</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">スペースプロジェクト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="bq_98">
+			<rom type="file" offset="-1">TRPSCR98.COM</rom>
+			<rom type="file" offset="-1">TRPSCHRN.COM</rom>
+			<rom type="file" offset="11">BQ_01.MDT</rom>
+			<rom type="file" offset="12">BQ_02.MDT</rom>
+			<rom type="file" offset="13">BQ_03.MDT</rom>
+			<rom type="file" offset="14">BQ_04.MDT</rom>
+			<rom type="file" offset="15">BQ_05.MDT</rom>
+			<rom type="file" offset="16">BQ_06.MDT</rom>
+			<rom type="file" offset="17">BQ_07.MDT</rom>
+			<rom type="file" offset="18">BQ_08.MDT</rom>
+			<rom type="file" offset="19">BQ_09.MDT</rom>
+			<rom type="file" offset="20">BQ_10.MDT</rom>
+			<rom type="file" offset="21">BQ_11.MDT</rom>
+			<rom type="file" offset="22">BQ_12.MDT</rom>
+			<rom type="file" offset="23">BQ_13.MDT</rom>
+			<rom type="file" offset="24">BQ_14.MDT</rom>
+			<rom type="file" offset="25">BQ_15.MDT</rom>
+			<rom type="file" offset="26">BQ_16.MDT</rom>
+			<rom type="shell" offset="0">TRPSCHRN</rom>
+			<rom type="shell" offset="0">TRPSCR98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">BQ_01.MDT : </title>
+			<title code="12">BQ_02.MDT : </title>
+			<title code="13">BQ_03.MDT : </title>
+			<title code="14">BQ_04.MDT : </title>
+			<title code="15">BQ_05.MDT : </title>
+			<title code="16">BQ_06.MDT : </title>
+			<title code="17">BQ_07.MDT : </title>
+			<title code="18">BQ_08.MDT : </title>
+			<title code="19">BQ_09.MDT : </title>
+			<title code="20">BQ_10.MDT : </title>
+			<title code="21">BQ_11.MDT : </title>
+			<title code="22">BQ_12.MDT : </title>
+			<title code="23">BQ_13.MDT : </title>
+			<title code="24">BQ_14.MDT : </title>
+			<title code="25">BQ_15.MDT : </title>
+			<title code="26">BQ_16.MDT : </title>
+		</titlelist>
+	</game>
+</gamelist>

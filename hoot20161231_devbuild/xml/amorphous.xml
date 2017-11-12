@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Amorphous -->
+	<game>
+		<name>[X68000] Shooting 68K</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Amorphous</driveralias>
+		<options>
+			<option name="opm_mix" value="0xe0"/>
+		</options>
+		<romlist archive="shooting68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">S68MUS00.OPM</rom>
+			<rom type="code" offset="0x28000">S68MUS01.OPM</rom>
+			<rom type="code" offset="0x2c000">S68MUS02.OPM</rom>
+			<rom type="code" offset="0x30000">S68MUS03.OPM</rom>
+			<rom type="code" offset="0x34000">S68MUS04.OPM</rom>
+			<rom type="code" offset="0x38000">S68MUS05.OPM</rom>
+			<rom type="code" offset="0x3c000">S68MUS06.OPM</rom>
+			<rom type="code" offset="0x40000">S68MUS08.OPM</rom>
+			<rom type="code" offset="0x44000">S68MUS99.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">S68MUS00.OPM : On A Gigantic Scale</title>
+			<title code="0x03">S68MUS01.OPM : Into The Comet</title>
+			<title code="0x04">S68MUS02.OPM : Attack The Base</title>
+			<title code="0x05">S68MUS03.OPM : Container</title>
+			<title code="0x06">S68MUS04.OPM : Inner World</title>
+			<title code="0x07">S68MUS05.OPM : Dangerous Moment</title>
+			<title code="0x08">S68MUS06.OPM : I'll Beat You</title>
+			<title code="0x09">S68MUS08.OPM : See You</title>
+			<title code="0x0a">S68MUS99.OPM : Try Again</title>
+		</titlelist>
+	</game>
+</gamelist>

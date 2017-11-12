@@ -1,0 +1,3285 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- enix -->
+	<game>
+		<name>[PC-88] Gandhara: Crusade of the Buddha (ガンダーラ ～仏陀の聖戦～)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="use_rtc"    value="0x01"/>
+			<option name="mdata_addr" value="0x1000"/>
+			<option name="mdata_size" value="0x4b00"/>
+			<option name="mfile_size" value="0x4b00"/>
+		</options>
+		<romlist archive="gandhara">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0200">DRIVER</rom>
+			<rom type="code" offset="0x8600">DRIVER</rom>
+			<rom type="bgm" offset="0x00">DRIVER</rom>
+			<rom type="bgm" offset="0x01">OPENING</rom>
+			<rom type="bgm" offset="0x02">OPENING</rom>
+			<rom type="bgm" offset="0x03">OPENING</rom>
+			<rom type="bgm" offset="0x04">DEAD</rom>
+			<rom type="bgm" offset="0x05">MENU</rom>
+			<rom type="bgm" offset="0x06">MENU</rom>
+			<rom type="bgm" offset="0x07">MENU</rom>
+			<rom type="bgm" offset="0x08">MENU</rom>
+			<rom type="bgm" offset="0x09">MENU</rom>
+			<rom type="bgm" offset="0x0a">MENU</rom>
+			<rom type="bgm" offset="0x0b">WORLD1A</rom>
+			<rom type="bgm" offset="0x0c">WORLD1A</rom>
+			<rom type="bgm" offset="0x0d">DUNGEON</rom>
+			<rom type="bgm" offset="0x0e">DUNGEON</rom>
+			<rom type="bgm" offset="0x0f">DUNGEON</rom>
+			<rom type="bgm" offset="0x10">DUNGEON</rom>
+			<rom type="bgm" offset="0x11">DUNGEON</rom>
+			<rom type="bgm" offset="0x12">DUNGEON</rom>
+			<rom type="bgm" offset="0x13">HEIAN</rom>
+			<rom type="bgm" offset="0x14">NINGEN</rom>
+			<rom type="bgm" offset="0x15">JIGOKU</rom>
+			<rom type="bgm" offset="0x16">GAKI</rom>
+			<rom type="bgm" offset="0x17">CHIKUSHO</rom>
+			<rom type="bgm" offset="0x18">SHURA</rom>
+			<rom type="bgm" offset="0x19">TENJO</rom>
+			<rom type="bgm" offset="0x1a">EPILOGUE</rom>
+			<rom type="bgm" offset="0x1b">ENDING</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">Sound Effect #0 (効果音#0)</title>
+			<title code="0x00000001">Opening (オープニング)</title>
+			<title code="0x00000002">The Road to Gandhara - Warrior of Buddha (ガンダーラへの路 －仏陀の戦士－)</title>
+			<title code="0x00000003">Lotus Land (東方幻想)</title>
+			<title code="0x00000004">Transmigration (転生輪廻)</title>
+			<title code="0x00000005">The Secular (世俗)</title>
+			<title code="0x00000006">Sound Effect #1 (効果音#1)</title>
+			<title code="0x00000007">Lotus (蓮華)</title>
+			<title code="0x00000008">New Rank (あらたな位)</title>
+			<title code="0x00000009">The Netherworld (冥府魔道)</title>
+			<title code="0x0200000a">To the Heavens (天上界へ)</title>
+			<title code="0x0000000b">Under the Banyan Tree (菩提樹の下)</title>
+			<title code="0x0000000c">Jingle (ジングル)</title>
+			<title code="0x0000000e">The Netherworld (Tunnel) (冥府魔道(地下道))</title>
+			<title code="0x0000000f">Obtaining the Buddha's Urn (仏舎利壷の入手)</title>
+			<title code="0x00000010">Tranquility (寂)</title>
+			<title code="0x00000011">Dark God (邪神)</title>
+			<title code="0x00000012">Garuda (迦楼羅)</title>
+			<title code="0x00000013">Peace (平安)</title>
+			<title code="0x01000014">Human Realm (人間界)</title>
+			<title code="0x01000015">Infernal Realm (地獄界)</title>
+			<title code="0x01000016">Ghoul Realm (餓鬼界)</title>
+			<title code="0x01000017">Beast Realm (畜生界)</title>
+			<title code="0x01000018">Asura Realm (修羅界)</title>
+			<title code="0x01000019">Heavenly Realm (天上界)</title>
+			<title code="0x0000001a">The Road to Gandhara (Epilogue) (ガンダーラへの路 －仏陀の戦士－ (エピローグ))</title>
+			<title code="0x0000001b">The Six Unenlightened Realms (六凡界)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Dragon Buster (ドラゴンバスター)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="drgbst88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7000">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xc700000b">Opening (オープニング)</title>
+			<title code="0xc7000000">Start Round (ラウンドスタート)</title>
+			<title code="0xc7000002">BGM 1</title>
+			<title code="0xc7000003">BGM 2</title>
+			<title code="0xc7000004">BGM 3</title>
+			<title code="0xc7000005">BGM 4</title>
+			<title code="0xc7000006">Battle (戦闘)</title>
+			<title code="0xc7000009">Dead Dragon (ドラゴン死亡)</title>
+			<title code="0x9a000007">Save the Princess (Intro) (王女救出(INTRO))</title>
+			<title code="0x9a000008">Save the Princess (王女救出)</title>
+			<title code="0xc700000a">Health Alert (体力警告音)</title>
+			<title code="0xc7000001">Game Over (ゲームオーバー)</title>
+			<title code="0xc700000c">Ending (エンディング)</title>
+			<title code="0x00000080">SFX Walking Sound (歩行音)</title>
+			<title code="0x00000081">SFX Entering a Building (建物に入る)</title>
+			<title code="0x00000082">SFX Jump (ジャンプ)</title>
+			<title code="0x00000083">SFX Climbing a Vine (蔦を登る)</title>
+			<title code="0x00000084">SFX Getting an Item (アイテムGET)</title>
+			<title code="0x00000085">SFX Swinging a Sword (剣を振る)</title>
+			<title code="0x00000086">SFX Sword Hit (剣HIT)</title>
+			<title code="0x00000087">SFX Sword Blocked (剣が弾かれる)</title>
+			<title code="0x00000088">SFX Fireball (ファイアボール)</title>
+			<title code="0x00000089">SFX Fireball Hit (ファイアボールHIT)</title>
+			<title code="0x0000008a">SFX Damage (ダメージ)</title>
+			<title code="0x0000008b">SFX Dragon Breath (ドラゴンブレス)</title>
+			<title code="0x0000008c">SFX Inosai (イノサイ)</title>
+			<title code="0x0000008d">SFX Bat Fluttering (コウモリ飛行音)</title>
+			<title code="0x0000008e">SFX ?</title>
+			<title code="0x0000008f">SFX Cave Shark (ケーブシャーク)</title>
+			<title code="0x00000090">SFX Restore Health (体力回復)</title>
+			<title code="0x00000091">SFX Damage (Weak Point) (ダメージ(弱点))</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Wingman 2: Rebirth of Kitakura (ウイングマン２ キータクラーの復活)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa0e7"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="wing2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9fe7">WING01.BIN</rom>
+			<rom type="code" offset="0xa0e7">WING02.BIN</rom>
+			<rom type="code" offset="0xaf6c">WING03.BIN</rom>
+			<rom type="code" offset="0x014b">WING05.BIN</rom>
+			<rom type="code" offset="0x2fe2">WING06.BIN</rom>
+			<rom type="bgm" offset="0x00">WING02.BIN</rom>
+			<rom type="bgm" offset="0x01">WING03.BIN</rom>
+			<rom type="bgm" offset="0x02">WING04.BIN</rom>
+			<rom type="bgm" offset="0x03">MDAT</rom>
+			<rom type="bgm" offset="0x04">MDAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Wingman 2 ~Opening~ (ウイングマン２　～オープニング～)</title>
+			<title code="0x02">Coffee Break (コーヒーブレイク)</title>
+			<title code="0x01">Battle (戦闘)</title>
+			<title code="0x03">Demo (デモ)</title>
+			<title code="0x04">Wingman 2 ~Ending Theme (ウイングマン２　～終曲～)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Wingman Special (ウイングマンスペシャル) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="init_pc" value="0x2000"/>
+			<option name="mdata_addr" value="0x6200"/>
+		</options>
+		<romlist archive="wings">
+			<rom type="code" offset="0x5000">WINGS01.BIN</rom>
+			<rom type="code" offset="0x2000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MDAT01</rom>
+			<rom type="bgm" offset="0x01">MDAT02</rom>
+			<rom type="bgm" offset="0x02">MDAT03</rom>
+			<rom type="bgm" offset="0x03">MDAT04</rom>
+			<rom type="bgm" offset="0x04">MDAT05</rom>
+			<rom type="bgm" offset="0x05">MDAT06</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Wingman</title>
+			<title code="0x01">Sunset</title>
+			<title code="0x02">Pinch</title>
+			<title code="0x03">Big.Boss</title>
+			<title code="0x04">Aoi</title>
+			<title code="0x05">Last Wing</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Wingman Special (ウイングマンスペシャル) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="init_pc" value="0x2000"/>
+			<option name="mdata_addr" value="0x6200"/>
+		</options>
+		<romlist archive="wings">
+			<rom type="code" offset="0x5000">WINGS02.BIN</rom>
+			<rom type="code" offset="0x2000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MDAT01_</rom>
+			<rom type="bgm" offset="0x01">MDAT02_</rom>
+			<rom type="bgm" offset="0x02">MDAT03_</rom>
+			<rom type="bgm" offset="0x03">MDAT04_</rom>
+			<rom type="bgm" offset="0x04">MDAT05_</rom>
+			<rom type="bgm" offset="0x05">MDAT06_</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Wingman</title>
+			<title code="0x01">Sunset</title>
+			<title code="0x02">Pinch</title>
+			<title code="0x03">Big.Boss</title>
+			<title code="0x04">Aoi</title>
+			<title code="0x05">Last Wing</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Angelus: Akuma no Fukuin (アンジェラス ～悪魔の福音～) (OPNA)</name>
+		<driver type="angelus">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="opna" value="1"/>
+		</options>
+		<romlist archive="angelus">
+			<rom type="code" offset="0x0000">ANGPATCH.BIN</rom>
+			<rom type="code" offset="0xf000">MUSIC</rom>
+			<rom type="bgm" offset="0x01">GAAN2</rom>
+			<rom type="bgm" offset="0x02">ENDI</rom>
+			<rom type="bgm" offset="0x03">IZASNG</rom>
+			<rom type="bgm" offset="0x04">IZASSS</rom>
+			<rom type="bgm" offset="0x05">JUK</rom>
+			<rom type="bgm" offset="0x06">BRI</rom>
+			<rom type="bgm" offset="0x07">BRIOF</rom>
+			<rom type="bgm" offset="0x08">BSTON5</rom>
+			<rom type="bgm" offset="0x09">DEAD</rom>
+			<rom type="bgm" offset="0x0a">DEAD2</rom>
+			<rom type="bgm" offset="0x0b">DEADST</rom>
+			<rom type="bgm" offset="0x0c">DUMA</rom>
+			<rom type="bgm" offset="0x0d">GERM</rom>
+			<rom type="bgm" offset="0x0e">GERMSL</rom>
+			<rom type="bgm" offset="0x0f">HENBO</rom>
+			<rom type="bgm" offset="0x10">HENBO2</rom>
+			<rom type="bgm" offset="0x11">HENBO3</rom>
+			<rom type="bgm" offset="0x12">IZA</rom>
+			<rom type="bgm" offset="0x13">IZAS2</rom>
+			<rom type="bgm" offset="0x14">IZASFT</rom>
+			<rom type="bgm" offset="0x15">JAKYO</rom>
+			<rom type="bgm" offset="0x16">KAISO</rom>
+			<rom type="bgm" offset="0x17">LONDON</rom>
+			<rom type="bgm" offset="0x18">OPEN</rom>
+			<rom type="bgm" offset="0x19">PENDAN</rom>
+			<rom type="bgm" offset="0x1a">PERU</rom>
+			<rom type="bgm" offset="0x1b">THEME2</rom>
+			<rom type="bgm" offset="0x1c">DODODO</rom>
+			<rom type="bgm" offset="0x1d">BUKIMI</rom>
+			<rom type="bgm" offset="0x1e">CAT</rom>
+			<rom type="bgm" offset="0x1f">DODO2</rom>
+			<rom type="bgm" offset="0x20">GACHA</rom>
+			<rom type="bgm" offset="0x21">GUSA</rom>
+			<rom type="bgm" offset="0x22">INJET</rom>
+			<rom type="bgm" offset="0x23">RING</rom>
+			<rom type="bgm" offset="0x24">TEL</rom>
+			<rom type="bgm" offset="0x25">GAAN</rom>
+			<rom type="bgm" offset="0x26">KNOCK1</rom>
+			<rom type="bgm" offset="0x27">PASHA</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xdc0018">Prologue</title>
+			<title code="0xdc001b">The Glittering Blue Stone (青い石のきらめき)</title>
+			<title code="0xdc0012">Love Sympathy ~Ver. 1~ (愛のシンパシー～Ver1～)</title>
+			<title code="0xdb0003">Love Sympathy ~Ver. 1 SNG~ (愛のシンパシー～Ver1SNG～)</title>
+			<title code="0xdc0013">Love Sympathy ~Ver. 2~ (愛のシンパシー～Ver2～)</title>
+			<title code="0xdb0004">Love Sympathy ~Ver. 2SSS~ (愛のシンパシー～Ver2SSS～)</title>
+			<title code="0xdc0014">Love Sympathy ~Ver. 3~ (愛のシンパシー～Ver3～)</title>
+			<title code="0xdb0005">Eris In Japan</title>
+			<title code="0xdc0006">Brian and Eris</title>
+			<title code="0xdc0008">Prophet/預言者</title>
+			<title code="0xdc0009">Wandering Psyche ~Ver.1~ (彷徨いのプシュケ～Ver1～)</title>
+			<title code="0xdc000a">Wandering Psyche ~Ver. 2~ (彷徨いのプシュケ～Ver2～)</title>
+			<title code="0xdc000c">Beyond the Collapse (崩壊の彼方)</title>
+			<title code="0xdc000d">Eris In Germany～Ver1～</title>
+			<title code="0xdc000e">Eris In Germany～Ver2～</title>
+			<title code="0xdc0010">Metamorphosis ~Seva's Warning~ (変貌～セヴァの警告～)</title>
+			<title code="0xdc0015">Evangel On Gnosis</title>
+			<title code="0xdc0016">Blue Object ~Nostalgia~ (ブルー・オブジェ～郷愁～)</title>
+			<title code="0xdc0017">Hard Days (ハード・デイズ)</title>
+			<title code="0xdc0019">Sad Tycoon (悲しみのタイクーン)</title>
+			<title code="0xdc001a">Jigsaw Town</title>
+			<title code="0xdb0002">Epilogue</title>
+			<title code="0xdc000f">Jingle #01 (ジングル #01)</title>
+			<title code="0xdc0011">Jingle #02 (ジングル #02)</title>
+			<title code="0xdc0007">Jingle #03 (ジングル #03)</title>
+			<title code="0xdc000b">Jingle #04 (ジングル #04)</title>
+			<title code="0xda8001">SFX #01</title>
+			<title code="0xde001c">SFX #02</title>
+			<title code="0xdf001d">SFX #03</title>
+			<title code="0xdf001e">SFX #04</title>
+			<title code="0xdf001f">SFX #05</title>
+			<title code="0xdf0020">SFX #06</title>
+			<title code="0xdf0021">SFX #07</title>
+			<title code="0xdf0022">SFX #08</title>
+			<title code="0xdf0023">SFX #09</title>
+			<title code="0xdf0024">SFX #10</title>
+			<title code="0xdf8025">SFX #11</title>
+			<title code="0xdf8026">SFX #12</title>
+			<title code="0xdf8027">SFX #13</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Angelus: Akuma no Fukuin (アンジェラス ～悪魔の福音～) (OPN)</name>
+		<driver type="angelus">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="opna" value="0"/>
+		</options>
+		<romlist archive="angelus">
+			<rom type="code" offset="0x0000">ANGPATCH.BIN</rom>
+			<rom type="code" offset="0xf000">MUSIC</rom>
+			<rom type="bgm" offset="0x01">GAAN2</rom>
+			<rom type="bgm" offset="0x02">ENDI</rom>
+			<rom type="bgm" offset="0x03">IZASNG</rom>
+			<rom type="bgm" offset="0x04">IZASSS</rom>
+			<rom type="bgm" offset="0x05">JUK</rom>
+			<rom type="bgm" offset="0x06">BRI</rom>
+			<rom type="bgm" offset="0x07">BRIOF</rom>
+			<rom type="bgm" offset="0x08">BSTON5</rom>
+			<rom type="bgm" offset="0x09">DEAD</rom>
+			<rom type="bgm" offset="0x0a">DEAD2</rom>
+			<rom type="bgm" offset="0x0b">DEADST</rom>
+			<rom type="bgm" offset="0x0c">DUMA</rom>
+			<rom type="bgm" offset="0x0d">GERM</rom>
+			<rom type="bgm" offset="0x0e">GERMSL</rom>
+			<rom type="bgm" offset="0x0f">HENBO</rom>
+			<rom type="bgm" offset="0x10">HENBO2</rom>
+			<rom type="bgm" offset="0x11">HENBO3</rom>
+			<rom type="bgm" offset="0x12">IZA</rom>
+			<rom type="bgm" offset="0x13">IZAS2</rom>
+			<rom type="bgm" offset="0x14">IZASFT</rom>
+			<rom type="bgm" offset="0x15">JAKYO</rom>
+			<rom type="bgm" offset="0x16">KAISO</rom>
+			<rom type="bgm" offset="0x17">LONDON</rom>
+			<rom type="bgm" offset="0x18">OPEN</rom>
+			<rom type="bgm" offset="0x19">PENDAN</rom>
+			<rom type="bgm" offset="0x1a">PERU</rom>
+			<rom type="bgm" offset="0x1b">THEME2</rom>
+			<rom type="bgm" offset="0x1c">DODODO</rom>
+			<rom type="bgm" offset="0x1d">BUKIMI</rom>
+			<rom type="bgm" offset="0x1e">CAT</rom>
+			<rom type="bgm" offset="0x1f">DODO2</rom>
+			<rom type="bgm" offset="0x20">GACHA</rom>
+			<rom type="bgm" offset="0x21">GUSA</rom>
+			<rom type="bgm" offset="0x22">INJET</rom>
+			<rom type="bgm" offset="0x23">RING</rom>
+			<rom type="bgm" offset="0x24">TEL</rom>
+			<rom type="bgm" offset="0x25">GAAN</rom>
+			<rom type="bgm" offset="0x26">KNOCK1</rom>
+			<rom type="bgm" offset="0x27">PASHA</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xdc0018">Prologue</title>
+			<title code="0xdc001b">The Glittering Blue Stone (青い石のきらめき)</title>
+			<title code="0xdc0012">Love Sympathy ~Ver. 1~ (愛のシンパシー～Ver1～)</title>
+			<title code="0xdb0003">Love Sympathy ~Ver. 1 SNG~ (愛のシンパシー～Ver1SNG～)</title>
+			<title code="0xdc0013">Love Sympathy ~Ver. 2~ (愛のシンパシー～Ver2～)</title>
+			<title code="0xdb0004">Love Sympathy ~Ver. 2SSS~ (愛のシンパシー～Ver2SSS～)</title>
+			<title code="0xdc0014">Love Sympathy ~Ver. 3~ (愛のシンパシー～Ver3～)</title>
+			<title code="0xdb0005">Eris In Japan</title>
+			<title code="0xdc0006">Brian and Eris</title>
+			<title code="0xdc0008">Prophet/預言者</title>
+			<title code="0xdc0009">Wandering Psyche ~Ver.1~ (彷徨いのプシュケ～Ver1～)</title>
+			<title code="0xdc000a">Wandering Psyche ~Ver. 2~ (彷徨いのプシュケ～Ver2～)</title>
+			<title code="0xdc000c">Beyond the Collapse (崩壊の彼方)</title>
+			<title code="0xdc000d">Eris In Germany～Ver1～</title>
+			<title code="0xdc000e">Eris In Germany～Ver2～</title>
+			<title code="0xdc0010">Metamorphosis ~Seva's Warning~ (変貌～セヴァの警告～)</title>
+			<title code="0xdc0015">Evangel On Gnosis</title>
+			<title code="0xdc0016">Blue Object ~Nostalgia~ (ブルー・オブジェ～郷愁～)</title>
+			<title code="0xdc0017">Hard Days (ハード・デイズ)</title>
+			<title code="0xdc0019">Sad Tycoon (悲しみのタイクーン)</title>
+			<title code="0xdc001a">Jigsaw Town</title>
+			<title code="0xdb0002">Epilogue</title>
+			<title code="0xdc000f">Jingle #01 (ジングル #01)</title>
+			<title code="0xdc0011">Jingle #02 (ジングル #02)</title>
+			<title code="0xdc0007">Jingle #03 (ジングル #03)</title>
+			<title code="0xdc000b">Jingle #04 (ジングル #04)</title>
+			<title code="0xda8001">SFX #01</title>
+			<title code="0xde001c">SFX #02</title>
+			<title code="0xdf001d">SFX #03</title>
+			<title code="0xdf001e">SFX #04</title>
+			<title code="0xdf001f">SFX #05</title>
+			<title code="0xdf0020">SFX #06</title>
+			<title code="0xdf0021">SFX #07</title>
+			<title code="0xdf0022">SFX #08</title>
+			<title code="0xdf0023">SFX #09</title>
+			<title code="0xdf0024">SFX #10</title>
+			<title code="0xdf8025">SFX #11</title>
+			<title code="0xdf8026">SFX #12</title>
+			<title code="0xdf8027">SFX #13</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] The Old Village Story (オールド・ヴィレッジ・ストーリー) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<romlist archive="oldv">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0600">PLAYB.COM</rom>
+			<rom type="bgm" offset="0x00">BAROQU.M2</rom>
+			<rom type="bgm" offset="0x01">CASL-1.M2</rom>
+			<rom type="bgm" offset="0x02">EARTH2.M2</rom>
+			<rom type="bgm" offset="0x03">EMERG.M2</rom>
+			<rom type="bgm" offset="0x04">END-3.M2</rom>
+			<rom type="bgm" offset="0x05">HOLE-1.M2</rom>
+			<rom type="bgm" offset="0x06">KIKI.M2</rom>
+			<rom type="bgm" offset="0x07">KIKI-2.M2</rom>
+			<rom type="bgm" offset="0x08">KING-1.M2</rom>
+			<rom type="bgm" offset="0x09">KING-2.M2</rom>
+			<rom type="bgm" offset="0x0a">KIZOKU.M2</rom>
+			<rom type="bgm" offset="0x0b">KUJI-2.M2</rom>
+			<rom type="bgm" offset="0x0c">KUJIRA.M2</rom>
+			<rom type="bgm" offset="0x0d">MOMO-1.M2</rom>
+			<rom type="bgm" offset="0x0e">OCEAN.M2</rom>
+			<rom type="bgm" offset="0x0f">OH!!!.M2</rom>
+			<rom type="bgm" offset="0x10">OH!.M2</rom>
+			<rom type="bgm" offset="0x11">SOROW5.M2</rom>
+			<rom type="bgm" offset="0x12">THEME1.M2</rom>
+			<rom type="bgm" offset="0x13">TOKEI.M2</rom>
+			<rom type="bgm" offset="0x14">TOWN-1.M2</rom>
+			<rom type="bgm" offset="0x15">TOWN-2.M2</rom>
+			<rom type="bgm" offset="0x16">WALTZ.M2</rom>
+			<rom type="bgm" offset="0x17">WOOD-1.M2</rom>
+			<rom type="bgm" offset="0x18">file01.M2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">Opening (オープニング)</title>
+			<title code="0x16">Village (村)</title>
+			<title code="0x00">BAROQU.M2</title>
+			<title code="0x01">CASL-1.M2</title>
+			<title code="0x02">Field 2 (フィールド２)</title>
+			<title code="0x03">EMERG.M2</title>
+			<title code="0x04">Ending (エンディング)</title>
+			<title code="0x05">HOLE-1.M2</title>
+			<title code="0x06">Showdown! Sylph (Boss Battle) (対決！シルフ (ボス戦))</title>
+			<title code="0x07">KIKI-2.M2</title>
+			<title code="0x08">Castle (城)</title>
+			<title code="0x09">KING-2.M2</title>
+			<title code="0x0a">Nobles' Town (貴族の街)</title>
+			<title code="0x0c">Whale (クジラ)</title>
+			<title code="0x0b">KUJI-2.M2</title>
+			<title code="0x0d">Dungeon (ダンジョン)</title>
+			<title code="0x0e">Adrift (漂流)</title>
+			<title code="0x0f">OH!!!.M2</title>
+			<title code="0x10">OH!.M2</title>
+			<title code="0x11">SOROW5.M2</title>
+			<title code="0x13">TOKEI.M2</title>
+			<title code="0x14">Castle Town (城下町)</title>
+			<title code="0x15">TOWN-2.M2</title>
+			<title code="0x17">Field 1 (フィールド１)</title>
+			<title code="0x18">Jingle (ジングル)</title>
+			<title code="0xfd">Change Tempo (Slow) (テンポ変更(遅い))</title>
+			<title code="0xfe">Change Tempo (Fast) (テンポ変更(速い))</title>
+			<title code="0xff">Change Tempo (Normal) (テンポ変更(通常))</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] The Old Village Story (オールド・ヴィレッジ・ストーリー) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<romlist archive="oldv">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x0600">PLAY2.COM</rom>
+			<rom type="bgm" offset="0x0e">THEME1.M</rom>
+			<rom type="bgm" offset="0x12">WALTZ.M</rom>
+			<rom type="bgm" offset="0x00">CASL-1.M</rom>
+			<rom type="bgm" offset="0x01">EARTH2.M</rom>
+			<rom type="bgm" offset="0x02">EMERG.M</rom>
+			<rom type="bgm" offset="0x03">END-3.M</rom>
+			<rom type="bgm" offset="0x04">KIKI.M</rom>
+			<rom type="bgm" offset="0x05">KIKI-2.M</rom>
+			<rom type="bgm" offset="0x06">KING-1.M</rom>
+			<rom type="bgm" offset="0x07">KIZOKU.M</rom>
+			<rom type="bgm" offset="0x08">KUJI-2.M</rom>
+			<rom type="bgm" offset="0x09">KUJIRA.M</rom>
+			<rom type="bgm" offset="0x0a">MOMO-1.M</rom>
+			<rom type="bgm" offset="0x0b">OCEAN.M</rom>
+			<rom type="bgm" offset="0x0c">OH!.M</rom>
+			<rom type="bgm" offset="0x0d">SOROW5.M</rom>
+			<rom type="bgm" offset="0x0f">TOKEI.M</rom>
+			<rom type="bgm" offset="0x10">TOWN-1.M</rom>
+			<rom type="bgm" offset="0x11">TOWN-2.M</rom>
+			<rom type="bgm" offset="0x13">WOOD-1.M</rom>
+			<rom type="bgm" offset="0x14">file01.M</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0e">Opening (オープニング)</title>
+			<title code="0x12">Village (村)</title>
+			<title code="0x00">CASL-1.M</title>
+			<title code="0x01">Field 2 (フィールド２)</title>
+			<title code="0x02">EMERG.M</title>
+			<title code="0x03">Ending (エンディング)</title>
+			<title code="0x04">Showdown! Sylph (Boss Battle) (対決！シルフ (ボス戦))</title>
+			<title code="0x05">KIKI-2.M</title>
+			<title code="0x06">Castle (城)</title>
+			<title code="0x07">Nobles' Town (貴族の街)</title>
+			<title code="0x09">Whale (クジラ)</title>
+			<title code="0x08">KUJI-2.M</title>
+			<title code="0x0a">Dungeon (ダンジョン)</title>
+			<title code="0x0b">Adrift (漂流)</title>
+			<title code="0x0c">OH!.M</title>
+			<title code="0x0d">SOROW5.M</title>
+			<title code="0x0f">TOKEI.M</title>
+			<title code="0x10">Castle Town (城下町)</title>
+			<title code="0x11">TOWN-2.M</title>
+			<title code="0x13">Field 1 (フィールド１)</title>
+			<title code="0x14">Jingle (ジングル)</title>
+			<title code="0xfd">Change Tempo (Slow) (テンポ変更(遅い))</title>
+			<title code="0xfe">Change Tempo (Fast) (テンポ変更(速い))</title>
+			<title code="0xff">Change Tempo (Normal) (テンポ変更(通常))</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Burning Point (バーニングポイント) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1500"/>
+			<option name="use_pcmx8" value="0x01"/>
+		</options>
+		<romlist archive="bpoint">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0230">DRIVER.BIN</rom>
+			<rom type="adpcm" offset="0x00000">BURNPCM</rom>
+			<rom type="bgm" offset="0x00">MDAT01</rom>
+			<rom type="bgm" offset="0x01">MDAT02</rom>
+			<rom type="bgm" offset="0x02">MDAT03</rom>
+			<rom type="bgm" offset="0x03">MDAT04</rom>
+			<rom type="bgm" offset="0x04">MDAT05</rom>
+			<rom type="bgm" offset="0x05">MDAT06</rom>
+			<rom type="bgm" offset="0x06">MDAT07</rom>
+			<rom type="bgm" offset="0x07">MDAT08</rom>
+			<rom type="bgm" offset="0x08">MDAT09</rom>
+			<rom type="bgm" offset="0x09">MDAT0a</rom>
+			<rom type="bgm" offset="0x0a">MDAT0b</rom>
+			<rom type="bgm" offset="0x0b">MDAT0c</rom>
+			<rom type="bgm" offset="0x0c">MDAT0d</rom>
+			<rom type="bgm" offset="0x0d">MDAT0e</rom>
+			<rom type="bgm" offset="0x0e">MDAT0f</rom>
+			<rom type="bgm" offset="0x0f">MDAT10</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0f">Radio Tune (ラジオの曲)</title>
+			<title code="0x00">Burning Point</title>
+			<title code="0x01">The Detective Agency Opens (探偵事務所開業)</title>
+			<title code="0x02">Debbie's Shop (デービスの店)</title>
+			<title code="0x03">Investigating Theme (捜査のテーマ)</title>
+			<title code="0x04">Get Rudolph (ルドルフの追え)</title>
+			<title code="0x05">Confession (告白)</title>
+			<title code="0x06">The Truth of 15 Years Ago (15年前の真実)</title>
+			<title code="0x07">The Killer (殺人者)</title>
+			<title code="0x08">Heart Attack Street</title>
+			<title code="0x09">Goldberg's Theme (ゴールドベルク変奏曲)</title>
+			<title code="0x0a">Core ～核心～</title>
+			<title code="0x0b">Waltz of Ambition (野望のワルツ)</title>
+			<title code="0x0c">See you again, Steel</title>
+			<title code="0x0d">Burning Point (Finale)</title>
+			<title code="0x0e">Fanfare (ファンファーレ)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Burning Point (バーニングポイント) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1500"/>
+		</options>
+		<romlist archive="bpoint">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x0230">DRIVER.BIN</rom>
+			<rom type="bgm" offset="0x0f">MDAT10</rom>
+			<rom type="bgm" offset="0x00">MDATN01</rom>
+			<rom type="bgm" offset="0x01">MDATN02</rom>
+			<rom type="bgm" offset="0x02">MDATN03</rom>
+			<rom type="bgm" offset="0x03">MDATN04</rom>
+			<rom type="bgm" offset="0x04">MDATN05</rom>
+			<rom type="bgm" offset="0x05">MDATN06</rom>
+			<rom type="bgm" offset="0x06">MDATN07</rom>
+			<rom type="bgm" offset="0x07">MDATN08</rom>
+			<rom type="bgm" offset="0x08">MDATN09</rom>
+			<rom type="bgm" offset="0x09">MDATN0a</rom>
+			<rom type="bgm" offset="0x0a">MDATN0b</rom>
+			<rom type="bgm" offset="0x0b">MDATN0c</rom>
+			<rom type="bgm" offset="0x0c">MDATN0d</rom>
+			<rom type="bgm" offset="0x0d">MDATN0e</rom>
+			<rom type="bgm" offset="0x0e">MDATN0f</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0f">Radio Tune (ラジオの曲)</title>
+			<title code="0x00">Burning Point</title>
+			<title code="0x01">The Detective Agency Opens (探偵事務所開業)</title>
+			<title code="0x02">Debbie's Shop (デービスの店)</title>
+			<title code="0x03">Investigating Theme (捜査のテーマ)</title>
+			<title code="0x04">Get Rudolph (ルドルフの追え)</title>
+			<title code="0x05">Confession (告白)</title>
+			<title code="0x06">The Truth of 15 Years Ago (15年前の真実)</title>
+			<title code="0x07">The Killer (殺人者)</title>
+			<title code="0x08">Heart Attack Street</title>
+			<title code="0x09">Goldberg's Theme (ゴールドベルク変奏曲)</title>
+			<title code="0x0a">Core ～核心～</title>
+			<title code="0x0b">Waltz of Ambition (野望のワルツ)</title>
+			<title code="0x0c">See you again, Steel</title>
+			<title code="0x0d">Burning Point (Finale)</title>
+			<title code="0x0e">Fanfare (ファンファーレ)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Prajator: Image Ranger (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+		</options>
+		<romlist archive="prajator">
+			<rom type="code" offset="0x0000">system</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">B911.MDT</rom>
+			<rom type="bgm" offset="0x01">BLUE.MDT</rom>
+			<rom type="bgm" offset="0x02">BROCK.MDT</rom>
+			<rom type="bgm" offset="0x03">COSMOS.MDT</rom>
+			<rom type="bgm" offset="0x04">EOB.MDT</rom>
+			<rom type="bgm" offset="0x05">EX.MDT</rom>
+			<rom type="bgm" offset="0x06">FAG.MDT</rom>
+			<rom type="bgm" offset="0x07">FAN2.MDT</rom>
+			<rom type="bgm" offset="0x08">FXX.MDT</rom>
+			<rom type="bgm" offset="0x09">GROW2.MDT</rom>
+			<rom type="bgm" offset="0x0a">HM3.MDT</rom>
+			<rom type="bgm" offset="0x0b">KNIGHT.MDT</rom>
+			<rom type="bgm" offset="0x0c">LEX2.MDT</rom>
+			<rom type="bgm" offset="0x0d">M1016.MDT</rom>
+			<rom type="bgm" offset="0x0e">MF.MDT</rom>
+			<rom type="bgm" offset="0x0f">NU.MDT</rom>
+			<rom type="bgm" offset="0x10">OPEN.MDT</rom>
+			<rom type="bgm" offset="0x11">OVER.MDT</rom>
+			<rom type="bgm" offset="0x12">SD2.MDT</rom>
+			<rom type="bgm" offset="0x13">SETUP.MDT</rom>
+			<rom type="bgm" offset="0x14">SP.MDT</rom>
+			<rom type="bgm" offset="0x15">STEND.MDT</rom>
+			<rom type="bgm" offset="0x16">WRN5.MDT</rom>
+			<rom type="bgm" offset="0x17">XEAS.MDT</rom>
+			<rom type="bgm" offset="0x18">ZR.MDT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Opening 1</title>
+			<title code="0x09">Opening 2</title>
+			<title code="0x18">Demo 1</title>
+			<title code="0x0c">Area 1a</title>
+			<title code="0x16">Alert</title>
+			<title code="0x11">Area 1b</title>
+			<title code="0x07">Win</title>
+			<title code="0x13">Set Up</title>
+			<title code="0x17">Area 2a</title>
+			<title code="0x00">Area 2b</title>
+			<title code="0x03">Area 3a</title>
+			<title code="0x05">Area 3b</title>
+			<title code="0x0e">Area 4a</title>
+			<title code="0x0a">Area 4b</title>
+			<title code="0x0f">Area 5a</title>
+			<title code="0x06">Area 5b</title>
+			<title code="0x14">Demo 2</title>
+			<title code="0x08">Last Target</title>
+			<title code="0x02">Demo 3</title>
+			<title code="0x0b">Demo 4～Last Battle</title>
+			<title code="0x04">Last Battle 2</title>
+			<title code="0x12">Demo 5</title>
+			<title code="0x15">Ending 1</title>
+			<title code="0x0d">Ending 2</title>
+			<title code="0x01">Game Over</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Prajator: Image Ranger (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+		</options>
+		<romlist archive="prajator">
+			<rom type="code" offset="0x0000">system</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">B911.MDT</rom>
+			<rom type="bgm" offset="0x01">BLUE.MDT</rom>
+			<rom type="bgm" offset="0x02">BROCK.MDT</rom>
+			<rom type="bgm" offset="0x03">COSMOS.MDT</rom>
+			<rom type="bgm" offset="0x04">EOB.MDT</rom>
+			<rom type="bgm" offset="0x05">EX.MDT</rom>
+			<rom type="bgm" offset="0x06">FAG.MDT</rom>
+			<rom type="bgm" offset="0x07">FAN2.MDT</rom>
+			<rom type="bgm" offset="0x08">FXX.MDT</rom>
+			<rom type="bgm" offset="0x09">GROW2.MDT</rom>
+			<rom type="bgm" offset="0x0a">HM3.MDT</rom>
+			<rom type="bgm" offset="0x0b">KNIGHT.MDT</rom>
+			<rom type="bgm" offset="0x0c">LEX2.MDT</rom>
+			<rom type="bgm" offset="0x0d">M1016.MDT</rom>
+			<rom type="bgm" offset="0x0e">MF.MDT</rom>
+			<rom type="bgm" offset="0x0f">NU.MDT</rom>
+			<rom type="bgm" offset="0x10">OPEN.MDT</rom>
+			<rom type="bgm" offset="0x11">OVER.MDT</rom>
+			<rom type="bgm" offset="0x12">SD2.MDT</rom>
+			<rom type="bgm" offset="0x13">SETUP.MDT</rom>
+			<rom type="bgm" offset="0x14">SP.MDT</rom>
+			<rom type="bgm" offset="0x15">STEND.MDT</rom>
+			<rom type="bgm" offset="0x16">WRN5.MDT</rom>
+			<rom type="bgm" offset="0x17">XEAS.MDT</rom>
+			<rom type="bgm" offset="0x18">ZR.MDT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Opening 1</title>
+			<title code="0x09">Opening 2</title>
+			<title code="0x18">Demo 1</title>
+			<title code="0x0c">Area 1a</title>
+			<title code="0x16">Alert</title>
+			<title code="0x11">Area 1b</title>
+			<title code="0x07">Win</title>
+			<title code="0x13">Set Up</title>
+			<title code="0x17">Area 2a</title>
+			<title code="0x00">Area 2b</title>
+			<title code="0x03">Area 3a</title>
+			<title code="0x05">Area 3b</title>
+			<title code="0x0e">Area 4a</title>
+			<title code="0x0a">Area 4b</title>
+			<title code="0x0f">Area 5a</title>
+			<title code="0x06">Area 5b</title>
+			<title code="0x14">Demo 2</title>
+			<title code="0x08">Last Target</title>
+			<title code="0x02">Demo 3</title>
+			<title code="0x0b">Demo 4～Last Battle</title>
+			<title code="0x04">Last Battle 2</title>
+			<title code="0x12">Demo 5</title>
+			<title code="0x15">Ending 1</title>
+			<title code="0x0d">Ending 2</title>
+			<title code="0x01">Game Over</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Jesus (ジーザス)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5000"/>
+			<option name="init_pc" value="0x8000"/>
+			<option name="vdata_addr" value="0x0800"/>
+			<option name="vdata_size" value="0x0800"/>
+			<option name="vfile_size" value="0x0800"/>
+		</options>
+		<romlist archive="jesus">
+			<rom type="code" offset="0x0000">DRIVER1.BIN</rom>
+			<rom type="code" offset="0x9b00">DRIVER2.BIN</rom>
+			<rom type="code" offset="0x8000">PATCH</rom>
+			<rom type="code" offset="0x0800">SDAT01</rom>
+			<rom type="bgm" offset="0x00">MDAT01</rom>
+			<rom type="voice" offset="0x00">SDAT01</rom>
+			<rom type="bgm" offset="0x01">MDAT01</rom>
+			<rom type="voice" offset="0x01">SDAT01</rom>
+			<rom type="bgm" offset="0x02">MDAT01</rom>
+			<rom type="voice" offset="0x02">SDAT01</rom>
+			<rom type="bgm" offset="0x03">MDAT01</rom>
+			<rom type="voice" offset="0x03">SDAT01</rom>
+			<rom type="bgm" offset="0x04">MDAT01</rom>
+			<rom type="voice" offset="0x04">SDAT01</rom>
+			<rom type="bgm" offset="0x05">MDAT01</rom>
+			<rom type="voice" offset="0x05">SDAT01</rom>
+			<rom type="bgm" offset="0x06">MDAT01</rom>
+			<rom type="voice" offset="0x06">SDAT01</rom>
+			<rom type="bgm" offset="0x07">MDAT01</rom>
+			<rom type="voice" offset="0x07">SDAT01</rom>
+			<rom type="bgm" offset="0x08">MDAT01</rom>
+			<rom type="voice" offset="0x08">SDAT01</rom>
+			<rom type="bgm" offset="0x09">MDAT01</rom>
+			<rom type="voice" offset="0x09">SDAT01</rom>
+			<rom type="bgm" offset="0x0a">MDAT01</rom>
+			<rom type="voice" offset="0x0a">SDAT01</rom>
+			<rom type="bgm" offset="0x0b">MDAT01</rom>
+			<rom type="voice" offset="0x0b">SDAT01</rom>
+			<rom type="bgm" offset="0x0c">MDAT01</rom>
+			<rom type="voice" offset="0x0c">SDAT01</rom>
+			<rom type="bgm" offset="0x0d">MDAT01</rom>
+			<rom type="voice" offset="0x0d">SDAT01</rom>
+			<rom type="bgm" offset="0x0e">MDAT01</rom>
+			<rom type="voice" offset="0x0e">SDAT01</rom>
+			<rom type="bgm" offset="0x0f">MDAT01</rom>
+			<rom type="voice" offset="0x0f">SDAT01</rom>
+			<rom type="bgm" offset="0x10">MDAT02</rom>
+			<rom type="voice" offset="0x10">SDAT02</rom>
+			<rom type="bgm" offset="0x11">MDAT02</rom>
+			<rom type="voice" offset="0x11">SDAT02</rom>
+			<rom type="bgm" offset="0x12">MDAT02</rom>
+			<rom type="voice" offset="0x12">SDAT02</rom>
+			<rom type="bgm" offset="0x13">MDAT02</rom>
+			<rom type="voice" offset="0x13">SDAT02</rom>
+			<rom type="bgm" offset="0x14">MDAT02</rom>
+			<rom type="voice" offset="0x14">SDAT02</rom>
+			<rom type="bgm" offset="0x15">MDAT02</rom>
+			<rom type="voice" offset="0x15">SDAT02</rom>
+			<rom type="bgm" offset="0x16">MDAT02</rom>
+			<rom type="voice" offset="0x16">SDAT02</rom>
+			<rom type="bgm" offset="0x17">MDAT02</rom>
+			<rom type="voice" offset="0x17">SDAT02</rom>
+			<rom type="bgm" offset="0x18">MDAT02</rom>
+			<rom type="voice" offset="0x18">SDAT02</rom>
+			<rom type="bgm" offset="0x19">MDAT02</rom>
+			<rom type="voice" offset="0x19">SDAT02</rom>
+			<rom type="bgm" offset="0x20">MDAT02</rom>
+			<rom type="voice" offset="0x20">SDAT02</rom>
+			<rom type="bgm" offset="0x21">MDAT02</rom>
+			<rom type="voice" offset="0x21">SDAT02</rom>
+			<rom type="bgm" offset="0x22">MDAT02</rom>
+			<rom type="voice" offset="0x22">SDAT02</rom>
+			<rom type="bgm" offset="0x23">MDAT02</rom>
+			<rom type="voice" offset="0x23">SDAT02</rom>
+			<rom type="bgm" offset="0x24">MDAT02</rom>
+			<rom type="voice" offset="0x24">SDAT02</rom>
+			<rom type="bgm" offset="0x25">MDAT02</rom>
+			<rom type="voice" offset="0x25">SDAT02</rom>
+			<rom type="bgm" offset="0x26">MDAT02</rom>
+			<rom type="voice" offset="0x26">SDAT02</rom>
+			<rom type="bgm" offset="0x27">MDAT02</rom>
+			<rom type="voice" offset="0x27">SDAT02</rom>
+			<rom type="bgm" offset="0x28">MDAT03</rom>
+			<rom type="voice" offset="0x28">SDAT03</rom>
+			<rom type="bgm" offset="0x29">MDAT03</rom>
+			<rom type="voice" offset="0x29">SDAT03</rom>
+			<rom type="bgm" offset="0x30">MDAT03</rom>
+			<rom type="voice" offset="0x30">SDAT03</rom>
+			<rom type="bgm" offset="0x31">MDAT03</rom>
+			<rom type="voice" offset="0x31">SDAT03</rom>
+			<rom type="bgm" offset="0x32">MDAT03</rom>
+			<rom type="voice" offset="0x32">SDAT03</rom>
+			<rom type="bgm" offset="0x33">MDAT03</rom>
+			<rom type="voice" offset="0x33">SDAT03</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Chime (チャイム)</title>
+			<title code="0x01">Prelude to the Void (虚空への前奏)</title>
+			<title code="0x02">Balkas is Attacked by a Monster (バルカスがモンスターにおそわれる)</title>
+			<title code="0x09">Game Over (ゲームオーバー)</title>
+			<title code="0x03">Blue Infinity (蒼い無限)</title>
+			<title code="0x0a">Sound of Hayao Walking (速雄が歩くときの音)</title>
+			<title code="0x07">Hero's Repose (勇者の休息)</title>
+			<title code="0x08">Shining Eyes (きらめく瞳)</title>
+			<title code="0x05">Violet Love (菫色の愛)</title>
+			<title code="0x04">Tranquil Universe (やすらぎの宇宙)</title>
+			<title code="0x0b">Sweet Embrace (甘い抱擁)</title>
+			<title code="0x0c">Two Within a Dream (夢の中の二人)</title>
+			<title code="0x0d">City on the Brink of Collapse (崩れ行く都市)</title>
+			<title code="0x0e">To the Edge of the Sky (空の果てへ)</title>
+			<title code="0x0f">Impending Crisis (迫りくる危機)</title>
+			<title code="0x10">The Return (帰還)</title>
+			<title code="0x15">The Intruder Reborn [1] (甦る侵入者 [1])</title>
+			<title code="0x23">The Intruder Reborn [2] (甦る侵入者 [2])</title>
+			<title code="0x16">Requiem (鎮魂歌)</title>
+			<title code="0x24">Shadow of Death (死神の影)</title>
+			<title code="0x28">The Challenge (挑戦の時)</title>
+			<title code="0x29">Victory Tune [1] (勝利の旋律 [1])</title>
+			<title code="0x30">If You Don't Listen to All of Victory Tune [1]</title>
+			<title code="0x30">                               (勝利の旋律 [1]を最後まで聞かないと音がおかしい)</title>
+			<title code="0x31">The Departing (去り行く者達)</title>
+			<title code="0x32">Ode to Life (生命への賛歌)</title>
+			<title code="0x06">効果音01</title>
+			<title code="0x11">効果音02</title>
+			<title code="0x12">効果音03</title>
+			<title code="0x13">効果音04</title>
+			<title code="0x14">効果音05</title>
+			<title code="0x17">効果音06</title>
+			<title code="0x19">効果音07</title>
+			<title code="0x20">効果音08</title>
+			<title code="0x21">効果音09</title>
+			<title code="0x22">効果音10</title>
+			<title code="0x25">効果音11</title>
+			<title code="0x26">効果音12</title>
+			<title code="0x27">効果音13</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Jesus II (ジーザス２) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1000"/>
+			<option name="mdata_size" value="0x3000"/>
+			<option name="mfile_size" value="0x3000"/>
+			<option name="use_pcmx8" value="0x01"/>
+		</options>
+		<romlist archive="jesus2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6b00">music.com</rom>
+			<rom type="adpcm" offset="0x00000">PCM_0</rom>
+			<rom type="adpcm" offset="0x02000">PCM_1</rom>
+			<rom type="adpcm" offset="0x04000">PCM_2</rom>
+			<rom type="adpcm" offset="0x06000">PCM_3</rom>
+			<rom type="adpcm" offset="0x08000">PCM_4</rom>
+			<rom type="adpcm" offset="0x0a000">PCM_5</rom>
+			<rom type="adpcm" offset="0x0c000">PCM_6</rom>
+			<rom type="adpcm" offset="0x0e000">PCM_7</rom>
+			<rom type="adpcm" offset="0x10000">PCM_8</rom>
+			<rom type="adpcm" offset="0x12000">PCM_9</rom>
+			<rom type="adpcm" offset="0x14000">PCM_a</rom>
+			<rom type="bgm" offset="0x00">mus_a.com</rom>
+			<rom type="bgm" offset="0x01">mus_b.com</rom>
+			<rom type="bgm" offset="0x02">mus_c.com</rom>
+			<rom type="bgm" offset="0x03">mus_d.com</rom>
+			<rom type="bgm" offset="0x04">mus_f.com</rom>
+			<rom type="bgm" offset="0x05">mus_g.com</rom>
+			<rom type="bgm" offset="0x06">mus_h.com</rom>
+			<rom type="bgm" offset="0x07">mus_i.com</rom>
+			<rom type="bgm" offset="0x08">mus_j.com</rom>
+			<rom type="bgm" offset="0x09">mus_k.com</rom>
+			<rom type="bgm" offset="0x0a">mus_l.com</rom>
+			<rom type="bgm" offset="0x0b">mus_m.com</rom>
+			<rom type="bgm" offset="0x0c">mus_n.com</rom>
+			<rom type="bgm" offset="0x0d">mus_o.com</rom>
+			<rom type="bgm" offset="0x0e">mus_p.com</rom>
+			<rom type="bgm" offset="0x20">effec1.com</rom>
+			<rom type="bgm" offset="0x21">effec2.com</rom>
+			<rom type="bgm" offset="0x22">effec3.com</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000020">Opening Demo (オープニングデモ)</title>
+			<title code="0x00000009">In the Cosmos (Radio Ver.) (宇宙に立ちて(ラジカセ ver.))</title>
+			<title code="0x00000006">Ship's Hawaiian (船上のハワイアン)</title>
+			<title code="0x0000000d">In the Cosmos (Alt. Radio Version) (宇宙に立ちて(ラジカセ 別ver.))</title>
+			<title code="0x0000000c">Suspense (サスペンス)</title>
+			<title code="0x00000000">Army Theme (軍隊のテーマ)</title>
+			<title code="0x00000003">Blue Infinity (蒼い無限)</title>
+			<title code="0x00000008">In the Cosmos (宇宙に立ちて)</title>
+			<title code="0x00000007">In the Cosmos (in G) (宇宙に立ちて(in G))</title>
+			<title code="0x0000000b">The Departing (去り行く者たち)</title>
+			<title code="0x0000000e">Monster (モンスター)</title>
+			<title code="0x00000004">Elegy (エレジー)</title>
+			<title code="0x0000000a">Requiem (レクイエム)</title>
+			<title code="0x00000005">Fight (ファイト)</title>
+			<title code="0x00000002">Monster (Full Version) (モンスター(フルバージョン))</title>
+			<title code="0x00000001">Finale (In the Cosmos/Blue Infinity/The Departing/In the Cosmos)</title>
+			<title code="0x00000001">              (フィナーレ(宇宙に立ちて～蒼い無限～去り行く者たち～宇宙に立ちて)</title>
+			<title code="0x00000020">効果音00</title>
+			<title code="0x02000020">効果音02</title>
+			<title code="0x03000020">効果音03</title>
+			<title code="0x04000020">効果音04</title>
+			<title code="0x05000020">効果音05</title>
+			<title code="0x06000020">効果音06</title>
+			<title code="0x07000020">効果音07</title>
+			<title code="0x08000020">効果音08</title>
+			<title code="0x09000020">効果音09</title>
+			<title code="0x0a000020">効果音0a</title>
+			<title code="0x0b000020">効果音0b</title>
+			<title code="0x0c000020">効果音0c</title>
+			<title code="0x0d000020">効果音0d</title>
+			<title code="0x0e000020">効果音0e</title>
+			<title code="0x0f000020">効果音0f</title>
+			<title code="0x10000020">効果音10</title>
+			<title code="0x11000020">効果音11</title>
+			<title code="0x12000020">効果音12</title>
+			<title code="0x13000020">効果音13</title>
+			<title code="0x14000020">効果音14</title>
+			<title code="0x15000020">効果音15</title>
+			<title code="0x16000020">効果音16</title>
+			<title code="0x17000020">効果音17</title>
+			<title code="0x18000020">効果音18</title>
+			<title code="0x00000021">効果音00</title>
+			<title code="0x01000021">効果音01</title>
+			<title code="0x02000021">効果音02</title>
+			<title code="0x03000021">効果音03</title>
+			<title code="0x04000021">効果音04</title>
+			<title code="0x05000021">効果音05</title>
+			<title code="0x06000021">効果音06</title>
+			<title code="0x07000021">効果音07</title>
+			<title code="0x08000021">効果音08</title>
+			<title code="0x09000021">効果音09</title>
+			<title code="0x0a000021">効果音0a</title>
+			<title code="0x0b000021">効果音0b</title>
+			<title code="0x0c000021">効果音0c</title>
+			<title code="0x0d000021">効果音0d</title>
+			<title code="0x0e000021">効果音0e</title>
+			<title code="0x0f000021">効果音0f</title>
+			<title code="0x10000021">効果音10</title>
+			<title code="0x11000021">効果音11</title>
+			<title code="0x12000021">効果音12</title>
+			<title code="0x13000021">効果音13</title>
+			<title code="0x14000021">効果音14</title>
+			<title code="0x15000021">効果音15</title>
+			<title code="0x16000021">効果音16</title>
+			<title code="0x17000021">効果音17</title>
+			<title code="0x18000021">効果音18</title>
+			<title code="0x19000021">効果音19</title>
+			<title code="0x1a000021">効果音1a</title>
+			<title code="0x1b000021">効果音1b</title>
+			<title code="0x00000022">効果音00</title>
+			<title code="0x01000022">効果音01</title>
+			<title code="0x02000022">効果音02</title>
+			<title code="0x03000022">効果音03</title>
+			<title code="0x04000022">効果音04</title>
+			<title code="0x05000022">効果音05</title>
+			<title code="0x06000022">効果音06</title>
+			<title code="0x07000022">効果音07</title>
+			<title code="0x08000022">効果音08</title>
+			<title code="0x09000022">効果音09</title>
+			<title code="0x0a000022">効果音0a</title>
+			<title code="0x0b000022">効果音0b</title>
+			<title code="0x0c000022">効果音0c</title>
+			<title code="0x0d000022">効果音0d</title>
+			<title code="0x0e000022">効果音0e</title>
+			<title code="0x0f000022">効果音0f</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Jesus II (ジーザス２) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1000"/>
+			<option name="mdata_size" value="0x3000"/>
+			<option name="mfile_size" value="0x3000"/>
+		</options>
+		<romlist archive="jesus2">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x6b00">music.com</rom>
+			<rom type="bgm" offset="0x00">mus_a.com</rom>
+			<rom type="bgm" offset="0x01">mus_b.com</rom>
+			<rom type="bgm" offset="0x02">mus_c.com</rom>
+			<rom type="bgm" offset="0x03">mus_d.com</rom>
+			<rom type="bgm" offset="0x04">mus_f.com</rom>
+			<rom type="bgm" offset="0x05">mus_g.com</rom>
+			<rom type="bgm" offset="0x06">mus_h.com</rom>
+			<rom type="bgm" offset="0x07">mus_i.com</rom>
+			<rom type="bgm" offset="0x08">mus_j.com</rom>
+			<rom type="bgm" offset="0x09">mus_k.com</rom>
+			<rom type="bgm" offset="0x0a">mus_l.com</rom>
+			<rom type="bgm" offset="0x0b">mus_m.com</rom>
+			<rom type="bgm" offset="0x0c">mus_n.com</rom>
+			<rom type="bgm" offset="0x0d">mus_o.com</rom>
+			<rom type="bgm" offset="0x0e">mus_p.com</rom>
+			<rom type="bgm" offset="0x20">effec1.com</rom>
+			<rom type="bgm" offset="0x21">effec2.com</rom>
+			<rom type="bgm" offset="0x22">effec3.com</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000020">Opening Demo (オープニングデモ)</title>
+			<title code="0x00000009">In the Cosmos (Radio Ver.) (宇宙に立ちて(ラジカセ ver.))</title>
+			<title code="0x00000006">Ship's Hawaiian (船上のハワイアン)</title>
+			<title code="0x0000000d">In the Cosmos (Alt. Radio Version) (宇宙に立ちて(ラジカセ 別ver.))</title>
+			<title code="0x0000000c">Suspense (サスペンス)</title>
+			<title code="0x00000000">Army Theme (軍隊のテーマ)</title>
+			<title code="0x00000003">Blue Infinity (蒼い無限)</title>
+			<title code="0x00000008">In the Cosmos (宇宙に立ちて)</title>
+			<title code="0x00000007">In the Cosmos (in G) (宇宙に立ちて(in G))</title>
+			<title code="0x0000000b">The Departing (去り行く者たち)</title>
+			<title code="0x0000000e">Monster (モンスター)</title>
+			<title code="0x00000004">Elegy (エレジー)</title>
+			<title code="0x0000000a">Requiem (レクイエム)</title>
+			<title code="0x00000005">Fight (ファイト)</title>
+			<title code="0x00000002">Monster (Full Version) (モンスター(フルバージョン))</title>
+			<title code="0x00000001">Finale (In the Cosmos/Blue Infinity/The Departing/In the Cosmos)</title>
+			<title code="0x00000001">              (フィナーレ(宇宙に立ちて～蒼い無限～去り行く者たち～宇宙に立ちて)</title>
+			<title code="0x00000020">効果音00</title>
+			<title code="0x02000020">効果音02</title>
+			<title code="0x03000020">効果音03</title>
+			<title code="0x04000020">効果音04</title>
+			<title code="0x05000020">効果音05</title>
+			<title code="0x06000020">効果音06</title>
+			<title code="0x07000020">効果音07</title>
+			<title code="0x08000020">効果音08</title>
+			<title code="0x09000020">効果音09</title>
+			<title code="0x0a000020">効果音0a</title>
+			<title code="0x0b000020">効果音0b</title>
+			<title code="0x0c000020">効果音0c</title>
+			<title code="0x0d000020">効果音0d</title>
+			<title code="0x0e000020">効果音0e</title>
+			<title code="0x0f000020">効果音0f</title>
+			<title code="0x10000020">効果音10</title>
+			<title code="0x11000020">効果音11</title>
+			<title code="0x12000020">効果音12</title>
+			<title code="0x13000020">効果音13</title>
+			<title code="0x14000020">効果音14</title>
+			<title code="0x15000020">効果音15</title>
+			<title code="0x16000020">効果音16</title>
+			<title code="0x17000020">効果音17</title>
+			<title code="0x18000020">効果音18</title>
+			<title code="0x00000021">効果音00</title>
+			<title code="0x01000021">効果音01</title>
+			<title code="0x02000021">効果音02</title>
+			<title code="0x03000021">効果音03</title>
+			<title code="0x04000021">効果音04</title>
+			<title code="0x05000021">効果音05</title>
+			<title code="0x06000021">効果音06</title>
+			<title code="0x07000021">効果音07</title>
+			<title code="0x08000021">効果音08</title>
+			<title code="0x09000021">効果音09</title>
+			<title code="0x0a000021">効果音0a</title>
+			<title code="0x0b000021">効果音0b</title>
+			<title code="0x0c000021">効果音0c</title>
+			<title code="0x0d000021">効果音0d</title>
+			<title code="0x0e000021">効果音0e</title>
+			<title code="0x0f000021">効果音0f</title>
+			<title code="0x10000021">効果音10</title>
+			<title code="0x11000021">効果音11</title>
+			<title code="0x12000021">効果音12</title>
+			<title code="0x13000021">効果音13</title>
+			<title code="0x14000021">効果音14</title>
+			<title code="0x15000021">効果音15</title>
+			<title code="0x16000021">効果音16</title>
+			<title code="0x17000021">効果音17</title>
+			<title code="0x18000021">効果音18</title>
+			<title code="0x19000021">効果音19</title>
+			<title code="0x1a000021">効果音1a</title>
+			<title code="0x1b000021">効果音1b</title>
+			<title code="0x00000022">効果音00</title>
+			<title code="0x01000022">効果音01</title>
+			<title code="0x02000022">効果音02</title>
+			<title code="0x03000022">効果音03</title>
+			<title code="0x04000022">効果音04</title>
+			<title code="0x05000022">効果音05</title>
+			<title code="0x06000022">効果音06</title>
+			<title code="0x07000022">効果音07</title>
+			<title code="0x08000022">効果音08</title>
+			<title code="0x09000022">効果音09</title>
+			<title code="0x0a000022">効果音0a</title>
+			<title code="0x0b000022">効果音0b</title>
+			<title code="0x0c000022">効果音0c</title>
+			<title code="0x0d000022">効果音0d</title>
+			<title code="0x0e000022">効果音0e</title>
+			<title code="0x0f000022">効果音0f</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] World Golf II (ワールドゴルフ２)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<romlist archive="wgolf2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening</title>
+			<title code="0x01">Coffee Break #1</title>
+			<title code="0x02">Coffee Break #2</title>
+			<title code="0x03">Awards Ceremony (表彰式)</title>
+			<title code="0x04">Ending</title>
+			<title code="0x05">Birdie Try</title>
+			<title code="0x06">Eagle Try</title>
+			<title code="0x07">Albatross</title>
+			<title code="0x08">Eagle</title>
+			<title code="0x09">Start (Short Hole)</title>
+			<title code="0x0a">Start (Middle Hole)</title>
+			<title code="0x0b">Start (Long Hole)</title>
+			<title code="0x0c">Birdie</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] World Golf III (ワールドゴルフ３) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="use_pcmx8" value="0x01"/>
+		</options>
+		<romlist archive="wgolf3">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">DRIVER</rom>
+			<rom type="adpcm" offset="0x00000">ADPCM</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening Demo (オープニングデモ)</title>
+			<title code="0x01">Menu (メニュー)</title>
+			<title code="0x02">Coffee Break (コーヒーブレイク)</title>
+			<title code="0x03">Hole Out (ホールアウト)</title>
+			<title code="0x04">Awards Ceremony (表彰式)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] World Golf III (ワールドゴルフ３) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<romlist archive="wgolf3">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening Demo (オープニングデモ)</title>
+			<title code="0x01">Menu (メニュー)</title>
+			<title code="0x02">Coffee Break (コーヒーブレイク)</title>
+			<title code="0x03">Hole Out (ホールアウト)</title>
+			<title code="0x04">Awards Ceremony (表彰式)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Fangs: The Saga of Wolf Blood (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="init_pc"    value="0xf000"/>
+			<option name="mdata_size" value="0x2100"/>
+			<option name="mfile_size" value="0x2100"/>
+			<option name="use_pcmx8"  value="0x01"/>
+		</options>
+		<romlist archive="fangs">
+			<rom type="code" offset="0x0300">SYSTEM.BIN</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="adpcm" offset="0x00000">AKI0.PCM</rom>
+			<rom type="adpcm" offset="0x01f40">AKI1.PCM</rom>
+			<rom type="adpcm" offset="0x03e80">AKI2.PCM</rom>
+			<rom type="adpcm" offset="0x05dc0">AKI3.PCM</rom>
+			<rom type="adpcm" offset="0x07d00">AKI4.PCM</rom>
+			<rom type="adpcm" offset="0x09c40">AKI5.PCM</rom>
+			<rom type="adpcm" offset="0x0bb80">AKI6.PCM</rom>
+			<rom type="adpcm" offset="0x0dac0">AKI7.PCM</rom>
+			<rom type="adpcm" offset="0x0fa00">AKI8.PCM</rom>
+			<rom type="adpcm" offset="0x11940">AKI9.PCM</rom>
+			<rom type="adpcm" offset="0x13880">AKI10.PCM</rom>
+			<rom type="adpcm" offset="0x157c0">AKI11.PCM</rom>
+			<rom type="adpcm" offset="0x17700">AKI12.PCM</rom>
+			<rom type="adpcm" offset="0x19640">AKI13.PCM</rom>
+			<rom type="adpcm" offset="0x1b580">AKI14.PCM</rom>
+			<rom type="adpcm" offset="0x1d4c0">AKI15.PCM</rom>
+			<rom type="adpcm" offset="0x1f400">AKI16.PCM</rom>
+			<rom type="adpcm" offset="0x21340">AKI17.PCM</rom>
+			<rom type="adpcm" offset="0x23280">AKI18.PCM</rom>
+			<rom type="adpcm" offset="0x251c0">AKI19.PCM</rom>
+			<rom type="adpcm" offset="0x27100">AKI20.PCM</rom>
+			<rom type="adpcm" offset="0x29040">AKI21.PCM</rom>
+			<rom type="adpcm" offset="0x2af80">AKI22.PCM</rom>
+			<rom type="adpcm" offset="0x2cec0">AKI23.PCM</rom>
+			<rom type="adpcm" offset="0x2ee00">AKI24.PCM</rom>
+			<rom type="adpcm" offset="0x30d40">AKI25.PCM</rom>
+			<rom type="adpcm" offset="0x32c80">AKI26.PCM</rom>
+			<rom type="adpcm" offset="0x34bc0">AKI27.PCM</rom>
+			<rom type="adpcm" offset="0x36b00">AKI28.PCM</rom>
+			<rom type="adpcm" offset="0x38a40">AKI29.PCM</rom>
+			<rom type="adpcm" offset="0x3a980">AKI30.PCM</rom>
+			<rom type="adpcm" offset="0x3c8c0">AKI31.PCM</rom>
+			<rom type="bgm" offset="0x00">M-01.MSD</rom>
+			<rom type="bgm" offset="0x01">M-10.MSD</rom>
+			<rom type="bgm" offset="0x02">M-9.MSD</rom>
+			<rom type="bgm" offset="0x03">MUS-01.MSD</rom>
+			<rom type="bgm" offset="0x04">MUS-02.MSD</rom>
+			<rom type="bgm" offset="0x05">MUS-03.MSD</rom>
+			<rom type="bgm" offset="0x06">MUS-06.MSD</rom>
+			<rom type="bgm" offset="0x07">MUS-07.MSD</rom>
+			<rom type="bgm" offset="0x08">MUS-08.MSD</rom>
+			<rom type="bgm" offset="0x09">MUS-09.MSD</rom>
+			<rom type="bgm" offset="0x0a">MUS-10.MSD</rom>
+			<rom type="bgm" offset="0x0b">MUS-11.MSD</rom>
+			<rom type="bgm" offset="0x0c">MUS-12.MSD</rom>
+			<rom type="bgm" offset="0x0d">MUS-13.MSD</rom>
+			<rom type="bgm" offset="0x0e">MUS-14.MSD</rom>
+			<rom type="bgm" offset="0x0f">MUS-16.MSD</rom>
+			<rom type="bgm" offset="0x10">MUS-17.MSD</rom>
+			<rom type="bgm" offset="0x11">MUS-19.MSD</rom>
+			<rom type="bgm" offset="0x12">MUS-20.MSD</rom>
+			<rom type="bgm" offset="0x13">MUS-22.MSD</rom>
+			<rom type="bgm" offset="0x14">MUS-23.MSD</rom>
+			<rom type="bgm" offset="0x15">MUS-24.MSD</rom>
+			<rom type="bgm" offset="0x16">MUS-25.MSD</rom>
+			<rom type="bgm" offset="0x17">MUS-26.MSD</rom>
+			<rom type="bgm" offset="0x18">MUS-27.MSD</rom>
+			<rom type="bgm" offset="0x19">MUS-28.MSD</rom>
+			<rom type="bgm" offset="0x1a">MUS-30.MSD</rom>
+			<rom type="bgm" offset="0x1b">MUS-32.MSD</rom>
+			<rom type="bgm" offset="0x1c">MUS-36.MSD</rom>
+			<rom type="bgm" offset="0x1d">MUS-98.MSD</rom>
+			<rom type="bgm" offset="0x1e">MUS31A.MSD</rom>
+			<rom type="bgm" offset="0x1f">MUS31B.MSD</rom>
+			<rom type="bgm" offset="0x20">M-2.MSD</rom>
+			<rom type="bgm" offset="0x21">M-31.MSD</rom>
+			<rom type="bgm" offset="0x22">SAMPLE.MSD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">M-01.MSD</title>
+			<title code="0x01">M-10.MSD</title>
+			<title code="0x02">M-9.MSD</title>
+			<title code="0x03">MUS-01.MSD</title>
+			<title code="0x04">MUS-02.MSD</title>
+			<title code="0x05">MUS-03.MSD</title>
+			<title code="0x06">MUS-06.MSD</title>
+			<title code="0x07">MUS-07.MSD</title>
+			<title code="0x08">MUS-08.MSD</title>
+			<title code="0x09">MUS-09.MSD</title>
+			<title code="0x0a">MUS-10.MSD</title>
+			<title code="0x0b">MUS-11.MSD</title>
+			<title code="0x0c">MUS-12.MSD</title>
+			<title code="0x0d">MUS-13.MSD</title>
+			<title code="0x0e">MUS-14.MSD</title>
+			<title code="0x0f">MUS-16.MSD</title>
+			<title code="0x10">MUS-17.MSD</title>
+			<title code="0x11">MUS-19.MSD</title>
+			<title code="0x12">MUS-20.MSD</title>
+			<title code="0x13">MUS-22.MSD</title>
+			<title code="0x14">MUS-23.MSD</title>
+			<title code="0x15">MUS-24.MSD</title>
+			<title code="0x16">MUS-25.MSD</title>
+			<title code="0x17">MUS-26.MSD</title>
+			<title code="0x18">MUS-27.MSD</title>
+			<title code="0x19">MUS-28.MSD</title>
+			<title code="0x1a">MUS-30.MSD</title>
+			<title code="0x1b">MUS-32.MSD</title>
+			<title code="0x1c">MUS-36.MSD</title>
+			<title code="0x1d">MUS-98.MSD</title>
+			<title code="0x1e">MUS31A.MSD</title>
+			<title code="0x1f">MUS31B.MSD</title>
+			<title code="0x20">M-2.MSD</title>
+			<title code="0x21">M-31.MSD</title>
+			<title code="0x22">SAMPLE.MSD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Fangs: The Saga of Wolf Blood (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="init_pc"    value="0xf000"/>
+			<option name="mdata_size" value="0x2100"/>
+			<option name="mfile_size" value="0x2100"/>
+		</options>
+		<romlist archive="fangs">
+			<rom type="code" offset="0x0300">SYSTEM.BIN</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">M-01.MSD</rom>
+			<rom type="bgm" offset="0x01">M-10.MSD</rom>
+			<rom type="bgm" offset="0x02">M-9.MSD</rom>
+			<rom type="bgm" offset="0x03">MUS-01.MSD</rom>
+			<rom type="bgm" offset="0x04">MUS-02.MSD</rom>
+			<rom type="bgm" offset="0x05">MUS-03.MSD</rom>
+			<rom type="bgm" offset="0x06">MUS-06.MSD</rom>
+			<rom type="bgm" offset="0x07">MUS-07.MSD</rom>
+			<rom type="bgm" offset="0x08">MUS-08.MSD</rom>
+			<rom type="bgm" offset="0x09">MUS-09.MSD</rom>
+			<rom type="bgm" offset="0x0a">MUS-10.MSD</rom>
+			<rom type="bgm" offset="0x0b">MUS-11.MSD</rom>
+			<rom type="bgm" offset="0x0c">MUS-12.MSD</rom>
+			<rom type="bgm" offset="0x0d">MUS-13.MSD</rom>
+			<rom type="bgm" offset="0x0e">MUS-14.MSD</rom>
+			<rom type="bgm" offset="0x0f">MUS-16.MSD</rom>
+			<rom type="bgm" offset="0x10">MUS-17.MSD</rom>
+			<rom type="bgm" offset="0x11">MUS-19.MSD</rom>
+			<rom type="bgm" offset="0x12">MUS-20.MSD</rom>
+			<rom type="bgm" offset="0x13">MUS-22.MSD</rom>
+			<rom type="bgm" offset="0x14">MUS-23.MSD</rom>
+			<rom type="bgm" offset="0x15">MUS-24.MSD</rom>
+			<rom type="bgm" offset="0x16">MUS-25.MSD</rom>
+			<rom type="bgm" offset="0x17">MUS-26.MSD</rom>
+			<rom type="bgm" offset="0x18">MUS-27.MSD</rom>
+			<rom type="bgm" offset="0x19">MUS-28.MSD</rom>
+			<rom type="bgm" offset="0x1a">MUS-30.MSD</rom>
+			<rom type="bgm" offset="0x1b">MUS-32.MSD</rom>
+			<rom type="bgm" offset="0x1c">MUS-36.MSD</rom>
+			<rom type="bgm" offset="0x1d">MUS-98.MSD</rom>
+			<rom type="bgm" offset="0x1e">MUS31A.MSD</rom>
+			<rom type="bgm" offset="0x1f">MUS31B.MSD</rom>
+			<rom type="bgm" offset="0x20">M-2.MSD</rom>
+			<rom type="bgm" offset="0x21">M-31.MSD</rom>
+			<rom type="bgm" offset="0x22">SAMPLE.MSD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">M-01.MSD</title>
+			<title code="0x01">M-10.MSD</title>
+			<title code="0x02">M-9.MSD</title>
+			<title code="0x03">MUS-01.MSD</title>
+			<title code="0x04">MUS-02.MSD</title>
+			<title code="0x05">MUS-03.MSD</title>
+			<title code="0x06">MUS-06.MSD</title>
+			<title code="0x07">MUS-07.MSD</title>
+			<title code="0x08">MUS-08.MSD</title>
+			<title code="0x09">MUS-09.MSD</title>
+			<title code="0x0a">MUS-10.MSD</title>
+			<title code="0x0b">MUS-11.MSD</title>
+			<title code="0x0c">MUS-12.MSD</title>
+			<title code="0x0d">MUS-13.MSD</title>
+			<title code="0x0e">MUS-14.MSD</title>
+			<title code="0x0f">MUS-16.MSD</title>
+			<title code="0x10">MUS-17.MSD</title>
+			<title code="0x11">MUS-19.MSD</title>
+			<title code="0x12">MUS-20.MSD</title>
+			<title code="0x13">MUS-22.MSD</title>
+			<title code="0x14">MUS-23.MSD</title>
+			<title code="0x15">MUS-24.MSD</title>
+			<title code="0x16">MUS-25.MSD</title>
+			<title code="0x17">MUS-26.MSD</title>
+			<title code="0x18">MUS-27.MSD</title>
+			<title code="0x19">MUS-28.MSD</title>
+			<title code="0x1a">MUS-30.MSD</title>
+			<title code="0x1b">MUS-32.MSD</title>
+			<title code="0x1c">MUS-36.MSD</title>
+			<title code="0x1d">MUS-98.MSD</title>
+			<title code="0x1e">MUS31A.MSD</title>
+			<title code="0x1f">MUS31B.MSD</title>
+			<title code="0x20">M-2.MSD</title>
+			<title code="0x21">M-31.MSD</title>
+			<title code="0x22">SAMPLE.MSD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Misty Blue (ミスティーブルー) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9500"/>
+		</options>
+		<romlist archive="mistyblue">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">FILE0003</rom>
+			<rom type="code" offset="0x9400">FILE0004</rom>
+			<rom type="code" offset="0x9500">FILE112D</rom>
+			<rom type="adpcm" offset="0x00000">FILE0006</rom>
+			<rom type="adpcm" offset="0x007b0">FILE0007</rom>
+			<rom type="adpcm" offset="0x01440">FILE0008</rom>
+			<rom type="adpcm" offset="0x01e90">FILE0009</rom>
+			<rom type="adpcm" offset="0x026c0">FILE000A</rom>
+			<rom type="adpcm" offset="0x030e0">FILE000B</rom>
+			<rom type="adpcm" offset="0x039c0">FILE000C</rom>
+			<rom type="adpcm" offset="0x05958">FILE000D</rom>
+			<rom type="adpcm" offset="0x07f30">FILE000E</rom>
+			<rom type="adpcm" offset="0x09a98">FILE000F</rom>
+			<rom type="adpcm" offset="0x0a6f8">FILE0010</rom>
+			<rom type="adpcm" offset="0x0b380">FILE0011</rom>
+			<rom type="adpcm" offset="0x0bd30">FILE0012</rom>
+			<rom type="adpcm" offset="0x0c1b0">FILE0013</rom>
+			<rom type="adpcm" offset="0x0dc00">FILE0014</rom>
+			<rom type="adpcm" offset="0x0e090">FILE0015</rom>
+			<rom type="adpcm" offset="0x0f350">FILE0016</rom>
+			<rom type="adpcm" offset="0x0f880">FILE0017</rom>
+			<rom type="adpcm" offset="0x10160">FILE0018</rom>
+			<rom type="adpcm" offset="0x11e48">FILE0019</rom>
+			<rom type="adpcm" offset="0x12b70">FILE001A</rom>
+			<rom type="bgm" offset="0x00">FILE012C</rom>
+			<rom type="bgm" offset="0x01">FILE012E</rom>
+			<rom type="bgm" offset="0x02">FILE012F</rom>
+			<rom type="bgm" offset="0x03">FILE0130</rom>
+			<rom type="bgm" offset="0x04">FILE0131</rom>
+			<rom type="bgm" offset="0x05">FILE0132</rom>
+			<rom type="bgm" offset="0x06">FILE0133</rom>
+			<rom type="bgm" offset="0x07">FILE0134</rom>
+			<rom type="bgm" offset="0x08">FILE0135</rom>
+			<rom type="bgm" offset="0x09">FILE0136</rom>
+			<rom type="bgm" offset="0x0a">FILE0137</rom>
+			<rom type="bgm" offset="0x0b">FILE0138</rom>
+			<rom type="bgm" offset="0x0c">FILE0139</rom>
+			<rom type="bgm" offset="0x0d">FILE013A</rom>
+			<rom type="bgm" offset="0x0e">FILE013B</rom>
+			<rom type="bgm" offset="0x0f">FILE013C</rom>
+			<rom type="bgm" offset="0x10">FILE013D</rom>
+			<rom type="bgm" offset="0x11">FILE013E</rom>
+			<rom type="bgm" offset="0x12">FILE0140</rom>
+			<rom type="bgm" offset="0x13">FILE0142</rom>
+			<rom type="bgm" offset="0x14">FILE0143</rom>
+			<rom type="bgm" offset="0x15">FILE0144</rom>
+			<rom type="bgm" offset="0x16">FILE0146</rom>
+			<rom type="bgm" offset="0x17">FILE112C</rom>
+			<rom type="bgm" offset="0x18">FILE112D</rom>
+			<rom type="bgm" offset="0x19">FILE112E</rom>
+			<rom type="bgm" offset="0x1a">FILE516D</rom>
+			<rom type="bgm" offset="0x1b">FILE516E</rom>
+			<rom type="bgm" offset="0x1c">FILE516F</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">In the morning</title>
+			<title code="0x17">Broken beats</title>
+			<title code="0x18">Opening</title>
+		<!--	<title code="0x19">FILE112E : Opening (OPN version)</title> -->
+			<title code="0x0b">Lovers</title>
+			<title code="0x04">Suspicion (疑惑)</title>
+			<title code="0x07">Elusive Thought (届かぬ思い)</title>
+			<title code="0x06">Illusion</title>
+			<title code="0x0c">I wanna close to you</title>
+			<title code="0x0d">Misty Blue</title>
+			<title code="0x03">Hold me tonight</title>
+			<title code="0x0f">Dancing heart</title>
+			<title code="0x0e">Catch the step</title>
+			<title code="0x1a">Theme of enix quest</title>
+			<title code="0x1b">Escape (enix quest)</title>
+			<title code="0x1c">Battle (enix quest)</title>
+			<title code="0x05">ミッキーの家の曲</title>
+			<title code="0x10">ミッキーの家の曲(ループ)</title>
+			<title code="0x0a">警察の曲</title>
+			<title code="0x11">警察の曲(ループ)</title>
+			<title code="0x08">BRIDGE 1</title>
+			<title code="0x09">BRIDGE 2</title>
+			<title code="0x01">無音</title>
+			<title code="0x02">トーン</title>
+			<title code="0x12">電話のベル</title>
+			<title code="0x13">電車</title>
+			<title code="0x14">TVのノイズ</title>
+			<title code="0x15">呼び鈴</title>
+			<title code="0x16">FAX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Misty Blue (ミスティーブルー) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">enix</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9500"/>
+		</options>
+		<romlist archive="mistyblue">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">FILE0003</rom>
+			<rom type="code" offset="0x9400">FILE0004</rom>
+			<rom type="code" offset="0x9500">FILE112D</rom>
+			<rom type="bgm" offset="0x00">FILE012C</rom>
+			<rom type="bgm" offset="0x01">FILE012E</rom>
+			<rom type="bgm" offset="0x02">FILE012F</rom>
+			<rom type="bgm" offset="0x03">FILE0130</rom>
+			<rom type="bgm" offset="0x04">FILE0131</rom>
+			<rom type="bgm" offset="0x05">FILE0132</rom>
+			<rom type="bgm" offset="0x06">FILE0133</rom>
+			<rom type="bgm" offset="0x07">FILE0134</rom>
+			<rom type="bgm" offset="0x08">FILE0135</rom>
+			<rom type="bgm" offset="0x09">FILE0136</rom>
+			<rom type="bgm" offset="0x0a">FILE0137</rom>
+			<rom type="bgm" offset="0x0b">FILE0138</rom>
+			<rom type="bgm" offset="0x0c">FILE0139</rom>
+			<rom type="bgm" offset="0x0d">FILE013A</rom>
+			<rom type="bgm" offset="0x0e">FILE013B</rom>
+			<rom type="bgm" offset="0x0f">FILE013C</rom>
+			<rom type="bgm" offset="0x10">FILE013D</rom>
+			<rom type="bgm" offset="0x11">FILE013E</rom>
+			<rom type="bgm" offset="0x12">FILE0140</rom>
+			<rom type="bgm" offset="0x13">FILE0142</rom>
+			<rom type="bgm" offset="0x14">FILE0143</rom>
+			<rom type="bgm" offset="0x15">FILE0144</rom>
+			<rom type="bgm" offset="0x16">FILE0146</rom>
+			<rom type="bgm" offset="0x17">FILE112C</rom>
+			<rom type="bgm" offset="0x18">FILE112D</rom>
+			<rom type="bgm" offset="0x19">FILE112E</rom>
+			<rom type="bgm" offset="0x1a">FILE516D</rom>
+			<rom type="bgm" offset="0x1b">FILE516E</rom>
+			<rom type="bgm" offset="0x1c">FILE516F</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">In the morning</title>
+			<title code="0x17">Broken beats</title>
+		<!--	<title code="0x18">FILE112D : Opening</title> -->
+			<title code="0x19">Opening (OPN version)</title>
+			<title code="0x0b">Lovers</title>
+			<title code="0x04">疑惑</title>
+			<title code="0x07">届かぬ想い</title>
+			<title code="0x06">Illusion</title>
+			<title code="0x0c">I wanna close to you</title>
+			<title code="0x0d">Misty Blue</title>
+			<title code="0x03">Hold me tonight</title>
+			<title code="0x0f">Dancing heart</title>
+			<title code="0x0e">Catch the step</title>
+			<title code="0x1a">Theme of enix quest</title>
+			<title code="0x1b">Escape (enix quest)</title>
+			<title code="0x1c">Battle (enix quest)</title>
+			<title code="0x05">ミッキーの家の曲</title>
+			<title code="0x10">ミッキーの家の曲(ループ)</title>
+			<title code="0x0a">警察の曲</title>
+			<title code="0x11">警察の曲(ループ)</title>
+			<title code="0x08">BRIDGE 1</title>
+			<title code="0x09">BRIDGE 2</title>
+			<title code="0x01">無音</title>
+			<title code="0x02">トーン</title>
+			<title code="0x12">電話のベル</title>
+			<title code="0x13">電車</title>
+			<title code="0x14">TVのノイズ</title>
+			<title code="0x15">呼び鈴</title>
+			<title code="0x16">FAX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Jesus II (ジーザス２) (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">enix</driveralias>
+		<romlist archive="jesus298">
+			<rom type="file" offset="-1">46.com</rom>
+			<rom type="file" offset="-1">fakecall.com</rom>
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSIC.DAT</rom>
+			<rom type="shell" offset="0">fakecall</rom>
+			<rom type="shell" offset="0">music</rom>
+			<rom type="shell" offset="0">46</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x65">軍隊のテーマ</title>
+			<title code="0x66">フィナーレ</title>
+			<title code="0x67">モンスター</title>
+			<title code="0x68">コメット</title>
+		<!--	<title code="0x69">オーバーチュア</title> -->
+			<title code="0x6a">エレジー</title>
+			<title code="0x6b">ファイト</title>
+			<title code="0x6c">洋上音楽</title>
+			<title code="0x6d">テーマINＧ</title>
+			<title code="0x6e">テーマ</title>
+			<title code="0x6f">ラジカセ</title>
+			<title code="0x70">レクイエム</title>
+			<title code="0x71">別れ</title>
+			<title code="0x72">サスペンス</title>
+			<title code="0x73">ラジカセ２</title>
+			<title code="0x74">モンスター２</title>
+			<title code="0x01">SFX #01</title>
+			<title code="0x02">SFX #02</title>
+			<title code="0x03">SFX #03</title>
+			<title code="0x04">SFX #04</title>
+			<title code="0x05">SFX #05</title>
+			<title code="0x06">SFX #06</title>
+			<title code="0x07">SFX #07</title>
+			<title code="0x08">SFX #08</title>
+			<title code="0x09">SFX #09</title>
+			<title code="0x0a">SFX #10</title>
+			<title code="0x0b">SFX #11</title>
+			<title code="0x0c">SFX #12</title>
+			<title code="0x0d">SFX #13</title>
+			<title code="0x0e">SFX #14</title>
+			<title code="0x0f">SFX #15</title>
+			<title code="0x10">SFX #16</title>
+			<title code="0x11">SFX #17</title>
+			<title code="0x12">SFX #18</title>
+			<title code="0x13">SFX #19</title>
+			<title code="0x14">SFX #20</title>
+			<title code="0x15">SFX #21</title>
+			<title code="0x16">SFX #22</title>
+			<title code="0x17">SFX #23</title>
+			<title code="0x18">SFX #24</title>
+			<title code="0x19">SFX #25</title>
+			<title code="0x1a">SFX #26</title>
+			<title code="0x1b">SFX #27</title>
+			<title code="0xff">フェードアウト</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Jesus II (ジーザス２) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">enix</driveralias>
+		<options>
+			<option name="fm_mix"   value="10"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="jesus298">
+			<rom type="file" offset="-1">46.com</rom>
+			<rom type="file" offset="-1">fakecall.com</rom>
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="shell" offset="0">fakecall</rom>
+			<rom type="shell" offset="0">music</rom>
+			<rom type="shell" offset="0">46</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x65">軍隊のテーマ</title>
+			<title code="0x66">フィナーレ</title>
+			<title code="0x67">モンスター</title>
+			<title code="0x68">コメット</title>
+		<!--	<title code="0x69">オーバーチュア</title> -->
+			<title code="0x6a">エレジー</title>
+			<title code="0x6b">ファイト</title>
+			<title code="0x6c">洋上音楽</title>
+			<title code="0x6d">テーマINＧ</title>
+			<title code="0x6e">テーマ</title>
+			<title code="0x6f">ラジカセ</title>
+			<title code="0x70">レクイエム</title>
+			<title code="0x71">別れ</title>
+			<title code="0x72">サスペンス</title>
+			<title code="0x73">ラジカセ２</title>
+			<title code="0x74">モンスター２</title>
+			<title code="0x01">SFX #01</title>
+			<title code="0x02">SFX #02</title>
+			<title code="0x03">SFX #03</title>
+			<title code="0x04">SFX #04</title>
+			<title code="0x05">SFX #05</title>
+			<title code="0x06">SFX #06</title>
+			<title code="0x07">SFX #07</title>
+			<title code="0x08">SFX #08</title>
+			<title code="0x09">SFX #09</title>
+			<title code="0x0a">SFX #10</title>
+			<title code="0x0b">SFX #11</title>
+			<title code="0x0c">SFX #12</title>
+			<title code="0x0d">SFX #13</title>
+			<title code="0x0e">SFX #14</title>
+			<title code="0x0f">SFX #15</title>
+			<title code="0x10">SFX #16</title>
+			<title code="0x11">SFX #17</title>
+			<title code="0x12">SFX #18</title>
+			<title code="0x13">SFX #19</title>
+			<title code="0x14">SFX #20</title>
+			<title code="0x15">SFX #21</title>
+			<title code="0x16">SFX #22</title>
+			<title code="0x17">SFX #23</title>
+			<title code="0x18">SFX #24</title>
+			<title code="0x19">SFX #25</title>
+			<title code="0x1a">SFX #26</title>
+			<title code="0x1b">SFX #27</title>
+			<title code="0xff">フェードアウト</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] 46 Oku Nen Monogatari: The Shinka Ron (46億年物語 －THE進化論－)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">enix</driveralias>
+		<options>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="46oku98">
+			<rom type="file" offset="-1">46.com</rom>
+			<rom type="file" offset="-1">fakecall.com</rom>
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="shell" offset="0">fakecall</rom>
+			<rom type="shell" offset="0">music</rom>
+			<rom type="shell" offset="0">46</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニングテーマ</title>
+			<title code="0x01">進化のテーマ</title>
+			<title code="0x02">ほこらのテーマ</title>
+			<title code="0x03">不気味なダンジョン</title>
+			<title code="0x04">哀愁</title>
+			<title code="0x05">フィールドのテーマＡ</title>
+			<title code="0x06">フィールドのテーマＢ</title>
+			<title code="0x07">女神ガイアのテーマ</title>
+			<title code="0x08">アトランティスの軍隊</title>
+			<title code="0x09">呪魔のテーマ</title>
+			<title code="0x0a">破壊そして誕生</title>
+			<title code="0x0b">最後の戦い</title>
+			<title code="0x0c">フィナーレ</title>
+			<title code="0x0d">進化ファンファーレ</title>
+			<title code="0x0e">戦闘のテーマ</title>
+			<title code="0x0f">ゲームオーバー</title>
+			<title code="0x10">戦闘終了</title>
+			<title code="0x11">進化エンド</title>
+			<title code="0x12">やられ  自分</title>
+			<title code="0x13">やられ  敵</title>
+			<title code="0x14">攻撃    自分</title>
+			<title code="0x15">攻撃    敵</title>
+			<title code="0x16">地震</title>
+			<title code="0x17">爆発</title>
+			<title code="0x18">波</title>
+			<title code="0x19">落下</title>
+			<title code="0x1a">足音</title>
+			<title code="0x1b">機械・ＵＦＯ</title>
+			<title code="0x1c">落雷</title>
+			<title code="0x1d">風</title>
+			<title code="0x1e">会話Ａ</title>
+			<title code="0x1f">会話Ｂ</title>
+			<title code="0x20">会話Ｃ</title>
+			<title code="0x21">会話Ｄ</title>
+			<title code="0x22">会話Ｅ</title>
+			<title code="0x23">逃げる</title>
+			<title code="0x24">ワープイン</title>
+			<title code="0x25">ワープアウト</title>
+			<title code="0x26">呪魔断末魔</title>
+			<title code="0x27">打撃音</title>
+			<title code="0x28">特殊攻撃Ａ</title>
+			<title code="0x29">特殊攻撃Ｂ</title>
+			<title code="0x2a">呪魔攻撃</title>
+			<title code="0x2b">良いアイテム</title>
+			<title code="0x2c">悪いアイテム</title>
+			<title code="0x2d">春がくる</title>
+			<title code="0x2e">緊迫！</title>
+			<title code="0x2f">創世</title>
+			<title code="0x30">エンディング</title>
+			<title code="0x31">巨大化</title>
+			<title code="0x32">スギヤマン</title>
+			<title code="0xff">フェードアウト</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Gunyu Sangokushi (群雄三国志)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">enix</driveralias>
+		<options>
+			<option name="fm_mix"  value="19"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="g3goku98">
+			<rom type="file" offset="-1">g3.com</rom>
+			<rom type="file" offset="-1">S.EXE</rom>
+			<rom type="file" offset="0x05">END.MUX</rom>
+			<rom type="file" offset="0x06">FT1.MUX</rom>
+			<rom type="file" offset="0x07">FT2.MUX</rom>
+			<rom type="file" offset="0x08">LOSS.MUX</rom>
+			<rom type="file" offset="0x09">MAIN1.MUX</rom>
+			<rom type="file" offset="0x0a">MAIN2.MUX</rom>
+			<rom type="file" offset="0x0b">OPEN.MUX</rom>
+			<rom type="file" offset="0x0c">OVER.MUX</rom>
+			<rom type="file" offset="0x0d">WIN.MUX</rom>
+			<rom type="shell" offset="0">g3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x0b">Opening (オープニング)</title>
+			<title code="0x09">Battle Map (Opening) (戦略画面(序盤))</title>
+			<title code="0x0a">Battle Map (Ending) (戦略画面(終盤))</title>
+			<title code="0x06">Battle (Offense) (戦闘 (攻勢))</title>
+			<title code="0x07">Battle (Defense) (戦闘 (守勢))</title>
+			<title code="0x0d">Victory (勝利)</title>
+			<title code="0x08">Defeat (敗戦)</title>
+			<title code="0x0c">Game Over (ゲームオーバー)</title>
+			<title code="0x05">Unity (統一)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Shutendouji (手天童子)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">enix</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="ttdk_98">
+			<rom type="file" offset="-1">PLAY5_98.COM</rom>
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="0x10">M1.M</rom>
+			<rom type="file" offset="0x11">M2.M</rom>
+			<rom type="file" offset="0x12">M3.M</rom>
+			<rom type="file" offset="0x13">M4.M</rom>
+			<rom type="file" offset="0x14">M5.M</rom>
+			<rom type="file" offset="0x15">M6.M</rom>
+			<rom type="file" offset="0x16">M8.M</rom>
+			<rom type="file" offset="0x17">M9.M</rom>
+			<rom type="file" offset="0x18">M10.M</rom>
+			<rom type="file" offset="0x19">M11.M</rom>
+			<rom type="file" offset="0x1a">M12.M</rom>
+			<rom type="file" offset="0x1b">M13.M</rom>
+			<rom type="file" offset="0x1c">M14.M</rom>
+			<rom type="file" offset="0x1d">M15.M</rom>
+			<rom type="file" offset="0x1e">M16.M</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">PLAY5_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">M1.M</title>
+			<title code="0x11">M2.M</title>
+			<title code="0x12">M3.M</title>
+			<title code="0x13">M4.M</title>
+			<title code="0x14">M5.M</title>
+			<title code="0x15">M6.M</title>
+			<title code="0x16">M8.M</title>
+			<title code="0x17">M9.M</title>
+			<title code="0x18">M10.M</title>
+			<title code="0x19">M11.M</title>
+			<title code="0x1a">M12.M</title>
+			<title code="0x1b">M13.M</title>
+			<title code="0x1c">M14.M</title>
+			<title code="0x1d">M15.M</title>
+			<title code="0x1e">M16.M</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Reichsritter (ライヒスリッター 帝国騎士団)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">enix</driveralias>
+		<options>
+			<option name="fm_mix" value="19"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="reichs98">
+			<rom type="file" offset="-1">rr.com</rom>
+			<rom type="file" offset="-1">OPENING.EXE</rom>
+			<rom type="file" offset="0x05">BOSS.MUS</rom>
+			<rom type="file" offset="0x06">DEMO.MUS</rom>
+			<rom type="file" offset="0x07">END.MUS</rom>
+			<rom type="file" offset="0x08">END2.MUS</rom>
+			<rom type="file" offset="0x09">OPEN.MUS</rom>
+			<rom type="file" offset="0x0a">SCROLL.MUS</rom>
+			<rom type="file" offset="0x0b">SCROLL2.MUS</rom>
+			<rom type="file" offset="0x0c">TITLE.MUS</rom>
+			<rom type="file" offset="0x0d">WAIT.MUS</rom>
+			<rom type="file" offset="0x0e">WEDDING.MUS</rom>
+			<rom type="file" offset="0x0f">ASI.MUC</rom>
+			<rom type="file" offset="0x10">RC-ADO.MUC</rom>
+			<rom type="file" offset="0x11">RC-ARI.MUC</rom>
+			<rom type="file" offset="0x12">RC-BUT.MUC</rom>
+			<rom type="file" offset="0x13">RC-DER.MUC</rom>
+			<rom type="file" offset="0x14">RC-EKO.MUC</rom>
+			<rom type="file" offset="0x15">RC-ELK.MUC</rom>
+			<rom type="file" offset="0x16">RC-FUN.MUC</rom>
+			<rom type="file" offset="0x17">RC-GAR.MUC</rom>
+			<rom type="file" offset="0x18">RC-GIS.MUC</rom>
+			<rom type="file" offset="0x19">RC-ISK.MUC</rom>
+			<rom type="file" offset="0x1a">RC-MIL.MUC</rom>
+			<rom type="file" offset="0x1b">RC-THU.MUC</rom>
+			<rom type="file" offset="0x1c">RC-YUL.MUC</rom>
+			<rom type="file" offset="0x1d">RR-ADV.MUC</rom>
+			<rom type="file" offset="0x1e">RR-BEF.MUC</rom>
+			<rom type="file" offset="0x1f">RR-BOS.MUC</rom>
+			<rom type="file" offset="0x20">RR-BS2.MUC</rom>
+			<rom type="file" offset="0x21">RR-CAV.MUC</rom>
+			<rom type="file" offset="0x22">RR-CHR.MUC</rom>
+			<rom type="file" offset="0x23">RR-CRE.MUC</rom>
+			<rom type="file" offset="0x24">RR-DEM.MUC</rom>
+			<rom type="file" offset="0x25">RR-DES.MUC</rom>
+			<rom type="file" offset="0x26">RR-EVE.MUC</rom>
+			<rom type="file" offset="0x27">RR-FAN.MUC</rom>
+			<rom type="file" offset="0x28">RR-FT.MUC</rom>
+			<rom type="file" offset="0x29">RR-FT2.MUC</rom>
+			<rom type="file" offset="0x2a">RR-FT3.MUC</rom>
+			<rom type="file" offset="0x2b">RR-ITM.MUC</rom>
+			<rom type="file" offset="0x2c">RR-LOS.MUC</rom>
+			<rom type="file" offset="0x2d">RR-MON.MUC</rom>
+			<rom type="file" offset="0x2e">RR-OP.MUC</rom>
+			<rom type="file" offset="0x2f">RR-PAS.MUC</rom>
+			<rom type="file" offset="0x30">RR-QUE.MUC</rom>
+			<rom type="file" offset="0x31">RR-RET.MUC</rom>
+			<rom type="file" offset="0x32">RR-ROM.MUC</rom>
+			<rom type="file" offset="0x33">RR-SEA.MUC</rom>
+			<rom type="file" offset="0x34">RR-SHP.MUC</rom>
+			<rom type="file" offset="0x35">RR-SPR.MUC</rom>
+			<rom type="file" offset="0x36">RR-TAC.MUC</rom>
+			<rom type="file" offset="0x37">RR-TRA.MUC</rom>
+			<rom type="file" offset="0x38">RR-TW2.MUC</rom>
+			<rom type="file" offset="0x39">RR-TWN.MUC</rom>
+			<rom type="file" offset="0x3a">RR-WAL.MUC</rom>
+			<rom type="file" offset="0x3b">RR-WIN.MUC</rom>
+			<rom type="shell" offset="0">rr</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x05">BOSS.MUS</title>
+			<title code="0x06">DEMO.MUS</title>
+			<title code="0x07">END.MUS</title>
+			<title code="0x08">END2.MUS</title>
+			<title code="0x09">OPEN.MUS</title>
+			<title code="0x0a">SCROLL.MUS</title>
+			<title code="0x0b">SCROLL2.MUS</title>
+			<title code="0x0c">TITLE.MUS</title>
+			<title code="0x0d">WAIT.MUS</title>
+			<title code="0x0e">WEDDING.MUS</title>
+			<title code="0x0f">ASI.MUC</title>
+			<title code="0x10">RC-ADO.MUC</title>
+			<title code="0x11">RC-ARI.MUC</title>
+			<title code="0x12">RC-BUT.MUC</title>
+			<title code="0x13">RC-DER.MUC</title>
+			<title code="0x14">RC-EKO.MUC</title>
+			<title code="0x15">RC-ELK.MUC</title>
+			<title code="0x16">RC-FUN.MUC</title>
+			<title code="0x17">RC-GAR.MUC</title>
+			<title code="0x18">RC-GIS.MUC</title>
+			<title code="0x19">RC-ISK.MUC</title>
+			<title code="0x1a">RC-MIL.MUC</title>
+			<title code="0x1b">RC-THU.MUC</title>
+			<title code="0x1c">RC-YUL.MUC</title>
+			<title code="0x1d">RR-ADV.MUC</title>
+			<title code="0x1e">RR-BEF.MUC</title>
+			<title code="0x1f">RR-BOS.MUC</title>
+			<title code="0x20">RR-BS2.MUC</title>
+			<title code="0x21">RR-CAV.MUC</title>
+			<title code="0x22">RR-CHR.MUC</title>
+			<title code="0x23">RR-CRE.MUC</title>
+			<title code="0x24">RR-DEM.MUC</title>
+			<title code="0x25">RR-DES.MUC</title>
+			<title code="0x26">RR-EVE.MUC</title>
+			<title code="0x27">RR-FAN.MUC</title>
+			<title code="0x28">RR-FT.MUC</title>
+			<title code="0x29">RR-FT2.MUC</title>
+			<title code="0x2a">RR-FT3.MUC</title>
+			<title code="0x2b">RR-ITM.MUC</title>
+			<title code="0x2c">RR-LOS.MUC</title>
+			<title code="0x2d">RR-MON.MUC</title>
+			<title code="0x2e">RR-OP.MUC</title>
+			<title code="0x2f">RR-PAS.MUC</title>
+			<title code="0x30">RR-QUE.MUC</title>
+			<title code="0x31">RR-RET.MUC</title>
+			<title code="0x32">RR-ROM.MUC</title>
+			<title code="0x33">RR-SEA.MUC</title>
+			<title code="0x34">RR-SHP.MUC</title>
+			<title code="0x35">RR-SPR.MUC</title>
+			<title code="0x36">RR-TAC.MUC</title>
+			<title code="0x37">RR-TRA.MUC</title>
+			<title code="0x38">RR-TW2.MUC</title>
+			<title code="0x39">RR-TWN.MUC</title>
+			<title code="0x3a">RR-WAL.MUC</title>
+			<title code="0x3b">RR-WIN.MUC</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Misty Blue (ミスティーブルー)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">enix</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="mblue98">
+			<rom type="file" offset="-1">musicap.com</rom>
+			<rom type="file" offset="-1">MUSICA98.COM</rom>
+			<rom type="file" offset="0x05">BG010L</rom>
+			<rom type="file" offset="0x06">BG018L</rom>
+			<rom type="file" offset="0x07">BGM001</rom>
+			<rom type="file" offset="0x08">BGM004</rom>
+			<rom type="file" offset="0x09">BGM010</rom>
+			<rom type="file" offset="0x0a">BGM012</rom>
+			<rom type="file" offset="0x0b">BGM013</rom>
+			<rom type="file" offset="0x0c">BGM014</rom>
+			<rom type="file" offset="0x0d">BGM015</rom>
+			<rom type="file" offset="0x0e">BGM016</rom>
+			<rom type="file" offset="0x0f">BGM018</rom>
+			<rom type="file" offset="0x10">BGM019</rom>
+			<rom type="file" offset="0x11">DISCO1</rom>
+			<rom type="file" offset="0x12">DISCO3</rom>
+			<rom type="file" offset="0x13">DISCO4.MSC</rom>
+			<rom type="file" offset="0x14">DISCO6</rom>
+			<rom type="file" offset="0x15">ENIQ3.MSC</rom>
+			<rom type="file" offset="0x16">ENIQ4.MSC</rom>
+			<rom type="file" offset="0x17">ENIQ5.MSC</rom>
+			<rom type="file" offset="0x18">HROCK1</rom>
+			<rom type="file" offset="0x19">HROCK3</rom>
+			<rom type="file" offset="0x1a">KYUFU.MSC</rom>
+			<rom type="file" offset="0x1b">OTO.MSC</rom>
+			<rom type="file" offset="0x1c">ROCK2</rom>
+			<rom type="file" offset="0x1d">TELBEL</rom>
+			<rom type="file" offset="0x1e">file01</rom>
+			<rom type="file" offset="0x1f">file02</rom>
+			<rom type="file" offset="0x20">file03</rom>
+			<rom type="file" offset="0x21">file04</rom>
+			<rom type="shell" offset="0">musica98</rom>
+			<rom type="shell" offset="0">musicap</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1a">Stop the Music (演奏停止)</title>
+			<title code="0x05">BG010L</title>
+			<title code="0x06">BG018L</title>
+			<title code="0x07">BGM001</title>
+			<title code="0x08">Broken beats</title>
+			<title code="0x09">BGM010</title>
+			<title code="0x0a">Illusion</title>
+			<title code="0x0b">In the morning</title>
+			<title code="0x0c">届かぬ思い</title>
+			<title code="0x0d">BGM015</title>
+			<title code="0x0e">BGM016</title>
+			<title code="0x0f">BGM018</title>
+			<title code="0x10">Lovers</title>
+			<title code="0x11">Misty Blue</title>
+			<title code="0x12">Catch the step</title>
+			<title code="0x13">Hold me tonight</title>
+			<title code="0x14">Dancing heart</title>
+			<title code="0x15">Escape (enix quest)</title>
+			<title code="0x16">Battle (enix quest)</title>
+			<title code="0x17">Theme of enix quest</title>
+			<title code="0x18">Opening (未使用)</title>
+			<title code="0x19">Opening</title>
+			<title code="0x1b">OTO.MSC</title>
+			<title code="0x1c">I wanna close to you</title>
+			<title code="0x1d">効果音</title>
+			<title code="0x1e">効果音</title>
+			<title code="0x1f">効果音</title>
+			<title code="0x20">効果音</title>
+			<title code="0x21">効果音</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] The Old Village Story (オールド・ヴィレッジ・ストーリー)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">enix</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="oldv_98">
+			<rom type="file" offset="-1">OLDV_98.COM</rom>
+			<rom type="file" offset="-1">PLAY98.COM</rom>
+			<rom type="file" offset="0x10">CASL-1.M</rom>
+			<rom type="file" offset="0x11">EARTH2.M</rom>
+			<rom type="file" offset="0x12">EMERG.M</rom>
+			<rom type="file" offset="0x13">END-3.M</rom>
+			<rom type="file" offset="0x14">KIKI.M</rom>
+			<rom type="file" offset="0x15">KIKI-2.M</rom>
+			<rom type="file" offset="0x16">KING-1.M</rom>
+			<rom type="file" offset="0x17">KIZOKU.M</rom>
+			<rom type="file" offset="0x18">KUJI-2.M</rom>
+			<rom type="file" offset="0x19">KUJIRA.M</rom>
+			<rom type="file" offset="0x1a">MOMO-1.M</rom>
+			<rom type="file" offset="0x1b">OCEAN.M</rom>
+			<rom type="file" offset="0x1c">OH!.M</rom>
+			<rom type="file" offset="0x1d">SOROW5.M</rom>
+			<rom type="file" offset="0x1e">THEME1.M</rom>
+			<rom type="file" offset="0x1f">TOKEI.M</rom>
+			<rom type="file" offset="0x20">TOWN-1.M</rom>
+			<rom type="file" offset="0x21">TOWN-2.M</rom>
+			<rom type="file" offset="0x22">WALTZ.M</rom>
+			<rom type="file" offset="0x23">WOOD-1.M</rom>
+			<rom type="file" offset="0x24">file01.M</rom>
+			<rom type="shell" offset="0">play98</rom>
+			<rom type="shell" offset="0">oldv_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1e">オープニング</title>
+			<title code="0x22">村</title>
+			<title code="0x10">CASL-1.M</title>
+			<title code="0x11">フィールド2</title>
+			<title code="0x12">EMERG.M</title>
+			<title code="0x13">エンディング</title>
+			<title code="0x14">対決！シルフ (ボス戦)</title>
+			<title code="0x15">KIKI-2.M</title>
+			<title code="0x16">城</title>
+			<title code="0x17">貴族の街</title>
+			<title code="0x18">KUJI-2.M</title>
+			<title code="0x19">クジラ</title>
+			<title code="0x1a">ダンジョン</title>
+			<title code="0x1b">漂流</title>
+			<title code="0x1c">OH!.M</title>
+			<title code="0x1d">SOROW5.M</title>
+			<title code="0x1f">TOKEI.M</title>
+			<title code="0x20">城下町</title>
+			<title code="0x21">TOWN-2.M</title>
+			<title code="0x23">フィールド1</title>
+			<title code="0x24">ジングル</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Angelus: Akuma no Fukuin (アンジェラス ～悪魔の福音～)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">enix</driveralias>
+		<options>
+			<option name="bootcs" value="0x0100"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="angelus_98">
+			<rom type="code" offset="0x01000">angelus.bin</rom>
+			<rom type="code" offset="0x10000">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">プロローグ</title>
+			<title code="0x01">愛のシンパシー ～アンジェラスのテーマ～</title>
+			<title code="0x02">青い石のきらめき</title>
+			<title code="0x03">ブライアンとエリス</title>
+			<title code="0x04">変貌～セヴァの警告～</title>
+			<title code="0x05">ブルー・オブジェ～郷愁～</title>
+			<title code="0x06">エヴァンジェル・オン・グノーシス</title>
+			<title code="0x07">悲しみのノクターン</title>
+			<title code="0x08">エリス・イン・ジャパン</title>
+			<title code="0x09">ペルーのテーマ～ジグソー・タウン～</title>
+			<title code="0x0a">愛のシンパシー～ヴァージョンII～</title>
+			<title code="0x0b">ハード・デイズ</title>
+			<title code="0x0c">エリス・イン・ジャーマニー</title>
+			<title code="0x0d">変貌～ヴァージョンII～</title>
+			<title code="0x0e">予言者</title>
+			<title code="0x0f">愛のシンパシー～ヴァージョンIII～</title>
+			<title code="0x10">彷徨いのプシュケ</title>
+			<title code="0x11">崩壊の彼方</title>
+			<title code="0x12">エピローグ</title>
+			<title code="0x13">ペルー公園にて</title>
+			<title code="0x14">SFX #01</title>
+			<title code="0x15">SFX #02</title>
+			<title code="0x16">SFX #03</title>
+			<title code="0x17">SFX #04</title>
+			<title code="0x18">SFX #05</title>
+			<title code="0x19">SFX #06</title>
+			<title code="0x1a">SFX #07</title>
+			<title code="0x1b">SFX #08</title>
+			<title code="0x1c">SFX #09</title>
+			<title code="0x1d">SFX #10</title>
+			<title code="0x1e">SFX #11</title>
+			<title code="0x1f">SFX #12</title>
+			<title code="0x20">SFX #13</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] World Golf II (ワールドゴルフ２)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">enix</driveralias>
+		<options>
+			<option name="bootcs" value="0x1000"/>
+			<option name="bootip" value="0x9000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+			<option name="dummysndrom" value="1"/>
+		</options>
+		<romlist archive="wg2_98">
+			<rom type="code" offset="0x10000">PROG</rom>
+			<rom type="code" offset="0x19000">wg2.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening</title>
+			<title code="0x01">Coffee Break #1</title>
+			<title code="0x02">Coffee Break #2</title>
+			<title code="0x03">Awards Ceremony (表彰式)</title>
+			<title code="0x04">Ending</title>
+			<title code="0x05">Birdie Try</title>
+			<title code="0x06">Eagle Try</title>
+			<title code="0x07">Hole In One</title>
+			<title code="0x08">Eagle</title>
+			<title code="0x09">Start (Short Hole)</title>
+			<title code="0x0a">Start (Middle Hole)</title>
+			<title code="0x0b">Start (Long Hole)</title>
+			<title code="0x0c">Birdie</title>
+		</titlelist>
+	</game>
+  <game>
+		<name>[X1] WORLD GOLF Ⅱ (ワールドゴルフ２) (OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="X1">enix</driveralias>
+		<romlist archive="x1wg2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">OPMDRV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening</title>
+			<title code="0x01">Coffee Break #1</title>
+			<title code="0x02">Coffee Break #2</title>
+			<title code="0x03">表彰式</title>
+			<title code="0x04">Ending</title>
+			<title code="0x05">Birdie Try</title>
+			<title code="0x06">Eagle Try</title>
+			<title code="0x07">Hole in One</title>
+			<title code="0x08">Eagle</title>
+			<title code="0x09">Start (Short Hole)</title>
+			<title code="0x0a">Start (Middle Hole)</title>
+			<title code="0x0b">Start (Long Hole)</title>
+			<title code="0x0c">Birdie</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] WORLD GOLF Ⅱ (ワールドゴルフ２) (PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">enix</driveralias>
+		<romlist archive="x1wg2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">PSGDRV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening</title>
+			<title code="0x01">Coffee Break #1</title>
+			<title code="0x02">Coffee Break #2</title>
+			<title code="0x03">表彰式</title>
+			<title code="0x04">Ending</title>
+			<title code="0x05">Birdie Try</title>
+			<title code="0x06">Eagle Try</title>
+			<title code="0x07">Hole in One</title>
+			<title code="0x08">Eagle</title>
+			<title code="0x09">Start (Short Hole)</title>
+			<title code="0x0a">Start (Middle Hole)</title>
+			<title code="0x0b">Start (Long Hole)</title>
+			<title code="0x0c">Birdie</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Jesus II (ジーザス２)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">enix</driveralias>
+		<options>
+			<option name="opm_mix" value="0xC0"/>
+			<option name="pcm_mix" value="0xF0"/>
+		</options>
+		<romlist archive="jesus268snd">
+			<rom type="code" offset="0x00000">jesus2.bin</rom>
+			<rom type="x"    offset="0x10000">MUSIC.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x66">軍隊のテーマ</title>
+			<title code="0x67">フィナーレ</title>
+			<title code="0x68">モンスター</title>
+			<title code="0x69">コメット</title>
+			<title code="0x6a">オーバーチュア</title>
+			<title code="0x6b">エレジー</title>
+			<title code="0x6c">ファイト</title>
+			<title code="0x6d">洋上音楽</title>
+			<title code="0x6e">テーマING</title>
+			<title code="0x6f">テーマ</title>
+			<title code="0x70">ラジカセ</title>
+			<title code="0x71">レクイエム</title>
+			<title code="0x72">別れ</title>
+			<title code="0x73">サスペンス</title>
+			<title code="0x74">ラジカセ2</title>
+			<title code="0x75">モンスター2</title>
+			<title code="0x02">貨物船近づく</title>
+			<title code="0x03">レーダー＋通信</title>
+			<title code="0x04">波の音＋ウミネコ</title>
+			<title code="0x05">小さく波の音</title>
+			<title code="0x06">キーボードクリック音</title>
+			<title code="0x07">ダーツ命中音</title>
+			<title code="0x08">客船ぐらいの船の機関室</title>
+			<title code="0x09">コンテナ落下</title>
+			<title code="0x0A">ウインチ巻き上げ</title>
+			<title code="0x0B">電話呼出音</title>
+			<title code="0x0C">電話切る</title>
+			<title code="0x0D">電話話中音</title>
+			<title code="0x0E">遠くで機関室爆発</title>
+			<title code="0x0F">死体が変化</title>
+			<title code="0x10">化け物の音</title>
+			<title code="0x11">銃声</title>
+			<title code="0x12">銃を構える</title>
+			<title code="0x13">コンテナが開く</title>
+			<title code="0x14">一斉掃射</title>
+			<title code="0x15">湯気がたつ</title>
+			<title code="0x16">ヘリコプター音</title>
+			<title code="0x17">ヘリ＋バルカン砲</title>
+			<title code="0x18">ヘリ撃墜音</title>
+			<title code="0x19">エンジン音(小)</title>
+			<title code="0x1A">シャッター音</title>
+			<title code="0x1B">トランシーバーコール音</title>
+			<title code="0x1C">宇宙船エンジン音</title>
+			<title code="0x1D">着艦用ビーコン</title>
+			<title code="0x1E">アリの足音</title>
+			<title code="0x1F">ドッキングベイノイズ</title>
+			<title code="0x20">フォジー移動音</title>
+			<title code="0x21">ドアの開く音</title>
+			<title code="0x22">エレベーター</title>
+			<title code="0x23">研究室ノイズ</title>
+			<title code="0x24">点滅する照明</title>
+			<title code="0x25">ターゲットロックオン</title>
+			<title code="0x26">砂の嵐</title>
+			<title code="0x27">遠くの爆発音</title>
+			<title code="0x28">非常サイレン</title>
+			<title code="0x29">巨大エンジン音</title>
+			<title code="0x2a">エレベーター落下</title>
+			<title code="0x2b">鋼鉄のドアをたたく</title>
+			<title code="0x2c">飛び散るガラス</title>
+			<title code="0x2d">バズーカ発射</title>
+			<title code="0x2e">命中！</title>
+			<title code="0x2f">はしごにかかる靴音</title>
+			<title code="0x30">心臓の鼓動</title>
+			<title code="0x31">波動砲エネルギー充填</title>
+			<title code="0x32">触手が伸びる</title>
+			<title code="0x33">冷気ガス</title>
+			<title code="0x34">フォジー移動音B</title>
+			<title code="0x35">非常サイレン小</title>
+			<title code="0x4E">レーダー音</title>
+			<title code="0x4F">水が落ちる音</title>
+			<title code="0x50">未使用</title>
+			<title code="0x51">ジャーン1</title>
+			<title code="0x52">ジャーン2</title>
+			<title code="0x53">ジャーン3</title>
+			<title code="0x54">エレベーター破壊</title>
+			<title code="0x55">機関銃の銃声2</title>
+			<title code="0x56">モールス音</title>
+			<title code="0x57">バイク セルモーター</title>
+			<title code="0x58">バイク アイドリング</title>
+			<title code="0x59">バイク ふかし</title>
+			<title code="0x5a">バイク 走り出し</title>
+			<title code="0x5b">バイク 走行音</title>
+			<title code="0x5c">波動砲</title>
+			<title code="0x5d">レーダー音B</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] World Golf III ((ワールドゴルフ３))</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">enix</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xe0"/>
+		</options>
+		<romlist archive="wgolf368snd">
+			<rom type="code" offset="0x00000">wg368snd.bin</rom>
+			<rom type="x"    offset="0x10000">MUSIC.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">オープニングデモ</title>
+			<title code="0x02">メニュー</title>
+			<title code="0x03">コーヒーブレーク</title>
+			<title code="0x04">ホールアウト</title>
+			<title code="0x05">表彰式</title>
+			<title code="0x06">BGM #05</title>
+			<title code="0x07">BGM #06</title>
+			<title code="0x08">BGM #07</title>
+			<title code="0x09">SFX #08</title>
+			<title code="0x0A">SFX #09</title>
+			<title code="0x0B">SFX #10</title>
+			<title code="0x0C">SFX #11</title>
+			<title code="0x0D">SFX #12</title>
+			<title code="0x0E">SFX #13</title>
+			<title code="0x0F">SFX #14</title>
+			<title code="0x10">SFX #15</title>
+			<title code="0x11">SFX #16</title>
+			<title code="0x12">SFX #17</title>
+			<title code="0x13">SFX #18</title>
+			<title code="0x14">SFX #19</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Animal Land Murder Case (アニマルランド殺人事件)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">enix</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="animal_msx">
+			<rom type="code">Animal Land Murder Case (1987)(Enix).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Dragon Quest (ドラゴンクエスト)</name>
+		<driver type="dq1">msx</driver>
+		<driveralias type="MSX">enix</driveralias>
+		<romlist archive="dq1msx">
+			<rom type="code">dq1.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Overture</title>
+			<title code="0x02">Tantegel Castle</title>
+			<title code="0x04">Peaceful Village</title>
+			<title code="0x05">Kingdom of Alefgard</title>
+			<title code="0x18">A Monster Draws Near</title>
+			<title code="0x14">Thou Hast Died...</title>
+			<title code="0x06">Dark Dungeon ~ Floor 1</title>
+			<title code="0x07">Dark Dungeon ~ Floor 2</title>
+			<title code="0x08">Dark Dungeon ~ Floor 3</title>
+			<title code="0x09">Dark Dungeon ~ Floor 4</title>
+			<title code="0x0a">Dark Dungeon ~ Floor 5</title>
+			<title code="0x0b">Dark Dungeon ~ Floor 6</title>
+			<title code="0x0c">Dark Dungeon ~ Floor 7</title>
+			<title code="0x0d">Dark Dungeon ~ Floor 8</title>
+			<title code="0x16">Princess Gwaelin's Love</title>
+			<title code="0x13">Rainbow Bridge</title>
+			<title code="0x19">Victory!</title>
+			<title code="0x1a">Improvement</title>
+			<title code="0x15">Good Night</title>
+			<title code="0x17">Cursed!</title>
+			<title code="0x12">Fairy Flute</title>
+			<title code="0x11">Silver Harp</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Dragon Quest 2 (ドラゴンクエスト２ 悪霊の神々)</name>
+		<driver type="dq2">msx</driver>
+		<driveralias type="MSX">enix</driveralias>
+		<romlist archive="dq2msx">
+			<rom type="code">dq2.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0b">Overture</title>
+			<title code="0x0c">Joyous Song</title>
+			<title code="0x12">All Hope is Lost...</title>
+			<title code="0x0e">Royal Palace</title>
+			<title code="0x15">A Lonely Youth</title>
+			<title code="0x17">Demon Attack</title>
+			<title code="0x0f">Busy City Streets</title>
+			<title code="0x10">Underground</title>
+			<title code="0x07">Friendship</title>
+			<title code="0x13">Prophecy</title>
+			<title code="0x14">Travelling with Friends</title>
+			<title code="0x11">Ever Upwards</title>
+			<title code="0x16">Riding the Waves</title>
+			<title code="0x0d">Kingdom of Alefgard</title>
+			<title code="0x18">Malroth ~ The True Evil</title>
+			<title code="0x19">Recounting our Journey</title>
+			<title code="0x01">Sleep Well</title>
+			<title code="0x05">The Spirit of Rubiss</title>
+			<title code="0x02">Saint's Prayer</title>
+			<title code="0x04">Echoing Flute</title>
+			<title code="0x03">Echoing Flute (Echo)</title>
+			<title code="0x06">Won the Lottery</title>
+			<title code="0x08">Improvement</title>
+			<title code="0x09">Victory!</title>
+			<title code="0x0a">Cursed</title>
+			<title code="0x1b">SFX #1b</title>
+			<title code="0x1c">SFX #1c</title>
+			<title code="0x1d">SFX #1d</title>
+			<title code="0x1e">SFX #1e</title>
+			<title code="0x1f">SFX #1f</title>
+			<title code="0x20">SFX #20</title>
+			<title code="0x21">SFX #21</title>
+			<title code="0x22">SFX #22</title>
+			<title code="0x23">SFX #23</title>
+			<title code="0x24">SFX #24</title>
+			<title code="0x25">SFX #25</title>
+			<title code="0x26">SFX #26</title>
+			<title code="0x27">SFX #27</title>
+			<title code="0x28">SFX #28</title>
+			<title code="0x29">SFX #29</title>
+			<title code="0x2a">SFX #2a</title>
+			<title code="0x2b">SFX #2b</title>
+			<title code="0x2c">SFX #2c</title>
+			<title code="0x2d">SFX #2d</title>
+			<title code="0x2e">SFX #2e</title>
+			<title code="0x2f">SFX #2f</title>
+			<title code="0x30">SFX #30</title>
+			<title code="0x31">SFX #31</title>
+			<title code="0x32">SFX #32</title>
+			<title code="0x33">SFX #33</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[NES] Dragon Quest (ドラゴンクエスト)</name>
+		<driver type="nsf">nes</driver>
+		<driveralias type="NES">enix</driveralias>
+		<romlist archive="dq1nsf">
+			<rom type="code">Dragon Quest (1986)(Enix).nsf</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Overture</title>
+			<title code="0x01">Tantegel Castle (Throne)</title>
+			<title code="0x02">Tantegel Castle (Courtyard)</title>
+			<title code="0x03">Peaceful Village</title>
+			<title code="0x04">Kingdom of Alefgard</title>
+			<title code="0x05">Dark Dungeon ~ Floor 1</title>
+			<title code="0x06">Dark Dungeon ~ Floor 2</title>
+			<title code="0x07">Dark Dungeon ~ Floor 3</title>
+			<title code="0x08">Dark Dungeon ~ Floor 4</title>
+			<title code="0x09">Dark Dungeon ~ Floor 5</title>
+			<title code="0x0a">Dark Dungeon ~ Floor 6</title>
+			<title code="0x0b">Dark Dungeon ~ Floor 7</title>
+			<title code="0x0c">Dark Dungeon ~ Floor 8</title>
+			<title code="0x0d">A Monster Draws Near</title>
+			<title code="0x0e">The Dragonlord</title>
+			<title code="0x0f">Hero's Fanfare</title>
+			<title code="0x10">Silver Harp</title>
+			<title code="0x11">Fairy Flute</title>
+			<title code="0x12">Rainbow Bridge</title>
+			<title code="0x13">Thou Hast Died</title>
+			<title code="0x14">Good Night</title>
+			<title code="0x15">Princess Gwaelin's Love</title>
+			<title code="0x16">Cursed</title>
+			<title code="0x17">A Monster Draws Near (Reprise)</title>
+			<title code="0x18">Victory!</title>
+			<title code="0x19">Improvement</title>
+			<title code="0x1a">Sleep Well</title>
+			<title code="0x1b">SFX #1b</title>
+			<title code="0x1c">SFX #1c</title>
+			<title code="0x1d">SFX #1d</title>
+			<title code="0x1e">SFX #1e</title>
+			<title code="0x1f">SFX #1f</title>
+			<title code="0x20">SFX #20</title>
+			<title code="0x21">SFX #21</title>
+			<title code="0x22">SFX #22</title>
+			<title code="0x23">SFX #23</title>
+			<title code="0x24">SFX #24</title>
+			<title code="0x25">SFX #25</title>
+			<title code="0x26">SFX #26</title>
+			<title code="0x27">SFX #27</title>
+			<title code="0x28">SFX #28</title>
+			<title code="0x29">SFX #29</title>
+			<title code="0x2a">SFX #2a</title>
+			<title code="0x2b">SFX #2b</title>
+			<title code="0x2c">SFX #2c</title>
+			<title code="0x2d">SFX #2d</title>
+			<title code="0x2e">SFX #2e</title>
+			<title code="0x2f">SFX #2f</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[NES] Dragon Quest 2 (ドラゴンクエストⅡ 悪霊の神々)</name>
+		<driver type="nsf">nes</driver>
+		<driveralias type="NES">enix</driveralias>
+		<romlist archive="dq2nsf">
+			<rom type="code">Dragon Quest 2 (1987)(Enix).nsf</rom>
+		</romlist>
+    <titlelist>
+      <title code="0x00">Overture</title>
+      <title code="0x01">Joyous Song</title>
+      <title code="0x02">Royal Palace</title>
+      <title code="0x03">Busy City Streets</title>
+      <title code="0x04">A Lonely Youth</title>
+      <title code="0x05">Underground</title>
+      <title code="0x06">Ever Upwards</title>
+      <title code="0x07">All Hope Is Lost...</title>
+      <title code="0x08">Prophecy</title>
+      <title code="0x09">Travelling with Friends</title>
+      <title code="0x0a">Kingdom of Alefgard</title>
+      <title code="0x0b">Riding the Waves</title>
+      <title code="0x0c">Demon Attack</title>
+      <title code="0x0d">Malroth ~ The True Evil</title>
+      <title code="0x0e">Recounting the Journey</title>
+      <title code="0x0f">Victory!</title>
+      <title code="0x10">Improvement</title>
+      <title code="0x11">Cursed!</title>
+      <title code="0x12">Saint's Prayer</title>
+      <title code="0x13">Sleep Well</title>
+      <title code="0x14">Echoing Flute</title>
+      <title code="0x15">Echoing Flute (Echo)</title>
+      <title code="0x16">Won the Lottery</title>
+      <title code="0x17">Friendship</title>
+      <title code="0x18">The Spirit of Rubiss</title>
+      <title code="0x19">SFX #19</title>
+      <title code="0x1a">SFX #1a</title>
+      <title code="0x1b">SFX #1b</title>
+      <title code="0x1c">SFX #1c</title>
+      <title code="0x1d">SFX #1d</title>
+      <title code="0x1e">SFX #1e</title>
+      <title code="0x1f">SFX #1f</title>
+      <title code="0x20">SFX #20</title>
+      <title code="0x21">SFX #21</title>
+      <title code="0x22">SFX #22</title>
+      <title code="0x23">SFX #23</title>
+      <title code="0x24">SFX #24</title>
+      <title code="0x25">SFX #25</title>
+      <title code="0x26">SFX #26</title>
+      <title code="0x27">SFX #27</title>
+      <title code="0x28">SFX #28</title>
+      <title code="0x29">SFX #29</title>
+      <title code="0x2a">SFX #2a</title>
+      <title code="0x2b">SFX #2b</title>
+      <title code="0x2c">SFX #2c</title>
+      <title code="0x2d">SFX #2d</title>
+      <title code="0x2e">SFX #2e</title>
+      <title code="0x2f">SFX #2f</title>
+      <title code="0x30">SFX #30</title>
+      <title code="0x31">SFX #31</title>
+    </titlelist>
+	</game>
+	<game>
+		<name>[NES] Dragon Quest 3 (ドラゴンクエストⅢ そして伝説へ…)</name>
+		<driver type="nsf">nes</driver>
+		<driveralias type="NES">enix</driveralias>
+		<romlist archive="dq3nsf">
+			<rom type="code">Dragon Quest 3 (1988)(Enix).nsf</rom>
+		</romlist>
+    <titlelist>
+      <title code="0x01">Level Up!</title>
+      <title code="0x02">Overture</title>
+      <title code="0x03">Castle ~ Rondo</title>
+      <title code="0x04">Adventure</title>
+      <title code="0x05">Unknown World</title>
+      <title code="0x06">Jipang</title>
+      <title code="0x07">Dungeon</title>
+      <title code="0x08">Tower</title>
+      <title code="0x09">Pyramid</title>
+      <title code="0x0a">Small Shrine</title>
+      <title code="0x0b">Sailing</title>
+      <title code="0x0c">The Song of Sadness</title>
+      <title code="0x0d">Village</title>
+      <title code="0x0e">Heavenly Flight</title>
+      <title code="0x0f">Town</title>
+      <title code="0x10">Battle Theme</title>
+      <title code="0x11">The Phantom Ship</title>
+      <title code="0x12">Hero's Challenge</title>
+      <title code="0x13">Requiem</title>
+      <title code="0x14">Wayfarer's Inn</title>
+      <title code="0x15">Church</title>
+      <title code="0x16">Victory</title>
+      <title code="0x17">Cursed</title>
+      <title code="0x18">The Light Returns</title>
+      <title code="0x19">Into the Legend</title>
+      <title code="0x1a">Rainbow Bridge</title>
+      <title code="0x1b">Silver Harp</title>
+      <title code="0x1c">Fairy Flute</title>
+      <title code="0x1d">Echoing Flute (Echo)</title>
+      <title code="0x1e">Echoing Flute</title>
+      <title code="0x1f">BGM #1f</title>
+      <title code="0x20">BGM #20</title>
+      <title code="0x21">BGM #21</title>
+      <title code="0x22">BGM #22</title>
+      <title code="0x23">BGM #23</title>
+      <title code="0x24">BGM #24</title>
+      <title code="0x25">BGM #25</title>
+      <title code="0x26">BGM #26</title>
+    </titlelist>
+	</game>
+	<game>
+		<name>[NES] Dragon Quest 4 (ドラゴンクエストⅣ 導かれし者たち)</name>
+		<driver type="nsf">nes</driver>
+		<driveralias type="NES">enix</driveralias>
+		<romlist archive="dq4nsf">
+			<rom type="code">Dragon Quest 4 (1989)(Chun Soft, Enix).nsf</rom>
+		</romlist>
+    <titlelist>
+      <title code="0x01">Overture</title>
+      <title code="0x02">Menuet</title>
+      <title code="0x1e">Interlude</title>
+      <title code="0x04">Ragnar ~ The Warrior Conquers Alone</title>
+      <title code="0x24">End of Chapter 1</title>
+			<title code="0x15">Alena ~ Tomboy Princess' March</title>
+			<title code="0x25">End of Chapter 2</title>
+			<title code="0x16">Weapons Merchant Torneco</title>
+			<title code="0x26">End of Chapter 3</title>
+			<title code="0x1f">Gypsy's Dance</title>
+			<title code="0x0a">Gypsy's Journey</title>
+			<title code="0x27">End of Chapter 4</title>
+			<title code="0x0b">In a Town</title>
+			<title code="0x03">Casino Rag</title>
+			<title code="0x14">Colosseum Back Stage</title>
+			<title code="0x18">Colosseum Stand</title>
+			<title code="0x1a">Colosseum Stand (with intro)</title>
+			<title code="0x1b">Hero 1st Map ~ Homeland</title>
+			<title code="0x1c">Hero 2nd Map ~ Wagon's Wheel March</title>
+			<title code="0x05">Frightning Dungeon</title>
+			<title code="0x06">Cursed Towers</title>
+			<title code="0x0d">Elegy</title>
+			<title code="0x07">Mysterious Shrine</title>
+			<title code="0x08">Expanding the Map</title>
+			<title code="0x12">Baloon's Flight</title>
+			<title code="0x09">The Unknown Castle</title>
+			<title code="0x0c">Battle for Glory</title>
+			<title code="0x1d">Evil One</title>
+			<title code="0x34">Incarnation of Evil</title>
+			<title code="0x30">Finale</title>
+			<title code="0x2c">Jingle ~ Fanfare</title>
+			<title code="0x31">Jingle ~ Runaway Ship</title>
+			<title code="0x28">Jingle ~ Flute of Uncovering</title>
+			<title code="0x2a">Jingle ~ Key Item</title>
+			<title code="0x19">Jingle ~ A Friend Joins</title>
+			<title code="0x2d">Jingle ~ Casino Small Prize</title>
+			<title code="0x2e">Jingle ~ Casino Big Prize</title>
+			<title code="0x2f">Jingle ~ Casino Jackpot</title>
+			<title code="0x11">Jingle ~ Cursed</title>
+			<title code="0x32">Jingle ~ Church Confession</title>
+			<title code="0x0f">Jingle ~ Church Healing</title>
+			<title code="0x10">Jingle ~ Victory</title>
+      <title code="0x00">Jingle ~ Level Up</title>
+			<title code="0x0e">Jingle ~ Good Night</title>
+			<title code="0x29">Jingle ~ Piano</title>
+			<title code="0x2b">Unknown Jingle #1</title>
+			<title code="0x33">Unknown Jingle #2</title>
+      <range min="0x36" max="0x6b">SFX #%02x</range>
+    </titlelist>
+	</game>
+	<game>
+		<name>[GBC] Dragon Quest 1+2 (ドラゴンクエストⅠ・Ⅱ)</name>
+		<driver type="gbs">gb</driver>
+		<driveralias type="GB">enix</driveralias>
+		<romlist archive="dq12gbs">
+			<rom type="code">Dragon Quest 1 &amp; 2 (2000)(Enix).gbr</rom>
+		</romlist>
+    <titlelist>
+      <range min="0x02" max="0x32">BGM #%02x</range>
+      <title code="0xc2">BGM #c2</title>
+      <title code="0xc3">BGM #c3</title>
+      <title code="0xc4">BGM #c4</title>
+      <title code="0xc5">BGM #c5</title>
+      <title code="0xc6">BGM #c6</title>
+      <title code="0xc7">BGM #c7</title>
+      <title code="0xc8">BGM #c8</title>
+      <title code="0xc9">BGM #c9</title>
+      <title code="0xca">BGM #ca</title>
+      <title code="0xcb">BGM #cb</title>
+      <title code="0xcc">BGM #cc</title>
+      <title code="0xcd">BGM #cd</title>
+      <title code="0xce">BGM #ce</title>
+      <title code="0xcf">BGM #cf</title>
+      <title code="0xd0">BGM #d0</title>
+      <title code="0xd1">BGM #d1</title>
+      <title code="0xd2">BGM #d2</title>
+      <title code="0xd3">BGM #d3</title>
+      <title code="0xd4">BGM #d4</title>
+      <title code="0xd5">BGM #d5</title>
+      <title code="0xd6">BGM #d6</title>
+      <title code="0xd7">BGM #d7</title>
+      <title code="0xd8">BGM #d8</title>
+      <title code="0xd9">BGM #d9</title>
+      <title code="0xda">BGM #da</title>
+      <title code="0xdb">BGM #db</title>
+      <title code="0xdc">BGM #dc</title>
+      <title code="0xdd">BGM #dd</title>
+      <title code="0xde">BGM #de</title>
+      <title code="0xdf">BGM #df</title>
+      <title code="0xe0">BGM #e0</title>
+      <title code="0xe1">BGM #e1</title>
+      <title code="0xe2">BGM #e2</title>
+      <title code="0xe3">BGM #e3</title>
+      <title code="0xe4">BGM #e4</title>
+      <title code="0xe5">BGM #e5</title>
+      <title code="0xe6">BGM #e6</title>
+      <title code="0xe7">BGM #e7</title>
+      <title code="0xe8">BGM #e8</title>
+      <title code="0xe9">BGM #e9</title>
+      <title code="0xea">BGM #ea</title>
+      <title code="0xeb">BGM #eb</title>
+      <title code="0xec">BGM #ec</title>
+      <title code="0xed">BGM #ed</title>
+      <title code="0xee">BGM #ee</title>
+      <title code="0xef">BGM #ef</title>
+      <title code="0xf0">BGM #f0</title>
+      <title code="0xf1">BGM #f1</title>
+      <title code="0xf2">BGM #f2</title>
+      <range min="0x41" max="0x7f">SFX #%02x</range>
+    </titlelist>
+	</game>
+	<game>
+		<name>[GBC] Dragon Quest 3 (ドラゴンクエストⅢ そして伝説へ…)</name>
+		<driver type="gbs">gb</driver>
+		<driveralias type="GB">enix</driveralias>
+		<romlist archive="dq3gbs">
+			<rom type="code">Dragon Quest 3 (2001)(Enix).gbr</rom>
+		</romlist>
+    <titlelist>
+      <range min="0x00" max="0x58">BGM #%02x</range>
+      <range min="0x5d" max="0xff">SFX #%02x</range>
+    </titlelist>
+	</game>
+	<game>
+		<name>[GBC] Dragon Quest Monsters (ドラゴンクエストモンスターズ テリーのワンダーランド)</name>
+		<driver type="gbs">gb</driver>
+		<driveralias type="GB">enix</driveralias>
+		<romlist archive="dqm1gbs">
+			<rom type="code">Dragon Quest Monsters (1998)(Enix).gbs</rom>
+		</romlist>
+    <titlelist>
+      <range min="0x00" max="0x19">BGM #%02x</range>
+    </titlelist>
+	</game>
+	<game>
+		<name>[GBC] Dragon Quest Monsters 2 (ドラゴンクエストモンスターズ２ マルタのふしぎな鍵)</name>
+		<driver type="gbs">gb</driver>
+		<driveralias type="GB">enix</driveralias>
+		<romlist archive="dqm2gbs">
+			<rom type="code">Dragon Quest Monsters 2 (2001)(Enix).gbs</rom>
+		</romlist>
+    <titlelist>
+      <range min="0x00" max="0x1b">BGM #%02x</range>
+    </titlelist>
+	</game>
+	<game>
+		<name>[SNES] Dragon Quest 1+2 Reprise (ドラゴンクエスト１・２)</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">enix</driveralias>
+		<options>
+			<option name="apu_mix" value="0x200"/>
+		</options>
+		<romlist archive="dq12spc">
+			<rom type="data" offset="0x01">dq-01.spc</rom>
+			<rom type="data" offset="0x02">dq-02.spc</rom>
+			<rom type="data" offset="0x03">dq-03.spc</rom>
+			<rom type="data" offset="0x04">dq1-01.spc</rom>
+			<rom type="data" offset="0x05">dq1-02.spc</rom>
+			<rom type="data" offset="0x06">dq1-03.spc</rom>
+			<rom type="data" offset="0x07">dq1-04.spc</rom>
+			<rom type="data" offset="0x08">dq1-05.spc</rom>
+			<rom type="data" offset="0x09">dq1-06.spc</rom>
+			<rom type="data" offset="0x0a">dq1-07.spc</rom>
+			<rom type="data" offset="0x0b">dq1-08.spc</rom>
+			<rom type="data" offset="0x0c">dq1-09.spc</rom>
+			<rom type="data" offset="0x0d">dq1-10.spc</rom>
+			<rom type="data" offset="0x0e">dq1-11.spc</rom>
+			<rom type="data" offset="0x0f">dq1-12.spc</rom>
+			<rom type="data" offset="0x10">dq1-13.spc</rom>
+			<rom type="data" offset="0x11">dq1-14.spc</rom>
+			<rom type="data" offset="0x12">dq1-15.spc</rom>
+			<rom type="data" offset="0x13">dq1-16.spc</rom>
+			<rom type="data" offset="0x14">dq1-s01.spc</rom>
+			<rom type="data" offset="0x15">dq1-s02.spc</rom>
+			<rom type="data" offset="0x16">dq1-s03.spc</rom>
+			<rom type="data" offset="0x17">dq1-s04.spc</rom>
+			<rom type="data" offset="0x18">dq1-s05.spc</rom>
+			<rom type="data" offset="0x19">dq1-s06.spc</rom>
+			<rom type="data" offset="0x1a">dq1-s07.spc</rom>
+			<rom type="data" offset="0x1b">dq2-01.spc</rom>
+			<rom type="data" offset="0x1c">dq2-02.spc</rom>
+			<rom type="data" offset="0x1d">dq2-03.spc</rom>
+			<rom type="data" offset="0x1e">dq2-04.spc</rom>
+			<rom type="data" offset="0x1f">dq2-05.spc</rom>
+			<rom type="data" offset="0x20">dq2-06.spc</rom>
+			<rom type="data" offset="0x21">dq2-07.spc</rom>
+			<rom type="data" offset="0x22">dq2-08.spc</rom>
+			<rom type="data" offset="0x23">dq2-09.spc</rom>
+			<rom type="data" offset="0x24">dq2-10.spc</rom>
+			<rom type="data" offset="0x25">dq2-11.spc</rom>
+			<rom type="data" offset="0x26">dq2-12.spc</rom>
+			<rom type="data" offset="0x27">dq2-13.spc</rom>
+			<rom type="data" offset="0x28">dq2-14.spc</rom>
+			<rom type="data" offset="0x29">dq2-15.spc</rom>
+			<rom type="data" offset="0x2a">dq2-16.spc</rom>
+			<rom type="data" offset="0x2b">dq2-s01.spc</rom>
+			<rom type="data" offset="0x2c">dq2-s02.spc</rom>
+			<rom type="data" offset="0x2d">dq2-s03.spc</rom>
+			<rom type="data" offset="0x2e">dq2-s04.spc</rom>
+			<rom type="data" offset="0x2f">dq2-s05.spc</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Overture (Part 1)</title>
+			<title code="0x02">Overture (Part 2)</title>
+			<title code="0x03">Overture (Full)</title>
+			<title code="0x04">[DQ1] Erdrick's Descendant</title>
+			<title code="0x05">[DQ1] Tantagel Castle</title>
+			<title code="0x06">[DQ1] Peaceful Village</title>
+			<title code="0x07">[DQ1] Kingdom of Alefgard</title>
+			<title code="0x08">[DQ1] A Monster Draws Near</title>
+			<title code="0x09">[DQ1] Thou Hast Died...</title>
+			<title code="0x0a">[DQ1] Ancestor's Legacy</title>
+			<title code="0x0b">[DQ1] Dark Dungeon ~ Floor 1</title>
+			<title code="0x0c">[DQ1] Dark Dungeon ~ Floor 2</title>
+			<title code="0x0d">[DQ1] Dark Dungeon ~ Floor 3</title>
+			<title code="0x0e">[DQ1] Dark Dungeon ~ Floor 4</title>
+			<title code="0x0f">[DQ1] Princess Gwaelin's Love</title>
+			<title code="0x10">[DQ1] Rainbow Bridge</title>
+			<title code="0x11">[DQ1] Throne of Darkness</title>
+			<title code="0x12">[DQ1] The Dragonlord</title>
+			<title code="0x13">[DQ1] Hero's Fanfare</title>
+			<title code="0x14">[DQ1] Victory!</title>
+			<title code="0x15">[DQ1] Improvement</title>
+			<title code="0x16">[DQ1] Good Night</title>
+			<title code="0x17">[DQ1] Special Item</title>
+			<title code="0x18">[DQ1] Cursed!</title>
+			<title code="0x19">[DQ1] Fairy Flute</title>
+			<title code="0x1a">[DQ1] Silver Harp</title>
+			<title code="0x1b">[DQ2] Joyous Song</title>
+			<title code="0x1c">[DQ2] Blue Skies ~ Ill Omen</title>
+			<title code="0x1d">[DQ2] All Hope is Lost...</title>
+			<title code="0x1e">[DQ2] Royal Palace</title>
+			<title code="0x1f">[DQ2] A Lonely Youth</title>
+			<title code="0x20">[DQ2] Demon Attack</title>
+			<title code="0x21">[DQ2] Busy City Streets</title>
+			<title code="0x22">[DQ2] Underground</title>
+			<title code="0x23">[DQ2] Friendship</title>
+			<title code="0x24">[DQ2] Prophecy</title>
+			<title code="0x25">[DQ2] Travelling with Friends</title>
+			<title code="0x26">[DQ2] Ever Upwards</title>
+			<title code="0x27">[DQ2] Riding the Waves</title>
+			<title code="0x28">[DQ2] The Spirit of Rubiss</title>
+			<title code="0x29">[DQ2] Malroth ~ The True Evil</title>
+			<title code="0x2a">[DQ2] Recounting Our Journey</title>
+			<title code="0x2b">[DQ2] Sleep Well</title>
+			<title code="0x2c">[DQ2] Won the Lottery!</title>
+			<title code="0x2d">[DQ2] Saint's Prayer</title>
+			<title code="0x2e">[DQ2] Echoing Flute</title>
+			<title code="0x2f">[DQ2] Echoing Flute (Echo)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[SNES] Dragon Quest 3: Soshite Densetsu he... (ドラゴンクエスト３ そして伝説へ…)</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">enix</driveralias>
+		<options>
+			<option name="apu_mix" value="0x200"/>
+		</options>
+		<romlist archive="dq3spc">
+			<rom type="data" offset="0x01">dq3-01.spc</rom>
+			<rom type="data" offset="0x02">dq3-02.spc</rom>
+			<rom type="data" offset="0x03">dq3-03.spc</rom>
+			<rom type="data" offset="0x04">dq3-04.spc</rom>
+			<rom type="data" offset="0x05">dq3-05.spc</rom>
+			<rom type="data" offset="0x06">dq3-06.spc</rom>
+			<rom type="data" offset="0x07">dq3-07.spc</rom>
+			<rom type="data" offset="0x08">dq3-08.spc</rom>
+			<rom type="data" offset="0x09">dq3-09.spc</rom>
+			<rom type="data" offset="0x0a">dq3-10.spc</rom>
+			<rom type="data" offset="0x0b">dq3-11.spc</rom>
+			<rom type="data" offset="0x0c">dq3-12.spc</rom>
+			<rom type="data" offset="0x0d">dq3-13.spc</rom>
+			<rom type="data" offset="0x0e">dq3-14.spc</rom>
+			<rom type="data" offset="0x0f">dq3-15.spc</rom>
+			<rom type="data" offset="0x10">dq3-16.spc</rom>
+			<rom type="data" offset="0x11">dq3-17.spc</rom>
+			<rom type="data" offset="0x12">dq3-18.spc</rom>
+			<rom type="data" offset="0x13">dq3-19.spc</rom>
+			<rom type="data" offset="0x14">dq3-20.spc</rom>
+			<rom type="data" offset="0x15">dq3-21.spc</rom>
+			<rom type="data" offset="0x16">dq3-22.spc</rom>
+			<rom type="data" offset="0x17">dq3-23.spc</rom>
+			<rom type="data" offset="0x18">dq3-24.spc</rom>
+			<rom type="data" offset="0x19">dq3-25.spc</rom>
+			<rom type="data" offset="0x1a">dq3-26.spc</rom>
+			<rom type="data" offset="0x1b">dq3-27.spc</rom>
+			<rom type="data" offset="0x1c">dq3-28.spc</rom>
+			<rom type="data" offset="0x1d">dq3-29.spc</rom>
+			<rom type="data" offset="0x1e">dq3-30.spc</rom>
+			<rom type="data" offset="0x1f">dq3-31.spc</rom>
+			<rom type="data" offset="0x20">dq3-32.spc</rom>
+			<rom type="data" offset="0x21">dq3-33.spc</rom>
+			<rom type="data" offset="0x22">dq3-34.spc</rom>
+			<rom type="data" offset="0x23">dq3-35.spc</rom>
+			<rom type="data" offset="0x24">dq3-36.spc</rom>
+			<rom type="data" offset="0x25">dq3-37.spc</rom>
+			<rom type="data" offset="0x26">dq3-38.spc</rom>
+			<rom type="data" offset="0x27">dq3-39.spc</rom>
+			<rom type="data" offset="0x28">dq3-40.spc</rom>
+			<rom type="data" offset="0x29">dq3-41.spc</rom>
+			<rom type="data" offset="0x2a">dq3-42.spc</rom>
+			<rom type="data" offset="0x2b">dq3-s01.spc</rom>
+			<rom type="data" offset="0x2c">dq3-s02.spc</rom>
+			<rom type="data" offset="0x2d">dq3-s03.spc</rom>
+			<rom type="data" offset="0x2e">dq3-s04.spc</rom>
+			<rom type="data" offset="0x2f">dq3-s05.spc</rom>
+			<rom type="data" offset="0x30">dq3-s06.spc</rom>
+			<rom type="data" offset="0x31">dq3-s07.spc</rom>
+			<rom type="data" offset="0x32">dq3-s08.spc</rom>
+			<rom type="data" offset="0x33">dq3-s09.spc</rom>
+			<rom type="data" offset="0x34">dq3-s10.spc</rom>
+			<rom type="data" offset="0x35">dq3-s11.spc</rom>
+			<rom type="data" offset="0x36">dq3-s12.spc</rom>
+			<rom type="data" offset="0x37">dq3-s13.spc</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Overture ~ Roto's Theme</title>
+			<title code="0x02">Intermezzo</title>
+			<title code="0x03">Prologue</title>
+			<title code="0x04">Distant Memories</title>
+			<title code="0x05">Town</title>
+			<title code="0x06">Night Town</title>
+			<title code="0x07">Castle ~ Rondo</title>
+			<title code="0x08">Night Castle</title>
+			<title code="0x09">Adventure</title>
+			<title code="0x0a">Battle Theme</title>
+			<title code="0x0b">Requiem</title>
+			<title code="0x0c">Dungeon</title>
+			<title code="0x0d">Village</title>
+			<title code="0x0e">Night Village</title>
+			<title code="0x0f">Tower</title>
+			<title code="0x10">Small Shrine</title>
+			<title code="0x11">Boogie-Woogie</title>
+			<title code="0x12">Rolling Dice</title>
+			<title code="0x13">Sleeping Village</title>
+			<title code="0x14">Wake Up Powder</title>
+			<title code="0x15">Pyramid</title>
+			<title code="0x16">Sailing</title>
+			<title code="0x17">Jipang</title>
+			<title code="0x18">The Palace of Himiko</title>
+			<title code="0x19">The Phantom Ship</title>
+			<title code="0x1a">The Song of Sadness</title>
+			<title code="0x1b">Memories of Love 1</title>
+			<title code="0x1c">Memories of Love 2</title>
+			<title code="0x1d">The Reverie of Phoenix 1</title>
+			<title code="0x1e">The Reverie of Phoenix 2</title>
+			<title code="0x1f">Heavenly Flight</title>
+			<title code="0x20">The Archfiend's Castle</title>
+			<title code="0x21">Gruelling Fight</title>
+			<title code="0x22">Unknown World</title>
+			<title code="0x23">Town of Alefgard</title>
+			<title code="0x24">Chateau Ladutorm</title>
+			<title code="0x25">Dungeon of Alefgard</title>
+			<title code="0x26">Fairy Flute</title>
+			<title code="0x27">Rainbow Bridge</title>
+			<title code="0x28">Hero's Challenge</title>
+			<title code="0x29">The Light Returns</title>
+			<title code="0x2a">Into the Legend</title>
+			<title code="0x2b">Victory</title>
+			<title code="0x2c">Level Up!</title>
+			<title code="0x2d">Wayfarer's Inn</title>
+			<title code="0x2e">Save</title>
+			<title code="0x2f">Church</title>
+			<title code="0x30">Special Item</title>
+			<title code="0x31">Cursed</title>
+			<title code="0x32">Fanfare 1</title>
+			<title code="0x33">Fanfare 2</title>
+			<title code="0x34">Fanfare 3</title>
+			<title code="0x35">Echoing Flute</title>
+			<title code="0x36">Echoing Flute (Echo)</title>
+			<title code="0x37">Silver Harp</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[SNES] Dragon Quest 5: Tenkuu no Hanayome (ドラゴンクエスト５ 天空の花嫁)</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">enix</driveralias>
+		<options>
+			<option name="apu_mix" value="0x200"/>
+		</options>
+		<romlist archive="dq5spc">
+			<rom type="data" offset="0x01">dq5-01a.spc</rom>
+			<rom type="data" offset="0x2e">dq5-01b.spc</rom>
+			<rom type="data" offset="0x02">dq5-02.spc</rom>
+			<rom type="data" offset="0x03">dq5-03.spc</rom>
+			<rom type="data" offset="0x04">dq5-04.spc</rom>
+			<rom type="data" offset="0x05">dq5-05.spc</rom>
+			<rom type="data" offset="0x06">dq5-06.spc</rom>
+			<rom type="data" offset="0x07">dq5-07.spc</rom>
+			<rom type="data" offset="0x08">dq5-08.spc</rom>
+			<rom type="data" offset="0x09">dq5-09.spc</rom>
+			<rom type="data" offset="0x0a">dq5-10.spc</rom>
+			<rom type="data" offset="0x0b">dq5-11.spc</rom>
+			<rom type="data" offset="0x0c">dq5-12.spc</rom>
+			<rom type="data" offset="0x0d">dq5-13.spc</rom>
+			<rom type="data" offset="0x0e">dq5-14.spc</rom>
+			<rom type="data" offset="0x0f">dq5-15.spc</rom>
+			<rom type="data" offset="0x10">dq5-16.spc</rom>
+			<rom type="data" offset="0x11">dq5-17.spc</rom>
+			<rom type="data" offset="0x12">dq5-18.spc</rom>
+			<rom type="data" offset="0x13">dq5-19.spc</rom>
+			<rom type="data" offset="0x14">dq5-20.spc</rom>
+			<rom type="data" offset="0x15">dq5-21.spc</rom>
+			<rom type="data" offset="0x16">dq5-22.spc</rom>
+			<rom type="data" offset="0x17">dq5-23.spc</rom>
+			<rom type="data" offset="0x18">dq5-24.spc</rom>
+			<rom type="data" offset="0x19">dq5-25.spc</rom>
+			<rom type="data" offset="0x1a">dq5-26.spc</rom>
+			<rom type="data" offset="0x1b">dq5-27.spc</rom>
+			<rom type="data" offset="0x1c">dq5-28.spc</rom>
+			<rom type="data" offset="0x1d">dq5-29.spc</rom>
+			<rom type="data" offset="0x1e">dq5-30.spc</rom>
+			<rom type="data" offset="0x1f">dq5-31.spc</rom>
+			<rom type="data" offset="0x20">dq5-s01.spc</rom>
+			<rom type="data" offset="0x21">dq5-s02.spc</rom>
+			<rom type="data" offset="0x22">dq5-s03.spc</rom>
+			<rom type="data" offset="0x23">dq5-s04.spc</rom>
+			<rom type="data" offset="0x24">dq5-s05.spc</rom>
+			<rom type="data" offset="0x25">dq5-s06.spc</rom>
+			<rom type="data" offset="0x26">dq5-s07.spc</rom>
+			<rom type="data" offset="0x27">dq5-s08.spc</rom>
+			<rom type="data" offset="0x28">dq5-s09.spc</rom>
+			<rom type="data" offset="0x29">dq5-s10.spc</rom>
+			<rom type="data" offset="0x2a">dq5-s11.spc</rom>
+			<rom type="data" offset="0x2b">dq5-s12.spc</rom>
+			<rom type="data" offset="0x2c">dq5-s13.spc</rom>
+			<rom type="data" offset="0x2d">dq5-s14.spc</rom>
+			<rom type="data" offset="0x2f">dq5-s15.spc</rom>
+			<rom type="data" offset="0x30">dq5-s16.spc</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Overture</title>
+			<title code="0x2e">Overture (Looped)</title>
+			<title code="0x02">Intermezzo</title>
+			<title code="0x03">Friendly and Peaceful</title>
+			<title code="0x04">Monsters</title>
+			<title code="0x05">Childhood Memories</title>
+			<title code="0x06">Deep Underground</title>
+			<title code="0x07">Higher and Higher</title>
+			<title code="0x08">Friendship</title>
+			<title code="0x09">Demon Combat</title>
+			<title code="0x0a">Royal Palace</title>
+			<title code="0x0b">Mystical Realm of the Faeries</title>
+			<title code="0x0c">The Arrival of Spring</title>
+			<title code="0x0d">Travelling Alone</title>
+			<title code="0x0e">Cruel Reality</title>
+			<title code="0x0f">Gambling Fever</title>
+			<title code="0x10">Racing Slimes!</title>
+			<title code="0x11">Devastation</title>
+			<title code="0x12">Reminiscence</title>
+			<title code="0x13">Country Living</title>
+			<title code="0x14">Ocean Voyage</title>
+			<title code="0x15">Theme of Love</title>
+			<title code="0x16">Vows of Marriage</title>
+			<title code="0x17">Trouble at Night</title>
+			<title code="0x18">Talking to the Skies</title>
+			<title code="0x19">Faeries' Song</title>
+			<title code="0x1a">Heavenly Castle</title>
+			<title code="0x1b">Zenithia's Fate</title>
+			<title code="0x1c">World Without Light</title>
+			<title code="0x1d">Lord Mildrath</title>
+			<title code="0x1e">Stardust Shower</title>
+			<title code="0x1f">Grand Finale</title>
+			<title code="0x20">Victory</title>
+			<title code="0x21">Improvement</title>
+			<title code="0x22">Good Night</title>
+			<title code="0x23">Prayer</title>
+			<title code="0x24">Imperial Scrolls of Honor</title>
+			<title code="0x25">Special Item</title>
+			<title code="0x26">Curse</title>
+			<title code="0x27">Surprise!</title>
+			<title code="0x28">Success</title>
+			<title code="0x29">Secret</title>
+			<title code="0x2a">Flute of Spring</title>
+			<title code="0x2b">Small Prize</title>
+			<title code="0x2c">Win Big!</title>
+			<title code="0x2d">Jackpot</title>
+			<title code="0x2f">On Your Marks!</title>
+			<title code="0x30">The Loosing Slime</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[SNES] Dragon Quest 6: Maboroshi no Daichi (ドラゴンクエスト６ 幻の大地)</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">enix</driveralias>
+		<options>
+			<option name="apu_mix" value="0x200"/>
+		</options>
+		<romlist archive="dq6spc">
+			<rom type="data" offset="0x01">dq6-01.spc</rom>
+			<rom type="data" offset="0x02">dq6-02.spc</rom>
+			<rom type="data" offset="0x03">dq6-03.spc</rom>
+			<rom type="data" offset="0x04">dq6-04.spc</rom>
+			<rom type="data" offset="0x05">dq6-05.spc</rom>
+			<rom type="data" offset="0x06">dq6-06.spc</rom>
+			<rom type="data" offset="0x07">dq6-07.spc</rom>
+			<rom type="data" offset="0x08">dq6-08.spc</rom>
+			<rom type="data" offset="0x09">dq6-09.spc</rom>
+			<rom type="data" offset="0x0a">dq6-10.spc</rom>
+			<rom type="data" offset="0x0b">dq6-11.spc</rom>
+			<rom type="data" offset="0x0c">dq6-12.spc</rom>
+			<rom type="data" offset="0x0d">dq6-13.spc</rom>
+			<rom type="data" offset="0x0e">dq6-14.spc</rom>
+			<rom type="data" offset="0x0f">dq6-15.spc</rom>
+			<rom type="data" offset="0x10">dq6-16.spc</rom>
+			<rom type="data" offset="0x11">dq6-17.spc</rom>
+			<rom type="data" offset="0x12">dq6-18.spc</rom>
+			<rom type="data" offset="0x13">dq6-19.spc</rom>
+			<rom type="data" offset="0x14">dq6-20.spc</rom>
+			<rom type="data" offset="0x15">dq6-21a.spc</rom>
+			<rom type="data" offset="0x16">dq6-21b.spc</rom>
+			<rom type="data" offset="0x17">dq6-22.spc</rom>
+			<rom type="data" offset="0x18">dq6-23a.spc</rom>
+			<rom type="data" offset="0x19">dq6-23b.spc</rom>
+			<rom type="data" offset="0x1a">dq6-24.spc</rom>
+			<rom type="data" offset="0x1b">dq6-25.spc</rom>
+			<rom type="data" offset="0x1c">dq6-26.spc</rom>
+			<rom type="data" offset="0x1d">dq6-27.spc</rom>
+			<rom type="data" offset="0x1e">dq6-28.spc</rom>
+			<rom type="data" offset="0x1f">dq6-29.spc</rom>
+			<rom type="data" offset="0x20">dq6-30a.spc</rom>
+			<rom type="data" offset="0x21">dq6-30b.spc</rom>
+			<rom type="data" offset="0x22">dq6-30c.spc</rom>
+			<rom type="data" offset="0x23">dq6-30d.spc</rom>
+			<rom type="data" offset="0x24">dq6-30e.spc</rom>
+			<rom type="data" offset="0x25">dq6-30f.spc</rom>
+			<rom type="data" offset="0x26">dq6-30g.spc</rom>
+			<rom type="data" offset="0x27">dq6-30h.spc</rom>
+			<rom type="data" offset="0x28">dq6-30i.spc</rom>
+			<rom type="data" offset="0x29">dq6-30j.spc</rom>
+			<rom type="data" offset="0x2a">dq6-30k.spc</rom>
+			<rom type="data" offset="0x2b">dq6-30l.spc</rom>
+			<rom type="data" offset="0x2c">dq6-30m.spc</rom>
+			<rom type="data" offset="0x2d">dq6-30n.spc</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Overture</title>
+			<title code="0x02">Save Data</title>
+			<title code="0x03">Castle</title>
+			<title code="0x04">In the Town</title>
+			<title code="0x05">Happy Humming</title>
+			<title code="0x06">Folk Dance</title>
+			<title code="0x07">Inviting Village</title>
+			<title code="0x08">At the Palace</title>
+			<title code="0x09">Through the Fields</title>
+			<title code="0x0a">Wandering Through the Silence</title>
+			<title code="0x0b">Another World</title>
+			<title code="0x0c">Saint's Wreath</title>
+			<title code="0x0d">Flying Bed</title>
+			<title code="0x0e">Ocean Waves</title>
+			<title code="0x0f">Evil World</title>
+			<title code="0x10">Dungeons</title>
+			<title code="0x11">Frightening Dungeon</title>
+			<title code="0x12">Devil's Tower</title>
+			<title code="0x13">Satan's Castle</title>
+			<title code="0x14">Last Dungeon</title>
+			<title code="0x15">Melancholy (glass)</title>
+			<title code="0x16">Melancholy (violin)</title>
+			<title code="0x17">Ocarina</title>
+			<title code="0x18">The Saint (glass)</title>
+			<title code="0x19">The Saint (violin)</title>
+			<title code="0x1a">Pegasus</title>
+			<title code="0x1b">Courageous Fight</title>
+			<title code="0x1c">Brave Fight</title>
+			<title code="0x1d">Monsters</title>
+			<title code="0x1e">Demon Combat</title>
+			<title code="0x1f">Eternal Lullaby</title>
+			<title code="0x20">Inn</title>
+			<title code="0x21">Church</title>
+			<title code="0x22">Friend</title>
+			<title code="0x23">Improvement</title>
+			<title code="0x24">Curse</title>
+			<title code="0x25">Save</title>
+			<title code="0x26">Item</title>
+			<title code="0x27">Fanfare 1</title>
+			<title code="0x28">Fanfare 2</title>
+			<title code="0x29">Fanfare 3</title>
+			<title code="0x2a">Mysterious Harp</title>
+			<title code="0x2b">Fever</title>
+			<title code="0x2c">Roll</title>
+			<title code="0x2d">Appearance</title>
+		</titlelist>
+	</game>
+</gamelist>

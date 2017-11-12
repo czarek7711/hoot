@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //COLOSSUS -->
+	<game>
+		<name>[PC-9801] FILE:0 ゴーストキラー・神村 麗(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">COLOSSUS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="file0_98">
+			<rom type="file" offset="-1">file0_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">G01.CMD</rom>
+			<rom type="file" offset="-1">G02.CMD</rom>
+			<rom type="file" offset="-1">G03.CMD</rom>
+			<rom type="file" offset="-1">G04.CMD</rom>
+			<rom type="file" offset="-1">G05.CMD</rom>
+			<rom type="file" offset="-1">G06.CMD</rom>
+			<rom type="file" offset="-1">G07.CMD</rom>
+			<rom type="shell" offset="0">file0_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">G01.CMD : オープニングテーマ</title>
+			<title code="0x02">G02.CMD : エンディングテーマ</title>
+			<title code="0x03">G03.CMD : メインテーマ</title>
+			<title code="0x04">G04.CMD : 占いの館</title>
+			<title code="0x05">G05.CMD : 地下迷路</title>
+			<title code="0x06">G06.CMD : 対ボス!</title>
+			<title code="0x07">G07.CMD : 甘美な世界</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] FILE:0 ゴーストキラー・神村 麗(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">COLOSSUS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="file0_98">
+			<rom type="file" offset="-1">file0_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">G01.CMD</rom>
+			<rom type="file" offset="-1">G02.CMD</rom>
+			<rom type="file" offset="-1">G03.CMD</rom>
+			<rom type="file" offset="-1">G04.CMD</rom>
+			<rom type="file" offset="-1">G05.CMD</rom>
+			<rom type="file" offset="-1">G06.CMD</rom>
+			<rom type="file" offset="-1">G07.CMD</rom>
+			<rom type="shell" offset="0">file0_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">G01.CMD : オープニングテーマ</title>
+			<title code="0x02">G02.CMD : エンディングテーマ</title>
+			<title code="0x03">G03.CMD : メインテーマ</title>
+			<title code="0x04">G04.CMD : 占いの館</title>
+			<title code="0x05">G05.CMD : 地下迷路</title>
+			<title code="0x06">G06.CMD : 対ボス!</title>
+			<title code="0x07">G07.CMD : 甘美な世界</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] FILE:0 ゴーストキラー・神村 麗(SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">COLOSSUS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="file0_98">
+			<rom type="file" offset="-1">file0_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">G01.MID</rom>
+			<rom type="file" offset="-1">G02.MID</rom>
+			<rom type="file" offset="-1">G03.MID</rom>
+			<rom type="file" offset="-1">G04.MID</rom>
+			<rom type="file" offset="-1">G05.MID</rom>
+			<rom type="file" offset="-1">G06.MID</rom>
+			<rom type="file" offset="-1">G07.MID</rom>
+			<rom type="shell" offset="0">file0_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x101">G01.MID : オープニングテーマ</title>
+			<title code="0x102">G02.MID : エンディングテーマ</title>
+			<title code="0x103">G03.MID : メインテーマ</title>
+			<title code="0x104">G04.MID : 占いの館</title>
+			<title code="0x105">G05.MID : 地下迷路</title>
+			<title code="0x106">G06.MID : 対ボス!</title>
+			<title code="0x107">G07.MID : 甘美な世界</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] リィナ☆クリスタル(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">COLOSSUS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="liena_98">
+			<rom type="file" offset="-1">liena_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">B01.CMD</rom>
+			<rom type="file" offset="-1">B02.CMD</rom>
+			<rom type="file" offset="-1">H01.CMD</rom>
+			<rom type="file" offset="-1">H02.CMD</rom>
+			<rom type="file" offset="-1">H03.CMD</rom>
+			<rom type="file" offset="-1">H04.CMD</rom>
+			<rom type="file" offset="-1">H05.CMD</rom>
+			<rom type="file" offset="-1">H06.CMD</rom>
+			<rom type="file" offset="-1">M01.CMD</rom>
+			<rom type="file" offset="-1">M02.CMD</rom>
+			<rom type="file" offset="-1">M03.CMD</rom>
+			<rom type="file" offset="-1">M04.CMD</rom>
+			<rom type="file" offset="-1">M05.CMD</rom>
+			<rom type="file" offset="-1">M06.CMD</rom>
+			<rom type="file" offset="-1">M07.CMD</rom>
+			<rom type="file" offset="-1">M08.CMD</rom>
+			<rom type="file" offset="-1">M09.CMD</rom>
+			<rom type="shell" offset="0">liena_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">M01.CMD : メインテーマ</title>
+			<title code="0x02">M02.CMD : サーカス</title>
+			<title code="0x03">M03.CMD : エンディングテーマ</title>
+			<title code="0x04">M04.CMD : ぺス&amp;リィナ1</title>
+			<title code="0x05">M05.CMD : ぺス&amp;リィナ2</title>
+			<title code="0x06">M06.CMD : 馬鹿まるだし</title>
+			<title code="0x07">M07.CMD : 嵐の中</title>
+			<title code="0x08">M08.CMD : 恐怖の研究所</title>
+			<title code="0x09">M09.CMD : 逃げろ!</title>
+			<title code="0x0b">H01.CMD : リィナのエッチ</title>
+			<title code="0x0c">H02.CMD : アンドレの楽しみ</title>
+			<title code="0x0d">H03.CMD : 拷問の始まり</title>
+			<title code="0x0e">H04.CMD : 拷問の極み</title>
+			<title code="0x0f">H05.CMD : スィートリィナたん</title>
+			<title code="0x10">H06.CMD : リィナとぺスのH</title>
+			<title code="0x15">B01.CMD : ファンファーレ1</title>
+			<title code="0x16">B02.CMD : ファンファーレ2</title>
+		</titlelist>
+	</game>
+
+	<game>
+		<name>[PC-9801] リィナ☆クリスタル(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">COLOSSUS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="liena_98">
+			<rom type="file" offset="-1">liena_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">B01.CMD</rom>
+			<rom type="file" offset="-1">B02.CMD</rom>
+			<rom type="file" offset="-1">H01.CMD</rom>
+			<rom type="file" offset="-1">H02.CMD</rom>
+			<rom type="file" offset="-1">H03.CMD</rom>
+			<rom type="file" offset="-1">H04.CMD</rom>
+			<rom type="file" offset="-1">H05.CMD</rom>
+			<rom type="file" offset="-1">H06.CMD</rom>
+			<rom type="file" offset="-1">M01.CMD</rom>
+			<rom type="file" offset="-1">M02.CMD</rom>
+			<rom type="file" offset="-1">M03.CMD</rom>
+			<rom type="file" offset="-1">M04.CMD</rom>
+			<rom type="file" offset="-1">M05.CMD</rom>
+			<rom type="file" offset="-1">M06.CMD</rom>
+			<rom type="file" offset="-1">M07.CMD</rom>
+			<rom type="file" offset="-1">M08.CMD</rom>
+			<rom type="file" offset="-1">M09.CMD</rom>
+			<rom type="shell" offset="0">liena_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">M01.CMD : メインテーマ</title>
+			<title code="0x02">M02.CMD : サーカス</title>
+			<title code="0x03">M03.CMD : エンディングテーマ</title>
+			<title code="0x04">M04.CMD : ぺス&amp;リィナ1</title>
+			<title code="0x05">M05.CMD : ぺス&amp;リィナ2</title>
+			<title code="0x06">M06.CMD : 馬鹿まるだし</title>
+			<title code="0x07">M07.CMD : 嵐の中</title>
+			<title code="0x08">M08.CMD : 恐怖の研究所</title>
+			<title code="0x09">M09.CMD : 逃げろ!</title>
+			<title code="0x0b">H01.CMD : リィナのエッチ</title>
+			<title code="0x0c">H02.CMD : アンドレの楽しみ</title>
+			<title code="0x0d">H03.CMD : 拷問の始まり</title>
+			<title code="0x0e">H04.CMD : 拷問の極み</title>
+			<title code="0x0f">H05.CMD : スィートリィナたん</title>
+			<title code="0x10">H06.CMD : リィナとぺスのH</title>
+			<title code="0x15">B01.CMD : ファンファーレ1</title>
+			<title code="0x16">B02.CMD : ファンファーレ2</title>
+		</titlelist>
+	</game>
+
+	<game>
+		<name>[PC-9801] リィナ☆クリスタル(SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">COLOSSUS</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="liena_98">
+			<rom type="file" offset="-1">liena_98.com</rom>
+			<rom type="file" offset="-1">AD.EXE</rom>
+			<rom type="conin" offset="5">AD.EXE</rom>
+			<rom type="file" offset="-1">B01.MID</rom>
+			<rom type="file" offset="-1">B02.MID</rom>
+			<rom type="file" offset="-1">H01.MID</rom>
+			<rom type="file" offset="-1">H02.MID</rom>
+			<rom type="file" offset="-1">H03.MID</rom>
+			<rom type="file" offset="-1">H04.MID</rom>
+			<rom type="file" offset="-1">H05.MID</rom>
+			<rom type="file" offset="-1">H06.MID</rom>
+			<rom type="file" offset="-1">M01.MID</rom>
+			<rom type="file" offset="-1">M02.MID</rom>
+			<rom type="file" offset="-1">M03.MID</rom>
+			<rom type="file" offset="-1">M04.MID</rom>
+			<rom type="file" offset="-1">M05.MID</rom>
+			<rom type="file" offset="-1">M06.MID</rom>
+			<rom type="file" offset="-1">M07.MID</rom>
+			<rom type="file" offset="-1">M08.MID</rom>
+			<rom type="file" offset="-1">M09.MID</rom>
+			<rom type="shell" offset="0">liena_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x101">M01.MID : メインテーマ</title>
+			<title code="0x102">M02.MID : サーカス</title>
+			<title code="0x103">M03.MID : エンディングテーマ</title>
+			<title code="0x104">M04.MID : ぺス&amp;リィナ1</title>
+			<title code="0x105">M05.MID : ぺス&amp;リィナ2</title>
+			<title code="0x106">M06.MID : 馬鹿まるだし</title>
+			<title code="0x107">M07.MID : 嵐の中</title>
+			<title code="0x108">M08.MID : 恐怖の研究所</title>
+			<title code="0x109">M09.MID : 逃げろ!</title>
+			<title code="0x10b">H01.MID : リィナのエッチ</title>
+			<title code="0x10c">H02.MID : アンドレの楽しみ</title>
+			<title code="0x10d">H03.MID : 拷問の始まり</title>
+			<title code="0x10e">H04.MID : 拷問の極み</title>
+			<title code="0x10f">H05.MID : スィートリィナたん</title>
+			<title code="0x110">H06.MID : リィナとぺスのH</title>
+			<title code="0x115">B01.MID : ファンファーレ1</title>
+			<title code="0x116">B02.MID : ファンファーレ2</title>
+		</titlelist>
+	</game>
+</gamelist>
