@@ -1,7 +1,5 @@
 # README #
 
-### My current hoot folder with all the xml files and games. ###
-
 ## Games List ##
 
 Arcade
