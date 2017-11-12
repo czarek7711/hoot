@@ -27,7 +27,7 @@ Arcade
 * Space Harrier
 * Strategic Defense Initiative // doesn't work
 * Sunset Riders
-* Super hang-On
+* Super Hang-On
 * Super Monaco GP
 * Super Street Fighter II: Turbo
 * Super Street Fighter II: The New Challengers
@@ -47,7 +47,7 @@ Gameboy
 * Castlevania - The Adventure
 * Castlevania II - Belmon't Revenge
 * Castlevania Legends // no titles added
-* Donkey kong Land
+* Donkey Kong Land
 * Final Fantasy Adventure [Mystic Quest]
 * Final Fantasy Legend II [SaGa 2 - Hihou Densetsu]
 * Final Fantasy Legend III [SaGa 3 - Jikuu no Hasha]
@@ -92,7 +92,7 @@ MegaDrive
 * Batman
 * Battle Mania Daiginjo
 * Castlevania: Bloodlines [Vampire Killer]
-* Columns III: Revenge of Clolumns
+* Columns III: Revenge of Columns
 * Contra: Hard Corps
 * Crude Buster [Two Crude]
 * Crusader of Centy
@@ -222,7 +222,7 @@ NES
 * Kid Icarus (FDS)
 * King Kong 2 - Ikari no Megaton Punch
 * Kirby's Adventure
-* Kiwi Kraze - A bird-Brained Adventure!
+* Kiwi Kraze - A Bird-Brained Adventure!
 * Kunio-kun no Nekketsu Soccer League
 * Lagrange Point (VRC7)
 * Legend of Zelda 2, The - The Adventure of Link (FDS)
@@ -285,7 +285,7 @@ NES
 * Teenage Mutant Ninja Turtles [Gekikame Ninja Den]
 * Tetris
 * Tiny Toon Adventures
-* Tom & Jerry: The Ultimate Game od Cat and Mouse!
+* Tom & Jerry: The Ultimate Game of Cat and Mouse!
 * Treasure Master
 * Trojan [Tatakai no Banka]
 * Trolls in Crazyland, The [Doki! Doki! Yuuenchi - Crazyland Daisakusen]
@@ -456,7 +456,7 @@ SNES
 * Mega Man X2
 * Parodius Da!: Shinwa kara Owarai he
 * Plok
-* Pop'm Twinbee
+* Pop'n Twinbee
 * Radical Dreamers
 * Rock N'Roll Racing
 * Romancing SaGa 3
@@ -528,7 +528,7 @@ X68000
 * Casablanca Ni Ai Wo Satsujinsha Ha Jikuu Wo Koete // no titles added
 * Cho Ren Sha 68K
 * Cosmic Psycho
-* Dragon night 4
+* Dragon Knight 4
 * Genocide 2
 * Geograph Seal
 * Gradius II
