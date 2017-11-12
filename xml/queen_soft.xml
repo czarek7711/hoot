@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //queen_soft -->
+	<game>
+		<name>[PC-98] Hotei Raoyui (麻雀河底撈魚)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="hoteir98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">MJG.EFC</rom>
+			<rom type="file" offset="0x10">ENDING.M</rom>
+			<rom type="file" offset="0x11">GRAPHIC.M</rom>
+			<rom type="file" offset="0x12">LETS_GO.M</rom>
+			<rom type="file" offset="0x13">LOGO.M</rom>
+			<rom type="file" offset="0x14">MENU.M</rom>
+			<rom type="file" offset="0x15">MJG1.M</rom>
+			<rom type="file" offset="0x16">MJG2.M</rom>
+			<rom type="file" offset="0x17">MJG3.M</rom>
+			<rom type="file" offset="0x18">OPENING.M</rom>
+			<rom type="file" offset="0x19">RANKING.M</rom>
+			<rom type="file" offset="0x1a">STAFF.M</rom>
+			<rom type="file" offset="0x1b">TITLE.M</rom>
+			<rom type="file" offset="0x1c">WIN.M</rom>
+			<rom type="shell" offset="0">PMD /M10 /V0 /E1 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ENDING.M</title> 
+			<title code="0x11">GRAPHIC.M</title>
+			<title code="0x12">LETS_GO.M</title>
+			<title code="0x13">LOGO.M</title>   
+			<title code="0x14">MENU.M</title>   
+			<title code="0x15">MJG1.M</title>   
+			<title code="0x16">MJG2.M</title>   
+			<title code="0x17">MJG3.M</title>   
+			<title code="0x18">OPENING.M</title>
+			<title code="0x19">RANKING.M</title>
+			<title code="0x1a">STAFF.M</title>  
+			<title code="0x1b">TITLE.M</title>  
+			<title code="0x1c">WIN.M</title>    
+			<range min="0x0801" max="0x0806" extcode="1">MJG.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Hotei Raoyui 2 (河底撈魚２)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="hoteira98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">MJG.EFC</rom>
+			<rom type="file" offset="0x10">ENDING.M</rom>
+			<rom type="file" offset="0x11">GRAPHIC.M</rom>
+			<rom type="file" offset="0x12">LETS_GO.M</rom>
+			<rom type="file" offset="0x13">LOGO.M</rom>
+			<rom type="file" offset="0x14">MENU.M</rom>
+			<rom type="file" offset="0x15">MJG1.M</rom>
+			<rom type="file" offset="0x16">MJG2.M</rom>
+			<rom type="file" offset="0x17">MJG3.M</rom>
+			<rom type="file" offset="0x18">OPENING.M</rom>
+			<rom type="file" offset="0x19">RANKING.M</rom>
+			<rom type="file" offset="0x1a">STAFF.M</rom>
+			<rom type="file" offset="0x1b">TITLE.M</rom>
+			<rom type="file" offset="0x1c">WIN.M</rom>
+			<rom type="shell" offset="0">PMD /M10 /V0 /E1 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ENDING.M</title> 
+			<title code="0x11">GRAPHIC.M</title>
+			<title code="0x12">LETS_GO.M</title>
+			<title code="0x13">LOGO.M</title>   
+			<title code="0x14">MENU.M</title>   
+			<title code="0x15">MJG1.M</title>   
+			<title code="0x16">MJG2.M</title>   
+			<title code="0x17">MJG3.M</title>   
+			<title code="0x18">OPENING.M</title>
+			<title code="0x19">RANKING.M</title>
+			<title code="0x1a">STAFF.M</title>  
+			<title code="0x1b">TITLE.M</title>  
+			<title code="0x1c">WIN.M</title>    
+			<range min="0x0801" max="0x0806" extcode="1">MJG.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Possessioner (ポゼッショナー)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="possesion98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">QUEEN.EFC</rom>
+			<rom type="file" offset="0x10">QUEEN01.M</rom>
+			<rom type="file" offset="0x11">QUEEN02.M</rom>
+			<rom type="file" offset="0x12">QUEEN03.M</rom>
+			<rom type="file" offset="0x13">QUEEN04.M</rom>
+			<rom type="file" offset="0x14">QUEEN05.M</rom>
+			<rom type="file" offset="0x15">QUEEN06.M</rom>
+			<rom type="file" offset="0x16">QUEEN07.M</rom>
+			<rom type="file" offset="0x17">QUEEN08.M</rom>
+			<rom type="file" offset="0x18">QUEEN09.M</rom>
+			<rom type="file" offset="0x19">QUEEN10.M</rom>
+			<rom type="file" offset="0x1A">QUEEN11.M</rom>
+			<rom type="file" offset="0x1B">QUEEN12.M</rom>
+			<rom type="file" offset="0x1C">QUEEN13.M</rom>
+			<rom type="file" offset="0x1D">QUEEN14.M</rom>
+			<rom type="file" offset="0x1E">QK01.M</rom>
+			<rom type="file" offset="0x1F">QK02.M</rom>
+			<rom type="file" offset="0x20">QK03.M</rom>
+			<rom type="file" offset="0x21">QK04.M</rom>
+			<rom type="file" offset="0x22">QK05.M</rom>
+			<rom type="file" offset="0x23">QK06.M</rom>
+			<rom type="file" offset="0x24">QK07.M</rom>
+			<rom type="shell" offset="0">PMD</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">戦闘シーン A</title>
+			<title code="0x11">街 B</title>
+			<title code="0x12">街 A</title>
+			<title code="0x13">Opening</title>
+			<title code="0x14">ボス戦闘&amp;バッドエンド</title>
+			<title code="0x15">プリム=ウォンの館</title>
+			<title code="0x16">アダルトシーンA</title>
+			<title code="0x17">装甲車出撃</title>
+			<title code="0x18">本部の曲</title>
+			<title code="0x19">シャワーシーン</title>
+			<title code="0x1A">OPのアレンジ?</title>
+			<title code="0x1B">エンディング</title>
+			<title code="0x1C">タワー/アダルトシーン</title>
+			<title code="0x1D">地下水路</title>
+			<title code="0x1E">戦闘シーンB</title>
+			<title code="0x1F">ブティックで流れている曲</title>
+			<title code="0x20">タワー内部</title>
+			<title code="0x21">放棄地区</title>
+			<title code="0x22">アダルトシーンBW</title>
+			<title code="0x23">アリサ、機械に犯されるの曲</title>
+			<title code="0x24">ラボテック/ラシュマル博士</title>
+			<range min="0x0801" max="0x082e" extcode="1">QUEEN.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Melty Marchen Mel Mar (メル・メル メルティーメルヘン)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="meltymar_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">DO01.M</rom>
+			<rom type="file" offset="0x11">DO02.M</rom>
+			<rom type="file" offset="0x12">DO03.M</rom>
+			<rom type="file" offset="0x13">DO04.M</rom>
+			<rom type="file" offset="0x14">DO05.M</rom>
+			<rom type="file" offset="0x15">DO06.M</rom>
+			<rom type="file" offset="0x16">DO07.M</rom>
+			<rom type="file" offset="0x17">DO08.M</rom>
+			<rom type="file" offset="0x18">DO09.M</rom>
+			<rom type="shell" offset="0">PMD /M10 /V0 /E1 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">DO01.M</title>
+			<title code="0x11">DO02.M</title>
+			<title code="0x12">DO03.M</title>
+			<title code="0x13">DO04.M</title>
+			<title code="0x14">DO05.M</title>
+			<title code="0x15">DO06.M</title>
+			<title code="0x16">DO07.M</title>
+			<title code="0x17">DO08.M</title>
+			<title code="0x18">DO09.M</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Curse (カース)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="curse_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">CURSE.EFC</rom>
+			<rom type="file" offset="0x10">LOGO.M</rom>
+			<rom type="file" offset="0x11">M001.M</rom>
+			<rom type="file" offset="0x12">M002.M</rom>
+			<rom type="file" offset="0x13">M003.M</rom>
+			<rom type="file" offset="0x14">M004.M</rom>
+			<rom type="file" offset="0x15">M005.M</rom>
+			<rom type="file" offset="0x16">M006.M</rom>
+			<rom type="file" offset="0x17">M007.M</rom>
+			<rom type="file" offset="0x18">M008.M</rom>
+			<rom type="file" offset="0x19">M009.M</rom>
+			<rom type="file" offset="0x1a">M010.M</rom>
+			<rom type="file" offset="0x1b">M011.M</rom>
+			<rom type="file" offset="0x1c">M013.M</rom>
+			<rom type="file" offset="0x1d">M014.M</rom>
+			<rom type="file" offset="0x1e">M015.M</rom>
+			<rom type="file" offset="0x1f">M016.M</rom>
+			<rom type="file" offset="0x20">M019.M</rom>
+			<rom type="file" offset="0x21">M020.M</rom>
+			<rom type="file" offset="0x22">M021.M</rom>
+			<rom type="file" offset="0x23">M022.M</rom>
+			<rom type="file" offset="0x24">M023.M</rom>
+			<rom type="file" offset="0x25">M050.M</rom>
+			<rom type="file" offset="0x26">M051.M</rom>
+			<rom type="file" offset="0x27">M052.M</rom>
+			<rom type="file" offset="0x28">M095.M</rom>
+			<rom type="file" offset="0x29">M096.M</rom>
+			<rom type="file" offset="0x2a">M098.M</rom>
+			<rom type="file" offset="0x2b">M099.M</rom>
+			<rom type="shell" offset="0">pmd /DS16 /DF16 /M6 /V0 /E2 /K /F /I</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LOGO.M</title>
+			<title code="0x11">オープニング</title>
+			<title code="0x12">メインテーマ</title>
+			<title code="0x13">喫茶シルク</title>
+			<title code="0x14">校門前</title>
+			<title code="0x15">学生課</title>
+			<title code="0x16">聞き込み1</title>
+			<title code="0x17">医学部研究室</title>
+			<title code="0x18">考古学研究室</title>
+			<title code="0x19">心理学研究室</title>
+			<title code="0x1a">博物館</title>
+			<title code="0x1b">さやか</title>
+			<title code="0x1c">教会1</title>
+			<title code="0x1d">病床</title>
+			<title code="0x1e">しんみり</title>
+			<title code="0x1f">咲子</title>
+			<title code="0x20">クライマックス</title>
+			<title code="0x21">スローアレンジ長調</title>
+			<title code="0x22">スローアレンジ短調</title>
+			<title code="0x23">マーチアレンジ</title>
+			<title code="0x24">コミカル</title>
+			<title code="0x28">緊張いっぱい</title>
+			<title code="0x29">教会2</title>
+			<title code="0x2a">聞き込み2</title>
+			<title code="0x2b">スタッフロール</title>
+			<title code="0x25">おやすみ</title>
+			<title code="0x26">が～ん</title>
+			<title code="0x27">むぅ、あやしい…</title>
+			<range min="0x0801" max="0x080c" extcode="1">CURSE.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Gamblers Queen's Cup (ギャンブラー Ｑｕｅｅｎ＇ｓ Ｃｕｐ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="gqcup_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">AYA4.M</rom>
+			<rom type="file" offset="0x11">AYA5.M</rom>
+			<rom type="file" offset="0x12">BAR1.M</rom>
+			<rom type="file" offset="0x13">BAR2.M</rom>
+			<rom type="file" offset="0x14">BAR3.M</rom>
+			<rom type="file" offset="0x15">DERBY.M</rom>
+			<rom type="file" offset="0x16">ENDING.M</rom>
+			<rom type="file" offset="0x17">FINAL.M</rom>
+			<rom type="file" offset="0x18">GO1.M</rom>
+			<rom type="file" offset="0x19">GO2.M</rom>
+			<rom type="file" offset="0x1a">JURI4.M</rom>
+			<rom type="file" offset="0x1b">JURI5.M</rom>
+			<rom type="file" offset="0x1c">LOGO.M</rom>
+			<rom type="file" offset="0x1d">QUIZ.M</rom>
+			<rom type="file" offset="0x1e">REINA4.M</rom>
+			<rom type="file" offset="0x1f">REINA5.M</rom>
+			<rom type="file" offset="0x20">TAKAGI.M</rom>
+			<rom type="file" offset="0x21">TITLE.M</rom>
+			<rom type="file" offset="0x22">TRACK0.M</rom>
+			<rom type="file" offset="0x23">TRACK1.M</rom>
+			<rom type="file" offset="0x24">WINNER.M</rom>
+			<rom type="file" offset="0x25">WORKMAN.M</rom>
+			<rom type="shell" offset="0">PMD /M6 /V0 /E0 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1c">Logo</title>   
+			<title code="0x21">Title</title>  
+			<title code="0x15">Odds Scene</title>  
+			<title code="0x22">Race 1</title> 
+			<title code="0x23">Race 2</title> 
+			<title code="0x12">Bar Scene 1</title>   
+			<title code="0x13">Bar Scene 2</title>   
+			<title code="0x14">Bar Scene 3</title>   
+			<title code="0x1e">Yuenchi Scene 1</title> 
+			<title code="0x1f">e1</title> 
+			<title code="0x1a">Eiga</title>  
+			<title code="0x1b">m1</title>  
+			<title code="0x10">Keiba</title>   
+			<title code="0x11">Aya</title>   
+			<title code="0x1d">Quiz Scene 1</title>   
+			<title code="0x20">Bar Scene 4</title> 
+			<title code="0x16">Ending</title> 
+			<title code="0x25">WORKMAN.M</title>
+			<title code="0x18">Game Over 1</title>    
+			<title code="0x19">Game Over 2</title>    
+			<title code="0x24">Fanfare 2</title> 
+			<title code="0x17">Quiz Scene 2</title>  
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Queensoft Library Nennai Tokubetsu Version (クイーンソフト ライブラリー 年内特別バージョン)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="queensl_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">MUSIC01.O</rom>
+			<rom type="file" offset="0x11">MUSIC02.O</rom>
+			<rom type="file" offset="0x12">MUSIC03.O</rom>
+			<rom type="file" offset="0x13">MUSIC04.O</rom>
+			<rom type="file" offset="0x14">MUSIC05.O</rom>
+			<rom type="file" offset="0x15">MUSIC06.O</rom>
+			<rom type="file" offset="0x16">MUSIC07.O</rom>
+			<rom type="file" offset="0x17">MUSIC08.O</rom>
+			<rom type="file" offset="0x18">MUSIC09.O</rom>
+			<rom type="file" offset="0x19">MUSIC10.O</rom>
+			<rom type="shell" offset="0">NAX -b10 -f7 -q -t</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MUSIC01.O</title>
+			<title code="0x11">MUSIC02.O</title>
+			<title code="0x12">MUSIC03.O</title>
+			<title code="0x13">MUSIC04.O</title>
+			<title code="0x14">MUSIC05.O</title>
+			<title code="0x15">MUSIC06.O</title>
+			<title code="0x16">MUSIC07.O</title>
+			<title code="0x17">MUSIC08.O</title>
+			<title code="0x18">MUSIC09.O</title>
+			<title code="0x19">MUSIC10.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Fall (フォール)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0xb000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="11"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-28"/>
+		</options>
+		<romlist archive="fall_98">
+			<rom type="binary" offset="0x100">00 70 00 00</rom>
+			<rom type="code" offset="0x600">madp_98.bin</rom>
+			<rom type="code" offset="0x7000">07000.BIN</rom>
+			<rom type="binary" offset="0xa3fee">08</rom>
+			<rom type="bgm" offset="1" >__01.DAT</rom>
+			<rom type="bgm" offset="2" >__02.DAT</rom>
+			<rom type="bgm" offset="3" >__03.DAT</rom>
+			<rom type="bgm" offset="4" >__04.DAT</rom>
+			<rom type="bgm" offset="5" >__05.DAT</rom>
+			<rom type="bgm" offset="6" >__06.DAT</rom>
+			<rom type="bgm" offset="7" >__07.DAT</rom>
+			<rom type="bgm" offset="8" >__08.DAT</rom>
+			<rom type="bgm" offset="9" >__09.DAT</rom>
+			<rom type="bgm" offset="10">__10.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >__01.DAT</title>
+			<title code="2" >__02.DAT</title>
+			<title code="3" >__03.DAT</title>
+			<title code="4" >__04.DAT</title>
+			<title code="5" >__05.DAT</title>
+			<title code="6" >__06.DAT</title>
+			<title code="7" >__07.DAT</title>
+			<title code="8" >__08.DAT</title>
+			<title code="9" >__09.DAT</title>
+			<title code="10">__10.DAT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Mad Paradox (マッドパラドックス)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0xd000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="15"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-28"/>
+		</options>
+		<romlist archive="madp_98">
+			<rom type="binary" offset="0x100">00 a0 00 00</rom>
+			<rom type="code" offset="0x600">madp_98.bin</rom>
+			<rom type="code" offset="0xa000">0A000.BIN</rom>
+			<rom type="bgm" offset="1" >__01.DAT</rom>
+			<rom type="bgm" offset="2" >__02.DAT</rom>
+			<rom type="bgm" offset="3" >__03.DAT</rom>
+			<rom type="bgm" offset="4" >__04.DAT</rom>
+			<rom type="bgm" offset="5" >__05.DAT</rom>
+			<rom type="bgm" offset="6" >__06.DAT</rom>
+			<rom type="bgm" offset="7" >__07.DAT</rom>
+			<rom type="bgm" offset="8" >__08.DAT</rom>
+			<rom type="bgm" offset="9" >__09.DAT</rom>
+			<rom type="bgm" offset="10">__10.DAT</rom>
+			<rom type="bgm" offset="11">__11.DAT</rom>
+			<rom type="bgm" offset="12">__12.DAT</rom>
+			<rom type="bgm" offset="13">__13.DAT</rom>
+			<rom type="bgm" offset="14">__14.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >裏山～ 思い出のリータ ～</title>
+			<title code="2" >戦いの地へ～ 序盤 ～</title>    
+			<title code="3" >ドギの砦</title>                
+			<title code="4" >戦いの地へ～ 中盤 ～</title>    
+			<title code="5" >戦闘</title>                    
+			<title code="6" >天空の城</title>                
+			<title code="7" >聖域</title>                    
+			<title code="8" >村</title>                      
+			<title code="9" >四天王</title>                  
+			<title code="10">ゲームオーバー</title>          
+			<title code="11">ゴーガス</title>                
+			<title code="12">エンディング</title>            
+			<title code="13">オープニング</title>            
+			<title code="14">ＣＧギャラリー</title>          
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Pure 2 (ピュア２)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="bootcs" value="0x1000"/>
+			<option name="bootip" value="0x7000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x1e000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="21"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-28"/>
+		</options>
+		<romlist archive="pure2_98">
+			<rom type="code" offset="0x10000">10000.BIN</rom>
+			<rom type="code" offset="0x17000">pure2_98.bin</rom>
+			<rom type="binary" offset="0xa3fee">08</rom>
+			<rom type="bgm" offset="1" >__01.DAT</rom>
+			<rom type="bgm" offset="2" >__02.DAT</rom>
+			<rom type="bgm" offset="3" >__03.DAT</rom>
+			<rom type="bgm" offset="4" >__04.DAT</rom>
+			<rom type="bgm" offset="5" >__05.DAT</rom>
+			<rom type="bgm" offset="6" >__06.DAT</rom>
+			<rom type="bgm" offset="7" >__07.DAT</rom>
+			<rom type="bgm" offset="8" >__08.DAT</rom>
+			<rom type="bgm" offset="9" >__09.DAT</rom>
+			<rom type="bgm" offset="10">__10.DAT</rom>
+			<rom type="bgm" offset="11">__11.DAT</rom>
+			<rom type="bgm" offset="12">__12.DAT</rom>
+			<rom type="bgm" offset="13">__13.DAT</rom>
+			<rom type="bgm" offset="14">__14.DAT</rom>
+			<rom type="bgm" offset="15">__15.DAT</rom>
+			<rom type="bgm" offset="16">__16.DAT</rom>
+			<rom type="bgm" offset="17">__17.DAT</rom>
+			<rom type="bgm" offset="18">__18.DAT</rom>
+			<rom type="bgm" offset="19">__19.DAT</rom>
+			<rom type="bgm" offset="20">__20.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >__01.DAT</title>
+			<title code="2" >__02.DAT</title>
+			<title code="3" >__03.DAT</title>
+			<title code="4" >__04.DAT</title>
+			<title code="5" >__05.DAT</title>
+			<title code="6" >__06.DAT</title>
+			<title code="7" >__07.DAT</title>
+			<title code="8" >__08.DAT</title>
+			<title code="9" >__09.DAT</title>
+			<title code="10">__10.DAT</title>
+			<title code="11">__11.DAT</title>
+			<title code="12">__12.DAT</title>
+			<title code="13">__13.DAT</title>
+			<title code="14">__14.DAT</title>
+			<title code="15">__15.DAT</title>
+			<title code="16">__16.DAT</title>
+			<title code="17">__17.DAT</title>
+			<title code="18">__18.DAT</title>
+			<title code="19">__19.DAT</title>
+			<title code="20">__20.DAT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Wedding Rhapsody (ウェディングラプソディー)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="bootcs" value="0x1000"/>
+			<option name="bootip" value="0x7000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x1e000"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="12"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-28"/>
+		</options>
+		<romlist archive="wedrahp_98">
+			<rom type="code" offset="0x10000">10000.BIN</rom>
+			<rom type="code" offset="0x17000">pure2_98.bin</rom>
+			<rom type="binary" offset="0xa3fee">08</rom>
+			<rom type="bgm" offset="1" >__01.DAT</rom>
+			<rom type="bgm" offset="2" >__02.DAT</rom>
+			<rom type="bgm" offset="3" >__03.DAT</rom>
+			<rom type="bgm" offset="4" >__04.DAT</rom>
+			<rom type="bgm" offset="5" >__05.DAT</rom>
+			<rom type="bgm" offset="6" >__06.DAT</rom>
+			<rom type="bgm" offset="7" >__07.DAT</rom>
+			<rom type="bgm" offset="8" >__08.DAT</rom>
+			<rom type="bgm" offset="9" >__09.DAT</rom>
+			<rom type="bgm" offset="10">__10.DAT</rom>
+			<rom type="bgm" offset="11">__11.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >__01.DAT</title>
+			<title code="2" >__02.DAT</title>
+			<title code="3" >__03.DAT</title>
+			<title code="4" >__04.DAT</title>
+			<title code="5" >__05.DAT</title>
+			<title code="6" >__06.DAT</title>
+			<title code="7" >__07.DAT</title>
+			<title code="8" >__08.DAT</title>
+			<title code="9" >__09.DAT</title>
+			<title code="10">__10.DAT</title>
+			<title code="11">__11.DAT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Slope (スロープ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">queen_soft</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="slope_98">
+			<rom type="binary" offset="0xa3fee">08</rom>
+			<rom type="file" offset="-1">slope_98.com</rom>
+			<rom type="file" offset="-1">SLOPE.EXE</rom>
+			<rom type="file" offset="-1">SLOPE.BIN</rom>
+			<rom type="conin" offset="5">SLOPE.EXE</rom>
+			<rom type="file" offset="11">1.BGM</rom>
+			<rom type="file" offset="12">2.BGM</rom>
+			<rom type="file" offset="13">3.BGM</rom>
+			<rom type="file" offset="14">4.BGM</rom>
+			<rom type="file" offset="15">5.BGM</rom>
+			<rom type="file" offset="16">6.BGM</rom>
+			<rom type="file" offset="17">7.BGM</rom>
+			<rom type="file" offset="18">9.BGM</rom>
+			<rom type="file" offset="19">A.BGM</rom>
+			<rom type="file" offset="20">B.BGM</rom>
+			<rom type="shell" offset="0">slope_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">Dream of Future</title>
+			<title code="12">School Life</title>
+			<title code="13">Day By Day</title>
+			<title code="14">Longing</title>
+			<title code="15">A New Day</title>
+			<title code="16">After School</title>
+			<title code="17">Have a Good Time</title>
+			<title code="18">The Heart Waver</title>
+			<title code="19">Don't Stop My Heartbeat</title>
+			<title code="20">A Dreamy State</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC] Curse (カース)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC">queen_soft</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="curse_at">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDIBM.COM</rom>
+			<rom type="file" offset="0x08">CURSE.EFC</rom>
+			<rom type="file" offset="0x10">LOGO.M</rom>
+			<rom type="file" offset="0x11">M001.M</rom>
+			<rom type="file" offset="0x12">M002.M</rom>
+			<rom type="file" offset="0x13">M003.M</rom>
+			<rom type="file" offset="0x14">M004.M</rom>
+			<rom type="file" offset="0x15">M005.M</rom>
+			<rom type="file" offset="0x16">M006.M</rom>
+			<rom type="file" offset="0x17">M007.M</rom>
+			<rom type="file" offset="0x18">M008.M</rom>
+			<rom type="file" offset="0x19">M009.M</rom>
+			<rom type="file" offset="0x1a">M010.M</rom>
+			<rom type="file" offset="0x1b">M011.M</rom>
+			<rom type="file" offset="0x1c">M013.M</rom>
+			<rom type="file" offset="0x1d">M014.M</rom>
+			<rom type="file" offset="0x1e">M015.M</rom>
+			<rom type="file" offset="0x1f">M016.M</rom>
+			<rom type="file" offset="0x20">M019.M</rom>
+			<rom type="file" offset="0x21">M020.M</rom>
+			<rom type="file" offset="0x22">M021.M</rom>
+			<rom type="file" offset="0x23">M022.M</rom>
+			<rom type="file" offset="0x24">M023.M</rom>
+			<rom type="file" offset="0x25">M050.M</rom>
+			<rom type="file" offset="0x26">M051.M</rom>
+			<rom type="file" offset="0x27">M052.M</rom>
+			<rom type="file" offset="0x28">M095.M</rom>
+			<rom type="file" offset="0x29">M096.M</rom>
+			<rom type="file" offset="0x2a">M098.M</rom>
+			<rom type="file" offset="0x2b">M099.M</rom>
+			<rom type="shell" offset="0">pmdibm /DF24 /M10 /V0 /E1 /F /I</rom>
+			<rom type="shell" offset="0">PMD_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LOGO.M</title>
+			<title code="0x11">オープニング</title>
+			<title code="0x12">メインテーマ</title>
+			<title code="0x13">喫茶シルク</title>
+			<title code="0x14">校門前</title>
+			<title code="0x15">学生課</title>
+			<title code="0x16">聞き込み1</title>
+			<title code="0x17">医学部研究室</title>
+			<title code="0x18">考古学研究室</title>
+			<title code="0x19">心理学研究室</title>
+			<title code="0x1a">博物館</title>
+			<title code="0x1b">さやか</title>
+			<title code="0x1c">教会1</title>
+			<title code="0x1d">病床</title>
+			<title code="0x1e">しんみり</title>
+			<title code="0x1f">咲子</title>
+			<title code="0x20">クライマックス</title>
+			<title code="0x21">スローアレンジ長調</title>
+			<title code="0x22">スローアレンジ短調</title>
+			<title code="0x23">マーチアレンジ</title>
+			<title code="0x24">コミカル</title>
+			<title code="0x28">緊張いっぱい</title>
+			<title code="0x29">教会2</title>
+			<title code="0x2a">聞き込み2</title>
+			<title code="0x2b">スタッフロール</title>
+			<title code="0x25">おやすみ</title>
+			<title code="0x26">が～ん</title>
+			<title code="0x27">むぅ、あやしい…</title>
+			<range min="0x0801" max="0x080c" extcode="1">CURSE.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC] Gamblers Queen's Cup (ギャンブラー Ｑｕｅｅｎ＇ｓ Ｃｕｐ)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC">queen_soft</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="queencup_at">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDIBM.COM</rom>
+			<rom type="file" offset="0x10">AYA4.M</rom>
+			<rom type="file" offset="0x11">AYA5.M</rom>
+			<rom type="file" offset="0x12">BAR1.M</rom>
+			<rom type="file" offset="0x13">BAR2.M</rom>
+			<rom type="file" offset="0x14">BAR3.M</rom>
+			<rom type="file" offset="0x15">DERBY.M</rom>
+			<rom type="file" offset="0x16">ENDING.M</rom>
+			<rom type="file" offset="0x17">FINAL.M</rom>
+			<rom type="file" offset="0x18">GO1.M</rom>
+			<rom type="file" offset="0x19">GO2.M</rom>
+			<rom type="file" offset="0x1a">JURI4.M</rom>
+			<rom type="file" offset="0x1b">JURI5.M</rom>
+			<rom type="file" offset="0x1c">LOGO.M</rom>
+			<rom type="file" offset="0x1d">QUIZ.M</rom>
+			<rom type="file" offset="0x1e">REINA4.M</rom>
+			<rom type="file" offset="0x1f">REINA5.M</rom>
+			<rom type="file" offset="0x20">TAKAGI.M</rom>
+			<rom type="file" offset="0x21">TITLE.M</rom>
+			<rom type="file" offset="0x22">TRACK0.M</rom>
+			<rom type="file" offset="0x23">TRACK1.M</rom>
+			<rom type="file" offset="0x24">WINNER.M</rom>
+			<rom type="file" offset="0x25">WORKMAN.M</rom>
+			<rom type="shell" offset="0">PMDIBM /k</rom>
+			<rom type="shell" offset="0">PMD_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1c">Logo</title>
+			<title code="0x21">Title</title>
+			<title code="0x15">Odds Scene</title>
+			<title code="0x22">Race 1</title>
+			<title code="0x23">Race 2</title>
+			<title code="0x12">Bar Scene 1</title>
+			<title code="0x13">Bar Scene 2</title>
+			<title code="0x14">Bar Scene 3</title>
+			<title code="0x1e">Yuenchi Scene 1</title>
+			<title code="0x1f">e1</title>
+			<title code="0x1a">Eiga</title>
+			<title code="0x1b">m1</title>
+			<title code="0x10">Keiba</title>
+			<title code="0x11">Aya</title>
+			<title code="0x1d">Quiz Scene 1</title>
+			<title code="0x20">Bar Scene 4</title>
+			<title code="0x16">Ending</title>
+			<title code="0x25">WORKMAN.M</title>
+			<title code="0x18">Game Over 1</title>
+			<title code="0x19">Game Over 2</title>
+			<title code="0x24">Fanfare 2</title>
+			<title code="0x17">Quiz Scene 2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC] Mad Paradox (マッドパラドックス)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC">queen_soft</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="madp_at">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDIBM.COM</rom>
+			<rom type="file" offset="0x10">M01.M</rom>
+			<rom type="file" offset="0x11">M02.M</rom>
+			<rom type="file" offset="0x12">M03.M</rom>
+			<rom type="file" offset="0x13">M04.M</rom>
+			<rom type="file" offset="0x14">M05.M</rom>
+			<rom type="file" offset="0x15">M06.M</rom>
+			<rom type="file" offset="0x16">M07.M</rom>
+			<rom type="file" offset="0x17">M08.M</rom>
+			<rom type="file" offset="0x18">M09.M</rom>
+			<rom type="file" offset="0x19">M10.M</rom>
+			<rom type="file" offset="0x1a">M11.M</rom>
+			<rom type="file" offset="0x1b">M12.M</rom>
+			<rom type="file" offset="0x1c">M13.M</rom>
+			<rom type="file" offset="0x1d">M14.M</rom>
+			<rom type="shell" offset="0">pmdibm /M16 /V0 /E2 /K</rom>
+			<rom type="shell" offset="0">PMD_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">裏山～ 思い出のリータ ～</title>
+			<title code="0x11">戦いの地へ～ 序盤 ～</title>
+			<title code="0x12">ドギの砦</title>
+			<title code="0x13">戦いの地へ～ 中盤 ～</title>
+			<title code="0x14">戦闘</title>
+			<title code="0x15">天空の城</title>
+			<title code="0x16">聖域</title>
+			<title code="0x17">村</title>
+			<title code="0x18">四天王</title>
+			<title code="0x19">ゲームオーバー</title>
+			<title code="0x1a">ゴーガス</title>
+			<title code="0x1b">エンディング</title>
+			<title code="0x1c">オープニング</title>
+			<title code="0x1d">ＣＧギャラリー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC] Hotei Raoyui (麻雀河底撈魚)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC">queen_soft</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="houtei1_at">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDIBM.COM</rom>
+			<rom type="file" offset="0x08">MJG.EFC</rom>
+			<rom type="file" offset="0x10">ENDING.M</rom>
+			<rom type="file" offset="0x11">GRAPHIC.M</rom>
+			<rom type="file" offset="0x12">LETS_GO.M</rom>
+			<rom type="file" offset="0x13">LOGO.M</rom>
+			<rom type="file" offset="0x14">MENU.M</rom>
+			<rom type="file" offset="0x15">MJG1.M</rom>
+			<rom type="file" offset="0x16">MJG2.M</rom>
+			<rom type="file" offset="0x17">MJG3.M</rom>
+			<rom type="file" offset="0x18">OPENING.M</rom>
+			<rom type="file" offset="0x19">RANKING.M</rom>
+			<rom type="file" offset="0x1a">STAFF.M</rom>
+			<rom type="file" offset="0x1b">TITLE.M</rom>
+			<rom type="file" offset="0x1c">WIN.M</rom>
+			<rom type="shell" offset="0">PMDIBM /k</rom>
+			<rom type="shell" offset="0">PMD_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x13">LOGO.M</title>
+			<title code="0x18">OPENING.M</title>
+			<title code="0x1b">TITLE.M</title>
+			<title code="0x11">GRAPHIC.M</title>
+			<title code="0x12">LETS_GO.M</title>
+			<title code="0x14">MENU.M</title>
+			<title code="0x15">MJG1.M</title>
+			<title code="0x16">MJG2.M</title>
+			<title code="0x17">MJG3.M</title>
+			<title code="0x19">RANKING.M</title>
+			<title code="0x1a">STAFF.M</title>
+			<title code="0x1c">WIN.M</title>
+			<title code="0x10">ENDING.M</title>
+			<range min="0x0801" max="0x0806" extcode="1">MJG.EFC #%2X</range>
+		</titlelist>
+	</game>
+</gamelist>

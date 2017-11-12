@@ -1,0 +1,1354 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //ウェンディマガジン -->
+	<game>
+		<name>[PC-9801] Bell's Avenue(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="belsavn1_98">
+			<rom type="file" offset="-1">SYNUP_98.COM</rom>
+			<rom type="file" offset="-1">SYNUPS.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY.EXE</rom>
+			<rom type="file" offset="0x10">BGM101B.OPN</rom>
+			<rom type="file" offset="0x11">BGM102B.OPN</rom>
+			<rom type="file" offset="0x12">BGM202B.OPN</rom>
+			<rom type="file" offset="0x13">BGM203B.OPN</rom>
+			<rom type="file" offset="0x14">BGM301B.OPN</rom>
+			<rom type="file" offset="0x15">BGM302B.OPN</rom>
+			<rom type="file" offset="0x16">BGM401B.OPN</rom>
+			<rom type="file" offset="0x17">BGM402B.OPN</rom>
+			<rom type="file" offset="0x18">FUNK_UFO.OPN</rom>
+			<rom type="file" offset="0x19">MELO001.OPN</rom>
+			<rom type="file" offset="0x1a">OPN2L.OPN</rom>
+			<rom type="file" offset="0x1b">TTL_01L.OPN</rom>
+			<rom type="file" offset="0x1c">TTL_02L.OPN</rom>
+			<rom type="file" offset="0x1d">TTL_03L.OPN</rom>
+			<rom type="file" offset="0x1e">TTL_04BL.OPN</rom>
+			<rom type="shell" offset="0">SYNUPS</rom>
+			<rom type="shell" offset="0">SYNPLAY</rom>
+			<rom type="shell" offset="0">SYNUP_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM101B.OPN  : </title>
+			<title code="0x11">BGM102B.OPN  : </title>
+			<title code="0x12">BGM202B.OPN  : </title>
+			<title code="0x13">BGM203B.OPN  : </title>
+			<title code="0x14">BGM301B.OPN  : </title>
+			<title code="0x15">BGM302B.OPN  : </title>
+			<title code="0x16">BGM401B.OPN  : </title>
+			<title code="0x17">BGM402B.OPN  : </title>
+			<title code="0x18">FUNK_UFO.OPN : </title>
+			<title code="0x19">MELO001.OPN  : </title>
+			<title code="0x1a">OPN2L.OPN    : </title>
+			<title code="0x1b">TTL_01L.OPN  : </title>
+			<title code="0x1c">TTL_02L.OPN  : </title>
+			<title code="0x1d">TTL_03L.OPN  : </title>
+			<title code="0x1e">TTL_04BL.OPN : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Bell's Avenue(MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="belsavn1_98">
+			<rom type="file" offset="-1">SYNUP_98.COM</rom>
+			<rom type="file" offset="-1">SYNUPS.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY.EXE</rom>
+			<rom type="file" offset="0x10">BGM101B.MDI</rom>
+			<rom type="file" offset="0x11">BGM102B.MDI</rom>
+			<rom type="file" offset="0x12">BGM202B.MDI</rom>
+			<rom type="file" offset="0x13">BGM203B.MDI</rom>
+			<rom type="file" offset="0x14">BGM301B.MDI</rom>
+			<rom type="file" offset="0x15">BGM302B.MDI</rom>
+			<rom type="file" offset="0x16">BGM401B.MDI</rom>
+			<rom type="file" offset="0x17">BGM402B.MDI</rom>
+			<rom type="file" offset="0x18">FUNK_UFO.MDI</rom>
+			<rom type="file" offset="0x19">OPN2L.MDI</rom>
+			<rom type="file" offset="0x1a">TTL_01L.MDI</rom>
+			<rom type="file" offset="0x1b">TTL_02L.MDI</rom>
+			<rom type="file" offset="0x1c">TTL_03L.MDI</rom>
+			<rom type="file" offset="0x1d">TTL_04BL.MDI</rom>
+			<rom type="shell" offset="0">SYNUPS</rom>
+			<rom type="shell" offset="0">SYNPLAY</rom>
+			<rom type="shell" offset="0">SYNUP_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM101B.MDI  : </title>
+			<title code="0x11">BGM102B.MDI  : </title>
+			<title code="0x12">BGM202B.MDI  : </title>
+			<title code="0x13">BGM203B.MDI  : </title>
+			<title code="0x14">BGM301B.MDI  : </title>
+			<title code="0x15">BGM302B.MDI  : </title>
+			<title code="0x16">BGM401B.MDI  : </title>
+			<title code="0x17">BGM402B.MDI  : </title>
+			<title code="0x18">FUNK_UFO.MDI : </title>
+			<title code="0x19">OPN2L.MDI    : </title>
+			<title code="0x1a">TTL_01L.MDI  : </title>
+			<title code="0x1b">TTL_02L.MDI  : </title>
+			<title code="0x1c">TTL_03L.MDI  : </title>
+			<title code="0x1d">TTL_04BL.MDI : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Bell's Avenue vol.2(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="belsavn2_98">
+			<rom type="file" offset="-1">SYNUP_98.COM</rom>
+			<rom type="file" offset="-1">SYNUPS.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY.EXE</rom>
+			<rom type="file" offset="-1">SOUND.LIB</rom>
+			<rom type="file" offset="0x10">BGM1_1.OPN</rom>
+			<rom type="file" offset="0x11">BGM1_2.OPN</rom>
+			<rom type="file" offset="0x12">BGM1_3.OPN</rom>
+			<rom type="file" offset="0x13">BGM101B.OPN</rom>
+			<rom type="file" offset="0x14">BGM102B.OPN</rom>
+			<rom type="file" offset="0x15">BGM2_1.OPN</rom>
+			<rom type="file" offset="0x16">BGM2_2.OPN</rom>
+			<rom type="file" offset="0x17">BGM2_3.OPN</rom>
+			<rom type="file" offset="0x18">BGM2_4.OPN</rom>
+			<rom type="file" offset="0x19">BGM3_1.OPN</rom>
+			<rom type="file" offset="0x1a">BGM3_2.OPN</rom>
+			<rom type="file" offset="0x1b">BGM401B.OPN</rom>
+			<rom type="file" offset="0x1c">BGM402B.OPN</rom>
+			<rom type="file" offset="0x1d">FUNK_UFO.OPN</rom>
+			<rom type="file" offset="0x1e">KOINU.OPN</rom>
+			<rom type="file" offset="0x1f">MELO001.OPN</rom>
+			<rom type="file" offset="0x20">OPN2L.OPN</rom>
+			<rom type="file" offset="0x21">TTL_01L.OPN</rom>
+			<rom type="file" offset="0x22">TTL_04BL.OPN</rom>
+			<rom type="shell" offset="0">SYNUPS</rom>
+			<rom type="shell" offset="0">SYNPLAY</rom>
+			<rom type="shell" offset="0">SYNUP_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM1_1.OPN   : </title>
+			<title code="0x11">BGM1_2.OPN   : </title>
+			<title code="0x12">BGM1_3.OPN   : </title>
+			<title code="0x13">BGM101B.OPN  : </title>
+			<title code="0x14">BGM102B.OPN  : </title>
+			<title code="0x15">BGM2_1.OPN   : </title>
+			<title code="0x16">BGM2_2.OPN   : </title>
+			<title code="0x17">BGM2_3.OPN   : </title>
+			<title code="0x18">BGM2_4.OPN   : </title>
+			<title code="0x19">BGM3_1.OPN   : </title>
+			<title code="0x1a">BGM3_2.OPN   : </title>
+			<title code="0x1b">BGM401B.OPN  : </title>
+			<title code="0x1c">BGM402B.OPN  : </title>
+			<title code="0x1d">FUNK_UFO.OPN : </title>
+			<title code="0x1e">KOINU.OPN    : </title>
+			<title code="0x1f">MELO001.OPN  : </title>
+			<title code="0x20">OPN2L.OPN    : </title>
+			<title code="0x21">TTL_01L.OPN  : </title>
+			<title code="0x22">TTL_04BL.OPN : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Bell's Avenue vol.2(MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="belsavn2_98">
+			<rom type="file" offset="-1">SYNUP_98.COM</rom>
+			<rom type="file" offset="-1">SYNUPS.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY.EXE</rom>
+			<rom type="file" offset="-1">SOUND.LIB</rom>
+			<rom type="file" offset="0x10">BGM1_1.MDI</rom>
+			<rom type="file" offset="0x11">BGM1_2.MDI</rom>
+			<rom type="file" offset="0x12">BGM1_3.MDI</rom>
+			<rom type="file" offset="0x13">BGM101B.MDI</rom>
+			<rom type="file" offset="0x14">BGM102B.MDI</rom>
+			<rom type="file" offset="0x15">BGM2_1.MDI</rom>
+			<rom type="file" offset="0x16">BGM2_2.MDI</rom>
+			<rom type="file" offset="0x17">BGM2_3.MDI</rom>
+			<rom type="file" offset="0x18">BGM2_4.MDI</rom>
+			<rom type="file" offset="0x19">BGM3_1.MDI</rom>
+			<rom type="file" offset="0x1a">BGM3_2.MDI</rom>
+			<rom type="file" offset="0x1b">BGM401B.MDI</rom>
+			<rom type="file" offset="0x1c">BGM402B.MDI</rom>
+			<rom type="file" offset="0x1d">FUNK_UFO.MDI</rom>
+			<rom type="file" offset="0x1e">KOINU.MDI</rom>
+			<rom type="file" offset="0x1f">OPN2L.MDI</rom>
+			<rom type="file" offset="0x20">TTL_01L.MDI</rom>
+			<rom type="file" offset="0x21">TTL_04BL.MDI</rom>
+			<rom type="shell" offset="0">SYNUPS</rom>
+			<rom type="shell" offset="0">SYNPLAY</rom>
+			<rom type="shell" offset="0">SYNUP_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM1_1.MDI   : </title>
+			<title code="0x11">BGM1_2.MDI   : </title>
+			<title code="0x12">BGM1_3.MDI   : </title>
+			<title code="0x13">BGM101B.MDI  : </title>
+			<title code="0x14">BGM102B.MDI  : </title>
+			<title code="0x15">BGM2_1.MDI   : </title>
+			<title code="0x16">BGM2_2.MDI   : </title>
+			<title code="0x17">BGM2_3.MDI   : </title>
+			<title code="0x18">BGM2_4.MDI   : </title>
+			<title code="0x19">BGM3_1.MDI   : </title>
+			<title code="0x1a">BGM3_2.MDI   : </title>
+			<title code="0x1b">BGM401B.MDI  : </title>
+			<title code="0x1c">BGM402B.MDI  : </title>
+			<title code="0x1d">FUNK_UFO.MDI : </title>
+			<title code="0x1e">KOINU.MDI    : </title>
+			<title code="0x1f">OPN2L.MDI    : </title>
+			<title code="0x20">TTL_01L.MDI  : </title>
+			<title code="0x21">TTL_04BL.MDI : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Bell's Avenue vol.2(SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="belsavn2_98">
+			<rom type="file" offset="-1">SYNUP_98.COM</rom>
+			<rom type="file" offset="-1">SYNUPS.COM</rom>
+			<rom type="file" offset="-1">SYNPLAY.EXE</rom>
+			<rom type="file" offset="-1">SOUND.LIB</rom>
+			<rom type="file" offset="0x10">BGM1_1.GSM</rom>
+			<rom type="file" offset="0x11">BGM1_2.GSM</rom>
+			<rom type="file" offset="0x12">BGM1_3.GSM</rom>
+			<rom type="file" offset="0x13">BGM101B.GSM</rom>
+			<rom type="file" offset="0x14">BGM102B.GSM</rom>
+			<rom type="file" offset="0x15">BGM2_1.GSM</rom>
+			<rom type="file" offset="0x16">BGM2_2.GSM</rom>
+			<rom type="file" offset="0x17">BGM2_3.GSM</rom>
+			<rom type="file" offset="0x18">BGM2_4.GSM</rom>
+			<rom type="file" offset="0x19">BGM3_1.GSM</rom>
+			<rom type="file" offset="0x1a">BGM3_2.GSM</rom>
+			<rom type="file" offset="0x1b">BGM401B.GSM</rom>
+			<rom type="file" offset="0x1c">BGM402B.GSM</rom>
+			<rom type="file" offset="0x1d">FUNK_UFO.GSM</rom>
+			<rom type="file" offset="0x1e">KOINU.GSM</rom>
+			<rom type="file" offset="0x1f">OPN2L.GSM</rom>
+			<rom type="file" offset="0x20">TTL_01L.GSM</rom>
+			<rom type="file" offset="0x21">TTL_04BL.GSM</rom>
+			<rom type="shell" offset="0">SYNUPS</rom>
+			<rom type="shell" offset="0">SYNPLAY</rom>
+			<rom type="shell" offset="0">SYNUP_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM1_1.GSM   : </title>
+			<title code="0x11">BGM1_2.GSM   : </title>
+			<title code="0x12">BGM1_3.GSM   : </title>
+			<title code="0x13">BGM101B.GSM  : </title>
+			<title code="0x14">BGM102B.GSM  : </title>
+			<title code="0x15">BGM2_1.GSM   : </title>
+			<title code="0x16">BGM2_2.GSM   : </title>
+			<title code="0x17">BGM2_3.GSM   : </title>
+			<title code="0x18">BGM2_4.GSM   : </title>
+			<title code="0x19">BGM3_1.GSM   : </title>
+			<title code="0x1a">BGM3_2.GSM   : </title>
+			<title code="0x1b">BGM401B.GSM  : </title>
+			<title code="0x1c">BGM402B.GSM  : </title>
+			<title code="0x1d">FUNK_UFO.GSM : </title>
+			<title code="0x1e">KOINU.GSM    : </title>
+			<title code="0x1f">OPN2L.GSM    : </title>
+			<title code="0x20">TTL_01L.GSM  : </title>
+			<title code="0x21">TTL_04BL.GSM : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Bell's Avenue vol.3(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="belsavn3_98">
+			<rom type="file" offset="-1">MDB_98.COM</rom>
+			<rom type="file" offset="-1">MDB.COM</rom>
+			<rom type="file" offset="0x09">TEST.MDD</rom>
+			<rom type="file" offset="0x10">BEL_3_00.MDB</rom>
+			<rom type="file" offset="0x11">BEL_3_01.MDB</rom>
+			<rom type="file" offset="0x12">BEL_3_02.MDB</rom>
+			<rom type="file" offset="0x13">BEL_3_03.MDB</rom>
+			<rom type="file" offset="0x14">BEL_3_04.MDB</rom>
+			<rom type="file" offset="0x15">BEL_3_06.MDB</rom>
+			<rom type="file" offset="0x16">BEL_3_07.MDB</rom>
+			<rom type="file" offset="0x17">BEL_3_08.MDB</rom>
+			<rom type="file" offset="0x18">BEL_3_09.MDB</rom>
+			<rom type="file" offset="0x19">BEL_3_10.MDB</rom>
+			<rom type="file" offset="0x1a">BEL_3_13.MDB</rom>
+			<rom type="file" offset="0x1b">BGM21FM.MDB</rom>
+			<rom type="file" offset="0x1c">BGM22FM.MDB</rom>
+			<rom type="file" offset="0x1d">BGM24FM.MDB</rom>
+			<rom type="file" offset="0x1e">KOINUFM.MDB</rom>
+			<rom type="file" offset="0x1f">OPN2L.MDB</rom>
+			<rom type="shell" offset="0">MDB -m24</rom>
+			<rom type="shell" offset="0">MDB_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x090010">BEL_3_00.MDB : </title>
+			<title code="0x090011">BEL_3_01.MDB : </title>
+			<title code="0x090012">BEL_3_02.MDB : </title>
+			<title code="0x090013">BEL_3_03.MDB : </title>
+			<title code="0x090014">BEL_3_04.MDB : </title>
+			<title code="0x090015">BEL_3_06.MDB : </title>
+			<title code="0x090016">BEL_3_07.MDB : </title>
+			<title code="0x090017">BEL_3_08.MDB : </title>
+			<title code="0x090018">BEL_3_09.MDB : </title>
+			<title code="0x090019">BEL_3_10.MDB : </title>
+			<title code="0x09001a">BEL_3_13.MDB : </title>
+			<title code="0x09001b">BGM21FM.MDB  : </title>
+			<title code="0x09001c">BGM22FM.MDB  : </title>
+			<title code="0x09001d">BGM24FM.MDB  : </title>
+			<title code="0x09001e">KOINUFM.MDB  : </title>
+			<title code="0x09001f">OPN2L.MDB    : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Bell's Avenue vol.3(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="belsavn3_98">
+			<rom type="file" offset="-1">MDB_98.COM</rom>
+			<rom type="file" offset="-1">MDB.COM</rom>
+			<rom type="file" offset="0x09">TEST.MDD</rom>
+			<rom type="file" offset="0x10">BEL_3_00.MDB</rom>
+			<rom type="file" offset="0x11">BEL_3_01.MDB</rom>
+			<rom type="file" offset="0x12">BEL_3_02.MDB</rom>
+			<rom type="file" offset="0x13">BEL_3_03.MDB</rom>
+			<rom type="file" offset="0x14">BEL_3_04.MDB</rom>
+			<rom type="file" offset="0x15">BEL_3_06.MDB</rom>
+			<rom type="file" offset="0x16">BEL_3_07.MDB</rom>
+			<rom type="file" offset="0x17">BEL_3_08.MDB</rom>
+			<rom type="file" offset="0x18">BEL_3_09.MDB</rom>
+			<rom type="file" offset="0x19">BEL_3_10.MDB</rom>
+			<rom type="file" offset="0x1a">BEL_3_13.MDB</rom>
+			<rom type="file" offset="0x1b">BGM21FM.MDB</rom>
+			<rom type="file" offset="0x1c">BGM22FM.MDB</rom>
+			<rom type="file" offset="0x1d">BGM24FM.MDB</rom>
+			<rom type="file" offset="0x1e">KOINUFM.MDB</rom>
+			<rom type="file" offset="0x1f">OPN2L.MDB</rom>
+			<rom type="shell" offset="0">MDB -m24</rom>
+			<rom type="shell" offset="0">MDB_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x090010">BEL_3_00.MDB : </title>
+			<title code="0x090011">BEL_3_01.MDB : </title>
+			<title code="0x090012">BEL_3_02.MDB : </title>
+			<title code="0x090013">BEL_3_03.MDB : </title>
+			<title code="0x090014">BEL_3_04.MDB : </title>
+			<title code="0x090015">BEL_3_06.MDB : </title>
+			<title code="0x090016">BEL_3_07.MDB : </title>
+			<title code="0x090017">BEL_3_08.MDB : </title>
+			<title code="0x090018">BEL_3_09.MDB : </title>
+			<title code="0x090019">BEL_3_10.MDB : </title>
+			<title code="0x09001a">BEL_3_13.MDB : </title>
+			<title code="0x09001b">BGM21FM.MDB  : </title>
+			<title code="0x09001c">BGM22FM.MDB  : </title>
+			<title code="0x09001d">BGM24FM.MDB  : </title>
+			<title code="0x09001e">KOINUFM.MDB  : </title>
+			<title code="0x09001f">OPN2L.MDB    : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] まなみのどこまでイクの?</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x0A702"/>
+			<option name="filesize" value="0xc00"/>
+			<option name="datamax" value="16"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="manadok1_98">
+			<rom type="code" offset="0x00600">00600.BIN</rom>
+			<rom type="code" offset="0x00600">MANAD_98.BIN</rom>
+			<rom type="bgm" offset="0x00">_00.BIN</rom>
+			<rom type="bgm" offset="0x01">_01.BIN</rom>
+			<rom type="bgm" offset="0x02">_02.BIN</rom>
+			<rom type="bgm" offset="0x03">_03.BIN</rom>
+			<rom type="bgm" offset="0x04">_04.BIN</rom>
+			<rom type="bgm" offset="0x05">_05.BIN</rom>
+			<rom type="bgm" offset="0x06">_06.BIN</rom>
+			<rom type="bgm" offset="0x07">_07.BIN</rom>
+			<rom type="bgm" offset="0x08">_08.BIN</rom>
+			<rom type="bgm" offset="0x09">_09.BIN</rom>
+			<rom type="bgm" offset="0x0a">_0A.BIN</rom>
+			<rom type="bgm" offset="0x0b">_0B.BIN</rom>
+			<rom type="bgm" offset="0x0c">_0C.BIN</rom>
+			<rom type="bgm" offset="0x0d">_0D.BIN</rom>
+			<rom type="bgm" offset="0x0e">_0E.BIN</rom>
+			<rom type="bgm" offset="0x0f">_0F.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">_00.BIN : </title>
+			<title code="0x01">_01.BIN : </title>
+			<title code="0x02">_02.BIN : </title>
+			<title code="0x03">_03.BIN : </title>
+			<title code="0x04">_04.BIN : </title>
+			<title code="0x05">_05.BIN : </title>
+			<title code="0x06">_06.BIN : </title>
+			<title code="0x07">_07.BIN : </title>
+			<title code="0x08">_08.BIN : </title>
+			<title code="0x09">_09.BIN : </title>
+			<title code="0x0a">_0A.BIN : </title>
+			<title code="0x0b">_0B.BIN : </title>
+			<title code="0x0c">_0C.BIN : </title>
+			<title code="0x0d">_0D.BIN : </title>
+			<title code="0x0e">_0E.BIN : </title>
+			<title code="0x0f">_0F.BIN : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] まなみのどこまでイクの? 2 リターンオブTHE黒パック</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="manadok2_98">
+			<rom type="file" offset="-1">MDB_98.COM</rom>
+			<rom type="file" offset="-1">KURI_DRV.COM</rom>
+			<rom type="file" offset="0x09">TEST.MDD</rom>
+			<rom type="file" offset="0x10">BGM1.GU1</rom>
+			<rom type="file" offset="0x11">BGM2.GU1</rom>
+			<rom type="file" offset="0x12">BGM3.GU1</rom>
+			<rom type="file" offset="0x13">BGM4.GU1</rom>
+			<rom type="file" offset="0x14">BGM5.GU1</rom>
+			<rom type="file" offset="0x15">BGM6.GU1</rom>
+			<rom type="file" offset="0x16">BGM7.GU1</rom>
+			<rom type="file" offset="0x17">BGM8.GU1</rom>
+			<rom type="file" offset="0x18">GAME1.GU1</rom>
+			<rom type="file" offset="0x19">GAME2.GU1</rom>
+			<rom type="file" offset="0x1a">GAME3.GU1</rom>
+			<rom type="file" offset="0x1b">GAME4.GU1</rom>
+			<rom type="file" offset="0x1c">GAME5.GU1</rom>
+			<rom type="file" offset="0x1d">GAME6.GU1</rom>
+			<rom type="file" offset="0x1e">GAME7.GU1</rom>
+			<rom type="file" offset="0x1f">GAME8.GU1</rom>
+			<rom type="shell" offset="0">KURI_DRV</rom>
+			<rom type="shell" offset="0">MDB_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x090010">BGM1.GU1  : </title>
+			<title code="0x090011">BGM2.GU1  : </title>
+			<title code="0x090012">BGM3.GU1  : </title>
+			<title code="0x090013">BGM4.GU1  : </title>
+			<title code="0x090014">BGM5.GU1  : </title>
+			<title code="0x090015">BGM6.GU1  : </title>
+			<title code="0x090016">BGM7.GU1  : </title>
+			<title code="0x090017">BGM8.GU1  : </title>
+			<title code="0x090018">GAME1.GU1 : </title>
+			<title code="0x090019">GAME2.GU1 : </title>
+			<title code="0x09001a">GAME3.GU1 : </title>
+			<title code="0x09001b">GAME4.GU1 : </title>
+			<title code="0x09001c">GAME5.GU1 : </title>
+			<title code="0x09001d">GAME6.GU1 : </title>
+			<title code="0x09001e">GAME7.GU1 : </title>
+			<title code="0x09001f">GAME8.GU1 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PINK SOX</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="bootcs" value="0x3000"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pinksox1_98">
+			<rom type="code" offset="0x30000">PINKS_98.BIN</rom>
+			<rom type="code" offset="0x32c00">32C00.BIN</rom>
+			<rom type="code" offset="0x40000">40000.BIN</rom>
+			<rom type="code" offset="0x4a000">4A000.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01" >01 : </title>
+			<title code="0x02" >02 : </title>
+			<title code="0x03" >03 : </title>
+			<title code="0x04" >04 : </title>
+			<title code="0x05" >05 : </title>
+			<title code="0x06" >06 : </title>
+			<title code="0x07" >07 : </title>
+			<title code="0x08" >08 : </title>
+			<title code="0x09" >09 : </title>
+			<title code="0x0a" >0A : </title>
+			<title code="0x0b" >0B : </title>
+			<title code="0x0c" >0C : </title>
+			<title code="0x0d" >0D : </title>
+			<title code="0x0e" >0E : </title>
+			<title code="0x0f" >0F : </title>
+			<title code="0x10" >10 : </title>
+			<title code="0x11" >11 : </title>
+			<title code="0x12" >12 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PINK SOX2</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="bootcs" value="0x3000"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pinksox2_98">
+			<rom type="code" offset="0x30000">PINKS_98.BIN</rom>
+			<rom type="code" offset="0x32c00">32C00.BIN</rom>
+			<rom type="code" offset="0x40000">40000.BIN</rom>
+			<rom type="code" offset="0x4a000">4a000.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01" >01 : </title>
+			<title code="0x02" >02 : </title>
+			<title code="0x03" >03 : </title>
+			<title code="0x04" >04 : </title>
+			<title code="0x05" >05 : </title>
+			<title code="0x06" >06 : </title>
+			<title code="0x07" >07 : </title>
+			<title code="0x08" >08 : </title>
+			<title code="0x09" >09 : </title>
+			<title code="0x0a" >0A : </title>
+			<title code="0x0b" >0B : </title>
+			<title code="0x0c" >0C : </title>
+			<title code="0x0d" >0D : </title>
+			<title code="0x0e" >0E : </title>
+			<title code="0x0f" >0F : </title>
+			<title code="0x10" >10 : </title>
+			<title code="0x11" >11 : </title>
+			<title code="0x12" >12 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PINK SOX3</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="bootcs" value="0x3000"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pinksox3_98">
+			<rom type="code" offset="0x30000">PINKS_98.BIN</rom>
+			<rom type="code" offset="0x32c00">32C00.BIN</rom>
+			<rom type="code" offset="0x40000">40000.BIN</rom>
+			<rom type="code" offset="0x4a000">4a000.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01" >01 : </title>
+			<title code="0x02" >02 : </title>
+			<title code="0x03" >03 : </title>
+			<title code="0x04" >04 : </title>
+			<title code="0x05" >05 : </title>
+			<title code="0x06" >06 : </title>
+			<title code="0x07" >07 : </title>
+			<title code="0x08" >08 : </title>
+			<title code="0x09" >09 : </title>
+			<title code="0x0a" >0A : </title>
+			<title code="0x0b" >0B : </title>
+			<title code="0x0c" >0C : </title>
+			<title code="0x0d" >0D : </title>
+			<title code="0x0e" >0E : </title>
+			<title code="0x0f" >0F : </title>
+			<title code="0x10" >10 : </title>
+			<title code="0x11" >11 : </title>
+			<title code="0x12" >12 : </title>
+			<title code="0x13" >13 : </title>
+			<title code="0x14" >14 : </title>
+			<title code="0x15" >15 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PINK SOX4</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="bootcs" value="0x3000"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x4a000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="datamax" value="3"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pinksox4_98">
+			<rom type="code" offset="0x30000">PINKS_98.BIN</rom>
+			<rom type="code" offset="0x32c00">32C00.BIN</rom>
+			<rom type="code" offset="0x40000">40000.BIN</rom>
+			<rom type="bgm" offset="1" >_08.BIN</rom>
+			<rom type="bgm" offset="2" >_0A.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010001" >_08.BIN : 01 : </title>
+			<title code="0x020001" >_08.BIN : 02 : </title>
+			<title code="0x030001" >_08.BIN : 03 : </title>
+			<title code="0x040001" >_08.BIN : 04 : </title>
+			<title code="0x050001" >_08.BIN : 05 : </title>
+			<title code="0x060001" >_08.BIN : 06 : </title>
+			<title code="0x070001" >_08.BIN : 07 : </title>
+			<title code="0x080001" >_08.BIN : 08 : </title>
+			<title code="0x090001" >_08.BIN : 09 : </title>
+			<title code="0x0a0001" >_08.BIN : 0A : </title>
+			<title code="0x0b0001" >_08.BIN : 0B : </title>
+			<title code="0x0c0001" >_08.BIN : 0C : </title>
+			<title code="0x010002" >_0A.BIN : 01 : </title>
+			<title code="0x020002" >_0A.BIN : 02 : </title>
+			<title code="0x030002" >_0A.BIN : 03 : </title>
+			<title code="0x040002" >_0A.BIN : 04 : </title>
+			<title code="0x050002" >_0A.BIN : 05 : </title>
+			<title code="0x060002" >_0A.BIN : 06 : </title>
+			<title code="0x070002" >_0A.BIN : 07 : </title>
+			<title code="0x080002" >_0A.BIN : 08 : </title>
+			<title code="0x090002" >_0A.BIN : 09 : </title>
+			<title code="0x0a0002" >_0A.BIN : 0A : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PINK SOX5</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="bootcs" value="0x3000"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x4a000"/>
+			<option name="filesize" value="0x5000"/>
+			<option name="datamax" value="3"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pinksox5_98">
+			<rom type="code" offset="0x30000">PINKS_98.BIN</rom>
+			<rom type="code" offset="0x32c00">32C00.BIN</rom>
+			<rom type="code" offset="0x40000">40000.BIN</rom>
+			<rom type="bgm" offset="1" >_09.BIN</rom>
+			<rom type="bgm" offset="2" >_0A.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010001" >_09.BIN : 01 : </title>
+			<title code="0x020001" >_09.BIN : 02 : </title>
+			<title code="0x030001" >_09.BIN : 03 : </title>
+			<title code="0x040001" >_09.BIN : 04 : </title>
+			<title code="0x050001" >_09.BIN : 05 : </title>
+			<title code="0x060001" >_09.BIN : 06 : </title>
+			<title code="0x070001" >_09.BIN : 07 : </title>
+			<title code="0x080001" >_09.BIN : 08 : </title>
+			<title code="0x090001" >_09.BIN : 09 : </title>
+			<title code="0x0a0001" >_09.BIN : 0A : </title>
+			<title code="0x0b0001" >_09.BIN : 0B : </title>
+			<title code="0x0c0001" >_09.BIN : 0C : </title>
+			<title code="0x010002" >_0a.BIN : 01 : </title>
+			<title code="0x020002" >_0a.BIN : 02 : </title>
+			<title code="0x030002" >_0a.BIN : 03 : </title>
+			<title code="0x040002" >_0a.BIN : 04 : </title>
+			<title code="0x050002" >_0a.BIN : 05 : </title>
+			<title code="0x060002" >_0a.BIN : 06 : </title>
+			<title code="0x070002" >_0a.BIN : 07 : </title>
+			<title code="0x080002" >_0a.BIN : 08 : </title>
+			<title code="0x090002" >_0a.BIN : 09 : </title>
+			<title code="0x0a0002" >_0a.BIN : 0A : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PINK SOX6</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="bootcs" value="0x3000"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x4a000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="3"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pinksox6_98">
+			<rom type="code" offset="0x30000">PINKS_98.BIN</rom>
+			<rom type="code" offset="0x32c00">32C00.BIN</rom>
+			<rom type="code" offset="0x40000">40000.BIN</rom>
+			<rom type="bgm" offset="1" >_08.BIN</rom>
+			<rom type="bgm" offset="2" >_09.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010001" >_08.BIN : 01 : </title>
+			<title code="0x020001" >_08.BIN : 02 : </title>
+			<title code="0x030001" >_08.BIN : 03 : </title>
+			<title code="0x040001" >_08.BIN : 04 : </title>
+			<title code="0x050001" >_08.BIN : 05 : </title>
+			<title code="0x060001" >_08.BIN : 06 : </title>
+			<title code="0x070001" >_08.BIN : 07 : </title>
+			<title code="0x080001" >_08.BIN : 08 : </title>
+			<title code="0x090001" >_08.BIN : 09 : </title>
+<!--			<title code="0x0a0001" >_08.BIN : 0A : </title>	-->
+			<title code="0x0b0001" >_08.BIN : 0B : </title>
+			<title code="0x0c0001" >_08.BIN : 0C : </title>
+			<title code="0x0d0001" >_08.BIN : 0D : </title>
+			<title code="0x010002" >_09.BIN : 01 : </title>
+			<title code="0x020002" >_09.BIN : 02 : </title>
+			<title code="0x030002" >_09.BIN : 03 : </title>
+			<title code="0x040002" >_09.BIN : 04 : </title>
+			<title code="0x050002" >_09.BIN : 05 : </title>
+			<title code="0x060002" >_09.BIN : 06 : </title>
+			<title code="0x070002" >_09.BIN : 07 : </title>
+			<title code="0x080002" >_09.BIN : 08 : </title>
+			<title code="0x090002" >_09.BIN : 09 : </title>
+			<title code="0x0a0002" >_09.BIN : 0A : </title>
+			<title code="0x0b0002" >_09.BIN : 0B : </title>
+			<title code="0x0c0002" >_09.BIN : 0C : </title>
+			<title code="0x0d0002" >_09.BIN : 0D : </title>
+			<title code="0x0e0002" >_09.BIN : 0E : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PINK SOX7</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">ウェンディマガジン</driveralias>
+		<options>
+			<option name="bootcs" value="0x3000"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x4a000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="3"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pinksox7_98">
+			<rom type="code" offset="0x30000">PINKS_98.BIN</rom>
+			<rom type="code" offset="0x32c00">32C00.BIN</rom>
+			<rom type="code" offset="0x40000">40000.BIN</rom>
+			<rom type="bgm" offset="1" >_08.BIN</rom>
+			<rom type="bgm" offset="2" >_09.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x010001" >_08.BIN : 01 : </title>
+			<title code="0x020001" >_08.BIN : 02 : </title>
+			<title code="0x030001" >_08.BIN : 03 : </title>
+			<title code="0x040001" >_08.BIN : 04 : </title>
+			<title code="0x050001" >_08.BIN : 05 : </title>
+			<title code="0x060001" >_08.BIN : 06 : </title>
+			<title code="0x070001" >_08.BIN : 07 : </title>
+			<title code="0x080001" >_08.BIN : 08 : </title>
+			<title code="0x090001" >_08.BIN : 09 : </title>
+			<title code="0x0a0001" >_08.BIN : 0A : </title>
+			<title code="0x0b0001" >_08.BIN : 0B : </title>
+			<title code="0x0c0001" >_08.BIN : 0C : </title>
+			<title code="0x0d0001" >_08.BIN : 0D : </title>
+			<title code="0x0e0001" >_08.BIN : 0E : </title>
+			<title code="0x0f0001" >_08.BIN : 0F : </title>
+			<title code="0x100001" >_08.BIN : 10 : </title>
+			<title code="0x110001" >_08.BIN : 11 : </title>
+			<title code="0x120001" >_08.BIN : 12 : </title>
+			<title code="0x130001" >_08.BIN : 13 : </title>
+			<title code="0x140001" >_08.BIN : 14 : </title>
+			<title code="0x150001" >_08.BIN : 15 : </title>
+			<title code="0x160001" >_08.BIN : 16 : </title>
+			<title code="0x170001" >_08.BIN : 17 : </title>
+			<title code="0x180001" >_08.BIN : 18 : </title>
+			<title code="0x010002" >_09.BIN : 01 : </title>
+			<title code="0x020002" >_09.BIN : 02 : </title>
+			<title code="0x030002" >_09.BIN : 03 : </title>
+			<title code="0x040002" >_09.BIN : 04 : </title>
+			<title code="0x050002" >_09.BIN : 05 : </title>
+			<title code="0x060002" >_09.BIN : 06 : </title>
+			<title code="0x070002" >_09.BIN : 07 : </title>
+			<title code="0x080002" >_09.BIN : 08 : </title>
+			<title code="0x090002" >_09.BIN : 09 : </title>
+			<title code="0x0a0002" >_09.BIN : 0A : </title>
+			<title code="0x0b0002" >_09.BIN : 0B : </title>
+			<title code="0x0c0002" >_09.BIN : 0C : </title>
+			<title code="0x0d0002" >_09.BIN : 0D : </title>
+			<title code="0x0e0002" >_09.BIN : 0E : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bell's Avenue(OPM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">ウェンディマガジン</driveralias>
+		<options>
+			<option name="mfp"    value="1"/>
+			<option name="dmaint" value="1"/>
+		</options>
+		<romlist archive="belsavn168snd">
+			<rom type="code" offset="0x000000">belsavn168snd.bin</rom>
+			<rom type="code" offset="0x010000">BELLS.ZMD</rom>
+			<rom type="code" offset="0x020000">BGM_FM.DAT</rom>
+			<rom type="code" offset="0x060000">BELLS.ZPD</rom>
+			<rom type="x"    offset="0x080000">ZMUSIC.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM_FM.DAT : 00 : </title>
+			<title code="0x02">BGM_FM.DAT : 01 : </title>
+			<title code="0x03">BGM_FM.DAT : 02 : </title>
+			<title code="0x04">BGM_FM.DAT : 03 : </title>
+			<title code="0x05">BGM_FM.DAT : 04 : </title>
+			<title code="0x06">BGM_FM.DAT : 05 : </title>
+			<title code="0x07">BGM_FM.DAT : 06 : </title>
+			<title code="0x08">BGM_FM.DAT : 07 : </title>
+			<title code="0x09">BGM_FM.DAT : 08 : </title>
+			<title code="0x0a">BGM_FM.DAT : 09 : </title>
+			<title code="0x0b">BGM_FM.DAT : 0A : </title>
+			<title code="0x0c">BGM_FM.DAT : 0B : </title>
+			<title code="0x0d">BGM_FM.DAT : 0C : </title>
+			<title code="0x0e">BGM_FM.DAT : 0D : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bell's Avenue(MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">ウェンディマガジン</driveralias>
+		<options>
+			<option name="mfp"     value="1"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="belsavn168snd">
+			<rom type="code" offset="0x000000">belsavn168snd.bin</rom>
+			<rom type="code" offset="0x010000">BELLS.ZMD</rom>
+			<rom type="code" offset="0x040000">BGM_MT.DAT</rom>
+			<rom type="code" offset="0x060000">BELLS.ZPD</rom>
+			<rom type="x"    offset="0x080000">ZMUSIC.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0f">BGM_MT.DAT : 00 : </title>
+			<title code="0x10">BGM_MT.DAT : 01 : </title>
+			<title code="0x11">BGM_MT.DAT : 02 : </title>
+			<title code="0x12">BGM_MT.DAT : 03 : </title>
+			<title code="0x13">BGM_MT.DAT : 04 : </title>
+			<title code="0x14">BGM_MT.DAT : 05 : </title>
+			<title code="0x15">BGM_MT.DAT : 06 : </title>
+			<title code="0x16">BGM_MT.DAT : 07 : </title>
+			<title code="0x17">BGM_MT.DAT : 08 : </title>
+			<title code="0x18">BGM_MT.DAT : 09 : </title>
+			<title code="0x19">BGM_MT.DAT : 0A : </title>
+			<title code="0x1a">BGM_MT.DAT : 0B : </title>
+			<title code="0x1b">BGM_MT.DAT : 0C : </title>
+			<title code="0x1c">BGM_MT.DAT : 0D : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bell's Avenue vol.2(OPM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">ウェンディマガジン</driveralias>
+		<options>
+			<option name="mfp"    value="1"/>
+		</options>
+		<romlist archive="belsavn268snd">
+			<rom type="code" offset="0x000000">belsavn268snd.bin</rom>
+			<rom type="code" offset="0x010000">bells.zmd</rom>
+			<rom type="code" offset="0x020007">bgm101b.fm</rom>
+			<rom type="code" offset="0x022007">bgm102b.fm</rom>
+			<rom type="code" offset="0x024007">bgm1_1.fm</rom>
+			<rom type="code" offset="0x026007">bgm1_2.fm</rom>
+			<rom type="code" offset="0x02c007">bgm1_3.fm</rom>
+			<rom type="code" offset="0x030007">bgm2_1.fm</rom>
+			<rom type="code" offset="0x032007">bgm2_2.fm</rom>
+			<rom type="code" offset="0x034007">bgm2_3.fm</rom>
+			<rom type="code" offset="0x036007">bgm2_4.fm</rom>
+			<rom type="code" offset="0x038007">bgm3_1.fm</rom>
+			<rom type="code" offset="0x03a007">bgm3_2.fm</rom>
+			<rom type="code" offset="0x03c007">bgm401b.fm</rom>
+			<rom type="code" offset="0x03e007">bgm402b.fm</rom>
+			<rom type="code" offset="0x040007">funk_ufo.fm</rom>
+			<rom type="code" offset="0x042007">koinu.fm</rom>
+			<rom type="code" offset="0x046007">opn2l.fm</rom>
+			<rom type="code" offset="0x050007">ttl_01l.fm</rom>
+			<rom type="code" offset="0x052007">ttl_04bl.fm</rom>
+			<rom type="code" offset="0x060000">bells.zpd</rom>
+			<rom type="x"    offset="0x080000">ZMUSIC.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">bgm101b.fm  : </title>
+			<title code="0x02">bgm102b.fm  : </title>
+			<title code="0x03">bgm1_1.fm   : </title>
+			<title code="0x04">bgm1_2.fm   : </title>
+			<title code="0x07">bgm1_3.fm   : </title>
+			<title code="0x09">bgm2_1.fm   : </title>
+			<title code="0x0a">bgm2_2.fm   : </title>
+			<title code="0x0b">bgm2_3.fm   : </title>
+			<title code="0x0c">bgm2_4.fm   : </title>
+			<title code="0x0d">bgm3_1.fm   : </title>
+			<title code="0x0e">bgm3_2.fm   : </title>
+			<title code="0x0f">bgm401b.fm  : </title>
+			<title code="0x10">bgm402b.fm  : </title>
+			<title code="0x11">funk_ufo.fm : </title>
+			<title code="0x12">koinu.fm    : </title>
+			<title code="0x14">opn2l.fm    : </title>
+			<title code="0x19">ttl_01l.fm  : </title>
+			<title code="0x1a">ttl_04bl.fm : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bell's Avenue vol.2(GS)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">ウェンディマガジン</driveralias>
+		<options>
+			<option name="mfp"    value="1"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="7"/>
+		</options>
+		<romlist archive="belsavn268snd">
+			<rom type="code" offset="0x000000">belsavn268snd.bin</rom>
+			<rom type="code" offset="0x010000">bells.zmd</rom>
+			<rom type="code" offset="0x020007">bgm101b.gs</rom>
+			<rom type="code" offset="0x022007">bgm102b.gs</rom>
+			<rom type="code" offset="0x024007">bgm1_1.gs</rom>
+			<rom type="code" offset="0x026007">bgm1_2.gs</rom>
+			<rom type="code" offset="0x02c007">bgm1_3.gs</rom>
+			<rom type="code" offset="0x030007">bgm2_1.gs</rom>
+			<rom type="code" offset="0x032007">bgm2_2.gs</rom>
+			<rom type="code" offset="0x034007">bgm2_3.gs</rom>
+			<rom type="code" offset="0x036007">bgm2_4.gs</rom>
+			<rom type="code" offset="0x038007">bgm3_1.gs</rom>
+			<rom type="code" offset="0x03a007">bgm3_2.gs</rom>
+			<rom type="code" offset="0x03c007">bgm401b.gs</rom>
+			<rom type="code" offset="0x03e007">bgm402b.gs</rom>
+			<rom type="code" offset="0x040007">funk_ufo.gs</rom>
+			<rom type="code" offset="0x042007">koinu.gs</rom>
+			<rom type="code" offset="0x044007">opn2l.gs</rom>
+			<rom type="code" offset="0x04e007">ttl_01l.gs</rom>
+			<rom type="code" offset="0x052007">ttl_04bl.gs</rom>
+			<rom type="code" offset="0x060000">bells.zpd</rom>
+			<rom type="x"    offset="0x080000">ZMUSIC.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">bgm101b.gs  : </title>
+			<title code="0x02">bgm102b.gs  : </title>
+			<title code="0x03">bgm1_1.gs   : </title>
+			<title code="0x04">bgm1_2.gs   : </title>
+			<title code="0x07">bgm1_3.gs   : </title>
+			<title code="0x09">bgm2_1.gs   : </title>
+			<title code="0x0a">bgm2_2.gs   : </title>
+			<title code="0x0b">bgm2_3.gs   : </title>
+			<title code="0x0c">bgm2_4.gs   : </title>
+			<title code="0x0d">bgm3_1.gs   : </title>
+			<title code="0x0e">bgm3_2.gs   : </title>
+			<title code="0x0f">bgm401b.gs  : </title>
+			<title code="0x10">bgm402b.gs  : </title>
+			<title code="0x11">funk_ufo.gs : </title>
+			<title code="0x12">koinu.gs    : </title>
+			<title code="0x13">opn2l.gs    : </title>
+			<title code="0x18">ttl_01l.gs  : </title>
+			<title code="0x1a">ttl_04bl.gs : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bell's Avenue vol.2(MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">ウェンディマガジン</driveralias>
+		<options>
+			<option name="mfp"    value="1"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="belsavn268snd">
+			<rom type="code" offset="0x000000">belsavn268snd.bin</rom>
+			<rom type="code" offset="0x010000">bells.zmd</rom>
+			<rom type="code" offset="0x020007">bgm101b.mt</rom>
+			<rom type="code" offset="0x022007">bgm102b.mt</rom>
+			<rom type="code" offset="0x024007">bgm1_1.mt</rom>
+			<rom type="code" offset="0x026007">bgm1_2.mt</rom>
+			<rom type="code" offset="0x02c007">bgm1_3.mt</rom>
+			<rom type="code" offset="0x030007">bgm2_1.mt</rom>
+			<rom type="code" offset="0x032007">bgm2_2.mt</rom>
+			<rom type="code" offset="0x034007">bgm2_3.mt</rom>
+			<rom type="code" offset="0x036007">bgm2_4.mt</rom>
+			<rom type="code" offset="0x038007">bgm3_1.mt</rom>
+			<rom type="code" offset="0x03a007">bgm3_2.mt</rom>
+			<rom type="code" offset="0x03c007">bgm401b.mt</rom>
+			<rom type="code" offset="0x03e007">bgm402b.mt</rom>
+			<rom type="code" offset="0x040007">funk_ufo.mt</rom>
+			<rom type="code" offset="0x042007">koinu.mt</rom>
+			<rom type="code" offset="0x044007">opn2l.mt</rom>
+			<rom type="code" offset="0x04e007">ttl_01l.mt</rom>
+			<rom type="code" offset="0x052007">ttl_04bl.mt</rom>
+			<rom type="code" offset="0x060000">bells.zpd</rom>
+			<rom type="x"    offset="0x080000">ZMUSIC.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">bgm101b.mt  : </title>
+			<title code="0x02">bgm102b.mt  : </title>
+			<title code="0x03">bgm1_1.mt   : </title>
+			<title code="0x04">bgm1_2.mt   : </title>
+			<title code="0x07">bgm1_3.mt   : </title>
+			<title code="0x09">bgm2_1.mt   : </title>
+			<title code="0x0a">bgm2_2.mt   : </title>
+			<title code="0x0b">bgm2_3.mt   : </title>
+			<title code="0x0c">bgm2_4.mt   : </title>
+			<title code="0x0d">bgm3_1.mt   : </title>
+			<title code="0x0e">bgm3_2.mt   : </title>
+			<title code="0x0f">bgm401b.mt  : </title>
+			<title code="0x10">bgm402b.mt  : </title>
+			<title code="0x11">funk_ufo.mt : </title>
+			<title code="0x12">koinu.mt    : </title>
+			<title code="0x13">opn2l.mt    : </title>
+			<title code="0x18">ttl_01l.mt  : </title>
+			<title code="0x1a">ttl_04bl.mt : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bell's Avenue vol.3(OPM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">ウェンディマガジン</driveralias>
+		<options>
+			<option name="mfp"    value="1"/>
+		</options>
+		<romlist archive="belsavn368snd">
+			<rom type="code" offset="0x000000">belsavn268snd.bin</rom>
+			<rom type="code" offset="0x010000">BELLS.ZMD</rom>
+			<rom type="code" offset="0x020007">BEL_3_00.FM</rom>
+			<rom type="code" offset="0x024007">BEL_3_01.FM</rom>
+			<rom type="code" offset="0x026007">BEL_3_02.FM</rom>
+			<rom type="code" offset="0x028007">BEL_3_03.FM</rom>
+			<rom type="code" offset="0x02a007">BEL_3_04.FM</rom>
+			<rom type="code" offset="0x02c007">BEL_3_05.FM</rom>
+			<rom type="code" offset="0x02e007">BEL_3_06.FM</rom>
+			<rom type="code" offset="0x030007">BEL_3_07.FM</rom>
+			<rom type="code" offset="0x032007">BEL_3_08.FM</rom>
+			<rom type="code" offset="0x034007">BEL_3_09.FM</rom>
+			<rom type="code" offset="0x036007">BEL_3_10.FM</rom>
+			<rom type="code" offset="0x038007">BEL_3_13.FM</rom>
+			<rom type="code" offset="0x03a007">BGM21.FM</rom>
+			<rom type="code" offset="0x03c007">BGM22.FM</rom>
+			<rom type="code" offset="0x03e007">BGM24.FM</rom>
+			<rom type="code" offset="0x040007">BGM31.FM</rom>
+			<rom type="code" offset="0x042007">KOINU.FM</rom>
+			<rom type="code" offset="0x060000">BELLS.ZPD</rom>
+			<rom type="x"    offset="0x080000">ZMUSIC.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BEL_3_00.FM : </title>
+			<title code="0x03">BEL_3_01.FM : </title>
+			<title code="0x04">BEL_3_02.FM : </title>
+			<title code="0x05">BEL_3_03.FM : </title>
+			<title code="0x06">BEL_3_04.FM : </title>
+			<title code="0x07">BEL_3_05.FM : </title>
+			<title code="0x08">BEL_3_06.FM : </title>
+			<title code="0x09">BEL_3_07.FM : </title>
+			<title code="0x0a">BEL_3_08.FM : </title>
+			<title code="0x0b">BEL_3_09.FM : </title>
+			<title code="0x0c">BEL_3_10.FM : </title>
+			<title code="0x0d">BEL_3_13.FM : </title>
+			<title code="0x0e">BGM21.FM    : </title>
+			<title code="0x0f">BGM22.FM    : </title>
+			<title code="0x10">BGM24.FM    : </title>
+			<title code="0x11">BGM31.FM    : </title>
+			<title code="0x12">KOINU.FM    : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bell's Avenue vol.3(GS)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">ウェンディマガジン</driveralias>
+		<options>
+			<option name="mfp"    value="1"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="7"/>
+		</options>
+		<romlist archive="belsavn368snd">
+			<rom type="code" offset="0x000000">belsavn268snd.bin</rom>
+			<rom type="code" offset="0x010000">BELLS.ZMD</rom>
+			<rom type="code" offset="0x020007">BEL_3_00.GS</rom>
+			<rom type="code" offset="0x024007">BEL_3_01.GS</rom>
+			<rom type="code" offset="0x026007">BEL_3_02.GS</rom>
+			<rom type="code" offset="0x028007">BEL_3_03.GS</rom>
+			<rom type="code" offset="0x02a007">BEL_3_04.GS</rom>
+			<rom type="code" offset="0x02c007">BEL_3_05.GS</rom>
+			<rom type="code" offset="0x030007">BEL_3_06.GS</rom>
+			<rom type="code" offset="0x032007">BEL_3_07.GS</rom>
+			<rom type="code" offset="0x034007">BEL_3_08.GS</rom>
+			<rom type="code" offset="0x036007">BEL_3_09.GS</rom>
+			<rom type="code" offset="0x038007">BEL_3_10.GS</rom>
+			<rom type="code" offset="0x03a007">BEL_3_13.GS</rom>
+			<rom type="code" offset="0x03c007">BGM21.GS</rom>
+			<rom type="code" offset="0x03e007">BGM22.GS</rom>
+			<rom type="code" offset="0x040007">BGM24.GS</rom>
+			<rom type="code" offset="0x042007">BGM31.GS</rom>
+			<rom type="code" offset="0x044007">KOINU.GS</rom>
+			<rom type="code" offset="0x060000">BELLS.ZPD</rom>
+			<rom type="x"    offset="0x080000">ZMUSIC.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BEL_3_00.GS : </title>
+			<title code="0x03">BEL_3_01.GS : </title>
+			<title code="0x04">BEL_3_02.GS : </title>
+			<title code="0x05">BEL_3_03.GS : </title>
+			<title code="0x06">BEL_3_04.GS : </title>
+			<title code="0x07">BEL_3_05.GS : </title>
+			<title code="0x09">BEL_3_06.GS : </title>
+			<title code="0x0a">BEL_3_07.GS : </title>
+			<title code="0x0b">BEL_3_08.GS : </title>
+			<title code="0x0c">BEL_3_09.GS : </title>
+			<title code="0x0d">BEL_3_10.GS : </title>
+			<title code="0x0e">BEL_3_13.GS : </title>
+			<title code="0x0f">BGM21.GS    : </title>
+			<title code="0x10">BGM22.GS    : </title>
+			<title code="0x11">BGM24.GS    : </title>
+			<title code="0x12">BGM31.GS    : </title>
+			<title code="0x13">KOINU.GS    : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bell's Avenue vol.3(MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">ウェンディマガジン</driveralias>
+		<options>
+			<option name="mfp"    value="1"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="belsavn368snd">
+			<rom type="code" offset="0x000000">belsavn268snd.bin</rom>
+			<rom type="code" offset="0x010000">BELLS.ZMD</rom>
+			<rom type="code" offset="0x020007">BEL_3_00.MT</rom>
+			<rom type="code" offset="0x024007">BEL_3_01.MT</rom>
+			<rom type="code" offset="0x026007">BEL_3_02.MT</rom>
+			<rom type="code" offset="0x028007">BEL_3_03.MT</rom>
+			<rom type="code" offset="0x02a007">BEL_3_04.MT</rom>
+			<rom type="code" offset="0x02c007">BEL_3_05.MT</rom>
+			<rom type="code" offset="0x030007">BEL_3_06.MT</rom>
+			<rom type="code" offset="0x032007">BEL_3_07.MT</rom>
+			<rom type="code" offset="0x034007">BEL_3_08.MT</rom>
+			<rom type="code" offset="0x036007">BEL_3_09.MT</rom>
+			<rom type="code" offset="0x038007">BEL_3_10.MT</rom>
+			<rom type="code" offset="0x03a007">BEL_3_13.MT</rom>
+			<rom type="code" offset="0x03c007">BGM21.MT</rom>
+			<rom type="code" offset="0x03e007">BGM22.MT</rom>
+			<rom type="code" offset="0x040007">BGM24.MT</rom>
+			<rom type="code" offset="0x042007">BGM31.MT</rom>
+			<rom type="code" offset="0x044007">KOINU.MT</rom>
+			<rom type="code" offset="0x060000">BELLS.ZPD</rom>
+			<rom type="x"    offset="0x080000">ZMUSIC.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BEL_3_00.MT : </title>
+			<title code="0x03">BEL_3_01.MT : </title>
+			<title code="0x04">BEL_3_02.MT : </title>
+			<title code="0x05">BEL_3_03.MT : </title>
+			<title code="0x06">BEL_3_04.MT : </title>
+			<title code="0x07">BEL_3_05.MT : </title>
+			<title code="0x09">BEL_3_06.MT : </title>
+			<title code="0x0a">BEL_3_07.MT : </title>
+			<title code="0x0b">BEL_3_08.MT : </title>
+			<title code="0x0c">BEL_3_09.MT : </title>
+			<title code="0x0d">BEL_3_10.MT : </title>
+			<title code="0x0e">BEL_3_13.MT : </title>
+			<title code="0x0f">BGM21.MT    : </title>
+			<title code="0x10">BGM22.MT    : </title>
+			<title code="0x11">BGM24.MT    : </title>
+			<title code="0x12">BGM31.MT    : </title>
+			<title code="0x13">KOINU.MT    : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] PINK SOX8</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">ウェンディマガジン</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8d80"/>
+			<option name="mdata_size" value="0x1400"/>
+			<option name="mfile_size" value="0x1400"/>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="ps8_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4000">TONE00.BIN</rom>
+			<rom type="code" offset="0x4200">TONE01.BIN</rom>
+			<rom type="code" offset="0x4400">TONE02.BIN</rom>
+			<rom type="code" offset="0x4800">TONE03.BIN</rom>
+			<rom type="code" offset="0x8000">FMDRV.BIN</rom>
+			<rom type="bgm" offset="0x00">MUS00.BIN</rom>
+			<rom type="bgm" offset="0x01">MUS01.BIN</rom>
+			<rom type="bgm" offset="0x02">MUS02.BIN</rom>
+			<rom type="bgm" offset="0x03">MUS03.BIN</rom>
+			<rom type="bgm" offset="0x04">MUS04.BIN</rom>
+			<rom type="bgm" offset="0x05">MUS05.BIN</rom>
+			<rom type="bgm" offset="0x06">MUS06.BIN</rom>
+			<rom type="bgm" offset="0x07">MUS07.BIN</rom>
+			<rom type="bgm" offset="0x08">MUS08.BIN</rom>
+			<rom type="bgm" offset="0x09">MUS09.BIN</rom>
+			<rom type="bgm" offset="0x0a">MUS0A.BIN</rom>
+			<rom type="bgm" offset="0x0b">MUS0B.BIN</rom>
+			<rom type="bgm" offset="0x0c">MUS0C.BIN</rom>
+			<rom type="bgm" offset="0x0d">MUS0D.BIN</rom>
+			<rom type="bgm" offset="0x0e">MUS10.BIN</rom>
+			<rom type="bgm" offset="0x0f">MUS11.BIN</rom>
+			<rom type="bgm" offset="0x10">MUS12.BIN</rom>
+			<rom type="bgm" offset="0x11">MUS13.BIN</rom>
+			<rom type="bgm" offset="0x12">MUS14.BIN</rom>
+			<rom type="bgm" offset="0x13">MUS15.BIN</rom>
+			<rom type="bgm" offset="0x14">MUS16.BIN</rom>
+			<rom type="bgm" offset="0x15">MUS17.BIN</rom>
+			<rom type="bgm" offset="0x16">MUS18.BIN</rom>
+			<rom type="bgm" offset="0x17">MUS19.BIN</rom>
+			<rom type="bgm" offset="0x18">MUS1A.BIN</rom>
+			<rom type="bgm" offset="0x19">MUS1B.BIN</rom>
+			<rom type="bgm" offset="0x1a">MUS1C.BIN</rom>
+			<rom type="bgm" offset="0x1b">MUS1D.BIN</rom>
+			<rom type="bgm" offset="0x1c">MUS1E.BIN</rom>
+			<rom type="bgm" offset="0x1d">MUS1F.BIN</rom>
+			<rom type="bgm" offset="0x1e">MUS20.BIN</rom>
+			<rom type="bgm" offset="0x1f">MUS21.BIN</rom>
+			<rom type="bgm" offset="0x20">MUS22.BIN</rom>
+			<rom type="bgm" offset="0x21">MUS23.BIN</rom>
+			<rom type="bgm" offset="0x22">MUS24.BIN</rom>
+			<rom type="bgm" offset="0x23">MUS25.BIN</rom>
+			<rom type="bgm" offset="0x24">MUS26.BIN</rom>
+			<rom type="bgm" offset="0x25">MUS27.BIN</rom>
+			<rom type="bgm" offset="0x26">MUS28.BIN</rom>
+			<rom type="bgm" offset="0x27">MUS29.BIN</rom>
+			<rom type="bgm" offset="0x28">MUS30.BIN</rom>
+			<rom type="bgm" offset="0x29">MUS31.BIN</rom>
+			<rom type="bgm" offset="0x2a">MUS32.BIN</rom>
+			<rom type="bgm" offset="0x2b">MUS33.BIN</rom>
+			<rom type="bgm" offset="0x2c">MUS34.BIN</rom>
+			<rom type="bgm" offset="0x2d">MUS40.BIN</rom>
+			<rom type="bgm" offset="0x2e">MUS41.BIN</rom>
+			<rom type="bgm" offset="0x2f">MUS42.BIN</rom>
+			<rom type="bgm" offset="0x30">MUS43.BIN</rom>
+			<rom type="bgm" offset="0x31">MUS44.BIN</rom>
+			<rom type="bgm" offset="0x32">MUS45.BIN</rom>
+			<rom type="bgm" offset="0x33">MUS46.BIN</rom>
+			<rom type="bgm" offset="0x34">MUS47.BIN</rom>
+			<rom type="bgm" offset="0x35">MUS48.BIN</rom>
+			<rom type="bgm" offset="0x36">MUS49.BIN</rom>
+			<rom type="bgm" offset="0x37">MUS4a.BIN</rom>
+			<rom type="bgm" offset="0x38">MUS4b.BIN</rom>
+			<rom type="bgm" offset="0x39">MUS4c.BIN</rom>
+			<rom type="bgm" offset="0x3a">MUS4d.BIN</rom>
+			<rom type="bgm" offset="0x3b">MUS4e.BIN</rom>
+			<rom type="bgm" offset="0x3c">MUS4f.BIN</rom>
+			<rom type="bgm" offset="0x3d">MUS50.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">タイトル</title>
+			<title code="0x000001">SIM GIRL #00</title>
+			<title code="0x000002">SIM GIRL #01</title>
+			<title code="0x000003">SIM GIRL #02</title>
+			<title code="0x010004">SIM GIRL #03</title>
+			<title code="0x010104">SIM GIRL #04</title>
+			<title code="0x010204">SIM GIRL #05</title>
+			<title code="0x010304">SIM GIRL #06</title>
+			<title code="0x010005">SIM GIRL #07</title>
+			<title code="0x010105">SIM GIRL #08</title>
+			<title code="0x010205">SIM GIRL #09</title>
+			<title code="0x020006">世界名作劇場 -シンデレラ- #00</title>
+			<title code="0x020007">世界名作劇場 -シンデレラ- #01</title>
+			<title code="0x020008">世界名作劇場 -シンデレラ- #02</title>
+			<title code="0x020009">世界名作劇場 -シンデレラ- #03</title>
+			<title code="0x02000a">世界名作劇場 -シンデレラ- #04</title>
+			<title code="0x02000b">世界名作劇場 -シンデレラ- #05</title>
+			<title code="0x02000c">世界名作劇場 -シンデレラ- #06</title>
+			<title code="0x02000d">世界名作劇場 -シンデレラ- #07</title>
+			<title code="0x02000e">世界名作劇場 -シンデレラ- #08</title>
+			<title code="0x02000f">世界名作劇場 -シンデレラ- #09</title>
+			<title code="0x020010">世界名作劇場 -シンデレラ- #10</title>
+			<title code="0x020011">世界名作劇場 -シンデレラ- #11</title>
+			<title code="0x020012">世界名作劇場 -シンデレラ- #12</title>
+			<title code="0x020013">世界名作劇場 -シンデレラ- #13</title>
+			<title code="0x020014">世界名作劇場 -シンデレラ- #14</title>
+			<title code="0x020015">世界名作劇場 -シンデレラ- #15</title>
+			<title code="0x020016">世界名作劇場 -シンデレラ- #16</title>
+			<title code="0x020017">世界名作劇場 -シンデレラ- #17</title>
+			<title code="0x020018">世界名作劇場 -シンデレラ- #18</title>
+			<title code="0x020019">世界名作劇場 -シンデレラ- #19</title>
+			<title code="0x02001a">世界名作劇場 -シンデレラ- #20</title>
+			<title code="0x02001b">世界名作劇場 -シンデレラ- #21</title>
+			<title code="0x02001c">世界名作劇場 -シンデレラ- #22</title>
+			<title code="0x02001d">世界名作劇場 -シンデレラ- #23</title>
+			<title code="0x02001e">世界名作劇場 -シンデレラ- #24</title>
+			<title code="0x02001f">世界名作劇場 -シンデレラ- #25</title>
+			<title code="0x020020">世界名作劇場 -シンデレラ- #26</title>
+			<title code="0x030021">どしふん #00</title>
+			<title code="0x030022">どしふん #01</title>
+			<title code="0x030023">どしふん #02</title>
+			<title code="0x030024">どしふん #03</title>
+			<title code="0x030025">どしふん #04</title>
+			<title code="0x030026">どしふん #05</title>
+			<title code="0x030027">どしふん #06</title>
+			<title code="0x000028">HALF TIME LOVER</title>
+			<title code="0x000029">小さなあなからコツコツと #00</title>
+			<title code="0x00002a">小さなあなからコツコツと #01</title>
+			<title code="0x00002b">小さなあなからコツコツと #02</title>
+			<title code="0x00002c">小さなあなからコツコツと #03</title>
+			<title code="0x01002d">濡れたガンキャノン #00</title>
+			<title code="0x01002e">濡れたガンキャノン #01</title>
+			<title code="0x01002f">濡れたガンキャノン #02</title>
+			<title code="0x010030">濡れたガンキャノン #03</title>
+			<title code="0x010031">濡れたガンキャノン #04</title>
+			<title code="0x010032">濡れたガンキャノン #05</title>
+			<title code="0x010033">濡れたガンキャノン #06</title>
+			<title code="0x010034">濡れたガンキャノン #07</title>
+			<title code="0x010035">濡れたガンキャノン #08</title>
+			<title code="0x010036">濡れたガンキャノン #09</title>
+			<title code="0x010037">濡れたガンキャノン #10</title>
+			<title code="0x010038">濡れたガンキャノン #11</title>
+			<title code="0x010039">濡れたガンキャノン #12</title>
+			<title code="0x01003a">濡れたガンキャノン #13</title>
+			<title code="0x01003b">濡れたガンキャノン #14</title>
+			<title code="0x01003c">濡れたガンキャノン #15</title>
+			<title code="0x00003d">OTAYORI</title>
+		</titlelist>
+	</game>
+</gamelist>

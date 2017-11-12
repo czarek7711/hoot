@@ -1,0 +1,2360 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //姫屋ソフト -->
+	<game>
+		<name>[PC-9801] Ash.(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ash_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">AH01.M</rom>
+			<rom type="file" offset="0x11">AH29.M</rom>
+			<rom type="file" offset="0x12">AH34.M</rom>
+			<rom type="file" offset="0x13">AH41.M</rom>
+			<rom type="file" offset="0x14">AH42.M</rom>
+			<rom type="file" offset="0x15">BTL49.M</rom>
+			<rom type="file" offset="0x16">CAVE04.M</rom>
+			<rom type="file" offset="0x17">HAPS02.M</rom>
+			<rom type="file" offset="0x18">IS13.M</rom>
+			<rom type="file" offset="0x19">IS44.M</rom>
+			<rom type="file" offset="0x1a">IS99.M</rom>
+			<rom type="file" offset="0x1b">LAND.M</rom>
+			<rom type="file" offset="0x1c">MORI.M</rom>
+			<rom type="file" offset="0x1d">PIAN01.M</rom>
+			<rom type="file" offset="0x1e">PIAN_R.M</rom>
+			<rom type="file" offset="0x1f">PRIS.M</rom>
+			<rom type="file" offset="0x20">RC13.M</rom>
+			<rom type="file" offset="0x21">RC17.M</rom>
+			<rom type="file" offset="0x22">RC34.M</rom>
+			<rom type="file" offset="0x23">SABANNA.M</rom>
+			<rom type="file" offset="0x24">SAKABA.M</rom>
+			<rom type="file" offset="0x25">SAKE.M</rom>
+			<rom type="file" offset="0x26">TITL02.M</rom>
+			<rom type="shell" offset="0">PMD #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AH01.M    : Miniature Town</title>
+			<title code="0x11">AH29.M    : A Memorial Point</title>
+			<title code="0x12">AH34.M    : Dead Carypso</title>
+			<title code="0x13">AH41.M    : Lunar Eclipse</title>
+			<title code="0x14">AH42.M    : DEAD END</title>
+			<title code="0x15">BTL49.M   : 予感</title>
+			<title code="0x16">CAVE04.M  : レクイエム</title>
+			<title code="0x17">HAPS02.M  : 来庭の日</title>
+			<title code="0x18">IS13.M    : Crave for Knowledge</title>
+			<title code="0x19">IS44.M    : 切迫</title>
+			<title code="0x1a">IS99.M    : 一触即発</title>
+			<title code="0x1b">LAND.M    : 丘陵を行く</title>
+			<title code="0x1c">MORI.M    : 森</title>
+			<title code="0x1d">PIAN01.M  : 出会い</title>
+			<title code="0x1e">PIAN_R.M  : 出会い</title>
+			<title code="0x1f">PRIS.M    : 虚ろな時間</title>
+			<title code="0x20">RC13.M    : 戦いの鳴動</title>
+			<title code="0x21">RC17.M    : Darkness Stole Up Me</title>
+			<title code="0x22">RC34.M    : 屍の道</title>
+			<title code="0x23">SABANNA.M : SABANNA</title>
+			<title code="0x24">SAKABA.M  : ルーレット テーブル</title>
+			<title code="0x25">SAKE.M    : 暗い酒場</title>
+			<title code="0x26">TITL02.M  : MAIN THEMA</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Ash.(MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="ash_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MIDISEND.COM</rom>
+			<rom type="file" offset="-1">MT32_ROM</rom>
+			<rom type="file" offset="0x10">AH01.MMD</rom>
+			<rom type="file" offset="0x11">AH29.MMD</rom>
+			<rom type="file" offset="0x12">AH34.MMD</rom>
+			<rom type="file" offset="0x13">AH41.MMD</rom>
+			<rom type="file" offset="0x14">AH42.MMD</rom>
+			<rom type="file" offset="0x15">BTL49.MMD</rom>
+			<rom type="file" offset="0x16">CAVE04.MMD</rom>
+			<rom type="file" offset="0x17">HAPS02.MMD</rom>
+			<rom type="file" offset="0x18">IS13.MMD</rom>
+			<rom type="file" offset="0x19">IS44.MMD</rom>
+			<rom type="file" offset="0x1a">IS99.MMD</rom>
+			<rom type="file" offset="0x1b">LAND.MMD</rom>
+			<rom type="file" offset="0x1c">MORI.MMD</rom>
+			<rom type="file" offset="0x1d">PIAN01.MMD</rom>
+			<rom type="file" offset="0x1e">PIAN_R.MMD</rom>
+			<rom type="file" offset="0x1f">PRIS.MMD</rom>
+			<rom type="file" offset="0x20">RC13.MMD</rom>
+			<rom type="file" offset="0x21">RC17.MMD</rom>
+			<rom type="file" offset="0x22">RC34.MMD</rom>
+			<rom type="file" offset="0x23">SABANNA.MMD</rom>
+			<rom type="file" offset="0x24">SAKABA.MMD</rom>
+			<rom type="file" offset="0x25">SAKE.MMD</rom>
+			<rom type="file" offset="0x26">TITL02.MMD</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MIDISEND MT32_ROM</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AH01.MMD    : Miniature Town</title>
+			<title code="0x11">AH29.MMD    : A Memorial Point</title>
+			<title code="0x12">AH34.MMD    : Dead Carypso</title>
+			<title code="0x13">AH41.MMD    : Lunar Eclipse</title>
+			<title code="0x14">AH42.MMD    : DEAD END</title>
+			<title code="0x15">BTL49.MMD   : 予感</title>
+			<title code="0x16">CAVE04.MMD  : レクイエム</title>
+			<title code="0x17">HAPS02.MMD  : 来庭の日</title>
+			<title code="0x18">IS13.MMD    : Crave for Knowledge</title>
+			<title code="0x19">IS44.MMD    : 切迫</title>
+			<title code="0x1a">IS99.MMD    : 一触即発</title>
+			<title code="0x1b">LAND.MMD    : 丘陵を行く</title>
+			<title code="0x1c">MORI.MMD    : 森</title>
+			<title code="0x1d">PIAN01.MMD  : 出会い</title>
+			<title code="0x1e">PIAN_R.MMD  : 出会い</title>
+			<title code="0x1f">PRIS.MMD    : 虚ろな時間</title>
+			<title code="0x20">RC13.MMD    : 戦いの鳴動</title>
+			<title code="0x21">RC17.MMD    : Darkness Stole Up Me</title>
+			<title code="0x22">RC34.MMD    : 屍の道</title>
+			<title code="0x23">SABANNA.MMD : SABANNA</title>
+			<title code="0x24">SAKABA.MMD  : ルーレット テーブル</title>
+			<title code="0x25">SAKE.MMD    : 暗い酒場</title>
+			<title code="0x26">TITL02.MMD  : MAIN THEMA</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Ash.(MT-32 Emulation)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="ash_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MIDISEND.COM</rom>
+			<rom type="file" offset="-1">MT32_ROM</rom>
+			<rom type="file" offset="0x10">AH01.MMD</rom>
+			<rom type="file" offset="0x11">AH29.MMD</rom>
+			<rom type="file" offset="0x12">AH34.MMD</rom>
+			<rom type="file" offset="0x13">AH41.MMD</rom>
+			<rom type="file" offset="0x14">AH42.MMD</rom>
+			<rom type="file" offset="0x15">BTL49.MMD</rom>
+			<rom type="file" offset="0x16">CAVE04.MMD</rom>
+			<rom type="file" offset="0x17">HAPS02.MMD</rom>
+			<rom type="file" offset="0x18">IS13.MMD</rom>
+			<rom type="file" offset="0x19">IS44.MMD</rom>
+			<rom type="file" offset="0x1a">IS99.MMD</rom>
+			<rom type="file" offset="0x1b">LAND.MMD</rom>
+			<rom type="file" offset="0x1c">MORI.MMD</rom>
+			<rom type="file" offset="0x1d">PIAN01.MMD</rom>
+			<rom type="file" offset="0x1e">PIAN_R.MMD</rom>
+			<rom type="file" offset="0x1f">PRIS.MMD</rom>
+			<rom type="file" offset="0x20">RC13.MMD</rom>
+			<rom type="file" offset="0x21">RC17.MMD</rom>
+			<rom type="file" offset="0x22">RC34.MMD</rom>
+			<rom type="file" offset="0x23">SABANNA.MMD</rom>
+			<rom type="file" offset="0x24">SAKABA.MMD</rom>
+			<rom type="file" offset="0x25">SAKE.MMD</rom>
+			<rom type="file" offset="0x26">TITL02.MMD</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MIDISEND MT32_ROM</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AH01.MMD    : Miniature Town</title>
+			<title code="0x11">AH29.MMD    : A Memorial Point</title>
+			<title code="0x12">AH34.MMD    : Dead Carypso</title>
+			<title code="0x13">AH41.MMD    : Lunar Eclipse</title>
+			<title code="0x14">AH42.MMD    : DEAD END</title>
+			<title code="0x15">BTL49.MMD   : 予感</title>
+			<title code="0x16">CAVE04.MMD  : レクイエム</title>
+			<title code="0x17">HAPS02.MMD  : 来庭の日</title>
+			<title code="0x18">IS13.MMD    : Crave for Knowledge</title>
+			<title code="0x19">IS44.MMD    : 切迫</title>
+			<title code="0x1a">IS99.MMD    : 一触即発</title>
+			<title code="0x1b">LAND.MMD    : 丘陵を行く</title>
+			<title code="0x1c">MORI.MMD    : 森</title>
+			<title code="0x1d">PIAN01.MMD  : 出会い</title>
+			<title code="0x1e">PIAN_R.MMD  : 出会い</title>
+			<title code="0x1f">PRIS.MMD    : 虚ろな時間</title>
+			<title code="0x20">RC13.MMD    : 戦いの鳴動</title>
+			<title code="0x21">RC17.MMD    : Darkness Stole Up Me</title>
+			<title code="0x22">RC34.MMD    : 屍の道</title>
+			<title code="0x23">SABANNA.MMD : SABANNA</title>
+			<title code="0x24">SAKABA.MMD  : ルーレット テーブル</title>
+			<title code="0x25">SAKE.MMD    : 暗い酒場</title>
+			<title code="0x26">TITL02.MMD  : MAIN THEMA</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Ash.(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="ash_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">AH01.MMD</rom>
+			<rom type="file" offset="0x11">AH29.MMD</rom>
+			<rom type="file" offset="0x12">AH34.MMD</rom>
+			<rom type="file" offset="0x13">AH41.MMD</rom>
+			<rom type="file" offset="0x14">AH42.MMD</rom>
+			<rom type="file" offset="0x15">BTL49.MMD</rom>
+			<rom type="file" offset="0x16">CAVE04.MMD</rom>
+			<rom type="file" offset="0x17">HAPS02.MMD</rom>
+			<rom type="file" offset="0x18">IS13.MMD</rom>
+			<rom type="file" offset="0x19">IS44.MMD</rom>
+			<rom type="file" offset="0x1a">IS99.MMD</rom>
+			<rom type="file" offset="0x1b">LAND.MMD</rom>
+			<rom type="file" offset="0x1c">MORI.MMD</rom>
+			<rom type="file" offset="0x1d">PIAN01.MMD</rom>
+			<rom type="file" offset="0x1e">PIAN_R.MMD</rom>
+			<rom type="file" offset="0x1f">PRIS.MMD</rom>
+			<rom type="file" offset="0x20">RC13.MMD</rom>
+			<rom type="file" offset="0x21">RC17.MMD</rom>
+			<rom type="file" offset="0x22">RC34.MMD</rom>
+			<rom type="file" offset="0x23">SABANNA.MMD</rom>
+			<rom type="file" offset="0x24">SAKABA.MMD</rom>
+			<rom type="file" offset="0x25">SAKE.MMD</rom>
+			<rom type="file" offset="0x26">TITL02.MMD</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AH01.MMD    : Miniature Town</title>
+			<title code="0x11">AH29.MMD    : A Memorial Point</title>
+			<title code="0x12">AH34.MMD    : Dead Carypso</title>
+			<title code="0x13">AH41.MMD    : Lunar Eclipse</title>
+			<title code="0x14">AH42.MMD    : DEAD END</title>
+			<title code="0x15">BTL49.MMD   : 予感</title>
+			<title code="0x16">CAVE04.MMD  : レクイエム</title>
+			<title code="0x17">HAPS02.MMD  : 来庭の日</title>
+			<title code="0x18">IS13.MMD    : Crave for Knowledge</title>
+			<title code="0x19">IS44.MMD    : 切迫</title>
+			<title code="0x1a">IS99.MMD    : 一触即発</title>
+			<title code="0x1b">LAND.MMD    : 丘陵を行く</title>
+			<title code="0x1c">MORI.MMD    : 森</title>
+			<title code="0x1d">PIAN01.MMD  : 出会い</title>
+			<title code="0x1e">PIAN_R.MMD  : 出会い</title>
+			<title code="0x1f">PRIS.MMD    : 虚ろな時間</title>
+			<title code="0x20">RC13.MMD    : 戦いの鳴動</title>
+			<title code="0x21">RC17.MMD    : Darkness Stole Up Me</title>
+			<title code="0x22">RC34.MMD    : 屍の道</title>
+			<title code="0x23">SABANNA.MMD : SABANNA</title>
+			<title code="0x24">SAKABA.MMD  : ルーレット テーブル</title>
+			<title code="0x25">SAKE.MMD    : 暗い酒場</title>
+			<title code="0x26">TITL02.MMD  : MAIN THEMA</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Bacta</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="bacta_98">
+			<rom type="file" offset="-1">mlalf_98.com</rom>
+			<rom type="file" offset="6">MLF.BIN</rom>
+			<rom type="file" offset="0x10">ATMOS-M2.MLO</rom>
+			<rom type="file" offset="0x11">BAKA.MLO</rom>
+			<rom type="file" offset="0x12">BANG.MLO</rom>
+			<rom type="file" offset="0x13">BEATPOP4.MLO</rom>
+			<rom type="file" offset="0x14">BLOODSUN.MLO</rom>
+			<rom type="file" offset="0x15">BLUES.MLO</rom>
+			<rom type="file" offset="0x16">BTL(19).MLO</rom>
+			<rom type="file" offset="0x17">CHIMN-E8.MLO</rom>
+			<rom type="file" offset="0x18">CLITT-Y2.MLO</rom>
+			<rom type="file" offset="0x19">CURIOUS2.MLO</rom>
+			<rom type="file" offset="0x1A">D0.MLO</rom>
+			<rom type="file" offset="0x1B">EASYSEAR.MLO</rom>
+			<rom type="file" offset="0x1C">ELEMEN-3.MLO</rom>
+			<rom type="file" offset="0x1D">EXORCI-3.MLO</rom>
+			<rom type="file" offset="0x1E">F0.MLO</rom>
+			<rom type="file" offset="0x1F">G0.MLO</rom>
+			<rom type="file" offset="0x20">GORA.MLO</rom>
+			<rom type="file" offset="0x21">H0.MLO</rom>
+			<rom type="file" offset="0x22">H-CM.MLO</rom>
+			<rom type="file" offset="0x23">ICETO-PS.MLO</rom>
+			<rom type="file" offset="0x24">IDLE-B-3.MLO</rom>
+			<rom type="file" offset="0x25">INTERP-3.MLO</rom>
+			<rom type="file" offset="0x26">JINALI-4.MLO</rom>
+			<rom type="file" offset="0x27">KASSLA-5.MLO</rom>
+			<rom type="file" offset="0x28">KONAMI01.MLO</rom>
+			<rom type="file" offset="0x29">NABBLS-2.MLO</rom>
+			<rom type="file" offset="0x2A">NUNU.MLO</rom>
+			<rom type="file" offset="0x2B">NYAN-4.MLO</rom>
+			<rom type="file" offset="0x2C">O0.MLO</rom>
+			<rom type="file" offset="0x2D">PAMPAS-2.MLO</rom>
+			<rom type="file" offset="0x2E">PINPON.MLO</rom>
+			<rom type="file" offset="0x2F">PISTLE-2.MLO</rom>
+			<rom type="file" offset="0x30">PLANDO-2.MLO</rom>
+			<rom type="file" offset="0x31">SEX-5.MLO</rom>
+			<rom type="file" offset="0x32">SINE.MLO</rom>
+			<rom type="shell" offset="0">mlalf_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ATMOS-M2.MLO : BACTA</title>
+			<title code="0x11">BAKA.MLO     : PUZZLE</title>
+			<title code="0x13">BEATPOP4.MLO : BEATPOP</title>
+			<title code="0x14">BLOODSUN.MLO : BLOODSUN</title>
+			<title code="0x15">BLUES.MLO    : BLUES IN MOON</title>
+			<title code="0x16">BTL(19).MLO  : FINAL BUTTLE</title>
+			<title code="0x17">CHIMN-E8.MLO : BREAK IN THE CLOUDS</title>
+			<title code="0x18">CLITT-Y2.MLO : MUDDY STREAM</title>
+			<title code="0x19">CURIOUS2.MLO : MOIST</title>
+			<title code="0x1A">D0.MLO       : HERE I AM!</title>
+			<title code="0x1B">EASYSEAR.MLO : SOFT WIND</title>
+			<title code="0x1C">ELEMEN-3.MLO : GO AWAY</title>
+			<title code="0x1D">EXORCI-3.MLO : EXORCIZE</title>
+			<title code="0x1E">F0.MLO       : REFLECTION</title>
+			<title code="0x1F">G0.MLO       : RUSTY STEEL</title>
+			<title code="0x20">GORA.MLO     : WAFT</title>
+			<title code="0x22">H-CM.MLO     : SECRET CONFERENCE</title>
+			<title code="0x21">H0.MLO       : EXPECTATIONS</title>
+			<title code="0x23">ICETO-PS.MLO : STREET</title>
+			<title code="0x24">IDLE-B-3.MLO : BORING AIR</title>
+			<title code="0x27">KASSLA-5.MLO : DAILY</title>
+			<title code="0x29">NABBLS-2.MLO : SOME TIME</title>
+			<title code="0x2B">NYAN-4.MLO   : EASY</title>
+			<title code="0x2C">O0.MLO       : MY TRAIN</title>
+			<title code="0x2D">PAMPAS-2.MLO : BABY</title>
+			<title code="0x30">PLANDO-2.MLO : TAKE A NAP</title>
+			<title code="0x31">SEX-5.MLO    : NEUTRON</title>
+			<title code="0x28">KONAMI01.MLO : GOING ON FOOT</title>
+			<title code="0x12">BANG.MLO     : SE</title>
+			<title code="0x25">INTERP-3.MLO : SE</title>
+			<title code="0x26">JINALI-4.MLO : SE</title>
+			<title code="0x2A">NUNU.MLO     : SE</title>
+			<title code="0x2E">PINPON.MLO   : SE</title>
+			<title code="0x2F">PISTLE-2.MLO : SE</title>
+			<title code="0x32">SINE.MLO     : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Bacta2(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="bacta2_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">BOCA.M</rom>
+			<rom type="file" offset="0x11">H11.M</rom>
+			<rom type="file" offset="0x12">H14.M</rom>
+			<rom type="file" offset="0x13">H25.M</rom>
+			<rom type="file" offset="0x14">H69.M</rom>
+			<rom type="file" offset="0x15">H71.M</rom>
+			<rom type="file" offset="0x16">INT11.M</rom>
+			<rom type="file" offset="0x17">INT14.M</rom>
+			<rom type="file" offset="0x18">INT19.M</rom>
+			<rom type="file" offset="0x19">LAS1_2.M</rom>
+			<rom type="file" offset="0x1a">LS06.M</rom>
+			<rom type="file" offset="0x1b">LS13.M</rom>
+			<rom type="file" offset="0x1c">LS15.M</rom>
+			<rom type="file" offset="0x1d">LS17.M</rom>
+			<rom type="file" offset="0x1e">LS26.M</rom>
+			<rom type="file" offset="0x1f">LS27.M</rom>
+			<rom type="file" offset="0x20">LS41.M</rom>
+			<rom type="file" offset="0x21">LS42.M</rom>
+			<rom type="file" offset="0x22">LS53.M</rom>
+			<rom type="file" offset="0x23">LS67.M</rom>
+			<rom type="file" offset="0x24">MOUNT.M</rom>
+			<rom type="file" offset="0x25">RS01.M</rom>
+			<rom type="file" offset="0x26">RS03.M</rom>
+			<rom type="file" offset="0x27">RS06.M</rom>
+			<rom type="file" offset="0x28">RS07.M</rom>
+			<rom type="file" offset="0x29">RS16.M</rom>
+			<rom type="file" offset="0x2a">RS51.M</rom>
+			<rom type="file" offset="0x2b">RS52.M</rom>
+			<rom type="file" offset="0x2c">RS54.M</rom>
+			<rom type="file" offset="0x2d">RS60.M</rom>
+			<rom type="file" offset="0x2e">RS62.M</rom>
+			<rom type="file" offset="0x2f">STROL.M</rom>
+			<rom type="file" offset="0x30">TEL5.M</rom>
+			<rom type="shell" offset="0">PMD #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x17">INT14.M  : Freet</title>
+			<title code="0x11">H11.M    : アヒルがついて来る</title>
+			<title code="0x12">H14.M    : Hoarfrost</title>
+			<title code="0x13">H25.M    : Amethyst</title>
+			<title code="0x14">H69.M    : 捨てられないおもちゃ</title>
+			<title code="0x15">H71.M    : Nightmare</title>
+			<title code="0x16">INT11.M  : 湧出</title>
+			<title code="0x18">INT19.M  : 窓のない屋敷</title>
+			<title code="0x19">LAS1_2.M : この闘いの果てにたどり着けるか</title>
+			<title code="0x1a">LS06.M   : Round-Table Conference</title>
+			<title code="0x1b">LS13.M   : 青炎の狙い</title>
+			<title code="0x1c">LS15.M   : Puppy</title>
+			<title code="0x1d">LS17.M   : 普段の従事</title>
+			<title code="0x1e">LS26.M   : French Sunlight</title>
+			<title code="0x1f">LS27.M   : Gentle Trees</title>
+			<title code="0x20">LS41.M   : A Life Of Ease</title>
+			<title code="0x21">LS42.M   : ダイジェスティブル エブリデイ</title>
+			<title code="0x22">LS53.M   : Toddle</title>
+			<title code="0x23">LS67.M   : 蟻の歯車</title>
+			<title code="0x24">MOUNT.M  : Mount The Photograph</title>
+			<title code="0x30">TEL5.M   : いたたまれない空気</title>
+			<title code="0x25">RS01.M   : The Enemy Is Close In</title>
+			<title code="0x26">RS03.M   : Poison Gas</title>
+			<title code="0x27">RS06.M   : チェイス</title>
+			<title code="0x28">RS07.M   : Resurrection</title>
+			<title code="0x29">RS16.M   : Hunter</title>
+			<title code="0x2a">RS51.M   : アウターバーンの追跡</title>
+			<title code="0x2b">RS52.M   : 混沌から具象</title>
+			<title code="0x2c">RS54.M   : Critical Moment</title>
+			<title code="0x2d">RS60.M   : Feeling Of Suspiction</title>
+			<title code="0x2e">RS62.M   : 止まらない自虐施設</title>
+			<title code="0x2f">STROL.M  : 群青</title>
+			<title code="0x10">BOCA.M   : ボカン</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Bacta2(MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="bacta2_98">
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MIDISEND.COM</rom>
+			<rom type="file" offset="-1">MT32_ROM</rom>
+			<rom type="file" offset="0x10">H11.MMD</rom>
+			<rom type="file" offset="0x11">H14.MMD</rom>
+			<rom type="file" offset="0x12">H25.MMD</rom>
+			<rom type="file" offset="0x13">H69.MMD</rom>
+			<rom type="file" offset="0x14">H71.MMD</rom>
+			<rom type="file" offset="0x15">INT11.MMD</rom>
+			<rom type="file" offset="0x16">INT14.MMD</rom>
+			<rom type="file" offset="0x17">INT19.MMD</rom>
+			<rom type="file" offset="0x18">LAS1_2.MMD</rom>
+			<rom type="file" offset="0x19">LS06.MMD</rom>
+			<rom type="file" offset="0x1a">LS13.MMD</rom>
+			<rom type="file" offset="0x1b">LS15.MMD</rom>
+			<rom type="file" offset="0x1c">LS17.MMD</rom>
+			<rom type="file" offset="0x1d">LS26.MMD</rom>
+			<rom type="file" offset="0x1e">LS27.MMD</rom>
+			<rom type="file" offset="0x1f">LS41.MMD</rom>
+			<rom type="file" offset="0x20">LS42.MMD</rom>
+			<rom type="file" offset="0x21">LS53.MMD</rom>
+			<rom type="file" offset="0x22">LS67.MMD</rom>
+			<rom type="file" offset="0x23">MOUNT.MMD</rom>
+			<rom type="file" offset="0x24">RS01.MMD</rom>
+			<rom type="file" offset="0x25">RS03.MMD</rom>
+			<rom type="file" offset="0x26">RS06.MMD</rom>
+			<rom type="file" offset="0x27">RS07.MMD</rom>
+			<rom type="file" offset="0x28">RS16.MMD</rom>
+			<rom type="file" offset="0x29">RS51.MMD</rom>
+			<rom type="file" offset="0x2a">RS52.MMD</rom>
+			<rom type="file" offset="0x2b">RS54.MMD</rom>
+			<rom type="file" offset="0x2c">RS60.MMD</rom>
+			<rom type="file" offset="0x2d">RS62.MMD</rom>
+			<rom type="file" offset="0x2e">STROL.MMD</rom>
+			<rom type="file" offset="0x2f">TEL5.MMD</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MIDISEND MT32_ROM</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x16">INT14.MMD  : Freet</title>
+			<title code="0x10">H11.MMD    : アヒルがついて来る</title>
+			<title code="0x11">H14.MMD    : Hoarfrost</title>
+			<title code="0x12">H25.MMD    : Amethyst</title>
+			<title code="0x13">H69.MMD    : 捨てられないおもちゃ</title>
+			<title code="0x14">H71.MMD    : Nightmare</title>
+			<title code="0x15">INT11.MMD  : 湧出</title>
+			<title code="0x17">INT19.MMD  : 窓のない屋敷</title>
+			<title code="0x18">LAS1_2.MMD : この闘いの果てにたどり着けるか</title>
+			<title code="0x19">LS06.MMD   : Round-Table Conference</title>
+			<title code="0x1a">LS13.MMD   : 青炎の狙い</title>
+			<title code="0x1b">LS15.MMD   : Puppy</title>
+			<title code="0x1c">LS17.MMD   : 普段の従事</title>
+			<title code="0x1d">LS26.MMD   : French Sunlight</title>
+			<title code="0x1e">LS27.MMD   : Gentle Trees</title>
+			<title code="0x1f">LS41.MMD   : A Life Of Ease</title>
+			<title code="0x20">LS42.MMD   : ダイジェスティブル エブリデイ</title>
+			<title code="0x21">LS53.MMD   : Toddle</title>
+			<title code="0x22">LS67.MMD   : 蟻の歯車</title>
+			<title code="0x23">MOUNT.MMD  : Mount The Photograph</title>
+			<title code="0x2f">TEL5.MMD   : いたたまれない空気</title>
+			<title code="0x24">RS01.MMD   : The Enemy Is Close In</title>
+			<title code="0x25">RS03.MMD   : Poison Gas</title>
+			<title code="0x26">RS06.MMD   : チェイス</title>
+			<title code="0x27">RS07.MMD   : Resurrection</title>
+			<title code="0x28">RS16.MMD   : Hunter</title>
+			<title code="0x29">RS51.MMD   : アウターバーンの追跡</title>
+			<title code="0x2a">RS52.MMD   : 混沌から具象</title>
+			<title code="0x2b">RS54.MMD   : Critical Moment</title>
+			<title code="0x2c">RS60.MMD   : Feeling Of Suspiction</title>
+			<title code="0x2d">RS62.MMD   : 止まらない自虐施設</title>
+			<title code="0x2e">STROL.MMD  : 群青</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Bacta2(MT-32 Emulation)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="bacta2_98">
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MIDISEND.COM</rom>
+			<rom type="file" offset="-1">MT32_ROM</rom>
+			<rom type="file" offset="0x10">H11.MMD</rom>
+			<rom type="file" offset="0x11">H14.MMD</rom>
+			<rom type="file" offset="0x12">H25.MMD</rom>
+			<rom type="file" offset="0x13">H69.MMD</rom>
+			<rom type="file" offset="0x14">H71.MMD</rom>
+			<rom type="file" offset="0x15">INT11.MMD</rom>
+			<rom type="file" offset="0x16">INT14.MMD</rom>
+			<rom type="file" offset="0x17">INT19.MMD</rom>
+			<rom type="file" offset="0x18">LAS1_2.MMD</rom>
+			<rom type="file" offset="0x19">LS06.MMD</rom>
+			<rom type="file" offset="0x1a">LS13.MMD</rom>
+			<rom type="file" offset="0x1b">LS15.MMD</rom>
+			<rom type="file" offset="0x1c">LS17.MMD</rom>
+			<rom type="file" offset="0x1d">LS26.MMD</rom>
+			<rom type="file" offset="0x1e">LS27.MMD</rom>
+			<rom type="file" offset="0x1f">LS41.MMD</rom>
+			<rom type="file" offset="0x20">LS42.MMD</rom>
+			<rom type="file" offset="0x21">LS53.MMD</rom>
+			<rom type="file" offset="0x22">LS67.MMD</rom>
+			<rom type="file" offset="0x23">MOUNT.MMD</rom>
+			<rom type="file" offset="0x24">RS01.MMD</rom>
+			<rom type="file" offset="0x25">RS03.MMD</rom>
+			<rom type="file" offset="0x26">RS06.MMD</rom>
+			<rom type="file" offset="0x27">RS07.MMD</rom>
+			<rom type="file" offset="0x28">RS16.MMD</rom>
+			<rom type="file" offset="0x29">RS51.MMD</rom>
+			<rom type="file" offset="0x2a">RS52.MMD</rom>
+			<rom type="file" offset="0x2b">RS54.MMD</rom>
+			<rom type="file" offset="0x2c">RS60.MMD</rom>
+			<rom type="file" offset="0x2d">RS62.MMD</rom>
+			<rom type="file" offset="0x2e">STROL.MMD</rom>
+			<rom type="file" offset="0x2f">TEL5.MMD</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MIDISEND MT32_ROM</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x16">INT14.MMD  : Freet</title>
+			<title code="0x10">H11.MMD    : アヒルがついて来る</title>
+			<title code="0x11">H14.MMD    : Hoarfrost</title>
+			<title code="0x12">H25.MMD    : Amethyst</title>
+			<title code="0x13">H69.MMD    : 捨てられないおもちゃ</title>
+			<title code="0x14">H71.MMD    : Nightmare</title>
+			<title code="0x15">INT11.MMD  : 湧出</title>
+			<title code="0x17">INT19.MMD  : 窓のない屋敷</title>
+			<title code="0x18">LAS1_2.MMD : この闘いの果てにたどり着けるか</title>
+			<title code="0x19">LS06.MMD   : Round-Table Conference</title>
+			<title code="0x1a">LS13.MMD   : 青炎の狙い</title>
+			<title code="0x1b">LS15.MMD   : Puppy</title>
+			<title code="0x1c">LS17.MMD   : 普段の従事</title>
+			<title code="0x1d">LS26.MMD   : French Sunlight</title>
+			<title code="0x1e">LS27.MMD   : Gentle Trees</title>
+			<title code="0x1f">LS41.MMD   : A Life Of Ease</title>
+			<title code="0x20">LS42.MMD   : ダイジェスティブル エブリデイ</title>
+			<title code="0x21">LS53.MMD   : Toddle</title>
+			<title code="0x22">LS67.MMD   : 蟻の歯車</title>
+			<title code="0x23">MOUNT.MMD  : Mount The Photograph</title>
+			<title code="0x2f">TEL5.MMD   : いたたまれない空気</title>
+			<title code="0x24">RS01.MMD   : The Enemy Is Close In</title>
+			<title code="0x25">RS03.MMD   : Poison Gas</title>
+			<title code="0x26">RS06.MMD   : チェイス</title>
+			<title code="0x27">RS07.MMD   : Resurrection</title>
+			<title code="0x28">RS16.MMD   : Hunter</title>
+			<title code="0x29">RS51.MMD   : アウターバーンの追跡</title>
+			<title code="0x2a">RS52.MMD   : 混沌から具象</title>
+			<title code="0x2b">RS54.MMD   : Critical Moment</title>
+			<title code="0x2c">RS60.MMD   : Feeling Of Suspiction</title>
+			<title code="0x2d">RS62.MMD   : 止まらない自虐施設</title>
+			<title code="0x2e">STROL.MMD  : 群青</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Bacta2(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="bacta2_98">
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="0x10">H11.MMD</rom>
+			<rom type="file" offset="0x11">H14.MMD</rom>
+			<rom type="file" offset="0x12">H25.MMD</rom>
+			<rom type="file" offset="0x13">H69.MMD</rom>
+			<rom type="file" offset="0x14">H71.MMD</rom>
+			<rom type="file" offset="0x15">INT11.MMD</rom>
+			<rom type="file" offset="0x16">INT14.MMD</rom>
+			<rom type="file" offset="0x17">INT19.MMD</rom>
+			<rom type="file" offset="0x18">LAS1_2.MMD</rom>
+			<rom type="file" offset="0x19">LS06.MMD</rom>
+			<rom type="file" offset="0x1a">LS13.MMD</rom>
+			<rom type="file" offset="0x1b">LS15.MMD</rom>
+			<rom type="file" offset="0x1c">LS17.MMD</rom>
+			<rom type="file" offset="0x1d">LS26.MMD</rom>
+			<rom type="file" offset="0x1e">LS27.MMD</rom>
+			<rom type="file" offset="0x1f">LS41.MMD</rom>
+			<rom type="file" offset="0x20">LS42.MMD</rom>
+			<rom type="file" offset="0x21">LS53.MMD</rom>
+			<rom type="file" offset="0x22">LS67.MMD</rom>
+			<rom type="file" offset="0x23">MOUNT.MMD</rom>
+			<rom type="file" offset="0x24">RS01.MMD</rom>
+			<rom type="file" offset="0x25">RS03.MMD</rom>
+			<rom type="file" offset="0x26">RS06.MMD</rom>
+			<rom type="file" offset="0x27">RS07.MMD</rom>
+			<rom type="file" offset="0x28">RS16.MMD</rom>
+			<rom type="file" offset="0x29">RS51.MMD</rom>
+			<rom type="file" offset="0x2a">RS52.MMD</rom>
+			<rom type="file" offset="0x2b">RS54.MMD</rom>
+			<rom type="file" offset="0x2c">RS60.MMD</rom>
+			<rom type="file" offset="0x2d">RS62.MMD</rom>
+			<rom type="file" offset="0x2e">STROL.MMD</rom>
+			<rom type="file" offset="0x2f">TEL5.MMD</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x16">INT14.MMD  : Freet</title>
+			<title code="0x10">H11.MMD    : アヒルがついて来る</title>
+			<title code="0x11">H14.MMD    : Hoarfrost</title>
+			<title code="0x12">H25.MMD    : Amethyst</title>
+			<title code="0x13">H69.MMD    : 捨てられないおもちゃ</title>
+			<title code="0x14">H71.MMD    : Nightmare</title>
+			<title code="0x15">INT11.MMD  : 湧出</title>
+			<title code="0x17">INT19.MMD  : 窓のない屋敷</title>
+			<title code="0x18">LAS1_2.MMD : この闘いの果てにたどり着けるか</title>
+			<title code="0x19">LS06.MMD   : Round-Table Conference</title>
+			<title code="0x1a">LS13.MMD   : 青炎の狙い</title>
+			<title code="0x1b">LS15.MMD   : Puppy</title>
+			<title code="0x1c">LS17.MMD   : 普段の従事</title>
+			<title code="0x1d">LS26.MMD   : French Sunlight</title>
+			<title code="0x1e">LS27.MMD   : Gentle Trees</title>
+			<title code="0x1f">LS41.MMD   : A Life Of Ease</title>
+			<title code="0x20">LS42.MMD   : ダイジェスティブル エブリデイ</title>
+			<title code="0x21">LS53.MMD   : Toddle</title>
+			<title code="0x22">LS67.MMD   : 蟻の歯車</title>
+			<title code="0x23">MOUNT.MMD  : Mount The Photograph</title>
+			<title code="0x2f">TEL5.MMD   : いたたまれない空気</title>
+			<title code="0x24">RS01.MMD   : The Enemy Is Close In</title>
+			<title code="0x25">RS03.MMD   : Poison Gas</title>
+			<title code="0x26">RS06.MMD   : チェイス</title>
+			<title code="0x27">RS07.MMD   : Resurrection</title>
+			<title code="0x28">RS16.MMD   : Hunter</title>
+			<title code="0x29">RS51.MMD   : アウターバーンの追跡</title>
+			<title code="0x2a">RS52.MMD   : 混沌から具象</title>
+			<title code="0x2b">RS54.MMD   : Critical Moment</title>
+			<title code="0x2c">RS60.MMD   : Feeling Of Suspiction</title>
+			<title code="0x2d">RS62.MMD   : 止まらない自虐施設</title>
+			<title code="0x2e">STROL.MMD  : 群青</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] D'Ark</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="d_ark_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">K1.EFC</rom>
+			<rom type="file" offset="0x10">ASSASSIN.M</rom>
+			<rom type="file" offset="0x11">BTL08.M</rom>
+			<rom type="file" offset="0x12">BTL29.M</rom>
+			<rom type="file" offset="0x13">BTL30.M</rom>
+			<rom type="file" offset="0x14">BTL32.M</rom>
+			<rom type="file" offset="0x15">BTL39.M</rom>
+			<rom type="file" offset="0x16">BURN.M</rom>
+			<rom type="file" offset="0x17">CR.M</rom>
+			<rom type="file" offset="0x18">DA_ARMOR.M</rom>
+			<rom type="file" offset="0x19">EV02.M</rom>
+			<rom type="file" offset="0x1a">EV05.M</rom>
+			<rom type="file" offset="0x1b">FIG03.M</rom>
+			<rom type="file" offset="0x1c">FLANNEL.M</rom>
+			<rom type="file" offset="0x1d">HORU.M</rom>
+			<rom type="file" offset="0x1e">LEBOO.M</rom>
+			<rom type="file" offset="0x1f">LEDO.M</rom>
+			<rom type="file" offset="0x20">LIVE_1.M</rom>
+			<rom type="file" offset="0x21">MURDER.M</rom>
+			<rom type="file" offset="0x22">PRISONER.M</rom>
+			<rom type="file" offset="0x23">RAP.M</rom>
+			<rom type="file" offset="0x24">SC04.M</rom>
+			<rom type="file" offset="0x25">SC08.M</rom>
+			<rom type="file" offset="0x26">SC12.M</rom>
+			<rom type="file" offset="0x27">SC13_B.M</rom>
+			<rom type="file" offset="0x28">SC14.M</rom>
+			<rom type="file" offset="0x29">SC18_B.M</rom>
+			<rom type="file" offset="0x2a">SC20.M</rom>
+			<rom type="file" offset="0x2b">SC22.M</rom>
+			<rom type="file" offset="0x2c">SCIO.M</rom>
+			<rom type="file" offset="0x2d">SR04.M</rom>
+			<rom type="file" offset="0x2e">STROLL.M</rom>
+			<rom type="file" offset="0x2f">TI8.M</rom>
+			<rom type="file" offset="0x30">TNS03.M</rom>
+			<rom type="file" offset="0x31">TNS04.M</rom>
+			<rom type="file" offset="0x32">UC07.M</rom>
+			<rom type="file" offset="0x33">VARM.M</rom>
+			<rom type="file" offset="0x34">ZER26.M</rom>
+			<rom type="file" offset="0x35">ZER27.M</rom>
+			<rom type="shell" offset="0">PMD</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1a">EV05.M     : Field Gun</title>
+			<title code="0x1b">FIG03.M    : 2way Attack</title>
+			<title code="0x2f">TI8.M      : PURGE</title>
+			<title code="0x29">SC18_B.M   : 徘徊する人魂</title>
+			<title code="0x13">BTL30.M    : Sharp</title>
+			<title code="0x15">BTL39.M    : 髑髏の絨毯</title>
+			<title code="0x11">BTL08.M    : 空との境界がない黒い海</title>
+			<title code="0x1d">HORU.M     : "J"の猜疑心</title>
+			<title code="0x21">MURDER.M   : 植物の報復計画</title>
+			<title code="0x16">BURN.M     : Dormant Volcano</title>
+			<title code="0x10">ASSASSIN.M : Careful Plan</title>
+			<title code="0x25">SC08.M     : Cold Blooded</title>
+			<title code="0x24">SC04.M     : イエローナイフ</title>
+			<title code="0x19">EV02.M     : 多くの独り</title>
+			<title code="0x33">VARM.M     : New Horizon</title>
+			<title code="0x14">BTL32.M    : For Power</title>
+			<title code="0x1c">FLANNEL.M  : A Long Way Off...</title>
+			<title code="0x2e">STROLL.M   : Deeper</title>
+			<title code="0x2c">SCIO.M     : 夢は夢</title>
+			<title code="0x31">TNS04.M    : 月から見た自分</title>
+			<title code="0x30">TNS03.M    : 人格が決める死の価値</title>
+			<title code="0x23">RAP.M      : Spider's Thread</title>
+			<title code="0x34">ZER26.M    : 実りのための無意味な風習</title>
+			<title code="0x17">CR.M       : 生まれ持った器</title>
+			<title code="0x18">DA_ARMOR.M : Hang Low Brack Clouds</title>
+			<title code="0x2b">SC22.M     : Secret By-Pass</title>
+			<title code="0x2a">SC20.M     : 半身体の行方</title>
+			<title code="0x28">SC14.M     : Root Out Hypocrisy</title>
+			<title code="0x27">SC13_B.M   : Disabled Person Returns</title>
+			<title code="0x26">SC12.M     : ステファンの五つ子</title>
+			<title code="0x1f">LEDO.M     : Frozen All Over</title>
+			<title code="0x22">PRISONER.M : 鏡の中の宝石</title>
+			<title code="0x20">LIVE_1.M   : 悲劇の少年王</title>
+			<title code="0x35">ZER27.M    : Fossil Plant</title>
+			<title code="0x1e">LEBOO.M    : Dry Up Insent</title>
+			<title code="0x2d">SR04.M     : Count Down</title>
+			<title code="0x32">UC07.M     : 国王の間</title>
+			<title code="0x12">BTL29.M    :</title>
+			<range min="0x081e" max="0x081e" extcode="1">K1.EFC     : %2X</range>
+			<range min="0x0823" max="0x0823" extcode="1">K1.EFC     : %2X</range>
+			<range min="0x0825" max="0x0826" extcode="1">K1.EFC     : %2X</range>
+			<range min="0x082b" max="0x082e" extcode="1">K1.EFC     : %2X</range>
+			<range min="0x0830" max="0x0832" extcode="1">K1.EFC     : %2X</range>
+			<range min="0x0838" max="0x083b" extcode="1">K1.EFC     : %2X</range>
+			<range min="0x083d" max="0x083d" extcode="1">K1.EFC     : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] D'Ark外伝(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="d_ark_g_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">K5.EFC</rom>
+			<rom type="file" offset="0x10">BTL08.M</rom>
+			<rom type="file" offset="0x11">BTL32.M</rom>
+			<rom type="file" offset="0x12">CR.M</rom>
+			<rom type="file" offset="0x13">FIG12.M</rom>
+			<rom type="file" offset="0x14">FIG13.M</rom>
+			<rom type="file" offset="0x15">FIG17.M</rom>
+			<rom type="file" offset="0x16">FIG19.M</rom>
+			<rom type="file" offset="0x17">FIG27.M</rom>
+			<rom type="file" offset="0x18">FRIP.M</rom>
+			<rom type="file" offset="0x19">HDCHA.M</rom>
+			<rom type="file" offset="0x1a">HEAVY02.M</rom>
+			<rom type="file" offset="0x1b">LIVE1_G2.M</rom>
+			<rom type="file" offset="0x1c">MURDER.M</rom>
+			<rom type="file" offset="0x1d">MV03.M</rom>
+			<rom type="file" offset="0x1e">MV06.M</rom>
+			<rom type="file" offset="0x1f">PRIE04.M</rom>
+			<rom type="file" offset="0x20">PRIE07.M</rom>
+			<rom type="file" offset="0x21">SC18_B.M</rom>
+			<rom type="file" offset="0x22">SC22.M</rom>
+			<rom type="file" offset="0x23">TI26.M</rom>
+			<rom type="file" offset="0x24">TRA.M</rom>
+			<rom type="file" offset="0x25">VARM.M</rom>
+			<rom type="file" offset="0x26">WING.M</rom>
+			<rom type="shell" offset="0">PMD /K /M6</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BTL08.M    : </title>
+			<title code="0x11">BTL32.M    : </title>
+			<title code="0x12">CR.M       : </title>
+			<title code="0x13">FIG12.M    : </title>
+			<title code="0x14">FIG13.M    : </title>
+			<title code="0x15">FIG17.M    : </title>
+			<title code="0x16">FIG19.M    : </title>
+			<title code="0x17">FIG27.M    : </title>
+			<title code="0x18">FRIP.M     : </title>
+			<title code="0x19">HDCHA.M    : </title>
+			<title code="0x1a">HEAVY02.M  : </title>
+			<title code="0x1b">LIVE1_G2.M : </title>
+			<title code="0x1c">MURDER.M   : </title>
+			<title code="0x1d">MV03.M     : </title>
+			<title code="0x1e">MV06.M     : </title>
+			<title code="0x1f">PRIE04.M   : </title>
+			<title code="0x20">PRIE07.M   : </title>
+			<title code="0x21">SC18_B.M   : </title>
+			<title code="0x22">SC22.M     : </title>
+			<title code="0x23">TI26.M     : </title>
+			<title code="0x24">TRA.M      : </title>
+			<title code="0x25">VARM.M     : </title>
+			<title code="0x26">WING.M     : </title>
+			<range min="0x0800" max="0x0809" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x081e" max="0x081e" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x0823" max="0x0823" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x0825" max="0x0826" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x082b" max="0x082e" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x0830" max="0x0832" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x0838" max="0x083b" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x083d" max="0x083d" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x083f" max="0x083f" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x0841" max="0x0843" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x0843" max="0x0843" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x0844" max="0x0844" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x0846" max="0x0846" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x0848" max="0x0848" extcode="1">K5.EFC     : %2X</range>
+			<range min="0x084e" max="0x084f" extcode="1">K5.EFC     : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] D'Ark外伝(MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="d_ark_g_98">
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">PUTCM6.EXE</rom>
+			<rom type="file" offset="-1">LITRA.CM6</rom>
+			<rom type="file" offset="0x10">BTL08.MMD</rom>
+			<rom type="file" offset="0x11">BTL32.MMD</rom>
+			<rom type="file" offset="0x12">CR.MMD</rom>
+			<rom type="file" offset="0x13">FIG12.MMD</rom>
+			<rom type="file" offset="0x14">FIG13.MMD</rom>
+			<rom type="file" offset="0x15">FIG17.MMD</rom>
+			<rom type="file" offset="0x16">FIG19.MMD</rom>
+			<rom type="file" offset="0x17">FIG27.MMD</rom>
+			<rom type="file" offset="0x18">FRIP.MMD</rom>
+			<rom type="file" offset="0x19">HDCHA.MMD</rom>
+			<rom type="file" offset="0x1a">HEAVY02.MMD</rom>
+			<rom type="file" offset="0x1b">LIVE1_G2.MMD</rom>
+			<rom type="file" offset="0x1c">MURDER.MMD</rom>
+			<rom type="file" offset="0x1d">MV03.MMD</rom>
+			<rom type="file" offset="0x1e">MV06.MMD</rom>
+			<rom type="file" offset="0x1f">PRIE04.MMD</rom>
+			<rom type="file" offset="0x20">PRIE07.MMD</rom>
+			<rom type="file" offset="0x21">SC18_B.MMD</rom>
+			<rom type="file" offset="0x22">SC22.MMD</rom>
+			<rom type="file" offset="0x23">TI26.MMD</rom>
+			<rom type="file" offset="0x24">TRA.MMD</rom>
+			<rom type="file" offset="0x25">VARM.MMD</rom>
+			<rom type="file" offset="0x26">WING.MMD</rom>
+			<rom type="shell" offset="0">MMD /K /M24</rom>
+			<rom type="shell" offset="0">PUTCM6 LITRA.CM6</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BTL08.MMD    : </title>
+			<title code="0x11">BTL32.MMD    : </title>
+			<title code="0x12">CR.MMD       : </title>
+			<title code="0x13">FIG12.MMD    : </title>
+			<title code="0x14">FIG13.MMD    : </title>
+			<title code="0x15">FIG17.MMD    : </title>
+			<title code="0x16">FIG19.MMD    : </title>
+			<title code="0x17">FIG27.MMD    : </title>
+			<title code="0x18">FRIP.MMD     : </title>
+			<title code="0x19">HDCHA.MMD    : </title>
+			<title code="0x1a">HEAVY02.MMD  : </title>
+			<title code="0x1b">LIVE1_G2.MMD : </title>
+			<title code="0x1c">MURDER.MMD   : </title>
+			<title code="0x1d">MV03.MMD     : </title>
+			<title code="0x1e">MV06.MMD     : </title>
+			<title code="0x1f">PRIE04.MMD   : </title>
+			<title code="0x20">PRIE07.MMD   : </title>
+			<title code="0x21">SC18_B.MMD   : </title>
+			<title code="0x22">SC22.MMD     : </title>
+			<title code="0x23">TI26.MMD     : </title>
+			<title code="0x24">TRA.MMD      : </title>
+			<title code="0x25">VARM.MMD     : </title>
+			<title code="0x26">WING.MMD     : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] D'Ark外伝(MT-32 Emulation)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="d_ark_g_98">
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">PUTCM6.EXE</rom>
+			<rom type="file" offset="-1">LITRA.CM6</rom>
+			<rom type="file" offset="0x10">BTL08.MMD</rom>
+			<rom type="file" offset="0x11">BTL32.MMD</rom>
+			<rom type="file" offset="0x12">CR.MMD</rom>
+			<rom type="file" offset="0x13">FIG12.MMD</rom>
+			<rom type="file" offset="0x14">FIG13.MMD</rom>
+			<rom type="file" offset="0x15">FIG17.MMD</rom>
+			<rom type="file" offset="0x16">FIG19.MMD</rom>
+			<rom type="file" offset="0x17">FIG27.MMD</rom>
+			<rom type="file" offset="0x18">FRIP.MMD</rom>
+			<rom type="file" offset="0x19">HDCHA.MMD</rom>
+			<rom type="file" offset="0x1a">HEAVY02.MMD</rom>
+			<rom type="file" offset="0x1b">LIVE1_G2.MMD</rom>
+			<rom type="file" offset="0x1c">MURDER.MMD</rom>
+			<rom type="file" offset="0x1d">MV03.MMD</rom>
+			<rom type="file" offset="0x1e">MV06.MMD</rom>
+			<rom type="file" offset="0x1f">PRIE04.MMD</rom>
+			<rom type="file" offset="0x20">PRIE07.MMD</rom>
+			<rom type="file" offset="0x21">SC18_B.MMD</rom>
+			<rom type="file" offset="0x22">SC22.MMD</rom>
+			<rom type="file" offset="0x23">TI26.MMD</rom>
+			<rom type="file" offset="0x24">TRA.MMD</rom>
+			<rom type="file" offset="0x25">VARM.MMD</rom>
+			<rom type="file" offset="0x26">WING.MMD</rom>
+			<rom type="shell" offset="0">MMD /K /M24</rom>
+			<rom type="shell" offset="0">PUTCM6 LITRA.CM6</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BTL08.MMD    : </title>
+			<title code="0x11">BTL32.MMD    : </title>
+			<title code="0x12">CR.MMD       : </title>
+			<title code="0x13">FIG12.MMD    : </title>
+			<title code="0x14">FIG13.MMD    : </title>
+			<title code="0x15">FIG17.MMD    : </title>
+			<title code="0x16">FIG19.MMD    : </title>
+			<title code="0x17">FIG27.MMD    : </title>
+			<title code="0x18">FRIP.MMD     : </title>
+			<title code="0x19">HDCHA.MMD    : </title>
+			<title code="0x1a">HEAVY02.MMD  : </title>
+			<title code="0x1b">LIVE1_G2.MMD : </title>
+			<title code="0x1c">MURDER.MMD   : </title>
+			<title code="0x1d">MV03.MMD     : </title>
+			<title code="0x1e">MV06.MMD     : </title>
+			<title code="0x1f">PRIE04.MMD   : </title>
+			<title code="0x20">PRIE07.MMD   : </title>
+			<title code="0x21">SC18_B.MMD   : </title>
+			<title code="0x22">SC22.MMD     : </title>
+			<title code="0x23">TI26.MMD     : </title>
+			<title code="0x24">TRA.MMD      : </title>
+			<title code="0x25">VARM.MMD     : </title>
+			<title code="0x26">WING.MMD     : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] De・FaNa(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="defana_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">DEF.EFC</rom>
+			<rom type="file" offset="0x10">GD07.M</rom>
+			<rom type="file" offset="0x11">GD26.M</rom>
+			<rom type="file" offset="0x12">GD93.M</rom>
+			<rom type="file" offset="0x13">LS59.M</rom>
+			<rom type="file" offset="0x14">VF06.M</rom>
+			<rom type="file" offset="0x15">VF13.M</rom>
+			<rom type="file" offset="0x16">VF13_C.M</rom>
+			<rom type="file" offset="0x17">VF13_F.M</rom>
+			<rom type="file" offset="0x18">VF20.M</rom>
+			<rom type="file" offset="0x19">VF24.M</rom>
+			<rom type="file" offset="0x1a">VF35.M</rom>
+			<rom type="file" offset="0x1b">ZE07.M</rom>
+			<rom type="shell" offset="0">PMD #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GD07.M   : Throb of devil</title>
+			<title code="0x11">GD26.M   : Tinker</title>
+			<title code="0x12">GD93.M   : Smoky mountain path</title>
+			<title code="0x13">LS59.M   : タンポポの実</title>
+			<title code="0x14">VF06.M   : PREVIEW</title>
+			<title code="0x15">VF13.M   : Be ambitious succeed</title>
+			<title code="0x16">VF13_C.M : De.FaNa</title>
+			<title code="0x17">VF13_F.M : Can not fail</title>
+			<title code="0x18">VF20.M   : Unknown factor</title>
+			<title code="0x19">VF24.M   : Plastic chick</title>
+			<title code="0x1a">VF35.M   : Obstruction</title>
+			<title code="0x1b">ZE07.M   : マジック ア・ラ・カルト</title>
+			<range min="0x0812" max="0x0812" extcode="1">DEF.EFC  : %2X</range>
+			<range min="0x0817" max="0x0818" extcode="1">DEF.EFC  : %2X</range>
+			<range min="0x081a" max="0x081b" extcode="1">DEF.EFC  : %2X</range>
+			<range min="0x082a" max="0x082a" extcode="1">DEF.EFC  : %2X</range>
+			<range min="0x0832" max="0x0832" extcode="1">DEF.EFC  : %2X</range>
+			<range min="0x0837" max="0x0837" extcode="1">DEF.EFC  : %2X</range>
+			<range min="0x0839" max="0x0839" extcode="1">DEF.EFC  : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] De・FaNa(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="defana_98">
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="0x10">GD07.MMD</rom>
+			<rom type="file" offset="0x11">GD26.MMD</rom>
+			<rom type="file" offset="0x12">GD93.MMD</rom>
+			<rom type="file" offset="0x13">LS59.MMD</rom>
+			<rom type="file" offset="0x14">VF06.MMD</rom>
+			<rom type="file" offset="0x15">VF13.MMD</rom>
+			<rom type="file" offset="0x16">VF13_C.MMD</rom>
+			<rom type="file" offset="0x17">VF13_F.MMD</rom>
+			<rom type="file" offset="0x18">VF20.MMD</rom>
+			<rom type="file" offset="0x19">VF24.MMD</rom>
+			<rom type="file" offset="0x1a">VF35.MMD</rom>
+			<rom type="file" offset="0x1b">ZE07.MMD</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GD07.MMD   : Throb of devil</title>
+			<title code="0x11">GD26.MMD   : Tinker</title>
+			<title code="0x12">GD93.MMD   : Smoky mountain path</title>
+			<title code="0x13">LS59.MMD   : タンポポの実</title>
+			<title code="0x14">VF06.MMD   : PREVIEW</title>
+			<title code="0x15">VF13.MMD   : Be ambitious succeed</title>
+			<title code="0x16">VF13_C.MMD : De.FaNa</title>
+			<title code="0x17">VF13_F.MMD : Can not fail</title>
+			<title code="0x18">VF20.MMD   : Unknown factor</title>
+			<title code="0x19">VF24.MMD   : Plastic chick</title>
+			<title code="0x1a">VF35.MMD   : Obstruction</title>
+			<title code="0x1b">ZE07.MMD   : マジック ア・ラ・カルト</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PHOBOS</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="phobos_98">
+			<rom type="file" offset="-1">mlalf_98.com</rom>
+			<rom type="file" offset="6">MLF.BIN</rom>
+			<rom type="file" offset="0x10">AFR(01).MLO</rom>
+			<rom type="file" offset="0x11">AFR(02).MLO</rom>
+			<rom type="file" offset="0x12">AIRSERVE.MLO</rom>
+			<rom type="file" offset="0x13">BLARD.MLO</rom>
+			<rom type="file" offset="0x14">BTL(17).MLO</rom>
+			<rom type="file" offset="0x15">CHATEAU.MLO</rom>
+			<rom type="file" offset="0x16">CHI(01).MLO</rom>
+			<rom type="file" offset="0x17">CHI(09).MLO</rom>
+			<rom type="file" offset="0x18">CHI(11).MLO</rom>
+			<rom type="file" offset="0x19">DARK(A).MLO</rom>
+			<rom type="file" offset="0x1A">END(03).MLO</rom>
+			<rom type="file" offset="0x1B">H(02).MLO</rom>
+			<rom type="file" offset="0x1C">H(05).MLO</rom>
+			<rom type="file" offset="0x1D">H(07).MLO</rom>
+			<rom type="file" offset="0x1E">INTRODU.MLO</rom>
+			<rom type="file" offset="0x1F">JINALI.MLO</rom>
+			<rom type="file" offset="0x20">LUZART.MLO</rom>
+			<rom type="file" offset="0x21">MIQUE.MLO</rom>
+			<rom type="file" offset="0x22">PHOBOS3A.MLO</rom>
+			<rom type="file" offset="0x23">PRACTICE.MLO</rom>
+			<rom type="file" offset="0x24">RECALL.MLO</rom>
+			<rom type="file" offset="0x25">RECALL2.MLO</rom>
+			<rom type="file" offset="0x26">RHY(02).MLO</rom>
+			<rom type="file" offset="0x27">RHY(03).MLO</rom>
+			<rom type="file" offset="0x28">RHY(04).MLO</rom>
+			<rom type="file" offset="0x29">RHY(06).MLO</rom>
+			<rom type="file" offset="0x2A">SNIPE.MLO</rom>
+			<rom type="file" offset="0x2B">SRW(01)1.MLO</rom>
+			<rom type="file" offset="0x2C">TEL-BELL.MLO</rom>
+			<rom type="file" offset="0x2D">TNS(02).MLO</rom>
+			<rom type="file" offset="0x2E">TWINKS.MLO</rom>
+			<rom type="file" offset="0x2F">UNC(02).MLO</rom>
+			<rom type="file" offset="0x30">UNC(05).MLO</rom>
+			<rom type="file" offset="0x31">UNC(06).MLO</rom>
+			<rom type="file" offset="0x32">WARMJET.MLO</rom>
+			<rom type="file" offset="0x33">ZER01.MLO</rom>
+			<rom type="file" offset="0x34">ZER04.MLO</rom>
+			<rom type="file" offset="0x35">ZER04_2.MLO</rom>
+			<rom type="file" offset="0x36">ZER07.MLO</rom>
+			<rom type="file" offset="0x37">ZER18.MLO</rom>
+			<rom type="file" offset="0x38">ZER18_2.MLO</rom>
+			<rom type="file" offset="0x39">ZER20.MLO</rom>
+			<rom type="file" offset="0x3A">ZER25.MLO</rom>
+			<rom type="file" offset="0x3B">ZER28_8.MLO</rom>
+			<rom type="file" offset="0x3C">ZER32.MLO</rom>
+			<rom type="file" offset="0x3D">ZG01_!.MLO</rom>
+			<rom type="file" offset="0x3E">ZG02.MLO</rom>
+			<rom type="shell" offset="0">mlalf_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">AFR(02).MLO  : Impluse of the machine</title>
+			<title code="0x22">PHOBOS3A.MLO : ECONOMIC GROWTH</title>
+			<title code="0x26">RHY(02).MLO  : My tea</title>
+			<title code="0x21">MIQUE.MLO    : Dull Life</title>
+			<title code="0x2D">TNS(02).MLO  : Hotbed of vice</title>
+			<title code="0x28">RHY(04).MLO  : たまには一人で</title>
+			<title code="0x31">UNC(06).MLO  : 器用な蛇遣い</title>
+			<title code="0x1D">H(07).MLO    : Star-Spangled Sky</title>
+			<title code="0x2F">UNC(02).MLO  : Antiquated Building</title>
+			<title code="0x34">ZER04.MLO    : ぼくの尊敬するこども</title>
+			<title code="0x35">ZER04_2.MLO  : Believe(-100%)such a story!</title>
+			<title code="0x36">ZER07.MLO    : 壊れた魚の泳ぐ河</title>
+			<title code="0x17">CHI(09).MLO  : March in a sigle file</title>
+			<title code="0x20">LUZART.MLO   : Surplus of nature</title>
+			<title code="0x27">RHY(03).MLO  : Walk Barefoot</title>
+			<title code="0x32">WARMJET.MLO  : Queenbee</title>
+			<title code="0x37">ZER18.MLO    : Hostility</title>
+			<title code="0x38">ZER18_2.MLO  : 誰も来たことのないはずの沼</title>
+			<title code="0x3C">ZER32.MLO    : エアーダクトはネズミたちの大動脈</title>
+			<title code="0x12">AIRSERVE.MLO : Unnamed Flower</title>
+			<title code="0x30">UNC(05).MLO  : Deep sea party</title>
+			<title code="0x1B">H(02).MLO    : 月光浴</title>
+			<title code="0x16">CHI(01).MLO  : Yellow Juggler</title>
+			<title code="0x2B">SRW(01)1.MLO : Momentary Happines</title>
+			<title code="0x13">BLARD.MLO    : 海賊船</title>
+			<title code="0x29">RHY(06).MLO  : Est vous……</title>
+			<title code="0x1E">INTRODU.MLO  : Punishment</title>
+			<title code="0x2E">TWINKS.MLO   : 小動物の日常生活</title>
+			<title code="0x33">ZER01.MLO    : CHINESE GEAR</title>
+			<title code="0x1C">H(05).MLO    : MOONLIGHT STORY</title>
+			<title code="0x39">ZER20.MLO    : 赤のハチドリ</title>
+			<title code="0x3B">ZER28_8.MLO  : Misteries from the distant</title>
+			<title code="0x18">CHI(11).MLO  : 雑技団</title>
+			<title code="0x19">DARK(A).MLO  : Dark Orange Crescent</title>
+			<title code="0x3A">ZER25.MLO    : 公的刺客</title>
+			<title code="0x2B">SRW(01)1.MLO : HOME</title>
+			<title code="0x24">RECALL.MLO   : Worn out diary</title>
+			<title code="0x15">CHATEAU.MLO  : Half in a dream</title>
+			<title code="0x10">AFR(01).MLO  : MONO</title>
+			<title code="0x25">RECALL2.MLO  : CONNOR</title>
+			<title code="0x14">BTL(17).MLO  : The end of fire</title>
+			<title code="0x3D">ZG01_!.MLO   : The end of fire II</title>
+			<title code="0x3E">ZG02.MLO     : The end of fire III</title>
+			<title code="0x23">PRACTICE.MLO : B-DISK</title>
+			<title code="0x1A">END(03).MLO  : Nebula</title>
+			<title code="0x1F">JINALI.MLO   : SE 爆破</title>
+			<title code="0x2A">SNIPE.MLO    : SE ピシッッッ…</title>
+			<title code="0x2C">TEL-BELL.MLO : SE Telephone Bell</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] YES!(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="yes_98">
+			<rom type="file" offset="-1">mlalf_98.com</rom>
+			<rom type="file" offset="-1">GAME.EXE</rom>
+			<rom type="conin" offset="5">GAME.EXE</rom>
+			<rom type="file" offset="0x10">CRENA.MLO</rom>
+			<rom type="file" offset="0x11">DOCA.MLO</rom>
+			<rom type="file" offset="0x12">FIG(07)1.MLO</rom>
+			<rom type="file" offset="0x13">FLORLE.MLO</rom>
+			<rom type="file" offset="0x14">GAMEFRE.MLO</rom>
+			<rom type="file" offset="0x15">INT02.MLO</rom>
+			<rom type="file" offset="0x16">JUV.MLO</rom>
+			<rom type="file" offset="0x17">LOCCO.MLO</rom>
+			<rom type="file" offset="0x18">NOHO.MLO</rom>
+			<rom type="file" offset="0x19">ODO_2.MLO</rom>
+			<rom type="file" offset="0x1a">ORGEL.MLO</rom>
+			<rom type="file" offset="0x1b">OTOS_1.MLO</rom>
+			<rom type="file" offset="0x1c">OTOS_2.MLO</rom>
+			<rom type="file" offset="0x1d">PIPORGAN.MLO</rom>
+			<rom type="file" offset="0x1e">POP.MLO</rom>
+			<rom type="file" offset="0x1f">RHY08.MLO</rom>
+			<rom type="file" offset="0x20">RUKU.MLO</rom>
+			<rom type="file" offset="0x21">SC01.MLO</rom>
+			<rom type="file" offset="0x22">SNOW2.MLO</rom>
+			<rom type="file" offset="0x23">TI14.MLO</rom>
+			<rom type="file" offset="0x24">VAMP6B.MLO</rom>
+			<rom type="shell" offset="0">mlalf_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">CRENA.MLO    : 飛行船が連れ去った古代生物</title>
+			<title code="0x13">FLORLE.MLO   : Tiny Hands</title>
+			<title code="0x14">GAMEFRE.MLO  : Air Fight</title>
+			<title code="0x15">INT02.MLO    : Digging Tank</title>
+			<title code="0x16">JUV.MLO      : Blue,Green,White</title>
+			<title code="0x18">NOHO.MLO     : Spectrum</title>
+			<title code="0x1a">ORGEL.MLO    : Kiss on the forehead</title>
+			<title code="0x1d">PIPORGAN.MLO : Atonement</title>
+			<title code="0x1e">POP.MLO      : 無人工場3号炉</title>
+			<title code="0x1f">RHY08.MLO    : 深海に降る雪</title>
+			<title code="0x20">RUKU.MLO     : Your portrait</title>
+			<title code="0x21">SC01.MLO     : A mummy in maze</title>
+			<title code="0x22">SNOW2.MLO    : Snow light</title>
+			<title code="0x24">VAMP6B.MLO   : Bloodsucker</title>
+			<title code="0x23">TI14.MLO     : 紙飛行機のパイロット</title>
+			<title code="0x1b">OTOS_2.MLO   : 銀の炎</title>
+			<title code="0x1c">OTOS_1.MLO   : Enigmatic Keyhole</title>
+			<title code="0x19">ODO_2.MLO    : 十二年の眠り</title>
+			<title code="0x17">LOCCO.MLO    : Cheeping</title>
+			<title code="0x12">FIG(07)1.MLO : Can't run any more!</title>
+			<title code="0x11">DOCA.MLO     : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] YES!(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="yes_98">
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+
+			<rom type="file" offset="0x10">CRENA.MMD</rom>
+			<rom type="file" offset="0x11">FIG(07)1.MMD</rom>
+			<rom type="file" offset="0x12">FLORLE.MMD</rom>
+			<rom type="file" offset="0x13">GAMEFRE.MMD</rom>
+			<rom type="file" offset="0x14">INT02.MMD</rom>
+			<rom type="file" offset="0x15">JUV.MMD</rom>
+			<rom type="file" offset="0x16">LOCCO.MMD</rom>
+			<rom type="file" offset="0x17">NOHO.MMD</rom>
+			<rom type="file" offset="0x18">ODO_2.MMD</rom>
+			<rom type="file" offset="0x19">ORGEL.MMD</rom>
+			<rom type="file" offset="0x1a">OTOS_1.MMD</rom>
+			<rom type="file" offset="0x1b">OTOS_2.MMD</rom>
+			<rom type="file" offset="0x1c">PIPORGAN.MMD</rom>
+			<rom type="file" offset="0x1d">POP.MMD</rom>
+			<rom type="file" offset="0x1e">RHY08.MMD</rom>
+			<rom type="file" offset="0x1f">RUKU.MMD</rom>
+			<rom type="file" offset="0x20">SC01.MMD</rom>
+			<rom type="file" offset="0x21">SNOW2.MMD</rom>
+			<rom type="file" offset="0x22">TI14.MMD</rom>
+			<rom type="file" offset="0x23">VAMP6B.MMD</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">CRENA.MMD    : 飛行船が連れ去った古代生物</title>
+			<title code="0x12">FLORLE.MMD   : Tiny Hands</title>
+			<title code="0x13">GAMEFRE.MMD  : Air Fight</title>
+			<title code="0x14">INT02.MMD    : Digging Tank</title>
+			<title code="0x15">JUV.MMD      : Blue,Green,White</title>
+			<title code="0x17">NOHO.MMD     : Spectrum</title>
+			<title code="0x19">ORGEL.MMD    : Kiss on the forehead</title>
+			<title code="0x1c">PIPORGAN.MMD : Atonement</title>
+			<title code="0x1d">POP.MMD      : 無人工場3号炉</title>
+			<title code="0x1e">RHY08.MMD    : 深海に降る雪</title>
+			<title code="0x1f">RUKU.MMD     : Your portrait</title>
+			<title code="0x20">SC01.MMD     : A mummy in maze</title>
+			<title code="0x21">SNOW2.MMD    : Snow light</title>
+			<title code="0x23">VAMP6B.MMD   : Bloodsucker</title>
+			<title code="0x22">TI14.MMD     : 紙飛行機のパイロット</title>
+			<title code="0x1b">OTOS_2.MMD   : 銀の炎</title>
+			<title code="0x1a">OTOS_1.MMD   : Enigmatic Keyhole</title>
+			<title code="0x18">ODO_2.MMD    : 十二年の眠り</title>
+			<title code="0x16">LOCCO.MMD    : Cheeping</title>
+			<title code="0x11">FIG(07)1.MMD : Can't run any more!</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] D'BaBOS(YES!付属 姫屋製品特別情報円盤)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="dbabs_98">
+			<rom type="file" offset="-1">mlalf_98.com</rom>
+			<rom type="file" offset="-1">BABOS.EXE</rom>
+			<rom type="conin" offset="5">BABOS.EXE</rom>
+			<rom type="file" offset="0x10">ATMOS-M2.MLO</rom>
+			<rom type="file" offset="0x11">BTL(12)2.MLO</rom>
+			<rom type="file" offset="0x12">DOCA.MLO</rom>
+			<rom type="file" offset="0x13">FUTSU.MLO</rom>
+			<rom type="file" offset="0x14">H(01).MLO</rom>
+			<rom type="file" offset="0x15">ND05.MLO</rom>
+			<rom type="shell" offset="0">mlalf_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ATMOS-M2.MLO : BACTA</title>
+			<title code="0x11">BTL(12)2.MLO : </title>
+			<title code="0x13">FUTSU.MLO    : </title>
+			<title code="0x14">H(01).MLO    : </title>
+			<title code="0x15">ND05.MLO     : </title>
+			<title code="0x12">DOCA.MLO     : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] YES! HG(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="yeshg_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">HG.EFC</rom>
+			<rom type="file" offset="0x10">AR77.ML</rom>
+			<rom type="file" offset="0x11">AR80.ML</rom>
+			<rom type="file" offset="0x12">CHAN82.ML</rom>
+			<rom type="file" offset="0x13">CLEAR.ML</rom>
+			<rom type="file" offset="0x14">GD08.ML</rom>
+			<rom type="file" offset="0x15">GD11.ML</rom>
+			<rom type="file" offset="0x16">GD19.ML</rom>
+			<rom type="file" offset="0x17">GD25.ML</rom>
+			<rom type="file" offset="0x18">GD30.ML</rom>
+			<rom type="file" offset="0x19">GD31.ML</rom>
+			<rom type="file" offset="0x1a">GD32.ML</rom>
+			<rom type="file" offset="0x1b">GD36.ML</rom>
+			<rom type="file" offset="0x1c">GD37.ML</rom>
+			<rom type="file" offset="0x1d">GD40.ML</rom>
+			<rom type="file" offset="0x1e">GD46.ML</rom>
+			<rom type="file" offset="0x1f">GD50.ML</rom>
+			<rom type="file" offset="0x20">GD51.ML</rom>
+			<rom type="file" offset="0x21">GD55.ML</rom>
+			<rom type="file" offset="0x22">GD59.ML</rom>
+			<rom type="file" offset="0x23">GD60.ML</rom>
+			<rom type="file" offset="0x24">GD63.ML</rom>
+			<rom type="file" offset="0x25">GD64.ML</rom>
+			<rom type="file" offset="0x26">GD73.ML</rom>
+			<rom type="file" offset="0x27">GD74.ML</rom>
+			<rom type="file" offset="0x28">GD75.ML</rom>
+			<rom type="file" offset="0x29">GD77.ML</rom>
+			<rom type="file" offset="0x2a">GD88.ML</rom>
+			<rom type="file" offset="0x2b">GD89.ML</rom>
+			<rom type="file" offset="0x2c">GD94.ML</rom>
+			<rom type="file" offset="0x2d">GD95.ML</rom>
+			<rom type="file" offset="0x2e">GD96.ML</rom>
+			<rom type="file" offset="0x2f">GD97.ML</rom>
+			<rom type="file" offset="0x30">GR45.ML</rom>
+			<rom type="file" offset="0x31">GR51.ML</rom>
+			<rom type="file" offset="0x32">H24.ML</rom>
+			<rom type="file" offset="0x33">IS05.ML</rom>
+			<rom type="file" offset="0x34">TI29.ML</rom>
+			<rom type="shell" offset="0">PMD /K /M10</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AR77.ML   : </title>
+			<title code="0x11">AR80.ML   : </title>
+			<title code="0x12">CHAN82.ML : </title>
+			<title code="0x13">CLEAR.ML  : </title>
+			<title code="0x14">GD08.ML   : </title>
+			<title code="0x15">GD11.ML   : </title>
+			<title code="0x16">GD19.ML   : </title>
+			<title code="0x17">GD25.ML   : </title>
+			<title code="0x18">GD30.ML   : </title>
+			<title code="0x19">GD31.ML   : </title>
+			<title code="0x1a">GD32.ML   : </title>
+			<title code="0x1b">GD36.ML   : </title>
+			<title code="0x1c">GD37.ML   : </title>
+			<title code="0x1d">GD40.ML   : </title>
+			<title code="0x1e">GD46.ML   : </title>
+			<title code="0x1f">GD50.ML   : </title>
+			<title code="0x20">GD51.ML   : </title>
+			<title code="0x21">GD55.ML   : </title>
+			<title code="0x22">GD59.ML   : </title>
+			<title code="0x23">GD60.ML   : </title>
+			<title code="0x24">GD63.ML   : </title>
+			<title code="0x25">GD64.ML   : </title>
+			<title code="0x26">GD73.ML   : </title>
+			<title code="0x27">GD74.ML   : </title>
+			<title code="0x28">GD75.ML   : </title>
+			<title code="0x29">GD77.ML   : </title>
+			<title code="0x2a">GD88.ML   : </title>
+			<title code="0x2b">GD89.ML   : </title>
+			<title code="0x2c">GD94.ML   : </title>
+			<title code="0x2d">GD95.ML   : </title>
+			<title code="0x2e">GD96.ML   : </title>
+			<title code="0x2f">GD97.ML   : </title>
+			<title code="0x30">GR45.ML   : </title>
+			<title code="0x31">GR51.ML   : </title>
+			<title code="0x32">H24.ML    : </title>
+			<title code="0x33">IS05.ML   : </title>
+			<title code="0x34">TI29.ML   : </title>
+			<range min="0x0813" max="0x0813" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0820" max="0x0821" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0826" max="0x082a" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x082c" max="0x082e" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0833" max="0x0834" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x083a" max="0x083e" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0840" max="0x0842" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0845" max="0x0845" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0853" max="0x0855" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0857" max="0x0857" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0859" max="0x0859" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x085c" max="0x085e" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0860" max="0x0864" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0866" max="0x0866" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0869" max="0x0869" extcode="1">HG.EFC    : %2X</range>
+			<range min="0x0870" max="0x0870" extcode="1">HG.EFC    : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] YES! HG(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="yeshg_98">
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="0x10">AR77.MDL</rom>
+			<rom type="file" offset="0x11">AR80.MDL</rom>
+			<rom type="file" offset="0x12">CHAN82.MDL</rom>
+			<rom type="file" offset="0x13">CLEAR.MDL</rom>
+			<rom type="file" offset="0x14">GD08.MDL</rom>
+			<rom type="file" offset="0x15">GD11.MDL</rom>
+			<rom type="file" offset="0x16">GD19.MDL</rom>
+			<rom type="file" offset="0x17">GD25.MDL</rom>
+			<rom type="file" offset="0x18">GD30.MDL</rom>
+			<rom type="file" offset="0x19">GD31.MDL</rom>
+			<rom type="file" offset="0x1a">GD32.MDL</rom>
+			<rom type="file" offset="0x1b">GD36.MDL</rom>
+			<rom type="file" offset="0x1c">GD37.MDL</rom>
+			<rom type="file" offset="0x1d">GD40.MDL</rom>
+			<rom type="file" offset="0x1e">GD46.MDL</rom>
+			<rom type="file" offset="0x1f">GD50.MDL</rom>
+			<rom type="file" offset="0x20">GD51.MDL</rom>
+			<rom type="file" offset="0x21">GD55.MDL</rom>
+			<rom type="file" offset="0x22">GD59.MDL</rom>
+			<rom type="file" offset="0x23">GD60.MDL</rom>
+			<rom type="file" offset="0x24">GD63.MDL</rom>
+			<rom type="file" offset="0x25">GD64.MDL</rom>
+			<rom type="file" offset="0x26">GD73.MDL</rom>
+			<rom type="file" offset="0x27">GD74.MDL</rom>
+			<rom type="file" offset="0x28">GD75.MDL</rom>
+			<rom type="file" offset="0x29">GD77.MDL</rom>
+			<rom type="file" offset="0x2a">GD88.MDL</rom>
+			<rom type="file" offset="0x2b">GD89.MDL</rom>
+			<rom type="file" offset="0x2c">GD94.MDL</rom>
+			<rom type="file" offset="0x2d">GD95.MDL</rom>
+			<rom type="file" offset="0x2e">GD96.MDL</rom>
+			<rom type="file" offset="0x2f">GD97.MDL</rom>
+			<rom type="file" offset="0x30">GR45.MDL</rom>
+			<rom type="file" offset="0x31">GR51.MDL</rom>
+			<rom type="file" offset="0x32">H24.MDL</rom>
+			<rom type="file" offset="0x33">IS05.MDL</rom>
+			<rom type="file" offset="0x34">TI29.MDL</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AR77.MDL   : </title>
+			<title code="0x11">AR80.MDL   : </title>
+			<title code="0x12">CHAN82.MDL : </title>
+			<title code="0x13">CLEAR.MDL  : </title>
+			<title code="0x14">GD08.MDL   : </title>
+			<title code="0x15">GD11.MDL   : </title>
+			<title code="0x16">GD19.MDL   : </title>
+			<title code="0x17">GD25.MDL   : </title>
+			<title code="0x18">GD30.MDL   : </title>
+			<title code="0x19">GD31.MDL   : </title>
+			<title code="0x1a">GD32.MDL   : </title>
+			<title code="0x1b">GD36.MDL   : </title>
+			<title code="0x1c">GD37.MDL   : </title>
+			<title code="0x1d">GD40.MDL   : </title>
+			<title code="0x1e">GD46.MDL   : </title>
+			<title code="0x1f">GD50.MDL   : </title>
+			<title code="0x20">GD51.MDL   : </title>
+			<title code="0x21">GD55.MDL   : </title>
+			<title code="0x22">GD59.MDL   : </title>
+			<title code="0x23">GD60.MDL   : </title>
+			<title code="0x24">GD63.MDL   : </title>
+			<title code="0x25">GD64.MDL   : </title>
+			<title code="0x26">GD73.MDL   : </title>
+			<title code="0x27">GD74.MDL   : </title>
+			<title code="0x28">GD75.MDL   : </title>
+			<title code="0x29">GD77.MDL   : </title>
+			<title code="0x2a">GD88.MDL   : </title>
+			<title code="0x2b">GD89.MDL   : </title>
+			<title code="0x2c">GD94.MDL   : </title>
+			<title code="0x2d">GD95.MDL   : </title>
+			<title code="0x2e">GD96.MDL   : </title>
+			<title code="0x2f">GD97.MDL   : </title>
+			<title code="0x30">GR45.MDL   : </title>
+			<title code="0x31">GR51.MDL   : </title>
+			<title code="0x32">H24.MDL    : </title>
+			<title code="0x33">IS05.MDL   : </title>
+			<title code="0x34">TI29.MDL   : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ZENITH(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="zenith_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">ZE.EFC</rom>
+			<rom type="file" offset="0x10">AS08.M</rom>
+			<rom type="file" offset="0x11">BOCA.M</rom>
+			<rom type="file" offset="0x12">EV08.M</rom>
+			<rom type="file" offset="0x13">FIG29.M</rom>
+			<rom type="file" offset="0x14">GAND.M</rom>
+			<rom type="file" offset="0x15">LEGA.M</rom>
+			<rom type="file" offset="0x16">ZE01.M</rom>
+			<rom type="file" offset="0x17">ZE02.M</rom>
+			<rom type="file" offset="0x18">ZE17.M</rom>
+			<rom type="shell" offset="0">PMD #</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AS08.M  : Melting of snow</title>
+			<title code="0x12">EV08.M  : Alert!</title>
+			<title code="0x13">FIG29.M : Rain of bombs</title>
+			<title code="0x14">GAND.M  : My bright tomorrow</title>
+			<title code="0x15">LEGA.M  : Unpleasant smell</title>
+			<title code="0x16">ZE01.M  : Evening primrose</title>
+			<title code="0x17">ZE02.M  : ZENITH</title>
+			<title code="0x18">ZE17.M  : Ghost ship</title>
+			<title code="0x11">BOCA.M  : ボカン</title>
+			<range min="0x0801" max="0x0803" extcode="1">ZE.EFC  : %2X</range>
+			<range min="0x0806" max="0x0807" extcode="1">ZE.EFC  : %2X</range>
+			<range min="0x0809" max="0x0809" extcode="1">ZE.EFC  : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ZENITH(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="zenith_98">
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="0x10">AS08.MMD</rom>
+			<rom type="file" offset="0x11">BOCA.MMD</rom>
+			<rom type="file" offset="0x12">EV08.MMD</rom>
+			<rom type="file" offset="0x13">FIG29.MMD</rom>
+			<rom type="file" offset="0x14">GAND.MMD</rom>
+			<rom type="file" offset="0x15">LEGA.MMD</rom>
+			<rom type="file" offset="0x16">ZE01.MMD</rom>
+			<rom type="file" offset="0x17">ZE02.MMD</rom>
+			<rom type="file" offset="0x18">ZE17.MMD</rom>
+			<rom type="shell" offset="0">MMD /M24 /K</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AS08.MMD  : Melting of snow</title>
+			<title code="0x12">EV08.MMD  : Alert!</title>
+			<title code="0x13">FIG29.MMD : Rain of bombs</title>
+			<title code="0x14">GAND.MMD  : My bright tomorrow</title>
+			<title code="0x15">LEGA.MMD  : Unpleasant smell</title>
+			<title code="0x16">ZE01.MMD  : Evening primrose</title>
+			<title code="0x17">ZE02.MMD  : ZENITH</title>
+			<title code="0x18">ZE17.MMD  : Ghost ship</title>
+			<title code="0x11">BOCA.MMD  : ボカン</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 七英雄物語(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="nanaei_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">SEV.EFC</rom>
+			<rom type="file" offset="0x10">AR30.ML</rom>
+			<rom type="file" offset="0x11">AR32.ML</rom>
+			<rom type="file" offset="0x12">AR34.ML</rom>
+			<rom type="file" offset="0x13">AR39.ML</rom>
+			<rom type="file" offset="0x14">AR51.ML</rom>
+			<rom type="file" offset="0x15">AR59.ML</rom>
+			<rom type="file" offset="0x16">AR75.ML</rom>
+			<rom type="file" offset="0x17">AR86.ML</rom>
+			<rom type="file" offset="0x18">AS44.ML</rom>
+			<rom type="file" offset="0x19">BT09.ML</rom>
+			<rom type="file" offset="0x1a">BTL01.ML</rom>
+			<rom type="file" offset="0x1b">EV02.ML</rom>
+			<rom type="file" offset="0x1c">FIG18.ML</rom>
+			<rom type="file" offset="0x1d">JIN01.ML</rom>
+			<rom type="file" offset="0x1e">LILI.ML</rom>
+			<rom type="file" offset="0x1f">LS50.ML</rom>
+			<rom type="file" offset="0x20">LS55.ML</rom>
+			<rom type="file" offset="0x21">LS58.ML</rom>
+			<rom type="file" offset="0x22">SINK2.ML</rom>
+			<rom type="file" offset="0x23">SV02.ML</rom>
+			<rom type="file" offset="0x24">SV07.ML</rom>
+			<rom type="file" offset="0x25">SV08.ML</rom>
+			<rom type="file" offset="0x26">SV13.ML</rom>
+			<rom type="file" offset="0x27">SV14.ML</rom>
+			<rom type="file" offset="0x28">SV15.ML</rom>
+			<rom type="file" offset="0x29">TI23.ML</rom>
+			<rom type="file" offset="0x2a">ZE09.ML</rom>
+			<rom type="file" offset="0x2b">ZE12.ML</rom>
+			<rom type="file" offset="0x2c">ZE18.ML</rom>
+			<rom type="shell" offset="0">PMD /K /M13</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1a">BTL01.ML : Kaleidoscopic</title>
+			<title code="0x17">AR86.ML  : CHABO</title>
+			<title code="0x1c">FIG18.ML : Fifty-fifty</title>
+			<title code="0x29">TI23.ML  : TROOPER</title>
+			<title code="0x19">BT09.ML  : Fierce reptile</title>
+			<title code="0x15">AR59.ML  : Gain the SPIRITUAL POWER</title>
+			<title code="0x2c">ZE18.ML  : Target</title>
+			<title code="0x16">AR75.ML  : Program-ID</title>
+			<title code="0x26">SV13.ML  : 勇者たち</title>
+			<title code="0x21">LS58.ML  : Fruitbearer</title>
+			<title code="0x20">LS55.ML  : Kitten</title>
+			<title code="0x28">SV15.ML  : Booze</title>
+			<title code="0x23">SV02.ML  : LOCK</title>
+			<title code="0x1b">EV02.ML  : Colder and colder</title>
+			<title code="0x1f">LS50.ML  : 銀杏並木</title>
+			<title code="0x25">SV08.ML  : First victim</title>
+			<title code="0x10">AR30.ML  : Grotesquerie hunting</title>
+			<title code="0x11">AR32.ML  : Restless night in a hut</title>
+			<title code="0x12">AR34.ML  : Dry grass</title>
+			<title code="0x22">SINK2.ML : Onward</title>
+			<title code="0x2a">ZE09.ML  : Degenerated eyes</title>
+			<title code="0x13">AR39.ML  : Dreams and phantasms</title>
+			<title code="0x1d">JIN01.ML : Adverse circumstances</title>
+			<title code="0x18">AS44.ML  : 見上げていた頃</title>
+			<title code="0x1e">LILI.ML  : 雨上がりの歩道</title>
+			<title code="0x27">SV14.ML  : 猛火しずくのカーテン</title>
+			<title code="0x14">AR51.ML  : Innumerable needles</title>
+			<title code="0x24">SV07.ML  : もう待つ者は誰もいない</title>
+			<title code="0x2b">ZE12.ML  : A journey to the New Continent</title>
+			<range min="0x0802" max="0x0802" extcode="1">SEV.EFC  : %2X</range>
+			<range min="0x0815" max="0x0828" extcode="1">SEV.EFC  : %2X</range>
+			<range min="0x082a" max="0x0830" extcode="1">SEV.EFC  : %2X</range>
+			<range min="0x0832" max="0x0839" extcode="1">SEV.EFC  : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 七英雄物語(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="nanaei_98">
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="0x10">AR30.MDL</rom>
+			<rom type="file" offset="0x11">AR32.MDL</rom>
+			<rom type="file" offset="0x12">AR34.MDL</rom>
+			<rom type="file" offset="0x13">AR39.MDL</rom>
+			<rom type="file" offset="0x14">AR51.MDL</rom>
+			<rom type="file" offset="0x15">AR59.MDL</rom>
+			<rom type="file" offset="0x16">AR75.MDL</rom>
+			<rom type="file" offset="0x17">AR86.MDL</rom>
+			<rom type="file" offset="0x18">AS44.MDL</rom>
+			<rom type="file" offset="0x19">BT09.MDL</rom>
+			<rom type="file" offset="0x1a">BTL01.MDL</rom>
+			<rom type="file" offset="0x1b">EV02.MDL</rom>
+			<rom type="file" offset="0x1c">FIG18.MDL</rom>
+			<rom type="file" offset="0x1d">JIN01.MDL</rom>
+			<rom type="file" offset="0x1e">LILI.MDL</rom>
+			<rom type="file" offset="0x1f">LS50.MDL</rom>
+			<rom type="file" offset="0x20">LS55.MDL</rom>
+			<rom type="file" offset="0x21">LS58.MDL</rom>
+			<rom type="file" offset="0x22">SINK2.MDL</rom>
+			<rom type="file" offset="0x23">SV02.MDL</rom>
+			<rom type="file" offset="0x24">SV07.MDL</rom>
+			<rom type="file" offset="0x25">SV08.MDL</rom>
+			<rom type="file" offset="0x26">SV13.MDL</rom>
+			<rom type="file" offset="0x27">SV14.MDL</rom>
+			<rom type="file" offset="0x28">SV15.MDL</rom>
+			<rom type="file" offset="0x29">TI23.MDL</rom>
+			<rom type="file" offset="0x2a">ZE09.MDL</rom>
+			<rom type="file" offset="0x2b">ZE12.MDL</rom>
+			<rom type="file" offset="0x2c">ZE18.MDL</rom>
+			<rom type="shell" offset="0">MMD /K /M13</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1a">BTL01.MDL : Kaleidoscopic</title>
+			<title code="0x17">AR86.MDL  : CHABO</title>
+			<title code="0x1c">FIG18.MDL : Fifty-fifty</title>
+			<title code="0x29">TI23.MDL  : TROOPER</title>
+			<title code="0x19">BT09.MDL  : Fierce reptile</title>
+			<title code="0x15">AR59.MDL  : Gain the SPIRITUAL POWER</title>
+			<title code="0x2c">ZE18.MDL  : Target</title>
+			<title code="0x16">AR75.MDL  : Program-ID</title>
+			<title code="0x26">SV13.MDL  : 勇者たち</title>
+			<title code="0x21">LS58.MDL  : Fruitbearer</title>
+			<title code="0x20">LS55.MDL  : Kitten</title>
+			<title code="0x28">SV15.MDL  : Booze</title>
+			<title code="0x23">SV02.MDL  : LOCK</title>
+			<title code="0x1b">EV02.MDL  : Colder and colder</title>
+			<title code="0x1f">LS50.MDL  : 銀杏並木</title>
+			<title code="0x25">SV08.MDL  : First victim</title>
+			<title code="0x10">AR30.MDL  : Grotesquerie hunting</title>
+			<title code="0x11">AR32.MDL  : Restless night in a hut</title>
+			<title code="0x12">AR34.MDL  : Dry grass</title>
+			<title code="0x22">SINK2.MDL : Onward</title>
+			<title code="0x2a">ZE09.MDL  : Degenerated eyes</title>
+			<title code="0x13">AR39.MDL  : Dreams and phantasms</title>
+			<title code="0x1d">JIN01.MDL : Adverse circumstances</title>
+			<title code="0x18">AS44.MDL  : 見上げていた頃</title>
+			<title code="0x1e">LILI.MDL  : 雨上がりの歩道</title>
+			<title code="0x27">SV14.MDL  : 猛火しずくのカーテン</title>
+			<title code="0x14">AR51.MDL  : Innumerable needles</title>
+			<title code="0x24">SV07.MDL  : もう待つ者は誰もいない</title>
+			<title code="0x2b">ZE12.MDL  : A journey to the New Continent</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 七英雄物語II</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="nanaei2_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">SEV2.EFC</rom>
+			<rom type="file" offset="0x10">AR08.M</rom>
+			<rom type="file" offset="0x11">AR36.M</rom>
+			<rom type="file" offset="0x12">AR38.M</rom>
+			<rom type="file" offset="0x13">AR54.M</rom>
+			<rom type="file" offset="0x14">AR67.M</rom>
+			<rom type="file" offset="0x15">BT44.M</rom>
+			<rom type="file" offset="0x16">DHAD.M</rom>
+			<rom type="file" offset="0x17">FB02.M</rom>
+			<rom type="file" offset="0x18">FIG09.M</rom>
+			<rom type="file" offset="0x19">GR10.M</rom>
+			<rom type="file" offset="0x1a">GR47.M</rom>
+			<rom type="file" offset="0x1b">VF04.M</rom>
+			<rom type="file" offset="0x1c">VF22.M</rom>
+			<rom type="file" offset="0x1d">VF22_TIM.M</rom>
+			<rom type="file" offset="0x1e">WF01.M</rom>
+			<rom type="file" offset="0x1f">WF03.M</rom>
+			<rom type="file" offset="0x20">WF26.M</rom>
+			<rom type="file" offset="0x21">WF26_B.M</rom>
+			<rom type="file" offset="0x22">WF26_C.M</rom>
+			<rom type="file" offset="0x23">WF26_D.M</rom>
+			<rom type="file" offset="0x24">WF34.M</rom>
+			<rom type="file" offset="0x25">WF39.M</rom>
+			<rom type="file" offset="0x26">WF41.M</rom>
+			<rom type="file" offset="0x27">WF43.M</rom>
+			<rom type="file" offset="0x28">WF49.M</rom>
+			<rom type="file" offset="0x29">WF49_B.M</rom>
+			<rom type="file" offset="0x2a">WF49_E.M</rom>
+			<rom type="file" offset="0x2b">WF56.M</rom>
+			<rom type="file" offset="0x2c">WF57.M</rom>
+			<rom type="file" offset="0x2d">WF61.M</rom>
+			<rom type="file" offset="0x2e">WF75.M</rom>
+			<rom type="file" offset="0x2f">ZE04.M</rom>
+			<rom type="file" offset="0x30">ZE16.M</rom>
+			<rom type="shell" offset="0">PMD /K /M10 /E4</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AR08.M     : 音楽001</title>
+			<title code="0x11">AR36.M     : 音楽002</title>
+			<title code="0x12">AR38.M     : 音楽003</title>
+			<title code="0x13">AR54.M     : 音楽004</title>
+			<title code="0x14">AR67.M     : 音楽005</title>
+			<title code="0x15">BT44.M     : 音楽006</title>
+			<title code="0x16">DHAD.M     : 音楽007</title>
+			<title code="0x17">FB02.M     : 音楽008</title>
+			<title code="0x18">FIG09.M    : 音楽009</title>
+			<title code="0x19">GR10.M     : 音楽010</title>
+			<title code="0x1a">GR47.M     : 音楽011</title>
+			<title code="0x1b">VF04.M     : 音楽012</title>
+			<title code="0x1c">VF22.M     : 音楽013</title>
+			<title code="0x1d">VF22_TIM.M : 音楽014</title>
+			<title code="0x1e">WF01.M     : 音楽015</title>
+			<title code="0x1f">WF03.M     : 音楽016</title>
+			<title code="0x20">WF26.M     : 音楽017</title>
+			<title code="0x21">WF26_B.M   : 音楽018</title>
+			<title code="0x22">WF26_C.M   : 音楽019</title>
+			<title code="0x23">WF26_D.M   : 音楽020</title>
+			<title code="0x24">WF34.M     : 音楽021</title>
+			<title code="0x25">WF39.M     : 音楽022</title>
+			<title code="0x26">WF41.M     : 音楽023</title>
+			<title code="0x27">WF43.M     : 音楽024</title>
+			<title code="0x28">WF49.M     : 音楽025</title>
+			<title code="0x29">WF49_B.M   : 音楽026</title>
+			<title code="0x2a">WF49_E.M   : 音楽027</title>
+			<title code="0x2b">WF56.M     : 音楽028</title>
+			<title code="0x2c">WF57.M     : 音楽029</title>
+			<title code="0x2d">WF61.M     : 音楽030</title>
+			<title code="0x2e">WF75.M     : 音楽031</title>
+			<title code="0x2f">ZE04.M     : 音楽032</title>
+			<title code="0x30">ZE16.M     : 音楽033</title>
+			<range min="0x0815" max="0x0828" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x082a" max="0x0830" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x0832" max="0x0839" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x083c" max="0x083e" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x0843" max="0x0848" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x084a" max="0x084f" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x0851" max="0x0853" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x0857" max="0x085d" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x0860" max="0x0862" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x0865" max="0x0866" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x0870" max="0x0873" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x0875" max="0x0877" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x0879" max="0x087b" extcode="1">SEV2.EFC   : %2X</range>
+			<range min="0x087d" max="0x087e" extcode="1">SEV2.EFC   : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] Bacta 1&amp;2+Voice</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9821">姫屋ソフト</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="bacta12_21">
+			<rom type="file" offset="-1">DOFMDX98.COM</rom>
+			<rom type="file" offset="-1">B12.EXE</rom>
+			<rom type="conin" offset="5">B12.EXE</rom>
+			<rom type="file" offset="0x10">ATMOS-M2.M</rom>
+			<rom type="file" offset="0x11">BAKA.M</rom>
+			<rom type="file" offset="0x12">BANG.M</rom>
+			<rom type="file" offset="0x13">BEATPOP4.M</rom>
+			<rom type="file" offset="0x14">BLOODSUN.M</rom>
+			<rom type="file" offset="0x15">BLUES.M</rom>
+			<rom type="file" offset="0x16">BTL(19).M</rom>
+			<rom type="file" offset="0x17">CHIMN-E8.M</rom>
+			<rom type="file" offset="0x18">CLITT-Y2.M</rom>
+			<rom type="file" offset="0x19">CURIOUS2.M</rom>
+			<rom type="file" offset="0x1a">D0.M</rom>
+			<rom type="file" offset="0x1b">EASYSEAR.M</rom>
+			<rom type="file" offset="0x1c">ELEMEN-3.M</rom>
+			<rom type="file" offset="0x1d">EXORCI-3.M</rom>
+			<rom type="file" offset="0x1e">F0.M</rom>
+			<rom type="file" offset="0x1f">G0.M</rom>
+			<rom type="file" offset="0x20">GORA.M</rom>
+			<rom type="file" offset="0x21">H0.M</rom>
+			<rom type="file" offset="0x22">H11.M</rom>
+			<rom type="file" offset="0x23">H14.M</rom>
+			<rom type="file" offset="0x24">H25.M</rom>
+			<rom type="file" offset="0x25">H69.M</rom>
+			<rom type="file" offset="0x26">H71.M</rom>
+			<rom type="file" offset="0x27">H-CM.M</rom>
+			<rom type="file" offset="0x28">ICETO-PS.M</rom>
+			<rom type="file" offset="0x29">IDLE-B-3.M</rom>
+			<rom type="file" offset="0x2a">INT11.M</rom>
+			<rom type="file" offset="0x2b">INT14.M</rom>
+			<rom type="file" offset="0x2c">INT19.M</rom>
+			<rom type="file" offset="0x2d">JINALI-4.M</rom>
+			<rom type="file" offset="0x2e">KASSLA-5.M</rom>
+			<rom type="file" offset="0x2f">KONAMI01.M</rom>
+			<rom type="file" offset="0x30">LAS1_2.M</rom>
+			<rom type="file" offset="0x31">LS06.M</rom>
+			<rom type="file" offset="0x32">LS13.M</rom>
+			<rom type="file" offset="0x33">LS15.M</rom>
+			<rom type="file" offset="0x34">LS17.M</rom>
+			<rom type="file" offset="0x35">LS26.M</rom>
+			<rom type="file" offset="0x36">LS27.M</rom>
+			<rom type="file" offset="0x37">LS41.M</rom>
+			<rom type="file" offset="0x38">LS42.M</rom>
+			<rom type="file" offset="0x39">LS53.M</rom>
+			<rom type="file" offset="0x3a">LS67.M</rom>
+			<rom type="file" offset="0x3b">MOUNT.M</rom>
+			<rom type="file" offset="0x3c">NABBLS-2.M</rom>
+			<rom type="file" offset="0x3d">NUNU.M</rom>
+			<rom type="file" offset="0x3e">NYAN-4.M</rom>
+			<rom type="file" offset="0x3f">O0.M</rom>
+			<rom type="file" offset="0x40">PAMPAS-2.M</rom>
+			<rom type="file" offset="0x41">PINPON.M</rom>
+			<rom type="file" offset="0x42">PLANDO-2.M</rom>
+			<rom type="file" offset="0x43">RS01.M</rom>
+			<rom type="file" offset="0x44">RS03.M</rom>
+			<rom type="file" offset="0x45">RS06.M</rom>
+			<rom type="file" offset="0x46">RS07.M</rom>
+			<rom type="file" offset="0x47">RS16.M</rom>
+			<rom type="file" offset="0x48">RS51.M</rom>
+			<rom type="file" offset="0x49">RS52.M</rom>
+			<rom type="file" offset="0x4a">RS54.M</rom>
+			<rom type="file" offset="0x4b">RS60.M</rom>
+			<rom type="file" offset="0x4c">RS62.M</rom>
+			<rom type="file" offset="0x4d">SEX-5.M</rom>
+			<rom type="file" offset="0x4e">SINE.M</rom>
+			<rom type="file" offset="0x4f">STROL.M</rom>
+			<rom type="file" offset="0x50">TEL5.M</rom>
+			<rom type="shell" offset="0">DOFMDX98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ATMOS-M2.M : </title>
+			<title code="0x11">BAKA.M     : </title>
+			<title code="0x12">BANG.M     : </title>
+			<title code="0x13">BEATPOP4.M : </title>
+			<title code="0x14">BLOODSUN.M : </title>
+			<title code="0x15">BLUES.M    : </title>
+			<title code="0x16">BTL(19).M  : </title>
+			<title code="0x17">CHIMN-E8.M : </title>
+			<title code="0x18">CLITT-Y2.M : </title>
+			<title code="0x19">CURIOUS2.M : </title>
+			<title code="0x1a">D0.M       : </title>
+			<title code="0x1b">EASYSEAR.M : </title>
+			<title code="0x1c">ELEMEN-3.M : </title>
+			<title code="0x1d">EXORCI-3.M : </title>
+			<title code="0x1e">F0.M       : </title>
+			<title code="0x1f">G0.M       : </title>
+			<title code="0x20">GORA.M     : </title>
+			<title code="0x21">H0.M       : </title>
+			<title code="0x22">H11.M      : </title>
+			<title code="0x23">H14.M      : </title>
+			<title code="0x24">H25.M      : </title>
+			<title code="0x25">H69.M      : </title>
+			<title code="0x26">H71.M      : </title>
+			<title code="0x27">H-CM.M     : </title>
+			<title code="0x28">ICETO-PS.M : </title>
+			<title code="0x29">IDLE-B-3.M : </title>
+			<title code="0x2a">INT11.M    : </title>
+			<title code="0x2b">INT14.M    : </title>
+			<title code="0x2c">INT19.M    : </title>
+			<title code="0x2d">JINALI-4.M : </title>
+			<title code="0x2e">KASSLA-5.M : </title>
+			<title code="0x2f">KONAMI01.M : </title>
+			<title code="0x30">LAS1_2.M   : </title>
+			<title code="0x31">LS06.M     : </title>
+			<title code="0x32">LS13.M     : </title>
+			<title code="0x33">LS15.M     : </title>
+			<title code="0x34">LS17.M     : </title>
+			<title code="0x35">LS26.M     : </title>
+			<title code="0x36">LS27.M     : </title>
+			<title code="0x37">LS41.M     : </title>
+			<title code="0x38">LS42.M     : </title>
+			<title code="0x39">LS53.M     : </title>
+			<title code="0x3a">LS67.M     : </title>
+			<title code="0x3b">MOUNT.M    : </title>
+			<title code="0x3c">NABBLS-2.M : </title>
+			<title code="0x3d">NUNU.M     : </title>
+			<title code="0x3e">NYAN-4.M   : </title>
+			<title code="0x3f">O0.M       : </title>
+			<title code="0x40">PAMPAS-2.M : </title>
+			<title code="0x41">PINPON.M   : </title>
+			<title code="0x42">PLANDO-2.M : </title>
+			<title code="0x43">RS01.M     : </title>
+			<title code="0x44">RS03.M     : </title>
+			<title code="0x45">RS06.M     : </title>
+			<title code="0x46">RS07.M     : </title>
+			<title code="0x47">RS16.M     : </title>
+			<title code="0x48">RS51.M     : </title>
+			<title code="0x49">RS52.M     : </title>
+			<title code="0x4a">RS54.M     : </title>
+			<title code="0x4b">RS60.M     : </title>
+			<title code="0x4c">RS62.M     : </title>
+			<title code="0x4d">SEX-5.M    : </title>
+			<title code="0x4e">SINE.M     : </title>
+			<title code="0x4f">STROL.M    : </title>
+			<title code="0x50">TEL5.M     : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] De・FaNa</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9821">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="defana_21">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD86.COM</rom>
+			<rom type="file" offset="0x10">GD07_86.M</rom>
+			<rom type="file" offset="0x11">GD26_86.M</rom>
+			<rom type="file" offset="0x12">GD93_86.M</rom>
+			<rom type="file" offset="0x13">LS59_86.M</rom>
+			<rom type="file" offset="0x14">VF06_86.M</rom>
+			<rom type="file" offset="0x15">VF13_86.M</rom>
+			<rom type="file" offset="0x16">VF13_C86.M</rom>
+			<rom type="file" offset="0x17">VF13_F86.M</rom>
+			<rom type="file" offset="0x18">VF20_86.M</rom>
+			<rom type="file" offset="0x19">VF24_86.M</rom>
+			<rom type="file" offset="0x1a">VF35_86.M</rom>
+			<rom type="file" offset="0x1b">ZE07_86.M</rom>
+			<rom type="shell" offset="0">PMD86 -k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GD07_86.M  : Throb of devil</title>
+			<title code="0x11">GD26_86.M  : Tinker</title>
+			<title code="0x12">GD93_86.M  : Smoky mountain path</title>
+			<title code="0x13">LS59_86.M  : タンポポの実</title>
+			<title code="0x14">VF06_86.M  : PREVIEW</title>
+			<title code="0x15">VF13_86.M  : Be ambitious to succeed</title>
+			<title code="0x16">VF13_C86.M : De.FaNa</title>
+			<title code="0x17">VF13_F86.M : Can not fail</title>
+			<title code="0x18">VF20_86.M  : Unknown factor</title>
+			<title code="0x19">VF24_86.M  : Plastic chick</title>
+			<title code="0x1a">VF35_86.M  : Obstruction</title>
+			<title code="0x1b">ZE07_86.M  : マジック ア・ラ・カルト</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] PHOBOS</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9821">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="phobos_21">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD86.COM</rom>
+			<rom type="file" offset="0x10">AFR(01).MSC</rom>
+			<rom type="file" offset="0x11">AFR(02).MSC</rom>
+			<rom type="file" offset="0x12">AIRSERVE.MSC</rom>
+			<rom type="file" offset="0x13">BLARD.MSC</rom>
+			<rom type="file" offset="0x14">BTL(17).MSC</rom>
+			<rom type="file" offset="0x15">CHATEAU.MSC</rom>
+			<rom type="file" offset="0x16">CHI(01).MSC</rom>
+			<rom type="file" offset="0x17">CHI(09).MSC</rom>
+			<rom type="file" offset="0x18">CHI(11).MSC</rom>
+			<rom type="file" offset="0x19">DARK(A).MSC</rom>
+			<rom type="file" offset="0x1a">END(03).MSC</rom>
+			<rom type="file" offset="0x1b">H(02).MSC</rom>
+			<rom type="file" offset="0x1c">H(05).MSC</rom>
+			<rom type="file" offset="0x1d">H(07).MSC</rom>
+			<rom type="file" offset="0x1e">INTRODU.MSC</rom>
+			<rom type="file" offset="0x1f">JINALI.MSC</rom>
+			<rom type="file" offset="0x20">LUZART.MSC</rom>
+			<rom type="file" offset="0x21">MIQUE.MSC</rom>
+			<rom type="file" offset="0x22">PHOBOS3A.MSC</rom>
+			<rom type="file" offset="0x23">PRACTICE.MSC</rom>
+			<rom type="file" offset="0x24">RECALL.MSC</rom>
+			<rom type="file" offset="0x25">RECALL2.MSC</rom>
+			<rom type="file" offset="0x26">RHY(02).MSC</rom>
+			<rom type="file" offset="0x27">RHY(03).MSC</rom>
+			<rom type="file" offset="0x28">RHY(04).MSC</rom>
+			<rom type="file" offset="0x29">RHY(06).MSC</rom>
+			<rom type="file" offset="0x2a">SNIPE.MSC</rom>
+			<rom type="file" offset="0x2b">SRW(01)1.MSC</rom>
+			<rom type="file" offset="0x2c">TEL-BELL.MSC</rom>
+			<rom type="file" offset="0x2d">TNS(02).MSC</rom>
+			<rom type="file" offset="0x2e">TWINKS.MSC</rom>
+			<rom type="file" offset="0x2f">UNC(02).MSC</rom>
+			<rom type="file" offset="0x30">UNC(05).MSC</rom>
+			<rom type="file" offset="0x31">UNC(06).MSC</rom>
+			<rom type="file" offset="0x32">WARMJET.MSC</rom>
+			<rom type="file" offset="0x33">ZER01.MSC</rom>
+			<rom type="file" offset="0x34">ZER04.MSC</rom>
+			<rom type="file" offset="0x35">ZER04_2.MSC</rom>
+			<rom type="file" offset="0x36">ZER07.MSC</rom>
+			<rom type="file" offset="0x37">ZER18.MSC</rom>
+			<rom type="file" offset="0x38">ZER18_2.MSC</rom>
+			<rom type="file" offset="0x39">ZER20.MSC</rom>
+			<rom type="file" offset="0x3a">ZER25.MSC</rom>
+			<rom type="file" offset="0x3b">ZER28_8.MSC</rom>
+			<rom type="file" offset="0x3c">ZER32.MSC</rom>
+			<rom type="file" offset="0x3d">ZG01_!.MSC</rom>
+			<rom type="file" offset="0x3e">ZG02.MSC</rom>
+			<rom type="shell" offset="0">PMD86 /v0 /e4 /F /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">AFR(02).MSC  : Impluse of the machine</title>
+			<title code="0x22">PHOBOS3A.MSC : ECONOMIC GROWTH</title>
+			<title code="0x26">RHY(02).MSC  : My tea</title>
+			<title code="0x21">MIQUE.MSC    : Dull Life</title>
+			<title code="0x2d">TNS(02).MSC  : Hotbed of vice</title>
+			<title code="0x28">RHY(04).MSC  : たまには一人で</title>
+			<title code="0x31">UNC(06).MSC  : 器用な蛇遣い</title>
+			<title code="0x1d">H(07).MSC    : Star-Spangled Sky</title>
+			<title code="0x2f">UNC(02).MSC  : Antiquated Building</title>
+			<title code="0x34">ZER04.MSC    : ぼくの尊敬するこども</title>
+			<title code="0x35">ZER04_2.MSC  : Believe(-100%)such a story!</title>
+			<title code="0x36">ZER07.MSC    : 壊れた魚の泳ぐ河</title>
+			<title code="0x17">CHI(09).MSC  : March in a sigle file</title>
+			<title code="0x20">LUZART.MSC   : Surplus of nature</title>
+			<title code="0x27">RHY(03).MSC  : Walk Barefoot</title>
+			<title code="0x32">WARMJET.MSC  : Queenbee</title>
+			<title code="0x37">ZER18.MSC    : Hostility</title>
+			<title code="0x38">ZER18_2.MSC  : 誰も来たことのないはずの沼</title>
+			<title code="0x3c">ZER32.MSC    : エアーダクトはネズミたちの大動脈</title>
+			<title code="0x12">AIRSERVE.MSC : Unnamed Flower</title>
+			<title code="0x30">UNC(05).MSC  : Deep sea party</title>
+			<title code="0x1b">H(02).MSC    : 月光浴</title>
+			<title code="0x16">CHI(01).MSC  : Yellow Juggler</title>
+			<title code="0x2b">SRW(01)1.MSC : Momentary Happines</title>
+			<title code="0x13">BLARD.MSC    : 海賊船</title>
+			<title code="0x29">RHY(06).MSC  : Est vous……</title>
+			<title code="0x1e">INTRODU.MSC  : Punishment</title>
+			<title code="0x2e">TWINKS.MSC   : 小動物の日常生活</title>
+			<title code="0x33">ZER01.MSC    : CHINESE GEAR</title>
+			<title code="0x1c">H(05).MSC    : MOONLIGHT STORY</title>
+			<title code="0x39">ZER20.MSC    : 赤のハチドリ</title>
+			<title code="0x3b">ZER28_8.MSC  : Misteries from the distant</title>
+			<title code="0x18">CHI(11).MSC  : 雑技団</title>
+			<title code="0x19">DARK(A).MSC  : Dark Orange Crescent</title>
+			<title code="0x3a">ZER25.MSC    : 公的刺客</title>
+			<title code="0x2b">SRW(01)1.MSC : HOME</title>
+			<title code="0x24">RECALL.MSC   : Worn out diary</title>
+			<title code="0x15">CHATEAU.MSC  : Half in a dream</title>
+			<title code="0x10">AFR(01).MSC  : MONO</title>
+			<title code="0x25">RECALL2.MSC  : CONNOR</title>
+			<title code="0x14">BTL(17).MSC  : The end of fire</title>
+			<title code="0x3d">ZG01_!.MSC   : The end of fire II</title>
+			<title code="0x3e">ZG02.MSC     : The end of fire III</title>
+			<title code="0x23">PRACTICE.MSC : B-DISK</title>
+			<title code="0x1a">END(03).MSC  : Nebula</title>
+			<title code="0x1f">JINALI.MSC   : SE 爆破</title>
+			<title code="0x2a">SNIPE.MSC    : SE ピシッッッ…</title>
+			<title code="0x2c">TEL-BELL.MSC : SE Telephone Bell</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] YES! HG EROTIC VOICE VERSION</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9821">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="yeshg_21">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD86.COM</rom>
+			<rom type="file" offset="0x08">HG.EFC</rom>
+			<rom type="file" offset="0x10">AR77_86.ML</rom>
+			<rom type="file" offset="0x12">AR80_86.ML</rom>
+			<rom type="file" offset="0x15">CHAN8_86.ML</rom>
+			<rom type="file" offset="0x17">CLEAR_86.ML</rom>
+			<rom type="file" offset="0x1a">GD08_86.ML</rom>
+			<rom type="file" offset="0x1c">GD11_86.ML</rom>
+			<rom type="file" offset="0x1e">GD19_86.ML</rom>
+			<rom type="file" offset="0x20">GD25_86.ML</rom>
+			<rom type="file" offset="0x23">GD30_86.ML</rom>
+			<rom type="file" offset="0x25">GD31_86.ML</rom>
+			<rom type="file" offset="0x27">GD32_86.ML</rom>
+			<rom type="file" offset="0x29">GD36_86.ML</rom>
+			<rom type="file" offset="0x2b">GD37_86.ML</rom>
+			<rom type="file" offset="0x2d">GD40_86.ML</rom>
+			<rom type="file" offset="0x2f">GD46_86.ML</rom>
+			<rom type="file" offset="0x31">GD50_86.ML</rom>
+			<rom type="file" offset="0x33">GD51_86.ML</rom>
+			<rom type="file" offset="0x35">GD55_86.ML</rom>
+			<rom type="file" offset="0x37">GD59_86.ML</rom>
+			<rom type="file" offset="0x39">GD60_86.ML</rom>
+			<rom type="file" offset="0x3b">GD63_86.ML</rom>
+			<rom type="file" offset="0x3d">GD64_86.ML</rom>
+			<rom type="file" offset="0x3f">GD73_86.ML</rom>
+			<rom type="file" offset="0x41">GD74_86.ML</rom>
+			<rom type="file" offset="0x43">GD75_86.ML</rom>
+			<rom type="file" offset="0x45">GD77_86.ML</rom>
+			<rom type="file" offset="0x47">GD88_86.ML</rom>
+			<rom type="file" offset="0x49">GD89_86.ML</rom>
+			<rom type="file" offset="0x4c">GD94_86.ML</rom>
+			<rom type="file" offset="0x4e">GD95_86.ML</rom>
+			<rom type="file" offset="0x50">GD96_86.ML</rom>
+			<rom type="file" offset="0x52">GD97_86.ML</rom>
+			<rom type="file" offset="0x54">GR45_86.ML</rom>
+			<rom type="file" offset="0x56">GR51_86.ML</rom>
+			<rom type="file" offset="0x58">H24_86.ML</rom>
+			<rom type="file" offset="0x5a">IS05_86.ML</rom>
+			<rom type="file" offset="0x5e">TI29_86.ML</rom>
+			<rom type="shell" offset="0">PMD86 # /K /M10</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AR77_86.ML  : Concrete Jungle(炎上_DS)</title>
+			<title code="0x12">AR80_86.ML  : Dead Fight</title>
+			<title code="0x17">CLEAR_86.ML : Coffee Brake</title>
+			<title code="0x1a">GD08_86.ML  : Monochrome still</title>
+			<title code="0x1c">GD11_86.ML  : 蛮行</title>
+			<title code="0x1e">GD19_86.ML  : スロー</title>
+			<title code="0x20">GD25_86.ML  : Western Silent(ギター)</title>
+			<title code="0x23">GD30_86.ML  : Stroller(流し)</title>
+			<title code="0x25">GD31_86.ML  : 敵対者(p_ss繋)</title>
+			<title code="0x27">GD32_86.ML  : fight(EVER)</title>
+			<title code="0x29">GD36_86.ML  : Victry(勝利のゲームオーバー)(VolL)</title>
+			<title code="0x2b">GD37_86.ML  : 洞窟(ロール)</title>
+			<title code="0x2d">GD40_86.ML  : クトゥルフ (出たァ)</title>
+			<title code="0x2f">GD46_86.ML  : Outbrake</title>
+			<title code="0x31">GD50_86.ML  : ナイト様、登場！</title>
+			<title code="0x33">GD51_86.ML  : フォーメーション</title>
+			<title code="0x35">GD55_86.ML  : Abnormal(ss op_h)</title>
+			<title code="0x37">GD59_86.ML  : Western Challenger</title>
+			<title code="0x39">GD60_86.ML  : 情事 "しましょう"</title>
+			<title code="0x3b">GD63_86.ML  : Ruins(侵入)</title>
+			<title code="0x3d">GD64_86.ML  : 愁傷(elepi)</title>
+			<title code="0x3f">GD73_86.ML  : Twilight Beach (rhythm l,r入り)</title>
+			<title code="0x41">GD74_86.ML  : ディツク</title>
+			<title code="0x43">GD75_86.ML  : フィア・ハート</title>
+			<title code="0x45">GD77_86.ML  : お正月</title>
+			<title code="0x47">GD88_86.ML  : A sigh of relief</title>
+			<title code="0x49">GD89_86.ML  : 酒場</title>
+			<title code="0x4c">GD94_86.ML  : ゲームオーバー(VolL)</title>
+			<title code="0x4e">GD95_86.ML  : Dear My Friend! (B.D未だ)</title>
+			<title code="0x50">GD96_86.ML  : Hard-core</title>
+			<title code="0x52">GD97_86.ML  : 湖の小舟</title>
+			<title code="0x54">GR45_86.ML  : Poplar</title>
+			<title code="0x56">GR51_86.ML  : Terrasse Talk(LADY)</title>
+			<title code="0x58">H24_86.ML   : Hotel HIGH SOCIETY</title>
+			<title code="0x5a">IS05_86.ML  : Happy ENDING</title>
+			<title code="0x5e">TI29_86.ML  : タイトル(VolL)</title>
+			<title code="0x15">CHAN8_86.ML : </title>
+			<range min="0x0813" max="0x0813" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0820" max="0x0821" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0826" max="0x082a" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x082c" max="0x082e" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0833" max="0x0834" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x083a" max="0x083e" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0840" max="0x0842" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0845" max="0x0845" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0853" max="0x0855" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0857" max="0x0857" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0859" max="0x0859" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x085c" max="0x085e" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0860" max="0x0864" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0866" max="0x0866" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0869" max="0x0869" extcode="1">HG.EFC      : %2X</range>
+			<range min="0x0870" max="0x0870" extcode="1">HG.EFC      : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] ZENITH</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9821">姫屋ソフト</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="zenith_21">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD86.COM</rom>
+			<rom type="file" offset="0x10">AS08.M</rom>
+			<rom type="file" offset="0x11">BOCA.M</rom>
+			<rom type="file" offset="0x12">EV08.M</rom>
+			<rom type="file" offset="0x13">FIG29.M</rom>
+			<rom type="file" offset="0x14">GAND.M</rom>
+			<rom type="file" offset="0x15">LEGA.M</rom>
+			<rom type="file" offset="0x16">LS52.M</rom>
+			<rom type="file" offset="0x17">ZE01.M</rom>
+			<rom type="file" offset="0x18">ZE02.M</rom>
+			<rom type="file" offset="0x19">ZE17.M</rom>
+			<rom type="shell" offset="0">PMD86 /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AS08.M  : Melting of snow</title>
+			<title code="0x12">EV08.M  : Alert!</title>
+			<title code="0x13">FIG29.M : Rain of bombs</title>
+			<title code="0x14">GAND.M  : My bright tomorrow</title>
+			<title code="0x15">LEGA.M  : Unpleasant smell</title>
+			<title code="0x17">ZE01.M  : Evening primrose</title>
+			<title code="0x18">ZE02.M  : ZENITH</title>
+			<title code="0x19">ZE17.M  : Ghost ship</title>
+			<title code="0x16">LS52.M  : Cosmic Alarm</title>
+			<title code="0x11">BOCA.M  : ボカン</title>
+		</titlelist>
+	</game>
+</gamelist>

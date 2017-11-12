@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2007/07/10">
+	<!--//Chime -->
+	<game>
+		<name>[PC-9801] プリンセスクエスト マージャンソード(86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Chime</driveralias>
+		<options>
+			<option name="funcvect" value="0x7d"/>
+			<option name="clockmul" value="0x50"/>
+			<option name="extramsize" value="0x400000"/>
+			<option name="pcm_mix"  value="0xe0"/>
+		</options>
+		<romlist archive="msw98">
+			<rom type="file" offset="-1">EMMDRV.COM</rom>
+			<rom type="file" offset="-1">PDR_86B.COM</rom>
+			<rom type="file" offset="-1">PUZ.COM</rom>
+			<rom type="file" offset="-1">puzp.com</rom>
+			<rom type="file" offset="-1">MSW_P01.PUZ</rom>
+			<rom type="file" offset="-1">MSW_P02.PUZ</rom>
+			<rom type="file" offset="-1">MSW_P03.PUZ</rom>
+			<rom type="file" offset="-1">MSW_P04.PUZ</rom>
+			<rom type="file" offset="-1">MSW_P05.PUZ</rom>
+			<rom type="file" offset="-1">MSW_P06.PUZ</rom>
+			<rom type="file" offset="-1">MSW_P07.PUZ</rom>
+			<rom type="file" offset="-1">MSW_P08.PUZ</rom>
+			<rom type="file" offset="-1">MSW_P09.PUZ</rom>
+			<rom type="file" offset="-1">MSW_P10.PUZ</rom>
+			<rom type="file" offset="-1">MSW_P11.PUZ</rom>
+			<rom type="file" offset="-1">MSW_P12.PUZ</rom>
+			<rom type="conin" offset="0x10">MSW_P01.PUZ</rom>
+			<rom type="conin" offset="0x11">MSW_P02.PUZ</rom>
+			<rom type="conin" offset="0x12">MSW_P03.PUZ</rom>
+			<rom type="conin" offset="0x13">MSW_P04.PUZ</rom>
+			<rom type="conin" offset="0x14">MSW_P05.PUZ</rom>
+			<rom type="conin" offset="0x15">MSW_P06.PUZ</rom>
+			<rom type="conin" offset="0x16">MSW_P07.PUZ</rom>
+			<rom type="conin" offset="0x17">MSW_P08.PUZ</rom>
+			<rom type="conin" offset="0x18">MSW_P09.PUZ</rom>
+			<rom type="conin" offset="0x19">MSW_P10.PUZ</rom>
+			<rom type="conin" offset="0x1a">MSW_P11.PUZ</rom>
+			<rom type="conin" offset="0x1b">MSW_P12.PUZ</rom>
+			<rom type="shell" offset="0">emmdrv</rom>
+			<rom type="shell" offset="0">pdr_86b s</rom>
+			<rom type="shell" offset="0">puz s</rom>
+			<rom type="shell" offset="0">puzp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">MSW_P02.PUZ : CHIME TITLE  「Happy Sampling!」</title>
+			<title code="0x1b">MSW_P12.PUZ : OPENING      「Here comes a new challenger!」</title>
+			<title code="0x19">MSW_P10.PUZ : 開会式       「Hopeful beginning」</title>
+			<title code="0x10">MSW_P01.PUZ : 麻雀中1      「Go! and beat' em!」</title>
+			<title code="0x17">MSW_P08.PUZ : 麻雀中2      「Chicken Heart」</title>
+			<title code="0x15">MSW_P06.PUZ : MAR-JONG LAND「Walkin' around」</title>
+			<title code="0x14">MSW_P05.PUZ : SHOP KeroKero「...Maybe they'll support me.」</title>
+			<title code="0x12">MSW_P03.PUZ : GAME OVER    「How was it?」</title>
+			<title code="0x18">MSW_P09.PUZ : 閉会式       「Unforgettable moment」</title>
+			<title code="0x1a">MSW_P11.PUZ : ENDING       「Results」</title>
+			<title code="0x16">MSW_P07.PUZ : STAFF ROLL   「Take a rest, babe...」</title>
+			<title code="0x13">MSW_P04.PUZ : H SCENE      「Makin' a beautiful music..」</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] プリンセスクエスト マージャンソード(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Chime</driveralias>
+		<options>
+			<option name="funcvect" value="0x7d"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="msw98">
+			<rom type="file" offset="-1">MDZ86.COM</rom>
+			<rom type="file" offset="-1">mdzp8p.com</rom>
+			<rom type="file" offset="-1">MSW_01.MDZ</rom>
+			<rom type="file" offset="-1">MSW_02.MDZ</rom>
+			<rom type="file" offset="-1">MSW_03.MDZ</rom>
+			<rom type="file" offset="-1">MSW_04.MDZ</rom>
+			<rom type="file" offset="-1">MSW_05.MDZ</rom>
+			<rom type="file" offset="-1">MSW_06.MDZ</rom>
+			<rom type="file" offset="-1">MSW_07.MDZ</rom>
+			<rom type="file" offset="-1">MSW_08.MDZ</rom>
+			<rom type="file" offset="-1">MSW_09.MDZ</rom>
+			<rom type="file" offset="-1">MSW_10.MDZ</rom>
+			<rom type="file" offset="-1">MSW_11.MDZ</rom>
+			<rom type="file" offset="-1">MSW_12.MDZ</rom>
+			<rom type="conin" offset="0x10">MSW_01.MDZ</rom>
+			<rom type="conin" offset="0x11">MSW_02.MDZ</rom>
+			<rom type="conin" offset="0x12">MSW_03.MDZ</rom>
+			<rom type="conin" offset="0x13">MSW_04.MDZ</rom>
+			<rom type="conin" offset="0x14">MSW_05.MDZ</rom>
+			<rom type="conin" offset="0x15">MSW_06.MDZ</rom>
+			<rom type="conin" offset="0x16">MSW_07.MDZ</rom>
+			<rom type="conin" offset="0x17">MSW_08.MDZ</rom>
+			<rom type="conin" offset="0x18">MSW_09.MDZ</rom>
+			<rom type="conin" offset="0x19">MSW_10.MDZ</rom>
+			<rom type="conin" offset="0x1a">MSW_11.MDZ</rom>
+			<rom type="conin" offset="0x1b">MSW_12.MDZ</rom>
+			<rom type="shell" offset="0">mdz86 s /#8 /E0 /T0</rom>
+			<rom type="shell" offset="0">mdzp8p</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MSW_01.MDZ : CHIME TITLE</title>
+			<title code="0x1b">MSW_12.MDZ : OPENING</title>
+			<title code="0x17">MSW_08.MDZ : 開会式</title>
+			<title code="0x15">MSW_06.MDZ : 麻雀中1</title>
+			<title code="0x16">MSW_07.MDZ : 麻雀中2</title>
+			<title code="0x13">MSW_04.MDZ : MAR-JONG LAND</title>
+			<title code="0x12">MSW_03.MDZ : SHOP KeroKero</title>
+			<title code="0x11">MSW_02.MDZ : GAME OVER</title>
+			<title code="0x1a">MSW_11.MDZ : 閉会式</title>
+			<title code="0x19">MSW_10.MDZ : ENDING</title>
+			<title code="0x18">MSW_09.MDZ : STAFF ROLL</title>
+			<title code="0x14">MSW_05.MDZ : H SCENE</title>
+		</titlelist>
+	</game>
+</gamelist>

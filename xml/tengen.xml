@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+<game>
+	<name>[NES] Tetris / Brad Fuller / 1989 Tengen</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">tengen</driveralias>
+	<romlist archive="Tetris (1989)(Tengen)">
+		<rom type="code">Tetris (1989)(Tengen).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x04">Title Screen</title>
+		<title code="0x00">Loginska</title>
+		<title code="0x01">Bradinski</title>
+		<title code="0x02">Kalinka</title>
+		<title code="0x03">Troika</title>
+		<title code="0x05">Game Over</title>
+		<title code="0x06">Level Up</title>
+		<title code="0x07">You Win</title>
+		<title code="0x08">Katiusha (Intermission)</title>
+	</titlelist>
+</game>
+<game>
+	<name>[NES] Fantasy Zone / Hiroshi Kawaguchi, Masaharu Iwata / 1989 (Sega, Tengen) Tengen</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">tengen</driveralias>
+	<romlist archive="Fantasy Zone (1989)(Sega)(Tengen)(Tengen)">
+		<rom type="code">Fantasy Zone (1989)(Sega)(Tengen)(Tengen).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">Round 1: Opa-Opa!</title>
+		<title code="0x01">Round 2: Keep On The Beat</title>
+		<title code="0x02">Round 3: Saari</title>
+		<title code="0x03">Round 4: Prome</title>
+		<title code="0x04">Round 5: Hot Snow</title>
+		<title code="0x05">Round 6: Don't Stop</title>
+		<title code="0x06">Round 7: Dreaming Tomorrow</title>
+		<title code="0x07">Round 8: Ya-Da-Yo</title>
+		<title code="0x08">Shopping</title>
+		<title code="0x09">Boss</title>
+		<title code="0x0A">Lose Life</title>
+		<title code="0x0B">Round Clear</title>
+		<title code="0x0C">Game Over</title>
+		<title code="0x0D">The End: Victory Way</title>
+	</titlelist>
+</game>
+<game> 
+<name>[MD] Gauntlet / Hitoshi Sakimoto, Masaharu Iwata, Hal Canon, Earl Vickers / 1993 (M2) Tengen</name> 
+<driver type="gauntlet">megadrive</driver> 
+<driveralias type="MegaDrive">tengen</driveralias>
+<romlist archive="Gauntlet4"> 
+<rom type="code">Gauntlet4.bin</rom> 
+</romlist> 
+<titlelist> 
+<title code="0x13">Stop the Music</title>
+<title code="0x14">Fade out</title>
+<title code="0x00">Main theme</title> 
+<title code="0x01">Treasure Room 1P</title> 
+<title code="0x02">Treasure Room 2P</title> 
+<title code="0x03">Treasure Room 3P</title> 
+<title code="0x04">Treasure Room 4P</title> 
+<title code="0x05">Back of Beyond</title> 
+<title code="0x06">Whisper of Phantom</title> 
+<title code="0x07">March in the Dark</title> 
+<title code="0x08">Sortie</title> 
+<title code="0x09">Transparent Obstacle</title> 
+<title code="0x0a">Adventures of Iron</title> 
+<title code="0x0b">Fire Starter</title> 
+<title code="0x0c">Fire Starter</title> 
+<title code="0x0d">Retribution</title> 
+<title code="0x0e">Crux</title> 
+<title code="0x0f">The Spark</title> 
+<title code="0x10">Betrayer</title> 
+<title code="0x11">Explosion</title> 
+<title code="0x12">. . .</title> 
+<range min="0x100" max="0x188" extcode="1">VOICE %02x</range>
+<range min="0x200" max="0x245" extcode="1">SE %02x</range>
+</titlelist> 
+</game> 
+</gamelist>

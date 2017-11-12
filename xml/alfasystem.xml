@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Alfa System -->
+	<game>
+		<name>[X68000] Noble Mind</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Alfa System</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="noble68snd">
+			<rom type="code">noble68snd.bin</rom>
+			<rom type="x"    offset="0x10000">core.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x16">オープニング</title>
+			<title code="0x0d">タイトル</title>
+			<title code="0x15">城</title>
+			<title code="0x13">街1</title>
+			<title code="0x08">街2</title>
+			<title code="0x11">イベント1</title>
+			<title code="0x14">イベント2</title>
+			<title code="0x01">フィールド</title>
+			<title code="0x04">戦闘</title>
+			<title code="0x05">ボス戦闘</title>
+			<title code="0x07">戦闘終了</title>
+			<title code="0x02">ダンジョン1</title>
+			<title code="0x10">ダンジョン2</title>
+			<title code="0x09">武器屋/道具屋</title>
+			<title code="0x0a">宿屋</title>
+			<title code="0x06">宿屋で休む</title>
+			<title code="0x0b">宝くじ屋</title>
+			<title code="0x19">アイテム取得</title>
+			<title code="0x17">レベルアップ</title>
+			<range min="0x0f" max="0x0f" extcode="1">BGM 0x%02x</range>
+			<range min="0x12" max="0x12" extcode="1">BGM 0x%02x</range>
+			<range min="0x1a" max="0x1b" extcode="1">BGM 0x%02x</range>
+			<title code="0x03">ラスボス戦闘</title>
+			<title code="0x0e">エンディング1</title>
+			<title code="0x0c">スタッフロール</title>
+			<title code="0x18">ゲームオーバー</title>
+			<range min="0x65" max="0x7e" extcode="1">SE %02x</range>
+		</titlelist>
+	</game>
+</gamelist>

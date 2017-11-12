@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //ApRicoT -->
+	<game>
+		<name>[PC-9801] 夢幻夜想曲(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ApRicoT</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="mugenya_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">N00.M</rom>
+			<rom type="file" offset="0x11">N01.M</rom>
+			<rom type="file" offset="0x12">N02.M</rom>
+			<rom type="file" offset="0x13">N04.M</rom>
+			<rom type="file" offset="0x14">N06.M</rom>
+			<rom type="file" offset="0x15">N07.M</rom>
+			<rom type="file" offset="0x16">N08.M</rom>
+			<rom type="file" offset="0x17">N09.M</rom>
+			<rom type="file" offset="0x18">N11.M</rom>
+			<rom type="file" offset="0x19">N12.M</rom>
+			<rom type="file" offset="0x1A">N13.M</rom>
+			<rom type="file" offset="0x1B">N14.M</rom>
+			<rom type="shell" offset="0">PMD # /M8 /V1 /DF20 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">N00.M  : 抒情歌</title>
+			<title code="0x11">N01.M  : 夢幻夜想曲</title>
+			<title code="0x12">N02.M  : 挽歌</title>
+			<title code="0x13">N04.M  : ラグタイム</title>
+			<title code="0x14">N06.M  : baroque</title>
+			<title code="0x15">N07.M  : 不安の刻</title>
+			<title code="0x16">N08.M  : 炎の舞</title>
+			<title code="0x17">N09.M  : 愛の夜想曲</title>
+			<title code="0x18">N11.M  : 妖精円舞曲</title>
+			<title code="0x19">N12.M  : 忍び寄る危機</title>
+			<title code="0x1A">N13.M  : 朝日</title>
+			<title code="0x1B">N14.M  : スタッフロール</title>
+			<range min="0x0801" max="0x0804" extcode="0">SE.EFC : 効果音%X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 夢幻夜想曲(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ApRicoT</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="total_mix"  value="0x80"/>
+		</options>
+		<romlist archive="mugenya_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">B00.M</rom>
+			<rom type="file" offset="0x11">B01.M</rom>
+			<rom type="file" offset="0x12">B02.M</rom>
+			<rom type="file" offset="0x13">B04.M</rom>
+			<rom type="file" offset="0x14">B06.M</rom>
+			<rom type="file" offset="0x15">B07.M</rom>
+			<rom type="file" offset="0x16">B08.M</rom>
+			<rom type="file" offset="0x17">B09.M</rom>
+			<rom type="file" offset="0x18">B11.M</rom>
+			<rom type="file" offset="0x19">B12.M</rom>
+			<rom type="file" offset="0x1A">B13.M</rom>
+			<rom type="file" offset="0x1B">B14.M</rom>
+			<rom type="shell" offset="0">PMDB2 # /M8 /V1 /DF10 /DS0 /DR16 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">B00.M  : 抒情歌</title>
+			<title code="0x11">B01.M  : 夢幻夜想曲</title>
+			<title code="0x12">B02.M  : 挽歌</title>
+			<title code="0x13">B04.M  : ラグタイム</title>
+			<title code="0x14">B06.M  : baroque</title>
+			<title code="0x15">B07.M  : 不安の刻</title>
+			<title code="0x16">B08.M  : 炎の舞</title>
+			<title code="0x17">B09.M  : 愛の夜想曲</title>
+			<title code="0x18">B11.M  : 妖精円舞曲</title>
+			<title code="0x19">B12.M  : 忍び寄る危機</title>
+			<title code="0x1A">B13.M  : 朝日</title>
+			<title code="0x1B">B14.M  : スタッフロール</title>
+			<range min="0x0801" max="0x0804" extcode="0">SE.EFC : 効果音%X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 夢幻夜想曲(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ApRicoT</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="mugenya_98">
+			<rom type="file" offset="-1">mmp_hoot.com</rom>
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="0x10">G00.M</rom>
+			<rom type="file" offset="0x11">G01.M</rom>
+			<rom type="file" offset="0x12">G02.M</rom>
+			<rom type="file" offset="0x13">G04.M</rom>
+			<rom type="file" offset="0x14">G06.M</rom>
+			<rom type="file" offset="0x15">G07.M</rom>
+			<rom type="file" offset="0x16">G08.M</rom>
+			<rom type="file" offset="0x17">G09.M</rom>
+			<rom type="file" offset="0x18">G11.M</rom>
+			<rom type="file" offset="0x19">G12.M</rom>
+			<rom type="file" offset="0x1A">G13.M</rom>
+			<rom type="file" offset="0x1B">G14.M</rom>
+			<rom type="shell" offset="0">MMD</rom>
+			<rom type="shell" offset="0">mmp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G00.M : 抒情歌</title>
+			<title code="0x11">G01.M : 夢幻夜想曲</title>
+			<title code="0x12">G02.M : 挽歌</title>
+			<title code="0x13">G04.M : ラグタイム</title>
+			<title code="0x14">G06.M : baroque</title>
+			<title code="0x15">G07.M : 不安の刻</title>
+			<title code="0x16">G08.M : 炎の舞</title>
+			<title code="0x17">G09.M : 愛の夜想曲</title>
+			<title code="0x18">G11.M : 妖精円舞曲</title>
+			<title code="0x19">G12.M : 忍び寄る危機</title>
+			<title code="0x1A">G13.M : 朝日</title>
+			<title code="0x1B">G14.M : スタッフロール</title>
+		</titlelist>
+	</game>
+</gamelist>

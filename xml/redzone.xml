@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //RED-ZONE -->
+	<game>
+		<name>[PC-9801] X-GIRL</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="x-girl_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">XGIRL.OV1</rom>
+			<rom type="conin" offset="0x05">XGIRL.OV1</rom>
+			<rom type="file" offset="0x10">XG_01.USO</rom>
+			<rom type="file" offset="0x11">XG_01V.USO</rom>
+			<rom type="file" offset="0x12">XG_02.USO</rom>
+			<rom type="file" offset="0x13">XG_02V.USO</rom>
+			<rom type="file" offset="0x14">XG_03.USO</rom>
+			<rom type="file" offset="0x15">XG_03V.USO</rom>
+			<rom type="file" offset="0x16">XG_04.USO</rom>
+			<rom type="file" offset="0x17">XG_04V.USO</rom>
+			<rom type="file" offset="0x18">XG_05.USO</rom>
+			<rom type="file" offset="0x19">XG_05V.USO</rom>
+			<rom type="file" offset="0x1a">XG_06.USO</rom>
+			<rom type="file" offset="0x1b">XG_06V.USO</rom>
+			<rom type="file" offset="0x1c">XG_07.USO</rom>
+			<rom type="file" offset="0x1d">XG_07V.USO</rom>
+			<rom type="file" offset="0x1e">XG_08.USO</rom>
+			<rom type="file" offset="0x1f">XG_08V.USO</rom>
+			<rom type="file" offset="0x20">XG_09.USO</rom>
+			<rom type="file" offset="0x21">XG_09V.USO</rom>
+			<rom type="file" offset="0x22">XG_10.USO</rom>
+			<rom type="file" offset="0x23">XG_10V.USO</rom>
+			<rom type="file" offset="0x24">XG_11.USO</rom>
+			<rom type="file" offset="0x25">XG_11V.USO</rom>
+			<rom type="file" offset="0x26">XG_12.USO</rom>
+			<rom type="file" offset="0x27">XG_12V.USO</rom>
+			<rom type="file" offset="0x28">XG_13.USO</rom>
+			<rom type="file" offset="0x29">XG_13V.USO</rom>
+			<rom type="file" offset="0x2a">XG_14.USO</rom>
+			<rom type="file" offset="0x2b">XG_14V.USO</rom>
+			<rom type="file" offset="0x2c">XG_15.USO</rom>
+			<rom type="file" offset="0x2d">XG_15V.USO</rom>
+			<rom type="file" offset="0x2e">XG_SE_01.USO</rom>
+			<rom type="file" offset="0x2f">XG_SE_02.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+<!-- SSGバランス内蔵用
+			<title code="0x10">XG_01.USO</title>
+			<title code="0x12">XG_02.USO</title>
+			<title code="0x14">XG_03.USO</title>
+			<title code="0x16">XG_04.USO</title>
+			<title code="0x18">XG_05.USO</title>
+			<title code="0x1a">XG_06.USO</title>
+			<title code="0x1c">XG_07.USO</title>
+			<title code="0x1e">XG_08.USO</title>
+			<title code="0x20">XG_09.USO</title>
+			<title code="0x22">XG_10.USO</title>
+			<title code="0x24">XG_11.USO</title>
+			<title code="0x26">XG_12.USO</title>
+			<title code="0x28">XG_13.USO</title>
+			<title code="0x2a">XG_14.USO</title>
+			<title code="0x2c">XG_15.USO</title>
+-->
+			<title code="0x11">XG_01V.USO   : open your earth hole</title>
+			<title code="0x13">XG_02V.USO   : are you going with us ?!</title>
+			<title code="0x15">XG_03V.USO   : just movin'</title>
+			<title code="0x17">XG_04V.USO   : 4 the future</title>
+			<title code="0x19">XG_05V.USO   : talking base</title>
+			<title code="0x1b">XG_06V.USO   : underground floor</title>
+			<title code="0x1d">XG_07V.USO   : mouth 2 mouth</title>
+			<title code="0x1f">XG_08V.USO   : a rod of song</title>
+			<title code="0x21">XG_09V.USO   : open your mouth</title>
+			<title code="0x23">XG_10V.USO   : slave 2 the rythm</title>
+			<title code="0x25">XG_11V.USO   : shoot me</title>
+			<title code="0x27">XG_12V.USO   : tongue 2 tongue</title>
+			<title code="0x29">XG_13V.USO   : climaxx/spanking love</title>
+			<title code="0x2b">XG_14V.USO   : 2 be continued</title>
+			<title code="0x2d">XG_15V.USO   : beat crazy</title>
+			<title code="0x2e">XG_SE_01.USO : </title>
+			<title code="0x2f">XG_SE_02.USO : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 亜紀子 GOLD -THE QUEEN OF ADULT-</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="akiko_g_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">GOLD.OV1</rom>
+			<rom type="conin" offset="0x05">GOLD.OV1</rom>
+			<rom type="file" offset="0x10">BGM_10D.USO</rom>
+			<rom type="file" offset="0x11">BGM_10V.USO</rom>
+			<rom type="file" offset="0x12">BGM_11D.USO</rom>
+			<rom type="file" offset="0x13">BGM_11V.USO</rom>
+			<rom type="file" offset="0x14">BGM_1D.USO</rom>
+			<rom type="file" offset="0x15">BGM_1V.USO</rom>
+			<rom type="file" offset="0x16">BGM_2D.USO</rom>
+			<rom type="file" offset="0x17">BGM_2V.USO</rom>
+			<rom type="file" offset="0x18">BGM_3D.USO</rom>
+			<rom type="file" offset="0x19">BGM_3V.USO</rom>
+			<rom type="file" offset="0x1a">BGM_4D.USO</rom>
+			<rom type="file" offset="0x1b">BGM_4V.USO</rom>
+			<rom type="file" offset="0x1c">BGM_5D.USO</rom>
+			<rom type="file" offset="0x1d">BGM_5V.USO</rom>
+			<rom type="file" offset="0x1e">BGM_6D.USO</rom>
+			<rom type="file" offset="0x1f">BGM_6V.USO</rom>
+			<rom type="file" offset="0x20">BGM_7D.USO</rom>
+			<rom type="file" offset="0x21">BGM_7V.USO</rom>
+			<rom type="file" offset="0x22">BGM_8D.USO</rom>
+			<rom type="file" offset="0x23">BGM_8V.USO</rom>
+			<rom type="file" offset="0x24">BGM_9D.USO</rom>
+			<rom type="file" offset="0x25">BGM_9V.USO</rom>
+			<rom type="file" offset="0x26">BGM_H1D.USO</rom>
+			<rom type="file" offset="0x27">BGM_H1V.USO</rom>
+			<rom type="file" offset="0x28">BGM_H2D.USO</rom>
+			<rom type="file" offset="0x29">BGM_H2V.USO</rom>
+			<rom type="file" offset="0x2a">BGM_H3D.USO</rom>
+			<rom type="file" offset="0x2b">BGM_H3V.USO</rom>
+			<rom type="file" offset="0x2c">BGM_H4D.USO</rom>
+			<rom type="file" offset="0x2d">BGM_H4V.USO</rom>
+			<rom type="file" offset="0x2e">BGM_H5D.USO</rom>
+			<rom type="file" offset="0x2f">BGM_H5V.USO</rom>
+			<rom type="file" offset="0x30">BGM_H6D.USO</rom>
+			<rom type="file" offset="0x31">BGM_H6V.USO</rom>
+			<rom type="file" offset="0x32">DX_SE_01.USO</rom>
+			<rom type="file" offset="0x33">DX_SE_02.USO</rom>
+			<rom type="file" offset="0x34">DX_SE_03.USO</rom>
+			<rom type="file" offset="0x35">DX_SE_04.USO</rom>
+			<rom type="file" offset="0x36">DX_SE_05.USO</rom>
+			<rom type="file" offset="0x37">VX_SE_01.USO</rom>
+			<rom type="file" offset="0x38">VX_SE_02.USO</rom>
+			<rom type="file" offset="0x39">VX_SE_03.USO</rom>
+			<rom type="file" offset="0x3A">VX_SE_04.USO</rom>
+			<rom type="file" offset="0x3B">VX_SE_05.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+<!-- SSGバランスDX用
+			<title code="0x14">BGM_1D.USO</title>
+			<title code="0x16">BGM_2D.USO</title>
+			<title code="0x18">BGM_3D.USO</title>
+			<title code="0x1a">BGM_4D.USO</title>
+			<title code="0x1c">BGM_5D.USO</title>
+			<title code="0x1e">BGM_6D.USO</title>
+			<title code="0x20">BGM_7D.USO</title>
+			<title code="0x22">BGM_8D.USO</title>
+			<title code="0x24">BGM_9D.USO</title>
+			<title code="0x10">BGM_10D.USO</title>
+			<title code="0x12">BGM_11D.USO</title>
+			<title code="0x26">BGM_H1D.USO</title>
+			<title code="0x28">BGM_H2D.USO</title>
+			<title code="0x2a">BGM_H3D.USO</title>
+			<title code="0x2c">BGM_H4D.USO</title>
+			<title code="0x2e">BGM_H5D.USO</title>
+			<title code="0x30">BGM_H6D.USO</title>
+			<title code="0x32">DX_SE_01.USO</title>
+			<title code="0x33">DX_SE_02.USO</title>
+			<title code="0x34">DX_SE_03.USO</title>
+			<title code="0x35">DX_SE_04.USO</title>
+			<title code="0x36">DX_SE_05.USO</title>
+-->
+			<title code="0x15">BGM_1V.USO   : 野ばら</title>
+			<title code="0x27">BGM_H1V.USO  : けだるい午後</title>
+			<title code="0x17">BGM_2V.USO   : 忍びよる影</title>
+			<title code="0x29">BGM_H2V.USO  : 焦燥</title>
+			<title code="0x19">BGM_3V.USO   : 追求</title>
+			<title code="0x2b">BGM_H3V.USO  : 夕暮れ-トワイライト</title>
+			<title code="0x1b">BGM_4V.USO   : 悲しみの少女</title>
+			<title code="0x2d">BGM_H4V.USO  : 反撃ビート</title>
+			<title code="0x1d">BGM_5V.USO   : 悪い予感</title>
+			<title code="0x2f">BGM_H5V.USO  : 見せ物にされて</title>
+			<title code="0x1f">BGM_6V.USO   : 背徳の匂い</title>
+			<title code="0x31">BGM_H6V.USO  : MORE DEEP</title>
+			<title code="0x21">BGM_7V.USO   : 裏切りのテーマ</title>
+			<title code="0x23">BGM_8V.USO   : 亜紀子見参!</title>
+			<title code="0x25">BGM_9V.USO   : クライマックス</title>
+			<title code="0x11">BGM_10V.USO  : 追跡</title>
+			<title code="0x13">BGM_11V.USO  : 新世界</title>
+			<title code="0x37">VX_SE_01.USO : SE</title>
+			<title code="0x38">VX_SE_02.USO : SE</title>
+			<title code="0x39">VX_SE_03.USO : SE</title>
+			<title code="0x3A">VX_SE_04.USO : SE</title>
+			<title code="0x3B">VX_SE_05.USO : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 亜紀子 プレミアム・バージョン</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="akiko_p_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">ADVBIOS.OVL</rom>
+			<rom type="conin" offset="0x05">ADVBIOS.OVL</rom>
+			<rom type="file" offset="0x10">AKI_01.USO</rom>
+			<rom type="file" offset="0x11">AKI_02.USO</rom>
+			<rom type="file" offset="0x12">AKI_03.USO</rom>
+			<rom type="file" offset="0x13">AKI_04.USO</rom>
+			<rom type="file" offset="0x14">AKI_05.USO</rom>
+			<rom type="file" offset="0x15">AKI_06.USO</rom>
+			<rom type="file" offset="0x16">AKI_08.USO</rom>
+			<rom type="file" offset="0x17">END_0.USO</rom>
+			<rom type="file" offset="0x18">END_2.USO</rom>
+			<rom type="file" offset="0x19">AKIKO_01.USO</rom>
+			<rom type="file" offset="0x1a">AKIKO_02.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AKI_01.USO   : 学園にて………</title>
+			<title code="0x11">AKI_02.USO   : AKIKO</title>
+			<title code="0x12">AKI_03.USO   : 凌辱</title>
+			<title code="0x13">AKI_04.USO   : めまい</title>
+			<title code="0x14">AKI_05.USO   : 欲望</title>
+			<title code="0x15">AKI_06.USO   : せつないひととき</title>
+			<title code="0x16">AKI_08.USO   : 教育指導室にて</title>
+			<title code="0x17">END_0.USO    : 決着</title>
+			<title code="0x18">END_2.USO    : </title>
+			<title code="0x19">AKIKO_01.USO : SE</title>
+			<title code="0x1a">AKIKO_02.USO : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 香奈子</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="kanako_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">KANAKO.OV1</rom>
+			<rom type="conin" offset="0x05">KANAKO.OV1</rom>
+			<rom type="file" offset="0x10">KAN_01D.USO</rom>
+			<rom type="file" offset="0x11">KAN_01V.USO</rom>
+			<rom type="file" offset="0x12">KAN_02D.USO</rom>
+			<rom type="file" offset="0x13">KAN_02V.USO</rom>
+			<rom type="file" offset="0x14">KAN_03D.USO</rom>
+			<rom type="file" offset="0x15">KAN_03V.USO</rom>
+			<rom type="file" offset="0x16">KAN_04D.USO</rom>
+			<rom type="file" offset="0x17">KAN_04V.USO</rom>
+			<rom type="file" offset="0x18">KAN_05D.USO</rom>
+			<rom type="file" offset="0x19">KAN_05V.USO</rom>
+			<rom type="file" offset="0x1a">KAN_06D.USO</rom>
+			<rom type="file" offset="0x1b">KAN_06V.USO</rom>
+			<rom type="file" offset="0x1c">KAN_07D.USO</rom>
+			<rom type="file" offset="0x1d">KAN_07V.USO</rom>
+			<rom type="file" offset="0x1e">KAN_08D.USO</rom>
+			<rom type="file" offset="0x1f">KAN_08V.USO</rom>
+			<rom type="file" offset="0x20">KAN_09D.USO</rom>
+			<rom type="file" offset="0x21">KAN_09V.USO</rom>
+			<rom type="file" offset="0x22">KAN_10D.USO</rom>
+			<rom type="file" offset="0x23">KAN_10V.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+<!-- SSGバランスDX用
+			<title code="0x10">KAN_01D.USO</title>
+			<title code="0x12">KAN_02D.USO</title>
+			<title code="0x14">KAN_03D.USO</title>
+			<title code="0x16">KAN_04D.USO</title>
+			<title code="0x18">KAN_05D.USO</title>
+			<title code="0x1a">KAN_06D.USO</title>
+			<title code="0x1c">KAN_07D.USO</title>
+			<title code="0x1e">KAN_08D.USO</title>
+			<title code="0x20">KAN_09D.USO</title>
+			<title code="0x22">KAN_10D.USO</title>
+-->
+			<title code="0x11">KAN_01V.USO : 香奈子のテーマ</title>
+			<title code="0x13">KAN_02V.USO : オフィスの香奈子</title>
+			<title code="0x15">KAN_03V.USO : 命令ですか?</title>
+			<title code="0x17">KAN_04V.USO : 香奈子、戸惑う</title>
+			<title code="0x19">KAN_05V.USO : どうして乱交?</title>
+			<title code="0x1b">KAN_06V.USO : 快楽なお仕事</title>
+			<title code="0x1d">KAN_07V.USO : 香奈子の望み</title>
+			<title code="0x1f">KAN_08V.USO : 香奈子の幸せ</title>
+			<title code="0x21">KAN_09V.USO : お仕事中です</title>
+			<title code="0x23">KAN_10V.USO : スイート・オフィス・ラブ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 沙也香 ～義母～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="sayaka_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">GIBO.OV1</rom>
+			<rom type="conin" offset="0x05">GIBO.OV1</rom>
+			<rom type="file" offset="0x10">DX/GIBO_01.USO</rom>
+			<rom type="file" offset="0x11">DX/GIBO_02.USO</rom>
+			<rom type="file" offset="0x12">DX/GIBO_03.USO</rom>
+			<rom type="file" offset="0x13">DX/GIBO_04.USO</rom>
+			<rom type="file" offset="0x14">DX/GIBO_05.USO</rom>
+			<rom type="file" offset="0x15">DX/GIBO_06.USO</rom>
+			<rom type="file" offset="0x16">DX/GIBO_07.USO</rom>
+			<rom type="file" offset="0x17">DX/GIBO_08.USO</rom>
+			<rom type="file" offset="0x18">DX/GIBO_09.USO</rom>
+			<rom type="file" offset="0x19">DX/GIBO_10.USO</rom>
+			<rom type="file" offset="0x1a">DX/GIBO_11.USO</rom>
+			<rom type="file" offset="0x1b">VM/GIBO_01.USO</rom>
+			<rom type="file" offset="0x1c">VM/GIBO_02.USO</rom>
+			<rom type="file" offset="0x1d">VM/GIBO_03.USO</rom>
+			<rom type="file" offset="0x1e">VM/GIBO_04.USO</rom>
+			<rom type="file" offset="0x1f">VM/GIBO_05.USO</rom>
+			<rom type="file" offset="0x20">VM/GIBO_06.USO</rom>
+			<rom type="file" offset="0x21">VM/GIBO_07.USO</rom>
+			<rom type="file" offset="0x22">VM/GIBO_08.USO</rom>
+			<rom type="file" offset="0x23">VM/GIBO_09.USO</rom>
+			<rom type="file" offset="0x24">VM/GIBO_10.USO</rom>
+			<rom type="file" offset="0x25">VM/GIBO_11.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+<!-- SSGバランスDX用
+			<title code="0x10">DX/GIBO_01.USO</title>
+			<title code="0x11">DX/GIBO_02.USO</title>
+			<title code="0x12">DX/GIBO_03.USO</title>
+			<title code="0x13">DX/GIBO_04.USO</title>
+			<title code="0x14">DX/GIBO_05.USO</title>
+			<title code="0x15">DX/GIBO_06.USO</title>
+			<title code="0x16">DX/GIBO_07.USO</title>
+			<title code="0x17">DX/GIBO_08.USO</title>
+			<title code="0x18">DX/GIBO_09.USO</title>
+			<title code="0x19">DX/GIBO_10.USO</title>
+			<title code="0x1a">DX/GIBO_11.USO</title>
+-->
+			<title code="0x1b">VM/GIBO_01.USO : 沙也香のテーマ</title>
+			<title code="0x1c">VM/GIBO_02.USO : 一郎のテーマ</title>
+			<title code="0x1d">VM/GIBO_03.USO : 銀次のテーマ</title>
+			<title code="0x1e">VM/GIBO_04.USO : 一人寂しく</title>
+			<title code="0x1f">VM/GIBO_05.USO : 覆面男のテーマ</title>
+			<title code="0x20">VM/GIBO_06.USO : 熟れた肉体</title>
+			<title code="0x21">VM/GIBO_07.USO : ちょっと乱れて</title>
+			<title code="0x22">VM/GIBO_08.USO : 緊縛のテーマ</title>
+			<title code="0x23">VM/GIBO_09.USO : 愛の目覚め</title>
+			<title code="0x24">VM/GIBO_10.USO : クライマックス</title>
+			<title code="0x25">VM/GIBO_11.USO : エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 真奈美 ～愛と交換の日々～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="manami_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">MANAMI.OV1</rom>
+			<rom type="conin" offset="0x05">MANAMI.OV1</rom>
+			<rom type="file" offset="0x10">SWP_01D.USO</rom>
+			<rom type="file" offset="0x11">SWP_01V.USO</rom>
+			<rom type="file" offset="0x12">SWP_02D.USO</rom>
+			<rom type="file" offset="0x13">SWP_02V.USO</rom>
+			<rom type="file" offset="0x14">SWP_03D.USO</rom>
+			<rom type="file" offset="0x15">SWP_03V.USO</rom>
+			<rom type="file" offset="0x16">SWP_04D.USO</rom>
+			<rom type="file" offset="0x17">SWP_04V.USO</rom>
+			<rom type="file" offset="0x18">SWP_05D.USO</rom>
+			<rom type="file" offset="0x19">SWP_05V.USO</rom>
+			<rom type="file" offset="0x1a">SWP_06D.USO</rom>
+			<rom type="file" offset="0x1b">SWP_06V.USO</rom>
+			<rom type="file" offset="0x1c">SWP_07D.USO</rom>
+			<rom type="file" offset="0x1d">SWP_07V.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+<!-- SSGバランスDX用
+			<title code="0x10">SWP_01D.USO</title>
+			<title code="0x12">SWP_02D.USO</title>
+			<title code="0x14">SWP_03D.USO</title>
+			<title code="0x16">SWP_04D.USO</title>
+			<title code="0x18">SWP_05D.USO</title>
+			<title code="0x1a">SWP_06D.USO</title>
+			<title code="0x1c">SWP_07D.USO</title>
+-->
+			<title code="0x11">SWP_01V.USO</title>
+			<title code="0x13">SWP_02V.USO</title>
+			<title code="0x15">SWP_03V.USO</title>
+			<title code="0x17">SWP_04V.USO</title>
+			<title code="0x19">SWP_05V.USO</title>
+			<title code="0x1b">SWP_06V.USO</title>
+			<title code="0x1d">SWP_07V.USO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 尋問遊戯</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="jinmon_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">YUGI.OV1</rom>
+			<rom type="conin" offset="0x05">YUGI.OV1</rom>
+			<rom type="file" offset="0x10">JIN_01.USO</rom>
+			<rom type="file" offset="0x11">JIN_02.USO</rom>
+			<rom type="file" offset="0x12">JIN_03.USO</rom>
+			<rom type="file" offset="0x13">JIN_04.USO</rom>
+			<rom type="file" offset="0x14">JIN_05.USO</rom>
+			<rom type="file" offset="0x15">JIN_06.USO</rom>
+			<rom type="file" offset="0x16">JIN_07.USO</rom>
+			<rom type="file" offset="0x17">JIN_08.USO</rom>
+			<rom type="file" offset="0x18">JIN_09.USO</rom>
+			<rom type="file" offset="0x19">JIN_10.USO</rom>
+			<rom type="file" offset="0x1a">JIN_11.USO</rom>
+			<rom type="file" offset="0x1b">JIN_12.USO</rom>
+			<rom type="file" offset="0x1c">JIN_01V.USO</rom>
+			<rom type="file" offset="0x1d">JIN_02V.USO</rom>
+			<rom type="file" offset="0x1e">JIN_03V.USO</rom>
+			<rom type="file" offset="0x1f">JIN_04V.USO</rom>
+			<rom type="file" offset="0x20">JIN_05V.USO</rom>
+			<rom type="file" offset="0x21">JIN_06V.USO</rom>
+			<rom type="file" offset="0x22">JIN_07V.USO</rom>
+			<rom type="file" offset="0x23">JIN_08V.USO</rom>
+			<rom type="file" offset="0x24">JIN_09V.USO</rom>
+			<rom type="file" offset="0x25">JIN_10V.USO</rom>
+			<rom type="file" offset="0x26">JIN_11V.USO</rom>
+			<rom type="file" offset="0x27">JIN_12V.USO</rom>
+			<rom type="file" offset="0x28">YUGI_01.USO</rom>
+			<rom type="file" offset="0x29">YUGI_02.USO</rom>
+			<rom type="file" offset="0x2A">YUGI_03.USO</rom>
+			<rom type="file" offset="0x2B">YUGI_04.USO</rom>
+			<rom type="file" offset="0x2C">YUGIV_01.USO</rom>
+			<rom type="file" offset="0x2D">YUGIV_02.USO</rom>
+			<rom type="file" offset="0x2E">YUGIV_03.USO</rom>
+			<rom type="file" offset="0x2F">YUGIV_04.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+<!-- SSGバランス内蔵用
+			<title code="0x10">JIN_01.USO</title>
+			<title code="0x11">JIN_02.USO</title>
+			<title code="0x12">JIN_03.USO</title>
+			<title code="0x13">JIN_04.USO</title>
+			<title code="0x14">JIN_05.USO</title>
+			<title code="0x15">JIN_06.USO</title>
+			<title code="0x16">JIN_07.USO</title>
+			<title code="0x17">JIN_08.USO</title>
+			<title code="0x18">JIN_09.USO</title>
+			<title code="0x19">JIN_10.USO</title>
+			<title code="0x1a">JIN_11.USO</title>
+			<title code="0x1b">JIN_12.USO</title>
+			<title code="0x28">YUGI_01.USO</title>
+			<title code="0x29">YUGI_02.USO</title>
+			<title code="0x2A">YUGI_03.USO</title>
+			<title code="0x2B">YUGI_04.USO</title>
+-->
+			<title code="0x1c">JIN_01V.USO  : JIN_01</title>
+			<title code="0x1d">JIN_02V.USO  : JIN_02</title>
+			<title code="0x1e">JIN_03V.USO  : JIN_03</title>
+			<title code="0x1f">JIN_04V.USO  : JIN_04</title>
+			<title code="0x20">JIN_05V.USO  : JIN_05</title>
+			<title code="0x21">JIN_06V.USO  : JIN_06</title>
+			<title code="0x22">JIN_07V.USO  : JIN_07</title>
+			<title code="0x23">JIN_08V.USO  : JIN_08</title>
+			<title code="0x24">JIN_09V.USO  : JIN_09</title>
+			<title code="0x25">JIN_10V.USO  : JIN_10</title>
+			<title code="0x26">JIN_11V.USO  : JIN_11</title>
+			<title code="0x27">JIN_12V.USO  : JIN_12</title>
+			<title code="0x2C">YUGIV_01.USO : </title>
+			<title code="0x2D">YUGIV_02.USO : </title>
+			<title code="0x2E">YUGIV_03.USO : JINSE_02</title>
+			<title code="0x2F">YUGIV_04.USO : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 雀妃楼</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="jankirou_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">JANKI.OV1</rom>
+			<rom type="conin" offset="0x05">JANKI.OV1</rom>
+			<rom type="file" offset="0x10">MJ_01DX.USO</rom>
+			<rom type="file" offset="0x11">MJ_01VM.USO</rom>
+			<rom type="file" offset="0x12">MJ_02DX.USO</rom>
+			<rom type="file" offset="0x13">MJ_02VM.USO</rom>
+			<rom type="file" offset="0x14">MJ_03DX.USO</rom>
+			<rom type="file" offset="0x15">MJ_03VM.USO</rom>
+			<rom type="file" offset="0x16">MJ_04DX.USO</rom>
+			<rom type="file" offset="0x17">MJ_04VM.USO</rom>
+			<rom type="file" offset="0x18">MJ_05DX.USO</rom>
+			<rom type="file" offset="0x19">MJ_05VM.USO</rom>
+			<rom type="file" offset="0x1a">MJ_06DX.USO</rom>
+			<rom type="file" offset="0x1b">MJ_06VM.USO</rom>
+			<rom type="file" offset="0x1c">MJ_07DX.USO</rom>
+			<rom type="file" offset="0x1d">MJ_07VM.USO</rom>
+			<rom type="file" offset="0x1E">MJ_DX_01.USO</rom>
+			<rom type="file" offset="0x1F">MJ_DX_02.USO</rom>
+			<rom type="file" offset="0x20">MJ_DX_03.USO</rom>
+			<rom type="file" offset="0x21">MJ_DX_04.USO</rom>
+			<rom type="file" offset="0x22">MJ_VM_01.USO</rom>
+			<rom type="file" offset="0x23">MJ_VM_02.USO</rom>
+			<rom type="file" offset="0x24">MJ_VM_03.USO</rom>
+			<rom type="file" offset="0x25">MJ_VM_04.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+<!-- SSGバランスDX用
+			<title code="0x10">MJ_01DX.USO</title>
+			<title code="0x12">MJ_02DX.USO</title>
+			<title code="0x14">MJ_03DX.USO</title>
+			<title code="0x16">MJ_04DX.USO</title>
+			<title code="0x18">MJ_05DX.USO</title>
+			<title code="0x1a">MJ_06DX.USO</title>
+			<title code="0x1c">MJ_07DX.USO</title>
+			<title code="0x1E">MJ_DX_01.USO</title>
+			<title code="0x1F">MJ_DX_02.USO</title>
+			<title code="0x20">MJ_DX_03.USO</title>
+			<title code="0x21">MJ_DX_04.USO</title>
+-->
+			<title code="0x11">MJ_01VM.USO</title>
+			<title code="0x13">MJ_02VM.USO</title>
+			<title code="0x15">MJ_03VM.USO</title>
+			<title code="0x17">MJ_04VM.USO</title>
+			<title code="0x19">MJ_05VM.USO</title>
+			<title code="0x1b">MJ_06VM.USO</title>
+			<title code="0x1d">MJ_07VM.USO</title>
+			<title code="0x22">MJ_VM_01.USO</title>
+			<title code="0x23">MJ_VM_02.USO</title>
+			<title code="0x24">MJ_VM_03.USO</title>
+			<title code="0x25">MJ_VM_04.USO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 稚恵美 ～緊縛エアライン～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="chiemi_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">CHIEMI.OV1</rom>
+			<rom type="conin" offset="0x05">CHIEMI.OV1</rom>
+			<rom type="file" offset="0x10">DX/ST_02.USO</rom>
+			<rom type="file" offset="0x11">DX/ST_03.USO</rom>
+			<rom type="file" offset="0x12">DX/ST_04.USO</rom>
+			<rom type="file" offset="0x13">DX/ST_05.USO</rom>
+			<rom type="file" offset="0x14">DX/ST_06.USO</rom>
+			<rom type="file" offset="0x15">DX/ST_16.USO</rom>
+			<rom type="file" offset="0x16">DX/ST_20.USO</rom>
+			<rom type="file" offset="0x17">DX/TIE_01.USO</rom>
+			<rom type="file" offset="0x18">DX/TIE_02.USO</rom>
+			<rom type="file" offset="0x19">DX/TIE_03.USO</rom>
+			<rom type="file" offset="0x1a">VM/ST_02.USO</rom>
+			<rom type="file" offset="0x1b">VM/ST_03.USO</rom>
+			<rom type="file" offset="0x1c">VM/ST_04.USO</rom>
+			<rom type="file" offset="0x1d">VM/ST_05.USO</rom>
+			<rom type="file" offset="0x1e">VM/ST_06.USO</rom>
+			<rom type="file" offset="0x1f">VM/ST_16.USO</rom>
+			<rom type="file" offset="0x20">VM/ST_20.USO</rom>
+			<rom type="file" offset="0x21">VM/TIE_01.USO</rom>
+			<rom type="file" offset="0x22">VM/TIE_02.USO</rom>
+			<rom type="file" offset="0x23">VM/TIE_03.USO</rom>
+			<rom type="file" offset="0x24">CH_SE_01.USO</rom>
+			<rom type="file" offset="0x25">CH_SE_02.USO</rom>
+			<rom type="file" offset="0x26">CH_SE_03.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+<!-- SSGバランスDX用
+			<title code="0x10">DX/ST_02.USO</title>
+			<title code="0x11">DX/ST_03.USO</title>
+			<title code="0x12">DX/ST_04.USO</title>
+			<title code="0x13">DX/ST_05.USO</title>
+			<title code="0x14">DX/ST_06.USO</title>
+			<title code="0x15">DX/ST_16.USO</title>
+			<title code="0x16">DX/ST_20.USO</title>
+			<title code="0x17">DX/TIE_01.USO</title>
+			<title code="0x18">DX/TIE_02.USO</title>
+			<title code="0x19">DX/TIE_03.USO</title>
+-->
+			<title code="0x21">VM/TIE_01.USO : FLIGHT</title>
+			<title code="0x23">VM/TIE_03.USO : HAVE A NICE TRIP</title>
+			<title code="0x22">VM/TIE_02.USO : 昇進</title>
+			<title code="0x1a">VM/ST_02.USO  : JACK THE BODY!</title>
+			<title code="0x1e">VM/ST_06.USO  : JACK ME!</title>
+			<title code="0x1f">VM/ST_16.USO  : 悪い予感</title>
+			<title code="0x20">VM/ST_20.USO  : TERROR</title>
+			<title code="0x1d">VM/ST_05.USO  : 快楽のワルツ-DANCING</title>
+			<title code="0x1b">VM/ST_03.USO  : 傷心</title>
+			<title code="0x1c">VM/ST_04.USO  : 明日に向かって</title>
+			<title code="0x24">CH_SE_01.USO  : SE</title>
+			<title code="0x25">CH_SE_02.USO  : SE</title>
+			<title code="0x26">CH_SE_03.USO  : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 透明人間あらわるあらわる</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="toumei_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">TOM.OV1</rom>
+			<rom type="conin" offset="0x05">TOM.OV1</rom>
+			<rom type="file" offset="0x10">N_04.USO</rom>
+			<rom type="file" offset="0x11">T_001.USO</rom>
+			<rom type="file" offset="0x12">T_002.USO</rom>
+			<rom type="file" offset="0x13">T_003.USO</rom>
+			<rom type="file" offset="0x14">T_004.USO</rom>
+			<rom type="file" offset="0x15">T_005.USO</rom>
+			<rom type="file" offset="0x16">T_006.USO</rom>
+			<rom type="file" offset="0x17">T_007.USO</rom>
+			<rom type="file" offset="0x18">T_01.USO</rom>
+			<rom type="file" offset="0x19">T_02.USO</rom>
+			<rom type="file" offset="0x1a">T_03.USO</rom>
+			<rom type="file" offset="0x1b">T_04.USO</rom>
+			<rom type="file" offset="0x1c">T_05.USO</rom>
+			<rom type="file" offset="0x1d">T_06.USO</rom>
+			<rom type="file" offset="0x1e">T_07.USO</rom>
+			<rom type="file" offset="0x1F">TOM_01.USO</rom>
+			<rom type="file" offset="0x20">TOM_02.USO</rom>
+			<rom type="file" offset="0x21">TOM_03.USO</rom>
+			<rom type="file" offset="0x22">TOM_04.USO</rom>
+			<rom type="file" offset="0x23">TOM_05.USO</rom>
+			<rom type="file" offset="0x24">TOM1_01.USO</rom>
+			<rom type="file" offset="0x25">TOM1_02.USO</rom>
+			<rom type="file" offset="0x26">TOM1_03.USO</rom>
+			<rom type="file" offset="0x27">TOM1_04.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">N_04.USO</title>
+			<title code="0x11">T_001.USO</title>
+			<title code="0x12">T_002.USO</title>
+			<title code="0x13">T_003.USO</title>
+			<title code="0x14">T_004.USO</title>
+			<title code="0x15">T_005.USO</title>
+			<title code="0x16">T_006.USO</title>
+			<title code="0x17">T_007.USO</title>
+			<title code="0x18">T_01.USO</title>
+			<title code="0x19">T_02.USO</title>
+			<title code="0x1a">T_03.USO</title>
+			<title code="0x1b">T_04.USO</title>
+			<title code="0x1c">T_05.USO</title>
+			<title code="0x1d">T_06.USO</title>
+			<title code="0x1e">T_07.USO</title>
+			<title code="0x1F">TOM_01.USO</title>
+			<title code="0x20">TOM_02.USO</title>
+			<title code="0x21">TOM_03.USO</title>
+			<title code="0x22">TOM_04.USO</title>
+			<title code="0x23">TOM_05.USO</title>
+			<title code="0x24">TOM1_01.USO</title>
+			<title code="0x25">TOM1_02.USO</title>
+			<title code="0x26">TOM1_03.USO</title>
+			<title code="0x27">TOM1_04.USO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 奈緒美 ～美少女たちの館～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="naomi_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">NAOMI.OV1</rom>
+			<rom type="conin" offset="0x05">NAOMI.OV1</rom>
+			<rom type="file" offset="0x10">EX_20.USO</rom>
+			<rom type="file" offset="0x11">ST_02.USO</rom>
+			<rom type="file" offset="0x12">DX/N_01.USO</rom>
+			<rom type="file" offset="0x13">DX/N_02.USO</rom>
+			<rom type="file" offset="0x14">DX/N_03.USO</rom>
+			<rom type="file" offset="0x15">DX/N_04.USO</rom>
+			<rom type="file" offset="0x16">DX/N_05.USO</rom>
+			<rom type="file" offset="0x17">DX/N_06.USO</rom>
+			<rom type="file" offset="0x18">VM/N_01.USO</rom>
+			<rom type="file" offset="0x19">VM/N_02.USO</rom>
+			<rom type="file" offset="0x1a">VM/N_03.USO</rom>
+			<rom type="file" offset="0x1b">VM/N_04.USO</rom>
+			<rom type="file" offset="0x1c">VM/N_05.USO</rom>
+			<rom type="file" offset="0x1d">VM/N_06.USO</rom>
+			<rom type="file" offset="0x1E">DX/DX_SE_01.USO</rom>
+			<rom type="file" offset="0x1F">DX/DX_SE_02.USO</rom>
+			<rom type="file" offset="0x20">DX/DX_SE_03.USO</rom>
+			<rom type="file" offset="0x21">DX/DX_SE_04.USO</rom>
+			<rom type="file" offset="0x22">DX/DX_SE_05.USO</rom>
+			<rom type="file" offset="0x23">DX/DX_SE_06.USO</rom>
+			<rom type="file" offset="0x24">DX/DX_SE_07.USO</rom>
+			<rom type="file" offset="0x25">DX/DX_SE_08.USO</rom>
+			<rom type="file" offset="0x26">DX/DX_SE_09.USO</rom>
+			<rom type="file" offset="0x27">DX/DX_SE_10.USO</rom>
+			<rom type="file" offset="0x28">VM/VM_SE_01.USO</rom>
+			<rom type="file" offset="0x29">VM/VM_SE_02.USO</rom>
+			<rom type="file" offset="0x2A">VM/VM_SE_03.USO</rom>
+			<rom type="file" offset="0x2B">VM/VM_SE_04.USO</rom>
+			<rom type="file" offset="0x2C">VM/VM_SE_05.USO</rom>
+			<rom type="file" offset="0x2D">VM/VM_SE_06.USO</rom>
+			<rom type="file" offset="0x2E">VM/VM_SE_07.USO</rom>
+			<rom type="file" offset="0x2F">VM/VM_SE_08.USO</rom>
+			<rom type="file" offset="0x30">VM/VM_SE_09.USO</rom>
+			<rom type="file" offset="0x31">VM/VM_SE_10.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+<!-- SSGバランスDX用
+			<title code="0x12">DX/N_01.USO</title>
+			<title code="0x13">DX/N_02.USO</title>
+			<title code="0x14">DX/N_03.USO</title>
+			<title code="0x15">DX/N_04.USO</title>
+			<title code="0x16">DX/N_05.USO</title>
+			<title code="0x17">DX/N_06.USO</title>
+			<title code="0x1E">DX/DX_SE_01.USO</title>
+			<title code="0x1F">DX/DX_SE_02.USO</title>
+			<title code="0x20">DX/DX_SE_03.USO</title>
+			<title code="0x21">DX/DX_SE_04.USO</title>
+			<title code="0x22">DX/DX_SE_05.USO</title>
+			<title code="0x23">DX/DX_SE_06.USO</title>
+			<title code="0x24">DX/DX_SE_07.USO</title>
+			<title code="0x25">DX/DX_SE_08.USO</title>
+			<title code="0x26">DX/DX_SE_09.USO</title>
+			<title code="0x27">DX/DX_SE_10.USO</title>
+-->
+			<title code="0x18">VM/N_01.USO</title>
+			<title code="0x19">VM/N_02.USO</title>
+			<title code="0x1a">VM/N_03.USO</title>
+			<title code="0x1b">VM/N_04.USO</title>
+			<title code="0x1c">VM/N_05.USO</title>
+			<title code="0x1d">VM/N_06.USO</title>
+			<title code="0x28">VM/VM_SE_01.USO</title>
+			<title code="0x29">VM/VM_SE_02.USO</title>
+			<title code="0x2A">VM/VM_SE_03.USO</title>
+			<title code="0x2B">VM/VM_SE_04.USO</title>
+			<title code="0x2C">VM/VM_SE_05.USO</title>
+			<title code="0x2D">VM/VM_SE_06.USO</title>
+			<title code="0x2E">VM/VM_SE_07.USO</title>
+			<title code="0x2F">VM/VM_SE_08.USO</title>
+			<title code="0x30">VM/VM_SE_09.USO</title>
+			<title code="0x31">VM/VM_SE_10.USO</title>
+			<title code="0x10">EX_20.USO</title>
+			<title code="0x11">ST_02.USO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 秘密指令1919</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="himi1919_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">19191.OV1</rom>
+			<rom type="conin" offset="0x05">19191.OV1</rom>
+			<rom type="file" offset="0x10">MUS01D.USO</rom>
+			<rom type="file" offset="0x11">MUS01V.USO</rom>
+			<rom type="file" offset="0x12">MUS02D.USO</rom>
+			<rom type="file" offset="0x13">MUS02V.USO</rom>
+			<rom type="file" offset="0x14">MUS03D.USO</rom>
+			<rom type="file" offset="0x15">MUS03V.USO</rom>
+			<rom type="file" offset="0x16">MUS04D.USO</rom>
+			<rom type="file" offset="0x17">MUS04V.USO</rom>
+			<rom type="file" offset="0x18">MUS05D.USO</rom>
+			<rom type="file" offset="0x19">MUS05V.USO</rom>
+			<rom type="file" offset="0x1a">MUS06D.USO</rom>
+			<rom type="file" offset="0x1b">MUS06V.USO</rom>
+			<rom type="file" offset="0x1c">MUS07D.USO</rom>
+			<rom type="file" offset="0x1d">MUS07V.USO</rom>
+			<rom type="file" offset="0x1e">MUS08D.USO</rom>
+			<rom type="file" offset="0x1f">MUS08V.USO</rom>
+			<rom type="file" offset="0x20">MUS09D.USO</rom>
+			<rom type="file" offset="0x21">MUS09V.USO</rom>
+			<rom type="file" offset="0x22">MUS10D.USO</rom>
+			<rom type="file" offset="0x23">MUS10V.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+<!-- SSGバランスDX用
+			<title code="0x10">MUS01D.USO</title>
+			<title code="0x12">MUS02D.USO</title>
+			<title code="0x14">MUS03D.USO</title>
+			<title code="0x16">MUS04D.USO</title>
+			<title code="0x18">MUS05D.USO</title>
+			<title code="0x1a">MUS06D.USO</title>
+			<title code="0x1c">MUS07D.USO</title>
+			<title code="0x1e">MUS08D.USO</title>
+			<title code="0x20">MUS09D.USO</title>
+			<title code="0x22">MUS10D.USO</title>
+-->
+			<title code="0x11">MUS01V.USO</title>
+			<title code="0x13">MUS02V.USO</title>
+			<title code="0x15">MUS03V.USO</title>
+			<title code="0x17">MUS04V.USO</title>
+			<title code="0x19">MUS05V.USO</title>
+			<title code="0x1b">MUS06V.USO</title>
+			<title code="0x1d">MUS07V.USO</title>
+			<title code="0x1f">MUS08V.USO</title>
+			<title code="0x21">MUS09V.USO</title>
+			<title code="0x23">MUS10V.USO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 美穂 ～桃色病棟・面会謝絶!～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">RED-ZONE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="miho_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">MIHO.OV1</rom>
+			<rom type="conin" offset="0x05">MIHO.OV1</rom>
+			<rom type="file" offset="0x10">DX/MIHO_01.USO</rom>
+			<rom type="file" offset="0x11">DX/MIHO_02.USO</rom>
+			<rom type="file" offset="0x12">DX/MIHO_03.USO</rom>
+			<rom type="file" offset="0x13">DX/MIHO_04.USO</rom>
+			<rom type="file" offset="0x14">DX/MIHO_05.USO</rom>
+			<rom type="file" offset="0x15">DX/MIHO_06.USO</rom>
+			<rom type="file" offset="0x16">DX/MIHO_07.USO</rom>
+			<rom type="file" offset="0x17">DX/MIHO_08.USO</rom>
+			<rom type="file" offset="0x18">DX/MIHO_09.USO</rom>
+			<rom type="file" offset="0x19">DX/MIHO_10.USO</rom>
+			<rom type="file" offset="0x1a">VM/MIHO_01.USO</rom>
+			<rom type="file" offset="0x1b">VM/MIHO_02.USO</rom>
+			<rom type="file" offset="0x1c">VM/MIHO_03.USO</rom>
+			<rom type="file" offset="0x1d">VM/MIHO_04.USO</rom>
+			<rom type="file" offset="0x1e">VM/MIHO_05.USO</rom>
+			<rom type="file" offset="0x1f">VM/MIHO_06.USO</rom>
+			<rom type="file" offset="0x20">VM/MIHO_07.USO</rom>
+			<rom type="file" offset="0x21">VM/MIHO_08.USO</rom>
+			<rom type="file" offset="0x22">VM/MIHO_09.USO</rom>
+			<rom type="file" offset="0x23">VM/MIHO_10.USO</rom>
+			<rom type="file" offset="0x24">DX/MI_SE_01.USO</rom>
+			<rom type="file" offset="0x25">DX/MI_SE_02.USO</rom>
+			<rom type="file" offset="0x26">DX/MI_SE_03.USO</rom>
+			<rom type="file" offset="0x27">DX/MI_SE_04.USO</rom>
+			<rom type="file" offset="0x28">DX/MI_SE_05.USO</rom>
+			<rom type="file" offset="0x29">VM/MI_SE_01.USO</rom>
+			<rom type="file" offset="0x2A">VM/MI_SE_02.USO</rom>
+			<rom type="file" offset="0x2B">VM/MI_SE_03.USO</rom>
+			<rom type="file" offset="0x2C">VM/MI_SE_04.USO</rom>
+			<rom type="file" offset="0x2D">VM/MI_SE_05.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+<!-- SSGバランスDX用
+			<title code="0x10">DX/MIHO_01.USO</title>
+			<title code="0x11">DX/MIHO_02.USO</title>
+			<title code="0x12">DX/MIHO_03.USO</title>
+			<title code="0x13">DX/MIHO_04.USO</title>
+			<title code="0x14">DX/MIHO_05.USO</title>
+			<title code="0x15">DX/MIHO_06.USO</title>
+			<title code="0x16">DX/MIHO_07.USO</title>
+			<title code="0x17">DX/MIHO_08.USO</title>
+			<title code="0x18">DX/MIHO_09.USO</title>
+			<title code="0x19">DX/MIHO_10.USO</title>
+			<title code="0x24">DX/MI_SE_01.USO</title>
+			<title code="0x25">DX/MI_SE_02.USO</title>
+			<title code="0x26">DX/MI_SE_03.USO</title>
+			<title code="0x27">DX/MI_SE_04.USO</title>
+			<title code="0x28">DX/MI_SE_05.USO</title>
+-->
+			<title code="0x1a">VM/MIHO_01.USO  : MAMBO HYPER GIRL</title>
+			<title code="0x1b">VM/MIHO_02.USO  : DAYTIME BOSSA</title>
+			<title code="0x1c">VM/MIHO_03.USO  : BETWEEN THE SHEETS</title>
+			<title code="0x1d">VM/MIHO_04.USO  : SADNESS</title>
+			<title code="0x1e">VM/MIHO_05.USO  : TELL ME WHY</title>
+			<title code="0x1f">VM/MIHO_06.USO  : BLOW YOUR HEAD</title>
+			<title code="0x20">VM/MIHO_07.USO  : NIGHT WALKER</title>
+			<title code="0x21">VM/MIHO_08.USO  : HAPPY END</title>
+			<title code="0x22">VM/MIHO_09.USO  : VIBLATION</title>
+			<title code="0x23">VM/MIHO_10.USO  : HEAVY VIBE</title>
+			<title code="0x29">VM/MI_SE_01.USO : SE</title>
+			<title code="0x2A">VM/MI_SE_02.USO : SE</title>
+			<title code="0x2B">VM/MI_SE_03.USO : SE</title>
+			<title code="0x2C">VM/MI_SE_04.USO : SE</title>
+			<title code="0x2D">VM/MI_SE_05.USO : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 亜紀子 プレミアム・バージョン</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">RED-ZONE</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="akiko68snd">
+			<rom type="code" offset="0x000000">akiko68snd.bin</rom>
+			<rom type="x"    offset="0x010000">TANK.X</rom>
+			<rom type="code" offset="0x04f000">AKIKO.SND</rom>
+			<rom type="code" offset="0x050000">AKIKO.PCD</rom>
+			<rom type="code" offset="0x090000">AKI_01.USO</rom>
+			<rom type="code" offset="0x095000">AKI_02.USO</rom>
+			<rom type="code" offset="0x09a000">AKI_03.USO</rom>
+			<rom type="code" offset="0x09f000">AKI_04.USO</rom>
+			<rom type="code" offset="0x0a4000">AKI_05.USO</rom>
+			<rom type="code" offset="0x0a9000">AKI_06.USO</rom>
+			<rom type="code" offset="0x0ae000">AKI_08.USO</rom>
+			<rom type="code" offset="0x0b3000">END_0.USO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">AKI_01.USO : 学園にて………</title>
+			<title code="0x02">AKI_02.USO : AKIKO</title>
+			<title code="0x03">AKI_03.USO : 凌辱</title>
+			<title code="0x04">AKI_04.USO : めまい</title>
+			<title code="0x05">AKI_05.USO : 欲望</title>
+			<title code="0x06">AKI_06.USO : せつないひととき</title>
+			<title code="0x07">AKI_08.USO : 教育指導室にて</title>
+			<title code="0x08">END_0.USO  : 決着</title>
+		</titlelist>
+	</game>
+</gamelist>

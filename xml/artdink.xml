@@ -1,0 +1,2346 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!--//ARTDINK -->
+	<game>
+		<name>[PC-98] Lunatic Dawn (ルナティックドーン) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="luna_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">LUNA.EXE</rom>
+			<rom type="conin" offset="5">LUNA.EXE</rom>
+			<rom type="file" offset="0x10">NTL.PAC</rom>
+			<rom type="file" offset="0x11">ENDM.PAC</rom>
+			<rom type="file" offset="0x12">RB_SE00.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">NTL.PAC #00</title>
+			<title code="0x1001">NTL.PAC #01</title>
+			<title code="0x1002">NTL.PAC #02</title>
+			<title code="0x1003">NTL.PAC #03</title>
+			<title code="0x1004">NTL.PAC #04</title>
+			<title code="0x1005">NTL.PAC #05</title>
+			<title code="0x1100">ENDM.PAC #00</title>
+			<title code="0x1101">ENDM.PAC #01</title>
+			<title code="0x0012">RB_SE00.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lunatic Dawn (ルナティックドーン) (MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="luna_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">LUNA.EXE</rom>
+			<rom type="conin" offset="5">LUNA.EXE</rom>
+			<rom type="file" offset="0x10">NTL.PAC</rom>
+			<rom type="file" offset="0x11">ENDM.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1006">NTL.PAC #06</title>
+			<title code="0x1007">NTL.PAC #07 : 暗黒</title>
+			<title code="0x1008">NTL.PAC #08 : Field of Lunatic</title>
+			<title code="0x1009">NTL.PAC #09 : 後ろからライトニング</title>
+			<title code="0x100a">NTL.PAC #10 : 旅立ちは月夜の晩に</title>
+			<title code="0x100b">NTL.PAC #11</title>
+			<title code="0x1102">ENDM.PAC #02</title>
+			<title code="0x1103">ENDM.PAC #03</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lunatic Dawn (ルナティックドーン) (MT-32 EMU)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="luna_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">LUNA.EXE</rom>
+			<rom type="conin" offset="5">LUNA.EXE</rom>
+			<rom type="file" offset="0x10">NTL.PAC</rom>
+			<rom type="file" offset="0x11">ENDM.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1006">NTL.PAC #06</title>
+			<title code="0x1007">NTL.PAC #07 : 暗黒</title>
+			<title code="0x1008">NTL.PAC #08 : Field of Lunatic</title>
+			<title code="0x1009">NTL.PAC #09 : 後ろからライトニング</title>
+			<title code="0x100a">NTL.PAC #10 : 旅立ちは月夜の晩に</title>
+			<title code="0x100b">NTL.PAC #11</title>
+			<title code="0x1102">ENDM.PAC #02</title>
+			<title code="0x1103">ENDM.PAC #03</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lunatic Dawn (ルナティックドーン) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="luna_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">LUNA.EXE</rom>
+			<rom type="conin" offset="5">LUNA.EXE</rom>
+			<rom type="file" offset="0x10">NTL.PAC</rom>
+			<rom type="file" offset="0x11">ENDM.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x100c">NTL.PAC #12</title>
+			<title code="0x100d">NTL.PAC #13 : 暗黒</title>
+			<title code="0x100e">NTL.PAC #14 : Field of Lunatic</title>
+			<title code="0x100f">NTL.PAC #15 : 後ろからライトニング</title>
+			<title code="0x1010">NTL.PAC #16 : 旅立ちは月夜の晩に</title>
+			<title code="0x1011">NTL.PAC #17</title>
+			<title code="0x1104">ENDM.PAC #04</title>
+			<title code="0x1105">ENDM.PAC #05</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lunatic Dawn (ルナティックドーン) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="luna_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">LUNA.EXE</rom>
+			<rom type="conin" offset="5">LUNA.EXE</rom>
+			<rom type="file" offset="0x10">NTL.PAC</rom>
+			<rom type="file" offset="0x11">ENDM.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x100c">NTL.PAC #12</title>
+			<title code="0x100d">NTL.PAC #13 : 暗黒</title>
+			<title code="0x100e">NTL.PAC #14 : Field of Lunatic</title>
+			<title code="0x100f">NTL.PAC #15 : 後ろからライトニング</title>
+			<title code="0x1010">NTL.PAC #16 : 旅立ちは月夜の晩に</title>
+			<title code="0x1011">NTL.PAC #17</title>
+			<title code="0x1104">ENDM.PAC #04</title>
+			<title code="0x1105">ENDM.PAC #05</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lunatic Dawn 2 (ルナティックドーン２) (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="luna2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">LUNA2.EXE</rom>
+			<rom type="conin" offset="5">LUNA2.EXE</rom>
+			<rom type="file" offset="0x10">H_MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">H_MUSIC.PAC #00</title>
+			<title code="0x1001">H_MUSIC.PAC #01</title>
+			<title code="0x1002">H_MUSIC.PAC #02</title>
+			<title code="0x1003">H_MUSIC.PAC #03</title>
+			<title code="0x1004">H_MUSIC.PAC #04</title>
+			<title code="0x1005">H_MUSIC.PAC #05</title>
+			<title code="0x1006">H_MUSIC.PAC #06</title>
+			<title code="0x1007">H_MUSIC.PAC #07</title>
+			<title code="0x1008">H_MUSIC.PAC #08</title>
+			<title code="0x1009">H_MUSIC.PAC #09</title>
+			<title code="0x100a">H_MUSIC.PAC #0A</title>
+			<title code="0x100b">H_MUSIC.PAC #0B</title>
+			<title code="0x100c">H_MUSIC.PAC #0C</title>
+			<title code="0x100d">H_MUSIC.PAC #0D</title>
+			<title code="0x100e">H_MUSIC.PAC #0E</title>
+			<title code="0x100f">H_MUSIC.PAC #0F</title>
+			<title code="0x1010">H_MUSIC.PAC #10</title>
+			<title code="0x1011">H_MUSIC.PAC #11</title>
+			<title code="0x1012">H_MUSIC.PAC #12</title>
+			<title code="0x1013">H_MUSIC.PAC #13</title>
+			<title code="0x1014">H_MUSIC.PAC #14</title>
+			<title code="0x1015">H_MUSIC.PAC #15</title>
+			<title code="0x1016">H_MUSIC.PAC #16</title>
+			<title code="0x1017">H_MUSIC.PAC #17</title>
+			<title code="0x1018">H_MUSIC.PAC #18</title>
+			<title code="0x1019">H_MUSIC.PAC #19</title>
+			<title code="0x101a">H_MUSIC.PAC #1A</title>
+			<title code="0x101b">H_MUSIC.PAC #1B</title>
+			<title code="0x101c">H_MUSIC.PAC #1C</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lunatic Dawn 2 (ルナティックドーン２) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="luna2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">LUNA2.EXE</rom>
+			<rom type="conin" offset="5">LUNA2.EXE</rom>
+			<rom type="file" offset="0x10">F_MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">F_MUSIC.PAC #00</title>
+			<title code="0x1001">F_MUSIC.PAC #01</title>
+			<title code="0x1002">F_MUSIC.PAC #02</title>
+			<title code="0x1003">F_MUSIC.PAC #03</title>
+			<title code="0x1004">F_MUSIC.PAC #04</title>
+			<title code="0x1005">F_MUSIC.PAC #05</title>
+			<title code="0x1006">F_MUSIC.PAC #06</title>
+			<title code="0x1007">F_MUSIC.PAC #07</title>
+			<title code="0x1008">F_MUSIC.PAC #08</title>
+			<title code="0x1009">F_MUSIC.PAC #09</title>
+			<title code="0x100a">F_MUSIC.PAC #0A</title>
+			<title code="0x100b">F_MUSIC.PAC #0B</title>
+			<title code="0x100c">F_MUSIC.PAC #0C</title>
+			<title code="0x100d">F_MUSIC.PAC #0D</title>
+			<title code="0x100e">F_MUSIC.PAC #0E</title>
+			<title code="0x100f">F_MUSIC.PAC #0F</title>
+			<title code="0x1010">F_MUSIC.PAC #10</title>
+			<title code="0x1011">F_MUSIC.PAC #11</title>
+			<title code="0x1012">F_MUSIC.PAC #12</title>
+			<title code="0x1013">F_MUSIC.PAC #13</title>
+			<title code="0x1014">F_MUSIC.PAC #14</title>
+			<title code="0x1015">F_MUSIC.PAC #15</title>
+			<title code="0x1016">F_MUSIC.PAC #16</title>
+			<title code="0x1017">F_MUSIC.PAC #17</title>
+			<title code="0x1018">F_MUSIC.PAC #18</title>
+			<title code="0x1019">F_MUSIC.PAC #19</title>
+			<title code="0x101a">F_MUSIC.PAC #1A</title>
+			<title code="0x101b">F_MUSIC.PAC #1B</title>
+			<title code="0x101c">F_MUSIC.PAC #1C</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lunatic Dawn 2 (ルナティックドーン２) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="luna2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">LUNA2.EXE</rom>
+			<rom type="conin" offset="5">LUNA2.EXE</rom>
+			<rom type="file" offset="0x10">G_MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">G_MUSIC.PAC #00</title>
+			<title code="0x1001">G_MUSIC.PAC #01</title>
+			<title code="0x1002">G_MUSIC.PAC #02</title>
+			<title code="0x1003">G_MUSIC.PAC #03</title>
+			<title code="0x1004">G_MUSIC.PAC #04</title>
+			<title code="0x1005">G_MUSIC.PAC #05</title>
+			<title code="0x1006">G_MUSIC.PAC #06</title>
+			<title code="0x1007">G_MUSIC.PAC #07</title>
+			<title code="0x1008">G_MUSIC.PAC #08</title>
+			<title code="0x1009">G_MUSIC.PAC #09</title>
+			<title code="0x100a">G_MUSIC.PAC #0A</title>
+			<title code="0x100b">G_MUSIC.PAC #0B</title>
+			<title code="0x100c">G_MUSIC.PAC #0C</title>
+			<title code="0x100d">G_MUSIC.PAC #0D</title>
+			<title code="0x100e">G_MUSIC.PAC #0E</title>
+			<title code="0x100f">G_MUSIC.PAC #0F</title>
+			<title code="0x1010">G_MUSIC.PAC #10</title>
+			<title code="0x1011">G_MUSIC.PAC #11</title>
+			<title code="0x1012">G_MUSIC.PAC #12</title>
+			<title code="0x1013">G_MUSIC.PAC #13</title>
+			<title code="0x1014">G_MUSIC.PAC #14</title>
+			<title code="0x1015">G_MUSIC.PAC #15</title>
+			<title code="0x1016">G_MUSIC.PAC #16</title>
+			<title code="0x1017">G_MUSIC.PAC #17</title>
+			<title code="0x1018">G_MUSIC.PAC #18</title>
+			<title code="0x1019">G_MUSIC.PAC #19</title>
+			<title code="0x101a">G_MUSIC.PAC #1A</title>
+			<title code="0x101b">G_MUSIC.PAC #1B</title>
+			<title code="0x101c">G_MUSIC.PAC #1C</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lunatic Dawn 2 (ルナティックドーン２) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="luna2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">LUNA2.EXE</rom>
+			<rom type="conin" offset="5">LUNA2.EXE</rom>
+			<rom type="file" offset="0x10">G_MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">G_MUSIC.PAC #00</title>
+			<title code="0x1001">G_MUSIC.PAC #01</title>
+			<title code="0x1002">G_MUSIC.PAC #02</title>
+			<title code="0x1003">G_MUSIC.PAC #03</title>
+			<title code="0x1004">G_MUSIC.PAC #04</title>
+			<title code="0x1005">G_MUSIC.PAC #05</title>
+			<title code="0x1006">G_MUSIC.PAC #06</title>
+			<title code="0x1007">G_MUSIC.PAC #07</title>
+			<title code="0x1008">G_MUSIC.PAC #08</title>
+			<title code="0x1009">G_MUSIC.PAC #09</title>
+			<title code="0x100a">G_MUSIC.PAC #0A</title>
+			<title code="0x100b">G_MUSIC.PAC #0B</title>
+			<title code="0x100c">G_MUSIC.PAC #0C</title>
+			<title code="0x100d">G_MUSIC.PAC #0D</title>
+			<title code="0x100e">G_MUSIC.PAC #0E</title>
+			<title code="0x100f">G_MUSIC.PAC #0F</title>
+			<title code="0x1010">G_MUSIC.PAC #10</title>
+			<title code="0x1011">G_MUSIC.PAC #11</title>
+			<title code="0x1012">G_MUSIC.PAC #12</title>
+			<title code="0x1013">G_MUSIC.PAC #13</title>
+			<title code="0x1014">G_MUSIC.PAC #14</title>
+			<title code="0x1015">G_MUSIC.PAC #15</title>
+			<title code="0x1016">G_MUSIC.PAC #16</title>
+			<title code="0x1017">G_MUSIC.PAC #17</title>
+			<title code="0x1018">G_MUSIC.PAC #18</title>
+			<title code="0x1019">G_MUSIC.PAC #19</title>
+			<title code="0x101a">G_MUSIC.PAC #1A</title>
+			<title code="0x101b">G_MUSIC.PAC #1B</title>
+			<title code="0x101c">G_MUSIC.PAC #1C</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] A Ressha de Ikou: A-Train 4 (A列車で行こうIV) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="a4_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">A4.EXE</rom>
+			<rom type="conin" offset="5">A4.EXE</rom>
+			<rom type="file" offset="0x10">F_OP_RIN.NTL</rom>
+			<rom type="file" offset="0x11">F_OP_SNW.NTL</rom>
+			<rom type="file" offset="0x12">MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0010">F_OP_SNW.NTL</title>
+			<title code="0x0011">F_OP_RIN.NTL</title>
+			<title code="0x1200">MUSIC.PAC #00</title>
+			<title code="0x1201">MUSIC.PAC #01</title>
+			<title code="0x1202">MUSIC.PAC #02</title>
+			<title code="0x1203">MUSIC.PAC #03</title>
+			<title code="0x1204">MUSIC.PAC #04</title>
+			<title code="0x1205">MUSIC.PAC #05</title>
+			<title code="0x1206">MUSIC.PAC #06</title>
+			<title code="0x1207">MUSIC.PAC #07</title>
+			<title code="0x1208">MUSIC.PAC #08</title>
+			<title code="0x1209">MUSIC.PAC #09</title>
+			<title code="0x120a">MUSIC.PAC #0A</title>
+			<title code="0x120b">MUSIC.PAC #0B</title>
+			<title code="0x120c">MUSIC.PAC #0C</title>
+			<title code="0x120d">MUSIC.PAC #0D</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] A Ressha de Ikou: A-Train 4 (A列車で行こうIV) (MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="a4_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">A4.EXE</rom>
+			<rom type="conin" offset="5">A4.EXE</rom>
+			<rom type="file" offset="0x10">L_OP_RIN.NTL</rom>
+			<rom type="file" offset="0x11">L_OP_SNW.NTL</rom>
+			<rom type="file" offset="0x12">MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0010">L_OP_SNW.NTL</title>
+			<title code="0x0011">L_OP_RIN.NTL</title>
+			<title code="0x120e">MUSIC.PAC #0E : 練習テーマ</title>
+			<title code="0x120f">MUSIC.PAC #0F : ジオフロント</title>
+			<title code="0x1210">MUSIC.PAC #10 : 渓谷</title>
+			<title code="0x1211">MUSIC.PAC #11 : ハイテク都市</title>
+			<title code="0x1212">MUSIC.PAC #12 : 霧雨テーマ</title>
+			<title code="0x1213">MUSIC.PAC #13 : 間奏曲</title>
+			<title code="0x1214">MUSIC.PAC #14 : 情報のテーマ</title>
+			<title code="0x1215">MUSIC.PAC #15</title>
+			<title code="0x1216">MUSIC.PAC #16</title>
+			<title code="0x1217">MUSIC.PAC #17</title>
+			<title code="0x1218">MUSIC.PAC #18</title>
+			<title code="0x1219">MUSIC.PAC #19</title>
+			<title code="0x121a">MUSIC.PAC #1A</title>
+			<title code="0x121b">MUSIC.PAC #1B</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] A Ressha de Ikou: A-Train 4 (A列車で行こうIV) (MT-32 EMU)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="a4_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">A4.EXE</rom>
+			<rom type="conin" offset="5">A4.EXE</rom>
+			<rom type="file" offset="0x10">L_OP_RIN.NTL</rom>
+			<rom type="file" offset="0x11">L_OP_SNW.NTL</rom>
+			<rom type="file" offset="0x12">MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0010">L_OP_SNW.NTL</title>
+			<title code="0x0011">L_OP_RIN.NTL</title>
+			<title code="0x120e">MUSIC.PAC #0E : 練習テーマ</title>
+			<title code="0x120f">MUSIC.PAC #0F : ジオフロント</title>
+			<title code="0x1210">MUSIC.PAC #10 : 渓谷</title>
+			<title code="0x1211">MUSIC.PAC #11 : ハイテク都市</title>
+			<title code="0x1212">MUSIC.PAC #12 : 霧雨テーマ</title>
+			<title code="0x1213">MUSIC.PAC #13 : 間奏曲</title>
+			<title code="0x1214">MUSIC.PAC #14 : 情報のテーマ</title>
+			<title code="0x1215">MUSIC.PAC #15</title>
+			<title code="0x1216">MUSIC.PAC #16</title>
+			<title code="0x1217">MUSIC.PAC #17</title>
+			<title code="0x1218">MUSIC.PAC #18</title>
+			<title code="0x1219">MUSIC.PAC #19</title>
+			<title code="0x121a">MUSIC.PAC #1A</title>
+			<title code="0x121b">MUSIC.PAC #1B</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] A Ressha de Ikou: A-Train 4 (A列車で行こうIV) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="a4_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">A4.EXE</rom>
+			<rom type="conin" offset="5">A4.EXE</rom>
+			<rom type="file" offset="0x10">G_OP_RIN.NTL</rom>
+			<rom type="file" offset="0x11">G_OP_SNW.NTL</rom>
+			<rom type="file" offset="0x12">MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0010">G_OP_SNW.NTL</title>
+			<title code="0x0011">G_OP_RIN.NTL</title>
+			<title code="0x121c">MUSIC.PAC #1C : 練習テーマ</title>
+			<title code="0x121d">MUSIC.PAC #1D : ジオフロント</title>
+			<title code="0x121e">MUSIC.PAC #1E : 渓谷</title>
+			<title code="0x121f">MUSIC.PAC #1F : ハイテク都市</title>
+			<title code="0x1220">MUSIC.PAC #20 : 霧雨テーマ</title>
+			<title code="0x1221">MUSIC.PAC #21 : 間奏曲</title>
+			<title code="0x1222">MUSIC.PAC #22 : 情報のテーマ</title>
+			<title code="0x1223">MUSIC.PAC #23</title>
+			<title code="0x1224">MUSIC.PAC #24</title>
+			<title code="0x1225">MUSIC.PAC #25</title>
+			<title code="0x1226">MUSIC.PAC #26</title>
+			<title code="0x1227">MUSIC.PAC #27</title>
+			<title code="0x1228">MUSIC.PAC #28</title>
+			<title code="0x1229">MUSIC.PAC #29</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] A Ressha de Ikou: A-Train 4 (A列車で行こうIV) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="a4_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">A4.EXE</rom>
+			<rom type="conin" offset="5">A4.EXE</rom>
+			<rom type="file" offset="0x10">G_OP_RIN.NTL</rom>
+			<rom type="file" offset="0x11">G_OP_SNW.NTL</rom>
+			<rom type="file" offset="0x12">MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0010">G_OP_SNW.NTL</title>
+			<title code="0x0011">G_OP_RIN.NTL</title>
+			<title code="0x121c">MUSIC.PAC #1C : 練習テーマ</title>
+			<title code="0x121d">MUSIC.PAC #1D : ジオフロント</title>
+			<title code="0x121e">MUSIC.PAC #1E : 渓谷</title>
+			<title code="0x121f">MUSIC.PAC #1F : ハイテク都市</title>
+			<title code="0x1220">MUSIC.PAC #20 : 霧雨テーマ</title>
+			<title code="0x1221">MUSIC.PAC #21 : 間奏曲</title>
+			<title code="0x1222">MUSIC.PAC #22 : 情報のテーマ</title>
+			<title code="0x1223">MUSIC.PAC #23</title>
+			<title code="0x1224">MUSIC.PAC #24</title>
+			<title code="0x1225">MUSIC.PAC #25</title>
+			<title code="0x1226">MUSIC.PAC #26</title>
+			<title code="0x1227">MUSIC.PAC #27</title>
+			<title code="0x1228">MUSIC.PAC #28</title>
+			<title code="0x1229">MUSIC.PAC #29</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] How Many Robot 2 (HR2 ハウ・メニ・ロボット2) (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="hr2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HR2.EXE</rom>
+			<rom type="conin" offset="5">HR2.EXE</rom>
+			<rom type="file" offset="0x10">F6.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">F6.PAC #00</title>
+			<title code="0x1001">F6.PAC #01</title>
+			<title code="0x1002">F6.PAC #02</title>
+			<title code="0x1003">F6.PAC #03</title>
+			<title code="0x1004">F6.PAC #04</title>
+			<title code="0x1005">F6.PAC #05</title>
+			<title code="0x1006">F6.PAC #06</title>
+			<title code="0x1007">F6.PAC #07</title>
+			<title code="0x1008">F6.PAC #08</title>
+			<title code="0x1009">F6.PAC #09</title>
+			<title code="0x100a">F6.PAC #0A</title>
+			<title code="0x100b">F6.PAC #0B</title>
+			<title code="0x100c">F6.PAC #0C</title>
+			<title code="0x100d">F6.PAC #0D</title>
+			<title code="0x100e">F6.PAC #0E</title>
+			<title code="0x100f">F6.PAC #0F</title>
+			<title code="0x1010">F6.PAC #10</title>
+			<title code="0x1011">F6.PAC #11</title>
+			<title code="0x1012">F6.PAC #12</title>
+			<title code="0x1013">F6.PAC #13</title>
+			<title code="0x1014">F6.PAC #14</title>
+			<title code="0x1015">F6.PAC #15</title>
+			<title code="0x1016">F6.PAC #16</title>
+			<title code="0x1017">F6.PAC #17</title>
+			<title code="0x1018">F6.PAC #18</title>
+			<title code="0x1019">F6.PAC #19</title>
+			<title code="0x101a">F6.PAC #1A</title>
+			<title code="0x101b">F6.PAC #1B</title>
+			<title code="0x101c">F6.PAC #1C</title>
+			<title code="0x101d">F6.PAC #1D</title>
+			<title code="0x101e">F6.PAC #1E</title>
+			<title code="0x101f">F6.PAC #1F</title>
+			<title code="0x1020">F6.PAC #20</title>
+			<title code="0x1021">F6.PAC #21</title>
+			<title code="0x1022">F6.PAC #22</title>
+			<title code="0x1023">F6.PAC #23</title>
+			<title code="0x1024">F6.PAC #24</title>
+			<title code="0x1025">F6.PAC #25</title>
+			<title code="0x1026">F6.PAC #26</title>
+			<title code="0x1027">F6.PAC #27</title>
+			<title code="0x1028">F6.PAC #28</title>
+			<title code="0x1029">F6.PAC #29</title>
+			<title code="0x102a">F6.PAC #2A</title>
+			<title code="0x102b">F6.PAC #2B</title>
+			<title code="0x102c">F6.PAC #2C</title>
+			<title code="0x102d">F6.PAC #2D</title>
+			<title code="0x102e">F6.PAC #2E</title>
+			<title code="0x102f">F6.PAC #2F</title>
+			<title code="0x1030">F6.PAC #30</title>
+			<title code="0x1031">F6.PAC #31</title>
+			<title code="0x1032">F6.PAC #32</title>
+			<title code="0x1033">F6.PAC #33</title>
+			<title code="0x1034">F6.PAC #34</title>
+<!--//                            
+			<title code="0x1035">F6.PAC : 35 : </title>
+			<title code="0x1036">F6.PAC : 36 : </title>
+			<title code="0x1037">F6.PAC : 37 : </title>
+			<title code="0x1038">F6.PAC : 38 : </title>
+			<title code="0x1039">F6.PAC : 39 : </title>
+			<title code="0x103a">F6.PAC : 3A : </title>
+			<title code="0x103b">F6.PAC : 3B : </title>
+			<title code="0x103c">F6.PAC : 3C : </title>
+			<title code="0x103d">F6.PAC : 3D : </title>
+-->
+			<title code="0x103e">F6.PAC #3E</title>
+			<title code="0x103f">F6.PAC #3F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] How Many Robot 2 (HR2 ハウ・メニ・ロボット2) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="hr2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HR2.EXE</rom>
+			<rom type="conin" offset="5">HR2.EXE</rom>
+			<rom type="file" offset="0x10">F3.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">F3.PAC #00</title>
+			<title code="0x1001">F3.PAC #01</title>
+			<title code="0x1002">F3.PAC #02</title>
+			<title code="0x1003">F3.PAC #03</title>
+			<title code="0x1004">F3.PAC #04</title>
+			<title code="0x1005">F3.PAC #05</title>
+			<title code="0x1006">F3.PAC #06</title>
+			<title code="0x1007">F3.PAC #07</title>
+			<title code="0x1008">F3.PAC #08</title>
+			<title code="0x1009">F3.PAC #09</title>
+			<title code="0x100a">F3.PAC #0A</title>
+			<title code="0x100b">F3.PAC #0B</title>
+			<title code="0x100c">F3.PAC #0C</title>
+			<title code="0x100d">F3.PAC #0D</title>
+			<title code="0x100e">F3.PAC #0E</title>
+			<title code="0x100f">F3.PAC #0F</title>
+			<title code="0x1010">F3.PAC #10</title>
+			<title code="0x1011">F3.PAC #11</title>
+			<title code="0x1012">F3.PAC #12</title>
+			<title code="0x1013">F3.PAC #13</title>
+			<title code="0x1014">F3.PAC #14</title>
+			<title code="0x1015">F3.PAC #15</title>
+			<title code="0x1016">F3.PAC #16</title>
+			<title code="0x1017">F3.PAC #17</title>
+			<title code="0x1018">F3.PAC #18</title>
+			<title code="0x1019">F3.PAC #19</title>
+			<title code="0x101a">F3.PAC #1A</title>
+			<title code="0x101b">F3.PAC #1B</title>
+			<title code="0x101c">F3.PAC #1C</title>
+			<title code="0x101d">F3.PAC #1D</title>
+			<title code="0x101e">F3.PAC #1E</title>
+			<title code="0x101f">F3.PAC #1F</title>
+			<title code="0x1020">F3.PAC #20</title>
+			<title code="0x1021">F3.PAC #21</title>
+			<title code="0x1022">F3.PAC #22</title>
+			<title code="0x1023">F3.PAC #23</title>
+			<title code="0x1024">F3.PAC #24</title>
+			<title code="0x1025">F3.PAC #25</title>
+			<title code="0x1026">F3.PAC #26</title>
+			<title code="0x1027">F3.PAC #27</title>
+			<title code="0x1028">F3.PAC #28</title>
+			<title code="0x1029">F3.PAC #29</title>
+			<title code="0x102a">F3.PAC #2A</title>
+			<title code="0x102b">F3.PAC #2B</title>
+			<title code="0x102c">F3.PAC #2C</title>
+			<title code="0x102d">F3.PAC #2D</title>
+			<title code="0x102e">F3.PAC #2E</title>
+			<title code="0x102f">F3.PAC #2F</title>
+			<title code="0x1030">F3.PAC #30</title>
+			<title code="0x1031">F3.PAC #31</title>
+			<title code="0x1032">F3.PAC #32</title>
+			<title code="0x1033">F3.PAC #33</title>
+			<title code="0x1034">F3.PAC #34</title>
+<!--//
+			<title code="0x1035">F3.PAC : 35 : </title>
+			<title code="0x1036">F3.PAC : 36 : </title>
+			<title code="0x1037">F3.PAC : 37 : </title>
+			<title code="0x1038">F3.PAC : 38 : </title>
+			<title code="0x1039">F3.PAC : 39 : </title>
+			<title code="0x103a">F3.PAC : 3A : </title>
+			<title code="0x103b">F3.PAC : 3B : </title>
+			<title code="0x103c">F3.PAC : 3C : </title>
+			<title code="0x103d">F3.PAC : 3D : </title>
+-->
+			<title code="0x103e">F3.PAC #3E</title>
+			<title code="0x103f">F3.PAC #3F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] How Many Robot 2 (HR2 ハウ・メニ・ロボット2) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="hr2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HR2.EXE</rom>
+			<rom type="conin" offset="5">HR2.EXE</rom>
+			<rom type="file" offset="0x10" >GM.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">GM.PAC #00</title>
+			<title code="0x1001">GM.PAC #01</title>
+			<title code="0x1002">GM.PAC #02</title>
+			<title code="0x1003">GM.PAC #03</title>
+			<title code="0x1004">GM.PAC #04</title>
+			<title code="0x1005">GM.PAC #05</title>
+			<title code="0x1006">GM.PAC #06</title>
+			<title code="0x1007">GM.PAC #07</title>
+			<title code="0x1008">GM.PAC #08</title>
+			<title code="0x1009">GM.PAC #09</title>
+			<title code="0x100a">GM.PAC #0A</title>
+			<title code="0x100b">GM.PAC #0B</title>
+			<title code="0x100c">GM.PAC #0C</title>
+			<title code="0x100d">GM.PAC #0D</title>
+			<title code="0x100e">GM.PAC #0E</title>
+			<title code="0x100f">GM.PAC #0F</title>
+			<title code="0x1010">GM.PAC #10</title>
+			<title code="0x1011">GM.PAC #11</title>
+			<title code="0x1012">GM.PAC #12</title>
+			<title code="0x1013">GM.PAC #13</title>
+			<title code="0x1014">GM.PAC #14</title>
+			<title code="0x1015">GM.PAC #15</title>
+			<title code="0x1016">GM.PAC #16</title>
+			<title code="0x1017">GM.PAC #17</title>
+			<title code="0x1018">GM.PAC #18</title>
+			<title code="0x1019">GM.PAC #19</title>
+			<title code="0x101a">GM.PAC #1A</title>
+			<title code="0x101b">GM.PAC #1B</title>
+			<title code="0x101c">GM.PAC #1C</title>
+			<title code="0x101d">GM.PAC #1D</title>
+			<title code="0x101e">GM.PAC #1E</title>
+			<title code="0x101f">GM.PAC #1F</title>
+			<title code="0x1020">GM.PAC #20</title>
+			<title code="0x1021">GM.PAC #21</title>
+			<title code="0x1022">GM.PAC #22</title>
+			<title code="0x1023">GM.PAC #23</title>
+			<title code="0x1024">GM.PAC #24</title>
+			<title code="0x1025">GM.PAC #25</title>
+			<title code="0x1026">GM.PAC #26</title>
+			<title code="0x1027">GM.PAC #27</title>
+			<title code="0x1028">GM.PAC #28</title>
+			<title code="0x1029">GM.PAC #29</title>
+			<title code="0x102a">GM.PAC #2A</title>
+			<title code="0x102b">GM.PAC #2B</title>
+			<title code="0x102c">GM.PAC #2C</title>
+			<title code="0x102d">GM.PAC #2D</title>
+			<title code="0x102e">GM.PAC #2E</title>
+			<title code="0x102f">GM.PAC #2F</title>
+			<title code="0x1030">GM.PAC #30</title>
+			<title code="0x1031">GM.PAC #31</title>
+			<title code="0x1032">GM.PAC #32</title>
+			<title code="0x1033">GM.PAC #33</title>
+			<title code="0x1034">GM.PAC #34</title>
+<!--//
+			<title code="0x1035">GM.PAC : 35 : </title>
+			<title code="0x1036">GM.PAC : 36 : </title>
+			<title code="0x1037">GM.PAC : 37 : </title>
+			<title code="0x1038">GM.PAC : 38 : </title>
+			<title code="0x1039">GM.PAC : 39 : </title>
+			<title code="0x103a">GM.PAC : 3A : </title>
+			<title code="0x103b">GM.PAC : 3B : </title>
+			<title code="0x103c">GM.PAC : 3C : </title>
+			<title code="0x103d">GM.PAC : 3D : </title>
+-->
+			<title code="0x103e">GM.PAC #3E</title>
+			<title code="0x103f">GM.PAC #3F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] How Many Robot 2 (HR2 ハウ・メニ・ロボット2) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="hr2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HR2.EXE</rom>
+			<rom type="conin" offset="5">HR2.EXE</rom>
+			<rom type="file" offset="0x10" >GM.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">GM.PAC #00</title>
+			<title code="0x1001">GM.PAC #01</title>
+			<title code="0x1002">GM.PAC #02</title>
+			<title code="0x1003">GM.PAC #03</title>
+			<title code="0x1004">GM.PAC #04</title>
+			<title code="0x1005">GM.PAC #05</title>
+			<title code="0x1006">GM.PAC #06</title>
+			<title code="0x1007">GM.PAC #07</title>
+			<title code="0x1008">GM.PAC #08</title>
+			<title code="0x1009">GM.PAC #09</title>
+			<title code="0x100a">GM.PAC #0A</title>
+			<title code="0x100b">GM.PAC #0B</title>
+			<title code="0x100c">GM.PAC #0C</title>
+			<title code="0x100d">GM.PAC #0D</title>
+			<title code="0x100e">GM.PAC #0E</title>
+			<title code="0x100f">GM.PAC #0F</title>
+			<title code="0x1010">GM.PAC #10</title>
+			<title code="0x1011">GM.PAC #11</title>
+			<title code="0x1012">GM.PAC #12</title>
+			<title code="0x1013">GM.PAC #13</title>
+			<title code="0x1014">GM.PAC #14</title>
+			<title code="0x1015">GM.PAC #15</title>
+			<title code="0x1016">GM.PAC #16</title>
+			<title code="0x1017">GM.PAC #17</title>
+			<title code="0x1018">GM.PAC #18</title>
+			<title code="0x1019">GM.PAC #19</title>
+			<title code="0x101a">GM.PAC #1A</title>
+			<title code="0x101b">GM.PAC #1B</title>
+			<title code="0x101c">GM.PAC #1C</title>
+			<title code="0x101d">GM.PAC #1D</title>
+			<title code="0x101e">GM.PAC #1E</title>
+			<title code="0x101f">GM.PAC #1F</title>
+			<title code="0x1020">GM.PAC #20</title>
+			<title code="0x1021">GM.PAC #21</title>
+			<title code="0x1022">GM.PAC #22</title>
+			<title code="0x1023">GM.PAC #23</title>
+			<title code="0x1024">GM.PAC #24</title>
+			<title code="0x1025">GM.PAC #25</title>
+			<title code="0x1026">GM.PAC #26</title>
+			<title code="0x1027">GM.PAC #27</title>
+			<title code="0x1028">GM.PAC #28</title>
+			<title code="0x1029">GM.PAC #29</title>
+			<title code="0x102a">GM.PAC #2A</title>
+			<title code="0x102b">GM.PAC #2B</title>
+			<title code="0x102c">GM.PAC #2C</title>
+			<title code="0x102d">GM.PAC #2D</title>
+			<title code="0x102e">GM.PAC #2E</title>
+			<title code="0x102f">GM.PAC #2F</title>
+			<title code="0x1030">GM.PAC #30</title>
+			<title code="0x1031">GM.PAC #31</title>
+			<title code="0x1032">GM.PAC #32</title>
+			<title code="0x1033">GM.PAC #33</title>
+			<title code="0x1034">GM.PAC #34</title>
+<!--//
+			<title code="0x1035">GM.PAC : 35 : </title>
+			<title code="0x1036">GM.PAC : 36 : </title>
+			<title code="0x1037">GM.PAC : 37 : </title>
+			<title code="0x1038">GM.PAC : 38 : </title>
+			<title code="0x1039">GM.PAC : 39 : </title>
+			<title code="0x103a">GM.PAC : 3A : </title>
+			<title code="0x103b">GM.PAC : 3B : </title>
+			<title code="0x103c">GM.PAC : 3C : </title>
+			<title code="0x103d">GM.PAC : 3D : </title>
+-->
+			<title code="0x103e">GM.PAC #3E</title>
+			<title code="0x103f">GM.PAC #3F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Eikan ha Kimini 3: Koukou Yakyuu Zenkoku Taikai (栄冠は君に3 高校野球全国大会) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="eikan3_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HSB3.EXE</rom>
+			<rom type="conin" offset="5">HSB3.EXE</rom>
+			<rom type="file" offset="0x10">MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">MUSIC.PAC #00</title>
+			<title code="0x1001">MUSIC.PAC #01</title>
+			<title code="0x1002">MUSIC.PAC #02</title>
+			<title code="0x1003">MUSIC.PAC #03</title>
+			<title code="0x1004">MUSIC.PAC #04</title>
+			<title code="0x1005">MUSIC.PAC #05</title>
+			<title code="0x1006">MUSIC.PAC #06</title>
+			<title code="0x1007">MUSIC.PAC #07</title>
+			<title code="0x1008">MUSIC.PAC #08</title>
+			<title code="0x1009">MUSIC.PAC #09</title>
+			<title code="0x100a">MUSIC.PAC #0A</title>
+			<title code="0x100b">MUSIC.PAC #0B</title>
+			<title code="0x100c">MUSIC.PAC #0C</title>
+			<title code="0x100d">MUSIC.PAC #0D</title>
+			<title code="0x100e">MUSIC.PAC #0E</title>
+			<title code="0x100f">MUSIC.PAC #0F</title>
+			<title code="0x1010">MUSIC.PAC #10</title>
+			<title code="0x1011">MUSIC.PAC #11</title>
+			<title code="0x1012">MUSIC.PAC #12</title>
+			<title code="0x1013">MUSIC.PAC #13</title>
+			<title code="0x1014">MUSIC.PAC #14</title>
+			<title code="0x1015">MUSIC.PAC #15</title>
+			<title code="0x1016">MUSIC.PAC #16</title>
+			<title code="0x1017">MUSIC.PAC #17</title>
+			<title code="0x1018">MUSIC.PAC #18</title>
+			<title code="0x1019">MUSIC.PAC #19</title>
+			<title code="0x101a">MUSIC.PAC #1A</title>
+			<title code="0x101b">MUSIC.PAC #1B</title>
+			<title code="0x101c">MUSIC.PAC #1C</title>
+			<title code="0x101d">MUSIC.PAC #1D</title>
+			<title code="0x101e">MUSIC.PAC #1E</title>
+			<title code="0x101f">MUSIC.PAC #1F</title>
+			<title code="0x1020">MUSIC.PAC #20</title>
+			<title code="0x1021">MUSIC.PAC #21</title>
+			<title code="0x1022">MUSIC.PAC #22</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Eikan ha Kimini 3: Koukou Yakyuu Zenkoku Taikai (栄冠は君に3 高校野球全国大会) (MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="eikan3_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HSB3.EXE</rom>
+			<rom type="conin" offset="5">HSB3.EXE</rom>
+			<rom type="file" offset="0x10">MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1023">MUSIC.PAC #23</title>
+			<title code="0x1024">MUSIC.PAC #24</title>
+			<title code="0x1025">MUSIC.PAC #25</title>
+			<title code="0x1026">MUSIC.PAC #26</title>
+			<title code="0x1027">MUSIC.PAC #27</title>
+			<title code="0x1028">MUSIC.PAC #28</title>
+			<title code="0x1029">MUSIC.PAC #29</title>
+			<title code="0x102a">MUSIC.PAC #2A</title>
+			<title code="0x102b">MUSIC.PAC #2B</title>
+			<title code="0x102c">MUSIC.PAC #2C</title>
+			<title code="0x102d">MUSIC.PAC #2D</title>
+			<title code="0x102e">MUSIC.PAC #2E</title>
+			<title code="0x102f">MUSIC.PAC #2F</title>
+			<title code="0x1030">MUSIC.PAC #30</title>
+			<title code="0x1031">MUSIC.PAC #31</title>
+			<title code="0x1032">MUSIC.PAC #32</title>
+			<title code="0x1033">MUSIC.PAC #33</title>
+			<title code="0x1034">MUSIC.PAC #34</title>
+			<title code="0x1035">MUSIC.PAC #35</title>
+			<title code="0x1036">MUSIC.PAC #36</title>
+			<title code="0x1037">MUSIC.PAC #37</title>
+			<title code="0x1038">MUSIC.PAC #38</title>
+			<title code="0x1039">MUSIC.PAC #39</title>
+			<title code="0x103a">MUSIC.PAC #3A</title>
+			<title code="0x103b">MUSIC.PAC #3B</title>
+			<title code="0x103c">MUSIC.PAC #3C</title>
+			<title code="0x103d">MUSIC.PAC #3D</title>
+			<title code="0x103e">MUSIC.PAC #3E</title>
+			<title code="0x103f">MUSIC.PAC #3F</title>
+			<title code="0x1040">MUSIC.PAC #40</title>
+			<title code="0x1041">MUSIC.PAC #41</title>
+			<title code="0x1042">MUSIC.PAC #42</title>
+			<title code="0x1043">MUSIC.PAC #43</title>
+			<title code="0x1044">MUSIC.PAC #44</title>
+			<title code="0x1045">MUSIC.PAC #45</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Eikan ha Kimini 3: Koukou Yakyuu Zenkoku Taikai (栄冠は君に3 高校野球全国大会) (MT-32 EMU)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="eikan3_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HSB3.EXE</rom>
+			<rom type="conin" offset="5">HSB3.EXE</rom>
+			<rom type="file" offset="0x10">MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1023">MUSIC.PAC #23</title>
+			<title code="0x1024">MUSIC.PAC #24</title>
+			<title code="0x1025">MUSIC.PAC #25</title>
+			<title code="0x1026">MUSIC.PAC #26</title>
+			<title code="0x1027">MUSIC.PAC #27</title>
+			<title code="0x1028">MUSIC.PAC #28</title>
+			<title code="0x1029">MUSIC.PAC #29</title>
+			<title code="0x102a">MUSIC.PAC #2A</title>
+			<title code="0x102b">MUSIC.PAC #2B</title>
+			<title code="0x102c">MUSIC.PAC #2C</title>
+			<title code="0x102d">MUSIC.PAC #2D</title>
+			<title code="0x102e">MUSIC.PAC #2E</title>
+			<title code="0x102f">MUSIC.PAC #2F</title>
+			<title code="0x1030">MUSIC.PAC #30</title>
+			<title code="0x1031">MUSIC.PAC #31</title>
+			<title code="0x1032">MUSIC.PAC #32</title>
+			<title code="0x1033">MUSIC.PAC #33</title>
+			<title code="0x1034">MUSIC.PAC #34</title>
+			<title code="0x1035">MUSIC.PAC #35</title>
+			<title code="0x1036">MUSIC.PAC #36</title>
+			<title code="0x1037">MUSIC.PAC #37</title>
+			<title code="0x1038">MUSIC.PAC #38</title>
+			<title code="0x1039">MUSIC.PAC #39</title>
+			<title code="0x103a">MUSIC.PAC #3A</title>
+			<title code="0x103b">MUSIC.PAC #3B</title>
+			<title code="0x103c">MUSIC.PAC #3C</title>
+			<title code="0x103d">MUSIC.PAC #3D</title>
+			<title code="0x103e">MUSIC.PAC #3E</title>
+			<title code="0x103f">MUSIC.PAC #3F</title>
+			<title code="0x1040">MUSIC.PAC #40</title>
+			<title code="0x1041">MUSIC.PAC #41</title>
+			<title code="0x1042">MUSIC.PAC #42</title>
+			<title code="0x1043">MUSIC.PAC #43</title>
+			<title code="0x1044">MUSIC.PAC #44</title>
+			<title code="0x1045">MUSIC.PAC #45</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Eikan ha Kimini 3: Koukou Yakyuu Zenkoku Taikai (栄冠は君に3 高校野球全国大会) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="eikan3_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HSB3.EXE</rom>
+			<rom type="conin" offset="5">HSB3.EXE</rom>
+			<rom type="file" offset="0x10">MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1046">MUSIC.PAC #46</title>
+			<title code="0x1047">MUSIC.PAC #47</title>
+			<title code="0x1048">MUSIC.PAC #48</title>
+			<title code="0x1049">MUSIC.PAC #49</title>
+			<title code="0x104a">MUSIC.PAC #4A</title>
+			<title code="0x104b">MUSIC.PAC #4B</title>
+			<title code="0x104c">MUSIC.PAC #4C</title>
+			<title code="0x104d">MUSIC.PAC #4D</title>
+			<title code="0x104e">MUSIC.PAC #4E</title>
+			<title code="0x104f">MUSIC.PAC #4F</title>
+			<title code="0x1050">MUSIC.PAC #50</title>
+			<title code="0x1051">MUSIC.PAC #51</title>
+			<title code="0x1052">MUSIC.PAC #52</title>
+			<title code="0x1053">MUSIC.PAC #53</title>
+			<title code="0x1054">MUSIC.PAC #54</title>
+			<title code="0x1055">MUSIC.PAC #55</title>
+			<title code="0x1056">MUSIC.PAC #56</title>
+			<title code="0x1057">MUSIC.PAC #57</title>
+			<title code="0x1058">MUSIC.PAC #58</title>
+			<title code="0x1059">MUSIC.PAC #59</title>
+			<title code="0x105a">MUSIC.PAC #5A</title>
+			<title code="0x105b">MUSIC.PAC #5B</title>
+			<title code="0x105c">MUSIC.PAC #5C</title>
+			<title code="0x105d">MUSIC.PAC #5D</title>
+			<title code="0x105e">MUSIC.PAC #5E</title>
+			<title code="0x105f">MUSIC.PAC #5F</title>
+			<title code="0x1060">MUSIC.PAC #60</title>
+			<title code="0x1061">MUSIC.PAC #61</title>
+			<title code="0x1062">MUSIC.PAC #62</title>
+			<title code="0x1063">MUSIC.PAC #63</title>
+			<title code="0x1064">MUSIC.PAC #64</title>
+			<title code="0x1065">MUSIC.PAC #65</title>
+			<title code="0x1066">MUSIC.PAC #66</title>
+			<title code="0x1067">MUSIC.PAC #67</title>
+			<title code="0x1068">MUSIC.PAC #68</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Eikan ha Kimini 3: Koukou Yakyuu Zenkoku Taikai (栄冠は君に3 高校野球全国大会) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="eikan3_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HSB3.EXE</rom>
+			<rom type="conin" offset="5">HSB3.EXE</rom>
+			<rom type="file" offset="0x10">MUSIC.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1046">MUSIC.PAC #46</title>
+			<title code="0x1047">MUSIC.PAC #47</title>
+			<title code="0x1048">MUSIC.PAC #48</title>
+			<title code="0x1049">MUSIC.PAC #49</title>
+			<title code="0x104a">MUSIC.PAC #4A</title>
+			<title code="0x104b">MUSIC.PAC #4B</title>
+			<title code="0x104c">MUSIC.PAC #4C</title>
+			<title code="0x104d">MUSIC.PAC #4D</title>
+			<title code="0x104e">MUSIC.PAC #4E</title>
+			<title code="0x104f">MUSIC.PAC #4F</title>
+			<title code="0x1050">MUSIC.PAC #50</title>
+			<title code="0x1051">MUSIC.PAC #51</title>
+			<title code="0x1052">MUSIC.PAC #52</title>
+			<title code="0x1053">MUSIC.PAC #53</title>
+			<title code="0x1054">MUSIC.PAC #54</title>
+			<title code="0x1055">MUSIC.PAC #55</title>
+			<title code="0x1056">MUSIC.PAC #56</title>
+			<title code="0x1057">MUSIC.PAC #57</title>
+			<title code="0x1058">MUSIC.PAC #58</title>
+			<title code="0x1059">MUSIC.PAC #59</title>
+			<title code="0x105a">MUSIC.PAC #5A</title>
+			<title code="0x105b">MUSIC.PAC #5B</title>
+			<title code="0x105c">MUSIC.PAC #5C</title>
+			<title code="0x105d">MUSIC.PAC #5D</title>
+			<title code="0x105e">MUSIC.PAC #5E</title>
+			<title code="0x105f">MUSIC.PAC #5F</title>
+			<title code="0x1060">MUSIC.PAC #60</title>
+			<title code="0x1061">MUSIC.PAC #61</title>
+			<title code="0x1062">MUSIC.PAC #62</title>
+			<title code="0x1063">MUSIC.PAC #63</title>
+			<title code="0x1064">MUSIC.PAC #64</title>
+			<title code="0x1065">MUSIC.PAC #65</title>
+			<title code="0x1066">MUSIC.PAC #66</title>
+			<title code="0x1067">MUSIC.PAC #67</title>
+			<title code="0x1068">MUSIC.PAC #68</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tenka Gomen (天下御免) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="tenkago_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">EDO.EXE</rom>
+			<rom type="conin" offset="5">EDO.EXE</rom>
+			<rom type="file" offset="0x10">MU.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">MU.PAC #00</title>
+			<title code="0x1001">MU.PAC #01</title>
+			<title code="0x1002">MU.PAC #02</title>
+			<title code="0x1003">MU.PAC #03</title>
+			<title code="0x1004">MU.PAC #04</title>
+			<title code="0x1005">MU.PAC #05</title>
+			<title code="0x1006">MU.PAC #06</title>
+			<title code="0x1007">MU.PAC #07</title>
+			<title code="0x1008">MU.PAC #08</title>
+			<title code="0x1009">MU.PAC #09</title>
+			<title code="0x100a">MU.PAC #0A</title>
+			<title code="0x100b">MU.PAC #0B</title>
+			<title code="0x100c">MU.PAC #0C</title>
+			<title code="0x100d">MU.PAC #0D</title>
+			<title code="0x100e">MU.PAC #0E</title>
+			<title code="0x100f">MU.PAC #0F</title>
+			<title code="0x1010">MU.PAC #10</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tenka Gomen (天下御免) (MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="tenkago_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">EDO.EXE</rom>
+			<rom type="conin" offset="5">EDO.EXE</rom>
+			<rom type="file" offset="0x10">MU.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1011">MU.PAC #11</title>
+			<title code="0x1012">MU.PAC #12</title>
+			<title code="0x1013">MU.PAC #13</title>
+			<title code="0x1014">MU.PAC #14</title>
+			<title code="0x1015">MU.PAC #15</title>
+			<title code="0x1016">MU.PAC #16</title>
+			<title code="0x1017">MU.PAC #17</title>
+			<title code="0x1018">MU.PAC #18</title>
+			<title code="0x1019">MU.PAC #19</title>
+			<title code="0x101a">MU.PAC #1A</title>
+			<title code="0x101b">MU.PAC #1B</title>
+			<title code="0x101c">MU.PAC #1C</title>
+			<title code="0x101d">MU.PAC #1D</title>
+			<title code="0x101e">MU.PAC #1E</title>
+			<title code="0x101f">MU.PAC #1F</title>
+			<title code="0x1020">MU.PAC #20</title>
+			<title code="0x1021">MU.PAC #21</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tenka Gomen (天下御免) (MT-32 EMU)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="tenkago_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">EDO.EXE</rom>
+			<rom type="conin" offset="5">EDO.EXE</rom>
+			<rom type="file" offset="0x10">MU.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1011">MU.PAC #11</title>
+			<title code="0x1012">MU.PAC #12</title>
+			<title code="0x1013">MU.PAC #13</title>
+			<title code="0x1014">MU.PAC #14</title>
+			<title code="0x1015">MU.PAC #15</title>
+			<title code="0x1016">MU.PAC #16</title>
+			<title code="0x1017">MU.PAC #17</title>
+			<title code="0x1018">MU.PAC #18</title>
+			<title code="0x1019">MU.PAC #19</title>
+			<title code="0x101a">MU.PAC #1A</title>
+			<title code="0x101b">MU.PAC #1B</title>
+			<title code="0x101c">MU.PAC #1C</title>
+			<title code="0x101d">MU.PAC #1D</title>
+			<title code="0x101e">MU.PAC #1E</title>
+			<title code="0x101f">MU.PAC #1F</title>
+			<title code="0x1020">MU.PAC #20</title>
+			<title code="0x1021">MU.PAC #21</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tenka Gomen (天下御免) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="tenkago_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">EDO.EXE</rom>
+			<rom type="conin" offset="5">EDO.EXE</rom>
+			<rom type="file" offset="0x10">MU.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1022">MU.PAC #22</title>
+			<title code="0x1023">MU.PAC #23</title>
+			<title code="0x1024">MU.PAC #24</title>
+			<title code="0x1025">MU.PAC #25</title>
+			<title code="0x1026">MU.PAC #26</title>
+			<title code="0x1027">MU.PAC #27</title>
+			<title code="0x1028">MU.PAC #28</title>
+			<title code="0x1029">MU.PAC #29</title>
+			<title code="0x102a">MU.PAC #2A</title>
+			<title code="0x102b">MU.PAC #2B</title>
+			<title code="0x102c">MU.PAC #2C</title>
+			<title code="0x102d">MU.PAC #2D</title>
+			<title code="0x102e">MU.PAC #2E</title>
+			<title code="0x102f">MU.PAC #2F</title>
+			<title code="0x1030">MU.PAC #30</title>
+			<title code="0x1031">MU.PAC #31</title>
+			<title code="0x1032">MU.PAC #32</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tenka Gomen (天下御免) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="tenkago_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">EDO.EXE</rom>
+			<rom type="conin" offset="5">EDO.EXE</rom>
+			<rom type="file" offset="0x10">MU.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1022">MU.PAC #22</title>
+			<title code="0x1023">MU.PAC #23</title>
+			<title code="0x1024">MU.PAC #24</title>
+			<title code="0x1025">MU.PAC #25</title>
+			<title code="0x1026">MU.PAC #26</title>
+			<title code="0x1027">MU.PAC #27</title>
+			<title code="0x1028">MU.PAC #28</title>
+			<title code="0x1029">MU.PAC #29</title>
+			<title code="0x102a">MU.PAC #2A</title>
+			<title code="0x102b">MU.PAC #2B</title>
+			<title code="0x102c">MU.PAC #2C</title>
+			<title code="0x102d">MU.PAC #2D</title>
+			<title code="0x102e">MU.PAC #2E</title>
+			<title code="0x102f">MU.PAC #2F</title>
+			<title code="0x1030">MU.PAC #30</title>
+			<title code="0x1031">MU.PAC #31</title>
+			<title code="0x1032">MU.PAC #32</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] A Ressha de Ikou: A-Train (A列車で行こう 復刻版) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="a1_rep_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">A1.EXE</rom>
+			<rom type="conin" offset="5">A1.EXE</rom>
+			<rom type="file" offset="0x10">F_CRASH.NTL</rom>
+			<rom type="file" offset="0x11">F_OPEN.NTL</rom>
+			<rom type="file" offset="0x12">F_WIN.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">F_CRASH.NTL</title>
+			<title code="0x11">F_OPEN.NTL</title>
+			<title code="0x12">F_WIN.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] A Ressha de Ikou: A-Train (A列車で行こう 復刻版) (MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="a1_rep_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">A1.EXE</rom>
+			<rom type="conin" offset="5">A1.EXE</rom>
+			<rom type="file" offset="0x10">L_CRASH.NTL</rom>
+			<rom type="file" offset="0x11">L_OPEN.NTL</rom>
+			<rom type="file" offset="0x12">L_WIN.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">L_CRASH.NTL</title>
+			<title code="0x11">L_OPEN.NTL</title>
+			<title code="0x12">L_WIN.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] A Ressha de Ikou: A-Train (A列車で行こう 復刻版) (MT-32 EMU)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="a1_rep_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">A1.EXE</rom>
+			<rom type="conin" offset="5">A1.EXE</rom>
+			<rom type="file" offset="0x10">L_CRASH.NTL</rom>
+			<rom type="file" offset="0x11">L_OPEN.NTL</rom>
+			<rom type="file" offset="0x12">L_WIN.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">L_CRASH.NTL</title>
+			<title code="0x11">L_OPEN.NTL</title>
+			<title code="0x12">L_WIN.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] A Ressha de Ikou: A-Train (A列車で行こう 復刻版) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="a1_rep_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">A1.EXE</rom>
+			<rom type="conin" offset="5">A1.EXE</rom>
+			<rom type="file" offset="0x10">G_CRASH.NTL</rom>
+			<rom type="file" offset="0x11">G_OPEN.NTL</rom>
+			<rom type="file" offset="0x12">G_WIN.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G_CRASH.NTL</title>
+			<title code="0x11">G_OPEN.NTL</title>
+			<title code="0x12">G_WIN.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] A Ressha de Ikou: A-Train (A列車で行こう 復刻版) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="a1_rep_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">A1.EXE</rom>
+			<rom type="conin" offset="5">A1.EXE</rom>
+			<rom type="file" offset="0x10">G_CRASH.NTL</rom>
+			<rom type="file" offset="0x11">G_OPEN.NTL</rom>
+			<rom type="file" offset="0x12">G_WIN.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G_CRASH.NTL</title>
+			<title code="0x11">G_OPEN.NTL</title>
+			<title code="0x12">G_WIN.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tokio: Tokio Todai 24 ku (トキオ 東京都第24区) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="tokio1_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">TOKIO.EXE</rom>
+			<rom type="conin" offset="5">TOKIO.EXE</rom>
+			<rom type="file" offset="0x10">OPEN1.NTL</rom>
+			<rom type="file" offset="0x11">OPEN2.NTL</rom>
+			<rom type="file" offset="0x12">NTL.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0010">OPEN1.NTL</title>
+			<title code="0x0011">OPEN2.NTL</title>
+			<title code="0x1201">NTL.PAC #01</title>
+			<title code="0x1202">NTL.PAC #02</title>
+			<title code="0x1203">NTL.PAC #03</title>
+			<title code="0x1204">NTL.PAC #04</title>
+			<title code="0x1205">NTL.PAC #05</title>
+			<title code="0x1206">NTL.PAC #06</title>
+			<title code="0x1207">NTL.PAC #07</title>
+			<title code="0x1208">NTL.PAC #08</title>
+			<title code="0x1209">NTL.PAC #09</title>
+			<title code="0x120a">NTL.PAC #0A</title>
+			<title code="0x120b">NTL.PAC #0B</title>
+			<title code="0x120c">NTL.PAC #0C</title>
+			<title code="0x120d">NTL.PAC #0D</title>
+			<title code="0x120e">NTL.PAC #0E</title>
+			<title code="0x120f">NTL.PAC #0F</title>
+			<title code="0x1210">NTL.PAC #10</title>
+			<title code="0x1211">NTL.PAC #11</title>
+			<title code="0x1212">NTL.PAC #12</title>
+			<title code="0x1213">NTL.PAC #13</title>
+			<title code="0x1214">NTL.PAC #14</title>
+			<title code="0x1215">NTL.PAC #15</title>
+			<title code="0x1216">NTL.PAC #16</title>
+			<title code="0x1217">NTL.PAC #17</title>
+<!--//
+			<title code="0x1218">NTL.PAC : 18</title>
+			<title code="0x1219">NTL.PAC : 19</title>
+			<title code="0x121a">NTL.PAC : 1A</title>
+-->
+			<title code="0x121b">NTL.PAC #1B</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tokio: Tokio Todai 24 ku (トキオ 東京都第24区) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="tokio1_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">TOKIO.EXE</rom>
+			<rom type="conin" offset="5">TOKIO.EXE</rom>
+			<rom type="file" offset="0x10">OPEN1.NTL</rom>
+			<rom type="file" offset="0x11">OPEN2.NTL</rom>
+			<rom type="file" offset="0x12">NTL.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0010">OPEN1.NTL</title>
+			<title code="0x0011">OPEN2.NTL</title>
+			<title code="0x1201">NTL.PAC #01</title>
+			<title code="0x1202">NTL.PAC #02</title>
+			<title code="0x1203">NTL.PAC #03</title>
+			<title code="0x1204">NTL.PAC #04</title>
+			<title code="0x1205">NTL.PAC #05</title>
+			<title code="0x1206">NTL.PAC #06</title>
+			<title code="0x1207">NTL.PAC #07</title>
+			<title code="0x1208">NTL.PAC #08</title>
+			<title code="0x1209">NTL.PAC #09</title>
+			<title code="0x120a">NTL.PAC #0A</title>
+			<title code="0x120b">NTL.PAC #0B</title>
+			<title code="0x120c">NTL.PAC #0C</title>
+			<title code="0x120d">NTL.PAC #0D</title>
+			<title code="0x120e">NTL.PAC #0E</title>
+			<title code="0x120f">NTL.PAC #0F</title>
+			<title code="0x1210">NTL.PAC #10</title>
+			<title code="0x1211">NTL.PAC #11</title>
+			<title code="0x1212">NTL.PAC #12</title>
+			<title code="0x1213">NTL.PAC #13</title>
+			<title code="0x1214">NTL.PAC #14</title>
+			<title code="0x1215">NTL.PAC #15</title>
+			<title code="0x1216">NTL.PAC #16</title>
+			<title code="0x1217">NTL.PAC #17</title>
+<!--//
+			<title code="0x1218">NTL.PAC : 18</title>
+			<title code="0x1219">NTL.PAC : 19</title>
+			<title code="0x121a">NTL.PAC : 1A</title>
+-->
+			<title code="0x121b">NTL.PAC #1B</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Tokio: Tokio Todai 24 ku (トキオ 東京都第24区) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="tokio1_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">TOKIO.EXE</rom>
+			<rom type="conin" offset="5">TOKIO.EXE</rom>
+			<rom type="file" offset="0x10">OPEN1.NTL</rom>
+			<rom type="file" offset="0x11">OPEN2.NTL</rom>
+			<rom type="file" offset="0x12">NTL.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0010">OPEN1.NTL</title>
+			<title code="0x0011">OPEN2.NTL</title>
+			<title code="0x1201">NTL.PAC #01</title>
+			<title code="0x1202">NTL.PAC #02</title>
+			<title code="0x1203">NTL.PAC #03</title>
+			<title code="0x1204">NTL.PAC #04</title>
+			<title code="0x1205">NTL.PAC #05</title>
+			<title code="0x1206">NTL.PAC #06</title>
+			<title code="0x1207">NTL.PAC #07</title>
+			<title code="0x1208">NTL.PAC #08</title>
+			<title code="0x1209">NTL.PAC #09</title>
+			<title code="0x120a">NTL.PAC #0A</title>
+			<title code="0x120b">NTL.PAC #0B</title>
+			<title code="0x120c">NTL.PAC #0C</title>
+			<title code="0x120d">NTL.PAC #0D</title>
+			<title code="0x120e">NTL.PAC #0E</title>
+			<title code="0x120f">NTL.PAC #0F</title>
+			<title code="0x1210">NTL.PAC #10</title>
+			<title code="0x1211">NTL.PAC #11</title>
+			<title code="0x1212">NTL.PAC #12</title>
+			<title code="0x1213">NTL.PAC #13</title>
+			<title code="0x1214">NTL.PAC #14</title>
+			<title code="0x1215">NTL.PAC #15</title>
+			<title code="0x1216">NTL.PAC #16</title>
+			<title code="0x1217">NTL.PAC #17</title>
+<!--//
+			<title code="0x1218">NTL.PAC : 18</title>
+			<title code="0x1219">NTL.PAC : 19</title>
+			<title code="0x121a">NTL.PAC : 1A</title>
+-->
+			<title code="0x121b">NTL.PAC #1B</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] Tokio 2: Kaitaku Iminbo Shuuchuu (トキオ2 開拓移民募集中!) (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-9821">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="tokio2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HR2.EXE</rom>
+			<rom type="conin" offset="5">HR2.EXE</rom>
+			<rom type="file" offset="0x10">FBRA_G.NTL</rom>
+			<rom type="file" offset="0x11">FBRA_T.NTL</rom>
+			<rom type="file" offset="0x12">FCHINA_G.NTL</rom>
+			<rom type="file" offset="0x13">FCHINA_T.NTL</rom>
+			<rom type="file" offset="0x14">FCNTROL.NTL</rom>
+			<rom type="file" offset="0x15">FEGYPT_G.NTL</rom>
+			<rom type="file" offset="0x16">FEGYPT_T.NTL</rom>
+			<rom type="file" offset="0x17">FELECT.NTL</rom>
+			<rom type="file" offset="0x18">FFINAL.NTL</rom>
+			<rom type="file" offset="0x19">FGERM_G.NTL</rom>
+			<rom type="file" offset="0x1a">FGERM_T.NTL</rom>
+			<rom type="file" offset="0x1b">FINDIA_G.NTL</rom>
+			<rom type="file" offset="0x1c">FINDIA_T.NTL</rom>
+			<rom type="file" offset="0x1d">FJAPAN_G.NTL</rom>
+			<rom type="file" offset="0x1e">FJAPAN_T.NTL</rom>
+			<rom type="file" offset="0x1f">FMAKETA.NTL</rom>
+			<rom type="file" offset="0x20">FOPNS2.NTL</rom>
+			<rom type="file" offset="0x21">FSTATION.NTL</rom>
+			<rom type="file" offset="0x22">FUSA_G.NTL</rom>
+			<rom type="file" offset="0x23">FUSA_T.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">FBRA_G.NTL</title>
+			<title code="0x11">FBRA_T.NTL</title>
+			<title code="0x12">FCHINA_G.NTL</title>
+			<title code="0x13">FCHINA_T.NTL</title>
+			<title code="0x14">FCNTROL.NTL</title>
+			<title code="0x15">FEGYPT_G.NTL</title>
+			<title code="0x16">FEGYPT_T.NTL</title>
+			<title code="0x17">FELECT.NTL</title>
+			<title code="0x18">FFINAL.NTL</title>
+			<title code="0x19">FGERM_G.NTL</title>
+			<title code="0x1a">FGERM_T.NTL</title>
+			<title code="0x1b">FINDIA_G.NTL</title>
+			<title code="0x1c">FINDIA_T.NTL</title>
+			<title code="0x1d">FJAPAN_G.NTL</title>
+			<title code="0x1e">FJAPAN_T.NTL</title>
+			<title code="0x1f">FMAKETA.NTL</title>
+			<title code="0x20">FOPNS2.NTL</title>
+			<title code="0x21">FSTATION.NTL</title>
+			<title code="0x22">FUSA_G.NTL</title>
+			<title code="0x23">FUSA_T.NTL</title>
+			<title code="0x24">GBRA_G.NTL</title>
+			<title code="0x25">GBRA_T.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] Tokio 2: Kaitaku Iminbo Shuuchuu (トキオ2 開拓移民募集中!) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-9821">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="tokio2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HR2.EXE</rom>
+			<rom type="conin" offset="5">HR2.EXE</rom>
+			<rom type="file" offset="0x10">GBRA_G.NTL</rom>
+			<rom type="file" offset="0x11">GBRA_T.NTL</rom>
+			<rom type="file" offset="0x12">GCHINA_G.NTL</rom>
+			<rom type="file" offset="0x13">GCHINA_T.NTL</rom>
+			<rom type="file" offset="0x14">GCNTROL.NTL</rom>
+			<rom type="file" offset="0x15">GEGYPT_G.NTL</rom>
+			<rom type="file" offset="0x16">GEGYPT_T.NTL</rom>
+			<rom type="file" offset="0x17">GELECT.NTL</rom>
+			<rom type="file" offset="0x18">GFINAL.NTL</rom>
+			<rom type="file" offset="0x19">GGERM_G.NTL</rom>
+			<rom type="file" offset="0x1a">GGERM_T.NTL</rom>
+			<rom type="file" offset="0x1b">GINDIA_G.NTL</rom>
+			<rom type="file" offset="0x1c">GINDIA_T.NTL</rom>
+			<rom type="file" offset="0x1d">GJAPAN_G.NTL</rom>
+			<rom type="file" offset="0x1e">GJAPAN_T.NTL</rom>
+			<rom type="file" offset="0x1f">GMAKETA.NTL</rom>
+			<rom type="file" offset="0x20">GOPNS2.NTL</rom>
+			<rom type="file" offset="0x21">GSTATION.NTL</rom>
+			<rom type="file" offset="0x22">GUSA_G.NTL</rom>
+			<rom type="file" offset="0x23">GUSA_T.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GBRA_G.NTL</title>
+			<title code="0x11">GBRA_T.NTL</title>
+			<title code="0x12">GCHINA_G.NTL</title>
+			<title code="0x13">GCHINA_T.NTL</title>
+			<title code="0x14">GCNTROL.NTL</title>
+			<title code="0x15">GEGYPT_G.NTL</title>
+			<title code="0x16">GEGYPT_T.NTL</title>
+			<title code="0x17">GELECT.NTL</title>
+			<title code="0x18">GFINAL.NTL</title>
+			<title code="0x19">GGERM_G.NTL</title>
+			<title code="0x1a">GGERM_T.NTL</title>
+			<title code="0x1b">GINDIA_G.NTL</title>
+			<title code="0x1c">GINDIA_T.NTL</title>
+			<title code="0x1d">GJAPAN_G.NTL</title>
+			<title code="0x1e">GJAPAN_T.NTL</title>
+			<title code="0x1f">GMAKETA.NTL</title>
+			<title code="0x20">GOPNS2.NTL</title>
+			<title code="0x21">GSTATION.NTL</title>
+			<title code="0x22">GUSA_G.NTL</title>
+			<title code="0x23">GUSA_T.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] Tokio 2: Kaitaku Iminbo Shuuchuu (トキオ2 開拓移民募集中!) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-9821">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="tokio2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">HR2.EXE</rom>
+			<rom type="conin" offset="5">HR2.EXE</rom>
+			<rom type="file" offset="0x10">GBRA_G.NTL</rom>
+			<rom type="file" offset="0x11">GBRA_T.NTL</rom>
+			<rom type="file" offset="0x12">GCHINA_G.NTL</rom>
+			<rom type="file" offset="0x13">GCHINA_T.NTL</rom>
+			<rom type="file" offset="0x14">GCNTROL.NTL</rom>
+			<rom type="file" offset="0x15">GEGYPT_G.NTL</rom>
+			<rom type="file" offset="0x16">GEGYPT_T.NTL</rom>
+			<rom type="file" offset="0x17">GELECT.NTL</rom>
+			<rom type="file" offset="0x18">GFINAL.NTL</rom>
+			<rom type="file" offset="0x19">GGERM_G.NTL</rom>
+			<rom type="file" offset="0x1a">GGERM_T.NTL</rom>
+			<rom type="file" offset="0x1b">GINDIA_G.NTL</rom>
+			<rom type="file" offset="0x1c">GINDIA_T.NTL</rom>
+			<rom type="file" offset="0x1d">GJAPAN_G.NTL</rom>
+			<rom type="file" offset="0x1e">GJAPAN_T.NTL</rom>
+			<rom type="file" offset="0x1f">GMAKETA.NTL</rom>
+			<rom type="file" offset="0x20">GOPNS2.NTL</rom>
+			<rom type="file" offset="0x21">GSTATION.NTL</rom>
+			<rom type="file" offset="0x22">GUSA_G.NTL</rom>
+			<rom type="file" offset="0x23">GUSA_T.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GBRA_G.NTL</title>
+			<title code="0x11">GBRA_T.NTL</title>
+			<title code="0x12">GCHINA_G.NTL</title>
+			<title code="0x13">GCHINA_T.NTL</title>
+			<title code="0x14">GCNTROL.NTL</title>
+			<title code="0x15">GEGYPT_G.NTL</title>
+			<title code="0x16">GEGYPT_T.NTL</title>
+			<title code="0x17">GELECT.NTL</title>
+			<title code="0x18">GFINAL.NTL</title>
+			<title code="0x19">GGERM_G.NTL</title>
+			<title code="0x1a">GGERM_T.NTL</title>
+			<title code="0x1b">GINDIA_G.NTL</title>
+			<title code="0x1c">GINDIA_T.NTL</title>
+			<title code="0x1d">GJAPAN_G.NTL</title>
+			<title code="0x1e">GJAPAN_T.NTL</title>
+			<title code="0x1f">GMAKETA.NTL</title>
+			<title code="0x20">GOPNS2.NTL</title>
+			<title code="0x21">GSTATION.NTL</title>
+			<title code="0x22">GUSA_G.NTL</title>
+			<title code="0x23">GUSA_T.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Rome Wasn't Build in One Day (ローマは一日にしてならず) (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="rome_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">ROME.EXE</rom>
+			<rom type="conin" offset="5">ROME.EXE</rom>
+			<rom type="file" offset="0x10">F_CSRBFF.NTL</rom>
+			<rom type="file" offset="0x11">F_CSRBLS.NTL</rom>
+			<rom type="file" offset="0x12">F_CSRBTL.NTL</rom>
+			<rom type="file" offset="0x13">F_CSRD.NTL</rom>
+			<rom type="file" offset="0x14">F_CSREND.NTL</rom>
+			<rom type="file" offset="0x15">F_CSRFAN.NTL</rom>
+			<rom type="file" offset="0x16">F_CSRMAP.NTL</rom>
+			<rom type="file" offset="0x17">F_CSRMP2.NTL</rom>
+			<rom type="file" offset="0x18">F_CSROP.NTL</rom>
+			<rom type="file" offset="0x19">F_CSROVR.NTL</rom>
+			<rom type="file" offset="0x1a">F_CSRW2.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">F_CSRBFF.NTL</title>
+			<title code="0x11">F_CSRBLS.NTL</title>
+			<title code="0x12">F_CSRBTL.NTL</title>
+			<title code="0x13">F_CSRD.NTL</title>
+			<title code="0x14">F_CSREND.NTL</title>
+			<title code="0x15">F_CSRFAN.NTL</title>
+			<title code="0x16">F_CSRMAP.NTL</title>
+			<title code="0x17">F_CSRMP2.NTL</title>
+			<title code="0x18">F_CSROP.NTL</title>
+			<title code="0x19">F_CSROVR.NTL</title>
+			<title code="0x1a">F_CSRW2.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Rome Wasn't Build in One Day (ローマは一日にしてならず) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="rome_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">ROME.EXE</rom>
+			<rom type="conin" offset="5">ROME.EXE</rom>
+			<rom type="file" offset="0x10">F_CSRBFF.NTL</rom>
+			<rom type="file" offset="0x11">F_CSRBLS.NTL</rom>
+			<rom type="file" offset="0x12">F_CSRBTL.NTL</rom>
+			<rom type="file" offset="0x13">F_CSRD.NTL</rom>
+			<rom type="file" offset="0x14">F_CSREND.NTL</rom>
+			<rom type="file" offset="0x15">F_CSRFAN.NTL</rom>
+			<rom type="file" offset="0x16">F_CSRMAP.NTL</rom>
+			<rom type="file" offset="0x17">F_CSRMP2.NTL</rom>
+			<rom type="file" offset="0x18">F_CSROP.NTL</rom>
+			<rom type="file" offset="0x19">F_CSROVR.NTL</rom>
+			<rom type="file" offset="0x1a">F_CSRW2.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">F_CSRBFF.NTL</title>
+			<title code="0x11">F_CSRBLS.NTL</title>
+			<title code="0x12">F_CSRBTL.NTL</title>
+			<title code="0x13">F_CSRD.NTL</title>
+			<title code="0x14">F_CSREND.NTL</title>
+			<title code="0x15">F_CSRFAN.NTL</title>
+			<title code="0x16">F_CSRMAP.NTL</title>
+			<title code="0x17">F_CSRMP2.NTL</title>
+			<title code="0x18">F_CSROP.NTL</title>
+			<title code="0x19">F_CSROVR.NTL</title>
+			<title code="0x1a">F_CSRW2.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Rome Wasn't Build in One Day (ローマは一日にしてならず) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="rome_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">ROME.EXE</rom>
+			<rom type="conin" offset="5">ROME.EXE</rom>
+			<rom type="file" offset="0x10">G_CSRBFF.NTL</rom>
+			<rom type="file" offset="0x11">G_CSRBLS.NTL</rom>
+			<rom type="file" offset="0x12">G_CSRBTL.NTL</rom>
+			<rom type="file" offset="0x13">G_CSRD.NTL</rom>
+			<rom type="file" offset="0x14">G_CSREND.NTL</rom>
+			<rom type="file" offset="0x15">G_CSRFAN.NTL</rom>
+			<rom type="file" offset="0x16">G_CSRMAP.NTL</rom>
+			<rom type="file" offset="0x17">G_CSRMP2.NTL</rom>
+			<rom type="file" offset="0x18">G_CSROP.NTL</rom>
+			<rom type="file" offset="0x19">G_CSROVR.NTL</rom>
+			<rom type="file" offset="0x1a">G_CSRW2.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G_CSRBFF.NTL</title>
+			<title code="0x11">G_CSRBLS.NTL</title>
+			<title code="0x12">G_CSRBTL.NTL</title>
+			<title code="0x13">G_CSRD.NTL</title>
+			<title code="0x14">G_CSREND.NTL</title>
+			<title code="0x15">G_CSRFAN.NTL</title>
+			<title code="0x16">G_CSRMAP.NTL</title>
+			<title code="0x17">G_CSRMP2.NTL</title>
+			<title code="0x18">G_CSROP.NTL</title>
+			<title code="0x19">G_CSROVR.NTL</title>
+			<title code="0x1a">G_CSRW2.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Rome Wasn't Build in One Day (ローマは一日にしてならず) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="rome_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">ROME.EXE</rom>
+			<rom type="conin" offset="5">ROME.EXE</rom>
+			<rom type="file" offset="0x10">G_CSRBFF.NTL</rom>
+			<rom type="file" offset="0x11">G_CSRBLS.NTL</rom>
+			<rom type="file" offset="0x12">G_CSRBTL.NTL</rom>
+			<rom type="file" offset="0x13">G_CSRD.NTL</rom>
+			<rom type="file" offset="0x14">G_CSREND.NTL</rom>
+			<rom type="file" offset="0x15">G_CSRFAN.NTL</rom>
+			<rom type="file" offset="0x16">G_CSRMAP.NTL</rom>
+			<rom type="file" offset="0x17">G_CSRMP2.NTL</rom>
+			<rom type="file" offset="0x18">G_CSROP.NTL</rom>
+			<rom type="file" offset="0x19">G_CSROVR.NTL</rom>
+			<rom type="file" offset="0x1a">G_CSRW2.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G_CSRBFF.NTL</title>
+			<title code="0x11">G_CSRBLS.NTL</title>
+			<title code="0x12">G_CSRBTL.NTL</title>
+			<title code="0x13">G_CSRD.NTL</title>
+			<title code="0x14">G_CSREND.NTL</title>
+			<title code="0x15">G_CSRFAN.NTL</title>
+			<title code="0x16">G_CSRMAP.NTL</title>
+			<title code="0x17">G_CSRMP2.NTL</title>
+			<title code="0x18">G_CSROP.NTL</title>
+			<title code="0x19">G_CSROVR.NTL</title>
+			<title code="0x1a">G_CSRW2.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Panzer Division 2 (機甲師団2) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="kikou2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">TANK2.EXE</rom>
+			<rom type="conin" offset="5">TANK2.EXE</rom>
+			<rom type="file" offset="0x10">K_BGM1.NTL</rom>
+			<rom type="file" offset="0x11">K_BGM2.NTL</rom>
+			<rom type="file" offset="0x12">K_BGM3.NTL</rom>
+			<rom type="file" offset="0x13">K_BGM4.NTL</rom>
+			<rom type="file" offset="0x14">K_DEMO.NTL</rom>
+			<rom type="file" offset="0x15">K_DISK.NTL</rom>
+			<rom type="file" offset="0x16">K_GOVER.NTL</rom>
+			<rom type="file" offset="0x17">K_HOUBI.NTL</rom>
+			<rom type="file" offset="0x18">K_MUS1.NTL</rom>
+			<rom type="file" offset="0x19">K_MUS2.NTL</rom>
+			<rom type="file" offset="0x1a">K_OPEN.NTL</rom>
+			<rom type="file" offset="0x1b">K_REND.NTL</rom>
+			<rom type="file" offset="0x1c">K_SE.NTL</rom>
+			<rom type="file" offset="0x1d">N_TANK.PLT</rom>
+			<rom type="file" offset="0x1e">N_TITLE.PLT</rom>
+			<rom type="file" offset="0x1f">TANK.PLT</rom>
+			<rom type="file" offset="0x20">TITLE.PLT</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">K_BGM1.NTL</title>
+			<title code="0x11">K_BGM2.NTL</title>
+			<title code="0x12">K_BGM3.NTL</title>
+			<title code="0x13">K_BGM4.NTL</title>
+			<title code="0x14">K_DEMO.NTL</title>
+			<title code="0x15">K_DISK.NTL</title>
+			<title code="0x16">K_GOVER.NTL</title>
+			<title code="0x17">K_HOUBI.NTL</title>
+			<title code="0x18">K_MUS1.NTL</title>
+			<title code="0x19">K_MUS2.NTL</title>
+			<title code="0x1a">K_OPEN.NTL</title>
+			<title code="0x1b">K_REND.NTL</title>
+			<title code="0x1c">K_SE.NTL</title>
+			<title code="0x1d">N_TANK.PLT</title>
+			<title code="0x1e">N_TITLE.PLT</title>
+			<title code="0x1f">TANK.PLT</title>
+			<title code="0x20">TITLE.PLT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Panzer Division 2 (機甲師団2) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="kikou2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">TANK2.EXE</rom>
+			<rom type="conin" offset="5">TANK2.EXE</rom>
+			<rom type="file" offset="0x10">K_BGM1.NTL</rom>
+			<rom type="file" offset="0x11">K_BGM2.NTL</rom>
+			<rom type="file" offset="0x12">K_BGM3.NTL</rom>
+			<rom type="file" offset="0x13">K_BGM4.NTL</rom>
+			<rom type="file" offset="0x14">K_DEMO.NTL</rom>
+			<rom type="file" offset="0x15">K_DISK.NTL</rom>
+			<rom type="file" offset="0x16">K_GOVER.NTL</rom>
+			<rom type="file" offset="0x17">K_HOUBI.NTL</rom>
+			<rom type="file" offset="0x18">K_MUS1.NTL</rom>
+			<rom type="file" offset="0x19">K_MUS2.NTL</rom>
+			<rom type="file" offset="0x1a">K_OPEN.NTL</rom>
+			<rom type="file" offset="0x1b">K_REND.NTL</rom>
+			<rom type="file" offset="0x1c">K_SE.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">K_BGM1.NTL</title>
+			<title code="0x11">K_BGM2.NTL</title>
+			<title code="0x12">K_BGM3.NTL</title>
+			<title code="0x13">K_BGM4.NTL</title>
+			<title code="0x14">K_DEMO.NTL</title>
+			<title code="0x15">K_DISK.NTL</title>
+			<title code="0x16">K_GOVER.NTL</title>
+			<title code="0x17">K_HOUBI.NTL</title>
+			<title code="0x18">K_MUS1.NTL</title>
+			<title code="0x19">K_MUS2.NTL</title>
+			<title code="0x1a">K_OPEN.NTL</title>
+			<title code="0x1b">K_REND.NTL</title>
+			<title code="0x1c">K_SE.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Panzer Division 2 (機甲師団2) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="kikou2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">TANK2.EXE</rom>
+			<rom type="conin" offset="5">TANK2.EXE</rom>
+			<rom type="file" offset="0x10">K_BGM1.NTL</rom>
+			<rom type="file" offset="0x11">K_BGM2.NTL</rom>
+			<rom type="file" offset="0x12">K_BGM3.NTL</rom>
+			<rom type="file" offset="0x13">K_BGM4.NTL</rom>
+			<rom type="file" offset="0x14">K_DEMO.NTL</rom>
+			<rom type="file" offset="0x15">K_DISK.NTL</rom>
+			<rom type="file" offset="0x16">K_GOVER.NTL</rom>
+			<rom type="file" offset="0x17">K_HOUBI.NTL</rom>
+			<rom type="file" offset="0x18">K_MUS1.NTL</rom>
+			<rom type="file" offset="0x19">K_MUS2.NTL</rom>
+			<rom type="file" offset="0x1a">K_OPEN.NTL</rom>
+			<rom type="file" offset="0x1b">K_REND.NTL</rom>
+			<rom type="file" offset="0x1c">K_SE.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">K_BGM1.NTL</title>
+			<title code="0x11">K_BGM2.NTL</title>
+			<title code="0x12">K_BGM3.NTL</title>
+			<title code="0x13">K_BGM4.NTL</title>
+			<title code="0x14">K_DEMO.NTL</title>
+			<title code="0x15">K_DISK.NTL</title>
+			<title code="0x16">K_GOVER.NTL</title>
+			<title code="0x17">K_HOUBI.NTL</title>
+			<title code="0x18">K_MUS1.NTL</title>
+			<title code="0x19">K_MUS2.NTL</title>
+			<title code="0x1a">K_OPEN.NTL</title>
+			<title code="0x1b">K_REND.NTL</title>
+			<title code="0x1c">K_SE.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Kassen Sekigahara (合戦関ヶ原) (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="k_sekiga_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">SEK2.EXE</rom>
+			<rom type="conin" offset="5">SEK2.EXE</rom>
+			<rom type="file" offset="0x10">F_ASA.NTL</rom>
+			<rom type="file" offset="0x11">F_BAD_E.NTL</rom>
+			<rom type="file" offset="0x12">F_FMT.NTL</rom>
+			<rom type="file" offset="0x13">F_GOOD_B.NTL</rom>
+			<rom type="file" offset="0x14">F_GUNGI2.NTL</rom>
+			<rom type="file" offset="0x15">F_JINKEI.NTL</rom>
+			<rom type="file" offset="0x16">F_KINPAC.NTL</rom>
+			<rom type="file" offset="0x17">F_KKR.NTL</rom>
+			<rom type="file" offset="0x18">F_KOSIN1.NTL</rom>
+			<rom type="file" offset="0x19">F_KOSIN3.NTL</rom>
+			<rom type="file" offset="0x1a">F_RONKOU.NTL</rom>
+			<rom type="file" offset="0x1b">F_S2E.NTL</rom>
+			<rom type="file" offset="0x1c">F_SENJYO.NTL</rom>
+			<rom type="file" offset="0x1d">F_SK2OP.NTL</rom>
+			<rom type="file" offset="0x1e">F_STORY.NTL</rom>
+			<rom type="file" offset="0x1f">F_YOYU.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">F_ASA.NTL</title>
+			<title code="0x11">F_BAD_E.NTL</title>
+			<title code="0x12">F_FMT.NTL</title>
+			<title code="0x13">F_GOOD_B.NTL</title>
+			<title code="0x14">F_GUNGI2.NTL</title>
+			<title code="0x15">F_JINKEI.NTL</title>
+			<title code="0x16">F_KINPAC.NTL</title>
+			<title code="0x17">F_KKR.NTL</title>
+			<title code="0x18">F_KOSIN1.NTL</title>
+			<title code="0x19">F_KOSIN3.NTL</title>
+			<title code="0x1a">F_RONKOU.NTL</title>
+			<title code="0x1b">F_S2E.NTL</title>
+			<title code="0x1c">F_SENJYO.NTL</title>
+			<title code="0x1d">F_SK2OP.NTL</title>
+			<title code="0x1e">F_STORY.NTL</title>
+			<title code="0x1f">F_YOYU.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Kassen Sekigahara (合戦関ヶ原) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="k_sekiga_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">SEK2.EXE</rom>
+			<rom type="conin" offset="5">SEK2.EXE</rom>
+			<rom type="file" offset="0x10">F_ASA.NTL</rom>
+			<rom type="file" offset="0x11">F_BAD_E.NTL</rom>
+			<rom type="file" offset="0x12">F_FMT.NTL</rom>
+			<rom type="file" offset="0x13">F_GOOD_B.NTL</rom>
+			<rom type="file" offset="0x14">F_GUNGI2.NTL</rom>
+			<rom type="file" offset="0x15">F_JINKEI.NTL</rom>
+			<rom type="file" offset="0x16">F_KINPAC.NTL</rom>
+			<rom type="file" offset="0x17">F_KKR.NTL</rom>
+			<rom type="file" offset="0x18">F_KOSIN1.NTL</rom>
+			<rom type="file" offset="0x19">F_KOSIN3.NTL</rom>
+			<rom type="file" offset="0x1a">F_RONKOU.NTL</rom>
+			<rom type="file" offset="0x1b">F_S2E.NTL</rom>
+			<rom type="file" offset="0x1c">F_SENJYO.NTL</rom>
+			<rom type="file" offset="0x1d">F_SK2OP.NTL</rom>
+			<rom type="file" offset="0x1e">F_STORY.NTL</rom>
+			<rom type="file" offset="0x1f">F_YOYU.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">F_ASA.NTL</title>
+			<title code="0x11">F_BAD_E.NTL</title>
+			<title code="0x12">F_FMT.NTL</title>
+			<title code="0x13">F_GOOD_B.NTL</title>
+			<title code="0x14">F_GUNGI2.NTL</title>
+			<title code="0x15">F_JINKEI.NTL</title>
+			<title code="0x16">F_KINPAC.NTL</title>
+			<title code="0x17">F_KKR.NTL</title>
+			<title code="0x18">F_KOSIN1.NTL</title>
+			<title code="0x19">F_KOSIN3.NTL</title>
+			<title code="0x1a">F_RONKOU.NTL</title>
+			<title code="0x1b">F_S2E.NTL</title>
+			<title code="0x1c">F_SENJYO.NTL</title>
+			<title code="0x1d">F_SK2OP.NTL</title>
+			<title code="0x1e">F_STORY.NTL</title>
+			<title code="0x1f">F_YOYU.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Kassen Sekigahara (合戦関ヶ原) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="k_sekiga_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">SEK2.EXE</rom>
+			<rom type="conin" offset="5">SEK2.EXE</rom>
+			<rom type="file" offset="0x10">G_ASA.NTL</rom>
+			<rom type="file" offset="0x11">G_BAD_E.NTL</rom>
+			<rom type="file" offset="0x12">G_FMT.NTL</rom>
+			<rom type="file" offset="0x13">G_GOOD_B.NTL</rom>
+			<rom type="file" offset="0x14">G_GUNGI2.NTL</rom>
+			<rom type="file" offset="0x15">G_JINKEI.NTL</rom>
+			<rom type="file" offset="0x16">G_KINPAC.NTL</rom>
+			<rom type="file" offset="0x17">G_KKR.NTL</rom>
+			<rom type="file" offset="0x18">G_KOSIN1.NTL</rom>
+			<rom type="file" offset="0x19">G_KOSIN3.NTL</rom>
+			<rom type="file" offset="0x1a">G_RONKOU.NTL</rom>
+			<rom type="file" offset="0x1b">G_S2E.NTL</rom>
+			<rom type="file" offset="0x1c">G_SENJYO.NTL</rom>
+			<rom type="file" offset="0x1d">G_SK2OP.NTL</rom>
+			<rom type="file" offset="0x1e">G_STORY.NTL</rom>
+			<rom type="file" offset="0x1f">G_YOYU.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G_ASA.NTL</title>
+			<title code="0x11">G_BAD_E.NTL</title>
+			<title code="0x12">G_FMT.NTL</title>
+			<title code="0x13">G_GOOD_B.NTL</title>
+			<title code="0x14">G_GUNGI2.NTL</title>
+			<title code="0x15">G_JINKEI.NTL</title>
+			<title code="0x16">G_KINPAC.NTL</title>
+			<title code="0x17">G_KKR.NTL</title>
+			<title code="0x18">G_KOSIN1.NTL</title>
+			<title code="0x19">G_KOSIN3.NTL</title>
+			<title code="0x1a">G_RONKOU.NTL</title>
+			<title code="0x1b">G_S2E.NTL</title>
+			<title code="0x1c">G_SENJYO.NTL</title>
+			<title code="0x1d">G_SK2OP.NTL</title>
+			<title code="0x1e">G_STORY.NTL</title>
+			<title code="0x1f">G_YOYU.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Kassen Sekigahara (合戦関ヶ原) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="k_sekiga_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">SEK2.EXE</rom>
+			<rom type="conin" offset="5">SEK2.EXE</rom>
+			<rom type="file" offset="0x10">G_ASA.NTL</rom>
+			<rom type="file" offset="0x11">G_BAD_E.NTL</rom>
+			<rom type="file" offset="0x12">G_FMT.NTL</rom>
+			<rom type="file" offset="0x13">G_GOOD_B.NTL</rom>
+			<rom type="file" offset="0x14">G_GUNGI2.NTL</rom>
+			<rom type="file" offset="0x15">G_JINKEI.NTL</rom>
+			<rom type="file" offset="0x16">G_KINPAC.NTL</rom>
+			<rom type="file" offset="0x17">G_KKR.NTL</rom>
+			<rom type="file" offset="0x18">G_KOSIN1.NTL</rom>
+			<rom type="file" offset="0x19">G_KOSIN3.NTL</rom>
+			<rom type="file" offset="0x1a">G_RONKOU.NTL</rom>
+			<rom type="file" offset="0x1b">G_S2E.NTL</rom>
+			<rom type="file" offset="0x1c">G_SENJYO.NTL</rom>
+			<rom type="file" offset="0x1d">G_SK2OP.NTL</rom>
+			<rom type="file" offset="0x1e">G_STORY.NTL</rom>
+			<rom type="file" offset="0x1f">G_YOYU.NTL</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G_ASA.NTL</title>
+			<title code="0x11">G_BAD_E.NTL</title>
+			<title code="0x12">G_FMT.NTL</title>
+			<title code="0x13">G_GOOD_B.NTL</title>
+			<title code="0x14">G_GUNGI2.NTL</title>
+			<title code="0x15">G_JINKEI.NTL</title>
+			<title code="0x16">G_KINPAC.NTL</title>
+			<title code="0x17">G_KKR.NTL</title>
+			<title code="0x18">G_KOSIN1.NTL</title>
+			<title code="0x19">G_KOSIN3.NTL</title>
+			<title code="0x1a">G_RONKOU.NTL</title>
+			<title code="0x1b">G_S2E.NTL</title>
+			<title code="0x1c">G_SENJYO.NTL</title>
+			<title code="0x1d">G_SK2OP.NTL</title>
+			<title code="0x1e">G_STORY.NTL</title>
+			<title code="0x1f">G_YOYU.NTL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] The Atlas II (ジ・アトラス２) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">artdink</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="atlas2_98">
+			<rom type="file" offset="-1">ARTDI_98.COM</rom>
+			<rom type="file" offset="-1">AL2.EXE</rom>
+			<rom type="conin" offset="5">AL2.EXE</rom>
+			<rom type="file" offset="0x10">NTL.PAC</rom>
+			<rom type="shell" offset="0">ARTDI_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">NTL.PAC #00</title>
+			<title code="0x1001">NTL.PAC #01</title>
+			<title code="0x1002">NTL.PAC #02</title>
+			<title code="0x1003">NTL.PAC #03</title>
+			<title code="0x1004">NTL.PAC #04</title>
+			<title code="0x1005">NTL.PAC #05</title>
+			<title code="0x1006">NTL.PAC #06</title>
+			<title code="0x1007">NTL.PAC #07</title>
+			<title code="0x1008">NTL.PAC #08</title>
+			<title code="0x1009">NTL.PAC #09</title>
+			<title code="0x100a">NTL.PAC #0a</title>
+			<title code="0x100b">NTL.PAC #0b</title>
+			<title code="0x100c">NTL.PAC #0c</title>
+			<title code="0x100d">NTL.PAC #0d</title>
+			<title code="0x100e">NTL.PAC #0e</title>
+			<title code="0x100f">NTL.PAC #0f</title>
+			<title code="0x1010">NTL.PAC #10</title>
+			<title code="0x1011">NTL.PAC #11</title>
+			<title code="0x1012">NTL.PAC #12</title>
+			<title code="0x1013">NTL.PAC #13</title>
+			<title code="0x1014">NTL.PAC #14</title>
+			<title code="0x1015">NTL.PAC #15</title>
+			<title code="0x1016">NTL.PAC #16</title>
+			<title code="0x1017">NTL.PAC #17</title>
+			<title code="0x1018">NTL.PAC #18</title>
+			<title code="0x1019">NTL.PAC #19</title>
+			<title code="0x101a">NTL.PAC #1a</title>
+			<title code="0x101b">NTL.PAC #1b</title>
+			<title code="0x101c">NTL.PAC #1c</title>
+			<title code="0x101d">NTL.PAC #1d</title>
+			<title code="0x101e">NTL.PAC #1e</title>
+			<title code="0x101f">NTL.PAC #1f</title>
+			<title code="0x1020">NTL.PAC #20</title>
+			<title code="0x1021">NTL.PAC #21</title>
+		</titlelist>
+	</game>
+</gamelist>

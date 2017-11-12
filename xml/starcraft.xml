@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //starcraft -->
+	<game>
+		<name>[PC-88] Kyu Ryu Tou (九龍島)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">starcraft</driveralias>
+		<romlist archive="kyuryu">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xa000">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000000">メインテーマ</title>
+			<title code="0x00000001">歩行音</title>
+			<title code="0x00000002">ターン開始</title>
+			<title code="0x00000003">ダメージ #1</title>
+			<title code="0x00000004">ダメージ #2</title>
+			<title code="0x00000005">ドアを開けた音</title>
+			<title code="0x00000006">ドアが開かなかった音</title>
+			<title code="0x00000007">ゲームオーバー</title>
+			<title code="0x00000008">敵を倒した音</title>
+			<title code="0x00000009">壁にぶつかった音 #1</title>
+			<title code="0x0000000a">壁にぶつかった音 #2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Might and Magic (マイト＆マジック Ｓｅｃｒｅｔ ｏｆ ｔｈｅ Ｉｎｎｅｒ Ｓａｎｃｔｕｍ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">starcraft</driveralias>
+		<romlist archive="m_and_m">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xea24">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0a">Stop the Music (演奏停止)</title>
+			<title code="0x00">BGM #01</title>
+			<title code="0x01">BGM #02</title>
+			<title code="0x02">BGM #03</title>
+			<title code="0x03">BGM #04</title>
+			<title code="0x04">BGM #05</title>
+			<title code="0x05">BGM #06</title>
+			<title code="0x06">BGM #07</title>
+			<title code="0x07">BGM #08</title>
+			<title code="0x08">BGM #09</title>
+			<title code="0x09">BGM #10</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Phantasie Ⅲ -The Wrath of Nikademus- (ファンタジー３ ニガデモスの怒り)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">starcraft</driveralias>
+		<romlist archive="phantas3">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xea80">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #01</title>
+			<title code="0x01">BGM #02</title>
+			<title code="0x02">BGM #03</title>
+			<title code="0x03">BGM #04</title>
+			<title code="0x04">BGM #05</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Rogue Alliance (ローグアライアンス)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">starcraft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8000"/>
+			<option name="init_pc" value="0xf000"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="rogueal">
+			<rom type="code" offset="0x0000">PROG</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00</title>
+			<title code="0x01">MUS01</title>
+			<title code="0x02">MUS02</title>
+			<title code="0x03">MUS03</title>
+			<title code="0x04">MUS04</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Rhyme Star / Takeshi Abo / 1994 StarCraft (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">starcraft</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+		</options>
+		<romlist archive="rhymes98">
+			<rom type="file" offset="-1">KOLIN.COM</rom>
+			<rom type="file" offset="-1">rhymes98.com</rom>
+			<rom type="file" offset="0x05">MUS_B/RHYME.SZ8</rom>
+			<rom type="file" offset="0x06">MUS_A/RHYME01.PZ8</rom>
+			<rom type="file" offset="0x10">MUS_A/RHYME05.MZ8</rom>
+			<rom type="file" offset="0x11">MUS_A/RHYME06.MZ8</rom>
+			<rom type="file" offset="0x12">MUS_A/RHYME07.MZ8</rom>
+			<rom type="file" offset="0x13">MUS_A/RHYME12.MZ3</rom>
+			<rom type="file" offset="0x14">MUS_A/RHYME29.MZ3</rom>
+			<rom type="file" offset="0x15">MUS_A/RHYME30.MZ3</rom>
+			<rom type="file" offset="0x16">MUS_A/RHYME31.MZ3</rom>
+			<rom type="file" offset="0x17">MUS_A/RHYME33.MZ3</rom>
+			<rom type="file" offset="0x18">MUS_A/RHYME34.MZ3</rom>
+			<rom type="file" offset="0x19">MUS_A/RHYME35.MZ3</rom>
+			<rom type="file" offset="0x1a">MUS_A/RHYME36.MZ3</rom>
+			<rom type="file" offset="0x1b">MUS_A/RHYME37.MZ3</rom>
+			<rom type="file" offset="0x1c">MUS_B/RHYME01.MZ8</rom>
+			<rom type="file" offset="0x1d">MUS_B/RHYME02.MZ8</rom>
+			<rom type="file" offset="0x1e">MUS_B/RHYME03.MZ8</rom>
+			<rom type="file" offset="0x1f">MUS_B/RHYME11.MZ8</rom>
+			<rom type="file" offset="0x20">MUS_B/RHYME13.MZ8</rom>
+			<rom type="file" offset="0x21">MUS_B/RHYME14.MZ8</rom>
+			<rom type="file" offset="0x22">MUS_B/RHYME15.MZ8</rom>
+			<rom type="file" offset="0x23">MUS_B/RHYME16.MZ8</rom>
+			<rom type="file" offset="0x24">MUS_B/RHYME17.MZ8</rom>
+			<rom type="file" offset="0x25">MUS_B/RHYME18.MZ8</rom>
+			<rom type="file" offset="0x26">MUS_C/RHYME08.MZ8</rom>
+			<rom type="file" offset="0x27">MUS_C/RHYME09.MZ8</rom>
+			<rom type="file" offset="0x28">MUS_C/RHYME10.MZ8</rom>
+			<rom type="file" offset="0x29">MUS_C/RHYME19.MZ8</rom>
+			<rom type="file" offset="0x2a">MUS_C/RHYME20.MZ8</rom>
+			<rom type="file" offset="0x2b">MUS_C/RHYME21.MZ8</rom>
+			<rom type="file" offset="0x2c">MUS_C/RHYME22.MZ8</rom>
+			<rom type="file" offset="0x2d">MUS_C/RHYME23.MZ8</rom>
+			<rom type="file" offset="0x2e">MUS_C/RHYME24.MZ8</rom>
+			<rom type="file" offset="0x2f">MUS_C/RHYME25.MZ8</rom>
+			<rom type="file" offset="0x30">MUS_C/RHYME26.MZ8</rom>
+			<rom type="shell" offset="0">kolin</rom>
+			<rom type="shell" offset="0">rhymes98 86</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1c">[スタークラフト・ジングル]</title>
+			<title code="0x1d">[オープニング] シンクロ版(2)</title>
+			<title code="0x1e">ゲームタイトル・メインメニュー</title>
+			<title code="0x10">Stage Clear Fanfare #1</title>
+			<title code="0x11">[中間イベントＡ] 挑戦：勝負だ！</title>
+			<title code="0x12">[中間イベントＢ] 勝利：やったね！</title>
+			<title code="0x26">[中間イベントＣ] おタマちゃんのテーマ</title>
+			<title code="0x27">[中間イベントＤ] サムソン亀岡／兄貴</title>
+			<title code="0x28">中間イベントＥ（大魔王ぺしぺし登場のテーマ）</title>
+			<title code="0x1f">[中間イベントＦ] 魔城崩壊</title>
+			<title code="0x13">Game Over #1</title>
+			<title code="0x20">[エンディング] 同期信号有りバージョン(1)</title>
+			<title code="0x21">[スタッフロール]</title>
+			<title code="0x22">World 1 [地上]</title>
+			<title code="0x23">World 2 [Cave] Ver.β</title>
+			<title code="0x24">World 3 [海上]</title>
+			<title code="0x25">World 4 [海底]</title>
+			<title code="0x29">World 5 [高山]</title>
+			<title code="0x2a">World 6 [雲上]</title>
+			<title code="0x2b">World 7 [珊瑚礁]</title>
+			<title code="0x2c">World 8 [大森林]</title>
+			<title code="0x2d">World 9 [浮遊大陸]</title>
+			<title code="0x2e">World 10 [砂漠]</title>
+			<title code="0x2f">World 11 [魔界]</title>
+			<title code="0x30">World 12 [魔王の城]</title>
+			<title code="0x14">Stage Start</title>
+			<title code="0x15">[ディスクを入れ換えてね]</title>
+			<title code="0x16">IPL sound #1</title>
+			<title code="0x17">[あけましておめでとー]</title>
+			<title code="0x18">Theme of April Fool</title>
+			<title code="0x19">[七夕（７月７日用）]</title>
+			<title code="0x1a">[体育の日]</title>
+			<title code="0x1b">[めりーくりすます]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] FlixMix / Takeshi Abo / 1995 StarCraft</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">starcraft</driveralias>
+		<options>
+			<option name="clockmul" value="0x14"/>
+			<option name="fm_mix"   value="8"/>
+			<option name="ssg_mix"  value="-11"/>
+		</options>
+		<romlist archive="flixmix">
+			<rom type="file" offset="-1">klp_hoot.com</rom>
+			<rom type="file" offset="-1">KOLIN2.COM</rom>
+			<rom type="file" offset="-1">FLIX0.PO8</rom>
+			<rom type="file" offset="-1">FLIX1.PO8</rom>
+			<rom type="file" offset="-1">FLIX2_.PO8</rom>
+			<rom type="file" offset="-1">FLIX4.PO8</rom>
+			<rom type="file" offset="0x10">FLIX01@.MO2</rom>
+			<rom type="file" offset="0x11">FLIX02@.MO2</rom>
+			<rom type="file" offset="0x12">FLIX03@.MO2</rom>
+			<rom type="file" offset="0x13">FLIX04@.MO2</rom>
+			<rom type="file" offset="0x14">FLIX05@.MO2</rom>
+			<rom type="file" offset="0x15">FLIX06@.MO2</rom>
+			<rom type="file" offset="0x16">FLIX07@.MO2</rom>
+			<rom type="file" offset="0x17">FLIX08@.MO2</rom>
+			<rom type="file" offset="0x18">FLIX09@.MO2</rom>
+			<rom type="file" offset="0x19">FLIX10@.MO2</rom>
+			<rom type="file" offset="0x1a">FLIX11@.MO2</rom>
+			<rom type="file" offset="0x1b">FLIX12@.MO2</rom>
+			<rom type="file" offset="0x1c">FLIX13@.MO2</rom>
+			<rom type="file" offset="0x1d">VAL236@.MO8</rom>
+			<rom type="file" offset="0x1e">VAL237B@.MO8</rom>
+			<rom type="file" offset="0x1f">VAL__1@.MO8</rom>
+			<rom type="file" offset="0x20">VAL__2@.MO8</rom>
+			<rom type="file" offset="0x21">VAL240@.MO8</rom>
+			<rom type="file" offset="0x22">VAL241@.MO8</rom>
+			<rom type="file" offset="0x23">VAL242@.MO8</rom>
+			<rom type="file" offset="0x24">VAL243@.MO8</rom>
+			<rom type="file" offset="0x25">VAL244@.MO8</rom>
+			<rom type="shell" offset="0">kolin2 /m32</rom>
+			<rom type="shell" offset="0">klp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Celeris Fanfare</title>
+			<title code="0x11">FlixMix Fanfare</title>
+			<title code="0x12">Spherical Aberration</title>
+			<title code="0x13">Quixotic Box Paradox</title>
+			<title code="0x14">Puddle Muddle</title>
+			<title code="0x15">Mishmash Mesh</title>
+			<title code="0x16">Distortion of times</title>
+			<title code="0x17">Suspicion</title>
+			<title code="0x18">Juggle Jumble</title>
+			<title code="0x19">Natural sight</title>
+			<title code="0x1a">Right Angleworms</title>
+			<title code="0x1b">Closeing Credits waltz</title>
+			<title code="0x1c">Scramblecade Ending</title>
+			<title code="0x1d">雲          : Spiritual sky</title>
+			<title code="0x1e">桜          : The SAKURA (KOLIN2 Version)</title>
+			<title code="0x1f">Penpen step 2</title>
+			<title code="0x20">トランプ(2) : cards</title>
+			<title code="0x21">足跡        : Whose footprints are these?</title>
+			<title code="0x22">雪          : Imagination</title>
+			<title code="0x23">Black or White</title>
+			<title code="0x24">Hard Bass</title>
+			<title code="0x25">Brightness morning (Unuse PCM)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Starfire / Takeshi Abo / 1994 StarCraft (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">starcraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="starfire_98">
+			<rom type="file" offset="-1">STARF_98.COM</rom>
+			<rom type="file" offset="-1">SF.EXE</rom>
+			<rom type="file" offset="-1">SF.CC</rom>
+			<rom type="conin" offset="5">SF.EXE</rom>
+			<rom type="shell" offset="0">STARF_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1e">Opening</title>
+			<title code="0x1d">Title</title>
+			<title code="0x15">My ship</title>
+			<title code="0x19">Station</title>
+			<title code="0x11">Galaxy I</title>
+			<title code="0x13">Battle I</title>
+			<title code="0x1f">Event I</title>
+			<title code="0x1b">Planet I</title>
+			<title code="0x16">Enemy ship I</title>
+			<title code="0x18">Planet II</title>
+			<title code="0x1a">Enemy ship II</title>
+			<title code="0x12">Galaxy II</title>
+			<title code="0x14">Battle II</title>
+			<title code="0x1c">Event II</title>
+			<title code="0x17">Planet III</title>
+			<title code="0x23">Boss I</title>
+			<title code="0x20">Ending</title>
+			<title code="0x21">Jingle I</title>
+			<title code="0x22">Jingle II</title>
+			<title code="0x24">Unused Music</title>
+		</titlelist>
+	</game>
+</gamelist>

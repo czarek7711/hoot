@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //ぷち -->
+	<game>
+		<name>[PC-9801] とらぶるあうとさいだーず(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ぷち</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="outsider_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">EFFEC.DAT</rom>
+			<rom type="file" offset="0x10">OS_01.M</rom>
+			<rom type="file" offset="0x11">OS_02.M</rom>
+			<rom type="file" offset="0x12">OS_03.M</rom>
+			<rom type="file" offset="0x13">OS_05.M</rom>
+			<rom type="file" offset="0x14">OS_08.M</rom>
+			<rom type="file" offset="0x15">OS_09.M</rom>
+			<rom type="file" offset="0x16">OS_07.M</rom>
+			<rom type="file" offset="0x17">OS_10.M</rom>
+			<rom type="file" offset="0x18">OS_11.M</rom>
+			<rom type="file" offset="0x19">OS_12.M</rom>
+			<rom type="shell" offset="0">pmd # /k /m16 /v0 /ds30</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">OS_01.M   : </title>
+			<title code="0x11">OS_02.M   : </title>
+			<title code="0x12">OS_03.M   : </title>
+			<title code="0x13">OS_05.M   : </title>
+			<title code="0x14">OS_08.M   : </title>
+			<title code="0x15">OS_09.M   : </title>
+			<title code="0x16">OS_07.M   : </title>
+			<title code="0x17">OS_10.M   : </title>
+			<title code="0x18">OS_11.M   : </title>
+			<title code="0x19">OS_12.M   : </title>
+			<range min="0x0880" max="0x08a5" extcode="1">EFFEC.DAT : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] とらぶるあうとさいだーず(86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ぷち</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="pcm_mix"  value="0x90"/>
+		</options>
+		<romlist archive="outsider_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD86.COM</rom>
+			<rom type="file" offset="-1">P86DRV.COM</rom>
+			<rom type="file" offset="-1">PMDPCM86.EXE</rom>
+			<rom type="file" offset="-1">PCM.P86</rom>
+			<rom type="file" offset="0x08">EFFEC.DAT</rom>
+			<rom type="file" offset="0x10">OS_01.M2</rom>
+			<rom type="file" offset="0x11">OS_02.M2</rom>
+			<rom type="file" offset="0x12">OS_03.M2</rom>
+			<rom type="file" offset="0x13">OS_05.M2</rom>
+			<rom type="file" offset="0x14">OS_08.M2</rom>
+			<rom type="file" offset="0x15">OS_09.M2</rom>
+			<rom type="file" offset="0x16">OS_07.M2</rom>
+			<rom type="file" offset="0x17">OS_10.M2</rom>
+			<rom type="file" offset="0x18">OS_11.M2</rom>
+			<rom type="file" offset="0x19">OS_12.M2</rom>
+			<rom type="shell" offset="0">P86DRV #/m /4</rom>
+			<rom type="shell" offset="0">PMD86 # /k /m10 /v0</rom>
+			<rom type="shell" offset="0">PMDPCM86 /l PCM.P86</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">OS_01.M2  : </title>
+			<title code="0x11">OS_02.M2  : </title>
+			<title code="0x12">OS_03.M2  : </title>
+			<title code="0x13">OS_05.M2  : </title>
+			<title code="0x14">OS_08.M2  : </title>
+			<title code="0x15">OS_09.M2  : </title>
+			<title code="0x16">OS_07.M2  : </title>
+			<title code="0x17">OS_10.M2  : </title>
+			<title code="0x18">OS_11.M2  : </title>
+			<title code="0x19">OS_12.M2  : </title>
+			<range min="0x0880" max="0x08a5" extcode="1">EFFEC.DAT : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ビーストブリーダーズ(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ぷち</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="beast_b_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">EFFEC.DAT</rom>
+			<rom type="file" offset="0x10">BST_00.M</rom>
+			<rom type="file" offset="0x11">BST_01.M</rom>
+			<rom type="file" offset="0x12">BST_02.M</rom>
+			<rom type="file" offset="0x13">BST_03.M</rom>
+			<rom type="file" offset="0x14">BST_04.M</rom>
+			<rom type="file" offset="0x15">BST_05.M</rom>
+			<rom type="file" offset="0x16">BST_06.M</rom>
+			<rom type="file" offset="0x17">BST_07.M</rom>
+			<rom type="file" offset="0x18">BST_08.M</rom>
+			<rom type="file" offset="0x19">BST_11.M</rom>
+			<rom type="file" offset="0x1A">BST_12.M</rom>
+			<rom type="shell" offset="0">pmd # /k /m10 /v0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BST_00.M  : </title>
+			<title code="0x11">BST_01.M  : </title>
+			<title code="0x12">BST_02.M  : </title>
+			<title code="0x13">BST_03.M  : </title>
+			<title code="0x14">BST_04.M  : </title>
+			<title code="0x15">BST_05.M  : </title>
+			<title code="0x16">BST_06.M  : </title>
+			<title code="0x17">BST_07.M  : </title>
+			<title code="0x18">BST_08.M  : </title>
+			<title code="0x19">BST_11.M  : </title>
+			<title code="0x1A">BST_12.M  : </title>
+			<range min="0x0880" max="0x08a5" extcode="1">EFFEC.DAT : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ビーストブリーダーズ(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ぷち</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="beast_b_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="0x08">EFFEC.DAT</rom>
+			<rom type="file" offset="0x10">BST_00.M2</rom>
+			<rom type="file" offset="0x11">BST_01.M2</rom>
+			<rom type="file" offset="0x12">BST_02.M2</rom>
+			<rom type="file" offset="0x13">BST_03.M2</rom>
+			<rom type="file" offset="0x14">BST_04.M2</rom>
+			<rom type="file" offset="0x15">BST_05.M2</rom>
+			<rom type="file" offset="0x16">BST_06.M2</rom>
+			<rom type="file" offset="0x17">BST_07.M2</rom>
+			<rom type="file" offset="0x18">BST_08.M2</rom>
+			<rom type="file" offset="0x19">BST_11.M2</rom>
+			<rom type="file" offset="0x1A">BST_12.M2</rom>
+			<rom type="shell" offset="0">PMDB2 # /k /m10 /v0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BST_00.M2 : </title>
+			<title code="0x11">BST_01.M2 : </title>
+			<title code="0x12">BST_02.M2 : </title>
+			<title code="0x13">BST_03.M2 : </title>
+			<title code="0x14">BST_04.M2 : </title>
+			<title code="0x15">BST_05.M2 : </title>
+			<title code="0x16">BST_06.M2 : </title>
+			<title code="0x17">BST_07.M2 : </title>
+			<title code="0x18">BST_08.M2 : </title>
+			<title code="0x19">BST_11.M2 : </title>
+			<title code="0x1A">BST_12.M2 : </title>
+			<range min="0x0880" max="0x08a5" extcode="1">EFFEC.DAT : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] メモリーズ ～白い夜空に舞う天使～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ぷち</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="memories_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">EFFEC.DAT</rom>
+			<rom type="file" offset="0x10">MEM001.M</rom>
+			<rom type="file" offset="0x11">MEM002.M</rom>
+			<rom type="file" offset="0x12">MEM003.M</rom>
+			<rom type="file" offset="0x13">MEM004.M</rom>
+			<rom type="file" offset="0x14">MEM005.M</rom>
+			<rom type="file" offset="0x15">MEM006.M</rom>
+			<rom type="file" offset="0x16">MEM007.M</rom>
+			<rom type="file" offset="0x17">MEM008.M</rom>
+			<rom type="file" offset="0x18">MEM009.M</rom>
+			<rom type="file" offset="0x19">MEM010.M</rom>
+			<rom type="file" offset="0x1A">MEM011.M</rom>
+			<rom type="file" offset="0x1B">MEM012.M</rom>
+			<rom type="file" offset="0x1C">MEM013.M</rom>
+			<rom type="file" offset="0x1D">MEM014.M</rom>
+			<rom type="file" offset="0x1E">MEM015.M</rom>
+			<rom type="file" offset="0x1F">MEM016.M</rom>
+			<rom type="shell" offset="0">pmd # /V0 /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MEM001.M  : </title>
+			<title code="0x11">MEM002.M  : </title>
+			<title code="0x12">MEM003.M  : </title>
+			<title code="0x13">MEM004.M  : </title>
+			<title code="0x14">MEM005.M  : </title>
+			<title code="0x15">MEM006.M  : </title>
+			<title code="0x16">MEM007.M  : </title>
+			<title code="0x17">MEM008.M  : </title>
+			<title code="0x18">MEM009.M  : </title>
+			<title code="0x19">MEM010.M  : </title>
+			<title code="0x1A">MEM011.M  : </title>
+			<title code="0x1B">MEM012.M  : </title>
+			<title code="0x1C">MEM013.M  : </title>
+			<title code="0x1D">MEM014.M  : </title>
+			<title code="0x1E">MEM015.M  : </title>
+			<title code="0x1F">MEM016.M  : </title>
+			<range min="0x0880" max="0x0890" extcode="1">EFFEC.DAT : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] メモリーズリフレイン 思い出はいつまでも…</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ぷち</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="memoref_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">EFFEC.DAT</rom>
+			<rom type="file" offset="0x10">MR_01.M</rom>
+			<rom type="file" offset="0x11">MR_02.M</rom>
+			<rom type="file" offset="0x12">MR_03.M</rom>
+			<rom type="file" offset="0x13">MR_04.M</rom>
+			<rom type="file" offset="0x14">MR_05.M</rom>
+			<rom type="file" offset="0x15">MR_06.M</rom>
+			<rom type="file" offset="0x16">MR_07.M</rom>
+			<rom type="file" offset="0x17">MR_08.M</rom>
+			<rom type="file" offset="0x18">MR_09.M</rom>
+			<rom type="file" offset="0x19">MR_10.M</rom>
+			<rom type="file" offset="0x1A">MR_11.M</rom>
+			<rom type="file" offset="0x1B">MR_12.M</rom>
+			<rom type="file" offset="0x1C">MR_13.M</rom>
+			<rom type="file" offset="0x1D">MR_14.M</rom>
+			<rom type="file" offset="0x1E">MR_15.M</rom>
+			<rom type="file" offset="0x1F">MR_16.M</rom>
+			<rom type="file" offset="0x20">MR_17.M</rom>
+			<rom type="file" offset="0x21">MR_18.M</rom>
+			<rom type="file" offset="0x22">MR_19.M</rom>
+			<rom type="file" offset="0x23">MR_20.M</rom>
+			<rom type="file" offset="0x24">MR_21.M</rom>
+			<rom type="shell" offset="0">pmd # /k /m16 /v0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MR_01.M   : </title>
+			<title code="0x11">MR_02.M   : </title>
+			<title code="0x12">MR_03.M   : </title>
+			<title code="0x13">MR_04.M   : </title>
+			<title code="0x14">MR_05.M   : </title>
+			<title code="0x15">MR_06.M   : </title>
+			<title code="0x16">MR_07.M   : </title>
+			<title code="0x17">MR_08.M   : </title>
+			<title code="0x18">MR_09.M   : </title>
+			<title code="0x19">MR_10.M   : </title>
+			<title code="0x1A">MR_11.M   : </title>
+			<title code="0x1B">MR_12.M   : </title>
+			<title code="0x1C">MR_13.M   : </title>
+			<title code="0x1D">MR_14.M   : </title>
+			<title code="0x1E">MR_15.M   : </title>
+			<title code="0x1F">MR_16.M   : </title>
+			<title code="0x20">MR_17.M   : </title>
+			<title code="0x21">MR_18.M   : </title>
+			<title code="0x22">MR_19.M   : </title>
+			<title code="0x23">MR_20.M   : </title>
+			<title code="0x24">MR_21.M   : </title>
+			<range min="0x0880" max="0x0890" extcode="1">EFFEC.DAT : %2X</range>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //日本デクスタ -->
+	<game>
+		<name>[X68000] The LAS VEGAS</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">日本デクスタ</driveralias>
+		<romlist archive="lasvegas68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.SYS</rom>
+			<rom type="code" offset="0x24000">LASEND.OPM</rom>
+			<rom type="code" offset="0x28000">LASGOD.OPM</rom>
+			<rom type="code" offset="0x2c000">LASINT1.OPM</rom>
+			<rom type="code" offset="0x30000">LASINT2.OPM</rom>
+			<rom type="code" offset="0x34000">LASINT3.OPM</rom>
+			<rom type="code" offset="0x38000">LASLOSE.OPM</rom>
+			<rom type="code" offset="0x3c000">LASOPEN.OPM</rom>
+			<rom type="code" offset="0x40000">LASWIN.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x08">LASOPEN.OPM : </title>
+			<title code="0x04">LASINT1.OPM : </title>
+			<title code="0x05">LASINT2.OPM : </title>
+			<title code="0x06">LASINT3.OPM : </title>
+			<title code="0x09">LASWIN.OPM  : </title>
+			<title code="0x07">LASLOSE.OPM : </title>
+			<title code="0x03">LASGOD.OPM  : </title>
+			<title code="0x02">LASEND.OPM  : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 妖魔降臨</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">日本デクスタ</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc"    value="0x2000"/>
+		</options>
+		<romlist archive="youmakrn_msx">
+			<rom type="code" offset="0x0100">M.COM</rom>
+			<rom type="code" offset="0x2000">patch</rom>
+			<rom type="bgm" offset="0x00">BGM00.BIN</rom>
+			<rom type="bgm" offset="0x01">BGM01.BIN</rom>
+			<rom type="bgm" offset="0x02">BGM02.BIN</rom>
+			<rom type="bgm" offset="0x03">BGM03.BIN</rom>
+			<rom type="bgm" offset="0x04">BGM04.BIN</rom>
+			<rom type="bgm" offset="0x05">BGM05.BIN</rom>
+			<rom type="bgm" offset="0x06">BGM06.BIN</rom>
+			<rom type="bgm" offset="0x07">BGM07.BIN</rom>
+			<rom type="bgm" offset="0x08">BGM08.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x900000">BGM00.BIN : タイトル</title>
+			<title code="0x900001">BGM01.BIN : 壱之巻</title>
+			<title code="0x953201">BGM01.BIN : 壱之巻 ボス</title>
+			<title code="0x900002">BGM02.BIN : 弐之巻</title>
+			<title code="0x927102">BGM02.BIN : 弐之巻 ボス</title>
+			<title code="0x900003">BGM03.BIN : 参之巻</title>
+			<title code="0x942103">BGM03.BIN : 参之巻 ボス</title>
+			<title code="0x900004">BGM04.BIN : 四之巻</title>
+			<title code="0x923104">BGM04.BIN : 四之巻 ボス</title>
+			<title code="0x900005">BGM05.BIN : 五之巻</title>
+			<title code="0x909505">BGM05.BIN : 五之巻 ボス</title>
+			<title code="0x900006">BGM06.BIN : 六之巻</title>
+			<title code="0x900007">BGM07.BIN : 七之巻</title>
+			<title code="0x900008">BGM08.BIN : 八之巻</title>
+			<title code="0x94b500">BGM00.BIN : エンデイング</title>
+		</titlelist>
+	</game>
+</gamelist>

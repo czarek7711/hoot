@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //victor -->
+	<game>
+		<name>[X68000] Rising Sun (ライジング・サン)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">victor</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="rsun68snd">
+			<rom type="code">rsun68snd.bin</rom>
+			<rom type="x" offset="0x8000">MHDRV.X</rom>
+			<rom type="code" offset="0x16116">RUNSE.PCM</rom>
+			<rom type="code" offset="0x100000">BOUJOU.MDH</rom>
+			<rom type="code" offset="0x102000">END.MDH</rom>
+			<rom type="code" offset="0x104000">HOUOU.MDH</rom>
+			<rom type="code" offset="0x106000">JIIN.MDH</rom>
+			<rom type="code" offset="0x108000">KASEN.MDH</rom>
+			<rom type="code" offset="0x10a000">KOUJOU.MDH</rom>
+			<rom type="code" offset="0x10c000">LOSE.MDH</rom>
+			<rom type="code" offset="0x10e000">MAP.MDH</rom>
+			<rom type="code" offset="0x110000">NIN.MDH</rom>
+			<rom type="code" offset="0x112000">OPEN.MDH</rom>
+			<rom type="code" offset="0x114000">ROOM.MDH</rom>
+			<rom type="code" offset="0x116000">UMA.MDH</rom>
+			<rom type="code" offset="0x118000">WIN.MDH</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">STOP</title>
+			<title code="0x01">ライジングサン　［ 防城 ］</title>
+			<title code="0x02">ライジングサン　［ エンデｲング　］</title>
+			<title code="0x03">ライジングサン　［ 法皇　］</title>
+			<title code="0x04">ライジングサン　［ 寺院　］</title>
+			<title code="0x05">ライジングサン　［ 合戦 ］</title>
+			<title code="0x06">ライジングサン　［ 攻城 ］</title>
+			<title code="0x07">ライジングサン　［ 負け ］</title>
+			<title code="0x08">ライジングサン　［ 地図 ］</title>
+			<title code="0x09">ライジングサン　［ 忍者アタック ］</title>
+			<title code="0x0a">ライジングサン　［ OPENING　］</title>
+			<title code="0x0b">ライジングサン　［ 自室 ］</title>
+			<title code="0x0c">ライジングサン　［ 馬追い ］</title>
+			<title code="0x0d">ライジングサン　［ 勝ち ］</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Shiryou Sensen 2 (死霊戦線2)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">victor</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1ba9"/>
+		</options>
+		<romlist archive="shiryo2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+			<rom type="bgm" offset="0x0f">MUS15</rom>
+			<rom type="bgm" offset="0x10">MUS16</rom>
+			<rom type="bgm" offset="0x11">MUS17</rom>
+			<rom type="bgm" offset="0x12">MUS18</rom>
+			<rom type="bgm" offset="0x13">MUS19</rom>
+			<rom type="bgm" offset="0x14">MUS20</rom>
+			<rom type="bgm" offset="0x15">MUS21</rom>
+			<rom type="bgm" offset="0x16">MUS22</rom>
+			<rom type="bgm" offset="0x17">MUS23</rom>
+			<rom type="bgm" offset="0x18">MUS24</rom>
+			<rom type="bgm" offset="0x19">MUS25</rom>
+			<rom type="bgm" offset="0x1a">MUS26</rom>
+			<rom type="bgm" offset="0x1b">MUS27</rom>
+			<rom type="bgm" offset="0x1c">MUS28</rom>
+			<rom type="bgm" offset="0x1d">MUS29</rom>
+			<rom type="bgm" offset="0x1e">MUS30</rom>
+			<rom type="bgm" offset="0x1f">MUS31</rom>
+			<rom type="bgm" offset="0x20">MUS32</rom>
+			<rom type="bgm" offset="0x21">MUS33</rom>
+			<rom type="bgm" offset="0x22">MUS34</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00</title>
+			<title code="0x01">MUS01</title>
+			<title code="0x02">MUS02</title>
+			<title code="0x03">MUS03</title>
+			<title code="0x04">MUS04</title>
+			<title code="0x05">MUS05</title>
+			<title code="0x06">MUS06</title>
+			<title code="0x07">MUS07</title>
+			<title code="0x08">MUS08</title>
+			<title code="0x09">MUS09</title>
+			<title code="0x0a">MUS10</title>
+			<title code="0x0b">MUS11</title>
+			<title code="0x0c">MUS12</title>
+			<title code="0x0d">MUS13</title>
+			<title code="0x0e">MUS14</title>
+			<title code="0x0f">MUS15</title>
+			<title code="0x10">MUS16</title>
+			<title code="0x11">MUS17</title>
+			<title code="0x12">MUS18</title>
+			<title code="0x13">MUS19</title>
+			<title code="0x14">MUS20</title>
+			<title code="0x15">MUS21</title>
+			<title code="0x16">MUS22</title>
+			<title code="0x17">MUS23</title>
+			<title code="0x18">MUS24</title>
+			<title code="0x19">MUS25</title>
+			<title code="0x1a">MUS26</title>
+			<title code="0x1b">MUS27</title>
+			<title code="0x1c">MUS28</title>
+			<title code="0x1d">MUS29</title>
+			<title code="0x1e">MUS30</title>
+			<title code="0x1f">MUS31</title>
+			<title code="0x20">MUS32</title>
+			<title code="0x21">MUS33</title>
+			<title code="0x22">MUS34</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Nile no Namida (ナイルの涙)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">victor</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="tearnile">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">PROG1</rom>
+			<rom type="code" offset="0x63a2">PROG2</rom>
+			<rom type="code" offset="0xc000">PROG3</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">Opening</title>
+			<title code="0x11000002">Main BGM</title>
+			<title code="0x11000001">Main BGM (別バージョン1 : 未使用)</title>
+			<title code="0x12000001">Main BGM (別バージョン2 : 未使用)</title>
+			<title code="0x03000003">Jingle #03</title>
+			<title code="0x04000003">Jingle #04</title>
+			<title code="0x05000003">Jingle #05</title>
+			<title code="0x07000003">Jingle #07</title>
+			<title code="0x08000003">Jingle #08</title>
+			<title code="0x3d000003">Jingle #3d</title>
+			<title code="0x3e000003">Jingle #3e</title>
+			<title code="0x3f000003">Jingle #3f</title>
+			<title code="0x40000003">Jingle #40</title>
+			<title code="0x01000002">SFX #01</title>
+			<title code="0x02000002">SFX #02</title>
+			<title code="0x03000002">SFX #03</title>
+			<title code="0x04000002">SFX #04</title>
+			<title code="0x05000002">SFX #05</title>
+			<title code="0x06000002">SFX #06</title>
+			<title code="0x07000002">SFX #07</title>
+			<title code="0x08000002">SFX #08</title>
+			<title code="0x09000002">SFX #09</title>
+			<title code="0x0a000002">SFX #0a</title>
+			<title code="0x0b000002">SFX #0b</title>
+			<title code="0x0c000002">SFX #0c</title>
+			<title code="0x0d000002">SFX #0d</title>
+			<title code="0x0e000002">SFX #0e</title>
+			<title code="0x0f000002">SFX #0f</title>
+			<title code="0x10000002">SFX #10</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Star Wars: Attack on the Death Star (スターウォーズ Ａｔｔａｃｋ ｏｎ ｔｈｅ ＤＥＡＴＨＳＴＡＲ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">victor</driveralias>
+		<options>
+			<option name="fm_mix"  value="8"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="sw98">
+			<rom type="file" offset="-1">F.COM</rom>
+			<rom type="file" offset="-1">iwaplay.com</rom>
+			<rom type="file" offset="0x05">WARS_FM.DAT</rom>
+			<rom type="file" offset="0x10">CANTINA.DAT</rom>
+			<rom type="file" offset="0x11">M-0A.DAT</rom>
+			<rom type="file" offset="0x12">M-0F_A.DAT</rom>
+			<rom type="file" offset="0x13">M-0F_B.DAT</rom>
+			<rom type="file" offset="0x14">M-0F_C.DAT</rom>
+			<rom type="file" offset="0x15">M-16.DAT</rom>
+			<rom type="file" offset="0x16">M-17.DAT</rom>
+			<rom type="file" offset="0x17">M-18.DAT</rom>
+			<rom type="file" offset="0x18">M-19.DAT</rom>
+			<rom type="file" offset="0x19">M-1A.DAT</rom>
+			<rom type="file" offset="0x1a">M-1D.DAT</rom>
+			<rom type="file" offset="0x1b">M-1E.DAT</rom>
+			<rom type="file" offset="0x1c">M-1F.DAT</rom>
+			<rom type="file" offset="0x1d">M-20.DAT</rom>
+			<rom type="file" offset="0x1e">M-21.DAT</rom>
+			<rom type="file" offset="0x1f">M-22.DAT</rom>
+			<rom type="file" offset="0x20">M-23.DAT</rom>
+			<rom type="file" offset="0x21">MAIN.DAT</rom>
+			<rom type="file" offset="0x22">ROOM.DAT</rom>
+			<rom type="file" offset="0x23">TORES.DAT</rom>
+			<rom type="file" offset="0x24">V-01_A.DAT</rom>
+			<rom type="file" offset="0x25">V-01_B.DAT</rom>
+			<rom type="file" offset="0x26">V-01_C.DAT</rom>
+			<rom type="file" offset="0x27">V-04_A.DAT</rom>
+			<rom type="file" offset="0x28">V-04_B.DAT</rom>
+			<rom type="file" offset="0x29">V-04_C.DAT</rom>
+			<rom type="file" offset="0x2a">V-07_A.DAT</rom>
+			<rom type="file" offset="0x2b">V-07_B.DAT</rom>
+			<rom type="file" offset="0x2c">V-07_C.DAT</rom>
+			<rom type="file" offset="0x2d">V-0A_A.DAT</rom>
+			<rom type="file" offset="0x2e">V-0A_B.DAT</rom>
+			<rom type="file" offset="0x2f">V-0A_C.DAT</rom>
+			<rom type="file" offset="0x30">V-0D_A.DAT</rom>
+			<rom type="file" offset="0x31">V-0D_B.DAT</rom>
+			<rom type="file" offset="0x32">V-0D_C.DAT</rom>
+			<rom type="file" offset="0x33">V-10_A.DAT</rom>
+			<rom type="file" offset="0x34">V-10_B.DAT</rom>
+			<rom type="file" offset="0x35">V-10_C.DAT</rom>
+			<rom type="file" offset="0x36">V-13_A.DAT</rom>
+			<rom type="file" offset="0x37">V-13_B.DAT</rom>
+			<rom type="file" offset="0x38">V-13_C.DAT</rom>
+			<rom type="file" offset="0x39">V-16_A.DAT</rom>
+			<rom type="file" offset="0x3a">V-16_B.DAT</rom>
+			<rom type="file" offset="0x3b">V-16_C.DAT</rom>
+			<rom type="file" offset="0x3c">V-19.DAT</rom>
+			<rom type="file" offset="0x3d">V-1A.DAT</rom>
+			<rom type="file" offset="0x3e">V-1B.DAT</rom>
+			<rom type="file" offset="0x3f">V-1C.DAT</rom>
+			<rom type="file" offset="0x40">V-1D.DAT</rom>
+			<rom type="file" offset="0x41">V-1E.DAT</rom>
+			<rom type="file" offset="0x42">V-1F.DAT</rom>
+			<rom type="file" offset="0x43">V-20_A.DAT</rom>
+			<rom type="file" offset="0x44">V-20_B.DAT</rom>
+			<rom type="file" offset="0x45">V-20_C.DAT</rom>
+			<rom type="file" offset="0x46">WARS01.DAT</rom>
+			<rom type="file" offset="0x47">WARS02.DAT</rom>
+			<rom type="file" offset="0x48">WARS03.DAT</rom>
+			<rom type="file" offset="0x49">WARS04.DAT</rom>
+			<rom type="file" offset="0x4a">WARS05.DAT</rom>
+			<rom type="shell" offset="0">f</rom>
+			<rom type="shell" offset="0">iwaplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x21">MAIN.DAT</title>
+			<title code="0x22">ROOM.DAT</title>
+			<title code="0x23">TORES.DAT</title>
+			<title code="0x46">WARS01.DAT</title>
+			<title code="0x47">WARS02.DAT</title>
+			<title code="0x48">WARS03.DAT</title>
+			<title code="0x49">WARS04.DAT</title>
+			<title code="0x4a">WARS05.DAT</title>
+			<title code="0x10">CANTINA.DAT</title>
+			<title code="0x11">M-0A.DAT</title>
+			<title code="0x12">M-0F_A.DAT</title>
+			<title code="0x13">M-0F_B.DAT</title>
+			<title code="0x14">M-0F_C.DAT</title>
+			<title code="0x15">M-16.DAT</title>
+			<title code="0x16">M-17.DAT</title>
+			<title code="0x17">M-18.DAT</title>
+			<title code="0x18">M-19.DAT</title>
+			<title code="0x19">M-1A.DAT</title>
+			<title code="0x1a">M-1D.DAT</title>
+			<title code="0x1b">M-1E.DAT</title>
+			<title code="0x1c">M-1F.DAT</title>
+			<title code="0x1d">M-20.DAT</title>
+			<title code="0x1e">M-21.DAT</title>
+			<title code="0x1f">M-22.DAT</title>
+			<title code="0x20">M-23.DAT</title>
+			<title code="0x24">V-01_A.DAT</title>
+			<title code="0x25">V-01_B.DAT</title>
+			<title code="0x26">V-01_C.DAT</title>
+			<title code="0x27">V-04_A.DAT</title>
+			<title code="0x28">V-04_B.DAT</title>
+			<title code="0x29">V-04_C.DAT</title>
+			<title code="0x2a">V-07_A.DAT</title>
+			<title code="0x2b">V-07_B.DAT</title>
+			<title code="0x2c">V-07_C.DAT</title>
+			<title code="0x2d">V-0A_A.DAT</title>
+			<title code="0x2e">V-0A_B.DAT</title>
+			<title code="0x2f">V-0A_C.DAT</title>
+			<title code="0x30">V-0D_A.DAT</title>
+			<title code="0x31">V-0D_B.DAT</title>
+			<title code="0x32">V-0D_C.DAT</title>
+			<title code="0x33">V-10_A.DAT</title>
+			<title code="0x34">V-10_B.DAT</title>
+			<title code="0x35">V-10_C.DAT</title>
+			<title code="0x36">V-13_A.DAT</title>
+			<title code="0x37">V-13_B.DAT</title>
+			<title code="0x38">V-13_C.DAT</title>
+			<title code="0x39">V-16_A.DAT</title>
+			<title code="0x3a">V-16_B.DAT</title>
+			<title code="0x3b">V-16_C.DAT</title>
+			<title code="0x3c">V-19.DAT</title>
+			<title code="0x3d">V-1A.DAT</title>
+			<title code="0x3e">V-1B.DAT</title>
+			<title code="0x3f">V-1C.DAT</title>
+			<title code="0x40">V-1D.DAT</title>
+			<title code="0x41">V-1E.DAT</title>
+			<title code="0x42">V-1F.DAT</title>
+			<title code="0x43">V-20_A.DAT</title>
+			<title code="0x44">V-20_B.DAT</title>
+			<title code="0x45">V-20_C.DAT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Classic Road 2 (クラシック・ロード２)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">victor</driveralias>
+		<options>
+			<option name="fm_mix"  value="8"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="clrd2_98">
+			<rom type="file" offset="-1">F.COM</rom>
+			<rom type="file" offset="-1">iwaplay.com</rom>
+			<rom type="file" offset="0x05">FM_VOICE.SND</rom>
+			<rom type="file" offset="0x10">OPEN.BGM</rom>
+			<rom type="file" offset="0x11">END.BGM</rom>
+			<rom type="file" offset="0x12">FAN1.BGM</rom>
+			<rom type="file" offset="0x13">FAN10.BGM</rom>
+			<rom type="file" offset="0x14">FAN11.BGM</rom>
+			<rom type="file" offset="0x15">FAN2.BGM</rom>
+			<rom type="file" offset="0x16">FAN3.BGM</rom>
+			<rom type="file" offset="0x17">FAN4.BGM</rom>
+			<rom type="file" offset="0x18">FAN5.BGM</rom>
+			<rom type="file" offset="0x19">FAN6.BGM</rom>
+			<rom type="file" offset="0x1a">FAN7.BGM</rom>
+			<rom type="file" offset="0x1b">FAN8.BGM</rom>
+			<rom type="file" offset="0x1c">FAN9.BGM</rom>
+			<rom type="file" offset="0x1d">MENU.BGM</rom>
+			<rom type="file" offset="0x1e">RACE.BGM</rom>
+			<rom type="file" offset="0x1f">WIN.BGM</rom>
+			<rom type="file" offset="0x20">YEAR.BGM</rom>
+			<rom type="shell" offset="0">f</rom>
+			<rom type="shell" offset="0">iwaplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">OPEN.BGM</title>
+			<title code="0x11">END.BGM</title>
+			<title code="0x12">FAN1.BGM</title>
+			<title code="0x13">FAN10.BGM</title>
+			<title code="0x14">FAN11.BGM</title>
+			<title code="0x15">FAN2.BGM</title>
+			<title code="0x16">FAN3.BGM</title>
+			<title code="0x17">FAN4.BGM</title>
+			<title code="0x18">FAN5.BGM</title>
+			<title code="0x19">FAN6.BGM</title>
+			<title code="0x1a">FAN7.BGM</title>
+			<title code="0x1b">FAN8.BGM</title>
+			<title code="0x1c">FAN9.BGM</title>
+			<title code="0x1d">MENU.BGM</title>
+			<title code="0x1e">RACE.BGM</title>
+			<title code="0x1f">WIN.BGM</title>
+			<title code="0x20">YEAR.BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Classic Road 3 (クラシック・ロード３)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">victor</driveralias>
+		<options>
+			<option name="fm_mix"  value="8"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="clrd3_98">
+			<rom type="file" offset="-1">F.COM</rom>
+			<rom type="file" offset="-1">iwaplay.com</rom>
+			<rom type="file" offset="0x05">FM_VOICE.DAT</rom>
+			<rom type="file" offset="0x10">F_B000.DAT</rom>
+			<rom type="file" offset="0x11">F_B001.DAT</rom>
+			<rom type="file" offset="0x12">F_B002.DAT</rom>
+			<rom type="file" offset="0x13">F_B003.DAT</rom>
+			<rom type="file" offset="0x14">F_B004.DAT</rom>
+			<rom type="file" offset="0x15">F_B005.DAT</rom>
+			<rom type="file" offset="0x16">F_B006.DAT</rom>
+			<rom type="file" offset="0x17">F_BED1.DAT</rom>
+			<rom type="file" offset="0x18">F_BED2.DAT</rom>
+			<rom type="file" offset="0x19">F_BENT.DAT</rom>
+			<rom type="file" offset="0x1a">F_BFLD.DAT</rom>
+			<rom type="file" offset="0x1b">F_BHLD.DAT</rom>
+			<rom type="file" offset="0x1c">F_BMKT.DAT</rom>
+			<rom type="file" offset="0x1d">F_BOPN.DAT</rom>
+			<rom type="file" offset="0x1e">F_BRMD.DAT</rom>
+			<rom type="file" offset="0x1f">F_BWIN.DAT</rom>
+			<rom type="file" offset="0x20">F_BYED.DAT</rom>
+			<rom type="file" offset="0x21">F_F001.DAT</rom>
+			<rom type="file" offset="0x22">F_F002.DAT</rom>
+			<rom type="file" offset="0x23">F_F003.DAT</rom>
+			<rom type="file" offset="0x24">F_F004.DAT</rom>
+			<rom type="file" offset="0x25">F_F005.DAT</rom>
+			<rom type="file" offset="0x26">F_F006.DAT</rom>
+			<rom type="file" offset="0x27">F_F007.DAT</rom>
+			<rom type="file" offset="0x28">F_F008.DAT</rom>
+			<rom type="file" offset="0x29">F_F009.DAT</rom>
+			<rom type="file" offset="0x2a">F_SFOT.DAT</rom>
+			<rom type="file" offset="0x2b">F_SGAT.DAT</rom>
+			<rom type="file" offset="0x2c">F_SWAA.DAT</rom>
+			<rom type="file" offset="0x2d">F_SYOH.DAT</rom>
+			<rom type="shell" offset="0">f</rom>
+			<rom type="shell" offset="0">iwaplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000010">F_B000.DAT</title>
+			<title code="0x00000011">F_B001.DAT</title>
+			<title code="0x00000012">F_B002.DAT</title>
+			<title code="0x00000013">F_B003.DAT</title>
+			<title code="0x00000014">F_B004.DAT</title>
+			<title code="0x00000015">F_B005.DAT</title>
+			<title code="0x00000016">F_B006.DAT</title>
+			<title code="0x00000017">F_BED1.DAT</title>
+			<title code="0x00000018">F_BED2.DAT</title>
+			<title code="0x00000019">F_BENT.DAT</title>
+			<title code="0x0000001a">F_BFLD.DAT</title>
+			<title code="0x0000001b">F_BHLD.DAT</title>
+			<title code="0x0000001c">F_BMKT.DAT</title>
+			<title code="0x0000001d">F_BOPN.DAT</title>
+			<title code="0x0000001e">F_BRMD.DAT</title>
+			<title code="0x0000001f">F_BWIN.DAT</title>
+			<title code="0x00000020">F_BYED.DAT</title>
+			<title code="0x00000021">F_F001.DAT</title>
+			<title code="0x00000022">F_F002.DAT</title>
+			<title code="0x00000023">F_F003.DAT</title>
+			<title code="0x00000024">F_F004.DAT</title>
+			<title code="0x00000025">F_F005.DAT</title>
+			<title code="0x00000026">F_F006.DAT</title>
+			<title code="0x00000027">F_F007.DAT</title>
+			<title code="0x00000028">F_F008.DAT</title>
+			<title code="0x00000029">F_F009.DAT</title>
+			<title code="0x8000002a">F_SFOT.DAT</title>
+			<title code="0x8000002b">F_SGAT.DAT</title>
+			<title code="0x8000002c">F_SWAA.DAT</title>
+			<title code="0x8000002d">F_SYOH.DAT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Bubblegum Crisis Crime Wave (バブルガムクライシス ＣＲＩＭＥ ＷＡＶＥ)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">victor</driveralias>
+		<options>
+			<option name="bootcs" value="0x0300"/>
+			<option name="bootip" value="0xf000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0x67fe"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="43"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="bublegum_98">
+			<rom type="code" offset="0x03000">03000.BIN</rom>
+			<rom type="code" offset="0x06400">06400.BIN</rom>
+			<rom type="code" offset="0x12000">bgc_98.bin</rom>
+			<rom type="bgm" offset="1" >__A01.DAT</rom>
+			<rom type="bgm" offset="2" >__A02.DAT</rom>
+			<rom type="bgm" offset="3" >__A03.DAT</rom>
+			<rom type="bgm" offset="4" >__A04.DAT</rom>
+			<rom type="bgm" offset="5" >__A05.DAT</rom>
+			<rom type="bgm" offset="6" >__A06.DAT</rom>
+			<rom type="bgm" offset="7" >__A07.DAT</rom>
+			<rom type="bgm" offset="8" >__A08.DAT</rom>
+			<rom type="bgm" offset="9" >__A09.DAT</rom>
+			<rom type="bgm" offset="10">__A10.DAT</rom>
+			<rom type="bgm" offset="11">__A11.DAT</rom>
+			<rom type="bgm" offset="12">__A12.DAT</rom>
+			<rom type="bgm" offset="13">__A13.DAT</rom>
+			<rom type="bgm" offset="14">__A14.DAT</rom>
+			<rom type="bgm" offset="15">__A15.DAT</rom>
+			<rom type="bgm" offset="16">__A16.DAT</rom>
+			<rom type="bgm" offset="17">__A17.DAT</rom>
+			<rom type="bgm" offset="18">__A18.DAT</rom>
+			<rom type="bgm" offset="19">__A19.DAT</rom>
+			<rom type="bgm" offset="20">__A20.DAT</rom>
+			<rom type="bgm" offset="21">__A21.DAT</rom>
+			<rom type="bgm" offset="22">__A22.DAT</rom>
+			<rom type="bgm" offset="23">__A23.DAT</rom>
+			<rom type="bgm" offset="24">__A24.DAT</rom>
+			<rom type="bgm" offset="25">__A25.DAT</rom>
+			<rom type="bgm" offset="26">__B01.DAT</rom>
+			<rom type="bgm" offset="27">__B02.DAT</rom>
+			<rom type="bgm" offset="28">__B03.DAT</rom>
+			<rom type="bgm" offset="29">__B04.DAT</rom>
+			<rom type="bgm" offset="30">__B05.DAT</rom>
+			<rom type="bgm" offset="31">__B06.DAT</rom>
+			<rom type="bgm" offset="32">__B07.DAT</rom>
+			<rom type="bgm" offset="33">__B08.DAT</rom>
+			<rom type="bgm" offset="34">__B09.DAT</rom>
+			<rom type="bgm" offset="35">__B10.DAT</rom>
+			<rom type="bgm" offset="36">__B11.DAT</rom>
+			<rom type="bgm" offset="37">__B12.DAT</rom>
+			<rom type="bgm" offset="38">__B13.DAT</rom>
+			<rom type="bgm" offset="39">__B14.DAT</rom>
+			<rom type="bgm" offset="40">__B15.DAT</rom>
+			<rom type="bgm" offset="41">__B16.DAT</rom>
+			<rom type="bgm" offset="42">__B17.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >__A01.DAT</title>
+			<title code="2" >__A02.DAT</title>
+			<title code="3" >__A03.DAT</title>
+			<title code="4" >__A04.DAT</title>
+			<title code="5" >__A05.DAT</title>
+			<title code="6" >__A06.DAT</title>
+			<title code="7" >__A07.DAT</title>
+			<title code="8" >__A08.DAT</title>
+			<title code="9" >__A09.DAT</title>
+			<title code="10">__A10.DAT</title>
+			<title code="11">__A11.DAT</title>
+			<title code="12">__A12.DAT</title>
+			<title code="13">__A13.DAT</title>
+			<title code="14">__A14.DAT</title>
+			<title code="15">__A15.DAT</title>
+			<title code="16">__A16.DAT</title>
+			<title code="17">__A17.DAT</title>
+			<title code="18">__A18.DAT</title>
+			<title code="19">__A19.DAT</title>
+			<title code="20">__A20.DAT</title>
+			<title code="21">__A21.DAT</title>
+			<title code="22">__A22.DAT</title>
+			<title code="23">__A23.DAT</title>
+			<title code="24">__A24.DAT</title>
+			<title code="25">__A25.DAT</title>
+			<title code="26">__B01.DAT</title>
+			<title code="27">__B02.DAT</title>
+			<title code="28">__B03.DAT</title>
+			<title code="29">__B04.DAT</title>
+			<title code="30">__B05.DAT</title>
+			<title code="31">__B06.DAT</title>
+			<title code="32">__B07.DAT</title>
+			<title code="33">__B08.DAT</title>
+			<title code="34">__B09.DAT</title>
+			<title code="35">__B10.DAT</title>
+			<title code="36">__B11.DAT</title>
+			<title code="37">__B12.DAT</title>
+			<title code="38">__B13.DAT</title>
+			<title code="39">__B14.DAT</title>
+			<title code="40">__B15.DAT</title>
+			<title code="41">__B16.DAT</title>
+			<title code="42">__B17.DAT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Alantia: Legend of Blue Star (アランティア)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">victor</driveralias>
+		<options>
+			<option name="bootcs" value="0x2000"/>
+			<option name="bootip" value="0xf000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x9bb80"/>
+			<option name="filesize" value="0x02000"/>
+			<option name="fm_mix"  value="19"/>
+			<option name="ssg_mix"  value="0"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="datamax" value="0x0c"/>
+		</options>
+		<romlist archive="alantia_98">
+			<rom type="code" offset="0x20000">DRIVER</rom>
+			<rom type="code" offset="0x2f000">alantia.bin</rom>
+			<rom type="code" offset="0x40000">DATA</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+			<rom type="bgm" offset="0x0a">MUS09</rom>
+			<rom type="bgm" offset="0x0b">MUS10</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">オープニングアニメーション</title>
+			<title code="0x07">メニュージングル</title>
+			<title code="0x05">Lonely Tracer</title>
+			<title code="0x04">Reflecting In My Mind</title>
+			<title code="0x03">Wizardry</title>
+			<title code="0x02">Ways</title>
+			<title code="0x06">Somebody There</title>
+			<title code="0x09">Moon Light</title>
+			<title code="0x0a">Long Lost Lover</title>
+			<title code="0x0b">Look In Your Eyes</title>
+			<title code="0x08">MUS07</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] My Home Dream (マイホームドリーム)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">victor</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix"  value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="myhomedr_98">
+			<rom type="file" offset="-1">F.COM</rom>
+			<rom type="file" offset="-1">iwaplay.com</rom>
+			<rom type="file" offset="0x05">FMV_MAS3.DAT</rom>
+			<rom type="file" offset="0x10">01_C.DAT</rom>
+			<rom type="file" offset="0x11">02_C.DAT</rom>
+			<rom type="file" offset="0x12">04_C.DAT</rom>
+			<rom type="file" offset="0x13">05_C.DAT</rom>
+			<rom type="file" offset="0x14">09_C.DAT</rom>
+			<rom type="file" offset="0x15">10_C.DAT</rom>
+			<rom type="file" offset="0x16">11_C.DAT</rom>
+			<rom type="file" offset="0x17">12_C.DAT</rom>
+			<rom type="file" offset="0x18">14_C.DAT</rom>
+			<rom type="file" offset="0x19">16_C.DAT</rom>
+			<rom type="file" offset="0x1a">17_C.DAT</rom>
+			<rom type="file" offset="0x1b">18_C.DAT</rom>
+			<rom type="file" offset="0x1c">19_C.DAT</rom>
+			<rom type="file" offset="0x1d">20_C.DAT</rom>
+			<rom type="file" offset="0x1e">21_C.DAT</rom>
+			<rom type="file" offset="0x1f">22_C.DAT</rom>
+			<rom type="file" offset="0x20">23_C.DAT</rom>
+			<rom type="shell" offset="0">f</rom>
+			<rom type="shell" offset="0">iwaplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">01_C.DAT</title>
+			<title code="0x11">02_C.DAT</title>
+			<title code="0x12">04_C.DAT</title>
+			<title code="0x13">05_C.DAT</title>
+			<title code="0x14">09_C.DAT</title>
+			<title code="0x15">10_C.DAT</title>
+			<title code="0x16">11_C.DAT</title>
+			<title code="0x17">12_C.DAT</title>
+			<title code="0x18">14_C.DAT</title>
+			<title code="0x19">16_C.DAT</title>
+			<title code="0x1a">17_C.DAT</title>
+			<title code="0x1b">18_C.DAT</title>
+			<title code="0x1c">19_C.DAT</title>
+			<title code="0x1d">20_C.DAT</title>
+			<title code="0x1e">21_C.DAT</title>
+			<title code="0x1f">22_C.DAT</title>
+			<title code="0x20">23_C.DAT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Star Wars: Attack on the Death Star (スターウォーズ Ａｔｔａｃｋ ｏｎ ｔｈｅ ＤＥＡＴＨＳＴＡＲ)</name>
+		<!-- アルガーナのドライバを流用 -->
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">victor</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="sw68snd">
+		<rom type="code">swsnd.bin</rom>
+		<rom type="code" offset="0x10000">SWMYU.R</rom>
+		<rom type="code" offset="0x12000">SW.MDT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0106">タイトル</title>
+			<title code="0x0101">ステージ１</title>
+			<title code="0x0102">ステージ２</title>
+			<title code="0x0103">ステージ３前半</title>
+			<title code="0x0104">ステージ３後半</title>
+			<title code="0x0105">オールクリア</title>
+			<title code="0x0109">エンディング</title>
+			<title code="0x0107">オプションモード</title>
+			<title code="0x0108">ネームエントリー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Fantastic Night Dreams Cotton (コットン)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">victor</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xe0"/>
+		</options>
+		<romlist archive="ctn68snd">
+			<rom type="code" offset="0x00000">ctn68snd.bin</rom>
+			<rom type="code" offset="0x10000">bootsnd.sys</rom>
+			<rom type="code" offset="0x11000">ctnsnd.r</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Loading</title>
+			<title code="0x02">Opening</title>
+			<title code="0x05">Visual 1</title>
+			<title code="0x15">Visual 2</title>
+			<title code="0x08">Stage 1</title>
+			<title code="0x0e">Boss 1</title>
+			<title code="0x09">Stage 2</title>
+			<title code="0x0f">Boss 2</title>
+			<title code="0x0a">Stage 3</title>
+			<title code="0x10">Boss 3</title>
+			<title code="0x0b">Stage 4</title>
+			<title code="0x11">Boss 4</title>
+			<title code="0x0c">Stage 5</title>
+			<title code="0x12">Boss 5</title>
+			<title code="0x0d">Stage 6</title>
+			<title code="0x13">Boss 6</title>
+			<title code="0x14">Last Boss</title>
+			<title code="0x03">Ending</title>
+			<title code="0x04">Ranking</title>
+			<title code="0x07">Continue</title>
+			<title code="0x06">Game Over</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Shanghai Banrinochojo: The Great Wall (上海 万里の長城 The Great Wall)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">victor</driveralias>
+		<options>
+			<option name="opm_mix" value="0x0c0"/>
+			<option name="pcm_mix" value="0x0e0"/>
+		</options>
+		<romlist archive="sh468snd">
+			<rom type="code" offset="0x00000">sh468snd.bin</rom>
+			<rom type="code" offset="0x10000">sh4sound.r</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">SFX #1e</title>
+			<title code="0x1f">SFX #1f</title>
+			<title code="0x20">SFX #20</title>
+			<title code="0x21">SFX #21</title>
+			<title code="0x22">SFX #22</title>
+			<title code="0x23">SFX #23</title>
+			<title code="0x24">SFX #24</title>
+			<title code="0x25">SFX #25</title>
+			<title code="0x26">SFX #26</title>
+			<title code="0x27">SFX #27</title>
+			<title code="0x28">SFX #28</title>
+			<title code="0x29">SFX #29</title>
+			<title code="0x2a">SFX #2a</title>
+			<title code="0x2b">SFX #2b</title>
+			<title code="0x2c">SFX #2c</title>
+			<title code="0x2d">SFX #2d</title>
+			<title code="0x2e">SFX #2e</title>
+			<title code="0x2f">SFX #2f</title>
+			<title code="0x30">SFX #30</title>
+			<title code="0x31">SFX #31</title>
+			<title code="0x32">SFX #32</title>
+			<title code="0x33">SFX #33</title>
+			<title code="0x34">SFX #34</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Shiryou Sensen (死霊戦線)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">victor</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="shiryo_msx">
+			<rom type="code">Shiryou Sensen (1987)(Victor).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Shiryou Sensen 2 (死霊戦線2)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">victor</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="shiryo2_msx">
+			<rom type="code">Shiryou Sensen 2 (1988)(Victor).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x2d">BGM #2d</title>
+		</titlelist>
+	</game>
+	<game>
+	<name>[TG16] Legendary Axe, The [Makyou Densetsu] / Jun Chikuma, Toshiaki Takimoto / 1988 (Atlus) Victor</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">victor</driveralias>
+	<romlist archive="Legendary Axe The [Makyou Densetsu] (1988-09-23)(Atlus)(Victor)">
+		<rom type="code">JC63001.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x2A">Level 1</title>
+		<title code="0x29">Level 2</title>
+		<title code="0x28">Level 3</title>
+		<title code="0x2B">Level 4</title>
+		<title code="0x2F">Level 5</title>
+		<title code="0x30">Level 6</title>
+		<title code="0x31">Level 7</title>
+		<title code="0x2C">Boss 1</title>
+		<title code="0x2D">Boss 2</title>
+		<title code="0x2E">Boss 3</title>
+		<title code="0x32">Level Complete</title>
+		<title code="0x33">Game Complete</title>
+		<title code="0x34">Game Over</title>
+		<title code="0x35">Ending</title>
+	</titlelist>
+</game>
+</gamelist>

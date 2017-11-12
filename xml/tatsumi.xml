@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //seibu -->
+	<game>
+  	<name>[Apache 3] Apache 3 (アパッチ3)</name>
+  	<driver type="apache3">tatsumi</driver>
+		<driveralias type="Arcade">tatsumi</driveralias>
+		<options>
+			<option name="opm_mix" value="0x400"/>
+			<option name="pcm_mix" value="0x400"/>
+		</options>
+  	<romlist archive="apache3">
+  		<rom type="code" offset="0xf0000">ap-27d.151</rom>
+  		<rom type="pcm" offset="0x00000">ap-28c.171</rom>
+  		<rom type="pcm" offset="0x20000">ap-29c.176</rom>
+  	</romlist>
+  	<titlelist>
+			<title code="0x30">BGM #30</title>
+			<title code="0x31">BGM #31</title>
+			<title code="0x32">BGM #32</title>
+			<title code="0x33">BGM #33</title>
+			<title code="0x34">BGM #34</title>
+			<title code="0x35">BGM #35</title>
+			<title code="0x36">BGM #36</title>
+			<title code="0x37">BGM #37</title>
+			<title code="0x39">BGM #39</title>
+			<title code="0x3a">BGM #3a</title>
+  	</titlelist>
+  </game>
+</gamelist>

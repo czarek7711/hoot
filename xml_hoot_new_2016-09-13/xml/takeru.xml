@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //TAKERU -->
+	<game>
+		<name>[X1] HAYATO(OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="SHARP X1">Takeru</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+		</options>
+		<romlist archive="x1hayato">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xb800">DRIVER1</rom>
+			<rom type="code" offset="0xbc00">DRIVER2</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000001">01</title>
+			<title code="0x02000000">02</title>
+			<title code="0x03000000">03</title>
+			<title code="0x04000000">04</title>
+			<title code="0x05000000">05</title>
+			<title code="0x06000000">06</title>
+			<title code="0x07000000">07</title>
+			<title code="0x08000000">08</title>
+			<title code="0x09000001">09</title>
+			<title code="0x0b000000">0b</title>
+			<title code="0x0c000000">0c</title>
+			<title code="0x0d000000">0d</title>
+			<title code="0x0e000000">0e</title>
+			<title code="0x0f000000">0f</title>
+			<title code="0x10000000">10</title>
+			<title code="0x11000000">11</title>
+			<title code="0x12000000">12</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] HAYATO(PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">Takeru</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+			<option name="psg_mix" value="0x70"/>
+		</options>
+		<romlist archive="x1hayato">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xb800">DRIVER1</rom>
+			<rom type="code" offset="0xbc00">DRIVER2</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000001">01</title>
+			<title code="0x02000000">02</title>
+			<title code="0x03000000">03</title>
+			<title code="0x04000000">04</title>
+			<title code="0x05000000">05</title>
+			<title code="0x06000000">06</title>
+			<title code="0x07000000">07</title>
+			<title code="0x08000000">08</title>
+			<title code="0x09000001">09</title>
+			<title code="0x0b000000">0b</title>
+			<title code="0x0c000000">0c</title>
+			<title code="0x0d000000">0d</title>
+			<title code="0x0e000000">0e</title>
+			<title code="0x0f000000">0f</title>
+			<title code="0x10000000">10</title>
+			<title code="0x11000000">11</title>
+			<title code="0x12000000">12</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] SORCERIAN - Dragon Slayer V - (基本シナリオ)(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Takeru</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8000"/>
+			<option name="mdata_size" value="0x2000"/>
+			<option name="mfile_size" value="0x2000"/>
+			<option name="mdata_num"  value="0x40"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="sor_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xb000">BIOS</rom>
+			<rom type="bgm" offset="0x00">PS001</rom>
+			<rom type="bgm" offset="0x01">PS002</rom>
+			<rom type="bgm" offset="0x02">PS003</rom>
+			<rom type="bgm" offset="0x03">PS004</rom>
+			<rom type="bgm" offset="0x04">PS005</rom>
+			<rom type="bgm" offset="0x05">PS006</rom>
+			<rom type="bgm" offset="0x06">PS007</rom>
+			<rom type="bgm" offset="0x07">PS008</rom>
+			<rom type="bgm" offset="0x08">PS009</rom>
+			<rom type="bgm" offset="0x09">PS010</rom>
+			<rom type="bgm" offset="0x0a">PS011</rom>
+			<rom type="bgm" offset="0x0b">PS012</rom>
+			<rom type="bgm" offset="0x0c">PS014</rom>
+			<rom type="bgm" offset="0x0d">PS015</rom>
+			<rom type="bgm" offset="0x0e">PS016</rom>
+			<rom type="bgm" offset="0x0f">PS017</rom>
+			<rom type="bgm" offset="0x10">PS018</rom>
+			<rom type="bgm" offset="0x11">PS020</rom>
+			<rom type="bgm" offset="0x12">PS021</rom>
+			<rom type="bgm" offset="0x13">PS022</rom>
+			<rom type="bgm" offset="0x14">PS025</rom>
+			<rom type="bgm" offset="0x15">PS026</rom>
+			<rom type="bgm" offset="0x16">PS027</rom>
+			<rom type="bgm" offset="0x17">PS029</rom>
+			<rom type="bgm" offset="0x18">PS032</rom>
+			<rom type="bgm" offset="0x19">PS034</rom>
+			<rom type="bgm" offset="0x1a">PS036</rom>
+			<rom type="bgm" offset="0x1b">PS037</rom>
+			<rom type="bgm" offset="0x1c">PS039</rom>
+			<rom type="bgm" offset="0x1d">PS040</rom>
+			<rom type="bgm" offset="0x1e">PS041</rom>
+			<rom type="bgm" offset="0x1f">PS042</rom>
+			<rom type="bgm" offset="0x20">PS043</rom>
+			<rom type="bgm" offset="0x21">PS044</rom>
+			<rom type="bgm" offset="0x22">PS045</rom>
+			<rom type="bgm" offset="0x23">PS047</rom>
+			<rom type="bgm" offset="0x24">PS048</rom>
+			<rom type="bgm" offset="0x25">PS049</rom>
+			<rom type="bgm" offset="0x26">PS053</rom>
+			<rom type="bgm" offset="0x27">PS054</rom>
+			<rom type="bgm" offset="0x28">PS055</rom>
+			<rom type="bgm" offset="0x29">PS058</rom>
+			<rom type="bgm" offset="0x2a">PS059</rom>
+			<rom type="bgm" offset="0x2b">PS060</rom>
+			<rom type="bgm" offset="0x2c">PS061</rom>
+			<rom type="bgm" offset="0x2d">PS062</rom>
+			<rom type="bgm" offset="0x2e">PS081</rom>
+			<rom type="bgm" offset="0x2f">PS082</rom>
+			<rom type="bgm" offset="0x30">PS083</rom>
+			<rom type="bgm" offset="0x31">PS084</rom>
+			<rom type="bgm" offset="0x32">PS085</rom>
+			<rom type="bgm" offset="0x33">PS086</rom>
+			<rom type="bgm" offset="0x34">PS087</rom>
+			<rom type="bgm" offset="0x35">PS088</rom>
+			<rom type="bgm" offset="0x36">PS089</rom>
+			<rom type="bgm" offset="0x37">PS090</rom>
+			<rom type="bgm" offset="0x38">PS091</rom>
+			<rom type="bgm" offset="0x39">PS092</rom>
+			<rom type="bgm" offset="0x3a">PS097</rom>
+			<rom type="bgm" offset="0x3b">PS098</rom>
+			<rom type="bgm" offset="0x3c">PS099</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1c">PS039 : オープニング</title>
+			<title code="0x10">PS018 : 城「ここで逢えるね」</title>
+			<title code="0x1d">PS040 : 町「ペンタウァI」</title>
+			<title code="0x0a">PS011 : 町「ペンタウァII」</title>
+			<title code="0x11">PS020 : アイテム分配「トラベラーズ・イン」</title>
+			<title code="0x3c">PS099 : ファンファーレ</title>
+			<title code="0x2d">PS062 : キングドラゴン</title>
+			<title code="0x3b">PS098 : キングドラゴン死亡</title>
+			<title code="0x2c">PS061 : エンディングI</title>
+			<title code="0x38">PS091 : エンディングII</title>
+			<title code="0x00">PS001 : 消えた王様の杖           / ダンジョン</title>
+			<title code="0x04">PS005 : 消えた王様の杖           / ヒドラ</title>
+			<title code="0x17">PS029 : 消えた王様の杖           / 生還</title>
+			<title code="0x0f">PS017 : 失われたタリスマン       / 森</title>
+			<title code="0x1e">PS041 : 失われたタリスマン       / 地下ダンジョン</title>
+			<title code="0x2e">PS081 : 失われたタリスマン       / 神官デヒテル</title>
+			<title code="0x32">PS085 : 失われたタリスマン       / サンド・マリボー</title>
+			<title code="0x09">PS010 : ルシフェルの水門         / 地下ダンジョン</title>
+			<title code="0x16">PS027 : ルシフェルの水門         / クラーケン</title>
+			<title code="0x35">PS088 : ルシフェルの水門         / ブラッディー・リバー</title>
+			<title code="0x1b">PS037 : 呪われたオアシス         / 砂漠</title>
+			<title code="0x29">PS058 : 呪われたオアシス         / 砂の城</title>
+			<title code="0x2b">PS060 : 呪われたオアシス         / ルワンとゴールドドラゴン</title>
+			<title code="0x25">PS049 : 盗賊たちの塔             / 塔</title>
+			<title code="0x27">PS054 : 盗賊たちの塔             / 地底</title>
+			<title code="0x28">PS055 : 盗賊たちの塔             / 屋上</title>
+			<title code="0x2f">PS082 : 盗賊たちの塔             / シャドー・ドラゴン</title>
+			<title code="0x37">PS090 : 盗賊たちの塔             / メジャー・デーモン</title>
+			<title code="0x34">PS087 : 盗賊たちの塔             / 封印</title>
+			<title code="0x19">PS034 : 暗き沼の魔法使い         / 暗き沼</title>
+			<title code="0x08">PS009 : 暗き沼の魔法使い         / レッド・ドラゴン</title>
+			<title code="0x02">PS003 : ロマンシア               / ロマンシア王国</title>
+			<title code="0x07">PS008 : ロマンシア               / ロマンシア城</title>
+			<title code="0x03">PS004 : ロマンシア               / アゾルバ王国</title>
+			<title code="0x20">PS043 : ロマンシア               / ヴァイデス</title>
+			<title code="0x01">PS002 : 紅玉の謎                 / 森</title>
+			<title code="0x3a">PS097 : 紅玉の謎                 / モス・ジャイアント</title>
+			<title code="0x36">PS089 : 紅玉の謎                 / 平和な森</title>
+			<title code="0x18">PS032 : 暗黒の魔導士             / ダンジョンI</title>
+			<title code="0x15">PS026 : 暗黒の魔導士             / ブルー・ドラゴン</title>
+			<title code="0x13">PS022 : 暗黒の魔導士             / ダンジョンII</title>
+			<title code="0x0e">PS016 : 暗黒の魔導士             / ゲディス</title>
+			<title code="0x0c">PS014 : 呪われたクイーンマリー号 / 船内</title>
+			<title code="0x21">PS044 : 呪われたクイーンマリー号 / 上陸後</title>
+			<title code="0x31">PS084 : 呪われたクイーンマリー号 / アークデーモン</title>
+			<title code="0x24">PS048 : 天の神々たち             / 村</title>
+			<title code="0x1f">PS042 : 天の神々たち             / コンバットシーン</title>
+			<title code="0x2a">PS059 : 天の神々たち             / 天上界</title>
+			<title code="0x22">PS045 : 天の神々たち             / 竪琴</title>
+			<title code="0x30">PS083 : 天の神々たち             / エビル=シャーマン</title>
+			<title code="0x06">PS007 : 氷の洞窟                 / 洞窟I</title>
+			<title code="0x05">PS006 : 氷の洞窟                 / エキム</title>
+			<title code="0x1a">PS036 : 氷の洞窟                 / 洞窟II</title>
+			<title code="0x0b">PS012 : メデューサの首           / 森</title>
+			<title code="0x26">PS053 : メデューサの首           / 村</title>
+			<title code="0x23">PS047 : メデューサの首           / メデューサ</title>
+			<title code="0x12">PS021 : 囚われた魔法使い         / 地下要塞</title>
+			<title code="0x33">PS086 : 囚われた魔法使い         / ファイヤー・エレメント</title>
+			<title code="0x14">PS025 : 不老長寿の水             / 生きている洞窟</title>
+			<title code="0x0d">PS015 : 不老長寿の水             / ダブル=デビルス</title>
+			<title code="0x39">PS092 : 不老長寿の水             / 動く心臓</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] SORCERIAN - Dragon Slayer V - (基本シナリオ)(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Takeru</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8000"/>
+			<option name="mdata_size" value="0x2000"/>
+			<option name="mfile_size" value="0x2000"/>
+			<option name="mdata_num"  value="0x40"/>
+			<option name="use_opll"   value="0x01"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="sor_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xb000">BIOS</rom>
+			<rom type="bgm" offset="0x00">SS001</rom>
+			<rom type="bgm" offset="0x01">SS002</rom>
+			<rom type="bgm" offset="0x02">SS003</rom>
+			<rom type="bgm" offset="0x03">SS004</rom>
+			<rom type="bgm" offset="0x04">SS005</rom>
+			<rom type="bgm" offset="0x05">SS006</rom>
+			<rom type="bgm" offset="0x06">SS007</rom>
+			<rom type="bgm" offset="0x07">SS008</rom>
+			<rom type="bgm" offset="0x08">SS009</rom>
+			<rom type="bgm" offset="0x09">SS010</rom>
+			<rom type="bgm" offset="0x0a">SS011</rom>
+			<rom type="bgm" offset="0x0b">SS012</rom>
+			<rom type="bgm" offset="0x0c">SS014</rom>
+			<rom type="bgm" offset="0x0d">SS015</rom>
+			<rom type="bgm" offset="0x0e">SS016</rom>
+			<rom type="bgm" offset="0x0f">SS017</rom>
+			<rom type="bgm" offset="0x10">SS018</rom>
+			<rom type="bgm" offset="0x11">SS020</rom>
+			<rom type="bgm" offset="0x12">SS021</rom>
+			<rom type="bgm" offset="0x13">SS022</rom>
+			<rom type="bgm" offset="0x14">SS025</rom>
+			<rom type="bgm" offset="0x15">SS026</rom>
+			<rom type="bgm" offset="0x16">SS027</rom>
+			<rom type="bgm" offset="0x17">SS029</rom>
+			<rom type="bgm" offset="0x18">SS032</rom>
+			<rom type="bgm" offset="0x19">SS034</rom>
+			<rom type="bgm" offset="0x1a">SS036</rom>
+			<rom type="bgm" offset="0x1b">SS037</rom>
+			<rom type="bgm" offset="0x1c">SS039</rom>
+			<rom type="bgm" offset="0x1d">SS040</rom>
+			<rom type="bgm" offset="0x1e">SS041</rom>
+			<rom type="bgm" offset="0x1f">SS042</rom>
+			<rom type="bgm" offset="0x20">SS043</rom>
+			<rom type="bgm" offset="0x21">SS044</rom>
+			<rom type="bgm" offset="0x22">SS045</rom>
+			<rom type="bgm" offset="0x23">SS047</rom>
+			<rom type="bgm" offset="0x24">SS048</rom>
+			<rom type="bgm" offset="0x25">SS049</rom>
+			<rom type="bgm" offset="0x26">SS053</rom>
+			<rom type="bgm" offset="0x27">SS054</rom>
+			<rom type="bgm" offset="0x28">SS055</rom>
+			<rom type="bgm" offset="0x29">SS058</rom>
+			<rom type="bgm" offset="0x2a">SS059</rom>
+			<rom type="bgm" offset="0x2b">SS060</rom>
+			<rom type="bgm" offset="0x2c">SS061</rom>
+			<rom type="bgm" offset="0x2d">SS062</rom>
+			<rom type="bgm" offset="0x2e">SS081</rom>
+			<rom type="bgm" offset="0x2f">SS082</rom>
+			<rom type="bgm" offset="0x30">SS083</rom>
+			<rom type="bgm" offset="0x31">SS084</rom>
+			<rom type="bgm" offset="0x32">SS085</rom>
+			<rom type="bgm" offset="0x33">SS086</rom>
+			<rom type="bgm" offset="0x34">SS087</rom>
+			<rom type="bgm" offset="0x35">SS088</rom>
+			<rom type="bgm" offset="0x36">SS089</rom>
+			<rom type="bgm" offset="0x37">SS090</rom>
+			<rom type="bgm" offset="0x38">SS091</rom>
+			<rom type="bgm" offset="0x39">SS092</rom>
+			<rom type="bgm" offset="0x3a">SS097</rom>
+			<rom type="bgm" offset="0x3b">SS098</rom>
+			<rom type="bgm" offset="0x3c">SS099</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1c">SS039 : オープニング</title>
+			<title code="0x10">SS018 : 城「ここで逢えるね」</title>
+			<title code="0x1d">SS040 : 町「ペンタウァI」</title>
+			<title code="0x0a">SS011 : 町「ペンタウァII」</title>
+			<title code="0x11">SS020 : アイテム分配「トラベラーズ・イン」</title>
+			<title code="0x3c">SS099 : ファンファーレ</title>
+			<title code="0x2d">SS062 : キングドラゴン</title>
+			<title code="0x3b">SS098 : キングドラゴン死亡</title>
+			<title code="0x2c">SS061 : エンディングI</title>
+			<title code="0x38">SS091 : エンディングII</title>
+			<title code="0x00">SS001 : 消えた王様の杖           / ダンジョン</title>
+			<title code="0x04">SS005 : 消えた王様の杖           / ヒドラ</title>
+			<title code="0x17">SS029 : 消えた王様の杖           / 生還</title>
+			<title code="0x0f">SS017 : 失われたタリスマン       / 森</title>
+			<title code="0x1e">SS041 : 失われたタリスマン       / 地下ダンジョン</title>
+			<title code="0x2e">SS081 : 失われたタリスマン       / 神官デヒテル</title>
+			<title code="0x32">SS085 : 失われたタリスマン       / サンド・マリボー</title>
+			<title code="0x09">SS010 : ルシフェルの水門         / 地下ダンジョン</title>
+			<title code="0x16">SS027 : ルシフェルの水門         / クラーケン</title>
+			<title code="0x35">SS088 : ルシフェルの水門         / ブラッディー・リバー</title>
+			<title code="0x1b">SS037 : 呪われたオアシス         / 砂漠</title>
+			<title code="0x29">SS058 : 呪われたオアシス         / 砂の城</title>
+			<title code="0x2b">SS060 : 呪われたオアシス         / ルワンとゴールドドラゴン</title>
+			<title code="0x25">SS049 : 盗賊たちの塔             / 塔</title>
+			<title code="0x27">SS054 : 盗賊たちの塔             / 地底</title>
+			<title code="0x28">SS055 : 盗賊たちの塔             / 屋上</title>
+			<title code="0x2f">SS082 : 盗賊たちの塔             / シャドー・ドラゴン</title>
+			<title code="0x37">SS090 : 盗賊たちの塔             / メジャー・デーモン</title>
+			<title code="0x34">SS087 : 盗賊たちの塔             / 封印</title>
+			<title code="0x19">SS034 : 暗き沼の魔法使い         / 暗き沼</title>
+			<title code="0x08">SS009 : 暗き沼の魔法使い         / レッド・ドラゴン</title>
+			<title code="0x02">SS003 : ロマンシア               / ロマンシア王国</title>
+			<title code="0x07">SS008 : ロマンシア               / ロマンシア城</title>
+			<title code="0x03">SS004 : ロマンシア               / アゾルバ王国</title>
+			<title code="0x20">SS043 : ロマンシア               / ヴァイデス</title>
+			<title code="0x01">SS002 : 紅玉の謎                 / 森</title>
+			<title code="0x3a">SS097 : 紅玉の謎                 / モス・ジャイアント</title>
+			<title code="0x36">SS089 : 紅玉の謎                 / 平和な森</title>
+			<title code="0x18">SS032 : 暗黒の魔導士             / ダンジョンI</title>
+			<title code="0x15">SS026 : 暗黒の魔導士             / ブルー・ドラゴン</title>
+			<title code="0x13">SS022 : 暗黒の魔導士             / ダンジョンII</title>
+			<title code="0x0e">SS016 : 暗黒の魔導士             / ゲディス</title>
+			<title code="0x0c">SS014 : 呪われたクイーンマリー号 / 船内</title>
+			<title code="0x21">SS044 : 呪われたクイーンマリー号 / 上陸後</title>
+			<title code="0x31">SS084 : 呪われたクイーンマリー号 / アークデーモン</title>
+			<title code="0x24">SS048 : 天の神々たち             / 村</title>
+			<title code="0x1f">SS042 : 天の神々たち             / コンバットシーン</title>
+			<title code="0x2a">SS059 : 天の神々たち             / 天上界</title>
+			<title code="0x22">SS045 : 天の神々たち             / 竪琴</title>
+			<title code="0x30">SS083 : 天の神々たち             / エビル=シャーマン</title>
+			<title code="0x06">SS007 : 氷の洞窟                 / 洞窟I</title>
+			<title code="0x05">SS006 : 氷の洞窟                 / エキム</title>
+			<title code="0x1a">SS036 : 氷の洞窟                 / 洞窟II</title>
+			<title code="0x0b">SS012 : メデューサの首           / 森</title>
+			<title code="0x26">SS053 : メデューサの首           / 村</title>
+			<title code="0x23">SS047 : メデューサの首           / メデューサ</title>
+			<title code="0x12">SS021 : 囚われた魔法使い         / 地下要塞</title>
+			<title code="0x33">SS086 : 囚われた魔法使い         / ファイヤー・エレメント</title>
+			<title code="0x14">SS025 : 不老長寿の水             / 生きている洞窟</title>
+			<title code="0x0d">SS015 : 不老長寿の水             / ダブル=デビルス</title>
+			<title code="0x39">SS092 : 不老長寿の水             / 動く心臓</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] SORCERIAN - Dragon Slayer V - (戦国ソーサリアン)(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Takeru</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8000"/>
+			<option name="mdata_size" value="0x2000"/>
+			<option name="mfile_size" value="0x2000"/>
+			<option name="mdata_num"  value="0x40"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="sorsen_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xb000">BIOS</rom>
+			<rom type="bgm" offset="0x00">PS000</rom>
+			<rom type="bgm" offset="0x01">PS005</rom>
+			<rom type="bgm" offset="0x02">PS011</rom>
+			<rom type="bgm" offset="0x03">PS018</rom>
+			<rom type="bgm" offset="0x04">PS020</rom>
+			<rom type="bgm" offset="0x05">PS026</rom>
+			<rom type="bgm" offset="0x06">PS039</rom>
+			<rom type="bgm" offset="0x07">PS040</rom>
+			<rom type="bgm" offset="0x08">PS043</rom>
+			<rom type="bgm" offset="0x09">PS061</rom>
+			<rom type="bgm" offset="0x0a">PS062</rom>
+			<rom type="bgm" offset="0x0b">PS063</rom>
+			<rom type="bgm" offset="0x0c">PS064</rom>
+			<rom type="bgm" offset="0x0d">PS065</rom>
+			<rom type="bgm" offset="0x0e">PS072</rom>
+			<rom type="bgm" offset="0x0f">PS077</rom>
+			<rom type="bgm" offset="0x10">PS078</rom>
+			<rom type="bgm" offset="0x11">PS079</rom>
+			<rom type="bgm" offset="0x12">PS080</rom>
+			<rom type="bgm" offset="0x13">PS091</rom>
+			<rom type="bgm" offset="0x14">PS093</rom>
+			<rom type="bgm" offset="0x15">PS094</rom>
+			<rom type="bgm" offset="0x16">PS095</rom>
+			<rom type="bgm" offset="0x17">PS096</rom>
+			<rom type="bgm" offset="0x18">PS098</rom>
+			<rom type="bgm" offset="0x19">PS099</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">PS000 : 演奏停止</title>
+			<title code="0x0b">PS063 : 武田信玄の章   / 異教の地</title>
+			<title code="0x15">PS094 : 武田信玄の章   / 阿修羅</title>
+			<title code="0x0c">PS064 : 織田信長の章   / 雪の五条大橋</title>
+			<title code="0x16">PS095 : 織田信長の章   / 風神 雷神</title>
+			<title code="0x0e">PS072 : 豊臣秀吉の章   / 哀愁の天守閣</title>
+			<title code="0x12">PS080 : 豊臣秀吉の章   / ぬえ</title>
+			<title code="0x0d">PS065 : 真田幸村の章   / 忍者屋敷</title>
+			<title code="0x14">PS093 : 真田幸村の章   / 天狗</title>
+			<title code="0x11">PS079 : 徳川家康の章   / 江戸を斬る</title>
+			<title code="0x10">PS078 : 徳川家康の章   / 邪鬼</title>
+			<title code="0x19">PS099 : ファンファーレ</title>
+			<title code="0x0f">PS077 : 勝利</title>
+			<title code="0x17">PS096 : 帰還</title>
+			<title code="0x06">PS039 : オープニング</title>
+			<title code="0x03">PS018 : 城「ここで逢えるね」</title>
+			<title code="0x07">PS040 : 町「ペンタウァI」</title>
+			<title code="0x02">PS011 : 町「ペンタウァII」</title>
+			<title code="0x04">PS020 : アイテム分配「トラベラーズ・イン」</title>
+			<title code="0x0a">PS062 : キングドラゴン</title>
+			<title code="0x18">PS098 : キングドラゴン死亡</title>
+			<title code="0x09">PS061 : エンディングI</title>
+			<title code="0x13">PS091 : エンディングII</title>
+			<title code="0x01">PS005 : 消えた王様の杖 / ヒドラ</title>
+			<title code="0x08">PS043 : ロマンシア     / ヴァイデス</title>
+			<title code="0x05">PS026 : 暗黒の魔導士   / ブルー・ドラゴン</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] SORCERIAN - Dragon Slayer V - (戦国ソーサリアン)(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Takeru</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8000"/>
+			<option name="mdata_size" value="0x2000"/>
+			<option name="mfile_size" value="0x2000"/>
+			<option name="mdata_num"  value="0x40"/>
+			<option name="use_opll"   value="0x01"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="sorsen_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xb000">BIOS</rom>
+			<rom type="bgm" offset="0x00">SS000</rom>
+			<rom type="bgm" offset="0x01">SS005</rom>
+			<rom type="bgm" offset="0x02">SS011</rom>
+			<rom type="bgm" offset="0x03">SS018</rom>
+			<rom type="bgm" offset="0x04">SS020</rom>
+			<rom type="bgm" offset="0x05">SS026</rom>
+			<rom type="bgm" offset="0x06">SS039</rom>
+			<rom type="bgm" offset="0x07">SS040</rom>
+			<rom type="bgm" offset="0x08">SS043</rom>
+			<rom type="bgm" offset="0x09">SS061</rom>
+			<rom type="bgm" offset="0x0a">SS062</rom>
+			<rom type="bgm" offset="0x0b">SS063</rom>
+			<rom type="bgm" offset="0x0c">SS064</rom>
+			<rom type="bgm" offset="0x0d">SS065</rom>
+			<rom type="bgm" offset="0x0e">SS072</rom>
+			<rom type="bgm" offset="0x0f">SS077</rom>
+			<rom type="bgm" offset="0x10">SS078</rom>
+			<rom type="bgm" offset="0x11">SS079</rom>
+			<rom type="bgm" offset="0x12">SS080</rom>
+			<rom type="bgm" offset="0x13">SS091</rom>
+			<rom type="bgm" offset="0x14">SS093</rom>
+			<rom type="bgm" offset="0x15">SS094</rom>
+			<rom type="bgm" offset="0x16">SS095</rom>
+			<rom type="bgm" offset="0x17">SS096</rom>
+			<rom type="bgm" offset="0x18">SS098</rom>
+			<rom type="bgm" offset="0x19">SS099</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">SS000 : 演奏停止</title>
+			<title code="0x0b">SS063 : 武田信玄の章   / 異教の地</title>
+			<title code="0x15">SS094 : 武田信玄の章   / 阿修羅</title>
+			<title code="0x0c">SS064 : 織田信長の章   / 雪の五条大橋</title>
+			<title code="0x16">SS095 : 織田信長の章   / 風神 雷神</title>
+			<title code="0x0e">SS072 : 豊臣秀吉の章   / 哀愁の天守閣</title>
+			<title code="0x12">SS080 : 豊臣秀吉の章   / ぬえ</title>
+			<title code="0x0d">SS065 : 真田幸村の章   / 忍者屋敷</title>
+			<title code="0x14">SS093 : 真田幸村の章   / 天狗</title>
+			<title code="0x11">SS079 : 徳川家康の章   / 江戸を斬る</title>
+			<title code="0x10">SS078 : 徳川家康の章   / 邪鬼</title>
+			<title code="0x19">SS099 : ファンファーレ</title>
+			<title code="0x0f">SS077 : 勝利</title>
+			<title code="0x17">SS096 : 帰還</title>
+			<title code="0x06">SS039 : オープニング</title>
+			<title code="0x03">SS018 : 城「ここで逢えるね」</title>
+			<title code="0x07">SS040 : 町「ペンタウァI」</title>
+			<title code="0x02">SS011 : 町「ペンタウァII」</title>
+			<title code="0x04">SS020 : アイテム分配「トラベラーズ・イン」</title>
+			<title code="0x0a">SS062 : キングドラゴン</title>
+			<title code="0x18">SS098 : キングドラゴン死亡</title>
+			<title code="0x09">SS061 : エンディングI</title>
+			<title code="0x13">SS091 : エンディングII</title>
+			<title code="0x01">SS005 : 消えた王様の杖 / ヒドラ</title>
+			<title code="0x08">SS043 : ロマンシア     / ヴァイデス</title>
+			<title code="0x05">SS026 : 暗黒の魔導士   / ブルー・ドラゴン</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] SORCERIAN - Dragon Slayer V - (ピラミッドソーサリアン)(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Takeru</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8000"/>
+			<option name="mdata_size" value="0x2000"/>
+			<option name="mfile_size" value="0x2000"/>
+			<option name="mdata_num"  value="0x40"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="sorpyr_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xb000">BIOS</rom>
+			<rom type="bgm" offset="0x00">PS000</rom>
+			<rom type="bgm" offset="0x01">PS001</rom>
+			<rom type="bgm" offset="0x02">PS002</rom>
+			<rom type="bgm" offset="0x03">PS003</rom>
+			<rom type="bgm" offset="0x04">PS004</rom>
+			<rom type="bgm" offset="0x05">PS005</rom>
+			<rom type="bgm" offset="0x06">PS006</rom>
+			<rom type="bgm" offset="0x07">PS007</rom>
+			<rom type="bgm" offset="0x08">PS008</rom>
+			<rom type="bgm" offset="0x09">PS009</rom>
+			<rom type="bgm" offset="0x0a">PS010</rom>
+			<rom type="bgm" offset="0x0b">PS011</rom>
+			<rom type="bgm" offset="0x0c">PS012</rom>
+			<rom type="bgm" offset="0x0d">PS013</rom>
+			<rom type="bgm" offset="0x0e">PS018</rom>
+			<rom type="bgm" offset="0x0f">PS020</rom>
+			<rom type="bgm" offset="0x10">PS026</rom>
+			<rom type="bgm" offset="0x11">PS039</rom>
+			<rom type="bgm" offset="0x12">PS040</rom>
+			<rom type="bgm" offset="0x13">PS043</rom>
+			<rom type="bgm" offset="0x14">PS046</rom>
+			<rom type="bgm" offset="0x15">PS057</rom>
+			<rom type="bgm" offset="0x16">PS061</rom>
+			<rom type="bgm" offset="0x17">PS062</rom>
+			<rom type="bgm" offset="0x18">PS091</rom>
+			<rom type="bgm" offset="0x19">PS098</rom>
+			<rom type="bgm" offset="0x1a">PS099</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">PS000 : 演奏停止</title>
+			<title code="0x14">PS046 : メニュー画面           / Sanders Island</title>
+			<title code="0x08">PS008 : 血塗られた王家の秘宝   / Bloody-Diamond</title>
+			<title code="0x0d">PS013 : 血塗られた王家の秘宝   / Tutankhamen</title>
+			<title code="0x03">PS003 : 魔の下僕ガッシュの陰謀 / Forest of Lafaune</title>
+			<title code="0x02">PS002 : 魔の下僕ガッシュの陰謀 / Before Gash</title>
+			<title code="0x05">PS005 : 魔の下僕ガッシュの陰謀 / Gash</title>
+			<title code="0x09">PS009 : 心を失った姫君         / Cherish-doll</title>
+			<title code="0x0c">PS012 : 心を失った姫君         / Gaddlegun</title>
+			<title code="0x15">PS057 : 嘆きの神殿             / Grievously Shrine</title>
+			<title code="0x06">PS006 : 嘆きの神殿             / Juggler</title>
+			<title code="0x01">PS001 : ギルバレスの迷宮       / Labyrinth of Gilbares</title>
+			<title code="0x0b">PS011 : ギルバレスの迷宮       / Foreboding</title>
+			<title code="0x0a">PS010 : ギルバレスの迷宮       / Gilbares</title>
+			<title code="0x1a">PS099 : ファンファーレ</title>
+			<title code="0x07">PS007 : シナリオクリア         / Click! Click!</title>
+			<title code="0x04">PS004 : エンディング           / Good-luck ! Good-by !</title>
+			<title code="0x11">PS039 : オープニング</title>
+			<title code="0x0e">PS018 : 城「ここで逢えるね」</title>
+			<title code="0x12">PS040 : 町「ペンタウァI」</title>
+			<title code="0x0f">PS020 : アイテム分配「トラベラーズ・イン」</title>
+			<title code="0x17">PS062 : キングドラゴン</title>
+			<title code="0x19">PS098 : キングドラゴン死亡</title>
+			<title code="0x16">PS061 : エンディングI</title>
+			<title code="0x18">PS091 : エンディングII</title>
+			<title code="0x10">PS026 : 暗黒の魔導士           / ブルー・ドラゴン</title>
+			<title code="0x13">PS043 : ロマンシア             / ヴァイデス</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] SORCERIAN - Dragon Slayer V - (ピラミッドソーサリアン)(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Takeru</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8000"/>
+			<option name="mdata_size" value="0x2000"/>
+			<option name="mfile_size" value="0x2000"/>
+			<option name="mdata_num"  value="0x40"/>
+			<option name="use_opll"   value="0x01"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="sorpyr_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xb000">BIOS</rom>
+			<rom type="bgm" offset="0x00">SS000</rom>
+			<rom type="bgm" offset="0x01">SS001</rom>
+			<rom type="bgm" offset="0x02">SS002</rom>
+			<rom type="bgm" offset="0x03">SS003</rom>
+			<rom type="bgm" offset="0x04">SS004</rom>
+			<rom type="bgm" offset="0x05">SS005</rom>
+			<rom type="bgm" offset="0x06">SS006</rom>
+			<rom type="bgm" offset="0x07">SS007</rom>
+			<rom type="bgm" offset="0x08">SS008</rom>
+			<rom type="bgm" offset="0x09">SS009</rom>
+			<rom type="bgm" offset="0x0a">SS010</rom>
+			<rom type="bgm" offset="0x0b">SS011</rom>
+			<rom type="bgm" offset="0x0c">SS012</rom>
+			<rom type="bgm" offset="0x0d">SS013</rom>
+			<rom type="bgm" offset="0x0e">SS018</rom>
+			<rom type="bgm" offset="0x0f">SS020</rom>
+			<rom type="bgm" offset="0x10">SS026</rom>
+			<rom type="bgm" offset="0x11">SS039</rom>
+			<rom type="bgm" offset="0x12">SS040</rom>
+			<rom type="bgm" offset="0x13">SS043</rom>
+			<rom type="bgm" offset="0x14">SS046</rom>
+			<rom type="bgm" offset="0x15">SS057</rom>
+			<rom type="bgm" offset="0x16">SS061</rom>
+			<rom type="bgm" offset="0x17">SS062</rom>
+			<rom type="bgm" offset="0x18">SS091</rom>
+			<rom type="bgm" offset="0x19">SS098</rom>
+			<rom type="bgm" offset="0x1a">SS099</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">SS000 : 演奏停止</title>
+			<title code="0x14">SS046 : メニュー画面           / Sanders Island</title>
+			<title code="0x08">SS008 : 血塗られた王家の秘宝   / Bloody-Diamond</title>
+			<title code="0x0d">SS013 : 血塗られた王家の秘宝   / Tutankhamen</title>
+			<title code="0x03">SS003 : 魔の下僕ガッシュの陰謀 / Forest of Lafaune</title>
+			<title code="0x02">SS002 : 魔の下僕ガッシュの陰謀 / Before Gash</title>
+			<title code="0x05">SS005 : 魔の下僕ガッシュの陰謀 / Gash</title>
+			<title code="0x09">SS009 : 心を失った姫君         / Cherish-doll</title>
+			<title code="0x0c">SS012 : 心を失った姫君         / Gaddlegun</title>
+			<title code="0x15">SS057 : 嘆きの神殿             / Grievously Shrine</title>
+			<title code="0x06">SS006 : 嘆きの神殿             / Juggler</title>
+			<title code="0x01">SS001 : ギルバレスの迷宮       / Labyrinth of Gilbares</title>
+			<title code="0x0b">SS011 : ギルバレスの迷宮       / Foreboding</title>
+			<title code="0x0a">SS010 : ギルバレスの迷宮       / Gilbares</title>
+			<title code="0x1a">SS099 : ファンファーレ</title>
+			<title code="0x07">SS007 : シナリオクリア         / Click! Click!</title>
+			<title code="0x04">SS004 : エンディング           / Good-luck ! Good-by !</title>
+			<title code="0x11">SS039 : オープニング</title>
+			<title code="0x0e">SS018 : 城「ここで逢えるね」</title>
+			<title code="0x12">SS040 : 町「ペンタウァI」</title>
+			<title code="0x0f">SS020 : アイテム分配「トラベラーズ・イン」</title>
+			<title code="0x17">SS062 : キングドラゴン</title>
+			<title code="0x19">SS098 : キングドラゴン死亡</title>
+			<title code="0x16">SS061 : エンディングI</title>
+			<title code="0x18">SS091 : エンディングII</title>
+			<title code="0x10">SS026 : 暗黒の魔導士           / ブルー・ドラゴン</title>
+			<title code="0x13">SS043 : ロマンシア             / ヴァイデス</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Ko window application shuu 3 (OPM+MSM)</name>
+		<driver type="mxdrv">x68k</driver>
+		<driveralias type="SHARP X68000">Takeru</driveralias>
+		<romlist archive="kowin368snd">
+			<rom type="data" offset="0x01">kowin3.mdx</rom>
+			<rom type="data" offset="0x02">KoWin3m.MDX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">kowin3.mdx  : theme music by ＬＥＥＸ</title>
+			<title code="0x02">KoWin3m.MDX : theme music by ＬＥＥＸ</title>
+		</titlelist>
+	</game>
+</gamelist>

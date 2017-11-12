@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //micronet -->
+	<game>
+		<name>[PC-88] Flicky</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">micronet</driveralias>
+		<romlist archive="flickypc">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG88</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">Stop the Music (演奏停止)</title>
+			<title code="0x03">Title / Name Regist</title>
+			<title code="0x00">Main BGM</title>
+			<title code="0x04">Bonus Stage</title>
+			<title code="0x02">Bonus Stage End</title>
+			<title code="0x01">Game over</title>
+			<title code="0x06">Credit???</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Flicky</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">micronet</driveralias>
+		<options>
+			<option name="use_ctc3" value="0x80"/>
+			<option name="psg_mix"  value="0x18"/>
+		</options>
+		<romlist archive="flickypc">
+			<rom type="code" offset="0x0000">PATCHX</rom>
+			<rom type="code" offset="0x0100">PROGX1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">Stop the Music (演奏停止)</title>
+			<title code="0x03">Title / Name Regist</title>
+			<title code="0x00">Main BGM</title>
+			<title code="0x04">Bonus Stage</title>
+			<title code="0x02">Bonus Stage End</title>
+			<title code="0x01">Game Over</title>
+			<title code="0x06">Credit???</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Champion Prowres Special</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">micronet</driveralias>
+		<romlist archive="cprwrspc">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">PROG1</rom>
+			<rom type="code" offset="0x7300">PROG2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">Stop the Music (演奏停止)</title>
+			<title code="0x01000000">キャラクターセレクト</title>
+			<title code="0x02000000">キャラクター選択終了</title>
+			<title code="0x01000001">ラウンドスタート</title>
+			<title code="0x02000001">メインBGM</title>
+			<title code="0x03000001">勝ち</title>
+			<title code="0x05000001">負け</title>
+			<title code="0x04000001">ゲームオーバー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Champion Prowres Special</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">micronet</driveralias>
+		<options>
+			<option name="use_ctc3" value="0x80"/>
+			<option name="psg_mix"  value="0x50"/>
+		</options>
+		<romlist archive="cprwrspc">
+			<rom type="code" offset="0x0000">PATCHX</rom>
+			<rom type="code" offset="0x1000">PROGX1</rom>
+			<rom type="code" offset="0x7300">PROGX2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">キャラクターセレクト</title>
+			<title code="0x01">キャラクター選択終了</title>
+			<title code="0x02">ラウンドスタート</title>
+			<title code="0x03">メインBGM</title>
+			<title code="0x04">勝ち</title>
+			<title code="0x06">負け</title>
+			<title code="0x05">ゲームオーバー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Robo Wres 2001</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">micronet</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x818b"/>
+			<option name="mdata_size" value="0x7b00"/>
+			<option name="mfile_size" value="0x7b00"/>
+		</options>
+		<romlist archive="robowr88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x818b">PROG1</rom>
+			<rom type="bgm" offset="0x00">PROG1</rom>
+			<rom type="bgm" offset="0x01">PROG2</rom>
+			<rom type="bgm" offset="0x02">PROG3</rom>
+			<rom type="bgm" offset="0x03">PROG4</rom>
+			<rom type="bgm" offset="0x04">PROG4</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">キャラクターセレクト</title>
+			<title code="0x01">ゲームスタート</title>
+			<title code="0x02">ゲーム中BGM</title>
+			<title code="0x03">敗戦</title>
+			<title code="0x04">勝利</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Rinne Tensei Reversible Game Tanba (たんば)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">micronet</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="tanba68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">AKAHS.MML</rom>
+			<rom type="code" offset="0x28000">COUGHTY.MML</rom>
+			<rom type="code" offset="0x2c000">DAWN.MML</rom>
+			<rom type="code" offset="0x30000">FANFA.MML</rom>
+			<rom type="code" offset="0x34000">QUIETY.MML</rom>
+			<rom type="code" offset="0x38000">SNAIN.MML</rom>
+			<rom type="code" offset="0x3c000">SHAKA.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0802">AKAHS.MML</title>
+			<title code="0x0803">COUGHTY.MML</title>
+			<title code="0x0804">DAWN.MML</title>
+			<title code="0x0805">FANFA.MML</title>
+			<title code="0x0806">QUIETY.MML</title>
+			<title code="0x0807">SNAIN.MML</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Mahjong Kyou Jidai Special (麻雀狂時代スペシャル)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">micronet</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="mjkyo68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">CONCERTO.MML</rom>
+			<rom type="code" offset="0x28000">FANFA.MML</rom>
+			<rom type="code" offset="0x2c000">STNO1.MML</rom>
+			<rom type="code" offset="0x30000">STNO3.MML</rom>
+			<rom type="code" offset="0x34000">STNO4.MML</rom>
+			<rom type="code" offset="0x38000">STNO5.MML</rom>
+			<rom type="code" offset="0x3c000">STNO6.MML</rom>
+			<rom type="code" offset="0x40000">STNO7.MML</rom>
+			<rom type="code" offset="0x44000">SHAKA.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0a02">CONCERTO.MML</title>
+			<title code="0x0a03">FANFA.MML</title>
+			<title code="0x0a04">STNO1.MML</title>
+			<title code="0x0a05">STNO3.MML</title>
+			<title code="0x0a06">STNO4.MML</title>
+			<title code="0x0a07">STNO5.MML</title>
+			<title code="0x0a08">STNO6.MML</title>
+			<title code="0x0a09">STNO7.MML</title>
+		</titlelist>
+	</game>
+</gamelist>

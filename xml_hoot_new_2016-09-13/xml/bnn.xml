@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //BNN -->
+	<game>
+		<name>[PC-9801] WOLF PACK</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">BNN</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="wlfpk_98">
+			<rom type="file" offset="-1">WLFPK_98.COM</rom>
+			<rom type="file" offset="-1">MDR.EXE</rom>
+			<rom type="device" offset="0">mdr.exe</rom>
+			<rom type="shell" offset="0">wlfpk_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">12 : </title>
+			<title code="0x00">00 : </title>
+			<title code="0x01">01 : </title>
+			<title code="0x02">02 : </title>
+			<title code="0x03">03 : SE</title>
+			<title code="0x04">04 : SE</title>
+			<title code="0x05">05 : SE</title>
+			<title code="0x06">06 : SE</title>
+			<title code="0x07">07 : SE</title>
+			<title code="0x08">08 : SE</title>
+			<title code="0x09">09 : SE</title>
+			<title code="0x0A">0A : SE</title>
+			<title code="0x0B">0B : SE</title>
+			<title code="0x0C">0C : SE</title>
+			<title code="0x0D">0D : SE</title>
+			<title code="0x0E">0E : SE</title>
+			<title code="0x0F">0F : SE</title>
+			<title code="0x10">10 : SE</title>
+			<title code="0x11">11 : SE</title>
+		</titlelist>
+	</game>
+</gamelist>

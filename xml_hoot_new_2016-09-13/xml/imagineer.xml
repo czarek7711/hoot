@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Imagineer -->
+	<game>
+		<name>[X68000] Lemmings (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Imagineer</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="lem68snd">
+			<rom type="code">lem68snd.bin</rom>
+			<rom type="x" offset="0x8000">lemmings.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">STOP</title>
+			<title code="0x01">SOUND 01</title>
+			<title code="0x02">SOUND 02</title>
+			<title code="0x03">SOUND 03</title>
+			<title code="0x04">SOUND 04</title>
+			<title code="0x05">SOUND 05</title>
+			<title code="0x06">SOUND 06</title>
+			<title code="0x07">SOUND 07</title>
+			<title code="0x08">SOUND 08</title>
+			<title code="0x09">SOUND 09</title>
+			<title code="0x0a">SOUND 0a</title>
+			<title code="0x0b">SOUND 0b</title>
+			<title code="0x0c">SOUND 0c</title>
+			<title code="0x0d">SOUND 0d</title>
+			<title code="0x0e">SOUND 0e</title>
+			<title code="0x0f">SOUND 0f</title>
+			<title code="0x10">SOUND 10</title>
+			<title code="0x11">SOUND 11</title>
+			<title code="0x12">SOUND 12</title>
+			<title code="0x13">SOUND 13</title>
+			<title code="0x14">SOUND 14</title>
+			<title code="0x15">SOUND 15</title>
+			<title code="0x16">SOUND 16</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] POPULOUS</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x03"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="poplus98">
+			<rom type="code" offset="0x00600">poplus98.bin</rom>
+			<rom type="code" offset="0x10100">OPNDRV.COM</rom>
+			<rom type="bgm" offset="0x01">TITLE.BIN</rom>
+			<rom type="bgm" offset="0x02">POPBGM.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">TITLE.BIN  : Title Theme</title>
+			<title code="0x02">POPBGM.BIN : Main Theme</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] メルティランサー</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mlancer_98">
+			<rom type="file" offset="-1">mdzsplay.com</rom>
+			<rom type="file" offset="-1">MDZ86.COM</rom>
+			<rom type="file" offset="6" >MLEFFECT.EFZ</rom>
+			<rom type="file" offset="11">MLTY_01.MDZ</rom>
+			<rom type="file" offset="12">MLTY_01I.MDZ</rom>
+			<rom type="file" offset="13">MLTY_02.MDZ</rom>
+			<rom type="file" offset="14">MLTY_03.MDZ</rom>
+			<rom type="file" offset="15">MLTY_03B.MDZ</rom>
+			<rom type="file" offset="16">MLTY_04.MDZ</rom>
+			<rom type="file" offset="17">MLTY_04B.MDZ</rom>
+			<rom type="file" offset="18">MLTY_05.MDZ</rom>
+			<rom type="file" offset="19">MLTY_06.MDZ</rom>
+			<rom type="file" offset="20">MLTY_07.MDZ</rom>
+			<rom type="file" offset="21">MLTY_08.MDZ</rom>
+			<rom type="file" offset="22">MLTY_09.MDZ</rom>
+			<rom type="file" offset="23">MLTY_10.MDZ</rom>
+			<rom type="file" offset="24">MLTY_11.MDZ</rom>
+			<rom type="file" offset="25">MLTY_12.MDZ</rom>
+			<rom type="file" offset="26">MLTY_13.MDZ</rom>
+			<rom type="file" offset="27">MLTY_14.MDZ</rom>
+			<rom type="file" offset="28">MLTY_15.MDZ</rom>
+			<rom type="file" offset="29">MLTY_16.MDZ</rom>
+			<rom type="file" offset="30">MLTY_17.MDZ</rom>
+			<rom type="file" offset="31">MLTY_18.MDZ</rom>
+			<rom type="file" offset="32">MLTY_19.MDZ</rom>
+			<rom type="file" offset="33">MLTY_20.MDZ</rom>
+			<rom type="shell" offset="0">mdz86 s /#8 /e10 /t0</rom>
+			<rom type="shell" offset="0">mdzsplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">MLTY_01.MDZ  : メインテ－マ</title>
+			<title code="12">MLTY_01I.MDZ : メインテ－マ (with Intro)</title>
+			<title code="13">MLTY_02.MDZ  : 一日の始まり</title>
+			<title code="14">MLTY_03.MDZ  : ファンファ－レ</title>
+			<title code="15">MLTY_03B.MDZ : ファンファ－レ</title>
+			<title code="16">MLTY_04.MDZ  : ボスクラスとの戦闘</title>
+			<title code="17">MLTY_04B.MDZ : ボスクラスとの戦闘 (b)</title>
+			<title code="18">MLTY_05.MDZ  : ノワ－ル</title>
+			<title code="19">MLTY_06.MDZ  : 幹部クラスとの戦闘</title>
+			<title code="20">MLTY_07.MDZ  : ヴァネッサ</title>
+			<title code="21">MLTY_08.MDZ  : スペシャルウェポン</title>
+			<title code="22">MLTY_09.MDZ  : 最終決戦(vsラヴェンヌ)</title>
+			<title code="23">MLTY_10.MDZ  : ラヴェンヌ</title>
+			<title code="24">MLTY_11.MDZ  : 一日の終り</title>
+			<title code="25">MLTY_12.MDZ  : 戦闘敗北</title>
+			<title code="26">MLTY_13.MDZ  : 戦闘員との戦闘</title>
+			<title code="27">MLTY_14.MDZ  : ランサーズ解散</title>
+			<title code="28">MLTY_15.MDZ  : スクランブル</title>
+			<title code="29">MLTY_16.MDZ  : モニタ－ル－ム</title>
+			<title code="30">MLTY_17.MDZ  : スキュラ</title>
+			<title code="31">MLTY_18.MDZ  : 戒厳令下の捜索</title>
+			<title code="32">MLTY_19.MDZ  : メンバーとの別れ</title>
+			<title code="33">MLTY_20.MDZ  : エンディング(スタッフロ－ル)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] POPULOUS (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Imagineer</driveralias>
+		<romlist archive="poplus68snd">
+			<rom type="code" offset="0x00000">pop68snd.bin</rom>
+			<rom type="x" offset="0x10000">OPMDRV.X</rom>
+			<rom type="code" offset="0x13000">POPBGM.BIN</rom>
+			<rom type="code" offset="0x15000">TITLE.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">TITLE.BIN  : Title Theme</title>
+			<title code="0x01">POPBGM.BIN : Main Theme</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] POPULOUS II -Trials of the Olympian Gods- (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Imagineer</driveralias>
+		<romlist archive="poplus268snd">
+			<rom type="code" offset="0x00000">pop268snd.bin</rom>
+			<rom type="x" offset="0x10000">OPMDRV.X</rom>
+			<rom type="code" offset="0x13000">DESERT.BIN</rom>
+			<rom type="code" offset="0x15000">END.BIN</rom>
+			<rom type="code" offset="0x17000">GRASS.BIN</rom>
+			<rom type="code" offset="0x19000">LOGO.BIN</rom>
+			<rom type="code" offset="0x1b000">SNOW.BIN</rom>
+			<rom type="code" offset="0x1d000">TIT.BIN</rom>
+			<rom type="code" offset="0x1f000">VOLCANO.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x04">LOGO.BIN    : </title>
+			<title code="0x06">TIT.BIN     : </title>
+			<title code="0x01">DESERT.BIN  : </title>
+			<title code="0x03">GRASS.BIN   : </title>
+			<title code="0x05">SNOW.BIN    : </title>
+			<title code="0x07">VOLCANO.BIN : </title>
+			<title code="0x02">END.BIN     : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Powermonger (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Imagineer</driveralias>
+		<romlist archive="powerm68snd">
+			<rom type="code" offset="0x00000">powerm68snd.bin</rom>
+			<rom type="x" offset="0x10000">OPMDRV.X</rom>
+			<rom type="code" offset="0x13000">TIT68.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">TIT68.BIN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Powermonger</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="powerm_98">
+			<rom type="file" offset="-1">OPNDRV.COM</rom>
+			<rom type="file" offset="-1">OPNDR_98.COM</rom>
+			<rom type="file" offset="0x10">TIT98.BIN</rom>
+			<rom type="shell" offset="0">opndrv</rom>
+			<rom type="shell" offset="0">opndr_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">TIT98.BIN : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] POPULOUS II -Trials of the Olympian Gods-</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="poplus2_98">
+			<rom type="file" offset="-1">OPNDRV.COM</rom>
+			<rom type="file" offset="-1">OPNDR_98.COM</rom>
+			<rom type="file" offset="0x10">P_OPEN.BIN</rom>
+			<rom type="file" offset="0x11">P_END.BIN</rom>
+			<rom type="shell" offset="0">opndrv</rom>
+			<rom type="shell" offset="0">opndr_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">P_OPEN.BIN : </title>
+			<title code="0x11">P_END.BIN  : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Lemmings</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="lemmings_98">
+			<rom type="file" offset="-1">lemm_98.com</rom>
+			<rom type="file" offset="-1">LEMMINGS.EXE</rom>
+			<rom type="conin" offset="5">LEMMINGS.EXE</rom>
+			<rom type="shell" offset="0">lemm_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">#00</title>
+			<title code="0x01">#01</title>
+			<title code="0x02">#02</title>
+			<title code="0x03">#03</title>
+			<title code="0x04">#04</title>
+			<title code="0x05">#05</title>
+			<title code="0x06">#06</title>
+			<title code="0x07">#07</title>
+			<title code="0x08">#08</title>
+			<title code="0x09">#09</title>
+			<title code="0x0a">#10</title>
+			<title code="0x0b">#11</title>
+			<title code="0x0c">#12</title>
+			<title code="0x0d">#13</title>
+			<title code="0x0e">#14</title>
+			<title code="0x0f">#15</title>
+			<title code="0x10">#16</title>
+			<title code="0x11">#17</title>
+			<title code="0x12">#18</title>
+			<title code="0x13">#19</title>
+			<title code="0x14">#20</title>
+			<title code="0x15">#21</title>
+			<title code="0x16">#22</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] MEGA lo MANIA (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Imagineer</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mlm68snd">
+			<rom type="code" offset="0x00000">mlm68snd.bin</rom>
+			<rom type="x" offset="0x10000">MUSDRV4.X</rom>
+			<rom type="code" offset="0x12d72">SOUND.DAT</rom>
+			<rom type="code" offset="0x14000">xop.DAT</rom>
+			<rom type="code" offset="0x16000">XPM.DAT</rom>
+			<rom type="code" offset="0x18000">XPS.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">xop.DAT</title>
+			<title code="0x02">XPM.DAT</title>
+			<title code="0x03">XPS.DAT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 鳳凰の如く -乱世の覇者・信長-</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="houou_98">
+			<rom type="file" offset="-1">houou_o.com</rom>
+			<rom type="file" offset="-1">O.EXE</rom>
+			<rom type="shell" offset="0">houou_o</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">00 演奏停止</title>
+			<title code="0x01">01 </title>
+			<title code="0x02">02 </title>
+			<title code="0x03">03 </title>
+			<title code="0x04">04 </title>
+			<title code="0x05">05 </title>
+			<title code="0x06">06 </title>
+			<title code="0x07">07 </title>
+			<title code="0x08">08 </title>
+			<title code="0x09">09 </title>
+			<title code="0x0a">0A </title>
+			<title code="0x0b">0B </title>
+			<title code="0x0c">0C </title>
+			<title code="0x0d">0D </title>
+			<title code="0x0e">0E </title>
+			<title code="0x0f">0F </title>
+			<title code="0x10">10 </title>
+			<title code="0x11">11 </title>
+			<title code="0x12">12 </title>
+			<title code="0x13">13 </title>
+			<title code="0x14">14 </title>
+			<title code="0x15">15 </title>
+			<title code="0x16">16 </title>
+			<title code="0x17">17 </title>
+			<title code="0x18">18 </title>
+			<title code="0x19">19 </title>
+			<title code="0x1a">1A </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 家康戦旗</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ieyasnki_98">
+			<rom type="file" offset="-1">NATT_98.COM</rom>
+			<rom type="file" offset="-1">NATTEL.COM</rom>
+			<rom type="file" offset="-1">INTDRV.COM</rom>
+			<rom type="file" offset="0x08">IEYA_SE.NMD</rom>
+			<rom type="file" offset="0x11">IEYA000.NMD</rom>
+			<rom type="file" offset="0x12">IEYA001.NMD</rom>
+			<rom type="file" offset="0x13">IEYA003.NMD</rom>
+			<rom type="file" offset="0x14">IEYA005.NMD</rom>
+			<rom type="file" offset="0x15">IEYA006.NMD</rom>
+			<rom type="file" offset="0x16">IEYA007.NMD</rom>
+			<rom type="file" offset="0x17">IEYA010.NMD</rom>
+			<rom type="file" offset="0x18">IEYA011.NMD</rom>
+			<rom type="file" offset="0x19">IEYA012.NMD</rom>
+			<rom type="file" offset="0x1a">IEYA013.NMD</rom>
+			<rom type="file" offset="0x1b">IEYA014.NMD</rom>
+			<rom type="file" offset="0x1c">IEYA015.NMD</rom>
+			<rom type="file" offset="0x1d">IEYA016.NMD</rom>
+			<rom type="file" offset="0x1e">IEYA017.NMD</rom>
+			<rom type="file" offset="0x1f">IEYA019.NMD</rom>
+			<rom type="file" offset="0x20">IEYA020.NMD</rom>
+			<rom type="file" offset="0x21">IEYA021.NMD</rom>
+			<rom type="file" offset="0x22">IEYA022.NMD</rom>
+			<rom type="file" offset="0x23">IEYA025.NMD</rom>
+			<rom type="file" offset="0x24">IEYA026.NMD</rom>
+			<rom type="file" offset="0x25">IEYA028.NMD</rom>
+			<rom type="shell"  offset="0">intdrv</rom>
+			<rom type="shell"  offset="0">nattel -S3 -M5</rom>
+			<rom type="shell"  offset="0">natt_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">IEYA000.NMD : </title>
+			<title code="0x12">IEYA001.NMD : </title>
+			<title code="0x13">IEYA003.NMD : </title>
+			<title code="0x14">IEYA005.NMD : </title>
+			<title code="0x15">IEYA006.NMD : </title>
+			<title code="0x16">IEYA007.NMD : </title>
+			<title code="0x17">IEYA010.NMD : </title>
+			<title code="0x18">IEYA011.NMD : </title>
+			<title code="0x19">IEYA012.NMD : </title>
+			<title code="0x1a">IEYA013.NMD : </title>
+			<title code="0x1b">IEYA014.NMD : </title>
+			<title code="0x1c">IEYA015.NMD : </title>
+			<title code="0x1d">IEYA016.NMD : </title>
+			<title code="0x1e">IEYA017.NMD : </title>
+			<title code="0x1f">IEYA019.NMD : </title>
+			<title code="0x20">IEYA020.NMD : </title>
+			<title code="0x21">IEYA021.NMD : </title>
+			<title code="0x22">IEYA022.NMD : </title>
+			<title code="0x23">IEYA025.NMD : </title>
+			<title code="0x24">IEYA026.NMD : </title>
+			<title code="0x25">IEYA028.NMD : </title>
+			<range min="0x100" max="0x11f" extcode="0">IEYA_SE.NMD : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 維新開国</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ishinkai_98">
+			<rom type="file" offset="-1">NATT_98.COM</rom>
+			<rom type="file" offset="-1">NATTEL.COM</rom>
+			<rom type="file" offset="-1">INTDRV.COM</rom>
+			<rom type="file" offset="0x08">ISHIN_SE.NMD</rom>
+			<rom type="file" offset="0x10">ISHIN000.NMD</rom>
+			<rom type="file" offset="0x11">ISHIN001.NMD</rom>
+			<rom type="file" offset="0x12">ISHIN002.NMD</rom>
+			<rom type="file" offset="0x13">ISHIN003.NMD</rom>
+			<rom type="file" offset="0x14">ISHIN004.NMD</rom>
+			<rom type="file" offset="0x15">ISHIN005.NMD</rom>
+			<rom type="file" offset="0x16">ISHIN006.NMD</rom>
+			<rom type="file" offset="0x17">ISHIN007.NMD</rom>
+			<rom type="file" offset="0x18">ISHIN008.NMD</rom>
+			<rom type="file" offset="0x19">ISHIN009.NMD</rom>
+			<rom type="file" offset="0x1a">ISHIN010.NMD</rom>
+			<rom type="file" offset="0x1b">ISHIN011.NMD</rom>
+			<rom type="file" offset="0x1c">ISHIN012.NMD</rom>
+			<rom type="file" offset="0x1d">ISHIN013.NMD</rom>
+			<rom type="file" offset="0x1e">ISHIN014.NMD</rom>
+			<rom type="file" offset="0x1f">ISHIN015.NMD</rom>
+			<rom type="file" offset="0x20">ISHIN016.NMD</rom>
+			<rom type="file" offset="0x21">ISHIN017.NMD</rom>
+			<rom type="file" offset="0x22">ISHIN018.NMD</rom>
+			<rom type="file" offset="0x23">ISHIN019.NMD</rom>
+			<rom type="file" offset="0x24">ISHIN020.NMD</rom>
+			<rom type="file" offset="0x25">ISHIN021.NMD</rom>
+			<rom type="file" offset="0x26">ISHIN022.NMD</rom>
+			<rom type="file" offset="0x27">ISHIN024.NMD</rom>
+			<rom type="shell"  offset="0">intdrv</rom>
+			<rom type="shell"  offset="0">nattel /S3 /M5</rom>
+			<rom type="shell"  offset="0">natt_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ISHIN000.NMD : </title>
+			<title code="0x11">ISHIN001.NMD : </title>
+			<title code="0x12">ISHIN002.NMD : </title>
+			<title code="0x13">ISHIN003.NMD : </title>
+			<title code="0x14">ISHIN004.NMD : </title>
+			<title code="0x15">ISHIN005.NMD : </title>
+			<title code="0x16">ISHIN006.NMD : </title>
+			<title code="0x17">ISHIN007.NMD : </title>
+			<title code="0x18">ISHIN008.NMD : </title>
+			<title code="0x19">ISHIN009.NMD : </title>
+			<title code="0x1a">ISHIN010.NMD : </title>
+			<title code="0x1b">ISHIN011.NMD : </title>
+			<title code="0x1c">ISHIN012.NMD : </title>
+			<title code="0x1d">ISHIN013.NMD : </title>
+			<title code="0x1e">ISHIN014.NMD : </title>
+			<title code="0x1f">ISHIN015.NMD : </title>
+			<title code="0x20">ISHIN016.NMD : </title>
+			<title code="0x21">ISHIN017.NMD : </title>
+			<title code="0x22">ISHIN018.NMD : </title>
+			<title code="0x23">ISHIN019.NMD : </title>
+			<title code="0x24">ISHIN020.NMD : </title>
+			<title code="0x25">ISHIN021.NMD : </title>
+			<title code="0x26">ISHIN022.NMD : </title>
+			<title code="0x27">ISHIN024.NMD : </title>
+			<range min="0x100" max="0x126" extcode="0">ISHIN_SE.NMD : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 龍王三國志(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="r_san_98">
+			<rom type="file" offset="-1">NATT_98.COM</rom>
+			<rom type="file" offset="-1">NATTEL.COM</rom>
+			<rom type="file" offset="-1">INTDRV.COM</rom>
+			<rom type="file" offset="0x08">R_SAN_SE.NMD</rom>
+			<rom type="file" offset="0x10">R_SAN100.NMD</rom>
+			<rom type="file" offset="0x11">R_SAN102.NMD</rom>
+			<rom type="file" offset="0x12">R_SAN104.NMD</rom>
+			<rom type="file" offset="0x13">R_SAN106.NMD</rom>
+			<rom type="file" offset="0x14">R_SAN107.NMD</rom>
+			<rom type="file" offset="0x15">R_SAN108.NMD</rom>
+			<rom type="file" offset="0x16">R_SAN109.NMD</rom>
+			<rom type="file" offset="0x17">R_SAN111.NMD</rom>
+			<rom type="file" offset="0x18">R_SAN112.NMD</rom>
+			<rom type="file" offset="0x19">R_SAN115.NMD</rom>
+			<rom type="file" offset="0x1a">R_SAN116.NMD</rom>
+			<rom type="file" offset="0x1b">R_SAN118.NMD</rom>
+			<rom type="shell"  offset="0">intdrv</rom>
+			<rom type="shell"  offset="0">nattel</rom>
+			<rom type="shell"  offset="0">natt_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">R_SAN102.NMD : 春</title>
+			<title code="0x14">R_SAN107.NMD : 夏</title>
+			<title code="0x16">R_SAN109.NMD : 秋</title>
+			<title code="0x13">R_SAN106.NMD : 冬</title>
+			<title code="0x10">R_SAN100.NMD : 城戦1</title>
+			<title code="0x15">R_SAN108.NMD : 城戦2</title>
+			<title code="0x12">R_SAN104.NMD : 野戦</title>
+			<title code="0x17">R_SAN111.NMD : 海戦</title>
+			<title code="0x18">R_SAN112.NMD : </title>
+			<title code="0x19">R_SAN115.NMD : </title>
+			<title code="0x1a">R_SAN116.NMD : </title>
+			<title code="0x1b">R_SAN118.NMD : </title>
+			<range min="0x100" max="0x10c" extcode="0">R_SAN_SE.NMD : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 龍王三國志(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="r_san_98">
+			<rom type="file" offset="-1">NATT_98.COM</rom>
+			<rom type="file" offset="-1">NATTEL.COM</rom>
+			<rom type="file" offset="-1">INTDRV.COM</rom>
+			<rom type="file" offset="0x10">R_SAN100.NMD</rom>
+			<rom type="file" offset="0x11">R_SAN102.NMD</rom>
+			<rom type="file" offset="0x12">R_SAN104.NMD</rom>
+			<rom type="file" offset="0x13">R_SAN106.NMD</rom>
+			<rom type="file" offset="0x14">R_SAN107.NMD</rom>
+			<rom type="file" offset="0x15">R_SAN108.NMD</rom>
+			<rom type="file" offset="0x16">R_SAN109.NMD</rom>
+			<rom type="file" offset="0x17">R_SAN111.NMD</rom>
+			<rom type="file" offset="0x18">R_SAN112.NMD</rom>
+			<rom type="file" offset="0x19">R_SAN115.NMD</rom>
+			<rom type="file" offset="0x1a">R_SAN116.NMD</rom>
+			<rom type="file" offset="0x1b">R_SAN118.NMD</rom>
+			<rom type="shell"  offset="0">intdrv</rom>
+			<rom type="shell"  offset="0">nattel</rom>
+			<rom type="shell"  offset="0">natt_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">R_SAN102.NMD : 春</title>
+			<title code="0x14">R_SAN107.NMD : 夏</title>
+			<title code="0x16">R_SAN109.NMD : 秋</title>
+			<title code="0x13">R_SAN106.NMD : 冬</title>
+			<title code="0x10">R_SAN100.NMD : 城戦1</title>
+			<title code="0x15">R_SAN108.NMD : 城戦2</title>
+			<title code="0x12">R_SAN104.NMD : 野戦</title>
+			<title code="0x17">R_SAN111.NMD : 海戦</title>
+			<title code="0x18">R_SAN112.NMD : </title>
+			<title code="0x19">R_SAN115.NMD : </title>
+			<title code="0x1a">R_SAN116.NMD : </title>
+			<title code="0x1b">R_SAN118.NMD : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 龍王三國志(OPN+GS)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="r_san_98">
+			<rom type="file" offset="-1">NATT_98.COM</rom>
+			<rom type="file" offset="-1">NATTEL.COM</rom>
+			<rom type="file" offset="-1">INTDRV.COM</rom>
+			<rom type="file" offset="0x08">R_SAN_SE.NMD</rom>
+			<rom type="file" offset="0x10">R_SAN100.NMD</rom>
+			<rom type="file" offset="0x11">R_SAN102.NMD</rom>
+			<rom type="file" offset="0x12">R_SAN104.NMD</rom>
+			<rom type="file" offset="0x13">R_SAN106.NMD</rom>
+			<rom type="file" offset="0x14">R_SAN107.NMD</rom>
+			<rom type="file" offset="0x15">R_SAN108.NMD</rom>
+			<rom type="file" offset="0x16">R_SAN109.NMD</rom>
+			<rom type="file" offset="0x17">R_SAN111.NMD</rom>
+			<rom type="file" offset="0x18">R_SAN112.NMD</rom>
+			<rom type="file" offset="0x19">R_SAN115.NMD</rom>
+			<rom type="file" offset="0x1a">R_SAN116.NMD</rom>
+			<rom type="file" offset="0x1b">R_SAN118.NMD</rom>
+			<rom type="shell"  offset="0">intdrv</rom>
+			<rom type="shell"  offset="0">nattel</rom>
+			<rom type="shell"  offset="0">natt_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">R_SAN102.NMD : 春</title>
+			<title code="0x14">R_SAN107.NMD : 夏</title>
+			<title code="0x16">R_SAN109.NMD : 秋</title>
+			<title code="0x13">R_SAN106.NMD : 冬</title>
+			<title code="0x10">R_SAN100.NMD : 城戦1</title>
+			<title code="0x15">R_SAN108.NMD : 城戦2</title>
+			<title code="0x12">R_SAN104.NMD : 野戦</title>
+			<title code="0x17">R_SAN111.NMD : 海戦</title>
+			<title code="0x18">R_SAN112.NMD : </title>
+			<title code="0x19">R_SAN115.NMD : </title>
+			<title code="0x1a">R_SAN116.NMD : </title>
+			<title code="0x1b">R_SAN118.NMD : </title>
+			<range min="0x100" max="0x10c" extcode="0">R_SAN_SE.NMD : %02X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 龍王三國志 パワーボックス(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="r_sanpb_98">
+			<rom type="file" offset="-1">NATT_98.COM</rom>
+			<rom type="file" offset="-1">NATTEL.COM</rom>
+			<rom type="file" offset="-1">INTDRV.COM</rom>
+			<rom type="file" offset="0x10">R_SAN100.NMD</rom>
+			<rom type="file" offset="0x11">R_SAN102.NMD</rom>
+			<rom type="file" offset="0x12">R_SAN104.NMD</rom>
+			<rom type="file" offset="0x13">R_SAN106.NMD</rom>
+			<rom type="file" offset="0x14">R_SAN107.NMD</rom>
+			<rom type="file" offset="0x15">R_SAN108.NMD</rom>
+			<rom type="file" offset="0x16">R_SAN109.NMD</rom>
+			<rom type="file" offset="0x17">R_SAN111.NMD</rom>
+			<rom type="file" offset="0x1c">R_SAN123.NMD</rom>
+			<rom type="file" offset="0x1d">R_SAN124.NMD</rom>
+			<rom type="shell"  offset="0">intdrv</rom>
+			<rom type="shell"  offset="0">nattel</rom>
+			<rom type="shell"  offset="0">natt_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1d">R_SAN124.NMD : </title>
+			<title code="0x11">R_SAN102.NMD : 春</title>
+			<title code="0x14">R_SAN107.NMD : 夏</title>
+			<title code="0x16">R_SAN109.NMD : 秋</title>
+			<title code="0x13">R_SAN106.NMD : 冬</title>
+			<title code="0x10">R_SAN100.NMD : 城戦1</title>
+			<title code="0x15">R_SAN108.NMD : 城戦2</title>
+			<title code="0x12">R_SAN104.NMD : 野戦</title>
+			<title code="0x17">R_SAN111.NMD : 海戦</title>
+			<title code="0x1c">R_SAN123.NMD : 初期メニュー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 龍王三國志 パワーボックス(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="r_sanpb_98">
+			<rom type="file" offset="-1">NATT_98.COM</rom>
+			<rom type="file" offset="-1">NATTEL.COM</rom>
+			<rom type="file" offset="-1">INTDRV.COM</rom>
+			<rom type="file" offset="0x10">R_SAN100.NMD</rom>
+			<rom type="file" offset="0x11">R_SAN102.NMD</rom>
+			<rom type="file" offset="0x12">R_SAN104.NMD</rom>
+			<rom type="file" offset="0x13">R_SAN106.NMD</rom>
+			<rom type="file" offset="0x14">R_SAN107.NMD</rom>
+			<rom type="file" offset="0x15">R_SAN108.NMD</rom>
+			<rom type="file" offset="0x16">R_SAN109.NMD</rom>
+			<rom type="file" offset="0x17">R_SAN111.NMD</rom>
+			<rom type="file" offset="0x1c">R_SAN123.NMD</rom>
+			<rom type="file" offset="0x1d">R_SAN124.NMD</rom>
+			<rom type="shell"  offset="0">intdrv</rom>
+			<rom type="shell"  offset="0">nattel</rom>
+			<rom type="shell"  offset="0">natt_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1d">R_SAN124.NMD : </title>
+			<title code="0x11">R_SAN102.NMD : 春</title>
+			<title code="0x14">R_SAN107.NMD : 夏</title>
+			<title code="0x16">R_SAN109.NMD : 秋</title>
+			<title code="0x13">R_SAN106.NMD : 冬</title>
+			<title code="0x10">R_SAN100.NMD : 城戦1</title>
+			<title code="0x15">R_SAN108.NMD : 城戦2</title>
+			<title code="0x12">R_SAN104.NMD : 野戦</title>
+			<title code="0x17">R_SAN111.NMD : 海戦</title>
+			<title code="0x1c">R_SAN123.NMD : 初期メニュー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 龍王三國志 パワーボックス(OPN+GS)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Imagineer</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="r_sanpb_98">
+			<rom type="file" offset="-1">NATT_98.COM</rom>
+			<rom type="file" offset="-1">NATTEL.COM</rom>
+			<rom type="file" offset="-1">INTDRV.COM</rom>
+			<rom type="file" offset="0x10">R_SAN100.NMD</rom>
+			<rom type="file" offset="0x11">R_SAN102.NMD</rom>
+			<rom type="file" offset="0x12">R_SAN104.NMD</rom>
+			<rom type="file" offset="0x13">R_SAN106.NMD</rom>
+			<rom type="file" offset="0x14">R_SAN107.NMD</rom>
+			<rom type="file" offset="0x15">R_SAN108.NMD</rom>
+			<rom type="file" offset="0x16">R_SAN109.NMD</rom>
+			<rom type="file" offset="0x17">R_SAN111.NMD</rom>
+			<rom type="file" offset="0x1c">R_SAN123.NMD</rom>
+			<rom type="file" offset="0x1d">R_SAN124.NMD</rom>
+			<rom type="shell"  offset="0">intdrv</rom>
+			<rom type="shell"  offset="0">nattel</rom>
+			<rom type="shell"  offset="0">natt_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1d">R_SAN124.NMD : </title>
+			<title code="0x11">R_SAN102.NMD : 春</title>
+			<title code="0x14">R_SAN107.NMD : 夏</title>
+			<title code="0x16">R_SAN109.NMD : 秋</title>
+			<title code="0x13">R_SAN106.NMD : 冬</title>
+			<title code="0x10">R_SAN100.NMD : 城戦1</title>
+			<title code="0x15">R_SAN108.NMD : 城戦2</title>
+			<title code="0x12">R_SAN104.NMD : 野戦</title>
+			<title code="0x17">R_SAN111.NMD : 海戦</title>
+			<title code="0x1c">R_SAN123.NMD : 初期メニュー</title>
+		</titlelist>
+	</game>
+</gamelist>

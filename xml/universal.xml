@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //universal -->
+  <game>
+    <name>[Mr. Do!] Mr. Do! (ミスターDo!)</name>
+    <driver type="mrdo">universal</driver>
+		<driveralias type="Arcade">universal</driveralias>
+		<romlist archive="mrdo">
+			<rom type="code" offset="0x0000">a4-01.bin</rom>
+			<rom type="code" offset="0x2000">c4-02.bin</rom>
+			<rom type="code" offset="0x4000">e4-03.bin</rom>
+			<rom type="code" offset="0x6000">f4-04.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">ド</title>
+			<title code="0x02">レ</title>
+			<title code="0x03">ミ</title>
+			<title code="0x04">ファ</title>
+			<title code="0x05">ソ</title>
+			<title code="0x06">ラ</title>
+			<title code="0x07">シ</title>
+			<title code="0x08">ド</title>
+			<title code="0x0f">メイン</title>
+			<title code="0x10">メイン</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">SFX #12</title>
+			<title code="0x13">SFX #13</title>
+			<title code="0x14">SFX #14</title>
+			<title code="0x15">SFX #15</title>
+			<title code="0x16">SFX #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x19">スタート</title>
+			<title code="0x1a">SFX #1a</title>
+			<title code="0x1b">SFX #1b</title>
+			<title code="0x1c">SFX #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x20">SFX #20</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">SFX #23</title>
+			<title code="0x24">死亡 SFX</title>
+			<title code="0x25">BGM #25</title>
+		</titlelist>
+  </game>
+</gamelist>

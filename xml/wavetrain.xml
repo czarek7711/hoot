@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //WaveTrain -->
+	<game>
+		<name>[X68000] SPACE ROGUE</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">WaveTrain</driveralias>
+		<options>
+			<option name="opm_mix" value="0x60"/>
+			<option name="pcm_mix" value="0x70"/>
+		</options>
+		<romlist archive="srogue68snd">
+			<rom type="code" offset="0x00000">srogue68snd.bin</rom>
+			<rom type="x" offset="0x10000">fmd.x</rom>
+			<rom type="x" offset="0x20000">fmdm.x</rom>
+			<rom type="code" offset="0x201f8">FMD.DAT</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x02" max="0x11" extcode="1">BGM %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] SPACE ROGUE</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">WaveTrain</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="srogue_98">
+			<rom type="binary" offset="0xA3FEE">08</rom>
+			<rom type="code" offset="0xCC000">SOUND.ROM</rom>
+			<rom type="file" offset="-1">SBD_98.COM</rom>
+			<rom type="file" offset="-1">SBD.EXE</rom>
+			<rom type="file" offset="-1">VOICE.DAT</rom>
+			<rom type="file" offset="-1">SR_01.M</rom>
+			<rom type="file" offset="-1">SR_02.M</rom>
+			<rom type="file" offset="-1">SR_03.M</rom>
+			<rom type="file" offset="-1">SR_04.M</rom>
+			<rom type="file" offset="-1">SR_05.M</rom>
+			<rom type="file" offset="-1">SR_06.M</rom>
+			<rom type="file" offset="-1">SR_07.M</rom>
+			<rom type="file" offset="-1">SR_08.M</rom>
+			<rom type="file" offset="-1">SR_10.M</rom>
+			<rom type="file" offset="-1">SR_12.M</rom>
+			<rom type="file" offset="-1">SR_13.M</rom>
+			<rom type="file" offset="-1">SR_14.M</rom>
+			<rom type="file" offset="-1">SR_15.M</rom>
+			<rom type="file" offset="-1">SR_18.M</rom>
+			<rom type="file" offset="-1">SR_19.M</rom>
+			<rom type="shell" offset="0">sbd</rom>
+			<rom type="shell" offset="0">sbd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">SR_01.M : </title>
+			<title code="0x02">SR_02.M : </title>
+			<title code="0x03">SR_03.M : </title>
+			<title code="0x04">SR_04.M : </title>
+			<title code="0x05">SR_05.M : </title>
+			<title code="0x06">SR_06.M : </title>
+			<title code="0x07">SR_07.M : </title>
+			<title code="0x08">SR_08.M : </title>
+			<title code="0x0a">SR_10.M : </title>
+			<title code="0x0c">SR_12.M : </title>
+			<title code="0x0d">SR_13.M : </title>
+			<title code="0x0e">SR_14.M : </title>
+			<title code="0x0f">SR_15.M : </title>
+			<title code="0x12">SR_18.M : </title>
+			<title code="0x13">SR_19.M : </title>
+		</titlelist>
+	</game>
+</gamelist>

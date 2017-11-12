@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- // sein -->
+	<game>
+		<name>[PC-88] Triton (トリトーン)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="baseclock" value="0x04"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="triton">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">MUSIC</rom>
+			<rom type="code" offset="0xf000">ENDING</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">通常BGM</title>
+			<title code="0x05">ゲームオーバー</title>
+			<title code="0x07">エンディング</title>
+			<title code="0x08">アイテム入手/レベルアップ</title>
+			<title code="0x09">BGM #09</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Mirai (未来)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+			<option name="mdata_addr" value="0xe300"/>
+			<option name="mdata_size" value="0x0300"/>
+		</options>
+		<romlist archive="mirai">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">OP</rom>
+			<rom type="code" offset="0x78e0">PROG</rom>
+			<rom type="bgm"  offset="0x00">OP</rom>
+			<rom type="bgm"  offset="0x01">MUS00</rom>
+			<rom type="bgm"  offset="0x02">MUS01</rom>
+			<rom type="bgm"  offset="0x03">MUS02</rom>
+			<rom type="bgm"  offset="0x04">MUS03</rom>
+			<rom type="bgm"  offset="0x05">MUS04</rom>
+			<rom type="bgm"  offset="0x06">MUS05</rom>
+			<rom type="bgm"  offset="0x07">MUS06</rom>
+			<rom type="bgm"  offset="0x08">MUS07</rom>
+			<rom type="bgm"  offset="0x09">MUS08</rom>
+			<rom type="bgm"  offset="0x0a">MUS09</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x02">地上 (惑星1,5)</title>
+			<title code="0x03">地下 (惑星1,5,7)</title>
+			<title code="0x08">地上 (惑星2,7)</title>
+			<title code="0x04">地下 (惑星2,6)</title>
+			<title code="0x01">地上 (惑星3,6)</title>
+			<title code="0x05">地下 (惑星3)</title>
+			<title code="0x06">地上 (惑星4)</title>
+			<title code="0x07">地下 (惑星4)</title>
+			<title code="0x0a">ボス</title>
+			<title code="0x09">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Jotumn (ヨトゥーン)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="jotumn">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0d">Stop the Music (演奏停止)</title>
+			<title code="0x01">BGM #00</title>
+			<title code="0x04">BGM #01</title>
+			<title code="0x07">BGM #02</title>
+			<title code="0x0a">BGM #03</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Herlesh (ハーレッシュ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="herlesh">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0300">MUSIC</rom>
+			<rom type="code" offset="0x7100">DRIVER</rom>
+			<rom type="code" offset="0xc000">OP</rom>
+			<rom type="code" offset="0xd000">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1c">Stop the Music (演奏停止)</title>
+			<title code="0x00">BGM #00</title>
+			<title code="0x04">BGM #01</title>
+			<title code="0x07">BGM #02</title>
+			<title code="0x0a">BGM #03</title>
+			<title code="0x0d">BGM #04</title>
+			<title code="0x10">BGM #05</title>
+			<title code="0x16">BGM #06</title>
+			<title code="0x19">BGM #07</title>
+			<title code="0x1f">BGM #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Hideger (ハイデッガー)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="hideger">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">MUS00</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">BGM #00</title>
+			<title code="0x00000001">BGM #01</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Bastard Special (バスタードスペシャル)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="bastards">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x5c00">DRIVER1</rom>
+			<rom type="code" offset="0x6600">DRIVER2</rom>
+			<rom type="code" offset="0x9900">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000001">BGM #01</title>
+			<title code="0x00000004">BGM #02</title>
+			<title code="0x00000007">BGM #03</title>
+			<title code="0x0000000a">BGM #04</title>
+			<title code="0x0000000d">BGM #05</title>
+			<title code="0x00000010">BGM #06</title>
+			<title code="0x00000013">BGM #07</title>
+			<title code="0x00000016">BGM #08</title>
+			<title code="0x010000ff">SFX #01</title>
+			<title code="0x020000ff">SFX #02</title>
+			<title code="0x030000ff">SFX #03</title>
+			<title code="0x040000ff">SFX #04</title>
+			<title code="0x050000ff">SFX #05</title>
+			<title code="0x060000ff">SFX #06</title>
+			<title code="0x070000ff">SFX #07</title>
+			<title code="0x080000ff">SFX #08</title>
+			<title code="0x090000ff">SFX #09</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] CLUJU</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">ザインソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5d06"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="cluju">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x5140">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x04000000">MUSIC 00</title>
+			<title code="0x04000001">MUSIC 01</title>
+			<title code="0x04000002">MUSIC 02</title>
+			<title code="0x04000003">MUSIC 03</title>
+			<title code="0x04000004">MUSIC 04</title>
+			<title code="0x04000005">MUSIC 05</title>
+			<title code="0x010000ff">EFFECT #01</title>
+			<title code="0x020000ff">EFFECT #02</title>
+			<title code="0x030000ff">EFFECT #03</title>
+			<title code="0x040000ff">EFFECT #04</title>
+			<title code="0x050000ff">EFFECT #05</title>
+			<title code="0x060000ff">EFFECT #06</title>
+			<title code="0x070000ff">EFFECT #07</title>
+			<title code="0x080000ff">EFFECT #08</title>
+			<title code="0x090000ff">EFFECT #09</title>
+			<title code="0x0a0000ff">効果音停止</title>
+		<!--	<title code="0x0b0000ff">効果音停止</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Triton 2 -Road of Darkness- (トリトーンII ROAD OF DARKNESS)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="triton2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000001">BGM #01</title>
+			<title code="0x01000002">BGM #02</title>
+			<title code="0x01000003">BGM #03</title>
+			<title code="0x01000004">BGM #04</title>
+			<title code="0x000000ff">SFX #00</title>
+			<title code="0x010000ff">SFX #01</title>
+			<title code="0x020000ff">SFX #02</title>
+			<title code="0x030000ff">SFX #03</title>
+			<title code="0x040000ff">SFX #04</title>
+			<title code="0x050000ff">SFX #05</title>
+			<title code="0x060000ff">SFX #06</title>
+			<title code="0x070000ff">SFX #07</title>
+			<title code="0x080000ff">SFX #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Galf Streem (ガルフストリーム)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<romlist archive="galfstrm">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUSOP1</rom>
+			<rom type="bgm" offset="0x01">MUSOP2</rom>
+			<rom type="bgm" offset="0x02">MUS000</rom>
+			<rom type="bgm" offset="0x03">MUS001</rom>
+			<rom type="bgm" offset="0x04">MUS002</rom>
+			<rom type="bgm" offset="0x05">MUS003</rom>
+			<rom type="bgm" offset="0x06">MUS004</rom>
+			<rom type="bgm" offset="0x07">MUS005</rom>
+			<rom type="bgm" offset="0x08">MUS006</rom>
+			<rom type="bgm" offset="0x09">MUSEND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xe0000000">MUSOP1</title>
+			<title code="0xe0000001">MUSOP2</title>
+			<title code="0x68000002">MUS000</title>
+			<title code="0x68000003">MUS001</title>
+			<title code="0x68000004">MUS002</title>
+			<title code="0x68000005">MUS003</title>
+			<title code="0x68000006">MUS004</title>
+			<title code="0x68000007">MUS005</title>
+			<title code="0x68000008">MUS006</title>
+			<title code="0x30000009">MUSEND</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Dios (FD版) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x3000"/>
+			<option name="use_pcmx8" value="0x01"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="dios">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x7100">PROG2</rom>
+			<rom type="adpcm" offset="0x00000">ADPCM</rom>
+			<rom type="bgm" offset="0x00">MUS100</rom>
+			<rom type="bgm" offset="0x01">MUS101</rom>
+			<rom type="bgm" offset="0x02">MUS102</rom>
+			<rom type="bgm" offset="0x03">MUS300</rom>
+			<rom type="bgm" offset="0x04">MUS301</rom>
+			<rom type="bgm" offset="0x05">MUS302</rom>
+			<rom type="bgm" offset="0x06">MUS303</rom>
+			<rom type="bgm" offset="0x07">MUS304</rom>
+			<rom type="bgm" offset="0x08">MUS305</rom>
+			<rom type="bgm" offset="0x09">MUS306</rom>
+			<rom type="bgm" offset="0x0a">MUS307</rom>
+			<rom type="bgm" offset="0x0b">MUS308</rom>
+			<rom type="bgm" offset="0x0c">MUS600</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MUS100</title>
+			<title code="0x00000001">MUS101</title>
+			<title code="0x00000002">MUS102</title>
+			<title code="0x00000003">MUS300</title>
+			<title code="0x00000004">MUS301</title>
+			<title code="0x00000005">MUS302</title>
+			<title code="0x00000006">MUS303</title>
+			<title code="0x00000007">MUS304</title>
+			<title code="0x00000008">MUS305</title>
+			<title code="0x00000009">MUS306</title>
+			<title code="0x0000000a">MUS307</title>
+			<title code="0x0000000b">MUS308</title>
+			<title code="0x0000000c">MUS600</title>
+			<title code="0x000000fe">PCMEFC #00</title>
+			<title code="0x010000fe">PCMEFC #01</title>
+			<title code="0x020000fe">PCMEFC #02</title>
+			<title code="0x030000fe">PCMEFC #03</title>
+			<title code="0x040000fe">PCMEFC #04</title>
+			<title code="0x050000fe">PCMEFC #05</title>
+			<title code="0x000000ff">SSGEFC #00</title>
+			<title code="0x010000ff">SSGEFC #01</title>
+			<title code="0x020000ff">SSGEFC #02</title>
+			<title code="0x030000ff">SSGEFC #03</title>
+			<title code="0x040000ff">SSGEFC #04</title>
+			<title code="0x050000ff">SSGEFC #05</title>
+			<title code="0x060000ff">SSGEFC #06</title>
+			<title code="0x070000ff">SSGEFC #07</title>
+			<title code="0x080000ff">SSGEFC #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Dios (FD版) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x3000"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="dios">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x7100">PROG2</rom>
+			<rom type="bgm" offset="0x00">MUS100</rom>
+			<rom type="bgm" offset="0x01">MUS101</rom>
+			<rom type="bgm" offset="0x02">MUS102</rom>
+			<rom type="bgm" offset="0x03">MUS300</rom>
+			<rom type="bgm" offset="0x04">MUS301</rom>
+			<rom type="bgm" offset="0x05">MUS302</rom>
+			<rom type="bgm" offset="0x06">MUS303</rom>
+			<rom type="bgm" offset="0x07">MUS304</rom>
+			<rom type="bgm" offset="0x08">MUS305</rom>
+			<rom type="bgm" offset="0x09">MUS306</rom>
+			<rom type="bgm" offset="0x0a">MUS307</rom>
+			<rom type="bgm" offset="0x0b">MUS308</rom>
+			<rom type="bgm" offset="0x0c">MUS600</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MUS100</title>
+			<title code="0x00000001">MUS101</title>
+			<title code="0x00000002">MUS102</title>
+			<title code="0x00000003">MUS300</title>
+			<title code="0x00000004">MUS301</title>
+			<title code="0x00000005">MUS302</title>
+			<title code="0x00000006">MUS303</title>
+			<title code="0x00000007">MUS304</title>
+			<title code="0x00000008">MUS305</title>
+			<title code="0x00000009">MUS306</title>
+			<title code="0x0000000a">MUS307</title>
+			<title code="0x0000000b">MUS308</title>
+			<title code="0x0000000c">MUS600</title>
+			<title code="0x000000ff">SSGEFC #00</title>
+			<title code="0x010000ff">SSGEFC #01</title>
+			<title code="0x020000ff">SSGEFC #02</title>
+			<title code="0x030000ff">SSGEFC #03</title>
+			<title code="0x040000ff">SSGEFC #04</title>
+			<title code="0x050000ff">SSGEFC #05</title>
+			<title code="0x060000ff">SSGEFC #06</title>
+			<title code="0x070000ff">SSGEFC #07</title>
+			<title code="0x080000ff">SSGEFC #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Alfaim (アルフェイム) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6000"/>
+			<option name="mdata_size" value="0x1000"/>
+		</options>
+		<romlist archive="alfaim">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00</title>
+			<title code="0x01">MUS01</title>
+			<title code="0x02">MUS02</title>
+			<title code="0x03">MUS03</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Alfaim (アルフェイム) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6000"/>
+			<option name="mdata_size" value="0x1000"/>
+		</options>
+		<romlist archive="alfaim">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00</title>
+			<title code="0x01">MUS01</title>
+			<title code="0x02">MUS02</title>
+			<title code="0x03">MUS03</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Kobe Renai Monogatari (神戸恋愛物語) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6000"/>
+			<option name="mdata_size" value="0x1000"/>
+		</options>
+		<romlist archive="kobe">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS100</rom>
+			<rom type="bgm" offset="0x01">MUS101</rom>
+			<rom type="bgm" offset="0x02">MUS102</rom>
+			<rom type="bgm" offset="0x03">MUS103</rom>
+			<rom type="bgm" offset="0x04">MUS104</rom>
+			<rom type="bgm" offset="0x05">MUS200</rom>
+			<rom type="bgm" offset="0x06">MUS600</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">オープニング</title>
+			<title code="0x02">第一章 「出会い・・  そして・・・」</title>
+			<title code="0x03">第二章 「現実・・・・」</title>
+			<title code="0x04">第三章 「真実・・・・」</title>
+			<title code="0x06">第四章 「離れ・・・・」</title>
+			<title code="0x00">未使用曲</title>
+			<title code="0x01">未使用曲(ALFAIM)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Kobe Renai Monogatari (神戸恋愛物語) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6000"/>
+			<option name="mdata_size" value="0x1000"/>
+		</options>
+		<romlist archive="kobe">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS100</rom>
+			<rom type="bgm" offset="0x01">MUS101</rom>
+			<rom type="bgm" offset="0x02">MUS102</rom>
+			<rom type="bgm" offset="0x03">MUS103</rom>
+			<rom type="bgm" offset="0x04">MUS104</rom>
+			<rom type="bgm" offset="0x05">MUS200</rom>
+			<rom type="bgm" offset="0x06">MUS600</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">オープニング</title>
+			<title code="0x02">第一章 「出会い・・  そして・・・」</title>
+			<title code="0x03">第二章 「現実・・・・」</title>
+			<title code="0x04">第三章 「真実・・・・」</title>
+			<title code="0x06">第四章 「離れ・・・・」</title>
+			<title code="0x00">未使用曲</title>
+			<title code="0x01">未使用曲(ALFAIM)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] The Tug of War (タッグオブウォー) (OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x2000"/>
+		</options>
+		<romlist archive="tugofwar">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x7100">PROG2</rom>
+			<rom type="bgm" offset="0x00">MUS100A</rom>
+			<rom type="bgm" offset="0x01">MUS101A</rom>
+			<rom type="bgm" offset="0x02">MUS102A</rom>
+			<rom type="bgm" offset="0x03">MUS103A</rom>
+			<rom type="bgm" offset="0x04">MUS104A</rom>
+			<rom type="bgm" offset="0x05">MUS105A</rom>
+			<rom type="bgm" offset="0x06">MUS106A</rom>
+			<rom type="bgm" offset="0x07">MUS100B</rom>
+			<rom type="bgm" offset="0x08">MUS101B</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS100A</title>
+			<title code="0x01">MUS101A</title>
+			<title code="0x02">MUS102A</title>
+			<title code="0x03">MUS103A</title>
+			<title code="0x04">MUS104A</title>
+			<title code="0x05">MUS105A</title>
+			<title code="0x06">MUS106A</title>
+			<title code="0x07">MUS100B</title>
+			<title code="0x08">MUS101B</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] The Tug of War (タッグオブウォー) (OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">sein</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x2000"/>
+		</options>
+		<romlist archive="tugofwar">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x7100">PROG2</rom>
+			<rom type="bgm" offset="0x00">MUS100A</rom>
+			<rom type="bgm" offset="0x01">MUS101A</rom>
+			<rom type="bgm" offset="0x02">MUS102A</rom>
+			<rom type="bgm" offset="0x03">MUS103A</rom>
+			<rom type="bgm" offset="0x04">MUS104A</rom>
+			<rom type="bgm" offset="0x05">MUS105A</rom>
+			<rom type="bgm" offset="0x06">MUS106A</rom>
+			<rom type="bgm" offset="0x07">MUS100B</rom>
+			<rom type="bgm" offset="0x08">MUS101B</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS100A</title>
+			<title code="0x01">MUS101A</title>
+			<title code="0x02">MUS102A</title>
+			<title code="0x03">MUS103A</title>
+			<title code="0x04">MUS104A</title>
+			<title code="0x05">MUS105A</title>
+			<title code="0x06">MUS106A</title>
+			<title code="0x07">MUS100B</title>
+			<title code="0x08">MUS101B</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Mirai (未来)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">sein</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="mirai_msx">
+			<rom type="code">Mirai (1987)(Zain Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Bastard (バスタード)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">sein</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="bastard_msx">
+			<rom type="code">Bastard (1988)(Zain Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x93">BGM #93</title>
+			<title code="0x91">BGM #91</title>
+			<title code="0x95">BGM #95</title>
+			<title code="0x98">BGM #98</title>
+			<title code="0x9d">BGM #9d</title>
+			<title code="0x8d">BGM #8d</title>
+			<title code="0x8f">BGM #8f</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Garyuuou (牙龍王)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">sein</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="garyu_msx">
+			<rom type="code">Garyuuou (1987)(Zain Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x8d">BGM #8d</title>
+			<title code="0x8e">BGM #8e</title>
+			<title code="0x8f">BGM #8f</title>
+			<title code="0x90">BGM #90</title>
+			<title code="0x91">BGM #91</title>
+			<title code="0x92">BGM #92</title>
+			<title code="0x93">BGM #93</title>
+			<title code="0x94">BGM #94</title>
+			<title code="0x95">BGM #95</title>
+			<title code="0x96">BGM #96</title>
+			<title code="0x97">BGM #97</title>
+			<title code="0x98">BGM #98</title>
+			<title code="0x99">BGM #99</title>
+			<title code="0x9a">BGM #9a</title>
+			<title code="0x9b">BGM #9b</title>
+			<title code="0x9c">BGM #9c</title>
+			<title code="0x9d">BGM #9d</title>
+			<title code="0x9e">BGM #9e</title>
+			<title code="0x9f">BGM #9f</title>
+		</titlelist>
+	</game>
+</gamelist>

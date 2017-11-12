@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Cuisse -->
+	<game>
+		<name>[PC-9801] もあ あんど もあ</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Cuisse</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="more_98">
+			<rom type="file" offset="-1">MORE_98.COM</rom>
+			<rom type="file" offset="-1">MM.EXE</rom>
+			<rom type="conin" offset="5">MM.EXE</rom>
+			<rom type="file" offset="10">BALANCE.MOB</rom>
+			<rom type="file" offset="11">MORE_01.MOB</rom>
+			<rom type="file" offset="12">MORE_02.MOB</rom>
+			<rom type="file" offset="13">MORE_03.MOB</rom>
+			<rom type="file" offset="14">MORE_04.MOB</rom>
+			<rom type="file" offset="15">MORE_05.MOB</rom>
+			<rom type="file" offset="16">MORE_06.MOB</rom>
+			<rom type="file" offset="17">MORE_07.MOB</rom>
+			<rom type="file" offset="18">MORE_08.MOB</rom>
+			<rom type="file" offset="19">MORE_09.MOB</rom>
+			<rom type="file" offset="20">MORE_10.MOB</rom>
+			<rom type="shell" offset="0">MORE_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="10">BALANCE.MOB : </title>
+			<title code="11">MORE_01.MOB : オ－プニング</title>
+			<title code="12">MORE_02.MOB : 留美のテ－マ</title>
+			<title code="13">MORE_03.MOB : 博子のテ－マ</title>
+			<title code="14">MORE_04.MOB : あゆみのテ－マ</title>
+			<title code="15">MORE_05.MOB : 美智子のテ－マ</title>
+			<title code="16">MORE_06.MOB : 沙都子のテ－マ</title>
+			<title code="17">MORE_07.MOB : 麻美のテ－マ</title>
+			<title code="18">MORE_08.MOB : その他の女の子のテ－マ</title>
+			<title code="19">MORE_09.MOB : 主人公のテ－マ</title>
+			<title code="20">MORE_10.MOB : エンディング</title>
+		</titlelist>
+	</game>
+</gamelist>

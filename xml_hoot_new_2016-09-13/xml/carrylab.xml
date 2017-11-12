@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Carry Lab. -->
+	<game>
+		<name>[PC-9801] Flight in Hawaii</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">Carry Lab.</driveralias>
+		<options>
+			<option name="cpuclock" value="1996800"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="dataaddr" value="0x33000"/>
+			<option name="filesize" value="0x06000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="datamax" value="0x06"/>
+		</options>
+		<romlist archive="fih98">
+			<rom type="code" offset="0x00600">fih.bin</rom>
+			<rom type="code" offset="0x31000">MUSIC PLAY</rom>
+			<rom type="bgm" offset="0x01">T MUSIC</rom>
+			<rom type="bgm" offset="0x02">SPRING MUSIC</rom>
+			<rom type="bgm" offset="0x03">SUMMER MUSIC</rom>
+			<rom type="bgm" offset="0x04">FALL MUSIC</rom>
+			<rom type="bgm" offset="0x05">WINTER MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">TITLE MUSIC</title>
+			<title code="0x02">SPRING MUSIC</title>
+			<title code="0x03">SUMMER MUSIC</title>
+			<title code="0x04">FALL MUSIC</title>
+			<title code="0x05">WINTER MUSIC</title>
+			<title code="0xff">墜落音</title>
+		</titlelist>
+	</game>
+</gamelist>

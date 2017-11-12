@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //PEGASUS SOFT -->
+	<game>
+		<name>[X68000] COMET</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">PEGASUS SOFT</driveralias>
+		<romlist archive="comet68snd">
+			<rom type="code">cmt68snd.bin</rom>
+			<rom type="x"    offset="0x10000">OPMDRV.X</rom>
+			<rom type="x"    offset="0x2e000">ONSYOKU.X</rom>
+			<rom type="x"    offset="0x30000">COMET_T.X</rom>
+			<rom type="code" offset="0x50000">GLEAM.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : 初期バージョンで使っていた曲</title>
+			<title code="0x02">01 : a gleam of hope</title>
+			<title code="0x03">02 : あっ やられた</title>
+			<title code="0x04">03 : Milky Way [タイトル曲]</title>
+			<title code="0x05">04 : 空の果てから [エンディング曲]</title>
+			<title code="0x06">05 : みずがめδ [ネーム・エントリー曲]</title>
+			<title code="0x07">06 : ほうき星 [テーマ曲]</title>
+			<title code="0x08">07 : 星時計 [ステージ・セレクト]</title>
+			<title code="0x09">08 : 凸レンズ</title>
+			<title code="0x0a">09 : 星降る丘</title>
+			<!--
+			<title code="0x0b">0A : a gleam of hope (GLEAM.OPM)</title>
+			  -->
+		</titlelist>
+	</game>
+</gamelist>

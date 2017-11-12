@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2007/11/23">
+	<!-- //Pack-In-Video -->
+	<game>
+		<name>[PC-8801] 歌声人</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">Pack-In-Video</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb800"/>
+			<option name="use_pcmx8" value="0x01"/>
+		</options>
+		<romlist archive="kaseijin">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0140">MAIN1-.COM</rom>
+			<rom type="code" offset="0x8a00">MAIN2-.COM</rom>
+			<rom type="adpcm" offset="0x00000">VOIB01.PDT</rom>
+			<rom type="adpcm" offset="0x04000">VOIB02.PDT</rom>
+			<rom type="adpcm" offset="0x08000">VOIB03.PDT</rom>
+			<rom type="adpcm" offset="0x0c000">VOIB04.PDT</rom>
+			<rom type="adpcm" offset="0x10000">VOIB05.PDT</rom>
+			<rom type="adpcm" offset="0x14000">VOIB06.PDT</rom>
+			<rom type="adpcm" offset="0x18000">VOIB07.PDT</rom>
+			<rom type="adpcm" offset="0x1c000">VOIB08.PDT</rom>
+			<rom type="adpcm" offset="0x20000">VOIB09.PDT</rom>
+			<rom type="adpcm" offset="0x24000">VOIB10.PDT</rom>
+			<rom type="adpcm" offset="0x28000">VOIB11.PDT</rom>
+			<rom type="adpcm" offset="0x2c000">VOIB12.PDT</rom>
+			<rom type="adpcm" offset="0x30000">VOIB13.PDT</rom>
+			<rom type="adpcm" offset="0x34000">VOIB14.PDT</rom>
+			<rom type="adpcm" offset="0x38000">VOIB15.PDT</rom>
+			<rom type="adpcm" offset="0x3c000">VOIB16.PDT</rom>
+			<rom type="bgm" offset="0x00">DEMO01.MEL</rom>
+			<rom type="bgm" offset="0x01">DEMO02.MEL</rom>
+			<rom type="bgm" offset="0x02">DEMO03.MEL</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">DEMO01.MEL : 赤いスイートピー</title>
+			<title code="0x01">DEMO02.MEL : 悲しみよ こんにちは</title>
+			<title code="0x02">DEMO03.MEL : 彼女とTIP ON DUO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] THE GOLF(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Pack-In-Video</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="thegolf_msx">
+		<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x8FF9">PAC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x00" max="0x03" extcode="1">BGM 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] THE GOLF(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Pack-In-Video</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="thegolf_msx">
+		<rom type="code" offset="0x0400">patch2</rom>
+			<rom type="code" offset="0x8FF9">FM1.BIN</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x01" max="0x05" extcode="1">BGM 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] シルヴィアーナ ～愛いっぱいの冒険者～(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Pack-In-Video</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9c65"/>
+			<option name="mdata_size" value="0xe00"/>
+			<option name="mfile_size" value="0xe00"/>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="silviana_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xBA50">FM_DRV.COM</rom>
+			<rom type="bgm" offset="0x00">BGM_00.COM</rom>
+			<rom type="bgm" offset="0x01">BGM_01.COM</rom>
+			<rom type="bgm" offset="0x02">BGM_02.COM</rom>
+			<rom type="bgm" offset="0x03">BGM_03.COM</rom>
+			<rom type="bgm" offset="0x04">BGM_04.COM</rom>
+			<rom type="bgm" offset="0x05">BGM_05.COM</rom>
+			<rom type="bgm" offset="0x06">BGM_06.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM_00.COM : オープニング</title>
+			<title code="0x01">BGM_01.COM : フィールド</title>
+			<title code="0x02">BGM_02.COM : 自宅/村</title>
+			<title code="0x03">BGM_03.COM : 洞窟</title>
+			<title code="0x04">BGM_04.COM : ボス</title>
+			<title code="0x05">BGM_05.COM : 勝利</title>
+			<title code="0x06">BGM_06.COM : エンディング</title>
+			<range min="0x107" max="0x119" extcode="0">SE  : 0x%02x : </range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] シルヴィアーナ ～愛いっぱいの冒険者～(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Pack-In-Video</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9c65"/>
+			<option name="mdata_size" value="0xe00"/>
+			<option name="mfile_size" value="0xe00"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="silviana_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xBA50">PSG_DRV.COM</rom>
+			<rom type="bgm" offset="0x00">P_BGM_00.COM</rom>
+			<rom type="bgm" offset="0x01">P_BGM_01.COM</rom>
+			<rom type="bgm" offset="0x02">P_BGM_02.COM</rom>
+			<rom type="bgm" offset="0x03">P_BGM_03.COM</rom>
+			<rom type="bgm" offset="0x04">P_BGM_04.COM</rom>
+			<rom type="bgm" offset="0x05">P_BGM_05.COM</rom>
+			<rom type="bgm" offset="0x06">P_BGM_06.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">P_BGM_00.COM : オープニング</title>
+			<title code="0x01">P_BGM_01.COM : フィールド</title>
+			<title code="0x02">P_BGM_02.COM : 自宅/村</title>
+			<title code="0x03">P_BGM_03.COM : 洞窟</title>
+			<title code="0x04">P_BGM_04.COM : ボス</title>
+			<title code="0x05">P_BGM_05.COM : 勝利</title>
+			<title code="0x06">P_BGM_06.COM : エンディング</title>
+			<range min="0x107" max="0x119" extcode="0">SE    : 0x%02x : </range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 軍人将棋</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Pack-In-Video</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+			<option name="mdata_size" value="0x3000"/>
+			<option name="mfile_size" value="0x3000"/>
+			<option name="init_pc"    value="0x400"/>
+		</options>
+		<romlist archive="gshogi_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="bgm" offset="0x00">BMSC.BIN</rom>
+			<rom type="bgm" offset="0x01">EMSC.BIN</rom>
+			<rom type="bgm" offset="0x02">MMSC.BIN</rom>
+			<rom type="bgm" offset="0x03">RMSC.BIN</rom>
+			<rom type="bgm" offset="0x04">SMSC.BIN</rom>
+			<rom type="bgm" offset="0x05">TMSC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0501">TMSC.BIN : 01 : タイトル</title>
+			<title code="0x0201">MMSC.BIN : 01 : </title>
+			<title code="0x0202">MMSC.BIN : 02 : </title>
+			<title code="0x0203">MMSC.BIN : 03 : </title>
+			<title code="0x0204">MMSC.BIN : 04 : </title>
+			<title code="0x0205">MMSC.BIN : 05 : </title>
+			<title code="0x0206">MMSC.BIN : 06 : </title>
+			<title code="0x0207">MMSC.BIN : 07 : </title>
+			<title code="0x0001">BMSC.BIN : 01 : </title>
+			<title code="0x0401">SMSC.BIN : 01 : 連勝CG1</title>
+			<title code="0x0402">SMSC.BIN : 02 : 連勝CG2</title>
+			<title code="0x0301">RMSC.BIN : 01 : 100勝(レプリカート)</title>
+			<title code="0x0101">EMSC.BIN : 01 : スタッフロール</title>
+		</titlelist>
+	</game>
+</gamelist>

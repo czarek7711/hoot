@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //C-Lab. -->
+	<game>
+		<name>[PC-9801] Rusty(OPN)</name>
+		<driver type="opn">pc9821dos</driver>
+		<driveralias type="NEC PC-9801">C-Lab.</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="16"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="wstimer" value="3"/>
+		</options>
+		<romlist archive="rusty98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="-1">PDR.COM</rom>
+			<rom type="file" offset="-1">PPSDRV.COM</rom>
+			<rom type="file" offset="-1">CLEAR.PPS</rom>
+			<rom type="file" offset="-1">DRUMS.PPS</rom>
+			<rom type="file" offset="-1">EC.PPS</rom>
+			<rom type="file" offset="-1">GAMES.PPS</rom>
+			<rom type="file" offset="0x10">_VISUAL1.M</rom>
+			<rom type="file" offset="0x11">_VISUAL2.M</rom>
+			<rom type="file" offset="0x12">_VISUAL3.M</rom>
+			<rom type="file" offset="0x13">_VISUAL4.M</rom>
+			<rom type="file" offset="0x14">_VISUAL5.M</rom>
+			<rom type="file" offset="0x15">ALLCLEAR.M</rom>
+			<rom type="file" offset="0x16">ALLMAP.M</rom>
+			<rom type="file" offset="0x17">BOSS.M</rom>
+			<rom type="file" offset="0x18">BOSS2.M</rom>
+			<rom type="file" offset="0x19">CLEAR.M</rom>
+			<rom type="file" offset="0x1a">ENDING1.M</rom>
+			<rom type="file" offset="0x1b">ENDING2.M</rom>
+			<rom type="file" offset="0x1c">EYECATCH.M</rom>
+			<rom type="file" offset="0x1d">GAMEOVER.M</rom>
+			<rom type="file" offset="0x1e">LASTBOSS.M</rom>
+			<rom type="file" offset="0x1f">MU02.M</rom>
+			<rom type="file" offset="0x20">MUSS.M</rom>
+			<rom type="file" offset="0x21">ROUND1.M</rom>
+			<rom type="file" offset="0x22">ROUND10.M</rom>
+			<rom type="file" offset="0x23">ROUND10B.M</rom>
+			<rom type="file" offset="0x24">ROUND2.M</rom>
+			<rom type="file" offset="0x25">ROUND3.M</rom>
+			<rom type="file" offset="0x26">ROUND4.M</rom>
+			<rom type="file" offset="0x27">ROUND5.M</rom>
+			<rom type="file" offset="0x28">ROUND5_2.M</rom>
+			<rom type="file" offset="0x29">ROUND6.M</rom>
+			<rom type="file" offset="0x2a">ROUND7.M</rom>
+			<rom type="file" offset="0x2b">ROUND8.M</rom>
+			<rom type="file" offset="0x2c">ROUND9.M</rom>
+			<rom type="file" offset="0x2d">VISUAL1.M</rom>
+			<rom type="file" offset="0x2e">VISUAL2.M</rom>
+			<rom type="file" offset="0x2f">VISUAL3.M</rom>
+			<rom type="file" offset="0x30">VISUAL4.M</rom>
+			<rom type="file" offset="0x31">CLABLOGO.M</rom>
+			<rom type="shell" offset="0">pdr /i</rom>
+			<rom type="shell" offset="0">ppsdrv drums.pps</rom>
+			<rom type="shell" offset="0">pmd /k/m11/v0/e0/df16</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x31">CLABLOGO.M : </title>
+			<title code="0x20">MUSS.M     : BLOOD SOON CASTLE       / 荒川憲一</title>
+			<title code="0x1f">MU02.M     : RUSTY                   / KAJA</title>
+			<title code="0x16">ALLMAP.M   : THE WORLD               / KAJA</title>
+			<title code="0x21">ROUND1.M   : QUEEN IN THE DARK NIGHT / 荒川憲一</title>
+			<title code="0x17">BOSS.M     : I'LL DESTROY YOUR MIND  / KAJA</title>
+			<title code="0x19">CLEAR.M    : DANCE DANCE             / KAJA</title>
+			<title code="0x24">ROUND2.M   : SILENT CEMETERY         / KAJA</title>
+			<title code="0x25">ROUND3.M   : MYSTERIOUS CHAPEL       / 荒川憲一</title>
+			<title code="0x26">ROUND4.M   : DEAD END                / KAJA</title>
+			<title code="0x18">BOSS2.M    : RHYTHM OF DARK          / 荒川憲一</title>
+			<title code="0x27">ROUND5.M   : EARTH HOLE              / 荒川憲一</title>
+			<title code="0x28">ROUND5_2.M : HELL'S STRIKE           / 荒川憲一</title>
+			<title code="0x29">ROUND6.M   : WATER GATE              / 荒川憲一</title>
+			<title code="0x2a">ROUND7.M   : RED SUNSET              / KAJA</title>
+			<title code="0x2b">ROUND8.M   : TOWER OF THE DESTINY    / R.TAKAMI</title>
+			<title code="0x22">ROUND10.M  : CASTLE                  / KAJA</title>
+			<title code="0x30">VISUAL4.M  : SHOOTING STAR           / 荒川憲一</title>
+			<title code="0x2c">ROUND9.M   : STONE WASHER            / KAJA</title>
+			<title code="0x23">ROUND10B.M : AN ALTER                / KAJA</title>
+			<title code="0x1e">LASTBOSS.M : FINAL BATTLE            / KAJA</title>
+			<title code="0x15">ALLCLEAR.M : ALL OVER                / KAJA</title>
+			<title code="0x1a">ENDING1.M  : AS IF IN A DREAM        / 荒川憲一</title>
+			<title code="0x1b">ENDING2.M  : RISING SUN              / KAJA</title>
+			<title code="0x1d">GAMEOVER.M : NEVER GIVEUP            / 荒川憲一</title>
+			<title code="0x1c">EYECATCH.M : </title>
+			<title code="0x2d">VISUAL1.M  : </title>
+			<title code="0x2e">VISUAL2.M  : </title>
+			<title code="0x2f">VISUAL3.M  : </title>
+			<title code="0x10">_VISUAL1.M : </title>
+			<title code="0x11">_VISUAL2.M : </title>
+			<title code="0x12">_VISUAL3.M : </title>
+			<title code="0x13">_VISUAL4.M : SHOOTING STAR           / 荒川憲一</title>
+			<title code="0x14">_VISUAL5.M : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Rusty(OPNA)</name>
+		<driver type="opna">pc9821dos</driver>
+		<driveralias type="NEC PC-9801">C-Lab.</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="16"/>
+			<option name="ssg_mix"  value="-13"/>
+			<option name="wstimer" value="3"/>
+		</options>
+		<romlist archive="rusty98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="-1">PDR.COM</rom>
+			<rom type="file" offset="-1">PPSDRV.COM</rom>
+			<rom type="file" offset="-1">CLEAR.PPS</rom>
+			<rom type="file" offset="-1">DRUMS.PPS</rom>
+			<rom type="file" offset="-1">EC.PPS</rom>
+			<rom type="file" offset="-1">GAMES.PPS</rom>
+			<rom type="file" offset="0x10">_VISUAL1.M2</rom>
+			<rom type="file" offset="0x11">_VISUAL2.M2</rom>
+			<rom type="file" offset="0x12">_VISUAL3.M2</rom>
+			<rom type="file" offset="0x13">_VISUAL4.M2</rom>
+			<rom type="file" offset="0x14">_VISUAL5.M2</rom>
+			<rom type="file" offset="0x15">ALLCLEAR.M2</rom>
+			<rom type="file" offset="0x16">ALLMAP.M2</rom>
+			<rom type="file" offset="0x17">BOSS.M2</rom>
+			<rom type="file" offset="0x18">BOSS2.M2</rom>
+			<rom type="file" offset="0x19">CLEAR.M2</rom>
+			<rom type="file" offset="0x1a">ENDING1.M2</rom>
+			<rom type="file" offset="0x1b">ENDING2.M2</rom>
+			<rom type="file" offset="0x1c">EYECATCH.M2</rom>
+			<rom type="file" offset="0x1d">GAMEOVER.M2</rom>
+			<rom type="file" offset="0x1e">LASTBOSS.M2</rom>
+			<rom type="file" offset="0x1f">MU02.M2</rom>
+			<rom type="file" offset="0x20">MUSS.M2</rom>
+			<rom type="file" offset="0x21">ROUND1.M2</rom>
+			<rom type="file" offset="0x22">ROUND10.M2</rom>
+			<rom type="file" offset="0x23">ROUND10B.M2</rom>
+			<rom type="file" offset="0x24">ROUND2.M2</rom>
+			<rom type="file" offset="0x25">ROUND3.M2</rom>
+			<rom type="file" offset="0x26">ROUND4.M2</rom>
+			<rom type="file" offset="0x27">ROUND5.M2</rom>
+			<rom type="file" offset="0x28">ROUND5_2.M2</rom>
+			<rom type="file" offset="0x29">ROUND6.M2</rom>
+			<rom type="file" offset="0x2a">ROUND7.M2</rom>
+			<rom type="file" offset="0x2b">ROUND8.M2</rom>
+			<rom type="file" offset="0x2c">ROUND9.M2</rom>
+			<rom type="file" offset="0x2d">VISUAL1.M2</rom>
+			<rom type="file" offset="0x2e">VISUAL2.M2</rom>
+			<rom type="file" offset="0x2f">VISUAL3.M2</rom>
+			<rom type="file" offset="0x30">VISUAL4.M2</rom>
+			<rom type="file" offset="0x31">CLABLOGO.M</rom>
+			<rom type="shell" offset="0">pdr /i</rom>
+			<rom type="shell" offset="0">ppsdrv drums.pps</rom>
+			<rom type="shell" offset="0">pmdb2 /k/m11/v0/e0/ds16/df24/dr8</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x31">CLABLOGO.M  : </title>
+			<title code="0x20">MUSS.M2     : BLOOD SOON CASTLE       / 荒川憲一</title>
+			<title code="0x1f">MU02.M2     : RUSTY                   / KAJA</title>
+			<title code="0x16">ALLMAP.M2   : THE WORLD               / KAJA</title>
+			<title code="0x21">ROUND1.M2   : QUEEN IN THE DARK NIGHT / 荒川憲一</title>
+			<title code="0x17">BOSS.M2     : I'LL DESTROY YOUR MIND  / KAJA</title>
+			<title code="0x19">CLEAR.M2    : DANCE DANCE             / KAJA</title>
+			<title code="0x24">ROUND2.M2   : SILENT CEMETERY         / KAJA</title>
+			<title code="0x25">ROUND3.M2   : MYSTERIOUS CHAPEL       / 荒川憲一</title>
+			<title code="0x26">ROUND4.M2   : DEAD END                / KAJA</title>
+			<title code="0x18">BOSS2.M2    : RHYTHM OF DARK          / 荒川憲一</title>
+			<title code="0x27">ROUND5.M2   : EARTH HOLE              / 荒川憲一</title>
+			<title code="0x28">ROUND5_2.M2 : HELL'S STRIKE           / 荒川憲一</title>
+			<title code="0x29">ROUND6.M2   : WATER GATE              / 荒川憲一</title>
+			<title code="0x2a">ROUND7.M2   : RED SUNSET              / KAJA</title>
+			<title code="0x2b">ROUND8.M2   : TOWER OF THE DESTINY    / R.TAKAMI</title>
+			<title code="0x22">ROUND10.M2  : CASTLE                  / KAJA</title>
+			<title code="0x30">VISUAL4.M2  : SHOOTING STAR           / 荒川憲一</title>
+			<title code="0x2c">ROUND9.M2   : STONE WASHER            / KAJA</title>
+			<title code="0x23">ROUND10B.M2 : AN ALTER                / KAJA</title>
+			<title code="0x1e">LASTBOSS.M2 : FINAL BATTLE            / KAJA</title>
+			<title code="0x15">ALLCLEAR.M2 : ALL OVER                / KAJA</title>
+			<title code="0x1a">ENDING1.M2  : AS IF IN A DREAM        / 荒川憲一</title>
+			<title code="0x1b">ENDING2.M2  : RISING SUN              / KAJA</title>
+			<title code="0x1d">GAMEOVER.M2 : NEVER GIVEUP            / 荒川憲一</title>
+			<title code="0x1c">EYECATCH.M2 : </title>
+			<title code="0x2d">VISUAL1.M2  : </title>
+			<title code="0x2e">VISUAL2.M2  : </title>
+			<title code="0x2f">VISUAL3.M2  : </title>
+			<title code="0x10">_VISUAL1.M2 : </title>
+			<title code="0x11">_VISUAL2.M2 : </title>
+			<title code="0x12">_VISUAL3.M2 : </title>
+			<title code="0x13">_VISUAL4.M2 : SHOOTING STAR           / 荒川憲一</title>
+			<title code="0x14">_VISUAL5.M2 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] マルチペイント・(秘)お楽しみセットvol.1</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">C-Lab.</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mps_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">MPS1.M</rom>
+			<rom type="file" offset="0x11">MPS2.M</rom>
+			<rom type="file" offset="0x12">MPS3.M</rom>
+			<rom type="shell" offset="0">pmd /m8 /v0 /e0 /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MPS1.M</title>
+			<title code="0x11">MPS2.M</title>
+			<title code="0x12">MPS3.M</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 突撃みっくす(OPN)</name>
+		<driver type="opn">pc9821dos</driver>
+		<driveralias type="NEC PC-9801">C-Lab.</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="16"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="wstimer" value="2"/>
+		</options>
+		<romlist archive="tmix98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="-1">PDR.COM</rom>
+			<rom type="file" offset="-1">PPSDRV.COM</rom>
+			<rom type="file" offset="-1">CLEAR.PPS</rom>
+			<rom type="file" offset="-1">DRUMS.PPS</rom>
+			<rom type="file" offset="-1">GAMES.PPS</rom>
+			<rom type="file" offset="-1">GAMES1.PPS</rom>
+			<rom type="file" offset="-1">GAMES2.PPS</rom>
+			<rom type="file" offset="-1">GAMES3.PPS</rom>
+			<rom type="file" offset="0x10">BOSS.M</rom>
+			<rom type="file" offset="0x11">BOSS2.M</rom>
+			<rom type="file" offset="0x12">BOSS3.M</rom>
+			<rom type="file" offset="0x13">CLEAR.M</rom>
+			<rom type="file" offset="0x14">ENDING1.M</rom>
+			<rom type="file" offset="0x15">ENDING2.M</rom>
+			<rom type="file" offset="0x16">FEVER.M</rom>
+			<rom type="file" offset="0x17">GAMEOVER.M</rom>
+			<rom type="file" offset="0x18">LASTBOSS.M</rom>
+			<rom type="file" offset="0x19">OP1.M</rom>
+			<rom type="file" offset="0x1a">OP2.M</rom>
+			<rom type="file" offset="0x1b">ROUND1.M</rom>
+			<rom type="file" offset="0x1c">ROUND2.M</rom>
+			<rom type="file" offset="0x1d">ROUND3.M</rom>
+			<rom type="file" offset="0x1e">ROUND4.M</rom>
+			<rom type="file" offset="0x1f">SELECT.M</rom>
+			<rom type="file" offset="0x20">CLABLOGO.M</rom>
+			<rom type="shell" offset="0">pdr /i</rom>
+			<rom type="shell" offset="0">ppsdrv drums.pps</rom>
+			<rom type="shell" offset="0">pmd /k/m12/e0/v2/df24/ds16</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x20">CLABLOGO.M  :</title>
+			<title code="0x19">OP1.M2      : 突撃MIX オープニング1                / 荒川憲一</title>
+			<title code="0x1a">OP2.M2      : 突撃MIX Opening2                     / M.Kajihara</title>
+			<title code="0x1f">SELECT.M2   : 突撃MIX プレイヤーセレクト           / 荒川憲一</title>
+			<title code="0x1b">ROUND1.M2   : 突撃MIX 難易度Cラウンド用BGM         / 荒川憲一</title>
+			<title code="0x1c">ROUND2.M2   : 突撃MIX 難易度Bラウンド用BGM         / M.Kajihara</title>
+			<title code="0x1d">ROUND3.M2   : 突撃MIX 難易度Aラウンド用BGM         / 荒川憲一</title>
+			<title code="0x1e">ROUND4.M2   : 突撃MIX 最終面用BGM                  / M.Kajihara</title>
+			<title code="0x10">BOSS.M2     : 突撃MIX ボス用BGM1                   / M.Kajihara</title>
+			<title code="0x11">BOSS2.M2    : 突撃MIX BOSS3                        / M.Kajihara</title>
+			<title code="0x12">BOSS3.M2    : 突撃MIX ボス2                        / 荒川憲一</title>
+			<title code="0x13">CLEAR.M2    : 突撃MIX ラウンドクリア               / 荒川憲一</title>
+			<title code="0x16">FEVER.M2    : 電撃MIX 軍艦行進曲 ロックバージョン  / TAKAHIRO NOGI</title>
+			<title code="0x18">LASTBOSS.M2 : 突撃MIX ラスボス用BGM                / M.Kajihara</title>
+			<title code="0x14">ENDING1.M2  : 突撃MIX Ending 1                     / M.Kajihara</title>
+			<title code="0x15">ENDING2.M2  : 突撃MIX Ending                       / 荒川憲一</title>
+			<title code="0x17">GAMEOVER.M2 : 突撃MIX ゲームオーバー               / M.Kajihara</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 突撃みっくす(OPNA)</name>
+		<driver type="opna">pc9821dos</driver>
+		<driveralias type="NEC PC-9801">C-Lab.</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="16"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="wstimer" value="2"/>
+		</options>
+		<romlist archive="tmix98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMDB2.COM</rom>
+			<rom type="file" offset="-1">PDR.COM</rom>
+			<rom type="file" offset="-1">PPSDRV.COM</rom>
+			<rom type="file" offset="-1">CLEAR.PPS</rom>
+			<rom type="file" offset="-1">DRUMS.PPS</rom>
+			<rom type="file" offset="-1">GAMES.PPS</rom>
+			<rom type="file" offset="-1">GAMES1.PPS</rom>
+			<rom type="file" offset="-1">GAMES2.PPS</rom>
+			<rom type="file" offset="-1">GAMES3.PPS</rom>
+			<rom type="file" offset="0x10">BOSS.M2</rom>
+			<rom type="file" offset="0x11">BOSS2.M2</rom>
+			<rom type="file" offset="0x12">BOSS3.M2</rom>
+			<rom type="file" offset="0x13">CLEAR.M2</rom>
+			<rom type="file" offset="0x14">ENDING1.M2</rom>
+			<rom type="file" offset="0x15">ENDING2.M2</rom>
+			<rom type="file" offset="0x16">FEVER.M2</rom>
+			<rom type="file" offset="0x17">GAMEOVER.M2</rom>
+			<rom type="file" offset="0x18">LASTBOSS.M2</rom>
+			<rom type="file" offset="0x19">OP1.M2</rom>
+			<rom type="file" offset="0x1a">OP2.M2</rom>
+			<rom type="file" offset="0x1b">ROUND1.M2</rom>
+			<rom type="file" offset="0x1c">ROUND2.M2</rom>
+			<rom type="file" offset="0x1d">ROUND3.M2</rom>
+			<rom type="file" offset="0x1e">ROUND4.M2</rom>
+			<rom type="file" offset="0x1f">SELECT.M2</rom>
+			<rom type="shell" offset="0">pdr /i</rom>
+			<rom type="shell" offset="0">ppsdrv drums.pps</rom>
+			<rom type="shell" offset="0">pmdb2 /k/m12/e0/v2/ds16/df24/dr8</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x19">OP1.M2      : 突撃MIX オープニング1                / 荒川憲一</title>
+			<title code="0x1a">OP2.M2      : 突撃MIX Opening2                     / M.Kajihara</title>
+			<title code="0x1f">SELECT.M2   : 突撃MIX プレイヤーセレクト           / 荒川憲一</title>
+			<title code="0x1b">ROUND1.M2   : 突撃MIX 難易度Cラウンド用BGM         / 荒川憲一</title>
+			<title code="0x1c">ROUND2.M2   : 突撃MIX 難易度Bラウンド用BGM         / M.Kajihara</title>
+			<title code="0x1d">ROUND3.M2   : 突撃MIX 難易度Aラウンド用BGM         / 荒川憲一</title>
+			<title code="0x1e">ROUND4.M2   : 突撃MIX 最終面用BGM                  / M.Kajihara</title>
+			<title code="0x10">BOSS.M2     : 突撃MIX ボス用BGM1                   / M.Kajihara</title>
+			<title code="0x11">BOSS2.M2    : 突撃MIX BOSS3                        / M.Kajihara</title>
+			<title code="0x12">BOSS3.M2    : 突撃MIX ボス2                        / 荒川憲一</title>
+			<title code="0x13">CLEAR.M2    : 突撃MIX ラウンドクリア               / 荒川憲一</title>
+			<title code="0x16">FEVER.M2    : 電撃MIX 軍艦行進曲 ロックバージョン  / TAKAHIRO NOGI</title>
+			<title code="0x18">LASTBOSS.M2 : 突撃MIX ラスボス用BGM                / M.Kajihara</title>
+			<title code="0x14">ENDING1.M2  : 突撃MIX Ending 1                     / M.Kajihara</title>
+			<title code="0x15">ENDING2.M2  : 突撃MIX Ending                       / 荒川憲一</title>
+			<title code="0x17">GAMEOVER.M2 : 突撃MIX ゲームオーバー               / M.Kajihara</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Rusty</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="IBM PC/AT">C-Lab.</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="0x12"/>
+		</options>
+		<romlist archive="rusty_at">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">EFC.EFC</rom>
+			<rom type="file" offset="0x10">_VISUAL1.M</rom>
+			<rom type="file" offset="0x11">_VISUAL2.M</rom>
+			<rom type="file" offset="0x12">_VISUAL3.M</rom>
+			<rom type="file" offset="0x13">_VISUAL4.M</rom>
+			<rom type="file" offset="0x14">_VISUAL5.M</rom>
+			<rom type="file" offset="0x15">ALLCLEAR.M</rom>
+			<rom type="file" offset="0x16">ALLMAP.M</rom>
+			<rom type="file" offset="0x17">BOSS.M</rom>
+			<rom type="file" offset="0x18">BOSS2.M</rom>
+			<rom type="file" offset="0x19">CLEAR.M</rom>
+			<rom type="file" offset="0x1a">ENDING1.M</rom>
+			<rom type="file" offset="0x1b">ENDING2.M</rom>
+			<rom type="file" offset="0x1c">EYECATCH.M</rom>
+			<rom type="file" offset="0x1d">GAMEOVER.M</rom>
+			<rom type="file" offset="0x1e">LASTBOSS.M</rom>
+			<rom type="file" offset="0x1f">MU02.M</rom>
+			<rom type="file" offset="0x20">MUSS.M</rom>
+			<rom type="file" offset="0x21">ROUND1.M</rom>
+			<rom type="file" offset="0x22">ROUND10.M</rom>
+			<rom type="file" offset="0x23">ROUND10B.M</rom>
+			<rom type="file" offset="0x24">ROUND2.M</rom>
+			<rom type="file" offset="0x25">ROUND3.M</rom>
+			<rom type="file" offset="0x26">ROUND4.M</rom>
+			<rom type="file" offset="0x27">ROUND5.M</rom>
+			<rom type="file" offset="0x28">ROUND5_2.M</rom>
+			<rom type="file" offset="0x29">ROUND6.M</rom>
+			<rom type="file" offset="0x2a">ROUND7.M</rom>
+			<rom type="file" offset="0x2b">ROUND8.M</rom>
+			<rom type="file" offset="0x2c">ROUND9.M</rom>
+			<rom type="file" offset="0x2d">VISUAL1.M</rom>
+			<rom type="file" offset="0x2e">VISUAL2.M</rom>
+			<rom type="file" offset="0x2f">VISUAL3.M</rom>
+			<rom type="file" offset="0x30">VISUAL4.M</rom>
+			<rom type="shell" offset="0">PMD /df32</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x20">MUSS.M     : BLOOD SOON CASTLE       / 荒川憲一</title>
+			<title code="0x1f">MU02.M     : RUSTY                   / KAJA</title>
+			<title code="0x16">ALLMAP.M   : THE WORLD               / KAJA</title>
+			<title code="0x21">ROUND1.M   : QUEEN IN THE DARK NIGHT / 荒川憲一</title>
+			<title code="0x17">BOSS.M     : I'LL DESTROY YOUR MIND  / KAJA</title>
+			<title code="0x19">CLEAR.M    : DANCE DANCE             / KAJA</title>
+			<title code="0x24">ROUND2.M   : SILENT CEMETERY         / KAJA</title>
+			<title code="0x25">ROUND3.M   : MYSTERIOUS CHAPEL       / 荒川憲一</title>
+			<title code="0x26">ROUND4.M   : DEAD END                / KAJA</title>
+			<title code="0x18">BOSS2.M    : RHYTHM OF DARK          / 荒川憲一</title>
+			<title code="0x27">ROUND5.M   : EARTH HOLE              / 荒川憲一</title>
+			<title code="0x28">ROUND5_2.M : HELL'S STRIKE           / 荒川憲一</title>
+			<title code="0x29">ROUND6.M   : WATER GATE              / 荒川憲一</title>
+			<title code="0x2a">ROUND7.M   : RED SUNSET              / KAJA</title>
+			<title code="0x2b">ROUND8.M   : TOWER OF THE DESTINY    / R.TAKAMI</title>
+			<title code="0x22">ROUND10.M  : CASTLE                  / KAJA</title>
+			<title code="0x30">VISUAL4.M  : SHOOTING STAR           / 荒川憲一</title>
+			<title code="0x2c">ROUND9.M   : STONE WASHER            / KAJA</title>
+			<title code="0x23">ROUND10B.M : AN ALTER                / KAJA</title>
+			<title code="0x1e">LASTBOSS.M : FINAL BATTLE            / KAJA</title>
+			<title code="0x15">ALLCLEAR.M : ALL OVER                / KAJA</title>
+			<title code="0x1a">ENDING1.M  : AS IF IN A DREAM        / 荒川憲一</title>
+			<title code="0x1b">ENDING2.M  : RISING SUN              / KAJA</title>
+			<title code="0x1d">GAMEOVER.M : NEVER GIVEUP            / 荒川憲一</title>
+			<title code="0x1c">EYECATCH.M :                         / KAJA</title>
+			<title code="0x2d">VISUAL1.M  :                         / KAJA</title>
+			<title code="0x2e">VISUAL2.M  :                         / KAJA</title>
+			<title code="0x2f">VISUAL3.M  : </title>
+			<title code="0x10">_VISUAL1.M :                         / KAJA</title>
+			<title code="0x11">_VISUAL2.M :                         / KAJA</title>
+			<title code="0x12">_VISUAL3.M : </title>
+			<title code="0x13">_VISUAL4.M : SHOOTING STAR           / 荒川憲一</title>
+			<title code="0x14">_VISUAL5.M : </title>
+			<range min="0x0800" max="0x0823" extcode="1">EFC.EFC    : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] 突撃みっくす</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="IBM PC/AT">C-Lab.</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="0x12"/>
+		</options>
+		<romlist archive="tmix_at">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">RG.EFC</rom>
+			<rom type="file" offset="0x10">BOSS.M</rom>
+			<rom type="file" offset="0x11">BOSS2.M</rom>
+			<rom type="file" offset="0x12">BOSS3.M</rom>
+			<rom type="file" offset="0x13">CLEAR.M</rom>
+			<rom type="file" offset="0x14">ENDING1.M</rom>
+			<rom type="file" offset="0x15">ENDING2.M</rom>
+			<rom type="file" offset="0x16">FEVER.M</rom>
+			<rom type="file" offset="0x17">GAMEOVER.M</rom>
+			<rom type="file" offset="0x18">LASTBOSS.M</rom>
+			<rom type="file" offset="0x19">OP1.M</rom>
+			<rom type="file" offset="0x1a">OP2.M</rom>
+			<rom type="file" offset="0x1b">ROUND1.M</rom>
+			<rom type="file" offset="0x1c">ROUND2.M</rom>
+			<rom type="file" offset="0x1d">ROUND3.M</rom>
+			<rom type="file" offset="0x1e">ROUND4.M</rom>
+			<rom type="file" offset="0x1f">SELECT.M</rom>
+			<rom type="shell" offset="0">PMD /df32</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x19">OP1.M      : 突撃MIX オープニング1                / 荒川憲一</title>
+			<title code="0x1a">OP2.M      : 突撃MIX Opening2                     / M.Kajihara</title>
+			<title code="0x1f">SELECT.M   : 突撃MIX プレイヤーセレクト           / 荒川憲一</title>
+			<title code="0x1b">ROUND1.M   : 突撃MIX 難易度Cラウンド用BGM         / 荒川憲一</title>
+			<title code="0x1c">ROUND2.M   : 突撃MIX 難易度Bラウンド用BGM         / M.Kajihara</title>
+			<title code="0x1d">ROUND3.M   : 突撃MIX 難易度Aラウンド用BGM         / 荒川憲一</title>
+			<title code="0x1e">ROUND4.M   : 突撃MIX 最終面用BGM                  / M.Kajihara</title>
+			<title code="0x10">BOSS.M     : 突撃MIX ボス用BGM1                   / M.Kajihara</title>
+			<title code="0x11">BOSS2.M    : 突撃MIX BOSS3                        / M.Kajihara</title>
+			<title code="0x12">BOSS3.M    : 突撃MIX ボス2                        / 荒川憲一</title>
+			<title code="0x13">CLEAR.M    : 突撃MIX ラウンドクリア               / 荒川憲一</title>
+			<title code="0x16">FEVER.M    : 電撃MIX 軍艦行進曲 ロックバージョン  / TAKAHIRO NOGI</title>
+			<title code="0x18">LASTBOSS.M : 突撃MIX ラスボス用BGM                / M.Kajihara</title>
+			<title code="0x14">ENDING1.M  : 突撃MIX Ending 1                     / M.Kajihara</title>
+			<title code="0x15">ENDING2.M  : 突撃MIX Ending                       / 荒川憲一</title>
+			<title code="0x17">GAMEOVER.M : 突撃MIX ゲームオーバー               / M.Kajihara</title>
+		</titlelist>
+	</game>
+</gamelist>

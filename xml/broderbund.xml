@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //broderbund -->
+	<game>
+		<name>[PC-88] The Ancient Art of War (アート オブ ウォー)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">broderbund</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xd000"/>
+			<option name="use_vrtc" value="0x01"/>
+			<option name="baseclock"  value="0x04"/>
+		</options>
+		<romlist archive="artofwar">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8500">title</rom>
+			<rom type="code" offset="0xa903">main6</rom>
+			<rom type="bgm" offset="0x00">misoSR</rom>
+			<rom type="bgm" offset="0x01">main6</rom>
+			<rom type="bgm" offset="0x02">sound</rom>
+			<rom type="bgm" offset="0x03">sound</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Broderbund Logo</title>
+			<title code="0x01">Opening</title>
+			<title code="0x02">Lose</title>
+			<title code="0x03">Win</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Wings (ウイングス)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">broderbund</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0003"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x360"/>
+			<option name="data2addr" value="0x21000"/>
+			<option name="file2size" value="0x2000"/>
+			<option name="datamax" value="0x0c"/>
+			<option name="dummysndrom" value="1"/>
+		</options>
+		<romlist archive="wings98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSDRV2.SYS</rom>
+			<rom type="bgm"  offset="0x01">AIRBORN.MUD</rom>
+			<rom type="bgm2" offset="0x01">AIRBORN.MUS</rom>
+			<rom type="bgm"  offset="0x02">ATTACK.MUD</rom>
+			<rom type="bgm2" offset="0x02">ATTACK.MUS</rom>
+			<rom type="bgm"  offset="0x03">CLS.MUD</rom>
+			<rom type="bgm2" offset="0x03">CLS.MUS</rom>
+			<rom type="bgm"  offset="0x04">DANGEROU.MUD</rom>
+			<rom type="bgm2" offset="0x04">DANGEROU.MUS</rom>
+			<rom type="bgm"  offset="0x05">FALLINGO.MUD</rom>
+			<rom type="bgm2" offset="0x05">FALLINGO.MUS</rom>
+			<rom type="bgm"  offset="0x06">INTERCEP.MUD</rom>
+			<rom type="bgm2" offset="0x06">INTERCEP.MUS</rom>
+			<rom type="bgm"  offset="0x07">KX.MUD</rom>
+			<rom type="bgm2" offset="0x07">KX.MUS</rom>
+			<rom type="bgm"  offset="0x08">SAME.MUD</rom>
+			<rom type="bgm2" offset="0x08">SAME.MUS</rom>
+			<rom type="bgm"  offset="0x09">SCORE.MUD</rom>
+			<rom type="bgm2" offset="0x09">SCORE.MUS</rom>
+			<rom type="bgm"  offset="0x0a">VICTORY.MUD</rom>
+			<rom type="bgm2" offset="0x0a">VICTORY.MUS</rom>
+			<rom type="bgm"  offset="0x0b">WEAPON.MUD</rom>
+			<rom type="bgm2" offset="0x0b">WEAPON.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">AIRBORN.MUS</title>
+			<title code="0x02">ATTACK.MUS</title>
+			<title code="0x03">CLS.MUS</title>
+			<title code="0x04">DANGEROU.MUS</title>
+			<title code="0x05">FALLINGO.MUS</title>
+			<title code="0x06">INTERCEP.MUS</title>
+			<title code="0x07">KX.MUS</title>
+			<title code="0x08">SAME.MUS</title>
+			<title code="0x09">SCORE.MUS</title>
+			<title code="0x0a">VICTORY.MUS</title>
+			<title code="0x0b">WEAPON.MUS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Loopz</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-98">broderbund</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5c00"/>
+			<option name="use_vrtc"  value="0x01"/>
+			<option name="clock_mul" value="0x00"/>
+		</options>
+		<romlist archive="loopz_98">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">VDMAIN</rom>
+			<rom type="bgm" offset="0x00">MUSIC1.S</rom>
+			<rom type="bgm" offset="0x01">MUSIC2.S</rom>
+			<rom type="bgm" offset="0x02">MUSIC3.S</rom>
+			<rom type="bgm" offset="0x03">MUSIC4.S</rom>
+			<rom type="bgm" offset="0x04">MUSIC5.S</rom>
+			<rom type="bgm" offset="0x05">MUSIC6.S</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MUSIC1.S</title>
+			<title code="0x00000001">MUSIC2.S</title>
+			<title code="0x00000002">MUSIC3.S</title>
+			<title code="0x00000003">MUSIC4.S</title>
+			<title code="0x00000004">MUSIC5.S</title>
+			<title code="0x00000005">MUSIC6.S</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Carmen Sandiego in Japan (カルメン サンディエゴ イン ジャパン ～犯人探して日本全国～)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">broderbund</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0003"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x361"/>
+			<option name="data2addr" value="0x21000"/>
+			<option name="file2size" value="0x2000"/>
+			<option name="datamax" value="0x09"/>
+			<option name="dummysndrom" value="1"/>
+		</options>
+		<romlist archive="carmen98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSIC.SYS</rom>
+			<rom type="bgm"  offset="0x01">TAIHO.MUD</rom>
+			<rom type="bgm2" offset="0x01">CARMEN.MUS</rom>
+			<rom type="bgm"  offset="0x02">SAMPLE.MUD</rom>
+			<rom type="bgm2" offset="0x02">ENDING.MUS</rom>
+			<rom type="bgm"  offset="0x03">SAMPLE.MUD</rom>
+			<rom type="bgm2" offset="0x03">ETUDES.MUS</rom>
+			<rom type="bgm"  offset="0x04">GOOD.MUD</rom>
+			<rom type="bgm2" offset="0x04">MAIL.MUS</rom>
+			<rom type="bgm"  offset="0x05">CHOUTEI.MUD</rom>
+			<rom type="bgm2" offset="0x05">NIGETA.MUS</rom>
+			<rom type="bgm"  offset="0x06">TAIHO.MUD</rom>
+			<rom type="bgm2" offset="0x06">SEIKYU.MUS</rom>
+			<rom type="bgm"  offset="0x07">TAIHO.MUD</rom>
+			<rom type="bgm2" offset="0x07">TAIHO.MUS</rom>
+			<rom type="bgm"  offset="0x08">SAMPLE.MUD</rom>
+			<rom type="bgm2" offset="0x08">WAKARE.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">CARMEN.MUS</title>
+			<title code="0x02">ENDING.MUS</title>
+			<title code="0x03">ETUDES.MUS</title>
+			<title code="0x04">MAIL.MUS</title>
+			<title code="0x05">NIGETA.MUS</title>
+			<title code="0x06">SEIKYU.MUS</title>
+			<title code="0x07">TAIHO.MUS</title>
+			<title code="0x08">WAKARE.MUS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Puznic (パズニック)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">broderbund</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0003"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x360"/>
+			<option name="data2addr" value="0x21000"/>
+			<option name="file2size" value="0x2000"/>
+			<option name="datamax" value="0x04"/>
+			<option name="dummysndrom" value="1"/>
+		</options>
+		<romlist archive="puzznic98">
+			<rom type="code" offset="0x00600">ss98md2.bin</rom>
+			<rom type="code" offset="0x01000">MUSIC.SYS</rom>
+			<rom type="bgm"  offset="0x01">PUZ01.MUD</rom>
+			<rom type="bgm2" offset="0x01">CLEAR.MUS</rom>
+			<rom type="bgm"  offset="0x02">PUZ01.MUD</rom>
+			<rom type="bgm2" offset="0x02">SELECT.MUS</rom>
+			<rom type="bgm"  offset="0x03">PUZ01.MUD</rom>
+			<rom type="bgm2" offset="0x03">START.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">CLEAR.MUS</title>
+			<title code="0x02">SELECT.MUS</title>
+			<title code="0x03">START.MUS</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Puznic (パズニック)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">broderbund</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+			<option name="pcm_mix" value="0x12a"/>
+		</options>
+		<romlist archive="pznc68snd">
+			<rom type="code" offset="0x00000">pznc68snd.bin</rom>
+			<rom type="code" offset="0x10000">PUZMYU.R</rom>
+			<rom type="code" offset="0x10d9a">PUZMUS.MDT</rom>
+			<rom type="code" offset="0x113fe">PUZ.PCM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x001">BGM #01</title>
+			<title code="0x102">SFX #102</title>
+			<title code="0x103">SFX #103</title>
+			<title code="0x104">SFX #104</title>
+			<title code="0x105">SFX #105</title>
+			<title code="0x106">SFX #106</title>
+			<title code="0x107">SFX #107</title>
+			<title code="0x108">SFX #108</title>
+			<title code="0x109">SFX #109</title>
+			<title code="0x10a">SFX #10a</title>
+			<title code="0x10b">SFX #10b</title>
+			<title code="0x10c">SFX #10c</title>
+			<title code="0x10d">SFX #10d</title>
+			<title code="0x10e">SFX #10e</title>
+			<title code="0x10f">SFX #10f</title>
+			<title code="0x110">SFX #110</title>
+			<title code="0x111">SFX #111</title>
+			<title code="0x112">SFX #112</title>
+			<title code="0x113">SFX #113</title>
+			<title code="0x114">SFX #114</title>
+			<title code="0x115">SFX #115</title>
+			<title code="0x116">SFX #116</title>
+			<title code="0x117">SFX #117</title>
+			<title code="0x118">SFX #118</title>
+			<title code="0x119">SFX #119</title>
+			<title code="0x11a">SFX #11a</title>
+			<title code="0x11b">SFX #11b</title>
+			<title code="0x11c">SFX #11c</title>
+			<title code="0x11d">SFX #11d</title>
+			<title code="0x11e">SFX #11e</title>
+			<title code="0x11f">SFX #11f</title>
+			<title code="0x120">SFX #120</title>
+			<title code="0x121">SFX #121</title>
+			<title code="0x122">SFX #122</title>
+			<title code="0x123">SFX #123</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Shufflepuck Cafe (シャッフルパックカフェ)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">broderbund</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xe0"/>
+		</options>
+		<romlist archive="spc68snd">
+			<rom type="code" offset="0x00000">spc68snd.bin</rom>
+			<rom type="x" offset="0x10000">spmusdrv.x</rom>
+			<rom type="code" offset="0x11cb6">spmusic.dat</rom>
+			<rom type="code" offset="0x1a132">spadpcm.dat</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x101">SFX #101</title>
+			<title code="0x102">SFX #102</title>
+			<title code="0x103">SFX #103</title>
+			<title code="0x104">SFX #104</title>
+			<title code="0x105">SFX #105</title>
+			<title code="0x106">SFX #106</title>
+			<title code="0x107">SFX #107</title>
+			<title code="0x108">SFX #108</title>
+			<title code="0x109">SFX #109</title>
+			<title code="0x10a">SFX #10a</title>
+			<title code="0x10b">SFX #10b</title>
+			<title code="0x10c">SFX #10c</title>
+			<title code="0x10d">SFX #10d</title>
+			<title code="0x10e">SFX #10e</title>
+			<title code="0x10f">SFX #10f</title>
+			<title code="0x110">SFX #110</title>
+			<title code="0x111">SFX #111</title>
+			<title code="0x112">SFX #112</title>
+			<title code="0x113">SFX #113</title>
+			<title code="0x114">SFX #114</title>
+			<title code="0x115">SFX #115</title>
+			<title code="0x116">SFX #116</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Blodia (ブロディア)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">broderbund</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="blodia68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">TITLE.OPM</rom>
+			<rom type="code" offset="0x28000">BGM_1.OPM</rom>
+			<rom type="code" offset="0x2c000">BGM_2.OPM</rom>
+			<rom type="code" offset="0x30000">CLEAR.OPM</rom>
+			<rom type="code" offset="0x34000">COFFEE_B.OPM</rom>
+			<rom type="code" offset="0x38000">GAME_OVE.OPM</rom>
+			<rom type="code" offset="0x3c000">ENDING.OPM</rom>
+			<rom type="code" offset="0x40000">SOUND.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0902">TITLE.OPM</title>
+			<title code="0x0903">BGM_1.OPM</title>
+			<title code="0x0904">BGM_2.OPM</title>
+			<title code="0x0905">CLEAR.OPM</title>
+			<title code="0x0906">COFFEE_B.OPM</title>
+			<title code="0x0907">GAME_OVE.OPM</title>
+			<title code="0x0908">ENDING.OPM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Prince of Persia (プリンスオブペルシャ)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">broderbund</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="pofp68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">DEATH3.OPM</rom>
+			<rom type="code" offset="0x28000">END1.OPM</rom>
+			<rom type="code" offset="0x2c000">END24.OPM</rom>
+			<rom type="code" offset="0x34000">FIGHT.OPM</rom>
+			<rom type="code" offset="0x38000">FIGHT2.OPM</rom>
+			<rom type="code" offset="0x3c000">FIGHTS.OPM</rom>
+			<rom type="code" offset="0x40000">GET2.OPM</rom>
+			<rom type="code" offset="0x44000">GETSWOAD.OPM</rom>
+			<rom type="code" offset="0x48000">IDOU.OPM</rom>
+			<rom type="code" offset="0x50000">IDOU2.OPM</rom>
+			<rom type="code" offset="0x54000">IDOU3.OPM</rom>
+			<rom type="code" offset="0x58000">IDOU4.OPM</rom>
+			<rom type="code" offset="0x5c000">ITIDAIJI.OPM</rom>
+			<rom type="code" offset="0x60000">MATU.OPM</rom>
+			<rom type="code" offset="0x64000">MED4.OPM</rom>
+			<rom type="code" offset="0x68000">NEW.OPM</rom>
+			<rom type="code" offset="0x6c000">OPEN22.OPM</rom>
+			<rom type="code" offset="0x70000">OPENV3.OPM</rom>
+			<rom type="code" offset="0x74000">SENTOU2.OPM</rom>
+			<rom type="code" offset="0x78000">SHYUL.OPM</rom>
+			<rom type="code" offset="0x7c000">STAGEV2.OPM</rom>
+			<rom type="code" offset="0x80000">TAIKE2.OPM</rom>
+			<rom type="code" offset="0x84000">TAOSITA.OPM</rom>
+			<rom type="code" offset="0x88000">THEEND.OPM</rom>
+			<rom type="code" offset="0x8c000">TIMEOUT.OPM</rom>
+			<rom type="code" offset="0x90000">TITLE.OPM</rom>
+			<rom type="code" offset="0x94000">TOBIRA2.OPM</rom>
+			<rom type="code" offset="0x98000">TOJYO.OPM</rom>
+			<rom type="code" offset="0x9c000">PERSIA.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x2015">プリンス・オブ・ペルシャ</title>
+			<title code="0x2014">ジャファーの陰謀</title>
+			<title code="0x201d">メニュー画面</title>
+			<title code="0x200d">石造りの部屋</title>
+			<title code="0x200b">装飾のある部屋</title>
+			<title code="0x2006">正義の戦い</title>
+			<title code="0x2016">スケルトン</title>
+			<title code="0x2008">ドッペルゲンガー</title>
+			<title code="0x200f">心臓破りの部屋</title>
+			<title code="0x200e">ジャファーの部屋</title>
+			<title code="0x2007">ジャファーとの対決</title>
+			<title code="0x2003">勝利の凱旋</title>
+			<title code="0x2004">戦いの軌跡</title>
+			<title code="0x201b">ペルシャの平和</title>
+			<title code="0x2011">プリンセスの不安</title>
+			<title code="0x2002">くし刺し</title>
+			<title code="0x201f">主人公死亡</title>
+			<title code="0x2009">剣を拾う</title>
+			<title code="0x200a">ライフアップ薬</title>
+			<title code="0x2010">ドッペルゲンガー出現</title>
+			<title code="0x201c">ゲームオーバー</title>
+			<title code="0x201e">ステージ扉が開く</title>
+			<title code="0x2018">ステージクリアー</title>
+			<title code="0x201a">敵を倒した</title>
+			<title code="0x2019">ジャファー登場</title>
+			<title code="0x2012">回復薬を飲んだ</title>
+			<title code="0x2013">INIT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Wings (ウイングス)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">broderbund</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="wings68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">AIRBORN.OPM</rom>
+			<rom type="code" offset="0x28000">ATTACK.OPM</rom>
+			<rom type="code" offset="0x2c000">CLS.OPM</rom>
+			<rom type="code" offset="0x30000">DANGEROU.OPM</rom>
+			<rom type="code" offset="0x34000">FALLINGO.OPM</rom>
+			<rom type="code" offset="0x38000">INTERCEP.OPM</rom>
+			<rom type="code" offset="0x3c000">KX.OPM</rom>
+			<rom type="code" offset="0x40000">SAME.OPM</rom>
+			<rom type="code" offset="0x44000">SCORE.OPM</rom>
+			<rom type="code" offset="0x48000">VICTORY.OPM</rom>
+			<rom type="code" offset="0x4c000">WEAPON.OPM</rom>
+			<rom type="code" offset="0x50000">KIBI.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0d02">AIRBORN.OPM</title>
+			<title code="0x0d03">ATTACK.OPM</title>
+			<title code="0x0d04">CLS.OPM</title>
+			<title code="0x0d05">DANGEROU.OPM</title>
+			<title code="0x0d06">FALLINGO.OPM</title>
+			<title code="0x0d07">INTERCEP.OPM</title>
+			<title code="0x0d08">KX.OPM</title>
+			<title code="0x0d09">SAME.OPM</title>
+			<title code="0x0d0a">SCORE.OPM</title>
+			<title code="0x0d0b">VICTORY.OPM</title>
+			<title code="0x0d0c">WEAPON.OPM</title>
+		</titlelist>
+	</game>
+</gamelist>

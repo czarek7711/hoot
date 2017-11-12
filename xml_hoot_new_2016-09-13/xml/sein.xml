@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2007/03/25">
+	<!-- //ザインソフト(sein & xain & zain) -->
+	<game>
+		<name>[PC-8801] トリトーン</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="baseclock" value="0x04"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="triton">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">MUSIC</rom>
+			<rom type="code" offset="0xf000">ENDING</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">00 通常BGM</title>
+		<!--	<title code="0x01">01 剣を振る音</title> -->
+		<!--	<title code="0x02">02 マジックボール発射音</title> -->
+		<!--	<title code="0x03">03 HIT音</title> -->
+		<!--	<title code="0x04">04 </title> -->
+			<title code="0x05">05 : ゲームオーバー</title>
+			<title code="0x07">07 : エンディング</title>
+			<title code="0x08">08 : アイテム入手/レベルアップ</title>
+			<title code="0x09">09 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 未来</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+			<option name="mdata_addr" value="0xe300"/>
+			<option name="mdata_size" value="0x0300"/>
+		</options>
+		<romlist archive="mirai">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">OP</rom>
+			<rom type="code" offset="0x78e0">PROG</rom>
+			<rom type="bgm"  offset="0x00">OP</rom>
+			<rom type="bgm"  offset="0x01">MUS00</rom>
+			<rom type="bgm"  offset="0x02">MUS01</rom>
+			<rom type="bgm"  offset="0x03">MUS02</rom>
+			<rom type="bgm"  offset="0x04">MUS03</rom>
+			<rom type="bgm"  offset="0x05">MUS04</rom>
+			<rom type="bgm"  offset="0x06">MUS05</rom>
+			<rom type="bgm"  offset="0x07">MUS06</rom>
+			<rom type="bgm"  offset="0x08">MUS07</rom>
+			<rom type="bgm"  offset="0x09">MUS08</rom>
+			<rom type="bgm"  offset="0x0a">MUS09</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">OP    : オープニング</title>
+			<title code="0x02">MUS01 : 地上 (惑星1,5)</title>
+			<title code="0x03">MUS02 : 地下 (惑星1,5,7)</title>
+			<title code="0x08">MUS07 : 地上 (惑星2,7)</title>
+			<title code="0x04">MUS03 : 地下 (惑星2,6)</title>
+			<title code="0x01">MUS00 : 地上 (惑星3,6)</title>
+			<title code="0x05">MUS04 : 地下 (惑星3)</title>
+			<title code="0x06">MUS05 : 地上 (惑星4)</title>
+			<title code="0x07">MUS06 : 地下 (惑星4)</title>
+			<title code="0x0a">MUS09 : ボス</title>
+			<title code="0x09">MUS08 : エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] JOTUMN</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="jotumn">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6000">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">MUSIC 00</title>
+			<title code="0x04">MUSIC 01</title>
+			<title code="0x07">MUSIC 02</title>
+			<title code="0x0a">MUSIC 03</title>
+			<title code="0x0d">演奏停止</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] HERLESH</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="herlesh">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0300">MUSIC</rom>
+			<rom type="code" offset="0x7100">DRIVER</rom>
+			<rom type="code" offset="0xc000">OP</rom>
+			<rom type="code" offset="0xd000">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUSIC 00</title>
+			<title code="0x04">MUSIC 01</title>
+			<title code="0x07">MUSIC 02</title>
+			<title code="0x0a">MUSIC 03</title>
+			<title code="0x0d">MUSIC 04</title>
+			<title code="0x10">MUSIC 05</title>
+		<!--	<title code="0x13">MUSIC 05</title> -->
+			<title code="0x16">MUSIC 06</title>
+			<title code="0x19">MUSIC 07</title>
+			<title code="0x1f">MUSIC 08</title>
+			<title code="0x1c">演奏停止</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] HIDEGER</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="hideger">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">MUS00</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MUSIC 00</title>
+			<title code="0x00000001">MUSIC 01</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] Bastard Special</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="bastards">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x5c00">DRIVER1</rom>
+			<rom type="code" offset="0x6600">DRIVER2</rom>
+			<rom type="code" offset="0x9900">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000001">MUSIC 01</title>
+			<title code="0x00000004">MUSIC 02</title>
+			<title code="0x00000007">MUSIC 03</title>
+			<title code="0x0000000a">MUSIC 04</title>
+			<title code="0x0000000d">MUSIC 05</title>
+			<title code="0x00000010">MUSIC 06</title>
+			<title code="0x00000013">MUSIC 07</title>
+			<title code="0x00000016">MUSIC 08</title>
+			<title code="0x010000ff">EFFECT #01</title>
+			<title code="0x020000ff">EFFECT #02</title>
+			<title code="0x030000ff">EFFECT #03</title>
+			<title code="0x040000ff">EFFECT #04</title>
+			<title code="0x050000ff">EFFECT #05</title>
+			<title code="0x060000ff">EFFECT #06</title>
+			<title code="0x070000ff">EFFECT #07</title>
+			<title code="0x080000ff">EFFECT #08</title>
+			<title code="0x090000ff">EFFECT #09</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] CLUJU</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x5d06"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="cluju">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x5140">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x04000000">MUSIC 00</title>
+			<title code="0x04000001">MUSIC 01</title>
+			<title code="0x04000002">MUSIC 02</title>
+			<title code="0x04000003">MUSIC 03</title>
+			<title code="0x04000004">MUSIC 04</title>
+			<title code="0x04000005">MUSIC 05</title>
+			<title code="0x010000ff">EFFECT #01</title>
+			<title code="0x020000ff">EFFECT #02</title>
+			<title code="0x030000ff">EFFECT #03</title>
+			<title code="0x040000ff">EFFECT #04</title>
+			<title code="0x050000ff">EFFECT #05</title>
+			<title code="0x060000ff">EFFECT #06</title>
+			<title code="0x070000ff">EFFECT #07</title>
+			<title code="0x080000ff">EFFECT #08</title>
+			<title code="0x090000ff">EFFECT #09</title>
+			<title code="0x0a0000ff">効果音停止</title>
+		<!--	<title code="0x0b0000ff">効果音停止</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] トリトーンII ROAD OF DARKNESS</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="triton2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+		</romlist>
+		<titlelist>
+		<!--	<title code="0x01000000">MUS00</title> -->
+			<title code="0x01000001">MUS01</title>
+			<title code="0x01000002">MUS02</title>
+			<title code="0x01000003">MUS03</title>
+			<title code="0x01000004">MUS04</title>
+			<title code="0x000000ff">EFFECT #00</title>
+			<title code="0x010000ff">EFFECT #01</title>
+			<title code="0x020000ff">EFFECT #02</title>
+			<title code="0x030000ff">EFFECT #03</title>
+			<title code="0x040000ff">EFFECT #04</title>
+			<title code="0x050000ff">EFFECT #05</title>
+			<title code="0x060000ff">EFFECT #06</title>
+			<title code="0x070000ff">EFFECT #07</title>
+			<title code="0x080000ff">EFFECT #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] GALF STREEM</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<romlist archive="galfstrm">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUSOP1</rom>
+			<rom type="bgm" offset="0x01">MUSOP2</rom>
+			<rom type="bgm" offset="0x02">MUS000</rom>
+			<rom type="bgm" offset="0x03">MUS001</rom>
+			<rom type="bgm" offset="0x04">MUS002</rom>
+			<rom type="bgm" offset="0x05">MUS003</rom>
+			<rom type="bgm" offset="0x06">MUS004</rom>
+			<rom type="bgm" offset="0x07">MUS005</rom>
+			<rom type="bgm" offset="0x08">MUS006</rom>
+			<rom type="bgm" offset="0x09">MUSEND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xe0000000">MUSOP1 : </title>
+			<title code="0xe0000001">MUSOP2 : </title>
+			<title code="0x68000002">MUS000 : </title>
+			<title code="0x68000003">MUS001 : </title>
+			<title code="0x68000004">MUS002 : </title>
+			<title code="0x68000005">MUS003 : </title>
+			<title code="0x68000006">MUS004 : </title>
+			<title code="0x68000007">MUS005 : </title>
+			<title code="0x68000008">MUS006 : </title>
+			<title code="0x30000009">MUSEND : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] DIOS(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x3000"/>
+			<option name="use_pcmx8" value="0x01"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="dios">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x7100">PROG2</rom>
+			<rom type="adpcm" offset="0x00000">ADPCM</rom>
+			<rom type="bgm" offset="0x00">MUS100</rom>
+			<rom type="bgm" offset="0x01">MUS101</rom>
+			<rom type="bgm" offset="0x02">MUS102</rom>
+			<rom type="bgm" offset="0x03">MUS300</rom>
+			<rom type="bgm" offset="0x04">MUS301</rom>
+			<rom type="bgm" offset="0x05">MUS302</rom>
+			<rom type="bgm" offset="0x06">MUS303</rom>
+			<rom type="bgm" offset="0x07">MUS304</rom>
+			<rom type="bgm" offset="0x08">MUS305</rom>
+			<rom type="bgm" offset="0x09">MUS306</rom>
+			<rom type="bgm" offset="0x0a">MUS307</rom>
+			<rom type="bgm" offset="0x0b">MUS308</rom>
+			<rom type="bgm" offset="0x0c">MUS600</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MUS100 : </title>
+			<title code="0x00000001">MUS101 : </title>
+			<title code="0x00000002">MUS102 : </title>
+			<title code="0x00000003">MUS300 : </title>
+			<title code="0x00000004">MUS301 : </title>
+			<title code="0x00000005">MUS302 : </title>
+			<title code="0x00000006">MUS303 : </title>
+			<title code="0x00000007">MUS304 : </title>
+			<title code="0x00000008">MUS305 : </title>
+			<title code="0x00000009">MUS306 : </title>
+			<title code="0x0000000a">MUS307 : </title>
+			<title code="0x0000000b">MUS308 : </title>
+			<title code="0x0000000c">MUS600 : </title>
+			<title code="0x000000fe">PCMEFC #00</title>
+			<title code="0x010000fe">PCMEFC #01</title>
+			<title code="0x020000fe">PCMEFC #02</title>
+			<title code="0x030000fe">PCMEFC #03</title>
+			<title code="0x040000fe">PCMEFC #04</title>
+			<title code="0x050000fe">PCMEFC #05</title>
+			<title code="0x000000ff">SSGEFC #00</title>
+			<title code="0x010000ff">SSGEFC #01</title>
+			<title code="0x020000ff">SSGEFC #02</title>
+			<title code="0x030000ff">SSGEFC #03</title>
+			<title code="0x040000ff">SSGEFC #04</title>
+			<title code="0x050000ff">SSGEFC #05</title>
+			<title code="0x060000ff">SSGEFC #06</title>
+			<title code="0x070000ff">SSGEFC #07</title>
+			<title code="0x080000ff">SSGEFC #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] DIOS(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x3000"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="dios">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x7100">PROG2</rom>
+			<rom type="bgm" offset="0x00">MUS100</rom>
+			<rom type="bgm" offset="0x01">MUS101</rom>
+			<rom type="bgm" offset="0x02">MUS102</rom>
+			<rom type="bgm" offset="0x03">MUS300</rom>
+			<rom type="bgm" offset="0x04">MUS301</rom>
+			<rom type="bgm" offset="0x05">MUS302</rom>
+			<rom type="bgm" offset="0x06">MUS303</rom>
+			<rom type="bgm" offset="0x07">MUS304</rom>
+			<rom type="bgm" offset="0x08">MUS305</rom>
+			<rom type="bgm" offset="0x09">MUS306</rom>
+			<rom type="bgm" offset="0x0a">MUS307</rom>
+			<rom type="bgm" offset="0x0b">MUS308</rom>
+			<rom type="bgm" offset="0x0c">MUS600</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MUS100 : </title>
+			<title code="0x00000001">MUS101 : </title>
+			<title code="0x00000002">MUS102 : </title>
+			<title code="0x00000003">MUS300 : </title>
+			<title code="0x00000004">MUS301 : </title>
+			<title code="0x00000005">MUS302 : </title>
+			<title code="0x00000006">MUS303 : </title>
+			<title code="0x00000007">MUS304 : </title>
+			<title code="0x00000008">MUS305 : </title>
+			<title code="0x00000009">MUS306 : </title>
+			<title code="0x0000000a">MUS307 : </title>
+			<title code="0x0000000b">MUS308 : </title>
+			<title code="0x0000000c">MUS600 : </title>
+			<title code="0x000000ff">SSGEFC #00</title>
+			<title code="0x010000ff">SSGEFC #01</title>
+			<title code="0x020000ff">SSGEFC #02</title>
+			<title code="0x030000ff">SSGEFC #03</title>
+			<title code="0x040000ff">SSGEFC #04</title>
+			<title code="0x050000ff">SSGEFC #05</title>
+			<title code="0x060000ff">SSGEFC #06</title>
+			<title code="0x070000ff">SSGEFC #07</title>
+			<title code="0x080000ff">SSGEFC #08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] ALFAIM(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6000"/>
+			<option name="mdata_size" value="0x1000"/>
+		</options>
+		<romlist archive="alfaim">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00 : </title>
+			<title code="0x01">MUS01 : </title>
+			<title code="0x02">MUS02 : </title>
+			<title code="0x03">MUS03 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] ALFAIM(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6000"/>
+			<option name="mdata_size" value="0x1000"/>
+		</options>
+		<romlist archive="alfaim">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00 : </title>
+			<title code="0x01">MUS01 : </title>
+			<title code="0x02">MUS02 : </title>
+			<title code="0x03">MUS03 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 神戸恋愛物語(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6000"/>
+			<option name="mdata_size" value="0x1000"/>
+		</options>
+		<romlist archive="kobe">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS100</rom>
+			<rom type="bgm" offset="0x01">MUS101</rom>
+			<rom type="bgm" offset="0x02">MUS102</rom>
+			<rom type="bgm" offset="0x03">MUS103</rom>
+			<rom type="bgm" offset="0x04">MUS104</rom>
+			<rom type="bgm" offset="0x05">MUS200</rom>
+			<rom type="bgm" offset="0x06">MUS600</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">MUS200 : オープニング</title>
+			<title code="0x02">MUS102 : 第一章「出会い… そして…」</title>
+			<title code="0x03">MUS103 : 第二章「現実…」</title>
+			<title code="0x04">MUS104 : 第三章「真実…」</title>
+			<title code="0x06">MUS600 : 第四章「離れ…」</title>
+			<title code="0x00">MUS100 : 未使用曲</title>
+			<title code="0x01">MUS101 : 未使用曲(ALFAIM)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 神戸恋愛物語(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x6000"/>
+			<option name="mdata_size" value="0x1000"/>
+		</options>
+		<romlist archive="kobe">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x7100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS100</rom>
+			<rom type="bgm" offset="0x01">MUS101</rom>
+			<rom type="bgm" offset="0x02">MUS102</rom>
+			<rom type="bgm" offset="0x03">MUS103</rom>
+			<rom type="bgm" offset="0x04">MUS104</rom>
+			<rom type="bgm" offset="0x05">MUS200</rom>
+			<rom type="bgm" offset="0x06">MUS600</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x05">MUS200 : オープニング</title>
+			<title code="0x02">MUS102 : 第一章「出会い… そして…」</title>
+			<title code="0x03">MUS103 : 第二章「現実…」</title>
+			<title code="0x04">MUS104 : 第三章「真実…」</title>
+			<title code="0x06">MUS600 : 第四章「離れ…」</title>
+			<title code="0x00">MUS100 : 未使用曲</title>
+			<title code="0x01">MUS101 : 未使用曲(ALFAIM)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] TUG OF WAR(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x2000"/>
+		</options>
+		<romlist archive="tugofwar">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x7100">PROG2</rom>
+			<rom type="bgm" offset="0x00">MUS100A</rom>
+			<rom type="bgm" offset="0x01">MUS101A</rom>
+			<rom type="bgm" offset="0x02">MUS102A</rom>
+			<rom type="bgm" offset="0x03">MUS103A</rom>
+			<rom type="bgm" offset="0x04">MUS104A</rom>
+			<rom type="bgm" offset="0x05">MUS105A</rom>
+			<rom type="bgm" offset="0x06">MUS106A</rom>
+			<rom type="bgm" offset="0x07">MUS100B</rom>
+			<rom type="bgm" offset="0x08">MUS101B</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS100A : </title>
+			<title code="0x01">MUS101A : </title>
+			<title code="0x02">MUS102A : </title>
+			<title code="0x03">MUS103A : </title>
+			<title code="0x04">MUS104A : </title>
+			<title code="0x05">MUS105A : </title>
+			<title code="0x06">MUS106A : </title>
+			<title code="0x07">MUS100B : </title>
+			<title code="0x08">MUS101B : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] TUG OF WAR(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Zain Soft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x2000"/>
+		</options>
+		<romlist archive="tugofwar">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x0100">PROG1</rom>
+			<rom type="code" offset="0x7100">PROG2</rom>
+			<rom type="bgm" offset="0x00">MUS100A</rom>
+			<rom type="bgm" offset="0x01">MUS101A</rom>
+			<rom type="bgm" offset="0x02">MUS102A</rom>
+			<rom type="bgm" offset="0x03">MUS103A</rom>
+			<rom type="bgm" offset="0x04">MUS104A</rom>
+			<rom type="bgm" offset="0x05">MUS105A</rom>
+			<rom type="bgm" offset="0x06">MUS106A</rom>
+			<rom type="bgm" offset="0x07">MUS100B</rom>
+			<rom type="bgm" offset="0x08">MUS101B</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS100A : </title>
+			<title code="0x01">MUS101A : </title>
+			<title code="0x02">MUS102A : </title>
+			<title code="0x03">MUS103A : </title>
+			<title code="0x04">MUS104A : </title>
+			<title code="0x05">MUS105A : </title>
+			<title code="0x06">MUS106A : </title>
+			<title code="0x07">MUS100B : </title>
+			<title code="0x08">MUS101B : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 未来</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">Zain Soft</driveralias>
+		<options>
+			<option name="cpuclock" value="1996800"/>
+			<option name="clockmul" value="1"/>
+			<option name="bootcs"   value="0x0800"/>
+			<option name="bootip"   value="0x0000"/>
+			<option name="dataaddr" value="0x17b00"/>
+			<option name="filesize" value="0x00300"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="datamax" value="0x0b"/>
+			<option name="wstimer" value="0x04"/>
+		</options>
+		<romlist archive="mirai98">
+			<rom type="code" offset="0x08000">mirai.bin</rom>
+			<rom type="code" offset="0x0c000">OP</rom>
+			<rom type="code" offset="0x0f800">PROG</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+			<rom type="bgm" offset="0x0a">MUS09</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">OP    : オープニング</title>
+			<title code="0x02">MUS01 : 地上(惑星1,5)</title>
+			<title code="0x03">MUS02 : 地下(惑星1,5,7)</title>
+			<title code="0x08">MUS07 : 地上(惑星2,7)</title>
+			<title code="0x04">MUS03 : 地下(惑星2,6)</title>
+			<title code="0x01">MUS00 : 地上(惑星3,6)</title>
+			<title code="0x05">MUS04 : 地下(惑星3)</title>
+			<title code="0x06">MUS05 : 地上(惑星4)</title>
+			<title code="0x07">MUS06 : 地下(惑星4)</title>
+			<title code="0x0a">MUS09 : ボス</title>
+			<title code="0x09">MUS08 : エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] 未来</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0100"/>
+			<option name="mdata_addr" value="0xe300"/>
+			<option name="mdata_size" value="0x0300"/>
+			<option name="mfile_size" value="0x0300"/>
+		</options>
+		<romlist archive="x1mirai">
+			<rom type="code" offset="0x0100">PATCH</rom>
+			<rom type="code" offset="0x4000">OP</rom>
+			<rom type="code" offset="0x78e0">PROG</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+			<rom type="bgm" offset="0x0a">MUS09</rom>
+			<rom type="bgm" offset="0x0b">MUS10</rom>
+			<rom type="bgm" offset="0x0c">MUS11</rom>
+			<rom type="bgm" offset="0x0d">MUS12</rom>
+			<rom type="bgm" offset="0x0e">MUS13</rom>
+			<rom type="bgm" offset="0x0f">MUS14</rom>
+			<rom type="bgm" offset="0x10">MUS15</rom>
+			<rom type="bgm" offset="0x11">MUS16</rom>
+			<rom type="bgm" offset="0x12">MUS17</rom>
+		</romlist>]
+		<titlelist>
+			<title code="0x00">OP    : オープニング</title>
+			<title code="0x0b">MUS10 : 地上(惑星1,4,7)</title>
+			<title code="0x0c">MUS11 : 地下(惑星1,4,7)</title>
+			<title code="0x0e">MUS13 : 地上(惑星2,5)</title>
+			<title code="0x0f">MUS14 : 地下(惑星2,5)</title>
+			<title code="0x10">MUS15 : 地上(惑星3,6)</title>
+			<title code="0x0d">MUS12 : 地下(惑星3,6)</title>
+			<title code="0x11">MUS16 : エンディング</title>
+			<title code="0x12">MUS17 : ボス</title>
+			<title code="0x02">MUS01 : 地上(PC88版惑星1,5)   (未使用)</title>
+			<title code="0x03">MUS02 : 地下(PC88版惑星1,5,7) (未使用)</title>
+			<title code="0x08">MUS07 : 地上(PC88版惑星2,7)   (未使用)</title>
+			<title code="0x04">MUS03 : 地下(PC88版惑星2,6)   (未使用)</title>
+			<title code="0x01">MUS00 : 地上(PC88版惑星3,6)   (未使用)</title>
+			<title code="0x05">MUS04 : 地下(PC88版惑星3)     (未使用)</title>
+			<title code="0x06">MUS05 : 地上(PC88版惑星4)     (未使用)</title>
+			<title code="0x07">MUS06 : 地下(PC88版惑星4)     (未使用)</title>
+			<title code="0x09">MUS08 : エンディング          (未使用)</title>
+			<title code="0x0a">MUS09 : ボス                  (未使用)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] ALFAIM (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Zain Soft</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="alfaim68snd">
+			<rom type="code">alf68snd.bin</rom>
+			<rom type="x" offset="0x10000">OPMDRV.X</rom>
+			<rom type="x" offset="0x20000">X68.X</rom>
+			<rom type="x" offset="0x30000">ALF.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : </title>
+			<title code="0x02">01 : </title>
+			<title code="0x03">02 : </title>
+			<title code="0x04">03 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] DIOS (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Zain Soft</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="dios68snd">
+			<rom type="code" offset="0x000000">dios68snd.bin</rom>
+			<rom type="x"    offset="0x010000">OPMDRV.X</rom>
+			<rom type="x"    offset="0x020000">OPENING.X</rom>
+			<rom type="code" offset="0x030000">MUS00.BIN</rom>
+			<rom type="code" offset="0x032000">MUS01.BIN</rom>
+			<rom type="code" offset="0x034000">MUS02.BIN</rom>
+			<rom type="code" offset="0x036000">MUS03.BIN</rom>
+			<rom type="code" offset="0x038000">MUS04.BIN</rom>
+			<rom type="code" offset="0x03a000">MUS05.BIN</rom>
+			<rom type="code" offset="0x03c000">MUS06.BIN</rom>
+			<rom type="code" offset="0x03e000">MUS07.BIN</rom>
+			<rom type="code" offset="0x040000">MUS08.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">OPENING.X:00</title>
+			<title code="0x02">OPENING.X:01</title>
+			<range min="0x03" max="0x0b" extcode="0">BGM %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Ground Master: Ushinawareta Houju no Densetsu (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Zain Soft</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="gmaster68snd">
+			<rom type="code">gmast68snd.bin</rom>
+			<rom type="x" offset="0x010000">OPMDRV.X</rom>
+			<rom type="x" offset="0x030000">ground.x</rom>
+			<rom type="code" offset="0x080000">opening.OPM</rom>
+			<rom type="code" offset="0x084000">FIELD.OPM</rom>
+			<rom type="code" offset="0x088000">TOWN.OPM</rom>
+			<rom type="code" offset="0x08c000">tower.OPM</rom>
+			<rom type="code" offset="0x090000">CAVE.OPM</rom>
+			<rom type="code" offset="0x094000">BATTLE.OPM</rom>
+			<rom type="code" offset="0x098000">ending.OPM</rom>
+			<rom type="code" offset="0x09c000">staff.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">opening.OPM : </title>
+			<title code="0x02">FIELD.OPM   : </title>
+			<title code="0x03">TOWN.OPM    : </title>
+			<title code="0x04">tower.OPM   : </title>
+			<title code="0x05">CAVE.OPM    : </title>
+			<title code="0x06">BATTLE.OPM  : </title>
+			<title code="0x07">ending.OPM  : </title>
+			<title code="0x08">staff.OPM   : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Reinforcer (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Zain Soft</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="reinf68snd">
+			<rom type="code">rein68snd.bin</rom>
+			<rom type="x"    offset="0x10000">OPMDRV.X</rom>
+			<rom type="x"    offset="0x20000">OPENING.X</rom>
+			<rom type="x"    offset="0x30000">ENDING.X</rom>
+			<rom type="code" offset="0x40000">MUS/BGM2.X</rom>
+			<rom type="code" offset="0x42000">MUS/END0.X</rom>
+			<rom type="code" offset="0x44000">BGM1.X</rom>
+			<rom type="code" offset="0x46000">BGM2.X</rom>
+			<rom type="code" offset="0x48000">BGM3.X</rom>
+			<rom type="code" offset="0x4a000">BGM4.X</rom>
+			<rom type="code" offset="0x4c000">BGM5.X</rom>
+			<rom type="code" offset="0x4e000">BGM6.X</rom>
+			<rom type="code" offset="0x50000">BGM7.X</rom>
+			<rom type="code" offset="0x52000">BGM8.X</rom>
+			<rom type="code" offset="0x54000">BGM9.X</rom>
+			<rom type="code" offset="0x56000">BGM10.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">OPENING.X : </title>
+			<title code="0x05">BGM1.X    : </title>
+			<!-- BGM1.Xとバイナリ一致
+			<title code="0x06">BGM2.X    : </title>
+			  -->
+			<title code="0x03">BGM2.X    : </title>
+			<title code="0x07">BGM3.X    : </title>
+			<title code="0x08">BGM4.X    : </title>
+			<!-- BGM4.Xとバイナリ一致
+			<title code="0x09">BGM5.X    : </title>
+			  -->
+			<title code="0x0a">BGM6.X    : </title>
+			<!-- BGM6.Xとバイナリ一致
+			<title code="0x0b">BGM7.X    : </title>
+			  -->
+			<title code="0x0c">BGM8.X    : </title>
+			<!-- BGM8.Xとバイナリ一致
+			<title code="0x0d">BGM9.X    : </title>
+			  -->
+			<title code="0x0e">BGM10.X   : </title>
+			<title code="0x04">END0.X    : </title>
+			<title code="0x02">ENDING.X  : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Baruusa no Fukushuu (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Zain Soft</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="barusa68snd">
+			<rom type="code">brs68snd.bin</rom>
+			<rom type="x" offset="0x10000">OPMDRV.X</rom>
+			<rom type="x" offset="0x30000">OPEN.X</rom>
+			<rom type="x" offset="0x40000">BARUSA.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">OPEN.X   : 00 : オープニング</title>
+			<title code="0x07">BARUSA.X : 05 : BGM1 (海/町)</title>
+			<title code="0x04">BARUSA.X : 02 : ビジュアルシーン1</title>
+			<title code="0x03">BARUSA.X : 01 : ボス</title>
+			<title code="0x02">BARUSA.X : 00 : BGM2 (墓場/森)</title>
+			<title code="0x08">BARUSA.X : 06 : BGM3 (洞窟/遺跡)</title>
+			<title code="0x09">BARUSA.X : 07 : BGM4 (炎/神殿)</title>
+			<title code="0x0a">BARUSA.X : 08 : ビジュアルシーン2</title>
+			<title code="0x05">BARUSA.X : 03 : バルーサ</title>
+			<title code="0x0b">BARUSA.X : 09 : エンディング</title>
+			<title code="0x06">BARUSA.X : 04 : ゲームオーバー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Koube Renai Monogatari (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Zain Soft</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="kobe68snd">
+			<rom type="code">kobe68snd.bin</rom>
+			<rom type="x" offset="0x10000">OPMDRV.X</rom>
+			<rom type="x" offset="0x30000">KOBE.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : オープニング</title>
+			<title code="0x02">01 : 第一章「出会い… そして…」</title>
+			<title code="0x03">02 : 第二章「現実…」</title>
+			<title code="0x04">03 : 第三章「真実…」</title>
+			<title code="0x05">04 : 第四章「離れ…」</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] BASTARD</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="bastard_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4c00">DRIVER.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0193">タイトル</title>
+			<title code="0x0191">通常BGM</title>
+			<title code="0x018d">ゲームオーバー</title>
+			<title code="0x018f">BGM 8f</title>
+			<title code="0x0195">BGM 95</title>
+			<title code="0x0198">BGM 98</title>
+			<title code="0x019d">BGM 9d</title>
+			<range min="0x01" max="0x0c" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] DIOS(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="mdata_addr" value="0x9800"/>
+			<option name="mdata_size" value="0x0800"/>
+			<option name="mfile_size" value="0x0800"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="dios_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4000">DRIVER.BIN</rom>
+			<rom type="bgm"  offset="0x00">MUS20.BIN</rom>
+			<rom type="bgm"  offset="0x01">MUS21.BIN</rom>
+			<rom type="bgm"  offset="0x02">MUS22.BIN</rom>
+			<rom type="bgm"  offset="0x03">MUS23.BIN</rom>
+			<rom type="bgm"  offset="0x04">MUS24.BIN</rom>
+			<rom type="bgm"  offset="0x05">MUS25.BIN</rom>
+			<rom type="bgm"  offset="0x06">MUS26.BIN</rom>
+			<rom type="bgm"  offset="0x07">MUS27.BIN</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x100" max="0x107" extcode="1">BGM 0x%02x</range>
+			<range min="0x00" max="0x08" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] DIOS(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="mdata_addr" value="0x9800"/>
+			<option name="mdata_size" value="0x0800"/>
+			<option name="mfile_size" value="0x0800"/>
+		</options>
+		<romlist archive="dios_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4000">DRIVER.BIN</rom>
+			<rom type="bgm"  offset="0x00">MUS20.BIN</rom>
+			<rom type="bgm"  offset="0x01">MUS21.BIN</rom>
+			<rom type="bgm"  offset="0x02">MUS22.BIN</rom>
+			<rom type="bgm"  offset="0x03">MUS23.BIN</rom>
+			<rom type="bgm"  offset="0x04">MUS24.BIN</rom>
+			<rom type="bgm"  offset="0x05">MUS25.BIN</rom>
+			<rom type="bgm"  offset="0x06">MUS26.BIN</rom>
+			<rom type="bgm"  offset="0x07">MUS27.BIN</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x100" max="0x107" extcode="1">BGM 0x%02x</range>
+			<range min="0x00" max="0x08" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GALF STREEM(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="mdata_addr" value="0xd000"/>
+			<option name="mdata_size" value="0x0800"/>
+			<option name="mfile_size" value="0x0800"/>
+			<option name="use_opll"   value="0x01"/>
+			<option name="psg_mix"    value="0x30"/>
+		</options>
+		<romlist archive="galfstrm_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4000">DRIVER.BIN</rom>
+			<rom type="bgm"  offset="0x00">MUS00.BIN</rom>
+			<rom type="bgm"  offset="0x01">MUS01.BIN</rom>
+			<rom type="bgm"  offset="0x02">MUS02.BIN</rom>
+			<rom type="bgm"  offset="0x03">MUS03.BIN</rom>
+			<rom type="bgm"  offset="0x04">MUS04.BIN</rom>
+			<rom type="bgm"  offset="0x05">MUS05.BIN</rom>
+			<rom type="bgm"  offset="0x06">MUS06.BIN</rom>
+			<rom type="bgm"  offset="0x07">MUS07.BIN</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x00" max="0x07" extcode="1">BGM 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GALF STREEM(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="mdata_addr" value="0xd000"/>
+			<option name="mdata_size" value="0x0800"/>
+			<option name="mfile_size" value="0x0800"/>
+		</options>
+		<romlist archive="galfstrm_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4000">DRIVER.BIN</rom>
+			<rom type="bgm"  offset="0x00">MUS00.BIN</rom>
+			<rom type="bgm"  offset="0x01">MUS01.BIN</rom>
+			<rom type="bgm"  offset="0x02">MUS02.BIN</rom>
+			<rom type="bgm"  offset="0x03">MUS03.BIN</rom>
+			<rom type="bgm"  offset="0x04">MUS04.BIN</rom>
+			<rom type="bgm"  offset="0x05">MUS05.BIN</rom>
+			<rom type="bgm"  offset="0x06">MUS06.BIN</rom>
+			<rom type="bgm"  offset="0x07">MUS07.BIN</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x00" max="0x07" extcode="1">BGM 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] HIDEGER(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc"  value="0x0400"/>
+			<option name="use_opll" value="0x01"/>
+		</options>
+		<romlist archive="hideger_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xb000">OPLL.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">タイトル</title>
+			<title code="0x02">BGM 02</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] HIDEGER(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="hideger_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xb000">PSG.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">タイトル</title>
+			<title code="0x02">BGM 02</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] JOTUMN</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="jotumn_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4000">DRIVER.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x04">タイトル</title>
+			<title code="0x01">通常BGM</title>
+			<title code="0x02">店/教会</title>
+			<title code="0x03">戦闘</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] トリトーンII ROAD OF DARKNESS(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="mdata_addr" value="0xb800"/>
+			<option name="mdata_size" value="0x0400"/>
+			<option name="mfile_size" value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="triton2_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x8000">FMDRV.BIN</rom>
+			<rom type="bgm"  offset="0x00">MUS0.BIN</rom>
+			<rom type="bgm"  offset="0x01">MUS1.BIN</rom>
+			<rom type="bgm"  offset="0x02">MUS2.BIN</rom>
+			<rom type="bgm"  offset="0x03">MUS3.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">タイトル</title>
+			<title code="0x03">通常BGM</title>
+			<title code="0x00">BGM 00</title>
+			<title code="0x02">BGM 02</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] トリトーンII ROAD OF DARKNESS(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="mdata_addr" value="0xb800"/>
+			<option name="mdata_size" value="0x0400"/>
+			<option name="mfile_size" value="0x0400"/>
+		</options>
+		<romlist archive="triton2_msx">
+			<rom type="code" offset="0x0400">patch2</rom>
+			<rom type="code" offset="0x8000">PSGDRV.BIN</rom>
+			<rom type="code" offset="0x9E80">TONE.BIN</rom>
+			<rom type="bgm"  offset="0x00">MUS0.BIN</rom>
+			<rom type="bgm"  offset="0x01">MUS1.BIN</rom>
+			<rom type="bgm"  offset="0x02">MUS2.BIN</rom>
+			<rom type="bgm"  offset="0x03">MUS3.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">タイトル</title>
+			<title code="0x03">通常BGM</title>
+			<title code="0x00">BGM 00</title>
+			<title code="0x02">BGM 02</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 魔神宮</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Zain Soft</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="majinkyu_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4000">DRIVER.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">タイトル</title>
+			<title code="0x02">通常BGM</title>
+			<title code="0x03">街</title>
+			<title code="0x05">戦闘</title>
+			<title code="0x04">塔</title>
+		</titlelist>
+	</game>
+</gamelist>

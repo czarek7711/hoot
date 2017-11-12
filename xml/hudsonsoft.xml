@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2006/05/26">
+
+	<!-- //hudsonsoft -->
+	<game>
+		<name>[PC-88] Dezeni World (デゼニワールド)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">hudsonsoft</driveralias>
+		<romlist archive="dezeniw">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x1000">MAIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">01</title>
+			<title code="0x02">02</title>
+			<title code="0x03">03</title>
+			<title code="0x04">04</title>
+			<title code="0x05">05</title>
+			<title code="0x06">06</title>
+			<title code="0x07">07</title>
+			<title code="0x08">08</title>
+			<title code="0x09">09</title>
+			<title code="0x0a">0A</title>
+			<title code="0x0b">0B</title>
+			<title code="0x0c">0C</title>
+			<title code="0x0d">0D</title>
+			<title code="0x0e">0E デゼニワールド</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Lamia 1999</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">hudsonsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1a00"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="lamia">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+			<rom type="bgm" offset="0x0a">MUS09</rom>
+			<rom type="bgm" offset="0x0b">MUS10</rom>
+			<rom type="bgm" offset="0x0c">MUS11</rom>
+			<rom type="bgm" offset="0x0d">MUS12</rom>
+			<rom type="bgm" offset="0x0e">MUS13</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">MUS00</title>
+			<title code="0x02">MUS01</title>
+			<title code="0x03">MUS02</title>
+			<title code="0x04">MUS03</title>
+			<title code="0x05">MUS04</title>
+			<title code="0x06">MUS05</title>
+			<title code="0x07">MUS06</title>
+			<title code="0x08">MUS07</title>
+			<title code="0x09">MUS08</title>
+			<title code="0x0a">MUS09</title>
+			<title code="0x0b">MUS10</title>
+			<title code="0x0c">MUS11</title>
+			<title code="0x0d">MUS12</title>
+			<title code="0x0e">MUS13</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Super Mario Bros. Special</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">hudsonsoft</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="smariosp">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">Stop the Music (演奏停止)</title>
+			<title code="0x00000001">地上</title>
+			<title code="0x00000002">地下</title>
+			<title code="0x00000003">海</title>
+			<title code="0x00000004">城</title>
+			<title code="0x00000005">無敵</title>
+			<title code="0x00000006">Hurry up!</title>
+			<title code="0x00000007">ラウンドクリア</title>
+			<title code="0x00000008">ワールドクリア</title>
+			<title code="0x00000009">オールラウンドクリア</title>
+			<title code="0x0000000a">ミス</title>
+			<title code="0x0000000b">ゲームオーバー</title>
+			<title code="0x01000000">EFC01</title>
+			<title code="0x02000000">EFC02</title>
+			<title code="0x03000000">EFC03</title>
+			<title code="0x04000000">EFC04</title>
+			<title code="0x05000000">EFC05</title>
+			<title code="0x06000000">EFC06</title>
+			<title code="0x07000000">EFC07</title>
+			<title code="0x08000000">EFC08</title>
+			<title code="0x09000000">EFC09</title>
+			<title code="0x0a000000">EFC0A</title>
+			<title code="0x0b000000">EFC0B</title>
+			<title code="0x0c000000">EFC0C</title>
+			<title code="0x0d000000">EFC0D</title>
+			<title code="0x0e000000">EFC0E</title>
+			<title code="0x0f000000">EFC0F</title>
+			<title code="0x10000000">EFC10</title>
+			<title code="0x11000000">EFC11</title>
+			<title code="0x12000000">EFC12</title>
+			<title code="0x13000000">EFC13</title>
+			<title code="0x14000000">EFC14</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Dione</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">hudsonsoft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1000"/>
+			<option name="vdata_addr" value="0x0800"/>
+			<option name="vdata_size" value="0x0800"/>
+			<option name="vfile_size" value="0x0800"/>
+		</options>
+		<romlist archive="dione">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0800">DRIVER2</rom>
+			<rom type="bgm"   offset="0x00">MUS00</rom>
+			<rom type="voice" offset="0x00">DRIVER1</rom>
+			<rom type="bgm"   offset="0x01">MUS01</rom>
+			<rom type="voice" offset="0x01">DRIVER2</rom>
+			<rom type="bgm"   offset="0x02">MUS02</rom>
+			<rom type="voice" offset="0x02">DRIVER1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">Stop the Music (演奏停止)</title>
+			<title code="0x0c000000">BGM #0C</title>
+			<title code="0x0d000000">BGM #0D</title>
+			<title code="0x0e000001">BGM #0E</title>
+			<title code="0x0f000001">BGM #0F</title>
+			<title code="0x10000000">BGM #10</title>
+			<title code="0x11000002">BGM #11</title>
+			<title code="0x01000000">SFX #01</title>
+			<title code="0x02000000">SFX #02</title>
+			<title code="0x04000000">SFX #04</title>
+			<title code="0x05000000">SFX #05</title>
+			<title code="0x06000000">SFX #06</title>
+			<title code="0x07000000">SFX #07</title>
+			<title code="0x08000000">SFX #08</title>
+			<title code="0x09000000">SFX #09</title>
+			<title code="0x0a000000">SFX #0A</title>
+			<title code="0x0b000000">SFX #0B</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Bomber King / ? / 1988 Hudson Soft</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">hudsonsoft</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="bking_msx">
+			<rom type="code">Bomber King (1988)(Hudson Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Star Soldier / ? / 1986 Hudson Soft</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">hudsonsoft</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="ssoldier_msx">
+			<rom type="code">Star Soldier (1986)(Hudson Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03">Normal Caesar Intro</title>
+			<title code="0x04">Normal Caesar Theme</title>
+			<title code="0x07">Power Up Caesar Intro</title>
+			<title code="0x06">Power Up Caesar Theme</title>
+			<title code="0x01">Lazarus</title>
+			<title code="0x05">Star Brain</title>
+			<title code="0x02">Clear</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Darwin 4078 / ? / 1987 Hudson Soft</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">hudsonsoft</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="darwin_msx">
+			<rom type="code">Darwin 4078 (1987)(Hudson Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+		</titlelist>
+	</game>
+  <game>
+    <name>[Neo Geo] Panic Bomber (ボンバーマン ぱにっくボンバー)</name>
+    <driver type="generic">neogeo</driver>
+		<driveralias type="Arcade">hudsonsoft</driveralias>
+		<options>
+			<option name="adpcm_size" value="0x800000"/>
+		</options>
+    <romlist archive="panicbom">
+      <rom type="code" offset="0x00000">073-m1.bin</rom>
+      <rom type="adpcm" offset="0x000000">073-v1.bin</rom>
+      <rom type="adpcm" offset="0x200000">073-v2.bin</rom>
+    </romlist>
+    <titlelist>
+			<title code="0x02">BGM #02</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x29">BGM #29</title>
+			<title code="0x2a">BGM #2a</title>
+			<title code="0x2b">BGM #2b</title>
+			<title code="0x2c">BGM #2c</title>
+			<title code="0x2d">BGM #2d</title>
+			<title code="0x2e">BGM #2e</title>
+			<title code="0x2f">BGM #2f</title>
+			<title code="0x30">BGM #30</title>
+			<title code="0x31">BGM #31</title>
+			<title code="0x32">BGM #32</title>
+			<title code="0x33">BGM #33</title>
+			<title code="0x34">BGM #34</title>
+			<title code="0x35">BGM #35</title>
+			<title code="0x36">BGM #36</title>
+			<title code="0x37">BGM #37</title>
+			<title code="0x38">BGM #38</title>
+			<title code="0x39">BGM #39</title>
+    </titlelist>
+  </game>
+  <game>
+    <name>[Neo Geo] Far East of Eden - Kabuki Klash (天外魔境真伝)</name>
+    <driver type="generic">neogeo</driver>
+		<driveralias type="Arcade">hudsonsoft</driveralias>
+		<options>
+			<option name="adpcm_size" value="0x700000"/>
+		</options>
+    <romlist archive="kabukikl">
+      <rom type="code" offset="0x00000">092-m1.bin</rom>
+      <rom type="adpcm" offset="0x000000">092-v1.bin</rom>
+      <rom type="adpcm" offset="0x200000">092-v2.bin</rom>
+      <rom type="adpcm" offset="0x400000">092-v3.bin</rom>
+      <rom type="adpcm" offset="0x600000">092-v4.bin</rom>
+    </romlist>
+    <titlelist>
+			<title code="0x02">Neo-Geo Logo</title>                                                   
+			<title code="0x21">Tengai Makyo Shinden Opening</title>                                   
+			<title code="0x2e">I Stand in the Land of Jipang (Select)</title>                         
+			<title code="0x2f">Come On, Let's Fight!! (VS Screen)</title>                             
+			<title code="0x22">Swordsman of the Evening (Manjimaru Sengoku Stage)</title>             
+			<title code="0x38">Banzai (Winner Screen)</title>                                         
+			<title code="0x25">Rain Flute (Ziria Stage)</title>                                       
+			<title code="0x24">The Inveterate Skirt Chaser's Usual Tune (Kabuki Danjuro Stage)</title>
+			<title code="0x23">Gokuraku's Ryugudai Restaurant (Taro Gokuraku Stage)</title>           
+			<title code="0x34">It's the Leader's Turn (Joining In)</title>                            
+			<title code="0x28">The Story of Taro Onagane (Tsunade Stage)</title>                      
+			<title code="0x29">Dance of Kinran (Yagumo Stage)</title>                                 
+			<title code="0x26">Snow, Moon, and Flowers (Orochimaru Stage)</title>                     
+			<title code="0x27">Maiden of White Sorcery (Kinu Stage)</title>                           
+			<title code="0x30">Manto A's Entry (Midway Demo 1)</title>                                
+			<title code="0x2a">The Monkey's Foolish Longing for the Sea (Manto A Stage)</title>       
+			<title code="0x31">Karakuri Soldier's Entry (Midway Demo 2)</title>                       
+			<title code="0x2b">A Steel Rival Appears! (Karakuri Soldier Stage)</title>                
+			<title code="0x32">Jyashinsai's Entry (Midway Demo 3)</title>                             
+			<title code="0x2c">Legend of the Bronze Hell (Jyashinsai Stage)</title>                   
+			<title code="0x33">Jyashinsai's Transformation (Midway Demo 4)</title>                    
+			<title code="0x2d">The Great Demon's Hunger (Lucifeller Stage)</title>                    
+			<title code="0x3a">Manjimaru Sengoku Ending</title>                                       
+			<title code="0x3d">Ziria Ending</title>                                                   
+			<title code="0x3c">Kabuki Danjuro Ending</title>                                          
+			<title code="0x3b">Taro Gokuraku Ending</title>                                           
+			<title code="0x40">Tsunade Ending</title>                                                 
+			<title code="0x41">Yagumo Ending</title>                                                  
+			<title code="0x3e">Orochimaru Ending</title>                                              
+			<title code="0x3f">Kinu Ending</title>                                                    
+			<title code="0x39">Seeking A New Land (Staff Roll)</title>                                
+			<title code="0x36">It's Over... (Continue)</title>                                        
+			<title code="0x37">Game Over (Game Over)</title>                                          
+			<title code="0x35">We'll Always Be Together (Ranking)</title>                             
+    </titlelist>
+  </game>
+  <game>
+    <name>[Neo Geo] Neo Bomberman (ネオボンバーマン)</name>
+    <driver type="generic">neogeo</driver>
+		<driveralias type="Arcade">hudsonsoft</driveralias>
+		<options>
+			<option name="adpcm_size" value="0x800000"/>
+		</options>
+    <romlist archive="neobombe">
+      <rom type="code" offset="0x00000">093-m1.bin</rom>
+      <rom type="adpcm" offset="0x000000">093-v1.bin</rom>
+      <rom type="adpcm" offset="0x400000">093-v2.bin</rom>
+    </romlist>
+    <titlelist>
+			<title code="0x02">NeoGeo Logo</title>                       
+			<title code="0x43">Attract Mode</title>                      
+			<title code="0x23">Title Screen</title>                      
+			<title code="0x7f">Coin</title>                              
+			<title code="0x2f">How to Play</title>                       
+			<title code="0x31">Options Screen</title>                    
+			<title code="0x37">Introduction</title>                      
+			<title code="0x25">Stage 1-x</title>                         
+			<title code="0x30">Time Running Out</title>                  
+			<title code="0x3e">Score Tally</title>                       
+			<title code="0x40">Round Complete</title>                    
+			<title code="0x3f">Round Complete 2 (Bombermen Saved)</title>
+			<title code="0x2a">Boss</title>                              
+			<title code="0x42">Stage Intermission</title>                
+			<title code="0x26">Stage 2-x</title>                         
+			<title code="0x27">Stage 3-x</title>                         
+			<title code="0x3a">Continue</title>                          
+			<title code="0x33">Game Over</title>                         
+			<title code="0x2c">Battle Mode</title>                       
+			<title code="0x32">Battle Mode Results</title>
+			<title code="0x2d">Battle Mode 2</title>                     
+			<title code="0x2e">Battle Mode 3</title>                     
+    </titlelist>
+  </game>
+  <game>
+	<name>[NES] Adventure Island / Jun Chikuma / 1986 Hudson Soft</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">hudsonsoft</driveralias>
+	<romlist archive="Adventure Island [Takahashi Meijin no Boukenjima] (1986-09-12)(Hudson)">
+		<rom type="code">Adventure Island [Takahashi Meijin no Boukenjima] (1986-09-12)(Hudson).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">Title Screen</title>
+		<title code="0x01">Wild Plains</title>
+		<title code="0x03">Cliffs and Rocks</title>
+		<title code="0x04">Ice Caverns</title>
+		<title code="0x02">Gloomy Forest</title>
+		<title code="0x05">Mountain Peak</title>
+		<title code="0x06">Invincibility</title>
+		<title code="0x07">Leechin' You</title>
+		<title code="0x0D">Round Clear</title>
+		<title code="0x08">Life Lost</title>
+		<title code="0x09">Game Over</title>
+		<title code="0x0B">Boss Battle</title>
+		<title code="0x0C">Boss Defeated</title>
+		<title code="0x0A">Ending</title>
+	</titlelist>
+</game>
+<game>
+	<name>[NES] Adventure Island 3 / ? / 1992 (Now Production) Hudson Soft</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">hudsonsoft</driveralias>
+	<romlist archive="Adventure Island 3 [Takahashi Meijin no Boukenjima III] (1992-07-31)(Hudson)">
+		<rom type="code">Adventure Island 3 [Takahashi Meijin no Boukenjima III] (1992-07-31)(Hudson).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">Title Screen</title>
+		<title code="0x09">Overworld Map</title>
+		<title code="0x03">Coastal Clash / Bone Crossing</title>
+		<title code="0x0B">Eggplant Theme</title>
+		<title code="0x12">Area Clear</title>
+		<title code="0x05">Bottomless Pit / Pyramid Crypt / Shaft of Darkness</title>
+		<title code="0x17">Oak Forest / Cascading Torrent / Perilous Plunge</title>
+		<title code="0x0A">Invincibility Fairy</title>
+		<title code="0x02">In The Abyss</title>
+		<title code="0x07">The Desolation</title>
+		<title code="0x08">Skip Island</title>
+		<title code="0x0D">Boss Battle</title>
+		<title code="0x13">Boss Defeated</title>
+		<title code="0x16">Lost Woods / Fossil Lair / Fire Gorge / Double Eruption</title>
+		<title code="0x14">Ice Cave</title>
+		<title code="0x06">Misty Maze</title>
+		<title code="0x1B">Shipwreck Salvage</title>
+		<title code="0x04">Blizzard Peak</title>
+		<title code="0x1A">Thunder Clash</title>
+		<title code="0x0F">Life Lost</title>
+		<title code="0x10">Game Over</title>
+		<title code="0x11">Ending - Part 1</title>
+		<title code="0x1E">Ending - Part 2</title>
+	</titlelist>
+</game>
+<game>
+	<name>[NES] Felix the Cat / T's Music / 1992 (Shimada Kikaku) Hudson</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">hudsonsoft</driveralias>
+	<romlist archive="Felix the Cat (1992-10)(Shimada Kikaku)(Hudson)">
+		<rom type="code">Felix the Cat (1992-10)(Shimada Kikaku)(Hudson).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">Title Screen / Get Ready</title>
+		<title code="0x06">Cutscene</title>
+		<title code="0x01">Round 1: Forest</title>
+		<title code="0x0B">Round 2: Egypt</title>
+		<title code="0x07">Round 3: Mountains</title>
+		<title code="0x04">Round 4: Islands</title>
+		<title code="0x03">Rounds 4-3 &amp; 6-2: Underwater / Round 9: Red Planet</title>
+		<title code="0x08">Round 5: Tropics</title>
+		<title code="0x05">Rounds 6-1 &amp; 7: Northpole</title>
+		<title code="0x02">Round 8: Space</title>
+		<title code="0x0E">Boss Battle</title>
+		<title code="0x0C">Game Over</title>
+		<title code="0x0D">Round Clear</title>
+		<title code="0x09">Ending</title>
+	</titlelist>
+</game>
+	<game>
+		<name>[SNES] Super Adventure Island / Yuzo Koshiro / 1992 (Produce!) Hudson</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">hudsonsoft</driveralias>
+		<options>
+			<option name="apu_mix" value="0x150"/>
+		</options>
+		<romlist archive="Super Adventure Island [Takahashi Meijin no Daiboukenjima] (1992-01-11)(Produce!)(Hudson)">
+			<rom type="data" offset="0x00">01 Follow Wind.spc</rom>
+			<rom type="data" offset="0x01">02 Break.spc</rom>
+			<rom type="data" offset="0x02">03 The Island of Everlasting Summer.spc</rom>
+			<rom type="data" offset="0x03">04 Hop Step and Jazzy Beats.spc</rom>
+			<rom type="data" offset="0x04">05 Blue Blue Moon.spc</rom>
+			<rom type="data" offset="0x05">06 Hot Reception.spc</rom>
+			<rom type="data" offset="0x06">07 Break (Scratched).spc</rom>
+			<rom type="data" offset="0x07">08 Jungle Chase.spc</rom>
+			<rom type="data" offset="0x08">09 Drop into a Walk.spc</rom>
+			<rom type="data" offset="0x09">10 Cool Jam.spc</rom>
+			<rom type="data" offset="0x0a">11 Ice Groove.spc</rom>
+			<rom type="data" offset="0x0b">12 Darkside Visitor.spc</rom>
+			<rom type="data" offset="0x0c">13 Big Zen.spc</rom>
+			<rom type="data" offset="0x0d">14 Hawaiian.spc</rom>
+			<rom type="data" offset="0x0e">15 Gently Sun.spc</rom>
+			<rom type="data" offset="0x0f">16 Game Over.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">Follow Wind</title>
+			<title code="0x01">Break</title>
+			<title code="0x02">The Island of Everlasting Summer</title>
+			<title code="0x03">Hop Step and Jazzy Beats</title>
+			<title code="0x04">Blue Blue Moon</title>
+			<title code="0x05">Hot Reception</title>
+			<title code="0x06">Break (Scratched)</title>
+			<title code="0x07">Jungle Chase</title>
+			<title code="0x08">Drop into a Walk</title>
+			<title code="0x09">Cool Jam</title>
+			<title code="0x0a">Ice Groove</title>
+			<title code="0x0b">Darkside Visitor</title>
+			<title code="0x0c">Big Zen</title>
+			<title code="0x0d">Hawaiian</title>
+			<title code="0x0e">Gently Sun</title>
+			<title code="0x0f">Game Over</title>
+		</titlelist>
+	</game>
+		<game>
+		<name>[SNES] Super Bomberman / Jun Chikuma / 1993 (Produce!) Hudson</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">hudsonsoft</driveralias>
+		<options>
+			<option name="apu_mix" value="0x200"/>
+		</options>
+		<romlist archive="Super Bomberman (1993-04-28)(Produce!)(Hudson)">
+			<rom type="data" offset="0x00">01 Title.spc</rom>
+			<rom type="data" offset="0x01">02 Map.spc</rom>
+			<rom type="data" offset="0x02">03 Start.spc</rom>
+			<rom type="data" offset="0x03">04 Level 1.spc</rom>
+			<rom type="data" offset="0x04">05 Level 2.spc</rom>
+			<rom type="data" offset="0x05">06 Level 3.spc</rom>
+			<rom type="data" offset="0x06">07 Level 4.spc</rom>
+			<rom type="data" offset="0x07">08 Level 5.spc</rom>
+			<rom type="data" offset="0x08">09 Level 6.spc</rom>
+			<rom type="data" offset="0x09">10 Stage Complete.spc</rom>
+			<rom type="data" offset="0x0a">11 Battle Menu.spc</rom>
+			<rom type="data" offset="0x0b">12 Battle.spc</rom>
+			<rom type="data" offset="0x0c">13 Battle Victory.spc</rom>
+			<rom type="data" offset="0x0d">14 Battle Draw.spc</rom>
+			<rom type="data" offset="0x0e">15 Boss.spc</rom>
+			<rom type="data" offset="0x0f">16 Ending.spc</rom>
+			<rom type="data" offset="0x10">17 Password.spc</rom>
+			<rom type="data" offset="0x11">18 Game Over.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">Title</title>
+			<title code="0x01">Map</title>
+			<title code="0x02">Start</title>
+			<title code="0x03">Level 1</title>
+			<title code="0x04">Level 2</title>
+			<title code="0x05">Level 3</title>
+			<title code="0x06">Level 4</title>
+			<title code="0x07">Level 5</title>
+			<title code="0x08">Level 6</title>
+			<title code="0x09">Stage Complete</title>
+			<title code="0x0a">Battle Menu</title>
+			<title code="0x0b">Battle</title>
+			<title code="0x0c">Battle Victory</title>
+			<title code="0x0d">Battle Draw</title>
+			<title code="0x0e">Boss</title>
+			<title code="0x0f">Ending</title>
+			<title code="0x10">Password</title>
+			<title code="0x11">Game Over</title>
+		</titlelist>
+	</game>
+	<game>
+	<name>[NES] Jackie Chan's Action Kung-Fu / Masakatsu Maekawa / 1990 (Now Production) Hudson</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">hudsonsoft</driveralias>
+	<romlist archive="Jackie Chan's Action Kung-Fu [Jackie Chan] (1990-12)(Now Production)(Hudson)">
+		<rom type="code">Jackie Chan's Action Kung-Fu [Jackie Chan] (1990-12)(Now Production)(Hudson).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x0A">Intro</title>
+		<title code="0x0F">World Map</title>
+		<title code="0x00">Levels 1-1, 1-2 &amp; 1-3</title>
+		<title code="0x08">Welcome to the Bonus Stage</title>
+		<title code="0x07">Bonus Stage</title>
+		<title code="0x0C">Bonus Results / Opening - Part 1</title>
+		<title code="0x01">Levels 1-4, 1-5, 1-6, 5-3 &amp; 5-5</title>
+		<title code="0x09">Boss Battle</title>
+		<title code="0x04">Levels 2-1, 4-1 &amp; 5-2</title>
+		<title code="0x05">Levels 2-2, 4-2, &amp; 4-3</title>
+		<title code="0x02">Levels 3-1 &amp; 4-4</title>
+		<title code="0x03">Level 3-2</title>
+		<title code="0x06">Levels 5-1 &amp; 4-4</title>
+		<title code="0x0D">Game Over / Opening - Part 2</title>
+		<title code="0x0E">Final Boss</title>
+		<title code="0x10">Ending</title>
+	</titlelist>
+</game>
+<game>
+	<name>[NES] Milon's Secret Castle / Takeaki Kunimoto / 1986 Hudson</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">hudsonsoft</driveralias>
+	<romlist archive="Milon's Secret Castle [Meikyuu Kumikyoku - Milon no Daibouken] (1986-11-13)(Hudson)">
+		<rom type="code">Milon's Secret Castle [Meikyuu Kumikyoku - Milon no Daibouken] (1986-11-13)(Hudson).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">Game Start!</title>
+		<title code="0x01">Outside Castle</title>
+		<title code="0x03">Inside Castle</title>
+		<title code="0x04">Inside Well &amp; Towers</title>
+		<title code="0x11">Boss</title>
+		<title code="0x0B">Ending (Part 1)</title>
+		<title code="0x05">Ending (Part 2)</title>
+		<title code="0x07">Door Open</title>
+		<title code="0x08">Door Close</title>
+		<title code="0x02">Game Start! (Continue)</title>
+		<title code="0x10">Pick Up Item</title>
+		<title code="0x0A">Bonus Stage! (Intro)</title>
+		<title code="0x0C">Bonus Stage! (Version 1)</title>
+		<title code="0x0D">Bonus Stage! (Version 2)</title>
+		<title code="0x0E">Bonus Stage! (Version 3)</title>
+		<title code="0x0F">Bonus Stage! (Version 4)</title>
+		<title code="0x09">Death</title>
+		<title code="0x06">Game Over</title>
+	</titlelist>
+</game>
+<game>
+	<name>[TG16] Super Star Soldier / Nozomi Nakahashi, Keita Hosh / 1990 (Kaneko) Hudson</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">hudsonsoft</driveralias>
+	<romlist archive="tg16_Super Star Soldier (1990-07-06)(Inter State)(Hudson)">
+		<rom type="code">TGX040052.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x30">Over Again [Opening]</title>
+		<title code="0x26">Into The Super Battle [Stage 1]</title>
+		<title code="0x27">The Front Line [Stage 2]</title>
+		<title code="0x28">Dislapidated Zone [Stage 3]</title>
+		<title code="0x29">Space Byway [Stage 4]</title>
+		<title code="0x2A">Crystal Road [Stage 5]</title>
+		<title code="0x2B">Overcome Difficulties [Stage 6]</title>
+		<title code="0x2C">Menacing Beat [Stage 7]</title>
+		<title code="0x2D">Trounce Parade [Stage 8]</title>
+		<title code="0x33">Homicide [Boss 1]</title>
+		<title code="0x34">Drop Dead [Boss 2]</title>
+		<title code="0x35">Machine Voice [Boss 3]</title>
+		<title code="0x36">Strike To Death [Boss 4]</title>
+		<title code="0x37">Lunge At You [Boss 5]</title>
+		<title code="0x39">Escape from Battle Ship [Final Boss]</title>
+		<title code="0x31">Stage Clear</title>
+		<title code="0x3B">Hector '87 [2 Minutes Game]</title>
+		<title code="0x3A">Star Soldier [5 Minutes Game]</title>
+		<title code="0x32">Fall in War [Game Over]</title>
+		<title code="0x3C">Brilliant Record [Score]</title>
+		<title code="0x2F">Returned Soldier's Rest [Ending]</title>
+		<title code="0x23">Voice 1</title>
+		<title code="0x22">Voice 2</title>
+	</titlelist>
+</game>
+<game>
+	<name>[TG16] Air Zonk / Daisuke Morishima, Hisashi Matsushita / 1992 (Red) Hudson</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">hudsonsoft</driveralias>
+	<romlist archive="Air Zonk [PC Denjin - Punkic Cyborgs] (1992-11-20)(Red)(Hudson)">
+		<rom type="code">HC92053.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x42">Red</title>
+		<title code="0x12">Opening</title>
+		<title code="0x13">Mode Select</title>
+		<title code="0x14">Friend Select</title>
+		<title code="0x01">Stage 1 (Aqua Base)</title>
+		<title code="0x08">Stage 2 (Brains Town)</title>
+		<title code="0x0A">Stage 3 (Pock'n Stadium)</title>
+		<title code="0x0B">Stage 4 (Bubble Marine)</title>
+		<title code="0x0F">Power Up</title>
+		<title code="0x04">Mid-Boss</title>
+		<title code="0x02">Boss</title>
+		<title code="0x06">Stage Clear</title>
+		<title code="0x09">Stage 5-1 (Psycoxy Palace)</title>
+		<title code="0x0D">Stage 5-2 (Holo Genjin)</title>
+		<title code="0x0C">Stage 5-3 (Boss Galore)</title>
+		<title code="0x16">Stage 5-4 (Cyber Chickens)</title>
+		<title code="0x15">King Tamagobot</title>
+		<title code="0x10">Game Complete</title>
+		<title code="0x05">Game Over</title>
+		<title code="0x11">Credits</title>
+		<title code="0x0E">Unknown</title>
+	</titlelist>
+</game>
+<game>
+	<name>[TG16] Aldynes - The Mission Code for Rage Crisis (SGX) / Keita Hoshi / 1991 (Produce!) Hudson</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">hudsonsoft</driveralias>
+	<romlist archive="Aldynes - The Mission Code for Rage Crisis (SGX)(1991-02-22)(Produce!)(Hudson)">
+		<rom type="code">HC91044.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x01">THX</title>
+		<title code="0x20">Warning</title>
+		<title code="0x22">Opening</title>
+		<title code="0x24">Stage 1</title>
+		<title code="0x25">Stage 2</title>
+		<title code="0x26">Stage 3</title>
+		<title code="0x27">Stage 4</title>
+		<title code="0x28">Stage 5</title>
+		<title code="0x29">Stage 6</title>
+		<title code="0x2A">Stage 7</title>
+		<title code="0x2C">Boss 1</title>
+		<title code="0x2D">Boss 2</title>
+		<title code="0x2E">Boss 3</title>
+		<title code="0x2F">Final Boss</title>
+		<title code="0x2B">Stage Clear</title>
+		<title code="0x23">Continue</title>
+		<title code="0x31">Game Over</title>
+		<title code="0x30">Ending</title>
+	</titlelist>
+</game>
+<game>
+	<name>[TG16] Battle Ace (SGX) / Tomotsune Maeno / 1989 Hudson</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">hudsonsoft</driveralias>
+	<romlist archive="Battle Ace (SGX)(1989-11-30)(-)(Hudson)">
+		<rom type="code">HC89026.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x32">Title</title>
+		<title code="0x2A">Act 1</title>
+		<title code="0x27">Act 2</title>
+		<title code="0x28">Act 3</title>
+		<title code="0x29">Act 4</title>
+		<title code="0x2C">Act 5</title>
+		<title code="0x2E">Act 6</title>
+		<title code="0x33">Boss 1</title>
+		<title code="0x31">Boss 2</title>
+		<title code="0x30">Stage Clear</title>
+		<title code="0x2F">Ending</title>
+		<title code="0x2B">Credits</title>
+	</titlelist>
+</game>
+<game>
+	<name>[TG16] Blazing Lazers [Gunhed] / J.T.S, Keiji Takeuchi, Masanobu Tsukamoto, Masatomo Miyamoto, Ozono  / 1989 (Compile) Hudson</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">hudsonsoft</driveralias>
+	<romlist archive="Blazing Lazers [Gunhed] (1989-07-07)(Compile)(Hudson)">
+		<rom type="code">HC89019.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x0D">Opening</title>
+		<title code="0x01">Thunder Blaze [Area 1]</title>
+		<title code="0x03">Big Borgo [Area 2]</title>
+		<title code="0x06">Vajia Great [Area 3]</title>
+		<title code="0x07">Queen Brawla [Area 4]</title>
+		<title code="0x05">Giant Boltek [Area 5]</title>
+		<title code="0x04">Hyper Bigray [Area 6]</title>
+		<title code="0x08">Iron Beriol [Area 7]</title>
+		<title code="0x15">Vanua Shade [Area 8]</title>
+		<title code="0x0F">Rubble [Area 9]</title>
+		<title code="0x40">Bonus</title>
+		<title code="0x0B">Boss 1</title>
+		<title code="0x11">Boss 2</title>
+		<title code="0x0A">Boss 3</title>
+		<title code="0x16">King Braille</title>
+		<title code="0x0C">Victory</title>
+		<title code="0x09">Area Clear</title>
+		<title code="0x0E">Game Over</title>
+		<title code="0x12">Normal Dog [Ending 1]</title>
+		<title code="0x13">Hard Human [Ending 2]</title>
+	</titlelist>
+</game>
+<game>
+	<name>[TG16] Bomberman '93 / June Chikuma, Keita Hoshi / 1992 Hudson</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">hudsonsoft</driveralias>
+	<romlist archive="Bomberman '93 (1992-12-11)(Hudson)">
+		<rom type="code">HC92061.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">BGM #01</title>
+		<title code="0x01">BGM #02</title>
+		<title code="0x02">BGM #03</title>
+		<title code="0x03">BGM #04</title>
+		<title code="0x05">BGM #05</title>
+		<title code="0x06">BGM #06</title>
+		<title code="0x07">BGM #07</title>
+		<title code="0x08">BGM #08</title>
+		<title code="0x09">BGM #09</title>
+		<title code="0x0A">BGM #10</title>
+		<title code="0x0B">BGM #11</title>
+		<title code="0x0C">BGM #12</title>
+		<title code="0x0D">BGM #13</title>
+		<title code="0x0F">BGM #14</title>
+		<title code="0x10">BGM #15</title>
+		<title code="0x11">BGM #16</title>
+		<title code="0x12">BGM #17</title>
+		<title code="0x13">BGM #18</title>
+		<title code="0x14">BGM #19</title>
+		<title code="0x17">BGM #20</title>
+		<title code="0x19">BGM #21</title>
+		<title code="0x04">Jingle #01</title>
+		<title code="0x0E">Jingle #02</title>
+		<title code="0x15">Jingle #03</title>
+		<title code="0x16">Jingle #04</title>
+		<title code="0x18">Jingle #05</title>
+		<title code="0x1A">Jingle #06</title>
+	</titlelist>
+</game>
+<game>
+	<name>[TG16] Bomberman '94 / Hajime Kowara, Jun Chikuma / 1993 Hudson</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">hudsonsoft</driveralias>
+	<romlist archive="Bomberman '94 (1993-12-10)(-)(Hudson)">
+		<rom type="code">HC93065.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x6A">Opening Theme</title>
+		<title code="0x6B">Title Theme</title>
+		<title code="0x7F">Password Entry</title>
+		<title code="0x6C">Area Select</title>
+		<title code="0x6E">Stage Select</title>
+		<title code="0x6F">Area 1: Jammin' Jungle</title>
+		<title code="0x75">Stage Clear</title>
+		<title code="0x79">Boss Theme 1 (Areas 1, 3, 4, 5)</title>
+		<title code="0x70">Area 2: Vexin' Volcano</title>
+		<title code="0x78">Boss Theme 2 (Area 2)</title>
+		<title code="0x71">Area 3: Slammin' Sea</title>
+		<title code="0x72">Area 4: Crankin' Castle</title>
+		<title code="0x73">Area 5: Thrashin' Tundra</title>
+		<title code="0x6D">Final Area Intro</title>
+		<title code="0x74">Final Area</title>
+		<title code="0x88">Final Boss (Part 1 Intro)</title>
+		<title code="0x7B">Final Boss (Part 1)</title>
+		<title code="0x89">Final Boss (Part 2 Intro)</title>
+		<title code="0x7C">Final Boss (Part 2)</title>
+		<title code="0x7A">Final Boss (Part 3 Intro)</title>
+		<title code="0x7D">Final Boss (Part 3)</title>
+		<title code="0x7E">Game Clear</title>
+		<title code="0x76">Player Death</title>
+		<title code="0x87">Staff Roll</title>
+		<title code="0x77">Game Over</title>
+		<title code="0x80">Battle Configuration</title>
+		<title code="0x81">Battle Start</title>
+		<title code="0x82">Battle Theme</title>
+		<title code="0x83">Battle Win</title>
+		<title code="0x84">Battle Draw</title>
+		<title code="0x85">Battle Victory</title>
+		<title code="0x86">Unknown Fanfare</title>
+	</titlelist>
+</game>
+<game>
+	<name>[TG16] Dungeon Explorer / Tsukasa Masuko / 1989 (Atlus) Hudson</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">hudsonsoft</driveralias>
+	<romlist archive="Dungeon Explorer (1989-03-04)(Atlus)(Hudson)">
+		<rom type="code">HC63015.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x1E">Title</title>
+		<title code="0x1D">Opening</title>
+		<title code="0x15">Bar</title>
+		<title code="0x13">Town</title>
+		<title code="0x12">Castle</title>
+		<title code="0x01">Field 1</title>
+		<title code="0x14">Field 2</title>
+		<title code="0x02">Dungeon 1</title>
+		<title code="0x16">Boss</title>
+		<title code="0x17">Crystal</title>
+		<title code="0x03">Dungeon 2</title>
+		<title code="0x09">Dungeon 3</title>
+		<title code="0x05">Dungeon 4</title>
+		<title code="0x06">Dungeon 5</title>
+		<title code="0x08">Dungeon 6</title>
+		<title code="0x07">Dungeon 7</title>
+		<title code="0x04">Dungeon 8</title>
+		<title code="0x19">Last Boss</title>
+		<title code="0x1B">Ending</title>
+		<title code="0x1F">Staff Roll</title>
+		<title code="0x1C">Game Over</title>
+	</titlelist>
+</game>
+<game>
+	<name>[TG16] Jackie Chan / Masakatsu Maekawa / 1991 (Now Production) Hudson</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">hudsonsoft</driveralias>
+	<romlist archive="Jackie Chan (1991-01-18)(Now Production)(Hudson)">
+		<rom type="code">HC90032.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x40">Opening 1</title>
+		<title code="0x42">Opening 2</title>
+		<title code="0x44">Opening 3</title>
+		<title code="0x3B">Map</title>
+		<title code="0x30">Stage 1-1</title>
+		<title code="0x31">Stage 1-2</title>
+		<title code="0x35">Stage 2-1</title>
+		<title code="0x36">Stage 2-2</title>
+		<title code="0x33">Stage 3-1</title>
+		<title code="0x34">Stage 3-2</title>
+		<title code="0x32">Stage 4</title>
+		<title code="0x37">Stage 5</title>
+		<title code="0x3E">Special Stage</title>
+		<title code="0x48">Perfect!</title>
+		<title code="0x49">Bonus Score</title>
+		<title code="0x38">Boss</title>
+		<title code="0x45">Stage Clear</title>
+		<title code="0x4A">Final Boss 1</title>
+		<title code="0x39">Final Boss 2</title>
+		<title code="0x3C">Ending</title>
+		<title code="0x3D">Credits</title>
+	</titlelist>
+</game>
+<game>
+	<name>[TG16] Soldier Blade / Keita Hoshi, Makiko Tanifuji / 1992 Hudson</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">hudsonsoft</driveralias>
+	<romlist archive="Soldier Blade (1992-07-10)(Hudson)">
+		<rom type="code">HC92056.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x56">Opening</title>
+		<title code="0x3D">Operation 1</title>
+		<title code="0x45">Operation 2</title>
+		<title code="0x46">Operation 3</title>
+		<title code="0x47">Operation 4</title>
+		<title code="0x49">Operation 5</title>
+		<title code="0x4B">Operation 6</title>
+		<title code="0x4C">Operation 7</title>
+		<title code="0x51">Boss 1</title>
+		<title code="0x3F">Boss 2</title>
+		<title code="0x40">Boss 3</title>
+		<title code="0x41">Boss 4</title>
+		<title code="0x50">Boss 5</title>
+		<title code="0x4D">Alert!</title>
+		<title code="0x4E">Final Boss</title>
+		<title code="0x44">Operation Complete</title>
+		<title code="0x4F">Caravan Stage</title>
+		<title code="0x52">Score</title>
+		<title code="0x43">Game Over</title>
+		<title code="0x54">Ending</title>
+		<title code="0x55">Credits</title>
+	</titlelist>
+</game>
+<game>
+	<name>[NES] Faxanadu / Jun Chikuma / 1987 (Falcom, Hudson) Hudson</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">hudson</driveralias>
+	<romlist archive="Faxanadu (1987-11-16)(Falcom Hudson)(Hudson)">
+		<rom type="code">Faxanadu (1987-11-16)(Falcom, Hudson)(Hudson).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">Opening</title>
+		<title code="0x01">Mantra (Password)</title>
+		<title code="0x02">Eolis</title>
+		<title code="0x03">The Guru's Mantra</title>
+		<title code="0x04">The Elven King</title>
+		<title code="0x05">Shopkeeper</title>
+		<title code="0x06">Overworld</title>
+		<title code="0x07">Town</title>
+		<title code="0x08">Tower</title>
+		<title code="0x09">Boss Battle</title>
+		<title code="0x0A">World of Mist</title>
+		<title code="0x0B">Hourglass</title>
+		<title code="0x0C">World Tree</title>
+		<title code="0x0D">World of Branch</title>
+		<title code="0x0E">Labyrinth</title>
+		<title code="0x0F">Ending</title>
+	</titlelist>
+</game>
+</gamelist>

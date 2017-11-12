@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!--//ETC -->
+	<game>
+		<name>[PC-8801] MUSIC LALF</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">ETC</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc200"/>
+		</options>
+		<romlist archive="mlalf88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xb000">music2</rom>
+			<rom type="code" offset="0xe300">PCMTBL</rom>
+			<rom type="adpcm" offset="0x00000">voice.1</rom>
+			<rom type="adpcm" offset="0x003f8">voice.2</rom>
+			<rom type="adpcm" offset="0x01088">voice.3</rom>
+			<rom type="adpcm" offset="0x01ad8">voice.4</rom>
+			<rom type="adpcm" offset="0x03a70">voice.5</rom>
+			<rom type="adpcm" offset="0x06048">voice.6</rom>
+			<rom type="adpcm" offset="0x067f0">voice.7</rom>
+			<rom type="adpcm" offset="0x07450">voice.8</rom>
+			<rom type="adpcm" offset="0x080d8">voice.9</rom>
+			<rom type="adpcm" offset="0x09798">voice.10</rom>
+			<rom type="adpcm" offset="0x09d68">voice.11</rom>
+			<rom type="adpcm" offset="0x0a328">voice.12</rom>
+			<rom type="adpcm" offset="0x0b7e0">voice.13</rom>
+			<rom type="adpcm" offset="0x0bcf0">voice.14</rom>
+			<rom type="adpcm" offset="0x0c070">voice.15</rom>
+			<rom type="adpcm" offset="0x0d4a0">voice.16</rom>
+			<rom type="bgm" offset="0x00">sampl1.dat</rom>
+			<rom type="bgm" offset="0x01">sampl2.dat</rom>
+			<rom type="bgm" offset="0x02">sampl3.dat</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">sampl1.dat</title>
+			<title code="0x01">sampl2.dat</title>
+			<title code="0x02">sampl3.dat</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] MUSIC LALF</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="NEC PC-9801">ETC</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="filesize" value="0x2000"/>
+			<option name="dataaddr" value="0x05000"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax"  value="0x33"/>
+		</options>
+		<romlist archive="mlalf98">
+			<rom type="code" offset="0x00600">mloplay.bin</rom>
+			<rom type="code" offset="0x01000">PLAY.BIN</rom>
+			<rom type="bgm" offset="0x01">GWARS1.MLO</rom>
+			<rom type="bgm" offset="0x02">GWARS2.MLO</rom>
+			<rom type="bgm" offset="0x03">GWARS3.MLO</rom>
+			<rom type="bgm" offset="0x04">OJYO1.MLO</rom>
+			<rom type="bgm" offset="0x05">OJYO2.MLO</rom>
+			<rom type="bgm" offset="0x06">OJYO3.MLO</rom>
+			<rom type="bgm" offset="0x07">OJYO4.MLO</rom>
+			<rom type="bgm" offset="0x08">OJYO5.MLO</rom>
+			<rom type="bgm" offset="0x09">OJYO6.MLO</rom>
+			<rom type="bgm" offset="0x0a">OJYO7.MLO</rom>
+			<rom type="bgm" offset="0x0b">OJYO8.MLO</rom>
+			<rom type="bgm" offset="0x0c">ORGNAL1.MLO</rom>
+			<rom type="bgm" offset="0x0d">ORGNAL2.MLO</rom>
+			<rom type="bgm" offset="0x0e">ORGNAL3.MLO</rom>
+			<rom type="bgm" offset="0x0f">ORGNAL4.MLO</rom>
+			<rom type="bgm" offset="0x20">ORGNAL5.MLO</rom>
+			<rom type="bgm" offset="0x21">SAMPL2.MLO</rom>
+			<rom type="bgm" offset="0x22">SAMPL3.MLO</rom>
+			<rom type="bgm" offset="0x23">SESIL.MLO</rom>
+			<rom type="bgm" offset="0x24">TUKUNE1.MLO</rom>
+			<rom type="bgm" offset="0x25">TUKUNE2.MLO</rom>
+			<rom type="bgm" offset="0x26">TUKUNE3.MLO</rom>
+			<rom type="bgm" offset="0x27">TUKUNE4.MLO</rom>
+			<rom type="bgm" offset="0x28">TUKUNE5.MLO</rom>
+			<rom type="bgm" offset="0x29">UFO1.MLO</rom>
+			<rom type="bgm" offset="0x2a">UFO2.MLO</rom>
+			<rom type="bgm" offset="0x2b">UFO3.MLO</rom>
+			<rom type="bgm" offset="0x2c">UFO4.MLO</rom>
+			<rom type="bgm" offset="0x2d">UFO5.MLO</rom>
+			<rom type="bgm" offset="0x2e">UFO6.MLO</rom>
+			<rom type="bgm" offset="0x2f">UFO7.MLO</rom>
+			<rom type="bgm" offset="0x30">UFO8.MLO</rom>
+			<rom type="bgm" offset="0x31">UFO9.MLO</rom>
+			<rom type="bgm" offset="0x32">UFOB.MLO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">GWARS1.MLO  : GAL WARSきゃぴきゃぴるん opening [flying swors]</title>
+			<title code="0x02">GWARS2.MLO  : GAL WARSきゃぴきゃぴるん music [美少女戦士紹介所]</title>
+			<title code="0x03">GWARS3.MLO  : GAL WARSきゃぴきゃぴるん ending [Get Away]</title>
+			<title code="0x04">OJYO1.MLO   : お嬢様くらぶ opening1</title>
+			<title code="0x05">OJYO2.MLO   : お嬢様くらぶ opening2</title>
+			<title code="0x06">OJYO3.MLO   : お嬢様くらぶ intermission</title>
+			<title code="0x07">OJYO4.MLO   : お嬢様くらぶ music1</title>
+			<title code="0x08">OJYO5.MLO   : お嬢様くらぶ music2</title>
+			<title code="0x09">OJYO6.MLO   : お嬢様くらぶ music3</title>
+			<title code="0x0a">OJYO7.MLO   : お嬢様くらぶ ending</title>
+			<title code="0x0b">OJYO8.MLO   : お嬢様くらぶ music mode のテーマ</title>
+			<title code="0x0c">ORGNAL1.MLO : 誇大広告の出口表示</title>
+			<title code="0x0d">ORGNAL2.MLO : にぎやかな墓地</title>
+			<title code="0x0e">ORGNAL3.MLO : 公儀隠密ロマンスカー 11両編成</title>
+			<title code="0x0f">ORGNAL4.MLO : 走れ 黒塗のロマンスカー</title>
+			<title code="0x20">ORGNAL5.MLO : デンジャラス ダーク</title>
+			<title code="0x21">SAMPL2.MLO  : Yuzo Koshiro/SAMPLE2 for normal sound board</title>
+			<title code="0x22">SAMPL3.MLO  : Yuzo Koshiro/SAMPLE3 for PSG only</title>
+			<title code="0x23">SESIL.MLO   : ときめきセシル ending</title>
+			<title code="0x24">TUKUNE1.MLO : スメタナ 交響詩｢モルダウ｣</title>
+			<title code="0x25">TUKUNE2.MLO : モーツァルト 交響曲第25番K.183 第1楽章</title>
+			<title code="0x26">TUKUNE3.MLO : ショパン ｢葬送行進曲｣</title>
+			<title code="0x27">TUKUNE4.MLO : ベートーベン ｢月光｣</title>
+			<title code="0x28">TUKUNE5.MLO : ベートーベン ｢運命｣</title>
+			<title code="0x29">UFO1.MLO    : fantastic ruin</title>
+			<title code="0x2a">UFO2.MLO    : Here comes...EBA !!</title>
+			<title code="0x2b">UFO3.MLO    : Dancing in the back of the moon</title>
+			<title code="0x2c">UFO4.MLO    : UFO推進音</title>
+			<title code="0x2d">UFO5.MLO    : EBEs STEP</title>
+			<title code="0x2e">UFO6.MLO    : further!</title>
+			<title code="0x2f">UFO7.MLO    : Night of ranch</title>
+			<title code="0x30">UFO8.MLO    : The last day</title>
+			<title code="0x31">UFO9.MLO    : Take me home EBEs</title>
+			<title code="0x32">UFOB.MLO    : UFO bakuhatsu</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] PX (Sample)</name>
+		<driver type="otomichan">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ETC</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="pxtest">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PX.COM</rom>
+			<rom type="file" offset="-1">PCMSET.EXE</rom>
+			<rom type="file" offset="-1">SNYBD.PCM</rom>
+			<rom type="file" offset="-1">CS_BD.MB</rom>
+			<rom type="file" offset="-1">BD1.MB</rom>
+			<rom type="file" offset="-1">SNARE</rom>
+			<rom type="file" offset="-1">SD1.MB</rom>
+			<rom type="file" offset="-1">SYNTOM.SNY</rom>
+			<rom type="file" offset="-1">D10TM1.PCM</rom>
+			<rom type="file" offset="-1">CRASH1.MB</rom>
+			<rom type="file" offset="0x10">GLACIERX.M</rom>
+			<rom type="file" offset="0x11">OVTKOP1X.M</rom>
+			<rom type="shell" offset="0">PX</rom>
+			<rom type="shell" offset="0">PCMSET /C</rom>
+			<rom type="shell" offset="0">PCMSET 0 SNYBD.PCM</rom>
+			<rom type="shell" offset="0">PCMSET 1 CS_BD.MB</rom>
+			<rom type="shell" offset="0">PCMSET 2 BD1.MB</rom>
+			<rom type="shell" offset="0">PCMSET 3 SNARE</rom>
+			<rom type="shell" offset="0">PCMSET 5 SD1.MB</rom>
+			<rom type="shell" offset="0">PCMSET 8 SYNTOM.SNY</rom>
+			<rom type="shell" offset="0">PCMSET 9 D10TM1.PCM</rom>
+			<rom type="shell" offset="0">PCMSET 13 CRASH1.MB</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GLACIERX.M : ｢ Gracier Land ｣ from DRAGON SABER (c) namco / Arranged by Captain-NEO</title>
+			<title code="0x11">GYNA_2.M   : OVER TAKE OPENING 1 / Arranged by NEO </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] VAL-SOUND / Kolin2 sample data</name>
+		<!-- http://www.valsound.com/ にて公開されています -->
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ETC</driveralias>
+		<options>
+			<option name="clockmul" value="0x14"/>
+		</options>
+		<romlist archive="kolinval">
+			<rom type="file" offset="-1">klp_hoot.com</rom>
+			<rom type="file" offset="-1">KOLIN2.COM</rom>
+			<rom type="file" offset="-1">VALPCM1.PO8</rom>
+			<rom type="file" offset="-1">VALPCM3.PO8</rom>
+			<rom type="file" offset="0x10">END00.MO2</rom>
+			<rom type="file" offset="0x11">END01.MO2</rom>
+			<rom type="file" offset="0x12">END02.MO2</rom>
+			<rom type="file" offset="0x13">EVENT01.MO2</rom>
+			<rom type="file" offset="0x14">EVENT02.MO2</rom>
+			<rom type="file" offset="0x15">EVENT03.MO2</rom>
+			<rom type="file" offset="0x16">EVENT04.MO2</rom>
+			<rom type="file" offset="0x17">EVENT05.MO2</rom>
+			<rom type="file" offset="0x18">IPL00.MO2</rom>
+			<rom type="file" offset="0x19">IPL01.MO2</rom>
+			<rom type="file" offset="0x1a">IPL04.MO2</rom>
+			<rom type="file" offset="0x1b">IPL07.MO2</rom>
+			<rom type="file" offset="0x1c">IPL10.MO2</rom>
+			<rom type="file" offset="0x1d">IPL12.MO2</rom>
+			<rom type="file" offset="0x1e">KSAMPLE.MO2</rom>
+			<rom type="file" offset="0x1f">LOGO00.MO2</rom>
+			<rom type="file" offset="0x20">OP00.MO2</rom>
+			<rom type="file" offset="0x21">OVER00.MO2</rom>
+			<rom type="file" offset="0x22">TITLE00.MO2</rom>
+			<rom type="file" offset="0x23">WRD01.MO2</rom>
+			<rom type="file" offset="0x24">WRD02.MO2</rom>
+			<rom type="file" offset="0x25">WRD03.MO2</rom>
+			<rom type="file" offset="0x26">WRD04.MO2</rom>
+			<rom type="file" offset="0x27">WRD05.MO2</rom>
+			<rom type="file" offset="0x28">WRD06.MO2</rom>
+			<rom type="file" offset="0x29">WRD07.MO2</rom>
+			<rom type="file" offset="0x2a">WRD08.MO2</rom>
+			<rom type="file" offset="0x2b">WRD09.MO2</rom>
+			<rom type="file" offset="0x2c">WRD10.MO2</rom>
+			<rom type="file" offset="0x2d">WRD11.MO2</rom>
+			<rom type="file" offset="0x2e">WRD12.MO2</rom>
+			<rom type="file" offset="0x2f">END00P.MO8</rom>
+			<rom type="file" offset="0x30">END01P.MO8</rom>
+			<rom type="file" offset="0x31">END02P.MO8</rom>
+			<rom type="file" offset="0x32">EVENT01P.MO8</rom>
+			<rom type="file" offset="0x33">EVENT02P.MO8</rom>
+			<rom type="file" offset="0x34">EVENT03P.MO8</rom>
+			<rom type="file" offset="0x35">EVENT04P.MO8</rom>
+			<rom type="file" offset="0x36">EVENT05P.MO8</rom>
+			<rom type="file" offset="0x37">IPL00A.MO8</rom>
+			<rom type="file" offset="0x38">IPL00P.MO8</rom>
+			<rom type="file" offset="0x39">IPL01A.MO8</rom>
+			<rom type="file" offset="0x3a">IPL04A.MO8</rom>
+			<rom type="file" offset="0x3b">IPL07A.MO8</rom>
+			<rom type="file" offset="0x3c">IPL10A.MO8</rom>
+			<rom type="file" offset="0x3d">IPL12P.MO8</rom>
+			<rom type="file" offset="0x3e">LOGO00A.MO8</rom>
+			<rom type="file" offset="0x3f">OP00P.MO8</rom>
+			<rom type="file" offset="0x40">OVER01A.MO8</rom>
+			<rom type="file" offset="0x41">SFK132.MO8</rom>
+			<rom type="file" offset="0x42">TITLE00P.MO8</rom>
+			<rom type="file" offset="0x43">WRD01P.MO8</rom>
+			<rom type="file" offset="0x44">WRD02P.MO8</rom>
+			<rom type="file" offset="0x45">WRD03P.MO8</rom>
+			<rom type="file" offset="0x46">WRD04A.MO8</rom>
+			<rom type="file" offset="0x47">WRD04P.MO8</rom>
+			<rom type="file" offset="0x48">WRD05P.MO8</rom>
+			<rom type="file" offset="0x49">WRD06P.MO8</rom>
+			<rom type="file" offset="0x4a">WRD07P.MO8</rom>
+			<rom type="file" offset="0x4b">WRD08P.MO8</rom>
+			<rom type="file" offset="0x4c">WRD09P.MO8</rom>
+			<rom type="file" offset="0x4d">WRD10P.MO8</rom>
+			<rom type="file" offset="0x4e">WRD11P.MO8</rom>
+			<rom type="file" offset="0x4f">WRD12P.MO8</rom>
+			<rom type="shell" offset="0">kolin2 /m32</rom>
+			<rom type="shell" offset="0">klp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x3e">LOGO00A.MO8  : [86]  Rhyme star : スタークラフト・ジングル</title>
+			<title code="0x3f">OP00P.MO8    : [86]  Rhyme star : オープニング シンクロ版(2)</title>
+			<title code="0x42">TITLE00P.MO8 : [86]  Rhyme star : ゲームタイトル・メインメニュー</title>
+			<title code="0x43">WRD01P.MO8   : [86]  Rhyme star : World 1 [地上]</title>
+			<title code="0x44">WRD02P.MO8   : [86]  Rhyme star : World 2 [CAVE]</title>
+			<title code="0x45">WRD03P.MO8   : [86]  Rhyme star : World 3 [海上]</title>
+			<title code="0x46">WRD04A.MO8   : [SPB] Rhyme star : World 4 [海底] スピークボード版</title>
+			<title code="0x47">WRD04P.MO8   : [86]  Rhyme star : World 4 [海底]</title>
+			<title code="0x48">WRD05P.MO8   : [86]  Rhyme star : World 5 [高山]</title>
+			<title code="0x49">WRD06P.MO8   : [86]  Rhyme star : World 6 [雲上]</title>
+			<title code="0x4a">WRD07P.MO8   : [86]  Rhyme star : World 7 [珊瑚礁]</title>
+			<title code="0x4b">WRD08P.MO8   : [86]  Rhyme star : World 8 [大森林] Ver.β</title>
+			<title code="0x4c">WRD09P.MO8   : [86]  Rhyme star : World 9 [浮遊大陸]</title>
+			<title code="0x4d">WRD10P.MO8   : [86]  Rhyme star : World 10 [砂漠]</title>
+			<title code="0x4e">WRD11P.MO8   : [86]  Rhyme star : World 11 [魔界]</title>
+			<title code="0x4f">WRD12P.MO8   : [86]  Rhyme star : World 12 [魔王の城]</title>
+			<title code="0x32">EVENT01P.MO8 : [86]  Rhyme star : [中間イベントA] 挑戦：勝負だ!</title>
+			<title code="0x33">EVENT02P.MO8 : [86]  Rhyme star : [中間イベントB] 勝利：やったね!</title>
+			<title code="0x34">EVENT03P.MO8 : [86]  Rhyme star : [中間イベントC] おタマちゃんのテーマ</title>
+			<title code="0x35">EVENT04P.MO8 : [86]  Rhyme star : [中間イベントD] サムソン亀岡／兄貴</title>
+			<title code="0x36">EVENT05P.MO8 : [86]  Rhyme star : [中間イベントE] 大魔王ぺしぺし登場のテーマ</title>
+			<title code="0x2f">END00P.MO8   : [86]  Rhyme star : [中間イベントF] 魔城崩壊</title>
+			<title code="0x30">END01P.MO8   : [86]  Rhyme star : [エンディング] 同期信号有りバージョン(1)</title>
+			<title code="0x31">END02P.MO8   : [86]  Rhyme star : [スタッフロール] BYE-BYE version</title>
+			<title code="0x37">IPL00A.MO8   : [86&amp;ASB] Rhyme star : IPL sound #1</title>
+			<title code="0x38">IPL00P.MO8   : [86]  Rhyme star : IPL sound #1</title>
+			<title code="0x39">IPL01A.MO8   : [86&amp;ASB] Rhyme star : あけましておめでとー</title>
+			<title code="0x3a">IPL04A.MO8   : [86]  Rhyme star : Theme of April Fool</title>
+			<title code="0x3b">IPL07A.MO8   : [86&amp;ASB] Rhyme star : 七夕（7月7日用）</title>
+			<title code="0x3c">IPL10A.MO8   : [86]  Rhyme star : 体育の日</title>
+			<title code="0x3d">IPL12P.MO8   : [86&amp;ASB] Rhyme star : めりーくりすます</title>
+			<title code="0x40">OVER01A.MO8  : [86&amp;ASB] Rhyme star : Game Over</title>
+			<title code="0x1f">LOGO00.MO2   : [26]  Rhyme star : スタークラフト・ジングル</title>
+			<title code="0x20">OP00.MO2     : [26]  Rhyme star : オープニング シンクロ版(2)</title>
+			<title code="0x22">TITLE00.MO2  : [26]  Rhyme star : ゲームタイトル・メインメニュー</title>
+			<title code="0x23">WRD01.MO2    : [26]  Rhyme star : World 1 [地上]</title>
+			<title code="0x24">WRD02.MO2    : [26]  Rhyme star : World 2 [CAVE] Ver.β</title>
+			<title code="0x25">WRD03.MO2    : [26]  Rhyme star : World 3 [海上]</title>
+			<title code="0x26">WRD04.MO2    : [26]  Rhyme star : World 4 [海底]</title>
+			<title code="0x27">WRD05.MO2    : [26]  Rhyme star : World 5 [高山]</title>
+			<title code="0x28">WRD06.MO2    : [26]  Rhyme star : World 6 [雲上]</title>
+			<title code="0x29">WRD07.MO2    : [26]  Rhyme star : World 7 [珊瑚礁]</title>
+			<title code="0x2a">WRD08.MO2    : [26]  Rhyme star : World 8 [大森林]</title>
+			<title code="0x2b">WRD09.MO2    : [26]  Rhyme star : World 9 [浮遊大陸]</title>
+			<title code="0x2c">WRD10.MO2    : [26]  Rhyme star : World 10 [砂漠]</title>
+			<title code="0x2d">WRD11.MO2    : [26]  Rhyme star : World 11 [魔界]</title>
+			<title code="0x2e">WRD12.MO2    : [26]  Rhyme star : World 12 [魔王の城]</title>
+			<title code="0x13">EVENT01.MO2  : [26]  Rhyme star : [中間イベントA] 挑戦：勝負だ!</title>
+			<title code="0x14">EVENT02.MO2  : [26]  Rhyme star : [中間イベントB] 勝利：やったね!</title>
+			<title code="0x15">EVENT03.MO2  : [26]  Rhyme star : [中間イベントC] おタマちゃんのテーマ</title>
+			<title code="0x16">EVENT04.MO2  : [26]  Rhyme star : [中間イベントD] サムソン亀岡／兄貴</title>
+			<title code="0x17">EVENT05.MO2  : [26]  Rhyme star : [中間イベントE] 大魔王ぺしぺし登場のテーマ</title>
+			<title code="0x10">END00.MO2    : [26]  Rhyme star : [中間イベントF]  魔城崩壊</title>
+			<title code="0x11">END01.MO2    : [26]  Rhyme star : [エンディング] 同期信号有りバージョン(1)</title>
+			<title code="0x12">END02.MO2    : [26]  Rhyme star : [スタッフロール]</title>
+			<title code="0x18">IPL00.MO2    : [26]  Rhyme star : IPL sound #1</title>
+			<title code="0x19">IPL01.MO2    : [26]  Rhyme star : あけましておめでとー</title>
+			<title code="0x1a">IPL04.MO2    : [26]  Rhyme star : Theme of April Fool</title>
+			<title code="0x1b">IPL07.MO2    : [26]  Rhyme star : 七夕（７月７日用）</title>
+			<title code="0x1c">IPL10.MO2    : [26]  Rhyme star : 体育の日</title>
+			<title code="0x1d">IPL12.MO2    : [26]  Rhyme star : めりーくりすます</title>
+			<title code="0x21">OVER00.MO2   : [26]  Rhyme star : Game Over #1</title>
+			<title code="0x1e">KSAMPLE.MO2  : [FM3+PSG3] Digital musicer / KOLIN test and sample</title>
+			<title code="0x41">SFK132.MO8   : [86] : 宇宙空間１</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] スピークボード MUSIC SHOW (ROOM1)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ETC</driveralias>
+		<options>
+			<option name="clockmul" value="0x20"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-13"/>
+		</options>
+		<romlist archive="mshowyk2">
+			<rom type="file" offset="-1">mlfplay.com</rom>
+			<rom type="file" offset="-1">MUSIC98.COM</rom>
+			<rom type="file" offset="-1">ADPCMSET.EXE</rom>
+			<rom type="file" offset="-1">DATA</rom>
+			<rom type="file" offset="-1">voice.1</rom>
+			<rom type="file" offset="-1">voice.2</rom>
+			<rom type="file" offset="-1">voice.3</rom>
+			<rom type="file" offset="-1">voice.4</rom>
+			<rom type="file" offset="-1">voice.5</rom>
+			<rom type="file" offset="-1">voice.6</rom>
+			<rom type="file" offset="-1">voice.7</rom>
+			<rom type="file" offset="-1">voice.8</rom>
+			<rom type="file" offset="-1">voice.9</rom>
+			<rom type="file" offset="-1">voice.10</rom>
+			<rom type="file" offset="-1">voice.11</rom>
+			<rom type="file" offset="-1">voice.12</rom>
+			<rom type="file" offset="-1">voice.13</rom>
+			<rom type="file" offset="-1">voice.14</rom>
+			<rom type="file" offset="-1">voice.15</rom>
+			<rom type="file" offset="-1">voice.16</rom>
+			<rom type="file" offset="-1">voice.17</rom>
+			<rom type="file" offset="-1">voice.18</rom>
+			<rom type="file" offset="-1">voice.19</rom>
+			<rom type="file" offset="-1">voice.20</rom>
+			<rom type="file" offset="-1">voice.21</rom>
+			<rom type="file" offset="-1">voice.22</rom>
+			<rom type="file" offset="-1">voice.23</rom>
+			<rom type="file" offset="-1">voice.24</rom>
+			<rom type="file" offset="-1">voice.25</rom>
+			<rom type="file" offset="-1">voice.26</rom>
+			<rom type="file" offset="-1">voice.27</rom>
+			<rom type="file" offset="0x10">DISCO4.OBJ</rom>
+			<rom type="file" offset="0x11">HROCK1.OBJ</rom>
+			<rom type="file" offset="0x12">PCMT10.OBJ</rom>
+			<rom type="file" offset="0x13">PCMT12.OBJ</rom>
+			<rom type="file" offset="0x14">PCMT13.OBJ</rom>
+			<rom type="file" offset="0x15">PCMT17.OBJ</rom>
+			<rom type="file" offset="0x16">PCMT20.OBJ</rom>
+			<rom type="file" offset="0x17">PCMT31.OBJ</rom>
+			<rom type="file" offset="0x18">SIN002.OBJ</rom>
+			<rom type="file" offset="0x19">SIN006.OBJ</rom>
+			<rom type="file" offset="0x1a">SIN008.OBJ</rom>
+			<rom type="file" offset="0x1b">SIN013.OBJ</rom>
+			<rom type="file" offset="0x1c">SIN014.OBJ</rom>
+			<rom type="file" offset="0x1d">SIN017.OBJ</rom>
+			<rom type="file" offset="0x1e">STG001.OBJ</rom>
+			<rom type="file" offset="0x1f">STK004.OBJ</rom>
+			<rom type="file" offset="0x20">STK019.OBJ</rom>
+			<rom type="file" offset="0x21">STK023.OBJ</rom>
+			<rom type="file" offset="0x22">STK027.OBJ</rom>
+			<rom type="file" offset="0x23">TEST7.OBJ</rom>
+			<rom type="shell" offset="0">music98</rom>
+			<rom type="shell" offset="0">adpcmset</rom>
+			<rom type="shell" offset="0">mlfplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">TEST7 .OBJ : [BOSCONIAN X68K] FLASH FLASH FLASH</title>
+			<title code="0x18">SIN002.OBJ : [The Super 忍] THE SHINOBI</title>
+			<title code="0x19">SIN006.OBJ : [The Super 忍] MAKE ME DANCE</title>
+			<title code="0x1a">SIN008.OBJ : [The Super 忍] CHINA TOWN</title>
+			<title code="0x1b">SIN013.OBJ : [The Super 忍] LIKE A WIND</title>
+			<title code="0x1c">SIN014.OBJ : [The Super 忍] SUNRISE BLUD.</title>
+			<title code="0x1d">SIN017.OBJ : [The Super 忍] LONG DISTANCE</title>
+			<title code="0x10">DISCO4.OBJ : [Misty Blue] Hold me tonight</title>
+			<title code="0x11">HROCK1.OBJ : [Misty Blue] Opening</title>
+			<title code="0x1e">STG001.OBJ : [ACTRASER] Space Fight</title>
+			<title code="0x21">STK023.OBJ : [BARE KNUCKLE] The Street of Rage</title>
+			<title code="0x1f">STK004.OBJ : [BARE KNUCKLE] Fighting in Street</title>
+			<title code="0x20">STK019.OBJ : [BARE KNUCKLE] Keep the groovin'</title>
+			<title code="0x22">STK027.OBJ : [BARE KNUCKLE] Moon Beach</title>
+			<title code="0x13">PCMT12.OBJ : [The Scheme] I'LL SAVE YOU ALL MY JUSTICE</title>
+			<title code="0x14">PCMT13.OBJ : [The Scheme] PERPETUAL DARK!</title>
+			<title code="0x12">PCMT10.OBJ : [The Scheme] ANGRY FIST</title>
+			<title code="0x15">PCMT17.OBJ : [The Scheme] THOUSAND EYES</title>
+			<title code="0x16">PCMT20.OBJ : [The Scheme] THE FORCE ROTTED AWAY</title>
+			<title code="0x17">PCMT31.OBJ : [The Scheme] CHALLENGING TOMORROW</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] スピークボード MUSIC SHOW (ROOM2)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ETC</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="0x20"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-13"/>
+		</options>
+		<romlist archive="mshowpmd">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="-1">PLOAD.EXE</rom>
+			<rom type="file" offset="-1">ADPCM.PMD</rom>
+			<rom type="file" offset="0x10">GET.M</rom>
+			<rom type="file" offset="0x11">LUDE.M</rom>
+			<rom type="file" offset="0x12">MACHI4.M</rom>
+			<rom type="file" offset="0x13">OPTI9.M</rom>
+			<rom type="file" offset="0x14">SP1.M</rom>
+			<rom type="file" offset="0x15">SP2.M</rom>
+			<rom type="file" offset="0x16">SP3.M</rom>
+			<rom type="file" offset="0x17">SP7.M</rom>
+			<rom type="file" offset="0x18">SW1.M</rom>
+			<rom type="file" offset="0x19">SW2.M</rom>
+			<rom type="file" offset="0x1a">SW3.M</rom>
+			<rom type="file" offset="0x1b">YS1.M</rom>
+			<rom type="file" offset="0x1c">YS2.M</rom>
+			<rom type="file" offset="0x1d">YS3.M</rom>
+			<rom type="shell" offset="0">pmd /k</rom>
+			<rom type="shell" offset="0">pload /c</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x14">SP1.M    : Frishauf!                      作編曲:荒川 憲一</title>
+			<title code="0x10">GET.M    : GET WILD '89 /T.M.NETWORK        編曲:中島 享生</title>
+			<title code="0x16">SP3.M    : 泣きたくても泣けなくて         作編曲:梶原 正裕</title>
+			<title code="0x17">SP7.M    : I miss you badly               作編曲:荒川 憲一</title>
+			<title code="0x11">LUDE.M   : 風のリュード Lude of the winds 作編曲:中島 享生</title>
+			<title code="0x15">SP2.M    : 恋人たちの朝                   作編曲:梶原 正裕</title>
+			<title code="0x18">SW1.M    : 微風の瞬間                     作編曲:荒川 憲一</title>
+			<title code="0x13">OPTI9.M  : Optical Illusion               作編曲:中島 享生</title>
+			<title code="0x1b">YS1.M    : 黄昏の箱舟                     作編曲:与猶 啓至</title>
+			<title code="0x19">SW2.M    : 僕の家においで                 作編曲:荒川 憲一</title>
+			<title code="0x12">MACHI4.M : 眠らない街                     作編曲:中島 享生</title>
+			<title code="0x1c">YS2.M    : 溜め息の宇宙(そら)             作編曲:与猶 啓至</title>
+			<title code="0x1a">SW3.M    : 貴公子                         作編曲:荒川 憲一</title>
+			<title code="0x1d">YS3.M    : 朝の気持ち                     作編曲:与猶 啓至</title>
+		</titlelist>
+	</game>
+</gamelist>

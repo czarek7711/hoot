@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //hummingbird -->
+	<game>
+		<name>[PC-88] Abyss 2 - Teiou no Namida (ABYSSⅡ 帝王の涙)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">hummingbird</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8900"/>
+		</options>
+		<romlist archive="abyss2">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8600">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00</title>
+			<title code="0x01">MUS01</title>
+			<title code="0x02">MUS02</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Laplace no Ma (ラプラスの魔)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">hummingbird</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="laplace">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+			<rom type="bgm" offset="0x0f">MUS15</rom>
+			<rom type="bgm" offset="0x10">MUS16</rom>
+			<rom type="bgm" offset="0x11">MUS17</rom>
+			<rom type="bgm" offset="0x12">MUS18</rom>
+			<rom type="bgm" offset="0x13">MUS19</rom>
+			<rom type="bgm" offset="0x14">MUS20</rom>
+			<rom type="bgm" offset="0x15">MUS21</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">イントロダクション</title>
+			<title code="0x01">ラプラスのテーマ ～旅立つ勇者～ (オープニング)</title>
+			<title code="0x05">想い出のニューカム              (ホテル)</title>
+			<title code="0x04">ニューカムの街                  (街)</title>
+			<title code="0x02">Pub Time Song                   (酒場)</title>
+			<title code="0x03">復活のクロス                    (教会)</title>
+			<title code="0x0a">幽霊屋敷                        (ウェザートップの館 地上)</title>
+			<title code="0x0c">鐘</title>
+			<title code="0x0d">ピアノ</title>
+			<title code="0x06">ゴースト ハンター               (戦闘)</title>
+			<title code="0x0b">不気味な地下                    (ウェザートップの館 地下)</title>
+			<title code="0x0e">魔城                            (ラプラス城)</title>
+			<title code="0x10">幽霊舞踏会                      (舞踏する幽霊)</title>
+			<title code="0x0f">恐怖の回廊                      (ラプラス城地下)</title>
+			<title code="0x08">哀しき勇者                      (死人との戦闘)</title>
+			<title code="0x11">悲しみの部屋</title>
+			<title code="0x12">揺れる小舟                      (ラプラス城３階 湖)</title>
+			<title code="0x13">南国の光                        (ラプラス城３階 ジャングル)</title>
+			<title code="0x07">バトル ウィズ ハスター          (最終ボス)</title>
+			<title code="0x09">奈落の叫び                      (ゲームオーバー)</title>
+			<title code="0x14">                                (エンディング1)</title>
+			<title code="0x15">明日への誓い                    (エンディング2)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Agni no Ishi (アグニの石)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">hummingbird</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="agni">
+			<rom type="code" offset="0x0000">DRIVER</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+			<rom type="bgm" offset="0x08">MUS08</rom>
+			<rom type="bgm" offset="0x09">MUS09</rom>
+			<rom type="bgm" offset="0x0a">MUS10</rom>
+			<rom type="bgm" offset="0x0b">MUS11</rom>
+			<rom type="bgm" offset="0x0c">MUS12</rom>
+			<rom type="bgm" offset="0x0d">MUS13</rom>
+			<rom type="bgm" offset="0x0e">MUS14</rom>
+			<rom type="bgm" offset="0x0f">MUS15</rom>
+			<rom type="bgm" offset="0x10">MUS16</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x01">ゲーム開始</title>
+			<title code="0x02">街</title>
+			<title code="0x03">MUS03</title>
+			<title code="0x04">MUS04</title>
+			<title code="0x05">屋敷</title>
+			<title code="0x06">MUS06</title>
+			<title code="0x07">MUS07</title>
+			<title code="0x08">MUS08</title>
+			<title code="0x09">MUS09</title>
+			<title code="0x0a">MUS10</title>
+			<title code="0x0b">MUS11</title>
+			<title code="0x0c">Bar</title>
+			<title code="0x0d">街へ</title>
+			<title code="0x0e">MUS14</title>
+			<title code="0x0f">MUS15</title>
+			<title code="0x10">MUS16</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lodoss to Senki 1: Haiiro no Majo (ロードス島戦記 灰色の魔女)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">hummingbird</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="addressing" value="1"/>
+			<option name="dataaddr" value="0x10000000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x1b"/>
+		</options>
+		<romlist archive="rolw1_98">
+			<rom type="code" offset="0x00600000">rolw1_98.bin</rom>
+			<rom type="code" offset="0x02180000">file_ff.bin</rom>
+			<rom type="code" offset="0x03500000">file_fe.bin</rom>
+			<rom type="bgm" offset="0x01">file_3c.bin</rom>
+			<rom type="bgm" offset="0x02">file_3d.bin</rom>
+			<rom type="bgm" offset="0x03">file_3e.bin</rom>
+			<rom type="bgm" offset="0x04">file_3f.bin</rom>
+			<rom type="bgm" offset="0x05">file_40.bin</rom>
+			<rom type="bgm" offset="0x06">file_41.bin</rom>
+			<rom type="bgm" offset="0x07">file_42.bin</rom>
+			<rom type="bgm" offset="0x08">file_43.bin</rom>
+			<rom type="bgm" offset="0x09">file_44.bin</rom>
+			<rom type="bgm" offset="0x0a">file_45.bin</rom>
+			<rom type="bgm" offset="0x0b">file_46.bin</rom>
+			<rom type="bgm" offset="0x0c">file_47.bin</rom>
+			<rom type="bgm" offset="0x0d">file_48.bin</rom>
+			<rom type="bgm" offset="0x0e">file_49.bin</rom>
+			<rom type="bgm" offset="0x0f">file_4a.bin</rom>
+			<rom type="bgm" offset="0x10">file_4b.bin</rom>
+			<rom type="bgm" offset="0x11">file_4c.bin</rom>
+			<rom type="bgm" offset="0x12">file_4d.bin</rom>
+			<rom type="bgm" offset="0x13">file_4e.bin</rom>
+			<rom type="bgm" offset="0x14">file_4f.bin</rom>
+			<rom type="bgm" offset="0x15">file_50.bin</rom>
+			<rom type="bgm" offset="0x16">file_51.bin</rom>
+			<rom type="bgm" offset="0x17">file_52.bin</rom>
+			<rom type="bgm" offset="0x18">file_53.bin</rom>
+			<rom type="bgm" offset="0x19">file_54.bin</rom>
+			<rom type="bgm" offset="0x1a">file_55.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">ワンダーランド</title>
+			<title code="0x02">迷宮伝説</title>
+			<title code="0x03">迷いの路</title>
+			<title code="0x04">村</title>
+			<title code="0x05">聖歌</title>
+			<title code="0x06">安息の宿</title>
+			<title code="0x07">バザー</title>
+			<title code="0x08">吟遊詩人</title>
+			<title code="0x09">スレイン</title>
+			<title code="0x0a">エト</title>
+			<title code="0x0b">ウッド・チャック</title>
+			<title code="0x0c">ギム</title>
+			<title code="0x0d">ディードリット</title>
+			<title code="0x0e">パーン</title>
+			<title code="0x0f">街</title>
+			<title code="0x10">シャイニングトゥリー</title>
+			<title code="0x11">覇王</title>
+			<title code="0x12">亡き戦士達への哀歌</title>
+			<title code="0x13">prg 78</title>
+			<title code="0x14">ブラックバトル</title>
+			<title code="0x15">バトルソング</title>
+			<title code="0x16">バトルファンファーレ</title>
+			<title code="0x17">序曲『灰色の魔女』</title>
+			<title code="0x18">prg 83</title>
+			<title code="0x19">prg 84</title>
+			<title code="0x1a">prg 85</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lodoss to Senki 2: Goshiki no Maryuu (ロードス島戦記II 五色の魔竜)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">hummingbird</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="fm_mix"   value="6"/>
+			<option name="ssg_mix"  value="-12"/>
+		</options>
+		<romlist archive="rolw2_98">
+			<rom type="binary" offset="0xafff0">46 4f 4e 54 53 45 54</rom>
+			<rom type="file" offset="-1">MUDRV2.SYS</rom>
+			<rom type="file" offset="-1">MUDRV298.COM</rom>
+			<rom type="file" offset="0x09">LODOSS.MLD</rom>
+			<rom type="file" offset="0x10">END1.MLD</rom>
+			<rom type="file" offset="0x11">END_2.MLD</rom>
+			<rom type="file" offset="0x12">GRAYROAD.MLD</rom>
+			<rom type="file" offset="0x13">GUILD.MLD</rom>
+			<rom type="file" offset="0x15">M_FORMAT.MLD</rom>
+			<rom type="file" offset="0x16">OPEN_12.MLD</rom>
+			<rom type="file" offset="0x17">OPEN_2.MLD</rom>
+			<rom type="file" offset="0x18">OPEN_34.MLD</rom>
+			<rom type="file" offset="0x19">MUSIC00.MLD</rom>
+			<rom type="file" offset="0x1a">MUSIC01.MLD</rom>
+			<rom type="file" offset="0x1b">MUSIC02.MLD</rom>
+			<rom type="file" offset="0x1c">MUSIC03.MLD</rom>
+			<rom type="file" offset="0x1d">MUSIC04.MLD</rom>
+			<rom type="file" offset="0x1e">MUSIC05.MLD</rom>
+			<rom type="file" offset="0x1f">MUSIC06.MLD</rom>
+			<rom type="file" offset="0x20">MUSIC07.MLD</rom>
+			<rom type="file" offset="0x21">MUSIC08.MLD</rom>
+			<rom type="file" offset="0x22">MUSIC09.MLD</rom>
+			<rom type="file" offset="0x23">MUSIC10.MLD</rom>
+			<rom type="file" offset="0x24">MUSIC11.MLD</rom>
+			<rom type="file" offset="0x25">MUSIC12.MLD</rom>
+			<rom type="file" offset="0x26">MUSIC13.MLD</rom>
+			<rom type="file" offset="0x27">MUSIC14.MLD</rom>
+			<rom type="file" offset="0x28">MUSIC15.MLD</rom>
+			<rom type="file" offset="0x29">MUSIC16.MLD</rom>
+			<rom type="file" offset="0x2a">MUSIC17.MLD</rom>
+			<rom type="file" offset="0x2b">MUSIC18.MLD</rom>
+			<rom type="file" offset="0x2c">MUSIC19.MLD</rom>
+			<rom type="file" offset="0x2d">MUSIC20.MLD</rom>
+			<rom type="file" offset="0x2e">MUSIC21.MLD</rom>
+			<rom type="file" offset="0x2f">MUSIC22.MLD</rom>
+			<rom type="file" offset="0x30">MUSIC23.MLD</rom>
+			<rom type="file" offset="0x31">MUSIC24.MLD</rom>
+			<rom type="file" offset="0x32">MUSIC25.MLD</rom>
+			<rom type="file" offset="0x33">MUSIC26.MLD</rom>
+			<rom type="file" offset="0x34">MUSIC27.MLD</rom>
+			<rom type="file" offset="0x35">MUSIC28.MLD</rom>
+			<rom type="file" offset="0x36">MUSIC29.MLD</rom>
+			<rom type="file" offset="0x37">MUSIC30.MLD</rom>
+			<rom type="file" offset="0x38">MUSIC31.MLD</rom>
+			<rom type="file" offset="0x39">MUSIC32.MLD</rom>
+			<rom type="file" offset="0x3a">MUSIC33.MLD</rom>
+			<rom type="file" offset="0x3b">MUSIC34.MLD</rom>
+			<rom type="file" offset="0x3c">MUSIC35.MLD</rom>
+			<rom type="file" offset="0x3d">MUSIC36.MLD</rom>
+			<rom type="file" offset="0x3e">MUSIC37.MLD</rom>
+			<rom type="file" offset="0x3f">MUSIC38.MLD</rom>
+			<rom type="file" offset="0x40">MUSIC39.MLD</rom>
+			<rom type="file" offset="0x41">MUSIC40.MLD</rom>
+			<rom type="file" offset="0x42">MUSIC41.MLD</rom>
+			<rom type="file" offset="0x43">MUSIC42.MLD</rom>
+			<rom type="file" offset="0x44">MUSIC43.MLD</rom>
+			<rom type="device" offset="0">MUDRV2.SYS</rom>
+			<rom type="shell"  offset="0">MUDRV298</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x16">湖底の記憶</title>
+			<title code="0x17">ロードスの危機</title>
+			<title code="0x18">飛翔</title>
+			<title code="0x12">暁の道</title>
+			<title code="0x13">友達</title>
+			<title code="0x15">胎動</title>
+			<title code="0x19">かなしき運命</title>
+			<title code="0x1a">悪の巣窟</title>
+			<title code="0x1b">魔導師バクナード</title>
+			<title code="0x1c">バトル・オブ・ファイヤ</title>
+			<title code="0x1d">地底探検</title>
+			<title code="0x1e">バッファローサーガ</title>
+			<title code="0x1f">バトルソング</title>
+			<title code="0x20">邪神復活</title>
+			<title code="0x21">勝利の行進</title>
+			<title code="0x22">奇跡</title>
+			<title code="0x23">迷宮伝説</title>
+			<title code="0x24">闇の洞窟</title>
+			<title code="0x25">カオス「魔の城」</title>
+			<title code="0x26">ダウン・タウン</title>
+			<title code="0x27">閉じこめられた街</title>
+			<title code="0x28">大地の怒り</title>
+			<title code="0x29">輝ける正義</title>
+			<title code="0x2a">渦巻く欲望</title>
+			<title code="0x2b">想いでのパヴァーヌ</title>
+			<title code="0x2c">許して! 女王様</title>
+			<title code="0x2d">安らぎ</title>
+			<title code="0x2e">金鱗の竜王</title>
+			<title code="0x2f">ブラックマーケット</title>
+			<title code="0x30">酒場の大道芸人</title>
+			<title code="0x31">デザート・アンド・ロック</title>
+			<title code="0x32">妖精の踊り</title>
+			<title code="0x33">勇ましき騎兵</title>
+			<title code="0x34">傭兵王</title>
+			<title code="0x35">地平の果て</title>
+			<title code="0x36">恵</title>
+			<title code="0x37">安息の街</title>
+			<title code="0x38">約束</title>
+			<title code="0x39">港</title>
+			<title code="0x3a">穏やかなる時</title>
+			<title code="0x3b">ラン・アウト</title>
+			<title code="0x3c">ささやかな喜び</title>
+			<title code="0x3d">紺碧の水平線</title>
+			<title code="0x3e">試練</title>
+			<title code="0x3f">苦悩の挫折</title>
+			<title code="0x40">新たなる緊張</title>
+			<title code="0x41">その頃…</title>
+			<title code="0x42">サーカス広場</title>
+			<title code="0x43">村</title>
+			<title code="0x44">夢</title>
+			<title code="0x10">END1.MLD</title>
+			<title code="0x11">END_2.MLD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lodoss to Senki: Fukujinduke (ロードス島戦記 福神漬)</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="PC-98">hummingbird</driveralias>
+		<options>
+			<option name="dummysndrom" value="1"/>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="addressing" value="1"/>
+			<option name="dataaddr" value="0x10000000"/>
+			<option name="filesize" value="0x4000"/>
+			<option name="datamax" value="0x20"/>
+			<option name="fm_mix"   value="6"/>
+			<option name="ssg_mix"  value="-12"/>
+		</options>
+		<romlist archive="fukujin1_98">
+			<rom type="code" offset="0x00600000">fuku1_98.bin</rom>
+			<rom type="code" offset="0x02180000">file_01.bin</rom>
+			<rom type="code" offset="0x0D000000">file_02.bin</rom>
+			<rom type="bgm" offset="0x01">file_0a.bin</rom>
+			<rom type="bgm" offset="0x02">file_0b.bin</rom>
+			<rom type="bgm" offset="0x03">file_0c.bin</rom>
+			<rom type="bgm" offset="0x04">file_0d.bin</rom>
+			<rom type="bgm" offset="0x05">file_0e.bin</rom>
+			<rom type="bgm" offset="0x06">file_0f.bin</rom>
+			<rom type="bgm" offset="0x07">file_10.bin</rom>
+			<rom type="bgm" offset="0x08">file_11.bin</rom>
+			<rom type="bgm" offset="0x09">file_12.bin</rom>
+			<rom type="bgm" offset="0x0a">file_13.bin</rom>
+			<rom type="bgm" offset="0x0b">file_14.bin</rom>
+			<rom type="bgm" offset="0x0c">file_15.bin</rom>
+			<rom type="bgm" offset="0x0d">file_16.bin</rom>
+			<rom type="bgm" offset="0x0e">file_17.bin</rom>
+			<rom type="bgm" offset="0x0f">file_18.bin</rom>
+			<rom type="bgm" offset="0x10">file_19.bin</rom>
+			<rom type="bgm" offset="0x11">file_1a.bin</rom>
+			<rom type="bgm" offset="0x12">file_1b.bin</rom>
+			<rom type="bgm" offset="0x13">file_1c.bin</rom>
+			<rom type="bgm" offset="0x14">file_1d.bin</rom>
+			<rom type="bgm" offset="0x15">file_1e.bin</rom>
+			<rom type="bgm" offset="0x16">file_1f.bin</rom>
+			<rom type="bgm" offset="0x17">file_20.bin</rom>
+			<rom type="bgm" offset="0x18">file_21.bin</rom>
+			<rom type="bgm" offset="0x19">file_22.bin</rom>
+			<rom type="bgm" offset="0x1a">file_23.bin</rom>
+			<rom type="bgm" offset="0x1b">file_be.bin</rom>
+			<rom type="bgm" offset="0x1c">file_bf.bin</rom>
+			<rom type="bgm" offset="0x1d">file_c0.bin</rom>
+			<rom type="bgm" offset="0x1e">file_c1.bin</rom>
+			<rom type="bgm" offset="0x1f">file_c2.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">ワンダーランド</title>
+			<title code="0x02">迷宮伝説</title>
+			<title code="0x03">迷いの路</title>
+			<title code="0x04">村</title>
+			<title code="0x05">聖歌</title>
+			<title code="0x06">安息の宿</title>
+			<title code="0x07">バザー</title>
+			<title code="0x08">吟遊詩人</title>
+			<title code="0x09">スレイン</title>
+			<title code="0x0a">エト</title>
+			<title code="0x0b">ウッド・チャック</title>
+			<title code="0x0c">ギム</title>
+			<title code="0x0d">ディードリット</title>
+			<title code="0x0e">パーン</title>
+			<title code="0x0f">街</title>
+			<title code="0x10">シャイニングトゥリー</title>
+			<title code="0x11">覇王</title>
+			<title code="0x12">亡き戦士達への哀歌</title>
+			<title code="0x13">file_1c.bin</title>
+			<title code="0x14">ブラックバトル</title>
+			<title code="0x15">バトルソング</title>
+			<title code="0x16">バトルファンファーレ</title>
+			<title code="0x17">序曲『灰色の魔女』</title>
+			<title code="0x18">file_21.bin</title>
+			<title code="0x19">file_22.bin</title>
+			<title code="0x1a">file_23.bin</title>
+			<title code="0x1b">file_be.bin</title>
+			<title code="0x1c">file_bf.bin</title>
+			<title code="0x1d">file_c0.bin</title>
+			<title code="0x1e">file_c1.bin</title>
+			<title code="0x1f">file_c2.bin</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lodoss to Senki: Fukujinduke 2 (ロードス島戦記 福神漬2)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">hummingbird</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="fm_mix"   value="6"/>
+			<option name="ssg_mix"  value="-12"/>
+		</options>
+		<romlist archive="fukujin2_98">
+			<rom type="file" offset="-1">MUDRV2.SYS</rom>
+			<rom type="file" offset="-1">MUDRV298.COM</rom>
+			<rom type="file" offset="0x09">LODOSS.MLD</rom>
+			<rom type="file" offset="0x19">MUSIC00.MLD</rom>
+			<rom type="file" offset="0x1a">MUSIC01.MLD</rom>
+			<rom type="file" offset="0x1b">MUSIC02.MLD</rom>
+			<rom type="file" offset="0x1c">MUSIC03.MLD</rom>
+			<rom type="file" offset="0x1d">MUSIC04.MLD</rom>
+			<rom type="file" offset="0x1e">MUSIC05.MLD</rom>
+			<rom type="file" offset="0x1f">MUSIC06.MLD</rom>
+			<rom type="file" offset="0x20">MUSIC07.MLD</rom>
+			<rom type="file" offset="0x21">MUSIC08.MLD</rom>
+			<rom type="file" offset="0x22">MUSIC09.MLD</rom>
+			<rom type="file" offset="0x23">MUSIC10.MLD</rom>
+			<rom type="file" offset="0x24">MUSIC11.MLD</rom>
+			<rom type="file" offset="0x25">MUSIC12.MLD</rom>
+			<rom type="file" offset="0x26">MUSIC13.MLD</rom>
+			<rom type="file" offset="0x27">MUSIC14.MLD</rom>
+			<rom type="file" offset="0x28">MUSIC15.MLD</rom>
+			<rom type="file" offset="0x29">MUSIC16.MLD</rom>
+			<rom type="file" offset="0x2a">MUSIC17.MLD</rom>
+			<rom type="file" offset="0x2b">MUSIC18.MLD</rom>
+			<rom type="file" offset="0x2c">MUSIC19.MLD</rom>
+			<rom type="file" offset="0x2d">MUSIC20.MLD</rom>
+			<rom type="file" offset="0x2e">MUSIC21.MLD</rom>
+			<rom type="file" offset="0x2f">MUSIC22.MLD</rom>
+			<rom type="file" offset="0x30">MUSIC23.MLD</rom>
+			<rom type="file" offset="0x31">MUSIC24.MLD</rom>
+			<rom type="file" offset="0x32">MUSIC25.MLD</rom>
+			<rom type="file" offset="0x33">MUSIC26.MLD</rom>
+			<rom type="file" offset="0x34">MUSIC27.MLD</rom>
+			<rom type="file" offset="0x35">MUSIC28.MLD</rom>
+			<rom type="file" offset="0x36">MUSIC29.MLD</rom>
+			<rom type="file" offset="0x37">MUSIC30.MLD</rom>
+			<rom type="file" offset="0x38">MUSIC31.MLD</rom>
+			<rom type="file" offset="0x39">MUSIC32.MLD</rom>
+			<rom type="file" offset="0x3a">MUSIC33.MLD</rom>
+			<rom type="file" offset="0x3b">MUSIC34.MLD</rom>
+			<rom type="file" offset="0x3c">MUSIC35.MLD</rom>
+			<rom type="file" offset="0x3d">MUSIC36.MLD</rom>
+			<rom type="file" offset="0x3e">MUSIC37.MLD</rom>
+			<rom type="file" offset="0x3f">MUSIC38.MLD</rom>
+			<rom type="file" offset="0x40">MUSIC39.MLD</rom>
+			<rom type="file" offset="0x41">MUSIC40.MLD</rom>
+			<rom type="file" offset="0x42">MUSIC41.MLD</rom>
+			<rom type="file" offset="0x43">MUSIC42.MLD</rom>
+			<rom type="file" offset="0x44">MUSIC43.MLD</rom>
+			<rom type="file" offset="0x45">MUSIC44.MLD</rom>
+			<rom type="file" offset="0x46">MUSIC45.MLD</rom>
+			<rom type="file" offset="0x47">MUSIC46.MLD</rom>
+			<rom type="file" offset="0x48">MUSIC47.MLD</rom>
+			<rom type="file" offset="0x49">MUSIC48.MLD</rom>
+			<rom type="file" offset="0x4a">MUSIC49.MLD</rom>
+			<rom type="file" offset="0x4b">MUSIC50.MLD</rom>
+			<rom type="file" offset="0x4c">MUSIC51.MLD</rom>
+			<rom type="file" offset="0x4d">MUSIC52.MLD</rom>
+			<rom type="file" offset="0x4e">MUSIC53.MLD</rom>
+			<rom type="file" offset="0x4f">MUSIC54.MLD</rom>
+			<rom type="file" offset="0x50">MUSIC55.MLD</rom>
+			<rom type="file" offset="0x51">MUSIC56.MLD</rom>
+			<rom type="file" offset="0x52">MUSIC57.MLD</rom>
+			<rom type="file" offset="0x53">MUSIC58.MLD</rom>
+			<rom type="file" offset="0x54">MUSIC59.MLD</rom>
+			<rom type="file" offset="0x55">MUSIC60.MLD</rom>
+			<rom type="file" offset="0x56">MUSIC61.MLD</rom>
+			<rom type="device" offset="0">MUDRV2.SYS</rom>
+			<rom type="shell"  offset="0">MUDRV298</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x19">かなしき運命</title>
+			<title code="0x1a">悪の巣窟</title>
+			<title code="0x1b">魔導師バクナード</title>
+			<title code="0x1c">バトル・オブ・ファイヤ</title>
+			<title code="0x1d">地底探検</title>
+			<title code="0x1e">バッファローサーガ</title>
+			<title code="0x1f">バトルソング</title>
+			<title code="0x20">邪神復活</title>
+			<title code="0x21">勝利の行進</title>
+			<title code="0x22">奇跡</title>
+			<title code="0x23">迷宮伝説</title>
+			<title code="0x24">闇の洞窟</title>
+			<title code="0x25">カオス「魔の城」</title>
+			<title code="0x26">ダウン・タウン</title>
+			<title code="0x27">閉じこめられた街</title>
+			<title code="0x28">大地の怒り</title>
+			<title code="0x29">輝ける正義</title>
+			<title code="0x2a">渦巻く欲望</title>
+			<title code="0x2b">想いでのパヴァーヌ</title>
+			<title code="0x2c">許して! 女王様</title>
+			<title code="0x2d">安らぎ</title>
+			<title code="0x2e">金鱗の竜王</title>
+			<title code="0x2f">ブラックマーケット</title>
+			<title code="0x30">酒場の大道芸人</title>
+			<title code="0x31">デザート・アンド・ロック</title>
+			<title code="0x32">妖精の踊り</title>
+			<title code="0x33">勇ましき騎兵</title>
+			<title code="0x34">傭兵王</title>
+			<title code="0x35">地平の果て</title>
+			<title code="0x36">恵</title>
+			<title code="0x37">安息の街</title>
+			<title code="0x38">約束</title>
+			<title code="0x39">港</title>
+			<title code="0x3a">穏やかなる時</title>
+			<title code="0x3b">ラン・アウト</title>
+			<title code="0x3c">ささやかな喜び</title>
+			<title code="0x3d">紺碧の水平線</title>
+			<title code="0x3e">試練</title>
+			<title code="0x3f">苦悩の挫折</title>
+			<title code="0x40">新たなる緊張</title>
+			<title code="0x41">その頃…</title>
+			<title code="0x42">サーカス広場</title>
+			<title code="0x43">村</title>
+			<title code="0x44">夢</title>
+			<title code="0x45">湖底の記憶</title>
+			<title code="0x46">ロードスの危機</title>
+			<title code="0x47">飛翔</title>
+			<title code="0x48">胎動</title>
+			<title code="0x49">友達</title>
+			<title code="0x4a">暁の道</title>
+			<title code="0x4b">MUSIC50.MLD</title>
+			<title code="0x4c">MUSIC51.MLD</title>
+			<title code="0x4d">MUSIC52.MLD</title>
+			<title code="0x4e">MUSIC53.MLD</title>
+			<title code="0x4f">MUSIC54.MLD</title>
+			<title code="0x50">MUSIC55.MLD</title>
+			<title code="0x51">MUSIC56.MLD</title>
+			<title code="0x52">MUSIC57.MLD</title>
+			<title code="0x53">MUSIC58.MLD</title>
+			<title code="0x54">MUSIC59.MLD</title>
+			<title code="0x55">MUSIC60.MLD</title>
+			<title code="0x56">MUSIC61.MLD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lodoss to Senki: Fukujinduke 3 (ロードス島戦記 福神漬3)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">hummingbird</driveralias>
+		<options>
+			<option name="clockmul" value="0x08"/>
+			<option name="fm_mix"   value="6"/>
+			<option name="ssg_mix"  value="-12"/>
+		</options>
+		<romlist archiver="fukujin3_98">
+			<rom type="file" offset="-1">MUDRV3.EXE</rom>
+			<rom type="file" offset="-1">MUDRV298.COM</rom>
+			<rom type="file" offset="0x09">LODOSS.MLD</rom>
+			<rom type="file" offset="0x10">F3_MDT00.MLD</rom>
+			<rom type="file" offset="0x11">F3_MDT01.MLD</rom>
+			<rom type="file" offset="0x12">F3_MDT02.MLD</rom>
+			<rom type="file" offset="0x13">F3_MDT03.MLD</rom>
+			<rom type="file" offset="0x14">F3_MDT04.MLD</rom>
+			<rom type="file" offset="0x15">F3_MDT05.MLD</rom>
+			<rom type="file" offset="0x16">F3_MDT06.MLD</rom>
+			<rom type="file" offset="0x17">F3_MDT07.MLD</rom>
+			<rom type="file" offset="0x18">F3_MDT08.MLD</rom>
+			<rom type="file" offset="0x19">F3_MDT09.MLD</rom>
+			<rom type="file" offset="0x1a">F3_MDT10.MLD</rom>
+			<rom type="file" offset="0x1b">F3_MDT11.MLD</rom>
+			<rom type="file" offset="0x1c">F3_MDT12.MLD</rom>
+			<rom type="file" offset="0x1d">F3_MDT13.MLD</rom>
+			<rom type="file" offset="0x1e">F3_MDT14.MLD</rom>
+			<rom type="file" offset="0x1f">F3_MDT15.MLD</rom>
+			<rom type="file" offset="0x20">F3_MDT16.MLD</rom>
+			<rom type="file" offset="0x21">F3_MDT17.MLD</rom>
+			<rom type="file" offset="0x22">F3_MDT18.MLD</rom>
+			<rom type="file" offset="0x23">F3_MDT19.MLD</rom>
+			<rom type="file" offset="0x24">F3_MDT20.MLD</rom>
+			<rom type="file" offset="0x25">F3_MDT21.MLD</rom>
+			<rom type="file" offset="0x26">F3_MDT22.MLD</rom>
+			<rom type="file" offset="0x27">F3_MDT23.MLD</rom>
+			<rom type="shell"  offset="0">MUDRV3</rom>
+			<rom type="shell"  offset="0">MUDRV298</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">F3_MDT00.MLD</title>
+			<title code="0x11">F3_MDT01.MLD</title>
+			<title code="0x12">F3_MDT02.MLD</title>
+			<title code="0x13">F3_MDT03.MLD</title>
+			<title code="0x14">F3_MDT04.MLD</title>
+			<title code="0x15">F3_MDT05.MLD</title>
+			<title code="0x16">F3_MDT06.MLD</title>
+			<title code="0x17">F3_MDT07.MLD</title>
+			<title code="0x18">F3_MDT08.MLD</title>
+			<title code="0x19">F3_MDT09.MLD</title>
+			<title code="0x1a">F3_MDT10.MLD</title>
+			<title code="0x1b">F3_MDT11.MLD</title>
+			<title code="0x1c">F3_MDT12.MLD</title>
+			<title code="0x1d">F3_MDT13.MLD</title>
+			<title code="0x1e">F3_MDT14.MLD</title>
+			<title code="0x1f">F3_MDT15.MLD</title>
+			<title code="0x20">F3_MDT16.MLD</title>
+			<title code="0x21">F3_MDT17.MLD</title>
+			<title code="0x22">F3_MDT18.MLD</title>
+			<title code="0x23">F3_MDT19.MLD</title>
+			<title code="0x24">F3_MDT20.MLD</title>
+			<title code="0x25">F3_MDT21.MLD</title>
+			<title code="0x26">F3_MDT22.MLD</title>
+			<title code="0x27">F3_MDT23.MLD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Paracelsus no Maken (パラケルススの魔剣) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">hummingbird</driveralias>
+		<options>
+			<option name="ssg_mix"  value="-16"/>
+		</options>
+		<romlist archive="para_98">
+			<rom type="file" offset="-1">PARA_98.COM</rom>
+			<rom type="file" offset="-1">PARALIBD.EXE</rom>
+			<rom type="file" offset="-1">SLDEXE.COM</rom>
+			<rom type="file" offset="-1">KSNDDRV.EXZ</rom>
+			<rom type="file" offset="-1">MDZ.ARC</rom>
+			<rom type="file" offset="-1">FMTONE.DAT</rom>
+			<rom type="shell" offset="0">paralibd</rom>
+			<rom type="shell" offset="0">sldexe ksnddrv.exz</rom>
+			<rom type="shell" offset="0">PARA_98 13</rom>
+		</romlist>
+		<titlelist>
+			<title code="14">BGM #14</title>
+			<title code="15">BGM #15</title>
+			<title code="16">BGM #16</title>
+			<title code="17">BGM #17</title>
+			<title code="18">BGM #18</title>
+			<title code="19">BGM #19</title>
+			<title code="20">BGM #20</title>
+			<title code="21">BGM #21</title>
+			<title code="22">BGM #22</title>
+			<title code="23">BGM #23</title>
+			<title code="24">BGM #24</title>
+			<title code="25">BGM #25</title>
+			<title code="26">BGM #26</title>
+			<title code="27">BGM #27</title>
+			<title code="28">BGM #28</title>
+			<title code="29">BGM #29</title>
+			<title code="30">BGM #30</title>
+			<title code="31">BGM #31</title>
+			<title code="32">BGM #32</title>
+			<title code="33">BGM #33</title>
+			<title code="34">BGM #34</title>
+			<title code="35">BGM #35</title>
+			<title code="36">BGM #36</title>
+			<title code="37">BGM #37</title>
+			<title code="38">BGM #38</title>
+			<title code="39">BGM #39</title>
+			<title code="40">BGM #40</title>
+			<title code="41">BGM #41</title>
+			<title code="42">BGM #42</title>
+			<title code="43">BGM #43</title>
+			<title code="44">BGM #44</title>
+			<title code="45">BGM #45</title>
+			<title code="46">BGM #46</title>
+			<title code="47">BGM #47</title>
+			<title code="48">BGM #48</title>
+			<title code="49">BGM #49</title>
+			<title code="50">BGM #50</title>
+			<title code="51">BGM #51</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Paracelsus no Maken (パラケルススの魔剣) (MIDI)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">hummingbird</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="para_98">
+			<rom type="file" offset="-1">PARA_98.COM</rom>
+			<rom type="file" offset="-1">PARALIBD.EXE</rom>
+			<rom type="file" offset="-1">SLDEXE.COM</rom>
+			<rom type="file" offset="-1">KSNDDRV.EXZ</rom>
+			<rom type="file" offset="-1">ZMD.ARC</rom>
+			<rom type="file" offset="-1">ZMR.ARC</rom>
+			<rom type="shell" offset="0">PARALIBD</rom>
+			<rom type="shell" offset="0">SLDEXE KSNDDRV.EXZ</rom>
+			<rom type="shell" offset="0">PARA_98 12</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0101">change to SC-55</title>
+			<title code="0x0102">change to SC-55mkII</title>
+			<title code="0x0103">change to SC-88</title>
+			<title code="0x0104">change to SC-33</title>
+			<title code="0x0105">change to SC-7</title>
+			<title code="0x0106">change to GMega, GMega L</title>
+			<title code="0x0107">change to GMega LX</title>
+			<title code="0x0108">change to MSB-98LX</title>
+			<title code="0x0109">change to TG-100</title>
+			<title code="0x010a">change to TG-300</title>
+			<title code="0x010b">change to 05R/W</title>
+			<title code="0x010c">change to GM</title>
+			<title code="14">BGM #14</title>
+			<title code="15">BGM #15</title>
+			<title code="16">BGM #16</title>
+			<title code="17">BGM #17</title>
+			<title code="18">BGM #18</title>
+			<title code="19">BGM #19</title>
+			<title code="20">BGM #20</title>
+			<title code="21">BGM #21</title>
+			<title code="22">BGM #22</title>
+			<title code="23">BGM #23</title>
+			<title code="24">BGM #24</title>
+			<title code="25">BGM #25</title>
+			<title code="26">BGM #26</title>
+			<title code="27">BGM #27</title>
+			<title code="28">BGM #28</title>
+			<title code="29">BGM #29</title>
+			<title code="30">BGM #30</title>
+			<title code="31">BGM #31</title>
+			<title code="32">BGM #32</title>
+			<title code="33">BGM #33</title>
+			<title code="34">BGM #34</title>
+			<title code="35">BGM #35</title>
+			<title code="36">BGM #36</title>
+			<title code="37">BGM #37</title>
+			<title code="38">BGM #38</title>
+			<title code="39">BGM #39</title>
+			<title code="40">BGM #40</title>
+			<title code="41">BGM #41</title>
+			<title code="42">BGM #42</title>
+			<title code="43">BGM #43</title>
+			<title code="44">BGM #44</title>
+			<title code="45">BGM #45</title>
+			<title code="46">BGM #46</title>
+			<title code="47">BGM #47</title>
+			<title code="48">BGM #48</title>
+			<title code="49">BGM #49</title>
+			<title code="50">BGM #50</title>
+			<title code="51">BGM #51</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Laplace no Ma (ラプラスの魔)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">hummingbird</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="lap68snd">
+			<rom type="code">lap68snd.bin</rom>
+			<rom type="x" offset="0x08000">fmdrv.x</rom>
+			<rom type="code" offset="0x20000">laplace.snd</rom>
+			<rom type="code" offset="0x30000">song0.mfa</rom>
+			<rom type="code" offset="0x34000">song1.mfa</rom>
+			<rom type="code" offset="0x38000">song2.mfa</rom>
+			<rom type="code" offset="0x3c000">song3.mfa</rom>
+			<rom type="code" offset="0x40000">song4.mfa</rom>
+			<rom type="code" offset="0x44000">song5.mfa</rom>
+			<rom type="code" offset="0x48000">song6.mfa</rom>
+			<rom type="code" offset="0x4c000">song7.mfa</rom>
+			<rom type="code" offset="0x50000">song8.mfa</rom>
+			<rom type="code" offset="0x60000">laplace.dat</rom>
+			<rom type="code" offset="0x70000">ending.dat</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00ff">Doorway</title>
+			<title code="0x0200">明日への誓い</title>
+			<title code="0x0201">ニューカムの街</title>
+			<title code="0x0202">Pub Time Song</title>
+			<title code="0x0203">復活のクロス</title>
+			<title code="0x0301">幽霊屋敷</title>
+			<title code="0x0302">不気味な地下</title>
+			<title code="0x0300">ゴーストハンター</title>
+			<title code="0x0401">魔城</title>
+			<title code="0x0402">恐怖の回廊</title>
+			<title code="0x0405">幽霊舞踏会</title>
+			<title code="0x0406">哀しき戦士</title>
+			<title code="0x0403">南国の光</title>
+			<title code="0x0404">揺れる小船</title>
+			<title code="0x07ff">奈落の叫び</title>
+			<title code="0x0500">バトル ウィズ ハスター</title>
+			<title code="0x0501">脱出 (Escape)</title>
+			<title code="0x0800">Dizziness</title>
+			<title code="0x0801">Flywheel</title>
+			<title code="0x0802">Invitation</title>
+			<title code="0x01ff">オープニング</title>
+			<title code="0x16ff">エンディング</title>
+			<title code="0x0303">SONG3.MFA</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Lodoss to Senki 1: Haiiro no Majo (ロードス島戦記 -灰色の魔女-)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">hummingbird</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="rolw68snd">
+			<rom type="code" offset="0x00000">lorw68snd.bin</rom>
+			<rom type="code" offset="0x10000">kmdrv.r</rom>
+			<rom type="code" offset="0x12000">lodoss.sdt</rom>
+			<rom type="code" offset="0x14000">lodoss.pdt</rom>
+			<rom type="code" offset="0x28000">lodoss_.pdt</rom>
+			<rom type="code" offset="0x60000">fmt68k.mdt</rom>
+			<rom type="code" offset="0x64000">intro.mdt</rom>
+			<rom type="code" offset="0x68000">s&amp;fin.mdt</rom>
+			<rom type="code" offset="0x6c000">v&amp;fin.mdt</rom>
+			<rom type="code" offset="0x70000">mdt.000</rom>
+			<rom type="code" offset="0x74000">mdt.001</rom>
+			<rom type="code" offset="0x78000">mdt.002</rom>
+			<rom type="code" offset="0x7C000">mdt.003</rom>
+			<rom type="code" offset="0x80000">mdt.004</rom>
+			<rom type="code" offset="0x84000">mdt.005</rom>
+			<rom type="code" offset="0x88000">mdt.006</rom>
+			<rom type="code" offset="0x8C000">mdt.007</rom>
+			<rom type="code" offset="0x90000">mdt.008</rom>
+			<rom type="code" offset="0x94000">mdt.009</rom>
+			<rom type="code" offset="0x98000">mdt.010</rom>
+			<rom type="code" offset="0x9C000">mdt.011</rom>
+			<rom type="code" offset="0xA0000">mdt.012</rom>
+			<rom type="code" offset="0xA4000">mdt.013</rom>
+			<rom type="code" offset="0xA8000">mdt.014</rom>
+			<rom type="code" offset="0xAC000">mdt.015</rom>
+			<rom type="code" offset="0xB0000">mdt.016</rom>
+			<rom type="code" offset="0xB4000">mdt.017</rom>
+			<rom type="code" offset="0xB8000">mdt.018</rom>
+			<rom type="code" offset="0xBC000">mdt.019</rom>
+			<rom type="code" offset="0xC0000">mdt.020</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">ロードス島への路</title>
+			<title code="0x102">序曲『灰色の魔女』</title>
+			<title code="0x05">街</title>
+			<title code="0x06">村</title>
+			<title code="0x07">シャイニングトゥリー</title>
+			<title code="0x08">聖歌</title>
+			<title code="0x09">バザー</title>
+			<title code="0x0a">安息の宿</title>
+			<title code="0x0b">バトルソング</title>
+			<title code="0x0c">バトルファンファーレ</title>
+			<title code="0x0d">迷宮伝説</title>
+			<title code="0x0e">覇王</title>
+			<title code="0x0f">迷いの路</title>
+			<title code="0x10">ワンダーランド</title>
+			<title code="0x11">吟遊詩人</title>
+			<title code="0x12">ブラックバトル</title>
+			<title code="0x13">亡き戦士達への哀歌</title>
+			<title code="0x14">ギム</title>
+			<title code="0x15">パーン</title>
+			<title code="0x16">エト</title>
+			<title code="0x17">スレイン</title>
+			<title code="0x18">ディードリット</title>
+			<title code="0x19">ウッド・チャック</title>
+			<title code="0x03">エンディング</title>
+			<title code="0x04">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Lodoss to Senki: Fukujinduke (ロードス島戦記 福神漬)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">hummingbird</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="fukujin68snd">
+			<rom type="code" offset="0x00000">lorw68snd.bin</rom>
+			<rom type="code" offset="0x10000">kmdrv.r</rom>
+			<rom type="code" offset="0x12000">fuku.sdt</rom>
+			<rom type="code" offset="0x28000">fuku.pdt</rom>
+			<rom type="code" offset="0x60000">mdt.000</rom>
+			<rom type="code" offset="0x64000">mdt.001</rom>
+			<rom type="code" offset="0x68000">mdt.002</rom>
+			<rom type="code" offset="0x6c000">mdt.003</rom>
+			<rom type="code" offset="0x70000">mdt.004</rom>
+			<rom type="code" offset="0x74000">mdt.005</rom>
+			<rom type="code" offset="0x78000">mdt.006</rom>
+			<rom type="code" offset="0x7C000">mdt.007</rom>
+			<rom type="code" offset="0x80000">mdt.008</rom>
+			<rom type="code" offset="0x84000">mdt.009</rom>
+			<rom type="code" offset="0x88000">mdt.010</rom>
+			<rom type="code" offset="0x8C000">mdt.011</rom>
+			<rom type="code" offset="0x90000">mdt.012</rom>
+			<rom type="code" offset="0x94000">mdt.013</rom>
+			<rom type="code" offset="0x98000">mdt.014</rom>
+			<rom type="code" offset="0x9C000">mdt.015</rom>
+			<rom type="code" offset="0xA0000">mdt.016</rom>
+			<rom type="code" offset="0xA4000">mdt.017</rom>
+			<rom type="code" offset="0xA8000">mdt.018</rom>
+			<rom type="code" offset="0xAC000">mdt.019</rom>
+			<rom type="code" offset="0xB0000">mdt.020</rom>
+			<rom type="code" offset="0xB4000">mdt.021</rom>
+			<rom type="code" offset="0xB8000">mdt.022</rom>
+			<rom type="code" offset="0xBC000">mdt.023</rom>
+			<rom type="code" offset="0xC0000">mdt.024</rom>
+			<rom type="code" offset="0xC4000">mdt.025</rom>
+			<rom type="code" offset="0xC8000">mdt.026</rom>
+			<rom type="code" offset="0xCC000">mdt.027</rom>
+			<rom type="code" offset="0xD0000">mdt.028</rom>
+			<rom type="code" offset="0xD4000">mdt.029</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">序曲『灰色の魔女』</title>
+			<title code="0x02">パーン</title>
+			<title code="0x03">ディードリット</title>
+			<title code="0x04">ギム</title>
+			<title code="0x05">ウッド・チャック</title>
+			<title code="0x06">エト</title>
+			<title code="0x07">スレイン</title>
+			<title code="0x08">バトルソング</title>
+			<title code="0x09">バトルファンファーレ</title>
+			<title code="0x0a">街</title>
+			<title code="0x0b">村</title>
+			<title code="0x0c">シャイニングトゥリー</title>
+			<title code="0x0d">バザー</title>
+			<title code="0x0e">安息の宿</title>
+			<title code="0x0f">聖歌</title>
+			<title code="0x10">覇王</title>
+			<title code="0x11">吟遊詩人</title>
+			<title code="0x12">ワンダーランド</title>
+			<title code="0x13">迷いの路</title>
+			<title code="0x14">迷宮伝説</title>
+			<title code="0x15">亡き戦士達への哀歌</title>
+			<title code="0x16">ブラックバトル</title>
+			<title code="0x17">哀しみのニース</title>
+			<title code="0x18">Arrive</title>
+			<title code="0x19">ロードス島への路</title>
+			<title code="0x1a">mdt.025</title>
+			<title code="0x1b">mdt.026</title>
+			<title code="0x1c">mdt.027</title>
+			<title code="0x1d">mdt.028</title>
+			<title code="0x1e">mdt.029</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Lodoss to Senki: Fukujinduke (ロードス島戦記 福神漬)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">hummingbird</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="fukujin1_msx">
+			<rom type="code">Record of Lodoss War - Fukujinduke (1990)(Humming Bird Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x1f">BGM #1f</title>
+		</titlelist>
+	</game>
+</gamelist>

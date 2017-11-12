@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2007/08/10">
+	<!-- //Nidecom Carry -->
+	<game>
+		<name>[PC-8801] VICTORIOUS NINE</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Nidecom Carry</driveralias>
+		<options>
+			<option name="init_pc"  value="0x0100"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="vic9_88">
+			<rom type="code" offset="0x0000">MAIN</rom>
+			<rom type="code" offset="0x0100">PATCH</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">タイトル</title>
+			<title code="0x01000000">タイトル(ループ)</title>
+			<title code="0x01000001">イニング表</title>
+			<title code="0x01000003">イニング裏</title>
+			<title code="0x00000005">勝ち</title>
+			<title code="0x00000002">負け</title>
+			<title code="0x00000004">未使用</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] GYRODINE</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Nidecom Carry</driveralias>
+		<options>
+			<option name="init_pc"  value="0x0100"/>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="gyro_88">
+			<rom type="code" offset="0x0100">PATCH</rom>
+			<rom type="code" offset="0xee00">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">OPENING TITLE</title>
+			<title code="0x04">GAME START</title>
+			<title code="0x10">ENDING (?)</title>
+			<title code="0x07">SE #07 ローター音(遅め)</title>
+			<title code="0x08">SE #08 ローター音(速め)</title>
+			<title code="0x09">SE #09 破壊音</title>
+			<title code="0x0a">SE #0A ミサイル発射</title>
+			<title code="0x0b">SE #0B 機銃</title>
+			<title code="0x0c">SE #0C サイレン</title>
+			<title code="0x0d">SE #0D</title>
+			<title code="0x0e">SE #0E</title>
+			<title code="0x0f">SE #0F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] 影の伝説(OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="SHARP X1">Nidecom Carry</driveralias>
+		<options>
+			<option name="init_pc"    value="0xf800"/>
+			<option name="mdata_addr" value="0xe000"/>
+			<option name="mdata_size" value="0x0c00"/>
+		</options>
+		<romlist archive="x1kage">
+			<rom type="code" offset="0x0000">SYSX1.Z80</rom>
+			<rom type="code" offset="0xec00">OPMX1.Z80</rom>
+			<rom type="code" offset="0xf800">PATCH</rom>
+			<rom type="bgm"  offset="0x00">MO1.Z80</rom>
+			<rom type="bgm"  offset="0x01">MO2.Z80</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MO1.Z80/00 : BGM1 (メインテーマ)「走!」(NO INTRO)</title>
+			<title code="0x01000000">MO1.Z80/01 : MISS</title>
+			<title code="0x02000000">MO1.Z80/02 : BGM1 (メインテーマ)「走!」</title>
+			<title code="0x03000000">MO1.Z80/03 : EXTEND</title>
+			<title code="0x04000000">MO1.Z80/04 : SE #01</title>
+			<title code="0x05000000">MO1.Z80/05 : SE #02</title>
+			<title code="0x06000000">MO1.Z80/06 : SE #03</title>
+			<title code="0x07000000">MO1.Z80/07 : SE #04</title>
+			<title code="0x08000000">MO1.Z80/08 : SE #05</title>
+			<title code="0x09000000">MO1.Z80/09 : SE #06</title>
+			<title code="0x0a000000">MO1.Z80/0A : SE #07</title>
+			<title code="0x0b000000">MO1.Z80/0B : SE #08</title>
+			<title code="0x00000001">MO2.Z80/00 : BGM2 (ステージクリア～)「闘!」</title>
+			<title code="0x01000001">MO2.Z80/01 : MISS</title>
+			<title code="0x02000001">MO2.Z80/02 : 霧姫のテーマ(ネームレジスト)「宴!」</title>
+			<title code="0x03000001">MO2.Z80/03 : EXTEND</title>
+			<title code="0x04000001">MO2.Z80/04 : SE #09</title>
+			<title code="0x05000001">MO2.Z80/05 : SE #10</title>
+			<title code="0x06000001">MO2.Z80/06 : SE #11</title>
+			<title code="0x07000001">MO2.Z80/07 : SE #12</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] 影の伝説(PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">Nidecom Carry</driveralias>
+		<options>
+			<option name="init_pc"    value="0xf800"/>
+			<option name="mdata_addr" value="0xe000"/>
+			<option name="mdata_size" value="0x0c00"/>
+		</options>
+		<romlist archive="x1kage">
+			<rom type="code" offset="0x0000">SYSX1.Z80</rom>
+			<rom type="code" offset="0xec00">PSGX1.Z80</rom>
+			<rom type="code" offset="0xf800">PATCH</rom>
+			<rom type="bgm"  offset="0x00">MP1.Z80</rom>
+			<rom type="bgm"  offset="0x01">MP2.Z80</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">MP1.Z80/00 : BGM1 (メインテーマ)「走!」(NO INTRO)</title>
+			<title code="0x01000000">MP1.Z80/01 : MISS</title>
+			<title code="0x02000000">MP1.Z80/02 : BGM1 (メインテーマ)「走!」</title>
+			<title code="0x03000000">MP1.Z80/03 : EXTEND</title>
+			<title code="0x04000000">MP1.Z80/04 : SE #01</title>
+			<title code="0x05000000">MP1.Z80/05 : SE #02</title>
+			<title code="0x06000000">MP1.Z80/06 : SE #03</title>
+			<title code="0x07000000">MP1.Z80/07 : SE #04</title>
+			<title code="0x08000000">MP1.Z80/08 : SE #05</title>
+			<title code="0x09000000">MP1.Z80/09 : SE #06</title>
+			<title code="0x0a000000">MP1.Z80/0A : SE #07</title>
+			<title code="0x0b000000">MP1.Z80/0B : SE #08</title>
+			<title code="0x00000001">MP2.Z80/00 : BGM2 (ステージクリア～)「闘!」</title>
+			<title code="0x01000001">MP2.Z80/01 : MISS</title>
+			<title code="0x02000001">MP2.Z80/02 : 霧姫のテーマ(ネームレジスト)「宴!」</title>
+			<title code="0x03000001">MP2.Z80/03 : EXTEND</title>
+			<title code="0x04000001">MP2.Z80/04 : SE #09</title>
+			<title code="0x05000001">MP2.Z80/05 : SE #10</title>
+			<title code="0x06000001">MP2.Z80/06 : SE #11</title>
+			<title code="0x07000001">MP2.Z80/07 : SE #12</title>
+			<title code="0x08000001">MP2.Z80/08 : SE #13</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] ELEVATOR ACTION</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Nidecom Carry</driveralias>
+		<options>
+			<option name="baseclock" value="0x04"/>
+			<option name="use_rtc"   value="1"/>
+		</options>
+		<romlist archive="elvact88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x3700">DATA</rom>
+			<rom type="code" offset="0xEFB0">SNDDRV</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x00" max="0x03" extcode="0">BGM %d</range>
+			<range min="0x04" max="0x15" extcode="1">0x%02X</range>
+		</titlelist>
+	</game>
+</gamelist>

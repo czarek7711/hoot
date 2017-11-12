@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //homedata -->
+	<game>
+		<name>[PC-98] Mahjong Clinic Zoukangou (麻雀クリニック 増刊号)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">homedata</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x0c0"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="mjclnc98">
+			<rom type="file" offset="-1">mmd2.com</rom>
+			<rom type="file" offset="-1">MMD2.SYS</rom>
+			<rom type="file" offset="0x05">X08FM.T</rom>
+			<rom type="file" offset="0x10">X08BG1.M</rom>
+			<rom type="file" offset="0x11">X08BG2.M</rom>
+			<rom type="file" offset="0x12">X08BOS.M</rom>
+			<rom type="file" offset="0x13">X08ED1.M</rom>
+			<rom type="file" offset="0x14">X08EVL.M</rom>
+			<rom type="file" offset="0x15">X08EVY.M</rom>
+			<rom type="file" offset="0x16">X08GO1.M</rom>
+			<rom type="file" offset="0x17">X08KNA.M</rom>
+			<rom type="file" offset="0x18">X08KON.M</rom>
+			<rom type="file" offset="0x19">X08KTU.M</rom>
+			<rom type="file" offset="0x1a">X08MAP.M</rom>
+			<rom type="file" offset="0x1b">X08ND1.M</rom>
+			<rom type="file" offset="0x1c">X08ND2.M</rom>
+			<rom type="file" offset="0x1d">X08ND3.M</rom>
+			<rom type="file" offset="0x1e">X08ND4.M</rom>
+			<rom type="file" offset="0x1f">X08PK1.M</rom>
+			<rom type="file" offset="0x20">X08PM1.M</rom>
+			<rom type="file" offset="0x21">X08REE.M</rom>
+			<rom type="file" offset="0x22">X08REP.M</rom>
+			<rom type="file" offset="0x23">X08SHP.M</rom>
+			<rom type="file" offset="0x24">X08SLG.M</rom>
+			<rom type="file" offset="0x25">X08TD1.M</rom>
+			<rom type="device" offset="0">mmd2.sys 2048 1024</rom>
+			<rom type="shell"  offset="0">mmd2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x050010">X08BG1.M</title>
+			<title code="0x050011">X08BG2.M</title>
+			<title code="0x050012">X08BOS.M</title>
+			<title code="0x050013">X08ED1.M</title>
+			<title code="0x050014">X08EVL.M</title>
+			<title code="0x050015">X08EVY.M</title>
+			<title code="0x050016">X08GO1.M</title>
+			<title code="0x050017">X08KNA.M</title>
+			<title code="0x050018">X08KON.M</title>
+			<title code="0x050019">X08KTU.M</title>
+			<title code="0x05001a">X08MAP.M</title>
+			<title code="0x05001b">X08ND1.M</title>
+			<title code="0x05001c">X08ND2.M</title>
+			<title code="0x05001d">X08ND3.M</title>
+			<title code="0x05001e">X08ND4.M</title>
+			<title code="0x05001f">X08PK1.M</title>
+			<title code="0x050020">X08PM1.M</title>
+			<title code="0x050021">X08REE.M</title>
+			<title code="0x050022">X08REP.M</title>
+			<title code="0x050023">X08SHP.M</title>
+			<title code="0x050024">X08SLG.M</title>
+			<title code="0x050025">X08TD1.M</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Marble Madness (マーブルマッドネス)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">homedata</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="marble98">
+			<rom type="file" offset="-1">marble98.com</rom>
+			<rom type="file" offset="-1">EXMUS.COM</rom>
+			<rom type="shell" offset="0">exmus</rom>
+			<rom type="shell" offset="0">marble98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x013a">Homedata Logo</title>
+			<title code="0x0001">BGM #01</title>
+			<title code="0x0002">BGM #02</title>
+			<title code="0x0003">BGM #03</title>
+			<title code="0x0004">BGM #04</title>
+			<title code="0x0005">BGM #05</title>
+			<title code="0x0006">BGM #06</title>
+			<title code="0x0007">BGM #07</title>
+			<title code="0x0008">BGM #08</title>
+			<title code="0x0009">BGM #09</title>
+			<title code="0x000a">BGM #0a</title>
+			<title code="0x000b">BGM #0b</title>
+			<title code="0x000c">BGM #0c</title>
+			<title code="0x000d">BGM #0d</title>
+			<title code="0x000e">BGM #0e</title>
+			<title code="0x0101">SFX #01</title>
+			<title code="0x0102">SFX #02</title>
+			<title code="0x0103">SFX #03</title>
+			<title code="0x0104">SFX #04</title>
+			<title code="0x0105">SFX #05</title>
+			<title code="0x0106">SFX #06</title>
+			<title code="0x0107">SFX #07</title>
+			<title code="0x0108">SFX #08</title>
+			<title code="0x0109">SFX #09</title>
+			<title code="0x010a">SFX #0a</title>
+			<title code="0x010b">SFX #0b</title>
+			<title code="0x010c">SFX #0c</title>
+			<title code="0x010d">SFX #0d</title>
+			<title code="0x010e">SFX #0e</title>
+			<title code="0x010f">SFX #0f</title>
+			<title code="0x0110">SFX #10</title>
+			<title code="0x0111">SFX #11</title>
+			<title code="0x0112">SFX #12</title>
+			<title code="0x0113">SFX #13</title>
+			<title code="0x0114">SFX #14</title>
+			<title code="0x0115">SFX #15</title>
+			<title code="0x0116">SFX #16</title>
+			<title code="0x0117">SFX #17</title>
+			<title code="0x0118">SFX #18</title>
+			<title code="0x0119">SFX #19</title>
+			<title code="0x011a">SFX #1a</title>
+			<title code="0x011b">SFX #1b</title>
+			<title code="0x011c">SFX #1c</title>
+			<title code="0x011d">SFX #1d</title>
+			<title code="0x011e">SFX #1e</title>
+			<title code="0x011f">SFX #1f</title>
+			<title code="0x0120">SFX #20</title>
+			<title code="0x0121">SFX #21</title>
+			<title code="0x0122">SFX #22</title>
+			<title code="0x0123">SFX #23</title>
+			<title code="0x0124">SFX #24</title>
+			<title code="0x0125">SFX #25</title>
+			<title code="0x0126">SFX #26</title>
+			<title code="0x0127">SFX #27</title>
+			<title code="0x0128">SFX #28</title>
+			<title code="0x0129">SFX #29</title>
+			<title code="0x012a">SFX #2a</title>
+			<title code="0x012b">SFX #2b</title>
+			<title code="0x012c">SFX #2c</title>
+			<title code="0x012d">SFX #2d</title>
+			<title code="0x012e">SFX #2e</title>
+			<title code="0x012f">SFX #2f</title>
+			<title code="0x0130">SFX #30</title>
+			<title code="0x0131">SFX #31</title>
+			<title code="0x0132">SFX #32</title>
+			<title code="0x0133">SFX #33</title>
+			<title code="0x0134">SFX #34</title>
+			<title code="0x0135">SFX #35</title>
+			<title code="0x0136">SFX #36</title>
+			<title code="0x0137">SFX #37</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] 2069AD</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">homedata</driveralias>
+		<options>
+			<option name="ssg_mix"  value="-16"/>
+		</options>
+		<romlist archive="2069ad_98">
+			<rom type="file" offset="-1">marble98.com</rom>
+			<rom type="file" offset="-1">EXMUS.COM</rom>
+			<rom type="shell" offset="0">exmus</rom>
+			<rom type="shell" offset="0">marble98</rom>
+		</romlist>
+		<titlelist>
+			<title code="1" >BGM #01</title>
+			<title code="2" >BGM #02</title>
+			<title code="3" >BGM #03</title>
+			<title code="4" >BGM #04</title>
+			<title code="5" >BGM #05</title>
+			<title code="6" >BGM #06</title>
+			<title code="7" >BGM #07</title>
+			<title code="8" >BGM #08</title>
+			<title code="9" >BGM #09</title>
+			<title code="10">BGM #10</title>
+			<title code="11">BGM #11</title>
+			<title code="12">BGM #12</title>
+			<title code="13">BGM #13</title>
+			<title code="14">BGM #14</title>
+			<title code="15">BGM #15</title>
+			<title code="16">BGM #16</title>
+			<title code="17">BGM #17</title>
+			<title code="18">BGM #18</title>
+			<title code="19">BGM #19</title>
+			<title code="20">BGM #20</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Mahjong Yuenchi (麻雀遊園地)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">homedata</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="mahyuen_98">
+			<rom type="file" offset="-1">marble98.com</rom>
+			<rom type="file" offset="-1">EXMUS.COM</rom>
+			<rom type="shell" offset="0">exmus</rom>
+			<rom type="shell" offset="0">marble98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">Homedata Logo</title>
+			<title code="0x0002">BGM #02</title>
+			<title code="0x0003">BGM #03</title>
+			<title code="0x0004">BGM #04</title>
+			<title code="0x0005">BGM #05</title>
+			<title code="0x0006">BGM #06</title>
+			<title code="0x0007">BGM #07</title>
+			<title code="0x0008">BGM #08</title>
+			<title code="0x0009">BGM #09</title>
+			<title code="0x000a">BGM #0a</title>
+			<title code="0x000b">BGM #0b</title>
+			<title code="0x000c">BGM #0c</title>
+			<title code="0x000d">BGM #0d</title>
+			<title code="0x000e">BGM #0e</title>
+			<title code="0x000f">BGM #0f</title>
+			<title code="0x0010">BGM #10</title>
+			<title code="0x0011">BGM #11</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Alaskan Malamute G.C. (アラスカンマラミュートＧ．Ｃ．)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">homedata</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="alaskan_98">
+			<rom type="file" offset="-1">marble98.com</rom>
+			<rom type="file" offset="-1">EXMUS.COM</rom>
+			<rom type="shell" offset="0">exmus</rom>
+			<rom type="shell" offset="0">marble98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">BGM #01</title>
+			<title code="0x0002">BGM #02</title>
+			<title code="0x0004">BGM #04</title>
+			<title code="0x0005">BGM #05</title>
+			<title code="0x0007">BGM #07</title>
+			<title code="0x0008">BGM #08</title>
+			<title code="0x0009">BGM #09</title>
+			<title code="0x000a">BGM #0a</title>
+			<title code="0x000b">BGM #0b</title>
+			<title code="0x000c">BGM #0c</title>
+			<title code="0x000d">BGM #0d</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Igo Seiten (囲碁聖天)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">homedata</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="igosei98">
+			<rom type="file" offset="-1">marble98.com</rom>
+			<rom type="file" offset="-1">EXMUS.COM</rom>
+			<rom type="shell" offset="0">exmus</rom>
+			<rom type="shell" offset="0">marble98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0001">BGM #01</title>
+			<title code="0x0002">BGM #02</title>
+			<title code="0x0003">BGM #03</title>
+			<title code="0x0004">BGM #04</title>
+			<title code="0x0005">BGM #05</title>
+			<title code="0x0006">BGM #06</title>
+			<title code="0x0007">BGM #07</title>
+			<title code="0x0008">BGM #08</title>
+			<title code="0x0009">BGM #09</title>
+			<title code="0x000a">BGM #0a</title>
+			<title code="0x000b">BGM #0b</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Marble Madness (マーブルマッドネス)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">homedata</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="marble68snd">
+			<rom type="code">marble.bin</rom>
+			<rom type="x"    offset="0x10000">MUDRV.X</rom>
+			<rom type="code" offset="0x18000">MARBLE.MGD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x48">Homedata Logo</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x2d">BGM #2d</title>
+			<title code="0x0f">SFX #0f</title>
+			<title code="0x10">SFX #10</title>
+			<title code="0x11">SFX #11</title>
+			<title code="0x12">SFX #12</title>
+			<title code="0x13">SFX #13</title>
+			<title code="0x14">SFX #14</title>
+			<title code="0x15">SFX #15</title>
+			<title code="0x16">SFX #16</title>
+			<title code="0x17">SFX #17</title>
+			<title code="0x18">SFX #18</title>
+			<title code="0x19">SFX #19</title>
+			<title code="0x1a">SFX #1a</title>
+			<title code="0x1b">SFX #1b</title>
+			<title code="0x1c">SFX #1c</title>
+			<title code="0x1d">SFX #1d</title>
+			<title code="0x1e">SFX #1e</title>
+			<title code="0x1f">SFX #1f</title>
+			<title code="0x20">SFX #20</title>
+			<title code="0x21">SFX #21</title>
+			<title code="0x22">SFX #22</title>
+			<title code="0x23">SFX #23</title>
+			<title code="0x24">SFX #24</title>
+			<title code="0x25">SFX #25</title>
+			<title code="0x26">SFX #26</title>
+			<title code="0x27">SFX #27</title>
+			<title code="0x28">SFX #28</title>
+			<title code="0x29">SFX #29</title>
+			<title code="0x2a">SFX #2a</title>
+			<title code="0x2b">SFX #2b</title>
+			<title code="0x2c">SFX #2c</title>
+			<title code="0x2e">SFX #2e</title>
+			<title code="0x2f">SFX #2f</title>
+			<title code="0x30">SFX #30</title>
+			<title code="0x31">SFX #31</title>
+			<title code="0x32">SFX #32</title>
+			<title code="0x33">SFX #33</title>
+			<title code="0x34">SFX #34</title>
+			<title code="0x35">SFX #35</title>
+			<title code="0x36">SFX #36</title>
+			<title code="0x37">SFX #37</title>
+			<title code="0x38">SFX #38</title>
+			<title code="0x39">SFX #39</title>
+			<title code="0x3a">SFX #3a</title>
+			<title code="0x3b">SFX #3b</title>
+			<title code="0x3c">SFX #3c</title>
+			<title code="0x3d">SFX #3d</title>
+			<title code="0x3e">SFX #3e</title>
+			<title code="0x3f">SFX #3f</title>
+			<title code="0x40">SFX #40</title>
+			<title code="0x41">SFX #41</title>
+			<title code="0x42">SFX #42</title>
+			<title code="0x43">SFX #43</title>
+			<title code="0x44">SFX #44</title>
+			<title code="0x45">SFX #45</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 2069AD</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">homedata</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="2069ad68snd">
+			<rom type="code">2069ad.bin</rom>
+			<rom type="x"    offset="0x10000">HDMUS.X</rom>
+			<rom type="code" offset="0x18000">2069AD.MGD</rom>
+			<rom type="code" offset="0x24000">ADPCM.SMP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">Homedata Logo</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x16">SFX #16</title>
+			<title code="0x17">SFX #17</title>
+			<title code="0x18">SFX #18</title>
+			<title code="0x19">SFX #19</title>
+			<title code="0x1c">SFX #1c</title>
+			<title code="0x1d">SFX #1d</title>
+			<title code="0x1e">SFX #1e</title>
+			<title code="0x22">SFX #22</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Mahjong Yuenchi (麻雀遊園地)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">homedata</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="mjy68snd">
+			<rom type="code">2069ad.bin</rom>
+			<rom type="x"    offset="0x10000">MUDRV.X</rom>
+			<rom type="code" offset="0x18000">X1A_MUS.MGD</rom>
+			<rom type="code" offset="0x24000">X1A_PCM.SMP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Homedata Logo</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">SFX #12</title>
+			<title code="0x13">SFX #13</title>
+			<title code="0x14">SFX #14</title>
+			<title code="0x15">SFX #15</title>
+			<title code="0x16">SFX #16</title>
+			<title code="0x17">SFX #17</title>
+			<title code="0x18">SFX #18</title>
+			<title code="0x19">SFX #19</title>
+			<title code="0x1a">SFX #1a</title>
+			<title code="0x1b">SFX #1b</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Mahjong Clinic Zoukangou (麻雀クリニック 増刊号)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">homedata</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="mjc68snd">
+			<rom type="code">2069ad.bin</rom>
+			<rom type="x"    offset="0x10000">MUDRV.X</rom>
+			<rom type="code" offset="0x18000">CLINIC.MGD</rom>
+			<rom type="code" offset="0x24000">ADPCM.SMP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Homedata Logo</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">SFX #17</title>
+			<title code="0x18">SFX #18</title>
+			<title code="0x1a">SFX #1a</title>
+			<title code="0x1b">SFX #1b</title>
+			<title code="0x1d">SFX #1d</title>
+			<title code="0x1f">SFX #1f</title>
+			<title code="0x20">SFX #20</title>
+			<title code="0x21">SFX #21</title>
+			<title code="0x22">SFX #22</title>
+		</titlelist>
+	</game>
+</gamelist>

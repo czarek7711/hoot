@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //studio_genmaitya -->
+	<game>
+		<name>[PC-98] Steel GunNyan</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">studio_genmaitya</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-8"/>
+		</options>
+		<romlist archive="stgunyan">
+			<rom type="file" offset="-1">mlfplay.com</rom>
+			<rom type="file" offset="-1">MUSIC98.COM</rom>
+			<rom type="file" offset="0x05">SGNEFC.SE</rom>
+			<rom type="file" offset="0x10">SONG_A.MUS</rom>
+			<rom type="file" offset="0x11">SONG_B.MUS</rom>
+			<rom type="file" offset="0x12">SONG_C.MUS</rom>
+			<rom type="file" offset="0x13">SONG_D.MUS</rom>
+			<rom type="file" offset="0x14">SONG_E.MUS</rom>
+			<rom type="file" offset="0x15">SONG_F.MUS</rom>
+			<rom type="file" offset="0x16">SONG_G.MUS</rom>
+			<rom type="file" offset="0x17">SONG_H.MUS</rom>
+			<rom type="file" offset="0x18">SONG_I.MUS</rom>
+			<rom type="file" offset="0x19">SONG_J.MUS</rom>
+			<rom type="file" offset="0x1a">SONG_K.MUS</rom>
+			<rom type="file" offset="0x1b">SONG_L.MUS</rom>
+			<rom type="file" offset="0x1c">SONG_M.MUS</rom>
+			<rom type="file" offset="0x1d">SONG_N.MUS</rom>
+			<rom type="file" offset="0x1e">SONG_O.MUS</rom>
+			<rom type="file" offset="0x1f">SONG_P.MUS</rom>
+			<rom type="shell" offset="0">music98</rom>
+			<rom type="shell" offset="0">mlfplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000010">SONG_A.MUS</title>
+			<title code="0x000011">SONG_B.MUS</title>
+			<title code="0x000012">SONG_C.MUS</title>
+			<title code="0x000013">SONG_D.MUS</title>
+			<title code="0x000014">SONG_E.MUS</title>
+			<title code="0x000015">SONG_F.MUS</title>
+			<title code="0x000016">SONG_G.MUS</title>
+			<title code="0x000017">SONG_H.MUS</title>
+			<title code="0x000018">SONG_I.MUS</title>
+			<title code="0x000019">SONG_J.MUS</title>
+			<title code="0x00001a">SONG_K.MUS</title>
+			<title code="0x00001b">SONG_L.MUS</title>
+			<title code="0x00001c">SONG_M.MUS</title>
+			<title code="0x00001d">SONG_N.MUS</title>
+			<title code="0x00001e">SONG_O.MUS</title>
+			<title code="0x00001f">SONG_P.MUS</title>
+			<title code="0x00ffff">EFFECT #00</title>
+			<title code="0x01ffff">EFFECT #01</title>
+			<title code="0x02ffff">EFFECT #02</title>
+			<title code="0x03ffff">EFFECT #03</title>
+			<title code="0x04ffff">EFFECT #04</title>
+			<title code="0x05ffff">EFFECT #05</title>
+			<title code="0x06ffff">EFFECT #06</title>
+			<title code="0x07ffff">EFFECT #07</title>
+			<title code="0x08ffff">EFFECT #08</title>
+			<title code="0x09ffff">EFFECT #09</title>
+			<title code="0x0affff">EFFECT #10</title>
+			<title code="0x0bffff">EFFECT #11</title>
+			<title code="0x0cffff">EFFECT #12</title>
+			<title code="0x0dffff">EFFECT #13</title>
+			<title code="0x0effff">EFFECT #14</title>
+			<title code="0x0fffff">EFFECT #15</title>
+		</titlelist>
+	</game>
+</gamelist>

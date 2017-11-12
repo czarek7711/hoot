@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //tear_drop -->
+	<game>
+		<name>[PC-98] Turn Over (ターンオーバー)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">tear_drop</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="turnover_98">
+			<rom type="file" offset="-1">FMPP.COM</rom>
+			<rom type="file" offset="-1">FMP.COM</rom>
+			<rom type="file" offset="0x10">TURN_01.OPI</rom>
+			<rom type="file" offset="0x11">TURN_02.OPI</rom>
+			<rom type="file" offset="0x12">TURN_03.OPI</rom>
+			<rom type="file" offset="0x13">TURN_04.OPI</rom>
+			<rom type="file" offset="0x14">TURN_05.OPI</rom>
+			<rom type="file" offset="0x15">TURN_06.OPI</rom>
+			<rom type="file" offset="0x16">TURN_07.OPI</rom>
+			<rom type="file" offset="0x17">TURN_08.OPI</rom>
+			<rom type="file" offset="0x18">TURN_09.OPI</rom>
+			<rom type="shell" offset="0">FMP S /S /#32</rom>
+			<rom type="shell" offset="0">FMPP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Holy High School (オープニング～タイトル)</title>
+			<title code="0x11">It's Wonderful! (通常流れる曲)</title>
+			<title code="0x12">The Secret (学校内で捜査している時の曲)</title>
+			<title code="0x13">Exciting Sight (Ｈシーンの曲１)</title>
+			<title code="0x14">Private Time (学校以外の場所での曲)</title>
+			<title code="0x15">Happening (驚いたとき、ガラッと場面が変わるときの曲)</title>
+			<title code="0x16">Sexy Lesson (Ｈシーンの曲２)</title>
+			<title code="0x17">Turn Over (最後の山場の曲)</title>
+			<title code="0x18">Seeya! (エンディング～スタッフロール)</title>
+		</titlelist>
+	</game>
+</gamelist>

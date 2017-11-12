@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+					offset CDATA #IMPLIED
+					crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- origin -->
+	<game>
+		<name>[PC/AT] Ultima VI: The False Prophet (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="ultima6_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="0x09">U6ADLIB.DRV</rom>
+			<rom type="file" offset="0x10">ULTIMA.M</rom>
+			<rom type="file" offset="0x11">BOOTUP.M</rom>
+			<rom type="file" offset="0x12">INTRO.M</rom>
+			<rom type="file" offset="0x13">CREATE.M</rom>
+			<rom type="file" offset="0x14">FOREST.M</rom>
+			<rom type="file" offset="0x15">HORNPIPE.M</rom>
+			<rom type="file" offset="0x16">ENGAGE.M</rom>
+			<rom type="file" offset="0x17">STONES.M</rom>
+			<rom type="file" offset="0x18">DUNGEON.M</rom>
+			<rom type="file" offset="0x19">BRIT.M</rom>
+			<rom type="file" offset="0x1A">GARGOYLE.M</rom>
+			<rom type="file" offset="0x1B">END.M</rom>
+			<rom type="shell" offset="0">CODE</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Ultima Theme</title>
+			<title code="0x11">Bootup</title>
+			<title code="0x12">Introduction</title>
+			<title code="0x13">Character Creation</title>
+			<title code="0x14">Forest</title>
+			<title code="0x15">Captain Johne's Hornpipe</title>
+			<title code="0x16">Engagement and Melee</title>
+			<title code="0x17">Stones</title>
+			<title code="0x18">Dungeon</title>
+			<title code="0x19">Rule Britannia</title>
+			<title code="0x1A">Audchar Gargl Zenmur</title>
+			<title code="0x1B">Endgame Music</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultima VI: The False Prophet (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="ultima6_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="0x09">U6ROLAND.DRV</rom>
+			<rom type="file" offset="0x10">ULTIMA.M</rom>
+			<rom type="file" offset="0x11">BOOTUP.M</rom>
+			<rom type="file" offset="0x12">INTRO.M</rom>
+			<rom type="file" offset="0x13">CREATE.M</rom>
+			<rom type="file" offset="0x14">FOREST.M</rom>
+			<rom type="file" offset="0x15">HORNPIPE.M</rom>
+			<rom type="file" offset="0x16">ENGAGE.M</rom>
+			<rom type="file" offset="0x17">STONES.M</rom>
+			<rom type="file" offset="0x18">DUNGEON.M</rom>
+			<rom type="file" offset="0x19">BRIT.M</rom>
+			<rom type="file" offset="0x1A">GARGOYLE.M</rom>
+			<rom type="file" offset="0x1B">END.M</rom>
+			<rom type="shell" offset="0">CODE</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Ultima Theme</title>
+			<title code="0x11">Bootup</title>
+			<title code="0x12">Introduction</title>
+			<title code="0x13">Character Creation</title>
+			<title code="0x14">Forest</title>
+			<title code="0x15">Captain Johne's Hornpipe</title>
+			<title code="0x16">Engagement and Melee</title>
+			<title code="0x17">Stones</title>
+			<title code="0x18">Dungeon</title>
+			<title code="0x19">Rule Britannia</title>
+			<title code="0x1A">Audchar Gargl Zenmur</title>
+			<title code="0x1B">Endgame Music</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultima VI: The False Prophet (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="ultima6_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="0x09">U6ROLAND.DRV</rom>
+			<rom type="file" offset="0x10">ULTIMA.M</rom>
+			<rom type="file" offset="0x11">BOOTUP.M</rom>
+			<rom type="file" offset="0x12">INTRO.M</rom>
+			<rom type="file" offset="0x13">CREATE.M</rom>
+			<rom type="file" offset="0x14">FOREST.M</rom>
+			<rom type="file" offset="0x15">HORNPIPE.M</rom>
+			<rom type="file" offset="0x16">ENGAGE.M</rom>
+			<rom type="file" offset="0x17">STONES.M</rom>
+			<rom type="file" offset="0x18">DUNGEON.M</rom>
+			<rom type="file" offset="0x19">BRIT.M</rom>
+			<rom type="file" offset="0x1A">GARGOYLE.M</rom>
+			<rom type="file" offset="0x1B">END.M</rom>
+			<rom type="shell" offset="0">CODE</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Ultima Theme</title>
+			<title code="0x11">Bootup</title>
+			<title code="0x12">Introduction</title>
+			<title code="0x13">Character Creation</title>
+			<title code="0x14">Forest</title>
+			<title code="0x15">Captain Johne's Hornpipe</title>
+			<title code="0x16">Engagement and Melee</title>
+			<title code="0x17">Stones</title>
+			<title code="0x18">Dungeon</title>
+			<title code="0x19">Rule Britannia</title>
+			<title code="0x1A">Audchar Gargl Zenmur</title>
+			<title code="0x1B">Endgame Music</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultima VII: Part Two - Serpent Isle (YMF262)</name>
+		<driver type="soundblaster16">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl3_mix" value="0x200"/>
+		</options>
+		<romlist archive="u7p2si_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="9">SBP2FM.ADV</rom>			
+			<rom type="file" offset="10">SAMPLE.OPL</rom>				
+
+			<rom type="file" offset="0x1A">AD_00.XMI</rom>
+			<rom type="file" offset="0x1B">AD_01.XMI</rom>
+			<rom type="file" offset="0x1C">AD_02.XMI</rom>
+			<rom type="file" offset="0x1D">AD_03.XMI</rom>
+			<rom type="file" offset="0x1E">AD_04.XMI</rom>
+			<rom type="file" offset="0x1F">AD_05.XMI</rom>
+			<rom type="file" offset="0x20">AD_06.XMI</rom>
+			<rom type="file" offset="0x21">AD_07.XMI</rom>
+			<rom type="file" offset="0x22">AD_08.XMI</rom>
+			<rom type="file" offset="0x23">AD_09.XMI</rom>
+			<rom type="file" offset="0x24">AD_0A.XMI</rom>
+			<rom type="file" offset="0x25">AD_0B.XMI</rom>
+			<rom type="file" offset="0x26">AD_0C.XMI</rom>
+			<rom type="file" offset="0x27">AD_0D.XMI</rom>
+			<rom type="file" offset="0x28">AD_0E.XMI</rom>
+			<rom type="file" offset="0x29">AD_0F.XMI</rom>
+			<rom type="file" offset="0x2A">AD_10.XMI</rom>
+			<rom type="file" offset="0x2B">AD_11.XMI</rom>
+			<rom type="file" offset="0x2C">AD_12.XMI</rom>
+			<rom type="file" offset="0x2D">AD_13.XMI</rom>
+			<rom type="file" offset="0x2E">AD_14.XMI</rom>
+			<rom type="file" offset="0x2F">AD_15.XMI</rom>
+			<rom type="file" offset="0x30">AD_16.XMI</rom>
+			<rom type="file" offset="0x31">AD_17.XMI</rom>
+			<rom type="file" offset="0x39">AD_18.XMI</rom>
+			<rom type="file" offset="0x3A">AD_19.XMI</rom>
+			<rom type="file" offset="0x3B">AD_1A.XMI</rom>
+			<rom type="file" offset="0x3C">AD_1B.XMI</rom>
+			<rom type="file" offset="0x3D">AD_1C.XMI</rom>			
+			<rom type="file" offset="0x3E">AD_1D.XMI</rom>
+			<rom type="file" offset="0x3F">AD_1E.XMI</rom>
+			<rom type="file" offset="0x40">AD_1F.XMI</rom>			
+			<rom type="file" offset="0x41">AD_20.XMI</rom>
+			<rom type="file" offset="0x42">AD_21.XMI</rom>
+			<rom type="file" offset="0x43">AD_22.XMI</rom>
+			<rom type="file" offset="0x44">AD_23.XMI</rom>
+			<rom type="file" offset="0x45">AD_24.XMI</rom>
+			<rom type="file" offset="0x46">AD_25.XMI</rom>
+			<rom type="file" offset="0x47">AD_26.XMI</rom>
+			<rom type="file" offset="0x48">AD_27.XMI</rom>
+			<rom type="file" offset="0x49">AD_28.XMI</rom>
+			<rom type="file" offset="0x4A">AD_29.XMI</rom>
+			<rom type="file" offset="0x4B">AD_2A.XMI</rom>
+			<rom type="file" offset="0x4C">AD_2B.XMI</rom>
+			<rom type="file" offset="0x4D">AD_2C.XMI</rom>
+			<rom type="file" offset="0x4E">AD_2D.XMI</rom>
+			<rom type="file" offset="0x4F">AD_2E.XMI</rom>
+			<rom type="file" offset="0x50">AD_2F.XMI</rom>			
+			<rom type="file" offset="0x51">AD_30.XMI</rom>
+			<rom type="file" offset="0x52">AD_31.XMI</rom>
+			<rom type="file" offset="0x53">AD_32.XMI</rom>
+			<rom type="file" offset="0x54">AD_33.XMI</rom>
+			<rom type="file" offset="0x55">AD_34.XMI</rom>
+			<rom type="file" offset="0x56">AD_35.XMI</rom>
+			<rom type="file" offset="0x57">AD_36.XMI</rom>
+			<rom type="file" offset="0x58">AD_37.XMI</rom>
+			<rom type="file" offset="0x59">AD_38.XMI</rom>
+			<rom type="file" offset="0x5A">AD_39.XMI</rom>
+			<rom type="file" offset="0x5B">AD_3A.XMI</rom>
+			<rom type="file" offset="0x5C">AD_3B.XMI</rom>
+			<rom type="file" offset="0x5D">AD_3C.XMI</rom>
+			<rom type="file" offset="0x5E">AD_3D.XMI</rom>
+			<rom type="file" offset="0x5F">AD_3E.XMI</rom>
+			<rom type="file" offset="0x60">AD_3F.XMI</rom>
+			<rom type="file" offset="0x61">AD_40.XMI</rom>
+			<rom type="file" offset="0x62">AD_41.XMI</rom>
+			<rom type="file" offset="0x63">AD_42.XMI</rom>			
+			<rom type="file" offset="0x64">a_send.xmi</rom>
+			<rom type="file" offset="0x65">a_sintro.xmi</rom>
+			<rom type="file" offset="0x66">a_valor.xmi</rom>
+						
+			<rom type="shell" offset="0">HOOT.EXE NONE SBP2FM.ADV</rom>
+		</romlist>
+		<titlelist>			
+			<title code="0x1A00">BGM #00</title>
+			<title code="0x1B00">BGM #01</title>
+			<title code="0x1C00">BGM #02</title>
+			<title code="0x1D00">BGM #03</title>
+			<title code="0x1E00">BGM #04</title>
+			<title code="0x1F00">BGM #05</title>
+			<title code="0x2000">BGM #06</title>
+			<title code="0x2100">BGM #07</title>
+			<title code="0x2200">BGM #08</title>
+			<title code="0x2300">BGM #09</title>
+			<title code="0x2400">BGM #10</title>
+			<title code="0x2500">BGM #11</title>
+			<title code="0x2600">BGM #12</title>
+			<title code="0x2700">BGM #13</title>
+			<title code="0x2800">BGM #14</title>
+			<title code="0x2900">BGM #15</title>
+			<title code="0x2A00">BGM #16</title>
+			<title code="0x2B00">BGM #17</title>
+			<title code="0x2C00">BGM #18</title>
+			<title code="0x2D00">BGM #19</title>
+			<title code="0x2E00">BGM #20</title>
+			<title code="0x2F00">BGM #21</title>
+			<title code="0x3000">BGM #22</title>
+			<title code="0x3100">BGM #23</title>						
+			<title code="0x3900">BGM #24</title>
+			<title code="0x3A00">BGM #25</title>
+			<title code="0x3B00">BGM #26</title>
+			<title code="0x3C00">BGM #27</title>
+			<title code="0x3D00">BGM #28</title>			
+			<title code="0x3E00">BGM #29</title>
+			<title code="0x3F00">BGM #30</title>
+			<title code="0x4000">BGM #31</title>
+			<title code="0x4100">BGM #32</title>
+			<title code="0x4200">BGM #33</title>
+			<title code="0x4300">BGM #34</title>
+			<title code="0x4400">BGM #35</title>
+			<title code="0x4500">BGM #36</title>
+			<title code="0x4600">BGM #37</title>
+			<title code="0x4700">BGM #38</title>
+			<title code="0x4800">BGM #39</title>
+			<title code="0x4900">BGM #40</title>
+			<title code="0x4A00">BGM #41</title>
+			<title code="0x4B00">BGM #42</title>
+			<title code="0x4C00">BGM #43</title>
+			<title code="0x4D00">BGM #44</title>
+			<title code="0x4E00">BGM #45</title>
+			<title code="0x4F00">BGM #46</title>
+			<title code="0x5000">BGM #47</title>
+			<title code="0x5100">BGM #48</title>
+			<title code="0x5200">BGM #49</title>
+			<title code="0x5300">BGM #50</title>
+			<title code="0x5400">BGM #51</title>
+			<title code="0x5500">BGM #52</title>
+			<title code="0x5600">BGM #53</title>
+			<title code="0x5700">BGM #54</title>
+			<title code="0x5800">BGM #55</title>
+			<title code="0x5900">BGM #56</title>
+			<title code="0x5A00">BGM #57</title>
+			<title code="0x5B00">BGM #58</title>
+			<title code="0x5C00">BGM #59</title>
+			<title code="0x5D00">BGM #60</title>
+			<title code="0x5E00">BGM #61</title>
+			<title code="0x5F00">BGM #62</title>
+			<title code="0x6000">BGM #63</title>
+			<title code="0x6100">BGM #64</title>
+			<title code="0x6200">BGM #65</title>
+			<title code="0x6300">BGM #66</title>			
+			<title code="0x6400">a_send</title>
+			<title code="0x6500">a_sintro</title>
+			<title code="0x6600">a_valor</title>									
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultima VII: Part Two - Serpent Isle (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="u7p2si_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="9">MT32.ADV</rom>										
+			<rom type="file" offset="10">SAMPLE.MT</rom>
+			
+			<rom type="file" offset="0x1A">MT_00.XMI</rom>
+			<rom type="file" offset="0x1B">MT_01.XMI</rom>
+			<rom type="file" offset="0x1C">MT_02.XMI</rom>
+			<rom type="file" offset="0x1D">MT_03.XMI</rom>
+			<rom type="file" offset="0x1E">MT_04.XMI</rom>
+			<rom type="file" offset="0x1F">MT_05.XMI</rom>
+			<rom type="file" offset="0x20">MT_06.XMI</rom>
+			<rom type="file" offset="0x21">MT_07.XMI</rom>
+			<rom type="file" offset="0x22">MT_08.XMI</rom>
+			<rom type="file" offset="0x23">MT_09.XMI</rom>
+			<rom type="file" offset="0x24">MT_0A.XMI</rom>
+			<rom type="file" offset="0x25">MT_0B.XMI</rom>
+			<rom type="file" offset="0x26">MT_0C.XMI</rom>
+			<rom type="file" offset="0x27">MT_0D.XMI</rom>
+			<rom type="file" offset="0x28">MT_0E.XMI</rom>
+			<rom type="file" offset="0x29">MT_0F.XMI</rom>
+			<rom type="file" offset="0x2A">MT_10.XMI</rom>
+			<rom type="file" offset="0x2B">MT_11.XMI</rom>
+			<rom type="file" offset="0x2C">MT_12.XMI</rom>
+			<rom type="file" offset="0x2D">MT_13.XMI</rom>
+			<rom type="file" offset="0x2E">MT_14.XMI</rom>
+			<rom type="file" offset="0x2F">MT_15.XMI</rom>
+			<rom type="file" offset="0x30">MT_16.XMI</rom>
+			<rom type="file" offset="0x31">MT_17.XMI</rom>
+			<rom type="file" offset="0x39">MT_18.XMI</rom>
+			<rom type="file" offset="0x3A">MT_19.XMI</rom>
+			<rom type="file" offset="0x3B">MT_1A.XMI</rom>
+			<rom type="file" offset="0x3C">MT_1B.XMI</rom>
+			<rom type="file" offset="0x3D">MT_1C.XMI</rom>			
+			<rom type="file" offset="0x3E">MT_1D.XMI</rom>
+			<rom type="file" offset="0x3F">MT_1E.XMI</rom>
+			<rom type="file" offset="0x40">MT_1F.XMI</rom>			
+			<rom type="file" offset="0x41">MT_20.XMI</rom>
+			<rom type="file" offset="0x42">MT_21.XMI</rom>
+			<rom type="file" offset="0x43">MT_22.XMI</rom>
+			<rom type="file" offset="0x44">MT_23.XMI</rom>
+			<rom type="file" offset="0x45">MT_24.XMI</rom>
+			<rom type="file" offset="0x46">MT_25.XMI</rom>
+			<rom type="file" offset="0x47">MT_26.XMI</rom>
+			<rom type="file" offset="0x48">MT_27.XMI</rom>
+			<rom type="file" offset="0x49">MT_28.XMI</rom>
+			<rom type="file" offset="0x4A">MT_29.XMI</rom>
+			<rom type="file" offset="0x4B">MT_2A.XMI</rom>
+			<rom type="file" offset="0x4C">MT_2B.XMI</rom>
+			<rom type="file" offset="0x4D">MT_2C.XMI</rom>
+			<rom type="file" offset="0x4E">MT_2D.XMI</rom>
+			<rom type="file" offset="0x4F">MT_2E.XMI</rom>
+			<rom type="file" offset="0x50">MT_2F.XMI</rom>			
+			<rom type="file" offset="0x51">MT_30.XMI</rom>
+			<rom type="file" offset="0x52">MT_31.XMI</rom>
+			<rom type="file" offset="0x53">MT_32.XMI</rom>
+			<rom type="file" offset="0x54">MT_33.XMI</rom>
+			<rom type="file" offset="0x55">MT_34.XMI</rom>
+			<rom type="file" offset="0x56">MT_35.XMI</rom>
+			<rom type="file" offset="0x57">MT_36.XMI</rom>
+			<rom type="file" offset="0x58">MT_37.XMI</rom>
+			<rom type="file" offset="0x59">MT_38.XMI</rom>
+			<rom type="file" offset="0x5A">MT_39.XMI</rom>
+			<rom type="file" offset="0x5B">MT_3A.XMI</rom>
+			<rom type="file" offset="0x5C">MT_3B.XMI</rom>
+			<rom type="file" offset="0x5D">MT_3C.XMI</rom>
+			<rom type="file" offset="0x5E">MT_3D.XMI</rom>
+			<rom type="file" offset="0x5F">MT_3E.XMI</rom>
+			<rom type="file" offset="0x60">MT_3F.XMI</rom>
+			<rom type="file" offset="0x61">MT_40.XMI</rom>
+			<rom type="file" offset="0x62">MT_41.XMI</rom>
+			<rom type="file" offset="0x63">MT_42.XMI</rom>
+			<rom type="file" offset="0x64">MT_43.XMI</rom>			
+			<rom type="file" offset="0x65">r_send.xmi</rom>
+			<rom type="file" offset="0x66">r_sintro.xmi</rom>
+			<rom type="file" offset="0x67">r_valor.xmi</rom>			
+			
+			<rom type="shell" offset="0">HOOT.EXE NONE MT32.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1A00">BGM #00</title>
+			<title code="0x1B00">BGM #01</title>
+			<title code="0x1C00">BGM #02</title>
+			<title code="0x1D00">BGM #03</title>
+			<title code="0x1E00">BGM #04</title>
+			<title code="0x1F00">BGM #05</title>
+			<title code="0x2000">BGM #06</title>
+			<title code="0x2100">BGM #07</title>
+			<title code="0x2200">BGM #08</title>
+			<title code="0x2300">BGM #09</title>
+			<title code="0x2400">BGM #10</title>
+			<title code="0x2500">BGM #11</title>
+			<title code="0x2600">BGM #12</title>
+			<title code="0x2700">BGM #13</title>
+			<title code="0x2800">BGM #14</title>
+			<title code="0x2900">BGM #15</title>
+			<title code="0x2A00">BGM #16</title>
+			<title code="0x2B00">BGM #17</title>
+			<title code="0x2C00">BGM #18</title>
+			<title code="0x2D00">BGM #19</title>
+			<title code="0x2E00">BGM #20</title>
+			<title code="0x2F00">BGM #21</title>
+			<title code="0x3000">BGM #22</title>
+			<title code="0x3100">BGM #23</title>						
+			<title code="0x3900">BGM #24</title>
+			<title code="0x3A00">BGM #25</title>
+			<title code="0x3B00">BGM #26</title>
+			<title code="0x3C00">BGM #27</title>
+			<title code="0x3D00">BGM #28</title>			
+			<title code="0x3E00">BGM #29</title>
+			<title code="0x3F00">BGM #30</title>
+			<title code="0x4000">BGM #31</title>
+			<title code="0x4100">BGM #32</title>
+			<title code="0x4200">BGM #33</title>
+			<title code="0x4300">BGM #34</title>
+			<title code="0x4400">BGM #35</title>
+			<title code="0x4500">BGM #36</title>
+			<title code="0x4600">BGM #37</title>
+			<title code="0x4700">BGM #38</title>
+			<title code="0x4800">BGM #39</title>
+			<title code="0x4900">BGM #40</title>
+			<title code="0x4A00">BGM #41</title>
+			<title code="0x4B00">BGM #42</title>
+			<title code="0x4C00">BGM #43</title>
+			<title code="0x4D00">BGM #44</title>
+			<title code="0x4E00">BGM #45</title>
+			<title code="0x4F00">BGM #46</title>
+			<title code="0x5000">BGM #47</title>
+			<title code="0x5100">BGM #48</title>
+			<title code="0x5200">BGM #49</title>
+			<title code="0x5300">BGM #50</title>
+			<title code="0x5400">BGM #51</title>
+			<title code="0x5500">BGM #52</title>
+			<title code="0x5600">BGM #53</title>
+			<title code="0x5700">BGM #54</title>
+			<title code="0x5800">BGM #55</title>
+			<title code="0x5900">BGM #56</title>
+			<title code="0x5A00">BGM #57</title>
+			<title code="0x5B00">BGM #58</title>
+			<title code="0x5C00">BGM #59</title>
+			<title code="0x5D00">BGM #60</title>
+			<title code="0x5E00">BGM #61</title>
+			<title code="0x5F00">BGM #62</title>
+			<title code="0x6000">BGM #63</title>
+			<title code="0x6100">BGM #64</title>
+			<title code="0x6200">BGM #65</title>
+			<title code="0x6300">BGM #66</title>
+			<title code="0x6400">BGM #67</title>			
+			<title code="0x6500">r_send</title>
+			<title code="0x6600">r_sintro</title>
+			<title code="0x6700">r_valor</title>			
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultima VII: Part Two - Serpent Isle (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="u7p2si_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="9">MT32.ADV</rom>										
+			<rom type="file" offset="10">SAMPLE.MT</rom>
+			
+			<rom type="file" offset="0x1A">MT_00.XMI</rom>
+			<rom type="file" offset="0x1B">MT_01.XMI</rom>
+			<rom type="file" offset="0x1C">MT_02.XMI</rom>
+			<rom type="file" offset="0x1D">MT_03.XMI</rom>
+			<rom type="file" offset="0x1E">MT_04.XMI</rom>
+			<rom type="file" offset="0x1F">MT_05.XMI</rom>
+			<rom type="file" offset="0x20">MT_06.XMI</rom>
+			<rom type="file" offset="0x21">MT_07.XMI</rom>
+			<rom type="file" offset="0x22">MT_08.XMI</rom>
+			<rom type="file" offset="0x23">MT_09.XMI</rom>
+			<rom type="file" offset="0x24">MT_0A.XMI</rom>
+			<rom type="file" offset="0x25">MT_0B.XMI</rom>
+			<rom type="file" offset="0x26">MT_0C.XMI</rom>
+			<rom type="file" offset="0x27">MT_0D.XMI</rom>
+			<rom type="file" offset="0x28">MT_0E.XMI</rom>
+			<rom type="file" offset="0x29">MT_0F.XMI</rom>
+			<rom type="file" offset="0x2A">MT_10.XMI</rom>
+			<rom type="file" offset="0x2B">MT_11.XMI</rom>
+			<rom type="file" offset="0x2C">MT_12.XMI</rom>
+			<rom type="file" offset="0x2D">MT_13.XMI</rom>
+			<rom type="file" offset="0x2E">MT_14.XMI</rom>
+			<rom type="file" offset="0x2F">MT_15.XMI</rom>
+			<rom type="file" offset="0x30">MT_16.XMI</rom>
+			<rom type="file" offset="0x31">MT_17.XMI</rom>
+			<rom type="file" offset="0x39">MT_18.XMI</rom>
+			<rom type="file" offset="0x3A">MT_19.XMI</rom>
+			<rom type="file" offset="0x3B">MT_1A.XMI</rom>
+			<rom type="file" offset="0x3C">MT_1B.XMI</rom>
+			<rom type="file" offset="0x3D">MT_1C.XMI</rom>			
+			<rom type="file" offset="0x3E">MT_1D.XMI</rom>
+			<rom type="file" offset="0x3F">MT_1E.XMI</rom>
+			<rom type="file" offset="0x40">MT_1F.XMI</rom>			
+			<rom type="file" offset="0x41">MT_20.XMI</rom>
+			<rom type="file" offset="0x42">MT_21.XMI</rom>
+			<rom type="file" offset="0x43">MT_22.XMI</rom>
+			<rom type="file" offset="0x44">MT_23.XMI</rom>
+			<rom type="file" offset="0x45">MT_24.XMI</rom>
+			<rom type="file" offset="0x46">MT_25.XMI</rom>
+			<rom type="file" offset="0x47">MT_26.XMI</rom>
+			<rom type="file" offset="0x48">MT_27.XMI</rom>
+			<rom type="file" offset="0x49">MT_28.XMI</rom>
+			<rom type="file" offset="0x4A">MT_29.XMI</rom>
+			<rom type="file" offset="0x4B">MT_2A.XMI</rom>
+			<rom type="file" offset="0x4C">MT_2B.XMI</rom>
+			<rom type="file" offset="0x4D">MT_2C.XMI</rom>
+			<rom type="file" offset="0x4E">MT_2D.XMI</rom>
+			<rom type="file" offset="0x4F">MT_2E.XMI</rom>
+			<rom type="file" offset="0x50">MT_2F.XMI</rom>			
+			<rom type="file" offset="0x51">MT_30.XMI</rom>
+			<rom type="file" offset="0x52">MT_31.XMI</rom>
+			<rom type="file" offset="0x53">MT_32.XMI</rom>
+			<rom type="file" offset="0x54">MT_33.XMI</rom>
+			<rom type="file" offset="0x55">MT_34.XMI</rom>
+			<rom type="file" offset="0x56">MT_35.XMI</rom>
+			<rom type="file" offset="0x57">MT_36.XMI</rom>
+			<rom type="file" offset="0x58">MT_37.XMI</rom>
+			<rom type="file" offset="0x59">MT_38.XMI</rom>
+			<rom type="file" offset="0x5A">MT_39.XMI</rom>
+			<rom type="file" offset="0x5B">MT_3A.XMI</rom>
+			<rom type="file" offset="0x5C">MT_3B.XMI</rom>
+			<rom type="file" offset="0x5D">MT_3C.XMI</rom>
+			<rom type="file" offset="0x5E">MT_3D.XMI</rom>
+			<rom type="file" offset="0x5F">MT_3E.XMI</rom>
+			<rom type="file" offset="0x60">MT_3F.XMI</rom>
+			<rom type="file" offset="0x61">MT_40.XMI</rom>
+			<rom type="file" offset="0x62">MT_41.XMI</rom>
+			<rom type="file" offset="0x63">MT_42.XMI</rom>
+			<rom type="file" offset="0x64">MT_43.XMI</rom>			
+			<rom type="file" offset="0x65">r_send.xmi</rom>
+			<rom type="file" offset="0x66">r_sintro.xmi</rom>
+			<rom type="file" offset="0x67">r_valor.xmi</rom>			
+			
+			<rom type="shell" offset="0">HOOT.EXE NONE MT32.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1A00">BGM #00</title>
+			<title code="0x1B00">BGM #01</title>
+			<title code="0x1C00">BGM #02</title>
+			<title code="0x1D00">BGM #03</title>
+			<title code="0x1E00">BGM #04</title>
+			<title code="0x1F00">BGM #05</title>
+			<title code="0x2000">BGM #06</title>
+			<title code="0x2100">BGM #07</title>
+			<title code="0x2200">BGM #08</title>
+			<title code="0x2300">BGM #09</title>
+			<title code="0x2400">BGM #10</title>
+			<title code="0x2500">BGM #11</title>
+			<title code="0x2600">BGM #12</title>
+			<title code="0x2700">BGM #13</title>
+			<title code="0x2800">BGM #14</title>
+			<title code="0x2900">BGM #15</title>
+			<title code="0x2A00">BGM #16</title>
+			<title code="0x2B00">BGM #17</title>
+			<title code="0x2C00">BGM #18</title>
+			<title code="0x2D00">BGM #19</title>
+			<title code="0x2E00">BGM #20</title>
+			<title code="0x2F00">BGM #21</title>
+			<title code="0x3000">BGM #22</title>
+			<title code="0x3100">BGM #23</title>						
+			<title code="0x3900">BGM #24</title>
+			<title code="0x3A00">BGM #25</title>
+			<title code="0x3B00">BGM #26</title>
+			<title code="0x3C00">BGM #27</title>
+			<title code="0x3D00">BGM #28</title>			
+			<title code="0x3E00">BGM #29</title>
+			<title code="0x3F00">BGM #30</title>
+			<title code="0x4000">BGM #31</title>
+			<title code="0x4100">BGM #32</title>
+			<title code="0x4200">BGM #33</title>
+			<title code="0x4300">BGM #34</title>
+			<title code="0x4400">BGM #35</title>
+			<title code="0x4500">BGM #36</title>
+			<title code="0x4600">BGM #37</title>
+			<title code="0x4700">BGM #38</title>
+			<title code="0x4800">BGM #39</title>
+			<title code="0x4900">BGM #40</title>
+			<title code="0x4A00">BGM #41</title>
+			<title code="0x4B00">BGM #42</title>
+			<title code="0x4C00">BGM #43</title>
+			<title code="0x4D00">BGM #44</title>
+			<title code="0x4E00">BGM #45</title>
+			<title code="0x4F00">BGM #46</title>
+			<title code="0x5000">BGM #47</title>
+			<title code="0x5100">BGM #48</title>
+			<title code="0x5200">BGM #49</title>
+			<title code="0x5300">BGM #50</title>
+			<title code="0x5400">BGM #51</title>
+			<title code="0x5500">BGM #52</title>
+			<title code="0x5600">BGM #53</title>
+			<title code="0x5700">BGM #54</title>
+			<title code="0x5800">BGM #55</title>
+			<title code="0x5900">BGM #56</title>
+			<title code="0x5A00">BGM #57</title>
+			<title code="0x5B00">BGM #58</title>
+			<title code="0x5C00">BGM #59</title>
+			<title code="0x5D00">BGM #60</title>
+			<title code="0x5E00">BGM #61</title>
+			<title code="0x5F00">BGM #62</title>
+			<title code="0x6000">BGM #63</title>
+			<title code="0x6100">BGM #64</title>
+			<title code="0x6200">BGM #65</title>
+			<title code="0x6300">BGM #66</title>
+			<title code="0x6400">BGM #67</title>			
+			<title code="0x6500">send</title>
+			<title code="0x6600">sintro</title>
+			<title code="0x6700">valor</title>			
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultima VIII - Pagan (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="ultima8_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">ADLIB.ADV</rom>
+			<rom type="file" offset="10">SAMPLE.AD</rom>
+      <rom type="file" offset="0x10">XMI00033.XMI</rom>
+      <rom type="file" offset="0x11">XMI00034.XMI</rom>
+			<rom type="file" offset="0x12">XMI00035.XMI</rom>
+			<rom type="file" offset="0x13">XMI00036.XMI</rom>
+			<rom type="file" offset="0x14">XMI00037.XMI</rom>
+			<rom type="file" offset="0x15">XMI00038.XMI</rom>
+			<rom type="file" offset="0x16">XMI00039.XMI</rom>
+			<rom type="file" offset="0x17">XMI00040.XMI</rom>
+			<rom type="file" offset="0x18">XMI00041.XMI</rom>
+			<rom type="file" offset="0x19">XMI00042.XMI</rom>
+			<rom type="file" offset="0x1A">XMI00043.XMI</rom>
+			<rom type="file" offset="0x1B">XMI00044.XMI</rom>
+			<rom type="file" offset="0x1C">XMI00045.XMI</rom>
+			<rom type="file" offset="0x1D">XMI00046.XMI</rom>
+			<rom type="file" offset="0x1E">XMI00047.XMI</rom>
+			<rom type="file" offset="0x1F">XMI00048.XMI</rom>
+			<rom type="file" offset="0x20">XMI00049.XMI</rom>
+			<rom type="file" offset="0x21">XMI00050.XMI</rom>
+			<rom type="file" offset="0x22">XMI00051.XMI</rom>
+			<rom type="file" offset="0x23">XMI00052.XMI</rom>
+			<rom type="file" offset="0x24">XMI00053.XMI</rom>
+			<rom type="file" offset="0x25">XMI00054.XMI</rom>
+			<rom type="file" offset="0x26">XMI00055.XMI</rom>
+			<rom type="file" offset="0x27">XMI00056.XMI</rom>
+			<rom type="file" offset="0x28">XMI00057.XMI</rom>
+			<rom type="file" offset="0x29">XMI00058.XMI</rom>
+			<rom type="file" offset="0x2A">XMI00059.XMI</rom>
+			<rom type="file" offset="0x2B">XMI00060.XMI</rom>
+			<rom type="file" offset="0x2C">XMI00061.XMI</rom>
+			<rom type="file" offset="0x2D">XMI00062.XMI</rom>
+			<rom type="file" offset="0x2E">XMI00063.XMI</rom>
+			<rom type="file" offset="0x2F">XMI00064.XMI</rom>
+			<rom type="file" offset="0x30">XMI00065.XMI</rom>
+      <rom type="shell" offset="0">HOOT.EXE NONE ADLIB.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000"> Death</title>
+			<title code="0x1100"> East Road</title>
+			<title code="0x1200"> Intro - part 1</title>
+			<title code="0x1300"> Intro - part 2 "Falling"</title>
+			<title code="0x1400"> Intro - part 3 "Main Theme"</title>
+			<title code="0x1500"> Docks</title>
+			<title code="0x1600"> Execution scene - part 1</title>
+			<title code="0x1700"> Execution scene - part 2 "Snare"</title>
+			<title code="0x1800"> Execution scene - part 3 "Chopping"</title>
+			<title code="0x1900"> Tenebrae</title>
+			<title code="0x1A00"> Reef</title>
+			<title code="0x1B00"> The Path Of Air</title>
+			<title code="0x1C00"> Combat</title>
+			<title code="0x1D00"> Shrine</title>
+			<title code="0x1E00"> Stabing</title>
+			<title code="0x1F00"> The Path Of Water</title>
+			<title code="0x2000"> Hydros</title>
+			<title code="0x2100"> Etheral Plane</title>
+			<title code="0x2200"> Release</title>
+			<title code="0x2300"> The Path of Fire</title>
+			<title code="0x2400"> Pyros</title>
+			<title code="0x2500"> Fanfare</title>
+			<title code="0x2600"> Running</title>
+			<title code="0x2700"> Endgame</title>
+			<title code="0x2800"> The Dead City</title>
+			<title code="0x2900"> Quotes</title>
+			<title code="0x2A00"> Catacombs</title>
+			<title code="0x2B00"> Stratos</title>
+			<title code="0x2C00"> Spells</title>
+			<title code="0x2D00"> Lithos</title>
+			<title code="0x2E00"> Cemetary</title>
+			<title code="0x2F00"> Zealans</title>
+			<title code="0x3000"> The Path of Earth</title>
+    </titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultima VIII - Pagan (GM)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="ultima8_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MIDI.ADV</rom>
+      <rom type="file" offset="0x10">XMI00000.XMI</rom>
+      <rom type="file" offset="0x11">XMI00001.XMI</rom>
+			<rom type="file" offset="0x12">XMI00002.XMI</rom>
+			<rom type="file" offset="0x13">XMI00003.XMI</rom>
+			<rom type="file" offset="0x14">XMI00004.XMI</rom>
+			<rom type="file" offset="0x15">XMI00005.XMI</rom>
+			<rom type="file" offset="0x16">XMI00006.XMI</rom>
+			<rom type="file" offset="0x17">XMI00007.XMI</rom>
+			<rom type="file" offset="0x18">XMI00008.XMI</rom>
+			<rom type="file" offset="0x19">XMI00009.XMI</rom>
+			<rom type="file" offset="0x1A">XMI00010.XMI</rom>
+			<rom type="file" offset="0x1B">XMI00011.XMI</rom>
+			<rom type="file" offset="0x1C">XMI00012.XMI</rom>
+			<rom type="file" offset="0x1D">XMI00013.XMI</rom>
+			<rom type="file" offset="0x1E">XMI00014.XMI</rom>
+			<rom type="file" offset="0x1F">XMI00015.XMI</rom>
+			<rom type="file" offset="0x20">XMI00016.XMI</rom>
+			<rom type="file" offset="0x21">XMI00017.XMI</rom>
+			<rom type="file" offset="0x22">XMI00018.XMI</rom>
+			<rom type="file" offset="0x23">XMI00019.XMI</rom>
+			<rom type="file" offset="0x24">XMI00020.XMI</rom>
+			<rom type="file" offset="0x25">XMI00021.XMI</rom>
+			<rom type="file" offset="0x26">XMI00022.XMI</rom>
+			<rom type="file" offset="0x27">XMI00023.XMI</rom>
+			<rom type="file" offset="0x28">XMI00024.XMI</rom>
+			<rom type="file" offset="0x29">XMI00025.XMI</rom>
+			<rom type="file" offset="0x2A">XMI00026.XMI</rom>
+			<rom type="file" offset="0x2B">XMI00027.XMI</rom>
+			<rom type="file" offset="0x2C">XMI00028.XMI</rom>
+			<rom type="file" offset="0x2D">XMI00029.XMI</rom>
+			<rom type="file" offset="0x2E">XMI00030.XMI</rom>
+			<rom type="file" offset="0x2F">XMI00031.XMI</rom>
+			<rom type="file" offset="0x30">XMI00032.XMI</rom>
+      <rom type="shell" offset="0">HOOT.EXE NONE MIDI.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000"> Death</title>
+			<title code="0x1100"> East Road</title>
+			<title code="0x1200"> Intro - part 1</title>
+			<title code="0x1300"> Intro - part 2 "Falling"</title>
+			<title code="0x1400"> Intro - part 3 "Main Theme"</title>
+			<title code="0x1500"> Docks</title>
+			<title code="0x1600"> Execution scene - part 1</title>
+			<title code="0x1700"> Execution scene - part 2 "Snare"</title>
+			<title code="0x1800"> Execution scene - part 3 "Chopping"</title>
+			<title code="0x1900"> Tenebrae</title>
+			<title code="0x1A00"> Reef</title>
+			<title code="0x1B00"> The Path Of Air</title>
+			<title code="0x1C00"> Combat</title>
+			<title code="0x1D00"> Shrine</title>
+			<title code="0x1E00"> Stabing</title>
+			<title code="0x1F00"> The Path Of Water</title>
+			<title code="0x2000"> Hydros</title>
+			<title code="0x2100"> Etheral Plane</title>
+			<title code="0x2200"> Release</title>
+			<title code="0x2300"> The Path of Fire</title>
+			<title code="0x2400"> Pyros</title>
+			<title code="0x2500"> Fanfare</title>
+			<title code="0x2600"> Running</title>
+			<title code="0x2700"> Endgame</title>
+			<title code="0x2800"> The Dead City</title>
+			<title code="0x2900"> Quotes</title>
+			<title code="0x2A00"> Catacombs</title>
+			<title code="0x2B00"> Stratos</title>
+			<title code="0x2C00"> Spells</title>
+			<title code="0x2D00"> Lithos</title>
+			<title code="0x2E00"> Cemetary</title>
+			<title code="0x2F00"> Zealans</title>
+			<title code="0x3000"> The Path of Earth</title>
+    </titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultima Underworld: The Stygian Abyss / George Sanger, Dave Govett/ 1992 Origin (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="ultimauw_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">SAMPLE.MT</rom>
+			<rom type="file" offset="-1">MT32.ADV</rom>
+			<rom type="file" offset="0x10">UW01.XMI</rom>
+			<rom type="file" offset="0x11">UW02.XMI</rom>
+			<rom type="file" offset="0x12">UW03.XMI</rom>
+			<rom type="file" offset="0x13">UW04.XMI</rom>
+			<rom type="file" offset="0x14">UW05.XMI</rom>
+			<rom type="file" offset="0x15">UW06.XMI</rom>
+			<rom type="file" offset="0x16">UW07.XMI</rom>
+			<rom type="file" offset="0x17">UW10.XMI</rom>
+			<rom type="file" offset="0x18">UW11.XMI</rom>
+			<rom type="file" offset="0x19">UW12.XMI</rom>
+			<rom type="file" offset="0x1A">UW13.XMI</rom>
+			<rom type="file" offset="0x1B">UW15.XMI</rom>
+			<rom type="shell" offset="0">HOOT.EXE NONE MT32.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">BGM #01</title>
+			<title code="0x1100">BGM #02</title>
+			<title code="0x1200">BGM #03</title>
+			<title code="0x1300">BGM #04</title>
+			<title code="0x1400">BGM #05</title>
+			<title code="0x1500">BGM #06</title>
+			<title code="0x1600">BGM #07</title>
+			<title code="0x1700">BGM #08</title>
+			<title code="0x1800">BGM #09</title>
+			<title code="0x1900">BGM #10</title>
+			<title code="0x1A00">BGM #11</title>
+			<title code="0x1B00">BGM #12</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultima Underworld II: Labyrinth of Worlds (YMF262)</name>
+		<driver type="soundblaster16">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl3_mix" value="0x200"/>
+		</options>
+		<romlist archive="ultimauw2_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">SAMPLE.OPL</rom>
+			<rom type="file" offset="-1">SBP2FM.ADV</rom>
+			<rom type="file" offset="0x10">UWA01.XMI</rom>
+			<rom type="file" offset="0x11">UWA02.XMI</rom>
+			<rom type="file" offset="0x12">UWA03.XMI</rom>
+			<rom type="file" offset="0x13">UWA04.XMI</rom>
+			<rom type="file" offset="0x14">UWA05.XMI</rom>
+			<rom type="file" offset="0x15">UWA06.XMI</rom>
+			<rom type="file" offset="0x16">UWA07.XMI</rom>
+			<rom type="file" offset="0x17">UWA10.XMI</rom>
+			<rom type="file" offset="0x18">UWA11.XMI</rom>
+			<rom type="file" offset="0x19">UWA12.XMI</rom>
+			<rom type="file" offset="0x1A">UWA13.XMI</rom>
+			<rom type="file" offset="0x1B">UWA14.XMI</rom>
+			<rom type="file" offset="0x1C">UWA15.XMI</rom>
+			<rom type="file" offset="0x1D">UWA16.XMI</rom>
+			<rom type="file" offset="0x1E">UWA17.XMI</rom>
+			<rom type="file" offset="0x1F">UWA30.XMI</rom>
+			<rom type="file" offset="0x20">UWA31.XMI</rom>
+			<rom type="shell" offset="0">HOOT.EXE NONE SBP2FM.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">BGM #01</title>
+			<title code="0x1100">BGM #02</title>
+			<title code="0x1200">BGM #03</title>
+			<title code="0x1300">BGM #04</title>
+			<title code="0x1400">BGM #05</title>
+			<title code="0x1500">BGM #06</title>
+			<title code="0x1600">BGM #07</title>
+			<title code="0x1700">BGM #08</title>
+			<title code="0x1800">BGM #09</title>
+			<title code="0x1900">BGM #10</title>
+			<title code="0x1A00">BGM #11</title>
+			<title code="0x1B00">BGM #12</title>
+			<title code="0x1C00">BGM #13</title>
+			<title code="0x1D00">BGM #14</title>
+			<title code="0x1E00">BGM #15</title>
+			<title code="0x1F00">BGM #16</title>
+			<title code="0x2000">BGM #17</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultima Underworld II: Labyrinth of Worlds (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="ultimauw2_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">SAMPLE.MT</rom>
+			<rom type="file" offset="-1">MT32.ADV</rom>
+			<rom type="file" offset="0x10">UWR01.XMI</rom>
+			<rom type="file" offset="0x11">UWR02.XMI</rom>
+			<rom type="file" offset="0x12">UWR03.XMI</rom>
+			<rom type="file" offset="0x13">UWR04.XMI</rom>
+			<rom type="file" offset="0x14">UWR05.XMI</rom>
+			<rom type="file" offset="0x15">UWR06.XMI</rom>
+			<rom type="file" offset="0x16">UWR07.XMI</rom>
+			<rom type="file" offset="0x17">UWR10.XMI</rom>
+			<rom type="file" offset="0x18">UWR11.XMI</rom>
+			<rom type="file" offset="0x19">UWR12.XMI</rom>
+			<rom type="file" offset="0x1A">UWR13.XMI</rom>
+			<rom type="file" offset="0x1B">UWR14.XMI</rom>
+			<rom type="file" offset="0x1C">UWR15.XMI</rom>
+			<rom type="file" offset="0x1D">UWR16.XMI</rom>
+			<rom type="file" offset="0x1E">UWR17.XMI</rom>
+			<rom type="file" offset="0x1F">UWR30.XMI</rom>
+			<rom type="file" offset="0x20">UWR31.XMI</rom>
+			<rom type="shell" offset="0">HOOT.EXE NONE MT32.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">BGM #01</title>
+			<title code="0x1100">BGM #02</title>
+			<title code="0x1200">BGM #03</title>
+			<title code="0x1300">BGM #04</title>
+			<title code="0x1400">BGM #05</title>
+			<title code="0x1500">BGM #06</title>
+			<title code="0x1600">BGM #07</title>
+			<title code="0x1700">BGM #08</title>
+			<title code="0x1800">BGM #09</title>
+			<title code="0x1900">BGM #10</title>
+			<title code="0x1A00">BGM #11</title>
+			<title code="0x1B00">BGM #12</title>
+			<title code="0x1C00">BGM #13</title>
+			<title code="0x1D00">BGM #14</title>
+			<title code="0x1E00">BGM #15</title>
+			<title code="0x1F00">BGM #16</title>
+			<title code="0x2000">BGM #17</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultima Underworld II: Labyrinth of Worlds (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="ultimauw2_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">SAMPLE.MT</rom>
+			<rom type="file" offset="-1">MT32.ADV</rom>
+			<rom type="file" offset="0x10">UWR01.XMI</rom>
+			<rom type="file" offset="0x11">UWR02.XMI</rom>
+			<rom type="file" offset="0x12">UWR03.XMI</rom>
+			<rom type="file" offset="0x13">UWR04.XMI</rom>
+			<rom type="file" offset="0x14">UWR05.XMI</rom>
+			<rom type="file" offset="0x15">UWR06.XMI</rom>
+			<rom type="file" offset="0x16">UWR07.XMI</rom>
+			<rom type="file" offset="0x17">UWR10.XMI</rom>
+			<rom type="file" offset="0x18">UWR11.XMI</rom>
+			<rom type="file" offset="0x19">UWR12.XMI</rom>
+			<rom type="file" offset="0x1A">UWR13.XMI</rom>
+			<rom type="file" offset="0x1B">UWR14.XMI</rom>
+			<rom type="file" offset="0x1C">UWR15.XMI</rom>
+			<rom type="file" offset="0x1D">UWR16.XMI</rom>
+			<rom type="file" offset="0x1E">UWR17.XMI</rom>
+			<rom type="file" offset="0x1F">UWR30.XMI</rom>
+			<rom type="file" offset="0x20">UWR31.XMI</rom>
+			<rom type="shell" offset="0">HOOT.EXE NONE MT32.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">BGM #01</title>
+			<title code="0x1100">BGM #02</title>
+			<title code="0x1200">BGM #03</title>
+			<title code="0x1300">BGM #04</title>
+			<title code="0x1400">BGM #05</title>
+			<title code="0x1500">BGM #06</title>
+			<title code="0x1600">BGM #07</title>
+			<title code="0x1700">BGM #08</title>
+			<title code="0x1800">BGM #09</title>
+			<title code="0x1900">BGM #10</title>
+			<title code="0x1A00">BGM #11</title>
+			<title code="0x1B00">BGM #12</title>
+			<title code="0x1C00">BGM #13</title>
+			<title code="0x1D00">BGM #14</title>
+			<title code="0x1E00">BGM #15</title>
+			<title code="0x1F00">BGM #16</title>
+			<title code="0x2000">BGM #17</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Wing Commander: Privateer (YMF262)</name>
+		<driver type="soundblaster16">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl3_mix" value="0x180"/>
+		</options>
+		<romlist archive="privateer_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">SBP2FM.ADV</rom>
+			<rom type="file" offset="-1">SAMPLE.OPL</rom>
+			<rom type="file" offset="0x10">OPENING.ADL</rom>
+			<rom type="file" offset="0x11">BASET000.ADL</rom>
+			<rom type="file" offset="0x12">BASET001.ADL</rom>
+			<rom type="file" offset="0x13">BASET002.ADL</rom>
+			<rom type="file" offset="0x14">BASET003.ADL</rom>
+			<rom type="file" offset="0x15">BASET004.ADL</rom>
+			<rom type="file" offset="0x16">BASET005.ADL</rom>
+			<rom type="file" offset="0x17">BASET006.ADL</rom>
+			<rom type="file" offset="0x18">BASET007.ADL</rom>
+			<rom type="file" offset="0x19">BASET008.ADL</rom>
+			<rom type="file" offset="0x1A">BASET009.ADL</rom>
+			<rom type="file" offset="0x1B">BASET010.ADL</rom>
+			<rom type="file" offset="0x1C">COMBAT04.ADL</rom>
+			<rom type="file" offset="0x1D">COMBAT05.ADL</rom>
+			<rom type="file" offset="0x1E">COMBAT06.ADL</rom>
+			<rom type="file" offset="0x1F">COMBAT07.ADL</rom>
+			<rom type="file" offset="0x20">COMBAT08.ADL</rom>
+			<rom type="file" offset="0x21">COMBAT09.ADL</rom>
+			<rom type="file" offset="0x22">CREDITS.ADL</rom>
+			<rom type="file" offset="0x23">VICTORY.ADL</rom>
+			<rom type="shell" offset="0">HOOT.EXE NONE SBP2FM.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Opening</title>
+			<title code="0x1100">Basetune 1</title>
+			<title code="0x1200">Basetune 2</title>
+			<title code="0x1300">Basetune 3</title>
+			<title code="0x1400">Basetune 4</title>
+			<title code="0x1500">Basetune 5</title>
+			<title code="0x1600">Basetune 6</title>
+			<title code="0x1700">Basetune 7</title>
+			<title code="0x1800">Basetune 8</title>
+			<title code="0x1900">Basetune 9</title>
+			<title code="0x1A00">Basetune 10</title>
+			<title code="0x1B00">Basetune 11</title>
+			<title code="0x1C00">Combat 1</title>
+			<title code="0x1D00">Combat 2</title>
+			<title code="0x1E00">Combat 3</title>
+			<title code="0x1F00">Combat 4</title>
+			<title code="0x2000">Combat 5</title>
+			<title code="0x2100">Combat 6</title>
+			<title code="0x2200">Credits</title>
+			<title code="0x2300">Victory</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Wing Commander: Privateer (SC-55)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="privateer_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MIDI.ADV</rom>
+			<rom type="file" offset="0x10">OPENING.GEN</rom>
+			<rom type="file" offset="0x11">BASET000.GEN</rom>
+			<rom type="file" offset="0x12">BASET001.GEN</rom>
+			<rom type="file" offset="0x13">BASET002.GEN</rom>
+			<rom type="file" offset="0x14">BASET003.GEN</rom>
+			<rom type="file" offset="0x15">BASET004.GEN</rom>
+			<rom type="file" offset="0x16">BASET005.GEN</rom>
+			<rom type="file" offset="0x17">BASET006.GEN</rom>
+			<rom type="file" offset="0x18">BASET007.GEN</rom>
+			<rom type="file" offset="0x19">BASET008.GEN</rom>
+			<rom type="file" offset="0x1A">BASET009.GEN</rom>
+			<rom type="file" offset="0x1B">BASET010.GEN</rom>
+			<rom type="file" offset="0x1C">COMBAT04.GEN</rom>
+			<rom type="file" offset="0x1D">COMBAT05.GEN</rom>
+			<rom type="file" offset="0x1E">COMBAT06.GEN</rom>
+			<rom type="file" offset="0x1F">COMBAT07.GEN</rom>
+			<rom type="file" offset="0x20">COMBAT08.GEN</rom>
+			<rom type="file" offset="0x21">COMBAT09.GEN</rom>
+			<rom type="file" offset="0x22">CREDITS.GEN</rom>
+			<rom type="file" offset="0x23">VICTORY.GEN</rom>
+			<rom type="shell" offset="0">HOOT.EXE NONE MIDI.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Opening</title>
+			<title code="0x1100">Basetune 1</title>
+			<title code="0x1200">Basetune 2</title>
+			<title code="0x1300">Basetune 3</title>
+			<title code="0x1400">Basetune 4</title>
+			<title code="0x1500">Basetune 5</title>
+			<title code="0x1600">Basetune 6</title>
+			<title code="0x1700">Basetune 7</title>
+			<title code="0x1800">Basetune 8</title>
+			<title code="0x1900">Basetune 9</title>
+			<title code="0x1A00">Basetune 10</title>
+			<title code="0x1B00">Basetune 11</title>
+			<title code="0x1C00">Combat 1</title>
+			<title code="0x1D00">Combat 2</title>
+			<title code="0x1E00">Combat 3</title>
+			<title code="0x1F00">Combat 4</title>
+			<title code="0x2000">Combat 5</title>
+			<title code="0x2100">Combat 6</title>
+			<title code="0x2200">Credits</title>
+			<title code="0x2300">Victory</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Wing Commander: Privateer (Vermouth, Gravis Ultrasound simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x80"/>
+		</options>
+		<romlist archive="privateer_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MIDI.ADV</rom>
+			<rom type="file" offset="0x10">OPENING.GEN</rom>
+			<rom type="file" offset="0x11">BASET000.GEN</rom>
+			<rom type="file" offset="0x12">BASET001.GEN</rom>
+			<rom type="file" offset="0x13">BASET002.GEN</rom>
+			<rom type="file" offset="0x14">BASET003.GEN</rom>
+			<rom type="file" offset="0x15">BASET004.GEN</rom>
+			<rom type="file" offset="0x16">BASET005.GEN</rom>
+			<rom type="file" offset="0x17">BASET006.GEN</rom>
+			<rom type="file" offset="0x18">BASET007.GEN</rom>
+			<rom type="file" offset="0x19">BASET008.GEN</rom>
+			<rom type="file" offset="0x1A">BASET009.GEN</rom>
+			<rom type="file" offset="0x1B">BASET010.GEN</rom>
+			<rom type="file" offset="0x1C">COMBAT04.GEN</rom>
+			<rom type="file" offset="0x1D">COMBAT05.GEN</rom>
+			<rom type="file" offset="0x1E">COMBAT06.GEN</rom>
+			<rom type="file" offset="0x1F">COMBAT07.GEN</rom>
+			<rom type="file" offset="0x20">COMBAT08.GEN</rom>
+			<rom type="file" offset="0x21">COMBAT09.GEN</rom>
+			<rom type="file" offset="0x22">CREDITS.GEN</rom>
+			<rom type="file" offset="0x23">VICTORY.GEN</rom>
+			<rom type="shell" offset="0">HOOT.EXE NONE MIDI.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Opening</title>
+			<title code="0x1100">Basetune 1</title>
+			<title code="0x1200">Basetune 2</title>
+			<title code="0x1300">Basetune 3</title>
+			<title code="0x1400">Basetune 4</title>
+			<title code="0x1500">Basetune 5</title>
+			<title code="0x1600">Basetune 6</title>
+			<title code="0x1700">Basetune 7</title>
+			<title code="0x1800">Basetune 8</title>
+			<title code="0x1900">Basetune 9</title>
+			<title code="0x1A00">Basetune 10</title>
+			<title code="0x1B00">Basetune 11</title>
+			<title code="0x1C00">Combat 1</title>
+			<title code="0x1D00">Combat 2</title>
+			<title code="0x1E00">Combat 3</title>
+			<title code="0x1F00">Combat 4</title>
+			<title code="0x2000">Combat 5</title>
+			<title code="0x2100">Combat 6</title>
+			<title code="0x2200">Credits</title>
+			<title code="0x2300">Victory</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Wing Commander: Privateer - Righteous Fire (YMF262)</name>
+		<driver type="soundblaster16">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl3_mix" value="0x180"/>
+		</options>
+		<romlist archive="priv_rf_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">SBP2FM.ADV</rom>
+			<rom type="file" offset="-1">SAMPLE.OPL</rom>
+			<rom type="file" offset="0x10">OPEN.ADL</rom>
+			<rom type="file" offset="0x11">BASET1.ADL</rom>
+			<rom type="file" offset="0x12">BASET2.ADL</rom>
+			<rom type="shell" offset="0">HOOT.EXE NONE SBP2FM.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Opening</title>
+			<title code="0x1100">Basetune 1</title>
+			<title code="0x1200">Basetune 2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Wing Commander: Privateer - Righteous Fire (SC-55)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="priv_rf_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MIDI.ADV</rom>
+			<rom type="file" offset="0x10">OPEN.GEN</rom>
+			<rom type="file" offset="0x11">BASET1.GEN</rom>
+			<rom type="file" offset="0x12">BASET2.GEN</rom>
+			<rom type="shell" offset="0">HOOT.EXE NONE MIDI.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Opening</title>
+			<title code="0x1100">Basetune 1</title>
+			<title code="0x1200">Basetune 2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Wing Commander: Privateer - Righteous Fire (Vermouth, Gravis Ultrasound simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">origin</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x80"/>
+		</options>
+		<romlist archive="priv_rf_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MIDI.ADV</rom>
+			<rom type="file" offset="0x10">OPEN.GEN</rom>
+			<rom type="file" offset="0x11">BASET1.GEN</rom>
+			<rom type="file" offset="0x12">BASET2.GEN</rom>
+			<rom type="shell" offset="0">HOOT.EXE NONE MIDI.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Opening</title>
+			<title code="0x1100">Basetune 1</title>
+			<title code="0x1200">Basetune 2</title>
+		</titlelist>
+	</game>
+</gamelist>

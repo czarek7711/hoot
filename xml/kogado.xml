@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //kogado -->
+	<game>
+		<name>[PC-88] Haja no Fuuin (覇邪の封印)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">kogado</driveralias>
+		<options>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="haja">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8000">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Ending</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Hercules (へらくれす)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">kogado</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb000"/>
+			<option name="mdata_size" value="0x3000"/>
+			<option name="mfile_size" value="0x3000"/>
+			<option name="baseclock" value="0x04"/>
+			<option name="use_vrtc"  value="0x01"/>
+		</options>
+		<romlist archive="hercules">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xb000">PROG</rom>
+			<rom type="bgm" offset="0x00">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">Round Start</title>
+			<title code="0x01000000">BGM</title>
+			<title code="0x02000000">Miss</title>
+			<title code="0x03000000">??</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Psychic War -Cosmic Soldier 2- (サイキックウォー コズミックソルジャー２)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">kogado</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf000"/>
+			<option name="mdata_size" value="0x1000"/>
+		</options>
+		<romlist archive="psywar">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xe000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">オープニング ～「起の序曲」～</title>
+			<title code="0x00000001">アンドロイドのテーマ ～「君にはチャイナ服がよく似合う」～</title>
+			<title code="0x02000001">帝国のテーマ ～「悪意の象徴」～</title>
+			<title code="0x03000001">戦闘のテーマ ～「サイキック・バトル」～</title>
+			<title code="0x01000001">レクイエム ～「君よ静かに眠れ」～</title>
+			<title code="0x04000001">エンディング ～「新たなる予感」～</title>
+			<title code="0x01000000">ばんざい！ ～「大団円」～</title>
+			<title code="0x05000001">警報</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Harajuku After Dark (原宿AFTeR DARK)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">kogado</driveralias>
+		<options>
+			<option name="init_pc" value="0x8000"/>
+		</options>
+		<romlist archive="aftdark">
+			<rom type="code" offset="0x0000">PROG</rom>
+			<rom type="code" offset="0x8000">PATCH</rom>
+			<rom type="code" offset="0xe000">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x01">聞き込み</title>
+			<title code="0x02">捜査</title>
+			<title code="0x03">告白</title>
+			<title code="0x04">出張捜査</title>
+			<title code="0x05">渋谷署</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Algeese no Tsubasa (アルギースの翼)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">kogado</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf000"/>
+			<option name="mdata_size" value="0x1000"/>
+		</options>
+		<romlist archive="arugies">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xe000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">オープニング</title>
+			<title code="0x01000000">#00-1</title>
+			<title code="0x02000000">#00-2</title>
+			<title code="0x00000001">店/メニュー</title>
+			<title code="0x01000001">戦闘</title>
+			<title code="0x02000001">#01-2</title>
+			<title code="0x03000001">フィールド</title>
+			<title code="0x04000001">#01-4</title>
+			<title code="0x03000002">城/塔</title>
+			<title code="0x04000002">#02-4</title>
+			<title code="0x05000002">#02-5</title>
+			<title code="0x03000003">#03-3</title>
+			<title code="0x04000003">#03-4</title>
+			<title code="0x01000004">ユーザーディスク作成/ゲームオーバー</title>
+			<title code="0x03000004">街</title>
+			<title code="0x03000005">#05-3</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Jikuu no Hanayome (時空の花嫁)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">kogado</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="init_pc" value="0x8000"/>
+		</options>
+		<romlist archive="jiku">
+			<rom type="code" offset="0x8000">PATCH</rom>
+			<rom type="code" offset="0x0000">DRIVER.BIN</rom>
+			<rom type="bgm" offset="0x00">MDAT1</rom>
+			<rom type="bgm" offset="0x01">MDAT2</rom>
+			<rom type="bgm" offset="0x02">MDAT3</rom>
+			<rom type="bgm" offset="0x03">MDAT4</rom>
+			<rom type="bgm" offset="0x04">MDAT5</rom>
+			<rom type="bgm" offset="0x05">MDAT6</rom>
+			<rom type="bgm" offset="0x06">MDAT7</rom>
+			<rom type="bgm" offset="0x07">MDAT8</rom>
+			<rom type="bgm" offset="0x08">MDAT9</rom>
+			<rom type="bgm" offset="0x09">MDAT10</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">デモ曲</title>
+			<title code="0x01">BGM #02</title>
+			<title code="0x06">タイトル</title>
+			<title code="0x08">街</title>
+			<title code="0x02">キャンプ</title>
+			<title code="0x04">戦闘</title>
+			<title code="0x09">タイムマシン</title>
+			<title code="0x05">ゲームオーバー</title>
+			<title code="0x03">BGM #09</title>
+			<title code="0x07">BGM #10</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] La Valeur (魔晶伝紀ラ・ヴァルー)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">kogado</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="init_pc" value="0x8000"/>
+		</options>
+		<romlist archive="lav">
+			<rom type="code" offset="0x8000">PATCH</rom>
+			<rom type="code" offset="0x0000">DRIVER.BIN</rom>
+			<rom type="bgm" offset="0x00">LDAT1</rom>
+			<rom type="bgm" offset="0x01">LDAT2</rom>
+			<rom type="bgm" offset="0x02">LDAT3</rom>
+			<rom type="bgm" offset="0x03">LDAT4</rom>
+			<rom type="bgm" offset="0x04">LDAT5</rom>
+			<rom type="bgm" offset="0x05">LDAT6</rom>
+			<rom type="bgm" offset="0x06">LDAT7</rom>
+			<rom type="bgm" offset="0x07">LDAT8</rom>
+			<rom type="bgm" offset="0x08">LDAT9</rom>
+			<rom type="bgm" offset="0x09">LDAT10</rom>
+			<rom type="bgm" offset="0x0a">LDAT11</rom>
+			<rom type="bgm" offset="0x0b">LDAT12</rom>
+			<rom type="bgm" offset="0x0c">LDAT13</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #01</title>
+			<title code="0x01">BGM #02</title>
+			<title code="0x02">BGM #03</title>
+			<title code="0x03">BGM #04</title>
+			<title code="0x04">BGM #05</title>
+			<title code="0x05">BGM #06</title>
+			<title code="0x06">BGM #07</title>
+			<title code="0x07">BGM #08</title>
+			<title code="0x08">BGM #09</title>
+			<title code="0x09">BGM #10</title>
+			<title code="0x0a">BGM #11</title>
+			<title code="0x0b">BGM #12</title>
+			<title code="0x0c">BGM #13</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Navitune (ナビチューン・ドラゴン航海記)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">kogado</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7700"/>
+			<option name="mfile_size" value="0x4000"/>
+			<option name="init_pc"    value="0x0100"/>
+		</options>
+		<romlist archive="navitune">
+			<rom type="code" offset="0x0100">PATCH</rom>
+			<rom type="code" offset="0x1000">m2.o</rom>
+			<rom type="code" offset="0x4d00">naviprg.bin</rom>
+			<rom type="code" offset="0x7700">navimus.o</rom>
+			<rom type="code" offset="0xc000">naviprg.bin</rom>
+			<rom type="bgm"  offset="0x00">navimus.o</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">BGM #01</title>
+			<title code="0x00046d00">BGM #02</title>
+			<title code="0x01079a00">BGM #03</title>
+			<title code="0x000a3a00">BGM #04</title>
+			<title code="0x000fcb00">BGM #05</title>
+			<title code="0x00132700">BGM #06</title>
+			<title code="0x01160600">BGM #07</title>
+			<title code="0x001bfd00">BGM #08</title>
+			<title code="0x001dba00">BGM #09</title>
+			<title code="0x00236f00">BGM #0a</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Navitune (ナビチューン・ドラゴン航海記)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">kogado</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="clockmul" value="0x02"/>
+			<option name="dummysndrom" value="1"/>
+		</options>
+		<romlist archive="navitn98">
+			<rom type="code" offset="0x00600">navitn98.bin</rom>
+			<rom type="code" offset="0x10000">MUSIC.O</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BGM #1</title>
+			<title code="0x11">BGM #2</title>
+			<title code="0x12">BGM #3</title>
+			<title code="0x13">BGM #4</title>
+			<title code="0x14">BGM #5</title>
+			<title code="0x15">BGM #6</title>
+			<title code="0x16">BGM #7</title>
+			<title code="0x17">BGM #8</title>
+			<title code="0x18">BGM #9</title>
+			<title code="0x19">BGM #10</title>
+			<title code="0x1a">BGM #11</title>
+			<title code="0x1b">BGM #12</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Power Dolls / Kayoko Maeda, Hiroto Saitou / 1994 Kogado (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">kogado</driveralias>
+		<options>
+			<option name="fm_mix" value="10"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="pdoll_98">
+			<rom type="file" offset="-1">EMI.COM</rom>
+			<rom type="file" offset="-1">EMIP.COM</rom>
+			<rom type="file" offset="0x10">CM_NEIRO.DAT</rom>
+			<rom type="file" offset="0x11">CM_SE.DAT</rom>
+			<rom type="file" offset="0x12">CM_LFO.DAT</rom>
+			<rom type="file" offset="0x13">CM_VIV.DAT</rom>
+			<rom type="file" offset="0x14">CM_ENV.DAT</rom>
+			<rom type="file" offset="0x20">PDL_00.CMD</rom>
+			<rom type="file" offset="0x21">PDL_01.CMD</rom>
+			<rom type="file" offset="0x22">PDL_02.CMD</rom>
+			<rom type="file" offset="0x23">PDL_03.CMD</rom>
+			<rom type="file" offset="0x24">PDL_502.CMD</rom>
+			<rom type="file" offset="0x25">PDL_70.CMD</rom>
+			<rom type="file" offset="0x26">PDL_81.CMD</rom>
+			<rom type="file" offset="0x27">PDL_END.CMD</rom>
+			<rom type="file" offset="0x28">PDL_OVER.CMD</rom>
+			<rom type="shell" offset="0">EMI</rom>
+			<rom type="shell" offset="0">EMIP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x21">Alternative Walls</title>
+			<title code="0x22">High Altitude Circle</title>
+			<title code="0x26">Power Dolls</title>
+			<title code="0x24">Land Around</title>
+			<title code="0x23">Gust of Wind</title>
+			<title code="0x20">Spank Mission</title>
+			<title code="0x25">Daybreak</title>
+			<title code="0x27">Silky Ground</title>
+			<title code="0x28">Eclipse</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Power Dolls 2 / Kayoko Maeda, Hiroto Saitou / 1994 Kogado (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">kogado</driveralias>
+		<options>
+			<option name="fm_mix" value="10"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="pdoll2_98">
+			<rom type="file" offset="-1">EMI.COM</rom>
+			<rom type="file" offset="-1">EMIP.COM</rom>
+			<rom type="file" offset="0x10">CM_NEIRO.DAT</rom>
+			<rom type="file" offset="0x11">CM_SE.DAT</rom>
+			<rom type="file" offset="0x12">CM_LFO.DAT</rom>
+			<rom type="file" offset="0x13">CM_VIV.DAT</rom>
+			<rom type="file" offset="0x14">CM_ENV.DAT</rom>
+			<rom type="file" offset="0x20">PD2_F01.CMD</rom>
+			<rom type="file" offset="0x21">PD2_F20.CMD</rom>
+			<rom type="file" offset="0x22">PD2_F30.CMD</rom>
+			<rom type="file" offset="0x23">PD2_F40.CMD</rom>
+			<rom type="file" offset="0x24">PD2_F50.CMD</rom>
+			<rom type="file" offset="0x25">PD2_F61.CMD</rom>
+			<rom type="file" offset="0x26">PD2_F70.CMD</rom>
+			<rom type="file" offset="0x27">PDM01.CMD</rom>
+			<rom type="file" offset="0x28">PDM02.CMD</rom>
+			<rom type="file" offset="0x29">PDM03.CMD</rom>
+			<rom type="file" offset="0x2a">PDM04.CMD</rom>
+			<rom type="shell" offset="0">EMI</rom>
+			<rom type="shell" offset="0">EMIP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x27">Settle Down</title>
+			<title code="0x28">Ivory Illusion</title>
+			<title code="0x25">D-Nail</title>
+			<title code="0x21">Night Raid</title>
+			<title code="0x23">Calling Me</title>
+			<title code="0x24">Out Flanks</title>
+			<title code="0x29">Take the Field</title>
+			<title code="0x20">Move In On</title>
+			<title code="0x26">Power Dolls 2</title>
+			<title code="0x2a">Streamed Blue</title>
+			<title code="0x22">Switched on "Dolls"</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Power Dolls 2 Dash / Kayoko Maeda, Hiroto Saitou / 1995 Kogado (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">kogado</driveralias>
+		<options>
+			<option name="fm_mix" value="10"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="pdoll2d_98">
+			<rom type="file" offset="-1">EMI.COM</rom>
+			<rom type="file" offset="-1">EMIP.COM</rom>
+			<rom type="file" offset="0x10">CM_NEIRO.DAT</rom>
+			<rom type="file" offset="0x11">CM_SE.DAT</rom>
+			<rom type="file" offset="0x12">CM_LFO.DAT</rom>
+			<rom type="file" offset="0x13">CM_VIV.DAT</rom>
+			<rom type="file" offset="0x14">CM_ENV.DAT</rom>
+			<rom type="file" offset="0x20">PD2_F01.CMD</rom>
+			<rom type="file" offset="0x21">PD2_F20.CMD</rom>
+			<rom type="file" offset="0x22">PD2_F30.CMD</rom>
+			<rom type="file" offset="0x23">PD2_F50.CMD</rom>
+			<rom type="file" offset="0x24">PD2_F61.CMD</rom>
+			<rom type="file" offset="0x25">PD2_F70.CMD</rom>
+			<rom type="file" offset="0x26">PD2_F80.CMD</rom>
+			<rom type="file" offset="0x27">PD2_F90.CMD</rom>
+			<rom type="file" offset="0x28">PD2_P40F.CMD</rom>
+			<rom type="file" offset="0x29">PDM01.CMD</rom>
+			<rom type="file" offset="0x2a">PDM02.CMD</rom>
+			<rom type="file" offset="0x2b">PDM03.CMD</rom>
+			<rom type="file" offset="0x2c">PDM04.CMD</rom>
+			<rom type="shell" offset="0">EMI</rom>
+			<rom type="shell" offset="0">EMIP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x29">Settle Down</title>
+			<title code="0x2a">Ivory Illusion</title>
+			<title code="0x24">D-Nail</title>
+			<title code="0x21">Night Raid</title>
+			<title code="0x28">Calling Me</title>
+			<title code="0x23">Out Flanks</title>
+			<title code="0x2b">Take the Field</title>
+			<title code="0x20">Move In On</title>
+			<title code="0x25">Power Dolls 2</title>
+			<title code="0x2c">Streamed Blue</title>
+			<title code="0x22">Switched on "Dolls"</title>
+			<title code="0x26">Nostalgia</title>
+			<title code="0x27">Rolling Steel</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Advanced Power Dolls 2 / Kayoko Maeda, Hiroto Saitou / 1996 Kogado (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">kogado</driveralias>
+		<options>
+			<option name="fm_mix" value="10"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="apdoll2_98">
+			<rom type="file" offset="-1">EMI.COM</rom>
+			<rom type="file" offset="-1">EMIP.COM</rom>
+			<rom type="file" offset="0x10">CM_NEIRO.DAT</rom>
+			<rom type="file" offset="0x11">CM_SE.DAT</rom>
+			<rom type="file" offset="0x12">CM_LFO.DAT</rom>
+			<rom type="file" offset="0x13">CM_VIV.DAT</rom>
+			<rom type="file" offset="0x14">CM_ENV.DAT</rom>
+			<rom type="file" offset="0x20">ADPD_10F.CMD</rom>
+			<rom type="file" offset="0x21">ADPD_31F.CMD</rom>
+			<rom type="file" offset="0x22">ADPD_40F.CMD</rom>
+			<rom type="file" offset="0x23">ADPD_50F.CMD</rom>
+			<rom type="file" offset="0x24">ADPD_60F.CMD</rom>
+			<rom type="file" offset="0x25">ADPD_70F.CMD</rom>
+			<rom type="file" offset="0x26">ADPD_80F.CMD</rom>
+			<rom type="file" offset="0x27">ADPD_90F.CMD</rom>
+			<rom type="file" offset="0x28">ADPD_A0F.CMD</rom>
+			<rom type="file" offset="0x29">ADPD_B0F.CMD</rom>
+			<rom type="file" offset="0x2a">ADPD_C0F.CMD</rom>
+			<rom type="shell" offset="0">EMI</rom>
+			<rom type="shell" offset="0">EMIP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x20">Tiptop Thrill (タイトル)</title>
+			<title code="0x21">Wind Flaw (編成C3)</title>
+			<title code="0x22">Wave (編成C2)</title>
+			<title code="0x23">Believe in Motivation (エンディング)</title>
+			<title code="0x24">Quiet Afternoon (作戦失敗)</title>
+			<title code="0x25">Speedy</title>
+			<title code="0x26">Futurity (編成C1)</title>
+			<title code="0x27">Poppoboov (作戦成功)</title>
+			<title code="0x28">J.A.V.E (作戦C1)</title>
+			<title code="0x29">Getting There (作戦C2A)</title>
+			<title code="0x2a">Breath of Abyss (作戦C2B)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Schwarzschild 4 - The Cradle End (シュヴァルツシルト４ ～クレイドルエンド～)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">kogado</driveralias>
+		<options>
+			<option name="ssg_mix" value="-12"/>
+		</options>
+		<romlist archive="schw4_98">
+			<rom type="file" offset="-1">schw4_98.com</rom>
+			<rom type="file" offset="-1">ending.exe</rom>
+			<rom type="file" offset="-1">cm_neiro.dat</rom>
+			<rom type="file" offset="-1">cm_se.dat</rom>
+			<rom type="file" offset="-1">cm_lfo.dat</rom>
+			<rom type="file" offset="-1">cm_viv.dat</rom>
+			<rom type="file" offset="-1">cm_env.dat</rom>
+			<rom type="file" offset="-1">m100.cmd</rom>
+			<rom type="file" offset="-1">m101.cmd</rom>
+			<rom type="file" offset="-1">m102.cmd</rom>
+			<rom type="file" offset="-1">m103.cmd</rom>
+			<rom type="file" offset="-1">m104.cmd</rom>
+			<rom type="file" offset="-1">m105.cmd</rom>
+			<rom type="file" offset="-1">m106.cmd</rom>
+			<rom type="file" offset="-1">m107.cmd</rom>
+			<rom type="file" offset="-1">m108.cmd</rom>
+			<rom type="file" offset="-1">m109.cmd</rom>
+			<rom type="file" offset="-1">m110.cmd</rom>
+			<rom type="file" offset="-1">neko.cmd</rom>
+			<rom type="file" offset="-1">s407.cmd</rom>
+			<rom type="file" offset="-1">s408.cmd</rom>
+			<rom type="file" offset="-1">s415.cmd</rom>
+			<rom type="file" offset="-1">s422.cmd</rom>
+			<rom type="file" offset="-1">s424.cmd</rom>
+			<rom type="file" offset="-1">s428.cmd</rom>
+			<rom type="file" offset="-1">s430.cmd</rom>
+			<rom type="file" offset="-1">s431.cmd</rom>
+			<rom type="file" offset="-1">s432.cmd</rom>
+			<rom type="file" offset="-1">s433.cmd</rom>
+			<rom type="conin" offset="5">cm_neiro.dat</rom>
+			<rom type="conin" offset="6">cm_se.dat</rom>
+			<rom type="conin" offset="7">cm_lfo.dat</rom>
+			<rom type="conin" offset="8">cm_viv.dat</rom>
+			<rom type="conin" offset="9">cm_env.dat</rom>
+			<rom type="conin" offset="11">m100.cmd</rom>
+			<rom type="conin" offset="12">m101.cmd</rom>
+			<rom type="conin" offset="13">m102.cmd</rom>
+			<rom type="conin" offset="14">m103.cmd</rom>
+			<rom type="conin" offset="15">m104.cmd</rom>
+			<rom type="conin" offset="16">m105.cmd</rom>
+			<rom type="conin" offset="17">m106.cmd</rom>
+			<rom type="conin" offset="18">m107.cmd</rom>
+			<rom type="conin" offset="19">m108.cmd</rom>
+			<rom type="conin" offset="20">m109.cmd</rom>
+			<rom type="conin" offset="21">m110.cmd</rom>
+			<rom type="conin" offset="22">neko.cmd</rom>
+			<rom type="conin" offset="23">s407.cmd</rom>
+			<rom type="conin" offset="24">s408.cmd</rom>
+			<rom type="conin" offset="25">s415.cmd</rom>
+			<rom type="conin" offset="26">s422.cmd</rom>
+			<rom type="conin" offset="27">s424.cmd</rom>
+			<rom type="conin" offset="28">s428.cmd</rom>
+			<rom type="conin" offset="29">s430.cmd</rom>
+			<rom type="conin" offset="30">s431.cmd</rom>
+			<rom type="conin" offset="31">s432.cmd</rom>
+			<rom type="conin" offset="32">s433.cmd</rom>
+			<rom type="shell" offset="0">schw4_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">m100.cmd</title>
+			<title code="12">m101.cmd</title>
+			<title code="13">m102.cmd</title>
+			<title code="14">m103.cmd</title>
+			<title code="15">m104.cmd</title>
+			<title code="16">m105.cmd</title>
+			<title code="17">m106.cmd</title>
+			<title code="18">m107.cmd</title>
+			<title code="19">m108.cmd</title>
+			<title code="20">m109.cmd</title>
+			<title code="21">m110.cmd</title>
+			<title code="22">neko.cmd</title>
+			<title code="23">s407.cmd</title>
+			<title code="24">s408.cmd</title>
+			<title code="25">s415.cmd</title>
+			<title code="26">s422.cmd</title>
+			<title code="27">s424.cmd</title>
+			<title code="28">s428.cmd</title>
+			<title code="29">s430.cmd</title>
+			<title code="30">s431.cmd</title>
+			<title code="31">s432.cmd</title>
+			<title code="32">s433.cmd</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Mouryousenki Madara (魍魎戦記摩陀羅 大金剛輪編)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">kogado</driveralias>
+		<options>
+			<option name="fm_mix" value="10"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="madara_98">
+			<rom type="file" offset="-1">EMI.COM</rom>
+			<rom type="file" offset="-1">EMIP.COM</rom>
+			<rom type="file" offset="0x10">CM_NEIRO.MDT</rom>
+			<rom type="file" offset="0x11">CM_SE.MDT</rom>
+			<rom type="file" offset="0x12">CM_LFO.MDT</rom>
+			<rom type="file" offset="0x13">CM_VIV.MDT</rom>
+			<rom type="file" offset="0x14">CM_ENV.MDT</rom>
+			<rom type="file" offset="0x20">MDR02001.MPL</rom>
+			<rom type="file" offset="0x21">MDR02002.MPL</rom>
+			<rom type="file" offset="0x22">MDR02003.MPL</rom>
+			<rom type="file" offset="0x23">MDR02004.MPL</rom>
+			<rom type="file" offset="0x24">MDR02005.MPL</rom>
+			<rom type="file" offset="0x25">MDR02006.MPL</rom>
+			<rom type="file" offset="0x26">MDR02007.MPL</rom>
+			<rom type="file" offset="0x27">MDR02008.MPL</rom>
+			<rom type="file" offset="0x28">MDR02009.MPL</rom>
+			<rom type="file" offset="0x29">MDR02010.MPL</rom>
+			<rom type="file" offset="0x2a">MDR02011.MPL</rom>
+			<rom type="file" offset="0x2b">MDR02012.MPL</rom>
+			<rom type="file" offset="0x2c">MDR02013.MPL</rom>
+			<rom type="file" offset="0x2d">MDR02014.MPL</rom>
+			<rom type="file" offset="0x2e">MDR02015.MPL</rom>
+			<rom type="file" offset="0x2f">MDR02016.MPL</rom>
+			<rom type="file" offset="0x30">MDR02017.MPL</rom>
+			<rom type="file" offset="0x31">MDR02018.MPL</rom>
+			<rom type="file" offset="0x32">MDR02019.MPL</rom>
+			<rom type="file" offset="0x33">MDR02020.MPL</rom>
+			<rom type="file" offset="0x34">MDR02021.MPL</rom>
+			<rom type="file" offset="0x35">MDR02022.MPL</rom>
+			<rom type="shell" offset="0">EMI</rom>
+			<rom type="shell" offset="0">EMIP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x20">MDR02001.MPL</title>
+			<title code="0x21">MDR02002.MPL</title>
+			<title code="0x22">MDR02003.MPL</title>
+			<title code="0x23">MDR02004.MPL</title>
+			<title code="0x24">MDR02005.MPL</title>
+			<title code="0x25">MDR02006.MPL</title>
+			<title code="0x26">MDR02007.MPL</title>
+			<title code="0x27">MDR02008.MPL</title>
+			<title code="0x28">MDR02009.MPL</title>
+			<title code="0x29">MDR02010.MPL</title>
+			<title code="0x2a">MDR02011.MPL</title>
+			<title code="0x2b">MDR02012.MPL</title>
+			<title code="0x2c">MDR02013.MPL</title>
+			<title code="0x2d">MDR02014.MPL</title>
+			<title code="0x2e">MDR02015.MPL</title>
+			<title code="0x2f">MDR02016.MPL</title>
+			<title code="0x30">MDR02017.MPL</title>
+			<title code="0x31">MDR02018.MPL</title>
+			<title code="0x32">MDR02019.MPL</title>
+			<title code="0x33">MDR02020.MPL</title>
+			<title code="0x34">MDR02021.MPL</title>
+			<title code="0x35">MDR02022.MPL</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Harajuku After Dark (原宿AFTeR DARK)</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">kogado</driveralias>
+		<options>
+			<option name="bootcs" value="0x1000"/>
+			<option name="bootip" value="0xf000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dummysndrom" value="1"/>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="10"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="aftdark98">
+			<rom type="code" offset="0x02000">MUSIC</rom>
+			<rom type="code" offset="0x10000">PROG</rom>
+			<rom type="code" offset="0x1f000">aftdark.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング</title>
+			<title code="0x01">聞き込み</title>
+			<title code="0x02">捜査</title>
+			<title code="0x03">告白</title>
+			<title code="0x04">出張捜査</title>
+			<title code="0x05">渋谷署</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Schwarzschild -Kyouran no Ginga- (シュヴァルツシルト 狂乱の銀河)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">kogado</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="schw68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x20000">OFF.OPM</rom>
+			<rom type="code" offset="0x24000">NEKO.OPM</rom>
+			<rom type="code" offset="0x28000">OPEN.OPM</rom>
+			<rom type="code" offset="0x2c000">M1.OPM</rom>
+			<rom type="code" offset="0x30000">M2.OPM</rom>
+			<rom type="code" offset="0x34000">M3.OPM</rom>
+			<rom type="code" offset="0x38000">M4.OPM</rom>
+			<rom type="code" offset="0x3c000">END.OPM</rom>
+			<rom type="code" offset="0x40000">STAFF.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x02">NEKO.OPM</title>
+			<title code="0x03">OPEN.OPM</title>
+			<title code="0x04">M1.OPM</title>
+			<title code="0x05">M2.OPM</title>
+			<title code="0x06">M3.OPM</title>
+			<title code="0x07">M4.OPM</title>
+			<title code="0x08">END.OPM</title>
+			<title code="0x09">STAFF.OPM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Psychic War -Cosmic Soldier 2- (サイキックウォー コズミックソルジャー２)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">kogado</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="psywar_msx">
+			<rom type="code">Psychic War - Cosmic Soldier 2 (1987)(Kogado).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+		</titlelist>
+	</game>
+</gamelist>

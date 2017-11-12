@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //EAST CUBE -->
+	<game>
+		<name>[MSX] 白夜物語 -ウインチェスター家の末裔-(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">EAST CUBE</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="byakuya_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x3000">MUSIC</rom>
+			<rom type="code" offset="0x8000">MAIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x100">MUSIC : 00</title>
+			<title code="0x001">MUSIC : 01</title>
+			<title code="0x102">MUSIC : 02</title>
+			<title code="0x103">MUSIC : 03</title>
+			<title code="0x004">MUSIC : 04</title>
+			<title code="0x005">MUSIC : 05</title>
+			<title code="0x106">MUSIC : 06</title>
+			<title code="0x107">MUSIC : 07</title>
+			<title code="0x108">MUSIC : 08</title>
+			<title code="0x109">MUSIC : 09</title>
+			<title code="0x10a">MUSIC : 0A</title>
+			<title code="0x10b">MUSIC : 0B</title>
+			<title code="0x10c">MUSIC : 0C</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 白夜物語 -ウインチェスター家の末裔-(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">EAST CUBE</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="byakuya_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x3000">MUSIC</rom>
+			<rom type="code" offset="0x8000">MAIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x100">MUSIC : 00</title>
+			<title code="0x001">MUSIC : 01</title>
+			<title code="0x102">MUSIC : 02</title>
+			<title code="0x103">MUSIC : 03</title>
+			<title code="0x004">MUSIC : 04</title>
+			<title code="0x005">MUSIC : 05</title>
+			<title code="0x107">MUSIC : 07</title>
+			<title code="0x108">MUSIC : 08</title>
+			<title code="0x109">MUSIC : 09</title>
+			<title code="0x10a">MUSIC : 0A</title>
+			<title code="0x10b">MUSIC : 0B</title>
+			<title code="0x10c">MUSIC : 0C</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 白夜物語 -ウインチェスター家の末裔-</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">EAST CUBE</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="byakuya68snd">
+			<rom type="code">byaku68snd.bin</rom>
+			<rom type="x"    offset="0x010000">MAIN.X</rom>
+			<rom type="code" offset="0x076e18">FM.DAT</rom>
+			<rom type="x"    offset="0x0a0000">FLOAT2.X</rom>
+			<rom type="code" offset="0x0b0000">KYOKU00.DAT</rom>
+			<rom type="code" offset="0x0b1000">KYOKU01.DAT</rom>
+			<rom type="code" offset="0x0b2000">KYOKU02.DAT</rom>
+			<rom type="code" offset="0x0b3000">KYOKU03.DAT</rom>
+			<rom type="code" offset="0x0b4000">KYOKU04.DAT</rom>
+			<rom type="code" offset="0x0b5000">KYOKU05.DAT</rom>
+			<rom type="code" offset="0x0b6000">KYOKU06.DAT</rom>
+			<rom type="code" offset="0x0b7000">KYOKU07.DAT</rom>
+			<rom type="code" offset="0x0b8000">KYOKU08.DAT</rom>
+			<rom type="code" offset="0x0b9000">KYOKU09.DAT</rom>
+			<rom type="code" offset="0x0ba000">KYOKU10.DAT</rom>
+			<rom type="code" offset="0x0bb000">KYOKU11.DAT</rom>
+			<rom type="code" offset="0x0bc000">KYOKU12.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x301">KYOKU00.DAT</title>
+			<title code="0x202">KYOKU01.DAT</title>
+			<title code="0x303">KYOKU02.DAT</title>
+			<title code="0x304">KYOKU03.DAT</title>
+			<title code="0x205">KYOKU04.DAT</title>
+			<title code="0x206">KYOKU05.DAT</title>
+			<title code="0x307">KYOKU06.DAT</title>
+			<title code="0x308">KYOKU07.DAT</title>
+			<title code="0x309">KYOKU08.DAT</title>
+			<title code="0x30a">KYOKU09.DAT</title>
+			<title code="0x30b">KYOKU10.DAT</title>
+			<title code="0x30c">KYOKU11.DAT</title>
+			<title code="0x30d">KYOKU12.DAT</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //淫・SIDE -->
+	<game>
+		<name>[PC-9801] BIND -緊縛尋問伝説-</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">淫・SIDE</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="ssg_mix" value="-18"/>
+			<option name="wstimer"  value="2"/>
+		</options>
+		<romlist archive="bind_98">
+			<rom type="file" offset="-1">MV.COM</rom>
+			<rom type="file" offset="-1">MV_98.COM</rom>
+			<rom type="file" offset="0x10">EPISODE1.MV</rom>
+			<rom type="file" offset="0x11">EPISODE2.MV</rom>
+			<rom type="file" offset="0x12">EPISODE3.MV</rom>
+			<rom type="file" offset="0x13">GAMEOVER.MV</rom>
+			<rom type="file" offset="0x14">OPEN.MV</rom>
+			<rom type="shell" offset="0">mv</rom>
+			<rom type="shell" offset="0">mv_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x14">OPEN.MV     : Opening(オープニングテーマ)</title>
+			<title code="0x10">EPISODE1.MV : EPISODE I</title>
+			<title code="0x11">EPISODE2.MV : EPISODE II</title>
+			<title code="0x12">EPISODE3.MV : EPISODE III</title>
+			<title code="0x13">GAMEOVER.MV : GAME OVER</title>
+		</titlelist>
+	</game>
+</gamelist>

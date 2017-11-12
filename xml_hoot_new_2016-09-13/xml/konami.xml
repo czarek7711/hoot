@@ -1,0 +1,3635 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //KONAMI -->
+	<game>
+		<name>[X68000] QUARTH (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="quarth68snd">
+			<rom type="code" offset="0x00000">quarth68snd.bin</rom>
+			<rom type="x" offset="0x10000">quarth.x</rom>
+			<rom type="code" offset="0x544d4">CREDIT.PCM</rom>
+			<rom type="code" offset="0x5623a">PSHOT.PCM</rom>
+			<rom type="code" offset="0x57088">BATTACK.PCM</rom>
+			<rom type="code" offset="0x57ecc">BCRUSH.PCM</rom>
+			<rom type="code" offset="0x59106">special.pcm</rom>
+			<rom type="code" offset="0x5b53a">BDELETE.PCM</rom>
+			<rom type="code" offset="0x5c168">BALLOUT.PCM</rom>
+			<rom type="code" offset="0x5eda4">POUT.PCM</rom>
+			<rom type="code" offset="0x62010">SELECT.PCM</rom>
+			<rom type="code" offset="0x629f6">NAMEINP.PCM</rom>
+			<rom type="code" offset="0x63f82">bomb.pcm</rom>
+			<rom type="code" offset="0x66534">SPACEBOMB.PCM</rom>
+			<rom type="code" offset="0x6c5cc">CONTINUE.PCM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">01 : The Theme from Quarth</title>
+			<title code="0x03">02 : The Menace of the Block</title>
+			<title code="0x04">03 : The Closing Game in the Universe</title>
+			<title code="0x05">04 : The Marauding Block</title>
+			<title code="0x06">05 : Title</title>
+			<title code="0x07">06 : Pattern Clear</title>
+			<title code="0x08">07 : Game Over</title>
+			<title code="0x09">08 : Ranking</title>
+			<title code="0x0a">09 : Beyond the Terminus</title>
+			<title code="0x0b">0A : SE</title>
+			<title code="0x0c">0B : SE</title>
+			<title code="0x0d">0C : SE</title>
+			<title code="0x0e">0D : SE</title>
+			<title code="0x0f">0E : SE</title>
+			<title code="0x10">0F : SE</title>
+			<title code="0x11">10 : SE</title>
+			<title code="0x12">11 : SE</title>
+			<title code="0x13">12 : SE</title>
+			<title code="0x14">13 : SE</title>
+			<title code="0x15">14 : SE</title>
+			<title code="0x16">15 : SE</title>
+			<title code="0x17">16 : SE</title>
+			<title code="0x18">17 : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Detana!! Twinbee (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0xf0"/>
+		</options>
+		<romlist archive="dtb68snd">
+			<rom type="code">dtb68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x20000">ADPCM_BG.DAT</rom>
+			<rom type="code" offset="0x40000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x60000">SOUND_BG.DAT</rom>
+			<rom type="code" offset="0x70000">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x80000">VOICE_BG.DAT</rom>
+			<rom type="code" offset="0x90000">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0xa0000">TABLE_BG.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xb0">風の贈り物</title>
+			<title code="0xb1">雲海を越えて</title>
+			<title code="0xb2">天空の要塞ラピュタ</title>
+			<title code="0xb3">World of the Mold</title>
+			<title code="0xb4">水上の行進</title>
+			<title code="0xb5">イーバの神殿</title>
+			<title code="0xb6">霧の向こうのパラダイス</title>
+			<title code="0xb7">ありがとう！ツインビー</title>
+			<title code="0xb8">メル女王からのメッセージ</title>
+			<title code="0xb9">Let's try again</title>
+			<title code="0xba">出たなツインビー</title>
+			<title code="0xbb">イーバ星人の攻撃</title>
+			<title code="0xbc">来るなら来いっ</title>
+			<title code="0xbd">イーバの帝王脳味噌昆虫</title>
+			<title code="0xbe">Congratulations!</title>
+			<title code="0xbf">惑星メルに平和の戻る日</title>
+			<title code="0xc0">コナミロゴ</title>
+			<title code="0xc1">コナミモーニングミュージック</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Detana!! Twinbee (MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="dtb68snd">
+			<rom type="code">dtb68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x40000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x60000">SOUND_MT.DAT</rom>
+			<rom type="code" offset="0x70000">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x90000">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0xa0000">TABLE_SC.DAT</rom>
+			<rom type="code" offset="0xb0000">VOICE_MT.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xb0">風の贈り物</title>
+			<title code="0xb1">雲海を越えて</title>
+			<title code="0xb2">天空の要塞ラピュタ</title>
+			<title code="0xb3">World of the Mold</title>
+			<title code="0xb4">水上の行進</title>
+			<title code="0xb5">イーバの神殿</title>
+			<title code="0xb6">霧の向こうのパラダイス</title>
+			<title code="0xb7">ありがとう！ツインビー</title>
+			<title code="0xb8">メル女王からのメッセージ</title>
+			<title code="0xb9">Let's try again</title>
+			<title code="0xba">出たなツインビー</title>
+			<title code="0xbb">イーバ星人の攻撃</title>
+			<title code="0xbc">来るなら来いっ</title>
+			<title code="0xbd">イーバの帝王脳味噌昆虫</title>
+			<title code="0xbe">Congratulations!</title>
+			<title code="0xbf">惑星メルに平和の戻る日</title>
+			<title code="0xc0">コナミロゴ</title>
+			<title code="0xc1">コナミモーニングミュージック</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Detana!! Twinbee (MT-32 Emulation)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+			<option name="midiout_mix" value="0x220"/>
+		</options>
+		<romlist archive="dtb68snd">
+			<rom type="code">dtb68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x40000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x60000">SOUND_MT.DAT</rom>
+			<rom type="code" offset="0x70000">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x90000">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0xa0000">TABLE_SC.DAT</rom>
+			<rom type="code" offset="0xb0000">VOICE_MT.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xb0">風の贈り物</title>
+			<title code="0xb1">雲海を越えて</title>
+			<title code="0xb2">天空の要塞ラピュタ</title>
+			<title code="0xb3">World of the Mold</title>
+			<title code="0xb4">水上の行進</title>
+			<title code="0xb5">イーバの神殿</title>
+			<title code="0xb6">霧の向こうのパラダイス</title>
+			<title code="0xb7">ありがとう！ツインビー</title>
+			<title code="0xb8">メル女王からのメッセージ</title>
+			<title code="0xb9">Let's try again</title>
+			<title code="0xba">出たなツインビー</title>
+			<title code="0xbb">イーバ星人の攻撃</title>
+			<title code="0xbc">来るなら来いっ</title>
+			<title code="0xbd">イーバの帝王脳味噌昆虫</title>
+			<title code="0xbe">Congratulations!</title>
+			<title code="0xbf">惑星メルに平和の戻る日</title>
+			<title code="0xc0">コナミロゴ</title>
+			<title code="0xc1">コナミモーニングミュージック</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Detana!! Twinbee (SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="dtb68snd">
+			<rom type="code">dtb68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x40000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x60000">SOUND_SC.DAT</rom>
+			<rom type="code" offset="0x70000">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x90000">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0xa0000">TABLE_SC.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xb0">風の贈り物</title>
+			<title code="0xb1">雲海を越えて</title>
+			<title code="0xb2">天空の要塞ラピュタ</title>
+			<title code="0xb3">World of the Mold</title>
+			<title code="0xb4">水上の行進</title>
+			<title code="0xb5">イーバの神殿</title>
+			<title code="0xb6">霧の向こうのパラダイス</title>
+			<title code="0xb7">ありがとう！ツインビー</title>
+			<title code="0xb8">メル女王からのメッセージ</title>
+			<title code="0xb9">Let's try again</title>
+			<title code="0xba">出たなツインビー</title>
+			<title code="0xbb">イーバ星人の攻撃</title>
+			<title code="0xbc">来るなら来いっ</title>
+			<title code="0xbd">イーバの帝王脳味噌昆虫</title>
+			<title code="0xbe">Congratulations!</title>
+			<title code="0xbf">惑星メルに平和の戻る日</title>
+			<title code="0xc0">コナミロゴ</title>
+			<title code="0xc1">コナミモーニングミュージック</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Detana!! Twinbee (Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="dtb68snd">
+			<rom type="code">dtb68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x40000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x60000">SOUND_SC.DAT</rom>
+			<rom type="code" offset="0x70000">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x90000">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0xa0000">TABLE_SC.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xb0">風の贈り物</title>
+			<title code="0xb1">雲海を越えて</title>
+			<title code="0xb2">天空の要塞ラピュタ</title>
+			<title code="0xb3">World of the Mold</title>
+			<title code="0xb4">水上の行進</title>
+			<title code="0xb5">イーバの神殿</title>
+			<title code="0xb6">霧の向こうのパラダイス</title>
+			<title code="0xb7">ありがとう！ツインビー</title>
+			<title code="0xb8">メル女王からのメッセージ</title>
+			<title code="0xb9">Let's try again</title>
+			<title code="0xba">出たなツインビー</title>
+			<title code="0xbb">イーバ星人の攻撃</title>
+			<title code="0xbc">来るなら来いっ</title>
+			<title code="0xbd">イーバの帝王脳味噌昆虫</title>
+			<title code="0xbe">Congratulations!</title>
+			<title code="0xbf">惑星メルに平和の戻る日</title>
+			<title code="0xc0">コナミロゴ</title>
+			<title code="0xc1">コナミモーニングミュージック</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Detana !! TwinBee over-the-counter demo (OPM) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="dmaint"  value="1"/>
+			<option name="mfp"     value="1"/>
+		</options>
+		<romlist archive="dtbdemo68snd">
+			<rom type="code">dtbdemo68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x0C200">ADPCM_BG.DAT</rom>
+			<rom type="code" offset="0x1E000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x32A00">SOUND_BG.DAT</rom>
+			<rom type="code" offset="0x37100">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x38200">VOICE_BG.DAT</rom>
+			<rom type="code" offset="0x39B00">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0x3B400">TABLE_BG.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xb0">風の贈り物</title>
+			<title code="0xb7">ありがとう！ツインビー</title>
+			<title code="0xb8">メル女王からのメッセージ</title>
+			<title code="0xb9">Let's try again</title>
+			<title code="0xba">出たなツインビー</title>
+			<title code="0xbb">イーバ星人の攻撃</title>
+			<title code="0xbe">Congratulations!</title>
+			<title code="0xc0">コナミロゴ</title>
+			<title code="0xc2">BGM 1(オープニング)</title>
+			<title code="0xc3">BGM 2(メル王女からのメッセージ)</title>
+			<title code="0xc4">BGM 3(惑星メルに出動だぁ?!)</title>
+			<title code="0xc5">BGM 4(タイトル)</title>
+			<title code="0xc6">BGM 5(商品内容説明)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Gradius II: Gofer no Yabou (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0xf0"/>
+		</options>
+		<romlist archive="gra268snd">
+			<rom type="code">gra268snd.bin</rom>
+			<rom type="x" offset="0x08000">SD_DRV.X</rom>
+			<rom type="code" offset="0x0f59e">BGM00.DAT</rom>
+			<rom type="code" offset="0x1b89e">DRPCM.DAT</rom>
+			<rom type="code" offset="0x27bde">SDPCM.DAT</rom>
+			<rom type="code" offset="0x3291e">VOPCM00.DAT</rom>
+			<rom type="code" offset="0x3c91e">VOPCM0X.DAT</rom>
+			<!-- <rom type="code" offset="0x5840e">MTVOICE.DAT</rom> -->
+			<!-- FOR 1MB
+			<rom type="code" offset="0x3c91e">VOPCM01.DAT</rom>
+			-->
+		</romlist>
+		<titlelist>
+			<title code="0xf9">FADE OUT</title>
+			<title code="0xb7">BALANCE TEST</title>
+			<title code="0xb6">NOW LOADING!</title>
+			<title code="0xb5">KONAMI LOGO</title>
+			<title code="0xb1">TITLE DEMO</title>
+			<title code="0xa6">EQUIPMENT</title>
+			<title code="0xa0">TABIDACHI</title>
+			<title code="0xa1">BURNING HEAT</title>
+			<title code="0xa5">SHOOTING STAR</title>
+			<title code="0xa2">SYNTHETIC LIFE</title>
+			<title code="0xa8">CRYSTAL WORLD</title>
+			<title code="0xa3">A WAY OUT</title>
+			<title code="0xad">OLD STONE AGE1</title>
+			<title code="0xae">OLD STONE AGE2</title>
+			<title code="0xa9">MAXIMUM SPEED</title>
+			<title code="0xa4">TAKE CARE!</title>
+			<title code="0xaa">GRADIUS BOSS</title>
+			<title code="0xab">SALAMANDA BOSS</title>
+			<title code="0xac">FIRE DRAGON</title>
+			<title code="0xb3">HOSTILE SHIP</title>
+			<title code="0xb0">SHOOT'N'SHOOT</title>
+			<title code="0xaf">FINAL ENEMY</title>
+			<title code="0xb4">FAREWELL</title>
+			<title code="0xb2">RANKING</title>
+			<title code="0xa7">GAME OVER</title>
+			<!--
+			<title code="0xb8">OLD STONE AGE1</title>
+			-->
+			<title code="0x01">NORMAL SHOT</title>
+			<title code="0x0b">DOUBLE SHOT</title>
+			<title code="0x03">MISSILE SHOT</title>
+			<title code="0x0d">LASER SHOT</title>
+			<title code="0x0c">RIPPLE LASER S</title>
+			<title code="0x05">ENEMY LASER</title>
+			<title code="0x4e">BOSS HADOUHOU</title>
+			<title code="0x04">SHIELD OUT</title>
+			<title code="0x07">ENEMY OUT 1</title>
+			<title code="0x08">ENEMY OUT 2</title>
+			<title code="0x02">MOAI RING OUT</title>
+			<title code="0x0f">BALL OUT</title>
+			<title code="0x10">ROBO OUT</title>
+			<title code="0x4f">CRYSTAL OUT</title>
+			<title code="0x15">CRYSTAL OUT</title>
+			<title code="0x51">HATCH OUT</title>
+			<title code="0x16">AMI OUT</title>
+			<title code="0x17">ALIEN OUT</title>
+			<title code="0x18">BOARD OUT</title>
+			<title code="0x40">MOAI OUT</title>
+			<title code="0x44">DRAGON OUT</title>
+			<title code="0x46">HOUDAI OUT</title>
+			<title code="0x11">SMALL ROCK OUT</title>
+			<title code="0x64">BOSS OUT</title>
+			<title code="0x62">PLAYER OUT</title>
+			<title code="0x66">ALL OUT</title>
+			<title code="0x63">END OUT</title>
+			<title code="0x0a">SHOT REBOUND</title>
+			<title code="0x13">MOAI DAMAGE</title>
+			<title code="0x51">BOSS DAMAGE</title>
+			<title code="0x45">KAZAN FUNKA</title>
+			<title code="0x4d">HATCH OPEN</title>
+			<title code="0x47">YOUSAI APPEAR</title>
+			<title code="0x48">GATTAI</title>
+			<title code="0x68">JET 1</title>
+			<title code="0x69">JET 2</title>
+			<title code="0x50">ALARM</title>
+			<title code="0x4c">PAC!</title>
+			<title code="0x0e">SELECT</title>
+			<title code="0x43">NAME INPUT</title>
+			<title code="0x67">POWER UP</title>
+			<title code="0x61">CAPSULE TAKE</title>
+			<title code="0x60">COIN</title>
+			<title code="0x65">ONE UP</title>
+			<title code="0xc0">SPEED UP</title>
+			<title code="0xc3">MISSILE</title>
+			<title code="0xc6">SPREAD BOMB</title>
+			<title code="0xc7">PHOTON TORPEDO</title>
+			<title code="0xc8">TWOWAY MISSILE</title>
+			<title code="0xc1">DOUBLE</title>
+			<title code="0xc9">TAIL GUN</title>
+			<title code="0xc2">LASER</title>
+			<title code="0xca">PULSE LASER</title>
+			<title code="0xcb">RIPPLE LASER</title>
+			<title code="0xcc">OPTION</title>
+			<title code="0xc4">MULTIPLE</title>
+			<title code="0xcd">SHIELD</title>
+			<title code="0xc5">FORCE FIELD</title>
+
+			<title code="0xce">YOU NEED SOME PRACTICE</title>
+			<title code="0xcf">DESTROY THE CORE</title>
+			<title code="0xd0">DESTROY THEM ALL</title>
+			<title code="0xd1">SHOOT IT IN THE HEAD</title>
+			<title code="0xd2">SHOOT IT IN THE EYES</title>
+			<title code="0xd3">YOU SHALL NEVER RETURN ALIVE</title>
+			<title code="0xd4">YOU SHALL BE CRASHED</title>
+			<title code="0xd5">YOU CAN'T GO ANY FARTHER</title>
+			<title code="0xd6">SHOOT IT IN THE MOUTH</title>
+			<title code="0xd7">DRAGON OUT</title>
+			<title code="0xd8">I AM THE STRONGEST</title>
+			<title code="0xd9">I AM JUST THE SMALL PORTION OF THE EMPIRE OF BACTERIUM</title>
+			<title code="0xda">I'LL BASH YOU DOWN</title>
+			<title code="0xdb">GOFER LAUGH</title>
+			<title code="0xdc">GOFER OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Gradius II: Gofer no Yabou (OPM+MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="gra268snd">
+			<rom type="code">gra268snd.bin</rom>
+			<rom type="x" offset="0x08000">SD_DRV.X</rom>
+			<rom type="code" offset="0x0f59e">BGM00.DAT</rom>
+			<rom type="code" offset="0x1b89e">DRPCM.DAT</rom>
+			<rom type="code" offset="0x27bde">SDPCM.DAT</rom>
+			<rom type="code" offset="0x3291e">VOPCM00.DAT</rom>
+			<rom type="code" offset="0x3c91e">VOPCM0X.DAT</rom>
+			<rom type="code" offset="0x583de">MTVOICE.DAT</rom>
+			<!-- FOR 1MB
+			<rom type="code" offset="0x3c91e">VOPCM01.DAT</rom>
+			-->
+		</romlist>
+		<titlelist>
+			<title code="0xf9">FADE OUT</title>
+			<title code="0xb7">BALANCE TEST</title>
+			<title code="0xb6">NOW LOADING!</title>
+			<title code="0xb5">KONAMI LOGO</title>
+			<title code="0xb1">TITLE DEMO</title>
+			<title code="0xa6">EQUIPMENT</title>
+			<title code="0xa0">TABIDACHI</title>
+			<title code="0xa1">BURNING HEAT</title>
+			<title code="0xa5">SHOOTING STAR</title>
+			<title code="0xa2">SYNTHETIC LIFE</title>
+			<title code="0xa8">CRYSTAL WORLD</title>
+			<title code="0xa3">A WAY OUT</title>
+			<title code="0xad">OLD STONE AGE1</title>
+			<title code="0xae">OLD STONE AGE2</title>
+			<title code="0xa9">MAXIMUM SPEED</title>
+			<title code="0xa4">TAKE CARE!</title>
+			<title code="0xaa">GRADIUS BOSS</title>
+			<title code="0xab">SALAMANDA BOSS</title>
+			<title code="0xac">FIRE DRAGON</title>
+			<title code="0xb3">HOSTILE SHIP</title>
+			<title code="0xb0">SHOOT'N'SHOOT</title>
+			<title code="0xaf">FINAL ENEMY</title>
+			<title code="0xb4">FAREWELL</title>
+			<title code="0xb2">RANKING</title>
+			<title code="0xa7">GAME OVER</title>
+			<!--
+			<title code="0xb8">OLD STONE AGE1</title>
+			-->
+			<title code="0x01">NORMAL SHOT</title>
+			<title code="0x0b">DOUBLE SHOT</title>
+			<title code="0x03">MISSILE SHOT</title>
+			<title code="0x0d">LASER SHOT</title>
+			<title code="0x0c">RIPPLE LASER S</title>
+			<title code="0x05">ENEMY LASER</title>
+			<title code="0x4e">BOSS HADOUHOU</title>
+			<title code="0x04">SHIELD OUT</title>
+			<title code="0x07">ENEMY OUT 1</title>
+			<title code="0x08">ENEMY OUT 2</title>
+			<title code="0x02">MOAI RING OUT</title>
+			<title code="0x0f">BALL OUT</title>
+			<title code="0x10">ROBO OUT</title>
+			<title code="0x4f">CRYSTAL OUT</title>
+			<title code="0x15">CRYSTAL OUT</title>
+			<title code="0x51">HATCH OUT</title>
+			<title code="0x16">AMI OUT</title>
+			<title code="0x17">ALIEN OUT</title>
+			<title code="0x18">BOARD OUT</title>
+			<title code="0x40">MOAI OUT</title>
+			<title code="0x44">DRAGON OUT</title>
+			<title code="0x46">HOUDAI OUT</title>
+			<title code="0x11">SMALL ROCK OUT</title>
+			<title code="0x64">BOSS OUT</title>
+			<title code="0x62">PLAYER OUT</title>
+			<title code="0x66">ALL OUT</title>
+			<title code="0x63">END OUT</title>
+			<title code="0x0a">SHOT REBOUND</title>
+			<title code="0x13">MOAI DAMAGE</title>
+			<title code="0x51">BOSS DAMAGE</title>
+			<title code="0x45">KAZAN FUNKA</title>
+			<title code="0x4d">HATCH OPEN</title>
+			<title code="0x47">YOUSAI APPEAR</title>
+			<title code="0x48">GATTAI</title>
+			<title code="0x68">JET 1</title>
+			<title code="0x69">JET 2</title>
+			<title code="0x50">ALARM</title>
+			<title code="0x4c">PAC!</title>
+			<title code="0x0e">SELECT</title>
+			<title code="0x43">NAME INPUT</title>
+			<title code="0x67">POWER UP</title>
+			<title code="0x61">CAPSULE TAKE</title>
+			<title code="0x60">COIN</title>
+			<title code="0x65">ONE UP</title>
+			<title code="0xc0">SPEED UP</title>
+			<title code="0xc3">MISSILE</title>
+			<title code="0xc6">SPREAD BOMB</title>
+			<title code="0xc7">PHOTON TORPEDO</title>
+			<title code="0xc8">TWOWAY MISSILE</title>
+			<title code="0xc1">DOUBLE</title>
+			<title code="0xc9">TAIL GUN</title>
+			<title code="0xc2">LASER</title>
+			<title code="0xca">PULSE LASER</title>
+			<title code="0xcb">RIPPLE LASER</title>
+			<title code="0xcc">OPTION</title>
+			<title code="0xc4">MULTIPLE</title>
+			<title code="0xcd">SHIELD</title>
+			<title code="0xc5">FORCE FIELD</title>
+
+			<title code="0xce">YOU NEED SOME PRACTICE</title>
+			<title code="0xcf">DESTROY THE CORE</title>
+			<title code="0xd0">DESTROY THEM ALL</title>
+			<title code="0xd1">SHOOT IT IN THE HEAD</title>
+			<title code="0xd2">SHOOT IT IN THE EYES</title>
+			<title code="0xd3">YOU SHALL NEVER RETURN ALIVE</title>
+			<title code="0xd4">YOU SHALL BE CRASHED</title>
+			<title code="0xd5">YOU CAN'T GO ANY FARTHER</title>
+			<title code="0xd6">SHOOT IT IN THE MOUTH</title>
+			<title code="0xd7">DRAGON OUT</title>
+			<title code="0xd8">I AM THE STRONGEST</title>
+			<title code="0xd9">I AM JUST THE SMALL PORTION OF THE EMPIRE OF BACTERIUM</title>
+			<title code="0xda">I'LL BASH YOU DOWN</title>
+			<title code="0xdb">GOFER LAUGH</title>
+			<title code="0xdc">GOFER OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Gradius II: Gofer no Yabou (OPM+MT-32 Emulation)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+			<option name="midiout_mix" value="0x220"/>
+			<!-- for compatibility -->
+			<option name="mt32" value="1"/>
+			<option name="mt32_mix" value="0x220"/>
+		</options>
+		<romlist archive="gra268snd">
+			<rom type="code">gra268snd.bin</rom>
+			<rom type="x" offset="0x08000">SD_DRV.X</rom>
+			<rom type="code" offset="0x0f59e">BGM00.DAT</rom>
+			<rom type="code" offset="0x1b89e">DRPCM.DAT</rom>
+			<rom type="code" offset="0x27bde">SDPCM.DAT</rom>
+			<rom type="code" offset="0x3291e">VOPCM00.DAT</rom>
+			<rom type="code" offset="0x3c91e">VOPCM0X.DAT</rom>
+			<rom type="code" offset="0x583de">MTVOICE.DAT</rom>
+			<!-- FOR 1MB
+			<rom type="code" offset="0x3c91e">VOPCM01.DAT</rom>
+			-->
+		</romlist>
+		<titlelist>
+			<title code="0xf9">FADE OUT</title>
+			<title code="0xb7">BALANCE TEST</title>
+			<title code="0xb6">NOW LOADING!</title>
+			<title code="0xb5">KONAMI LOGO</title>
+			<title code="0xb1">TITLE DEMO</title>
+			<title code="0xa6">EQUIPMENT</title>
+			<title code="0xa0">TABIDACHI</title>
+			<title code="0xa1">BURNING HEAT</title>
+			<title code="0xa5">SHOOTING STAR</title>
+			<title code="0xa2">SYNTHETIC LIFE</title>
+			<title code="0xa8">CRYSTAL WORLD</title>
+			<title code="0xa3">A WAY OUT</title>
+			<title code="0xad">OLD STONE AGE1</title>
+			<title code="0xae">OLD STONE AGE2</title>
+			<title code="0xa9">MAXIMUM SPEED</title>
+			<title code="0xa4">TAKE CARE!</title>
+			<title code="0xaa">GRADIUS BOSS</title>
+			<title code="0xab">SALAMANDA BOSS</title>
+			<title code="0xac">FIRE DRAGON</title>
+			<title code="0xb3">HOSTILE SHIP</title>
+			<title code="0xb0">SHOOT'N'SHOOT</title>
+			<title code="0xaf">FINAL ENEMY</title>
+			<title code="0xb4">FAREWELL</title>
+			<title code="0xb2">RANKING</title>
+			<title code="0xa7">GAME OVER</title>
+			<!--
+			<title code="0xb8">OLD STONE AGE1</title>
+			-->
+			<title code="0x01">NORMAL SHOT</title>
+			<title code="0x0b">DOUBLE SHOT</title>
+			<title code="0x03">MISSILE SHOT</title>
+			<title code="0x0d">LASER SHOT</title>
+			<title code="0x0c">RIPPLE LASER S</title>
+			<title code="0x05">ENEMY LASER</title>
+			<title code="0x4e">BOSS HADOUHOU</title>
+			<title code="0x04">SHIELD OUT</title>
+			<title code="0x07">ENEMY OUT 1</title>
+			<title code="0x08">ENEMY OUT 2</title>
+			<title code="0x02">MOAI RING OUT</title>
+			<title code="0x0f">BALL OUT</title>
+			<title code="0x10">ROBO OUT</title>
+			<title code="0x4f">CRYSTAL OUT</title>
+			<title code="0x15">CRYSTAL OUT</title>
+			<title code="0x51">HATCH OUT</title>
+			<title code="0x16">AMI OUT</title>
+			<title code="0x17">ALIEN OUT</title>
+			<title code="0x18">BOARD OUT</title>
+			<title code="0x40">MOAI OUT</title>
+			<title code="0x44">DRAGON OUT</title>
+			<title code="0x46">HOUDAI OUT</title>
+			<title code="0x11">SMALL ROCK OUT</title>
+			<title code="0x64">BOSS OUT</title>
+			<title code="0x62">PLAYER OUT</title>
+			<title code="0x66">ALL OUT</title>
+			<title code="0x63">END OUT</title>
+			<title code="0x0a">SHOT REBOUND</title>
+			<title code="0x13">MOAI DAMAGE</title>
+			<title code="0x51">BOSS DAMAGE</title>
+			<title code="0x45">KAZAN FUNKA</title>
+			<title code="0x4d">HATCH OPEN</title>
+			<title code="0x47">YOUSAI APPEAR</title>
+			<title code="0x48">GATTAI</title>
+			<title code="0x68">JET 1</title>
+			<title code="0x69">JET 2</title>
+			<title code="0x50">ALARM</title>
+			<title code="0x4c">PAC!</title>
+			<title code="0x0e">SELECT</title>
+			<title code="0x43">NAME INPUT</title>
+			<title code="0x67">POWER UP</title>
+			<title code="0x61">CAPSULE TAKE</title>
+			<title code="0x60">COIN</title>
+			<title code="0x65">ONE UP</title>
+			<title code="0xc0">SPEED UP</title>
+			<title code="0xc3">MISSILE</title>
+			<title code="0xc6">SPREAD BOMB</title>
+			<title code="0xc7">PHOTON TORPEDO</title>
+			<title code="0xc8">TWOWAY MISSILE</title>
+			<title code="0xc1">DOUBLE</title>
+			<title code="0xc9">TAIL GUN</title>
+			<title code="0xc2">LASER</title>
+			<title code="0xca">PULSE LASER</title>
+			<title code="0xcb">RIPPLE LASER</title>
+			<title code="0xcc">OPTION</title>
+			<title code="0xc4">MULTIPLE</title>
+			<title code="0xcd">SHIELD</title>
+			<title code="0xc5">FORCE FIELD</title>
+
+			<title code="0xce">YOU NEED SOME PRACTICE</title>
+			<title code="0xcf">DESTROY THE CORE</title>
+			<title code="0xd0">DESTROY THEM ALL</title>
+			<title code="0xd1">SHOOT IT IN THE HEAD</title>
+			<title code="0xd2">SHOOT IT IN THE EYES</title>
+			<title code="0xd3">YOU SHALL NEVER RETURN ALIVE</title>
+			<title code="0xd4">YOU SHALL BE CRASHED</title>
+			<title code="0xd5">YOU CAN'T GO ANY FARTHER</title>
+			<title code="0xd6">SHOOT IT IN THE MOUTH</title>
+			<title code="0xd7">DRAGON OUT</title>
+			<title code="0xd8">I AM THE STRONGEST</title>
+			<title code="0xd9">I AM JUST THE SMALL PORTION OF THE EMPIRE OF BACTERIUM</title>
+			<title code="0xda">I'LL BASH YOU DOWN</title>
+			<title code="0xdb">GOFER LAUGH</title>
+			<title code="0xdc">GOFER OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Gradius II: Gofer no Yabou (SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="gra268snd">
+			<rom type="code">gra268snd.bin</rom>
+			<rom type="x" offset="0x08000">SD_DRV.X</rom>
+			<rom type="code" offset="0x0f59e">BGM01.DAT</rom>
+			<rom type="code" offset="0x1b89e">DRPCM.DAT</rom>
+			<rom type="code" offset="0x27bde">SDPCM.DAT</rom>
+			<rom type="code" offset="0x3291e">VOPCM00.DAT</rom>
+			<rom type="code" offset="0x3c91e">VOPCM0X.DAT</rom>
+			<!-- <rom type="code" offset="0x583de">MTVOICE.DAT</rom> -->
+			<!-- FOR 1MB
+			<rom type="code" offset="0x3c91e">VOPCM01.DAT</rom>
+			-->
+		</romlist>
+		<titlelist>
+			<title code="0xf9">FADE OUT</title>
+			<title code="0xb7">BALANCE TEST</title>
+			<title code="0xb6">NOW LOADING!</title>
+			<title code="0xb5">KONAMI LOGO</title>
+			<title code="0xb1">TITLE DEMO</title>
+			<title code="0xa6">EQUIPMENT</title>
+			<title code="0xa0">TABIDACHI</title>
+			<title code="0xa1">BURNING HEAT</title>
+			<title code="0xa5">SHOOTING STAR</title>
+			<title code="0xa2">SYNTHETIC LIFE</title>
+			<title code="0xa8">CRYSTAL WORLD</title>
+			<title code="0xa3">A WAY OUT</title>
+			<title code="0xad">OLD STONE AGE1</title>
+			<title code="0xae">OLD STONE AGE2</title>
+			<title code="0xa9">MAXIMUM SPEED</title>
+			<title code="0xa4">TAKE CARE!</title>
+			<title code="0xaa">GRADIUS BOSS</title>
+			<title code="0xab">SALAMANDA BOSS</title>
+			<title code="0xac">FIRE DRAGON</title>
+			<title code="0xb3">HOSTILE SHIP</title>
+			<title code="0xb0">SHOOT'N'SHOOT</title>
+			<title code="0xaf">FINAL ENEMY</title>
+			<title code="0xb4">FAREWELL</title>
+			<title code="0xb2">RANKING</title>
+			<title code="0xa7">GAME OVER</title>
+			<!--
+			<title code="0xb8">OLD STONE AGE1</title>
+			-->
+			<title code="0x01">NORMAL SHOT</title>
+			<title code="0x0b">DOUBLE SHOT</title>
+			<title code="0x03">MISSILE SHOT</title>
+			<title code="0x0d">LASER SHOT</title>
+			<title code="0x0c">RIPPLE LASER S</title>
+			<title code="0x05">ENEMY LASER</title>
+			<title code="0x4e">BOSS HADOUHOU</title>
+			<title code="0x04">SHIELD OUT</title>
+			<title code="0x07">ENEMY OUT 1</title>
+			<title code="0x08">ENEMY OUT 2</title>
+			<title code="0x02">MOAI RING OUT</title>
+			<title code="0x0f">BALL OUT</title>
+			<title code="0x10">ROBO OUT</title>
+			<title code="0x4f">CRYSTAL OUT</title>
+			<title code="0x15">CRYSTAL OUT</title>
+			<title code="0x51">HATCH OUT</title>
+			<title code="0x16">AMI OUT</title>
+			<title code="0x17">ALIEN OUT</title>
+			<title code="0x18">BOARD OUT</title>
+			<title code="0x40">MOAI OUT</title>
+			<title code="0x44">DRAGON OUT</title>
+			<title code="0x46">HOUDAI OUT</title>
+			<title code="0x11">SMALL ROCK OUT</title>
+			<title code="0x64">BOSS OUT</title>
+			<title code="0x62">PLAYER OUT</title>
+			<title code="0x66">ALL OUT</title>
+			<title code="0x63">END OUT</title>
+			<title code="0x0a">SHOT REBOUND</title>
+			<title code="0x13">MOAI DAMAGE</title>
+			<title code="0x51">BOSS DAMAGE</title>
+			<title code="0x45">KAZAN FUNKA</title>
+			<title code="0x4d">HATCH OPEN</title>
+			<title code="0x47">YOUSAI APPEAR</title>
+			<title code="0x48">GATTAI</title>
+			<title code="0x68">JET 1</title>
+			<title code="0x69">JET 2</title>
+			<title code="0x50">ALARM</title>
+			<title code="0x4c">PAC!</title>
+			<title code="0x0e">SELECT</title>
+			<title code="0x43">NAME INPUT</title>
+			<title code="0x67">POWER UP</title>
+			<title code="0x61">CAPSULE TAKE</title>
+			<title code="0x60">COIN</title>
+			<title code="0x65">ONE UP</title>
+			<title code="0xc0">SPEED UP</title>
+			<title code="0xc3">MISSILE</title>
+			<title code="0xc6">SPREAD BOMB</title>
+			<title code="0xc7">PHOTON TORPEDO</title>
+			<title code="0xc8">TWOWAY MISSILE</title>
+			<title code="0xc1">DOUBLE</title>
+			<title code="0xc9">TAIL GUN</title>
+			<title code="0xc2">LASER</title>
+			<title code="0xca">PULSE LASER</title>
+			<title code="0xcb">RIPPLE LASER</title>
+			<title code="0xcc">OPTION</title>
+			<title code="0xc4">MULTIPLE</title>
+			<title code="0xcd">SHIELD</title>
+			<title code="0xc5">FORCE FIELD</title>
+
+			<title code="0xce">YOU NEED SOME PRACTICE</title>
+			<title code="0xcf">DESTROY THE CORE</title>
+			<title code="0xd0">DESTROY THEM ALL</title>
+			<title code="0xd1">SHOOT IT IN THE HEAD</title>
+			<title code="0xd2">SHOOT IT IN THE EYES</title>
+			<title code="0xd3">YOU SHALL NEVER RETURN ALIVE</title>
+			<title code="0xd4">YOU SHALL BE CRASHED</title>
+			<title code="0xd5">YOU CAN'T GO ANY FARTHER</title>
+			<title code="0xd6">SHOOT IT IN THE MOUTH</title>
+			<title code="0xd7">DRAGON OUT</title>
+			<title code="0xd8">I AM THE STRONGEST</title>
+			<title code="0xd9">I AM JUST THE SMALL PORTION OF THE EMPIRE OF BACTERIUM</title>
+			<title code="0xda">I'LL BASH YOU DOWN</title>
+			<title code="0xdb">GOFER LAUGH</title>
+			<title code="0xdc">GOFER OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Gradius II: Gofer no Yabou (Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x200"/>
+		</options>
+		<romlist archive="gra268snd">
+			<rom type="code">gra268snd.bin</rom>
+			<rom type="x" offset="0x08000">SD_DRV.X</rom>
+			<rom type="code" offset="0x0f59e">BGM01.DAT</rom>
+			<rom type="code" offset="0x1b89e">DRPCM.DAT</rom>
+			<rom type="code" offset="0x27bde">SDPCM.DAT</rom>
+			<rom type="code" offset="0x3291e">VOPCM00.DAT</rom>
+			<rom type="code" offset="0x3c91e">VOPCM0X.DAT</rom>
+			<!-- <rom type="code" offset="0x583de">MTVOICE.DAT</rom> -->
+			<!-- FOR 1MB
+			<rom type="code" offset="0x3c91e">VOPCM01.DAT</rom>
+			-->
+		</romlist>
+		<titlelist>
+			<title code="0xf9">FADE OUT</title>
+			<title code="0xb7">BALANCE TEST</title>
+			<title code="0xb6">NOW LOADING!</title>
+			<title code="0xb5">KONAMI LOGO</title>
+			<title code="0xb1">TITLE DEMO</title>
+			<title code="0xa6">EQUIPMENT</title>
+			<title code="0xa0">TABIDACHI</title>
+			<title code="0xa1">BURNING HEAT</title>
+			<title code="0xa5">SHOOTING STAR</title>
+			<title code="0xa2">SYNTHETIC LIFE</title>
+			<title code="0xa8">CRYSTAL WORLD</title>
+			<title code="0xa3">A WAY OUT</title>
+			<title code="0xad">OLD STONE AGE1</title>
+			<title code="0xae">OLD STONE AGE2</title>
+			<title code="0xa9">MAXIMUM SPEED</title>
+			<title code="0xa4">TAKE CARE!</title>
+			<title code="0xaa">GRADIUS BOSS</title>
+			<title code="0xab">SALAMANDA BOSS</title>
+			<title code="0xac">FIRE DRAGON</title>
+			<title code="0xb3">HOSTILE SHIP</title>
+			<title code="0xb0">SHOOT'N'SHOOT</title>
+			<title code="0xaf">FINAL ENEMY</title>
+			<title code="0xb4">FAREWELL</title>
+			<title code="0xb2">RANKING</title>
+			<title code="0xa7">GAME OVER</title>
+			<!--
+			<title code="0xb8">OLD STONE AGE1</title>
+			-->
+			<title code="0x01">NORMAL SHOT</title>
+			<title code="0x0b">DOUBLE SHOT</title>
+			<title code="0x03">MISSILE SHOT</title>
+			<title code="0x0d">LASER SHOT</title>
+			<title code="0x0c">RIPPLE LASER S</title>
+			<title code="0x05">ENEMY LASER</title>
+			<title code="0x4e">BOSS HADOUHOU</title>
+			<title code="0x04">SHIELD OUT</title>
+			<title code="0x07">ENEMY OUT 1</title>
+			<title code="0x08">ENEMY OUT 2</title>
+			<title code="0x02">MOAI RING OUT</title>
+			<title code="0x0f">BALL OUT</title>
+			<title code="0x10">ROBO OUT</title>
+			<title code="0x4f">CRYSTAL OUT</title>
+			<title code="0x15">CRYSTAL OUT</title>
+			<title code="0x51">HATCH OUT</title>
+			<title code="0x16">AMI OUT</title>
+			<title code="0x17">ALIEN OUT</title>
+			<title code="0x18">BOARD OUT</title>
+			<title code="0x40">MOAI OUT</title>
+			<title code="0x44">DRAGON OUT</title>
+			<title code="0x46">HOUDAI OUT</title>
+			<title code="0x11">SMALL ROCK OUT</title>
+			<title code="0x64">BOSS OUT</title>
+			<title code="0x62">PLAYER OUT</title>
+			<title code="0x66">ALL OUT</title>
+			<title code="0x63">END OUT</title>
+			<title code="0x0a">SHOT REBOUND</title>
+			<title code="0x13">MOAI DAMAGE</title>
+			<title code="0x51">BOSS DAMAGE</title>
+			<title code="0x45">KAZAN FUNKA</title>
+			<title code="0x4d">HATCH OPEN</title>
+			<title code="0x47">YOUSAI APPEAR</title>
+			<title code="0x48">GATTAI</title>
+			<title code="0x68">JET 1</title>
+			<title code="0x69">JET 2</title>
+			<title code="0x50">ALARM</title>
+			<title code="0x4c">PAC!</title>
+			<title code="0x0e">SELECT</title>
+			<title code="0x43">NAME INPUT</title>
+			<title code="0x67">POWER UP</title>
+			<title code="0x61">CAPSULE TAKE</title>
+			<title code="0x60">COIN</title>
+			<title code="0x65">ONE UP</title>
+			<title code="0xc0">SPEED UP</title>
+			<title code="0xc3">MISSILE</title>
+			<title code="0xc6">SPREAD BOMB</title>
+			<title code="0xc7">PHOTON TORPEDO</title>
+			<title code="0xc8">TWOWAY MISSILE</title>
+			<title code="0xc1">DOUBLE</title>
+			<title code="0xc9">TAIL GUN</title>
+			<title code="0xc2">LASER</title>
+			<title code="0xca">PULSE LASER</title>
+			<title code="0xcb">RIPPLE LASER</title>
+			<title code="0xcc">OPTION</title>
+			<title code="0xc4">MULTIPLE</title>
+			<title code="0xcd">SHIELD</title>
+			<title code="0xc5">FORCE FIELD</title>
+
+			<title code="0xce">YOU NEED SOME PRACTICE</title>
+			<title code="0xcf">DESTROY THE CORE</title>
+			<title code="0xd0">DESTROY THEM ALL</title>
+			<title code="0xd1">SHOOT IT IN THE HEAD</title>
+			<title code="0xd2">SHOOT IT IN THE EYES</title>
+			<title code="0xd3">YOU SHALL NEVER RETURN ALIVE</title>
+			<title code="0xd4">YOU SHALL BE CRASHED</title>
+			<title code="0xd5">YOU CAN'T GO ANY FARTHER</title>
+			<title code="0xd6">SHOOT IT IN THE MOUTH</title>
+			<title code="0xd7">DRAGON OUT</title>
+			<title code="0xd8">I AM THE STRONGEST</title>
+			<title code="0xd9">I AM JUST THE SMALL PORTION OF THE EMPIRE OF BACTERIUM</title>
+			<title code="0xda">I'LL BASH YOU DOWN</title>
+			<title code="0xdb">GOFER LAUGH</title>
+			<title code="0xdc">GOFER OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Gradius II: Gofer no Yabou (Demo) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="mfp" value="1"/>
+			<option name="dmaint" value="1"/>
+		</options>
+		<romlist archive="gra2d68snd">
+			<rom type="code">gra2d68snd.bin</rom>
+			<rom type="x"    offset="0x08000">SD_DRV.X</rom>
+			<rom type="code" offset="0x0f564">BGM00.DAT</rom>
+			<rom type="code" offset="0x1bfa4">DRPCM.DAT</rom>
+			<rom type="code" offset="0x282E4">SDPCM.DAT</rom>
+			<rom type="code" offset="0x33024">VOPCM00.DAT</rom>
+			<rom type="code" offset="0x3d024">MTVOICE.DAT</rom>
+			<rom type="code" offset="0x3e364">VOPCM01.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xb6">NOW LOADING!</title>
+			<title code="0xb5">KONAMI LOGO</title>
+			<title code="0xb1">TITLE DEMO</title>
+			<title code="0xa6">EQUIPMENT</title>
+			<title code="0xa0">TABIDACHI</title>
+			<title code="0xa1">BURNING HEAT</title>
+			<title code="0xa5">SHOOTING STAR</title>
+			<title code="0xa2">SYNTHETIC LIFE</title>
+			<title code="0xa8">CRYSTAL WORLD</title>
+			<title code="0xa3">A WAY OUT</title>
+			<title code="0xad">OLD STONE AGE1</title>
+			<title code="0xae">OLD STONE AGE2</title>
+			<title code="0xa9">MAXIMUM SPEED</title>
+			<title code="0xa4">TAKE CARE!</title>
+			<title code="0xaa">GRADIUS BOSS</title>
+			<title code="0xab">SALAMANDA BOSS</title>
+			<title code="0xac">FIRE DRAGON</title>
+			<title code="0xb3">HOSTILE SHIP</title>
+			<title code="0xb0">SHOOT'N'SHOOT</title>
+			<title code="0xaf">FINAL ENEMY</title>
+			<title code="0xb4">FAREWELL</title>
+			<title code="0xb2">RANKING</title>
+			<title code="0xa7">GAME OVER</title>
+		<!--	<title code="0xb7">BALANCE TEST</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Gradius II: Gofer no Yabou (Demo) (OPM+MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+			<option name="mfp" value="1"/>
+			<option name="dmaint" value="1"/>
+		</options>
+		<romlist archive="gra2d68snd">
+			<rom type="code">gra2d68snd.bin</rom>
+			<rom type="x"    offset="0x08000">SD_DRV.X</rom>
+			<rom type="code" offset="0x0f564">BGM00.DAT</rom>
+			<rom type="code" offset="0x1bfa4">DRPCM.DAT</rom>
+			<rom type="code" offset="0x282e4">SDPCM.DAT</rom>
+			<rom type="code" offset="0x33024">VOPCM00.DAT</rom>
+			<rom type="code" offset="0x3d024">MTVOICE.DAT</rom>
+			<rom type="code" offset="0x3e364">VOPCM01.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xb6">NOW LOADING!</title>
+			<title code="0xb5">KONAMI LOGO</title>
+			<title code="0xb1">TITLE DEMO</title>
+			<title code="0xa6">EQUIPMENT</title>
+			<title code="0xa0">TABIDACHI</title>
+			<title code="0xa1">BURNING HEAT</title>
+			<title code="0xa5">SHOOTING STAR</title>
+			<title code="0xa2">SYNTHETIC LIFE</title>
+			<title code="0xa8">CRYSTAL WORLD</title>
+			<title code="0xa3">A WAY OUT</title>
+			<title code="0xad">OLD STONE AGE1</title>
+			<title code="0xae">OLD STONE AGE2</title>
+			<title code="0xa9">MAXIMUM SPEED</title>
+			<title code="0xa4">TAKE CARE!</title>
+			<title code="0xaa">GRADIUS BOSS</title>
+			<title code="0xab">SALAMANDA BOSS</title>
+			<title code="0xac">FIRE DRAGON</title>
+			<title code="0xb3">HOSTILE SHIP</title>
+			<title code="0xb0">SHOOT'N'SHOOT</title>
+			<title code="0xaf">FINAL ENEMY</title>
+			<title code="0xb4">FAREWELL</title>
+			<title code="0xb2">RANKING</title>
+			<title code="0xa7">GAME OVER</title>
+			<title code="0xb7">BALANCE TEST</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Gradius II: Gofer no Yabou (Demo) (OPM+MT-32 Emulation)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+			<option name="midiout_mix" value="0x200"/>
+			<option name="mfp" value="1"/>
+			<option name="dmaint" value="1"/>
+		</options>
+		<romlist archive="gra2d68snd">
+			<rom type="code">gra2d68snd.bin</rom>
+			<rom type="x"    offset="0x08000">SD_DRV.X</rom>
+			<rom type="code" offset="0x0f564">BGM00.DAT</rom>
+			<rom type="code" offset="0x1bfa4">DRPCM.DAT</rom>
+			<rom type="code" offset="0x282E4">SDPCM.DAT</rom>
+			<rom type="code" offset="0x33024">VOPCM00.DAT</rom>
+			<rom type="code" offset="0x3d024">MTVOICE.DAT</rom>
+			<rom type="code" offset="0x3e364">VOPCM01.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xb6">NOW LOADING!</title>
+			<title code="0xb5">KONAMI LOGO</title>
+			<title code="0xb1">TITLE DEMO</title>
+			<title code="0xa6">EQUIPMENT</title>
+			<title code="0xa0">TABIDACHI</title>
+			<title code="0xa1">BURNING HEAT</title>
+			<title code="0xa5">SHOOTING STAR</title>
+			<title code="0xa2">SYNTHETIC LIFE</title>
+			<title code="0xa8">CRYSTAL WORLD</title>
+			<title code="0xa3">A WAY OUT</title>
+			<title code="0xad">OLD STONE AGE1</title>
+			<title code="0xae">OLD STONE AGE2</title>
+			<title code="0xa9">MAXIMUM SPEED</title>
+			<title code="0xa4">TAKE CARE!</title>
+			<title code="0xaa">GRADIUS BOSS</title>
+			<title code="0xab">SALAMANDA BOSS</title>
+			<title code="0xac">FIRE DRAGON</title>
+			<title code="0xb3">HOSTILE SHIP</title>
+			<title code="0xb0">SHOOT'N'SHOOT</title>
+			<title code="0xaf">FINAL ENEMY</title>
+			<title code="0xb4">FAREWELL</title>
+			<title code="0xb2">RANKING</title>
+			<title code="0xa7">GAME OVER</title>
+			<title code="0xb7">BALANCE TEST</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Gradius II: Gofer no Yabou (Demo) (SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+			<option name="mfp" value="1"/>
+		</options>
+		<romlist archive="gra2d68snd">
+			<rom type="code">gra2d68snd.bin</rom>
+			<rom type="x"    offset="0x08000">SD_DRV.X</rom>
+			<rom type="code" offset="0x0f564">BGM01.DAT</rom>
+			<rom type="code" offset="0x1bfa4">DRPCM.DAT</rom>
+			<rom type="code" offset="0x282E4">SDPCM.DAT</rom>
+			<rom type="code" offset="0x33024">VOPCM00.DAT</rom>
+			<rom type="code" offset="0x3d024">MTVOICE.DAT</rom>
+			<rom type="code" offset="0x3e364">VOPCM01.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xb6">NOW LOADING!</title>
+			<title code="0xb5">KONAMI LOGO</title>
+			<title code="0xb1">TITLE DEMO</title>
+			<title code="0xa6">EQUIPMENT</title>
+			<title code="0xa0">TABIDACHI</title>
+			<title code="0xa1">BURNING HEAT</title>
+			<title code="0xa5">SHOOTING STAR</title>
+			<title code="0xa2">SYNTHETIC LIFE</title>
+			<title code="0xa8">CRYSTAL WORLD</title>
+			<title code="0xa3">A WAY OUT</title>
+			<title code="0xad">OLD STONE AGE1</title>
+			<title code="0xae">OLD STONE AGE2</title>
+			<title code="0xa9">MAXIMUM SPEED</title>
+			<title code="0xa4">TAKE CARE!</title>
+			<title code="0xaa">GRADIUS BOSS</title>
+			<title code="0xab">SALAMANDA BOSS</title>
+			<title code="0xac">FIRE DRAGON</title>
+			<title code="0xb3">HOSTILE SHIP</title>
+			<title code="0xb0">SHOOT'N'SHOOT</title>
+			<title code="0xaf">FINAL ENEMY</title>
+			<title code="0xb4">FAREWELL</title>
+			<title code="0xb2">RANKING</title>
+			<title code="0xa7">GAME OVER</title>
+		<!--	<title code="0xb7">BALANCE TEST</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Parodius Da! (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="paro68snd">
+			<rom type="code">paro68snd.bin</rom>
+			<rom type="x" offset="0x08000">SD_DRV.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xc0">ツインビーのテーマ</title>
+			<title code="0xc1">ビック・バイパーのテーマ</title>
+			<title code="0xc2">たこのテーマ</title>
+			<title code="0xc3">ペン太郎のテーマ</title>
+			<title code="0xc4">アイランド・オブ・パイレーツ</title>
+			<title code="0xc5">ピエロの涙も三度まで</title>
+			<title code="0xc6">ラビリンス</title>
+			<title code="0xc7">ナイト・オブ・ザ・リビングデッド</title>
+			<title code="0xc8">タコの要塞のテーマ</title>
+			<title code="0xc9">嗚呼! 日本旅情</title>
+			<title code="0xca">軍艦マーチで今日もフィーバー</title>
+			<title code="0xcb">宇宙戦艦モアイ</title>
+			<title code="0xcc">神話からお笑いへ</title>
+			<title code="0xcd">パロディウス音頭</title>
+			<title code="0xce">ボスBGMだ!</title>
+			<title code="0xcf">電飾コアのテーマ</title>
+			<title code="0xd0">吉原太夫のテーマ</title>
+			<title code="0xd1">豚潮のテーマ</title>
+			<title code="0xd2">イーグル佐武のテーマ</title>
+			<title code="0xd3">ゴルゴダ・タコのテーマ</title>
+			<title code="0xd4">ボス・アウトだ!</title>
+			<title code="0xd5">ビューティフル・ギャルズ</title>
+			<title code="0xd6">もっとも北の国から'90</title>
+			<title code="0xd7">ちちびんたリカのテーマ</title>
+			<title code="0xd8">ホット・リップスのテーマ</title>
+			<title code="0xd9">エンディングだ!</title>
+			<title code="0xda">コンティニューだ!</title>
+			<title code="0xdb">ランキングだ!</title>
+			<title code="0xdc">クライシス第4楽章</title>
+			<title code="0xdd">こんにちは、パロちゃん</title>
+			<title code="0xe0">プレイヤー アウト</title>
+			<title code="0xe1">ゲームオーバー!!</title>
+			<title code="0xe2">バランス テスト</title>
+			<title code="0xe3">ロゴ表示</title>
+			<title code="0xe4">ロード中</title>
+			<title code="0xe6">グラディウスII ～武器セレクト～</title>
+			<!--
+			<title code="0xe5">e5</title>
+			<title code="0xe7">e7</title>
+			<title code="0xe8">e8</title>
+			<title code="0xe9">e9</title>
+			<title code="0xea">ea</title>
+			<title code="0xeb">eb</title>
+			<title code="0xec">ec</title>
+			<title code="0xed">ed</title>
+			<title code="0xee">ee</title>
+			<title code="0xef">ef</title>
+			-->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Parodius Da! (OPM+MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="paro68snd">
+			<rom type="code">paro68snd.bin</rom>
+			<rom type="x" offset="0x08000">SD_DRV.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xc0">ツインビーのテーマ</title>
+			<title code="0xc1">ビック・バイパーのテーマ</title>
+			<title code="0xc2">たこのテーマ</title>
+			<title code="0xc3">ペン太郎のテーマ</title>
+			<title code="0xc4">アイランド・オブ・パイレーツ</title>
+			<title code="0xc5">ピエロの涙も三度まで</title>
+			<title code="0xc6">ラビリンス</title>
+			<title code="0xc7">ナイト・オブ・ザ・リビングデッド</title>
+			<title code="0xc8">タコの要塞のテーマ</title>
+			<title code="0xc9">嗚呼! 日本旅情</title>
+			<title code="0xca">軍艦マーチで今日もフィーバー</title>
+			<title code="0xcb">宇宙戦艦モアイ</title>
+			<title code="0xcc">神話からお笑いへ</title>
+			<title code="0xcd">パロディウス音頭</title>
+			<title code="0xce">ボスBGMだ!</title>
+			<title code="0xcf">電飾コアのテーマ</title>
+			<title code="0xd0">吉原太夫のテーマ</title>
+			<title code="0xd1">豚潮のテーマ</title>
+			<title code="0xd2">イーグル佐武のテーマ</title>
+			<title code="0xd3">ゴルゴダ・タコのテーマ</title>
+			<title code="0xd4">ボス・アウトだ!</title>
+			<title code="0xd5">ビューティフル・ギャルズ</title>
+			<title code="0xd6">もっとも北の国から'90</title>
+			<title code="0xd7">ちちびんたリカのテーマ</title>
+			<title code="0xd8">ホット・リップスのテーマ</title>
+			<title code="0xd9">エンディングだ!</title>
+			<title code="0xda">コンティニューだ!</title>
+			<title code="0xdb">ランキングだ!</title>
+			<title code="0xdc">クライシス第4楽章</title>
+			<title code="0xdd">こんにちは、パロちゃん</title>
+			<title code="0xe0">プレイヤー アウト</title>
+			<title code="0xe1">ゲームオーバー!!</title>
+			<title code="0xe2">バランス テスト</title>
+			<title code="0xe3">ロゴ表示</title>
+			<title code="0xe4">ロード中</title>
+			<title code="0xe6">グラディウスII ～武器セレクト～</title>
+			<!--
+			<title code="0xe5">e5</title>
+			<title code="0xe7">e7</title>
+			<title code="0xe8">e8</title>
+			<title code="0xe9">e9</title>
+			<title code="0xea">ea</title>
+			<title code="0xeb">eb</title>
+			<title code="0xec">ec</title>
+			<title code="0xed">ed</title>
+			<title code="0xee">ee</title>
+			<title code="0xef">ef</title>
+			-->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Parodius Da! (OPM+MT-32 Emulation)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+			<option name="midiout_mix" value="0x220"/>
+		</options>
+		<romlist archive="paro68snd">
+			<rom type="code">paro68snd.bin</rom>
+			<rom type="x" offset="0x08000">SD_DRV.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xc0">ツインビーのテーマ</title>
+			<title code="0xc1">ビック・バイパーのテーマ</title>
+			<title code="0xc2">たこのテーマ</title>
+			<title code="0xc3">ペン太郎のテーマ</title>
+			<title code="0xc4">アイランド・オブ・パイレーツ</title>
+			<title code="0xc5">ピエロの涙も三度まで</title>
+			<title code="0xc6">ラビリンス</title>
+			<title code="0xc7">ナイト・オブ・ザ・リビングデッド</title>
+			<title code="0xc8">タコの要塞のテーマ</title>
+			<title code="0xc9">嗚呼! 日本旅情</title>
+			<title code="0xca">軍艦マーチで今日もフィーバー</title>
+			<title code="0xcb">宇宙戦艦モアイ</title>
+			<title code="0xcc">神話からお笑いへ</title>
+			<title code="0xcd">パロディウス音頭</title>
+			<title code="0xce">ボスBGMだ!</title>
+			<title code="0xcf">電飾コアのテーマ</title>
+			<title code="0xd0">吉原太夫のテーマ</title>
+			<title code="0xd1">豚潮のテーマ</title>
+			<title code="0xd2">イーグル佐武のテーマ</title>
+			<title code="0xd3">ゴルゴダ・タコのテーマ</title>
+			<title code="0xd4">ボス・アウトだ!</title>
+			<title code="0xd5">ビューティフル・ギャルズ</title>
+			<title code="0xd6">もっとも北の国から'90</title>
+			<title code="0xd7">ちちびんたリカのテーマ</title>
+			<title code="0xd8">ホット・リップスのテーマ</title>
+			<title code="0xd9">エンディングだ!</title>
+			<title code="0xda">コンティニューだ!</title>
+			<title code="0xdb">ランキングだ!</title>
+			<title code="0xdc">クライシス第4楽章</title>
+			<title code="0xdd">こんにちは、パロちゃん</title>
+			<title code="0xe0">プレイヤー アウト</title>
+			<title code="0xe1">ゲームオーバー!!</title>
+			<title code="0xe2">バランス テスト</title>
+			<title code="0xe3">ロゴ表示</title>
+			<title code="0xe4">ロード中</title>
+			<title code="0xe6">グラディウスII ～武器セレクト～</title>
+			<!--
+			<title code="0xe5">e5</title>
+			<title code="0xe7">e7</title>
+			<title code="0xe8">e8</title>
+			<title code="0xe9">e9</title>
+			<title code="0xea">ea</title>
+			<title code="0xeb">eb</title>
+			<title code="0xec">ec</title>
+			<title code="0xed">ed</title>
+			<title code="0xee">ee</title>
+			<title code="0xef">ef</title>
+			-->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Akumajo Dracula (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0xb8"/>
+		</options>
+		<romlist archive="ad68snd">
+			<rom type="code">ad68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x20000">ADPCM_BG.DAT</rom>
+			<rom type="code" offset="0x40000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x60000">SOUND_BG.DAT</rom>
+			<rom type="code" offset="0x70000">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x80000">VOICE_BG.DAT</rom>
+			<rom type="code" offset="0x90000">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0xa0000">TABLE_BG.DAT</rom>
+			<rom type="code" offset="0xa8000">YUSEN_TB.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xc0">01 : LOAD BGM</title>
+			<title code="0xc4">02 : KONAMI LOGO</title>
+			<title code="0xbe">03 : Black Mass</title>
+			<title code="0xb9">04 : Title</title>
+			<title code="0xb0">05 : Something Loopy</title>
+			<title code="0xb7">06 : Start Demo</title>
+			<title code="0xbb">07 : Vampire Killer</title>
+			<title code="0xc2">08 : Round Clear</title>
+			<title code="0xb3">09 : Thrashard In The Cave</title>
+			<title code="0xb2">10 : Wiched Child</title>
+			<title code="0xc5">11 : Bloody Tear</title>
+			<title code="0xb5">12 : The Tower Of Gears</title>
+			<title code="0xc1">13 : MOON-FIGHT</title>
+			<title code="0xb4">14 : The Tower Of Dolls</title>
+			<title code="0xba">15 : Etude For The Killer</title>
+			<title code="0xbc">16 : Theme Of Simon Belmondo</title>
+			<title code="0xb6">17 : Creatures In The Depth</title>
+			<title code="0xb1">18 : You Goddamned Bathead!</title>
+			<title code="0xc3">19 : All Clear</title>
+			<title code="0xbf">20 : Mother Earth</title>
+			<title code="0xc6">21 : Player Dead</title>
+			<title code="0xbd">22 : GAME OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Akumajo Dracula (MT-32)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+			<!-- for compatibility -->
+			<option name="mt32" value="1"/>
+			<option name="mt32_mix" value="0x220"/>
+			<option name="stop" value="0xb8"/>
+		</options>
+		<romlist archive="ad68snd">
+			<rom type="code">ad68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x40000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x60000">SOUND_MT.DAT</rom>
+			<rom type="code" offset="0x70000">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x90000">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0xa0000">TABLE_MT.DAT</rom>
+			<rom type="code" offset="0xa8000">YUSEN_TB.DAT</rom>
+			<rom type="code" offset="0xb0000">VOICE_MT.DAT</rom>
+			<rom type="code" offset="0xb8000">PATCH_MT.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xc0">01 : LOAD BGM</title>
+			<title code="0xc4">02 : KONAMI LOGO</title>
+			<title code="0xbe">03 : Black Mass</title>
+			<title code="0xb9">04 : Title</title>
+			<title code="0xb0">05 : Something Loopy</title>
+			<title code="0xb7">06 : Start Demo</title>
+			<title code="0xbb">07 : Vampire Killer</title>
+			<title code="0xc2">08 : Round Clear</title>
+			<title code="0xb3">09 : Thrashard In The Cave</title>
+			<title code="0xb2">10 : Wiched Child</title>
+			<title code="0xc5">11 : Bloody Tear</title>
+			<title code="0xb5">12 : The Tower Of Gears</title>
+			<title code="0xc1">13 : MOON-FIGHT</title>
+			<title code="0xb4">14 : The Tower Of Dolls</title>
+			<title code="0xba">15 : Etude For The Killer</title>
+			<title code="0xbc">16 : Theme Of Simon Belmondo</title>
+			<title code="0xb6">17 : Creatures In The Depth</title>
+			<title code="0xb1">18 : You Goddamned Bathead!</title>
+			<title code="0xc3">19 : All Clear</title>
+			<title code="0xbf">20 : Mother Earth</title>
+			<title code="0xc6">21 : Player Dead</title>
+			<title code="0xbd">22 : GAME OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Akumajo Dracula (MT-32 Emulation)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+			<option name="midiout_mix" value="0x220"/>
+			<!-- for compatibility -->
+			<option name="mt32" value="1"/>
+			<option name="mt32_mix" value="0x220"/>
+			<option name="stop" value="0xb8"/>
+		</options>
+		<romlist archive="ad68snd">
+			<rom type="code">ad68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x40000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x60000">SOUND_MT.DAT</rom>
+			<rom type="code" offset="0x70000">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x90000">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0xa0000">TABLE_MT.DAT</rom>
+			<rom type="code" offset="0xa8000">YUSEN_TB.DAT</rom>
+			<rom type="code" offset="0xb0000">VOICE_MT.DAT</rom>
+			<rom type="code" offset="0xb8000">PATCH_MT.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xc0">01 : LOAD BGM</title>
+			<title code="0xc4">02 : KONAMI LOGO</title>
+			<title code="0xbe">03 : Black Mass</title>
+			<title code="0xb9">04 : Title</title>
+			<title code="0xb0">05 : Something Loopy</title>
+			<title code="0xb7">06 : Start Demo</title>
+			<title code="0xbb">07 : Vampire Killer</title>
+			<title code="0xc2">08 : Round Clear</title>
+			<title code="0xb3">09 : Thrashard In The Cave</title>
+			<title code="0xb2">10 : Wiched Child</title>
+			<title code="0xc5">11 : Bloody Tear</title>
+			<title code="0xb5">12 : The Tower Of Gears</title>
+			<title code="0xc1">13 : MOON-FIGHT</title>
+			<title code="0xb4">14 : The Tower Of Dolls</title>
+			<title code="0xba">15 : Etude For The Killer</title>
+			<title code="0xbc">16 : Theme Of Simon Belmondo</title>
+			<title code="0xb6">17 : Creatures In The Depth</title>
+			<title code="0xb1">18 : You Goddamned Bathead!</title>
+			<title code="0xc3">19 : All Clear</title>
+			<title code="0xbf">20 : Mother Earth</title>
+			<title code="0xc6">21 : Player Dead</title>
+			<title code="0xbd">22 : GAME OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Akumajo Dracula (SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+			<!-- for compatibility -->
+			<option name="mt32" value="1"/>
+			<option name="mt32_mix" value="0x220"/>
+			<option name="stop" value="0xb8"/>
+		</options>
+		<romlist archive="ad68snd">
+			<rom type="code">ad68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x40000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x60000">SOUND_SC.DAT</rom>
+			<rom type="code" offset="0x70000">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x90000">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0xa0000">TABLE_SC.DAT</rom>
+			<rom type="code" offset="0xa8000">YUSEN_TB.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xc0">01 : LOAD BGM</title>
+			<title code="0xc4">02 : KONAMI LOGO</title>
+			<title code="0xbe">03 : Black Mass</title>
+			<title code="0xb9">04 : Title</title>
+			<title code="0xb0">05 : Something Loopy</title>
+			<title code="0xb7">06 : Start Demo</title>
+			<title code="0xbb">07 : Vampire Killer</title>
+			<title code="0xc2">08 : Round Clear</title>
+			<title code="0xb3">09 : Thrashard In The Cave</title>
+			<title code="0xb2">10 : Wiched Child</title>
+			<title code="0xc5">11 : Bloody Tear</title>
+			<title code="0xb5">12 : The Tower Of Gears</title>
+			<title code="0xc1">13 : MOON-FIGHT</title>
+			<title code="0xb4">14 : The Tower Of Dolls</title>
+			<title code="0xba">15 : Etude For The Killer</title>
+			<title code="0xbc">16 : Theme Of Simon Belmondo</title>
+			<title code="0xb6">17 : Creatures In The Depth</title>
+			<title code="0xb1">18 : You Goddamned Bathead!</title>
+			<title code="0xc3">19 : All Clear</title>
+			<title code="0xbf">20 : Mother Earth</title>
+			<title code="0xc6">21 : Player Dead</title>
+			<title code="0xbd">22 : GAME OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Akumajo Dracula (GM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+			<!-- for compatibility -->
+			<option name="mt32" value="1"/>
+			<option name="mt32_mix" value="0x220"/>
+			<option name="stop" value="0xb8"/>
+		</options>
+		<romlist archive="ad68snd">
+			<rom type="code">ad68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x40000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x60000">SOUND_SC.DAT</rom>
+			<rom type="code" offset="0x70000">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x90000">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0xa0000">TABLE_SC.DAT</rom>
+			<rom type="code" offset="0xa8000">YUSEN_TB.DAT</rom>
+
+			<rom type="code" offset="0xc0000">VOICE_MT.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xc0">01 : LOAD BGM</title>
+			<title code="0xc4">02 : KONAMI LOGO</title>
+			<title code="0xbe">03 : Black Mass</title>
+			<title code="0xb9">04 : Title</title>
+			<title code="0xb0">05 : Something Loopy</title>
+			<title code="0xb7">06 : Start Demo</title>
+			<title code="0xbb">07 : Vampire Killer</title>
+			<title code="0xc2">08 : Round Clear</title>
+			<title code="0xb3">09 : Thrashard In The Cave</title>
+			<title code="0xb2">10 : Wiched Child</title>
+			<title code="0xc5">11 : Bloody Tear</title>
+			<title code="0xb5">12 : The Tower Of Gears</title>
+			<title code="0xc1">13 : MOON-FIGHT</title>
+			<title code="0xb4">14 : The Tower Of Dolls</title>
+			<title code="0xba">15 : Etude For The Killer</title>
+			<title code="0xbc">16 : Theme Of Simon Belmondo</title>
+			<title code="0xb6">17 : Creatures In The Depth</title>
+			<title code="0xb1">18 : You Goddamned Bathead!</title>
+			<title code="0xc3">19 : All Clear</title>
+			<title code="0xbf">20 : Mother Earth</title>
+			<title code="0xc6">21 : Player Dead</title>
+			<title code="0xbd">22 : GAME OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Akumajo Dracula (Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+			<option name="stop" value="0xb8"/>
+		</options>
+		<romlist archive="ad68snd">
+			<rom type="code">ad68snd.bin</rom>
+			<rom type="x" offset="0x08000">KMDRV.X</rom>
+			<rom type="code" offset="0x40000">ADPCM_SE.DAT</rom>
+			<rom type="code" offset="0x60000">SOUND_SC.DAT</rom>
+			<rom type="code" offset="0x70000">SOUND_SE.DAT</rom>
+			<rom type="code" offset="0x90000">VOICE_SE.DAT</rom>
+			<rom type="code" offset="0xa0000">TABLE_SC.DAT</rom>
+			<rom type="code" offset="0xa8000">YUSEN_TB.DAT</rom>
+			<rom type="code" offset="0xc0000">VOICE_MT.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xc0">01 : LOAD BGM</title>
+			<title code="0xc4">02 : KONAMI LOGO</title>
+			<title code="0xbe">03 : Black Mass</title>
+			<title code="0xb9">04 : Title</title>
+			<title code="0xb0">05 : Something Loopy</title>
+			<title code="0xb7">06 : Start Demo</title>
+			<title code="0xbb">07 : Vampire Killer</title>
+			<title code="0xc2">08 : Round Clear</title>
+			<title code="0xb3">09 : Thrashard In The Cave</title>
+			<title code="0xb2">10 : Wiched Child</title>
+			<title code="0xc5">11 : Bloody Tear</title>
+			<title code="0xb5">12 : The Tower Of Gears</title>
+			<title code="0xc1">13 : MOON-FIGHT</title>
+			<title code="0xb4">14 : The Tower Of Dolls</title>
+			<title code="0xba">15 : Etude For The Killer</title>
+			<title code="0xbc">16 : Theme Of Simon Belmondo</title>
+			<title code="0xb6">17 : Creatures In The Depth</title>
+			<title code="0xb1">18 : You Goddamned Bathead!</title>
+			<title code="0xc3">19 : All Clear</title>
+			<title code="0xbf">20 : Mother Earth</title>
+			<title code="0xc6">21 : Player Dead</title>
+			<title code="0xbd">22 : GAME OVER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Nama Baseball '68 (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Konami</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+			<option name="stop" value="0x5f"/>
+		</options>
+		<romlist archive="nama68snd">
+			<rom type="code">nama68snd.bin</rom>
+			<rom type="x" offset="0x4000">OPMXDRV.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x4d">4D : ロード</title>
+			<title code="0x6d">6D : コナミ ロゴ</title>
+			<title code="0x4a">4A : オープニング</title>
+			<title code="0x4c">4C : メニュー</title>
+			<title code="0x6a">6A : ペナントレース開幕</title>
+			<title code="0x69">69 : ペナントレース</title>
+			<title code="0x40">40 : ヒッティングマーチ1</title>
+			<title code="0x41">41 : ヒッティングマーチ2</title>
+			<title code="0x42">42 : ヒッティングマーチ3</title>
+			<title code="0x43">43 : ヒッティングマーチ4</title>
+			<!--
+			<title code="0x44">44 : ヒッティングマーチ4</title>
+			  -->
+			<title code="0x46">46 : ヒット1</title>
+			<title code="0x62">62 : ヒット2</title>
+			<title code="0x65">65 : ラッキー7</title>
+			<title code="0x45">45 : ホームラン</title>
+			<title code="0x48">48 : チェンジ</title>
+			<title code="0x4f">4F : 試合終了</title>
+			<title code="0x4b">4B : プロ野球ニュース ジングル</title>
+			<title code="0x4e">4E : プロ野球ニュース</title>
+			<title code="0x49">49 : リーグ優勝</title>
+			<title code="0x47">47 : エンディング</title>
+			<title code="0x6c">6C : </title>
+			<title code="0x70">70 : 試験電波</title>
+			<title code="0x01">01 : SE</title>
+			<title code="0x02">02 : SE</title>
+			<title code="0x02">03 : SE</title>
+			<title code="0x05">05 : SE</title>
+			<title code="0x06">06 : SE</title>
+			<title code="0x07">07 : SE</title>
+			<title code="0x1a">1A : SE</title>
+			<title code="0x59">59 : SE</title>
+			<title code="0x5a">5A : SE</title>
+			<title code="0x5b">5B : SE</title>
+			<title code="0x5c">5C : SE</title>
+			<title code="0x5d">5D : SE</title>
+			<title code="0x5e">5E : SE</title>
+			<title code="0x56">56 : SE</title>
+			<title code="0x57">57 : SE</title>
+			<title code="0x55">55 : SE 時報1</title>
+			<title code="0x58">58 : SE 時報2</title>
+			<title code="0x0a">0A : ピッチャー</title>
+			<title code="0x0b">0B : バッター</title>
+			<title code="0x0c">0C : キャッチャー</title>
+			<title code="0x0d">0D : ランナー</title>
+			<title code="0x0e">0E : ファースト</title>
+			<title code="0x0f">0F : セカンド</title>
+			<title code="0x10">10 : サード</title>
+			<title code="0x11">11 : ショート</title>
+			<title code="0x12">12 : ライト</title>
+			<title code="0x13">13 : センター</title>
+			<title code="0x14">14 : レフト</title>
+			<title code="0x15">15 : 指名打者</title>
+			<title code="0x16">16 : ラッキー7の攻撃です</title>
+			<title code="0x17">17 : ファールボールにご注意ください</title>
+			<title code="0x18">18 : ゲームセット</title>
+			<title code="0x1c">1C : 背番号</title>
+			<title code="0x1d">1D : 1番</title>
+			<title code="0x1e">1E : 2番</title>
+			<title code="0x1f">1F : 3番</title>
+			<title code="0x20">20 : 4番</title>
+			<title code="0x21">21 : 5番</title>
+			<title code="0x22">22 : 6番</title>
+			<title code="0x23">23 : 7番</title>
+			<title code="0x24">24 : 8番</title>
+			<title code="0x25">25 : 9番</title>
+			<title code="0x26">26 : 0</title>
+			<title code="0x27">27 : 1</title>
+			<title code="0x28">28 : 2</title>
+			<title code="0x29">29 : 3</title>
+			<title code="0x2a">2A : 4</title>
+			<title code="0x2b">2B : 5</title>
+			<title code="0x2c">2C : 6</title>
+			<title code="0x2d">2D : 7</title>
+			<title code="0x2e">2E : 8</title>
+			<title code="0x2f">2F : 9</title>
+			<title code="0x30">30 : 10</title>
+			<title code="0x31">31 : 20</title>
+			<title code="0x32">32 : 30</title>
+			<title code="0x33">33 : 40</title>
+			<title code="0x34">34 : 50</title>
+			<title code="0x35">35 : 60</title>
+			<title code="0x36">36 : 70</title>
+			<title code="0x37">37 : 80</title>
+			<title code="0x38">38 : 90</title>
+			<title code="0x39">39 : アウト</title>
+			<title code="0x3a">3A : セーフ</title>
+			<title code="0x3b">3B : スリー</title>
+			<title code="0x3c">3C : ボール</title>
+			<title code="0x3d">3D : バッターアウト</title>
+			<title code="0x3e">3E : デッドボール</title>
+			<title code="0x3f">3F : ファールボール</title>
+			<title code="0x50">50 : プレイボール</title>
+			<title code="0x51">51 : テイクワンベース</title>
+			<title code="0x52">52 : プレイ</title>
+			<title code="0x53">53 : タイム</title>
+			<title code="0x54">54 : フォアボール</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] SNATCHER(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">Konami</driveralias>
+		<options>
+			<option name="init_pc"    value="0x4000"/>
+			<option name="mdata_addr" value="0x0000"/>
+			<option name="mdata_size" value="0x3000"/>
+			<option name="mfile_size" value="0xe000"/>
+			<option name="opna_mix"   value="0x180"/>
+		</options>
+		<romlist archive="snatcher">
+			<rom type="code" offset="0x4000">PATCH</rom>
+			<rom type="code" offset="0x6800">LOADER</rom>
+			<rom type="code" offset="0xd000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUSIC</rom>
+			<rom type="bgm" offset="0x01">MUSIC2</rom>
+		</romlist>
+		<titlelist>
+			<!-- 以下の4タイトル不明 -->
+			<!-- "WRONG ANSWER" (Axia) -->
+			<!-- "TITLE PART5" (Peace of Mind) -->
+			<!-- "TRANSFORM RISA" (Virtual Image) -->
+			<!-- "CREDITS" -->
+			<title code="0x000300">"TEAM LOGO" (Slave to METAL)</title>
+			<title code="0x01d700">"PROLOGUE DEMO" (Bio Hazard)</title>
+			<title code="0x099800">"SNATCHER TITLE" (Squeak!!)</title>
+			<title code="0x0fdd00">"THEME OF OPENING" (Twilight of Neo Kobe City)</title>
+			<title code="0x15d000">"THEME OF SNATCHER"</title>
+			<title code="0x1b1000">"BLOW UP TRICYCLE"</title>
+			<title code="0x1e0d00">"TITLE TELOP" (Evil Ripple)</title>
+			<title code="0x21c100">"THEME OF METAL GEAR" (Theme of TARA)</title>
+			<title code="0x23f400">"PURSUER PART1" (Creeping Silence)</title>
+			<title code="0x254900">"PURSUER PART2" (Criminal Omen)</title>
+			<title code="0x27b100">"PURSUER PART3" (Pleasure of Tension)</title>
+			<title code="0x28db00">"PURSUER PART4" (Endless Pursue)</title>
+			<title code="0x2cf800">"PURSUER PART5" (Follow up The Scent)</title>
+			<title code="0x2e7500">?</title>
+			<title code="0x315900">"BATH ROOM" (Virulent Smile)</title>
+			<title code="0x328a00">"TITLE PART3" (Faded Memories)</title>
+			<title code="0x380000">"TITLE PART1" (Theme of JUNKER)</title>
+			<title code="0x3cd900">"PROLOGUE(UNUSED)" (AD2042 Neo Kobe City)</title>
+			<title code="0x3f0200">"THEME OF SNATCHER 2"</title>
+			<title code="0x40af00">"THEME OF SNATCHER 3"</title>
+			<title code="0x428700">"KATRINE PART3" (Theme of katrine 2)</title>
+			<title code="0x456800">"KATRINE PART1" (Innocent Girl)</title>
+			<title code="0x480500">?</title>
+			<title code="0x489400">"KATRINE PART2" (Theme of katrine)</title>
+			<title code="0x4a2800">"KATRINE PART4" (Theme of katrine 3)</title>
+			<title code="0x4c6600">"JOY DIVISION" (Decadance Beat) 1</title>
+			<title code="0x4f7400">"JOY DIVISION" (Decadance Beat) 2</title>
+			<title code="0x529400">"OUTER HEAVEN1" (The Entrance to Hell) 1</title>
+			<title code="0x54cf00">"OUTER HEAVEN1" (The Entrance to Hell) 2</title>
+			<title code="0x577a00">"OUTER HEAVEN2" (Theme of IZABEL)</title>
+			<title code="0x5a1100">"JINGLE BELL" (Jingle bell 2042)</title>
+			<title code="0x5d4400">"ACTION" (Justice for all)</title>
+			<title code="0x5f0b00">"ACTION" (Danger Dance)</title>
+			<title code="0x603f00">"JAIME" (Theme of JAIME)</title>
+			<title code="0x61d200">"MORTUARY PART1" (Morg)</title>
+			<title code="0x645600">"RESTORATION"</title>
+			<title code="0x666900">"GOODBYE RANDAM" (Eternal Promise)</title>
+			<title code="0x683b00">"TITLE PART2" (Theme of RANDAM)</title>
+			<title code="0x700400">?</title>
+			<title code="0x70f900">"SEARCH LIGHT" (Spreading Diehard)</title>
+			<title code="0x726f00">"REQUIEM" (For Harry)</title>
+			<title code="0x757d00">"EPIROGUE" (Beyond Sorrows)</title>
+			<title code="0x7bbd00">"GAME OVER" (Lament for The Death)</title>
+			<title code="0x7cd800">"ENDING 1" (Master of Puppets Among The Disease)</title>
+			<title code="0x000001">"THEME OF ENDING" (We Have to Struggle for Our Future Against Our Doubt)</title>
+			<title code="0xa93500">FANFARE 1</title>
+			<title code="0xaf3700">FANFARE 2</title>
+			<title code="0x209d00">SE 00</title>
+			<title code="0x20e900">SE 01</title>
+			<title code="0x8cf900">SE 02</title>
+			<title code="0x8a4900">SE 03</title>
+			<title code="0x8d7c00">SE 04</title>
+			<title code="0x919d00">SE 05</title>
+			<title code="0x91b900">SE 06</title>
+			<title code="0x928000">SE 07</title>
+			<title code="0x973100">SE 08</title>
+			<title code="0x990900">SE 09</title>
+			<title code="0x9ef100">SE 10</title>
+			<title code="0xa88100">SE 11</title>
+			<title code="0xaa3900">SE 12</title>
+			<title code="0xab2200">SE 13</title>
+			<title code="0xac9400">SE 14</title>
+			<title code="0xadd300">SE 15</title>
+			<title code="0xae3c00">SE 16</title>
+			<title code="0xb01a00">SE 17</title>
+			<title code="0xb1c500">SE 18</title>
+			<title code="0xb55e00">SE 19</title>
+			<title code="0xb58200">SE 20</title>
+			<title code="0xb62b00">SE 21</title>
+			<title code="0xb6f100">SE 22</title>
+			<title code="0xb65700">SE 23</title>
+			<title code="0xb72a00">SE 24</title>
+			<title code="0xb7e700">SE 25</title>
+			<title code="0xb8e200">SE 26</title>
+			<title code="0xb99f00">SE 27</title>
+			<title code="0xb9f500">SE 28</title>
+			<title code="0xba5200">SE 29</title>
+			<title code="0xbb7300">SE 30</title>
+			<title code="0xbc7200">SE 31</title>
+			<title code="0xbcf100">SE 32</title>
+			<title code="0xbd7000">SE 33</title>
+			<title code="0xbdc400">SE 34</title>
+			<title code="0xc04900">SE 35</title>
+			<title code="0xc46100">SE 36</title>
+			<title code="0xc4c100">SE 37</title>
+			<title code="0xc50c00">SE 38</title>
+			<title code="0xc5d800">SE 39</title>
+			<title code="0xc69800">SE 40</title>
+			<title code="0xc7f800">SE 41</title>
+			<title code="0xc81000">SE 42</title>
+			<title code="0xc91d00">SE 43</title>
+			<title code="0xc95f00">SE 44</title>
+			<title code="0xc98600">SE 45</title>
+			<title code="0xc9ef00">SE 46</title>
+			<title code="0xca2f00">SE 47</title>
+			<title code="0xca8700">SE 48</title>
+			<title code="0xcab800">SE 49</title>
+			<title code="0xcb1800">SE 50</title>
+			<title code="0xcb3000">SE 51</title>
+			<title code="0xcb4800">SE 52</title>
+			<title code="0xcb6000">SE 53</title>
+			<title code="0xcc5c00">SE 54</title>
+			<title code="0xcd4000">SE 55</title>
+			<title code="0xcd7400">SE 56</title>
+			<title code="0xcd9200">SE 57</title>
+			<title code="0xcdf800">SE 58</title>
+			<title code="0xcf0900">SE 59</title>
+			<title code="0xcf4000">SE 60</title>
+			<title code="0xd00e00">SE 61</title>
+			<title code="0xd0dd00">SE 62</title>
+			<title code="0xd1ac00">SE 63</title>
+			<title code="0xd20800">SE 64</title>
+			<title code="0xd35200">SE 65</title>
+			<title code="0xd3bc00">SE 66</title>
+			<title code="0xd47500">SE 67</title>
+			<title code="0xd55200">SE 68</title>
+			<title code="0xd66400">SE 69</title>
+			<title code="0xd85100">SE 70</title>
+			<title code="0xd87200">SE 71</title>
+			<title code="0xdada00">SE 72</title>
+			<title code="0xdb1700">SE 73</title>
+			<title code="0xdbbf00">SE 74</title>
+			<title code="0xdc7800">SE 75</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] SNATCHER(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Konami</driveralias>
+		<options>
+			<option name="init_pc"    value="0x4000"/>
+			<option name="mdata_addr" value="0x0000"/>
+			<option name="mdata_size" value="0x3000"/>
+			<option name="mfile_size" value="0xe000"/>
+			<option name="opn_mix"   value="0x180"/>
+		</options>
+		<romlist archive="snatcher">
+			<rom type="code" offset="0x4000">PATCH</rom>
+			<rom type="code" offset="0x6800">LOADER</rom>
+			<rom type="code" offset="0xd000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUSIC</rom>
+			<rom type="bgm" offset="0x01">MUSIC2</rom>
+		</romlist>
+		<titlelist>
+			<!-- 以下の4タイトル不明 -->
+			<!-- "WRONG ANSWER" (Axia) -->
+			<!-- "TITLE PART5" (Peace of Mind) -->
+			<!-- "TRANSFORM RISA" (Virtual Image) -->
+			<!-- "CREDITS" -->
+			<title code="0x000300">"TEAM LOGO" (Slave to METAL)</title>
+			<title code="0x01d700">"PROLOGUE DEMO" (Bio Hazard)</title>
+			<title code="0x099800">"SNATCHER TITLE" (Squeak!!)</title>
+			<title code="0x0fdd00">"THEME OF OPENING" (Twilight of Neo Kobe City)</title>
+			<title code="0x15d000">"THEME OF SNATCHER"</title>
+			<title code="0x1b1000">"BLOW UP TRICYCLE"</title>
+			<title code="0x1e0d00">"TITLE TELOP" (Evil Ripple)</title>
+			<title code="0x21c100">"THEME OF METAL GEAR" (Theme of TARA)</title>
+			<title code="0x23f400">"PURSUER PART1" (Creeping Silence)</title>
+			<title code="0x254900">"PURSUER PART2" (Criminal Omen)</title>
+			<title code="0x27b100">"PURSUER PART3" (Pleasure of Tension)</title>
+			<title code="0x28db00">"PURSUER PART4" (Endless Pursue)</title>
+			<title code="0x2cf800">"PURSUER PART5" (Follow up The Scent)</title>
+			<title code="0x2e7500">?</title>
+			<title code="0x315900">"BATH ROOM" (Virulent Smile)</title>
+			<title code="0x328a00">"TITLE PART3" (Faded Memories)</title>
+			<title code="0x380000">"TITLE PART1" (Theme of JUNKER)</title>
+			<title code="0x3cd900">"PROLOGUE(UNUSED)" (AD2042 Neo Kobe City)</title>
+			<title code="0x3f0200">"THEME OF SNATCHER 2"</title>
+			<title code="0x40af00">"THEME OF SNATCHER 3"</title>
+			<title code="0x428700">"KATRINE PART3" (Theme of katrine 2)</title>
+			<title code="0x456800">"KATRINE PART1" (Innocent Girl)</title>
+			<title code="0x480500">?</title>
+			<title code="0x489400">"KATRINE PART2" (Theme of katrine)</title>
+			<title code="0x4a2800">"KATRINE PART4" (Theme of katrine 3)</title>
+			<title code="0x4c6600">"JOY DIVISION" (Decadance Beat) 1</title>
+			<title code="0x4f7400">"JOY DIVISION" (Decadance Beat) 2</title>
+			<title code="0x529400">"OUTER HEAVEN1" (The Entrance to Hell) 1</title>
+			<title code="0x54cf00">"OUTER HEAVEN1" (The Entrance to Hell) 2</title>
+			<title code="0x577a00">"OUTER HEAVEN2" (Theme of IZABEL)</title>
+			<title code="0x5a1100">"JINGLE BELL" (Jingle bell 2042)</title>
+			<title code="0x5d4400">"ACTION" (Justice for all)</title>
+			<title code="0x5f0b00">"ACTION" (Danger Dance)</title>
+			<title code="0x603f00">"JAIME" (Theme of JAIME)</title>
+			<title code="0x61d200">"MORTUARY PART1" (Morg)</title>
+			<title code="0x645600">"RESTORATION"</title>
+			<title code="0x666900">"GOODBYE RANDAM" (Eternal Promise)</title>
+			<title code="0x683b00">"TITLE PART2" (Theme of RANDAM)</title>
+			<title code="0x700400">?</title>
+			<title code="0x70f900">"SEARCH LIGHT" (Spreading Diehard)</title>
+			<title code="0x726f00">"REQUIEM" (For Harry)</title>
+			<title code="0x757d00">"EPIROGUE" (Beyond Sorrows)</title>
+			<title code="0x7bbd00">"GAME OVER" (Lament for The Death)</title>
+			<title code="0x7cd800">"ENDING 1" (Master of Puppets Among The Disease)</title>
+			<title code="0x000001">"THEME OF ENDING" (We Have to Struggle for Our Future Against Our Doubt)</title>
+			<title code="0xa93500">FANFARE 1</title>
+			<title code="0xaf3700">FANFARE 2</title>
+			<title code="0x209d00">SE 00</title>
+			<title code="0x20e900">SE 01</title>
+			<title code="0x8cf900">SE 02</title>
+			<title code="0x8a4900">SE 03</title>
+			<title code="0x8d7c00">SE 04</title>
+			<title code="0x919d00">SE 05</title>
+			<title code="0x91b900">SE 06</title>
+			<title code="0x928000">SE 07</title>
+			<title code="0x973100">SE 08</title>
+			<title code="0x990900">SE 09</title>
+			<title code="0x9ef100">SE 10</title>
+			<title code="0xa88100">SE 11</title>
+			<title code="0xaa3900">SE 12</title>
+			<title code="0xab2200">SE 13</title>
+			<title code="0xac9400">SE 14</title>
+			<title code="0xadd300">SE 15</title>
+			<title code="0xae3c00">SE 16</title>
+			<title code="0xb01a00">SE 17</title>
+			<title code="0xb1c500">SE 18</title>
+			<title code="0xb55e00">SE 19</title>
+			<title code="0xb58200">SE 20</title>
+			<title code="0xb62b00">SE 21</title>
+			<title code="0xb6f100">SE 22</title>
+			<title code="0xb65700">SE 23</title>
+			<title code="0xb72a00">SE 24</title>
+			<title code="0xb7e700">SE 25</title>
+			<title code="0xb8e200">SE 26</title>
+			<title code="0xb99f00">SE 27</title>
+			<title code="0xb9f500">SE 28</title>
+			<title code="0xba5200">SE 29</title>
+			<title code="0xbb7300">SE 30</title>
+			<title code="0xbc7200">SE 31</title>
+			<title code="0xbcf100">SE 32</title>
+			<title code="0xbd7000">SE 33</title>
+			<title code="0xbdc400">SE 34</title>
+			<title code="0xc04900">SE 35</title>
+			<title code="0xc46100">SE 36</title>
+			<title code="0xc4c100">SE 37</title>
+			<title code="0xc50c00">SE 38</title>
+			<title code="0xc5d800">SE 39</title>
+			<title code="0xc69800">SE 40</title>
+			<title code="0xc7f800">SE 41</title>
+			<title code="0xc81000">SE 42</title>
+			<title code="0xc91d00">SE 43</title>
+			<title code="0xc95f00">SE 44</title>
+			<title code="0xc98600">SE 45</title>
+			<title code="0xc9ef00">SE 46</title>
+			<title code="0xca2f00">SE 47</title>
+			<title code="0xca8700">SE 48</title>
+			<title code="0xcab800">SE 49</title>
+			<title code="0xcb1800">SE 50</title>
+			<title code="0xcb3000">SE 51</title>
+			<title code="0xcb4800">SE 52</title>
+			<title code="0xcb6000">SE 53</title>
+			<title code="0xcc5c00">SE 54</title>
+			<title code="0xcd4000">SE 55</title>
+			<title code="0xcd7400">SE 56</title>
+			<title code="0xcd9200">SE 57</title>
+			<title code="0xcdf800">SE 58</title>
+			<title code="0xcf0900">SE 59</title>
+			<title code="0xcf4000">SE 60</title>
+			<title code="0xd00e00">SE 61</title>
+			<title code="0xd0dd00">SE 62</title>
+			<title code="0xd1ac00">SE 63</title>
+			<title code="0xd20800">SE 64</title>
+			<title code="0xd35200">SE 65</title>
+			<title code="0xd3bc00">SE 66</title>
+			<title code="0xd47500">SE 67</title>
+			<title code="0xd55200">SE 68</title>
+			<title code="0xd66400">SE 69</title>
+			<title code="0xd85100">SE 70</title>
+			<title code="0xd87200">SE 71</title>
+			<title code="0xdada00">SE 72</title>
+			<title code="0xdb1700">SE 73</title>
+			<title code="0xdbbf00">SE 74</title>
+			<title code="0xdc7800">SE 75</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] GRADIUS</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Konami</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1000"/>
+		</options>
+		<romlist archive="gra88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x8900">DRIVER.BIN</rom>
+			<rom type="code" offset="0x5000">MUSIC.BIN</rom>
+			<rom type="code" offset="0xF000">VOICE.BIN</rom>
+			<rom type="code" offset="0xBA00">MUSIC2.BIN</rom>
+			<rom type="bgm" offset="0x00">MDAT</rom>
+			<rom type="bgm" offset="0x01">MDAT</rom>
+			<rom type="bgm" offset="0x02">MDAT</rom>
+			<rom type="bgm" offset="0x03">MDAT</rom>
+			<rom type="bgm" offset="0x04">MDAT</rom>
+			<rom type="bgm" offset="0x05">MDAT</rom>
+			<rom type="bgm" offset="0x06">MDAT</rom>
+			<rom type="bgm" offset="0x07">MDAT</rom>
+			<rom type="bgm" offset="0x08">MDAT</rom>
+			<rom type="bgm" offset="0x09">MDAT</rom>
+			<rom type="bgm" offset="0x0a">MDAT</rom>
+			<rom type="bgm" offset="0x0b">MDAT</rom>
+			<rom type="bgm" offset="0x0c">MDAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0b">COIN</title>
+			<title code="0x00">Beginning Of The History (AIR BATTLE BGM)</title>
+			<title code="0x01">Challenger 1985          (1st.BGM)</title>
+			<title code="0x02">Beat Back                (2st.BGM)</title>
+			<title code="0x03">Blank Mask               (3st.BGM)</title>
+			<title code="0x04">Free Flyer               (4st.BGM)</title>
+			<title code="0x05">Mazed Music              (5st.BGM)</title>
+			<title code="0x06">Mechanical Globule       (6st.BGM)</title>
+			<title code="0x07">Final Attack             (7st.BGM)</title>
+			<title code="0x0c">Aircraft Carrier         (BOSS BGM)</title>
+			<title code="0x0a">Game Over                (GAME OVER)</title>
+			<title code="0x08">Historic Soldier         (NAMING BGM)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] Goonies</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Konami</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7586"/>
+		</options>
+		<romlist archive="goonies88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">GONIES.COM</rom>
+			<rom type="code" offset="0xe000">ENDING.COM</rom>
+			<rom type="bgm" offset="0x01">GONA.MUS</rom>
+			<rom type="bgm" offset="0x02">GONB.MUS</rom>
+			<rom type="bgm" offset="0x03">GONC.MUS</rom>
+			<rom type="bgm" offset="0x04">GOND.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">00 : 演奏停止</title>
+			<title code="0x01000000">01 : 効果音停止</title>
+			<title code="0x02000000">02 : アイテム取得</title>
+			<title code="0x03000000">03 : 最終面クリア</title>
+			<title code="0x04000000">04 : アイテム出現</title>
+			<title code="0x05000000">05 : ライフ回復</title>
+			<title code="0x06000000">06 : 爆弾爆発</title>
+			<title code="0x07000000">07 : ジャンプ</title>
+			<title code="0x08000000">08 : 鼠を倒した音</title>
+			<title code="0x09000000">09 : 拳銃</title>
+			<title code="0x0a000000">0a : フラッテリーを倒した音</title>
+			<title code="0x0b000000">0b : タイム警告</title>
+			<title code="0x0c000000">0c : フラッテリーの音痴な歌</title>
+			<title code="0x0d000000">0d : ダメージ</title>
+			<title code="0x0e000000">0e : 仲間救出</title>
+			<title code="0x0f000000">0f : ワープ</title>
+			<title code="0x10000000">10 : クリア条件満了</title>
+			<title code="0x11000000">11 : 滝</title>
+			<title code="0x12000000">12 : 炎</title>
+			<title code="0x13000000">13 : ダメージ警告音</title>
+		<!--	<title code="0x14000001">14 : STAGE 1,3 The Goonies 'R' Good Enough</title> -->
+			<title code="0x15000000">15 : パチンコ発射</title>
+			<title code="0x16000000">16 : 無敵</title>
+			<title code="0x17000000">17 : ラウンドクリア</title>
+			<title code="0x18000000">18 : ミス</title>
+			<title code="0x19000000">19 : ゲームオーバー</title>
+			<title code="0x1a000000">1a : ゲームスタート</title>
+			<title code="0x1b000001">1b : STAGE 1,3 (リスタート)</title>
+			<title code="0x1c000001">1c : STAGE 1,3 "The Goonies 'R' Good Enough"</title>
+			<title code="0x1c000002">1c : STAGE 2</title>
+			<title code="0x1c000003">1c : STAGE間の洞窟</title>
+			<title code="0x1c000004">1c : STAGE 4 洞窟</title>
+			<title code="0x1d000000">1d : 骸骨出現音</title>
+		<!--	<title code="0x1e000000">1e : </title> -->
+			<title code="0x1f000000">1f : 着地</title>
+			<title code="0x20000000">20 : 狐を倒した音</title>
+			<title code="0x21000000">21 : 骸骨を倒した音</title>
+			<title code="0x22000000">22 : 海賊の音痴な歌</title>
+			<title code="0x00000020">00 : エンディング</title>
+			<title code="0x01000020">01 : エンディング効果音</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 天と地と</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">Konami</driveralias>
+		<options>
+			<option name="init_pc"    value="0x8000"/>
+			<option name="mdata_addr" value="0x3000"/>
+		</options>
+		<romlist archive="tentochi">
+			<rom type="code" offset="0x0000">000</rom>
+			<rom type="code" offset="0x8000">PATCH</rom>
+			<rom type="code" offset="0xe000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">002</rom>
+			<rom type="bgm" offset="0x01">003</rom>
+			<rom type="bgm" offset="0x02">004</rom>
+			<rom type="bgm" offset="0x10">MUS00</rom>
+			<rom type="bgm" offset="0x11">MUS01</rom>
+			<rom type="bgm" offset="0x12">MUS02</rom>
+			<rom type="bgm" offset="0x13">MUS03</rom>
+			<rom type="bgm" offset="0x14">MUS04</rom>
+			<rom type="bgm" offset="0x15">MUS05</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">002-00</title>
+			<title code="0x00000001">003-00</title>
+			<title code="0x00000002">004-00</title>
+			<title code="0x01000010">MUS00-01</title>
+			<title code="0x02000011">MUS01-02</title>
+			<title code="0x03000012">MUS02-03</title>
+			<title code="0x04000013">MUS03-04</title>
+			<title code="0x05000014">MUS04-05</title>
+			<title code="0x06000015">MUS05-06</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] GRADIUS</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0100"/>
+			<option name="mdata_addr" value="0xf000"/>
+			<option name="mdata_size" value="0x0500"/>
+			<option name="init_pc" value="0x0100"/>
+		</options>
+		<romlist archive="x1gradius">
+			<rom type="code" offset="0x0100">PATCH</rom>
+			<rom type="code" offset="0x1000">DRIVER</rom>
+			<rom type="code" offset="0xe000">MUSIC</rom>
+			<rom type="code" offset="0xf500">EFFECT</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000fe">空中戦</title>
+			<title code="0x00000000">STAGE 1</title>
+			<title code="0x00000001">STAGE 2</title>
+			<title code="0x01000001">EXTRA STAGE</title>
+			<title code="0x00000002">STAGE 3</title>
+			<title code="0x00000003">STAGE 4</title>
+			<title code="0x00000004">STAGE 5</title>
+			<title code="0x00000005">STAGE 6</title>
+			<title code="0x00000006">STAGE 7</title>
+			<title code="0x010000fe">BIG CORE</title>
+			<title code="0x020000fe">GAME OVER</title>
+			<title code="0x040000fe">ALL CLEAR</title>
+			<title code="0x030000fe">NAME ENTRY(TITLE)</title>
+		<!--	<title code="0x050000fe">(MUSIC MODE) 空中戦</title> -->
+		<!--	<title code="0x060000fe">(MUSIC MODE) STAGE 1</title> -->
+		<!--	<title code="0x070000fe">(MUSIC MODE) STAGE 2</title> -->
+		<!--	<title code="0x080000fe">(MUSIC MODE) EXTRA STAGE</title> -->
+		<!--	<title code="0x090000fe">(MUSIC MODE) STAGE 3</title> -->
+		<!--	<title code="0x0a0000fe">(MUSIC MODE) STAGE 4</title> -->
+		<!--	<title code="0x0b0000fe">(MUSIC MODE) STAGE 5</title> -->
+		<!--	<title code="0x0c0000fe">(MUSIC MODE) STAGE 6</title> -->
+		<!--	<title code="0x0d0000fe">(MUSIC MODE) STAGE 7</title> -->
+			<title code="0x010000ff">EFFECT #01</title>
+			<title code="0x020000ff">EFFECT #02</title>
+			<title code="0x030000ff">EFFECT #03</title>
+			<title code="0x040000ff">EFFECT #04</title>
+			<title code="0x050000ff">EFFECT #05</title>
+			<title code="0x060000ff">EFFECT #06</title>
+			<title code="0x070000ff">EFFECT #07</title>
+			<title code="0x080000ff">EFFECT #08</title>
+			<title code="0x090000ff">EFFECT #09</title>
+			<title code="0x0a0000ff">EFFECT #0a</title>
+			<title code="0x0d0000ff">EFFECT #0d</title>
+			<title code="0x0e0000ff">EFFECT #0e</title>
+			<title code="0x0f0000ff">EFFECT #0f</title>
+			<title code="0x100000ff">EFFECT #10</title>
+			<title code="0x110000ff">EFFECT #11</title>
+			<title code="0x120000ff">EFFECT #12</title>
+			<title code="0x130000ff">EFFECT #13</title>
+			<title code="0x140000ff">EFFECT #14</title>
+			<title code="0x150000ff">EFFECT #15</title>
+			<title code="0x160000ff">EFFECT #16</title>
+			<title code="0x1c0000ff">EFFECT #1c</title>
+			<title code="0x1f0000ff">EFFECT #1f</title>
+			<title code="0x250000ff">EFFECT #25</title>
+			<title code="0x280000ff">EFFECT #28</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Goonies</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">Konami</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7e48"/>
+		</options>
+		<romlist archive="x1goonies">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">GONIES.COM</rom>
+			<rom type="bgm" offset="0x00">GONA.MUS</rom>
+			<rom type="bgm" offset="0x01">GONB.MUS</rom>
+			<rom type="bgm" offset="0x02">GONC.MUS</rom>
+			<rom type="bgm" offset="0x03">GOND.MUS</rom>
+			<rom type="bgm" offset="0x04">GONE.MUS</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">STAGE 1,3 The Goonies 'R' Good Enough</title>
+			<title code="0x01">STAGE 2</title>
+			<title code="0x02">STAGE間の洞窟</title>
+			<title code="0x03">STAGE 4 洞窟</title>
+			<title code="0x04">エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 天と地と</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">Konami</driveralias>
+		<options>
+			<option name="bootcs" value="0x00a5"/>
+			<option name="bootip" value="0x3000"/>
+			<option name="dataaddr" value="0x0ec90"/>
+			<option name="filesize" value="0x03000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dummysndrom" value="1"/>
+			<option name="clockmul" value="8"/>
+			<option name="datamax" value="0x03"/>
+		</options>
+		<romlist archive="tentochi_98">
+			<rom type="code" offset="0x00800">PROG</rom>
+			<rom type="code" offset="0x03a50">tento.bin</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000000">00-00 : </title>
+			<title code="0x010001">01-01 : </title>
+			<title code="0x020001">01-02 : </title>
+			<title code="0x030001">01-03 : </title>
+			<title code="0x040001">01-04 : </title>
+			<title code="0x050001">01-05 : </title>
+			<title code="0x060001">01-06 : </title>
+			<title code="0x000002">02-00 : </title>
+			<title code="0x010002">02-01 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] QUARTH</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Konami</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="quarth_98">
+			<rom type="file" offset="-1">SOUND.EXE</rom>
+			<rom type="file" offset="-1">qurth_98.com</rom>
+			<rom type="shell" offset="0">sound</rom>
+			<rom type="shell" offset="0">qurth_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">01 : The Theme from Quarth</title>
+			<title code="0x02">02 : The Menace of the Block</title>
+			<title code="0x03">03 : The Closing Game in the Universe</title>
+			<title code="0x04">04 : The Marauding Block</title>
+			<title code="0x05">05 : Title</title>
+			<title code="0x06">06 : Pattern Clear</title>
+			<title code="0x07">07 : Game Over</title>
+			<title code="0x08">08 : Ranking</title>
+			<title code="0x09">09 : Beyond the Terminus</title>
+			<title code="0x0a">0A : SE</title>
+			<title code="0x0b">0B : SE</title>
+			<title code="0x0c">0C : SE</title>
+			<title code="0x0d">0D : SE</title>
+			<title code="0x0e">0E : SE</title>
+			<title code="0x0f">0F : SE</title>
+			<title code="0x10">10 : SE</title>
+			<title code="0x11">11 : SE</title>
+			<title code="0x12">12 : SE</title>
+			<title code="0x13">13 : SE</title>
+			<title code="0x14">14 : SE</title>
+			<title code="0x15">15 : SE</title>
+			<title code="0x16">16 : SE</title>
+			<title code="0x17">17 : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] コナミの占いセンセーション</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="uranai_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x4000">DRIVER.BIN</rom>
+			<rom type="code" offset="0x9c00">DATA.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x40">タイトル</title>
+			<title code="0x33">メニュー</title>
+			<title code="0x3f">血液型相性占い1</title>
+			<title code="0x36">血液型相性占い2</title>
+			<title code="0x3c">血液型相性占い3</title>
+			<title code="0x37">おみくじ</title>
+			<title code="0x3d">西洋占星術1</title>
+			<title code="0x35">西洋占星術2</title>
+			<title code="0x3e">手相占い1</title>
+			<title code="0x34">手相占い2</title>
+			<title code="0x38">大～中吉</title>
+			<title code="0x2a">大～中吉(イントロ無し)</title>
+			<title code="0x3a">小～末吉</title>
+			<title code="0x39">凶～大凶</title>
+			<title code="0x3b">データ表示</title>
+			<title code="0x17">BGM 17</title>
+			<title code="0x18">BGM 18</title>
+			<title code="0x28">BGM 28</title>
+			<title code="0x2c">BGM 2C</title>
+			<title code="0x31">BGM 31</title>
+			<title code="0x32">BGM 32</title>
+			<range min="0x103" max="0x116" extcode="1">SE %02x</range>
+			<range min="0x119" max="0x127" extcode="1">SE %02x</range>
+			<range min="0x129" max="0x129" extcode="1">SE %02x</range>
+			<range min="0x12b" max="0x12b" extcode="1">SE %02x</range>
+			<range min="0x12d" max="0x130" extcode="1">SE %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.1 - 魔城伝説(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc1_msx">
+			<rom type="code"  offset="0x0400">majpsg</rom>
+			<rom type="code"  offset="0x4000">MAJ.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01B7">ゲームスタート</title>
+			<title code="0x019D">BGM1</title>
+			<title code="0x01A3">ボス1</title>
+			<title code="0x019F">BGM2</title>
+			<title code="0x01A1">ボス2</title>
+			<title code="0x01A5">パワーアップ</title>
+			<title code="0x01AE">プレイヤーアウト</title>
+			<title code="0x01B4">エンディング</title>
+			<title code="0x01BA">ゲームオーバー</title>
+			<title code="0x01A8">ポーズ</title>
+			<title code="0x01B1">ワープ</title>
+			<range min="0x01" max="0x13" extcode="1">SE 0x%02x</range>
+			<range min="0x15" max="0x1b" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.1 - 魔城伝説(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc1_msx">
+			<rom type="code"  offset="0x0400">majscc</rom>
+			<rom type="sccp"  offset="0x0000">MAJSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01B7">ゲームスタート</title>
+			<title code="0x019D">BGM1</title>
+			<title code="0x01A3">ボス1</title>
+			<title code="0x019F">BGM2</title>
+			<title code="0x01A1">ボス2</title>
+			<title code="0x01A5">パワーアップ</title>
+			<title code="0x01AE">プレイヤーアウト</title>
+			<title code="0x01B4">エンディング</title>
+			<title code="0x01BA">ゲームオーバー</title>
+			<title code="0x01A8">ポーズ</title>
+			<title code="0x01B1">ワープ</title>
+			<range min="0x01" max="0x13" extcode="1">SE 0x%02x</range>
+			<range min="0x15" max="0x1b" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.1 - けっきょく南極大冒険(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc1_msx">
+			<rom type="code"  offset="0x0400">kndscc</rom>
+			<rom type="sccp"  offset="0x0000">KNDSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0192">ゲームスタート</title>
+			<title code="0x018a">BGM</title>
+			<title code="0x018f">ステージクリア</title>
+			<title code="0x018c">ゲームオーバー</title>
+			<range min="0x01" max="0x09" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.1 - けっきょく南極大冒険(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc1_msx">
+			<rom type="code"  offset="0x0400">kndpsg</rom>
+			<rom type="code"  offset="0x4000">KND.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0192">ゲームスタート</title>
+			<title code="0x018a">BGM</title>
+			<title code="0x018f">ステージクリア</title>
+			<title code="0x018c">ゲームオーバー</title>
+			<range min="0x01" max="0x09" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.1 - Yie Ar KUNG-FU(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc1_msx">
+			<rom type="code"  offset="0x0400">yieascc</rom>
+			<rom type="sccp"  offset="0x0000">YIEASCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0188">BGM</title>
+			<title code="0x018a">ステージクリア</title>
+			<title code="0x018f">ゲームオーバー</title>
+			<range min="0x01" max="0x07" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.1 - Yie Ar KUNG-FU(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc1_msx">
+			<rom type="code"  offset="0x0400">yieapsg</rom>
+			<rom type="code"  offset="0x4000">YIEA.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0188">BGM</title>
+			<title code="0x018a">ステージクリア</title>
+			<title code="0x018f">ゲームオーバー</title>
+			<range min="0x01" max="0x07" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.1 - イーガー皇帝の逆襲 Yie Ar KUNG-FU II(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc1_msx">
+			<rom type="code"  offset="0x0400">yiegscc</rom>
+			<rom type="sccp"  offset="0x0000">YIEGSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x019f">ゲームスタート</title>
+			<title code="0x0193">BGM</title>
+			<title code="0x0195">BOSS BGM</title>
+			<title code="0x0197">BOSS BGM(体力残少時)</title>
+			<title code="0x01A2">ゲームオーバー</title>
+			<range min="0x02" max="0x12" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.1 - イーガー皇帝の逆襲 Yie Ar KUNG-FU II(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc1_msx">
+			<rom type="code"  offset="0x0400">yiegpsg</rom>
+			<rom type="code"  offset="0x4000">YIEG.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x019f">ゲームスタート</title>
+			<title code="0x0193">BGM</title>
+			<title code="0x0195">BOSS BGM</title>
+			<title code="0x0197">BOSS BGM(体力残少時)</title>
+			<title code="0x01A2">ゲームオーバー</title>
+			<range min="0x02" max="0x12" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.1 - 秘蔵版・王家の谷</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc1_msx">
+			<rom type="code"  offset="0x0400">kvalley</rom>
+			<rom type="code"  offset="0x8000">KVALLEY.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01a2">ゲームスタート</title>
+			<title code="0x018b">通常BGM</title>
+			<title code="0x018d">ゲート オープン/クローズ</title>
+			<title code="0x019c">NEXT PYRAMID</title>
+			<title code="0x019f">宝石全取得</title>
+			<title code="0x01a5">ゲームオーバー</title>
+			<title code="0x0193">通常BGM2?</title>
+			<title code="0x03">SE 0x03</title>
+			<title code="0x04">SE 0x04</title>
+			<title code="0x06">SE 0x06</title>
+			<title code="0x08">SE 0x08</title>
+			<title code="0x09">SE 0x09</title>
+			<title code="0x16">SE 0x16</title>
+			<title code="0x19">SE 0x19</title>
+			<title code="0x28">SE 0x28</title>
+			<title code="0x45">SE 0x45</title>
+			<title code="0x87">SE 0x87</title>
+			<title code="0x8a">SE 0x8a</title>
+			<title code="0x91">SE 0x91</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.2 - コナミのボクシング(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc2_msx">
+			<rom type="code"  offset="0x0400">boxpsg</rom>
+			<rom type="code"  offset="0x4000">BOX.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01a2">GAME START</title>
+			<title code="0x01a5">CHAMPION</title>
+			<title code="0x01a8">LOSE</title>
+			<range min="0x01" max="0x06" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.2 - コナミのボクシング(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc2_msx">
+			<rom type="code"  offset="0x0400">boxscc</rom>
+			<rom type="sccp"  offset="0x0000">BOXSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01a2">GAME START</title>
+			<title code="0x01a5">CHAMPION</title>
+			<title code="0x01a8">LOSE</title>
+			<range min="0x01" max="0x06" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.2 - ビデオハスラー(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc2_msx">
+			<rom type="code"  offset="0x0400">vhslpsg</rom>
+			<rom type="code"  offset="0x4000">VHSL.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x018d">GAME START</title>
+			<title code="0x0188">CLEAR</title>
+			<title code="0x018a">GAME OVER</title>
+			<range min="0x01" max="0x01" extcode="1">SE 0x%02x</range>
+			<range min="0x03" max="0x07" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.2 - ビデオハスラー(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc2_msx">
+			<rom type="code"  offset="0x0400">vhslscc</rom>
+			<rom type="sccp"  offset="0x0000">VHSLSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x018d">GAME START</title>
+			<title code="0x0188">CLEAR</title>
+			<title code="0x018a">GAME OVER</title>
+			<range min="0x01" max="0x01" extcode="1">SE 0x%02x</range>
+			<range min="0x03" max="0x07" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.2 - ハイパースポーツ2(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc2_msx">
+			<rom type="code"  offset="0x0400">hsp2psg</rom>
+			<rom type="code"  offset="0x4000">HSP2.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x019c">GAME START</title>
+			<title code="0x01a5">NEXT</title>
+			<title code="0x01a8">MISS</title>
+			<title code="0x019f">WORLD RECORD</title>
+			<title code="0x01ab">GAME CLEAR</title>
+			<title code="0x01a2">GAME OVER</title>
+			<range min="0x01" max="0x01" extcode="1">SE 0x%02x</range>
+			<range min="0x05" max="0x08" extcode="1">SE 0x%02x</range>
+			<title code="0x8c">SE 0x8c</title>
+			<title code="0x94">SE 0x94</title>
+			<title code="0x96">SE 0x96</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.2 - ハイパースポーツ2(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc2_msx">
+			<rom type="code"  offset="0x0400">hsp2scc</rom>
+			<rom type="sccp"  offset="0x0000">HSP2SCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x019c">GAME START</title>
+			<title code="0x01a5">NEXT</title>
+			<title code="0x01a8">MISS</title>
+			<title code="0x019f">WORLD RECORD</title>
+			<title code="0x01ab">GAME CLEAR</title>
+			<title code="0x01a2">GAME OVER</title>
+			<range min="0x01" max="0x01" extcode="1">SE 0x%02x</range>
+			<range min="0x05" max="0x08" extcode="1">SE 0x%02x</range>
+			<title code="0x8c">SE 0x8c</title>
+			<title code="0x94">SE 0x94</title>
+			<title code="0x96">SE 0x96</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.2 - コナミのテニス</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc2_msx">
+			<rom type="code"  offset="0x0400">tennis</rom>
+			<rom type="code"  offset="0x4000">TENNIS.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0194">GAME START</title>
+			<title code="0x018e">GAME</title>
+			<title code="0x0191">GAME SET</title>
+			<range min="0x01" max="0x0b" extcode="1">SE 0x%02x</range>
+			<range min="0x0d" max="0x0d" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.2 - ハイパーオリンピック</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="kgc2_msx">
+			<rom type="code"   offset="0x0400">HOLY</rom>
+			<rom type="code"   offset="0x4000">HOLY.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0196">GAME START</title>
+			<title code="0x0192">START</title>
+			<title code="0x019c">NEXT</title>
+			<title code="0x019f">GAME OVER</title>
+			<title code="0x0199">WORLD RECORD</title>
+			<range min="0x01" max="0x0a">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.3 - TwinBee(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc3_msx">
+			<rom type="code"  offset="0x0400">twnbpsg</rom>
+			<rom type="code"  offset="0x4000">TWNB.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01e2">Start</title>
+			<title code="0x01d6">Twinbee's Home Town Song</title>
+			<title code="0x01e5">Power Up</title>
+			<title code="0x01d8">Fantastic Power</title>
+			<title code="0x01da">BOSS BGM A-1</title>
+			<title code="0x01dc">BOSS BGM A-2</title>
+			<title code="0x01de">Warning ~ BOSS BGM B</title>
+			<title code="0x01e0">BOSS BGM B</title>
+			<title code="0x01ee">Clear</title>
+			<title code="0x01f4">Game Over</title>
+			<title code="0x01e8">1up</title>
+			<range min="0x81" max="0x94" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.3 - TwinBee(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc3_msx">
+			<rom type="code"  offset="0x0400">twnbscc</rom>
+			<rom type="sccp"  offset="0x0000">TWNBSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01e2">Start</title>
+			<title code="0x01d6">Twinbee's Home Town Song</title>
+			<title code="0x01e5">Power Up</title>
+			<title code="0x01d8">Fantastic Power</title>
+			<title code="0x01da">BOSS BGM A-1</title>
+			<title code="0x01dc">BOSS BGM A-2</title>
+			<title code="0x01de">Warning ~ BOSS BGM B</title>
+			<title code="0x01e0">BOSS BGM B</title>
+			<title code="0x01ee">Clear</title>
+			<title code="0x01f4">Game Over</title>
+			<title code="0x01e8">1up</title>
+			<title code="0x0eb">SE 0x2b</title>
+			<title code="0x0f1">SE 0x31</title>
+			<range min="0x81" max="0x94" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.3 - SKY JAGUAR(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc3_msx">
+			<rom type="code"  offset="0x0400">sjgrpsg</rom>
+			<rom type="code"  offset="0x4000">SJGR.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0193">START</title>
+			<!--
+			<title code="0x0190">BOSS START</title>
+			  -->
+			<title code="0x0191">BOSS START</title>
+			<title code="0x0188">BOSS</title>
+			<title code="0x0196">BOSS CLEAR</title>
+			<title code="0x0199">GAME OVER</title>
+			<range min="0x01" max="0x0c">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.3 - SKY JAGUAR(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc3_msx">
+			<rom type="code"  offset="0x0400">sjgrscc</rom>
+			<rom type="sccp"  offset="0x0000">SJGRSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0193">START</title>
+			<!--
+			<title code="0x0190">BOSS START</title>
+			  -->
+			<title code="0x0191">BOSS START</title>
+			<title code="0x0188">BOSS</title>
+			<title code="0x0196">BOSS CLEAR</title>
+			<title code="0x0199">GAME OVER</title>
+			<range min="0x01" max="0x0c">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.3 - Super Cobra(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc3_msx">
+			<rom type="code"  offset="0x0400">scbrpsg</rom>
+			<rom type="code"  offset="0x4000">SCBR.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x89">GAME START</title>
+			<title code="0x8b">CLEAR</title>
+			<range min="0x01" max="0x09">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.3 - Super Cobra(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc3_msx">
+			<rom type="code"  offset="0x0400">scbrscc</rom>
+			<rom type="sccp"  offset="0x0000">SCBRSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x89">GAME START</title>
+			<title code="0x8b">CLEAR</title>
+			<range min="0x01" max="0x09">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.3 - NEMESIS(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="mdata_addr" value="0xbc00"/>
+			<option name="mdata_size" value="0x400"/>
+			<option name="mfile_size" value="0x400"/>
+		</options>
+		<romlist archive="kgc3_msx">
+			<rom type="code"  offset="0x0400">grapsg</rom>
+			<rom type="code"  offset="0xac00">GRAmd.BIN</rom>
+			<rom type="bgm" offset="0x01">GRAm0.BIN</rom>
+			<rom type="bgm" offset="0x02">GRAm1.BIN</rom>
+			<rom type="bgm" offset="0x03">GRAm2.BIN</rom>
+			<rom type="bgm" offset="0x04">GRAm3.BIN</rom>
+			<rom type="bgm" offset="0x05">GRAm4.BIN</rom>
+			<rom type="bgm" offset="0x06">GRAm5.BIN</rom>
+			<rom type="bgm" offset="0x07">GRAm6.BIN</rom>
+			<rom type="bgm" offset="0x08">GRAm7.BIN</rom>
+			<rom type="bgm" offset="0x09">GRAm8.BIN</rom>
+			<rom type="bgm" offset="0x0a">GRAm9.BIN</rom>
+			<rom type="bgm" offset="0x0b">GRAmA.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0a01a6">Historic Soldier</title>
+			<title code="0x0001ac">Beginning Of The History</title>
+			<title code="0x0101af">Challenger 1985</title>
+			<title code="0x020196">Beat Bank</title>
+			<title code="0x030198">Blank Mask</title>
+			<title code="0x04019a">Free Flyer</title>
+			<title code="0x0501a2">Bone Stage</title>
+			<title code="0x06019c">Mazed Music</title>
+			<title code="0x07019e">Mechanical Globule</title>
+			<title code="0x0801a0">Final Attack</title>
+			<title code="0x0901a4">Extra Stage</title>
+			<title code="0x0001b5">Aircraft Carrier</title>
+			<title code="0x0b01a9">All Pattern Clear</title>
+			<title code="0x0001ca">Game Over</title>
+			<range min="0x02" max="0x03" extcode="1">SE 0x%02x</range>
+			<range min="0x05" max="0x08" extcode="1">SE 0x%02x</range>
+			<title code="0x000a">SE 0x0a</title>
+			<range min="0x0d" max="0x0f" extcode="1">SE 0x%02x</range>
+			<range min="0x11" max="0x15" extcode="1">SE 0x%02x</range>
+			<title code="0x0032">SE 0x32</title>
+			<title code="0x003b">SE 0x3b</title>
+			<title code="0x003e">SE 0x3e</title>
+			<title code="0x0041">SE 0x41</title>
+			<title code="0x0047">SE 0x47</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.3 - NEMESIS(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc3_msx">
+			<rom type="code"  offset="0x0400">grascc</rom>
+			<rom type="code"  offset="0x4000">GRA.BIN</rom>
+			<rom type="sccp"  offset="0x0000">GRASCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01a6">Historic Soldier</title>
+			<title code="0x01ac">Beginning Of The History</title>
+			<title code="0x01af">Challenger 1985</title>
+			<title code="0x0196">Beat Bank</title>
+			<title code="0x0198">Blank Mask</title>
+			<title code="0x019a">Free Flyer</title>
+			<title code="0x01a2">Bone Stage</title>
+			<title code="0x019c">Mazed Music</title>
+			<title code="0x019e">Mechanical Globule</title>
+			<title code="0x01a0">Final Attack</title>
+			<title code="0x01a4">Extra Stage</title>
+			<title code="0x01b5">Aircraft Carrier</title>
+			<title code="0x01a9">All Pattern Clear</title>
+			<title code="0x01ca">Game Over</title>
+			<range min="0x02" max="0x15" extcode="1">SE 0x%02x</range>
+			<title code="0x0032">SE 0x32</title>
+			<title code="0x003b">SE 0x3b</title>
+			<title code="0x003e">SE 0x3e</title>
+			<title code="0x0041">SE 0x41</title>
+			<title code="0x0047">SE 0x47</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.3 - TIME PILOT</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc3_msx">
+			<rom type="code"  offset="0x0400">tppat</rom>
+			<rom type="code"  offset="0x4000">tp.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">START</title>
+			<title code="0x01">MISS</title>
+			<title code="0x02">STAGE CLEAR</title>
+			<range min="0x03" max="0x04">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.4 - コナミのゴルフ</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc4_msx">
+			<rom type="code"  offset="0x0400">golf</rom>
+			<rom type="code"  offset="0x4000">GOLF.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0187">START</title>
+			<title code="0x0186">NEXT</title>
+			<title code="0x018a">HOLE OUT</title>
+			<range min="0x01" max="0x01" extcode="1">SE 0x%02x</range>
+			<range min="0x03" max="0x05" extcode="1">SE 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.4 - コナミのサッカー(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc4_msx">
+			<rom type="code"  offset="0x0400">socrscc</rom>
+			<rom type="sccp"  offset="0x0000">SOCRSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x019b">SELECT</title>
+			<title code="0x01b1">GAME START</title>
+			<title code="0x01ae">HI SCORE</title>
+			<range min="0x01" max="0x02" extcode="1">SE 0x%02x</range>
+			<title code="0x04">SE 0x04</title>
+			<title code="0x0b">SE 0x0b</title>
+			<title code="0x11">SE 0x11</title>
+			<title code="0x13">SE 0x13</title>
+			<title code="0x15">SE 0x15</title>
+			<title code="0x1f">SE 0x1f</title>
+			<title code="0x25">SE 0x25</title>
+			<title code="0x28">SE 0x28</title>
+			<title code="0x2b">SE 0x2b</title>
+			<title code="0x46">SE 0x46</title>
+			<title code="0x47">SE 0x47</title>
+			<title code="0x49">SE 0x49</title>
+			<title code="0x4d">SE 0x4d</title>
+			<title code="0x4f">SE 0x4f</title>
+			<title code="0x57">SE 0x57</title>
+			<title code="0x59">SE 0x59</title>
+			<title code="0x5d">SE 0x5d</title>
+			<title code="0x62">SE 0x62</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.4 - コナミのサッカー(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc4_msx">
+			<rom type="code"  offset="0x0400">socrpsg</rom>
+			<rom type="code"  offset="0x4000">SOCR.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x019b">SELECT</title>
+			<title code="0x01b1">GAME START</title>
+			<title code="0x01ae">HI SCORE</title>
+			<range min="0x01" max="0x02" extcode="1">SE 0x%02x</range>
+			<title code="0x04">SE 0x04</title>
+			<title code="0x0b">SE 0x0b</title>
+			<title code="0x11">SE 0x11</title>
+			<title code="0x13">SE 0x13</title>
+			<title code="0x15">SE 0x15</title>
+			<title code="0x1f">SE 0x1f</title>
+			<title code="0x25">SE 0x25</title>
+			<title code="0x28">SE 0x28</title>
+			<title code="0x2b">SE 0x2b</title>
+			<title code="0x46">SE 0x46</title>
+			<title code="0x47">SE 0x47</title>
+			<title code="0x49">SE 0x49</title>
+			<title code="0x4d">SE 0x4d</title>
+			<title code="0x4f">SE 0x4f</title>
+			<title code="0x57">SE 0x57</title>
+			<title code="0x59">SE 0x59</title>
+			<title code="0x5d">SE 0x5d</title>
+			<title code="0x62">SE 0x62</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.4 - コナミのピンポン(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc4_msx">
+			<rom type="code"  offset="0x0400">pingscc</rom>
+			<rom type="sccp"  offset="0x0000">PINGSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01a5">GAME START</title>
+			<title code="0x01ae">SET</title>
+			<title code="0x01b1">GAME SET</title>
+			<title code="0x01">SE 0x01</title>
+			<title code="0x03">SE 0x03</title>
+			<range min="0x05" max="0x06" extcode="1">SE 0x%02x</range>
+			<title code="0x0d">SE 0x0d</title>
+			<title code="0x0f">SE 0x0f</title>
+			<title code="0x11">SE 0x11</title>
+			<title code="0x2b">SE 0x2b</title>
+			<title code="0x68">SE 0x68</title>
+			<title code="0x84">SE 0x84</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.4 - コナミのピンポン(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc4_msx">
+			<rom type="code"  offset="0x0400">pingpsg</rom>
+			<rom type="code"  offset="0x4000">PING.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01a5">GAME START</title>
+			<title code="0x01ae">SET</title>
+			<title code="0x01b1">GAME SET</title>
+			<title code="0x01">SE 0x01</title>
+			<title code="0x03">SE 0x03</title>
+			<range min="0x05" max="0x06" extcode="1">SE 0x%02x</range>
+			<title code="0x0d">SE 0x0d</title>
+			<title code="0x0f">SE 0x0f</title>
+			<title code="0x11">SE 0x11</title>
+			<title code="0x2b">SE 0x2b</title>
+			<title code="0x68">SE 0x68</title>
+			<title code="0x84">SE 0x84</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.4 - ハイパーオリンピック2</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc4_msx">
+			<rom type="code"  offset="0x0400">hol2</rom>
+			<rom type="code"  offset="0x4000">HOL2.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x9f">GAME START / CONGRATULATION</title>
+			<title code="0x91">START</title>
+			<title code="0x93">HIGH JUMP</title>
+			<title code="0x99">NEXT</title>
+			<title code="0x9c">GAME OVER</title>
+			<title code="0x96">WORLD RECORD</title>
+			<range min="0x01" max="0x02" extcode="1">SE 0x%02x</range>
+			<title code="0x05">SE 0x05</title>
+			<title code="0x43">SE 0x43</title>
+			<title code="0x47">SE 0x47</title>
+			<title code="0x49">SE 0x49</title>
+			<title code="0x4b">SE 0x4b</title>
+			<title code="0x4e">SE 0x4e</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.4 - ハイパースポーツ3(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgc4_msx">
+			<rom type="code"  offset="0x0400">hsp3scc</rom>
+			<rom type="sccp"  offset="0x0000">HSP3SCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01a6">GAME START / CONGRATULATION</title>
+			<title code="0x018e">START</title>
+			<title code="0x018c">CYCLING</title>
+			<title code="0x01a3">MISS</title>
+			<title code="0x01a9">NEXT</title>
+			<title code="0x01ac">GAME OVER</title>
+			<title code="0x01b2">WORLD RECORD</title>
+			<title code="0x01">SE 0x01</title>
+			<title code="0x04">SE 0x04</title>
+			<title code="0x06">SE 0x06</title>
+			<title code="0x07">SE 0x07</title>
+			<title code="0x10">SE 0x10</title>
+			<title code="0x12">SE 0x12</title>
+			<title code="0x16">SE 0x16</title>
+			<title code="0x1a">SE 0x1a</title>
+			<title code="0x1e">SE 0x1e</title>
+			<title code="0x42">SE 0x42</title>
+			<title code="0x43">SE 0x43</title>
+			<title code="0x48">SE 0x48</title>
+			<title code="0x49">SE 0x49</title>
+			<title code="0x4a">SE 0x4a</title>
+			<title code="0x4b">SE 0x4b</title>
+			<title code="0x58">SE 0x58</title>
+			<title code="0x60">SE 0x60</title>
+			<title code="0x6f">SE 0x6f</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION Vol.4 - ハイパースポーツ3(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgc4_msx">
+			<rom type="code"  offset="0x0400">hsp3psg</rom>
+			<rom type="code"  offset="0x4000">HSP3.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01a6">GAME START / CONGRATULATION</title>
+			<title code="0x018e">START</title>
+			<title code="0x018c">CYCLING</title>
+			<title code="0x01a3">MISS</title>
+			<title code="0x01a9">NEXT</title>
+			<title code="0x01ac">GAME OVER</title>
+			<title code="0x01b2">WORLD RECORD</title>
+			<title code="0x01">SE 0x01</title>
+			<title code="0x04">SE 0x04</title>
+			<title code="0x06">SE 0x06</title>
+			<title code="0x07">SE 0x07</title>
+			<title code="0x10">SE 0x10</title>
+			<title code="0x12">SE 0x12</title>
+			<title code="0x16">SE 0x16</title>
+			<title code="0x1a">SE 0x1a</title>
+			<title code="0x1e">SE 0x1e</title>
+			<title code="0x42">SE 0x42</title>
+			<title code="0x43">SE 0x43</title>
+			<title code="0x48">SE 0x48</title>
+			<title code="0x49">SE 0x49</title>
+			<title code="0x4a">SE 0x4a</title>
+			<title code="0x4b">SE 0x4b</title>
+			<title code="0x58">SE 0x58</title>
+			<title code="0x60">SE 0x60</title>
+			<title code="0x6f">SE 0x6f</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - PIPPOLS(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">pipopsg</rom>
+			<rom type="code"  offset="0x4000">PIPO.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x018f">START</title>
+			<title code="0x01c7">BGM</title>
+			<title code="0x0189">GHOST</title>
+			<title code="0x0192">CLEAR</title>
+			<title code="0x0195">HOLY GEM</title>
+			<title code="0x0198">GAME OVER</title>
+			<title code="0x01a1">ENDING</title>
+			<range min="0x01" max="0x02">SE 0x%02x</range>
+			<range min="0x05" max="0x06">SE 0x%02x</range>
+			<title code="0x0b">SE 0x0b</title>
+			<title code="0x0d">SE 0x0d</title>
+			<title code="0x1e">SE 0x1e</title>
+			<title code="0x24">SE 0x24</title>
+			<title code="0x83">SE 0x83</title>
+			<title code="0x84">SE 0x84</title>
+			<title code="0x9b">SE 0x9b</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - PIPPOLS(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">piposcc</rom>
+			<rom type="sccp"  offset="0x0000">PIPOSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x018f">START</title>
+			<title code="0x01c7">BGM</title>
+			<title code="0x0189">GHOST</title>
+			<title code="0x0192">CLEAR</title>
+			<title code="0x0195">HOLY GEM</title>
+			<title code="0x0198">GAME OVER</title>
+			<title code="0x01a1">ENDING</title>
+			<range min="0x01" max="0x02">SE 0x%02x</range>
+			<range min="0x05" max="0x06">SE 0x%02x</range>
+			<title code="0x0b">SE 0x0b</title>
+			<title code="0x0d">SE 0x0d</title>
+			<title code="0x1e">SE 0x1e</title>
+			<title code="0x24">SE 0x24</title>
+			<title code="0x83">SE 0x83</title>
+			<title code="0x84">SE 0x84</title>
+			<title code="0x9b">SE 0x9b</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - HYPER RALLY(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">hrlypsg</rom>
+			<rom type="code"  offset="0x4000">HRLY.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x019A">STAGE START</title>
+			<title code="0x0191">STAGE CLEAR</title>
+			<title code="0x0194">GAME OVER</title>
+			<title code="0x0197">ENDING</title>
+			<title code="0x01">SE 01</title>
+			<title code="0x08">SE 08</title>
+			<title code="0x0a">SE 0a</title>
+			<title code="0x0e">SE 0e</title>
+			<title code="0x42">SE 42</title>
+			<title code="0x43">SE 43</title>
+			<title code="0x44">SE 44</title>
+			<title code="0x46">SE 46</title>
+			<title code="0x4c">SE 4c</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - HYPER RALLY(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">hrlyscc</rom>
+			<rom type="sccp"  offset="0x0000">HRLYSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x019A">STAGE START</title>
+			<title code="0x0191">STAGE CLEAR</title>
+			<title code="0x0194">GAME OVER</title>
+			<title code="0x0197">ENDING</title>
+			<title code="0x01">SE 01</title>
+			<title code="0x08">SE 08</title>
+			<title code="0x0a">SE 0a</title>
+			<title code="0x0e">SE 0e</title>
+			<title code="0x42">SE 42</title>
+			<title code="0x43">SE 43</title>
+			<title code="0x44">SE 44</title>
+			<title code="0x46">SE 46</title>
+			<title code="0x4c">SE 4c</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - ROAD FIGHTER(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">rfghtpsg</rom>
+			<rom type="code"  offset="0x4000">RFGHT.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0198">GAME START</title>
+			<title code="0x0192">CHECK POINT</title>
+			<title code="0x0195">GAME OVER</title>
+			<title code="0x01">SE 01</title>
+			<title code="0x02">SE 02</title>
+			<title code="0x03">SE 03</title>
+			<title code="0x04">SE 04</title>
+			<title code="0x05">SE 05</title>
+			<title code="0x07">SE 07</title>
+			<title code="0x09">SE 09</title>
+			<title code="0x0b">SE 0b</title>
+			<title code="0x0d">SE 0d</title>
+			<title code="0x4f">SE 4f</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - ROAD FIGHTER(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">rfghtscc</rom>
+			<rom type="sccp"  offset="0x0000">RFGHTSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0198">GAME START</title>
+			<title code="0x0192">CHECK POINT</title>
+			<title code="0x0195">GAME OVER</title>
+			<title code="0x01">SE 01</title>
+			<title code="0x02">SE 02</title>
+			<title code="0x03">SE 03</title>
+			<title code="0x04">SE 04</title>
+			<title code="0x05">SE 05</title>
+			<title code="0x07">SE 07</title>
+			<title code="0x09">SE 09</title>
+			<title code="0x0b">SE 0b</title>
+			<title code="0x0d">SE 0d</title>
+			<title code="0x4f">SE 4f</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - アゴボード(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">kgcbpat</rom>
+			<rom type="code"  offset="0x4000">AGOB.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0102">BGM</title>
+			<title code="0x0103">GAME OVER</title>
+			<title code="0x0104">GAME OVER2</title>
+			<title code="0x05">SE 05</title>
+			<title code="0x06">SE 06</title>
+			<title code="0x07">SE 07</title>
+			<title code="0x08">SE 08</title>
+			<title code="0x09">SE 09</title>
+			<title code="0x0a">SE 0a</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - アゴボード(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">kgcbpat</rom>
+			<rom type="sccp"  offset="0x0000">AGOBSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0102">BGM</title>
+			<title code="0x0103">GAME OVER</title>
+			<title code="0x0104">GAME OVER2</title>
+			<title code="0x05">SE 05</title>
+			<title code="0x06">SE 06</title>
+			<title code="0x07">SE 07</title>
+			<title code="0x08">SE 08</title>
+			<title code="0x09">SE 09</title>
+			<title code="0x0a">SE 0a</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - タイトルあわせ(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">kgcbpat</rom>
+			<rom type="code"  offset="0x4000">TAWA.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0102">BGM</title>
+			<title code="0x0103">GAME OVER</title>
+			<title code="0x04">SE 04</title>
+			<title code="0x05">SE 05</title>
+			<title code="0x06">SE 06</title>
+			<title code="0x07">SE 07</title>
+			<title code="0x08">SE 08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - タイトルあわせ(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">kgcbpat</rom>
+			<rom type="sccp"  offset="0x0000">TAWASCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0102">BGM</title>
+			<title code="0x0103">GAME OVER</title>
+			<title code="0x04">SE 04</title>
+			<title code="0x05">SE 05</title>
+			<title code="0x06">SE 06</title>
+			<title code="0x07">SE 07</title>
+			<title code="0x08">SE 08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - つるりん君(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">kgcbpat</rom>
+			<rom type="code"  offset="0x4000">TURU.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0102">BGM</title>
+			<title code="0x0103">GAME OVER</title>
+			<title code="0x0104">CLEAR</title>
+			<title code="0x0105">ALL CLEAR</title>
+			<title code="0x06">SE 06</title>
+			<title code="0x07">SE 07</title>
+			<title code="0x08">SE 08</title>
+			<title code="0x0b">SE 0b</title>
+			<title code="0x0c">SE 0c</title>
+			<title code="0x0d">SE 0d</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - つるりん君(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">kgcbpat</rom>
+			<rom type="sccp"  offset="0x0000">TURUSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0102">BGM</title>
+			<title code="0x0103">GAME OVER</title>
+			<title code="0x0104">CLEAR</title>
+			<title code="0x0105">ALL CLEAR</title>
+			<title code="0x06">SE 06</title>
+			<title code="0x07">SE 07</title>
+			<title code="0x08">SE 08</title>
+			<title code="0x0b">SE 0b</title>
+			<title code="0x0c">SE 0c</title>
+			<title code="0x0d">SE 0d</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - はいぱーそーめん(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">kgcbpat</rom>
+			<rom type="code"  offset="0x4000">HSOU.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0102">BGM</title>
+			<title code="0x0103">GAME OVER</title>
+			<title code="0x04">SE 04</title>
+			<title code="0x05">SE 05</title>
+			<title code="0x06">SE 06</title>
+			<title code="0x07">SE 07</title>
+			<title code="0x08">SE 08</title>
+			<title code="0x0a">SE 0a</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] GAME COLLECTION 番外編 - はいぱーそーめん(SCC+)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Konami</driveralias>
+		<options>
+			<option name="init_pc" value="0x0400"/>
+			<option name="use_scc" value="0x02"/>
+		</options>
+		<romlist archive="kgcb_msx">
+			<rom type="code"  offset="0x0400">kgcbpat</rom>
+			<rom type="sccp"  offset="0x0000">HSOUSCC.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0102">BGM</title>
+			<title code="0x0103">GAME OVER</title>
+			<title code="0x04">SE 04</title>
+			<title code="0x05">SE 05</title>
+			<title code="0x06">SE 06</title>
+			<title code="0x07">SE 07</title>
+			<title code="0x08">SE 08</title>
+			<title code="0x0a">SE 0a</title>
+		</titlelist>
+	</game>
+</gamelist>

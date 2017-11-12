@@ -1,0 +1,1764 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Sogna -->
+	<game>
+		<name>[PC-98] Anime Mahjong (あにまーじゃんV3)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="anmv3_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">EFCMJ.EFC</rom>
+			<rom type="file" offset="0x10">MJ01.M</rom>
+			<rom type="file" offset="0x11">MJ02.M</rom>
+			<rom type="file" offset="0x12">MJ03A.M</rom>
+			<rom type="file" offset="0x13">MJ03B.M</rom>
+			<rom type="file" offset="0x14">MJ03C.M</rom>
+			<rom type="file" offset="0x15">MJ04.M</rom>
+			<rom type="file" offset="0x16">MJ05.M</rom>
+			<rom type="file" offset="0x17">MJ06.M</rom>
+			<rom type="file" offset="0x18">MJ07.M</rom>
+			<rom type="file" offset="0x19">MJ08.M</rom>
+			<rom type="shell" offset="0">pmd /k</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MJ01.M</title>
+			<title code="0x11">MJ02.M</title>
+			<title code="0x12">MJ03A.M</title>
+			<title code="0x13">MJ03B.M</title>
+			<title code="0x14">MJ03C.M</title>
+			<title code="0x15">MJ04.M</title>
+			<title code="0x16">MJ05.M</title>
+			<title code="0x17">MJ06.M</title>
+			<title code="0x18">MJ07.M</title>
+			<title code="0x19">MJ08.M</title>
+			<range min="0x0801" max="0x0805" extcode="1">EFCMJ.EFC #%2X</range>
+			<range min="0x0880" max="0x089F" extcode="1">EFCMJ.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Anime Mahjong X / (?) / 1994 Sogna(86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="anmx_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">MA01.FMX</rom>
+			<rom type="file" offset="0x11">MA02.FMX</rom>
+			<rom type="file" offset="0x12">MA03.FMX</rom>
+			<rom type="file" offset="0x13">MA05.FMX</rom>
+			<rom type="file" offset="0x14">MA06.FMX</rom>
+			<rom type="file" offset="0x15">MA07.FMX</rom>
+			<rom type="file" offset="0x16">MA09.FMX</rom>
+			<rom type="file" offset="0x17">MA10.FMX</rom>
+			<rom type="file" offset="0x18">MA11.FMX</rom>
+			<rom type="file" offset="0x19">MA12.FMX</rom>
+			<rom type="file" offset="0x1a">MA13.FMX</rom>
+			<rom type="file" offset="0x1b">MA14.FMX</rom>
+			<rom type="file" offset="0x1c">MJ07.FMX</rom>
+			<rom type="file" offset="0x1d">MJ08.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">MA01.FMX</title>
+			<title code="0x11">MA02.FMX</title>
+			<title code="0x12">MA03.FMX</title>
+			<title code="0x13">MA05.FMX</title>
+			<title code="0x14">MA06.FMX</title>
+			<title code="0x15">MA07.FMX</title>
+			<title code="0x16">MA09.FMX</title>
+			<title code="0x17">MA10.FMX</title>
+			<title code="0x18">MA11.FMX</title>
+			<title code="0x19">MA12.FMX</title>
+			<title code="0x1a">MA13.FMX</title>
+			<title code="0x1b">MA14.FMX</title>
+			<title code="0x1c">MJ07.FMX</title>
+			<title code="0x1d">MJ08.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V6</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="fm_mix" value="10"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="v_v6_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">VI01.FMX</rom>
+			<rom type="file" offset="0x11">VI02.FMX</rom>
+			<rom type="file" offset="0x12">VI03.FMX</rom>
+			<rom type="file" offset="0x13">VI04.FMX</rom>
+			<rom type="file" offset="0x14">VI05.FMX</rom>
+			<rom type="file" offset="0x15">VI06.FMX</rom>
+			<rom type="file" offset="0x16">VI07.FMX</rom>
+			<rom type="file" offset="0x17">VICH.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">VI01.FMX</title>
+			<title code="0x11">VI02.FMX</title>
+			<title code="0x12">VI03.FMX</title>
+			<title code="0x13">VI04.FMX</title>
+			<title code="0x14">VI05.FMX</title>
+			<title code="0x15">VI06.FMX</title>
+			<title code="0x16">VI07.FMX</title>
+			<title code="0x17">VICH.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V8</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="fm_mix" value="10"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="v_v8_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">VI8_01.FMX</rom>
+			<rom type="file" offset="0x11">VI8_02.FMX</rom>
+			<rom type="file" offset="0x12">VI8_03.FMX</rom>
+			<rom type="file" offset="0x13">VI8_04.FMX</rom>
+			<rom type="file" offset="0x14">VI8_05.FMX</rom>
+			<rom type="file" offset="0x15">VI8_06.FMX</rom>
+			<rom type="file" offset="0x16">VI8_07.FMX</rom>
+			<rom type="file" offset="0x17">VI8_08.FMX</rom>
+			<rom type="file" offset="0x18">VI8_09.FMX</rom>
+			<rom type="file" offset="0x19">VI8_10.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">VI8_01.FMX</title>
+			<title code="0x11">VI8_02.FMX</title>
+			<title code="0x12">VI8_03.FMX</title>
+			<title code="0x13">VI8_04.FMX</title>
+			<title code="0x14">VI8_05.FMX</title>
+			<title code="0x15">VI8_06.FMX</title>
+			<title code="0x16">VI8_07.FMX</title>
+			<title code="0x17">VI8_08.FMX</title>
+			<title code="0x18">VI8_09.FMX</title>
+			<title code="0x19">VI8_10.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V10</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="fm_mix" value="10"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="v_v10_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">VI072.FMX</rom>
+			<rom type="file" offset="0x11">VI10_01.FMX</rom>
+			<rom type="file" offset="0x12">VI10_02.FMX</rom>
+			<rom type="file" offset="0x13">VI10_03.FMX</rom>
+			<rom type="file" offset="0x14">VI10_04.FMX</rom>
+			<rom type="file" offset="0x15">VI10_05.FMX</rom>
+			<rom type="file" offset="0x16">VI10_06.FMX</rom>
+			<rom type="file" offset="0x17">VI10_08.FMX</rom>
+			<rom type="file" offset="0x18">VI10_09.FMX</rom>
+			<rom type="file" offset="0x19">VI10_10.FMX</rom>
+			<rom type="file" offset="0x1a">VI10_11.FMX</rom>
+			<rom type="file" offset="0x1b">VI10_12.FMX</rom>
+			<rom type="file" offset="0x1c">VI10_TT.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">VI072.FMX</title>
+			<title code="0x11">VI10_01.FMX</title>
+			<title code="0x12">VI10_02.FMX</title>
+			<title code="0x13">VI10_03.FMX</title>
+			<title code="0x14">VI10_04.FMX</title>
+			<title code="0x15">VI10_05.FMX</title>
+			<title code="0x16">VI10_06.FMX</title>
+			<title code="0x17">VI10_08.FMX</title>
+			<title code="0x18">VI10_09.FMX</title>
+			<title code="0x19">VI10_10.FMX</title>
+			<title code="0x1a">VI10_11.FMX</title>
+			<title code="0x1b">VI10_12.FMX</title>
+			<title code="0x1c">VI10_TT.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper GTS (ＶＩＰＥＲ－ＧＴＳ ～悪魔は再び～)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="fm_mix" value="10"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="v_gts_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">GTS01.FMX</rom>
+			<rom type="file" offset="0x11">GTS02.FMX</rom>
+			<rom type="file" offset="0x12">GTS03.FMX</rom>
+			<rom type="file" offset="0x13">GTS04.FMX</rom>
+			<rom type="file" offset="0x14">GTS05.FMX</rom>
+			<rom type="file" offset="0x15">GTS06.FMX</rom>
+			<rom type="file" offset="0x16">GTS07.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GTS01.FMX</title>
+			<title code="0x11">GTS02.FMX</title>
+			<title code="0x12">GTS03.FMX</title>
+			<title code="0x13">GTS04.FMX</title>
+			<title code="0x14">GTS05.FMX</title>
+			<title code="0x15">GTS06.FMX</title>
+			<title code="0x16">GTS07.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V6 RS (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="v_v6rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">STUP.FMX</rom>
+			<rom type="file" offset="0x12">VI6_01.FMX</rom>
+			<rom type="file" offset="0x13">VI6_02.FMX</rom>
+			<rom type="file" offset="0x14">VI6_03.FMX</rom>
+			<rom type="file" offset="0x15">VI6_04.FMX</rom>
+			<rom type="file" offset="0x16">VI6_05.FMX</rom>
+			<rom type="file" offset="0x17">VI6_06.FMX</rom>
+			<rom type="file" offset="0x18">VI6_07.FMX</rom>
+			<rom type="file" offset="0x19">VI6_CH.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">STUP.FMX</title>
+			<title code="0x12">VI6_01.FMX</title>
+			<title code="0x13">VI6_02.FMX</title>
+			<title code="0x14">VI6_03.FMX</title>
+			<title code="0x15">VI6_04.FMX</title>
+			<title code="0x16">VI6_05.FMX</title>
+			<title code="0x17">VI6_06.FMX</title>
+			<title code="0x18">VI6_07.FMX</title>
+			<title code="0x19">VI6_CH.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V6 RS (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="v_v6rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">STUP.FMX</rom>
+			<rom type="file" offset="0x12">VI6_01.FMX</rom>
+			<rom type="file" offset="0x13">VI6_02.FMX</rom>
+			<rom type="file" offset="0x14">VI6_03.FMX</rom>
+			<rom type="file" offset="0x15">VI6_04.FMX</rom>
+			<rom type="file" offset="0x16">VI6_05.FMX</rom>
+			<rom type="file" offset="0x17">VI6_06.FMX</rom>
+			<rom type="file" offset="0x18">VI6_07.FMX</rom>
+			<rom type="file" offset="0x19">VI6_CH.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">STUP.FMX</title>
+			<title code="0x12">VI6_01.FMX</title>
+			<title code="0x13">VI6_02.FMX</title>
+			<title code="0x14">VI6_03.FMX</title>
+			<title code="0x15">VI6_04.FMX</title>
+			<title code="0x16">VI6_05.FMX</title>
+			<title code="0x17">VI6_06.FMX</title>
+			<title code="0x18">VI6_07.FMX</title>
+			<title code="0x19">VI6_CH.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V6 RS (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="v_v6rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">VI6_01.MMX</rom>
+			<rom type="file" offset="0x12">VI6_02.MMX</rom>
+			<rom type="file" offset="0x13">VI6_03.MMX</rom>
+			<rom type="file" offset="0x14">VI6_04.MMX</rom>
+			<rom type="file" offset="0x15">VI6_05.MMX</rom>
+			<rom type="file" offset="0x16">VI6_06.MMX</rom>
+			<rom type="file" offset="0x17">VI6_07.MMX</rom>
+			<rom type="file" offset="0x18">VI6_CH.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">VI6_01.MMX</title>
+			<title code="0x12">VI6_02.MMX</title>
+			<title code="0x13">VI6_03.MMX</title>
+			<title code="0x14">VI6_04.MMX</title>
+			<title code="0x15">VI6_05.MMX</title>
+			<title code="0x16">VI6_06.MMX</title>
+			<title code="0x17">VI6_07.MMX</title>
+			<title code="0x18">VI6_CH.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V6 RS (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="v_v6rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">VI6_01.MMX</rom>
+			<rom type="file" offset="0x12">VI6_02.MMX</rom>
+			<rom type="file" offset="0x13">VI6_03.MMX</rom>
+			<rom type="file" offset="0x14">VI6_04.MMX</rom>
+			<rom type="file" offset="0x15">VI6_05.MMX</rom>
+			<rom type="file" offset="0x16">VI6_06.MMX</rom>
+			<rom type="file" offset="0x17">VI6_07.MMX</rom>
+			<rom type="file" offset="0x18">VI6_CH.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">VI6_01.MMX</title>
+			<title code="0x12">VI6_02.MMX</title>
+			<title code="0x13">VI6_03.MMX</title>
+			<title code="0x14">VI6_04.MMX</title>
+			<title code="0x15">VI6_05.MMX</title>
+			<title code="0x16">VI6_06.MMX</title>
+			<title code="0x17">VI6_07.MMX</title>
+			<title code="0x18">VI6_CH.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V12 (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="v_v12_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">STUP.FMX</rom>
+			<rom type="file" offset="0x12">V12_01.FMX</rom>
+			<rom type="file" offset="0x13">V12_02.FMX</rom>
+			<rom type="file" offset="0x14">V12_03.FMX</rom>
+			<rom type="file" offset="0x15">V12_04.FMX</rom>
+			<rom type="file" offset="0x16">V12_05.FMX</rom>
+			<rom type="file" offset="0x17">V12_06.FMX</rom>
+			<rom type="file" offset="0x18">V12_07.FMX</rom>
+			<rom type="file" offset="0x19">V12_08.FMX</rom>
+			<rom type="file" offset="0x1a">V12_09.FMX</rom>
+			<rom type="file" offset="0x1b">V12_10.FMX</rom>
+			<rom type="file" offset="0x1c">V12_11A.FMX</rom>
+			<rom type="file" offset="0x1d">V12_11B.FMX</rom>
+			<rom type="file" offset="0x1e">V12_12.FMX</rom>
+			<rom type="file" offset="0x1f">V12_13.FMX</rom>
+			<rom type="file" offset="0x20">V12_14.FMX</rom>
+			<rom type="file" offset="0x21">V12_15.FMX</rom>
+			<rom type="file" offset="0x22">V12_16A.FMX</rom>
+			<rom type="file" offset="0x23">V12_16B.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">STUP.FMX</title>
+			<title code="0x12">V12_01.FMX</title>
+			<title code="0x13">V12_02.FMX</title>
+			<title code="0x14">V12_03.FMX</title>
+			<title code="0x15">V12_04.FMX</title>
+			<title code="0x16">V12_05.FMX</title>
+			<title code="0x17">V12_06.FMX</title>
+			<title code="0x18">V12_07.FMX</title>
+			<title code="0x19">V12_08.FMX</title>
+			<title code="0x1a">V12_09.FMX</title>
+			<title code="0x1b">V12_10.FMX</title>
+			<title code="0x1c">V12_11A.FMX</title>
+			<title code="0x1d">V12_11B.FMX</title>
+			<title code="0x1e">V12_12.FMX</title>
+			<title code="0x1f">V12_13.FMX</title>
+			<title code="0x20">V12_14.FMX</title>
+			<title code="0x21">V12_15.FMX</title>
+			<title code="0x22">V12_16A.FMX</title>
+			<title code="0x23">V12_16B.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V12 (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="fm_mix" value="18"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="v_v12_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">STUP.FMX</rom>
+			<rom type="file" offset="0x12">V12_01.FMX</rom>
+			<rom type="file" offset="0x13">V12_02.FMX</rom>
+			<rom type="file" offset="0x14">V12_03.FMX</rom>
+			<rom type="file" offset="0x15">V12_04.FMX</rom>
+			<rom type="file" offset="0x16">V12_05.FMX</rom>
+			<rom type="file" offset="0x17">V12_06.FMX</rom>
+			<rom type="file" offset="0x18">V12_07.FMX</rom>
+			<rom type="file" offset="0x19">V12_08.FMX</rom>
+			<rom type="file" offset="0x1a">V12_09.FMX</rom>
+			<rom type="file" offset="0x1b">V12_10.FMX</rom>
+			<rom type="file" offset="0x1c">V12_11A.FMX</rom>
+			<rom type="file" offset="0x1d">V12_11B.FMX</rom>
+			<rom type="file" offset="0x1e">V12_12.FMX</rom>
+			<rom type="file" offset="0x1f">V12_13.FMX</rom>
+			<rom type="file" offset="0x20">V12_14.FMX</rom>
+			<rom type="file" offset="0x21">V12_15.FMX</rom>
+			<rom type="file" offset="0x22">V12_16A.FMX</rom>
+			<rom type="file" offset="0x23">V12_16B.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">STUP.FMX</title>
+			<title code="0x12">V12_01.FMX</title>
+			<title code="0x13">V12_02.FMX</title>
+			<title code="0x14">V12_03.FMX</title>
+			<title code="0x15">V12_04.FMX</title>
+			<title code="0x16">V12_05.FMX</title>
+			<title code="0x17">V12_06.FMX</title>
+			<title code="0x18">V12_07.FMX</title>
+			<title code="0x19">V12_08.FMX</title>
+			<title code="0x1a">V12_09.FMX</title>
+			<title code="0x1b">V12_10.FMX</title>
+			<title code="0x1c">V12_11A.FMX</title>
+			<title code="0x1d">V12_11B.FMX</title>
+			<title code="0x1e">V12_12.FMX</title>
+			<title code="0x1f">V12_13.FMX</title>
+			<title code="0x20">V12_14.FMX</title>
+			<title code="0x21">V12_15.FMX</title>
+			<title code="0x22">V12_16A.FMX</title>
+			<title code="0x23">V12_16B.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V12 (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="v_v12_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">V12_01.MMX</rom>
+			<rom type="file" offset="0x12">V12_02.MMX</rom>
+			<rom type="file" offset="0x13">V12_03.MMX</rom>
+			<rom type="file" offset="0x14">V12_04.MMX</rom>
+			<rom type="file" offset="0x15">V12_05.MMX</rom>
+			<rom type="file" offset="0x16">V12_06.MMX</rom>
+			<rom type="file" offset="0x17">V12_07.MMX</rom>
+			<rom type="file" offset="0x18">V12_08.MMX</rom>
+			<rom type="file" offset="0x19">V12_09.MMX</rom>
+			<rom type="file" offset="0x1a">V12_10.MMX</rom>
+			<rom type="file" offset="0x1b">V12_11A.MMX</rom>
+			<rom type="file" offset="0x1c">V12_11B.MMX</rom>
+			<rom type="file" offset="0x1d">V12_12.MMX</rom>
+			<rom type="file" offset="0x1e">V12_13.MMX</rom>
+			<rom type="file" offset="0x1f">V12_14.MMX</rom>
+			<rom type="file" offset="0x20">V12_15.MMX</rom>
+			<rom type="file" offset="0x21">V12_16A.MMX</rom>
+			<rom type="file" offset="0x22">V12_16B.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">V12_01.MMX</title>
+			<title code="0x12">V12_02.MMX</title>
+			<title code="0x13">V12_03.MMX</title>
+			<title code="0x14">V12_04.MMX</title>
+			<title code="0x15">V12_05.MMX</title>
+			<title code="0x16">V12_06.MMX</title>
+			<title code="0x17">V12_07.MMX</title>
+			<title code="0x18">V12_08.MMX</title>
+			<title code="0x19">V12_09.MMX</title>
+			<title code="0x1a">V12_10.MMX</title>
+			<title code="0x1b">V12_11A.MMX</title>
+			<title code="0x1c">V12_11B.MMX</title>
+			<title code="0x1d">V12_12.MMX</title>
+			<title code="0x1e">V12_13.MMX</title>
+			<title code="0x1f">V12_14.MMX</title>
+			<title code="0x20">V12_15.MMX</title>
+			<title code="0x21">V12_16A.MMX</title>
+			<title code="0x22">V12_16B.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V12 (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="v_v12_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">V12_01.MMX</rom>
+			<rom type="file" offset="0x12">V12_02.MMX</rom>
+			<rom type="file" offset="0x13">V12_03.MMX</rom>
+			<rom type="file" offset="0x14">V12_04.MMX</rom>
+			<rom type="file" offset="0x15">V12_05.MMX</rom>
+			<rom type="file" offset="0x16">V12_06.MMX</rom>
+			<rom type="file" offset="0x17">V12_07.MMX</rom>
+			<rom type="file" offset="0x18">V12_08.MMX</rom>
+			<rom type="file" offset="0x19">V12_09.MMX</rom>
+			<rom type="file" offset="0x1a">V12_10.MMX</rom>
+			<rom type="file" offset="0x1b">V12_11A.MMX</rom>
+			<rom type="file" offset="0x1c">V12_11B.MMX</rom>
+			<rom type="file" offset="0x1d">V12_12.MMX</rom>
+			<rom type="file" offset="0x1e">V12_13.MMX</rom>
+			<rom type="file" offset="0x1f">V12_14.MMX</rom>
+			<rom type="file" offset="0x20">V12_15.MMX</rom>
+			<rom type="file" offset="0x21">V12_16A.MMX</rom>
+			<rom type="file" offset="0x22">V12_16B.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">V12_01.MMX</title>
+			<title code="0x12">V12_02.MMX</title>
+			<title code="0x13">V12_03.MMX</title>
+			<title code="0x14">V12_04.MMX</title>
+			<title code="0x15">V12_05.MMX</title>
+			<title code="0x16">V12_06.MMX</title>
+			<title code="0x17">V12_07.MMX</title>
+			<title code="0x18">V12_08.MMX</title>
+			<title code="0x19">V12_09.MMX</title>
+			<title code="0x1a">V12_10.MMX</title>
+			<title code="0x1b">V12_11A.MMX</title>
+			<title code="0x1c">V12_11B.MMX</title>
+			<title code="0x1d">V12_12.MMX</title>
+			<title code="0x1e">V12_13.MMX</title>
+			<title code="0x1f">V12_14.MMX</title>
+			<title code="0x20">V12_15.MMX</title>
+			<title code="0x21">V12_16A.MMX</title>
+			<title code="0x22">V12_16B.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V8 RS (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="v_v8rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">STUP.FMX</rom>
+			<rom type="file" offset="0x12">VI8_01.FMX</rom>
+			<rom type="file" offset="0x13">VI8_02.FMX</rom>
+			<rom type="file" offset="0x14">VI8_03.FMX</rom>
+			<rom type="file" offset="0x15">VI8_04.FMX</rom>
+			<rom type="file" offset="0x16">VI8_05.FMX</rom>
+			<rom type="file" offset="0x17">VI8_06.FMX</rom>
+			<rom type="file" offset="0x18">VI8_07.FMX</rom>
+			<rom type="file" offset="0x19">VI8_08.FMX</rom>
+			<rom type="file" offset="0x1a">VI8_09.FMX</rom>
+			<rom type="file" offset="0x1b">VI8_10.FMX</rom>
+			<rom type="file" offset="0x1c">VI8_11.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">SOGNAいんすとぉる</title>
+			<title code="0x12">Too Cold</title>
+			<title code="0x13">Power Slum</title>
+			<title code="0x14">52line</title>
+			<title code="0x15">Silent Trees</title>
+			<title code="0x16">J-Son</title>
+			<title code="0x17">Joe's Motion</title>
+			<title code="0x18">Caution!</title>
+			<title code="0x19">You Need Lovers</title>
+			<title code="0x1a">Country</title>
+			<title code="0x1b">Opening Theme</title>
+			<title code="0x1c">Moon</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V8 RS (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="fm_mix" value="18"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="v_v8rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">STUP.FMX</rom>
+			<rom type="file" offset="0x12">VI8_01.FMX</rom>
+			<rom type="file" offset="0x13">VI8_02.FMX</rom>
+			<rom type="file" offset="0x14">VI8_03.FMX</rom>
+			<rom type="file" offset="0x15">VI8_04.FMX</rom>
+			<rom type="file" offset="0x16">VI8_05.FMX</rom>
+			<rom type="file" offset="0x17">VI8_06.FMX</rom>
+			<rom type="file" offset="0x18">VI8_07.FMX</rom>
+			<rom type="file" offset="0x19">VI8_08.FMX</rom>
+			<rom type="file" offset="0x1a">VI8_09.FMX</rom>
+			<rom type="file" offset="0x1b">VI8_10.FMX</rom>
+			<rom type="file" offset="0x1c">VI8_11.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">SOGNAいんすとぉる</title>
+			<title code="0x12">Too Cold</title>
+			<title code="0x13">Power Slum</title>
+			<title code="0x14">52line</title>
+			<title code="0x15">Silent Trees</title>
+			<title code="0x16">J-Son</title>
+			<title code="0x17">Joe's Motion</title>
+			<title code="0x18">Caution!</title>
+			<title code="0x19">You Need Lovers</title>
+			<title code="0x1a">Country</title>
+			<title code="0x1b">Opening Theme</title>
+			<title code="0x1c">Moon</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V8 RS (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="v_v8rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">VI8_01.MMX</rom>
+			<rom type="file" offset="0x12">VI8_02.MMX</rom>
+			<rom type="file" offset="0x13">VI8_03.MMX</rom>
+			<rom type="file" offset="0x14">VI8_04.MMX</rom>
+			<rom type="file" offset="0x15">VI8_05.MMX</rom>
+			<rom type="file" offset="0x16">VI8_06.MMX</rom>
+			<rom type="file" offset="0x17">VI8_07.MMX</rom>
+			<rom type="file" offset="0x18">VI8_08.MMX</rom>
+			<rom type="file" offset="0x19">VI8_09.MMX</rom>
+			<rom type="file" offset="0x1a">VI8_10.MMX</rom>
+			<rom type="file" offset="0x1b">VI8_11.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">Too Cold</title>       
+			<title code="0x12">Power Slum</title>     
+			<title code="0x13">52line</title>         
+			<title code="0x14">Silent Trees</title>   
+			<title code="0x15">J-Son</title>          
+			<title code="0x16">Joe's Motion</title>   
+			<title code="0x17">Caution!</title>       
+			<title code="0x18">You Need Lovers</title>
+			<title code="0x19">Country</title>        
+			<title code="0x1a">Opening Theme</title>  
+			<title code="0x1b">Moon</title>           
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V8 RS (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="v_v8rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">VI8_01.MMX</rom>
+			<rom type="file" offset="0x12">VI8_02.MMX</rom>
+			<rom type="file" offset="0x13">VI8_03.MMX</rom>
+			<rom type="file" offset="0x14">VI8_04.MMX</rom>
+			<rom type="file" offset="0x15">VI8_05.MMX</rom>
+			<rom type="file" offset="0x16">VI8_06.MMX</rom>
+			<rom type="file" offset="0x17">VI8_07.MMX</rom>
+			<rom type="file" offset="0x18">VI8_08.MMX</rom>
+			<rom type="file" offset="0x19">VI8_09.MMX</rom>
+			<rom type="file" offset="0x1a">VI8_10.MMX</rom>
+			<rom type="file" offset="0x1b">VI8_11.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">Too Cold</title>       
+			<title code="0x12">Power Slum</title>     
+			<title code="0x13">52line</title>         
+			<title code="0x14">Silent Trees</title>   
+			<title code="0x15">J-Son</title>          
+			<title code="0x16">Joe's Motion</title>   
+			<title code="0x17">Caution!</title>       
+			<title code="0x18">You Need Lovers</title>
+			<title code="0x19">Country</title>        
+			<title code="0x1a">Opening Theme</title>  
+			<title code="0x1b">Moon</title>           
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V10 RS (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="v_v10rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">VI072.FMX</rom>
+			<rom type="file" offset="0x12">VI10_01.FMX</rom>
+			<rom type="file" offset="0x13">VI10_02.FMX</rom>
+			<rom type="file" offset="0x14">VI10_03.FMX</rom>
+			<rom type="file" offset="0x15">VI10_04.FMX</rom>
+			<rom type="file" offset="0x16">VI10_05.FMX</rom>
+			<rom type="file" offset="0x17">VI10_06.FMX</rom>
+			<rom type="file" offset="0x18">VI10_08.FMX</rom>
+			<rom type="file" offset="0x19">VI10_09.FMX</rom>
+			<rom type="file" offset="0x1a">VI10_10.FMX</rom>
+			<rom type="file" offset="0x1b">VI10_11.FMX</rom>
+			<rom type="file" offset="0x1c">VI10_12.FMX</rom>
+			<rom type="file" offset="0x1d">VI10_TT.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">VI072.FMX</title>
+			<title code="0x12">VI10_01.FMX</title>
+			<title code="0x13">VI10_02.FMX</title>
+			<title code="0x14">VI10_03.FMX</title>
+			<title code="0x15">VI10_04.FMX</title>
+			<title code="0x16">VI10_05.FMX</title>
+			<title code="0x17">VI10_06.FMX</title>
+			<title code="0x18">VI10_08.FMX</title>
+			<title code="0x19">VI10_09.FMX</title>
+			<title code="0x1a">VI10_10.FMX</title>
+			<title code="0x1b">VI10_11.FMX</title>
+			<title code="0x1c">VI10_12.FMX</title>
+			<title code="0x1d">VI10_TT.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V10 RS (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="fm_mix" value="18"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="v_v10rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">VI072.FMX</rom>
+			<rom type="file" offset="0x12">VI10_01.FMX</rom>
+			<rom type="file" offset="0x13">VI10_02.FMX</rom>
+			<rom type="file" offset="0x14">VI10_03.FMX</rom>
+			<rom type="file" offset="0x15">VI10_04.FMX</rom>
+			<rom type="file" offset="0x16">VI10_05.FMX</rom>
+			<rom type="file" offset="0x17">VI10_06.FMX</rom>
+			<rom type="file" offset="0x18">VI10_08.FMX</rom>
+			<rom type="file" offset="0x19">VI10_09.FMX</rom>
+			<rom type="file" offset="0x1a">VI10_10.FMX</rom>
+			<rom type="file" offset="0x1b">VI10_11.FMX</rom>
+			<rom type="file" offset="0x1c">VI10_12.FMX</rom>
+			<rom type="file" offset="0x1d">VI10_TT.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">VI072.FMX</title>
+			<title code="0x12">VI10_01.FMX</title>
+			<title code="0x13">VI10_02.FMX</title>
+			<title code="0x14">VI10_03.FMX</title>
+			<title code="0x15">VI10_04.FMX</title>
+			<title code="0x16">VI10_05.FMX</title>
+			<title code="0x17">VI10_06.FMX</title>
+			<title code="0x18">VI10_08.FMX</title>
+			<title code="0x19">VI10_09.FMX</title>
+			<title code="0x1a">VI10_10.FMX</title>
+			<title code="0x1b">VI10_11.FMX</title>
+			<title code="0x1c">VI10_12.FMX</title>
+			<title code="0x1d">VI10_TT.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V10 RS (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="v_v10rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">VI072.MMX</rom>
+			<rom type="file" offset="0x12">VI10_01.MMX</rom>
+			<rom type="file" offset="0x13">VI10_02.MMX</rom>
+			<rom type="file" offset="0x14">VI10_03.MMX</rom>
+			<rom type="file" offset="0x15">VI10_05.MMX</rom>
+			<rom type="file" offset="0x16">VI10_06.MMX</rom>
+			<rom type="file" offset="0x17">VI10_08.MMX</rom>
+			<rom type="file" offset="0x18">VI10_09.MMX</rom>
+			<rom type="file" offset="0x19">VI10_10.MMX</rom>
+			<rom type="file" offset="0x1a">VI10_11.MMX</rom>
+			<rom type="file" offset="0x1b">VI10_12.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">VI072.MMX</title>
+			<title code="0x12">VI10_01.MMX</title>
+			<title code="0x13">VI10_02.MMX</title>
+			<title code="0x14">VI10_03.MMX</title>
+			<title code="0x15">VI10_05.MMX</title>
+			<title code="0x16">VI10_06.MMX</title>
+			<title code="0x17">VI10_08.MMX</title>
+			<title code="0x18">VI10_09.MMX</title>
+			<title code="0x19">VI10_10.MMX</title>
+			<title code="0x1a">VI10_11.MMX</title>
+			<title code="0x1b">VI10_12.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V10 RS (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="v_v10rs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">VI072.MMX</rom>
+			<rom type="file" offset="0x12">VI10_01.MMX</rom>
+			<rom type="file" offset="0x13">VI10_02.MMX</rom>
+			<rom type="file" offset="0x14">VI10_03.MMX</rom>
+			<rom type="file" offset="0x15">VI10_05.MMX</rom>
+			<rom type="file" offset="0x16">VI10_06.MMX</rom>
+			<rom type="file" offset="0x17">VI10_08.MMX</rom>
+			<rom type="file" offset="0x18">VI10_09.MMX</rom>
+			<rom type="file" offset="0x19">VI10_10.MMX</rom>
+			<rom type="file" offset="0x1a">VI10_11.MMX</rom>
+			<rom type="file" offset="0x1b">VI10_12.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">VI072.MMX</title>
+			<title code="0x12">VI10_01.MMX</title>
+			<title code="0x13">VI10_02.MMX</title>
+			<title code="0x14">VI10_03.MMX</title>
+			<title code="0x15">VI10_05.MMX</title>
+			<title code="0x16">VI10_06.MMX</title>
+			<title code="0x17">VI10_08.MMX</title>
+			<title code="0x18">VI10_09.MMX</title>
+			<title code="0x19">VI10_10.MMX</title>
+			<title code="0x1a">VI10_11.MMX</title>
+			<title code="0x1b">VI10_12.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper GTS RS (ＶＩＰＥＲ－ＧＴＳ ＲＳ ～悪魔は再び～) (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="v_gtsrs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">STUP.FMX</rom>
+			<rom type="file" offset="0x12">GTS01.FMX</rom>
+			<rom type="file" offset="0x13">GTS02.FMX</rom>
+			<rom type="file" offset="0x14">GTS03.FMX</rom>
+			<rom type="file" offset="0x15">GTS04.FMX</rom>
+			<rom type="file" offset="0x16">GTS05.FMX</rom>
+			<rom type="file" offset="0x17">GTS06.FMX</rom>
+			<rom type="file" offset="0x18">GTS07.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">STUP.FMX</title>
+			<title code="0x12">GTS01.FMX</title>
+			<title code="0x13">GTS02.FMX</title>
+			<title code="0x14">GTS03.FMX</title>
+			<title code="0x15">GTS04.FMX</title>
+			<title code="0x16">GTS05.FMX</title>
+			<title code="0x17">GTS06.FMX</title>
+			<title code="0x18">GTS07.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper GTS RS (ＶＩＰＥＲ－ＧＴＳ ＲＳ ～悪魔は再び～) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="fm_mix" value="10"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="v_gtsrs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">STUP.FMX</rom>
+			<rom type="file" offset="0x12">GTS01.FMX</rom>
+			<rom type="file" offset="0x13">GTS02.FMX</rom>
+			<rom type="file" offset="0x14">GTS03.FMX</rom>
+			<rom type="file" offset="0x15">GTS04.FMX</rom>
+			<rom type="file" offset="0x16">GTS05.FMX</rom>
+			<rom type="file" offset="0x17">GTS06.FMX</rom>
+			<rom type="file" offset="0x18">GTS07.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">STUP.FMX</title>
+			<title code="0x12">GTS01.FMX</title>
+			<title code="0x13">GTS02.FMX</title>
+			<title code="0x14">GTS03.FMX</title>
+			<title code="0x15">GTS04.FMX</title>
+			<title code="0x16">GTS05.FMX</title>
+			<title code="0x17">GTS06.FMX</title>
+			<title code="0x18">GTS07.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper GTS RS (ＶＩＰＥＲ－ＧＴＳ ＲＳ ～悪魔は再び～) (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="v_gtsrs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">GTS01.MMX</rom>
+			<rom type="file" offset="0x12">GTS02.MMX</rom>
+			<rom type="file" offset="0x13">GTS03.MMX</rom>
+			<rom type="file" offset="0x14">GTS04.MMX</rom>
+			<rom type="file" offset="0x15">GTS05.MMX</rom>
+			<rom type="file" offset="0x16">GTS06.MMX</rom>
+			<rom type="file" offset="0x17">GTS07.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">GTS01.MMX</title>
+			<title code="0x12">GTS02.MMX</title>
+			<title code="0x13">GTS03.MMX</title>
+			<title code="0x14">GTS04.MMX</title>
+			<title code="0x15">GTS05.MMX</title>
+			<title code="0x16">GTS06.MMX</title>
+			<title code="0x17">GTS07.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper GTS RS (ＶＩＰＥＲ－ＧＴＳ ＲＳ ～悪魔は再び～) (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="v_gtsrs_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">GTS01.MMX</rom>
+			<rom type="file" offset="0x12">GTS02.MMX</rom>
+			<rom type="file" offset="0x13">GTS03.MMX</rom>
+			<rom type="file" offset="0x14">GTS04.MMX</rom>
+			<rom type="file" offset="0x15">GTS05.MMX</rom>
+			<rom type="file" offset="0x16">GTS06.MMX</rom>
+			<rom type="file" offset="0x17">GTS07.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">GTS01.MMX</title>
+			<title code="0x12">GTS02.MMX</title>
+			<title code="0x13">GTS03.MMX</title>
+			<title code="0x14">GTS04.MMX</title>
+			<title code="0x15">GTS05.MMX</title>
+			<title code="0x16">GTS06.MMX</title>
+			<title code="0x17">GTS07.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V16 (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="v_v16_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">STUP.FMX</rom>
+			<rom type="file" offset="0x12">BADEND.FMX</rom>
+			<rom type="file" offset="0x13">C01.FMX</rom>
+			<rom type="file" offset="0x14">C12.FMX</rom>
+			<rom type="file" offset="0x15">C14.FMX</rom>
+			<rom type="file" offset="0x16">C19.FMX</rom>
+			<rom type="file" offset="0x17">C21.FMX</rom>
+			<rom type="file" offset="0x18">C29.FMX</rom>
+			<rom type="file" offset="0x19">C32.FMX</rom>
+			<rom type="file" offset="0x1a">C40.FMX</rom>
+			<rom type="file" offset="0x1b">C46.FMX</rom>
+			<rom type="file" offset="0x1c">C50.FMX</rom>
+			<rom type="file" offset="0x1d">GAMEOVER.FMX</rom>
+			<rom type="file" offset="0x1e">HARUKA.FMX</rom>
+			<rom type="file" offset="0x1f">K01.FMX</rom>
+			<rom type="file" offset="0x20">K02.FMX</rom>
+			<rom type="file" offset="0x21">K04.FMX</rom>
+			<rom type="file" offset="0x22">K05.FMX</rom>
+			<rom type="file" offset="0x23">K06.FMX</rom>
+			<rom type="file" offset="0x24">K07.FMX</rom>
+			<rom type="file" offset="0x25">K08.FMX</rom>
+			<rom type="file" offset="0x26">K09.FMX</rom>
+			<rom type="file" offset="0x27">K10.FMX</rom>
+			<rom type="file" offset="0x28">K11.FMX</rom>
+			<rom type="file" offset="0x29">K12.FMX</rom>
+			<rom type="file" offset="0x2a">K13.FMX</rom>
+			<rom type="file" offset="0x2b">K14.FMX</rom>
+			<rom type="file" offset="0x2c">NAMI.FMX</rom>
+			<rom type="file" offset="0x2d">TAKAKO.FMX</rom>
+			<rom type="file" offset="0x2e">V16_T.FMX</rom>
+			<rom type="file" offset="0x2f">VTITLE.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">STUP.FMX</title>
+			<title code="0x12">BADEND.FMX</title>
+			<title code="0x13">C01.FMX</title>
+			<title code="0x14">C12.FMX</title>
+			<title code="0x15">C14.FMX</title>
+			<title code="0x16">C19.FMX</title>
+			<title code="0x17">C21.FMX</title>
+			<title code="0x18">C29.FMX</title>
+			<title code="0x19">C32.FMX</title>
+			<title code="0x1a">C40.FMX</title>
+			<title code="0x1b">C46.FMX</title>
+			<title code="0x1c">C50.FMX</title>
+			<title code="0x1d">GAMEOVER.FMX</title>
+			<title code="0x1e">HARUKA.FMX</title>
+			<title code="0x1f">K01.FMX</title>
+			<title code="0x20">K02.FMX</title>
+			<title code="0x21">K04.FMX</title>
+			<title code="0x22">K05.FMX</title>
+			<title code="0x23">K06.FMX</title>
+			<title code="0x24">K07.FMX</title>
+			<title code="0x25">K08.FMX</title>
+			<title code="0x26">K09.FMX</title>
+			<title code="0x27">K10.FMX</title>
+			<title code="0x28">K11.FMX</title>
+			<title code="0x29">K12.FMX</title>
+			<title code="0x2a">K13.FMX</title>
+			<title code="0x2b">K14.FMX</title>
+			<title code="0x2c">NAMI.FMX</title>
+			<title code="0x2d">TAKAKO.FMX</title>
+			<title code="0x2e">V16_T.FMX</title>
+			<title code="0x2f">VTITLE.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V16 (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="fm_mix" value="18"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="v_v16_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">sogna95.FMX</rom>
+			<rom type="file" offset="0x11">STUP.FMX</rom>
+			<rom type="file" offset="0x12">BADEND.FMX</rom>
+			<rom type="file" offset="0x13">C01.FMX</rom>
+			<rom type="file" offset="0x14">C12.FMX</rom>
+			<rom type="file" offset="0x15">C14.FMX</rom>
+			<rom type="file" offset="0x16">C19.FMX</rom>
+			<rom type="file" offset="0x17">C21.FMX</rom>
+			<rom type="file" offset="0x18">C29.FMX</rom>
+			<rom type="file" offset="0x19">C32.FMX</rom>
+			<rom type="file" offset="0x1a">C40.FMX</rom>
+			<rom type="file" offset="0x1b">C46.FMX</rom>
+			<rom type="file" offset="0x1c">C50.FMX</rom>
+			<rom type="file" offset="0x1d">GAMEOVER.FMX</rom>
+			<rom type="file" offset="0x1e">HARUKA.FMX</rom>
+			<rom type="file" offset="0x1f">K01.FMX</rom>
+			<rom type="file" offset="0x20">K02.FMX</rom>
+			<rom type="file" offset="0x21">K04.FMX</rom>
+			<rom type="file" offset="0x22">K05.FMX</rom>
+			<rom type="file" offset="0x23">K06.FMX</rom>
+			<rom type="file" offset="0x24">K07.FMX</rom>
+			<rom type="file" offset="0x25">K08.FMX</rom>
+			<rom type="file" offset="0x26">K09.FMX</rom>
+			<rom type="file" offset="0x27">K10.FMX</rom>
+			<rom type="file" offset="0x28">K11.FMX</rom>
+			<rom type="file" offset="0x29">K12.FMX</rom>
+			<rom type="file" offset="0x2a">K13.FMX</rom>
+			<rom type="file" offset="0x2b">K14.FMX</rom>
+			<rom type="file" offset="0x2c">NAMI.FMX</rom>
+			<rom type="file" offset="0x2d">TAKAKO.FMX</rom>
+			<rom type="file" offset="0x2e">V16_T.FMX</rom>
+			<rom type="file" offset="0x2f">VTITLE.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">STUP.FMX</title>
+			<title code="0x12">BADEND.FMX</title>
+			<title code="0x13">C01.FMX</title>
+			<title code="0x14">C12.FMX</title>
+			<title code="0x15">C14.FMX</title>
+			<title code="0x16">C19.FMX</title>
+			<title code="0x17">C21.FMX</title>
+			<title code="0x18">C29.FMX</title>
+			<title code="0x19">C32.FMX</title>
+			<title code="0x1a">C40.FMX</title>
+			<title code="0x1b">C46.FMX</title>
+			<title code="0x1c">C50.FMX</title>
+			<title code="0x1d">GAMEOVER.FMX</title>
+			<title code="0x1e">HARUKA.FMX</title>
+			<title code="0x1f">K01.FMX</title>
+			<title code="0x20">K02.FMX</title>
+			<title code="0x21">K04.FMX</title>
+			<title code="0x22">K05.FMX</title>
+			<title code="0x23">K06.FMX</title>
+			<title code="0x24">K07.FMX</title>
+			<title code="0x25">K08.FMX</title>
+			<title code="0x26">K09.FMX</title>
+			<title code="0x27">K10.FMX</title>
+			<title code="0x28">K11.FMX</title>
+			<title code="0x29">K12.FMX</title>
+			<title code="0x2a">K13.FMX</title>
+			<title code="0x2b">K14.FMX</title>
+			<title code="0x2c">NAMI.FMX</title>
+			<title code="0x2d">TAKAKO.FMX</title>
+			<title code="0x2e">V16_T.FMX</title>
+			<title code="0x2f">VTITLE.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V16 (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="v_v16_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">BADEND.MMX</rom>
+			<rom type="file" offset="0x12">C01.MMX</rom>
+			<rom type="file" offset="0x13">C12.MMX</rom>
+			<rom type="file" offset="0x14">C14.MMX</rom>
+			<rom type="file" offset="0x15">C19.MMX</rom>
+			<rom type="file" offset="0x16">C21.MMX</rom>
+			<rom type="file" offset="0x17">C29.MMX</rom>
+			<rom type="file" offset="0x18">C32.MMX</rom>
+			<rom type="file" offset="0x19">C40.MMX</rom>
+			<rom type="file" offset="0x1a">C46.MMX</rom>
+			<rom type="file" offset="0x1b">C50.MMX</rom>
+			<rom type="file" offset="0x1c">GAMEOVER.MMX</rom>
+			<rom type="file" offset="0x1d">HARUKA.MMX</rom>
+			<rom type="file" offset="0x1e">K01.MMX</rom>
+			<rom type="file" offset="0x1f">K02.MMX</rom>
+			<rom type="file" offset="0x20">K04.MMX</rom>
+			<rom type="file" offset="0x21">K05.MMX</rom>
+			<rom type="file" offset="0x22">K06.MMX</rom>
+			<rom type="file" offset="0x23">K07.MMX</rom>
+			<rom type="file" offset="0x24">K08.MMX</rom>
+			<rom type="file" offset="0x25">K09.MMX</rom>
+			<rom type="file" offset="0x26">K10.MMX</rom>
+			<rom type="file" offset="0x27">K11.MMX</rom>
+			<rom type="file" offset="0x28">K12.MMX</rom>
+			<rom type="file" offset="0x29">K13.MMX</rom>
+			<rom type="file" offset="0x2a">K14.MMX</rom>
+			<rom type="file" offset="0x2b">NAMI.MMX</rom>
+			<rom type="file" offset="0x2c">TAKAKO.MMX</rom>
+			<rom type="file" offset="0x2d">V16_T.MMX</rom>
+			<rom type="file" offset="0x2e">VTITLE.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">BADEND.MMX</title>
+			<title code="0x12">C01.MMX</title>
+			<title code="0x13">C12.MMX</title>
+			<title code="0x14">C14.MMX</title>
+			<title code="0x15">C19.MMX</title>
+			<title code="0x16">C21.MMX</title>
+			<title code="0x17">C29.MMX</title>
+			<title code="0x18">C32.MMX</title>
+			<title code="0x19">C40.MMX</title>
+			<title code="0x1a">C46.MMX</title>
+			<title code="0x1b">C50.MMX</title>
+			<title code="0x1c">GAMEOVER.MMX</title>
+			<title code="0x1d">HARUKA.MMX</title>
+			<title code="0x1e">K01.MMX</title>
+			<title code="0x1f">K02.MMX</title>
+			<title code="0x20">K04.MMX</title>
+			<title code="0x21">K05.MMX</title>
+			<title code="0x22">K06.MMX</title>
+			<title code="0x23">K07.MMX</title>
+			<title code="0x24">K08.MMX</title>
+			<title code="0x25">K09.MMX</title>
+			<title code="0x26">K10.MMX</title>
+			<title code="0x27">K11.MMX</title>
+			<title code="0x28">K12.MMX</title>
+			<title code="0x29">K13.MMX</title>
+			<title code="0x2a">K14.MMX</title>
+			<title code="0x2b">NAMI.MMX</title>
+			<title code="0x2c">TAKAKO.MMX</title>
+			<title code="0x2d">V16_T.MMX</title>
+			<title code="0x2e">VTITLE.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper V16 (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="v_v16_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">SOGNA95.MMX</rom>
+			<rom type="file" offset="0x11">BADEND.MMX</rom>
+			<rom type="file" offset="0x12">C01.MMX</rom>
+			<rom type="file" offset="0x13">C12.MMX</rom>
+			<rom type="file" offset="0x14">C14.MMX</rom>
+			<rom type="file" offset="0x15">C19.MMX</rom>
+			<rom type="file" offset="0x16">C21.MMX</rom>
+			<rom type="file" offset="0x17">C29.MMX</rom>
+			<rom type="file" offset="0x18">C32.MMX</rom>
+			<rom type="file" offset="0x19">C40.MMX</rom>
+			<rom type="file" offset="0x1a">C46.MMX</rom>
+			<rom type="file" offset="0x1b">C50.MMX</rom>
+			<rom type="file" offset="0x1c">GAMEOVER.MMX</rom>
+			<rom type="file" offset="0x1d">HARUKA.MMX</rom>
+			<rom type="file" offset="0x1e">K01.MMX</rom>
+			<rom type="file" offset="0x1f">K02.MMX</rom>
+			<rom type="file" offset="0x20">K04.MMX</rom>
+			<rom type="file" offset="0x21">K05.MMX</rom>
+			<rom type="file" offset="0x22">K06.MMX</rom>
+			<rom type="file" offset="0x23">K07.MMX</rom>
+			<rom type="file" offset="0x24">K08.MMX</rom>
+			<rom type="file" offset="0x25">K09.MMX</rom>
+			<rom type="file" offset="0x26">K10.MMX</rom>
+			<rom type="file" offset="0x27">K11.MMX</rom>
+			<rom type="file" offset="0x28">K12.MMX</rom>
+			<rom type="file" offset="0x29">K13.MMX</rom>
+			<rom type="file" offset="0x2a">K14.MMX</rom>
+			<rom type="file" offset="0x2b">NAMI.MMX</rom>
+			<rom type="file" offset="0x2c">TAKAKO.MMX</rom>
+			<rom type="file" offset="0x2d">V16_T.MMX</rom>
+			<rom type="file" offset="0x2e">VTITLE.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">BADEND.MMX</title>
+			<title code="0x12">C01.MMX</title>
+			<title code="0x13">C12.MMX</title>
+			<title code="0x14">C14.MMX</title>
+			<title code="0x15">C19.MMX</title>
+			<title code="0x16">C21.MMX</title>
+			<title code="0x17">C29.MMX</title>
+			<title code="0x18">C32.MMX</title>
+			<title code="0x19">C40.MMX</title>
+			<title code="0x1a">C46.MMX</title>
+			<title code="0x1b">C50.MMX</title>
+			<title code="0x1c">GAMEOVER.MMX</title>
+			<title code="0x1d">HARUKA.MMX</title>
+			<title code="0x1e">K01.MMX</title>
+			<title code="0x1f">K02.MMX</title>
+			<title code="0x20">K04.MMX</title>
+			<title code="0x21">K05.MMX</title>
+			<title code="0x22">K06.MMX</title>
+			<title code="0x23">K07.MMX</title>
+			<title code="0x24">K08.MMX</title>
+			<title code="0x25">K09.MMX</title>
+			<title code="0x26">K10.MMX</title>
+			<title code="0x27">K11.MMX</title>
+			<title code="0x28">K12.MMX</title>
+			<title code="0x29">K13.MMX</title>
+			<title code="0x2a">K14.MMX</title>
+			<title code="0x2b">NAMI.MMX</title>
+			<title code="0x2c">TAKAKO.MMX</title>
+			<title code="0x2d">V16_T.MMX</title>
+			<title code="0x2e">VTITLE.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper BTR (ＶＩＰＥＲ－ＢＴＲ ～魔法の賭博師トトカル☆チョミ～) (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="v_btr_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">BTR16.FMX</rom>
+			<rom type="file" offset="0x11">CHO01.FMX</rom>
+			<rom type="file" offset="0x12">CHO03.FMX</rom>
+			<rom type="file" offset="0x13">CHO05.FMX</rom>
+			<rom type="file" offset="0x14">CHO07.FMX</rom>
+			<rom type="file" offset="0x15">CHO08.FMX</rom>
+			<rom type="file" offset="0x16">CHO09.FMX</rom>
+			<rom type="file" offset="0x17">CHO11.FMX</rom>
+			<rom type="file" offset="0x18">CHO12.FMX</rom>
+			<rom type="file" offset="0x19">CHO14.FMX</rom>
+			<rom type="file" offset="0x1a">CHO15.FMX</rom>
+			<rom type="file" offset="0x1b">CHO16.FMX</rom>
+			<rom type="file" offset="0x1c">CHO18.FMX</rom>
+			<rom type="file" offset="0x1d">CHO19.FMX</rom>
+			<rom type="file" offset="0x1e">STUP.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BTR16.FMX</title>
+			<title code="0x11">CHO01.FMX</title>
+			<title code="0x12">CHO03.FMX</title>
+			<title code="0x13">CHO05.FMX</title>
+			<title code="0x14">CHO07.FMX</title>
+			<title code="0x15">CHO08.FMX</title>
+			<title code="0x16">CHO09.FMX</title>
+			<title code="0x17">CHO11.FMX</title>
+			<title code="0x18">CHO12.FMX</title>
+			<title code="0x19">CHO14.FMX</title>
+			<title code="0x1a">CHO15.FMX</title>
+			<title code="0x1b">CHO16.FMX</title>
+			<title code="0x1c">CHO18.FMX</title>
+			<title code="0x1d">CHO19.FMX</title>
+			<title code="0x1e">STUP.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper BTR (ＶＩＰＥＲ－ＢＴＲ ～魔法の賭博師トトカル☆チョミ～) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="fm_mix" value="18"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="v_btr_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">BTR16.FMX</rom>
+			<rom type="file" offset="0x11">CHO01.FMX</rom>
+			<rom type="file" offset="0x12">CHO03.FMX</rom>
+			<rom type="file" offset="0x13">CHO05.FMX</rom>
+			<rom type="file" offset="0x14">CHO07.FMX</rom>
+			<rom type="file" offset="0x15">CHO08.FMX</rom>
+			<rom type="file" offset="0x16">CHO09.FMX</rom>
+			<rom type="file" offset="0x17">CHO11.FMX</rom>
+			<rom type="file" offset="0x18">CHO12.FMX</rom>
+			<rom type="file" offset="0x19">CHO14.FMX</rom>
+			<rom type="file" offset="0x1a">CHO15.FMX</rom>
+			<rom type="file" offset="0x1b">CHO16.FMX</rom>
+			<rom type="file" offset="0x1c">CHO18.FMX</rom>
+			<rom type="file" offset="0x1d">CHO19.FMX</rom>
+			<rom type="file" offset="0x1e">STUP.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BTR16.FMX</title>
+			<title code="0x11">CHO01.FMX</title>
+			<title code="0x12">CHO03.FMX</title>
+			<title code="0x13">CHO05.FMX</title>
+			<title code="0x14">CHO07.FMX</title>
+			<title code="0x15">CHO08.FMX</title>
+			<title code="0x16">CHO09.FMX</title>
+			<title code="0x17">CHO11.FMX</title>
+			<title code="0x18">CHO12.FMX</title>
+			<title code="0x19">CHO14.FMX</title>
+			<title code="0x1a">CHO15.FMX</title>
+			<title code="0x1b">CHO16.FMX</title>
+			<title code="0x1c">CHO18.FMX</title>
+			<title code="0x1d">CHO19.FMX</title>
+			<title code="0x1e">STUP.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper BTR (ＶＩＰＥＲ－ＢＴＲ ～魔法の賭博師トトカル☆チョミ～) (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="v_btr_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">BTR16.MMX</rom>
+			<rom type="file" offset="0x11">CHO01.MMX</rom>
+			<rom type="file" offset="0x12">CHO03.MMX</rom>
+			<rom type="file" offset="0x13">CHO05.MMX</rom>
+			<rom type="file" offset="0x14">CHO07.MMX</rom>
+			<rom type="file" offset="0x15">CHO08.MMX</rom>
+			<rom type="file" offset="0x16">CHO09.MMX</rom>
+			<rom type="file" offset="0x17">CHO11.MMX</rom>
+			<rom type="file" offset="0x18">CHO12.MMX</rom>
+			<rom type="file" offset="0x19">CHO14.MMX</rom>
+			<rom type="file" offset="0x1a">CHO15.MMX</rom>
+			<rom type="file" offset="0x1b">CHO16.MMX</rom>
+			<rom type="file" offset="0x1c">CHO18.MMX</rom>
+			<rom type="file" offset="0x1d">CHO19.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BTR16.MMX</title>
+			<title code="0x11">CHO01.MMX</title>
+			<title code="0x12">CHO03.MMX</title>
+			<title code="0x13">CHO05.MMX</title>
+			<title code="0x14">CHO07.MMX</title>
+			<title code="0x15">CHO08.MMX</title>
+			<title code="0x16">CHO09.MMX</title>
+			<title code="0x17">CHO11.MMX</title>
+			<title code="0x18">CHO12.MMX</title>
+			<title code="0x19">CHO14.MMX</title>
+			<title code="0x1a">CHO15.MMX</title>
+			<title code="0x1b">CHO16.MMX</title>
+			<title code="0x1c">CHO18.MMX</title>
+			<title code="0x1d">CHO19.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper BTR (ＶＩＰＥＲ－ＢＴＲ ～魔法の賭博師トトカル☆チョミ～) (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="v_btr_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">BTR16.MMX</rom>
+			<rom type="file" offset="0x11">CHO01.MMX</rom>
+			<rom type="file" offset="0x12">CHO03.MMX</rom>
+			<rom type="file" offset="0x13">CHO05.MMX</rom>
+			<rom type="file" offset="0x14">CHO07.MMX</rom>
+			<rom type="file" offset="0x15">CHO08.MMX</rom>
+			<rom type="file" offset="0x16">CHO09.MMX</rom>
+			<rom type="file" offset="0x17">CHO11.MMX</rom>
+			<rom type="file" offset="0x18">CHO12.MMX</rom>
+			<rom type="file" offset="0x19">CHO14.MMX</rom>
+			<rom type="file" offset="0x1a">CHO15.MMX</rom>
+			<rom type="file" offset="0x1b">CHO16.MMX</rom>
+			<rom type="file" offset="0x1c">CHO18.MMX</rom>
+			<rom type="file" offset="0x1d">CHO19.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">BTR16.MMX</title>
+			<title code="0x11">CHO01.MMX</title>
+			<title code="0x12">CHO03.MMX</title>
+			<title code="0x13">CHO05.MMX</title>
+			<title code="0x14">CHO07.MMX</title>
+			<title code="0x15">CHO08.MMX</title>
+			<title code="0x16">CHO09.MMX</title>
+			<title code="0x17">CHO11.MMX</title>
+			<title code="0x18">CHO12.MMX</title>
+			<title code="0x19">CHO14.MMX</title>
+			<title code="0x1a">CHO15.MMX</title>
+			<title code="0x1b">CHO16.MMX</title>
+			<title code="0x1c">CHO18.MMX</title>
+			<title code="0x1d">CHO19.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Viper CTR: Asuka / TOMAZO / 1997 Sogna (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">sogna</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="v_ctr_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">CTR16.FMX</rom>
+			<rom type="file" offset="0x11">CTR_C00.FMX</rom>
+			<rom type="file" offset="0x12">CTR_C01.FMX</rom>
+			<rom type="file" offset="0x13">CTR_C08.FMX</rom>
+			<rom type="file" offset="0x14">CTR_C103.FMX</rom>
+			<rom type="file" offset="0x15">CTR_C11.FMX</rom>
+			<rom type="file" offset="0x16">CTR_C117.FMX</rom>
+			<rom type="file" offset="0x17">CTR_C130.FMX</rom>
+			<rom type="file" offset="0x18">CTR_C16.FMX</rom>
+			<rom type="file" offset="0x19">CTR_C19.FMX</rom>
+			<rom type="file" offset="0x1a">CTR_C22.FMX</rom>
+			<rom type="file" offset="0x1b">CTR_C27B.FMX</rom>
+			<rom type="file" offset="0x1c">CTR_C34.FMX</rom>
+			<rom type="file" offset="0x1d">CTR_C40.FMX</rom>
+			<rom type="file" offset="0x1e">CTR_C58.FMX</rom>
+			<rom type="file" offset="0x1f">CTR_C60.FMX</rom>
+			<rom type="file" offset="0x20">CTR_C75.FMX</rom>
+			<rom type="file" offset="0x21">CTR_C76.FMX</rom>
+			<rom type="file" offset="0x22">G_OVER1.FMX</rom>
+			<rom type="file" offset="0x23">G_OVER2.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">CTR16.FMX</title>
+			<title code="0x11">CTR_C00.FMX</title>
+			<title code="0x12">CTR_C01.FMX</title>
+			<title code="0x13">CTR_C08.FMX</title>
+			<title code="0x14">CTR_C103.FMX</title>
+			<title code="0x15">CTR_C11.FMX</title>
+			<title code="0x16">CTR_C117.FMX</title>
+			<title code="0x17">CTR_C130.FMX</title>
+			<title code="0x18">CTR_C16.FMX</title>
+			<title code="0x19">CTR_C19.FMX</title>
+			<title code="0x1a">CTR_C22.FMX</title>
+			<title code="0x1b">CTR_C27B.FMX</title>
+			<title code="0x1c">CTR_C34.FMX</title>
+			<title code="0x1d">CTR_C40.FMX</title>
+			<title code="0x1e">CTR_C58.FMX</title>
+			<title code="0x1f">CTR_C60.FMX</title>
+			<title code="0x20">CTR_C75.FMX</title>
+			<title code="0x21">CTR_C76.FMX</title>
+			<title code="0x22">G_OVER1.FMX</title>
+			<title code="0x23">G_OVER2.FMX</title>
+		</titlelist>
+	</game>
+</gamelist>

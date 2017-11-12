@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //フェアリーダスト -->
+	<game>
+		<name>[PC-98] 5-jikanme no Venus (5時間目のヴィーナス)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="5venus_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">SE.EFC</rom>
+			<rom type="file" offset="0x10">5_01.M</rom>
+			<rom type="file" offset="0x11">5_02.M</rom>
+			<rom type="file" offset="0x12">5_03.M</rom>
+			<rom type="file" offset="0x13">5_04.M</rom>
+			<rom type="file" offset="0x14">5_05.M</rom>
+			<rom type="file" offset="0x15">5_06.M</rom>
+			<rom type="file" offset="0x16">5_07.M</rom>
+			<rom type="file" offset="0x17">5_08.M</rom>
+			<rom type="file" offset="0x18">5_09.M</rom>
+			<rom type="file" offset="0x19">5_10.M</rom>
+			<rom type="file" offset="0x1a">5_11.M</rom>
+			<rom type="file" offset="0x1b">5_20.M</rom>
+			<rom type="file" offset="0x1c">SE_10.M</rom>
+			<rom type="shell" offset="0">PMD # /M10 /V0 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">5_01.M</title>
+			<title code="0x11">5_02.M</title>
+			<title code="0x12">5_03.M</title>
+			<title code="0x13">5_04.M</title>
+			<title code="0x14">5_05.M</title>
+			<title code="0x15">5_06.M</title>
+			<title code="0x16">5_07.M</title>
+			<title code="0x17">5_08.M</title>
+			<title code="0x18">5_09.M</title>
+			<title code="0x19">5_10.M</title>
+			<title code="0x1a">5_11.M</title>
+			<title code="0x1b">5_20.M</title>
+			<title code="0x1c">SE_10.M</title>
+			<range min="0x0801" max="0x0809" extcode="1">SE.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Akai Suishou no Hitomi (赤い水晶の瞳) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="akasui_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">ANO_E01.M</rom>
+			<rom type="file" offset="0x11">ANO_E02.M</rom>
+			<rom type="file" offset="0x12">ANO_E03.M</rom>
+			<rom type="file" offset="0x13">ANO_E04.M</rom>
+			<rom type="file" offset="0x14">ANO_E05.M</rom>
+			<rom type="file" offset="0x15">ANO_H01.M</rom>
+			<rom type="file" offset="0x16">ANO_H02.M</rom>
+			<rom type="file" offset="0x17">ANO_H03.M</rom>
+			<rom type="file" offset="0x18">ANO_I01.M</rom>
+			<rom type="file" offset="0x19">ANO_I02.M</rom>
+			<rom type="file" offset="0x1a">ANO_I03.M</rom>
+			<rom type="file" offset="0x1b">ANO_J01.M</rom>
+			<rom type="file" offset="0x1c">ANO_J02.M</rom>
+			<rom type="file" offset="0x1d">ANO_J03.M</rom>
+			<rom type="file" offset="0x1e">ANO_J04.M</rom>
+			<rom type="file" offset="0x1f">ANO_J05.M</rom>
+			<rom type="file" offset="0x20">ANO_J06.M</rom>
+			<rom type="file" offset="0x21">ANO_J07.M</rom>
+			<rom type="file" offset="0x22">ANO_J08.M</rom>
+			<rom type="file" offset="0x23">ANO_J09.M</rom>
+			<rom type="file" offset="0x24">ANO_K01.M</rom>
+			<rom type="file" offset="0x25">ANO_K02.M</rom>
+			<rom type="file" offset="0x26">ANO_K03.M</rom>
+			<rom type="file" offset="0x27">ANO_K04.M</rom>
+			<rom type="file" offset="0x28">ANO_O01A.M</rom>
+			<rom type="file" offset="0x29">ANO_O01B.M</rom>
+			<rom type="file" offset="0x2a">ANO_O02.M</rom>
+			<rom type="file" offset="0x2b">ANO_O03.M</rom>
+			<rom type="file" offset="0x2c">ANO_S01.M</rom>
+			<rom type="shell" offset="0">PMD # /M10 /V0 /K /I</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">END(真琴)</title>
+			<title code="0x11">END(萌ハッピー)</title>
+			<title code="0x12">END(墓参り)</title>
+			<title code="0x13">END(愛子)</title>
+			<title code="0x14">END(逮捕)</title>
+			<title code="0x15">Hシーン1</title>
+			<title code="0x16">Hシーン2</title>
+			<title code="0x17">Hシーン3</title>
+			<title code="0x18">移動2</title>
+			<title code="0x19">移動3</title>
+			<title code="0x1a">移動&amp;会話1</title>
+			<title code="0x1b">手帳オープン</title>
+			<title code="0x1c">推理中</title>
+			<title code="0x1d">推理終了(シナリオ後半)</title>
+			<title code="0x1e">ミイラ発見</title>
+			<title code="0x1f">移動(夜)</title>
+			<title code="0x20">強姦シーン</title>
+			<title code="0x21">対決</title>
+			<title code="0x22">酒場</title>
+			<title code="0x23">萌デッド</title>
+			<title code="0x24">シャワー音</title>
+			<title code="0x25">電話音</title>
+			<title code="0x26">電話音</title>
+			<title code="0x27">無音</title>
+			<title code="0x28">タイトル</title>
+			<title code="0x29">タイトル</title>
+			<title code="0x2a">ハード</title>
+			<title code="0x2b">つなぎ</title>
+			<title code="0x2c">スタッフロール</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Akai Suishou no Hitomi (赤い水晶の瞳) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="akasui_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">ANO_E01.MMD</rom>
+			<rom type="file" offset="0x11">ANO_E02.MMD</rom>
+			<rom type="file" offset="0x12">ANO_E03.MMD</rom>
+			<rom type="file" offset="0x13">ANO_E04.MMD</rom>
+			<rom type="file" offset="0x14">ANO_E05.MMD</rom>
+			<rom type="file" offset="0x15">ANO_H01.MMD</rom>
+			<rom type="file" offset="0x16">ANO_H02.MMD</rom>
+			<rom type="file" offset="0x17">ANO_H03.MMD</rom>
+			<rom type="file" offset="0x18">ANO_I01.MMD</rom>
+			<rom type="file" offset="0x19">ANO_I02.MMD</rom>
+			<rom type="file" offset="0x1a">ANO_I03.MMD</rom>
+			<rom type="file" offset="0x1b">ANO_J01.MMD</rom>
+			<rom type="file" offset="0x1c">ANO_J02.MMD</rom>
+			<rom type="file" offset="0x1d">ANO_J03.MMD</rom>
+			<rom type="file" offset="0x1e">ANO_J04.MMD</rom>
+			<rom type="file" offset="0x1f">ANO_J05.MMD</rom>
+			<rom type="file" offset="0x20">ANO_J06.MMD</rom>
+			<rom type="file" offset="0x21">ANO_J07.MMD</rom>
+			<rom type="file" offset="0x22">ANO_J08.MMD</rom>
+			<rom type="file" offset="0x23">ANO_J09.MMD</rom>
+			<rom type="file" offset="0x24">ANO_K01.MMD</rom>
+			<rom type="file" offset="0x25">ANO_K02.MMD</rom>
+			<rom type="file" offset="0x26">ANO_K03.MMD</rom>
+			<rom type="file" offset="0x27">ANO_K04.MMD</rom>
+			<rom type="file" offset="0x28">ANO_O01A.MMD</rom>
+			<rom type="file" offset="0x29">ANO_O01B.MMD</rom>
+			<rom type="file" offset="0x2a">ANO_O02.MMD</rom>
+			<rom type="file" offset="0x2b">ANO_O03.MMD</rom>
+			<rom type="file" offset="0x2c">ANO_S01.MMD</rom>
+			<rom type="shell" offset="0">MMD</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">END(真琴)</title>             
+			<title code="0x11">END(萌ハッピー)</title>       
+			<title code="0x12">END(墓参り)</title>           
+			<title code="0x13">END(愛子)</title>             
+			<title code="0x14">END(逮捕)</title>             
+			<title code="0x15">Hシーン1</title>              
+			<title code="0x16">Hシーン2</title>              
+			<title code="0x17">Hシーン3</title>              
+			<title code="0x18">移動2</title>                 
+			<title code="0x19">移動3</title>                 
+			<title code="0x1a">移動&amp;会話1</title>        
+			<title code="0x1b">手帳オープン</title>          
+			<title code="0x1c">推理中</title>                
+			<title code="0x1d">推理終了(シナリオ後半)</title>
+			<title code="0x1e">ミイラ発見</title>            
+			<title code="0x1f">移動(夜)</title>              
+			<title code="0x20">強姦シーン</title>            
+			<title code="0x21">対決</title>                  
+			<title code="0x22">酒場</title>                  
+			<title code="0x23">萌デッド</title>              
+			<title code="0x24">シャワー音</title>            
+			<title code="0x25">電話音</title>                
+			<title code="0x26">電話音</title>                
+			<title code="0x27">無音</title>                  
+			<title code="0x28">タイトル</title>              
+			<title code="0x29">タイトル</title>              
+			<title code="0x2a">ハード</title>                
+			<title code="0x2b">つなぎ</title>                
+			<title code="0x2c">スタッフロール</title>        
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Akai Suishou no Hitomi (赤い水晶の瞳) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="akasui_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">ANO_E01.MMD</rom>
+			<rom type="file" offset="0x11">ANO_E02.MMD</rom>
+			<rom type="file" offset="0x12">ANO_E03.MMD</rom>
+			<rom type="file" offset="0x13">ANO_E04.MMD</rom>
+			<rom type="file" offset="0x14">ANO_E05.MMD</rom>
+			<rom type="file" offset="0x15">ANO_H01.MMD</rom>
+			<rom type="file" offset="0x16">ANO_H02.MMD</rom>
+			<rom type="file" offset="0x17">ANO_H03.MMD</rom>
+			<rom type="file" offset="0x18">ANO_I01.MMD</rom>
+			<rom type="file" offset="0x19">ANO_I02.MMD</rom>
+			<rom type="file" offset="0x1a">ANO_I03.MMD</rom>
+			<rom type="file" offset="0x1b">ANO_J01.MMD</rom>
+			<rom type="file" offset="0x1c">ANO_J02.MMD</rom>
+			<rom type="file" offset="0x1d">ANO_J03.MMD</rom>
+			<rom type="file" offset="0x1e">ANO_J04.MMD</rom>
+			<rom type="file" offset="0x1f">ANO_J05.MMD</rom>
+			<rom type="file" offset="0x20">ANO_J06.MMD</rom>
+			<rom type="file" offset="0x21">ANO_J07.MMD</rom>
+			<rom type="file" offset="0x22">ANO_J08.MMD</rom>
+			<rom type="file" offset="0x23">ANO_J09.MMD</rom>
+			<rom type="file" offset="0x24">ANO_K01.MMD</rom>
+			<rom type="file" offset="0x25">ANO_K02.MMD</rom>
+			<rom type="file" offset="0x26">ANO_K03.MMD</rom>
+			<rom type="file" offset="0x27">ANO_K04.MMD</rom>
+			<rom type="file" offset="0x28">ANO_O01A.MMD</rom>
+			<rom type="file" offset="0x29">ANO_O01B.MMD</rom>
+			<rom type="file" offset="0x2a">ANO_O02.MMD</rom>
+			<rom type="file" offset="0x2b">ANO_O03.MMD</rom>
+			<rom type="file" offset="0x2c">ANO_S01.MMD</rom>
+			<rom type="shell" offset="0">MMD</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">END(真琴)</title>             
+			<title code="0x11">END(萌ハッピー)</title>       
+			<title code="0x12">END(墓参り)</title>           
+			<title code="0x13">END(愛子)</title>             
+			<title code="0x14">END(逮捕)</title>             
+			<title code="0x15">Hシーン1</title>              
+			<title code="0x16">Hシーン2</title>              
+			<title code="0x17">Hシーン3</title>              
+			<title code="0x18">移動2</title>                 
+			<title code="0x19">移動3</title>                 
+			<title code="0x1a">移動&amp;会話1</title>        
+			<title code="0x1b">手帳オープン</title>          
+			<title code="0x1c">推理中</title>                
+			<title code="0x1d">推理終了(シナリオ後半)</title>
+			<title code="0x1e">ミイラ発見</title>            
+			<title code="0x1f">移動(夜)</title>              
+			<title code="0x20">強姦シーン</title>            
+			<title code="0x21">対決</title>                  
+			<title code="0x22">酒場</title>                  
+			<title code="0x23">萌デッド</title>              
+			<title code="0x24">シャワー音</title>            
+			<title code="0x25">電話音</title>                
+			<title code="0x26">電話音</title>                
+			<title code="0x27">無音</title>                  
+			<title code="0x28">タイトル</title>              
+			<title code="0x29">タイトル</title>              
+			<title code="0x2a">ハード</title>                
+			<title code="0x2b">つなぎ</title>                
+			<title code="0x2c">スタッフロール</title>        
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Ami: Kaze Tachinu (亜美 ～風立ちぬ～)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="ami_kaze_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">AMI_01.M</rom>
+			<rom type="file" offset="0x11">AMI_02.M</rom>
+			<rom type="file" offset="0x12">AMI_03.M</rom>
+			<rom type="file" offset="0x13">AMI_04.M</rom>
+			<rom type="file" offset="0x14">AMI_05.M</rom>
+			<rom type="file" offset="0x15">AMI_06.M</rom>
+			<rom type="file" offset="0x16">AMI_07.M</rom>
+			<rom type="file" offset="0x17">AMI_08.M</rom>
+			<rom type="file" offset="0x18">AMI_09.M</rom>
+			<rom type="file" offset="0x19">AMI_10.M</rom>
+			<rom type="file" offset="0x1a">AMI_11.M</rom>
+			<rom type="file" offset="0x1b">AMI_12.M</rom>
+			<rom type="file" offset="0x1c">AMI_21.M</rom>
+			<rom type="file" offset="0x1d">AMI_212.M</rom>
+			<rom type="file" offset="0x1e">AMI_22.M</rom>
+			<rom type="file" offset="0x1f">AMI_23.M</rom>
+			<rom type="file" offset="0x20">AMI_24.M</rom>
+			<rom type="file" offset="0x21">AMI_25.M</rom>
+			<rom type="file" offset="0x22">AMI_26.M</rom>
+			<rom type="file" offset="0x23">AMI_27.M</rom>
+			<rom type="file" offset="0x24">AMI_28.M</rom>
+			<rom type="file" offset="0x25">AMI_29.M</rom>
+			<rom type="file" offset="0x26">AMI_32.M</rom>
+			<rom type="file" offset="0x27">AMI_33.M</rom>
+			<rom type="shell" offset="0">PMD /M12 /K /V0 /E0</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AMI_01.M</title>
+			<title code="0x11">AMI_02.M</title>
+			<title code="0x12">AMI_03.M</title>
+			<title code="0x13">AMI_04.M</title>
+			<title code="0x14">AMI_05.M</title>
+			<title code="0x15">AMI_06.M</title>
+			<title code="0x16">AMI_07.M</title>
+			<title code="0x17">AMI_08.M</title>
+			<title code="0x18">AMI_09.M</title>
+			<title code="0x19">AMI_10.M</title>
+			<title code="0x1a">AMI_11.M</title>
+			<title code="0x1b">AMI_12.M</title>
+			<title code="0x1c">AMI_21.M</title>
+			<title code="0x1d">AMI_212.M</title>
+			<title code="0x1e">AMI_22.M</title>
+			<title code="0x1f">AMI_23.M</title>
+			<title code="0x20">AMI_24.M</title>
+			<title code="0x21">AMI_25.M</title>
+			<title code="0x22">AMI_26.M</title>
+			<title code="0x23">AMI_27.M</title>
+			<title code="0x24">AMI_28.M</title>
+			<title code="0x25">AMI_29.M</title>
+			<title code="0x26">AMI_32.M</title>
+			<title code="0x27">AMI_33.M</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Escalation 95: O Anesamatte Yonde Ii Desu ka? / MUSE / 1995 Fairy Dust (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairydust</driveralias>
+		<options>
+			<option name="funcvect" value="0x70"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="es95_98">
+			<rom type="file" offset="-1">usmd_98.com</rom>
+			<rom type="file" offset="-1">USMD.EXE</rom>
+			<rom type="file" offset="-1">ES_01.USO</rom>
+			<rom type="file" offset="-1">ES_01V.USO</rom>
+			<rom type="file" offset="-1">ES_02.USO</rom>
+			<rom type="file" offset="-1">ES_02V.USO</rom>
+			<rom type="file" offset="-1">ES_03.USO</rom>
+			<rom type="file" offset="-1">ES_03V.USO</rom>
+			<rom type="file" offset="-1">ES_04.USO</rom>
+			<rom type="file" offset="-1">ES_04V.USO</rom>
+			<rom type="file" offset="-1">ES_05.USO</rom>
+			<rom type="file" offset="-1">ES_05V.USO</rom>
+			<rom type="file" offset="-1">ES_06.USO</rom>
+			<rom type="file" offset="-1">ES_06V.USO</rom>
+			<rom type="file" offset="-1">ES_07.USO</rom>
+			<rom type="file" offset="-1">ES_07V.USO</rom>
+			<rom type="file" offset="-1">ES_08.USO</rom>
+			<rom type="file" offset="-1">ES_08V.USO</rom>
+			<rom type="file" offset="-1">ES_09.USO</rom>
+			<rom type="file" offset="-1">ES_09V.USO</rom>
+			<rom type="file" offset="-1">ES_10.USO</rom>
+			<rom type="file" offset="-1">ES_10V.USO</rom>
+			<rom type="file" offset="-1">ES_11.USO</rom>
+			<rom type="file" offset="-1">ES_11V.USO</rom>
+			<rom type="file" offset="-1">OFF.USO</rom>
+			<rom type="file" offset="-1">OFFV.USO</rom>
+			<rom type="conin" offset="0x10">ES_01.USO</rom>
+			<rom type="conin" offset="0x11">ES_01V.USO</rom>
+			<rom type="conin" offset="0x12">ES_02.USO</rom>
+			<rom type="conin" offset="0x13">ES_02V.USO</rom>
+			<rom type="conin" offset="0x14">ES_03.USO</rom>
+			<rom type="conin" offset="0x15">ES_03V.USO</rom>
+			<rom type="conin" offset="0x16">ES_04.USO</rom>
+			<rom type="conin" offset="0x17">ES_04V.USO</rom>
+			<rom type="conin" offset="0x18">ES_05.USO</rom>
+			<rom type="conin" offset="0x19">ES_05V.USO</rom>
+			<rom type="conin" offset="0x1A">ES_06.USO</rom>
+			<rom type="conin" offset="0x1B">ES_06V.USO</rom>
+			<rom type="conin" offset="0x1C">ES_07.USO</rom>
+			<rom type="conin" offset="0x1D">ES_07V.USO</rom>
+			<rom type="conin" offset="0x1E">ES_08.USO</rom>
+			<rom type="conin" offset="0x1F">ES_08V.USO</rom>
+			<rom type="conin" offset="0x20">ES_09.USO</rom>
+			<rom type="conin" offset="0x21">ES_09V.USO</rom>
+			<rom type="conin" offset="0x22">ES_10.USO</rom>
+			<rom type="conin" offset="0x23">ES_10V.USO</rom>
+			<rom type="conin" offset="0x24">ES_11.USO</rom>
+			<rom type="conin" offset="0x25">ES_11V.USO</rom>
+			<rom type="conin" offset="0x26">OFF.USO</rom>
+			<rom type="conin" offset="0x27">OFFV.USO</rom>
+			<rom type="shell" offset="0">usmd_98</rom>
+			<rom type="shell" offset="0">usmd</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x26">Stop the Music (演奏停止)</title>
+			<title code="0x10">ES_01.USO</title>
+			<title code="0x12">ES_02.USO</title>
+			<title code="0x14">ES_03.USO</title>
+			<title code="0x16">ES_04.USO</title>
+			<title code="0x18">ES_05.USO</title>
+			<title code="0x1A">ES_06.USO</title>
+			<title code="0x1C">ES_07.USO</title>
+			<title code="0x1E">ES_08.USO</title>
+			<title code="0x20">ES_09.USO</title>
+			<title code="0x22">ES_10.USO</title>
+			<title code="0x24">ES_11.USO</title>
+			<title code="0x11">ES_01V.USO</title>
+			<title code="0x13">ES_02V.USO</title>
+			<title code="0x15">ES_03V.USO</title>
+			<title code="0x17">ES_04V.USO</title>
+			<title code="0x19">ES_05V.USO</title>
+			<title code="0x1B">ES_06V.USO</title>
+			<title code="0x1D">ES_07V.USO</title>
+			<title code="0x1F">ES_08V.USO</title>
+			<title code="0x21">ES_09V.USO</title>
+			<title code="0x23">ES_10V.USO</title>
+			<title code="0x25">ES_11V.USO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lemon Angel (レモンエンジェル) (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="lemmona_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">LA01.FMX</rom>
+			<rom type="file" offset="0x11">LA02.FMX</rom>
+			<rom type="file" offset="0x12">LA03.FMX</rom>
+			<rom type="file" offset="0x13">LA04.FMX</rom>
+			<rom type="file" offset="0x14">LA05.FMX</rom>
+			<rom type="file" offset="0x15">LA06.FMX</rom>
+			<rom type="file" offset="0x16">LA07.FMX</rom>
+			<rom type="file" offset="0x17">LA08.FMX</rom>
+			<rom type="file" offset="0x18">LA09.FMX</rom>
+			<rom type="file" offset="0x19">LA10.FMX</rom>
+			<rom type="file" offset="0x1a">LA11.FMX</rom>
+			<rom type="file" offset="0x1b">LA12.FMX</rom>
+			<rom type="file" offset="0x1c">LAEFC.FMX</rom>
+			<rom type="file" offset="0x1d">LAEYE.FMX</rom>
+			<rom type="file" offset="0x1e">STUP.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LA01.FMX</title>
+			<title code="0x11">LA02.FMX</title>
+			<title code="0x12">LA03.FMX</title>
+			<title code="0x13">LA04.FMX</title>
+			<title code="0x14">LA05.FMX</title>
+			<title code="0x15">LA06.FMX</title>
+			<title code="0x16">LA07.FMX</title>
+			<title code="0x17">LA08.FMX</title>
+			<title code="0x18">LA09.FMX</title>
+			<title code="0x19">LA10.FMX</title>
+			<title code="0x1a">LA11.FMX</title>
+			<title code="0x1b">LA12.FMX</title>
+			<title code="0x1c">LAEFC.FMX</title>
+			<title code="0x1d">LAEYE.FMX</title>
+			<title code="0x1e">STUP.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lemon Angel (レモンエンジェル) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="lemmona_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXP.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXP</rom>
+			<rom type="file" offset="0x10">LA01.FMX</rom>
+			<rom type="file" offset="0x11">LA02.FMX</rom>
+			<rom type="file" offset="0x12">LA03.FMX</rom>
+			<rom type="file" offset="0x13">LA04.FMX</rom>
+			<rom type="file" offset="0x14">LA05.FMX</rom>
+			<rom type="file" offset="0x15">LA06.FMX</rom>
+			<rom type="file" offset="0x16">LA07.FMX</rom>
+			<rom type="file" offset="0x17">LA08.FMX</rom>
+			<rom type="file" offset="0x18">LA09.FMX</rom>
+			<rom type="file" offset="0x19">LA10.FMX</rom>
+			<rom type="file" offset="0x1a">LA11.FMX</rom>
+			<rom type="file" offset="0x1b">LA12.FMX</rom>
+			<rom type="file" offset="0x1c">LAEFC.FMX</rom>
+			<rom type="file" offset="0x1d">LAEYE.FMX</rom>
+			<rom type="file" offset="0x1e">STUP.FMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LA01.FMX</title>
+			<title code="0x11">LA02.FMX</title>
+			<title code="0x12">LA03.FMX</title>
+			<title code="0x13">LA04.FMX</title>
+			<title code="0x14">LA05.FMX</title>
+			<title code="0x15">LA06.FMX</title>
+			<title code="0x16">LA07.FMX</title>
+			<title code="0x17">LA08.FMX</title>
+			<title code="0x18">LA09.FMX</title>
+			<title code="0x19">LA10.FMX</title>
+			<title code="0x1a">LA11.FMX</title>
+			<title code="0x1b">LA12.FMX</title>
+			<title code="0x1c">LAEFC.FMX</title>
+			<title code="0x1d">LAEYE.FMX</title>
+			<title code="0x1e">STUP.FMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lemon Angel (レモンエンジェル) (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="lemmona_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">LA01.MMX</rom>
+			<rom type="file" offset="0x11">LA02.MMX</rom>
+			<rom type="file" offset="0x12">LA03.MMX</rom>
+			<rom type="file" offset="0x13">LA04.MMX</rom>
+			<rom type="file" offset="0x14">LA05.MMX</rom>
+			<rom type="file" offset="0x15">LA06.MMX</rom>
+			<rom type="file" offset="0x16">LA07.MMX</rom>
+			<rom type="file" offset="0x17">LA08.MMX</rom>
+			<rom type="file" offset="0x18">LA09.MMX</rom>
+			<rom type="file" offset="0x19">LA10.MMX</rom>
+			<rom type="file" offset="0x1a">LA11.MMX</rom>
+			<rom type="file" offset="0x1b">LA12.MMX</rom>
+			<rom type="file" offset="0x1c">LAEYE.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LA01.MMX</title>
+			<title code="0x11">LA02.MMX</title>
+			<title code="0x12">LA03.MMX</title>
+			<title code="0x13">LA04.MMX</title>
+			<title code="0x14">LA05.MMX</title>
+			<title code="0x15">LA06.MMX</title>
+			<title code="0x16">LA07.MMX</title>
+			<title code="0x17">LA08.MMX</title>
+			<title code="0x18">LA09.MMX</title>
+			<title code="0x19">LA10.MMX</title>
+			<title code="0x1a">LA11.MMX</title>
+			<title code="0x1b">LA12.MMX</title>
+			<title code="0x1c">LAEYE.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Lemon Angel (レモンエンジェル) (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="lemmona_98">
+			<rom type="file" offset="-1">FMX.COM</rom>
+			<rom type="file" offset="-1">FMXPM.COM</rom>
+			<rom type="file" offset="-1">FAKECALL.COM</rom>
+			<rom type="shell" offset="0">FAKECALL</rom>
+			<rom type="shell" offset="0">FMX</rom>
+			<rom type="shell" offset="0">FMXPM</rom>
+			<rom type="file" offset="0x10">LA01.MMX</rom>
+			<rom type="file" offset="0x11">LA02.MMX</rom>
+			<rom type="file" offset="0x12">LA03.MMX</rom>
+			<rom type="file" offset="0x13">LA04.MMX</rom>
+			<rom type="file" offset="0x14">LA05.MMX</rom>
+			<rom type="file" offset="0x15">LA06.MMX</rom>
+			<rom type="file" offset="0x16">LA07.MMX</rom>
+			<rom type="file" offset="0x17">LA08.MMX</rom>
+			<rom type="file" offset="0x18">LA09.MMX</rom>
+			<rom type="file" offset="0x19">LA10.MMX</rom>
+			<rom type="file" offset="0x1a">LA11.MMX</rom>
+			<rom type="file" offset="0x1b">LA12.MMX</rom>
+			<rom type="file" offset="0x1c">LAEYE.MMX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LA01.MMX</title>
+			<title code="0x11">LA02.MMX</title>
+			<title code="0x12">LA03.MMX</title>
+			<title code="0x13">LA04.MMX</title>
+			<title code="0x14">LA05.MMX</title>
+			<title code="0x15">LA06.MMX</title>
+			<title code="0x16">LA07.MMX</title>
+			<title code="0x17">LA08.MMX</title>
+			<title code="0x18">LA09.MMX</title>
+			<title code="0x19">LA10.MMX</title>
+			<title code="0x1a">LA11.MMX</title>
+			<title code="0x1b">LA12.MMX</title>
+			<title code="0x1c">LAEYE.MMX</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Chou Jigen Densetsu Rall 3: Kakuseihen / Ryu Umemoto / 1994 Fairy Dust (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairydust</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="rall3_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">RALL_SE.EFC</rom>
+			<rom type="file" offset="0x10">RALL_01.M</rom>
+			<rom type="file" offset="0x11">RALL_02.M</rom>
+			<rom type="file" offset="0x12">RALL_09.M</rom>
+			<rom type="file" offset="0x13">RALL_11.M</rom>
+			<rom type="file" offset="0x14">RALL_12.M</rom>
+			<rom type="file" offset="0x15">RALL_13.M</rom>
+			<rom type="file" offset="0x16">RALL_14.M</rom>
+			<rom type="file" offset="0x17">RALL_15.M</rom>
+			<rom type="file" offset="0x18">RALL_16.M</rom>
+			<rom type="file" offset="0x19">RALL_20.M</rom>
+			<rom type="file" offset="0x1a">RALL_21.M</rom>
+			<rom type="file" offset="0x1b">RALL_22.M</rom>
+			<rom type="shell" offset="0">PMD /M15 /V0 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">町 (Endless Gossip)</title>
+			<title code="0x11">Battle I (Winning Expectation)</title>
+			<title code="0x12">Opening (Single Luster)</title>
+			<title code="0x13">Stage Extend I</title>
+			<title code="0x14">Stage Extend II</title>
+			<title code="0x15">Ending I</title>
+			<title code="0x16">トリラス村消失</title>
+			<title code="0x17">イグドラシル神殿</title>
+			<title code="0x18">ショック</title>
+			<title code="0x19">Pinch</title>
+			<title code="0x1a">RALL_21.M</title>
+			<title code="0x1b">RALL_22.M</title>
+			<range min="0x0803" max="0x0805" extcode="1">RALL_SE.EFC #%2X</range>
+			<range min="0x080b" max="0x0810" extcode="1">RALL_SE.EFC #%2X</range>
+			<range min="0x0812" max="0x082b" extcode="1">RALL_SE.EFC #%2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Uki Uki Island (うきうきアイランド) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="ukiukiis_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x10">M_EMIK01.M</rom>
+			<rom type="file" offset="0x11">M_EMIKO.M</rom>
+			<rom type="file" offset="0x12">M_END01.M</rom>
+			<rom type="file" offset="0x13">M_END02.M</rom>
+			<rom type="file" offset="0x14">M_END03.M</rom>
+			<rom type="file" offset="0x15">M_HIROMI.M</rom>
+			<rom type="file" offset="0x16">M_KEIKO.M</rom>
+			<rom type="file" offset="0x17">M_KONATU.M</rom>
+			<rom type="file" offset="0x18">M_KUSU01.M</rom>
+			<rom type="file" offset="0x19">M_KUSU02.M</rom>
+			<rom type="file" offset="0x1a">M_KUSU03.M</rom>
+			<rom type="file" offset="0x1b">M_KUSU04.M</rom>
+			<rom type="file" offset="0x1c">M_KUSU05.M</rom>
+			<rom type="file" offset="0x1d">M_MASA01.M</rom>
+			<rom type="file" offset="0x1e">M_MASA02.M</rom>
+			<rom type="file" offset="0x1f">M_MIYO.M</rom>
+			<rom type="file" offset="0x20">M_NANA.M</rom>
+			<rom type="file" offset="0x21">M_OP01.M</rom>
+			<rom type="file" offset="0x22">M_OP02.M</rom>
+			<rom type="file" offset="0x23">M_OP03.M</rom>
+			<rom type="file" offset="0x24">M_RURI.M</rom>
+			<rom type="file" offset="0x25">M_RYOUKO.M</rom>
+			<rom type="file" offset="0x26">M_SING01.M</rom>
+			<rom type="file" offset="0x27">M_SING02.M</rom>
+			<rom type="file" offset="0x28">M_SYS01.M</rom>
+			<rom type="file" offset="0x29">M_SYS02.M</rom>
+			<rom type="file" offset="0x2a">M_TAKU01.M</rom>
+			<rom type="shell" offset="0">PMD #/I/K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">M_EMIK01.M</title>
+			<title code="0x11">M_EMIKO.M</title>
+			<title code="0x12">M_END01.M</title>
+			<title code="0x13">M_END02.M</title>
+			<title code="0x14">M_END03.M</title>
+			<title code="0x15">M_HIROMI.M</title>
+			<title code="0x16">M_KEIKO.M</title>
+			<title code="0x17">M_KONATU.M</title>
+			<title code="0x18">M_KUSU01.M</title>
+			<title code="0x19">M_KUSU02.M</title>
+			<title code="0x1a">M_KUSU03.M</title>
+			<title code="0x1b">M_KUSU04.M</title>
+			<title code="0x1c">M_KUSU05.M</title>
+			<title code="0x1d">M_MASA01.M</title>
+			<title code="0x1e">M_MASA02.M</title>
+			<title code="0x1f">M_MIYO.M</title>
+			<title code="0x20">M_NANA.M</title>
+			<title code="0x21">M_OP01.M</title>
+			<title code="0x22">M_OP02.M</title>
+			<title code="0x23">M_OP03.M</title>
+			<title code="0x24">M_RURI.M</title>
+			<title code="0x25">M_RYOUKO.M</title>
+			<title code="0x26">M_SING01.M</title>
+			<title code="0x27">M_SING02.M</title>
+			<title code="0x28">M_SYS01.M</title>
+			<title code="0x29">M_SYS02.M</title>
+			<title code="0x2a">M_TAKU01.M</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Uki Uki Island (うきうきアイランド) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="ukiukiis_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">M_EMIK01.MMD</rom>
+			<rom type="file" offset="0x11">M_EMIKO.MMD</rom>
+			<rom type="file" offset="0x12">M_END01.MMD</rom>
+			<rom type="file" offset="0x13">M_END02.MMD</rom>
+			<rom type="file" offset="0x14">M_END03.MMD</rom>
+			<rom type="file" offset="0x15">M_HIROMI.MMD</rom>
+			<rom type="file" offset="0x16">M_KEIKO.MMD</rom>
+			<rom type="file" offset="0x17">M_KONATU.MMD</rom>
+			<rom type="file" offset="0x18">M_KUSU01.MMD</rom>
+			<rom type="file" offset="0x19">M_KUSU02.MMD</rom>
+			<rom type="file" offset="0x1a">M_KUSU03.MMD</rom>
+			<rom type="file" offset="0x1b">M_KUSU04.MMD</rom>
+			<rom type="file" offset="0x1c">M_KUSU05.MMD</rom>
+			<rom type="file" offset="0x1d">M_MASA01.MMD</rom>
+			<rom type="file" offset="0x1e">M_MASA02.MMD</rom>
+			<rom type="file" offset="0x1f">M_MIYO.MMD</rom>
+			<rom type="file" offset="0x20">M_NANA.MMD</rom>
+			<rom type="file" offset="0x21">M_OP01.MMD</rom>
+			<rom type="file" offset="0x22">M_OP02.MMD</rom>
+			<rom type="file" offset="0x23">M_OP03.MMD</rom>
+			<rom type="file" offset="0x24">M_RURI.MMD</rom>
+			<rom type="file" offset="0x25">M_RYOUKO.MMD</rom>
+			<rom type="file" offset="0x26">M_SING01.MMD</rom>
+			<rom type="file" offset="0x27">M_SING02.MMD</rom>
+			<rom type="file" offset="0x28">M_SYS01.MMD</rom>
+			<rom type="file" offset="0x29">M_SYS02.MMD</rom>
+			<rom type="file" offset="0x2a">M_TAKU01.MMD</rom>
+			<rom type="shell" offset="0">MMD</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">M_EMIK01.MMD</title>
+			<title code="0x11">M_EMIKO.MMD</title>
+			<title code="0x12">M_END01.MMD</title>
+			<title code="0x13">M_END02.MMD</title>
+			<title code="0x14">M_END03.MMD</title>
+			<title code="0x15">M_HIROMI.MMD</title>
+			<title code="0x16">M_KEIKO.MMD</title>
+			<title code="0x17">M_KONATU.MMD</title>
+			<title code="0x18">M_KUSU01.MMD</title>
+			<title code="0x19">M_KUSU02.MMD</title>
+			<title code="0x1a">M_KUSU03.MMD</title>
+			<title code="0x1b">M_KUSU04.MMD</title>
+			<title code="0x1c">M_KUSU05.MMD</title>
+			<title code="0x1d">M_MASA01.MMD</title>
+			<title code="0x1e">M_MASA02.MMD</title>
+			<title code="0x1f">M_MIYO.MMD</title>
+			<title code="0x20">M_NANA.MMD</title>
+			<title code="0x21">M_OP01.MMD</title>
+			<title code="0x22">M_OP02.MMD</title>
+			<title code="0x23">M_OP03.MMD</title>
+			<title code="0x24">M_RURI.MMD</title>
+			<title code="0x25">M_RYOUKO.MMD</title>
+			<title code="0x26">M_SING01.MMD</title>
+			<title code="0x27">M_SING02.MMD</title>
+			<title code="0x28">M_SYS01.MMD</title>
+			<title code="0x29">M_SYS02.MMD</title>
+			<title code="0x2a">M_TAKU01.MMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Uki Uki Island (うきうきアイランド) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="ukiukiis_98">
+			<rom type="file" offset="-1">MMD.COM</rom>
+			<rom type="file" offset="-1">MMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">M_EMIK01.MMD</rom>
+			<rom type="file" offset="0x11">M_EMIKO.MMD</rom>
+			<rom type="file" offset="0x12">M_END01.MMD</rom>
+			<rom type="file" offset="0x13">M_END02.MMD</rom>
+			<rom type="file" offset="0x14">M_END03.MMD</rom>
+			<rom type="file" offset="0x15">M_HIROMI.MMD</rom>
+			<rom type="file" offset="0x16">M_KEIKO.MMD</rom>
+			<rom type="file" offset="0x17">M_KONATU.MMD</rom>
+			<rom type="file" offset="0x18">M_KUSU01.MMD</rom>
+			<rom type="file" offset="0x19">M_KUSU02.MMD</rom>
+			<rom type="file" offset="0x1a">M_KUSU03.MMD</rom>
+			<rom type="file" offset="0x1b">M_KUSU04.MMD</rom>
+			<rom type="file" offset="0x1c">M_KUSU05.MMD</rom>
+			<rom type="file" offset="0x1d">M_MASA01.MMD</rom>
+			<rom type="file" offset="0x1e">M_MASA02.MMD</rom>
+			<rom type="file" offset="0x1f">M_MIYO.MMD</rom>
+			<rom type="file" offset="0x20">M_NANA.MMD</rom>
+			<rom type="file" offset="0x21">M_OP01.MMD</rom>
+			<rom type="file" offset="0x22">M_OP02.MMD</rom>
+			<rom type="file" offset="0x23">M_OP03.MMD</rom>
+			<rom type="file" offset="0x24">M_RURI.MMD</rom>
+			<rom type="file" offset="0x25">M_RYOUKO.MMD</rom>
+			<rom type="file" offset="0x26">M_SING01.MMD</rom>
+			<rom type="file" offset="0x27">M_SING02.MMD</rom>
+			<rom type="file" offset="0x28">M_SYS01.MMD</rom>
+			<rom type="file" offset="0x29">M_SYS02.MMD</rom>
+			<rom type="file" offset="0x2a">M_TAKU01.MMD</rom>
+			<rom type="shell" offset="0">MMD</rom>
+			<rom type="shell" offset="0">MMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">M_EMIK01.MMD</title>
+			<title code="0x11">M_EMIKO.MMD</title>
+			<title code="0x12">M_END01.MMD</title>
+			<title code="0x13">M_END02.MMD</title>
+			<title code="0x14">M_END03.MMD</title>
+			<title code="0x15">M_HIROMI.MMD</title>
+			<title code="0x16">M_KEIKO.MMD</title>
+			<title code="0x17">M_KONATU.MMD</title>
+			<title code="0x18">M_KUSU01.MMD</title>
+			<title code="0x19">M_KUSU02.MMD</title>
+			<title code="0x1a">M_KUSU03.MMD</title>
+			<title code="0x1b">M_KUSU04.MMD</title>
+			<title code="0x1c">M_KUSU05.MMD</title>
+			<title code="0x1d">M_MASA01.MMD</title>
+			<title code="0x1e">M_MASA02.MMD</title>
+			<title code="0x1f">M_MIYO.MMD</title>
+			<title code="0x20">M_NANA.MMD</title>
+			<title code="0x21">M_OP01.MMD</title>
+			<title code="0x22">M_OP02.MMD</title>
+			<title code="0x23">M_OP03.MMD</title>
+			<title code="0x24">M_RURI.MMD</title>
+			<title code="0x25">M_RYOUKO.MMD</title>
+			<title code="0x26">M_SING01.MMD</title>
+			<title code="0x27">M_SING02.MMD</title>
+			<title code="0x28">M_SYS01.MMD</title>
+			<title code="0x29">M_SYS02.MMD</title>
+			<title code="0x2a">M_TAKU01.MMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Star Trap (スタートラップ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-8"/>
+		</options>
+		<romlist archive="startrap_98">
+			<rom type="file" offset="-1">MDZ86.COM</rom>
+			<rom type="file" offset="-1">MDZSPLAY.COM</rom>
+			<rom type="file" offset="0x10">_____001.CHM</rom>
+			<rom type="file" offset="0x11">_____002.CHM</rom>
+			<rom type="file" offset="0x12">_____003.CHM</rom>
+			<rom type="file" offset="0x13">_____004.CHM</rom>
+			<rom type="file" offset="0x14">_____005.CHM</rom>
+			<rom type="file" offset="0x15">_____006.CHM</rom>
+			<rom type="file" offset="0x16">_____007.CHM</rom>
+			<rom type="file" offset="0x17">_____008.CHM</rom>
+			<rom type="file" offset="0x18">_____009.CHM</rom>
+			<rom type="file" offset="0x19">_____010.CHM</rom>
+			<rom type="file" offset="0x1a">_____011.CHM</rom>
+			<rom type="file" offset="0x1b">_____012.CHM</rom>
+			<rom type="file" offset="0x1c">_____013.CHM</rom>
+			<rom type="file" offset="0x1d">_____014.CHM</rom>
+			<rom type="file" offset="0x1e">_____015.CHM</rom>
+			<rom type="file" offset="0x1f">_____016.CHM</rom>
+			<rom type="file" offset="0x20">_____017.CHM</rom>
+			<rom type="file" offset="0x21">_____018.CHM</rom>
+			<rom type="file" offset="0x22">_____019.CHM</rom>
+			<rom type="file" offset="0x23">_____020.CHM</rom>
+			<rom type="file" offset="0x24">_____021.CHM</rom>
+			<rom type="file" offset="0x25">_____022.CHM</rom>
+			<rom type="file" offset="0x26">_____023.CHM</rom>
+			<rom type="file" offset="0x27">_____024.CHM</rom>
+			<rom type="file" offset="0x28">_____025.CHM</rom>
+			<rom type="file" offset="0x29">_____026.CHM</rom>
+			<rom type="shell" offset="0">MDZ86 S</rom>
+			<rom type="shell" offset="0">MDZSPLAY</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">オープニング</title>
+			<title code="0x11">ラン＆かなた</title>
+			<title code="0x12">ラン</title>
+			<title code="0x13">かなた</title>
+			<title code="0x14">レイミ (ulk2)</title>
+			<title code="0x15">教官＆シンディ (ulk2)</title>
+			<title code="0x16">妖精ピスティル (Nava)</title>
+			<title code="0x17">Hシーン1 (ulk2)</title>
+			<title code="0x18">緊急事態 (Nava)</title>
+			<title code="0x19">宇宙空間 (Nava)</title>
+			<title code="0x1a">宇宙戦闘 (Nava)</title>
+			<title code="0x1b">宇宙ステーション シーベル (Nava)</title>
+			<title code="0x1c">オナニー (ulk2)</title>
+			<title code="0x1d">犯されるラン</title>
+			<title code="0x1e">触手にいたぶられる少女たち</title>
+			<title code="0x1f">_____016.CHM</title>
+			<title code="0x20">_____017.CHM</title>
+			<title code="0x21">Hシーン2 (ulk2)</title>
+			<title code="0x22">_____019.CHM</title>
+			<title code="0x23">_____020.CHM</title>
+			<title code="0x24">_____021.CHM</title>
+			<title code="0x25">大暴れ (NOGICHAN.)</title>
+			<title code="0x26">帰還 (NOGICHAN.)</title>
+			<title code="0x27">エピローグ</title>
+			<title code="0x28">エンディング</title>
+			<title code="0x29">アイキャッチ (NOGICHAN.)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Koukan Nikki (こうかん日記) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="koukan_n_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">G001.KMD</rom>
+			<rom type="file" offset="-1">G002.KMD</rom>
+			<rom type="file" offset="-1">G003.KMD</rom>
+			<rom type="file" offset="-1">G004.KMD</rom>
+			<rom type="file" offset="-1">G005.KMD</rom>
+			<rom type="file" offset="-1">G006.KMD</rom>
+			<rom type="file" offset="-1">G007.KMD</rom>
+			<rom type="file" offset="-1">G008.KMD</rom>
+			<rom type="file" offset="-1">G009.KMD</rom>
+			<rom type="file" offset="-1">G010.KMD</rom>
+			<rom type="file" offset="-1">G011.KMD</rom>
+			<rom type="conin" offset="0x10">G001.KMD</rom>
+			<rom type="conin" offset="0x11">G002.KMD</rom>
+			<rom type="conin" offset="0x12">G003.KMD</rom>
+			<rom type="conin" offset="0x13">G004.KMD</rom>
+			<rom type="conin" offset="0x14">G005.KMD</rom>
+			<rom type="conin" offset="0x15">G006.KMD</rom>
+			<rom type="conin" offset="0x16">G007.KMD</rom>
+			<rom type="conin" offset="0x17">G008.KMD</rom>
+			<rom type="conin" offset="0x18">G009.KMD</rom>
+			<rom type="conin" offset="0x19">G010.KMD</rom>
+			<rom type="conin" offset="0x1a">G011.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G001.KMD</title>
+			<title code="0x11">G002.KMD</title>
+			<title code="0x12">G003.KMD</title>
+			<title code="0x13">G004.KMD</title>
+			<title code="0x14">G005.KMD</title>
+			<title code="0x15">G006.KMD</title>
+			<title code="0x16">G007.KMD</title>
+			<title code="0x17">G008.KMD</title>
+			<title code="0x18">G009.KMD</title>
+			<title code="0x19">G010.KMD</title>
+			<title code="0x1a">G011.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Koukan Nikki (こうかん日記) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="koukan_n_98">
+			<rom type="file" offset="-1">MDDRV.COM</rom>
+			<rom type="file" offset="-1">MDDRV_98.COM</rom>
+			<rom type="file" offset="-1">G001.KMM</rom>
+			<rom type="file" offset="-1">G002.KMM</rom>
+			<rom type="file" offset="-1">G003.KMM</rom>
+			<rom type="file" offset="-1">G004.KMM</rom>
+			<rom type="file" offset="-1">G005.KMM</rom>
+			<rom type="file" offset="-1">G006.KMM</rom>
+			<rom type="file" offset="-1">G007.KMM</rom>
+			<rom type="file" offset="-1">G008.KMM</rom>
+			<rom type="file" offset="-1">G009.KMM</rom>
+			<rom type="file" offset="-1">G010.KMM</rom>
+			<rom type="file" offset="-1">G011.KMM</rom>
+			<rom type="conin" offset="0x10">G001.KMM</rom>
+			<rom type="conin" offset="0x11">G002.KMM</rom>
+			<rom type="conin" offset="0x12">G003.KMM</rom>
+			<rom type="conin" offset="0x13">G004.KMM</rom>
+			<rom type="conin" offset="0x14">G005.KMM</rom>
+			<rom type="conin" offset="0x15">G006.KMM</rom>
+			<rom type="conin" offset="0x16">G007.KMM</rom>
+			<rom type="conin" offset="0x17">G008.KMM</rom>
+			<rom type="conin" offset="0x18">G009.KMM</rom>
+			<rom type="conin" offset="0x19">G010.KMM</rom>
+			<rom type="conin" offset="0x1a">G011.KMM</rom>
+			<rom type="shell" offset="0">MDDRV</rom>
+			<rom type="shell" offset="0">MDDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G001.KMM</title>
+			<title code="0x11">G002.KMM</title>
+			<title code="0x12">G003.KMM</title>
+			<title code="0x13">G004.KMM</title>
+			<title code="0x14">G005.KMM</title>
+			<title code="0x15">G006.KMM</title>
+			<title code="0x16">G007.KMM</title>
+			<title code="0x17">G008.KMM</title>
+			<title code="0x18">G009.KMM</title>
+			<title code="0x19">G010.KMM</title>
+			<title code="0x1a">G011.KMM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Koukan Nikki (こうかん日記) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="koukan_n_98">
+			<rom type="file" offset="-1">MDDRV.COM</rom>
+			<rom type="file" offset="-1">MDDRV_98.COM</rom>
+			<rom type="file" offset="-1">G001.KMM</rom>
+			<rom type="file" offset="-1">G002.KMM</rom>
+			<rom type="file" offset="-1">G003.KMM</rom>
+			<rom type="file" offset="-1">G004.KMM</rom>
+			<rom type="file" offset="-1">G005.KMM</rom>
+			<rom type="file" offset="-1">G006.KMM</rom>
+			<rom type="file" offset="-1">G007.KMM</rom>
+			<rom type="file" offset="-1">G008.KMM</rom>
+			<rom type="file" offset="-1">G009.KMM</rom>
+			<rom type="file" offset="-1">G010.KMM</rom>
+			<rom type="file" offset="-1">G011.KMM</rom>
+			<rom type="conin" offset="0x10">G001.KMM</rom>
+			<rom type="conin" offset="0x11">G002.KMM</rom>
+			<rom type="conin" offset="0x12">G003.KMM</rom>
+			<rom type="conin" offset="0x13">G004.KMM</rom>
+			<rom type="conin" offset="0x14">G005.KMM</rom>
+			<rom type="conin" offset="0x15">G006.KMM</rom>
+			<rom type="conin" offset="0x16">G007.KMM</rom>
+			<rom type="conin" offset="0x17">G008.KMM</rom>
+			<rom type="conin" offset="0x18">G009.KMM</rom>
+			<rom type="conin" offset="0x19">G010.KMM</rom>
+			<rom type="conin" offset="0x1a">G011.KMM</rom>
+			<rom type="shell" offset="0">MDDRV</rom>
+			<rom type="shell" offset="0">MDDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">G001.KMM</title>
+			<title code="0x11">G002.KMM</title>
+			<title code="0x12">G003.KMM</title>
+			<title code="0x13">G004.KMM</title>
+			<title code="0x14">G005.KMM</title>
+			<title code="0x15">G006.KMM</title>
+			<title code="0x16">G007.KMM</title>
+			<title code="0x17">G008.KMM</title>
+			<title code="0x18">G009.KMM</title>
+			<title code="0x19">G010.KMM</title>
+			<title code="0x1a">G011.KMM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Fairy Dust Fan Kansha Disk Final (フェアリーダスト ファン感謝ディスク FINAL)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">fairy_dust</driveralias>
+		<options>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="fdus_fan_98">
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="-1">PMP_HOOT.COM</rom>
+			<rom type="file" offset="0x10">BFAST.M</rom>
+			<rom type="file" offset="0x11">BKATI.M</rom>
+			<rom type="file" offset="0x12">BMAIN.M</rom>
+			<rom type="file" offset="0x13">BMAKE.M</rom>
+			<rom type="file" offset="0x14">DOC.M</rom>
+			<rom type="file" offset="0x15">QEND.M</rom>
+			<rom type="file" offset="0x16">QMAIN.M</rom>
+			<rom type="file" offset="0x17">QOVER.M</rom>
+			<rom type="file" offset="0x18">QTITLE.M</rom>
+			<rom type="file" offset="0x19">SELECT.M</rom>
+			<rom type="file" offset="0x1A">STITLE.M</rom>
+			<rom type="shell" offset="0">PMD</rom>
+			<rom type="shell" offset="0">PMP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1A">STITLE.M : Title</title>
+			<title code="0x19">SELECT.M : SELECT</title>
+			<title code="0x14">DOC.M    : 色々</title>
+			<title code="0x18">QTITLE.M : Quiz Title</title>
+			<title code="0x16">QMAIN.M  : Theme of Quiz</title>
+			<title code="0x15">QEND.M   : Quiz Ending</title>
+			<title code="0x17">QOVER.M  : Quiz Game Over</title>
+			<title code="0x10">BFAST.M  : 闘う前の曲</title>
+			<title code="0x12">BMAIN.M  : Theme of Battle</title>
+			<title code="0x11">BKATI.M  : 勝ったのね？</title>
+			<title code="0x13">BMAKE.M  : 負けちゃったぁ</title>
+		</titlelist>
+	</game>
+</gamelist>

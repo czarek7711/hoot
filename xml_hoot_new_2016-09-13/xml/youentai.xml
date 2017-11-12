@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //遊・演・体 -->
+	<game>
+		<name>[PC-9801] ELVES</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">遊・演・体</driveralias>
+		<!-- 制作:日本ソフテック -->
+		<romlist archive="elves98">
+			<rom type="file" offset="-1">elves.com</rom>
+			<rom type="file" offset="-1">OP.EXE</rom>
+			<rom type="file" offset="-1">E.EXE</rom>
+			<rom type="file" offset="0x05">OPN/FM_TONE.SND</rom>
+			<rom type="file" offset="0x06">SYS/FM_TONE.SND</rom>
+			<rom type="file" offset="-1">MMLDAT.00</rom>
+			<rom type="file" offset="-1">MMLDAT.01</rom>
+			<rom type="file" offset="-1">MMLDAT.02</rom>
+			<rom type="file" offset="-1">MMLDAT.03</rom>
+			<rom type="file" offset="-1">MMLDAT.04</rom>
+			<rom type="file" offset="-1">MMLDAT.05</rom>
+			<rom type="file" offset="-1">MMLDAT.06</rom>
+			<rom type="file" offset="-1">MMLDAT.07</rom>
+			<rom type="conin" offset="0x10">MMLDAT.00</rom>
+			<rom type="conin" offset="0x11">MMLDAT.01</rom>
+			<rom type="conin" offset="0x12">MMLDAT.02</rom>
+			<rom type="conin" offset="0x13">MMLDAT.03</rom>
+			<rom type="conin" offset="0x14">MMLDAT.04</rom>
+			<rom type="conin" offset="0x15">MMLDAT.05</rom>
+			<rom type="conin" offset="0x16">MMLDAT.06</rom>
+			<rom type="conin" offset="0x17">MMLDAT.07</rom>
+			<rom type="shell" offset="0">elves</rom>
+		</romlist>
+		<titlelist>
+		<!--	<title code="0x000001f8">OP.EXE    : (無音)</title> -->
+			<title code="0x0000020a">OP.EXE    : </title>
+			<title code="0x01010001">E.EXE     : </title>
+			<title code="0x01010002">E.EXE     : </title>
+			<title code="0x01010003">E.EXE     : </title>
+			<title code="0x01010004">E.EXE     : </title>
+			<title code="0x01010005">E.EXE     : </title>
+			<title code="0x01010006">E.EXE     : </title>
+		<!--	<title code="0x01010007">E.EXE     : (鳴らない)</title> -->
+			<title code="0x01010008">E.EXE     : </title>
+			<title code="0x01010009">E.EXE     : </title>
+			<title code="0x0101000a">E.EXE     : </title>
+			<title code="0x01020010">MMLDAT.00 : </title>
+			<title code="0x01020011">MMLDAT.01 : </title>
+			<title code="0x01020012">MMLDAT.02 : </title>
+			<title code="0x01020013">MMLDAT.03 : </title>
+			<title code="0x01020014">MMLDAT.04 : </title>
+			<title code="0x01020015">MMLDAT.05 : </title>
+			<title code="0x01020016">MMLDAT.06 : </title>
+			<title code="0x01020017">MMLDAT.07 : </title>
+			<title code="0xfe000000">FADE OUT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Fifth Element - 魂の元素 -</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">遊・演・体</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="5thelm98">
+			<rom type="file" offset="-1">FMP.COM</rom>
+			<rom type="file" offset="-1">fmp_5th.com</rom>
+			<rom type="file" offset="0x05">5TH_BGM.COM</rom>
+			<rom type="shell" offset="0">fmp s</rom>
+			<rom type="shell" offset="0">fmp_5th</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000005">Fifth Element - 光のテ－マ -        Composed &amp; Arranged by KID</title>
+			<title code="0x010005">Fifth Element - 町のテ－マ -        Composed &amp; Arranged by KID</title>
+			<title code="0x020005">Fifth Element - イベント2(自然)-    Composed &amp; Arranged by KID</title>
+			<title code="0x030005">Fifth Element - 戦闘時BGM -         Composed &amp; Arranged by KID</title>
+			<title code="0x040005">Fifth Element - 闇のテ－マ -        Composed &amp; Arranged by KID</title>
+			<title code="0x050005">Fifth Element - イベント1(人間)-    Composed &amp; Arranged by KID</title>
+			<title code="0x060005">Fifth Element - 洞窟のテ－マ -      Composed &amp; Arranged by KID</title>
+			<title code="0x070005">Fifth Element - 最後の闘い -        Composed &amp; Arranged by KID</title>
+			<title code="0x080005">Fifth Element - 室内のテ－マ(改) -  Composed &amp; Arranged by KID</title>
+			<title code="0x090005">Fifth Element - 土のテ－マ -        Composed &amp; Arranged by KID</title>
+			<title code="0x0a0005">Fifth Element - 死んだ時のBGM -     Composed &amp; Arranged by KID</title>
+			<title code="0x0b0005">Fifth Element - 火のテ－マ -        Composed &amp; Arranged by KID</title>
+			<title code="0x0c0005">Fifth Element - 店のテ－マ -        Composed &amp; Arranged by KID</title>
+			<title code="0x0d0005">Fifth Element - 水のテ－マ -        Composed &amp; Arranged by KID</title>
+			<title code="0x0e0005">Fifth Element - 風のテ－マ -        Composed &amp; Arranged by KID</title>
+			<title code="0x0f0005">Fifth Element - 神殿のテ－マ -      Composed &amp; Arranged by KID</title>
+			<title code="0x100005">Fifth Element - オ－プニング -                     Arranged by KID</title>
+			<title code="0x110005">Fifth Element - ウィルダネス -      Composed &amp; Arranged by KID</title>
+			<title code="0x120005">Fifth Element - プレオ－プニング -  Composed &amp; Arranged by KID</title>
+			<title code="0x130005">Fifth Element - エンディング -      Composed &amp; Arranged by KID</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] METAL FORCE(SPB)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">遊・演・体</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-13"/>
+		</options>
+		<romlist archive="mforce98">
+			<rom type="file" offset="-1">MDZS.COM</rom>
+			<rom type="file" offset="-1">mdzsplay.com</rom>
+			<rom type="file" offset="0x05">MF.PVI</rom>
+			<rom type="file" offset="0x06">MF_EFF.EFZ</rom>
+			<rom type="file" offset="0x07">MF_PP4.P4Z</rom>
+			<rom type="file" offset="0x10">MF_01.MDZ</rom>
+			<rom type="file" offset="0x11">MF_02.MDZ</rom>
+			<rom type="file" offset="0x12">MF_02B.MDZ</rom>
+			<rom type="file" offset="0x13">MF_03.MDZ</rom>
+			<rom type="file" offset="0x14">MF_04.MDZ</rom>
+			<rom type="file" offset="0x15">MF_05.MDZ</rom>
+			<rom type="file" offset="0x16">MF_05B.MDZ</rom>
+			<rom type="file" offset="0x17">MF_06.MDZ</rom>
+			<rom type="file" offset="0x18">MF_07.MDZ</rom>
+			<rom type="file" offset="0x19">MF_08.MDZ</rom>
+			<rom type="file" offset="0x1a">MF_09.MDZ</rom>
+			<rom type="file" offset="0x1b">MF_10.MDZ</rom>
+			<rom type="file" offset="0x1c">MF_11.MDZ</rom>
+			<rom type="file" offset="0x1d">MF_12.MDZ</rom>
+			<rom type="file" offset="0x1e">MF_13.MDZ</rom>
+			<rom type="file" offset="0x1f">MF_14.MDZ</rom>
+			<rom type="file" offset="0x20">MF_15.MDZ</rom>
+			<rom type="file" offset="0x21">MF_16.MDZ</rom>
+			<rom type="file" offset="0x22">MF_17.MDZ</rom>
+			<rom type="file" offset="0x23">MF_18.MDZ</rom>
+			<rom type="file" offset="0x24">MF_19.MDZ</rom>
+			<rom type="file" offset="0x25">MF_20.MDZ</rom>
+			<rom type="file" offset="0x26">MF_21.MDZ</rom>
+			<rom type="shell" offset="0">mdzs s /T0 /E8 /#6 /P52 /B55 /S</rom>
+			<rom type="shell" offset="0">mdzsplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000014">MF_04.MDZ   : [SPB] CHIME THEME</title>
+			<title code="0x000016">MF_05B.MDZ  : [SPB] OPENING</title>
+			<title code="0x000020">MF_15.MDZ   : [SPB] TAKE OFF</title>
+			<title code="0x000010">MF_01.MDZ   : [SPB] STAGE 1</title>
+			<title code="0x000013">MF_03.MDZ   : [SPB] STAGE 2</title>
+			<title code="0x00001b">MF_10.MDZ   : [SPB] STAGE 3</title>
+			<title code="0x000021">MF_16.MDZ   : [SPB] STAGE 4</title>
+			<title code="0x00001d">MF_12.MDZ   : [SPB] STAGE 5</title>
+			<title code="0x00001e">MF_13.MDZ   : [SPB] STAGE 6</title>
+			<title code="0x00001c">MF_11.MDZ   : [SPB] STAGE 7</title>
+			<title code="0x000023">MF_18.MDZ   : [SPB] STAGE 8</title>
+			<title code="0x000024">MF_19.MDZ   : [SPB] SCORE ATTACK</title>
+			<title code="0x00001f">MF_14.MDZ   : [SPB] STAGE CLEAR</title>
+			<title code="0x000019">MF_08.MDZ   : [SPB] CONTINUE</title>
+			<title code="0x000018">MF_07.MDZ   : [SPB] GAME OVER</title>
+			<title code="0x00001a">MF_09.MDZ   : [SPB] NAME ENTRY 1</title>
+			<title code="0x000017">MF_06.MDZ   : [SPB] NAME ENTRY 2</title>
+			<title code="0x000011">MF_02.MDZ   : [SPB] NORMAL BOSS</title>
+			<title code="0x000022">MF_17.MDZ   : [SPB] LAST BOSS</title>
+			<title code="0x000012">MF_02B.MDZ  : [SPB] NORMAL BOSS(2)</title>
+			<title code="0x000026">MF_21.MDZ   : [SPB] STAFF ROLL</title>
+			<title code="0x000025">MF_20.MDZ   : [SPB] ENDING</title>
+			<title code="0x000015">MF_05.MDZ   : [SPB] NOT USE</title>
+			<title code="0x010000">SSG効果音 #00</title>
+			<title code="0x010001">SSG効果音 #01</title>
+			<title code="0x010002">SSG効果音 #02</title>
+			<title code="0x010003">SSG効果音 #03</title>
+			<title code="0x010004">SSG効果音 #04</title>
+			<title code="0x010005">SSG効果音 #05</title>
+			<title code="0x010006">SSG効果音 #06</title>
+			<title code="0x010007">SSG効果音 #07</title>
+			<title code="0x010008">SSG効果音 #08</title>
+			<title code="0x010009">SSG効果音 #09</title>
+			<title code="0x01000a">SSG効果音 #0a</title>
+			<title code="0x01000b">SSG効果音 #0b</title>
+			<title code="0x01000c">SSG効果音 #0c</title>
+			<title code="0x01000d">SSG効果音 #0d</title>
+			<title code="0x01000e">SSG効果音 #0e</title>
+			<title code="0x01000f">SSG効果音 #0f</title>
+			<title code="0x010010">SSG効果音 #10</title>
+			<title code="0x010011">SSG効果音 #11</title>
+			<title code="0x010012">SSG効果音 #12</title>
+			<title code="0x010013">SSG効果音 #13</title>
+			<title code="0x010014">SSG効果音 #14</title>
+			<title code="0x010015">SSG効果音 #15</title>
+			<title code="0x010016">SSG効果音 #16</title>
+			<title code="0x010017">SSG効果音 #17</title>
+			<title code="0x010018">SSG効果音 #18</title>
+			<title code="0x010019">SSG効果音 #19</title>
+			<title code="0x01001a">SSG効果音 #1a</title>
+			<title code="0x01001b">SSG効果音 #1b</title>
+			<title code="0x01001c">SSG効果音 #1c</title>
+			<title code="0x01001d">SSG効果音 #1d</title>
+			<title code="0x010029">SSG効果音 #29</title>
+			<title code="0x01002a">SSG効果音 #2a</title>
+			<title code="0x01002b">SSG効果音 #2b</title>
+			<title code="0x01002c">SSG効果音 #2c</title>
+			<title code="0x01002d">SSG効果音 #2d</title>
+			<title code="0x020000">ADPCM #00 (Kick)</title>
+			<title code="0x020001">ADPCM #01 (Snare 1)</title>
+			<title code="0x020002">ADPCM #02 (Tom)</title>
+			<title code="0x020003">ADPCM #03 (Crash Cymbal)</title>
+			<title code="0x020004">ADPCM #04 (Close Hi-hat 1)</title>
+			<title code="0x020005">ADPCM #05 (Open Hi-hat)</title>
+			<title code="0x020006">ADPCM #06 (Snare 2)</title>
+			<title code="0x020007">ADPCM #07 (Close Hi-hat 2)</title>
+			<title code="0x020008">ADPCM #08 (Kick + Crash)</title>
+			<title code="0x020009">ADPCM #09 (Clap)</title>
+			<title code="0x02000a">ADPCM #0a (Orchestra Hit)</title>
+			<title code="0x02000b">ADPCM #0b (Guitar)</title>
+			<title code="0x02000c">ADPCM #0c (hey)</title>
+			<title code="0x02000d">ADPCM #0d (爆発音#1)</title>
+			<title code="0x02000e">ADPCM #0e (爆発音#2)</title>
+			<title code="0x02000f">ADPCM #0f (爆発音#3)</title>
+			<title code="0x020010">ADPCM #10 (爆発音#4)</title>
+			<title code="0x020013">ADPCM #13 (風切音)</title>
+			<title code="0x020014">ADPCM #14 (Vulcan)</title>
+			<title code="0x020015">ADPCM #15 (Laser)</title>
+			<title code="0x020016">ADPCM #16 (Homing)</title>
+			<title code="0x020017">ADPCM #17 (1up)</title>
+			<title code="0x020018">ADPCM #18 (Repair)</title>
+			<title code="0x020019">ADPCM #19 (All Repair)</title>
+			<title code="0x02001a">ADPCM #1a (Stage Clear)</title>
+			<title code="0x02001b">ADPCM #1b (Game Over)</title>
+			<title code="0x02001c">ADPCM #1c (Please Continue)</title>
+			<title code="0x02001d">ADPCM #1d (Chime Corporation)</title>
+			<title code="0x02001e">ADPCM #1e (Danger)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] METAL FORCE(86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9801">遊・演・体</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="pcm_mix"  value="0xa0"/>
+		</options>
+		<romlist archive="mforce98">
+			<rom type="file" offset="-1">MDZS.COM</rom>
+			<rom type="file" offset="-1">mdzsplay.com</rom>
+			<rom type="file" offset="0x05">MF_P86.P86</rom>
+			<rom type="file" offset="0x06">MF_EFF.EFZ</rom>
+			<rom type="file" offset="0x07">MF_PP4.P4Z</rom>
+			<rom type="file" offset="0x10">MF_01.MDZ</rom>
+			<rom type="file" offset="0x11">MF_02.MDZ</rom>
+			<rom type="file" offset="0x12">MF_02B.MDZ</rom>
+			<rom type="file" offset="0x13">MF_03.MDZ</rom>
+			<rom type="file" offset="0x14">MF_04.MDZ</rom>
+			<rom type="file" offset="0x15">MF_05.MDZ</rom>
+			<rom type="file" offset="0x16">MF_05B.MDZ</rom>
+			<rom type="file" offset="0x17">MF_06.MDZ</rom>
+			<rom type="file" offset="0x18">MF_07.MDZ</rom>
+			<rom type="file" offset="0x19">MF_08.MDZ</rom>
+			<rom type="file" offset="0x1a">MF_09.MDZ</rom>
+			<rom type="file" offset="0x1b">MF_10.MDZ</rom>
+			<rom type="file" offset="0x1c">MF_11.MDZ</rom>
+			<rom type="file" offset="0x1d">MF_12.MDZ</rom>
+			<rom type="file" offset="0x1e">MF_13.MDZ</rom>
+			<rom type="file" offset="0x1f">MF_14.MDZ</rom>
+			<rom type="file" offset="0x20">MF_15.MDZ</rom>
+			<rom type="file" offset="0x21">MF_16.MDZ</rom>
+			<rom type="file" offset="0x22">MF_17.MDZ</rom>
+			<rom type="file" offset="0x23">MF_18.MDZ</rom>
+			<rom type="file" offset="0x24">MF_19.MDZ</rom>
+			<rom type="file" offset="0x25">MF_20.MDZ</rom>
+			<rom type="file" offset="0x26">MF_21.MDZ</rom>
+			<rom type="shell" offset="0">mdzs s /T0 /E8 /#6 /P52 /B55</rom>
+			<rom type="shell" offset="0">mdzsplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000014">MF_04.MDZ   : CHIME THEME</title>
+			<title code="0x000016">MF_05B.MDZ  : OPENING</title>
+			<title code="0x000020">MF_15.MDZ   : TAKE OFF</title>
+			<title code="0x000010">MF_01.MDZ   : STAGE 1</title>
+			<title code="0x000013">MF_03.MDZ   : STAGE 2</title>
+			<title code="0x00001b">MF_10.MDZ   : STAGE 3</title>
+			<title code="0x000021">MF_16.MDZ   : STAGE 4</title>
+			<title code="0x00001d">MF_12.MDZ   : STAGE 5</title>
+			<title code="0x00001e">MF_13.MDZ   : STAGE 6</title>
+			<title code="0x00001c">MF_11.MDZ   : STAGE 7</title>
+			<title code="0x000023">MF_18.MDZ   : STAGE 8</title>
+			<title code="0x000024">MF_19.MDZ   : SCORE ATTACK</title>
+			<title code="0x00001f">MF_14.MDZ   : STAGE CLEAR</title>
+			<title code="0x000019">MF_08.MDZ   : CONTINUE</title>
+			<title code="0x000018">MF_07.MDZ   : GAME OVER</title>
+			<title code="0x00001a">MF_09.MDZ   : NAME ENTRY 1</title>
+			<title code="0x000017">MF_06.MDZ   : NAME ENTRY 2</title>
+			<title code="0x000011">MF_02.MDZ   : NORMAL BOSS</title>
+			<title code="0x000022">MF_17.MDZ   : LAST BOSS</title>
+			<title code="0x000012">MF_02B.MDZ  : NORMAL BOSS(2)</title>
+			<title code="0x000026">MF_21.MDZ   : STAFF ROLL</title>
+			<title code="0x000025">MF_20.MDZ   : ENDING</title>
+			<title code="0x000015">MF_05.MDZ   : NOT USE</title>
+			<title code="0x010000">SSG効果音 #00</title>
+			<title code="0x010001">SSG効果音 #01</title>
+			<title code="0x010002">SSG効果音 #02</title>
+			<title code="0x010003">SSG効果音 #03</title>
+			<title code="0x010004">SSG効果音 #04</title>
+			<title code="0x010005">SSG効果音 #05</title>
+			<title code="0x010006">SSG効果音 #06</title>
+			<title code="0x010007">SSG効果音 #07</title>
+			<title code="0x010008">SSG効果音 #08</title>
+			<title code="0x010009">SSG効果音 #09</title>
+			<title code="0x01000a">SSG効果音 #0a</title>
+			<title code="0x01000b">SSG効果音 #0b</title>
+			<title code="0x01000c">SSG効果音 #0c</title>
+			<title code="0x01000d">SSG効果音 #0d</title>
+			<title code="0x01000e">SSG効果音 #0e</title>
+			<title code="0x01000f">SSG効果音 #0f</title>
+			<title code="0x010010">SSG効果音 #10</title>
+			<title code="0x010011">SSG効果音 #11</title>
+			<title code="0x010012">SSG効果音 #12</title>
+			<title code="0x010013">SSG効果音 #13</title>
+			<title code="0x010014">SSG効果音 #14</title>
+			<title code="0x010015">SSG効果音 #15</title>
+			<title code="0x010016">SSG効果音 #16</title>
+			<title code="0x010017">SSG効果音 #17</title>
+			<title code="0x010018">SSG効果音 #18</title>
+			<title code="0x010019">SSG効果音 #19</title>
+			<title code="0x01001a">SSG効果音 #1a</title>
+			<title code="0x01001b">SSG効果音 #1b</title>
+			<title code="0x01001c">SSG効果音 #1c</title>
+			<title code="0x01001d">SSG効果音 #1d</title>
+			<title code="0x010029">SSG効果音 #29</title>
+			<title code="0x01002a">SSG効果音 #2a</title>
+			<title code="0x01002b">SSG効果音 #2b</title>
+			<title code="0x01002c">SSG効果音 #2c</title>
+			<title code="0x01002d">SSG効果音 #2d</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] METAL FORCE(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">遊・演・体</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mforce98">
+			<rom type="file" offset="-1">MDZS.COM</rom>
+			<rom type="file" offset="-1">mdzsplay.com</rom>
+			<rom type="file" offset="0x06">MF_EFF.EFZ</rom>
+			<rom type="file" offset="0x07">MF_PP4.P4Z</rom>
+			<rom type="file" offset="0x10">MF_N01.MDZ</rom>
+			<rom type="file" offset="0x11">MF_N02.MDZ</rom>
+			<rom type="file" offset="0x12">MF_N03.MDZ</rom>
+			<rom type="file" offset="0x13">MF_N04.MDZ</rom>
+			<rom type="file" offset="0x14">MF_N05B.MDZ</rom>
+			<rom type="file" offset="0x15">MF_N06.MDZ</rom>
+			<rom type="file" offset="0x16">MF_N07.MDZ</rom>
+			<rom type="file" offset="0x17">MF_N08.MDZ</rom>
+			<rom type="file" offset="0x18">MF_N09.MDZ</rom>
+			<rom type="file" offset="0x19">MF_N10.MDZ</rom>
+			<rom type="file" offset="0x1a">MF_N11.MDZ</rom>
+			<rom type="file" offset="0x1b">MF_N12.MDZ</rom>
+			<rom type="file" offset="0x1c">MF_N13.MDZ</rom>
+			<rom type="file" offset="0x1d">MF_N14.MDZ</rom>
+			<rom type="file" offset="0x1e">MF_N15.MDZ</rom>
+			<rom type="file" offset="0x1f">MF_N16.MDZ</rom>
+			<rom type="file" offset="0x20">MF_N17.MDZ</rom>
+			<rom type="file" offset="0x21">MF_N18.MDZ</rom>
+			<rom type="file" offset="0x22">MF_N19.MDZ</rom>
+			<rom type="file" offset="0x23">MF_N20.MDZ</rom>
+			<rom type="file" offset="0x24">MF_N21.MDZ</rom>
+			<rom type="shell" offset="0">mdzs s /T0 /E8 /#6 /P52 /B55 /S</rom>
+			<rom type="shell" offset="0">mdzsplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000013">MF_N04.MDZ  : [NORMAL] CHIME THEME</title>
+			<title code="0x000014">MF_N05B.MDZ : [NORMAL] OPENING</title>
+			<title code="0x00001e">MF_N15.MDZ  : [NORMAL] TAKE OFF</title>
+			<title code="0x000010">MF_N01.MDZ  : [NORMAL] STAGE 1</title>
+			<title code="0x000012">MF_N03.MDZ  : [NORMAL] STAGE 2</title>
+			<title code="0x000019">MF_N10.MDZ  : [NORMAL] STAGE 3</title>
+			<title code="0x00001f">MF_N16.MDZ  : [NORMAL] STAGE 4</title>
+			<title code="0x00001b">MF_N12.MDZ  : [NORMAL] STAGE 5</title>
+			<title code="0x00001c">MF_N13.MDZ  : [NORMAL] STAGE 6</title>
+			<title code="0x00001a">MF_N11.MDZ  : [NORMAL] STAGE 7</title>
+			<title code="0x000021">MF_N18.MDZ  : [NORMAL] STAGE 8</title>
+			<title code="0x000022">MF_N19.MDZ  : [NORMAL] SCORE ATTACK</title>
+			<title code="0x00001d">MF_N14.MDZ  : [NORMAL] STAGE CLEAR</title>
+			<title code="0x000017">MF_N08.MDZ  : [NORMAL] CONTINUE</title>
+			<title code="0x000016">MF_N07.MDZ  : [NORMAL] GAME OVER</title>
+			<title code="0x000018">MF_N09.MDZ  : [NORMAL] NAME ENTRY 1</title>
+			<title code="0x000015">MF_N06.MDZ  : [NORMAL] NAME ENTRY 2</title>
+			<title code="0x000011">MF_N02.MDZ  : [NORMAL] NORMAL BOSS</title>
+			<title code="0x000020">MF_N17.MDZ  : [NORMAL] LAST BOSS</title>
+			<title code="0x000024">MF_N21.MDZ  : [NORMAL] STAFF ROLL</title>
+			<title code="0x000023">MF_N20.MDZ  : [NORMAL] ENDING</title>
+			<title code="0x010000">SSG効果音 #00</title>
+			<title code="0x010001">SSG効果音 #01</title>
+			<title code="0x010002">SSG効果音 #02</title>
+			<title code="0x010003">SSG効果音 #03</title>
+			<title code="0x010004">SSG効果音 #04</title>
+			<title code="0x010005">SSG効果音 #05</title>
+			<title code="0x010006">SSG効果音 #06</title>
+			<title code="0x010007">SSG効果音 #07</title>
+			<title code="0x010008">SSG効果音 #08</title>
+			<title code="0x010009">SSG効果音 #09</title>
+			<title code="0x01000a">SSG効果音 #0a</title>
+			<title code="0x01000b">SSG効果音 #0b</title>
+			<title code="0x01000c">SSG効果音 #0c</title>
+			<title code="0x01000d">SSG効果音 #0d</title>
+			<title code="0x01000e">SSG効果音 #0e</title>
+			<title code="0x01000f">SSG効果音 #0f</title>
+			<title code="0x010010">SSG効果音 #10</title>
+			<title code="0x010011">SSG効果音 #11</title>
+			<title code="0x010012">SSG効果音 #12</title>
+			<title code="0x010013">SSG効果音 #13</title>
+			<title code="0x010014">SSG効果音 #14</title>
+			<title code="0x010015">SSG効果音 #15</title>
+			<title code="0x010016">SSG効果音 #16</title>
+			<title code="0x010017">SSG効果音 #17</title>
+			<title code="0x010018">SSG効果音 #18</title>
+			<title code="0x010019">SSG効果音 #19</title>
+			<title code="0x01001a">SSG効果音 #1a</title>
+			<title code="0x01001b">SSG効果音 #1b</title>
+			<title code="0x01001c">SSG効果音 #1c</title>
+			<title code="0x01001d">SSG効果音 #1d</title>
+			<title code="0x010029">SSG効果音 #29</title>
+			<title code="0x01002a">SSG効果音 #2a</title>
+			<title code="0x01002b">SSG効果音 #2b</title>
+			<title code="0x01002c">SSG効果音 #2c</title>
+			<title code="0x01002d">SSG効果音 #2d</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 忘れえぬ炎 - ABDOR AETERNUS -</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">遊・演・体</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="close98">
+			<rom type="file" offset="-1">MDZ86.COM</rom>
+			<rom type="file" offset="-1">mdzsplay.com</rom>
+			<rom type="file" offset="0x06">038</rom>
+			<rom type="file" offset="0x10">000</rom>
+			<rom type="file" offset="0x11">001</rom>
+			<rom type="file" offset="0x12">002</rom>
+			<rom type="file" offset="0x13">003</rom>
+			<rom type="file" offset="0x14">004</rom>
+			<rom type="file" offset="0x15">005</rom>
+			<rom type="file" offset="0x16">006</rom>
+			<rom type="file" offset="0x17">007</rom>
+			<rom type="file" offset="0x18">008</rom>
+			<rom type="file" offset="0x19">009</rom>
+			<rom type="file" offset="0x1a">010</rom>
+			<rom type="file" offset="0x1b">011</rom>
+			<rom type="file" offset="0x1c">012</rom>
+			<rom type="file" offset="0x1d">013</rom>
+			<rom type="file" offset="0x1e">014</rom>
+			<rom type="file" offset="0x1f">015</rom>
+			<rom type="file" offset="0x20">016</rom>
+			<rom type="file" offset="0x21">017</rom>
+			<rom type="file" offset="0x22">018</rom>
+			<rom type="file" offset="0x23">019</rom>
+			<rom type="file" offset="0x24">020</rom>
+			<rom type="file" offset="0x25">021</rom>
+			<rom type="file" offset="0x26">022</rom>
+			<rom type="file" offset="0x27">023</rom>
+			<rom type="file" offset="0x28">024</rom>
+			<rom type="file" offset="0x29">025</rom>
+			<rom type="file" offset="0x2a">026</rom>
+			<rom type="file" offset="0x2b">027</rom>
+			<rom type="file" offset="0x2c">028</rom>
+			<rom type="file" offset="0x2d">029</rom>
+			<rom type="file" offset="0x2e">030</rom>
+			<rom type="file" offset="0x2f">031</rom>
+			<rom type="file" offset="0x30">032</rom>
+			<rom type="file" offset="0x31">033</rom>
+			<rom type="file" offset="0x32">034</rom>
+			<rom type="file" offset="0x33">035</rom>
+			<rom type="file" offset="0x34">036</rom>
+			<rom type="file" offset="0x35">037</rom>
+			<rom type="shell" offset="0">mdz86 s -N -E14</rom>
+			<rom type="shell" offset="0">mdzsplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000010">BGM 000</title>
+			<title code="0x000011">BGM 001</title>
+			<title code="0x000012">BGM 002</title>
+			<title code="0x000013">BGM 003</title>
+			<title code="0x000014">BGM 004</title>
+			<title code="0x000015">BGM 005</title>
+			<title code="0x000016">BGM 006</title>
+			<title code="0x000017">BGM 007</title>
+			<title code="0x000018">BGM 008</title>
+			<title code="0x000019">BGM 009</title>
+			<title code="0x00001a">BGM 010</title>
+			<title code="0x00001b">BGM 011</title>
+			<title code="0x00001c">BGM 012</title>
+			<title code="0x00001d">BGM 013</title>
+			<title code="0x00001e">BGM 014</title>
+			<title code="0x00001f">BGM 015</title>
+			<title code="0x000020">BGM 016</title>
+			<title code="0x000021">BGM 017</title>
+			<title code="0x000022">BGM 018</title>
+			<title code="0x000023">BGM 019</title>
+			<title code="0x000024">BGM 020</title>
+			<title code="0x000025">BGM 021</title>
+			<title code="0x000026">BGM 022</title>
+			<title code="0x000027">BGM 023</title>
+			<title code="0x000028">BGM 024</title>
+			<title code="0x000029">BGM 025</title>
+			<title code="0x00002a">BGM 026</title>
+			<title code="0x00002b">BGM 027</title>
+			<title code="0x00002c">BGM 028</title>
+			<title code="0x00002d">BGM 029</title>
+			<title code="0x00002e">BGM 030</title>
+			<title code="0x00002f">BGM 031</title>
+			<title code="0x000030">BGM 032</title>
+			<title code="0x000031">BGM 033</title>
+			<title code="0x000032">BGM 034</title>
+			<title code="0x000033">BGM 035</title>
+			<title code="0x000034">BGM 036</title>
+			<title code="0x000035">BGM 037</title>
+			<title code="0x010000">効果音 #00</title>
+			<title code="0x010001">効果音 #01</title>
+			<title code="0x010002">効果音 #02</title>
+			<title code="0x010003">効果音 #03</title>
+			<title code="0x010004">効果音 #04</title>
+			<title code="0x010005">効果音 #05</title>
+			<title code="0x010006">効果音 #06</title>
+			<title code="0x010007">効果音 #07</title>
+			<title code="0x010008">効果音 #08</title>
+			<title code="0x010009">効果音 #09</title>
+			<title code="0x01000a">効果音 #0a</title>
+			<title code="0x01000b">効果音 #0b</title>
+			<title code="0x01000c">効果音 #0c</title>
+			<title code="0x01000d">効果音 #0d</title>
+			<title code="0x01000e">効果音 #0e</title>
+			<title code="0x01000f">効果音 #0f</title>
+			<title code="0x010010">効果音 #10</title>
+			<title code="0x010011">効果音 #11</title>
+			<title code="0x010012">効果音 #12</title>
+			<title code="0x010013">効果音 #13</title>
+			<title code="0x010014">効果音 #14</title>
+			<title code="0x010015">効果音 #15</title>
+			<title code="0x010016">効果音 #16</title>
+			<title code="0x010017">効果音 #17</title>
+			<title code="0x010018">効果音 #18</title>
+			<title code="0x010019">効果音 #19</title>
+			<title code="0x01001a">効果音 #1a</title>
+			<title code="0x01001b">効果音 #1b</title>
+			<title code="0x01001c">効果音 #1c</title>
+			<title code="0x01001d">効果音 #1d</title>
+			<title code="0x01001e">効果音 #1e</title>
+			<title code="0x01001f">効果音 #1f</title>
+			<title code="0x010020">効果音 #20</title>
+			<title code="0x010021">効果音 #21</title>
+			<title code="0x010022">効果音 #22</title>
+			<title code="0x010023">効果音 #23</title>
+			<title code="0x010024">効果音 #24</title>
+			<title code="0x010025">効果音 #25</title>
+			<title code="0x010026">効果音 #26</title>
+			<title code="0x010027">効果音 #27</title>
+			<title code="0x010028">効果音 #28</title>
+			<title code="0x010029">効果音 #29</title>
+			<title code="0x01002a">効果音 #2a</title>
+			<title code="0x01002b">効果音 #2b</title>
+			<title code="0x01002c">効果音 #2c</title>
+			<title code="0x01002d">効果音 #2d</title>
+			<title code="0x01002e">効果音 #2e</title>
+			<title code="0x01002f">効果音 #2f</title>
+			<title code="0x010030">効果音 #30</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Fifth Element 2 -光と闇の王子-</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">遊・演・体</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="5th2_98">
+			<rom type="file" offset="-1">mdznplay.com</rom>
+			<rom type="file" offset="-1">MDZN.COM</rom>
+			<rom type="file" offset="6" >5TH_EFF.EFZ</rom>
+			<rom type="file" offset="11">5TH2_01.MDZ</rom>
+			<rom type="file" offset="12">5TH2_02.MDZ</rom>
+			<rom type="file" offset="13">5TH2_03.MDZ</rom>
+			<rom type="file" offset="14">5TH2_04.MDZ</rom>
+			<rom type="file" offset="15">5TH2_05.MDZ</rom>
+			<rom type="file" offset="16">5TH2_06.MDZ</rom>
+			<rom type="file" offset="17">5TH2_07.MDZ</rom>
+			<rom type="file" offset="18">5TH2_08.MDZ</rom>
+			<rom type="file" offset="19">5TH2_09.MDZ</rom>
+			<rom type="file" offset="20">5TH2_10.MDZ</rom>
+			<rom type="file" offset="21">5TH2_11.MDZ</rom>
+			<rom type="file" offset="22">5TH2_12.MDZ</rom>
+			<rom type="file" offset="23">5TH2_13.MDZ</rom>
+			<rom type="file" offset="24">5TH2_14.MDZ</rom>
+			<rom type="file" offset="25">5TH2_15.MDZ</rom>
+			<rom type="file" offset="26">5TH2_16.MDZ</rom>
+			<rom type="file" offset="27">5TH2_17.MDZ</rom>
+			<rom type="file" offset="28">5TH2_18.MDZ</rom>
+			<rom type="file" offset="29">5TH2_19.MDZ</rom>
+			<rom type="file" offset="30">5TH2_20.MDZ</rom>
+			<rom type="file" offset="31">5TH2_21.MDZ</rom>
+			<rom type="file" offset="32">5TH2_22.MDZ</rom>
+			<rom type="file" offset="33">5TH2_23.MDZ</rom>
+			<rom type="file" offset="34">5TH2_24.MDZ</rom>
+			<rom type="file" offset="35">5TH2_25.MDZ</rom>
+			<rom type="file" offset="36">5TH2_26.MDZ</rom>
+			<rom type="file" offset="37">5TH2_27.MDZ</rom>
+			<rom type="shell" offset="0">mdzn S -#8 -E8</rom>
+			<rom type="shell" offset="0">mdznplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">5TH2_01.MDZ : オープニング(main theme)</title>
+			<title code="12">5TH2_02.MDZ : ジャングル</title>
+			<title code="13">5TH2_03.MDZ : 山</title>
+			<title code="14">5TH2_04.MDZ : 南極</title>
+			<title code="15">5TH2_05.MDZ : 雲</title>
+			<title code="16">5TH2_06.MDZ : 天空</title>
+			<title code="17">5TH2_07.MDZ : 魔の洞窟のテーマ</title>
+			<title code="18">5TH2_08.MDZ : エンディング</title>
+			<title code="19">5TH2_09.MDZ : 町のテーマ(reprise)</title>
+			<title code="20">5TH2_10.MDZ : 呪われた町のテーマ</title>
+			<title code="21">5TH2_11.MDZ : ウィルダネス</title>
+			<title code="22">5TH2_12.MDZ : 洞窟のテーマ(reprise)</title>
+			<title code="23">5TH2_13.MDZ : 室内のテーマ(reprise)</title>
+			<title code="24">5TH2_14.MDZ : 第二部冒頭イベント</title>
+			<title code="25">5TH2_15.MDZ : 第三部冒頭イベント</title>
+			<title code="26">5TH2_16.MDZ : 第四部冒頭イベント</title>
+			<title code="27">5TH2_17.MDZ : 第五部冒頭イベント</title>
+			<title code="28">5TH2_18.MDZ : 第六部冒頭イベント</title>
+			<title code="29">5TH2_19.MDZ : 戦闘</title>
+			<title code="30">5TH2_20.MDZ : 最後の戦闘</title>
+			<title code="31">5TH2_21.MDZ : 店のテーマ(reprise)</title>
+			<title code="32">5TH2_22.MDZ : 教会</title>
+			<title code="33">5TH2_23.MDZ : 死んだ時</title>
+			<title code="34">5TH2_24.MDZ : 光のテーマ(reprise)</title>
+			<title code="35">5TH2_25.MDZ : 町のテーマ(new)</title>
+			<title code="36">5TH2_26.MDZ : 洞窟のテーマ(new)</title>
+			<title code="37">5TH2_27.MDZ : 室内のテーマ(new)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 遊演体空想遊戯 Vol.2 那由他の世界</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">遊・演・体</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="nayuta_98">
+			<rom type="file" offset="-1">mdznplay.com</rom>
+			<rom type="file" offset="-1">MDZN.COM</rom>
+			<rom type="file" offset="6" >DM_EFF.EFZ</rom>
+			<rom type="file" offset="10">DM_BGM_0.MDZ</rom>
+			<rom type="file" offset="11">DM_BGM_1.MDZ</rom>
+			<rom type="file" offset="12">DM_BGM_2.MDZ</rom>
+			<rom type="file" offset="13">DM_BGM_3.MDZ</rom>
+			<rom type="file" offset="14">DM_BGM_4.MDZ</rom>
+			<rom type="file" offset="15">DM_BGM_5.MDZ</rom>
+			<rom type="shell" offset="0">mdzn S</rom>
+			<rom type="shell" offset="0">mdznplay</rom>
+		</romlist>
+		<titlelist>
+			<title code="10">DM_BGM_0.MDZ : BGM1</title>
+			<title code="11">DM_BGM_1.MDZ : BGM2</title>
+			<title code="12">DM_BGM_2.MDZ : BGM3</title>
+			<title code="13">DM_BGM_3.MDZ : 夜桜ファイト</title>
+			<title code="14">DM_BGM_4.MDZ : 占い</title>
+			<title code="15">DM_BGM_5.MDZ : メニュー</title>
+		</titlelist>
+	</game>
+</gamelist>

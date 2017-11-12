@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+<game>
+<name>[SNES] X-Kaliber 2097 [Sword Maniac] / Hayato Matsuo, Hitoshi Sakimoto / 1994 (Fupac, Winds) Toshiba EMI</name>
+<driver type="spc">snes</driver>
+<driveralias type="SNES">toshibaemi</driveralias>
+<options>
+<option name="apu_mix" value="0x200"/>
+</options>
+<romlist archive="sdmc">
+<rom type="data" offset="0x01">sdmc-01.spc</rom>
+<rom type="data" offset="0x02">sdmc-02.spc</rom>
+<rom type="data" offset="0x03">sdmc-03.spc</rom>
+<rom type="data" offset="0x04">sdmc-04.spc</rom>
+<rom type="data" offset="0x05">sdmc-05.spc</rom>
+<rom type="data" offset="0x06">sdmc-06.spc</rom>
+<rom type="data" offset="0x07">sdmc-07.spc</rom>
+<rom type="data" offset="0x08">sdmc-08.spc</rom>
+<rom type="data" offset="0x09">sdmc-09.spc</rom>
+<rom type="data" offset="0x0a">sdmc-10.spc</rom>
+<rom type="data" offset="0x0b">sdmc-11.spc</rom>
+<rom type="data" offset="0x0c">sdmc-12.spc</rom>
+<rom type="data" offset="0x0d">sdmc-13.spc</rom>
+</romlist>
+<titlelist>
+<title code="0x01">Main Theme</title>
+<title code="0x02">Neo New York</title>
+<title code="0x03">Street</title>
+<title code="0x04">Scaffold</title>
+<title code="0x05">Sewer</title>
+<title code="0x06">Entrance Hall</title>
+<title code="0x07">Paradox</title>
+<title code="0x08">Story</title>
+<title code="0x09">Boss</title>
+<title code="0x0a">Stage Complete</title>
+<title code="0x0b">Last Boss</title>
+<title code="0x0c">Game Over</title>
+<title code="0x0d">Vs. Select</title>
+</titlelist>
+</game>
+
+</gamelist>

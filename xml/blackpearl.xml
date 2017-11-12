@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+<!-- 
+settings for hoot.ini
+
+sampling_rate=53267
+lpf=1
+lpf_order=1
+lpf_cutoff=8000
+-->
+<game>
+<name>[MD] Time Trax (Prototype) / Tim Follin, Dean Belfield / 1993 (Malibu Interactive) Black Pearl</name> 
+<driver type="timetrax">megadrive</driver>
+<driveralias type="MegaDrive">blackpearl</driveralias>
+<options> 
+<option name="opn_mix" value="0xCA"/> 
+<option name="ssg_mix" value="0x55"/> 
+<option name="dac_mix" value="0xCA"/>
+</options> 
+<romlist archive="timetrax"> 
+<rom type="code">timetrax.bin</rom>
+</romlist> 
+<titlelist> 
+<title code="0x00">Music 00</title>
+<title code="0x01">Music 01</title>
+<title code="0x02">Music 02</title>
+<title code="0x03">Music 03</title>
+<title code="0x04">Music 04</title>
+<title code="0x05">Music 05</title>
+</titlelist>
+</game>
+</gamelist>

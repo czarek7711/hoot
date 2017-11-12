@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //thinkingrabbit -->
+	<game>
+		<name>[PC-88] Soukoban Perfect (倉庫番Perfect)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">thinkingrabbit</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xe000"/>
+		</options>
+		<romlist archive="sbp">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">SBP.COM</rom>
+			<rom type="code" offset="0x484c">SBPVOICE.BIN</rom>
+			<rom type="bgm"  offset="0x00">SBPBGM0.BIN</rom>
+			<rom type="bgm"  offset="0x01">SBPBGM1.BIN</rom>
+			<rom type="bgm"  offset="0x02">SBPBGM2.BIN</rom>
+			<rom type="bgm"  offset="0x03">SBPBGM3.BIN</rom>
+			<rom type="bgm"  offset="0x04">SBPBGM4.BIN</rom>
+			<rom type="bgm"  offset="0x05">SBPBGM5.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">SBPBGM0.BIN</title>
+			<title code="0x01">SBPBGM1.BIN</title>
+			<title code="0x02">SBPBGM2.BIN</title>
+			<title code="0x03">SBPBGM3.BIN</title>
+			<title code="0x04">SBPBGM4.BIN</title>
+			<title code="0x05">SBPBGM5.BIN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] The Man I Love (ザ マン アイ ラブ)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">thinkingrabbit</driveralias>
+		<romlist archive="theman">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x2000">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #01</title>
+			<title code="0x01">BGM #02</title>
+			<title code="0x02">BGM #03</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Soukoban Perfect (倉庫番Perfect)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">thinkingrabbit</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opn_mix"  value="0x0c0"/>
+			<option name="fm_mix"   value="19"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="sbp98">
+			<rom type="file" offset="-1">mmd2.com</rom>
+			<rom type="file" offset="-1">MMD2.SYS</rom>
+			<rom type="file" offset="0x05">SBPVOICE.VOI</rom>
+			<rom type="file" offset="0x10">SBPBGM0.BGM</rom>
+			<rom type="file" offset="0x11">SBPBGM1.BGM</rom>
+			<rom type="file" offset="0x12">SBPBGM2.BGM</rom>
+			<rom type="file" offset="0x13">SBPBGM3.BGM</rom>
+			<rom type="file" offset="0x14">SBPBGM4.BGM</rom>
+			<rom type="file" offset="0x15">SBPBGM5.BGM</rom>
+			<rom type="device" offset="0">mmd2.sys 5000</rom>
+			<rom type="shell"  offset="0">mmd2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x050010">SBPBGM0.BGM</title>
+			<title code="0x050011">SBPBGM1.BGM</title>
+			<title code="0x050012">SBPBGM2.BGM</title>
+			<title code="0x050013">SBPBGM3.BGM</title>
+			<title code="0x050014">SBPBGM4.BGM</title>
+			<title code="0x050015">SBPBGM5.BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Douke Shisatsujin Jiken (道化師殺人事件)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">thinkingrabbit</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="dsj68snd">
+			<rom type="code">dsj68snd.bin</rom>
+			<rom type="code" offset="0x0067c0">01.bin</rom>
+			<rom type="code" offset="0x13e000">05.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] The Man I Love (ザ マン アイ ラブ)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">thinkingrabbit</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="tmil68snd">
+			<rom type="code">tmil68snd.bin</rom>
+			<rom type="code" offset="0xed000">03.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Casablanca Ni Ai Wo Satsujinsha Ha Jikuu Wo Koete / Hideya Nagata / 1988 Thinking Rabbit</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">thinkingrabbit</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="casa68snd">
+			<rom type="code">tmil68snd.bin</rom>
+			<rom type="code" offset="0xed000">03.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+		</titlelist>
+	</game>
+</gamelist>

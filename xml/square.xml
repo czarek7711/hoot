@@ -1,0 +1,2530 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //SQUARE -->
+	<game>
+		<name>[PC-8801] WILL - THE DEATH TRAP II -</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">SQUARE</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="will">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0800">PROG</rom>
+			<rom type="code" offset="0xc000">MUSIC</rom>
+			<rom type="bgm" offset="0x00">DUMMY</rom>
+			<rom type="bgm" offset="0x01">DUMMY</rom>
+			<rom type="bgm" offset="0x02">DUMMY</rom>
+			<rom type="bgm" offset="0x03">DUMMY</rom>
+			<rom type="bgm" offset="0x04">DUMMY</rom>
+			<rom type="bgm" offset="0x05">DUMMY</rom>
+			<rom type="bgm" offset="0x06">DUMMY</rom>
+			<rom type="bgm" offset="0x07">DUMMY</rom>
+			<rom type="bgm" offset="0x08">DUMMY</rom>
+			<rom type="bgm" offset="0x09">DUMMY</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">STOP</title>
+			<title code="0x09">MAIN THEME</title>
+			<title code="0x01">EFFECT #1</title>
+			<title code="0x02">EFFECT #2</title>
+			<title code="0x03">EFFECT #3</title>
+			<title code="0x04">EFFECT #4</title>
+			<title code="0x05">EFFECT #5</title>
+			<title code="0x06">EFFECT #6</title>
+			<title code="0x07">EFFECT #7</title>
+			<title code="0x08">EFFECT #8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] CRUISE CHASER BLASSTY</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">SQUARE</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xd800"/>
+			<option name="mdata_size" value="0x0b00"/>
+		</options>
+		<romlist archive="blassty">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xe300">VOICE</rom>
+			<rom type="code" offset="0xe700">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">EFFECT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000001">MUS01 : BLASSTY MAIN THEME</title>
+			<title code="0x00000003">MUS03 : ANTHEM</title>
+			<title code="0x00000004">MUS04 : SPACE</title>
+			<title code="0x00000005">MUS05 : In The Maze</title>
+			<title code="0x00000000">MUS00 : ENDING</title>
+			<title code="0x00000002">MUS02 : FINALE</title>
+			<title code="0x00000006">EFFECT #0</title>
+			<title code="0x01000006">EFFECT #1</title>
+			<title code="0x02000006">EFFECT #2</title>
+			<title code="0x03000006">EFFECT #3</title>
+			<title code="0x04000006">EFFECT #4</title>
+			<title code="0x05000006">EFFECT #5</title>
+			<title code="0x06000006">EFFECT #6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] ALPHA</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">SQUARE</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc300"/>
+			<option name="mdata_size" value="0x1400"/>
+		</options>
+		<romlist archive="alpha">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0800">PROG</rom>
+			<rom type="code" offset="0xdf00">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x07">MUS07 : MAIN THEME</title>
+			<title code="0x00">MUS00 : EFFECT #0</title>
+			<title code="0x01">MUS01 : EFFECT #1</title>
+			<title code="0x02">MUS02 : EFFECT #2</title>
+			<title code="0x03">MUS03 : EFFECT #3</title>
+			<title code="0x04">MUS04 : EFFECT #4</title>
+			<title code="0x05">MUS05 : EFFECT #5</title>
+			<title code="0x06">MUS06 : EFFECT #6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] GENESIS</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">SQUARE</driveralias>
+		<romlist archive="genesis88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xb200">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Main Theme</title>
+			<title code="0x02">Map</title>
+			<title code="0x03">Shop</title>
+			<title code="0x04">Satan</title>
+			<title code="0x05">Battle</title>
+			<title code="0x06">Church</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] KING' KNIGHT Special</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">SQUARE</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x0100"/>
+			<option name="mdata_size" value="0x7000"/>
+			<option name="mfile_size" value="0x7000"/>
+		</options>
+		<romlist archive="kgknight">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">KMAIN.COM</rom>
+			<rom type="bgm" offset="0x00">KMAIN.COM</rom>
+			<rom type="bgm" offset="0x01">CMAIN.COM</rom>
+			<rom type="bgm" offset="0x02">DMAIN.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">KMAIN.COM : 00</title>
+			<title code="0x01000000">KMAIN.COM : 01</title>
+			<title code="0x02000000">KMAIN.COM : 02</title>
+			<title code="0x03000000">KMAIN.COM : 03</title>
+			<title code="0x04000000">KMAIN.COM : 04</title>
+			<title code="0x05000000">KMAIN.COM : 05</title>
+			<title code="0x00000001">CMAIN.COM : 00</title>
+			<title code="0x01000001">CMAIN.COM : 01</title>
+			<title code="0x02000001">CMAIN.COM : 02</title>
+			<title code="0x03000001">CMAIN.COM : 03</title>
+			<title code="0x04000001">CMAIN.COM : 04</title>
+			<title code="0x00000002">DMAIN.COM : 00</title>
+			<title code="0x01000002">DMAIN.COM : 01</title>
+			<title code="0x02000002">DMAIN.COM : 02</title>
+			<title code="0x03000002">DMAIN.COM : 03</title>
+			<title code="0x04000002">DMAIN.COM : 04</title>
+			<title code="0x05000002">DMAIN.COM : 05</title>
+			<title code="0x06000002">DMAIN.COM : 06</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] THEXDER</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">SQUARE</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x0100"/>
+			<option name="mdata_size" value="0xbb00"/>
+			<option name="mfile_size" value="0xbb00"/>
+		</options>
+		<romlist archive="x1thexder">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">DEMO</rom>
+			<rom type="bgm" offset="0x00">DEMO</rom>
+			<rom type="bgm" offset="0x01">ENDING</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80000000">THEXDER / H.GODAI</title>
+			<title code="0x00000001">MOON LIGHT SONATA / BEETHOVEN</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] CRUISE CHASER BLASSTY</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">SQUARE</driveralias>
+		<romlist archive="x1blassty">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xd000">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BLASSTY MAIN THEME</title>
+			<title code="0x02">ANTHEM</title>
+			<title code="0x03">SPACE</title>
+			<title code="0x04">In The Maze</title>
+			<title code="0x00">ENDING</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] WILL - THE DEATH TRAP ][ -</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">SQUARE</driveralias>
+		<romlist archive="x1will">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0xc000">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MAIN THEME</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] ALPHA</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">SQUARE</driveralias>
+		<romlist archive="x1alpha">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0xb000">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MAIN THEME</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] KING' KNIGHT Special(OPM)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="SHARP X1">SQUARE</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x0100"/>
+			<option name="mdata_size" value="0x0a00"/>
+			<option name="init_pc"    value="0xf000"/>
+		</options>
+		<romlist archive="x1kingknight">
+			<rom type="code" offset="0x0b00">PROG</rom>
+			<rom type="code" offset="0x6000">LOGO</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">LOGO     : スクエアロゴ</title>
+			<title code="0x00000001">MUS00-00 : フィールドスタート</title>
+			<title code="0x01000001">MUS00-01 : フィールド</title>
+			<title code="0x02000001">MUS00-02 : ゲームオーバー</title>
+			<title code="0x03000001">MUS00-03 : フィールドクリア</title>
+			<title code="0x00000002">MUS01-00 : キャラクターセレクト</title>
+			<title code="0x01000002">MUS01-01 : ゲームオーバー</title>
+			<title code="0x02000002">MUS01-02 : フィールドクリア</title>
+			<title code="0x03000002">MUS01-03 : バッドエンド</title>
+			<title code="0x00000003">MUS02-00 : イザンデ城スタート</title>
+			<title code="0x01000003">MUS02-01 : イザンデ城1</title>
+			<title code="0x02000003">MUS02-02 : イザンデ城2</title>
+			<title code="0x03000003">MUS02-03 : ボス登場</title>
+			<title code="0x04000003">MUS02-04 : エンディング</title>
+			<title code="0x00000004">MUS03-00 : リーン城</title>
+			<title code="0x01000004">MUS03-01 : カーンの洞窟</title>
+			<title code="0x02000004">MUS03-02 : ベスの塔</title>
+			<title code="0x03000004">MUS03-03 : シルナスの街</title>
+			<title code="0x04000004">MUS03-04 : ヴァルの迷路</title>
+			<title code="0x05000004">MUS03-05 : タイロンの神殿</title>
+			<title code="0x00000005">MUS04-00 : ボルタクスの森</title>
+			<title code="0x01000005">MUS04-01 : ザックの谷</title>
+			<title code="0x02000005">MUS04-02 : グールの湖</title>
+			<title code="0x03000005">MUS04-03 : ジブジの幽霊船</title>
+			<title code="0x04000005">MUS04-04 : エール島</title>
+			<title code="0x05000005">MUS04-05 : ベルフォルンの巣</title>
+			<title code="0x00000006">MUS05-00 : リーン城</title>
+			<title code="0x01000006">MUS05-01 : カーンの洞窟</title>
+			<title code="0x02000006">MUS05-02 : ベスの塔</title>
+			<title code="0x03000006">MUS05-03 : ゲームオーバー</title>
+			<title code="0x00000007">MUS06-00 : シルナスの街</title>
+			<title code="0x01000007">MUS06-01 : ヴァルの迷路</title>
+			<title code="0x02000007">MUS06-02 : タイロンの神殿</title>
+			<title code="0x03000007">MUS06-03 : ゲームオーバー</title>
+			<title code="0x00000008">MUS07-00 : ボルタクスの森</title>
+			<title code="0x01000008">MUS07-01 : ザックの谷</title>
+			<title code="0x02000008">MUS07-02 : グールの湖</title>
+			<title code="0x03000008">MUS07-03 : ゲームオーバー</title>
+			<title code="0x00000009">MUS08-00 : ジブジの幽霊船</title>
+			<title code="0x01000009">MUS08-01 : エール島</title>
+			<title code="0x02000009">MUS08-02 : ベルフォルンの巣</title>
+			<title code="0x03000009">MUS08-03 : ゲームオーバー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] KING' KNIGHT Special(PSG)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="SHARP X1">SQUARE</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x0100"/>
+			<option name="mdata_size" value="0x0a00"/>
+			<option name="init_pc"    value="0xf000"/>
+		</options>
+		<romlist archive="x1kingknight">
+			<rom type="code" offset="0x0b00">PROG</rom>
+			<rom type="code" offset="0x6000">LOGO</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">LOGO     : スクエアロゴ</title>
+			<title code="0x00000001">MUS00-00 : フィールドスタート</title>
+			<title code="0x01000001">MUS00-01 : フィールド</title>
+			<title code="0x02000001">MUS00-02 : ゲームオーバー</title>
+			<title code="0x03000001">MUS00-03 : フィールドクリア</title>
+			<title code="0x00000002">MUS01-00 : キャラクターセレクト</title>
+			<title code="0x01000002">MUS01-01 : ゲームオーバー</title>
+			<title code="0x02000002">MUS01-02 : フィールドクリア</title>
+			<title code="0x03000002">MUS01-03 : バッドエンド</title>
+			<title code="0x00000003">MUS02-00 : イザンデ城スタート</title>
+			<title code="0x01000003">MUS02-01 : イザンデ城1</title>
+			<title code="0x02000003">MUS02-02 : イザンデ城2</title>
+			<title code="0x03000003">MUS02-03 : ボス登場</title>
+			<title code="0x04000003">MUS02-04 : エンディング</title>
+			<title code="0x00000004">MUS03-00 : リーン城</title>
+			<title code="0x01000004">MUS03-01 : カーンの洞窟</title>
+			<title code="0x02000004">MUS03-02 : ベスの塔</title>
+			<title code="0x03000004">MUS03-03 : シルナスの街</title>
+			<title code="0x04000004">MUS03-04 : ヴァルの迷路</title>
+			<title code="0x05000004">MUS03-05 : タイロンの神殿</title>
+			<title code="0x00000005">MUS04-00 : ボルタクスの森</title>
+			<title code="0x01000005">MUS04-01 : ザックの谷</title>
+			<title code="0x02000005">MUS04-02 : グールの湖</title>
+			<title code="0x03000005">MUS04-03 : ジブジの幽霊船</title>
+			<title code="0x04000005">MUS04-04 : エール島</title>
+			<title code="0x05000005">MUS04-05 : ベルフォルンの巣</title>
+			<title code="0x00000006">MUS05-00 : リーン城</title>
+			<title code="0x01000006">MUS05-01 : カーンの洞窟</title>
+			<title code="0x02000006">MUS05-02 : ベスの塔</title>
+			<title code="0x03000006">MUS05-03 : ゲームオーバー</title>
+			<title code="0x00000007">MUS06-00 : シルナスの街</title>
+			<title code="0x01000007">MUS06-01 : ヴァルの迷路</title>
+			<title code="0x02000007">MUS06-02 : タイロンの神殿</title>
+			<title code="0x03000007">MUS06-03 : ゲームオーバー</title>
+			<title code="0x00000008">MUS07-00 : ボルタクスの森</title>
+			<title code="0x01000008">MUS07-01 : ザックの谷</title>
+			<title code="0x02000008">MUS07-02 : グールの湖</title>
+			<title code="0x03000008">MUS07-03 : ゲームオーバー</title>
+			<title code="0x00000009">MUS08-00 : ジブジの幽霊船</title>
+			<title code="0x01000009">MUS08-01 : エール島</title>
+			<title code="0x02000009">MUS08-02 : ベルフォルンの巣</title>
+			<title code="0x03000009">MUS08-03 : ゲームオーバー</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[FM-7] ALPHA(PSG)</name>
+		<driver type="generic">fm7</driver>
+		<driveralias type="FUJITSU FM-7">SQUARE</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0000"/>
+		</options>
+		<romlist archive="alpha_fm7">
+			<rom type="code" offset="0x0000">PATCH.BIN</rom>
+			<rom type="code" offset="0x2000">DRIVER.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">MAIN THEME</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[FM-7] ALPHA(OPN)</name>
+		<driver type="generic">fm77av</driver>
+		<driveralias type="FUJITSU FM-7">SQUARE</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0000"/>
+		</options>
+		<romlist archive="alpha_fm7">
+			<rom type="code" offset="0x0000">PATCH.BIN</rom>
+			<rom type="code" offset="0x2000">DRIVER.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">MAIN THEME</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[FM-7] WILL - THE DEATH TRAP II -</name>
+		<driver type="generic">fm7</driver>
+		<driveralias type="FUJITSU FM-7">SQUARE</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0000"/>
+		</options>
+		<romlist archive="will_fm7">
+			<rom type="code" offset="0x0000">PATCH.BIN</rom>
+			<rom type="code" offset="0x6600">DRIVER.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">MAIN THEME</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Final Fantasy / Nobuo Uematsu / 1989 (Square) Microcabin [FM-Pac]</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">square</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="ff1_msx">
+			<rom type="code">Final Fantasy (1989)(Microcabin, Square).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Prelude</title>
+			<title code="0x01">Opening Theme</title>
+			<title code="0x02">Cornelia Castle</title>
+			<title code="0x03">Main Theme</title>
+			<title code="0x04">Temple of Chaos</title>
+			<title code="0x05">Matoya's Cave</title>
+			<title code="0x06">Town</title>
+			<title code="0x07">Shop</title>
+			<title code="0x08">Ship</title>
+			<title code="0x09">Sunken Shrine</title>
+			<title code="0x0A">Dungeon</title>
+			<title code="0x0B">Menu Screen</title>
+			<title code="0x0C">Airship</title>
+			<title code="0x0D">Gurgu Volcano</title>
+			<title code="0x0E">Floating Castle</title>
+			<title code="0x0F">Battle Theme</title>
+			<title code="0x10">Victory</title>
+			<title code="0x11">Ending Theme</title>
+			<title code="0x12">Dead Music</title>
+			<title code="0x13">Save</title>
+			<title code="0x14">Special Event</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Final Fantasy / Nobuo Uematsu / 1989 (Square) Microcabin [PSG]</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">square</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="ff1_msx">
+			<rom type="code">Final Fantasy (1989)(Microcabin, Square).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x80">プレリュード</title>
+			<title code="0x81">オープニング・テーマ</title>
+			<title code="0x82">コーネリア城</title>
+			<title code="0x83">メイン・テーマ</title>
+			<title code="0x84">カオスの神殿</title>
+			<title code="0x85">マトーヤの洞窟</title>
+			<title code="0x86">街</title>
+			<title code="0x87">店</title>
+			<title code="0x88">船</title>
+			<title code="0x89">海底神殿</title>
+			<title code="0x8A">ダンジョン</title>
+			<title code="0x8B">メニュー画面</title>
+			<title code="0x8C">飛空船</title>
+			<title code="0x8D">グルグ火山</title>
+			<title code="0x8E">浮遊城</title>
+			<title code="0x8F">戦闘シーン</title>
+			<title code="0x90">勝利</title>
+			<title code="0x91">エンディング・テーマ</title>
+			<title code="0x92">デッドミュージック</title>
+			<title code="0x93">セーブミュージック</title>
+			<title code="0x94">ファンファーレ</title>
+		</titlelist>
+	</game>
+	<game>
+	<name>[SNES] Chrono Trigger / Yasunori Mitsuda, Nobuo Uematsu / 1995 Square</name>
+	<driver type="spc">snes</driver>
+	<driveralias type="SNES">square</driveralias>
+<options>
+
+</options>
+<romlist archive="chronotrigger">
+<rom type="data" offset="0x01">ct-101.spc</rom>
+<rom type="data" offset="0x02">ct-102a.spc</rom>
+<rom type="data" offset="0x03">ct-102b.spc</rom>
+<rom type="data" offset="0x04">ct-103.spc</rom>
+<rom type="data" offset="0x05">ct-104.spc</rom>
+<rom type="data" offset="0x06">ct-105.spc</rom>
+<rom type="data" offset="0x07">ct-106.spc</rom>
+<rom type="data" offset="0x08">ct-107.spc</rom>
+<rom type="data" offset="0x09">ct-108.spc</rom>
+<rom type="data" offset="0x0a">ct-109.spc</rom>
+<rom type="data" offset="0x0b">ct-110.spc</rom>
+<rom type="data" offset="0x0c">ct-111.spc</rom>
+<rom type="data" offset="0x0d">ct-112.spc</rom>
+<rom type="data" offset="0x0e">ct-113.spc</rom>
+<rom type="data" offset="0x0f">ct-114.spc</rom>
+<rom type="data" offset="0x10">ct-115.spc</rom>
+<rom type="data" offset="0x11">ct-116.spc</rom>
+<rom type="data" offset="0x12">ct-117.spc</rom>
+<rom type="data" offset="0x13">ct-118.spc</rom>
+<rom type="data" offset="0x14">ct-119.spc</rom>
+<rom type="data" offset="0x15">ct-120.spc</rom>
+<rom type="data" offset="0x16">ct-121.spc</rom>
+<rom type="data" offset="0x17">ct-122a.spc</rom>
+<rom type="data" offset="0x18">ct-122b.spc</rom>
+<rom type="data" offset="0x19">ct-123.spc</rom>
+<rom type="data" offset="0x1a">ct-201.spc</rom>
+<rom type="data" offset="0x1b">ct-202.spc</rom>
+<rom type="data" offset="0x1c">ct-203.spc</rom>
+<rom type="data" offset="0x1d">ct-204a.spc</rom>
+<rom type="data" offset="0x1e">ct-204b.spc</rom>
+<rom type="data" offset="0x1f">ct-204c.spc</rom>
+<rom type="data" offset="0x20">ct-205a.spc</rom>
+<rom type="data" offset="0x21">ct-205b.spc</rom>
+<rom type="data" offset="0x22">ct-206.spc</rom>
+<rom type="data" offset="0x23">ct-207.spc</rom>
+<rom type="data" offset="0x24">ct-208.spc</rom>
+<rom type="data" offset="0x25">ct-209.spc</rom>
+<rom type="data" offset="0x26">ct-210.spc</rom>
+<rom type="data" offset="0x27">ct-211.spc</rom>
+<rom type="data" offset="0x28">ct-212.spc</rom>
+<rom type="data" offset="0x29">ct-213.spc</rom>
+<rom type="data" offset="0x2a">ct-214.spc</rom>
+<rom type="data" offset="0x2b">ct-215.spc</rom>
+<rom type="data" offset="0x2c">ct-216b.spc</rom>
+<rom type="data" offset="0x2d">ct-217.spc</rom>
+<rom type="data" offset="0x2e">ct-218.spc</rom>
+<rom type="data" offset="0x2f">ct-219.spc</rom>
+<rom type="data" offset="0x30">ct-220.spc</rom>
+<rom type="data" offset="0x31">ct-221.spc</rom>
+<rom type="data" offset="0x32">ct-222.spc</rom>
+<rom type="data" offset="0x33">ct-223.spc</rom>
+<rom type="data" offset="0x34">ct-224.spc</rom>
+<rom type="data" offset="0x35">ct-301.spc</rom>
+<rom type="data" offset="0x36">ct-302.spc</rom>
+<rom type="data" offset="0x37">ct-303.spc</rom>
+<rom type="data" offset="0x38">ct-304.spc</rom>
+<rom type="data" offset="0x39">ct-305.spc</rom>
+<rom type="data" offset="0x3a">ct-306.spc</rom>
+<rom type="data" offset="0x3b">ct-307.spc</rom>
+<rom type="data" offset="0x3c">ct-308.spc</rom>
+<rom type="data" offset="0x3d">ct-309.spc</rom>
+<rom type="data" offset="0x3e">ct-310.spc</rom>
+<rom type="data" offset="0x3f">ct-311.spc</rom>
+<rom type="data" offset="0x40">ct-312.spc</rom>
+<rom type="data" offset="0x41">ct-313.spc</rom>
+<rom type="data" offset="0x42">ct-314.spc</rom>
+<rom type="data" offset="0x43">ct-315.spc</rom>
+<rom type="data" offset="0x44">ct-316.spc</rom>
+<rom type="data" offset="0x45">ct-317.spc</rom>
+<rom type="data" offset="0x46">ct-b01.spc</rom>
+<rom type="data" offset="0x47">ct-s01.spc</rom>
+<rom type="data" offset="0x48">ct-s02.spc</rom>
+<rom type="data" offset="0x49">ct-s03.spc</rom>
+<rom type="data" offset="0x4a">ct-s04.spc</rom>
+<rom type="data" offset="0x4b">ct-s12.spc</rom>
+<rom type="data" offset="0x4c">ct-s15a.spc</rom>
+<rom type="data" offset="0x4d">ct-s15b.spc</rom>
+<rom type="data" offset="0x4e">ct-s17.spc</rom>
+<rom type="data" offset="0x4f">ct-v01.spc</rom>
+<rom type="data" offset="0x50">ct-v02.spc</rom>
+</romlist> 
+<titlelist>
+<title code="0x01">Presentiment</title>
+<title code="0x02">Chrono Trigger</title>
+<title code="0x03">Chrono Trigger (looped)</title>
+<title code="0x04">Morning Sunlight</title>
+<title code="0x05">Peaceful Days</title>
+<title code="0x06">Memories of Green</title>
+<title code="0x07">Guardia Millennial Fair</title>
+<title code="0x08">Gato's Song</title>
+<title code="0x09">A Strange Happening</title>
+<title code="0x0a">Wind Scene</title>
+<title code="0x0b">Goodnight</title>
+<title code="0x0c">Secret of the Forest</title>
+<title code="0x0d">Battle 1</title>
+<title code="0x0e">Courage and Pride</title>
+<title code="0x0f">Huh?!</title>
+<title code="0x10">Manoria Cathedral</title>
+<title code="0x11">A Prayer to the Road that Leads</title>
+<title code="0x12">Silent Light</title>
+<title code="0x13">Boss Battle 1</title>
+<title code="0x14">Frog's Theme</title>
+<title code="0x15">Fanfare 1</title>
+<title code="0x16">Kingdom Trial</title>
+<title code="0x17">The Hidden Truth</title>
+<title code="0x18">The Hidden Truth (looped)</title>
+<title code="0x19">A Shot of Crisis</title>
+<title code="0x1a">Ruined World</title>
+<title code="0x1b">Mystery of the Past</title>
+<title code="0x1c">Lab 16's Ruin</title>
+<title code="0x1d">People Without Hope</title>
+<title code="0x1e">People Without Hope (variant 1)</title>
+<title code="0x1f">People Without Hope (variant 2)</title>
+<title code="0x20">Lavos' Theme</title>
+<title code="0x21">Lavos' Theme (extended)</title>
+<title code="0x22">The Day the World Revived</title>
+<title code="0x23">Robo Gang Johnny</title>
+<title code="0x24">Bike Chase</title>
+<title code="0x25">Robo's Theme</title>
+<title code="0x26">Remains of the Factory</title>
+<title code="0x27">Battle 2</title>
+<title code="0x28">Fanfare 2</title>
+<title code="0x29">Brink of Time</title>
+<title code="0x2a">Delightful Spekkio</title>
+<title code="0x2b">Fanfare 3</title>
+<title code="0x2c">Underground Sewer (no water efx)</title>
+<title code="0x2d">Boss Battle 2</title>
+<title code="0x2e">Primitive Mountain</title>
+<title code="0x2f">Ayla's Theme</title>
+<title code="0x30">Rhythm of Wind, Sky and Earth</title>
+<title code="0x31">Burn! Bobonga!</title>
+<title code="0x32">Magus' Castle</title>
+<title code="0x33">Confusing Melody</title>
+<title code="0x34">Battle with Magus</title>
+<title code="0x35">Singing Mountain</title>
+<title code="0x36">Tyran Castle</title>
+<title code="0x37">At the Bottom of Night</title>
+<title code="0x38">Corridors of Time</title>
+<title code="0x39">Zeal Palace</title>
+<title code="0x3a">Schala's Theme</title>
+<title code="0x3b">Sealed Door</title>
+<title code="0x3c">Undersea Palace</title>
+<title code="0x3d">Far Off Promise</title>
+<title code="0x3e">Wings That Cross Time</title>
+<title code="0x3f">Black Omen</title>
+<title code="0x40">Determination</title>
+<title code="0x41">World Revolution</title>
+<title code="0x42">Last Battle</title>
+<title code="0x43">First Festival of Stars</title>
+<title code="0x44">Epilogue ~ To Good Friends</title>
+<title code="0x45">To Far Away Times</title>
+<title code="0x46">Rat-a-Tat-Tat It's ... Mitsuda</title>
+<title code="0x47">Time Vortex</title>
+<title code="0x48">Quiet Beach</title>
+<title code="0x49">Leene's Bell</title>
+<title code="0x4a">Truce Canyon</title>
+<title code="0x4b">Ocean Waves</title>
+<title code="0x4c">Lavos Stirs</title>
+<title code="0x4d">Lavos Stirs (faster)</title>
+<title code="0x4e">Voice of Lavos</title>
+<title code="0x4f">Ozzie Laugh</title>
+<title code="0x50">Ozzie Scream</title>
+</titlelist>
+</game>
+	<game>
+		<name>[SNES] Final Fantasy VI / Nobuo Uematsu / 1994 Square</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">square</driveralias>
+		<options>
+			
+		</options>
+		<romlist archive="ff6">
+			<rom type="data" offset="0x00">101a Opening Theme (part 1).spc</rom>
+			<rom type="data" offset="0x01">101b Opening Theme (part 2).spc</rom>
+			<rom type="data" offset="0x02">101c Opening Theme (part 3).spc</rom>
+			<rom type="data" offset="0x03">102 The Mines of Narshe.spc</rom>
+			<rom type="data" offset="0x04">103 Awakening.spc</rom>
+			<rom type="data" offset="0x05">104 Locke.spc</rom>
+			<rom type="data" offset="0x06">105 Battle Theme.spc</rom>
+			<rom type="data" offset="0x07">106 Fanfare.spc</rom>
+			<rom type="data" offset="0x08">107 Edgar and Sabin.spc</rom>
+			<rom type="data" offset="0x09">108 Kefka.spc</rom>
+			<rom type="data" offset="0x0a">109 Mt. Koltz.spc</rom>
+			<rom type="data" offset="0x0b">110 Returners.spc</rom>
+			<rom type="data" offset="0x0c">111 Shadow.spc</rom>
+			<rom type="data" offset="0x0d">112 Troops March on.spc</rom>
+			<rom type="data" offset="0x0e">113 Cyan.spc</rom>
+			<rom type="data" offset="0x0f">114 The Unforgiven.spc</rom>
+			<rom type="data" offset="0x10">115 The Phantom Forest.spc</rom>
+			<rom type="data" offset="0x11">116 The Phantom Train.spc</rom>
+			<rom type="data" offset="0x12">117 Wild West.spc</rom>
+			<rom type="data" offset="0x13">118 Gau.spc</rom>
+			<rom type="data" offset="0x14">119 The Serpent Trench.spc</rom>
+			<rom type="data" offset="0x15">120 Kids Run Through the City.spc</rom>
+			<rom type="data" offset="0x16">121 Under Martial Law.spc</rom>
+			<rom type="data" offset="0x17">122 Celes.spc</rom>
+			<rom type="data" offset="0x18">123 Save Them!.spc</rom>
+			<rom type="data" offset="0x19">124 The Decisive Battle.spc</rom>
+			<rom type="data" offset="0x1a">125 Metamorphasis.spc</rom>
+			<rom type="data" offset="0x1b">201 Terra.spc</rom>
+			<rom type="data" offset="0x1c">202 Coin Song.spc</rom>
+			<rom type="data" offset="0x1d">203 Techno de Chocobo.spc</rom>
+			<rom type="data" offset="0x1e">204 Forever Rachel!.spc</rom>
+			<rom type="data" offset="0x1f">205 Slam Shuffle.spc</rom>
+			<rom type="data" offset="0x20">206 Spinach Rag.spc</rom>
+			<rom type="data" offset="0x21">207a Overture (part 1).spc</rom>
+			<rom type="data" offset="0x22">207b Overture (part 2).spc</rom>
+			<rom type="data" offset="0x23">207c Overture (part 3).spc</rom>
+			<rom type="data" offset="0x24">208 Aria de Mezzo Carattere.spc</rom>
+			<rom type="data" offset="0x25">209a The Wedding Waltz-Duel (part 1).spc</rom>
+			<rom type="data" offset="0x26">209b The Wedding Waltz-Duel (part 2).spc</rom>
+			<rom type="data" offset="0x27">209c The Wedding Waltz-Duel (part 3).spc</rom>
+			<rom type="data" offset="0x28">209d The Wedding Waltz-Duel (part 4).spc</rom>
+			<rom type="data" offset="0x29">210a Grand Finale (part 1).spc</rom>
+			<rom type="data" offset="0x2a">c210b Grand Finale (part 2).spc</rom>
+			<rom type="data" offset="0x2b">211 Setzer.spc</rom>
+			<rom type="data" offset="0x2c">212 Johnny C. Bad.spc</rom>
+			<rom type="data" offset="0x2d">213 The Empire Gestahl.spc</rom>
+			<rom type="data" offset="0x2e">214 Devil's Lab.spc</rom>
+			<rom type="data" offset="0x2f">215 Blackjack.spc</rom>
+			<rom type="data" offset="0x30">216 ____.spc</rom>
+			<rom type="data" offset="0x31">217 Mog.spc</rom>
+			<rom type="data" offset="0x32">218 Strago.spc</rom>
+			<rom type="data" offset="0x33">219 Relm.spc</rom>
+			<rom type="data" offset="0x34">220 Another World of Beasts.spc</rom>
+			<rom type="data" offset="0x35">301 New Continent.spc</rom>
+			<rom type="data" offset="0x36">302 Catastrophe.spc</rom>
+			<rom type="data" offset="0x37">303 The Fierce Battle.spc</rom>
+			<rom type="data" offset="0x38">304 Rest in Peace.spc</rom>
+			<rom type="data" offset="0x39">305 Dark World.spc</rom>
+			<rom type="data" offset="0x3a">306 The Day After.spc</rom>
+			<rom type="data" offset="0x3b">307 Searching for Friends.spc</rom>
+			<rom type="data" offset="0x3c">308 Gogo.spc</rom>
+			<rom type="data" offset="0x3d">309 Epitaph.spc</rom>
+			<rom type="data" offset="0x3e">310 The Magic House.spc</rom>
+			<rom type="data" offset="0x3f">311 Umaro.spc</rom>
+			<rom type="data" offset="0x40">312 Fanatics.spc</rom>
+			<rom type="data" offset="0x41">313 Last Dungeon.spc</rom>
+			<rom type="data" offset="0x42">314a Dancing Mad (part 1).spc</rom>
+			<rom type="data" offset="0x43">314b Dancing Mad (part 2).spc</rom>
+			<rom type="data" offset="0x44">314c Dancing Mad (part 3).spc</rom>
+			<rom type="data" offset="0x45">314d Dancing Mad (part 4).spc</rom>
+			<rom type="data" offset="0x46">314e Dancing Mad (part 5).spc</rom>
+			<rom type="data" offset="0x47">315a Ending Theme (part 1).spc</rom>
+			<rom type="data" offset="0x48">315b Ending Theme (part 2).spc</rom>
+			<rom type="data" offset="0x49">316 The Prelude.spc</rom>
+			<rom type="data" offset="0x4a">999 Blazing Fire.spc</rom>
+			<rom type="data" offset="0x4b">999 Dancing Mad (Full).spc</rom>
+			<rom type="data" offset="0x4c">999 Good Night.spc</rom>
+			<rom type="data" offset="0x4d">999 Quiet Beach.spc</rom>
+			<rom type="data" offset="0x4e">999 Rumbling.spc</rom>
+			<rom type="data" offset="0x4f">999 Strong Wind.spc</rom>
+			<rom type="data" offset="0x50">999 Train.spc</rom>
+			<rom type="data" offset="0x51">999 Unused Fanfare.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">Opening Theme (part 1)</title>
+			<title code="0x01">Opening Theme (part 2)</title>
+			<title code="0x02">Opening Theme (part 3)</title>
+			<title code="0x03">The Mines of Narshe</title>
+			<title code="0x04">Awakening</title>
+			<title code="0x05">Locke</title>
+			<title code="0x06">Battle Theme</title>
+			<title code="0x07">Fanfare</title>
+			<title code="0x08">Edgar and Sabin</title>
+			<title code="0x09">Kefka</title>
+			<title code="0x0a">Mt. Koltz</title>
+			<title code="0x0b">Returners</title>
+			<title code="0x0c">Shadow</title>
+			<title code="0x0d">Troops March on</title>
+			<title code="0x0e">Cyan</title>
+			<title code="0x0f">The Unforgiven</title>
+			<title code="0x10">The Phantom Forest</title>
+			<title code="0x11">The Phantom Train</title>
+			<title code="0x12">Wild West</title>
+			<title code="0x13">Gau</title>
+			<title code="0x14">The Serpent Trench</title>
+			<title code="0x15">Kids Run Through the City</title>
+			<title code="0x16">Under Martial Law</title>
+			<title code="0x17">Celes</title>
+			<title code="0x18">Save Them!</title>
+			<title code="0x19">The Decisive Battle</title>
+			<title code="0x1a">Metamorphosis</title>
+			<title code="0x1b">Terra</title>
+			<title code="0x1c">Coin Song</title>
+			<title code="0x1d">Techno de Chocobo</title>
+			<title code="0x1e">Forever Rachel!</title>
+			<title code="0x1f">Slam Shuffle</title>
+			<title code="0x20">Spinach Rag</title>
+			<title code="0x21">Overture (part 1)</title>
+			<title code="0x22">Overture (part 2)</title>
+			<title code="0x23">Overture (part 3)</title>
+			<title code="0x24">Aria de Mezzo Carattere</title>
+			<title code="0x25">The Wedding Waltz-Duel (part 1)</title>
+			<title code="0x26">The Wedding Waltz-Duel (part 2)</title>
+			<title code="0x27">The Wedding Waltz-Duel (part 3)</title>
+			<title code="0x28">The Wedding Waltz-Duel (part 4)</title>
+			<title code="0x29">Grand Finale (part 1)</title>
+			<title code="0x2a">Grand Finale (part 2)</title>
+			<title code="0x2b">Setzer</title>
+			<title code="0x2c">Johnny C. Bad</title>
+			<title code="0x2d">The Empire Gestahl</title>
+			<title code="0x2e">Devil's Lab</title>
+			<title code="0x2f">Blackjack</title>
+			<title code="0x30">____</title>
+			<title code="0x31">Mog</title>
+			<title code="0x32">Strago</title>
+			<title code="0x33">Relm</title>
+			<title code="0x34">Another World of Beasts</title>
+			<title code="0x35">New Continent</title>
+			<title code="0x36">Catastrophe</title>
+			<title code="0x37">The Fierce Battle</title>
+			<title code="0x38">Rest in Peace</title>
+			<title code="0x39">Dark World</title>
+			<title code="0x3a">The Day After</title>
+			<title code="0x3b">Searching for Friends</title>
+			<title code="0x3c">Gogo</title>
+			<title code="0x3d">Epitaph</title>
+			<title code="0x3e">The Magic House</title>
+			<title code="0x3f">Umaro</title>
+			<title code="0x40">Fanatics</title>
+			<title code="0x41">Last Dungeon</title>
+			<title code="0x42">Dancing Mad (part 1)</title>
+			<title code="0x43">Dancing Mad (part 2)</title>
+			<title code="0x44">Dancing Mad (part 3)</title>
+			<title code="0x45">Dancing Mad (part 4)</title>
+			<title code="0x46">Dancing Mad (part 5)</title>
+			<title code="0x47">Ending Theme (part 1)</title>
+			<title code="0x48">Ending Theme (part 2)</title>
+			<title code="0x49">The Prelude</title>
+			<title code="0x4a">Blazing Fire</title>
+			<title code="0x4b">Dancing Mad (Full)</title>
+			<title code="0x4c">Good Night</title>
+			<title code="0x4d">Quiet Beach</title>
+			<title code="0x4e">Rumbling</title>
+			<title code="0x4f">Strong Wind</title>
+			<title code="0x50">Train</title>
+			<title code="0x51">Unused Fanfare</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[SNES] Breath of Fire / Yasuaki Fujita, Mari Yamaguchi / 1993 Square</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">square</driveralias>
+		<options>
+			
+		</options>
+		<romlist archive="Breath of Fire [Breath of Fire - Ryuu no Senshi] (1993-04-03)(Capcom)">
+			<rom type="data" offset="0x01">02 Blood Relation.spc</rom>
+			<rom type="data" offset="0x02">03 The Dragon Warrior.spc</rom>
+			<rom type="data" offset="0x03">04 White Dragon.spc</rom>
+			<rom type="data" offset="0x04">05 Quickening.spc</rom>
+			<rom type="data" offset="0x05">06 Fate.spc</rom>
+			<rom type="data" offset="0x06">07 Starting the Journey ~Breath of Fire~.spc</rom>
+			<rom type="data" offset="0x07">08 Day and Night.spc</rom>
+			<rom type="data" offset="0x08">09 Profit.spc</rom>
+			<rom type="data" offset="0x09">10 Sorrow.spc</rom>
+			<rom type="data" offset="0x0a">11 Beginning of Battle.spc</rom>
+			<rom type="data" offset="0x0b">12 Victory Song.spc</rom>
+			<rom type="data" offset="0x0c">13 Gentle Breeze.spc</rom>
+			<rom type="data" offset="0x0d">14 Sleep.spc</rom>
+			<rom type="data" offset="0x0e">15 Strong Fortress.spc</rom>
+			<rom type="data" offset="0x0f">16 Solution.spc</rom>
+			<rom type="data" offset="0x10">17 Bonds.spc</rom>
+			<rom type="data" offset="0x11">18 Culvert.spc</rom>
+			<rom type="data" offset="0x12">19 Skyscraper.spc</rom>
+			<rom type="data" offset="0x13">20 A Brave General.spc</rom>
+			<rom type="data" offset="0x14">21 Deep Forest.spc</rom>
+			<rom type="data" offset="0x15">22 Holy.spc</rom>
+			<rom type="data" offset="0x16">23 Distant View.spc</rom>
+			<rom type="data" offset="0x17">24 Fishing.spc</rom>
+			<rom type="data" offset="0x18">25 Release.spc</rom>
+			<rom type="data" offset="0x19">26 Small Hermitage.spc</rom>
+			<rom type="data" offset="0x1a">27 A Road.spc</rom>
+			<rom type="data" offset="0x1b">28 A Drunk's Life.spc</rom>
+			<rom type="data" offset="0x1c">29 Secret City.spc</rom>
+			<rom type="data" offset="0x1d">30 Sand Palace.spc</rom>
+			<rom type="data" offset="0x1e">31 Memories.spc</rom>
+			<rom type="data" offset="0x1f">32 Trade City.spc</rom>
+			<rom type="data" offset="0x20">33 Swimming.spc</rom>
+			<rom type="data" offset="0x21">34 Battling.spc</rom>
+			<rom type="data" offset="0x22">35 Dejection.spc</rom>
+			<rom type="data" offset="0x23">36 Premature Death.spc</rom>
+			<rom type="data" offset="0x24">37 Expedition.spc</rom>
+			<rom type="data" offset="0x25">38 Music City.spc</rom>
+			<rom type="data" offset="0x26">39 Song and Dance.spc</rom>
+			<rom type="data" offset="0x27">40 Ancient Ruins.spc</rom>
+			<rom type="data" offset="0x28">41 Emergency.spc</rom>
+			<rom type="data" offset="0x29">42 Flying.spc</rom>
+			<rom type="data" offset="0x2a">43 The Empire.spc</rom>
+			<rom type="data" offset="0x2b">44 A Powerful Emperor.spc</rom>
+			<rom type="data" offset="0x2c">45 God's Footprints.spc</rom>
+			<rom type="data" offset="0x2d">46 The Final Level.spc</rom>
+			<rom type="data" offset="0x2e">47 Black Dragon.spc</rom>
+			<rom type="data" offset="0x2f">48 Dawn.spc</rom>
+			<rom type="data" offset="0x30">49 Return.spc</rom>
+			<rom type="data" offset="0x31">50 Great Achievement.spc</rom>
+			<rom type="data" offset="0x32">51 True Ending.spc</rom>
+			<rom type="data" offset="0x33">52 The Lost Hero.spc</rom>
+			<rom type="data" offset="0x34">53 Dragon Heart.spc</rom>
+			<rom type="data" offset="0x35">54 Level Up!.spc</rom>
+			<rom type="data" offset="0x36">55 Special Item Fanfare.spc</rom>
+			<rom type="data" offset="0x37">56 The Fife.spc</rom>
+			<rom type="data" offset="0x38">57 Unused Ambience.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x01">Blood Relation</title>
+			<title code="0x02">The Dragon Warrior</title>
+			<title code="0x03">White Dragon</title>
+			<title code="0x04">Quickening</title>
+			<title code="0x05">Fate</title>
+			<title code="0x06">Starting the Journey ~Breath of Fire~</title>
+			<title code="0x07">Day and Night</title>
+			<title code="0x08">Profit</title>
+			<title code="0x09">Sorrow</title>
+			<title code="0x0a">Beginning of Battle</title>
+			<title code="0x0b">Victory Song</title>
+			<title code="0x0c">Gentle Breeze</title>
+			<title code="0x0d">Sleep</title>
+			<title code="0x0e">Strong Fortress</title>
+			<title code="0x0f">Solution</title>
+			<title code="0x10">Bonds</title>
+			<title code="0x11">Culvert</title>
+			<title code="0x12">Skyscraper</title>
+			<title code="0x13">A Brave General</title>
+			<title code="0x14">Deep Forest</title>
+			<title code="0x15">Holy</title>
+			<title code="0x16">Distant View</title>
+			<title code="0x17">Fishing</title>
+			<title code="0x18">Release</title>
+			<title code="0x19">Small Hermitage</title>
+			<title code="0x1a">A Road</title>
+			<title code="0x1b">A Drunk's Life</title>
+			<title code="0x1c">Secret City</title>
+			<title code="0x1d">Sand Palace</title>
+			<title code="0x1e">Memories</title>
+			<title code="0x1f">Trade City</title>
+			<title code="0x20">Swimming</title>
+			<title code="0x21">Battling</title>
+			<title code="0x22">Dejection</title>
+			<title code="0x23">Premature Death</title>
+			<title code="0x24">Expedition</title>
+			<title code="0x25">Music City</title>
+			<title code="0x26">Song and Dance</title>
+			<title code="0x27">Ancient Ruins</title>
+			<title code="0x28">Emergency</title>
+			<title code="0x29">Flying</title>
+			<title code="0x2a">The Empire</title>
+			<title code="0x2b">A Powerful Emperor</title>
+			<title code="0x2c">God's Footprints</title>
+			<title code="0x2d">The Final Level</title>
+			<title code="0x2e">Black Dragon</title>
+			<title code="0x2f">Dawn</title>
+			<title code="0x30">Return</title>
+			<title code="0x31">Great Achievement</title>
+			<title code="0x32">True Ending</title>
+			<title code="0x33">The Lost Hero</title>
+			<title code="0x34">Dragon Heart</title>
+			<title code="0x35">Level Up!</title>
+			<title code="0x36">Special Item Fanfare</title>
+			<title code="0x37">The Fife</title>
+			<title code="0x38">Unused Ambience</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[SNES] Final Fantasy IV / Nobuo Uematsu / 1991 Square</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">square</driveralias>
+		<options>
+			
+		</options>
+		<romlist archive="Final Fantasy IV (1991-07-19)(Square)">
+			<rom type="data" offset="0x00">01 The Prelude.spc</rom>
+			<rom type="data" offset="0x01">02 Red Wings.spc</rom>
+			<rom type="data" offset="0x02">03 Kingdom Baron.spc</rom>
+			<rom type="data" offset="0x03">04 Theme of Love.spc</rom>
+			<rom type="data" offset="0x04">05 Prologue.spc</rom>
+			<rom type="data" offset="0x05">06 Welcome to Our Town!.spc</rom>
+			<rom type="data" offset="0x06">07a Main Theme.spc</rom>
+			<rom type="data" offset="0x07">07b Main Theme (Ocean).spc</rom>
+			<rom type="data" offset="0x08">08 Fight 1.spc</rom>
+			<rom type="data" offset="0x09">09 Fanfare.spc</rom>
+			<rom type="data" offset="0x0a">10 Hello! Big Chocobo!.spc</rom>
+			<rom type="data" offset="0x0b">11 Chocobo ~ Chocobo.spc</rom>
+			<rom type="data" offset="0x0c">12 Into the Darkness.spc</rom>
+			<rom type="data" offset="0x0d">13 Fight 2.spc</rom>
+			<rom type="data" offset="0x0e">14 Ring of Bomb.spc</rom>
+			<rom type="data" offset="0x0f">15 Rydia.spc</rom>
+			<rom type="data" offset="0x10">16 Castle Damcyan.spc</rom>
+			<rom type="data" offset="0x11">17 Cry in Sorrow (part 1).spc</rom>
+			<rom type="data" offset="0x12">17 Cry in Sorrow (part 2).spc</rom>
+			<rom type="data" offset="0x13">18a Melody of Lute.spc</rom>
+			<rom type="data" offset="0x14">18b Melody of Lute (Night).spc</rom>
+			<rom type="data" offset="0x15">19 Mt. Ordeals.spc</rom>
+			<rom type="data" offset="0x16">20 Fabul.spc</rom>
+			<rom type="data" offset="0x17">21 Run!!!.spc</rom>
+			<rom type="data" offset="0x18">22 Suspicion.spc</rom>
+			<rom type="data" offset="0x19">23 Golbez, Clad in Dark.spc</rom>
+			<rom type="data" offset="0x1a">24 Hey, Cid!.spc</rom>
+			<rom type="data" offset="0x1b">25 Mystic Mysidia.spc</rom>
+			<rom type="data" offset="0x1c">26 Long Way to Go.spc</rom>
+			<rom type="data" offset="0x1d">27 Palom and Porom.spc</rom>
+			<rom type="data" offset="0x1e">28 The Dreadful Fight.spc</rom>
+			<rom type="data" offset="0x1f">29 The Airship.spc</rom>
+			<rom type="data" offset="0x20">30 Toroian Beauty.spc</rom>
+			<rom type="data" offset="0x21">31 Samba de Chocobo!.spc</rom>
+			<rom type="data" offset="0x22">32 The Tower of Babel.spc</rom>
+			<rom type="data" offset="0x23">33 Somewhere in the World.spc</rom>
+			<rom type="data" offset="0x24">34 Land of Dwarves.spc</rom>
+			<rom type="data" offset="0x25">35 Giott, the Great King.spc</rom>
+			<rom type="data" offset="0x26">36 Dancing Calcobrina.spc</rom>
+			<rom type="data" offset="0x27">37 Tower of Zot.spc</rom>
+			<rom type="data" offset="0x28">38 Illusionary World.spc</rom>
+			<rom type="data" offset="0x29">39 The Big Whale.spc</rom>
+			<rom type="data" offset="0x2a">40 Another Moon.spc</rom>
+			<rom type="data" offset="0x2b">41 The Lunarians.spc</rom>
+			<rom type="data" offset="0x2c">42 Within the Giant.spc</rom>
+			<rom type="data" offset="0x2d">43 The Final Battle.spc</rom>
+			<rom type="data" offset="0x2e">44 Epilogue (part 1).spc</rom>
+			<rom type="data" offset="0x2f">44 Epilogue (part 2).spc</rom>
+			<rom type="data" offset="0x30">44 Epilogue (part 3).spc</rom>
+			<rom type="data" offset="0x31">99 Chocobo Forest.spc</rom>
+			<rom type="data" offset="0x32">99 Dancing Girls.spc</rom>
+			<rom type="data" offset="0x33">99 Good Night.spc</rom>
+			<rom type="data" offset="0x34">99 Lunar Subterrane.spc</rom>
+			<rom type="data" offset="0x35">99 Surprise.spc</rom>
+			<rom type="data" offset="0x36">99 The Paladin.spc</rom>
+			<rom type="data" offset="0x37">99 The Porno Magazine!.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">The Prelude</title>
+			<title code="0x01">Red Wings</title>
+			<title code="0x02">Kingdom Baron</title>
+			<title code="0x03">Theme of Love</title>
+			<title code="0x04">Prologue</title>
+			<title code="0x05">Welcome to Our Town!</title>
+			<title code="0x06">Main Theme</title>
+			<title code="0x07">Main Theme (Ocean)</title>
+			<title code="0x08">Fight 1</title>
+			<title code="0x09">Fanfare</title>
+			<title code="0x0a">Hello! Big Chocobo!</title>
+			<title code="0x0b">Chocobo ~ Chocobo</title>
+			<title code="0x0c">Into the Darkness</title>
+			<title code="0x0d">Fight 2</title>
+			<title code="0x0e">Ring of Bomb</title>
+			<title code="0x0f">Rydia</title>
+			<title code="0x10">Castle Damcyan</title>
+			<title code="0x11">Cry in Sorrow (part 1)</title>
+			<title code="0x12">Cry in Sorrow (part 2)</title>
+			<title code="0x13">Melody of Lute</title>
+			<title code="0x14">Melody of Lute (Night)</title>
+			<title code="0x15">Mt. Ordeals</title>
+			<title code="0x16">Fabul</title>
+			<title code="0x17">Run!!!</title>
+			<title code="0x18">Suspicion</title>
+			<title code="0x19">Golbez, Clad in Dark</title>
+			<title code="0x1a">Hey, Cid!</title>
+			<title code="0x1b">Mystic Mysidia</title>
+			<title code="0x1c">Long Way to Go</title>
+			<title code="0x1d">Palom and Porom</title>
+			<title code="0x1e">The Dreadful Fight</title>
+			<title code="0x1f">The Airship</title>
+			<title code="0x20">Toroian Beauty</title>
+			<title code="0x21">Samba de Chocobo!</title>
+			<title code="0x22">The Tower of Babel</title>
+			<title code="0x23">Somewhere in the World</title>
+			<title code="0x24">Land of Dwarves</title>
+			<title code="0x25">Giott, the Great King</title>
+			<title code="0x26">Dancing Calcobrina</title>
+			<title code="0x27">Tower of Zot</title>
+			<title code="0x28">Illusionary World</title>
+			<title code="0x29">The Big Whale</title>
+			<title code="0x2a">Another Moon</title>
+			<title code="0x2b">The Lunarians</title>
+			<title code="0x2c">Within the Giant</title>
+			<title code="0x2d">The Final Battle</title>
+			<title code="0x2e">Epilogue (part 1)</title>
+			<title code="0x2f">Epilogue (part 2)</title>
+			<title code="0x30">Epilogue (part 3)</title>
+			<title code="0x31">Chocobo Forest</title>
+			<title code="0x32">Dancing Girls</title>
+			<title code="0x33">Good Night</title>
+			<title code="0x34">Lunar Subterrane</title>
+			<title code="0x35">Surprise</title>
+			<title code="0x36">The Paladin</title>
+			<title code="0x37">The Porno Magazine!</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[SNES] Final Fantasy V / Nobuo Uematsu / 1992 Square</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">square</driveralias>
+		<options>
+			
+		</options>
+		<romlist archive="Final Fantasy V (1992-12-06)(Square)">
+			<rom type="data" offset="0x00">100 The Prelude.spc</rom>
+			<rom type="data" offset="0x01">101 Ahead on our Way.spc</rom>
+			<rom type="data" offset="0x02">102 A Presentiment.spc</rom>
+			<rom type="data" offset="0x03">103 Four Valiant Hearts.spc</rom>
+			<rom type="data" offset="0x04">104 Hurry! Hurry!.spc</rom>
+			<rom type="data" offset="0x05">105 Lenna's Theme.spc</rom>
+			<rom type="data" offset="0x06">106 Fate in Haze.spc</rom>
+			<rom type="data" offset="0x07">107 The Battle.spc</rom>
+			<rom type="data" offset="0x08">108 Victory's Fanfare.spc</rom>
+			<rom type="data" offset="0x09">109 Requiem.spc</rom>
+			<rom type="data" offset="0x0a">110 Pirates Ahoy!.spc</rom>
+			<rom type="data" offset="0x0b">111 Tenderness in the Air.spc</rom>
+			<rom type="data" offset="0x0c">112 Good Night!.spc</rom>
+			<rom type="data" offset="0x0d">113 Sealed Away.spc</rom>
+			<rom type="data" offset="0x0e">114 Cursed Earths.spc</rom>
+			<rom type="data" offset="0x0f">115 Deception.spc</rom>
+			<rom type="data" offset="0x10">116 Harvest.spc</rom>
+			<rom type="data" offset="0x11">117 Walking the Snowy Mountains.spc</rom>
+			<rom type="data" offset="0x12">118 Danger!.spc</rom>
+			<rom type="data" offset="0x13">119 The Fierce Battle.spc</rom>
+			<rom type="data" offset="0x14">120 The Dragon Spreads it's Wings.spc</rom>
+			<rom type="data" offset="0x15">121 Royal Palace.spc</rom>
+			<rom type="data" offset="0x16">122 The Fire Powered Ship.spc</rom>
+			<rom type="data" offset="0x17">123 Run!.spc</rom>
+			<rom type="data" offset="0x18">124 Nostalgia.spc</rom>
+			<rom type="data" offset="0x19">125 The Ancient Library.spc</rom>
+			<rom type="data" offset="0x1a">126 Reminiscence.spc</rom>
+			<rom type="data" offset="0x1b">127 Musica Machina.spc</rom>
+			<rom type="data" offset="0x1c">128 The Day Will Come.spc</rom>
+			<rom type="data" offset="0x1d">129 What_.spc</rom>
+			<rom type="data" offset="0x1e">130 Mambo de Chocobo!.spc</rom>
+			<rom type="data" offset="0x1f">131 My Home, Sweet Home.spc</rom>
+			<rom type="data" offset="0x20">132 Music Box.spc</rom>
+			<rom type="data" offset="0x21">133 The Airship.spc</rom>
+			<rom type="data" offset="0x22">134 The Evil Lord Exdeath.spc</rom>
+			<rom type="data" offset="0x23">201 Exdeath's Castle.spc</rom>
+			<rom type="data" offset="0x24">202 The Four Warriors of Dawn.spc</rom>
+			<rom type="data" offset="0x25">203 Battle with Gilgamesh.spc</rom>
+			<rom type="data" offset="0x26">204 Unknown Lands.spc</rom>
+			<rom type="data" offset="0x27">205 Critter Tripper Fritter!.spc</rom>
+			<rom type="data" offset="0x28">206 The Castle of Dawn.spc</rom>
+			<rom type="data" offset="0x29">207 Beyond the Deep Blue Sea.spc</rom>
+			<rom type="data" offset="0x2a">208 As I Feel, You Feel.spc</rom>
+			<rom type="data" offset="0x2b">209 Waltz Suomi.spc</rom>
+			<rom type="data" offset="0x2c">210 Go Go Boco!.spc</rom>
+			<rom type="data" offset="0x2d">211 The Land Unknown.spc</rom>
+			<rom type="data" offset="0x2e">212 The Book of Sealings.spc</rom>
+			<rom type="data" offset="0x2f">213 Intension of the Earth.spc</rom>
+			<rom type="data" offset="0x30">214 The Prelude of Empty Skies.spc</rom>
+			<rom type="data" offset="0x31">215 Searching the Light.spc</rom>
+			<rom type="data" offset="0x32">216 The Decisive Battle.spc</rom>
+			<rom type="data" offset="0x33">217 The Last Battle.spc</rom>
+			<rom type="data" offset="0x34">218 The Silent Beyond.spc</rom>
+			<rom type="data" offset="0x35">219 Dear Friends.spc</rom>
+			<rom type="data" offset="0x36">220 Final Fantasy.spc</rom>
+			<rom type="data" offset="0x37">221 A New Origin.spc</rom>
+			<rom type="data" offset="0x38">223 Fanfare 1.spc</rom>
+			<rom type="data" offset="0x39">225 I'm a Dancer.spc</rom>
+			<rom type="data" offset="0x3a">226 Piano Lesson 1.spc</rom>
+			<rom type="data" offset="0x3b">227 Piano Lesson 2.spc</rom>
+			<rom type="data" offset="0x3c">228 Piano Lesson 3.spc</rom>
+			<rom type="data" offset="0x3d">229 Piano Lesson 4.spc</rom>
+			<rom type="data" offset="0x3e">230 Piano Lesson 5.spc</rom>
+			<rom type="data" offset="0x3f">231 Piano Lesson 6.spc</rom>
+			<rom type="data" offset="0x40">232 Piano Lesson 7.spc</rom>
+			<rom type="data" offset="0x41">233 Piano Lesson 8.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">The Prelude</title>
+			<title code="0x01">Ahead on our Way</title>
+			<title code="0x02">A Presentiment</title>
+			<title code="0x03">Four Valiant Hearts</title>
+			<title code="0x04">Hurry! Hurry!</title>
+			<title code="0x05">Lenna's Theme</title>
+			<title code="0x06">Fate in Haze</title>
+			<title code="0x07">The Battle</title>
+			<title code="0x08">Victory's Fanfare</title>
+			<title code="0x09">Requiem</title>
+			<title code="0x0a">Pirates Ahoy!</title>
+			<title code="0x0b">Tenderness in the Air</title>
+			<title code="0x0c">Good Night!</title>
+			<title code="0x0d">Sealed Away</title>
+			<title code="0x0e">Cursed Earths</title>
+			<title code="0x0f">Deception</title>
+			<title code="0x10">Harvest</title>
+			<title code="0x11">Walking the Snowy Mountains</title>
+			<title code="0x12">Danger!</title>
+			<title code="0x13">The Fierce Battle</title>
+			<title code="0x14">The Dragon Spreads it's Wings</title>
+			<title code="0x15">Royal Palace</title>
+			<title code="0x16">The Fire Powered Ship</title>
+			<title code="0x17">Run!</title>
+			<title code="0x18">Nostalgia</title>
+			<title code="0x19">The Ancient Library</title>
+			<title code="0x1a">Reminiscence</title>
+			<title code="0x1b">Musica Machina</title>
+			<title code="0x1c">The Day Will Come</title>
+			<title code="0x1d">What_</title>
+			<title code="0x1e">Mambo de Chocobo!</title>
+			<title code="0x1f">My Home, Sweet Home</title>
+			<title code="0x20">Music Box</title>
+			<title code="0x21">The Airship</title>
+			<title code="0x22">The Evil Lord Exdeath</title>
+			<title code="0x23">Exdeath's Castle</title>
+			<title code="0x24">The Four Warriors of Dawn</title>
+			<title code="0x25">Battle with Gilgamesh</title>
+			<title code="0x26">Unknown Lands</title>
+			<title code="0x27">Critter Tripper Fritter!</title>
+			<title code="0x28">The Castle of Dawn</title>
+			<title code="0x29">Beyond the Deep Blue Sea</title>
+			<title code="0x2a">As I Feel, You Feel</title>
+			<title code="0x2b">Waltz Suomi</title>
+			<title code="0x2c">Go Go Boco!</title>
+			<title code="0x2d">The Land Unknown</title>
+			<title code="0x2e">The Book of Sealings</title>
+			<title code="0x2f">Intension of the Earth</title>
+			<title code="0x30">The Prelude of Empty Skies</title>
+			<title code="0x31">Searching the Light</title>
+			<title code="0x32">The Decisive Battle</title>
+			<title code="0x33">The Last Battle</title>
+			<title code="0x34">The Silent Beyond</title>
+			<title code="0x35">Dear Friends</title>
+			<title code="0x36">Final Fantasy</title>
+			<title code="0x37">A New Origin</title>
+			<title code="0x38">Fanfare 1</title>
+			<title code="0x39">I'm a Dancer</title>
+			<title code="0x3a">Piano Lesson 1</title>
+			<title code="0x3b">Piano Lesson 2</title>
+			<title code="0x3c">Piano Lesson 3</title>
+			<title code="0x3d">Piano Lesson 4</title>
+			<title code="0x3e">Piano Lesson 5</title>
+			<title code="0x3f">Piano Lesson 6</title>
+			<title code="0x40">Piano Lesson 7</title>
+			<title code="0x41">Piano Lesson 8</title>
+		</titlelist>
+	</game>
+<game>
+		<name>[SNES] Live A Live / Yoko Shimomura / 1994 Square</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">square</driveralias>
+		<options>
+			
+		</options>
+		<romlist archive="Live A Live (1994-09-02)(Square)">
+			<rom type="data" offset="0x00">01 Live-A-Live.spc</rom>
+			<rom type="data" offset="0x01">02 Select-A-Live.spc</rom>
+			<rom type="data" offset="0x02">03 Secret Mission.spc</rom>
+			<rom type="data" offset="0x03">04 Sound of Shinobi.spc</rom>
+			<rom type="data" offset="0x04">05 Killing Field!.spc</rom>
+			<rom type="data" offset="0x05">06 Ultimate Strength ~ Victory Road.spc</rom>
+			<rom type="data" offset="0x06">07 Martial Arts Masters.spc</rom>
+			<rom type="data" offset="0x07">08 Versus!.spc</rom>
+			<rom type="data" offset="0x08">09 Knock You Down!.spc</rom>
+			<rom type="data" offset="0x09">10 Native Life.spc</rom>
+			<rom type="data" offset="0x0a">11 Nice Weather Ain't it!.spc</rom>
+			<rom type="data" offset="0x0b">12 Kiss of Jealousy.spc</rom>
+			<rom type="data" offset="0x0c">14 Unseen Syndrome.spc</rom>
+			<rom type="data" offset="0x0d">15 Captain Square.spc</rom>
+			<rom type="data" offset="0x0e">16 Captain of the Shooting Stars!.spc</rom>
+			<rom type="data" offset="0x0f">17 The Birds Fly in the Sky, the Fish Swim in the River.spc</rom>
+			<rom type="data" offset="0x10">18 The Ancient Master Descends from the Mountains.spc</rom>
+			<rom type="data" offset="0x11">19 War in China.spc</rom>
+			<rom type="data" offset="0x12">20 Wanderer.spc</rom>
+			<rom type="data" offset="0x13">21 Under the Fake.spc</rom>
+			<rom type="data" offset="0x14">22 The Wilds.spc</rom>
+			<rom type="data" offset="0x15">23 Sancho.de.Los.Panchos.spc</rom>
+			<rom type="data" offset="0x16">24a Go Go Buriki Daioh!.spc</rom>
+			<rom type="data" offset="0x17">25 Wait for Truth.spc</rom>
+			<rom type="data" offset="0x18">26 A Painful Death at the Hands of a Psycho.spc</rom>
+			<rom type="data" offset="0x19">27 Prelude to the Demon King.spc</rom>
+			<rom type="data" offset="0x1a">28 Wings That Don't Reach.spc</rom>
+			<rom type="data" offset="0x1b">29 Difficult Fight.spc</rom>
+			<rom type="data" offset="0x1c">30 Journey to the Mountain of the Demon King.spc</rom>
+			<rom type="data" offset="0x1d">31 City of Hopelessness.spc</rom>
+			<rom type="data" offset="0x1e">32 Silent Labyrinth.spc</rom>
+			<rom type="data" offset="0x1f">33 Cry-A-Live.spc</rom>
+			<rom type="data" offset="0x20">34 Warm-A-Live.spc</rom>
+			<rom type="data" offset="0x21">35 The Demon King Odio.spc</rom>
+			<rom type="data" offset="0x22">36 Megalomania.spc</rom>
+			<rom type="data" offset="0x23">37 Illusion....spc</rom>
+			<rom type="data" offset="0x24">38 Pure Odio.spc</rom>
+			<rom type="data" offset="0x25">39 Armageddon.spc</rom>
+			<rom type="data" offset="0x26">40 Live Over Again.spc</rom>
+			<rom type="data" offset="0x27">41 Live for Live.spc</rom>
+			<rom type="data" offset="0x28">99 Bittersweet Memories.spc</rom>
+			<rom type="data" offset="0x29">99 Dangerous Bar.spc</rom>
+			<rom type="data" offset="0x2a">99 Defeated....spc</rom>
+			<rom type="data" offset="0x2b">99 Prehistoric Night.spc</rom>
+			<rom type="data" offset="0x2c">99 Words of Trust.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">Live-A-Live</title>
+			<title code="0x01">Select-A-Live</title>
+			<title code="0x02">Secret Mission</title>
+			<title code="0x03">Sound of Shinobi</title>
+			<title code="0x04">Killing Field!</title>
+			<title code="0x05">Ultimate Strength ~ Victory Road</title>
+			<title code="0x06">Martial Arts Masters</title>
+			<title code="0x07">Versus!</title>
+			<title code="0x08">Knock You Down!</title>
+			<title code="0x09">Native Life</title>
+			<title code="0x0a">Nice Weather Ain't it!</title>
+			<title code="0x0b">Kiss of Jealousy</title>
+			<title code="0x0c">Unseen Syndrome</title>
+			<title code="0x0d">Captain Square</title>
+			<title code="0x0e">Captain of the Shooting Stars!</title>
+			<title code="0x0f">The Birds Fly in the Sky, the Fish Swim in the River</title>
+			<title code="0x10">The Ancient Master Descends from the Mountains</title>
+			<title code="0x11">War in China</title>
+			<title code="0x12">Wanderer</title>
+			<title code="0x13">Under the Fake</title>
+			<title code="0x14">The Wilds</title>
+			<title code="0x15">Sancho.de.Los.Panchos</title>
+			<title code="0x16">Go Go Buriki Daioh!</title>
+			<title code="0x17">Wait for Truth</title>
+			<title code="0x18">A Painful Death at the Hands of a Psycho</title>
+			<title code="0x19">Prelude to the Demon King</title>
+			<title code="0x1a">Wings That Don't Reach</title>
+			<title code="0x1b">Difficult Fight</title>
+			<title code="0x1c">Journey to the Mountain of the Demon King</title>
+			<title code="0x1d">City of Hopelessness</title>
+			<title code="0x1e">Silent Labyrinth</title>
+			<title code="0x1f">Cry-A-Live</title>
+			<title code="0x20">Warm-A-Live</title>
+			<title code="0x21">The Demon King Odio</title>
+			<title code="0x22">Megalomania</title>
+			<title code="0x23">Illusion...</title>
+			<title code="0x24">Pure Odio</title>
+			<title code="0x25">Armageddon</title>
+			<title code="0x26">Live Over Again</title>
+			<title code="0x27">Live for Live</title>
+			<title code="0x28">Bittersweet Memories</title>
+			<title code="0x29">Dangerous Bar</title>
+			<title code="0x2a">Defeated...</title>
+			<title code="0x2b">Prehistoric Night</title>
+			<title code="0x2c">Words of Trust</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[SNES] Romancing SaGa 3 / Kenji Ito / 1994 Square</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">square</driveralias>
+		<options>
+			
+		</options>
+		<romlist archive="Romancing SaGa 3 (1995-11-11)(-)(Square)">
+			<rom type="data" offset="0x00">101 Surprise of the Death Eaters.spc</rom>
+			<rom type="data" offset="0x01">102 The SaGa Continues.spc</rom>
+			<rom type="data" offset="0x02">103 Julian's Theme.spc</rom>
+			<rom type="data" offset="0x03">104 Ellen's Theme.spc</rom>
+			<rom type="data" offset="0x04">105 Sara's Theme.spc</rom>
+			<rom type="data" offset="0x05">106 Thomas' Theme.spc</rom>
+			<rom type="data" offset="0x06">107 Harid's Theme.spc</rom>
+			<rom type="data" offset="0x07">108 Mikhail's Theme.spc</rom>
+			<rom type="data" offset="0x08">109 Monica's Theme.spc</rom>
+			<rom type="data" offset="0x09">110 Katalina's Theme.spc</rom>
+			<rom type="data" offset="0x0a">111 Field.spc</rom>
+			<rom type="data" offset="0x0b">112 The Battle.spc</rom>
+			<rom type="data" offset="0x0c">113 Victory!.spc</rom>
+			<rom type="data" offset="0x0d">114 Boundaries.spc</rom>
+			<rom type="data" offset="0x0e">115 Dungeon 1.spc</rom>
+			<rom type="data" offset="0x0f">116 Battle 2.spc</rom>
+			<rom type="data" offset="0x10">117 Celebration March.spc</rom>
+			<rom type="data" offset="0x11">118 The Voyage.spc</rom>
+			<rom type="data" offset="0x12">119 Muse's Theme.spc</rom>
+			<rom type="data" offset="0x13">120 Dungeon 2.spc</rom>
+			<rom type="data" offset="0x14">121 The Professor's Theme (original version).spc</rom>
+			<rom type="data" offset="0x15">122 Operation - Pet Retrieval.spc</rom>
+			<rom type="data" offset="0x16">123 Sailing.spc</rom>
+			<rom type="data" offset="0x17">201 Lance ~ City of the Holy King.spc</rom>
+			<rom type="data" offset="0x18">202 Year of the Holy King.spc</rom>
+			<rom type="data" offset="0x19">203 Magical Tank Battle.spc</rom>
+			<rom type="data" offset="0x1a">204 The Great Arch.spc</rom>
+			<rom type="data" offset="0x1b">205 Jungle.spc</rom>
+			<rom type="data" offset="0x1c">206 Fairy Town.spc</rom>
+			<rom type="data" offset="0x1d">207 Nightmare.spc</rom>
+			<rom type="data" offset="0x1e">208 Dufore's Evil Plans.spc</rom>
+			<rom type="data" offset="0x1f">209 Evil Does Not Cherish.spc</rom>
+			<rom type="data" offset="0x20">210 Arousing.spc</rom>
+			<rom type="data" offset="0x21">211a On with the Bangard! (part 1).spc</rom>
+			<rom type="data" offset="0x22">211b On with the Bangard! (part 2).spc</rom>
+			<rom type="data" offset="0x23">212 Island at the Farthest Reaches.spc</rom>
+			<rom type="data" offset="0x24">213 Insufferable Desert.spc</rom>
+			<rom type="data" offset="0x25">214 Ruin of the Crystal.spc</rom>
+			<rom type="data" offset="0x26">215 The Eastern Country.spc</rom>
+			<rom type="data" offset="0x27">216 Emperor's City.spc</rom>
+			<rom type="data" offset="0x28">217 Rusukata.spc</rom>
+			<rom type="data" offset="0x29">218 Tower of the Godly King.spc</rom>
+			<rom type="data" offset="0x2a">219 Trade Off.spc</rom>
+			<rom type="data" offset="0x2b">220 Aurora.spc</rom>
+			<rom type="data" offset="0x2c">221 Snowman's Town.spc</rom>
+			<rom type="data" offset="0x2d">222 Ice Lake.spc</rom>
+			<rom type="data" offset="0x2e">223 Owain's Lake.spc</rom>
+			<rom type="data" offset="0x2f">224 Leonid's Castle.spc</rom>
+			<rom type="data" offset="0x30">301 The Devil King's Castle.spc</rom>
+			<rom type="data" offset="0x31">302 The Dark Underground.spc</rom>
+			<rom type="data" offset="0x32">303 Byunei's Nest.spc</rom>
+			<rom type="data" offset="0x33">304 Fortress of Fire.spc</rom>
+			<rom type="data" offset="0x34">305 Underwater Palace.spc</rom>
+			<rom type="data" offset="0x35">306 Foreboding Danger.spc</rom>
+			<rom type="data" offset="0x36">307 Four Noble Devils.spc</rom>
+			<rom type="data" offset="0x37">308 Defeated.spc</rom>
+			<rom type="data" offset="0x38">309 Grieve.spc</rom>
+			<rom type="data" offset="0x39">310 Sorrow.spc</rom>
+			<rom type="data" offset="0x3a">311a Into War... (part 1).spc</rom>
+			<rom type="data" offset="0x3b">311b Into War... (part 2).spc</rom>
+			<rom type="data" offset="0x3c">312 Gen's Castle Battle.spc</rom>
+			<rom type="data" offset="0x3d">313 The Last Journey.spc</rom>
+			<rom type="data" offset="0x3e">314 Four Noble Devils 2.spc</rom>
+			<rom type="data" offset="0x3f">315 Abyss' Gate.spc</rom>
+			<rom type="data" offset="0x40">316 The Last Battle.spc</rom>
+			<rom type="data" offset="0x41">317a Into a New Horizon (part 1).spc</rom>
+			<rom type="data" offset="0x42">317b Into a New Horizon (part 2).spc</rom>
+			<rom type="data" offset="0x43">318 Staff Roll ~ Finale.spc</rom>
+			<rom type="data" offset="0x44">319a Fanfare.spc</rom>
+			<rom type="data" offset="0x45">319b Thomas' Fanfare.spc</rom>
+			<rom type="data" offset="0x46">320 Good Night!.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">Surprise of the Death Eaters</title>
+			<title code="0x01">The SaGa Continues</title>
+			<title code="0x02">Julian's Theme</title>
+			<title code="0x03">Ellen's Theme</title>
+			<title code="0x04">Sara's Theme</title>
+			<title code="0x05">Thomas' Theme</title>
+			<title code="0x06">Harid's Theme</title>
+			<title code="0x07">Mikhail's Theme</title>
+			<title code="0x08">Monica's Theme</title>
+			<title code="0x09">Katalina's Theme</title>
+			<title code="0x0a">Field</title>
+			<title code="0x0b">The Battle</title>
+			<title code="0x0c">Victory!</title>
+			<title code="0x0d">Boundaries</title>
+			<title code="0x0e">Dungeon 1</title>
+			<title code="0x0f">Battle 2</title>
+			<title code="0x10">Celebration March</title>
+			<title code="0x11">The Voyage</title>
+			<title code="0x12">Muse's Theme</title>
+			<title code="0x13">Dungeon 2</title>
+			<title code="0x14">The Professor's Theme (original version)</title>
+			<title code="0x15">Operation - Pet Retrieval</title>
+			<title code="0x16">Sailing</title>
+			<title code="0x17">Lance ~ City of the Holy King</title>
+			<title code="0x18">Year of the Holy King</title>
+			<title code="0x19">Magical Tank Battle</title>
+			<title code="0x1a">The Great Arch</title>
+			<title code="0x1b">Jungle</title>
+			<title code="0x1c">Fairy Town</title>
+			<title code="0x1d">Nightmare</title>
+			<title code="0x1e">Dufore's Evil Plans</title>
+			<title code="0x1f">Evil Does Not Cherish</title>
+			<title code="0x20">Arousing</title>
+			<title code="0x21">On with the Bangard! (part 1)</title>
+			<title code="0x22">On with the Bangard! (part 2)</title>
+			<title code="0x23">Island at the Farthest Reaches</title>
+			<title code="0x24">Insufferable Desert</title>
+			<title code="0x25">Ruin of the Crystal</title>
+			<title code="0x26">The Eastern Country</title>
+			<title code="0x27">Emperor's City</title>
+			<title code="0x28">Rusukata</title>
+			<title code="0x29">Tower of the Godly King</title>
+			<title code="0x2a">Trade Off</title>
+			<title code="0x2b">Aurora</title>
+			<title code="0x2c">Snowman's Town</title>
+			<title code="0x2d">Ice Lake</title>
+			<title code="0x2e">Owain's Lake</title>
+			<title code="0x2f">Leonid's Castle</title>
+			<title code="0x30">The Devil King's Castle</title>
+			<title code="0x31">The Dark Underground</title>
+			<title code="0x32">Byunei's Nest</title>
+			<title code="0x33">Fortress of Fire</title>
+			<title code="0x34">Underwater Palace</title>
+			<title code="0x35">Foreboding Danger</title>
+			<title code="0x36">Four Noble Devils</title>
+			<title code="0x37">Defeated</title>
+			<title code="0x38">Grieve</title>
+			<title code="0x39">Sorrow</title>
+			<title code="0x3a">Into War... (part 1)</title>
+			<title code="0x3b">Into War... (part 2)</title>
+			<title code="0x3c">Gen's Castle Battle</title>
+			<title code="0x3d">The Last Journey</title>
+			<title code="0x3e">Four Noble Devils 2</title>
+			<title code="0x3f">Abyss' Gate</title>
+			<title code="0x40">The Last Battle</title>
+			<title code="0x41">Into a New Horizon (part 1)</title>
+			<title code="0x42">Into a New Horizon (part 2)</title>
+			<title code="0x43">Staff Roll ~ Finale</title>
+			<title code="0x44">Fanfare</title>
+			<title code="0x45">Thomas' Fanfare</title>
+			<title code="0x46">Good Night!</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[SNES] Rudra no Hihou / Ryuji Sasai / 1996 Square</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">square</driveralias>
+		<options>
+			
+		</options>
+		<romlist archive="Rudra no Hihou (1996-04-05)(Square)">
+			<rom type="data" offset="0x00">101 The Quest for Rudra's Mines.spc</rom>
+			<rom type="data" offset="0x01">102 Beginning for the End.spc</rom>
+			<rom type="data" offset="0x02">103 The Mysterious Stone.spc</rom>
+			<rom type="data" offset="0x03">104 Rudra.spc</rom>
+			<rom type="data" offset="0x04">105 Sword of the Valiant (night).spc</rom>
+			<rom type="data" offset="0x05">105 Sword of the Valiant.spc</rom>
+			<rom type="data" offset="0x06">106 Between Two Worlds (night).spc</rom>
+			<rom type="data" offset="0x07">106 Between Two Worlds.spc</rom>
+			<rom type="data" offset="0x08">107 Crime of the Heart (night).spc</rom>
+			<rom type="data" offset="0x09">107 Crime of the Heart.spc</rom>
+			<rom type="data" offset="0x0a">108 Take the Gold and Run! (night).spc</rom>
+			<rom type="data" offset="0x0b">108 Take the Gold and Run!.spc</rom>
+			<rom type="data" offset="0x0c">109 Amazing Express.spc</rom>
+			<rom type="data" offset="0x0d">110 Ride on the Breeze.spc</rom>
+			<rom type="data" offset="0x0e">111 Under World.spc</rom>
+			<rom type="data" offset="0x0f">112 Earth Bound.spc</rom>
+			<rom type="data" offset="0x10">113 Voyage to the Bottom of the Sea.spc</rom>
+			<rom type="data" offset="0x11">114 The Ultimate Warrior.spc</rom>
+			<rom type="data" offset="0x12">115 Holiday in the Village.spc</rom>
+			<rom type="data" offset="0x13">116 Night Shift.spc</rom>
+			<rom type="data" offset="0x14">117 Parade.spc</rom>
+			<rom type="data" offset="0x15">118 Waiting for the Moon.spc</rom>
+			<rom type="data" offset="0x16">119 Whistle Down the Wind.spc</rom>
+			<rom type="data" offset="0x17">120 Place in the Sun.spc</rom>
+			<rom type="data" offset="0x18">121 Underwater City.spc</rom>
+			<rom type="data" offset="0x19">122 Dance with the Zombie.spc</rom>
+			<rom type="data" offset="0x1a">123 The Nightbreed.spc</rom>
+			<rom type="data" offset="0x1b">124 Downfall.spc</rom>
+			<rom type="data" offset="0x1c">125 Battle for the Fields.spc</rom>
+			<rom type="data" offset="0x1d">126 Evil Eyes.spc</rom>
+			<rom type="data" offset="0x1e">127 Strange Encounter.spc</rom>
+			<rom type="data" offset="0x1f">128 The Spirit Chaser.spc</rom>
+			<rom type="data" offset="0x20">129 The Flame and the Arrow.spc</rom>
+			<rom type="data" offset="0x21">130 Blazing Impact.spc</rom>
+			<rom type="data" offset="0x22">131 Winners Take All.spc</rom>
+			<rom type="data" offset="0x23">132 Mystics in Babel.spc</rom>
+			<rom type="data" offset="0x24">133 The Tower of God.spc</rom>
+			<rom type="data" offset="0x25">134 Clockwork Steeple.spc</rom>
+			<rom type="data" offset="0x26">135 Shadows of Illusion.spc</rom>
+			<rom type="data" offset="0x27">136 Prophecy.spc</rom>
+			<rom type="data" offset="0x28">137 Sanctuary.spc</rom>
+			<rom type="data" offset="0x29">138 Storm over the Place.spc</rom>
+			<rom type="data" offset="0x2a">139 Bio Hazard.spc</rom>
+			<rom type="data" offset="0x2b">140 Night Gallery.spc</rom>
+			<rom type="data" offset="0x2c">141 Evil in the Deep.spc</rom>
+			<rom type="data" offset="0x2d">142 King of the Mountain.spc</rom>
+			<rom type="data" offset="0x2e">143 The Inhuman Condition.spc</rom>
+			<rom type="data" offset="0x2f">144 The Aquarians.spc</rom>
+			<rom type="data" offset="0x30">145 The Invisible Dead.spc</rom>
+			<rom type="data" offset="0x31">146 Edge of Darkness.spc</rom>
+			<rom type="data" offset="0x32">147 Ko-So-Do-Ro.spc</rom>
+			<rom type="data" offset="0x33">148 Run for it!.spc</rom>
+			<rom type="data" offset="0x34">149 Creatures from the Silent Sea.spc</rom>
+			<rom type="data" offset="0x35">150 Purgation.spc</rom>
+			<rom type="data" offset="0x36">151 Land of Doom.spc</rom>
+			<rom type="data" offset="0x37">152 Battle of the Last Enemy ~ In the Mirror.spc</rom>
+			<rom type="data" offset="0x38">153 Battle of the Last Enemy ~ Damned.spc</rom>
+			<rom type="data" offset="0x39">154 Battle of the Last Enemy ~ Evolution.spc</rom>
+			<rom type="data" offset="0x3a">155 Battle of the Last Enemy ~ Final Conflict.spc</rom>
+			<rom type="data" offset="0x3b">156 Change of Mind.spc</rom>
+			<rom type="data" offset="0x3c">157 Beyond the Rising Moon (part 1).spc</rom>
+			<rom type="data" offset="0x3d">157 Beyond the Rising Moon (part 2).spc</rom>
+			<rom type="data" offset="0x3e">158 Echoes (short variation).spc</rom>
+			<rom type="data" offset="0x3f">158 Echoes.spc</rom>
+			<rom type="data" offset="0x40">999 Sunlight.spc</rom>
+			<rom type="data" offset="0x41">999 The Eclipse.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">The Quest for Rudra's Mines</title>
+			<title code="0x01">Beginning for the End</title>
+			<title code="0x02">The Mysterious Stone</title>
+			<title code="0x03">Rudra</title>
+			<title code="0x04">Sword of the Valiant (night)</title>
+			<title code="0x05">Sword of the Valiant</title>
+			<title code="0x06">Between Two Worlds (night)</title>
+			<title code="0x07">Between Two Worlds</title>
+			<title code="0x08">Crime of the Heart (night)</title>
+			<title code="0x09">Crime of the Heart</title>
+			<title code="0x0a">Take the Gold and Run! (night)</title>
+			<title code="0x0b">Take the Gold and Run!</title>
+			<title code="0x0c">Amazing Express</title>
+			<title code="0x0d">Ride on the Breeze</title>
+			<title code="0x0e">Under World</title>
+			<title code="0x0f">Earth Bound</title>
+			<title code="0x10">Voyage to the Bottom of the Sea</title>
+			<title code="0x11">The Ultimate Warrior</title>
+			<title code="0x12">Holiday in the Village</title>
+			<title code="0x13">Night Shift</title>
+			<title code="0x14">Parade</title>
+			<title code="0x15">Waiting for the Moon</title>
+			<title code="0x16">Whistle Down the Wind</title>
+			<title code="0x17">Place in the Sun</title>
+			<title code="0x18">Underwater City</title>
+			<title code="0x19">Dance with the Zombie</title>
+			<title code="0x1a">The Nightbreed</title>
+			<title code="0x1b">Downfall</title>
+			<title code="0x1c">Battle for the Fields</title>
+			<title code="0x1d">Evil Eyes</title>
+			<title code="0x1e">Strange Encounter</title>
+			<title code="0x1f">The Spirit Chaser</title>
+			<title code="0x20">The Flame and the Arrow</title>
+			<title code="0x21">Blazing Impact</title>
+			<title code="0x22">Winners Take All</title>
+			<title code="0x23">Mystics in Babel</title>
+			<title code="0x24">The Tower of God</title>
+			<title code="0x25">Clockwork Steeple</title>
+			<title code="0x26">Shadows of Illusion</title>
+			<title code="0x27">Prophecy</title>
+			<title code="0x28">Sanctuary</title>
+			<title code="0x29">Storm over the Place</title>
+			<title code="0x2a">Bio Hazard</title>
+			<title code="0x2b">Night Gallery</title>
+			<title code="0x2c">Evil in the Deep</title>
+			<title code="0x2d">King of the Mountain</title>
+			<title code="0x2e">The Inhuman Condition</title>
+			<title code="0x2f">The Aquarians</title>
+			<title code="0x30">The Invisible Dead</title>
+			<title code="0x31">Edge of Darkness</title>
+			<title code="0x32">Ko-So-Do-Ro</title>
+			<title code="0x33">Run for it!</title>
+			<title code="0x34">Creatures from the Silent Sea</title>
+			<title code="0x35">Purgation</title>
+			<title code="0x36">Land of Doom</title>
+			<title code="0x37">Battle of the Last Enemy ~ In the Mirror</title>
+			<title code="0x38">Battle of the Last Enemy ~ Damned</title>
+			<title code="0x39">Battle of the Last Enemy ~ Evolution</title>
+			<title code="0x3a">Battle of the Last Enemy ~ Final Conflict</title>
+			<title code="0x3b">Change of Mind</title>
+			<title code="0x3c">Beyond the Rising Moon (part 1)</title>
+			<title code="0x3d">Beyond the Rising Moon (part 2)</title>
+			<title code="0x3e">Echoes (short variation)</title>
+			<title code="0x3f">Echoes</title>
+			<title code="0x40">Sunlight</title>
+			<title code="0x41">The Eclipse</title>
+		</titlelist>
+	</game>
+	<!-- SNES -->
+	<game>
+		<name>[SNES] Secret of Evermore / Jeremy Soule / 1995 (Square USA) Square</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">square</driveralias>
+		<options>
+			
+		</options>
+		<romlist archive="Secret of Evermore (1995-10)(Square USA)(Square)">
+			<rom type="data" offset="0x00">01 Main Title.spc</rom>
+			<rom type="data" offset="0x01">02 Menu.spc</rom>
+			<rom type="data" offset="0x02">03 Many Years Ago....spc</rom>
+			<rom type="data" offset="0x03">04 A Boy and His Dog.spc</rom>
+			<rom type="data" offset="0x04">05 Machinery.spc</rom>
+			<rom type="data" offset="0x05">06 Item Fanfare.spc</rom>
+			<rom type="data" offset="0x06">07 Minor Minion.spc</rom>
+			<rom type="data" offset="0x07">08 Victory Fanfare.spc</rom>
+			<rom type="data" offset="0x08">09 Distant Wind.spc</rom>
+			<rom type="data" offset="0x09">10 Southern Jungle.spc</rom>
+			<rom type="data" offset="0x0a">11 Raptor Attack!.spc</rom>
+			<rom type="data" offset="0x0b">12 Village on the Plateau.spc</rom>
+			<rom type="data" offset="0x0c">13 Fire Eyes.spc</rom>
+			<rom type="data" offset="0x0d">14 Northern Jungle.spc</rom>
+			<rom type="data" offset="0x0e">15 Quicksand Fields.spc</rom>
+			<rom type="data" offset="0x0f">16 Windy Cave.spc</rom>
+			<rom type="data" offset="0x10">17 Bugmuck Tar Pits.spc</rom>
+			<rom type="data" offset="0x11">18 Merchant in the Cave.spc</rom>
+			<rom type="data" offset="0x12">19 Battle with Thraxx.spc</rom>
+			<rom type="data" offset="0x13">20 Hidden River.spc</rom>
+			<rom type="data" offset="0x14">21 Elephant Graveyard.spc</rom>
+			<rom type="data" offset="0x15">22 Swamplands.spc</rom>
+			<rom type="data" offset="0x16">23 Major Enemy.spc</rom>
+			<rom type="data" offset="0x17">24 Within the Volcano.spc</rom>
+			<rom type="data" offset="0x18">25 Volcano Pipes.spc</rom>
+			<rom type="data" offset="0x19">26 Over the Waterfall.spc</rom>
+			<rom type="data" offset="0x1a">27 The Seashore.spc</rom>
+			<rom type="data" offset="0x1b">28 Pirates of Crustacia.spc</rom>
+			<rom type="data" offset="0x1c">29 Desert of Doom.spc</rom>
+			<rom type="data" offset="0x1d">30 Lively Nobilia Marketplace.spc</rom>
+			<rom type="data" offset="0x1e">31 Storekeepers.spc</rom>
+			<rom type="data" offset="0x1f">32 Quiet Plaza.spc</rom>
+			<rom type="data" offset="0x20">33 In the Arena.spc</rom>
+			<rom type="data" offset="0x21">34 Vigor the Indestructible!.spc</rom>
+			<rom type="data" offset="0x22">35 Palace Fountains.spc</rom>
+			<rom type="data" offset="0x23">36 Horace Highwater.spc</rom>
+			<rom type="data" offset="0x24">37 Great Pyramid.spc</rom>
+			<rom type="data" offset="0x25">38 Hall of Collosia.spc</rom>
+			<rom type="data" offset="0x26">39 Darkness of the Temple.spc</rom>
+			<rom type="data" offset="0x27">40 Death of a Minotaur.spc</rom>
+			<rom type="data" offset="0x28">41 Underground Path.spc</rom>
+			<rom type="data" offset="0x29">42 Fields of Gothica.spc</rom>
+			<rom type="data" offset="0x2a">43 City of Ivory.spc</rom>
+			<rom type="data" offset="0x2b">44 Freak Show!!!.spc</rom>
+			<rom type="data" offset="0x2c">45 Racing Pigs!.spc</rom>
+			<rom type="data" offset="0x2d">46 Regal Castle.spc</rom>
+			<rom type="data" offset="0x2e">47 Lonely Halls.spc</rom>
+			<rom type="data" offset="0x2f">48 Puppet Show.spc</rom>
+			<rom type="data" offset="0x30">49 Dank Dungeon.spc</rom>
+			<rom type="data" offset="0x31">50 Dark Forest.spc</rom>
+			<rom type="data" offset="0x32">51 City of Ebony.spc</rom>
+			<rom type="data" offset="0x33">52 Deserted Castle.spc</rom>
+			<rom type="data" offset="0x34">53 Queen Bluegarden.spc</rom>
+			<rom type="data" offset="0x35">54 Tinker Tinderbox.spc</rom>
+			<rom type="data" offset="0x36">55 Collapse of Ivor Tower.spc</rom>
+			<rom type="data" offset="0x37">56 High in the Sky.spc</rom>
+			<rom type="data" offset="0x38">57 Omnitopia Surface.spc</rom>
+			<rom type="data" offset="0x39">58 Omnitopia Hallways.spc</rom>
+			<rom type="data" offset="0x3a">59 Control Room.spc</rom>
+			<rom type="data" offset="0x3b">60 The Professor's Room.spc</rom>
+			<rom type="data" offset="0x3c">61 Dark Greenhouse.spc</rom>
+			<rom type="data" offset="0x3d">62 Final Battle ~ Carltron.spc</rom>
+			<rom type="data" offset="0x3e">63 Escape from Evermore.spc</rom>
+			<rom type="data" offset="0x3f">64 Return to Podunk.spc</rom>
+			<rom type="data" offset="0x40">65 Staff Roll.spc</rom>
+			<rom type="data" offset="0x41">99 Game Over.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">Main Title</title>
+			<title code="0x01">Menu</title>
+			<title code="0x02">Many Years Ago...</title>
+			<title code="0x03">A Boy and His Dog</title>
+			<title code="0x04">Machinery</title>
+			<title code="0x05">Item Fanfare</title>
+			<title code="0x06">Minor Minion</title>
+			<title code="0x07">Victory Fanfare</title>
+			<title code="0x08">Distant Wind</title>
+			<title code="0x09">Southern Jungle</title>
+			<title code="0x0a">Raptor Attack!</title>
+			<title code="0x0b">Village on the Plateau</title>
+			<title code="0x0c">Fire Eyes</title>
+			<title code="0x0d">Northern Jungle</title>
+			<title code="0x0e">Quicksand Fields</title>
+			<title code="0x0f">Windy Cave</title>
+			<title code="0x10">Bugmuck Tar Pits</title>
+			<title code="0x11">Merchant in the Cave</title>
+			<title code="0x12">Battle with Thraxx</title>
+			<title code="0x13">Hidden River</title>
+			<title code="0x14">Elephant Graveyard</title>
+			<title code="0x15">Swamplands</title>
+			<title code="0x16">Major Enemy</title>
+			<title code="0x17">Within the Volcano</title>
+			<title code="0x18">Volcano Pipes</title>
+			<title code="0x19">Over the Waterfall</title>
+			<title code="0x1a">The Seashore</title>
+			<title code="0x1b">Pirates of Crustacia</title>
+			<title code="0x1c">Desert of Doom</title>
+			<title code="0x1d">Lively Nobilia Marketplace</title>
+			<title code="0x1e">Storekeepers</title>
+			<title code="0x1f">Quiet Plaza</title>
+			<title code="0x20">In the Arena</title>
+			<title code="0x21">Vigor the Indestructible!</title>
+			<title code="0x22">Palace Fountains</title>
+			<title code="0x23">Horace Highwater</title>
+			<title code="0x24">Great Pyramid</title>
+			<title code="0x25">Hall of Collosia</title>
+			<title code="0x26">Darkness of the Temple</title>
+			<title code="0x27">Death of a Minotaur</title>
+			<title code="0x28">Underground Path</title>
+			<title code="0x29">Fields of Gothica</title>
+			<title code="0x2a">City of Ivory</title>
+			<title code="0x2b">Freak Show!!!</title>
+			<title code="0x2c">Racing Pigs!</title>
+			<title code="0x2d">Regal Castle</title>
+			<title code="0x2e">Lonely Halls</title>
+			<title code="0x2f">Puppet Show</title>
+			<title code="0x30">Dank Dungeon</title>
+			<title code="0x31">Dark Forest</title>
+			<title code="0x32">City of Ebony</title>
+			<title code="0x33">Deserted Castle</title>
+			<title code="0x34">Queen Bluegarden</title>
+			<title code="0x35">Tinker Tinderbox</title>
+			<title code="0x36">Collapse of Ivor Tower</title>
+			<title code="0x37">High in the Sky</title>
+			<title code="0x38">Omnitopia Surface</title>
+			<title code="0x39">Omnitopia Hallways</title>
+			<title code="0x3a">Control Room</title>
+			<title code="0x3b">The Professor's Room</title>
+			<title code="0x3c">Dark Greenhouse</title>
+			<title code="0x3d">Final Battle ~ Carltron</title>
+			<title code="0x3e">Escape from Evermore</title>
+			<title code="0x3f">Return to Podunk</title>
+			<title code="0x40">Staff Roll</title>
+			<title code="0x41">Game Over</title>
+		</titlelist>
+	</game>
+	<!-- SNES -->
+	<game>
+		<name>[SNES] Secret of Mana (Seiken Densetsu 2) / Hiroki Kikuta / 1993 Square</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">square</driveralias>
+		<options>
+			
+		</options>
+		<romlist archive="Secret of Mana [Seiken Densetsu 2] (1993-08-06)(Square)">
+			<rom type="data" offset="0x00">01 Fear of the Heavens.spc</rom>
+			<rom type="data" offset="0x01">02 A Curious Tale.spc</rom>
+			<rom type="data" offset="0x02">03 Phantom and a Rose.spc</rom>
+			<rom type="data" offset="0x03">04 Together Always.spc</rom>
+			<rom type="data" offset="0x04">05 Fond Memories.spc</rom>
+			<rom type="data" offset="0x05">06 Into the Thick of it.spc</rom>
+			<rom type="data" offset="0x06">07 The Color of the Summer Sky.spc</rom>
+			<rom type="data" offset="0x07">08 Dancing Animals.spc</rom>
+			<rom type="data" offset="0x08">09 Distant Thunder.spc</rom>
+			<rom type="data" offset="0x09">9a Flammie Coming.spc</rom>
+			<rom type="data" offset="0x0a">9a Flammie Voice.spc</rom>
+			<rom type="data" offset="0x0b">9a New Continent Rises.spc</rom>
+			<rom type="data" offset="0x0c">9b Mysterious Moaning.spc</rom>
+			<rom type="data" offset="0x0d">10 The Little Sprite.spc</rom>
+			<rom type="data" offset="0x0e">11 It Happened Late One Evening.spc</rom>
+			<rom type="data" offset="0x0f">12 In the Dead of the Night.spc</rom>
+			<rom type="data" offset="0x10">13 Mystic Invasion.spc</rom>
+			<rom type="data" offset="0x11">14 Secret of the Arid Sands.spc</rom>
+			<rom type="data" offset="0x12">15 What the Forest Taught Me.spc</rom>
+			<rom type="data" offset="0x13">16 A Wish.spc</rom>
+			<rom type="data" offset="0x14">17 Spirit of the Night.spc</rom>
+			<rom type="data" offset="0x15">18 Did You See the Ocean_.spc</rom>
+			<rom type="data" offset="0x16">19 Danger.spc</rom>
+			<rom type="data" offset="0x17">20 Calm Before the Storm.spc</rom>
+			<rom type="data" offset="0x18">21 The Wind Never Ceases.spc</rom>
+			<rom type="data" offset="0x19">22 Flight into the Unknown.spc</rom>
+			<rom type="data" offset="0x1a">23 Eternal Recurrence.spc</rom>
+			<rom type="data" offset="0x1b">24 The Legend.spc</rom>
+			<rom type="data" offset="0x1c">25 A Bell is Tolling.spc</rom>
+			<rom type="data" offset="0x1d">26 A Curious Happening.spc</rom>
+			<rom type="data" offset="0x1e">27 Monarch on the Shore.spc</rom>
+			<rom type="data" offset="0x1f">28 The Dark Star.spc</rom>
+			<rom type="data" offset="0x20">29 Prophecy.spc</rom>
+			<rom type="data" offset="0x21">30 Steel and Snare.spc</rom>
+			<rom type="data" offset="0x22">31 Whisper and Mantra.spc</rom>
+			<rom type="data" offset="0x23">32 Ceremony.spc</rom>
+			<rom type="data" offset="0x24">33 Morning is Here.spc</rom>
+			<rom type="data" offset="0x25">34 Leave Time for Love.spc</rom>
+			<rom type="data" offset="0x26">35 Still of the Night.spc</rom>
+			<rom type="data" offset="0x27">36 The Curse.spc</rom>
+			<rom type="data" offset="0x28">37 The Oracle.spc</rom>
+			<rom type="data" offset="0x29">38 A Conclusion.spc</rom>
+			<rom type="data" offset="0x2a">39 I Won't Forget.spc</rom>
+			<rom type="data" offset="0x2b">40 One of Them is Hopespc</rom>
+			<rom type="data" offset="0x2c">41 Meridian Dance.spc</rom>
+			<rom type="data" offset="0x2d">42 Now Flightless Wings.spc</rom>
+			<rom type="data" offset="0x2e">43 The Second Truth From the Left.spc</rom>
+			<rom type="data" offset="0x2f">44 I Closed My Eyes.spc</rom>
+			<rom type="data" offset="0x30">91 Unused Jingle 1.spc</rom>
+			<rom type="data" offset="0x31">91 Unused Jingle 2.spc</rom>
+			<rom type="data" offset="0x32">92 Menu.spc</rom>
+			<rom type="data" offset="0x33">93 Ally Joins.spc</rom>
+			<rom type="data" offset="0x34">93 Victory.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">Fear of the Heavens</title>
+			<title code="0x01">A Curious Tale</title>
+			<title code="0x02">Phantom and a Rose</title>
+			<title code="0x03">Together Always</title>
+			<title code="0x04">Fond Memories</title>
+			<title code="0x05">Into the Thick of it</title>
+			<title code="0x06">The Color of the Summer Sky</title>
+			<title code="0x07">Dancing Animals</title>
+			<title code="0x08">Distant Thunder</title>
+			<title code="0x09">Flammie Coming</title>
+			<title code="0x0a">Flammie Voice</title>
+			<title code="0x0b">New Continent Rises</title>
+			<title code="0x0c">Mysterious Moaning</title>
+			<title code="0x0d">The Little Sprite</title>
+			<title code="0x0e">It Happened Late One Evening</title>
+			<title code="0x0f">In the Dead of the Night</title>
+			<title code="0x10">Mystic Invasion</title>
+			<title code="0x11">Secret of the Arid Sands</title>
+			<title code="0x12">What the Forest Taught Me</title>
+			<title code="0x13">A Wish</title>
+			<title code="0x14">Spirit of the Night</title>
+			<title code="0x15">Did You See the Ocean_</title>
+			<title code="0x16">Danger</title>
+			<title code="0x17">Calm Before the Storm</title>
+			<title code="0x18">The Wind Never Ceases</title>
+			<title code="0x19">Flight into the Unknown</title>
+			<title code="0x1a">Eternal Recurrence</title>
+			<title code="0x1b">The Legend</title>
+			<title code="0x1c">A Bell is Tolling</title>
+			<title code="0x1d">Curious Happening</title>
+			<title code="0x1e">Monarch on the Shore</title>
+			<title code="0x1f">The Dark Star</title>
+			<title code="0x20">Prophecy</title>
+			<title code="0x21">Steel and Snare</title>
+			<title code="0x22">Whisper and Mantra</title>
+			<title code="0x23">Ceremony</title>
+			<title code="0x24">Morning is Here</title>
+			<title code="0x25">Leave Time for Love</title>
+			<title code="0x26">Still of the Night</title>
+			<title code="0x27">The Curse</title>
+			<title code="0x28">The Oracle</title>
+			<title code="0x29">A Conclusion</title>
+			<title code="0x2a">I Won't Forget</title>
+			<title code="0x2b">One of Them is Hopespc</title>
+			<title code="0x2c">Meridian Dance</title>
+			<title code="0x2d">Now Flightless Wings</title>
+			<title code="0x2e">The Second Truth From the Left</title>
+			<title code="0x2f">I Closed My Eyes</title>
+			<title code="0x30">Unused Jingle 1</title>
+			<title code="0x31">Unused Jingle 2</title>
+			<title code="0x32">Menu</title>
+			<title code="0x33">Ally Joins</title>
+			<title code="0x34">Victory</title>
+		</titlelist>
+	</game>
+	<!-- SNES -->
+	<game>
+		<name>[SNES] Seiken Densetsu 3 / Hiroki Kikuta / 1995 Square</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">square</driveralias>
+		<options>
+			
+		</options>
+		<romlist archive="Seiken Densetsu 3 (1995-09-30)(Square)">
+			<rom type="data" offset="0x00">101 Not Awaken.spc</rom>
+			<rom type="data" offset="0x01">102 Where Angels Fear to Tread.spc</rom>
+			<rom type="data" offset="0x02">103 Ordinary People.spc</rom>
+			<rom type="data" offset="0x03">104 Whiz Kid.spc</rom>
+			<rom type="data" offset="0x04">105 Walls and Steels.spc</rom>
+			<rom type="data" offset="0x05">106 Axe Bring Storm.spc</rom>
+			<rom type="data" offset="0x06">107 Little Sweet Cafe.spc</rom>
+			<rom type="data" offset="0x07">108 Witchmakers.spc</rom>
+			<rom type="data" offset="0x08">109 Another Winter.spc</rom>
+			<rom type="data" offset="0x09">110 Ancient Dolphin.spc</rom>
+			<rom type="data" offset="0x0a">111 Hope Isolation Pray.spc</rom>
+			<rom type="data" offset="0x0b">112 Raven.spc</rom>
+			<rom type="data" offset="0x0c">113 Damn Damn Drum.spc</rom>
+			<rom type="data" offset="0x0d">114 Innocent Sea.spc</rom>
+			<rom type="data" offset="0x0e">115 Swivel.spc</rom>
+			<rom type="data" offset="0x0f">116 Oh I'm a Flamelet.spc</rom>
+			<rom type="data" offset="0x10">117 Evening Star.spc</rom>
+			<rom type="data" offset="0x11">118 Don't Hunt the Fairy.spc</rom>
+			<rom type="data" offset="0x12">119 Fable.spc</rom>
+			<rom type="data" offset="0x13">201 Left-Handed Wolf.spc</rom>
+			<rom type="data" offset="0x14">202 Person's Die.spc</rom>
+			<rom type="data" offset="0x15">203 Harvest November.spc</rom>
+			<rom type="data" offset="0x16">204 Few Paths Forbidden.spc</rom>
+			<rom type="data" offset="0x17">206 Intolerance.spc</rom>
+			<rom type="data" offset="0x18">207 Different Road.spc</rom>
+			<rom type="data" offset="0x19">208 Powell.spc</rom>
+			<rom type="data" offset="0x1a">209 Political Pressure.spc</rom>
+			<rom type="data" offset="0x1b">210 Nuclear Fusion.spc</rom>
+			<rom type="data" offset="0x1c">211 Positive.spc</rom>
+			<rom type="data" offset="0x1d">212 Meridian Child.spc</rom>
+			<rom type="data" offset="0x1e">213 Closed Garden.spc</rom>
+			<rom type="data" offset="0x1f">214 Splash Hop.spc</rom>
+			<rom type="data" offset="0x20">215 Innocent Water.spc</rom>
+			<rom type="data" offset="0x21">216 Delicate Affection.spc</rom>
+			<rom type="data" offset="0x22">217 Three of Darkside.spc</rom>
+			<rom type="data" offset="0x23">218 Last Audience.spc</rom>
+			<rom type="data" offset="0x24">219 Obsession.spc</rom>
+			<rom type="data" offset="0x25">220 Strange Medicine.spc</rom>
+			<rom type="data" offset="0x26">221 Frenzy.spc</rom>
+			<rom type="data" offset="0x27">301 Can You Fly, Sister_.spc</rom>
+			<rom type="data" offset="0x28">302 Decision Bell.spc</rom>
+			<rom type="data" offset="0x29">303 Secret of Mana.spc</rom>
+			<rom type="data" offset="0x2a">304 Faith Total Machine.spc</rom>
+			<rom type="data" offset="0x2b">305 Weird Counterpoint.spc</rom>
+			<rom type="data" offset="0x2c">306 Rolling Cradle.spc</rom>
+			<rom type="data" offset="0x2d">307 Black Soup.spc</rom>
+			<rom type="data" offset="0x2e">308 Hightension Wire.spc</rom>
+			<rom type="data" offset="0x2f">309 And Other.spc</rom>
+			<rom type="data" offset="0x30">310 Electric Talk.spc</rom>
+			<rom type="data" offset="0x31">311 Religion Thunder.spc</rom>
+			<rom type="data" offset="0x32">312 Angel's Fear.spc</rom>
+			<rom type="data" offset="0x33">313 The Sacrifice, Part One.spc</rom>
+			<rom type="data" offset="0x34">314 The Sacrifice, Part Two.spc</rom>
+			<rom type="data" offset="0x35">315 The Sacrifice, Part Three.spc</rom>
+			<rom type="data" offset="0x36">316 Reincarnation.spc</rom>
+			<rom type="data" offset="0x37">317 Farewell Song.spc</rom>
+			<rom type="data" offset="0x38">318 Breezin'.spc</rom>
+			<rom type="data" offset="0x39">319 Return to Forever.spc</rom>
+			<rom type="data" offset="0x3a">320 Long Goodbye.spc</rom>
+			<rom type="data" offset="0x3b">991 Flight From the Holy Land.spc</rom>
+			<rom type="data" offset="0x3c">991 Presentation.spc</rom>
+			<rom type="data" offset="0x3d">992 Level Up!.spc</rom>
+			<rom type="data" offset="0x3e">993 Gate.spc</rom>
+			<rom type="data" offset="0x3f">999a Open Chest.spc</rom>
+			<rom type="data" offset="0x40">999a Treasure!.spc</rom>
+			<rom type="data" offset="0x41">999b Get Item!.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">Not Awaken</title>
+			<title code="0x01">Where Angels Fear to Tread</title>
+			<title code="0x02">Ordinary People</title>
+			<title code="0x03">Whiz Kid</title>
+			<title code="0x04">Walls and Steels</title>
+			<title code="0x05">Axe Bring Storm</title>
+			<title code="0x06">Little Sweet Cafe</title>
+			<title code="0x07">Witchmakers</title>
+			<title code="0x08">Another Winter</title>
+			<title code="0x09">Ancient Dolphin</title>
+			<title code="0x0a">Hope Isolation Pray</title>
+			<title code="0x0b">Raven</title>
+			<title code="0x0c">Damn Damn Drum</title>
+			<title code="0x0d">Innocent Sea</title>
+			<title code="0x0e">Swivel</title>
+			<title code="0x0f">Oh I'm a Flamelet</title>
+			<title code="0x10">Evening Star</title>
+			<title code="0x11">Don't Hunt the Fairy</title>
+			<title code="0x12">Fable</title>
+			<title code="0x13">Left-Handed Wolf</title>
+			<title code="0x14">Person's Die</title>
+			<title code="0x15">Harvest November</title>
+			<title code="0x16">Few Paths Forbidden</title>
+			<title code="0x17">Intolerance</title>
+			<title code="0x18">Different Road</title>
+			<title code="0x19">Powell</title>
+			<title code="0x1a">Political Pressure</title>
+			<title code="0x1b">Nuclear Fusion</title>
+			<title code="0x1c">Positive</title>
+			<title code="0x1d">Meridian Child</title>
+			<title code="0x1e">Closed Garden</title>
+			<title code="0x1f">Splash Hop</title>
+			<title code="0x20">Innocent Water</title>
+			<title code="0x21">Delicate Affection</title>
+			<title code="0x22">Three of Darkside</title>
+			<title code="0x23">Last Audience</title>
+			<title code="0x24">Obsession</title>
+			<title code="0x25">Strange Medicine</title>
+			<title code="0x26">Frenzy</title>
+			<title code="0x27">Can You Fly, Sister_</title>
+			<title code="0x28">Decision Bell</title>
+			<title code="0x29">Secret of Mana</title>
+			<title code="0x2a">Faith Total Machine</title>
+			<title code="0x2b">Weird Counterpoint</title>
+			<title code="0x2c">Rolling Cradle</title>
+			<title code="0x2d">Black Soup</title>
+			<title code="0x2e">Hightension Wire</title>
+			<title code="0x2f">And Other</title>
+			<title code="0x30">Electric Talk</title>
+			<title code="0x31">Religion Thunder</title>
+			<title code="0x32">Angel's Fear</title>
+			<title code="0x33">The Sacrifice, Part One</title>
+			<title code="0x34">The Sacrifice, Part Two</title>
+			<title code="0x35">The Sacrifice, Part Three</title>
+			<title code="0x36">Reincarnation</title>
+			<title code="0x37">Farewell Song</title>
+			<title code="0x38">Breezin'</title>
+			<title code="0x39">Return to Forever</title>
+			<title code="0x3a">Long Goodbye</title>
+			<title code="0x3b">Flight From the Holy Land</title>
+			<title code="0x3c">Presentation</title>
+			<title code="0x3d">Level Up!</title>
+			<title code="0x3e">Gate</title>
+			<title code="0x3f">Open Chest</title>
+			<title code="0x40">Treasure!</title>
+			<title code="0x41">Get Item!</title>
+		</titlelist>
+	</game>
+	<game>
+	<name>[NES] Final Fantasy II / Nobuo Uematsu / 1988 Square</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">square</driveralias>
+	<romlist archive="Final Fantasy II (1988-12-17)(Square)">
+		<rom type="code">Final Fantasy II (1988-12-17)(Square).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">The Prelude</title>
+		<title code="0x02">Chocobo Theme</title>
+		<title code="0x03">Main Theme</title>
+		<title code="0x04">The Emperor's Revival</title>
+		<title code="0x05">Finale</title>
+		<title code="0x07">Fanfare</title>
+		<title code="0x0A">Joining the Team</title>
+		<title code="0x0B">Castle Pandemonium</title>
+		<title code="0x0C">Ancient Castle</title>
+		<title code="0x0D">Magician's Tower</title>
+		<title code="0x0E">Imperial Army Theme</title>
+		<title code="0x0F">Dungeon</title>
+		<title code="0x10">Town</title>
+		<title code="0x11">Rebel Army Theme</title>
+		<title code="0x12">Battle Scene 1</title>
+		<title code="0x13">Battle Scene 2</title>
+		<title code="0x15">Victory</title>
+		<title code="0x16">Dead Music</title>
+		<title code="0x17">Temptation of the Princess</title>
+		<title code="0x18">Revivification</title>
+		<title code="0x19">Reunion</title>
+		<title code="0x1A">Escape!</title>
+		<title code="0x1B">Waltz</title>
+	</titlelist>
+</game>
+<game>
+	<name>[NES] Final Fantasy III / Nobuo Uematsu / 1990 Square</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">square</driveralias>
+	<romlist archive="Final Fantasy III (1990-04-27)(Square)">
+		<rom type="code">Final Fantasy III (1990-04-27)(Square).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x01">The Prelude</title>
+		<title code="0x02">Crystal Cave</title>
+		<title code="0x20">Battle 1</title>
+		<title code="0x07">Fanfare</title>
+		<title code="0x40">Crystal Room</title>
+		<title code="0x14">Opening Theme</title>
+		<title code="0x1F">My Home Town</title>
+		<title code="0x1E">Eternal Wind</title>
+		<title code="0x0C">Jinn, the Fire</title>
+		<title code="0x1D">The Dungeon</title>
+		<title code="0x05">Return of the Warrior</title>
+		<title code="0x21">The Way to the Top</title>
+		<title code="0x0B">Cute Little Tozas</title>
+		<title code="0x16">Shrine of Nept</title>
+		<title code="0x22">Sailing Enterprise</title>
+		<title code="0x0D">Living Forest</title>
+		<title code="0x10">Time Remains</title>
+		<title code="0x08">Chocobos!</title>
+		<title code="0x19">Big Chocobo!</title>
+		<title code="0x24">Tower of Owen</title>
+		<title code="0x11">Vegies of Geasal</title>
+		<title code="0x2C">Castle of Hain</title>
+		<title code="0x2A">Battle 2</title>
+		<title code="0x13">The Requiem</title>
+		<title code="0x0A">Go Above the Clouds!</title>
+		<title code="0x39">The Boundless Ocean</title>
+		<title code="0x03">Elia, the Maiden of Water</title>
+		<title code="0x06">Town of Water</title>
+		<title code="0x34">Let's Play the Piano!</title>
+		<title code="0x2E">Let's Play the Piano Again!</title>
+		<title code="0x1A">Swift Twist</title>
+		<title code="0x09">Good Ol' Fellows</title>
+		<title code="0x12">In the Covert Town</title>
+		<title code="0x38">Salonia</title>
+		<title code="0x15">Deep Under the Water</title>
+		<title code="0x0F">Beneath the Horizon</title>
+		<title code="0x26">Let Me Know the Truth</title>
+		<title code="0x04">Lute of Noah</title>
+		<title code="0x1B">Good Morning!</title>
+		<title code="0x23">The Invincible</title>
+		<title code="0x27">Forbidden Land</title>
+		<title code="0x25">The Crystal Tower</title>
+		<title code="0x29">The Dark Crystals</title>
+		<title code="0x32">This Is The Last Battle (Part 1)</title>
+		<title code="0x33">This Is The Last Battle (Part 2)</title>
+		<title code="0x28">This Is The Last Battle (Part 3)</title>
+		<title code="0x30">The Everlasting World (Part 1)</title>
+		<title code="0x2B">The Everlasting World (Part 2)</title>
+		<title code="0x2F">The Everlasting World (Part 3)</title>
+		<title code="0x00">Resting At The Inn</title>
+		<title code="0x2D">Chocobos! (No Main Melody)</title>
+		<title code="0x17">Hurray!</title>
+		<title code="0x0E">Ambushed</title>
+		<title code="0x18">Prince Allus' Theme</title>
+		<title code="0x1C">Dancer's Theme</title>
+		<title code="0x31">Bad Event</title>
+		<title code="0x35">Leaving Party</title>
+		<title code="0x36">Joining Party</title>
+		<title code="0x37">Bullied Prince</title>
+	</titlelist>
+</game>
+<game>
+<name>[SNES] Bahamut Lagoon / Noriko Matsueda / 1996 Square</name>
+<driver type="spc">snes</driver>
+<driveralias type="SNES">square</driveralias>
+<options>
+
+</options>
+<romlist archive="bl">
+<rom type="data" offset="0x01">bl-01.spc</rom>
+<rom type="data" offset="0x02">bl-02.spc</rom>
+<rom type="data" offset="0x03">bl-03.spc</rom>
+<rom type="data" offset="0x04">bl-04.spc</rom>
+<rom type="data" offset="0x05">bl-05.spc</rom>
+<rom type="data" offset="0x06">bl-06.spc</rom>
+<rom type="data" offset="0x07">bl-07.spc</rom>
+<rom type="data" offset="0x08">bl-08.spc</rom>
+<rom type="data" offset="0x09">bl-09.spc</rom>
+<rom type="data" offset="0x0a">bl-10.spc</rom>
+<rom type="data" offset="0x0b">bl-11.spc</rom>
+<rom type="data" offset="0x0c">bl-12.spc</rom>
+<rom type="data" offset="0x0d">bl-13.spc</rom>
+<rom type="data" offset="0x0e">bl-14.spc</rom>
+<rom type="data" offset="0x0f">bl-15.spc</rom>
+<rom type="data" offset="0x10">bl-16.spc</rom>
+<rom type="data" offset="0x11">bl-17.spc</rom>
+<rom type="data" offset="0x12">bl-18.spc</rom>
+<rom type="data" offset="0x13">bl-19.spc</rom>
+<rom type="data" offset="0x14">bl-20.spc</rom>
+<rom type="data" offset="0x15">bl-21.spc</rom>
+<rom type="data" offset="0x16">bl-22.spc</rom>
+<rom type="data" offset="0x17">bl-23.spc</rom>
+<rom type="data" offset="0x18">bl-24.spc</rom>
+<rom type="data" offset="0x19">bl-25.spc</rom>
+<rom type="data" offset="0x1a">bl-26.spc</rom>
+<rom type="data" offset="0x1b">bl-27.spc</rom>
+<rom type="data" offset="0x1c">bl-28.spc</rom>
+<rom type="data" offset="0x1d">bl-29.spc</rom>
+<rom type="data" offset="0x1e">bl-30.spc</rom>
+<rom type="data" offset="0x1f">bl-31.spc</rom>
+<rom type="data" offset="0x20">bl-32.spc</rom>
+<rom type="data" offset="0x21">bl-33.spc</rom>
+<rom type="data" offset="0x22">bl-34.spc</rom>
+<rom type="data" offset="0x23">bl-35.spc</rom>
+<rom type="data" offset="0x24">bl-36.spc</rom>
+</romlist>
+<titlelist>
+<title code="0x01">Opening</title>
+<title code="0x02">Kanna</title>
+<title code="0x03">Fight 1</title>
+<title code="0x04">Jojo</title>
+<title code="0x05">Jojo and the God Dragons</title>
+<title code="0x06">Sauzer</title>
+<title code="0x07">Requiem</title>
+<title code="0x08">Friendship</title>
+<title code="0x09">Materaito</title>
+<title code="0x0a">Gudorfu</title>
+<title code="0x0b">Menu</title>
+<title code="0x0c">Kanna Army</title>
+<title code="0x0d">Rebel Troops</title>
+<title code="0x0e">Orerusu Salvation Army</title>
+<title code="0x0f">Guranberosu</title>
+<title code="0x10">Monsters</title>
+<title code="0x11">Arutairu Monsters</title>
+<title code="0x12">Sub Battle</title>
+<title code="0x13">Boss Battle</title>
+<title code="0x14">Level Up</title>
+<title code="0x15">Mission Clear</title>
+<title code="0x16">Game Over</title>
+<title code="0x17">Green Land Canbel</title>
+<title code="0x18">Aqui-Land Mahaaru</title>
+<title code="0x19">Magical City Godorando</title>
+<title code="0x1a">Desert Daphira</title>
+<title code="0x1b">Bahamut</title>
+<title code="0x1c">Bahamut Lagoon Arutairu</title>
+<title code="0x1d">Epicedium</title>
+<title code="0x1e">Stringency</title>
+<title code="0x1f">Little Nori</title>
+<title code="0x20">Dancing Party</title>
+<title code="0x21">Fight 2</title>
+<title code="0x22">Battle with Alexander</title>
+<title code="0x23">The Last Battle</title>
+<title code="0x24">Ending</title>
+</titlelist>
+</game>
+<game>
+	<name>[GB] Final Fantasy Adventure [Mystic Quest] / Kenji Ito / 1991 Square</name>
+	<driver type="gbs">gb</driver>
+	<driveralias type="Gameboy">square</driveralias>
+	<romlist archive="Final Fantasy Adventure [Seiken Densetsu - Final Fantasy Gaiden] [Mystic Quest] (GB)(1991-06-28)(Square)">
+		<rom type="code">DMG-FFJ.gbs</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">Rising Sun</title>
+		<title code="0x01">Fighting Arena</title>
+		<title code="0x02">Requiem</title>
+		<title code="0x15">Endless Battlefield</title>
+		<title code="0x07">Village</title>
+		<title code="0x18">Dwarves' Theme</title>
+		<title code="0x03">Glance Dukedom</title>
+		<title code="0x0A">Dungeon 1</title>
+		<title code="0x10">Fight 1</title>
+		<title code="0x0D">Royal Palace</title>
+		<title code="0x06">Mana's Mansion</title>
+		<title code="0x0C">Danger!</title>
+		<title code="0x1A">Jema's Realization</title>
+		<title code="0x19">In Search of the Sacred Sword</title>
+		<title code="0x08">Birth of Chocobo</title>
+		<title code="0x09">Theme of Chocobo</title>
+		<title code="0x0B">Dungeon 2</title>
+		<title code="0x13">Moogles</title>
+		<title code="0x0E">Dungeon 3</title>
+		<title code="0x14">Fight 2</title>
+		<title code="0x05">In Sorrow</title>
+		<title code="0x0F">Let Thoughts Ride on Knowledge</title>
+		<title code="0x17">Mana Palace</title>
+		<title code="0x04">Julius' Ambition</title>
+		<title code="0x11">Final Battle</title>
+		<title code="0x16">Legend Forever</title>
+		<title code="0x12">Jingle</title>
+		<title code="0x1B">Fanfare</title>
+		<title code="0x1C">Tension</title>
+		<title code="0x1D">Uneasiness</title>
+	</titlelist>
+</game>
+<game>
+	<name>[GB] Final Fantasy Legend III [SaGa 3 - Jikuu no Hasha] / 1991 Square</name>
+	<driver type="gbs">gb</driver>
+	<driveralias type="Gameboy">square</driveralias>
+	<romlist archive="Final Fantasy Legend III [SaGa 3 - Jikuu no Hasha] (GB)(1991-12-13)(Square)">
+		<rom type="code">DMG-OSJ.gbs</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">Nobuo Uematsu, Ryuji Sasai - Opening</title>
+		<title code="0x08">Ryuji Sasai - Journey to the Future</title>
+		<title code="0x09">Chihiro Fujioka - Deep</title>
+		<title code="0x12">Ryuji Sasai - Oasis</title>
+		<title code="0x01">Ryuji Sasai - Fight!</title>
+		<title code="0x0E">Ryuji Sasai - Holy Ruins</title>
+		<title code="0x0F">Ryuji Sasai - Stronghold</title>
+		<title code="0x02">Ryuji Sasai - Gods of Another Dimension</title>
+		<title code="0x04">Nobuo Uematsu, Ryuji Sasai - Eat the Meat</title>
+		<title code="0x05">Chihiro Fujioka - Warrior's Rest</title>
+		<title code="0x0A">Ryuji Sasai - Theme of Another Dimension</title>
+		<title code="0x13">Ryuji Sasai - Village in a Strange Land</title>
+		<title code="0x10">Ryuji Sasai - Dungeon</title>
+		<title code="0x07">Ryuji Sasai - Stealth</title>
+		<title code="0x0C">Chihiro Fujioka - Insanity</title>
+		<title code="0x03">Ryuji Sasai - Hold Back Your Tears</title>
+		<title code="0x0B">Ryuji Sasai - Dark Zone</title>
+		<title code="0x11">Ryuji Sasai - Laguna's Palace</title>
+		<title code="0x0D">Ryuji Sasai - Spiritual Battle</title>
+		<title code="0x06">Chihiro Fujioka - Supreme Ruler of Time and Space</title>
+	</titlelist>
+</game>
+<game>
+	<name>[GB] Final Fantasy Legend II [SaGa 2 - Hihou Densetsu] / 1990 Square</name>
+	<driver type="gbs">gb</driver>
+	<driveralias type="Gameboy">square</driveralias>
+	<romlist archive="Final Fantasy Legend II [SaGa 2 - Hihou Densetsu] (GB)(1990-12-14)(Square)">
+		<rom type="code">DMG-S2J.gbs</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">Nobuo Uematsu - The Legend Begins</title>
+		<title code="0x0B">Nobuo Uematsu - Searching for the Secret Treasure</title>
+		<title code="0x10">Kenji Ito - Lethal Strike</title>
+		<title code="0x03">Nobuo Uematsu - Eat the Meat</title>
+		<title code="0x09">Kenji Ito - Peaceful World</title>
+		<title code="0x01">Kenji Ito - Adventurer's Theme</title>
+		<title code="0x05">Nobuo Uematsu - Pillar of Heaven</title>
+		<title code="0x0D">Kenji Ito - Through the Cramped Darkness</title>
+		<title code="0x06">Kenji Ito - Wandering Spirit</title>
+		<title code="0x07">Kenji Ito - Theme of the New God</title>
+		<title code="0x04">Nobuo Uematsu - Ah!!</title>
+		<title code="0x11">Kenji Ito - Decisive Battle</title>
+		<title code="0x0C">Nobuo Uematsu - Mystery of the Secret Treasure</title>
+		<title code="0x0A">Kenji Ito - Never Give Up</title>
+		<title code="0x0F">Nobuo Uematsu - Wipe Your Tears Away</title>
+		<title code="0x02">Nobuo Uematsu - Burning Blood</title>
+		<title code="0x12">Nobuo Uematsu - Saving the World</title>
+		<title code="0x0E">Kenji Ito - Ending Theme 1</title>
+		<title code="0x08">Kenji Ito - Ending Theme 2</title>
+	</titlelist>
+</game>
+<game>
+<name>[SNES] Front Mission: Gun Hazard / Nobuo Uematsu, Yasunori Mitsuda, Junya Nakano / 1996 (Omiya Soft, Cobra Team) Square</name>
+<driver type="spc">snes</driver>
+<driveralias type="SNES">square</driveralias>
+<options>
+
+</options>
+<romlist archive="gh">
+<rom type="data" offset="0x01">gh-1-01.spc</rom>
+<rom type="data" offset="0x02">gh-1-02.spc</rom>
+<rom type="data" offset="0x03">gh-1-03.spc</rom>
+<rom type="data" offset="0x04">gh-1-04.spc</rom>
+<rom type="data" offset="0x05">gh-1-05.spc</rom>
+<rom type="data" offset="0x06">gh-1-06.spc</rom>
+<rom type="data" offset="0x07">gh-1-07.spc</rom>
+<rom type="data" offset="0x08">gh-1-08.spc</rom>
+<rom type="data" offset="0x09">gh-1-09.spc</rom>
+<rom type="data" offset="0x0a">gh-1-10.spc</rom>
+<rom type="data" offset="0x0b">gh-1-11.spc</rom>
+<rom type="data" offset="0x0c">gh-1-12.spc</rom>
+<rom type="data" offset="0x0d">gh-1-13.spc</rom>
+<rom type="data" offset="0x0e">gh-1-14.spc</rom>
+<rom type="data" offset="0x0f">gh-1-15.spc</rom>
+<rom type="data" offset="0x10">gh-1-16.spc</rom>
+<rom type="data" offset="0x11">gh-1-17.spc</rom>
+<rom type="data" offset="0x12">gh-1-18.spc</rom>
+<rom type="data" offset="0x13">gh-1-19.spc</rom>
+<rom type="data" offset="0x14">gh-1-20.spc</rom>
+<rom type="data" offset="0x15">gh-1-21.spc</rom>
+<rom type="data" offset="0x16">gh-1-22.spc</rom>
+<rom type="data" offset="0x17">gh-1-23.spc</rom>
+<rom type="data" offset="0x18">gh-1-24.spc</rom>
+<rom type="data" offset="0x19">gh-1-25.spc</rom>
+<rom type="data" offset="0x1a">gh-1-26.spc</rom>
+<rom type="data" offset="0x1b">gh-1-27.spc</rom>
+<rom type="data" offset="0x1c">gh-1-28.spc</rom>
+<rom type="data" offset="0x1d">gh-1-29.spc</rom>
+<rom type="data" offset="0x1e">gh-1-30.spc</rom>
+<rom type="data" offset="0x1f">gh-1-31.spc</rom>
+<rom type="data" offset="0x20">gh-1-32.spc</rom>
+<rom type="data" offset="0x21">gh-1-33.spc</rom>
+<rom type="data" offset="0x22">gh-2-01.spc</rom>
+<rom type="data" offset="0x23">gh-2-02.spc</rom>
+<rom type="data" offset="0x24">gh-2-03.spc</rom>
+<rom type="data" offset="0x25">gh-2-04.spc</rom>
+<rom type="data" offset="0x26">gh-2-05.spc</rom>
+<rom type="data" offset="0x27">gh-2-06.spc</rom>
+<rom type="data" offset="0x28">gh-2-07.spc</rom>
+<rom type="data" offset="0x29">gh-2-08.spc</rom>
+<rom type="data" offset="0x2a">gh-2-09.spc</rom>
+<rom type="data" offset="0x2b">gh-2-10.spc</rom>
+<rom type="data" offset="0x2c">gh-2-11.spc</rom>
+<rom type="data" offset="0x2d">gh-2-12.spc</rom>
+<rom type="data" offset="0x2e">gh-2-13.spc</rom>
+<rom type="data" offset="0x2f">gh-2-14.spc</rom>
+<rom type="data" offset="0x30">gh-2-15.spc</rom>
+<rom type="data" offset="0x31">gh-2-16.spc</rom>
+<rom type="data" offset="0x32">gh-2-17.spc</rom>
+<rom type="data" offset="0x33">gh-2-18.spc</rom>
+<rom type="data" offset="0x34">gh-2-19.spc</rom>
+<rom type="data" offset="0x35">gh-2-20.spc</rom>
+<rom type="data" offset="0x36">gh-2-21.spc</rom>
+<rom type="data" offset="0x37">gh-2-22.spc</rom>
+<rom type="data" offset="0x38">gh-2-23a.spc</rom>
+<rom type="data" offset="0x39">gh-2-23b.spc</rom>
+<rom type="data" offset="0x3a">gh-2-24.spc</rom>
+<rom type="data" offset="0x3b">gh-2-25.spc</rom>
+<rom type="data" offset="0x3c">gh-2-26.spc</rom>
+<rom type="data" offset="0x3d">gh-2-27.spc</rom>
+<rom type="data" offset="0x3d">gh-s-01.spc</rom>
+</romlist>
+<titlelist>
+<title code="0x01">Gun Hazard</title>
+<title code="0x02">Emergency</title>
+<title code="0x03">Mission Complete</title>
+<title code="0x04">Pull Out</title>
+<title code="0x05">Last Words</title>
+<title code="0x06">Tension</title>
+<title code="0x07">Footsteps</title>
+<title code="0x08">Shiver</title>
+<title code="0x09">Move</title>
+<title code="0x0a">A Store Keeper</title>
+<title code="0x0b">Voice of Ark</title>
+<title code="0x0c">The President's Deadly Fight</title>
+<title code="0x0d">Ominous Wind</title>
+<title code="0x0e">Silencer</title>
+<title code="0x0f">Escape</title>
+<title code="0x10">Richard Millman</title>
+<title code="0x11">Cenktrich</title>
+<title code="0x12">Enemy Raid</title>
+<title code="0x13">Successful Attack</title>
+<title code="0x14">Invasion</title>
+<title code="0x15">Warning One</title>
+<title code="0x16">Warning Two</title>
+<title code="0x17">Genoce</title>
+<title code="0x18">Sorrowful Karion</title>
+<title code="0x19">Transaction</title>
+<title code="0x1a">Monologue</title>
+<title code="0x1b">Secret Story</title>
+<title code="0x1c">Galeon</title>
+<title code="0x1d">Sneak and Attack</title>
+<title code="0x1e">Blue Sky ~ Blue Sky</title>
+<title code="0x1f">Notice</title>
+<title code="0x20">Resistence</title>
+<title code="0x21">Naval Fortress</title>
+<title code="0x22">Royce Felder</title>
+<title code="0x23">A-R-K</title>
+<title code="0x24">Remains</title>
+<title code="0x25">Cavern</title>
+<title code="0x26">Spark Shot</title>
+<title code="0x27">202</title>
+<title code="0x28">Violent Chase</title>
+<title code="0x29">Death in Broad Daylight</title>
+<title code="0x2a">Uneasy</title>
+<title code="0x2b">Message of Genoce</title>
+<title code="0x2c">Determination</title>
+<title code="0x2d">Gardian</title>
+<title code="0x2e">Sentinel</title>
+<title code="0x2f">Trap</title>
+<title code="0x30">Edel Ritter</title>
+<title code="0x31">Nature</title>
+<title code="0x32">Royce's Death</title>
+<title code="0x33">Evil Power</title>
+<title code="0x34">Atlas</title>
+<title code="0x35">Approach to a Shrine</title>
+<title code="0x36">Final Mission</title>
+<title code="0x37">Impatience (Part 1)</title>
+<title code="0x38">Impatience (Part 2)</title>
+<title code="0x39">Promise ~ Engagement</title>
+<title code="0x3a">Heaven's Door</title>
+<title code="0x3b">Emotion</title>
+<title code="0x3c">Trial Zone</title>
+<title code="0x3d">Battle</title>
+</titlelist>
+</game>
+<game>
+<name>[SNES] Radical Dreamers / Yasunori Mitsuda / 1995 Square</name>
+<driver type="spc">snes</driver>
+<driveralias type="SNES">square</driveralias>
+<options>
+
+</options>
+<romlist archive="rd">
+<rom type="data" offset="0x01">rd-01.spc</rom>
+<rom type="data" offset="0x02">rd-02.spc</rom>
+<rom type="data" offset="0x03">rd-03.spc</rom>
+<rom type="data" offset="0x04">rd-04.spc</rom>
+<rom type="data" offset="0x05">rd-05.spc</rom>
+<rom type="data" offset="0x06">rd-06.spc</rom>
+<rom type="data" offset="0x07">rd-07.spc</rom>
+<rom type="data" offset="0x08">rd-08.spc</rom>
+<rom type="data" offset="0x09">rd-09.spc</rom>
+<rom type="data" offset="0x0a">rd-10.spc</rom>
+<rom type="data" offset="0x0b">rd-11.spc</rom>
+<rom type="data" offset="0x0c">rd-12.spc</rom>
+<rom type="data" offset="0x0d">rd-13.spc</rom>
+<rom type="data" offset="0x0e">rd-14.spc</rom>
+<rom type="data" offset="0x0f">rd-15.spc</rom>
+<rom type="data" offset="0x10">rd-s-01.spc</rom>
+<rom type="data" offset="0x11">rd-s-02.spc</rom>
+</romlist>
+<titlelist>
+<title code="0x01">Day of Summer</title>
+<title code="0x02">Gale</title>
+<title code="0x03">Under the Moonlight</title>
+<title code="0x04">Strange Presentiment</title>
+<title code="0x05">Sneaking Around</title>
+<title code="0x06">Snakebone Mansion</title>
+<title code="0x07">The Girl Who Stole the Star</title>
+<title code="0x08">Far Promise ~ Dream Shore (1)</title>
+<title code="0x09">Requiem ~ Dream Shore (2)</title>
+<title code="0x0a">Frozen Flame</title>
+<title code="0x0b">Portal to Open Grounds</title>
+<title code="0x0c">Facing</title>
+<title code="0x0d">Final Confrontation</title>
+<title code="0x0e">Epilogue ~ Dream Shore (3)</title>
+<title code="0x0f">Ending ~ Le Tresor Interdit</title>
+<title code="0x10">Huh?</title>
+<title code="0x11">Voices</title>
+</titlelist>
+</game>
+
+</gamelist>

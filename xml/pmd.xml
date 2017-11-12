@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //pmd -->
+	<game>
+		<name>[PC-88] PMD88 Demonstration Demo</name>
+		<driver type="generic">pc88</driver>
+		<driveralias type="PC-88">m_kajihara</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+			<option name="mdata_addr" value="0x1000"/>
+			<option name="mdata_size" value="0x7000"/>
+			<option name="mfile_size" value="0x7000"/>
+			<option name="vdata_addr" value="0x8000"/>
+			<option name="vdata_size" value="0x3000"/>
+			<option name="vfile_size" value="0x3000"/>
+			<option name="mdata_num"  value="0x0100"/>
+		</options>
+		<romlist archive="pmd88">
+			<rom type="code"  offset="0x0000">PATCH</rom>
+			<rom type="code"  offset="0x8000">effec.dat</rom>
+			<rom type="code"  offset="0xbe00">pmd2g</rom>
+			<rom type="code"  offset="0xdf00">PCMTBL</rom>
+			<rom type="code"  offset="0xe000">efcdat</rom>
+			<rom type="adpcm" offset="0x00000">BD3</rom>
+			<rom type="adpcm" offset="0x013f8">SD1</rom>
+			<rom type="adpcm" offset="0x033f0">TOM1</rom>
+			<rom type="adpcm" offset="0x053e8">HHATCL</rom>
+			<rom type="adpcm" offset="0x05be0">HHATOP</rom>
+			<rom type="adpcm" offset="0x06bd8">CRSCYM</rom>
+			<rom type="adpcm" offset="0x097d0">OCHIT2</rom>
+			<rom type="adpcm" offset="0x0b7c8">HCLAP</rom>
+			<rom type="adpcm" offset="0x0c7c0">ohit.u22</rom>
+			<rom type="bgm"   offset="0x00">pm3.m</rom>
+			<rom type="voice" offset="0x00">effec.dat</rom>
+			<rom type="bgm"   offset="0x01">qqq8.m</rom>
+			<rom type="voice" offset="0x01">effec.dat</rom>
+			<rom type="bgm"   offset="0x02">sam10.m</rom>
+			<rom type="voice" offset="0x02">effec.dat</rom>
+			<rom type="bgm"   offset="0x03">sam13.m</rom>
+			<rom type="voice" offset="0x03">effec.dat</rom>
+			<rom type="bgm"   offset="0x04">sam14.m</rom>
+			<rom type="voice" offset="0x04">effec.dat</rom>
+			<rom type="bgm"   offset="0x05">sam5.m</rom>
+			<rom type="voice" offset="0x05">effec.dat</rom>
+			<rom type="bgm"   offset="0x06">sam6.m</rom>
+			<rom type="voice" offset="0x06">effec.dat</rom>
+			<rom type="bgm"   offset="0x07">sam8.m</rom>
+			<rom type="voice" offset="0x07">effec.dat</rom>
+			<rom type="bgm"   offset="0x08">sam9.m</rom>
+			<rom type="voice" offset="0x08">effec.dat</rom>
+			<rom type="bgm"   offset="0x09">sildem.m</rom>
+			<rom type="voice" offset="0x09">effec.dat</rom>
+			<rom type="bgm"   offset="0x0a">grast1.m2</rom>
+			<rom type="voice" offset="0x0a">effec.dat</rom>
+			<rom type="bgm"   offset="0x0b">sam1.m2</rom>
+			<rom type="voice" offset="0x0b">effec.dat</rom>
+			<rom type="bgm"   offset="0x0c">sam2.m2</rom>
+			<rom type="voice" offset="0x0c">effec.dat</rom>
+			<rom type="bgm"   offset="0x0d">sam3.m2</rom>
+			<rom type="voice" offset="0x0d">effec.dat</rom>
+			<rom type="bgm"   offset="0x0e">sam4.m2</rom>
+			<rom type="voice" offset="0x0e">effec.dat</rom>
+			<rom type="bgm"   offset="0x0f">sgsop.m2</rom>
+			<rom type="voice" offset="0x0f">effec.dat</rom>
+			<rom type="bgm"   offset="0x10">sma.m2</rom>
+			<rom type="voice" offset="0x10">effec.dat</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">[Princess Maker] －子育て－</title>
+			<title code="0x01">qqq8.m</title>
+			<title code="0x02">sam10.m</title>
+			<title code="0x03">sam13.m</title>
+			<title code="0x04">sam14.m</title>
+			<title code="0x05">sam5.m</title>
+			<title code="0x06">sam6.m</title>
+			<title code="0x07">sam8.m</title>
+			<title code="0x08">sam9.m</title>
+			<title code="0x09">[Silent Mobius] Demo Music</title>
+			<title code="0x0a">grast1.m2</title>
+			<title code="0x0b">sam1.m2</title>
+			<title code="0x0c">sam2.m2</title>
+			<title code="0x0d">sam3.m2</title>
+			<title code="0x0e">sam4.m2</title>
+			<title code="0x0f">sgsop.m2</title>
+			<title code="0x10">[Silent Mobius] Battle Theme "Auhtung!!"</title>
+		</titlelist>
+	</game>
+</gamelist>

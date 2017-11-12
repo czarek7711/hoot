@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<game>
+		<name>[PC-98] Ace of Spades (エース オブ スペード)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">lovegun</driveralias>
+		<options>
+			<option name="fm_mix"  value="19"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="aofspad98">
+			<rom type="file" offset="-1">nlp_hoot.com</rom>
+			<rom type="file" offset="-1">NA.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">Bl.o</rom>
+			<rom type="file" offset="0x11">Bn.o</rom>
+			<rom type="file" offset="0x12">De.o</rom>
+			<rom type="file" offset="0x13">En.o</rom>
+			<rom type="file" offset="0x14">Er.o</rom>
+			<rom type="file" offset="0x15">Ga.o</rom>
+			<rom type="file" offset="0x16">Op.o</rom>
+			<rom type="file" offset="0x17">Ow.o</rom>
+			<rom type="file" offset="0x18">Po.o</rom>
+			<rom type="shell" offset="0">na /T /FZ /L60</rom>
+			<rom type="shell" offset="0">nlp_hoot</rom>
+		</romlist>
+		<titlelist>
+      <title code="0x10">Bl.o</title>  
+      <title code="0x11">Bn.o</title> 
+			<title code="0x12">De.o</title>
+			<title code="0x13">En.o</title>
+			<title code="0x14">Er.o</title>
+			<title code="0x15">Ga.o</title>
+			<title code="0x16">Op.o</title>
+			<title code="0x17">Ow.o</title>
+			<title code="0x18">Po.o</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Love Phantom (ラブ・ファントム)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">lovegun</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"  value="19"/>
+			<option name="ssg_mix" value="0"/>
+		</options>
+		<romlist archive="lovep_98">
+			<rom type="file" offset="-1">NAX.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">ENDING.O</rom>
+			<rom type="file" offset="0x11">FIGHT.O</rom>
+			<rom type="file" offset="0x12">FIGHT2.O</rom>
+			<rom type="file" offset="0x13">OPENING.O</rom>
+			<rom type="file" offset="0x14">PEACE.O</rom>
+			<rom type="file" offset="0x15">SEX.O</rom>
+			<rom type="file" offset="0x16">THRILL.O</rom>
+			<rom type="shell" offset="0">NAX -T</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ENDING.O</title>
+			<title code="0x11">FIGHT.O</title>
+			<title code="0x12">FIGHT2.O</title>
+			<title code="0x13">OPENING.O</title>
+			<title code="0x14">PEACE.O</title>
+			<title code="0x15">SEX.O</title>
+			<title code="0x16">THRILL.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Dangerous Toys (デンジャラス トイズ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">lovegun</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="dangtoys_98">
+			<rom type="file" offset="-1">NA.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONES.DTA</rom>
+			<rom type="file" offset="0x10">DTOP.O</rom>
+			<rom type="file" offset="0x11">DT00.O</rom>
+			<rom type="file" offset="0x12">DT01.O</rom>
+			<rom type="file" offset="0x13">DT02.O</rom>
+			<rom type="file" offset="0x14">DT03.O</rom>
+			<rom type="file" offset="0x15">DT04.O</rom>
+			<rom type="file" offset="0x16">DT05.O</rom>
+			<rom type="file" offset="0x17">DT06.O</rom>
+			<rom type="file" offset="0x18">DT07.O</rom>
+			<rom type="file" offset="0x19">DT08.O</rom>
+			<rom type="file" offset="0x1A">DT09.O</rom>
+			<rom type="shell" offset="0">NA -T</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">DTOP.O</title>
+			<title code="0x11">DT00.O</title>
+			<title code="0x12">DT01.O</title>
+			<title code="0x13">DT02.O</title>
+			<title code="0x14">DT03.O</title>
+			<title code="0x15">DT04.O</title>
+			<title code="0x16">DT05.O</title>
+			<title code="0x17">DT06.O</title>
+			<title code="0x18">DT07.O</title>
+			<title code="0x19">DT08.O</title>
+			<title code="0x1A">DT09.O</title>
+		</titlelist>
+	</game>
+</gamelist>

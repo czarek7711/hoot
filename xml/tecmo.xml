@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //tecmo -->
+	<game>
+		<name>[MSX] Star Force (スターフォース)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">tecmo</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="starforc_msx">
+			<rom type="code">Star Force (1985)(Tecmo, Hudson Soft).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Normal</title>
+			<title code="0x02">Power Up</title>
+			<title code="0x03">Larios</title>
+			<title code="0x04">Area Target</title>
+			<title code="0x05">Intro</title>
+			<title code="0x06">Clear</title>
+			<title code="0x07">Extend</title>
+			<title code="0x08">Bonus</title>
+			<title code="0x09">Pause</title>
+		</titlelist>    
+	</game>          
+  <game>
+    <name>[Swimmer] Swimmer (スイマー)</name>
+    <driver type="swimmer">tehkan</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+    <romlist archive="swimmer">
+      <rom type="code" offset="0x00000">sw12.4k</rom>
+    </romlist>
+    <titlelist>
+			<title code="0x81">BGM #81</title>
+			<title code="0x82">BGM #82</title>
+			<title code="0x83">BGM #83</title>
+			<title code="0x84">BGM #84</title>
+			<title code="0x85">BGM #85</title>
+			<title code="0x86">BGM #86</title>
+			<title code="0x87">BGM #87</title>
+			<title code="0x88">BGM #88</title>
+			<title code="0x89">BGM #89</title>
+			<title code="0x8a">BGM #8a</title>
+			<title code="0x8b">BGM #8b</title>
+			<title code="0x8c">BGM #8c</title>
+			<title code="0x8d">BGM #8d</title>
+			<title code="0x8e">BGM #8e</title>
+			<title code="0x8f">BGM #8f</title>
+    </titlelist>
+  </game>
+	<game>
+		<name>[Swimmer] Guzzler (ガズラー)</name>
+		<driver type="swimmer">tehkan</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<options>
+			<option name="psg_mix" value="0x80"/>
+		</options>
+		<romlist archive="guzzler">
+			<rom type="code" offset="0x0000">guzz-12.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x20">Credit</title>
+			<title code="0x21">Start 1</title>
+			<title code="0x22">Start 2</title>
+			<title code="0x23">Target Get</title>
+			<title code="0x24">Walk 1</title>
+			<title code="0x25">Walk 2</title>
+			<title code="0x26">Miss</title>
+			<title code="0x27">Shot 1</title>
+			<title code="0x28">Shot 2</title>
+			<title code="0x29">Shot 3</title>
+			<title code="0x2c">Drink 1</title>
+			<title code="0x2b">Drink 2</title>
+			<title code="0x2a">Drink 3</title>
+			<title code="0x2d">無音</title>
+			<title code="0x2e">雑音</title>
+			<title code="0x2f">Atari</title>
+			<title code="0x30">Roulette</title>
+			<title code="0x31">Hazure</title>
+			<title code="0x32">BGM 1</title>
+			<title code="0x33">BGM 2</title>
+			<title code="0x34">BGM 3</title>
+			<title code="0x35">BGM 4</title>
+			<title code="0x3c">Name</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Bomb Jack] Bomb Jack (ボンジャック)</name>
+		<driver type="bombjack">tehkan</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="bombjack">
+			<rom type="code" offset="0x0000">01_h03t.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Credit</title>
+			<title code="0x20">Title</title>
+			<title code="0x23">BGM 1</title>
+			<title code="0x28">Got a Special Coin</title>
+			<title code="0x23">BGM 1</title>
+			<title code="0x25">Clear</title>
+			<title code="0x22">BGM 2</title>
+			<title code="0x1B">Power Ball Appearing</title>
+			<title code="0x1A">Got a Power Ball</title>
+			<title code="0x22">BGM 2</title>
+			<title code="0x2B">Special Bonus</title>
+			<title code="0x24">BGM 3</title>
+			<title code="0x27">Touched an Enemy</title>
+			<title code="0x26">Game Over</title>
+			<title code="0x29">Name Entry 1</title>
+			<title code="0x2A">Name Entry 2</title>
+			<title code="0x2E">Not on CD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Star Force] Senjyo (センジョウ)</name>
+		<driver type="starforce">tehkan</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="senjyo">
+			<rom type="code" offset="0x00000">02h_01t.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Star Force] Star Force (スターフォース)</name>
+		<driver type="starforce">tehkan</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="starforc">
+			<rom type="code" offset="0x00000">starforc.1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x28">BGM #28</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Star Force] Baluba-louk no Densetsu (バルバルークの伝説)</name>
+		<driver type="starforce">tehkan</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="baluba">
+			<rom type="code" offset="0x00000">2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x31">BGM #31</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Pinball Action] Pinball Action (ピンボールアクション)</name>
+		<driver type="pbaction">tehkan</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="pbaction">
+			<rom type="code" offset="0x00000">a-e3.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x32">BGM #32</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Tehkan World Cup] Tehkan World Cup (テーカンワールドカップ)</name>
+		<driver type="worldcup">tehkan</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="tehkanwc">
+			<rom type="code" offset="0x00000">twc-6.bin</rom>
+			<rom type="pcm" offset="0x00000">twc-5.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1e">BGM #1e</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Tehkan World Cup] Gridiron Fight (グリダイアンファイト)</name>
+		<driver type="worldcup">tehkan</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="gridiron">
+			<rom type="code" offset="0x00000">gfight5.bin</rom>
+			<rom type="pcm" offset="0x00000">gfight6.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Solomon's Key] Solomon's Key (ソロモンの鍵)</name>
+		<driver type="solomon">tecmo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<options>
+			<option name="psg_mix" value="0x80"/>
+		</options>
+		<romlist archive="solomon">
+			<rom type="code" offset="0x00000">1.3jk</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x2a">BGM #2a</title>
+			<title code="0x2b">BGM #2b</title>
+			<title code="0x34">BGM #34</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Rygar] Rygar (アルゴスの戦士)</name>
+		<driver type="rygar">tecmo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="rygar">
+			<rom type="code" offset="0x00000">cpu_4h.bin</rom>
+			<rom type="pcm" offset="0x00000">cpu_1f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Credit</title>
+			<title code="0x32">Introduction - Main BGM</title>
+			<title code="0x3F">Get An Indra!</title>
+			<title code="0x34">Main BGM (w/o intro)</title>
+			<title code="0x39">Bonus Points</title>
+			<title code="0x3D">Invincibility</title>
+			<title code="0x37">Interval [Repulse, Rank, Timer Bonus]</title>
+			<title code="0x33">Main BGM (Restart)</title>
+			<title code="0x3B">Timer Alert / Undead Monster</title>
+			<title code="0x38">Special Bonus Points</title>
+			<title code="0x08">[Voice] Player Dead</title>
+			<title code="0x36">Game Over</title>
+			<title code="0x3E">[Voice] Shout of joy [Ending]</title>
+			<title code="0x35">Ending</title>
+			<title code="0x30">Name Entry [1st]</title>
+			<title code="0x31">Name Entry [Other]</title>
+			<title code="0x3A">Undead Monster</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Gemini Wing] Gemini Wing (ジェミニウイング)</name>
+		<driver type="gemini">tecmo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="gemini">
+			<rom type="code" offset="0x00000">gw03-5h.rom</rom>
+			<rom type="pcm" offset="0x00000">gw01-6a.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Stage 1</title>
+			<title code="0x08">Stage 1 Boss</title>
+			<title code="0x02">Stage 2</title>
+			<title code="0x09">Stage 2 Boss</title>
+			<title code="0x03">Stage 3</title>
+			<title code="0x04">Stage 4</title>
+			<title code="0x0A">Stage 4 Boss</title>
+			<title code="0x05">Stage 5</title>
+			<title code="0x0B">Stage 5 Boss</title>
+			<title code="0x06">Stage 6</title>
+			<title code="0x0C">Stage 6 Boss</title>
+			<title code="0x07">Stage 7</title>
+			<title code="0x0D">Stage 7 Boss</title>
+			<title code="0x0E">Stage Clear 1</title>
+			<title code="0x0F">Stage Clear 2</title>
+			<title code="0x34">Name Entry</title>
+			<title code="0x35">Ending - Credits Roll</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Gemini Wing] Silk Worm (シルクワーム)</name>
+		<driver type="gemini">tecmo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="silkworm">
+			<rom type="code" offset="0x00000">silkworm.3</rom>
+			<rom type="pcm" offset="0x00000">silkworm.1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Credit</title>
+			<title code="0x30">Start / Main Theme</title>
+			<title code="0x2F">Boss</title>
+			<title code="0x31">Clear</title>
+			<title code="0x32">Name Entry</title>
+			<title code="0x2A">Start</title>
+			<title code="0x2E">Main Theme</title>
+			<title code="0x2C">Unused 1</title>
+			<title code="0x2D">Unused 2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Ninja Gaiden] Shadow Warriors (忍者龍剣伝)</name>
+		<driver type="gaiden">tecmo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="shadoww">
+			<rom type="code" offset="0x00000">gaiden_3.4b</rom>
+			<rom type="pcm" offset="0x00000">4.4a</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Credit</title>
+			<title code="0x42">Game Start</title>
+			<title code="0x02">Shadow Soldier [Round 1 - Los Angeles]</title>
+			<title code="0x05">Sumo Wrestler [Round 1, 3 Boss]</title>
+			<title code="0x34">Round Clear 1</title>
+			<title code="0x04">PAT [Round 2 - New York]</title>
+			<title code="0x07">I am Man [Round 2, 5 Boss]</title>
+			<title code="0x35">Round Clear 2</title>
+			<title code="0x03">Casino [Round 3 Boss]</title>
+			<title code="0x06">Na-N-To [Round 3 - Las Vegas]</title>
+			<title code="0x36">Round Clear 3</title>
+			<title code="0x09">Sun Rises on Imoarai-zaka [US ver. Round 4 - Grand Canyon]</title>
+			<title code="0x37">Round Clear 4</title>
+			<title code="0x08">Until the Last Gun is Fired [Round 5 - Transcontinental Train]</title>
+			<title code="0x38">Round Clear 5</title>
+			<title code="0x3E">Evil's Humming [Last Round]</title>
+			<title code="0x3F">Last Fight [Last Round Boss]</title>
+			<title code="0x2C">Time Out</title>
+			<title code="0x43">Game Over</title>
+			<title code="0x2F">Do You Like Sukiya..ki? [Ending]</title>
+			<title code="0x2D">That's the Way the Ball Bounces [Name Entry]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Ninja Gaiden] Shadow Warriors JP (忍者龍剣伝)</name>
+		<driver type="gaiden">tecmo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="ryukendn">
+			<rom type="code" offset="0x00000">3.4b</rom>
+			<rom type="pcm" offset="0x00000">4.4a</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Credit</title>
+			<title code="0x42">Game Start</title>
+			<title code="0x02">Shadow Soldier [Round 1 - Los Angeles]</title>
+			<title code="0x05">Sumo Wrestler [Round 1, 3 Boss]</title>
+			<title code="0x34">Round Clear 1</title>
+			<title code="0x04">PAT [Round 2 - New York]</title>
+			<title code="0x07">I am Man [Round 2, 5 Boss]</title>
+			<title code="0x35">Round Clear 2</title>
+			<title code="0x03">Casino [Round 3 Boss]</title>
+			<title code="0x06">Na-N-To [Round 3 - Las Vegas]</title>
+			<title code="0x36">Round Clear 3</title>
+			<title code="0x09">Symphony of Nature [JP ver. Round 4 - Grand Canyon]</title>
+			<title code="0x37">Round Clear 4</title>
+			<title code="0x08">Until the Last Gun is Fired [Round 5 - Transcontinental Train]</title>
+			<title code="0x38">Round Clear 5</title>
+			<title code="0x3E">Evil's Humming [Last Round]</title>
+			<title code="0x3F">Last Fight [Last Round Boss]</title>
+			<title code="0x2C">Time Out</title>
+			<title code="0x43">Game Over</title>
+			<title code="0x2F">Do You Like Sukiya..ki? [Ending]</title>
+			<title code="0x2D">That's the Way the Ball Bounces [Name Entry]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Ninja Gaiden] Tecmo Knight (ワイルドファング)</name>
+		<driver type="gaiden">tecmo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="wildfang">
+			<rom type="code" offset="0x00000">tkni3.bin</rom>
+			<rom type="pcm" offset="0x00000">tkni4.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Credit</title>
+			<title code="0x1D">Title Screen</title>
+			<title code="0x30">Round 1</title>
+			<title code="0x35">Round 1 Boss [Drago]</title>
+			<title code="0x38">Round 1 Clear</title>
+			<title code="0x2C">Map Preview</title>
+			<title code="0x31">Round 2</title>
+			<title code="0x36">Round 2 Boss [Medusa]</title>
+			<title code="0x39">Round 2 Clear</title>
+			<title code="0x2C">Map Preview</title>
+			<title code="0x32">Round 3</title>
+			<title code="0x3D">Time Out</title>
+			<title code="0x2F">Continue?</title>
+			<title code="0x37">Round 3 Boss [Iron]</title>
+			<title code="0x3A">Round 3 Clear</title>
+			<title code="0x2C">Map Preview</title>
+			<title code="0x33">Round 4</title>
+			<title code="0x2D">Round 4 Boss [Uribou]</title>
+			<title code="0x3B">Round 4 Clear</title>
+			<title code="0x2C">Map Preview</title>
+			<title code="0x34">Round 5</title>
+			<title code="0x2D">Round 5 Boss [Uribou]</title>
+			<title code="0x2E">Last Boss [Degromess]</title>
+			<title code="0x3C">All Round Cleared</title>
+			<title code="0x3F">The King of Kings</title>
+			<title code="0x3E">Game Over</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Ninja Gaiden] Raiga: Strato Fighter (雷牙)</name>
+		<driver type="gaiden">tecmo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="stratof">
+			<rom type="code" offset="0x00000">a-4b.3</rom>
+			<rom type="pcm" offset="0x00000">a-4a.4</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Credit</title>
+			<title code="0x68">Attacking Force [Opening]</title>
+			<title code="0x01">Take the Air [Interval]</title>
+			<title code="0x04">Raiga - Air Land Battle [Stage 1]</title>
+			<title code="0x0B">Ko.Ke.O.Do.Shi [Boss 1]</title>
+			<title code="0x60">Star Starter [Round Clear 1]</title>
+			<title code="0x05">Close Quarter Fighting [Stage 2]</title>
+			<title code="0x0C">Ko.Te.Shi.Ra.Be [Boss 2]</title>
+			<title code="0x61">Spirit of Fire [Round Clear 2]</title>
+			<title code="0x06">Kartus [Stage 3]</title>
+			<title code="0x0A">Pendulum [Boss 3]</title>
+			<title code="0x62">Coffee Break [Round Clear 3]</title>
+			<title code="0x07">Big Columns [Stage 4]</title>
+			<title code="0x0E">Rolling Laser [Boss 4]</title>
+			<title code="0x64">Calm [Round Clear 4]</title>
+			<title code="0x08">Dog Fight II [Stage 5]</title>
+			<title code="0x0D">Mighty Mac [Boss 5]</title>
+			<title code="0x63">Tea Break [Round Clear 5]</title>
+			<title code="0x09">Burial Song [Stage 6]</title>
+			<title code="0x0F">Last Stand [Boss 6]</title>
+			<title code="0x65">Peacefully [Round Clear 6]</title>
+			<title code="0x02">Freedom [Ending]</title>
+			<title code="0x66">Shoot Down [Game Over]</title>
+			<title code="0x03">Danger! Danger! [Continue]</title>
+			<title code="0x67">Ace's High [High Score]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Tecmo World Cup '90] Tecmo World Cup '90 (テクモワールドカップ'90)</name>
+		<driver type="wc90">tecmo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="wc90">
+			<rom type="code" offset="0x00000">ic54_05.bin</rom>
+			<rom type="pcm" offset="0x00000">ic82_06.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x29">BGM #29</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Tecmo16] Final Star Force (ファイナルスターフォース)</name>
+		<driver type="tecmo16">tecmo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="fstarfrc">
+			<rom type="code" offset="0x00000">fstarf07.rom</rom>
+			<rom type="pcm" offset="0x00000">fstarf08.rom</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x78">Title</title>
+			<title code="0x09">Credit</title>
+			<title code="0x6F">Main BGM</title>
+			<title code="0x70">Power up BGM A</title>
+			<title code="0x71">Power up BGM B</title>
+			<title code="0x77">Power up BGM C</title>
+			<title code="0x72">Boss A [Stage 1, 2, 8]</title>
+			<title code="0x73">Boss B [Stage 3, 4, 5, 6, 7, 8]</title>
+			<title code="0x76">Boss C [Stage 9]</title>
+			<title code="0x75">Final Boss [Stage 10]</title>
+			<title code="0x79">Ending 1 [Bad]</title>
+			<title code="0x7A">Ending 2 [Good]</title>
+			<title code="0x7C">Continue</title>
+			<title code="0x7B">Game Over</title>
+			<title code="0x7E">Name Entry</title>
+			<title code="0x74">Unused 1</title>
+			<title code="0x7D">Unused 2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[Tecmo16] Ganbare Ginkun (がんばれギンくん -アクションミニゲーム集-)</name>
+		<driver type="tecmo16">tecmo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<romlist archive="ginkun">
+			<rom type="code" offset="0x00000">ginkun07.i17</rom>
+			<rom type="pcm" offset="0x00000">ginkun08.i18</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Theme of Ganbare Ginkun</title>
+			<title code="0x02">As You Like It 1</title>
+			<title code="0x03">As You Like It 2</title>
+			<title code="0x04">Eraberu Waltz</title>
+			<title code="0x05">Here It Comes</title>
+			<title code="0x06">Beyond the Stratosphere</title>
+			<title code="0x07">Flamenco of Bull</title>
+			<title code="0x08">King of Curry</title>
+			<title code="0x09">Rub-a-Dub Africa</title>
+			<title code="0x0A">Chin-Polka</title>
+			<title code="0x0B">Les Feuilles de Marronnier</title>
+			<title code="0x0C">Hawaiian Feeling</title>
+			<title code="0x0D">Don Boogaloo</title>
+			<title code="0x0E">Welcome to Chatan Branch Shop</title>
+			<title code="0x0F">Gin's Bar</title>
+			<title code="0x10">Ganbare Shirogumi</title>
+			<title code="0x11">FSF?!</title>
+			<title code="0x12">Cowabunga!</title>
+			<title code="0x13">Thank Goodness</title>
+			<title code="0x14">How Cruel!</title>
+			<title code="0x15">Hopeless</title>
+			<title code="0x16">Lucky Balboa Fanfare</title>
+			<title code="0x17">See You Next Week</title>
+			<title code="0x18">Happy-go-lucky Duo</title>
+			<title code="0x19">Game Over</title>
+			<title code="0x1A">Love Theme of Ganbare Ginkun</title>
+		</titlelist>
+	</game>
+  <game>
+    <name>[Neo Geo] Tecmo World Soccer '96 (テクモワールドサッカー'95)</name>
+    <driver type="generic">neogeo</driver>
+		<driveralias type="Arcade">tecmo</driveralias>
+		<options>
+			<option name="code_play" value="0x00"/>
+			<option name="adpcm_size" value="0x0400000"/>
+		</options>
+    <romlist archive="tws96">
+      <rom type="code" offset="0x00000">086-m1.bin</rom>
+      <rom type="adpcm" offset="0x000000">086-v1.bin</rom>
+      <rom type="adpcm" offset="0x200000">086-v2.bin</rom>
+    </romlist>
+    <titlelist>
+			<title code="0x02">BGM #02</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x8e">BGM #8e</title>
+			<title code="0x8f">BGM #8f</title>
+			<title code="0x90">BGM #90</title>
+			<title code="0xb5">BGM #b5</title>
+    </titlelist>
+  </game>
+  <game>
+    <name>[Model 2B] Dead or Alive (デッドオアアライブ)</name>
+    <driver type="model2a">sega</driver>
+    <driveralias type="Arcade">tecmo</driveralias>
+    <options>
+      <option name="pcm_mix" value="0x40"/>
+      <option name="pcm_size" value="0x800000"/>
+    </options>
+    <romlist archive="doa">
+      <rom type="code" offset="0x80000">epr-19328.30</rom>
+      <rom type="pcm" offset="0x000000">mpr-19329.31</rom>
+      <rom type="pcm" offset="0x200000">mpr-19330.32</rom>
+      <rom type="pcm" offset="0x400000">mpr-19331.33</rom>
+      <rom type="pcm" offset="0x600000">mpr-19332.34</rom>
+    </romlist>
+    <titlelist>
+      <title code="0x21">Tecmo Logo</title>
+      <title code="0x0a">Dead or Alive Overture [Opening]</title>
+      <title code="0x0c">Chopper's Final Moment [Demonstration, Unused]</title>
+      <title code="0x0b">Show Down [Character Select]</title>
+      <title code="0x02">No Money [Zack's Stage]</title>
+      <title code="0x20">Stage Clear</title>
+      <title code="0x05">The Fist of TAIKYOKU Blows Up [Lei-Fang's Stage]</title>
+      <title code="0x04">Blade of "RYU" [Ryu Hayabusa's Stage]</title>
+      <title code="0x06">Lonely Warrior [Jann-Lee's Stage]</title>
+      <title code="0x01">Power is Beauty [Tina's Stage]</title>
+      <title code="0x08">Codename "Bayman" [Bayman's Stage]</title>
+      <title code="0x03">Legend of the Secret Fist [Gen-Fu's Stage]</title>
+      <title code="0x00">Decisive Scratch [Kasumi's Stage]</title>
+      <title code="0x10">Dead or Alive [Raidou's Stage]</title>
+      <title code="0x0d">In Between Life and Death [Continue]</title>
+      <title code="0x11">Show Must Go On! [Credits]</title>
+      <title code="0x0e">Your Name Is... [Name Entry]</title>
+    </titlelist>
+  </game>
+  <game>
+	<name>[NES] Ninja Gaiden [Ninja Ryukenden] / More Yasaman, B.B., Hasake / 1988 Tecmo</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">tecmo</driveralias>
+	<romlist archive="Ninja Gaiden [Ninja Ryukenden] [Shadow Warriors] (1988-12-09)(Tecmo)">
+		<rom type="code">Ninja Gaiden [Ninja Ryukenden] [Shadow Warriors] (1988-12-09)(Tecmo).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">The Duel [Opening]</title>
+		<title code="0x01">Vow of Revenge [Opening II]</title>
+		<title code="0x02">SFX ( Next Act )</title>
+		<title code="0x03">Pushing Onward [1-1, 5-2, 6-3]</title>
+		<title code="0x04">Boss Battle</title>
+		<title code="0x05">Veil of Uncertainty [Cutscene]</title>
+		<title code="0x06">Apprehensive Moments [Cutscene, 4-3]</title>
+		<title code="0x07">Evading the Enemy [2-1, 6-1]</title>
+		<title code="0x08">Rugged Terrain [2-2, 4-1]</title>
+		<title code="0x09">Swift Ninja [Cutscene, 3-1]</title>
+		<title code="0x0A">Seeking Truth [Cutscene, 5-3]</title>
+		<title code="0x0B">Nowhere to Run [3-2, 6-2]</title>
+		<title code="0x0C">Devilish Influence [Cutscene, 6-4]</title>
+		<title code="0x0D">Information and Coercion [Cutscene]</title>
+		<title code="0x0E">Unbreakable Determination [4-2]</title>
+		<title code="0x10">Spawn of Evil [Cutscene]</title>
+		<title code="0x11">Evil Plans [Cutscene]</title>
+		<title code="0x12">Depth of Wickedness [5-1, 6-5]</title>
+		<title code="0x13">Bloody Malth [Cutscene]</title>
+		<title code="0x14">Aftermath [Cutscene]</title>
+		<title code="0x15">A Hero's End [Ending I]</title>
+		<title code="0x16">It's Over [Ending II]</title>
+		<title code="0x17">For Your Love [Ending III]</title>
+		<title code="0x18">Credits [Duplicate]</title>
+		<title code="0x19">Game Over</title>
+	</titlelist>
+</game>
+<game>
+	<name>[NES] Ninja Gaiden II - The Dark Sword of Chaos / Shitamachi Kajiya, Hiroshi Miyazaki / 1990 Tecmo</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">tecmo</driveralias>
+	<romlist archive="Ninja Gaiden II - The Dark Sword of Chaos [Ninja Ryukenden II - Ankoku no Jashinken] [Shadow Warriors II - Ninja Gaiden II] (1990-04-06)(Tecmo)">
+		<rom type="code">Ninja Gaiden II - The Dark Sword of Chaos [Ninja Ryukenden II - Ankoku no Jashinken] [Shadow Warriors II - Ninja Gaiden II] (1990-04-06)(Tecmo).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x0A">Approaching Evil [Opening]</title>
+		<title code="0x15">Motion of the Ninja [1-1, 7-2, Interlude]</title>
+		<title code="0x06">Minions of Evil [Boss Battle]</title>
+		<title code="0x0B">Military Man [Robert Cutscene]</title>
+		<title code="0x1B">Lurking Creatures [Cutscene]</title>
+		<title code="0x18">( Transition ) - Time is Critical</title>
+		<title code="0x01">Rushing Foward [2-1, 5-2, 7-2]</title>
+		<title code="0x02">Battling Precariously [2-2, 4-2, 5-1a,7-2]</title>
+		<title code="0x0C">Mysterious Foes [Cutscenes]</title>
+		<title code="0x14">Determined Spirit [Tower Rises]</title>
+		<title code="0x03">Domination of Darkness [3-1]</title>
+		<title code="0x00">Tower of Lahja [3-2, 7-2]</title>
+		<title code="0x0D">Tearful Reunion [Rescue Cutscenes]</title>
+		<title code="0x0F">Lord of Darkness [Ashtar Cutscenes]</title>
+		<title code="0x12">Cruel Laughter [Pre-Maze Cutscene]</title>
+		<title code="0x17">( Transition ) - Impending Doom</title>
+		<title code="0x04">Blazing Inferno [4-1]</title>
+		<title code="0x11">Puppetmaster [Cutscenes]</title>
+		<title code="0x05">Deep Within the Heart [5-1b, 7-1]</title>
+		<title code="0x07">Cunning Enemy [Ashtar, Jaquio Battles]</title>
+		<title code="0x0E">( Transition ) - They Got Irene</title>
+		<title code="0x13">Final Confrontation [Ryu vs Jaquio]</title>
+		<title code="0x08">Inevitable [Unused; Final Boss Battle]</title>
+		<title code="0x16">Triumphant [Ending I]</title>
+		<title code="0x19">Irene Lives [Ending II]</title>
+		<title code="0x1A">Credits</title>
+	</titlelist>
+</game>
+<game>
+	<name>[NES] Ninja Gaiden III - The Ancient Ship of Doom / Hiroshi Miyazaki, Kaori Nakabai / 1991 Tecmo</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">tecmo</driveralias>
+	<romlist archive="Ninja Gaiden III - The Ancient Ship of Doom [Ninja Ryukenden III - Yomi no Hakobune] (1991-06-21)(Tecmo)">
+		<rom type="code">Ninja Gaiden III - The Ancient Ship of Doom [Ninja Ryukenden III - Yomi no Hakobune] (1991-06-21)(Tecmo).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x00">Spying (Intro Part I)</title>
+		<title code="0x0B">The Chase (Intro Part II)</title>
+		<title code="0x0C">Promises to Keep (Intro Part III)</title>
+		<title code="0x1c">Twist of Fate III</title>
+		<title code="0x02">Stage 1-1: Weapons Lab</title>
+		<title code="0x09">Battlefield III</title>
+		<title code="0x0D">Clancy's Theme</title>
+		<title code="0x07">Stage 2-1: The Desert</title>
+		<title code="0x04">Stage 2-2: The Lava Tunnels</title>
+		<title code="0x0E">Foster's Theme</title>
+		<title code="0x1B">Defiance</title>
+		<title code="0x05">Stage 3-1: The Jungle</title>
+		<title code="0x06">Stage 3-2: The Watery Depths</title>
+		<title code="0x0F">Duel with a Double</title>
+		<title code="0x10">Ryu's Defeat</title>
+		<title code="0x08">Stage 4-1: Inverted Catwalk</title>
+		<title code="0x03">Stage 4-2: Castle Rock Entry Hall</title>
+		<title code="0x11">Truth?</title>
+		<title code="0x17">Approaching Castle Rock</title>
+		<title code="0x1A">Surprise</title>
+		<title code="0x14">Metamorphosis</title>
+		<title code="0x12">Into Subspace</title>
+		<title code="0x13">The Dimensional Rift</title>
+		<title code="0x18">The Ancient Ship of Doom</title>
+		<title code="0x19">Monster</title>
+		<title code="0x0C">The Final Battle</title>
+		<title code="0x15">Epilogue</title>
+		<title code="0x16">Closing Credits</title>
+		<title code="0x01">Death</title>
+	</titlelist>
+</game>
+</gamelist>

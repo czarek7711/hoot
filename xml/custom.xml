@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //trpscr -->
+	<game>
+		<name>[PC-88] Cyber Block Metal Orange / Masaharu Iwata / 1990 Custom</name>
+		<driver type="trpscr">pc88</driver>
+		<driveralias type="PC-88">custom</driveralias>
+		<options>
+			<option name="init_pc" value="0x1000"/>
+			<option name="mdata_addr" value="0xd400"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="baseclock"  value="0x04"/>
+			<option name="showfm3ex" value="0x01"/>
+		</options>
+		<romlist archive="morange">
+			<rom type="code" offset="0x1000">mopatch.bin</rom>
+			<rom type="code" offset="0xbf40">trpscr.sys</rom>
+			<rom type="code" offset="0x3000">music.pck</rom>
+			<rom type="bgm" offset="0x00">cbiam01.mdt</rom>
+			<rom type="bgm" offset="0x01">cbiam03.mdt</rom>
+			<rom type="bgm" offset="0x02">cbiam05.mdt</rom>
+			<rom type="bgm" offset="0x03">cbiam072.mdt</rom>
+			<rom type="bgm" offset="0x04">cbiam08.mdt</rom>
+			<rom type="bgm" offset="0x05">cbiam09.mdt</rom>
+			<rom type="bgm" offset="0x06">cosumo.mdt</rom>
+			<rom type="bgm" offset="0x07">info.mdt</rom>
+			<rom type="bgm" offset="0x08">mo_vis_a.mdt</rom>
+			<rom type="bgm" offset="0x09">mo_vis_b.mdt</rom>
+			<rom type="bgm" offset="0x0a">mo_vis_c.mdt</rom>
+			<rom type="bgm" offset="0x0b">mo_vis_d.mdt</rom>
+			<rom type="bgm" offset="0x0c">mo_vis_e.mdt</rom>
+			<rom type="bgm" offset="0x0d">orion.mdt</rom>
+			<rom type="bgm" offset="0x0e">sfc.mdt</rom>
+			<rom type="bgm" offset="0x0f">sfo2.mdt</rom>
+			<rom type="bgm" offset="0x10">sfp.mdt</rom>
+			<rom type="bgm" offset="0x11">sfp2.mdt</rom>
+			<rom type="bgm" offset="0x12">sfq.mdt</rom>
+			<rom type="bgm" offset="0x13">sfr.mdt</rom>
+			<rom type="bgm" offset="0x14">sft3.mdt</rom>
+			<rom type="bgm" offset="0x15">sfx.mdt</rom>
+			<rom type="bgm" offset="0x16">sfz.mdt</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x12">Login Check &lt;Furukawa&gt;</title>
+			<title code="0x0f">Opening &lt;Furukawa&gt;</title>
+			<title code="0x10">Ranking &lt;Furukawa&gt;</title>
+			<title code="0x05">Start &lt;Rezon&gt;</title>
+			<title code="0x11">Stage &lt;Furukawa&gt;</title>
+			<title code="0x08">Visual1: Tomo &lt;Mokomoko&gt;</title>
+			<title code="0x09">Visual2: Kazumi &lt;Mokomoko&gt;</title>
+			<title code="0x0a">Visual3: Mika &lt;Mokomoko&gt;</title>
+			<title code="0x0b">Visual4: Rinn &lt;Furukawa&gt;</title>
+			<title code="0x0c">Visual5: Cynthia &lt;Mokomoko&gt;</title>
+			<title code="0x07">Info &lt;Rezon&gt;</title>
+			<title code="0x0d">Stage 01 &lt;Furukawa&gt;</title>
+			<title code="0x00">Stage 02 &lt;Rezon&gt;</title>
+			<title code="0x06">Stage 03 &lt;Furukawa&gt;</title>
+			<title code="0x02">Stage 04 &lt;Rezon&gt;</title>
+			<title code="0x0e">Stage 05 &lt;Furukawa&gt;</title>
+			<title code="0x03">Clear &lt;Rezon&gt;</title>
+			<title code="0x13">Continue &lt;Furukawa&gt;</title>
+			<title code="0x01">Gameover &lt;Rezon&gt;</title>
+			<title code="0x15">Top Entry &lt;Furukawa&gt;</title>
+			<title code="0x04">Entry 2-8 &lt;Rezon&gt;</title>
+			<title code="0x14">Ending &lt;Furukawa&gt;</title>
+			<title code="0x16">Unused &lt;Furukawa&gt;</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Cyber Block Metal Orange / Masaharu Iwata / 1991 Custom</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">custom</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="wstimer" value="1"/>
+			<option name="opn_mix" value="128"/>
+		</options>
+		<romlist archive="morang98">
+			<rom type="file" offset="-1">MORG_98.COM</rom>
+			<rom type="file" offset="-1">TRPSCHRN.COM</rom>
+			<rom type="file" offset="0x35">CBIAM01.MDT</rom>
+			<rom type="file" offset="0x36">CBIAM02.MDT</rom>
+			<rom type="file" offset="0x37">CBIAM03.MDT</rom>
+			<rom type="file" offset="0x38">CBIAM06.MDT</rom>
+			<rom type="file" offset="0x10">CBIAM08.MDT</rom>
+			<rom type="file" offset="0x27">CBIAM07.MDT</rom>
+			<rom type="file" offset="0x11">CBIAM09.MDT</rom>
+			<rom type="file" offset="0x12">CHINA.MDT</rom>
+			<rom type="file" offset="0x13">COSUMO.MDT</rom>
+			<rom type="file" offset="0x14">MOV1.MDT</rom>
+			<rom type="file" offset="0x15">MOV3.MDT</rom>
+			<rom type="file" offset="0x16">MOV4.MDT</rom>
+			<rom type="file" offset="0x17">MOV8.MDT</rom>
+			<rom type="file" offset="0x18">ORION.MDT</rom>
+			<rom type="file" offset="0x19">SFC.MDT</rom>
+			<rom type="file" offset="0x20">SFO2.MDT</rom>
+			<rom type="file" offset="0x21">SFP.MDT</rom>
+			<rom type="file" offset="0x22">SFP2.MDT</rom>
+			<rom type="file" offset="0x23">SFQ.MDT</rom>
+			<rom type="file" offset="0x24">SFR.MDT</rom>
+			<rom type="file" offset="0x25">SFT3.MDT</rom>
+			<rom type="file" offset="0x26">SFX.MDT</rom>
+			<rom type="shell" offset="0">TRPSCHRN</rom>
+			<rom type="shell" offset="0">MORG_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">Login Check &lt;Furukawa&gt;</title>
+			<title code="0x20">Opening &lt;Furukawa&gt;</title>
+			<title code="0x21">Ranking &lt;Furukawa&gt;</title>
+			<title code="0x11">Start &lt;Rezon&gt;</title>
+			<title code="0x22">Stage &lt;Furukawa&gt;</title>
+			<title code="0x15">Visual1: Tomo &lt;Mokomoko&gt;</title>
+			<title code="0x17">Visual2: Kazumi &lt;Mokomoko&gt;</title>
+			<title code="0x14">Visual3: Mika &lt;Mokomoko&gt;</title>
+			<title code="0x12">Visual4: Rinn &lt;Furukawa&gt;</title>
+			<title code="0x16">Visual5: Cynthia &lt;Mokomoko&gt;</title>
+			<title code="0x36">Info &lt;Rezon&gt;</title>
+			<title code="0x18">Stage 01 &lt;Furukawa&gt;</title>
+			<title code="0x35">Stage 02 &lt;Rezon&gt;</title>
+			<title code="0x13">Stage 03 &lt;Furukawa&gt;</title>
+			<title code="0x38">Stage 04 &lt;Rezon&gt;</title>
+			<title code="0x19">Stage 05 &lt;Furukawa&gt;</title>
+			<title code="0x27">Clear &lt;Rezon&gt;</title>
+			<title code="0x24">Continue &lt;Furukawa&gt;</title>
+			<title code="0x37">Gameover &lt;Rezon&gt;</title>
+			<title code="0x26">Top Entry &lt;Furukawa&gt;</title>
+			<title code="0x10">Entry 2-8 &lt;Rezon&gt;</title>
+			<title code="0x25">Ending &lt;Furukawa&gt;</title>
+		</titlelist>  
+	</game>
+	<game>
+		<name>[PC-98] Carat -Magical Blocks- / Hitoshi Sakimoto / 1992 Custom</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">custom</driveralias>
+		<options>
+      <option name="clockmul" value="4"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="opn_mix" value="128"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="carat98">
+			<rom type="file" offset="-1">TRPSCR98.COM</rom>
+			<rom type="file" offset="-1">TRPSCHRN.COM</rom>
+			<rom type="file" offset="0x01">CRTJKL01.MDT</rom>
+			<rom type="file" offset="0x02">CRTJKL02.MDT</rom>
+			<rom type="file" offset="0x03">CRTJKL04.MDT</rom>
+			<rom type="file" offset="0x04">CRTJKL05.MDT</rom>
+			<rom type="file" offset="0x05">CRTJKL06.MDT</rom>
+			<rom type="file" offset="0x06">CRTJKL07.MDT</rom>
+			<rom type="file" offset="0x07">CRTJKL08.MDT</rom>
+			<rom type="file" offset="0x08">CRTJKL12.MDT</rom>
+			<rom type="file" offset="0x09">CRTJKL15.MDT</rom>
+			<rom type="file" offset="0x0a">CRTJKL16.MDT</rom>
+			<rom type="file" offset="0x0b">CRTJKL17.MDT</rom>
+			<rom type="file" offset="0x0c">CRTJKL18.MDT</rom>
+			<rom type="file" offset="0x0d">CRTJKL26.MDT</rom>
+			<rom type="file" offset="0x0e">CRTJKL31.MDT</rom>
+			<rom type="file" offset="0x0f">CRTJKL33.MDT</rom>
+			<rom type="file" offset="0x10">CRTJKL35.MDT</rom>
+			<rom type="file" offset="0x11">CRTJKL36.MDT</rom>
+			<rom type="file" offset="0x12">CRTWIN02.MDT</rom>
+			<rom type="file" offset="0x13">CRTWIN03.MDT</rom>
+			<rom type="file" offset="0x14">CRTWIN04.MDT</rom>
+			<rom type="file" offset="0x15">CRTWIN05.MDT</rom>
+			<rom type="file" offset="0x16">CRTWIN06.MDT</rom>
+			<rom type="file" offset="0x17">CRTWIN07.MDT</rom>
+			<rom type="file" offset="0x18">CRTWIN08.MDT</rom>
+			<rom type="file" offset="0x19">CRTWIN09.MDT</rom>
+			<rom type="file" offset="0x1a">CRTYHS01.MDT</rom>
+			<rom type="file" offset="0x1b">CRTYHS02.MDT</rom>
+			<rom type="shell" offset="0">TRPSCHRN</rom>
+			<rom type="shell" offset="0">TRPSCR98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1a">オープニング</title>
+			<title code="0x0c">タイトル</title>
+			<title code="0x06">インフォメーション</title>
+			<title code="0x02">BGM #1</title>
+			<title code="0x01">ピンチ１</title>
+			<title code="0x03">BGM #2</title>
+			<title code="0x0a">BGM #3</title>
+			<title code="0x08">ピンチ２</title>
+			<title code="0x07">BGM #4</title>
+			<title code="0x04">BGM #5</title>
+			<title code="0x12">BGM #6</title>
+			<title code="0x13">ピンチ３</title>
+			<title code="0x18">BGM #7</title>
+			<title code="0x19">ピンチ４</title>
+			<title code="0x05">未使用</title>
+			<title code="0x14">クリアー</title>
+			<title code="0x0d">ステージクリア</title>
+			<title code="0x0e">試合終了１</title>
+			<title code="0x0f">試合終了２</title>
+			<title code="0x17">コンティニュー</title>
+			<title code="0x16">ゲームオーバー</title>
+			<title code="0x15">ネームエントリー</title>
+			<title code="0x1b">リトライ</title>
+			<title code="0x0b">ヴィジュアル</title>
+			<title code="0x09">エンディング（妖艶天使）</title>
+			<title code="0x10">エンディング（ノーマル）</title>
+			<title code="0x11">エンディング（ハード）</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Teens (てぃ～ん)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">custom</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archive="teens98">
+			<rom type="file" offset="-1">TRPSCR98.COM</rom>
+			<rom type="file" offset="-1">TRPSCHRN.COM</rom>
+			<rom type="file" offset="0x01">CHIP_OP.MDT</rom>
+			<rom type="file" offset="0x02">TEEN101.MDT</rom>
+			<rom type="file" offset="0x03">TEEN102.MDT</rom>
+			<rom type="file" offset="0x04">TEEN103.MDT</rom>
+			<rom type="file" offset="0x05">TEEN104.MDT</rom>
+			<rom type="file" offset="0x06">TEEN105.MDT</rom>
+			<rom type="file" offset="0x07">TEEN109.MDT</rom>
+			<rom type="file" offset="0x08">TEEN111.MDT</rom>
+			<rom type="file" offset="0x09">TEEN1H1.MDT</rom>
+			<rom type="file" offset="0x0a">TEEN1H2.MDT</rom>
+			<rom type="file" offset="0x0b">TEEN1H3.MDT</rom>
+			<rom type="file" offset="0x0c">TEEN201.MDT</rom>
+			<rom type="file" offset="0x0d">TEEN201B.MDT</rom>
+			<rom type="file" offset="0x0e">TEEN202.MDT</rom>
+			<rom type="file" offset="0x0f">TEEN203.MDT</rom>
+			<rom type="file" offset="0x10">TEEN204.MDT</rom>
+			<rom type="file" offset="0x11">TEEN205.MDT</rom>
+			<rom type="file" offset="0x12">TEEN206.MDT</rom>
+			<rom type="file" offset="0x13">TEEN207.MDT</rom>
+			<rom type="file" offset="0x14">TEENSE01.MDT</rom>
+			<rom type="file" offset="0x15">TEENSE02.MDT</rom>
+			<rom type="file" offset="0x16">TEENSE03.MDT</rom>
+			<rom type="file" offset="0x17">TEENSE04.MDT</rom>
+			<rom type="file" offset="0x18">TEENSE05.MDT</rom>
+			<rom type="shell" offset="0x00">TRPSCHRN</rom>
+			<rom type="shell" offset="0x00">TRPSCR98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">カスタムロゴ</title>
+			<title code="0x03">てんわやんわが！女子高生 [OP]</title>
+			<title code="0x02">わたし若瀬あゆみ</title>
+			<title code="0x04">ハ～イ、ミ～キ～ちゃん</title>
+			<title code="0x05">愛ちゃんてば…もぅ～☆</title>
+			<title code="0x07">愛ちゃんの憂鬱!?</title>
+			<title code="0x0b">Ｈな気分</title>
+			<title code="0x09">あゆみちゃんに捧げます………</title>
+			<title code="0x0a">気持ちよくしてあげる</title>
+			<title code="0x06">Eye Catch</title>
+			<title code="0x08">てんわやんわが！女子高生 [ED]</title>
+			<title code="0x0c">愛欲の戯れ</title>
+			<title code="0x0d">小さき花の雫</title>
+			<title code="0x0e">天使達の休日</title>
+			<title code="0x0f">悦虐の陶酔</title>
+			<title code="0x10">調教された天使</title>
+			<title code="0x11">堕天使の涙</title>
+			<title code="0x12">優しさの中で</title>
+			<title code="0x13">恋色Teen</title>
+			<title code="0x14">TEENSE01.MDT</title>
+			<title code="0x15">TEENSE02.MDT</title>
+			<title code="0x16">TEENSE03.MDT</title>
+			<title code="0x17">TEENSE04.MDT</title>
+			<title code="0x18">TEENSE05.MDT</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Star Platinum (スタープラチナ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">custom</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="ssg_mix" value="-18"/>
+			<option name="opn_type" value="0"/>
+		</options>
+		<romlist archive="starplatinum_98">
+			<rom type="file" offset="-1">TRPSCR98.COM</rom>
+			<rom type="file" offset="-1">TRPSCHRN.COM</rom>
+			<rom type="file" offset="11">017.DAT</rom>
+			<rom type="file" offset="12">019.DAT</rom>
+			<rom type="file" offset="13">021.DAT</rom>
+			<rom type="file" offset="14">023.DAT</rom>
+			<rom type="file" offset="15">025.DAT</rom>
+			<rom type="file" offset="16">027.DAT</rom>
+			<rom type="file" offset="17">029.DAT</rom>
+			<rom type="file" offset="18">031.DAT</rom>
+			<rom type="file" offset="19">033.DAT</rom>
+			<rom type="file" offset="20">035.DAT</rom>
+			<rom type="file" offset="21">037.DAT</rom>
+			<rom type="file" offset="22">039.DAT</rom>
+			<rom type="file" offset="23">041.DAT</rom>
+			<rom type="file" offset="24">043.DAT</rom>
+			<rom type="file" offset="25">045.DAT</rom>
+			<rom type="file" offset="26">047.DAT</rom>
+			<rom type="file" offset="27">049.DAT</rom>
+			<rom type="file" offset="28">051.DAT</rom>
+			<rom type="file" offset="29">053.DAT</rom>
+			<rom type="file" offset="30">055.DAT</rom>
+			<rom type="file" offset="31">057.DAT</rom>
+			<rom type="file" offset="32">059.DAT</rom>
+			<rom type="file" offset="33">061.DAT</rom>
+			<rom type="file" offset="34">063.DAT</rom>
+			<rom type="file" offset="35">065.DAT</rom>
+			<rom type="file" offset="36">067.DAT</rom>
+			<rom type="file" offset="37">069.DAT</rom>
+			<rom type="file" offset="38">071.DAT</rom>
+			<rom type="file" offset="39">073.DAT</rom>
+			<rom type="file" offset="40">075.DAT</rom>
+			<rom type="file" offset="41">077.DAT</rom>
+			<rom type="file" offset="42">079.DAT</rom>
+			<rom type="file" offset="43">081.DAT</rom>
+			<rom type="file" offset="44">083.DAT</rom>
+			<rom type="file" offset="45">085.DAT</rom>
+			<rom type="file" offset="46">087.DAT</rom>
+			<rom type="file" offset="47">089.DAT</rom>
+			<rom type="file" offset="48">091.DAT</rom>
+			<rom type="file" offset="49">093.DAT</rom>
+			<rom type="file" offset="50">095.DAT</rom>
+			<rom type="file" offset="51">097.DAT</rom>
+			<rom type="file" offset="52">099.DAT</rom>
+			<rom type="file" offset="53">101.DAT</rom>
+			<rom type="file" offset="54">103.DAT</rom>
+			<rom type="file" offset="55">105.DAT</rom>
+			<rom type="file" offset="56">107.DAT</rom>
+			<rom type="file" offset="57">109.DAT</rom>
+			<rom type="file" offset="58">111.DAT</rom>
+			<rom type="file" offset="59">113.DAT</rom>
+			<rom type="shell" offset="0">TRPSCHRN</rom>
+			<rom type="shell" offset="0">TRPSCR98</rom>
+		</romlist>
+		<titlelist>
+			<title code="13">オープニング</title>
+			<title code="19">タイトル</title>
+			<title code="21">カード説明デモ</title>
+			<title code="22">ゲームBGM1</title>
+			<title code="53">ゲームBGM2</title>
+			<title code="20">ゲームBGM3</title>
+			<title code="18">ゲームBGM4</title>
+			<title code="43">ゲームBGM5</title>
+			<title code="51">勝ちファンファーレ</title>
+			<title code="56">負けファンファーレ</title>
+			<title code="57">ドローゲーム</title>
+			<title code="52">役表示BGM</title>
+			<title code="48">コンティニュー</title>
+			<title code="59">ゲームオーバー</title>
+			<title code="23">M01 星雲と追いかけっこ</title>
+			<title code="47">M29 サブタイトルバック</title>
+			<title code="26">M02 第1次接近遭遇とは…</title>
+			<title code="25">M04 リュシィのテーマ P1</title>
+			<title code="30">M05 天上界回想</title>
+			<title code="37">M08 リュシィのテーマ P2</title>
+			<title code="54">M09 花札へんし～ん</title>
+			<title code="31">M11 放課後水泳娘</title>
+			<title code="38">M12 星霊召還</title>
+			<title code="42">M19 夕焼けこやけで日が暮れる</title>
+			<title code="28">M13 ぱ～ぷりん少女</title>
+			<title code="34">M14 夜になっても星霊探し</title>
+			<title code="33">M15 人気の無い神社</title>
+			<title code="44">M16 豪邸とお嬢様</title>
+			<title code="27">M17 困った双子</title>
+			<title code="41">M21 リュシィのテーマ P3</title>
+			<title code="40">M22 リュシィへんし～ん!</title>
+			<title code="35">M25 幸せの余韻</title>
+			<title code="39">M26 別れの時</title>
+			<title code="36">M27 女神様登場!</title>
+			<title code="46">M30 またヨロシクね!</title>
+			<title code="11">M28 それぞれの幸せ</title>
+			<title code="55">脱ぎ脱ぎBGM1</title>
+			<title code="49">脱ぎ脱ぎBGM2</title>
+			<title code="50">脱ぎ脱ぎBGM3</title>
+			<title code="58">ずべ子ちゃんと遊ぼう!</title>
+			<title code="45">ずべ子ちゃん スタッフロール</title>
+			<title code="12">オープニング 1</title>
+			<title code="14">オープニング 2</title>
+			<title code="15">SE 1</title>
+			<title code="16">SE 2</title>
+			<title code="17">METAL ORANGE</title>
+			<title code="24">M01 星雲と追いかけっこ</title>
+			<title code="29">METAL ORANGE</title>
+			<title code="32">METAL ORANGE</title>
+		</titlelist>
+	</game>
+<game>
+		<name>[X68000] Cyber Block Metal Orange EX (メタルオレンジEX) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">custom</driveralias>
+		<romlist archive="morang68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x100000">MO68.ZPD</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x17">Stop the Music (演奏停止)</title>
+			<title code="0x01">Opening</title>
+			<title code="0x03">Select</title>
+			<title code="0x05">Visual 1</title>
+			<title code="0x06">Visual 2</title>
+			<title code="0x07">Visual 3</title>
+			<title code="0x08">Visual 4</title>
+			<title code="0x09">Visual 5</title>
+			<title code="0x0A">Information</title>
+			<title code="0x0B">Stage 1</title>
+			<title code="0x0C">Stage 2</title>
+			<title code="0x0D">Stage 3</title>
+			<title code="0x0E">Stage 4</title>
+			<title code="0x0F">Stage 5</title>
+			<title code="0x10">Stage Clear</title>
+			<title code="0xffff">Pause</title>
+			<title code="0x11">Continue</title>
+			<title code="0x12">Game Over</title>
+			<title code="0x13">Ranking 1</title>
+			<title code="0x14">Ranking 2</title>
+			<title code="0x15">Ending</title>
+			<title code="0x1B">Select (PSG)</title>
+			<title code="0x1C">Information (PSG)</title>
+			<title code="0x1D">Stage 2 (PSG)</title>
+			<title code="0x1E">Stage 4 (PSG)</title>
+			<title code="0x1F">Stage Clear (PSG)</title>
+			<title code="0x20">Game Over (PSG)</title>
+			<title code="0x21">Ranking 2 (PSG)</title>
+			<title code="0x02">Unused?</title>
+			<title code="0x18">Select (arranged)</title>
+			<title code="0x19">Information (arranged)</title>
+			<title code="0x1A">Stage 2 (arranged)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Cyber Block Metal Orange EX (メタルオレンジEX) (SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">custom</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="morang68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x100000">MO68.ZPD</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">Opening</title>
+			<title code="0x25">Select</title>
+			<title code="0x27">Visual 1</title>
+			<title code="0x28">Visual 2</title>
+			<title code="0x29">Visual 3</title>
+			<title code="0x2A">Visual 4</title>
+			<title code="0x2B">Visual 5</title>
+			<title code="0x2C">Information</title>
+			<title code="0x2D">Stage 1</title>
+			<title code="0x2E">Stage 2</title>
+			<title code="0x2F">Stage 3</title>
+			<title code="0x30">Stage 4</title>
+			<title code="0x31">Stage 5</title>
+			<title code="0x32">Stage Clear</title>
+			<title code="0x22">Pause</title>
+			<title code="0x33">Continue</title>
+			<title code="0x34">Game Over</title>
+			<title code="0x35">Ranking 1</title>
+			<title code="0x36">Ranking 2</title>
+			<title code="0x37">Ending</title>
+			<title code="0x38">Unused?</title>
+			<title code="0x39">Unused?</title>
+			<title code="0x3A">Unused?</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Cyber Block Metal Orange EX (メタルオレンジEX) (Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">custom</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="morang68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x100000">MO68.ZPD</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x23">Opening</title>
+			<title code="0x25">Select</title>
+			<title code="0x27">Visual 1</title>
+			<title code="0x28">Visual 2</title>
+			<title code="0x29">Visual 3</title>
+			<title code="0x2A">Visual 4</title>
+			<title code="0x2B">Visual 5</title>
+			<title code="0x2C">Information</title>
+			<title code="0x2D">Stage 1</title>
+			<title code="0x2E">Stage 2</title>
+			<title code="0x2F">Stage 3</title>
+			<title code="0x30">Stage 4</title>
+			<title code="0x31">Stage 5</title>
+			<title code="0x32">Stage Clear</title>
+			<title code="0x22">Pause</title>
+			<title code="0x33">Continue</title>
+			<title code="0x34">Game Over</title>
+			<title code="0x35">Ranking 1</title>
+			<title code="0x36">Ranking 2</title>
+			<title code="0x37">Ending</title>
+			<title code="0x38">Unused?</title>
+			<title code="0x39">Unused?</title>
+			<title code="0x3A">Unused?</title>
+		</titlelist>
+	</game>
+</gamelist>

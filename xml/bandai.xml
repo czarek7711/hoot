@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //bandai -->
+	<game>
+		<name>[PC-88] Kidou Senshi Z Gundam (Ｚガンダム)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">bandai</driveralias>
+		<romlist archive="zgundam">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Theme</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Kidou Senshi Gundam (機動戦士ガンダム)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">bandai</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="gundam_msx">
+			<rom type="code">Mobile Suit Gundam (1984)(Bandai).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+		</titlelist>
+	</game>
+	<!-- SNES -->
+	<game>
+		<name>[SNES] Shin Kidou Senki Gundam W - Endless Duel / Hiroyuki Iwatsuki, Haruo Ohashi / 1996 (Natsume) Bandai</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">bandai</driveralias>
+		<options>
+			<option name="apu_mix" value="0x200"/>
+		</options>
+		<romlist archive="Shin Kidou Senki Gundam W - Endless Duel (1996-03-29)(Natsume)(Bandai)">
+			<rom type="data" offset="0x00">01 Opening.spc</rom>
+			<rom type="data" offset="0x01">02 Player Choose.spc</rom>
+			<rom type="data" offset="0x02">03 Versus Screen.spc</rom>
+			<rom type="data" offset="0x03">04 Airport.spc</rom>
+			<rom type="data" offset="0x04">05 Arctic.spc</rom>
+			<rom type="data" offset="0x05">06 City.spc</rom>
+			<rom type="data" offset="0x06">07 Desert.spc</rom>
+			<rom type="data" offset="0x07">08 Port.spc</rom>
+			<rom type="data" offset="0x08">09 Seaside.spc</rom>
+			<rom type="data" offset="0x09">10 Space Ship.spc</rom>
+			<rom type="data" offset="0x0a">11 Tower.spc</rom>
+			<rom type="data" offset="0x0b">12 Continue.spc</rom>
+			<rom type="data" offset="0x0c">13 Game Over.spc</rom>
+			<rom type="data" offset="0x0d">14 Victory.spc</rom>
+			<rom type="data" offset="0x0e">15 Credits.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x01">Player Choose</title>
+			<title code="0x02">Versus Screen</title>
+			<title code="0x03">Airport</title>
+			<title code="0x04">Arctic</title>
+			<title code="0x05">City</title>
+			<title code="0x06">Desert</title>
+			<title code="0x07">Port</title>
+			<title code="0x08">Seaside</title>
+			<title code="0x09">Space Ship</title>
+			<title code="0x0a">Tower</title>
+			<title code="0x0b">Continue</title>
+			<title code="0x0c">Game Over</title>
+			<title code="0x0d">Victory</title>
+			<title code="0x0e">Credits</title>
+		</titlelist>
+	</game>
+</gamelist>

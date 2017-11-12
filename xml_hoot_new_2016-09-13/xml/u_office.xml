@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //U-Office -->
+	<game>
+		<name>[PC-9801] Legam(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">U-Office</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="legam_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">FLEF.EFC</rom>
+			<rom type="file" offset="0x10">LG_FM01.FM</rom>
+			<rom type="file" offset="0x11">LG_FM02.FM</rom>
+			<rom type="file" offset="0x12">LG_FM03.FM</rom>
+			<rom type="file" offset="0x13">LG_FM04.FM</rom>
+			<rom type="file" offset="0x14">LG_FM05.FM</rom>
+			<rom type="file" offset="0x15">LG_FM06.FM</rom>
+			<rom type="file" offset="0x16">LG_FM07.FM</rom>
+			<rom type="file" offset="0x17">LG_FM08.FM</rom>
+			<rom type="file" offset="0x18">LG_FM09.FM</rom>
+			<rom type="file" offset="0x19">LG_FM10.FM</rom>
+			<rom type="file" offset="0x1a">LG_FM11.FM</rom>
+			<rom type="file" offset="0x1b">LG_FM12.FM</rom>
+			<rom type="file" offset="0x1c">LG_FM13.FM</rom>
+			<rom type="file" offset="0x1d">LG_FM14.FM</rom>
+			<rom type="file" offset="0x1e">LG_FM15.FM</rom>
+			<rom type="file" offset="0x1f">LG_FM16.FM</rom>
+			<rom type="file" offset="0x20">LG_FM17.FM</rom>
+			<rom type="file" offset="0x21">LG_FM18.FM</rom>
+			<rom type="file" offset="0x22">LG_FM19.FM</rom>
+			<rom type="file" offset="0x23">LG_FM20.FM</rom>
+			<rom type="file" offset="0x24">LG_FM21.FM</rom>
+			<rom type="file" offset="0x25">LG_FM22.FM</rom>
+			<rom type="file" offset="0x26">LG_FM23.FM</rom>
+			<rom type="file" offset="0x27">LG_FM24.FM</rom>
+			<rom type="file" offset="0x28">LG_FM25.FM</rom>
+			<rom type="file" offset="0x29">LG_FM26.FM</rom>
+			<rom type="file" offset="0x2a">LG_FM27.FM</rom>
+			<rom type="file" offset="0x2b">LG_FM28.FM</rom>
+			<rom type="shell" offset="0">pmd # /M12 /V0 /E2 /DF32 /DS0 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LG_FM01.FM : Opening 1</title>
+			<title code="0x11">LG_FM02.FM : Opening 2</title>
+			<title code="0x12">LG_FM03.FM : 森</title>
+			<title code="0x13">LG_FM04.FM : Main Feled</title>
+			<title code="0x14">LG_FM05.FM : 町</title>
+			<title code="0x15">LG_FM06.FM : 村</title>
+			<title code="0x16">LG_FM07.FM : エルフの村</title>
+			<title code="0x17">LG_FM08.FM : 洞窟</title>
+			<title code="0x18">LG_FM09.FM : 神殿</title>
+			<title code="0x19">LG_FM10.FM : イベント 1</title>
+			<title code="0x1a">LG_FM11.FM : イベント 2</title>
+			<title code="0x1b">LG_FM12.FM : 3人組</title>
+			<title code="0x1c">LG_FM13.FM : Nomal Battle</title>
+			<title code="0x1d">LG_FM14.FM : BOSS</title>
+			<title code="0x1e">LG_FM15.FM : </title>
+			<title code="0x1f">LG_FM16.FM : </title>
+			<title code="0x20">LG_FM17.FM : </title>
+			<title code="0x21">LG_FM18.FM : 山・雪山</title>
+			<title code="0x22">LG_FM19.FM : イベント 3</title>
+			<title code="0x23">LG_FM20.FM : Ending</title>
+			<title code="0x24">LG_FM21.FM : LAST BATTLE</title>
+			<title code="0x25">LG_FM22.FM : Dragon</title>
+			<title code="0x26">LG_FM23.FM : 宿屋</title>
+			<title code="0x27">LG_FM24.FM : GAME OVER</title>
+			<title code="0x28">LG_FM25.FM : WIN</title>
+			<title code="0x29">LG_FM26.FM : 怪しい音色</title>
+			<title code="0x2a">LG_FM27.FM : 宝箱</title>
+			<title code="0x2b">LG_FM28.FM : 笛</title>
+			<range min="0x0801" max="0x080C" extcode="1">FLEF.EFC   : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Legam(GS)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="NEC PC-9801">U-Office</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="legam_98">
+			<rom type="file" offset="-1">MMDR.COM</rom>
+			<rom type="file" offset="-1">MMDR_98.COM</rom>
+			<rom type="file" offset="0x10">LG_GS01.MD</rom>
+			<rom type="file" offset="0x11">LG_GS02.MD</rom>
+			<rom type="file" offset="0x12">LG_GS03.MD</rom>
+			<rom type="file" offset="0x13">LG_GS04.MD</rom>
+			<rom type="file" offset="0x14">LG_GS05.MD</rom>
+			<rom type="file" offset="0x15">LG_GS06.MD</rom>
+			<rom type="file" offset="0x16">LG_GS07.MD</rom>
+			<rom type="file" offset="0x17">LG_GS08.MD</rom>
+			<rom type="file" offset="0x18">LG_GS09.MD</rom>
+			<rom type="file" offset="0x19">LG_GS10.MD</rom>
+			<rom type="file" offset="0x1a">LG_GS11.MD</rom>
+			<rom type="file" offset="0x1b">LG_GS12.MD</rom>
+			<rom type="file" offset="0x1c">LG_GS13.MD</rom>
+			<rom type="file" offset="0x1d">LG_GS14.MD</rom>
+			<rom type="file" offset="0x1e">LG_GS15.MD</rom>
+			<rom type="file" offset="0x1f">LG_GS16.MD</rom>
+			<rom type="file" offset="0x20">LG_GS17.MD</rom>
+			<rom type="file" offset="0x21">LG_GS18.MD</rom>
+			<rom type="file" offset="0x22">LG_GS19.MD</rom>
+			<rom type="file" offset="0x23">LG_GS20.MD</rom>
+			<rom type="file" offset="0x24">LG_GS21.MD</rom>
+			<rom type="file" offset="0x25">LG_GS22.MD</rom>
+			<rom type="file" offset="0x26">LG_GS23.MD</rom>
+			<rom type="file" offset="0x27">LG_GS24.MD</rom>
+			<rom type="file" offset="0x28">LG_GS25.MD</rom>
+			<rom type="file" offset="0x29">LG_GS26.MD</rom>
+			<rom type="file" offset="0x2a">LG_GS27.MD</rom>
+			<rom type="file" offset="0x2b">LG_GS28.MD</rom>
+			<rom type="shell" offset="0">MMDR</rom>
+			<rom type="shell" offset="0">MMDR_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">LG_GS01.MD : Opening 1</title>
+			<title code="0x11">LG_GS02.MD : Opening 2</title>
+			<title code="0x12">LG_GS03.MD : 森</title>
+			<title code="0x13">LG_GS04.MD : Main Feled</title>
+			<title code="0x14">LG_GS05.MD : 町</title>
+			<title code="0x15">LG_GS06.MD : 村</title>
+			<title code="0x16">LG_GS07.MD : エルフの村</title>
+			<title code="0x17">LG_GS08.MD : 洞窟</title>
+			<title code="0x18">LG_GS09.MD : 神殿</title>
+			<title code="0x19">LG_GS10.MD : イベント 1</title>
+			<title code="0x1a">LG_GS11.MD : イベント 2</title>
+			<title code="0x1b">LG_GS12.MD : 3人組</title>
+			<title code="0x1c">LG_GS13.MD : Nomal Battle</title>
+			<title code="0x1d">LG_GS14.MD : BOSS</title>
+			<title code="0x1e">LG_GS15.MD : </title>
+			<title code="0x1f">LG_GS16.MD : </title>
+			<title code="0x20">LG_GS17.MD : </title>
+			<title code="0x21">LG_GS18.MD : 山・雪山</title>
+			<title code="0x22">LG_GS19.MD : イベント 3</title>
+			<title code="0x23">LG_GS20.MD : Ending</title>
+			<title code="0x24">LG_GS21.MD : LAST BATTLE</title>
+			<title code="0x25">LG_GS22.MD : Dragon</title>
+			<title code="0x26">LG_GS23.MD : 宿屋</title>
+			<title code="0x27">LG_GS24.MD : GAME OVER</title>
+			<title code="0x28">LG_GS25.MD : WIN</title>
+			<title code="0x29">LG_GS26.MD : 怪しい音色</title>
+			<title code="0x2a">LG_GS27.MD : 宝箱</title>
+			<title code="0x2b">LG_GS28.MD : 笛</title>
+		</titlelist>
+	</game>
+</gamelist>

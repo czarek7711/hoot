@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //mucom88 -->
+	<!-- //mucomfm -->
+
+	<!-- ///PC-88 -->
+	<!-- ///PC-88VA -->
+	<!-- ///PC-98 -->
+	<game>
+		<name>[PC-98] 英雄伝説Ⅱデモ版</name>
+		<driver type="ed2">mucom88</driver>
+		<driveralias type="PC-98">falcom</driveralias>
+		<romlist archive="ed2d_98">
+			<rom type="code" offset="0x4000">PATCH</rom>
+			<rom type="code" offset="0x6000">MUSDRV</rom>
+			<rom type="bgm" offset="0">ED201.DAT</rom>
+			<rom type="bgm" offset="1">ED202.DAT</rom>
+			<rom type="bgm" offset="2">ED203.DAT</rom>
+			<rom type="bgm" offset="3">ED204.DAT</rom>
+			<rom type="bgm" offset="4">ED205.DAT</rom>
+			<rom type="bgm" offset="5">ED206.DAT</rom>
+			<rom type="bgm" offset="6">ED207.DAT</rom>
+			<rom type="bgm" offset="7">ED209.DAT</rom>
+			<rom type="bgm" offset="8">ED211.DAT</rom>
+			<rom type="bgm" offset="9">ED212.DAT</rom>
+			<rom type="bgm" offset="10">ED219.DAT</rom>
+			<rom type="bgm" offset="11">ED280.DAT</rom>
+			<rom type="bgm" offset="12">ED290.DAT</rom>
+			<rom type="bgm" offset="13">ED291.DAT</rom>
+			<rom type="bgm" offset="14">ED292.DAT</rom>
+			<rom type="bgm" offset="15">ED293.DAT</rom>
+			<rom type="bgm" offset="16">ED294.DAT</rom>
+			<rom type="bgm" offset="17">ED300.DAT</rom>
+			<rom type="bgm" offset="18">ED301.DAT</rom>
+			<rom type="bgm" offset="19">ED302.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0">戦闘</title>
+			<title code="1">ゲームオーバー</title>
+			<title code="2">平和</title>
+			<title code="3">城</title>
+			<title code="4">ビックリ</title>
+			<title code="5">スライムいじめ</title>
+			<title code="6">町</title>
+			<title code="7">船</title>
+			<title code="8">地底、町</title>
+			<title code="9">グロストス城</title>
+			<title code="10">SFX</title>
+			<title code="11">ユーティリティー</title>
+			<title code="12">ED290</title>
+			<title code="13">オープニング</title>
+			<title code="14">ED292</title>
+			<title code="15">ED293</title>
+			<title code="16">ED294</title>
+			<title code="17">ED300</title>
+			<title code="18">ED301</title>
+			<title code="19">小さな英雄－ジュリオとクリスの大冒険－</title>
+		</titlelist>
+	</game>
+	<!-- ///X1 -->
+	<!-- ///FM Towns -->
+</gamelist>

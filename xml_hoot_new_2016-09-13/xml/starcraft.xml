@@ -1,0 +1,2184 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //StarCraft -->
+	<game>
+		<name>[PC-8801] 九龍島</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">StarCraft</driveralias>
+		<romlist archive="kyuryu">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xa000">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000000">メインテーマ</title>
+			<title code="0x00000001">歩行音</title>
+			<title code="0x00000002">ターン開始</title>
+			<title code="0x00000003">ダメージ #1</title>
+			<title code="0x00000004">ダメージ #2</title>
+			<title code="0x00000005">ドアを開けた音</title>
+			<title code="0x00000006">ドアが開かなかった音</title>
+			<title code="0x00000007">ゲームオーバー</title>
+			<title code="0x00000008">敵を倒した音</title>
+			<title code="0x00000009">壁にぶつかった音 #1</title>
+			<title code="0x0000000a">壁にぶつかった音 #2</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] Might and Magic</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">StarCraft</driveralias>
+		<romlist archive="m_and_m">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xea24">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">タイトル/メインメニュー</title>
+			<title code="0x01">街</title>
+			<title code="0x03">フィールド</title>
+			<title code="0x08">戦闘</title>
+			<title code="0x09">戦闘終了</title>
+			<title code="0x02">BGM03</title>
+			<title code="0x04">BGM05</title>
+			<title code="0x05">BGM06</title>
+			<title code="0x06">BGM07</title>
+			<title code="0x07">BGM08</title>
+			<title code="0x0a">演奏停止</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] PHANTASIE III - The Wrath of Nikademus -</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">StarCraft</driveralias>
+		<romlist archive="phantas3">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xea80">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM1</title>
+			<title code="0x01">BGM2</title>
+			<title code="0x02">BGM3</title>
+			<title code="0x03">BGM4</title>
+			<title code="0x04">BGM5</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] Rogue Alliance</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">StarCraft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8000"/>
+			<option name="init_pc" value="0xf000"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="rogueal">
+			<rom type="code" offset="0x0000">PROG</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00 :</title>
+			<title code="0x01">MUS01 :</title>
+			<title code="0x02">MUS02 :</title>
+			<title code="0x03">MUS03 :</title>
+			<title code="0x04">MUS04 :</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] RHYME STAR(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="rhymes98">
+			<rom type="file" offset="-1">KOLIN.COM</rom>
+			<rom type="file" offset="-1">rhymes98.com</rom>
+			<rom type="file" offset="0x05">MUS_B/RHYME.SZ8</rom>
+			<rom type="file" offset="0x10">MUS_A/RHYME05.MZ2</rom>
+			<rom type="file" offset="0x11">MUS_A/RHYME06.MZ2</rom>
+			<rom type="file" offset="0x12">MUS_A/RHYME07.MZ2</rom>
+			<rom type="file" offset="0x13">MUS_A/RHYME12.MZ2</rom>
+			<rom type="file" offset="0x14">MUS_A/RHYME29.MZ2</rom>
+			<rom type="file" offset="0x15">MUS_A/RHYME30.MZ2</rom>
+			<rom type="file" offset="0x16">MUS_A/RHYME31.MZ2</rom>
+			<rom type="file" offset="0x17">MUS_A/RHYME33.MZ2</rom>
+			<rom type="file" offset="0x18">MUS_A/RHYME34.MZ2</rom>
+			<rom type="file" offset="0x19">MUS_A/RHYME35.MZ2</rom>
+			<rom type="file" offset="0x1a">MUS_A/RHYME36.MZ2</rom>
+			<rom type="file" offset="0x1b">MUS_A/RHYME37.MZ2</rom>
+			<rom type="file" offset="0x1c">MUS_B/RHYME01.MZ2</rom>
+			<rom type="file" offset="0x1d">MUS_B/RHYME02.MZ2</rom>
+			<rom type="file" offset="0x1e">MUS_B/RHYME03.MZ2</rom>
+			<rom type="file" offset="0x1f">MUS_B/RHYME11.MZ2</rom>
+			<rom type="file" offset="0x20">MUS_B/RHYME13.MZ2</rom>
+			<rom type="file" offset="0x21">MUS_B/RHYME14.MZ2</rom>
+			<rom type="file" offset="0x22">MUS_B/RHYME15.MZ2</rom>
+			<rom type="file" offset="0x23">MUS_B/RHYME16.MZ2</rom>
+			<rom type="file" offset="0x24">MUS_B/RHYME17.MZ2</rom>
+			<rom type="file" offset="0x25">MUS_B/RHYME18.MZ2</rom>
+			<rom type="file" offset="0x26">MUS_C/RHYME08.MZ2</rom>
+			<rom type="file" offset="0x27">MUS_C/RHYME09.MZ2</rom>
+			<rom type="file" offset="0x28">MUS_C/RHYME10.MZ2</rom>
+			<rom type="file" offset="0x29">MUS_C/RHYME19.MZ2</rom>
+			<rom type="file" offset="0x2a">MUS_C/RHYME20.MZ2</rom>
+			<rom type="file" offset="0x2b">MUS_C/RHYME21.MZ2</rom>
+			<rom type="file" offset="0x2c">MUS_C/RHYME22.MZ2</rom>
+			<rom type="file" offset="0x2d">MUS_C/RHYME23.MZ2</rom>
+			<rom type="file" offset="0x2e">MUS_C/RHYME24.MZ2</rom>
+			<rom type="file" offset="0x2f">MUS_C/RHYME25.MZ2</rom>
+			<rom type="file" offset="0x30">MUS_C/RHYME26.MZ2</rom>
+			<rom type="shell" offset="0">kolin</rom>
+			<rom type="shell" offset="0">rhymes98 26</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000001c">RHYME01.MZ2 : [スタークラフト・ジングル]</title>
+			<title code="0x0000001d">RHYME02.MZ2 : [オープニング] シンクロ版(2)</title>
+			<title code="0x0000001e">RHYME03.MZ2 : ゲームタイトル・メインメニュー</title>
+			<title code="0x00000010">RHYME05.MZ2 : Stage clear fanfare #1</title>
+			<title code="0x00000011">RHYME06.MZ2 : [中間イベントA] 挑戦：勝負だ!</title>
+			<title code="0x00000012">RHYME07.MZ2 : [中間イベントB] 勝利：やったね!</title>
+			<title code="0x00000026">RHYME08.MZ2 : [中間イベントC] おタマちゃんのテーマ</title>
+			<title code="0x00000027">RHYME09.MZ2 : [中間イベントD] サムソン亀岡／兄貴</title>
+			<title code="0x00000028">RHYME10.MZ2 : [中間イベントE] (大魔王ぺしぺし登場のテーマ)</title>
+			<title code="0x0000001f">RHYME11.MZ2 : [中間イベントF] 魔城崩壊</title>
+			<title code="0x00000013">RHYME12.MZ2 : Game Over #1</title>
+			<title code="0x00000020">RHYME13.MZ2 : [エンディング] 同期信号有りバージョン(1)</title>
+			<title code="0x00000021">RHYME14.MZ2 : [スタッフロール]</title>
+			<title code="0x00000022">RHYME15.MZ2 : World 1 [地上]</title>
+			<title code="0x00000023">RHYME16.MZ2 : World 2 [CAVE] Ver.β</title>
+			<title code="0x00000024">RHYME17.MZ2 : World 3 [海上]</title>
+			<title code="0x00000025">RHYME18.MZ2 : World 4 [海底]</title>
+			<title code="0x00000029">RHYME19.MZ2 : World 5 [高山]</title>
+			<title code="0x0000002a">RHYME20.MZ2 : World 6 [雲上]</title>
+			<title code="0x0000002b">RHYME21.MZ2 : World 7 [珊瑚礁]</title>
+			<title code="0x0000002c">RHYME22.MZ2 : World 8 [大森林]</title>
+			<title code="0x0000002d">RHYME23.MZ2 : World 9 [浮遊大陸]</title>
+			<title code="0x0000002e">RHYME24.MZ2 : World 10 [砂漠]</title>
+			<title code="0x0000002f">RHYME25.MZ2 : World 11 [魔界]</title>
+			<title code="0x00000030">RHYME26.MZ2 : World 12 [魔王の城]</title>
+			<title code="0x00000014">RHYME29.MZ2 : STAGE START</title>
+			<title code="0x00000015">RHYME30.MZ2 : [ディスクを入れ換えてね]</title>
+			<title code="0x00000016">RHYME31.MZ2 : IPL sound #1</title>
+			<title code="0x00000017">RHYME33.MZ2 : [あけましておめでとー]</title>
+			<title code="0x00000018">RHYME34.MZ2 : Theme of April Fool</title>
+			<title code="0x00000019">RHYME35.MZ2 : [七夕(7月7日用)]</title>
+			<title code="0x0000001a">RHYME36.MZ2 : [体育の日]</title>
+			<title code="0x0000001b">RHYME37.MZ2 : [めりーくりすます]</title>
+			<title code="0x01000000">RHYME  .SZ8 : EFFECT #01</title>
+			<title code="0x02000000">RHYME  .SZ8 : EFFECT #02</title>
+			<title code="0x03000000">RHYME  .SZ8 : EFFECT #03</title>
+			<title code="0x04000000">RHYME  .SZ8 : EFFECT #04</title>
+			<title code="0x05000000">RHYME  .SZ8 : EFFECT #05</title>
+			<title code="0x06000000">RHYME  .SZ8 : EFFECT #06</title>
+			<title code="0x07000000">RHYME  .SZ8 : EFFECT #07</title>
+			<title code="0x08000000">RHYME  .SZ8 : EFFECT #08</title>
+			<title code="0x09000000">RHYME  .SZ8 : EFFECT #09</title>
+			<title code="0x0a000000">RHYME  .SZ8 : EFFECT #0A</title>
+			<title code="0x0b000000">RHYME  .SZ8 : EFFECT #0B</title>
+			<title code="0x0c000000">RHYME  .SZ8 : EFFECT #0C</title>
+			<title code="0x0d000000">RHYME  .SZ8 : EFFECT #0D</title>
+			<title code="0x0e000000">RHYME  .SZ8 : EFFECT #0E</title>
+			<title code="0x0f000000">RHYME  .SZ8 : EFFECT #0F</title>
+			<title code="0x10000000">RHYME  .SZ8 : EFFECT #10</title>
+			<title code="0x11000000">RHYME  .SZ8 : EFFECT #11</title>
+			<title code="0x12000000">RHYME  .SZ8 : EFFECT #12</title>
+			<title code="0x13000000">RHYME  .SZ8 : EFFECT #13</title>
+			<title code="0x14000000">RHYME  .SZ8 : EFFECT #14</title>
+			<title code="0x15000000">RHYME  .SZ8 : EFFECT #15</title>
+			<title code="0x16000000">RHYME  .SZ8 : EFFECT #16</title>
+			<title code="0x17000000">RHYME  .SZ8 : EFFECT #17</title>
+			<title code="0x18000000">RHYME  .SZ8 : EFFECT #18</title>
+			<title code="0x19000000">RHYME  .SZ8 : EFFECT #19</title>
+			<title code="0x1a000000">RHYME  .SZ8 : EFFECT #1A</title>
+			<title code="0x1b000000">RHYME  .SZ8 : EFFECT #1B</title>
+			<title code="0x1c000000">RHYME  .SZ8 : EFFECT #1C</title>
+			<title code="0x1d000000">RHYME  .SZ8 : EFFECT #1D</title>
+			<title code="0x1e000000">RHYME  .SZ8 : EFFECT #1E</title>
+			<title code="0x1f000000">RHYME  .SZ8 : EFFECT #1F</title>
+			<title code="0x20000000">RHYME  .SZ8 : EFFECT #20</title>
+			<title code="0x21000000">RHYME  .SZ8 : EFFECT #21</title>
+			<title code="0x22000000">RHYME  .SZ8 : EFFECT #22</title>
+			<title code="0x23000000">RHYME  .SZ8 : EFFECT #23</title>
+			<title code="0x24000000">RHYME  .SZ8 : EFFECT #24</title>
+			<title code="0x25000000">RHYME  .SZ8 : EFFECT #25</title>
+			<title code="0x26000000">RHYME  .SZ8 : EFFECT #26</title>
+			<title code="0x27000000">RHYME  .SZ8 : EFFECT #27</title>
+			<title code="0x28000000">RHYME  .SZ8 : EFFECT #28</title>
+			<title code="0x29000000">RHYME  .SZ8 : EFFECT #29</title>
+			<title code="0x2a000000">RHYME  .SZ8 : EFFECT #2A</title>
+			<title code="0x2b000000">RHYME  .SZ8 : EFFECT #2B</title>
+			<title code="0x2c000000">RHYME  .SZ8 : EFFECT #2C</title>
+			<title code="0x2d000000">RHYME  .SZ8 : EFFECT #2D</title>
+			<title code="0x2e000000">RHYME  .SZ8 : EFFECT #2E</title>
+			<title code="0x2f000000">RHYME  .SZ8 : EFFECT #2F</title>
+			<title code="0x30000000">RHYME  .SZ8 : EFFECT #30</title>
+			<title code="0x31000000">RHYME  .SZ8 : EFFECT #31</title>
+			<title code="0x32000000">RHYME  .SZ8 : EFFECT #32</title>
+			<title code="0x33000000">RHYME  .SZ8 : EFFECT #33</title>
+			<title code="0x34000000">RHYME  .SZ8 : EFFECT #34</title>
+			<title code="0x35000000">RHYME  .SZ8 : EFFECT #35</title>
+			<title code="0x36000000">RHYME  .SZ8 : EFFECT #36</title>
+			<title code="0x37000000">RHYME  .SZ8 : EFFECT #37</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] Might and Magic Book Two</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="NEC PC-9801">StarCraft</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="mandm2_98">
+			<rom type="code" offset="0x00600">mm2.bin</rom>
+			<rom type="code" offset="0x02000">PROG</rom>
+			<rom type="code" offset="0x22680">DATA</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUSIC 00</title>
+			<title code="0x01">MUSIC 01</title>
+			<title code="0x02">MUSIC 02</title>
+			<title code="0x03">MUSIC 03</title>
+			<title code="0x04">MUSIC 04</title>
+			<title code="0x05">MUSIC 05</title>
+			<title code="0x06">MUSIC 06</title>
+			<title code="0x07">MUSIC 07</title>
+			<title code="0x08">MUSIC 08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] RHYME STAR(86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9801">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="rhymes98">
+			<rom type="file" offset="-1">KOLIN.COM</rom>
+			<rom type="file" offset="-1">rhymes98.com</rom>
+			<rom type="file" offset="0x05">MUS_B/RHYME.SZ8</rom>
+			<rom type="file" offset="0x06">MUS_A/RHYME01.PZ8</rom>
+			<rom type="file" offset="0x07">MUS_C/RHYME03.PZ8</rom>
+			<rom type="file" offset="0x40">MUS_B/SEPCM01.PZ8</rom>
+			<rom type="file" offset="0x41">MUS_B/SEPCM02.PZ8</rom>
+			<rom type="file" offset="0x42">MUS_B/SEPCM03.PZ8</rom>
+			<rom type="file" offset="0x43">MUS_B/SEPCM04.PZ8</rom>
+			<rom type="file" offset="0x44">MUS_B/SEPCM05.PZ8</rom>
+			<rom type="file" offset="0x45">MUS_B/SEPCM14.PZ8</rom>
+			<rom type="file" offset="0x46">MUS_B/SEPCM15.PZ8</rom>
+			<rom type="file" offset="0x47">MUS_C/SEPCM06.PZ8</rom>
+			<rom type="file" offset="0x48">MUS_C/SEPCM07.PZ8</rom>
+			<rom type="file" offset="0x49">MUS_C/SEPCM08.PZ8</rom>
+			<rom type="file" offset="0x4a">MUS_C/SEPCM09.PZ8</rom>
+			<rom type="file" offset="0x4b">MUS_C/SEPCM10.PZ8</rom>
+			<rom type="file" offset="0x4c">MUS_C/SEPCM11.PZ8</rom>
+			<rom type="file" offset="0x4d">MUS_C/SEPCM12.PZ8</rom>
+			<rom type="file" offset="0x4e">MUS_C/SEPCM13.PZ8</rom>
+			<rom type="file" offset="0x10">MUS_A/RHYME05.MZ8</rom>
+			<rom type="file" offset="0x11">MUS_A/RHYME06.MZ8</rom>
+			<rom type="file" offset="0x12">MUS_A/RHYME07.MZ8</rom>
+			<rom type="file" offset="0x13">MUS_A/RHYME12.MZ3</rom>
+			<rom type="file" offset="0x14">MUS_A/RHYME29.MZ3</rom>
+			<rom type="file" offset="0x15">MUS_A/RHYME30.MZ3</rom>
+			<rom type="file" offset="0x16">MUS_A/RHYME31.MZ3</rom>
+			<rom type="file" offset="0x17">MUS_A/RHYME33.MZ3</rom>
+			<rom type="file" offset="0x18">MUS_A/RHYME34.MZ3</rom>
+			<rom type="file" offset="0x19">MUS_A/RHYME35.MZ3</rom>
+			<rom type="file" offset="0x1a">MUS_A/RHYME36.MZ3</rom>
+			<rom type="file" offset="0x1b">MUS_A/RHYME37.MZ3</rom>
+			<rom type="file" offset="0x1c">MUS_B/RHYME01.MZ8</rom>
+			<rom type="file" offset="0x1d">MUS_B/RHYME02.MZ8</rom>
+			<rom type="file" offset="0x1e">MUS_B/RHYME03.MZ8</rom>
+			<rom type="file" offset="0x1f">MUS_B/RHYME11.MZ8</rom>
+			<rom type="file" offset="0x20">MUS_B/RHYME13.MZ8</rom>
+			<rom type="file" offset="0x21">MUS_B/RHYME14.MZ8</rom>
+			<rom type="file" offset="0x22">MUS_B/RHYME15.MZ8</rom>
+			<rom type="file" offset="0x23">MUS_B/RHYME16.MZ8</rom>
+			<rom type="file" offset="0x24">MUS_B/RHYME17.MZ8</rom>
+			<rom type="file" offset="0x25">MUS_B/RHYME18.MZ8</rom>
+			<rom type="file" offset="0x26">MUS_C/RHYME08.MZ8</rom>
+			<rom type="file" offset="0x27">MUS_C/RHYME09.MZ8</rom>
+			<rom type="file" offset="0x28">MUS_C/RHYME10.MZ8</rom>
+			<rom type="file" offset="0x29">MUS_C/RHYME19.MZ8</rom>
+			<rom type="file" offset="0x2a">MUS_C/RHYME20.MZ8</rom>
+			<rom type="file" offset="0x2b">MUS_C/RHYME21.MZ8</rom>
+			<rom type="file" offset="0x2c">MUS_C/RHYME22.MZ8</rom>
+			<rom type="file" offset="0x2d">MUS_C/RHYME23.MZ8</rom>
+			<rom type="file" offset="0x2e">MUS_C/RHYME24.MZ8</rom>
+			<rom type="file" offset="0x2f">MUS_C/RHYME25.MZ8</rom>
+			<rom type="file" offset="0x30">MUS_C/RHYME26.MZ8</rom>
+			<rom type="shell" offset="0">kolin</rom>
+			<rom type="shell" offset="0">rhymes98 86</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0006001c">RHYME01.MZ8 : [スタークラフト・ジングル]</title>
+			<title code="0x0006001d">RHYME02.MZ8 : [オープニング] シンクロ版(2)</title>
+			<title code="0x0006001e">RHYME03.MZ8 : ゲームタイトル・メインメニュー</title>
+			<title code="0x00060010">RHYME05.MZ8 : Stage clear fanfare #1</title>
+			<title code="0x00060011">RHYME06.MZ8 : [中間イベントA] 挑戦：勝負だ!</title>
+			<title code="0x00060012">RHYME07.MZ8 : [中間イベントB] 勝利：やったね!</title>
+			<title code="0x00060026">RHYME08.MZ8 : [中間イベントC] おタマちゃんのテーマ</title>
+			<title code="0x00060027">RHYME09.MZ8 : [中間イベントD] サムソン亀岡／兄貴</title>
+			<title code="0x00060028">RHYME10.MZ8 : [中間イベントE] (大魔王ぺしぺし登場のテーマ)</title>
+			<title code="0x0006001f">RHYME11.MZ8 : [中間イベントF] 魔城崩壊</title>
+			<title code="0x00060013">RHYME12.MZ3 : Game Over #1</title>
+			<title code="0x00060020">RHYME13.MZ8 : [エンディング] 同期信号有りバージョン(1)</title>
+			<title code="0x00060021">RHYME14.MZ8 : [スタッフロール]</title>
+			<title code="0x00060022">RHYME15.MZ8 : World 1 [地上]</title>
+			<title code="0x00060023">RHYME16.MZ8 : World 2 [CAVE] Ver.β</title>
+			<title code="0x00060024">RHYME17.MZ8 : World 3 [海上]</title>
+			<title code="0x00060025">RHYME18.MZ8 : World 4 [海底]</title>
+			<title code="0x00060029">RHYME19.MZ8 : World 5 [高山]</title>
+			<title code="0x0006002a">RHYME20.MZ8 : World 6 [雲上]</title>
+			<title code="0x0006002b">RHYME21.MZ8 : World 7 [珊瑚礁]</title>
+			<title code="0x0007002c">RHYME22.MZ8 : World 8 [大森林]</title>
+			<title code="0x0006002d">RHYME23.MZ8 : World 9 [浮遊大陸]</title>
+			<title code="0x0007002e">RHYME24.MZ8 : World 10 [砂漠]</title>
+			<title code="0x0006002f">RHYME25.MZ8 : World 11 [魔界]</title>
+			<title code="0x00060030">RHYME26.MZ8 : World 12 [魔王の城]</title>
+			<title code="0x00060014">RHYME29.MZ3 : STAGE START</title>
+			<title code="0x00060015">RHYME30.MZ3 : [ディスクを入れ換えてね]</title>
+			<title code="0x00060016">RHYME31.MZ3 : IPL sound #1</title>
+			<title code="0x00060017">RHYME33.MZ3 : [あけましておめでとー]</title>
+			<title code="0x00060018">RHYME34.MZ3 : Theme of April Fool</title>
+			<title code="0x00060019">RHYME35.MZ3 : [七夕(7月7日用)]</title>
+			<title code="0x0006001a">RHYME36.MZ3 : [体育の日]</title>
+			<title code="0x0006001b">RHYME37.MZ3 : [めりーくりすます]</title>
+			<title code="0x01000000">RHYME  .SZ8 : EFFECT #01</title>
+			<title code="0x02000000">RHYME  .SZ8 : EFFECT #02</title>
+			<title code="0x03000000">RHYME  .SZ8 : EFFECT #03</title>
+			<title code="0x04000000">RHYME  .SZ8 : EFFECT #04</title>
+			<title code="0x05000000">RHYME  .SZ8 : EFFECT #05</title>
+			<title code="0x06000000">RHYME  .SZ8 : EFFECT #06</title>
+			<title code="0x07000000">RHYME  .SZ8 : EFFECT #07</title>
+			<title code="0x08000000">RHYME  .SZ8 : EFFECT #08</title>
+			<title code="0x09000000">RHYME  .SZ8 : EFFECT #09</title>
+			<title code="0x0a000000">RHYME  .SZ8 : EFFECT #0A</title>
+			<title code="0x0b000000">RHYME  .SZ8 : EFFECT #0B</title>
+			<title code="0x0c000000">RHYME  .SZ8 : EFFECT #0C</title>
+			<title code="0x0d000000">RHYME  .SZ8 : EFFECT #0D</title>
+			<title code="0x0e000000">RHYME  .SZ8 : EFFECT #0E</title>
+			<title code="0x0f000000">RHYME  .SZ8 : EFFECT #0F</title>
+			<title code="0x10000000">RHYME  .SZ8 : EFFECT #10</title>
+			<title code="0x11000000">RHYME  .SZ8 : EFFECT #11</title>
+			<title code="0x12000000">RHYME  .SZ8 : EFFECT #12</title>
+			<title code="0x13000000">RHYME  .SZ8 : EFFECT #13</title>
+			<title code="0x14000000">RHYME  .SZ8 : EFFECT #14</title>
+			<title code="0x15000000">RHYME  .SZ8 : EFFECT #15</title>
+			<title code="0x16000000">RHYME  .SZ8 : EFFECT #16</title>
+			<title code="0x17000000">RHYME  .SZ8 : EFFECT #17</title>
+			<title code="0x18000000">RHYME  .SZ8 : EFFECT #18</title>
+			<title code="0x19000000">RHYME  .SZ8 : EFFECT #19</title>
+			<title code="0x1a000000">RHYME  .SZ8 : EFFECT #1A</title>
+			<title code="0x1b000000">RHYME  .SZ8 : EFFECT #1B</title>
+			<title code="0x1c000000">RHYME  .SZ8 : EFFECT #1C</title>
+			<title code="0x1d000000">RHYME  .SZ8 : EFFECT #1D</title>
+			<title code="0x1e000000">RHYME  .SZ8 : EFFECT #1E</title>
+			<title code="0x1f000000">RHYME  .SZ8 : EFFECT #1F</title>
+			<title code="0x20000000">RHYME  .SZ8 : EFFECT #20</title>
+			<title code="0x21000000">RHYME  .SZ8 : EFFECT #21</title>
+			<title code="0x22000000">RHYME  .SZ8 : EFFECT #22</title>
+			<title code="0x23000000">RHYME  .SZ8 : EFFECT #23</title>
+			<title code="0x24000000">RHYME  .SZ8 : EFFECT #24</title>
+			<title code="0x25000000">RHYME  .SZ8 : EFFECT #25</title>
+			<title code="0x26000000">RHYME  .SZ8 : EFFECT #26</title>
+			<title code="0x27000000">RHYME  .SZ8 : EFFECT #27</title>
+			<title code="0x28000000">RHYME  .SZ8 : EFFECT #28</title>
+			<title code="0x29000000">RHYME  .SZ8 : EFFECT #29</title>
+			<title code="0x2a000000">RHYME  .SZ8 : EFFECT #2A</title>
+			<title code="0x2b000000">RHYME  .SZ8 : EFFECT #2B</title>
+			<title code="0x2c000000">RHYME  .SZ8 : EFFECT #2C</title>
+			<title code="0x2d000000">RHYME  .SZ8 : EFFECT #2D</title>
+			<title code="0x2e000000">RHYME  .SZ8 : EFFECT #2E</title>
+			<title code="0x2f000000">RHYME  .SZ8 : EFFECT #2F</title>
+			<title code="0x30000000">RHYME  .SZ8 : EFFECT #30</title>
+			<title code="0x31000000">RHYME  .SZ8 : EFFECT #31</title>
+			<title code="0x32000000">RHYME  .SZ8 : EFFECT #32</title>
+			<title code="0x33000000">RHYME  .SZ8 : EFFECT #33</title>
+			<title code="0x34000000">RHYME  .SZ8 : EFFECT #34</title>
+			<title code="0x35000000">RHYME  .SZ8 : EFFECT #35</title>
+			<title code="0x36000000">RHYME  .SZ8 : EFFECT #36</title>
+			<title code="0x37000000">RHYME  .SZ8 : EFFECT #37</title>
+			<title code="0x50400000">SEPCM01.PZ8 : 「すた～くらふと」</title>
+			<title code="0x51400000">SEPCM01.PZ8 : 「らいむすた～」</title>
+			<title code="0x40410000">SEPCM02.PZ8 : 「え～ん」</title>
+			<title code="0x44410000">SEPCM02.PZ8 : 「がるるる」</title>
+			<title code="0x40420000">SEPCM03.PZ8 : 「え～ん」</title>
+			<title code="0x45420000">SEPCM03.PZ8 : 「きゅ～ん」</title>
+			<title code="0x41430000">SEPCM04.PZ8 : 「ぶくぶ～ん」</title>
+			<title code="0x46430000">SEPCM04.PZ8 : 「ぶくぶくにゃ～ん」</title>
+			<title code="0x42440000">SEPCM05.PZ8 : 「がばがばごぼ」</title>
+			<title code="0x47440000">SEPCM05.PZ8 : 「?」</title>
+			<title code="0x57450000">SEPCM14.PZ8 : 「ディスクを入れ換えてね」</title>
+			<title code="0x55460000">SEPCM15.PZ8 : 「ばいば～い」</title>
+			<title code="0x43470000">SEPCM06.PZ8 : 「きゅ～ん」</title>
+			<title code="0x48470000">SEPCM06.PZ8 : 「ひ～」</title>
+			<title code="0x43480000">SEPCM07.PZ8 : 「きゅ～ん」</title>
+			<title code="0x49480000">SEPCM07.PZ8 : 「ひえええ」</title>
+			<title code="0x40490000">SEPCM08.PZ8 : 「え～ん」</title>
+			<title code="0x4a490000">SEPCM08.PZ8 : 「Oh, No」</title>
+			<title code="0x404a0000">SEPCM09.PZ8 : 「え～ん」</title>
+			<title code="0x4b4a0000">SEPCM09.PZ8 : 「いや～ん」</title>
+			<title code="0x434b0000">SEPCM10.PZ8 : 「きゅ～ん」</title>
+			<title code="0x4c4b0000">SEPCM10.PZ8 : 「じじじじじじ」</title>
+			<title code="0x404c0000">SEPCM11.PZ8 : 「え～ん」</title>
+			<title code="0x404d0000">SEPCM12.PZ8 : 「え～ん」</title>
+			<title code="0x4e4d0000">SEPCM12.PZ8 : 「くっそ～う」</title>
+			<title code="0x404e0000">SEPCM13.PZ8 : 「え～ん」</title>
+			<title code="0x4f4e0000">SEPCM13.PZ8 : 「う～ん」</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] FlixMix</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9801">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="flixmix">
+			<rom type="file" offset="-1">klp_hoot.com</rom>
+			<rom type="file" offset="-1">KOLIN2.COM</rom>
+			<rom type="file" offset="-1">FLIX0.PO8</rom>
+			<rom type="file" offset="-1">FLIX1.PO8</rom>
+			<rom type="file" offset="-1">FLIX2_.PO8</rom>
+			<rom type="file" offset="-1">FLIX4.PO8</rom>
+			<rom type="file" offset="0x10">FLIX01@.MO2</rom>
+			<rom type="file" offset="0x11">FLIX02@.MO2</rom>
+			<rom type="file" offset="0x12">FLIX03@.MO2</rom>
+			<rom type="file" offset="0x13">FLIX04@.MO2</rom>
+			<rom type="file" offset="0x14">FLIX05@.MO2</rom>
+			<rom type="file" offset="0x15">FLIX06@.MO2</rom>
+			<rom type="file" offset="0x16">FLIX07@.MO2</rom>
+			<rom type="file" offset="0x17">FLIX08@.MO2</rom>
+			<rom type="file" offset="0x18">FLIX09@.MO2</rom>
+			<rom type="file" offset="0x19">FLIX10@.MO2</rom>
+			<rom type="file" offset="0x1a">FLIX11@.MO2</rom>
+			<rom type="file" offset="0x1b">FLIX12@.MO2</rom>
+			<rom type="file" offset="0x1c">FLIX13@.MO2</rom>
+			<rom type="file" offset="0x1d">VAL236@.MO8</rom>
+			<rom type="file" offset="0x1e">VAL237B@.MO8</rom>
+			<rom type="file" offset="0x1f">VAL__1@.MO8</rom>
+			<rom type="file" offset="0x20">VAL__2@.MO8</rom>
+			<rom type="file" offset="0x21">VAL240@.MO8</rom>
+			<rom type="file" offset="0x22">VAL241@.MO8</rom>
+			<rom type="file" offset="0x23">VAL242@.MO8</rom>
+			<rom type="file" offset="0x24">VAL243@.MO8</rom>
+			<rom type="file" offset="0x25">VAL244@.MO8</rom>
+		<!--	<rom type="file" offset="0x26">VAL238@.MO8</rom>  -->
+		<!--	<rom type="file" offset="0x27">VAL239C@.MO8</rom> -->
+			<rom type="shell" offset="0">kolin2 /m32</rom>
+			<rom type="shell" offset="0">klp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">FLIX01@.MO2  : Celeris Fanfare</title>
+			<title code="0x11">FLIX02@.MO2  : FlixMix Fanfare</title>
+			<title code="0x12">FLIX03@.MO2  : Spherical Aberration</title>
+			<title code="0x13">FLIX04@.MO2  : Quixotic Box Paradox</title>
+			<title code="0x14">FLIX05@.MO2  : Puddle Muddle</title>
+			<title code="0x15">FLIX06@.MO2  : Mishmash Mesh</title>
+			<title code="0x16">FLIX07@.MO2  : Distortion of times</title>
+			<title code="0x17">FLIX08@.MO2  : Suspicion</title>
+			<title code="0x18">FLIX09@.MO2  : Juggle Jumble</title>
+			<title code="0x19">FLIX10@.MO2  : Natural sight</title>
+			<title code="0x1a">FLIX11@.MO2  : Right Angleworms</title>
+			<title code="0x1b">FLIX12@.MO2  : Closeing Credits waltz</title>
+			<title code="0x1c">FLIX13@.MO2  : Scramblecade Ending</title>
+			<title code="0x1d">VAL236@.MO8  : 雲          : Spiritual sky</title>
+			<title code="0x1e">VAL237B@.MO8 : 桜          : The SAKURA (KOLIN2 Version)</title>
+			<title code="0x1f">VAL__1@.MO8  : Penpen step 2</title>
+			<title code="0x20">VAL__2@.MO8  : トランプ(2) : cards</title>
+			<title code="0x21">VAL240@.MO8  : 足跡        : Whose footprints are these?</title>
+			<title code="0x22">VAL241@.MO8  : 雪          : Imagination</title>
+			<title code="0x23">VAL242@.MO8  : Black or White</title>
+			<title code="0x24">VAL243@.MO8  : Hard Bass</title>
+			<title code="0x25">VAL244@.MO8  : Brightness morning (Unuse PCM)</title>
+			<!-- FlixMix 半曲集にて公開されたもので、実ゲームには収録されていません -->
+		<!--	<title code="0x26">VAL238@.MO8  : 水槽 : A paradise in water</title> -->
+		<!--	<title code="0x27">VAL239C@.MO8 : トランプ : Vulgar casino -ShortMIX-</title> -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] King's Bounty(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="kngsbnty_98">
+			<rom type="file" offset="-1">kboun_98.com</rom>
+			<rom type="file" offset="-1">KB01.EXE</rom>
+			<rom type="file" offset="-1">KB01.CC</rom>
+			<rom type="conin" offset="5">KB01.EXE</rom>
+			<rom type="conin" offset="6">KB01.CC</rom>
+			<rom type="shell" offset="0">kboun_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">val01.26 : </title>
+			<title code="0x11">val02.26 : </title>
+			<title code="0x12">val03.26 : </title>
+			<title code="0x13">val04.26 : </title>
+			<title code="0x14">val05.26 : </title>
+			<title code="0x15">val06.26 : </title>
+			<title code="0x16">val07.26 : </title>
+			<title code="0x17">val08.26 : </title>
+			<title code="0x18">val09.26 : </title>
+			<title code="0x19">val10.26 : </title>
+			<title code="0x1a">val11.26 : </title>
+			<title code="0x1b">val12.26 : </title>
+			<title code="0x1c">val13.26 : </title>
+			<title code="0x0101">sound.dat : 01 : </title>
+			<title code="0x0102">sound.dat : 02 : </title>
+			<title code="0x0103">sound.dat : 03 : </title>
+			<title code="0x0104">sound.dat : 04 : </title>
+			<title code="0x0105">sound.dat : 05 : </title>
+			<title code="0x0106">sound.dat : 06 : </title>
+			<title code="0x0107">sound.dat : 07 : </title>
+			<title code="0x0108">sound.dat : 08 : </title>
+			<title code="0x0109">sound.dat : 09 : </title>
+			<title code="0x010a">sound.dat : 0a : </title>
+			<title code="0x010b">sound.dat : 0b : </title>
+			<title code="0x010c">sound.dat : 0c : </title>
+			<title code="0x010d">sound.dat : 0d : </title>
+			<title code="0x010e">sound.dat : 0e : </title>
+			<title code="0x010f">sound.dat : 0f : </title>
+			<title code="0x0110">sound.dat : 10 : </title>
+			<title code="0x0111">sound.dat : 11 : </title>
+			<title code="0x0112">sound.dat : 12 : </title>
+			<title code="0x0113">sound.dat : 13 : </title>
+			<title code="0x0114">sound.dat : 14 : </title>
+			<title code="0x0115">sound.dat : 15 : </title>
+			<title code="0x0116">sound.dat : 16 : </title>
+			<title code="0x0117">sound.dat : 17 : </title>
+			<title code="0x0118">sound.dat : 18 : </title>
+			<title code="0x0119">sound.dat : 19 : </title>
+			<title code="0x011a">sound.dat : 1a : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] King's Bounty(86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9801">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="kngsbnty_98">
+			<rom type="file" offset="-1">kboun_98.com</rom>
+			<rom type="file" offset="-1">KB01.EXE</rom>
+			<rom type="file" offset="-1">KB01.CC</rom>
+			<rom type="conin" offset="5">KB01.EXE</rom>
+			<rom type="conin" offset="6">KB01.CC</rom>
+			<rom type="shell" offset="0">kboun_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">val01.86 : </title>
+			<title code="0x11">val02.86 : </title>
+			<title code="0x12">val03.86 : </title>
+			<title code="0x13">val04.86 : </title>
+			<title code="0x14">val05.86 : </title>
+			<title code="0x15">val06.86 : </title>
+			<title code="0x16">val07.86 : </title>
+			<title code="0x17">val08.86 : </title>
+			<title code="0x18">val09.86 : </title>
+			<title code="0x19">val10.86 : </title>
+			<title code="0x1a">val11.86 : </title>
+			<title code="0x1b">val12.86 : </title>
+			<title code="0x1c">val13.86 : </title>
+			<title code="0x0101">sound.dat : 01 : </title>
+			<title code="0x0102">sound.dat : 02 : </title>
+			<title code="0x0103">sound.dat : 03 : </title>
+			<title code="0x0104">sound.dat : 04 : </title>
+			<title code="0x0105">sound.dat : 05 : </title>
+			<title code="0x0106">sound.dat : 06 : </title>
+			<title code="0x0107">sound.dat : 07 : </title>
+			<title code="0x0108">sound.dat : 08 : </title>
+			<title code="0x0109">sound.dat : 09 : </title>
+			<title code="0x010a">sound.dat : 0a : </title>
+			<title code="0x010b">sound.dat : 0b : </title>
+			<title code="0x010c">sound.dat : 0c : </title>
+			<title code="0x010d">sound.dat : 0d : </title>
+			<title code="0x010e">sound.dat : 0e : </title>
+			<title code="0x010f">sound.dat : 0f : </title>
+			<title code="0x0110">sound.dat : 10 : </title>
+			<title code="0x0111">sound.dat : 11 : </title>
+			<title code="0x0112">sound.dat : 12 : </title>
+			<title code="0x0113">sound.dat : 13 : </title>
+			<title code="0x0114">sound.dat : 14 : </title>
+			<title code="0x0115">sound.dat : 15 : </title>
+			<title code="0x0116">sound.dat : 16 : </title>
+			<title code="0x0117">sound.dat : 17 : </title>
+			<title code="0x0118">sound.dat : 18 : </title>
+			<title code="0x0119">sound.dat : 19 : </title>
+			<title code="0x011a">sound.dat : 1a : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] STAR FIRE(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="starfire_98">
+			<rom type="file" offset="-1">STARF_98.COM</rom>
+			<rom type="file" offset="-1">SF.EXE</rom>
+			<rom type="file" offset="-1">SF.CC</rom>
+			<rom type="conin" offset="5">SF.EXE</rom>
+			<rom type="shell" offset="0">STARF_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1e">014.m   : Opening</title>
+			<title code="0x1d">013.m   : Title</title>
+			<title code="0x15">005.m   : My ship</title>
+			<title code="0x19">009.m   : Station</title>
+			<title code="0x11">001.m   : Galaxy_I</title>
+			<title code="0x13">003.m   : Battle_I</title>
+			<title code="0x1f">015.m   : Event1</title>
+			<title code="0x1b">011.m   : Planet1</title>
+			<title code="0x16">006.m   : Enemy ship I</title>
+			<title code="0x18">008.m   : Planet2</title>
+			<title code="0x1a">010.m   : Enemy ship II</title>
+			<title code="0x12">002.m   : Galaxy_II</title>
+			<title code="0x14">004.m   : Battle II</title>
+			<title code="0x1c">012.m   : Event2</title>
+			<title code="0x17">007.m   : Planet3</title>
+			<title code="0x23">019.m   : Boss I</title>
+			<title code="0x20">016.m   : Ending</title>
+			<title code="0x21">017.m   : </title>
+			<title code="0x22">018.m   : </title>
+			<title code="0x24">020.m   : 未使用曲4</title>
+			<title code="0x0101">se : 01 : </title>
+			<title code="0x0102">se : 02 : </title>
+			<title code="0x0103">se : 03 : </title>
+			<title code="0x0104">se : 04 : </title>
+			<title code="0x0105">se : 05 : </title>
+			<title code="0x0106">se : 06 : </title>
+			<title code="0x0107">se : 07 : </title>
+			<title code="0x0108">se : 08 : </title>
+			<title code="0x0109">se : 09 : </title>
+			<title code="0x010a">se : 0a : </title>
+			<title code="0x010b">se : 0b : </title>
+			<title code="0x010c">se : 0c : </title>
+			<title code="0x010d">se : 0d : </title>
+			<title code="0x010e">se : 0e : </title>
+			<title code="0x010f">se : 0f : </title>
+			<title code="0x0110">se : 10 : </title>
+			<title code="0x0111">se : 11 : </title>
+			<title code="0x0112">se : 12 : </title>
+			<title code="0x0113">se : 13 : </title>
+			<title code="0x0114">se : 14 : </title>
+			<title code="0x0115">se : 15 : </title>
+			<title code="0x0116">se : 16 : </title>
+			<title code="0x0117">se : 17 : </title>
+			<title code="0x0118">se : 18 : </title>
+			<title code="0x0119">se : 19 : </title>
+			<title code="0x011a">se : 1a : </title>
+			<title code="0x011b">se : 1b : </title>
+			<title code="0x011c">se : 1c : </title>
+			<title code="0x011d">se : 1d : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] STAR FIRE(86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9801">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="starfire_98">
+			<rom type="file" offset="-1">STARF_98.COM</rom>
+			<rom type="file" offset="-1">SF.EXE</rom>
+			<rom type="file" offset="-1">SF.CC</rom>
+			<rom type="conin" offset="5">SF.EXE</rom>
+			<rom type="shell" offset="0">STARF_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1e">a14.m   : Opening</title>
+			<title code="0x1d">a13.m   : Title</title>
+			<title code="0x15">a05.m   : My ship</title>
+			<title code="0x19">a09.m   : Station</title>
+			<title code="0x11">a01.m   : Galaxy_I</title>
+			<title code="0x13">a03.m   : Battle_I</title>
+			<title code="0x1f">a15.m   : Event1</title>
+			<title code="0x1b">a11.m   : Planet1</title>
+			<title code="0x16">a06.m   : Enemy ship I</title>
+			<title code="0x18">a08.m   : Planet2</title>
+			<title code="0x1a">a10.m   : Enemy ship II</title>
+			<title code="0x12">a02.m   : Galaxy_II</title>
+			<title code="0x14">a04.m   : Battle II</title>
+			<title code="0x1c">a12.m   : Event2</title>
+			<title code="0x17">a07.m   : Planet3</title>
+			<title code="0x23">a19.m   : Boss I</title>
+			<title code="0x20">a16.m   : Ending</title>
+			<title code="0x21">a17.m   : </title>
+			<title code="0x22">a18.m   : </title>
+			<title code="0x24">a20.m   : 未使用曲4</title>
+			<title code="0x0101">se : 01 : </title>
+			<title code="0x0102">se : 02 : </title>
+			<title code="0x0103">se : 03 : </title>
+			<title code="0x0104">se : 04 : </title>
+			<title code="0x0105">se : 05 : </title>
+			<title code="0x0106">se : 06 : </title>
+			<title code="0x0107">se : 07 : </title>
+			<title code="0x0108">se : 08 : </title>
+			<title code="0x0109">se : 09 : </title>
+			<title code="0x010a">se : 0a : </title>
+			<title code="0x010b">se : 0b : </title>
+			<title code="0x010c">se : 0c : </title>
+			<title code="0x010d">se : 0d : </title>
+			<title code="0x010e">se : 0e : </title>
+			<title code="0x010f">se : 0f : </title>
+			<title code="0x0110">se : 10 : </title>
+			<title code="0x0111">se : 11 : </title>
+			<title code="0x0112">se : 12 : </title>
+			<title code="0x0113">se : 13 : </title>
+			<title code="0x0114">se : 14 : </title>
+			<title code="0x0115">se : 15 : </title>
+			<title code="0x0116">se : 16 : </title>
+			<title code="0x0117">se : 17 : </title>
+			<title code="0x0118">se : 18 : </title>
+			<title code="0x0119">se : 19 : </title>
+			<title code="0x011a">se : 1a : </title>
+			<title code="0x011b">se : 1b : </title>
+			<title code="0x011c">se : 1c : </title>
+			<title code="0x011d">se : 1d : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] The Legend of Kyrandia</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="kyrandia_98">
+			<rom type="file" offset="-1">kyran_98.com</rom>
+			<rom type="file" offset="-1">KYRA.EXE</rom>
+			<rom type="conin" offset="5">KYRA.EXE</rom>
+			<rom type="file" offset="6" >SE.DAT</rom>
+			<rom type="file" offset="11">INTRO1.DAT</rom>
+			<rom type="file" offset="12">INTRO2.DAT</rom>
+			<rom type="file" offset="13">INTRO3.DAT</rom>
+			<rom type="file" offset="14">INTRO4.DAT</rom>
+			<rom type="file" offset="15">KYRAM1.DAT</rom>
+			<rom type="file" offset="16">KYRAM2.DAT</rom>
+			<rom type="file" offset="17">KYRAM3.DAT</rom>
+			<rom type="file" offset="18">KYRAM4.DAT</rom>
+			<rom type="file" offset="19">KYRAM5.DAT</rom>
+			<rom type="file" offset="20">KYRAM6.DAT</rom>
+			<rom type="file" offset="21">KYRAM7.DAT</rom>
+			<rom type="file" offset="22">KYRAM8.DAT</rom>
+			<rom type="file" offset="23">KYRAM9.DAT</rom>
+			<rom type="file" offset="24">KYRAM10.DAT</rom>
+			<rom type="file" offset="25">KYRAM11.DAT</rom>
+			<rom type="file" offset="26">KYRAM12.DAT</rom>
+			<rom type="file" offset="27">KYRAM13.DAT</rom>
+			<rom type="file" offset="28">KYRAM14.DAT</rom>
+			<rom type="file" offset="29">KYRAM15.DAT</rom>
+			<rom type="file" offset="30">KYRAM16.DAT</rom>
+			<rom type="file" offset="31">KYRAM17.DAT</rom>
+			<rom type="file" offset="32">KYRAM18.DAT</rom>
+			<rom type="file" offset="33">KYRAM19.DAT</rom>
+			<rom type="file" offset="34">KYRAM20.DAT</rom>
+			<rom type="file" offset="35">KYRAM21.DAT</rom>
+			<rom type="file" offset="36">KYRAM22.DAT</rom>
+			<rom type="file" offset="37">KYRAM23.DAT</rom>
+			<rom type="file" offset="38">KYRAM24.DAT</rom>
+			<rom type="file" offset="39">KYRAM25.DAT</rom>
+			<rom type="file" offset="40">KYRAM26.DAT</rom>
+			<rom type="file" offset="41">KYRAM27.DAT</rom>
+			<rom type="file" offset="42">KYRAM28.DAT</rom>
+			<rom type="file" offset="43">KYRAM29.DAT</rom>
+			<rom type="file" offset="44">KYRAM30.DAT</rom>
+			<rom type="file" offset="45">KYRAM31.DAT</rom>
+			<rom type="file" offset="46">KYRAM32.DAT</rom>
+			<rom type="file" offset="47">KYRAM33.DAT</rom>
+			<rom type="file" offset="48">KYRAM34.DAT</rom>
+			<rom type="file" offset="49">KYRAM35.DAT</rom>
+			<rom type="file" offset="50">KYRAM36.DAT</rom>
+			<rom type="file" offset="51">KYRAM37.DAT</rom>
+			<rom type="file" offset="52">KYRAM38.DAT</rom>
+			<rom type="file" offset="53">KYRAM39.DAT</rom>
+			<rom type="file" offset="54">KYRAM40.DAT</rom>
+			<rom type="file" offset="55">KYRAM41.DAT</rom>
+			<rom type="file" offset="56">KYRAM42.DAT</rom>
+			<rom type="file" offset="57">KYRAM43.DAT</rom>
+			<rom type="file" offset="58">KYRAM44.DAT</rom>
+			<rom type="file" offset="59">KYRAM45.DAT</rom>
+			<rom type="file" offset="60">KYRAM46.DAT</rom>
+			<rom type="file" offset="61">KYRAM47.DAT</rom>
+			<rom type="file" offset="62">KYRAM48.DAT</rom>
+			<rom type="file" offset="63">KYRAM49.DAT</rom>
+			<rom type="file" offset="64">KYRAM50.DAT</rom>
+			<rom type="file" offset="65">KYRAM51.DAT</rom>
+			<rom type="file" offset="66">KYRAM54.DAT</rom>
+			<rom type="shell" offset="0">kyran_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">INTRO1.DAT  : </title>
+			<title code="12">INTRO2.DAT  : </title>
+			<title code="13">INTRO3.DAT  : </title>
+			<title code="14">INTRO4.DAT  : </title>
+			<title code="15">KYRAM1.DAT  : </title>
+			<title code="16">KYRAM2.DAT  : </title>
+			<title code="17">KYRAM3.DAT  : </title>
+			<title code="18">KYRAM4.DAT  : </title>
+			<title code="19">KYRAM5.DAT  : </title>
+			<title code="20">KYRAM6.DAT  : </title>
+			<title code="21">KYRAM7.DAT  : </title>
+			<title code="22">KYRAM8.DAT  : </title>
+			<title code="23">KYRAM9.DAT  : </title>
+			<title code="24">KYRAM10.DAT : </title>
+			<title code="25">KYRAM11.DAT : </title>
+			<title code="26">KYRAM12.DAT : </title>
+			<title code="27">KYRAM13.DAT : </title>
+			<title code="28">KYRAM14.DAT : </title>
+			<title code="29">KYRAM15.DAT : </title>
+			<title code="30">KYRAM16.DAT : </title>
+			<title code="31">KYRAM17.DAT : </title>
+			<title code="32">KYRAM18.DAT : </title>
+			<title code="33">KYRAM19.DAT : </title>
+			<title code="34">KYRAM20.DAT : </title>
+			<title code="35">KYRAM21.DAT : </title>
+			<title code="36">KYRAM22.DAT : </title>
+			<title code="37">KYRAM23.DAT : </title>
+			<title code="38">KYRAM24.DAT : </title>
+			<title code="39">KYRAM25.DAT : </title>
+			<title code="40">KYRAM26.DAT : </title>
+			<title code="41">KYRAM27.DAT : </title>
+			<title code="42">KYRAM28.DAT : </title>
+			<title code="43">KYRAM29.DAT : </title>
+			<title code="44">KYRAM30.DAT : </title>
+			<title code="45">KYRAM31.DAT : </title>
+			<title code="46">KYRAM32.DAT : </title>
+			<title code="47">KYRAM33.DAT : </title>
+			<title code="48">KYRAM34.DAT : </title>
+			<title code="49">KYRAM35.DAT : </title>
+			<title code="50">KYRAM36.DAT : </title>
+			<title code="51">KYRAM37.DAT : </title>
+			<title code="52">KYRAM38.DAT : </title>
+			<title code="53">KYRAM39.DAT : </title>
+			<title code="54">KYRAM40.DAT : </title>
+			<title code="55">KYRAM41.DAT : </title>
+			<title code="56">KYRAM42.DAT : </title>
+			<title code="57">KYRAM43.DAT : </title>
+			<title code="58">KYRAM44.DAT : </title>
+			<title code="59">KYRAM45.DAT : </title>
+			<title code="60">KYRAM46.DAT : </title>
+			<title code="61">KYRAM47.DAT : </title>
+			<title code="62">KYRAM48.DAT : </title>
+			<title code="63">KYRAM49.DAT : </title>
+			<title code="64">KYRAM50.DAT : </title>
+			<title code="65">KYRAM51.DAT : </title>
+			<title code="66">KYRAM54.DAT : </title>
+			<title code="0x110">SE.DAT : 10 : </title>
+			<title code="0x111">SE.DAT : 11 : </title>
+			<title code="0x112">SE.DAT : 12 : </title>
+			<title code="0x113">SE.DAT : 13 : </title>
+			<title code="0x114">SE.DAT : 14 : </title>
+			<title code="0x115">SE.DAT : 15 : </title>
+			<title code="0x116">SE.DAT : 16 : </title>
+			<title code="0x117">SE.DAT : 17 : </title>
+			<title code="0x118">SE.DAT : 18 : </title>
+			<title code="0x119">SE.DAT : 19 : </title>
+			<title code="0x11a">SE.DAT : 1a : </title>
+			<title code="0x11b">SE.DAT : 1b : </title>
+			<title code="0x11c">SE.DAT : 1c : </title>
+			<title code="0x11d">SE.DAT : 1d : </title>
+			<title code="0x11e">SE.DAT : 1e : </title>
+			<title code="0x11f">SE.DAT : 1f : </title>
+			<title code="0x120">SE.DAT : 20 : </title>
+			<title code="0x121">SE.DAT : 21 : </title>
+			<title code="0x122">SE.DAT : 22 : </title>
+			<title code="0x123">SE.DAT : 23 : </title>
+			<title code="0x124">SE.DAT : 24 : </title>
+			<title code="0x125">SE.DAT : 25 : </title>
+			<title code="0x126">SE.DAT : 26 : </title>
+			<title code="0x127">SE.DAT : 27 : </title>
+			<title code="0x128">SE.DAT : 28 : </title>
+			<title code="0x129">SE.DAT : 29 : </title>
+			<title code="0x12a">SE.DAT : 2a : </title>
+			<title code="0x12b">SE.DAT : 2b : </title>
+			<title code="0x12c">SE.DAT : 2c : </title>
+			<title code="0x12d">SE.DAT : 2d : </title>
+			<title code="0x12e">SE.DAT : 2e : </title>
+			<title code="0x12f">SE.DAT : 2f : </title>
+			<title code="0x130">SE.DAT : 30 : </title>
+			<title code="0x131">SE.DAT : 31 : </title>
+			<title code="0x132">SE.DAT : 32 : </title>
+			<title code="0x133">SE.DAT : 33 : </title>
+			<title code="0x134">SE.DAT : 34 : </title>
+			<title code="0x135">SE.DAT : 35 : </title>
+			<title code="0x136">SE.DAT : 36 : </title>
+			<title code="0x137">SE.DAT : 37 : </title>
+			<title code="0x138">SE.DAT : 38 : </title>
+			<title code="0x139">SE.DAT : 39 : </title>
+			<title code="0x13a">SE.DAT : 3a : </title>
+			<title code="0x13b">SE.DAT : 3b : </title>
+			<title code="0x13c">SE.DAT : 3c : </title>
+			<title code="0x13d">SE.DAT : 3d : </title>
+			<title code="0x13e">SE.DAT : 3e : </title>
+			<title code="0x13f">SE.DAT : 3f : </title>
+			<title code="0x140">SE.DAT : 40 : </title>
+			<title code="0x141">SE.DAT : 41 : </title>
+			<title code="0x142">SE.DAT : 42 : </title>
+			<title code="0x143">SE.DAT : 43 : </title>
+			<title code="0x144">SE.DAT : 44 : </title>
+			<title code="0x145">SE.DAT : 45 : </title>
+			<title code="0x146">SE.DAT : 46 : </title>
+			<title code="0x147">SE.DAT : 47 : </title>
+			<title code="0x148">SE.DAT : 48 : </title>
+			<title code="0x149">SE.DAT : 49 : </title>
+			<title code="0x14a">SE.DAT : 4a : </title>
+			<title code="0x14b">SE.DAT : 4b : </title>
+			<title code="0x14c">SE.DAT : 4c : </title>
+			<title code="0x14d">SE.DAT : 4d : </title>
+			<title code="0x14e">SE.DAT : 4e : </title>
+			<title code="0x14f">SE.DAT : 4f : </title>
+			<title code="0x150">SE.DAT : 50 : </title>
+			<title code="0x151">SE.DAT : 51 : </title>
+			<title code="0x152">SE.DAT : 52 : </title>
+			<title code="0x153">SE.DAT : 53 : </title>
+			<title code="0x154">SE.DAT : 54 : </title>
+			<title code="0x155">SE.DAT : 55 : </title>
+			<title code="0x156">SE.DAT : 56 : </title>
+			<title code="0x157">SE.DAT : 57 : </title>
+			<title code="0x158">SE.DAT : 58 : </title>
+			<title code="0x159">SE.DAT : 59 : </title>
+			<title code="0x15a">SE.DAT : 5a : </title>
+			<title code="0x15b">SE.DAT : 5b : </title>
+			<title code="0x15c">SE.DAT : 5c : </title>
+			<title code="0x15d">SE.DAT : 5d : </title>
+			<title code="0x15e">SE.DAT : 5e : </title>
+			<title code="0x15f">SE.DAT : 5f : </title>
+			<title code="0x160">SE.DAT : 60 : </title>
+			<title code="0x161">SE.DAT : 61 : </title>
+			<title code="0x162">SE.DAT : 62 : </title>
+			<title code="0x163">SE.DAT : 63 : </title>
+			<title code="0x164">SE.DAT : 64 : </title>
+			<title code="0x165">SE.DAT : 65 : </title>
+			<title code="0x166">SE.DAT : 66 : </title>
+			<title code="0x167">SE.DAT : 67 : </title>
+			<title code="0x168">SE.DAT : 68 : </title>
+			<title code="0x169">SE.DAT : 69 : </title>
+			<title code="0x16a">SE.DAT : 6a : </title>
+			<title code="0x16b">SE.DAT : 6b : </title>
+			<title code="0x16c">SE.DAT : 6c : </title>
+			<title code="0x16d">SE.DAT : 6d : </title>
+			<title code="0x16e">SE.DAT : 6e : </title>
+			<title code="0x16f">SE.DAT : 6f : </title>
+			<title code="0x170">SE.DAT : 70 : </title>
+			<title code="0x171">SE.DAT : 71 : </title>
+			<title code="0x172">SE.DAT : 72 : </title>
+			<title code="0x173">SE.DAT : 73 : </title>
+			<title code="0x174">SE.DAT : 74 : </title>
+			<title code="0x175">SE.DAT : 75 : </title>
+			<title code="0x176">SE.DAT : 76 : </title>
+			<title code="0x177">SE.DAT : 77 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] Lands of Lore(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9821">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="lands_21">
+			<rom type="file" offset="-1">LANDS_21.COM</rom>
+			<rom type="file" offset="-1">LANDS.EXE</rom>
+			<rom type="conin" offset="5">LANDS.EXE</rom>
+			<rom type="file" offset="6" >SOUND.DAT</rom>
+			<rom type="file" offset="11">LORE01.26</rom>
+			<rom type="file" offset="12">LORE02.26</rom>
+			<rom type="file" offset="13">LORE03.26</rom>
+			<rom type="file" offset="14">LORE04.26</rom>
+			<rom type="file" offset="15">LORE05.26</rom>
+			<rom type="file" offset="16">LORE06.26</rom>
+			<rom type="file" offset="17">LORE07.26</rom>
+			<rom type="file" offset="18">LORE08.26</rom>
+			<rom type="file" offset="19">LORE09.26</rom>
+			<rom type="file" offset="20">LORE10.26</rom>
+			<rom type="file" offset="21">LORE11.26</rom>
+			<rom type="file" offset="22">LORE12.26</rom>
+			<rom type="file" offset="23">LORE13.26</rom>
+			<rom type="file" offset="24">LORE14.26</rom>
+			<rom type="file" offset="25">LORE15.26</rom>
+			<rom type="file" offset="26">LORE16.26</rom>
+			<rom type="file" offset="27">LORE17.26</rom>
+			<rom type="file" offset="28">LORE18.26</rom>
+			<rom type="file" offset="29">LORE19.26</rom>
+			<rom type="file" offset="30">LORE20.26</rom>
+			<rom type="file" offset="31">LORE21.26</rom>
+			<rom type="file" offset="32">LORE22.26</rom>
+			<rom type="file" offset="33">LORE23.26</rom>
+			<rom type="file" offset="34">LORE24.26</rom>
+			<rom type="file" offset="35">LORE25.26</rom>
+			<rom type="file" offset="36">LORE26.26</rom>
+			<rom type="file" offset="37">LORE27.26</rom>
+			<rom type="file" offset="38">LORE28.26</rom>
+			<rom type="file" offset="39">LORE29.26</rom>
+			<rom type="file" offset="40">LORE30.26</rom>
+			<rom type="file" offset="41">LORE31.26</rom>
+			<rom type="file" offset="42">LORE32.26</rom>
+			<rom type="file" offset="43">LORE33.26</rom>
+			<rom type="file" offset="44">LORE34.26</rom>
+			<rom type="file" offset="45">LORE35.26</rom>
+			<rom type="file" offset="46">LORE36.26</rom>
+			<rom type="file" offset="47">LORE37.26</rom>
+			<rom type="file" offset="48">LORE38.26</rom>
+			<rom type="file" offset="49">LORE39.26</rom>
+			<rom type="file" offset="50">LORE40.26</rom>
+			<rom type="file" offset="51">LORE41.26</rom>
+			<rom type="file" offset="52">LORE42.26</rom>
+			<rom type="file" offset="53">LORE43.26</rom>
+			<rom type="file" offset="54">LORE44.26</rom>
+			<rom type="file" offset="55">LORE45.26</rom>
+			<rom type="file" offset="56">LORE46.26</rom>
+			<rom type="file" offset="57">LORE47.26</rom>
+			<rom type="file" offset="58">LORE48.26</rom>
+			<rom type="file" offset="59">LORE49.26</rom>
+			<rom type="file" offset="60">LORE50.26</rom>
+			<rom type="file" offset="61">LORE51.26</rom>
+			<rom type="file" offset="62">LORE52.26</rom>
+			<rom type="file" offset="63">LORE53.26</rom>
+			<rom type="file" offset="64">LORE54.26</rom>
+			<rom type="file" offset="65">LORE55.26</rom>
+			<rom type="file" offset="66">LORE56.26</rom>
+			<rom type="file" offset="67">LORE57.26</rom>
+			<rom type="file" offset="68">LORE58.26</rom>
+			<rom type="file" offset="69">LORE59.26</rom>
+			<rom type="file" offset="70">LORE60.26</rom>
+			<rom type="file" offset="71">LORE61.26</rom>
+			<rom type="file" offset="72">LORE62.26</rom>
+			<rom type="file" offset="73">LORE63.26</rom>
+			<rom type="file" offset="74">LORE64.26</rom>
+			<rom type="file" offset="75">LORE65.26</rom>
+			<rom type="file" offset="76">LORE66.26</rom>
+			<rom type="file" offset="77">LORE67.26</rom>
+			<rom type="file" offset="78">LORE68.26</rom>
+			<rom type="file" offset="79">LORE69.26</rom>
+			<rom type="file" offset="80">LORE70.26</rom>
+			<rom type="file" offset="81">LORE71.26</rom>
+			<rom type="file" offset="82">LORE72.26</rom>
+			<rom type="file" offset="83">LORE73.26</rom>
+			<rom type="file" offset="84">LORE74.26</rom>
+			<rom type="file" offset="85">LORE75.26</rom>
+			<rom type="file" offset="86">LORE76.26</rom>
+			<rom type="file" offset="87">LORE77.26</rom>
+			<rom type="file" offset="88">LORE78.26</rom>
+			<rom type="file" offset="89">LORE79.26</rom>
+			<rom type="file" offset="90">LORE80.26</rom>
+			<rom type="file" offset="91">LORE81.26</rom>
+			<rom type="file" offset="92">LORE82.26</rom>
+			<rom type="file" offset="93">LORE83.26</rom>
+			<rom type="file" offset="94">LORE84.26</rom>
+			<rom type="file" offset="95">LORE85.26</rom>
+			<rom type="file" offset="96">LORE86.26</rom>
+			<rom type="file" offset="97">LORE87.26</rom>
+			<rom type="shell" offset="0">LANDS_21</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">LORE01.26      : </title>
+			<title code="12">LORE02.26      : </title>
+			<title code="13">LORE03.26      : </title>
+			<title code="14">LORE04.26      : </title>
+			<title code="15">LORE05.26      : </title>
+			<title code="16">LORE06.26      : </title>
+			<title code="17">LORE07.26      : </title>
+			<title code="18">LORE08.26      : </title>
+			<title code="19">LORE09.26      : </title>
+			<title code="20">LORE10.26      : </title>
+			<title code="21">LORE11.26      : </title>
+			<title code="22">LORE12.26      : </title>
+			<title code="23">LORE13.26      : </title>
+			<title code="24">LORE14.26      : </title>
+			<title code="25">LORE15.26      : </title>
+			<title code="26">LORE16.26      : </title>
+			<title code="27">LORE17.26      : </title>
+			<title code="28">LORE18.26      : </title>
+			<title code="29">LORE19.26      : </title>
+			<title code="30">LORE20.26      : </title>
+			<title code="31">LORE21.26      : </title>
+			<title code="32">LORE22.26      : </title>
+			<title code="33">LORE23.26      : </title>
+			<title code="34">LORE24.26      : </title>
+			<title code="35">LORE25.26      : </title>
+			<title code="36">LORE26.26      : </title>
+			<title code="37">LORE27.26      : </title>
+			<title code="38">LORE28.26      : </title>
+			<title code="39">LORE29.26      : </title>
+			<title code="40">LORE30.26      : </title>
+			<title code="41">LORE31.26      : </title>
+			<title code="42">LORE32.26      : </title>
+			<title code="43">LORE33.26      : </title>
+			<title code="44">LORE34.26      : </title>
+			<title code="45">LORE35.26      : </title>
+			<title code="46">LORE36.26      : </title>
+			<title code="47">LORE37.26      : </title>
+			<title code="48">LORE38.26      : </title>
+			<title code="49">LORE39.26      : </title>
+			<title code="50">LORE40.26      : </title>
+			<title code="51">LORE41.26      : </title>
+			<title code="52">LORE42.26      : </title>
+			<title code="53">LORE43.26      : </title>
+			<title code="54">LORE44.26      : </title>
+			<title code="55">LORE45.26      : </title>
+			<title code="56">LORE46.26      : </title>
+			<title code="57">LORE47.26      : </title>
+			<title code="58">LORE48.26      : </title>
+			<title code="59">LORE49.26      : </title>
+			<title code="60">LORE50.26      : </title>
+			<title code="61">LORE51.26      : </title>
+			<title code="62">LORE52.26      : </title>
+			<title code="63">LORE53.26      : </title>
+			<title code="64">LORE54.26      : </title>
+			<title code="65">LORE55.26      : </title>
+			<title code="66">LORE56.26      : </title>
+			<title code="67">LORE57.26      : </title>
+			<title code="68">LORE58.26      : </title>
+			<title code="69">LORE59.26      : </title>
+			<title code="70">LORE60.26      : </title>
+			<title code="71">LORE61.26      : </title>
+			<title code="72">LORE62.26      : </title>
+			<title code="73">LORE63.26      : </title>
+			<title code="74">LORE64.26      : </title>
+			<title code="75">LORE65.26      : </title>
+			<title code="76">LORE66.26      : </title>
+			<title code="77">LORE67.26      : </title>
+			<title code="78">LORE68.26      : </title>
+			<title code="79">LORE69.26      : </title>
+			<title code="80">LORE70.26      : </title>
+			<title code="81">LORE71.26      : </title>
+			<title code="82">LORE72.26      : </title>
+			<title code="83">LORE73.26      : </title>
+			<title code="84">LORE74.26      : </title>
+			<title code="85">LORE75.26      : </title>
+			<title code="86">LORE76.26      : </title>
+			<title code="87">LORE77.26      : </title>
+			<title code="88">LORE78.26      : </title>
+			<title code="89">LORE79.26      : </title>
+			<title code="90">LORE80.26      : </title>
+			<title code="91">LORE81.26      : </title>
+			<title code="92">LORE82.26      : </title>
+			<title code="93">LORE83.26      : </title>
+			<title code="94">LORE84.26      : </title>
+			<title code="95">LORE85.26      : </title>
+			<title code="96">LORE86.26      : </title>
+			<title code="97">LORE87.26      : </title>
+			<title code="0x100">SOUND.DAT : 00 : </title>
+			<title code="0x101">SOUND.DAT : 01 : </title>
+			<title code="0x102">SOUND.DAT : 02 : </title>
+			<title code="0x103">SOUND.DAT : 03 : </title>
+			<title code="0x104">SOUND.DAT : 04 : </title>
+			<title code="0x105">SOUND.DAT : 05 : </title>
+			<title code="0x106">SOUND.DAT : 06 : </title>
+			<title code="0x107">SOUND.DAT : 07 : </title>
+			<title code="0x108">SOUND.DAT : 08 : </title>
+			<title code="0x109">SOUND.DAT : 09 : </title>
+			<title code="0x10a">SOUND.DAT : 0A : </title>
+			<title code="0x10b">SOUND.DAT : 0B : </title>
+			<title code="0x10c">SOUND.DAT : 0C : </title>
+			<title code="0x10d">SOUND.DAT : 0D : </title>
+			<title code="0x10e">SOUND.DAT : 0E : </title>
+			<title code="0x10f">SOUND.DAT : 0F : </title>
+			<title code="0x110">SOUND.DAT : 10 : </title>
+			<title code="0x111">SOUND.DAT : 11 : </title>
+			<title code="0x112">SOUND.DAT : 12 : </title>
+			<title code="0x113">SOUND.DAT : 13 : </title>
+			<title code="0x114">SOUND.DAT : 14 : </title>
+			<title code="0x115">SOUND.DAT : 15 : </title>
+			<title code="0x116">SOUND.DAT : 16 : </title>
+			<title code="0x117">SOUND.DAT : 17 : </title>
+			<title code="0x118">SOUND.DAT : 18 : </title>
+			<title code="0x119">SOUND.DAT : 19 : </title>
+			<title code="0x11a">SOUND.DAT : 1A : </title>
+			<title code="0x11b">SOUND.DAT : 1B : </title>
+			<title code="0x11c">SOUND.DAT : 1C : </title>
+			<title code="0x11d">SOUND.DAT : 1D : </title>
+			<title code="0x11e">SOUND.DAT : 1E : </title>
+			<title code="0x11f">SOUND.DAT : 1F : </title>
+			<title code="0x120">SOUND.DAT : 20 : </title>
+			<title code="0x121">SOUND.DAT : 21 : </title>
+			<title code="0x122">SOUND.DAT : 22 : </title>
+			<title code="0x123">SOUND.DAT : 23 : </title>
+			<title code="0x124">SOUND.DAT : 24 : </title>
+			<title code="0x125">SOUND.DAT : 25 : </title>
+			<title code="0x126">SOUND.DAT : 26 : </title>
+			<title code="0x127">SOUND.DAT : 27 : </title>
+			<title code="0x128">SOUND.DAT : 28 : </title>
+			<title code="0x129">SOUND.DAT : 29 : </title>
+			<title code="0x12a">SOUND.DAT : 2A : </title>
+			<title code="0x12b">SOUND.DAT : 2B : </title>
+			<title code="0x12c">SOUND.DAT : 2C : </title>
+			<title code="0x12d">SOUND.DAT : 2D : </title>
+			<title code="0x12e">SOUND.DAT : 2E : </title>
+			<title code="0x12f">SOUND.DAT : 2F : </title>
+			<title code="0x130">SOUND.DAT : 30 : </title>
+			<title code="0x131">SOUND.DAT : 31 : </title>
+			<title code="0x132">SOUND.DAT : 32 : </title>
+			<title code="0x133">SOUND.DAT : 33 : </title>
+			<title code="0x134">SOUND.DAT : 34 : </title>
+			<title code="0x135">SOUND.DAT : 35 : </title>
+			<title code="0x136">SOUND.DAT : 36 : </title>
+			<title code="0x137">SOUND.DAT : 37 : </title>
+			<title code="0x138">SOUND.DAT : 38 : </title>
+			<title code="0x139">SOUND.DAT : 39 : </title>
+			<title code="0x13a">SOUND.DAT : 3A : </title>
+			<title code="0x13b">SOUND.DAT : 3B : </title>
+			<title code="0x13c">SOUND.DAT : 3C : </title>
+			<title code="0x13d">SOUND.DAT : 3D : </title>
+			<title code="0x13e">SOUND.DAT : 3E : </title>
+			<title code="0x13f">SOUND.DAT : 3F : </title>
+			<title code="0x140">SOUND.DAT : 40 : </title>
+			<title code="0x141">SOUND.DAT : 41 : </title>
+			<title code="0x142">SOUND.DAT : 42 : </title>
+			<title code="0x143">SOUND.DAT : 43 : </title>
+			<title code="0x144">SOUND.DAT : 44 : </title>
+			<title code="0x145">SOUND.DAT : 45 : </title>
+			<title code="0x146">SOUND.DAT : 46 : </title>
+			<title code="0x147">SOUND.DAT : 47 : </title>
+			<title code="0x148">SOUND.DAT : 48 : </title>
+			<title code="0x149">SOUND.DAT : 49 : </title>
+			<title code="0x14a">SOUND.DAT : 4A : </title>
+			<title code="0x14b">SOUND.DAT : 4B : </title>
+			<title code="0x14c">SOUND.DAT : 4C : </title>
+			<title code="0x14d">SOUND.DAT : 4D : </title>
+			<title code="0x14e">SOUND.DAT : 4E : </title>
+			<title code="0x14f">SOUND.DAT : 4F : </title>
+			<title code="0x150">SOUND.DAT : 50 : </title>
+			<title code="0x151">SOUND.DAT : 51 : </title>
+			<title code="0x152">SOUND.DAT : 52 : </title>
+			<title code="0x153">SOUND.DAT : 53 : </title>
+			<title code="0x154">SOUND.DAT : 54 : </title>
+			<title code="0x155">SOUND.DAT : 55 : </title>
+			<title code="0x156">SOUND.DAT : 56 : </title>
+			<title code="0x157">SOUND.DAT : 57 : </title>
+			<title code="0x158">SOUND.DAT : 58 : </title>
+			<title code="0x159">SOUND.DAT : 59 : </title>
+			<title code="0x15a">SOUND.DAT : 5A : </title>
+			<title code="0x15b">SOUND.DAT : 5B : </title>
+			<title code="0x15c">SOUND.DAT : 5C : </title>
+			<title code="0x15d">SOUND.DAT : 5D : </title>
+			<title code="0x15e">SOUND.DAT : 5E : </title>
+			<title code="0x15f">SOUND.DAT : 5F : </title>
+			<title code="0x160">SOUND.DAT : 60 : </title>
+			<title code="0x161">SOUND.DAT : 61 : </title>
+			<title code="0x162">SOUND.DAT : 62 : </title>
+			<title code="0x163">SOUND.DAT : 63 : </title>
+			<title code="0x164">SOUND.DAT : 64 : </title>
+			<title code="0x165">SOUND.DAT : 65 : </title>
+			<title code="0x166">SOUND.DAT : 66 : </title>
+			<title code="0x167">SOUND.DAT : 67 : </title>
+			<title code="0x168">SOUND.DAT : 68 : </title>
+			<title code="0x169">SOUND.DAT : 69 : </title>
+			<title code="0x16a">SOUND.DAT : 6A : </title>
+			<title code="0x16b">SOUND.DAT : 6B : </title>
+			<title code="0x16c">SOUND.DAT : 6C : </title>
+			<title code="0x16d">SOUND.DAT : 6D : </title>
+			<title code="0x16e">SOUND.DAT : 6E : </title>
+			<title code="0x16f">SOUND.DAT : 6F : </title>
+			<title code="0x170">SOUND.DAT : 70 : </title>
+			<title code="0x171">SOUND.DAT : 71 : </title>
+			<title code="0x172">SOUND.DAT : 72 : </title>
+			<title code="0x173">SOUND.DAT : 73 : </title>
+			<title code="0x174">SOUND.DAT : 74 : </title>
+			<title code="0x175">SOUND.DAT : 75 : </title>
+			<title code="0x176">SOUND.DAT : 76 : </title>
+			<title code="0x177">SOUND.DAT : 77 : </title>
+			<title code="0x178">SOUND.DAT : 78 : </title>
+			<title code="0x179">SOUND.DAT : 79 : </title>
+			<title code="0x17a">SOUND.DAT : 7A : </title>
+			<title code="0x17b">SOUND.DAT : 7B : </title>
+			<title code="0x17c">SOUND.DAT : 7C : </title>
+			<title code="0x17d">SOUND.DAT : 7D : </title>
+			<title code="0x17e">SOUND.DAT : 7E : </title>
+			<title code="0x17f">SOUND.DAT : 7F : </title>
+			<title code="0x180">SOUND.DAT : 80 : </title>
+			<title code="0x181">SOUND.DAT : 81 : </title>
+			<title code="0x182">SOUND.DAT : 82 : </title>
+			<title code="0x183">SOUND.DAT : 83 : </title>
+			<title code="0x184">SOUND.DAT : 84 : </title>
+			<title code="0x185">SOUND.DAT : 85 : </title>
+			<title code="0x186">SOUND.DAT : 86 : </title>
+			<title code="0x187">SOUND.DAT : 87 : </title>
+			<title code="0x188">SOUND.DAT : 88 : </title>
+			<title code="0x189">SOUND.DAT : 89 : </title>
+			<title code="0x18a">SOUND.DAT : 8A : </title>
+			<title code="0x18b">SOUND.DAT : 8B : </title>
+			<title code="0x18c">SOUND.DAT : 8C : </title>
+			<title code="0x18d">SOUND.DAT : 8D : </title>
+			<title code="0x18e">SOUND.DAT : 8E : </title>
+			<title code="0x18f">SOUND.DAT : 8F : </title>
+			<title code="0x190">SOUND.DAT : 90 : </title>
+			<title code="0x191">SOUND.DAT : 91 : </title>
+			<title code="0x192">SOUND.DAT : 92 : </title>
+			<title code="0x193">SOUND.DAT : 93 : </title>
+			<title code="0x194">SOUND.DAT : 94 : </title>
+			<title code="0x195">SOUND.DAT : 95 : </title>
+			<title code="0x196">SOUND.DAT : 96 : </title>
+			<title code="0x197">SOUND.DAT : 97 : </title>
+			<title code="0x198">SOUND.DAT : 98 : </title>
+			<title code="0x199">SOUND.DAT : 99 : </title>
+			<title code="0x19a">SOUND.DAT : 9A : </title>
+			<title code="0x19b">SOUND.DAT : 9B : </title>
+			<title code="0x19c">SOUND.DAT : 9C : </title>
+			<title code="0x19d">SOUND.DAT : 9D : </title>
+			<title code="0x19e">SOUND.DAT : 9E : </title>
+			<title code="0x19f">SOUND.DAT : 9F : </title>
+			<title code="0x1a0">SOUND.DAT : A0 : </title>
+			<title code="0x1a1">SOUND.DAT : A1 : </title>
+			<title code="0x1a2">SOUND.DAT : A2 : </title>
+			<title code="0x1a3">SOUND.DAT : A3 : </title>
+			<title code="0x1a4">SOUND.DAT : A4 : </title>
+			<title code="0x1a5">SOUND.DAT : A5 : </title>
+			<title code="0x1a6">SOUND.DAT : A6 : </title>
+			<title code="0x1a7">SOUND.DAT : A7 : </title>
+			<title code="0x1a8">SOUND.DAT : A8 : </title>
+			<title code="0x1a9">SOUND.DAT : A9 : </title>
+			<title code="0x1aa">SOUND.DAT : AA : </title>
+			<title code="0x1ab">SOUND.DAT : AB : </title>
+			<title code="0x1ac">SOUND.DAT : AC : </title>
+			<title code="0x1ad">SOUND.DAT : AD : </title>
+			<title code="0x1ae">SOUND.DAT : AE : </title>
+			<title code="0x1af">SOUND.DAT : AF : </title>
+			<title code="0x1b0">SOUND.DAT : B0 : </title>
+			<title code="0x1b1">SOUND.DAT : B1 : </title>
+			<title code="0x1b2">SOUND.DAT : B2 : </title>
+			<title code="0x1b3">SOUND.DAT : B3 : </title>
+			<title code="0x1b4">SOUND.DAT : B4 : </title>
+			<title code="0x1b5">SOUND.DAT : B5 : </title>
+			<title code="0x1b6">SOUND.DAT : B6 : </title>
+			<title code="0x1b7">SOUND.DAT : B7 : </title>
+			<title code="0x1b8">SOUND.DAT : B8 : </title>
+			<title code="0x1b9">SOUND.DAT : B9 : </title>
+			<title code="0x1ba">SOUND.DAT : BA : </title>
+			<title code="0x1bb">SOUND.DAT : BB : </title>
+			<title code="0x1bc">SOUND.DAT : BC : </title>
+			<title code="0x1bd">SOUND.DAT : BD : </title>
+			<title code="0x1be">SOUND.DAT : BE : </title>
+			<title code="0x1bf">SOUND.DAT : BF : </title>
+			<title code="0x1c0">SOUND.DAT : C0 : </title>
+			<title code="0x1c1">SOUND.DAT : C1 : </title>
+			<title code="0x1c2">SOUND.DAT : C2 : </title>
+			<title code="0x1c3">SOUND.DAT : C3 : </title>
+			<title code="0x1c4">SOUND.DAT : C4 : </title>
+			<title code="0x1c5">SOUND.DAT : C5 : </title>
+			<title code="0x1c6">SOUND.DAT : C6 : </title>
+			<title code="0x1c7">SOUND.DAT : C7 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] Lands of Lore(86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9821">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="lands_21">
+			<rom type="file" offset="-1">LANDS_21.COM</rom>
+			<rom type="file" offset="-1">LANDS.EXE</rom>
+			<rom type="conin" offset="5">LANDS.EXE</rom>
+			<rom type="file" offset="6" >SOUND.DAT</rom>
+			<rom type="file" offset="11">LORE01.86</rom>
+			<rom type="file" offset="12">LORE02.86</rom>
+			<rom type="file" offset="13">LORE03.86</rom>
+			<rom type="file" offset="14">LORE04.86</rom>
+			<rom type="file" offset="15">LORE05.86</rom>
+			<rom type="file" offset="16">LORE06.86</rom>
+			<rom type="file" offset="17">LORE07.86</rom>
+			<rom type="file" offset="18">LORE08.86</rom>
+			<rom type="file" offset="19">LORE09.86</rom>
+			<rom type="file" offset="20">LORE10.86</rom>
+			<rom type="file" offset="21">LORE11.86</rom>
+			<rom type="file" offset="22">LORE12.86</rom>
+			<rom type="file" offset="23">LORE13.86</rom>
+			<rom type="file" offset="24">LORE14.86</rom>
+			<rom type="file" offset="25">LORE15.86</rom>
+			<rom type="file" offset="26">LORE16.86</rom>
+			<rom type="file" offset="27">LORE17.86</rom>
+			<rom type="file" offset="28">LORE18.86</rom>
+			<rom type="file" offset="29">LORE19.86</rom>
+			<rom type="file" offset="30">LORE20.86</rom>
+			<rom type="file" offset="31">LORE21.86</rom>
+			<rom type="file" offset="32">LORE22.86</rom>
+			<rom type="file" offset="33">LORE23.86</rom>
+			<rom type="file" offset="34">LORE24.86</rom>
+			<rom type="file" offset="35">LORE25.86</rom>
+			<rom type="file" offset="36">LORE26.86</rom>
+			<rom type="file" offset="37">LORE27.86</rom>
+			<rom type="file" offset="38">LORE28.86</rom>
+			<rom type="file" offset="39">LORE29.86</rom>
+			<rom type="file" offset="40">LORE30.86</rom>
+			<rom type="file" offset="41">LORE31.86</rom>
+			<rom type="file" offset="42">LORE32.86</rom>
+			<rom type="file" offset="43">LORE33.86</rom>
+			<rom type="file" offset="44">LORE34.86</rom>
+			<rom type="file" offset="45">LORE35.86</rom>
+			<rom type="file" offset="46">LORE36.86</rom>
+			<rom type="file" offset="47">LORE37.86</rom>
+			<rom type="file" offset="48">LORE38.86</rom>
+			<rom type="file" offset="49">LORE39.86</rom>
+			<rom type="file" offset="50">LORE40.86</rom>
+			<rom type="file" offset="51">LORE41.86</rom>
+			<rom type="file" offset="52">LORE42.86</rom>
+			<rom type="file" offset="53">LORE43.86</rom>
+			<rom type="file" offset="54">LORE44.86</rom>
+			<rom type="file" offset="55">LORE45.86</rom>
+			<rom type="file" offset="56">LORE46.86</rom>
+			<rom type="file" offset="57">LORE47.86</rom>
+			<rom type="file" offset="58">LORE48.86</rom>
+			<rom type="file" offset="59">LORE49.86</rom>
+			<rom type="file" offset="60">LORE50.86</rom>
+			<rom type="file" offset="61">LORE51.86</rom>
+			<rom type="file" offset="62">LORE52.86</rom>
+			<rom type="file" offset="63">LORE53.86</rom>
+			<rom type="file" offset="64">LORE54.86</rom>
+			<rom type="file" offset="65">LORE55.86</rom>
+			<rom type="file" offset="66">LORE56.86</rom>
+			<rom type="file" offset="67">LORE57.86</rom>
+			<rom type="file" offset="68">LORE58.86</rom>
+			<rom type="file" offset="69">LORE59.86</rom>
+			<rom type="file" offset="70">LORE60.86</rom>
+			<rom type="file" offset="71">LORE61.86</rom>
+			<rom type="file" offset="72">LORE62.86</rom>
+			<rom type="file" offset="73">LORE63.86</rom>
+			<rom type="file" offset="74">LORE64.86</rom>
+			<rom type="file" offset="75">LORE65.86</rom>
+			<rom type="file" offset="76">LORE66.86</rom>
+			<rom type="file" offset="77">LORE67.86</rom>
+			<rom type="file" offset="78">LORE68.86</rom>
+			<rom type="file" offset="79">LORE69.86</rom>
+			<rom type="file" offset="80">LORE70.86</rom>
+			<rom type="file" offset="81">LORE71.86</rom>
+			<rom type="file" offset="82">LORE72.86</rom>
+			<rom type="file" offset="83">LORE73.86</rom>
+			<rom type="file" offset="84">LORE74.86</rom>
+			<rom type="file" offset="85">LORE75.86</rom>
+			<rom type="file" offset="86">LORE76.86</rom>
+			<rom type="file" offset="87">LORE77.86</rom>
+			<rom type="file" offset="88">LORE78.86</rom>
+			<rom type="file" offset="89">LORE79.86</rom>
+			<rom type="file" offset="90">LORE80.86</rom>
+			<rom type="file" offset="91">LORE81.86</rom>
+			<rom type="file" offset="92">LORE82.86</rom>
+			<rom type="file" offset="93">LORE83.86</rom>
+			<rom type="file" offset="94">LORE84.86</rom>
+			<rom type="file" offset="95">LORE85.86</rom>
+			<rom type="file" offset="96">LORE86.86</rom>
+			<rom type="file" offset="97">LORE87.86</rom>
+			<rom type="shell" offset="0">LANDS_21</rom>
+		</romlist>
+		<titlelist>
+			<title code="11">LORE01.86      : </title>
+			<title code="12">LORE02.86      : </title>
+			<title code="13">LORE03.86      : </title>
+			<title code="14">LORE04.86      : </title>
+			<title code="15">LORE05.86      : </title>
+			<title code="16">LORE06.86      : </title>
+			<title code="17">LORE07.86      : </title>
+			<title code="18">LORE08.86      : </title>
+			<title code="19">LORE09.86      : </title>
+			<title code="20">LORE10.86      : </title>
+			<title code="21">LORE11.86      : </title>
+			<title code="22">LORE12.86      : </title>
+			<title code="23">LORE13.86      : </title>
+			<title code="24">LORE14.86      : </title>
+			<title code="25">LORE15.86      : </title>
+			<title code="26">LORE16.86      : </title>
+			<title code="27">LORE17.86      : </title>
+			<title code="28">LORE18.86      : </title>
+			<title code="29">LORE19.86      : </title>
+			<title code="30">LORE20.86      : </title>
+			<title code="31">LORE21.86      : </title>
+			<title code="32">LORE22.86      : </title>
+			<title code="33">LORE23.86      : </title>
+			<title code="34">LORE24.86      : </title>
+			<title code="35">LORE25.86      : </title>
+			<title code="36">LORE26.86      : </title>
+			<title code="37">LORE27.86      : </title>
+			<title code="38">LORE28.86      : </title>
+			<title code="39">LORE29.86      : </title>
+			<title code="40">LORE30.86      : </title>
+			<title code="41">LORE31.86      : </title>
+			<title code="42">LORE32.86      : </title>
+			<title code="43">LORE33.86      : </title>
+			<title code="44">LORE34.86      : </title>
+			<title code="45">LORE35.86      : </title>
+			<title code="46">LORE36.86      : </title>
+			<title code="47">LORE37.86      : </title>
+			<title code="48">LORE38.86      : </title>
+			<title code="49">LORE39.86      : </title>
+			<title code="50">LORE40.86      : </title>
+			<title code="51">LORE41.86      : </title>
+			<title code="52">LORE42.86      : </title>
+			<title code="53">LORE43.86      : </title>
+			<title code="54">LORE44.86      : </title>
+			<title code="55">LORE45.86      : </title>
+			<title code="56">LORE46.86      : </title>
+			<title code="57">LORE47.86      : </title>
+			<title code="58">LORE48.86      : </title>
+			<title code="59">LORE49.86      : </title>
+			<title code="60">LORE50.86      : </title>
+			<title code="61">LORE51.86      : </title>
+			<title code="62">LORE52.86      : </title>
+			<title code="63">LORE53.86      : </title>
+			<title code="64">LORE54.86      : </title>
+			<title code="65">LORE55.86      : </title>
+			<title code="66">LORE56.86      : </title>
+			<title code="67">LORE57.86      : </title>
+			<title code="68">LORE58.86      : </title>
+			<title code="69">LORE59.86      : </title>
+			<title code="70">LORE60.86      : </title>
+			<title code="71">LORE61.86      : </title>
+			<title code="72">LORE62.86      : </title>
+			<title code="73">LORE63.86      : </title>
+			<title code="74">LORE64.86      : </title>
+			<title code="75">LORE65.86      : </title>
+			<title code="76">LORE66.86      : </title>
+			<title code="77">LORE67.86      : </title>
+			<title code="78">LORE68.86      : </title>
+			<title code="79">LORE69.86      : </title>
+			<title code="80">LORE70.86      : </title>
+			<title code="81">LORE71.86      : </title>
+			<title code="82">LORE72.86      : </title>
+			<title code="83">LORE73.86      : </title>
+			<title code="84">LORE74.86      : </title>
+			<title code="85">LORE75.86      : </title>
+			<title code="86">LORE76.86      : </title>
+			<title code="87">LORE77.86      : </title>
+			<title code="88">LORE78.86      : </title>
+			<title code="89">LORE79.86      : </title>
+			<title code="90">LORE80.86      : </title>
+			<title code="91">LORE81.86      : </title>
+			<title code="92">LORE82.86      : </title>
+			<title code="93">LORE83.86      : </title>
+			<title code="94">LORE84.86      : </title>
+			<title code="95">LORE85.86      : </title>
+			<title code="96">LORE86.86      : </title>
+			<title code="97">LORE87.86      : </title>
+			<title code="0x100">SOUND.DAT : 00 : </title>
+			<title code="0x101">SOUND.DAT : 01 : </title>
+			<title code="0x102">SOUND.DAT : 02 : </title>
+			<title code="0x103">SOUND.DAT : 03 : </title>
+			<title code="0x104">SOUND.DAT : 04 : </title>
+			<title code="0x105">SOUND.DAT : 05 : </title>
+			<title code="0x106">SOUND.DAT : 06 : </title>
+			<title code="0x107">SOUND.DAT : 07 : </title>
+			<title code="0x108">SOUND.DAT : 08 : </title>
+			<title code="0x109">SOUND.DAT : 09 : </title>
+			<title code="0x10a">SOUND.DAT : 0A : </title>
+			<title code="0x10b">SOUND.DAT : 0B : </title>
+			<title code="0x10c">SOUND.DAT : 0C : </title>
+			<title code="0x10d">SOUND.DAT : 0D : </title>
+			<title code="0x10e">SOUND.DAT : 0E : </title>
+			<title code="0x10f">SOUND.DAT : 0F : </title>
+			<title code="0x110">SOUND.DAT : 10 : </title>
+			<title code="0x111">SOUND.DAT : 11 : </title>
+			<title code="0x112">SOUND.DAT : 12 : </title>
+			<title code="0x113">SOUND.DAT : 13 : </title>
+			<title code="0x114">SOUND.DAT : 14 : </title>
+			<title code="0x115">SOUND.DAT : 15 : </title>
+			<title code="0x116">SOUND.DAT : 16 : </title>
+			<title code="0x117">SOUND.DAT : 17 : </title>
+			<title code="0x118">SOUND.DAT : 18 : </title>
+			<title code="0x119">SOUND.DAT : 19 : </title>
+			<title code="0x11a">SOUND.DAT : 1A : </title>
+			<title code="0x11b">SOUND.DAT : 1B : </title>
+			<title code="0x11c">SOUND.DAT : 1C : </title>
+			<title code="0x11d">SOUND.DAT : 1D : </title>
+			<title code="0x11e">SOUND.DAT : 1E : </title>
+			<title code="0x11f">SOUND.DAT : 1F : </title>
+			<title code="0x120">SOUND.DAT : 20 : </title>
+			<title code="0x121">SOUND.DAT : 21 : </title>
+			<title code="0x122">SOUND.DAT : 22 : </title>
+			<title code="0x123">SOUND.DAT : 23 : </title>
+			<title code="0x124">SOUND.DAT : 24 : </title>
+			<title code="0x125">SOUND.DAT : 25 : </title>
+			<title code="0x126">SOUND.DAT : 26 : </title>
+			<title code="0x127">SOUND.DAT : 27 : </title>
+			<title code="0x128">SOUND.DAT : 28 : </title>
+			<title code="0x129">SOUND.DAT : 29 : </title>
+			<title code="0x12a">SOUND.DAT : 2A : </title>
+			<title code="0x12b">SOUND.DAT : 2B : </title>
+			<title code="0x12c">SOUND.DAT : 2C : </title>
+			<title code="0x12d">SOUND.DAT : 2D : </title>
+			<title code="0x12e">SOUND.DAT : 2E : </title>
+			<title code="0x12f">SOUND.DAT : 2F : </title>
+			<title code="0x130">SOUND.DAT : 30 : </title>
+			<title code="0x131">SOUND.DAT : 31 : </title>
+			<title code="0x132">SOUND.DAT : 32 : </title>
+			<title code="0x133">SOUND.DAT : 33 : </title>
+			<title code="0x134">SOUND.DAT : 34 : </title>
+			<title code="0x135">SOUND.DAT : 35 : </title>
+			<title code="0x136">SOUND.DAT : 36 : </title>
+			<title code="0x137">SOUND.DAT : 37 : </title>
+			<title code="0x138">SOUND.DAT : 38 : </title>
+			<title code="0x139">SOUND.DAT : 39 : </title>
+			<title code="0x13a">SOUND.DAT : 3A : </title>
+			<title code="0x13b">SOUND.DAT : 3B : </title>
+			<title code="0x13c">SOUND.DAT : 3C : </title>
+			<title code="0x13d">SOUND.DAT : 3D : </title>
+			<title code="0x13e">SOUND.DAT : 3E : </title>
+			<title code="0x13f">SOUND.DAT : 3F : </title>
+			<title code="0x140">SOUND.DAT : 40 : </title>
+			<title code="0x141">SOUND.DAT : 41 : </title>
+			<title code="0x142">SOUND.DAT : 42 : </title>
+			<title code="0x143">SOUND.DAT : 43 : </title>
+			<title code="0x144">SOUND.DAT : 44 : </title>
+			<title code="0x145">SOUND.DAT : 45 : </title>
+			<title code="0x146">SOUND.DAT : 46 : </title>
+			<title code="0x147">SOUND.DAT : 47 : </title>
+			<title code="0x148">SOUND.DAT : 48 : </title>
+			<title code="0x149">SOUND.DAT : 49 : </title>
+			<title code="0x14a">SOUND.DAT : 4A : </title>
+			<title code="0x14b">SOUND.DAT : 4B : </title>
+			<title code="0x14c">SOUND.DAT : 4C : </title>
+			<title code="0x14d">SOUND.DAT : 4D : </title>
+			<title code="0x14e">SOUND.DAT : 4E : </title>
+			<title code="0x14f">SOUND.DAT : 4F : </title>
+			<title code="0x150">SOUND.DAT : 50 : </title>
+			<title code="0x151">SOUND.DAT : 51 : </title>
+			<title code="0x152">SOUND.DAT : 52 : </title>
+			<title code="0x153">SOUND.DAT : 53 : </title>
+			<title code="0x154">SOUND.DAT : 54 : </title>
+			<title code="0x155">SOUND.DAT : 55 : </title>
+			<title code="0x156">SOUND.DAT : 56 : </title>
+			<title code="0x157">SOUND.DAT : 57 : </title>
+			<title code="0x158">SOUND.DAT : 58 : </title>
+			<title code="0x159">SOUND.DAT : 59 : </title>
+			<title code="0x15a">SOUND.DAT : 5A : </title>
+			<title code="0x15b">SOUND.DAT : 5B : </title>
+			<title code="0x15c">SOUND.DAT : 5C : </title>
+			<title code="0x15d">SOUND.DAT : 5D : </title>
+			<title code="0x15e">SOUND.DAT : 5E : </title>
+			<title code="0x15f">SOUND.DAT : 5F : </title>
+			<title code="0x160">SOUND.DAT : 60 : </title>
+			<title code="0x161">SOUND.DAT : 61 : </title>
+			<title code="0x162">SOUND.DAT : 62 : </title>
+			<title code="0x163">SOUND.DAT : 63 : </title>
+			<title code="0x164">SOUND.DAT : 64 : </title>
+			<title code="0x165">SOUND.DAT : 65 : </title>
+			<title code="0x166">SOUND.DAT : 66 : </title>
+			<title code="0x167">SOUND.DAT : 67 : </title>
+			<title code="0x168">SOUND.DAT : 68 : </title>
+			<title code="0x169">SOUND.DAT : 69 : </title>
+			<title code="0x16a">SOUND.DAT : 6A : </title>
+			<title code="0x16b">SOUND.DAT : 6B : </title>
+			<title code="0x16c">SOUND.DAT : 6C : </title>
+			<title code="0x16d">SOUND.DAT : 6D : </title>
+			<title code="0x16e">SOUND.DAT : 6E : </title>
+			<title code="0x16f">SOUND.DAT : 6F : </title>
+			<title code="0x170">SOUND.DAT : 70 : </title>
+			<title code="0x171">SOUND.DAT : 71 : </title>
+			<title code="0x172">SOUND.DAT : 72 : </title>
+			<title code="0x173">SOUND.DAT : 73 : </title>
+			<title code="0x174">SOUND.DAT : 74 : </title>
+			<title code="0x175">SOUND.DAT : 75 : </title>
+			<title code="0x176">SOUND.DAT : 76 : </title>
+			<title code="0x177">SOUND.DAT : 77 : </title>
+			<title code="0x178">SOUND.DAT : 78 : </title>
+			<title code="0x179">SOUND.DAT : 79 : </title>
+			<title code="0x17a">SOUND.DAT : 7A : </title>
+			<title code="0x17b">SOUND.DAT : 7B : </title>
+			<title code="0x17c">SOUND.DAT : 7C : </title>
+			<title code="0x17d">SOUND.DAT : 7D : </title>
+			<title code="0x17e">SOUND.DAT : 7E : </title>
+			<title code="0x17f">SOUND.DAT : 7F : </title>
+			<title code="0x180">SOUND.DAT : 80 : </title>
+			<title code="0x181">SOUND.DAT : 81 : </title>
+			<title code="0x182">SOUND.DAT : 82 : </title>
+			<title code="0x183">SOUND.DAT : 83 : </title>
+			<title code="0x184">SOUND.DAT : 84 : </title>
+			<title code="0x185">SOUND.DAT : 85 : </title>
+			<title code="0x186">SOUND.DAT : 86 : </title>
+			<title code="0x187">SOUND.DAT : 87 : </title>
+			<title code="0x188">SOUND.DAT : 88 : </title>
+			<title code="0x189">SOUND.DAT : 89 : </title>
+			<title code="0x18a">SOUND.DAT : 8A : </title>
+			<title code="0x18b">SOUND.DAT : 8B : </title>
+			<title code="0x18c">SOUND.DAT : 8C : </title>
+			<title code="0x18d">SOUND.DAT : 8D : </title>
+			<title code="0x18e">SOUND.DAT : 8E : </title>
+			<title code="0x18f">SOUND.DAT : 8F : </title>
+			<title code="0x190">SOUND.DAT : 90 : </title>
+			<title code="0x191">SOUND.DAT : 91 : </title>
+			<title code="0x192">SOUND.DAT : 92 : </title>
+			<title code="0x193">SOUND.DAT : 93 : </title>
+			<title code="0x194">SOUND.DAT : 94 : </title>
+			<title code="0x195">SOUND.DAT : 95 : </title>
+			<title code="0x196">SOUND.DAT : 96 : </title>
+			<title code="0x197">SOUND.DAT : 97 : </title>
+			<title code="0x198">SOUND.DAT : 98 : </title>
+			<title code="0x199">SOUND.DAT : 99 : </title>
+			<title code="0x19a">SOUND.DAT : 9A : </title>
+			<title code="0x19b">SOUND.DAT : 9B : </title>
+			<title code="0x19c">SOUND.DAT : 9C : </title>
+			<title code="0x19d">SOUND.DAT : 9D : </title>
+			<title code="0x19e">SOUND.DAT : 9E : </title>
+			<title code="0x19f">SOUND.DAT : 9F : </title>
+			<title code="0x1a0">SOUND.DAT : A0 : </title>
+			<title code="0x1a1">SOUND.DAT : A1 : </title>
+			<title code="0x1a2">SOUND.DAT : A2 : </title>
+			<title code="0x1a3">SOUND.DAT : A3 : </title>
+			<title code="0x1a4">SOUND.DAT : A4 : </title>
+			<title code="0x1a5">SOUND.DAT : A5 : </title>
+			<title code="0x1a6">SOUND.DAT : A6 : </title>
+			<title code="0x1a7">SOUND.DAT : A7 : </title>
+			<title code="0x1a8">SOUND.DAT : A8 : </title>
+			<title code="0x1a9">SOUND.DAT : A9 : </title>
+			<title code="0x1aa">SOUND.DAT : AA : </title>
+			<title code="0x1ab">SOUND.DAT : AB : </title>
+			<title code="0x1ac">SOUND.DAT : AC : </title>
+			<title code="0x1ad">SOUND.DAT : AD : </title>
+			<title code="0x1ae">SOUND.DAT : AE : </title>
+			<title code="0x1af">SOUND.DAT : AF : </title>
+			<title code="0x1b0">SOUND.DAT : B0 : </title>
+			<title code="0x1b1">SOUND.DAT : B1 : </title>
+			<title code="0x1b2">SOUND.DAT : B2 : </title>
+			<title code="0x1b3">SOUND.DAT : B3 : </title>
+			<title code="0x1b4">SOUND.DAT : B4 : </title>
+			<title code="0x1b5">SOUND.DAT : B5 : </title>
+			<title code="0x1b6">SOUND.DAT : B6 : </title>
+			<title code="0x1b7">SOUND.DAT : B7 : </title>
+			<title code="0x1b8">SOUND.DAT : B8 : </title>
+			<title code="0x1b9">SOUND.DAT : B9 : </title>
+			<title code="0x1ba">SOUND.DAT : BA : </title>
+			<title code="0x1bb">SOUND.DAT : BB : </title>
+			<title code="0x1bc">SOUND.DAT : BC : </title>
+			<title code="0x1bd">SOUND.DAT : BD : </title>
+			<title code="0x1be">SOUND.DAT : BE : </title>
+			<title code="0x1bf">SOUND.DAT : BF : </title>
+			<title code="0x1c0">SOUND.DAT : C0 : </title>
+			<title code="0x1c1">SOUND.DAT : C1 : </title>
+			<title code="0x1c2">SOUND.DAT : C2 : </title>
+			<title code="0x1c3">SOUND.DAT : C3 : </title>
+			<title code="0x1c4">SOUND.DAT : C4 : </title>
+			<title code="0x1c5">SOUND.DAT : C5 : </title>
+			<title code="0x1c6">SOUND.DAT : C6 : </title>
+			<title code="0x1c7">SOUND.DAT : C7 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] SPACE HULK(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9821">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="shulk_21">
+			<rom type="file" offset="-1">SHULK_21.COM</rom>
+			<rom type="file" offset="0" >HULK.EXE</rom>
+			<rom type="conin" offset="5">HULK.EXE</rom>
+			<rom type="file" offset="10">HULK_A1.MUS</rom>
+			<rom type="file" offset="11">HULK_B1.MUS</rom>
+			<rom type="file" offset="12">HULK_C1.MUS</rom>
+			<rom type="file" offset="13">HULK_D1.MUS</rom>
+			<rom type="file" offset="14">HULK_E1.MUS</rom>
+			<rom type="shell" offset="0">SHULK_21</rom>
+		</romlist>
+		<titlelist>
+			<title code="10">HULK_A1.MUS : </title>
+			<title code="11">HULK_B1.MUS : </title>
+			<title code="12">HULK_C1.MUS : </title>
+			<title code="13">HULK_D1.MUS : </title>
+			<title code="14">HULK_E1.MUS : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9821] SPACE HULK(86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="NEC PC-9821">StarCraft</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="shulk_21">
+			<rom type="file" offset="-1">SHULK_21.COM</rom>
+			<rom type="file" offset="0" >HULK.EXE</rom>
+			<rom type="conin" offset="5">HULK.EXE</rom>
+			<rom type="file" offset="10">HULK_A2.MUS</rom>
+			<rom type="file" offset="11">HULK_B2.MUS</rom>
+			<rom type="file" offset="12">HULK_C2.MUS</rom>
+			<rom type="file" offset="13">HULK_D2.MUS</rom>
+			<rom type="file" offset="14">HULK_E2.MUS</rom>
+			<rom type="shell" offset="0">SHULK_21</rom>
+		</romlist>
+		<titlelist>
+			<title code="10">HULK_A2.MUS : </title>
+			<title code="11">HULK_B2.MUS : </title>
+			<title code="12">HULK_C2.MUS : </title>
+			<title code="13">HULK_D2.MUS : </title>
+			<title code="14">HULK_E2.MUS : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] DARWIN'S DILEMMA (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">StarCraft</driveralias>
+		<romlist archive="darwin68snd">
+			<rom type="code">dd68snd.bin</rom>
+			<rom type="x" offset="0x010000">OPMDRV.X</rom>
+			<rom type="code" offset="0x030000">DD.OPM</rom>
+			<rom type="x" offset="0x040000">DD.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : </title>
+			<title code="0x02">01 : </title>
+			<title code="0x03">02 : </title>
+			<title code="0x04">03 : </title>
+			<title code="0x05">04 : </title>
+			<title code="0x06">05 : </title>
+			<title code="0x07">06 : </title>
+			<title code="0x08">07 : </title>
+			<title code="0x09">08 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Dragon Wars (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">StarCraft</driveralias>
+		<romlist archive="drgnwars68snd">
+			<rom type="code">dwars68snd.bin</rom>
+			<rom type="x" offset="0x010000">OPMDRV.X</rom>
+			<rom type="code" offset="0x030000">DW.OPM</rom>
+			<rom type="x" offset="0x040000">DRAGON.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : </title>
+			<title code="0x02">01 : </title>
+			<title code="0x03">02 : </title>
+			<title code="0x04">03 : </title>
+			<title code="0x05">04 : </title>
+			<title code="0x06">05 : </title>
+			<title code="0x07">06 : </title>
+			<title code="0x08">07 : </title>
+			<title code="0x09">08 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Might and Magic (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">StarCraft</driveralias>
+		<romlist archive="m_and_m68snd">
+			<rom type="code">mm168snd.bin</rom>
+			<rom type="x" offset="0x010000">OP.X</rom>
+			<rom type="x" offset="0x030000">MAIN.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : タイトル/メインメニュー</title>
+			<title code="0x02">01 : 街</title>
+			<title code="0x04">03 : フィールド</title>
+			<title code="0x09">08 : 戦闘</title>
+			<title code="0x0a">09 : 戦闘終了</title>
+			<title code="0x03">02 : </title>
+			<title code="0x05">04 : </title>
+			<title code="0x06">05 : </title>
+			<title code="0x07">06 : </title>
+			<title code="0x08">07 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Might and Magic Book Two (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">StarCraft</driveralias>
+		<romlist archive="m_and_m268snd">
+			<rom type="code">mm268snd.bin</rom>
+			<rom type="x" offset="0x010000">OP.X</rom>
+			<rom type="x" offset="0x030000">MAIN.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : タイトル</title>
+			<title code="0x02">01 : 街</title>
+			<title code="0x03">02 : フィールド</title>
+			<title code="0x05">04 : ダンジョン</title>
+			<title code="0x06">05 : 戦闘</title>
+			<title code="0x04">03 : </title>
+			<title code="0x07">06 : </title>
+			<title code="0x08">07 : </title>
+			<title code="0x09">08 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] PHANTASIE III - The Wrath of Nikademus - (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">StarCraft</driveralias>
+		<romlist archive="phantas368snd">
+			<rom type="code">ps368snd.bin</rom>
+			<rom type="x" offset="0x010000">OP.X</rom>
+			<rom type="x" offset="0x030000">main.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : </title>
+			<title code="0x02">01 : </title>
+			<title code="0x03">02 : </title>
+			<title code="0x04">03 : </title>
+			<title code="0x05">04 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] PHANTASIE IV - THE BIRTH OF HEROES - (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">StarCraft</driveralias>
+		<romlist archive="phantas468snd">
+			<rom type="code">ps468snd.bin</rom>
+			<rom type="x" offset="0x010000">OPMDRV.X</rom>
+			<rom type="code" offset="0x030000">P4.OPM</rom>
+			<rom type="x" offset="0x040000">P4.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : </title>
+			<title code="0x02">01 : </title>
+			<title code="0x03">02 : </title>
+			<title code="0x04">03 : </title>
+			<title code="0x05">04 : </title>
+			<title code="0x06">05 : </title>
+			<title code="0x07">06 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] QUARTERSTAFF - THE TOMB OF SETMOTH - (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">StarCraft</driveralias>
+		<romlist archive="qstaff68snd">
+			<rom type="code">qs68snd.bin</rom>
+			<rom type="x" offset="0x010000">OPMDRV.X</rom>
+			<rom type="code" offset="0x030000">QS.OPM</rom>
+			<rom type="x" offset="0x040000">QS.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Rogue Alliance (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">StarCraft</driveralias>
+		<romlist archive="rougea68snd">
+			<rom type="code">ra68snd.bin</rom>
+			<rom type="x" offset="0x010000">OP.X</rom>
+			<rom type="code" offset="0x030000">KIM.OPM</rom>
+			<rom type="x" offset="0x040000">main.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : </title>
+			<title code="0x02">01 : </title>
+			<title code="0x03">02 : </title>
+			<title code="0x04">03 : </title>
+			<title code="0x05">04 : </title>
+			<title code="0x06">05 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] TUNNELS &amp; TROLLS - Crusaders of Khazan - (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">StarCraft</driveralias>
+		<romlist archive="tnt68snd">
+			<rom type="code">tnt68snd.bin</rom>
+			<rom type="x" offset="0x010000">OPMDRV.X</rom>
+			<rom type="x" offset="0x030000">TNT.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : </title>
+			<title code="0x02">01 : </title>
+			<title code="0x03">02 : </title>
+			<title code="0x04">03 : </title>
+			<title code="0x05">04 : </title>
+			<title code="0x06">05 : </title>
+			<title code="0x07">05 : </title>
+			<title code="0x08">06 : </title>
+			<title code="0x09">07 : </title>
+			<title code="0x0a">08 : </title>
+			<title code="0x0b">09 : </title>
+			<title code="0x0c">0A : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Might and Magic</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">StarCraft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x1a4f"/>
+			<option name="mdata_size" value="0x0400"/>
+			<option name="mfile_size" value="0x0400"/>
+			<option name="init_pc"    value="0x400"/>
+		</options>
+		<romlist archive="m_and_m_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x0b00">DRIVER.BIN</rom>
+			<rom type="bgm"  offset="0x00">DATA1.BIN</rom>
+			<rom type="bgm"  offset="0x01">DATA2.BIN</rom>
+			<rom type="bgm"  offset="0x02">DATA3.BIN</rom>
+			<rom type="bgm"  offset="0x03">DATA4.BIN</rom>
+			<rom type="bgm"  offset="0x04">DATA5.BIN</rom>
+			<rom type="bgm"  offset="0x05">DATA6.BIN</rom>
+			<rom type="bgm"  offset="0x06">DATA7.BIN</rom>
+			<rom type="bgm"  offset="0x07">DATA8.BIN</rom>
+			<rom type="bgm"  offset="0x08">DATA9.BIN</rom>
+			<rom type="bgm"  offset="0x09">DATAA.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">タイトル/メインメニュー</title>
+			<title code="0x01">街</title>
+			<title code="0x03">フィールド</title>
+			<title code="0x08">戦闘</title>
+			<title code="0x09">戦闘終了</title>
+			<range min="0x02" max="0x02" extcode="1">BGM %02x</range>
+			<range min="0x04" max="0x07" extcode="1">BGM %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Might and Magic Book Two(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">StarCraft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xd1a0"/>
+			<option name="mdata_size" value="0x0400"/>
+			<option name="mfile_size" value="0x0400"/>
+			<option name="init_pc"    value="0x400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="mandm2_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xcb7f">DRIVER.BIN</rom>
+			<rom type="bgm"  offset="0x00">DATA1.BIN</rom>
+			<rom type="bgm"  offset="0x01">DATA2.BIN</rom>
+			<rom type="bgm"  offset="0x02">DATA3.BIN</rom>
+			<rom type="bgm"  offset="0x03">DATA4.BIN</rom>
+			<rom type="bgm"  offset="0x04">DATA5.BIN</rom>
+			<rom type="bgm"  offset="0x05">DATA6.BIN</rom>
+			<rom type="bgm"  offset="0x06">DATA7.BIN</rom>
+			<rom type="bgm"  offset="0x07">DATA8.BIN</rom>
+			<rom type="bgm"  offset="0x08">DATA9.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">タイトル</title>
+			<title code="0x01">街</title>
+			<title code="0x02">フィールド</title>
+			<title code="0x04">ダンジョン</title>
+			<title code="0x05">戦闘</title>
+			<range min="0x03" max="0x03" extcode="1">BGM %02x</range>
+			<range min="0x05" max="0x08" extcode="1">BGM %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Might and Magic Book Two(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">StarCraft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xd1a0"/>
+			<option name="mdata_size" value="0x0400"/>
+			<option name="mfile_size" value="0x0400"/>
+			<option name="init_pc"    value="0x400"/>
+		</options>
+		<romlist archive="mandm2_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xcb7f">DRIVER.BIN</rom>
+			<rom type="bgm"  offset="0x00">DATA1.BIN</rom>
+			<rom type="bgm"  offset="0x01">DATA2.BIN</rom>
+			<rom type="bgm"  offset="0x02">DATA3.BIN</rom>
+			<rom type="bgm"  offset="0x03">DATA4.BIN</rom>
+			<rom type="bgm"  offset="0x04">DATA5.BIN</rom>
+			<rom type="bgm"  offset="0x05">DATA6.BIN</rom>
+			<rom type="bgm"  offset="0x06">DATA7.BIN</rom>
+			<rom type="bgm"  offset="0x07">DATA8.BIN</rom>
+			<rom type="bgm"  offset="0x08">DATA9.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">タイトル</title>
+			<title code="0x01">街</title>
+			<title code="0x02">フィールド</title>
+			<title code="0x04">ダンジョン</title>
+			<title code="0x05">戦闘</title>
+			<range min="0x03" max="0x03" extcode="1">BGM %02x</range>
+			<range min="0x05" max="0x08" extcode="1">BGM %02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Rogue Alliance(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">StarCraft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xd4ac"/>
+			<option name="mdata_size" value="0x0200"/>
+			<option name="mfile_size" value="0x0200"/>
+			<option name="init_pc"    value="0x400"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="rougea_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xcb9d">DRIVER.BIN</rom>
+			<rom type="bgm"  offset="0x00">DATA1.BIN</rom>
+			<rom type="bgm"  offset="0x01">DATA2.BIN</rom>
+			<rom type="bgm"  offset="0x02">DATA3.BIN</rom>
+			<rom type="bgm"  offset="0x03">DATA4.BIN</rom>
+			<rom type="bgm"  offset="0x04">DATA5.BIN</rom>
+			<rom type="bgm"  offset="0x05">DATA6.BIN</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x00" max="0x05" extcode="1">%02x : </range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Rogue Alliance(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">StarCraft</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xd4ac"/>
+			<option name="mdata_size" value="0x0200"/>
+			<option name="mfile_size" value="0x0200"/>
+			<option name="init_pc"    value="0x400"/>
+		</options>
+		<romlist archive="rougea_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xcb9d">DRIVER.BIN</rom>
+			<rom type="bgm"  offset="0x00">DATA1.BIN</rom>
+			<rom type="bgm"  offset="0x01">DATA2.BIN</rom>
+			<rom type="bgm"  offset="0x02">DATA3.BIN</rom>
+			<rom type="bgm"  offset="0x03">DATA4.BIN</rom>
+			<rom type="bgm"  offset="0x04">DATA5.BIN</rom>
+			<rom type="bgm"  offset="0x05">DATA6.BIN</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x00" max="0x05" extcode="1">%02x : </range>
+		</titlelist>
+	</game>
+</gamelist>

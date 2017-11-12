@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2008/04/24">
+	<!-- //SHARP -->
+	<game>
+		<name>[X68000] New PrintShop Pro-68K</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">sharp</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="nps68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">MU_SOUND.OPM</rom>
+			<rom type="code" offset="0x2c000">ps_banner.opm</rom>
+			<rom type="code" offset="0x30000">ps_envelope.opm</rom>
+			<rom type="code" offset="0x34000">ps_gedit.opm</rom>
+			<rom type="code" offset="0x38000">ps_greet.opm</rom>
+			<rom type="code" offset="0x3c000">ps_letter.opm</rom>
+			<rom type="code" offset="0x40000">ps_post.opm</rom>
+			<rom type="code" offset="0x44000">ps_print.opm</rom>
+			<rom type="code" offset="0x48000">ps_screen.opm</rom>
+			<rom type="code" offset="0x4c000">ps_sign.opm</rom>
+			<rom type="code" offset="0x50000">ps_title.opm</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0204">ps_banner.opm</title>
+			<title code="0x0205">ps_envelope.opm</title>
+			<title code="0x0206">ps_gedit.opm</title>
+			<title code="0x0207">ps_greet.opm</title>
+			<title code="0x0208">ps_letter.opm</title>
+			<title code="0x0209">ps_post.opm</title>
+			<title code="0x020a">ps_print.opm</title>
+			<title code="0x020b">ps_screen.opm</title>
+			<title code="0x020c">ps_sign.opm</title>
+			<title code="0x020d">ps_title.opm</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] New PrintShop Pro-68K V2.0</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">sharp</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="nps268snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">MU_SOUND.OPM</rom>
+			<rom type="code" offset="0x2c000">PS_BANNER.OPM</rom>
+			<rom type="code" offset="0x30000">PS_CALENDAR.OPM</rom>
+			<rom type="code" offset="0x34000">PS_CASSETTE.OPM</rom>
+			<rom type="code" offset="0x38000">PS_ENVELOPE.OPM</rom>
+			<rom type="code" offset="0x3c000">PS_GEDIT.OPM</rom>
+			<rom type="code" offset="0x40000">PS_GREETING.OPM</rom>
+			<rom type="code" offset="0x44000">PS_LETTER.OPM</rom>
+			<rom type="code" offset="0x48000">PS_POST.OPM</rom>
+			<rom type="code" offset="0x4c000">PS_PRINT.OPM</rom>
+			<rom type="code" offset="0x50000">PS_SIGN.OPM</rom>
+			<rom type="code" offset="0x54000">PS_TEDIT.OPM</rom>
+			<rom type="code" offset="0x58000">PS_TITLE.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0204">PS_BANNER.OPM</title>
+			<title code="0x0205">PS_CALENDAR.OPM</title>
+			<title code="0x0206">PS_CASSETTE.OPM</title>
+			<title code="0x0207">PS_ENVELOPE.OPM</title>
+			<title code="0x0208">PS_GEDIT.OPM</title>
+			<title code="0x0209">PS_GREETING.OPM</title>
+			<title code="0x020a">PS_LETTER.OPM</title>
+			<title code="0x020b">PS_POST.OPM</title>
+			<title code="0x020c">PS_PRINT.OPM</title>
+			<title code="0x020d">PS_SIGN.OPM</title>
+			<title code="0x020e">PS_TEDIT.OPM</title>
+			<title code="0x020f">PS_TITLE.OPM</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //backspin -->
+	<game>
+		<name>[PC-98] Guernica (ゲルニカ)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">backspin</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="guernica_98">
+			<rom type="file" offset="-1">SYNTH_98.COM</rom>
+			<rom type="file" offset="0x05">SYNTHIA.EXE</rom>
+			<rom type="file" offset="0x10">000.PAI</rom>
+			<rom type="file" offset="0x11">001.PAI</rom>
+			<rom type="file" offset="0x12">002.PAI</rom>
+			<rom type="file" offset="0x13">003.PAI</rom>
+			<rom type="file" offset="0x14">005.PAI</rom>
+			<rom type="file" offset="0x15">006.PAI</rom>
+			<rom type="file" offset="0x16">007.PAI</rom>
+			<rom type="file" offset="0x17">008.PAI</rom>
+			<rom type="file" offset="0x18">009.PAI</rom>
+			<rom type="file" offset="0x19">010.PAI</rom>
+			<rom type="file" offset="0x1a">011.PAI</rom>
+			<rom type="file" offset="0x1b">012.PAI</rom>
+			<rom type="file" offset="0x1c">013.PAI</rom>
+			<rom type="file" offset="0x1d">014.PAI</rom>
+			<rom type="file" offset="0x1e">016.PAI</rom>
+			<rom type="file" offset="0x1f">BATTLE1.PAI</rom>
+			<rom type="file" offset="0x20">BATTLE2.PAI</rom>
+			<rom type="file" offset="0x21">GAMEOVER.PAI</rom>
+			<rom type="file" offset="0x22">OPENING.PAI</rom>
+			<rom type="shell" offset="0">SYNTHIA</rom>
+			<rom type="shell" offset="0">SYNTH_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">オープニング</title>
+			<title code="0x11">全体マップ</title>
+			<title code="0x12">街、村</title>
+			<title code="0x13">戦闘2 ボス</title>
+			<title code="0x14">エッチ1</title>
+			<title code="0x15">エッチ2</title>
+			<title code="0x16">森林迷路</title>
+			<title code="0x17">洞窟1 魔族のすみか</title>
+			<title code="0x18">王城</title>
+			<title code="0x19">怪しい地下水路</title>
+			<title code="0x1a">失われた魔法学校</title>
+			<title code="0x1b">魔法城建設中</title>
+			<title code="0x1c">洞窟2 海賊のアジト</title>
+			<title code="0x1d">最後の塔</title>
+			<title code="0x1e">エンディング</title>
+			<title code="0x1f">戦闘1</title>
+			<title code="0x20">戦闘2 ボス</title>
+			<title code="0x21">ゲームオーバー</title>
+			<title code="0x22">オープニング</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+					offset CDATA #IMPLIED
+					crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+
+	<game>
+		<name>[PC/AT] Blackthorne (GM)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">blizzard</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="blackthorne_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MIDI.ADV</rom>
+			<rom type="file" offset="0x10">blackthorne_title.xmi</rom>
+			<rom type="file" offset="0x11">blackthorne_intro.xmi</rom>
+			<rom type="file" offset="0x12">blackthorne_ingame1.xmi</rom>
+			<rom type="file" offset="0x13">blackthorne_ingame2.xmi</rom>
+			<rom type="file" offset="0x14">blackthorne_ingame3.xmi</rom>
+			<rom type="file" offset="0x15">blackthorne_ingame4.xmi</rom>
+			<rom type="file" offset="0x16">blackthorne_last_battle.xmi</rom>
+			<rom type="file" offset="0x17">blackthorne_ending.xmi</rom>
+			<rom type="shell" offset="0">HOOT.EXE NONE MIDI.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Title</title>
+			<title code="0x1100">Intro</title>
+			<title code="0x1200">Ingame - BGM 1</title>
+			<title code="0x1300">Ingame - BGM 2</title>
+			<title code="0x1400">Ingame - BGM 3</title>
+			<title code="0x1500">Ingame - BGM 4</title>
+			<title code="0x1600">Last Battle</title>
+			<title code="0x1700">Ending</title>
+			</titlelist>
+	</game>
+	
+	<game>
+		<name>[PC/AT] The Lost Vikings (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">blizzard</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="lostvikings_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">ADLIB.ADV</rom>
+			<rom type="file" offset="-1">SAMPLE.AD</rom>
+			<rom type="file" offset="0x10">01AD.XMI</rom>
+			<rom type="file" offset="0x11">02AD.XMI</rom>
+			<rom type="file" offset="0x12">03AD.XMI</rom>
+			<rom type="file" offset="0x13">04AD.XMI</rom>
+			<rom type="file" offset="0x14">05AD.XMI</rom>
+			<rom type="file" offset="0x15">06AD.XMI</rom>
+			<rom type="file" offset="0x16">07AD.XMI</rom>
+			<rom type="file" offset="0x17">08AD.XMI</rom>
+			<rom type="shell" offset="0">HOOT.EXE NULL ADLIB.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Music 1</title>
+			<title code="0x1100">Music 2</title>
+			<title code="0x1200">Music 3</title>
+			<title code="0x1300">Music 4</title>
+			<title code="0x1400">Music 5</title>
+			<title code="0x1500">Music 6</title>
+			<title code="0x1600">Music 7</title>
+			<title code="0x1700">Music 8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] The Lost Vikings (YMF262)</name>
+		<driver type="soundblaster16">pcatdos</driver>
+		<driveralias type="PC/AT">blizzard</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl3_mix" value="0x180"/>
+		</options>
+		<romlist archive="lostvikings_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">SBP2FM.ADV</rom>
+			<rom type="file" offset="-1">SAMPLE.OPL</rom>
+			<rom type="file" offset="0x10">01SB.XMI</rom>
+			<rom type="file" offset="0x11">02SB.XMI</rom>
+			<rom type="file" offset="0x12">03SB.XMI</rom>
+			<rom type="file" offset="0x13">04SB.XMI</rom>
+			<rom type="file" offset="0x14">05SB.XMI</rom>
+			<rom type="file" offset="0x15">06SB.XMI</rom>
+			<rom type="file" offset="0x16">07SB.XMI</rom>
+			<rom type="file" offset="0x17">08SB.XMI</rom>
+			<rom type="shell" offset="0">HOOT.EXE NULL SBP2FM.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Music 1</title>
+			<title code="0x1100">Music 2</title>
+			<title code="0x1200">Music 3</title>
+			<title code="0x1300">Music 4</title>
+			<title code="0x1400">Music 5</title>
+			<title code="0x1500">Music 6</title>
+			<title code="0x1600">Music 7</title>
+			<title code="0x1700">Music 8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] The Lost Vikings (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">blizzard</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="lostvikings_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MT32MPU.ADV</rom>
+			<rom type="file" offset="-1">SAMPLE.MT</rom>
+			<rom type="file" offset="-1">MT.XMI</rom>
+			<rom type="file" offset="0x10">01MT.XMI</rom>
+			<rom type="file" offset="0x11">02MT.XMI</rom>
+			<rom type="file" offset="0x12">03MT.XMI</rom>
+			<rom type="file" offset="0x13">04MT.XMI</rom>
+			<rom type="file" offset="0x14">05MT.XMI</rom>
+			<rom type="file" offset="0x15">06MT.XMI</rom>
+			<rom type="file" offset="0x16">07MT.XMI</rom>
+			<rom type="file" offset="0x17">08MT.XMI</rom>
+			<rom type="shell" offset="0">HOOT.EXE MT.XMI MT32MPU.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Music 1</title>
+			<title code="0x1100">Music 2</title>
+			<title code="0x1200">Music 3</title>
+			<title code="0x1300">Music 4</title>
+			<title code="0x1400">Music 5</title>
+			<title code="0x1500">Music 6</title>
+			<title code="0x1600">Music 7</title>
+			<title code="0x1700">Music 8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] The Lost Vikings (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">blizzard</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="lostvikings_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MT32MPU.ADV</rom>
+			<rom type="file" offset="-1">SAMPLE.MT</rom>
+			<rom type="file" offset="-1">MT.XMI</rom>
+			<rom type="file" offset="0x10">01MT.XMI</rom>
+			<rom type="file" offset="0x11">02MT.XMI</rom>
+			<rom type="file" offset="0x12">03MT.XMI</rom>
+			<rom type="file" offset="0x13">04MT.XMI</rom>
+			<rom type="file" offset="0x14">05MT.XMI</rom>
+			<rom type="file" offset="0x15">06MT.XMI</rom>
+			<rom type="file" offset="0x16">07MT.XMI</rom>
+			<rom type="file" offset="0x17">08MT.XMI</rom>
+			<rom type="shell" offset="0">HOOT.EXE MT.XMI MT32MPU.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Music 1</title>
+			<title code="0x1100">Music 2</title>
+			<title code="0x1200">Music 3</title>
+			<title code="0x1300">Music 4</title>
+			<title code="0x1400">Music 5</title>
+			<title code="0x1500">Music 6</title>
+			<title code="0x1600">Music 7</title>
+			<title code="0x1700">Music 8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] The Lost Vikings (GM)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">blizzard</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="lostvikings_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MIDI.ADV</rom>
+			<rom type="file" offset="0x10">01GM.XMI</rom>
+			<rom type="file" offset="0x11">02GM.XMI</rom>
+			<rom type="file" offset="0x12">03GM.XMI</rom>
+			<rom type="file" offset="0x13">04GM.XMI</rom>
+			<rom type="file" offset="0x14">05GM.XMI</rom>
+			<rom type="file" offset="0x15">06GM.XMI</rom>
+			<rom type="file" offset="0x16">07GM.XMI</rom>
+			<rom type="file" offset="0x17">08GM.XMI</rom>
+			<rom type="shell" offset="0">HOOT.EXE NULL MIDI.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Music 1</title>
+			<title code="0x1100">Music 2</title>
+			<title code="0x1200">Music 3</title>
+			<title code="0x1300">Music 4</title>
+			<title code="0x1400">Music 5</title>
+			<title code="0x1500">Music 6</title>
+			<title code="0x1600">Music 7</title>
+			<title code="0x1700">Music 8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] The Lost Vikings (Vermouth)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">blizzard</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="lostvikings_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MIDI.ADV</rom>
+			<rom type="file" offset="0x10">01GM.XMI</rom>
+			<rom type="file" offset="0x11">02GM.XMI</rom>
+			<rom type="file" offset="0x12">03GM.XMI</rom>
+			<rom type="file" offset="0x13">04GM.XMI</rom>
+			<rom type="file" offset="0x14">05GM.XMI</rom>
+			<rom type="file" offset="0x15">06GM.XMI</rom>
+			<rom type="file" offset="0x16">07GM.XMI</rom>
+			<rom type="file" offset="0x17">08GM.XMI</rom>
+			<rom type="shell" offset="0">HOOT.EXE NULL MIDI.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Music 1</title>
+			<title code="0x1100">Music 2</title>
+			<title code="0x1200">Music 3</title>
+			<title code="0x1300">Music 4</title>
+			<title code="0x1400">Music 5</title>
+			<title code="0x1500">Music 6</title>
+			<title code="0x1600">Music 7</title>
+			<title code="0x1700">Music 8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] WarCraft 1 (GM)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">blizzard</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="warcraft_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MIDI.ADV</rom>
+			<rom type="file" offset="0x10">01GM.XMI</rom>
+			<rom type="file" offset="0x11">02GM.XMI</rom>
+			<rom type="file" offset="0x12">03GM.XMI</rom>
+			<rom type="file" offset="0x13">04GM.XMI</rom>
+			<rom type="file" offset="0x14">05GM.XMI</rom>
+			<rom type="file" offset="0x15">06GM.XMI</rom>
+			<rom type="file" offset="0x16">07GM.XMI</rom>
+			<rom type="file" offset="0x17">08GM.XMI</rom>
+			<rom type="shell" offset="0">HOOT.EXE NULL MIDI.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Music 1</title>
+			<title code="0x1100">Music 2</title>
+			<title code="0x1200">Music 3</title>
+			<title code="0x1300">Music 4</title>
+			<title code="0x1400">Music 5</title>
+			<title code="0x1500">Music 6</title>
+			<title code="0x1600">Music 7</title>
+			<title code="0x1700">Music 8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] WarCraft 2 / Glenn Stafford / 1995 Blizzard (GM)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">blizzard</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="warcraft2_at">
+			<rom type="file" offset="-1">HOOT.EXE</rom>
+			<rom type="file" offset="-1">MIDI.ADV</rom>
+			<rom type="file" offset="0x10">wc2_00001gm.xmi</rom>
+			<rom type="file" offset="0x11">wc2_00002gm.xmi</rom>
+			<rom type="file" offset="0x12">wc2_00003gm.xmi</rom>
+			<rom type="file" offset="0x13">wc2_00004gm.xmi</rom>
+			<rom type="file" offset="0x14">wc2_00005gm.xmi</rom>
+			<rom type="file" offset="0x15">wc2_00006gm.xmi</rom>
+			<rom type="file" offset="0x16">wc2_00007gm.xmi</rom>
+			<rom type="file" offset="0x17">wc2_00008gm.xmi</rom>
+			<rom type="file" offset="0x18">wc2_00009gm.xmi</rom>
+			<rom type="file" offset="0x19">wc2_00010gm.xmi</rom>
+			<rom type="file" offset="0x1a">wc2_00011gm.xmi</rom>
+			<rom type="file" offset="0x1b">wc2_00012gm.xmi</rom>
+			<rom type="file" offset="0x1c">wc2_00013gm.xmi</rom>
+			<rom type="file" offset="0x1d">wc2_00014gm.xmi</rom>
+			<rom type="file" offset="0x1e">wc2_00015gm.xmi</rom>
+			<rom type="file" offset="0x1f">wc2_00016gm.xmi</rom>
+			<rom type="file" offset="0x20">wc2_00017gm.xmi</rom>
+			<rom type="shell" offset="0">HOOT.EXE NULL MIDI.ADV</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1000">Music 1</title>
+			<title code="0x1100">Music 2</title>
+			<title code="0x1200">Music 3</title>
+			<title code="0x1300">Music 4</title>
+			<title code="0x1400">Music 5</title>
+			<title code="0x1500">Music 6</title>
+			<title code="0x1600">Music 7</title>
+			<title code="0x1700">Music 8</title>
+			<title code="0x1800">Music 9</title>
+			<title code="0x1900">Music 10</title>
+			<title code="0x1a00">Music 11</title>
+			<title code="0x1b00">Music 12</title>
+			<title code="0x1c00">Music 13</title>
+			<title code="0x1d00">Music 14</title>
+			<title code="0x1e00">Music 15</title>
+			<title code="0x1f00">Music 16</title>
+			<title code="0x2000">Music 17</title>
+		</titlelist>
+	</game>
+</gamelist>

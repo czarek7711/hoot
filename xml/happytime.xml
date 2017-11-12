@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //ハッピータイム -->
+	<game>
+		<name>[PC-9801] AMBITION</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">ハッピータイム</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="ambition_98">
+			<rom type="file" offset="-1">AMBIT_98.COM</rom>
+			<rom type="file" offset="-1">ANBSYAS.EXE</rom>
+			<rom type="conin" offset="5">ANBSYAS.EXE</rom>
+			<rom type="file" offset="6" >ANB.OPN</rom>
+			<rom type="file" offset="7" >ANB.SSG</rom>
+			<rom type="file" offset="11">KONPEI.MU</rom>
+			<rom type="file" offset="12">NAZO01.MU</rom>
+			<rom type="file" offset="13">NAZO02.MU</rom>
+			<rom type="file" offset="14">NAZO03.MU</rom>
+			<rom type="file" offset="15">NAZO04.MU</rom>
+			<rom type="file" offset="16">NAZO05.MU</rom>
+			<rom type="file" offset="17">NAZO06.MU</rom>
+			<rom type="file" offset="18">REST.MU</rom>
+			<rom type="shell" offset="0">ambit_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="18">REST.MU   : [STOP]</title>
+			<title code="11">KONPEI.MU : </title>
+			<title code="12">NAZO01.MU : </title>
+			<title code="13">NAZO02.MU : </title>
+			<title code="14">NAZO03.MU : </title>
+			<title code="15">NAZO04.MU : </title>
+			<title code="16">NAZO05.MU : </title>
+			<title code="17">NAZO06.MU : </title>
+		</titlelist>
+	</game>
+</gamelist>

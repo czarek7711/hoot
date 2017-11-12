@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //scaptrust -->
+	<game>
+		<name>[PC-88] Star/Ship Rendezvous / Masaharu Iwata, Hitoshi Sakimoto / 1988 Scap Trust</name>
+		<driver type="starship">pc88</driver>
+		<driveralias type="PC-88">scaptrust</driveralias>
+		<romlist archive="starship">
+			<rom type="code" offset="0x8000">SUB88.COM</rom>
+			<rom type="code" offset="0xe000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MTIAM07.SND</rom>
+			<rom type="bgm" offset="0x01">MTYH04.SND</rom>
+			<rom type="bgm" offset="0x02">MTYH02.SND</rom>
+			<rom type="bgm" offset="0x03">MTIAM06.SND</rom>
+			<rom type="bgm" offset="0x04">MTYH05.SND</rom>
+			<rom type="bgm" offset="0x05">MTIAM02.SND</rom>
+			<rom type="bgm" offset="0x06">MTIAM05.SND</rom>
+			<rom type="bgm" offset="0x07">MTYH01.SND</rom>
+			<rom type="bgm" offset="0x08">MTIAM08.SND</rom>
+			<rom type="bgm" offset="0x09">MTYH03.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Operation in Unsteady Space</title>
+			<title code="0x01">The Art of Noise</title>
+			<title code="0x02">Madness And Its Synergistic Effect</title>
+			<title code="0x03">Maze Trap!!</title>
+			<title code="0x04">Bass が ブ・リ・バ・リ</title>
+			<title code="0x05">The Outsider</title>
+			<title code="0x06">Work of Digging at Midnight</title>
+			<title code="0x07">Mysticism</title>
+			<title code="0x08">The Sunset for the Sunrise</title>
+			<title code="0x09">Don't Forget Your Wonderful Memory</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Shikinjou (紫禁城)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">scaptrust</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xb000"/>
+			<option name="init_pc"    value="0xf000"/>
+		</options>
+		<romlist archive="shikinjo">
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">BGM #00</title>
+			<title code="0x00000001">BGM #01</title>
+			<title code="0x00000002">BGM #02</title>
+			<title code="0x00000003">BGM #03</title>
+			<title code="0x00000004">BGM #04</title>
+			<title code="0x00000005">BGM #05</title>
+			<title code="0x00000006">BGM #06</title>
+			<title code="0x00000007">BGM #07</title>
+			<title code="0x000000ff">SFX #00</title>
+			<title code="0x010000ff">SFX #01</title>
+			<title code="0x020000ff">SFX #02</title>
+			<title code="0x030000ff">SFX #03</title>
+			<title code="0x040000ff">SFX #04</title>
+			<title code="0x050000ff">SFX #05</title>
+			<title code="0x060000ff">SFX #06</title>
+			<title code="0x070000ff">SFX #07</title>
+			<title code="0x0b0000ff">SFX #0B</title>
+			<title code="0x0c0000ff">SFX #0C</title>
+			<title code="0x0d0000ff">SFX #0D</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Star/Ship Rendezvous / Masaharu Iwata, Hitoshi Sakimoto / 1988 Scap Trust</name>
+		<driver type="opn">pc98vx</driver>
+		<driveralias type="PC-98">scaptrust</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="adressing" value="0"/>
+			<option name="dataaddr" value="0xb145"/>
+			<option name="filesize" value="4096"/>
+			<option name="datamax" value="11"/>
+			<option name="showfm3ex" value="1"/>
+			<option name="ssg_mix" value="-28"/>
+		</options>
+		<romlist archive="starship_98">
+			<rom type="code" offset="0x600">SPX</rom>
+			<rom type="code" offset="0x600">stars_98.bin</rom>
+			<rom type="binary" offset="0xa3fee">08</rom>
+			<rom type="bgm" offset="1" >MTIAM02.SND</rom>
+			<rom type="bgm" offset="2" >MTIAM05.SND</rom>
+			<rom type="bgm" offset="3" >MTIAM06.SND</rom>
+			<rom type="bgm" offset="4" >MTIAM07.SND</rom>
+			<rom type="bgm" offset="5" >MTIAM08.SND</rom>
+			<rom type="bgm" offset="6" >MTYH01.SND</rom>
+			<rom type="bgm" offset="7" >MTYH02.SND</rom>
+			<rom type="bgm" offset="8" >MTYH03.SND</rom>
+			<rom type="bgm" offset="9" >MTYH04.SND</rom>
+			<rom type="bgm" offset="10">MTYH05.SND</rom>
+		</romlist>
+		<titlelist>
+			<title code="4" >Operation in Unsteady Space</title>
+			<title code="9" >The Art of Noise</title>
+			<title code="7" >Madness and Its Synergistic Effect</title>
+			<title code="3" >MAZE TRAP!!</title>
+			<title code="10">Bass が ブ・リ・バ・リ</title>
+			<title code="1" >The Outsider</title>
+			<title code="2" >Work of Digging at Midnight</title>
+			<title code="6" >Mysticism</title>
+			<title code="5" >The Sunset for The Sunrise</title>
+			<title code="8" >Don't Forget Your Wonderful Memory</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Deep Dungeon: Madou Senki (ディープダンジョン 魔洞戦記)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">scaptrust</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="deepd1_msx">
+			<rom type="code">Deep Dungeon - Madou Senki (1988)(Scap Trust).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Deep Dungeon 2: Yuushi no Monshou / ? / 1988 Scap Trust</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX">scaptrust</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="deepd2_msx">
+			<rom type="code">Deep Dungeon 2 - Yuushi no Monshou (1988)(Scap Trust).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Star/Ship Rendezvous / Masaharu Iwata, Hitoshi Sakimoto / 1988 Scap Trust (FM-Pac)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">scaptrust</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="starship_msx">
+			<rom type="code">Starship Randezvous (1988)(Scap Trust).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x12">BGM #12</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX2] Star/Ship Rendezvous / Masaharu Iwata, Hitoshi Sakimoto / 1988 Scap Trust (PSG)</name>
+		<driver type="kss">msx</driver>
+		<driveralias type="MSX2">scaptrust</driveralias>
+		<options>
+			<option name="ay_mix" value="0x48"/>
+			<option name="sn_mix" value="0x100"/>
+			<option name="fmpac_mix" value="0x200"/>
+			<option name="fmunit_mix" value="0x200"/>
+			<option name="scc_mix" value="0xcc"/>
+		</options>
+		<romlist archive="starship_msx">
+			<rom type="code">Starship Randezvous (1988)(Scap Trust).kss</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x13">BGM #13</title>
+		</titlelist>
+	</game>
+</gamelist>

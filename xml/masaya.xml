@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2017/05/08">
+	<!-- //Masaya -->
+	<game>
+		<name>[SNES] Cybernator / Masanao Akahori / 1992 (NCS Corp) Masaya</name>
+		<driver type="spc">snes</driver>
+		<driveralias type="SNES">masaya</driveralias>
+		<options>
+			<option name="apu_mix" value="0x200"/>
+		</options>
+		<romlist archive="Cybernator [Assault Suits Valken] (1992-12-18)(Masaya)">
+			<rom type="data" offset="0x00">01 Who's Praying for a Soldier.spc</rom>
+			<rom type="data" offset="0x01">02 Fully Set Up for Penetration.spc</rom>
+			<rom type="data" offset="0x02">03 We've Gotta Do it.spc</rom>
+			<rom type="data" offset="0x03">04 No Time, No Shield.spc</rom>
+			<rom type="data" offset="0x04">05 Mission Completed.spc</rom>
+			<rom type="data" offset="0x05">06 Asteroid Run.spc</rom>
+			<rom type="data" offset="0x06">07 Face to Face.spc</rom>
+			<rom type="data" offset="0x07">08 Not for Peace.spc</rom>
+			<rom type="data" offset="0x08">09 Living Possibility.spc</rom>
+			<rom type="data" offset="0x09">10 Armed Ghost.spc</rom>
+			<rom type="data" offset="0x0a">11 Till the Crack of Doom.spc</rom>
+			<rom type="data" offset="0x0b">12 In Despair.spc</rom>
+			<rom type="data" offset="0x0c">13 Looking for the Infinitude.spc</rom>
+			<rom type="data" offset="0x0d">14 Crashed Burn.spc</rom>
+			<rom type="data" offset="0x0e">15 Staff Roll.spc</rom>
+		</romlist> 
+		<titlelist>
+			<title code="0x00">Who's Praying for a Soldier</title>
+			<title code="0x01">Fully Set Up for Penetration</title>
+			<title code="0x02">We've Gotta Do it</title>
+			<title code="0x03">No Time, No Shield</title>
+			<title code="0x04">Mission Completed</title>
+			<title code="0x05">Asteroid Run</title>
+			<title code="0x06">Face to Face</title>
+			<title code="0x07">Not for Peace</title>
+			<title code="0x08">Living Possibility</title>
+			<title code="0x09">Armed Ghost</title>
+			<title code="0x0a">Till the Crack of Doom</title>
+			<title code="0x0b">In Despair</title>
+			<title code="0x0c">Looking for the Infinitude</title>
+			<title code="0x0d">Crashed Burn</title>
+			<title code="0x0e">Staff Roll</title>
+		</titlelist>
+	</game>
+	<game>
+<name>[MD] GleyLancer / Yoshiaki Kubotera, Masanori Hikichi, Isao Mizoguchi / 1992 Masaya</name>
+<driver type="iyinc">megadrive</driver>
+<driveralias type="MegaDrive">masaya</driveralias>
+<options>
+<option name="topaddr" value="0xf6000"/>
+<option name="data1"   value="0x0000"/>
+<option name="size1"   value="0x1fff"/>
+</options>
+<romlist archive="GleyLancer">
+<rom type="code">GleyLancer.bin</rom>
+</romlist>
+<titlelist>
+<title code="0x24">Story Begin</title>
+<title code="0x23">Select Mover</title>
+<title code="0x02">Stage 1 (Asteroid Field)</title>
+<title code="0x01">Stage 2 (Purple Sea)</title>
+<title code="0x03">Stage 3 (Asteroid Caves)</title>
+<title code="0x09">Story 2</title>
+<title code="0x04">Stage 4 (Base Interior)</title>
+<title code="0x05">Story 3 &amp; Stage 5 (Huge Battleship)</title>
+<title code="0x07">Stage 6 (Twin Sunset)</title>
+<title code="0x08">Stage 7 (Crystal Caverns)</title>
+<title code="0x06">Stage 8 (Flying Rocks)</title>
+<title code="0x0c">Stage 9 (Battleship)</title>
+<title code="0x0b">Story 4 &amp; Stage 10 (Super Enemy Attack)</title>
+<title code="0x0d">Stage 11 (Blue Lightning)</title>
+<title code="0x0e">Bosses 1, 4, 7, 8, 9</title>
+<title code="0x0f">Bosses 2, 3, 5, 6</title>
+<title code="0x12">Continue</title>
+<title code="0x10">Final Boss</title>
+<title code="0x22">Story End &amp; Credits (Easy Mode)</title>
+<title code="0x21">Normal Ending</title>
+<title code="0x11">Stage Clear</title>
+<title code="0x13">Game Over</title>
+<title code="0x0a">Unknown Track (Sound Test 0A)</title>
+</titlelist>
+</game>
+<game>
+	<name>[TG16] Ganbare! Golf Boys / Atsuhiro Motoyama / 1989 (Dual) Masaya</name>
+	<driver type="hes">pcengine</driver>
+	<driveralias type="TurboGrafx-16">masaya</driveralias>
+	<romlist archive="Ganbare! Golf Boys (1989-03-28)(Dual)(Masaya)">
+		<rom type="code">NCS89003.hes</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x04">Away Back</title>
+		<title code="0x03">Fair Wind</title>
+		<title code="0x08">Take It Easy</title>
+		<title code="0x02">Through the Green</title>
+		<title code="0x01">Memory of the Breeze</title>
+		<title code="0x07">"Sun Sun" Samba</title>
+		<title code="0x06">Dream of Childhood</title>
+		<title code="0x09">Passing Illusion</title>
+		<title code="0x05">Just Now Beginning</title>
+		<title code="0x0B">Fanfare</title>
+	</titlelist>
+</game>
+</gamelist>

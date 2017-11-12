@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Pegasus Japan -->
+	<game>
+		<name>[PC-98] Round Warrior (ラウンドウォーリア) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="roundwar_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x08">OPN.DAT</rom>
+			<rom type="file" offset="0x09">SSG.DAT</rom>
+			<rom type="file" offset="0x10">ED01.MDP</rom>
+			<rom type="file" offset="0x11">ED02.MDP</rom>
+			<rom type="file" offset="0x12">ED03.MDP</rom>
+			<rom type="file" offset="0x13">ED11.MDP</rom>
+<!-- ED11.MDPと同じ	<rom type="file" offset="0x14">ED12.MDP</rom> -->
+			<rom type="file" offset="0x15">MENU1.MDP</rom>
+			<rom type="file" offset="0x17">RWE00.MDP</rom>
+			<rom type="file" offset="0x18">RW00.MDP</rom>
+			<rom type="file" offset="0x19">SG00.MDP</rom>
+			<rom type="file" offset="0x1a">SG01.MDP</rom>
+			<rom type="file" offset="0x1b">SG02.MDP</rom>
+			<rom type="file" offset="0x1c">SG03.MDP</rom>
+			<rom type="file" offset="0x1d">STG1.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ED01.MDP</title>
+			<title code="0x11">ED02.MDP</title>
+			<title code="0x12">ED03.MDP</title>
+			<title code="0x13">ED11.MDP</title>
+<!--			<title code="0x14">ED12.MDP</title> -->
+			<title code="0x15">MENU1.MDP</title>
+			<title code="0x17">RW00.MDP</title>
+			<title code="0x18">RWE00.MDP</title>
+			<title code="0x19">SG00.MDP</title>
+			<title code="0x1a">SG01.MDP</title>
+			<title code="0x1b">SG02.MDP</title>
+			<title code="0x1c">SG03.MDP</title>
+			<title code="0x1d">STG1.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Round Warrior (ラウンドウォーリア) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="roundwar_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">ED01M.MDP</rom>
+			<rom type="file" offset="0x11">ED02M.MDP</rom>
+			<rom type="file" offset="0x12">ED03M.MDP</rom>
+			<rom type="file" offset="0x16">MENU2.MDP</rom>
+			<rom type="file" offset="0x17">RWE00M.MDP</rom>
+			<rom type="file" offset="0x18">RW00M.MDP</rom>
+			<rom type="file" offset="0x19">SG00M.MDP</rom>
+			<rom type="file" offset="0x1a">SG01M.MDP</rom>
+			<rom type="file" offset="0x1b">SG02M.MDP</rom>
+			<rom type="file" offset="0x1c">SG03M.MDP</rom>
+			<rom type="file" offset="0x1e">STG2.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ED01M.MDP</title>
+			<title code="0x11">ED02M.MDP</title>
+			<title code="0x12">ED03M.MDP</title>
+			<title code="0x16">MENU2.MDP</title>
+			<title code="0x17">RW00M.MDP</title>
+			<title code="0x18">RWE00M.MDP</title>
+			<title code="0x19">SG00M.MDP</title>
+			<title code="0x1a">SG01M.MDP</title>
+			<title code="0x1b">SG02M.MDP</title>
+			<title code="0x1c">SG03M.MDP</title>
+			<title code="0x1e">STG2.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Round Warrior (ラウンドウォーリア) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="roundwar_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">ED01M.MDP</rom>
+			<rom type="file" offset="0x11">ED02M.MDP</rom>
+			<rom type="file" offset="0x12">ED03M.MDP</rom>
+			<rom type="file" offset="0x16">MENU2.MDP</rom>
+			<rom type="file" offset="0x17">RWE00M.MDP</rom>
+			<rom type="file" offset="0x18">RW00M.MDP</rom>
+			<rom type="file" offset="0x19">SG00M.MDP</rom>
+			<rom type="file" offset="0x1a">SG01M.MDP</rom>
+			<rom type="file" offset="0x1b">SG02M.MDP</rom>
+			<rom type="file" offset="0x1c">SG03M.MDP</rom>
+			<rom type="file" offset="0x1e">STG2.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ED01M.MDP</title>
+			<title code="0x11">ED02M.MDP</title>
+			<title code="0x12">ED03M.MDP</title>
+			<title code="0x16">MENU2.MDP</title>
+			<title code="0x17">RW00M.MDP</title>
+			<title code="0x18">RWE00M.MDP</title>
+			<title code="0x19">SG00M.MDP</title>
+			<title code="0x1a">SG01M.MDP</title>
+			<title code="0x1b">SG02M.MDP</title>
+			<title code="0x1c">SG03M.MDP</title>
+			<title code="0x1e">STG2.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Check Six (チェックシックス ～６時方向に注意せよ～) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="checksix_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x06">OPN2.DAT</rom>
+			<rom type="file" offset="0x07">SSG2.DAT</rom>
+			<rom type="file" offset="0x08">OPN.DAT</rom>
+			<rom type="file" offset="0x09">SSG.DAT</rom>
+			<rom type="file" offset="0x10">C6M00.MDP</rom>
+			<rom type="file" offset="0x11">C6M01.MDP</rom>
+			<rom type="file" offset="0x12">C6M02.MDP</rom>
+			<rom type="file" offset="0x13">C6M03.MDP</rom>
+			<rom type="file" offset="0x14">C6M04.MDP</rom>
+			<rom type="file" offset="0x15">C6M05.MDP</rom>
+			<rom type="file" offset="0x16">C6M06.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x090810">オープニングテーマ</title>
+			<title code="0x000011">Progress</title>
+			<title code="0x000012">Dog Fight</title>
+			<title code="0x070613">Flight #9</title>
+			<title code="0x070614">歓喜の帰還</title>
+			<title code="0x000015">Fail</title>
+			<title code="0x000016">エピローグ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Check Six (チェックシックス ～６時方向に注意せよ～) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="checksix_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">C6M00M.MDP</rom>
+			<rom type="file" offset="0x11">C6M01M.MDP</rom>
+			<rom type="file" offset="0x12">C6M02M.MDP</rom>
+			<rom type="file" offset="0x13">C6M03M.MDP</rom>
+			<rom type="file" offset="0x14">C6M04M.MDP</rom>
+			<rom type="file" offset="0x15">C6M05M.MDP</rom>
+			<rom type="file" offset="0x16">C6M06M.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">オープニングテーマ</title>
+			<title code="0x11">Progress</title>
+			<title code="0x12">Dog Fight</title>
+			<title code="0x13">Flight #9</title>
+			<title code="0x14">歓喜の帰還</title>
+			<title code="0x15">Fail</title>
+			<title code="0x16">エピローグ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Check Six (チェックシックス ～６時方向に注意せよ～) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="checksix_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">C6M00M.MDP</rom>
+			<rom type="file" offset="0x11">C6M01M.MDP</rom>
+			<rom type="file" offset="0x12">C6M02M.MDP</rom>
+			<rom type="file" offset="0x13">C6M03M.MDP</rom>
+			<rom type="file" offset="0x14">C6M04M.MDP</rom>
+			<rom type="file" offset="0x15">C6M05M.MDP</rom>
+			<rom type="file" offset="0x16">C6M06M.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">オープニングテーマ</title>
+			<title code="0x11">Progress</title>
+			<title code="0x12">Dog Fight</title>
+			<title code="0x13">Flight #9</title>
+			<title code="0x14">歓喜の帰還</title>
+			<title code="0x15">Fail</title>
+			<title code="0x16">エピローグ</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Check Six 2 -Hekiku no Ohkami- (チェックシックス２ 碧空の狼) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="checksx2_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x08">OPN2.DAT</rom>
+			<rom type="file" offset="0x09">SSG2.DAT</rom>
+			<rom type="file" offset="0x10">C0.MDP</rom>
+			<rom type="file" offset="0x11">C1.MDP</rom>
+			<rom type="file" offset="0x12">C2.MDP</rom>
+			<rom type="file" offset="0x13">C3.MDP</rom>
+			<rom type="file" offset="0x14">C4.MDP</rom>
+			<rom type="file" offset="0x15">C5.MDP</rom>
+			<rom type="file" offset="0x16">C6.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">C0.MDP</title>
+			<title code="0x11">C1.MDP</title>
+			<title code="0x12">C2.MDP</title>
+			<title code="0x13">C3.MDP</title>
+			<title code="0x14">C4.MDP</title>
+			<title code="0x15">C5.MDP</title>
+			<title code="0x16">C6.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Check Six 2 -Hekiku no Ohkami- (チェックシックス２ 碧空の狼) (MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="checksx2_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">C0L.MDP</rom>
+			<rom type="file" offset="0x11">C1L.MDP</rom>
+			<rom type="file" offset="0x12">C2L.MDP</rom>
+			<rom type="file" offset="0x13">C3L.MDP</rom>
+			<rom type="file" offset="0x14">C4L.MDP</rom>
+			<rom type="file" offset="0x15">C5L.MDP</rom>
+			<rom type="file" offset="0x16">C6L.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">C0L.MDP</title>
+			<title code="0x11">C1L.MDP</title>
+			<title code="0x12">C2L.MDP</title>
+			<title code="0x13">C3L.MDP</title>
+			<title code="0x14">C4L.MDP</title>
+			<title code="0x15">C5L.MDP</title>
+			<title code="0x16">C6L.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Check Six 2 -Hekiku no Ohkami- (チェックシックス２ 碧空の狼) (MT-32 EMU)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="checksx2_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">C0L.MDP</rom>
+			<rom type="file" offset="0x11">C1L.MDP</rom>
+			<rom type="file" offset="0x12">C2L.MDP</rom>
+			<rom type="file" offset="0x13">C3L.MDP</rom>
+			<rom type="file" offset="0x14">C4L.MDP</rom>
+			<rom type="file" offset="0x15">C5L.MDP</rom>
+			<rom type="file" offset="0x16">C6L.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">C0L.MDP</title>
+			<title code="0x11">C1L.MDP</title>
+			<title code="0x12">C2L.MDP</title>
+			<title code="0x13">C3L.MDP</title>
+			<title code="0x14">C4L.MDP</title>
+			<title code="0x15">C5L.MDP</title>
+			<title code="0x16">C6L.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Check Six 2 -Hekiku no Ohkami- (チェックシックス２ 碧空の狼) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="checksx2_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">C0M.MDP</rom>
+			<rom type="file" offset="0x11">C1M.MDP</rom>
+			<rom type="file" offset="0x12">C2M.MDP</rom>
+			<rom type="file" offset="0x13">C3M.MDP</rom>
+			<rom type="file" offset="0x14">C4M.MDP</rom>
+			<rom type="file" offset="0x15">C5M.MDP</rom>
+			<rom type="file" offset="0x16">C6M.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">C0M.MDP</title>
+			<title code="0x11">C1M.MDP</title>
+			<title code="0x12">C2M.MDP</title>
+			<title code="0x13">C3M.MDP</title>
+			<title code="0x14">C4M.MDP</title>
+			<title code="0x15">C5M.MDP</title>
+			<title code="0x16">C6M.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Check Six 2 -Hekiku no Ohkami- (チェックシックス２ 碧空の狼) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="checksx2_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">C0M.MDP</rom>
+			<rom type="file" offset="0x11">C1M.MDP</rom>
+			<rom type="file" offset="0x12">C2M.MDP</rom>
+			<rom type="file" offset="0x13">C3M.MDP</rom>
+			<rom type="file" offset="0x14">C4M.MDP</rom>
+			<rom type="file" offset="0x15">C5M.MDP</rom>
+			<rom type="file" offset="0x16">C6M.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">C0M.MDP</title>
+			<title code="0x11">C1M.MDP</title>
+			<title code="0x12">C2M.MDP</title>
+			<title code="0x13">C3M.MDP</title>
+			<title code="0x14">C4M.MDP</title>
+			<title code="0x15">C5M.MDP</title>
+			<title code="0x16">C6M.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Graystone Saga -Demon's Fountain- (グレイストンサーガ 魔界の泉) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="gssaga_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x08">OPN2.DAT</rom>
+			<rom type="file" offset="0x09">SSG2.DAT</rom>
+			<rom type="file" offset="0x10">GS1.MDP</rom>
+			<rom type="file" offset="0x11">GS2.MDP</rom>
+			<rom type="file" offset="0x12">GS3.MDP</rom>
+			<rom type="file" offset="0x13">GS4.MDP</rom>
+			<rom type="file" offset="0x14">GS6.MDP</rom>
+			<rom type="file" offset="0x15">GS7.MDP</rom>
+			<rom type="file" offset="0x16">GS8.MDP</rom>
+			<rom type="file" offset="0x17">GS9.MDP</rom>
+			<rom type="file" offset="0x18">GS10.MDP</rom>
+			<rom type="file" offset="0x19">GS11.MDP</rom>
+			<rom type="file" offset="0x1a">GS12.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GS1.MDP</title>
+			<title code="0x11">GS2.MDP</title>
+			<title code="0x12">GS3.MDP</title>
+			<title code="0x13">GS4.MDP</title>
+			<title code="0x14">GS6.MDP</title>
+			<title code="0x15">GS7.MDP</title>
+			<title code="0x16">GS8.MDP</title>
+			<title code="0x17">GS9.MDP</title>
+			<title code="0x18">GS10.MDP</title>
+			<title code="0x19">GS11.MDP</title>
+			<title code="0x1a">GS12.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Graystone Saga -Demon's Fountain- (グレイストンサーガ 魔界の泉) (MT-32)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="gssaga_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">GS1L.MDP</rom>
+			<rom type="file" offset="0x11">GS2L.MDP</rom>
+			<rom type="file" offset="0x12">GS3L.MDP</rom>
+			<rom type="file" offset="0x13">GS4L.MDP</rom>
+			<rom type="file" offset="0x14">GS6L.MDP</rom>
+			<rom type="file" offset="0x15">GS7L.MDP</rom>
+			<rom type="file" offset="0x16">GS8L.MDP</rom>
+			<rom type="file" offset="0x17">GS9L.MDP</rom>
+			<rom type="file" offset="0x18">GS10L.MDP</rom>
+			<rom type="file" offset="0x19">GS11L.MDP</rom>
+			<rom type="file" offset="0x1a">GS12L.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GS1L.MDP</title>
+			<title code="0x11">GS2L.MDP</title>
+			<title code="0x12">GS3L.MDP</title>
+			<title code="0x13">GS4L.MDP</title>
+			<title code="0x14">GS6L.MDP</title>
+			<title code="0x15">GS7L.MDP</title>
+			<title code="0x16">GS8L.MDP</title>
+			<title code="0x17">GS9L.MDP</title>
+			<title code="0x18">GS10L.MDP</title>
+			<title code="0x19">GS11L.MDP</title>
+			<title code="0x1a">GS12L.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Graystone Saga -Demon's Fountain- (グレイストンサーガ 魔界の泉) (MT-32 EMU)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="gssaga_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">GS1L.MDP</rom>
+			<rom type="file" offset="0x11">GS2L.MDP</rom>
+			<rom type="file" offset="0x12">GS3L.MDP</rom>
+			<rom type="file" offset="0x13">GS4L.MDP</rom>
+			<rom type="file" offset="0x14">GS6L.MDP</rom>
+			<rom type="file" offset="0x15">GS7L.MDP</rom>
+			<rom type="file" offset="0x16">GS8L.MDP</rom>
+			<rom type="file" offset="0x17">GS9L.MDP</rom>
+			<rom type="file" offset="0x18">GS10L.MDP</rom>
+			<rom type="file" offset="0x19">GS11L.MDP</rom>
+			<rom type="file" offset="0x1a">GS12L.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GS1L.MDP</title>
+			<title code="0x11">GS2L.MDP</title>
+			<title code="0x12">GS3L.MDP</title>
+			<title code="0x13">GS4L.MDP</title>
+			<title code="0x14">GS6L.MDP</title>
+			<title code="0x15">GS7L.MDP</title>
+			<title code="0x16">GS8L.MDP</title>
+			<title code="0x17">GS9L.MDP</title>
+			<title code="0x18">GS10L.MDP</title>
+			<title code="0x19">GS11L.MDP</title>
+			<title code="0x1a">GS12L.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Graystone Saga -Demon's Fountain- (グレイストンサーガ 魔界の泉) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="gssaga_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">GS1M.MDP</rom>
+			<rom type="file" offset="0x11">GS2M.MDP</rom>
+			<rom type="file" offset="0x12">GS3M.MDP</rom>
+			<rom type="file" offset="0x13">GS4M.MDP</rom>
+			<rom type="file" offset="0x14">GS6M.MDP</rom>
+			<rom type="file" offset="0x15">GS7M.MDP</rom>
+			<rom type="file" offset="0x16">GS8M.MDP</rom>
+			<rom type="file" offset="0x17">GS9M.MDP</rom>
+			<rom type="file" offset="0x18">GS10M.MDP</rom>
+			<rom type="file" offset="0x19">GS11M.MDP</rom>
+			<rom type="file" offset="0x1a">GS12M.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GS1M.MDP</title>
+			<title code="0x11">GS2M.MDP</title>
+			<title code="0x12">GS3M.MDP</title>
+			<title code="0x13">GS4M.MDP</title>
+			<title code="0x14">GS6M.MDP</title>
+			<title code="0x15">GS7M.MDP</title>
+			<title code="0x16">GS8M.MDP</title>
+			<title code="0x17">GS9M.MDP</title>
+			<title code="0x18">GS10M.MDP</title>
+			<title code="0x19">GS11M.MDP</title>
+			<title code="0x1a">GS12M.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Graystone Saga -Demon's Fountain- (グレイストンサーガ 魔界の泉) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="gssaga_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">GS1M.MDP</rom>
+			<rom type="file" offset="0x11">GS2M.MDP</rom>
+			<rom type="file" offset="0x12">GS3M.MDP</rom>
+			<rom type="file" offset="0x13">GS4M.MDP</rom>
+			<rom type="file" offset="0x14">GS6M.MDP</rom>
+			<rom type="file" offset="0x15">GS7M.MDP</rom>
+			<rom type="file" offset="0x16">GS8M.MDP</rom>
+			<rom type="file" offset="0x17">GS9M.MDP</rom>
+			<rom type="file" offset="0x18">GS10M.MDP</rom>
+			<rom type="file" offset="0x19">GS11M.MDP</rom>
+			<rom type="file" offset="0x1a">GS12M.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GS1M.MDP</title>
+			<title code="0x11">GS2M.MDP</title>
+			<title code="0x12">GS3M.MDP</title>
+			<title code="0x13">GS4M.MDP</title>
+			<title code="0x14">GS6M.MDP</title>
+			<title code="0x15">GS7M.MDP</title>
+			<title code="0x16">GS8M.MDP</title>
+			<title code="0x17">GS9M.MDP</title>
+			<title code="0x18">GS10M.MDP</title>
+			<title code="0x19">GS11M.MDP</title>
+			<title code="0x1a">GS12M.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Graystone Saga Gaiden -The Dark Storm of Morza- (グレイストンサーガ外伝 ～動乱の魔都～) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="gsgaiden_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x08">OPN2.DAT</rom>
+			<rom type="file" offset="0x09">SSG2.DAT</rom>
+			<rom type="file" offset="0x10">GS1.MDP</rom>
+			<rom type="file" offset="0x11">GS2.MDP</rom>
+			<rom type="file" offset="0x12">GS3.MDP</rom>
+			<rom type="file" offset="0x13">GS4.MDP</rom>
+			<rom type="file" offset="0x14">GS5.MDP</rom>
+			<rom type="file" offset="0x15">GS6.MDP</rom>
+			<rom type="file" offset="0x16">GS7.MDP</rom>
+			<rom type="file" offset="0x17">GS8.MDP</rom>
+			<rom type="file" offset="0x18">GS9.MDP</rom>
+			<rom type="file" offset="0x19">GS10.MDP</rom>
+			<rom type="file" offset="0x1a">GS11.MDP</rom>
+			<rom type="file" offset="0x1b">GS12.MDP</rom>
+			<rom type="file" offset="0x1c">GS13.MDP</rom>
+			<rom type="file" offset="0x1d">GS14.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GS1.MDP</title>
+			<title code="0x11">GS2.MDP</title>
+			<title code="0x12">GS3.MDP</title>
+			<title code="0x13">GS4.MDP</title>
+			<title code="0x14">GS5.MDP</title>
+			<title code="0x15">GS6.MDP</title>
+			<title code="0x16">GS7.MDP</title>
+			<title code="0x17">GS8.MDP</title>
+			<title code="0x18">GS9.MDP</title>
+			<title code="0x19">GS10.MDP</title>
+			<title code="0x1a">GS11.MDP</title>
+			<title code="0x1b">GS12.MDP</title>
+			<title code="0x1c">GS13.MDP</title>
+			<title code="0x1d">GS14.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Graystone Saga Gaiden -The Dark Storm of Morza- (グレイストンサーガ外伝 ～動乱の魔都～) (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="gsgaiden_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">GS1M.MDP</rom>
+			<rom type="file" offset="0x11">GS2M.MDP</rom>
+			<rom type="file" offset="0x12">GS3M.MDP</rom>
+			<rom type="file" offset="0x13">GS4M.MDP</rom>
+			<rom type="file" offset="0x14">GS5M.MDP</rom>
+			<rom type="file" offset="0x15">GS6M.MDP</rom>
+			<rom type="file" offset="0x16">GS7M.MDP</rom>
+			<rom type="file" offset="0x17">GS8M.MDP</rom>
+			<rom type="file" offset="0x18">GS9M.MDP</rom>
+			<rom type="file" offset="0x19">GS10M.MDP</rom>
+			<rom type="file" offset="0x1a">GS11M.MDP</rom>
+			<rom type="file" offset="0x1b">GS12M.MDP</rom>
+			<rom type="file" offset="0x1c">GS13M.MDP</rom>
+			<rom type="file" offset="0x1d">GS14M.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GS1M.MDP</title>
+			<title code="0x11">GS2M.MDP</title>
+			<title code="0x12">GS3M.MDP</title>
+			<title code="0x13">GS4M.MDP</title>
+			<title code="0x14">GS5M.MDP</title>
+			<title code="0x15">GS6M.MDP</title>
+			<title code="0x16">GS7M.MDP</title>
+			<title code="0x17">GS8M.MDP</title>
+			<title code="0x18">GS9M.MDP</title>
+			<title code="0x19">GS10M.MDP</title>
+			<title code="0x1a">GS11M.MDP</title>
+			<title code="0x1b">GS12M.MDP</title>
+			<title code="0x1c">GS13M.MDP</title>
+			<title code="0x1d">GS14M.MDP</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Graystone Saga Gaiden -The Dark Storm of Morza- (グレイストンサーガ外伝 ～動乱の魔都～) (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">pegasus_japan</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="gsgaiden_98">
+			<rom type="file" offset="-1">MUSIC.COM</rom>
+			<rom type="file" offset="-1">MUSPJ_98.COM</rom>
+			<rom type="file" offset="0x10">GS1M.MDP</rom>
+			<rom type="file" offset="0x11">GS2M.MDP</rom>
+			<rom type="file" offset="0x12">GS3M.MDP</rom>
+			<rom type="file" offset="0x13">GS4M.MDP</rom>
+			<rom type="file" offset="0x14">GS5M.MDP</rom>
+			<rom type="file" offset="0x15">GS6M.MDP</rom>
+			<rom type="file" offset="0x16">GS7M.MDP</rom>
+			<rom type="file" offset="0x17">GS8M.MDP</rom>
+			<rom type="file" offset="0x18">GS9M.MDP</rom>
+			<rom type="file" offset="0x19">GS10M.MDP</rom>
+			<rom type="file" offset="0x1a">GS11M.MDP</rom>
+			<rom type="file" offset="0x1b">GS12M.MDP</rom>
+			<rom type="file" offset="0x1c">GS13M.MDP</rom>
+			<rom type="file" offset="0x1d">GS14M.MDP</rom>
+			<rom type="shell" offset="0">MUSIC</rom>
+			<rom type="shell" offset="0">MUSPJ_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">GS1M.MDP</title>
+			<title code="0x11">GS2M.MDP</title>
+			<title code="0x12">GS3M.MDP</title>
+			<title code="0x13">GS4M.MDP</title>
+			<title code="0x14">GS5M.MDP</title>
+			<title code="0x15">GS6M.MDP</title>
+			<title code="0x16">GS7M.MDP</title>
+			<title code="0x17">GS8M.MDP</title>
+			<title code="0x18">GS9M.MDP</title>
+			<title code="0x19">GS10M.MDP</title>
+			<title code="0x1a">GS11M.MDP</title>
+			<title code="0x1b">GS12M.MDP</title>
+			<title code="0x1c">GS13M.MDP</title>
+			<title code="0x1d">GS14M.MDP</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //giga -->
+	<game>
+		<name>[PC-98] Harlem Blade: The Greatest of All Time / Takahiro Yonemura / 1996 Giga (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="rhy_mix"  value="20"/>
+			<option name="fm_mix"   value="20"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="hb_98">
+			<rom type="file" offset="-1">tglfmp.com</rom>
+			<rom type="file" offset="-1">FMP3.COM</rom>
+			<rom type="file" offset="0x10">HBM062.MF2</rom>
+			<rom type="file" offset="0x11">HBM064.MF2</rom>
+			<rom type="file" offset="0x12">HBM069.MF2</rom>
+			<rom type="file" offset="0x13">HBM072.MF2</rom>
+			<rom type="file" offset="0x14">HBM078.MF2</rom>
+			<rom type="file" offset="0x15">HBM079.MF2</rom>
+			<rom type="file" offset="0x16">HBM080.MF2</rom>
+			<rom type="file" offset="0x17">HBM092.MF2</rom>
+			<rom type="file" offset="0x18">HBM096.MF2</rom>
+			<rom type="file" offset="0x19">HBM101.MF2</rom>
+			<rom type="file" offset="0x1a">HBM118.MF2</rom>
+			<rom type="file" offset="0x1b">HBM121.MF2</rom>
+			<rom type="file" offset="0x1c">HBM124.MF2</rom>
+			<rom type="file" offset="0x1d">HBM129.MF2</rom>
+			<rom type="file" offset="0x1e">HBM130.MF2</rom>
+			<rom type="file" offset="0x1f">HBM131.MF2</rom>
+			<rom type="file" offset="0x20">HBM133.MF2</rom>
+			<rom type="file" offset="0x21">HBM137.MF2</rom>
+			<rom type="file" offset="0x22">HBM144.MF2</rom>
+			<rom type="file" offset="0x23">HBM148.MF2</rom>
+			<rom type="file" offset="0x24">HBM149.MF2</rom>
+			<rom type="file" offset="0x25">HBM154.MF2</rom>
+			<rom type="file" offset="0x26">HBM155.MF2</rom>
+			<rom type="file" offset="0x27">HBM156.MF2</rom>
+			<rom type="file" offset="0x28">HBM163.MF2</rom>
+			<rom type="file" offset="0x29">HBM195.MF2</rom>
+			<rom type="file" offset="0x2a">HBM207.MF2</rom>
+			<rom type="file" offset="0x2b">HBM214.MF2</rom>
+			<rom type="shell" offset="0">fmp3 -2</rom>
+			<rom type="shell" offset="0">tglfmp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Sweethearts (与えるもの)</title>
+			<title code="0x11">Pastoral (木漏れ日)</title>
+			<title code="0x12">Openfield (拡がる荒野)</title>
+			<title code="0x13">Harlem Blade Main Theme (歴史と伝承)</title>
+			<title code="0x14">Global Sight (遥かなる展望)</title>
+			<title code="0x15">Progress Forces (溢れる力)</title>
+			<title code="0x16">Maplease Kingdom (王国の肖像)</title>
+			<title code="0x17">Wasteland (闇を彷徨う)</title>
+			<title code="0x18">Prosperity (賑わい)</title>
+			<title code="0x19">Mayflower (享楽の日)</title>
+			<title code="0x1a">Chronopolis (時の浮島)</title>
+			<title code="0x1b">Requiem (鎮魂歌)</title>
+			<title code="0x1c">Reminiscene (追憶)</title>
+			<title code="0x1d">Harlem Blade Ending Theme (それぞれの未来)</title>
+			<title code="0x1e">Together (新たな力)</title>
+			<title code="0x1f">Revelation (啓示)</title>
+			<title code="0x20">Conqueror (勝利者たち)</title>
+			<title code="0x21">Take Back (時を越える)</title>
+			<title code="0x22">Take a Rest (休息)</title>
+			<title code="0x23">Genesis (メイプリーズ創世)</title>
+			<title code="0x24">Conclusion (終局へ)</title>
+			<title code="0x25">Fortune Lullaby (トルテの子守歌)</title>
+			<title code="0x26">Hontou no Yuuki (真実（ほんとう）の勇気)</title>
+			<title code="0x27">Making Love (求めるもの)</title>
+			<title code="0x28">Counter Attack (放たれた矢)</title>
+			<title code="0x29">Agony (慟哭)</title>
+			<title code="0x2a">Risky Explorer (危険を冒す者)</title>
+			<title code="0x2b">Brutal Courage (猛き蛮勇)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Briganty: The Roots of Darkness / Takahiro Yonemura / 1995 Giga (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="rhy_mix"  value="20"/>
+			<option name="fm_mix"   value="20"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="bg_98">
+			<rom type="file" offset="-1">tglfmp.com</rom>
+			<rom type="file" offset="-1">FMP3.COM</rom>
+			<rom type="file" offset="0x10">BGM001.MF2</rom>
+			<rom type="file" offset="0x11">BGM002.MF2</rom>
+			<rom type="file" offset="0x12">BGM003.MF2</rom>
+			<rom type="file" offset="0x13">BGM011.MF2</rom>
+			<rom type="file" offset="0x14">BGM012.MF2</rom>
+			<rom type="file" offset="0x15">BGM013.MF2</rom>
+			<rom type="file" offset="0x16">BGM014.MF2</rom>
+			<rom type="file" offset="0x17">BGM015.MF2</rom>
+			<rom type="file" offset="0x18">BGM021.MF2</rom>
+			<rom type="file" offset="0x19">BGM022.MF2</rom>
+			<rom type="file" offset="0x1a">BGM031.MF2</rom>
+			<rom type="file" offset="0x1b">BGM032.MF2</rom>
+			<rom type="file" offset="0x1c">BGM033.MF2</rom>
+			<rom type="file" offset="0x1d">BGM034.MF2</rom>
+			<rom type="file" offset="0x1e">BGM035.MF2</rom>
+			<rom type="file" offset="0x1f">BGM036.MF2</rom>
+			<rom type="file" offset="0x20">BGM037.MF2</rom>
+			<rom type="file" offset="0x21">BGM043.MF2</rom>
+			<rom type="file" offset="0x22">BGM044.MF2</rom>
+			<rom type="shell" offset="0">fmp3 -2</rom>
+			<rom type="shell" offset="0">tglfmp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Moving On</title>
+			<title code="0x11">Townscape</title>
+			<title code="0x12">Snapshot</title>
+			<title code="0x13">Blaze of Flame</title>
+			<title code="0x14">Sealed Ruins</title>
+			<title code="0x15">Tracer</title>
+			<title code="0x16">Valiant Tune</title>
+			<title code="0x17">Stray Corpse</title>
+			<title code="0x18">Roaring</title>
+			<title code="0x19">Deadline</title>
+			<title code="0x1a">Embraced</title>
+			<title code="0x1b">Naked Blue</title>
+			<title code="0x1c">Serenity</title>
+			<title code="0x1d">From Beyond</title>
+			<title code="0x1e">Heartache</title>
+			<title code="0x1f">Jeopardy</title>
+			<title code="0x20">Pressure</title>
+			<title code="0x21">Coda "Briganty"</title>
+			<title code="0x22">Stranger</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Steam-Heart's / Takahiro Yonemura, Tatsuya Watarai / 1994 (GIGA) TGL (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="rhy_mix"  value="20"/>
+			<option name="fm_mix"   value="20"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="sh_98">
+			<rom type="file" offset="-1">tglfmp.com</rom>
+			<rom type="file" offset="-1">FMP3.COM</rom>
+			<rom type="file" offset="0x10">SH00.MF2</rom>
+			<rom type="file" offset="0x11">SH01.MF2</rom>
+			<rom type="file" offset="0x12">SH02.MF2</rom>
+			<rom type="file" offset="0x13">SH03.MF2</rom>
+			<rom type="file" offset="0x14">SH04.MF2</rom>
+			<rom type="file" offset="0x15">SH05.MF2</rom>
+			<rom type="file" offset="0x16">SH06.MF2</rom>
+			<rom type="file" offset="0x17">SH07.MF2</rom>
+			<rom type="file" offset="0x18">SH08.MF2</rom>
+			<rom type="file" offset="0x19">SH09.MF2</rom>
+			<rom type="file" offset="0x1a">SH10.MF2</rom>
+			<rom type="file" offset="0x1b">SH11.MF2</rom>
+			<rom type="file" offset="0x1c">SH12.MF2</rom>
+			<rom type="file" offset="0x1d">SH13.MF2</rom>
+			<rom type="file" offset="0x1e">SH14.MF2</rom>
+			<rom type="file" offset="0x1f">SH15.MF2</rom>
+			<rom type="file" offset="0x20">SH16.MF2</rom>
+			<rom type="file" offset="0x21">SH17.MF2</rom>
+			<rom type="file" offset="0x22">SH18.MF2</rom>
+			<rom type="shell" offset="0">fmp3 -2</rom>
+			<rom type="shell" offset="0">tglfmp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Out of Gray (Opening)</title>
+			<title code="0x11">Rise Out (Stage 1 Ocean)</title>
+			<title code="0x12">Fly High (Stage 2 Clouds)</title>
+			<title code="0x13">Shining Star (Stage 3 Outskirts)</title>
+			<title code="0x14">Inorganic NRG (Stage 4 Plant)</title>
+			<title code="0x15">Wings of Steal (Stage 5 Valley)</title>
+			<title code="0x16">Dawn of Westina (Stage 6 Forest)</title>
+			<title code="0x17">Against Nirvana (Stage 7 Warship)</title>
+			<title code="0x18">Heatin' Beatin' Heart's (Escape)</title>
+			<title code="0x19">Battle Cry (Boss Theme A)</title>
+			<title code="0x1A">Vanished into the Stardust (Boss Theme B)</title>
+			<title code="0x1B">Falling Down (Stage Clear)</title>
+			<title code="0x1C">Disapear (Game Over)</title>
+			<title code="0x1D">Crisis (Score Attack)</title>
+			<title code="0x1E">Soldier's Rest (Score Rankinkg)</title>
+			<title code="0x1F">Unit Contact (Visual A (Hard))</title>
+			<title code="0x20">A Name of Rose (Visual B (Light))</title>
+			<title code="0x21">Feel So Sweet (Visual C (Soft))</title>
+			<title code="0x22">The Planet Westina (Ending)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Variable Geo (ヴァリアブル・ジオ) (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="20"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="vg_98">
+			<rom type="file" offset="-1">tglfmp.com</rom>
+			<rom type="file" offset="-1">FMP3.COM</rom>
+			<rom type="file" offset="0x10">VG00.MF2</rom>
+			<rom type="file" offset="0x11">VG01.MF2</rom>
+			<rom type="file" offset="0x12">VG02.MF2</rom>
+			<rom type="file" offset="0x13">VG03.MF2</rom>
+			<rom type="file" offset="0x14">VG04.MF2</rom>
+			<rom type="file" offset="0x15">VG05.MF2</rom>
+			<rom type="file" offset="0x16">VG06.MF2</rom>
+			<rom type="file" offset="0x17">VG07.MF2</rom>
+			<rom type="file" offset="0x18">VG08.MF2</rom>
+			<rom type="file" offset="0x19">VG09.MF2</rom>
+			<rom type="file" offset="0x1A">VG10.MF2</rom>
+			<rom type="file" offset="0x1B">VG11.MF2</rom>
+			<rom type="file" offset="0x1C">VG11X.MF2</rom>
+			<rom type="file" offset="0x1D">VG12.MF2</rom>
+			<rom type="file" offset="0x1E">VG13.MF2</rom>
+			<rom type="file" offset="0x1F">VG14.MF2</rom>
+			<rom type="file" offset="0x20">VG15.MF2</rom>
+			<rom type="file" offset="0x21">VG16.MF2</rom>
+			<rom type="file" offset="0x22">VG17.MF2</rom>
+			<rom type="file" offset="0x23">VG18.MF2</rom>
+			<rom type="file" offset="0x24">VG19.MF2</rom>
+			<rom type="file" offset="0x25">VG20.MF2</rom>
+			<rom type="shell" offset="0">fmp3 -2</rom>
+			<rom type="shell" offset="0">tglfmp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Vi-sion (オープニング)</title>
+			<title code="0x11">Staff (TW-Drive ver.) (スタッフロール)</title>
+			<title code="0x12">Tight T.K.O (キャラクターセレクト)</title>
+			<title code="0x13">Fizz (BGM～優香)</title>
+			<title code="0x14">Behind Muse (BGM～千穂)</title>
+			<title code="0x15">Cat Chat (BGM～真奈美)</title>
+			<title code="0x16">Side R (BGM～潤)</title>
+			<title code="0x17">Tea all You (BGM～かおり)</title>
+			<title code="0x18">Will over (BGM～麗美)</title>
+			<title code="0x19">VG09.MF2</title>
+			<title code="0x1A">DV-1 (クリア画面 1)</title>
+			<title code="0x1B">DV-2 (クリア画面 2)</title>
+			<title code="0x1D">Winner (プレイヤー勝利)</title>
+			<title code="0x1E">Loser (コンティニュー)</title>
+			<title code="0x1F">Here Come... (相手プレイヤー乱入)</title>
+			<title code="0x20">ED-1 (Ending～優香)</title>
+			<title code="0x21">ED-2 (Ending～千穂)</title>
+			<title code="0x22">ED-3 (Ending～真奈美)</title>
+			<title code="0x23">ED-4 (Ending～潤)</title>
+			<title code="0x24">ED-5 (Ending～かおり)</title>
+			<title code="0x25">ED-6 (Ending～麗美)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Variable Geo (ヴァリアブル・ジオ) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="20"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="vg_98">
+			<rom type="file" offset="-1">tglfmp.com</rom>
+			<rom type="file" offset="-1">FMP3.COM</rom>
+			<rom type="file" offset="0x10">VG00.MFM</rom>
+			<rom type="file" offset="0x11">VG01.MFM</rom>
+			<rom type="file" offset="0x12">VG02.MFM</rom>
+			<rom type="file" offset="0x13">VG03.MFM</rom>
+			<rom type="file" offset="0x14">VG04.MFM</rom>
+			<rom type="file" offset="0x15">VG05.MFM</rom>
+			<rom type="file" offset="0x16">VG06.MFM</rom>
+			<rom type="file" offset="0x17">VG07.MFM</rom>
+			<rom type="file" offset="0x18">VG08.MFM</rom>
+			<rom type="file" offset="0x19">VG09.MFM</rom>
+			<rom type="file" offset="0x1A">VG10.MFM</rom>
+			<rom type="file" offset="0x1B">VG11.MFM</rom>
+			<rom type="file" offset="0x1C">VG11X.MFM</rom>
+			<rom type="file" offset="0x1D">VG12.MFM</rom>
+			<rom type="file" offset="0x1E">VG13.MFM</rom>
+			<rom type="file" offset="0x1F">VG14.MFM</rom>
+			<rom type="file" offset="0x20">VG15.MFM</rom>
+			<rom type="file" offset="0x21">VG16.MFM</rom>
+			<rom type="file" offset="0x22">VG17.MFM</rom>
+			<rom type="file" offset="0x23">VG18.MFM</rom>
+			<rom type="file" offset="0x24">VG19.MFM</rom>
+			<rom type="file" offset="0x25">VG20.MFM</rom>
+			<rom type="shell" offset="0">fmp3</rom>
+			<rom type="shell" offset="0">tglfmp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Vi-sion (オープニング)</title>
+			<title code="0x11">Staff (TW-Drive ver.) (スタッフロール)</title>
+			<title code="0x12">Tight T.K.O (キャラクターセレクト)</title>
+			<title code="0x13">Fizz (BGM～優香)</title>
+			<title code="0x14">Behind Muse (BGM～千穂)</title>
+			<title code="0x15">Cat Chat (BGM～真奈美)</title>
+			<title code="0x16">Side R (BGM～潤)</title>
+			<title code="0x17">Tea all You (BGM～かおり)</title>
+			<title code="0x18">Will over (BGM～麗美)</title>
+			<title code="0x19">VG09.MFM</title>
+			<title code="0x1A">DV-1 (クリア画面 1)</title>
+			<title code="0x1B">DV-2 (クリア画面 2)</title>
+			<title code="0x1D">Winner (プレイヤー勝利)</title>
+			<title code="0x1E">Loser (コンティニュー)</title>
+			<title code="0x1F">Here Come... (相手プレイヤー乱入)</title>
+			<title code="0x20">ED-1 (Ending～優香)</title>
+			<title code="0x21">ED-2 (Ending～千穂)</title>
+			<title code="0x22">ED-3 (Ending～真奈美)</title>
+			<title code="0x23">ED-4 (Ending～潤)</title>
+			<title code="0x24">ED-5 (Ending～かおり)</title>
+			<title code="0x25">ED-6 (Ending～麗美)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Variable Geo (ヴァリアブル・ジオ) (MT-32)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="vg_98">
+			<rom type="file" offset="-1">TGLFMP2.COM</rom>
+			<rom type="file" offset="-1">FMP3.COM</rom>
+			<rom type="file" offset="0x09">VGORG.TBR</rom>
+			<rom type="file" offset="0x10">VG00.MMT</rom>
+			<rom type="file" offset="0x11">VG01.MMT</rom>
+			<rom type="file" offset="0x12">VG02.MMT</rom>
+			<rom type="file" offset="0x13">VG03.MMT</rom>
+			<rom type="file" offset="0x14">VG04.MMT</rom>
+			<rom type="file" offset="0x15">VG05.MMT</rom>
+			<rom type="file" offset="0x16">VG06.MMT</rom>
+			<rom type="file" offset="0x17">VG07.MMT</rom>
+			<rom type="file" offset="0x18">VG08.MMT</rom>
+			<rom type="file" offset="0x19">VG09.MMT</rom>
+			<rom type="file" offset="0x1A">VG10.MMT</rom>
+			<rom type="file" offset="0x1B">VG11.MMT</rom>
+			<rom type="file" offset="0x1C">VG11X.MMT</rom>
+			<rom type="file" offset="0x1D">VG12.MMT</rom>
+			<rom type="file" offset="0x1E">VG13.MMT</rom>
+			<rom type="file" offset="0x1F">VG14.MMT</rom>
+			<rom type="file" offset="0x20">VG15.MMT</rom>
+			<rom type="file" offset="0x21">VG16.MMT</rom>
+			<rom type="file" offset="0x22">VG17.MMT</rom>
+			<rom type="file" offset="0x23">VG18.MMT</rom>
+			<rom type="file" offset="0x24">VG19.MMT</rom>
+			<rom type="file" offset="0x25">VG20.MMT</rom>
+			<rom type="shell" offset="0">fmp3 -m</rom>
+			<rom type="shell" offset="0">tglfmp2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000010">Vi-sion [オープニング]</title>
+			<title code="0x000011">Staff (TW-Drive ver.) [スタッフロール]</title>
+			<title code="0x000012">Tight T.K.O [キャラクターセレクト]</title>
+			<title code="0x000013">Fizz [BGM～優香]</title>
+			<title code="0x000014">Behind Muse [BGM～千穂]</title>
+			<title code="0x000015">Cat Chat [BGM～真奈美]</title>
+			<title code="0x000016">Side R [BGM～潤]</title>
+			<title code="0x000017">Tea all You [BGM～かおり]</title>
+			<title code="0x000018">Will over [BGM～麗美]</title>
+			<title code="0x000019">VG09.MMT</title>
+			<title code="0x00001A">DV-1 [クリア画面 1]</title>
+			<title code="0x00001B">DV-2 [クリア画面 2]</title>
+			<title code="0x00001C">DV-2 [クリア画面 2]</title>
+			<title code="0x00001D">Winner [プレイヤー勝利]</title>
+			<title code="0x00001E">Loser [コンティニュー]</title>
+			<title code="0x00001F">Here Come... [相手プレイヤー乱入]</title>
+			<title code="0x000020">ED-1 [ENDING～優香]</title>
+			<title code="0x000021">ED-2 [ENDING～千穂]</title>
+			<title code="0x000022">ED-3 [ENDING～真奈美]</title>
+			<title code="0x000023">ED-4 [ENDING～潤]</title>
+			<title code="0x000024">ED-5 [ENDING～かおり]</title>
+			<title code="0x000025">ED-6 [ENDING～麗美]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Variable Geo (ヴァリアブル・ジオ) (MT-32 EMU)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="vg_98">
+			<rom type="file" offset="-1">TGLFMP2.COM</rom>
+			<rom type="file" offset="-1">FMP3.COM</rom>
+			<rom type="file" offset="0x09">VGORG.TBR</rom>
+			<rom type="file" offset="0x10">VG00.MMT</rom>
+			<rom type="file" offset="0x11">VG01.MMT</rom>
+			<rom type="file" offset="0x12">VG02.MMT</rom>
+			<rom type="file" offset="0x13">VG03.MMT</rom>
+			<rom type="file" offset="0x14">VG04.MMT</rom>
+			<rom type="file" offset="0x15">VG05.MMT</rom>
+			<rom type="file" offset="0x16">VG06.MMT</rom>
+			<rom type="file" offset="0x17">VG07.MMT</rom>
+			<rom type="file" offset="0x18">VG08.MMT</rom>
+			<rom type="file" offset="0x19">VG09.MMT</rom>
+			<rom type="file" offset="0x1A">VG10.MMT</rom>
+			<rom type="file" offset="0x1B">VG11.MMT</rom>
+			<rom type="file" offset="0x1C">VG11X.MMT</rom>
+			<rom type="file" offset="0x1D">VG12.MMT</rom>
+			<rom type="file" offset="0x1E">VG13.MMT</rom>
+			<rom type="file" offset="0x1F">VG14.MMT</rom>
+			<rom type="file" offset="0x20">VG15.MMT</rom>
+			<rom type="file" offset="0x21">VG16.MMT</rom>
+			<rom type="file" offset="0x22">VG17.MMT</rom>
+			<rom type="file" offset="0x23">VG18.MMT</rom>
+			<rom type="file" offset="0x24">VG19.MMT</rom>
+			<rom type="file" offset="0x25">VG20.MMT</rom>
+			<rom type="shell" offset="0">fmp3 -m</rom>
+			<rom type="shell" offset="0">tglfmp2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000010">Vi-sion [オープニング]</title>
+			<title code="0x000011">Staff (TW-Drive ver.) [スタッフロール]</title>
+			<title code="0x000012">Tight T.K.O [キャラクターセレクト]</title>
+			<title code="0x000013">Fizz [BGM～優香]</title>
+			<title code="0x000014">Behind Muse [BGM～千穂]</title>
+			<title code="0x000015">Cat Chat [BGM～真奈美]</title>
+			<title code="0x000016">Side R [BGM～潤]</title>
+			<title code="0x000017">Tea all You [BGM～かおり]</title>
+			<title code="0x000018">Will over [BGM～麗美]</title>
+			<title code="0x000019">VG09.MMT</title>
+			<title code="0x00001A">DV-1 [クリア画面 1]</title>
+			<title code="0x00001B">DV-2 [クリア画面 2]</title>
+			<title code="0x00001C">DV-2 [クリア画面 2]</title>
+			<title code="0x00001D">Winner [プレイヤー勝利]</title>
+			<title code="0x00001E">Loser [コンティニュー]</title>
+			<title code="0x00001F">Here Come... [相手プレイヤー乱入]</title>
+			<title code="0x000020">ED-1 [ENDING～優香]</title>
+			<title code="0x000021">ED-2 [ENDING～千穂]</title>
+			<title code="0x000022">ED-3 [ENDING～真奈美]</title>
+			<title code="0x000023">ED-4 [ENDING～潤]</title>
+			<title code="0x000024">ED-5 [ENDING～かおり]</title>
+			<title code="0x000025">ED-6 [ENDING～麗美]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Variable Geo (ヴァリアブル・ジオ) (CM-64)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="3"/>
+		</options>
+		<romlist archive="vg_98">
+			<rom type="file" offset="-1">TGLFMP2.COM</rom>
+			<rom type="file" offset="-1">FMP3.COM</rom>
+			<rom type="file" offset="0x09">VGORG.TBR</rom>
+			<rom type="file" offset="0x10">VG00.MCM</rom>
+			<rom type="file" offset="0x11">VG01.MCM</rom>
+			<rom type="file" offset="0x12">VG02.MCM</rom>
+			<rom type="file" offset="0x13">VG03.MCM</rom>
+			<rom type="file" offset="0x14">VG04.MCM</rom>
+			<rom type="file" offset="0x15">VG05.MCM</rom>
+			<rom type="file" offset="0x16">VG06.MCM</rom>
+			<rom type="file" offset="0x17">VG07.MCM</rom>
+			<rom type="file" offset="0x18">VG08.MCM</rom>
+			<rom type="file" offset="0x19">VG09.MCM</rom>
+			<rom type="file" offset="0x1A">VG10.MCM</rom>
+			<rom type="file" offset="0x1B">VG11.MCM</rom>
+			<rom type="file" offset="0x1C">VG11X.MCM</rom>
+			<rom type="file" offset="0x1D">VG12.MCM</rom>
+			<rom type="file" offset="0x1E">VG13.MCM</rom>
+			<rom type="file" offset="0x1F">VG14.MCM</rom>
+			<rom type="file" offset="0x20">VG15.MCM</rom>
+			<rom type="file" offset="0x21">VG16.MCM</rom>
+			<rom type="file" offset="0x22">VG17.MCM</rom>
+			<rom type="file" offset="0x23">VG18.MCM</rom>
+			<rom type="file" offset="0x24">VG19.MCM</rom>
+			<rom type="file" offset="0x25">VG20.MCM</rom>
+			<rom type="shell" offset="0">fmp3 -m</rom>
+			<rom type="shell" offset="0">tglfmp2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000010">Vi-sion [オープニング]</title>
+			<title code="0x000011">Staff (TW-Drive ver.) [スタッフロール]</title>
+			<title code="0x000012">Tight T.K.O [キャラクターセレクト]</title>
+			<title code="0x000013">Fizz [BGM～優香]</title>
+			<title code="0x000014">Behind Muse [BGM～千穂]</title>
+			<title code="0x000015">Cat Chat [BGM～真奈美]</title>
+			<title code="0x000016">Side R [BGM～潤]</title>
+			<title code="0x000017">Tea all You [BGM～かおり]</title>
+			<title code="0x000018">Will over [BGM～麗美]</title>
+			<title code="0x000019">VG09.MCM</title>
+			<title code="0x00001A">DV-1 [クリア画面 1]</title>
+			<title code="0x00001B">DV-2 [クリア画面 2]</title>
+			<title code="0x00001C">DV-2 [クリア画面 2]</title>
+			<title code="0x00001D">Winner [プレイヤー勝利]</title>
+			<title code="0x00001E">Loser [コンティニュー]</title>
+			<title code="0x00001F">Here Come... [相手プレイヤー乱入]</title>
+			<title code="0x000020">ED-1 [ENDING～優香]</title>
+			<title code="0x000021">ED-2 [ENDING～千穂]</title>
+			<title code="0x000022">ED-3 [ENDING～真奈美]</title>
+			<title code="0x000023">ED-4 [ENDING～潤]</title>
+			<title code="0x000024">ED-5 [ENDING～かおり]</title>
+			<title code="0x000025">ED-6 [ENDING～麗美]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Variable Geo (ヴァリアブル・ジオ) (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="vg_98">
+			<rom type="file" offset="-1">TGLFMP2.COM</rom>
+			<rom type="file" offset="-1">FMP3.COM</rom>
+			<rom type="file" offset="0x10">VG00.MGS</rom>
+			<rom type="file" offset="0x11">VG01.MGS</rom>
+			<rom type="file" offset="0x12">VG02.MGS</rom>
+			<rom type="file" offset="0x13">VG03.MGS</rom>
+			<rom type="file" offset="0x14">VG04.MGS</rom>
+			<rom type="file" offset="0x15">VG05.MGS</rom>
+			<rom type="file" offset="0x16">VG06.MGS</rom>
+			<rom type="file" offset="0x17">VG07.MGS</rom>
+			<rom type="file" offset="0x18">VG08.MGS</rom>
+			<rom type="file" offset="0x19">VG09.MGS</rom>
+			<rom type="file" offset="0x1A">VG10.MGS</rom>
+			<rom type="file" offset="0x1B">VG11.MGS</rom>
+			<rom type="file" offset="0x1C">VG11X.MGS</rom>
+			<rom type="file" offset="0x1D">VG12.MGS</rom>
+			<rom type="file" offset="0x1E">VG13.MGS</rom>
+			<rom type="file" offset="0x1F">VG14.MGS</rom>
+			<rom type="file" offset="0x20">VG15.MGS</rom>
+			<rom type="file" offset="0x21">VG16.MGS</rom>
+			<rom type="file" offset="0x22">VG17.MGS</rom>
+			<rom type="file" offset="0x23">VG18.MGS</rom>
+			<rom type="file" offset="0x24">VG19.MGS</rom>
+			<rom type="file" offset="0x25">VG20.MGS</rom>
+			<rom type="shell" offset="0">fmp3 -m</rom>
+			<rom type="shell" offset="0">tglfmp2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x020010">Vi-sion [オープニング]</title>
+			<title code="0x020011">Staff (TW-Drive ver.) [スタッフロール]</title>
+			<title code="0x020012">Tight T.K.O [キャラクターセレクト]</title>
+			<title code="0x020013">Fizz [BGM～優香]</title>
+			<title code="0x020014">Behind Muse [BGM～千穂]</title>
+			<title code="0x020015">Cat Chat [BGM～真奈美]</title>
+			<title code="0x020016">Side R [BGM～潤]</title>
+			<title code="0x020017">Tea all You [BGM～かおり]</title>
+			<title code="0x020018">Will over [BGM～麗美]</title>
+			<title code="0x020019">VG09.MGS</title>
+			<title code="0x02001A">DV-1 [クリア画面 1]</title>
+			<title code="0x02001B">DV-2 [クリア画面 2]</title>
+			<title code="0x02001C">DV-2 [クリア画面 2]</title>
+			<title code="0x02001D">Winner [プレイヤー勝利]</title>
+			<title code="0x02001E">Loser [コンティニュー]</title>
+			<title code="0x02001F">Here Come... [相手プレイヤー乱入]</title>
+			<title code="0x020020">ED-1 [ENDING～優香]</title>
+			<title code="0x020021">ED-2 [ENDING～千穂]</title>
+			<title code="0x020022">ED-3 [ENDING～真奈美]</title>
+			<title code="0x020023">ED-4 [ENDING～潤]</title>
+			<title code="0x020024">ED-5 [ENDING～かおり]</title>
+			<title code="0x020025">ED-6 [ENDING～麗美]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Variable Geo (ヴァリアブル・ジオ) (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="vg_98">
+			<rom type="file" offset="-1">TGLFMP2.COM</rom>
+			<rom type="file" offset="-1">FMP3.COM</rom>
+			<rom type="file" offset="0x10">VG00.MGS</rom>
+			<rom type="file" offset="0x11">VG01.MGS</rom>
+			<rom type="file" offset="0x12">VG02.MGS</rom>
+			<rom type="file" offset="0x13">VG03.MGS</rom>
+			<rom type="file" offset="0x14">VG04.MGS</rom>
+			<rom type="file" offset="0x15">VG05.MGS</rom>
+			<rom type="file" offset="0x16">VG06.MGS</rom>
+			<rom type="file" offset="0x17">VG07.MGS</rom>
+			<rom type="file" offset="0x18">VG08.MGS</rom>
+			<rom type="file" offset="0x19">VG09.MGS</rom>
+			<rom type="file" offset="0x1A">VG10.MGS</rom>
+			<rom type="file" offset="0x1B">VG11.MGS</rom>
+			<rom type="file" offset="0x1C">VG11X.MGS</rom>
+			<rom type="file" offset="0x1D">VG12.MGS</rom>
+			<rom type="file" offset="0x1E">VG13.MGS</rom>
+			<rom type="file" offset="0x1F">VG14.MGS</rom>
+			<rom type="file" offset="0x20">VG15.MGS</rom>
+			<rom type="file" offset="0x21">VG16.MGS</rom>
+			<rom type="file" offset="0x22">VG17.MGS</rom>
+			<rom type="file" offset="0x23">VG18.MGS</rom>
+			<rom type="file" offset="0x24">VG19.MGS</rom>
+			<rom type="file" offset="0x25">VG20.MGS</rom>
+			<rom type="shell" offset="0">fmp3 -m</rom>
+			<rom type="shell" offset="0">tglfmp2</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x020010">Vi-sion [オープニング]</title>
+			<title code="0x020011">Staff (TW-Drive ver.) [スタッフロール]</title>
+			<title code="0x020012">Tight T.K.O [キャラクターセレクト]</title>
+			<title code="0x020013">Fizz [BGM～優香]</title>
+			<title code="0x020014">Behind Muse [BGM～千穂]</title>
+			<title code="0x020015">Cat Chat [BGM～真奈美]</title>
+			<title code="0x020016">Side R [BGM～潤]</title>
+			<title code="0x020017">Tea all You [BGM～かおり]</title>
+			<title code="0x020018">Will over [BGM～麗美]</title>
+			<title code="0x020019">VG09.MGS</title>
+			<title code="0x02001A">DV-1 [クリア画面 1]</title>
+			<title code="0x02001B">DV-2 [クリア画面 2]</title>
+			<title code="0x02001C">DV-2 [クリア画面 2]</title>
+			<title code="0x02001D">Winner [プレイヤー勝利]</title>
+			<title code="0x02001E">Loser [コンティニュー]</title>
+			<title code="0x02001F">Here Come... [相手プレイヤー乱入]</title>
+			<title code="0x020020">ED-1 [ENDING～優香]</title>
+			<title code="0x020021">ED-2 [ENDING～千穂]</title>
+			<title code="0x020022">ED-3 [ENDING～真奈美]</title>
+			<title code="0x020023">ED-4 [ENDING～潤]</title>
+			<title code="0x020024">ED-5 [ENDING～かおり]</title>
+			<title code="0x020025">ED-6 [ENDING～麗美]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Variable Geo 2: The Bout of Cabalistic Goddess / Shinya Ishikawa, Atsutoshi Isemura, Naoya Shimokawa, Tatsuya Watarai, Siracono / 1994 Giga (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="20"/>
+			<option name="ssg_mix"  value="0"/>
+		</options>
+		<romlist archive="vg2_98">
+			<rom type="file" offset="-1">tglfmp.com</rom>
+			<rom type="file" offset="-1">FMP3.COM</rom>
+			<rom type="file" offset="0x10">VG2_01.MF2</rom>
+			<rom type="file" offset="0x11">VG2_02.MF2</rom>
+			<!-- <rom type="file" offset="0x12">VG2_03.MF2</rom> -->
+			<rom type="file" offset="0x13">VG2_04.MF2</rom>
+			<rom type="file" offset="0x14">VG2_05.MF2</rom>
+			<rom type="file" offset="0x15">VG2_06.MF2</rom>
+			<rom type="file" offset="0x16">VG2_07.MF2</rom>
+			<rom type="file" offset="0x17">VG2_08.MF2</rom>
+			<rom type="file" offset="0x18">VG2_09.MF2</rom>
+			<rom type="file" offset="0x19">VG2_10.MF2</rom>
+			<rom type="file" offset="0x1A">VG2_11.MF2</rom>
+			<rom type="file" offset="0x1B">VG2_12.MF2</rom>
+			<rom type="file" offset="0x1C">VG2_13.MF2</rom>
+			<rom type="file" offset="0x1D">VG2_14.MF2</rom>
+			<rom type="file" offset="0x1E">VG2_15.MF2</rom>
+			<rom type="file" offset="0x1F">VG2_16.MF2</rom>
+			<!-- <rom type="file" offset="0x20">VG2_17.MF2</rom> -->
+			<rom type="file" offset="0x21">VG2_18.MF2</rom>
+			<rom type="file" offset="0x22">VG2_19.MF2</rom>
+			<rom type="file" offset="0x23">VG2_20.MF2</rom>
+			<rom type="file" offset="0x24">VG2_21.MF2</rom>
+			<rom type="file" offset="0x25">VG2_22.MF2</rom>
+			<rom type="file" offset="0x26">VG2_23.MF2</rom>
+			<rom type="shell" offset="0">fmp3 -2</rom>
+			<rom type="shell" offset="0">tglfmp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Legend of Goddess (オープニングテーマ)</title>
+			<title code="0x11">Kiss T.K.O. (キャラクターセレクト)</title>
+			<!-- <title code="0x12">VG2_03.MF2 : 対峙                    ｢     Face 2 Faces ｣</title> -->
+			<title code="0x13">Mighty Power (武内優香　ステージ)</title>
+			<title code="0x14">Silent Muse (増田千穂　ステージ)</title>
+			<title code="0x15">Typhoon Lady (久保田潤　ステージ)</title>
+			<title code="0x16">Wild Kitten (楠真奈美　ステージ)</title>
+			<title code="0x17">D-G with Violin (梁瀬かおりステージ)</title>
+			<title code="0x18">Rosenbeet (レイミ謝華ステージ)</title>
+			<title code="0x19">Knucle on Fire (八島聡美　ステージ)</title>
+			<title code="0x1A">Break 4 Station (結城綾子　ステージ)</title>
+			<title code="0x1B">Naniwa Kakuto-do (えりりん　ステージ)</title>
+			<title code="0x1C">Like the Phoenix (神無月輝美ステージ)</title>
+			<title code="0x1D">Innate Instinct (綿貫弓子　ステージ)</title>
+			<title code="0x1E">Battle Xtasy (嘉島琴荏　ステージ)</title>
+			<title code="0x1F">Victory 2 U (バトルアウト)</title>
+			<!-- <title code="0x20">VG2_17.MF2 : ２Ｐ乱入                ｢ ChallengerComin' ｣</title> -->
+			<title code="0x21">Black Whispers (ビジュアルＡ)</title>
+			<title code="0x22">Gymnopedies '94 (ビジュアルＢ)</title>
+			<title code="0x23">Fight Continued (ゲームオーバー(ｺﾝﾃｨﾆｭｰ))</title>
+			<title code="0x24">Over the Summer (エンディングテーマＡ)</title>
+			<title code="0x25">The End of Bout (エンディングテーマＢ)</title>
+			<title code="0x26">Fame of Geo (スタッフロール)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Advanced Variable Geo 2 / Takahiro Yonemura / 1998 Giga (86)</name>
+		<driver type="86">pc98dos</driver>
+		<driveralias type="PC-98">giga</driveralias>
+		<options>
+			<option name="clockmul" value="0x10"/>
+			<option name="extramsize" value="0x400000"/>
+			<option name="fm_mix"   value="8"/>
+			<option name="ssg_mix"  value="-4"/>
+			<option name="pcm_mix"  value="0x200"/>
+		</options>
+		<romlist archive="avg2">
+			<rom type="file" offset="-1">pmp_hoot.com</rom>
+			<rom type="file" offset="-1">EMMDRV.COM</rom>
+			<rom type="file" offset="-1">PMD86.COM</rom>
+			<rom type="file" offset="-1">P86DRV.COM</rom>
+			<rom type="file" offset="-1">PMDPCM86.EXE</rom>
+			<rom type="file" offset="-1">PDR.COM</rom>
+			<rom type="file" offset="-1">PPSDRV.COM</rom>
+			<rom type="file" offset="-1">CMLPCM1.PPS</rom>
+			<rom type="file" offset="-1">CMLPCM9.P86</rom>
+			<rom type="file" offset="0x10">AVG2AYB.M</rom>
+			<rom type="file" offset="0x11">AVG2BOB.M</rom>
+			<rom type="file" offset="0x12">AVG2CHB_.M</rom>
+			<rom type="file" offset="0x13">AVG2CSB.M</rom>
+			<rom type="file" offset="0x14">AVG2EDB.M</rom>
+			<rom type="file" offset="0x15">AVG2ELB_.M</rom>
+			<rom type="file" offset="0x16">AVG2GOB.M</rom>
+			<rom type="file" offset="0x17">AVG2JUB.M</rom>
+			<rom type="file" offset="0x18">AVG2KAB_.M</rom>
+			<rom type="file" offset="0x19">AVG2KYB_.M</rom>
+			<rom type="file" offset="0x1a">AVG2MAB.M</rom>
+			<rom type="file" offset="0x1b">AVG2MIB.M</rom>
+			<rom type="file" offset="0x1c">AVG2NXB.M</rom>
+			<rom type="file" offset="0x1d">AVG2REB_.M</rom>
+			<rom type="file" offset="0x1e">AVG2S1B.M</rom>
+			<rom type="file" offset="0x1f">AVG2S2B.M</rom>
+			<rom type="file" offset="0x20">AVG2S3B.M</rom>
+			<rom type="file" offset="0x21">AVG2S4B.M</rom>
+			<rom type="file" offset="0x22">AVG2S5B.M</rom>
+			<rom type="file" offset="0x23">AVG2SKB.M</rom>
+			<rom type="file" offset="0x24">AVG2SRB.M</rom>
+			<rom type="file" offset="0x25">AVG2STB_.M</rom>
+			<rom type="file" offset="0x26">AVG2TAB.M</rom>
+			<rom type="file" offset="0x27">AVG2TBB.M</rom>
+			<rom type="file" offset="0x28">AVG2YKB.M</rom>
+			<rom type="shell" offset="0">emmdrv</rom>
+			<rom type="shell" offset="0">pdr</rom>
+			<rom type="shell" offset="0">ppsdrv cmlpcm1.pps</rom>
+			<rom type="shell" offset="0">p86drv #/32</rom>
+			<rom type="shell" offset="0">pmd86 #/m10 /k /i</rom>
+			<rom type="shell" offset="0">PMDPCM86 /l CMLPCM9.P86</rom>
+			<rom type="shell" offset="0">pmp_hoot</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x13">We Moving Of (キャラクターセレクト)</title>
+			<title code="0x28">The Rising Sun (優香ステージ)</title>
+			<title code="0x12">Mystic Muse (千穂ステージ)</title>
+			<title code="0x1a">Naughty Little (真奈美ステージ)</title>
+			<title code="0x17">Jun the Tiger (潤ステージ)</title>
+			<title code="0x18">Daisy call 4 U (かおりステージ)</title>
+			<title code="0x1d">Majestic Rose (レイミステージ)</title>
+			<title code="0x25">Blazing Soul (聡美ステージ)</title>
+			<title code="0x10">Break Through (綾子ステージ)</title>
+			<title code="0x15">Born in the oSaKA (えりりんステージ)</title>
+			<title code="0x26">Starry Emotion (珠緒ステージ)</title>
+			<title code="0x19">Duel at Dusk (恭子ステージ)</title>
+			<title code="0x23">Cruel Blood (サキステージ)</title>
+			<title code="0x1b">Wicked Witch (ミランダステージ)</title>
+			<title code="0x24">Wind Up (Normal Modeエンディング)</title>
+			<title code="0x14">Farewell 2 GEO (Story Modeエンディング)</title>
+			<title code="0x1c">Next Bout (ステージスタート)</title>
+			<title code="0x11">Result (バトルアウト)</title>
+			<title code="0x16">Battle is Over (ゲームオーバー)</title>
+			<title code="0x27">The Advent Of (Story Modeタイトルバック)</title>
+			<title code="0x1e">Invocation (B part C2～ 珠緒発動)</title>
+			<title code="0x1f">Insanity (A part C13～ 狂気その１)</title>
+			<title code="0x20">Insanity ver.2 (A part C36～ 狂気その２)</title>
+			<title code="0x21">Sacrifice (A part C54～ 悲しみ)</title>
+			<title code="0x22">Determination (A part C71～ 決意)</title>
+		</titlelist>
+	</game>
+</gamelist>

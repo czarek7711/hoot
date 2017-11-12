@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Sur De Wave -->
+	<game>
+		<name>[PC-9801] Presence(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Sur De Wave</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="presence_98">
+			<rom type="file" offset="-1">MUAPLAY.com</rom>
+			<rom type="file" offset="-1">NLP_HOOT.COM</rom>
+			<rom type="file" offset="-1">TONE.DTA</rom>
+			<rom type="file" offset="0x10">FMRDY01.O</rom>
+			<rom type="file" offset="0x11">FMRDY02.O</rom>
+			<rom type="file" offset="0x12">FMRDY03.O</rom>
+			<rom type="file" offset="0x13">FMRDY04.O</rom>
+			<rom type="file" offset="0x14">FMRDY05.O</rom>
+			<rom type="file" offset="0x15">FMRDY11.O</rom>
+			<rom type="file" offset="0x16">FMRDY12.O</rom>
+			<rom type="file" offset="0x17">FMRDY13.O</rom>
+			<rom type="file" offset="0x18">FMRDY14.O</rom>
+			<rom type="file" offset="0x19">FMRDY15.O</rom>
+			<rom type="file" offset="0x1A">FMRDY16.O</rom>
+			<rom type="file" offset="0x1B">FMRDY17.O</rom>
+			<rom type="file" offset="0x1C">FMRDY18.O</rom>
+			<rom type="file" offset="0x1D">FMRDY19.O</rom>
+			<rom type="file" offset="0x1E">FMRDY20.O</rom>
+			<rom type="file" offset="0x1F">FMRDY21.O</rom>
+			<rom type="file" offset="0x20">FMRDY30.O</rom>
+			<rom type="file" offset="0x21">FMRDY31.O</rom>
+			<rom type="shell" offset="0">MUAPLAY -Z -f9</rom>
+			<rom type="shell" offset="0">NLP_HOOT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">FMRDY01.O</title>
+			<title code="0x11">FMRDY02.O</title>
+			<title code="0x12">FMRDY03.O</title>
+			<title code="0x13">FMRDY04.O</title>
+			<title code="0x14">FMRDY05.O</title>
+			<title code="0x15">FMRDY11.O</title>
+			<title code="0x16">FMRDY12.O</title>
+			<title code="0x17">FMRDY13.O</title>
+			<title code="0x18">FMRDY14.O</title>
+			<title code="0x19">FMRDY15.O</title>
+			<title code="0x1A">FMRDY16.O</title>
+			<title code="0x1B">FMRDY17.O</title>
+			<title code="0x1C">FMRDY18.O</title>
+			<title code="0x1D">FMRDY19.O</title>
+			<title code="0x1E">FMRDY20.O</title>
+			<title code="0x1F">FMRDY21.O</title>
+			<title code="0x20">FMRDY30.O</title>
+			<title code="0x21">FMRDY31.O</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] NOSTALGIA 1907</name>
+		<driver type="opn">pc98</driver>
+		<driveralias type="NEC PC-9801">Sur De Wave</driveralias>
+		<options>
+			<option name="bootcs" value="0x0060"/>
+			<option name="bootip" value="0x0000"/>
+			<option name="funcvect" value="0x7f"/>
+			<option name="dataaddr" value="0x20000"/>
+			<option name="filesize" value="0x3000"/>
+			<option name="datamax" value="0x83"/>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="nostal98">
+			<rom type="code" offset="0x00600">nostal98.bin</rom>
+			<rom type="code" offset="0x10100">MUSDRVT.COM</rom>
+			<rom type="bgm" offset="0x01">A.COM</rom>
+			<rom type="bgm" offset="0x02">A1.COM</rom>
+			<rom type="bgm" offset="0x03">ASHU1.COM</rom>
+			<rom type="bgm" offset="0x04">ASHU2.COM</rom>
+			<rom type="bgm" offset="0x05">ASHU3.COM</rom>
+			<rom type="bgm" offset="0x06">ASHU4.COM</rom>
+			<rom type="bgm" offset="0x07">ASHU5.COM</rom>
+			<rom type="bgm" offset="0x08">ASHU6.COM</rom>
+			<rom type="bgm" offset="0x09">ASHU7.COM</rom>
+			<rom type="bgm" offset="0x0a">B.COM</rom>
+			<rom type="bgm" offset="0x0b">B1.COM</rom>
+			<rom type="bgm" offset="0x0c">B2.COM</rom>
+			<rom type="bgm" offset="0x0d">B3.COM</rom>
+			<rom type="bgm" offset="0x0e">BAGI.COM</rom>
+			<rom type="bgm" offset="0x0f">BAKUDAN.COM</rom>
+			<rom type="bgm" offset="0x10">BLACK1.COM</rom>
+			<rom type="bgm" offset="0x11">BLACK2.COM</rom>
+			<rom type="bgm" offset="0x12">BLACK3.COM</rom>
+			<rom type="bgm" offset="0x13">BLACK4.COM</rom>
+			<rom type="bgm" offset="0x14">BUU1.COM</rom>
+			<rom type="bgm" offset="0x15">BUU2.COM</rom>
+			<rom type="bgm" offset="0x16">C.COM</rom>
+			<rom type="bgm" offset="0x17">CHOUSA.COM</rom>
+			<rom type="bgm" offset="0x18">CO.COM</rom>
+			<rom type="bgm" offset="0x19">D.COM</rom>
+			<rom type="bgm" offset="0x1a">DORA11.COM</rom>
+			<rom type="bgm" offset="0x1b">DORA22.COM</rom>
+			<rom type="bgm" offset="0x1c">DORA33.COM</rom>
+			<rom type="bgm" offset="0x1d">DORA44.COM</rom>
+			<rom type="bgm" offset="0x1e">E.COM</rom>
+			<rom type="bgm" offset="0x1f">E1.COM</rom>
+			<rom type="bgm" offset="0x20">E2.COM</rom>
+			<rom type="bgm" offset="0x21">END.COM</rom>
+			<rom type="bgm" offset="0x22">F.COM</rom>
+			<rom type="bgm" offset="0x23">G.COM</rom>
+			<rom type="bgm" offset="0x24">GAME.COM</rom>
+			<rom type="bgm" offset="0x25">GAME1.COM</rom>
+			<rom type="bgm" offset="0x26">GUSA.COM</rom>
+			<rom type="bgm" offset="0x27">H.COM</rom>
+			<rom type="bgm" offset="0x28">HATUKEN.COM</rom>
+			<rom type="bgm" offset="0x29">HUBU3.COM</rom>
+			<rom type="bgm" offset="0x2a">I.COM</rom>
+			<rom type="bgm" offset="0x2b">INBOU1.COM</rom>
+			<rom type="bgm" offset="0x2c">INBOU2.COM</rom>
+			<rom type="bgm" offset="0x2d">INBOU3.COM</rom>
+			<rom type="bgm" offset="0x2e">IRYU1.COM</rom>
+			<rom type="bgm" offset="0x2f">IRYU10.COM</rom>
+			<rom type="bgm" offset="0x30">IRYU2.COM</rom>
+			<rom type="bgm" offset="0x31">IRYU3.COM</rom>
+			<rom type="bgm" offset="0x32">IRYU4.COM</rom>
+			<rom type="bgm" offset="0x33">IRYU5.COM</rom>
+			<rom type="bgm" offset="0x34">IRYU6.COM</rom>
+			<rom type="bgm" offset="0x35">IRYU7.COM</rom>
+			<rom type="bgm" offset="0x36">IRYU8.COM</rom>
+			<rom type="bgm" offset="0x37">IRYU9.COM</rom>
+			<rom type="bgm" offset="0x38">IRYUNOAI.COM</rom>
+			<rom type="bgm" offset="0x39">IRYUU.COM</rom>
+			<rom type="bgm" offset="0x3a">IYA.COM</rom>
+			<rom type="bgm" offset="0x3b">J.COM</rom>
+			<rom type="bgm" offset="0x3c">KAITAI.COM</rom>
+			<rom type="bgm" offset="0x3d">KANSEI.COM</rom>
+			<rom type="bgm" offset="0x3e">KAR.COM</rom>
+			<rom type="bgm" offset="0x3f">KASUKE1.COM</rom>
+			<rom type="bgm" offset="0x40">KASUKE2.COM</rom>
+			<rom type="bgm" offset="0x41">KASUKE3.COM</rom>
+			<rom type="bgm" offset="0x42">KASUKE4.COM</rom>
+			<rom type="bgm" offset="0x43">KASUKE5.COM</rom>
+			<rom type="bgm" offset="0x44">KASUKE6.COM</rom>
+			<rom type="bgm" offset="0x45">KASUKE7.COM</rom>
+			<rom type="bgm" offset="0x46">KASUKE8.COM</rom>
+			<rom type="bgm" offset="0x47">KASUKE9.COM</rom>
+			<rom type="bgm" offset="0x48">KASUKEA.COM</rom>
+			<rom type="bgm" offset="0x49">KASUKEB.COM</rom>
+			<rom type="bgm" offset="0x4a">KASUKEC.COM</rom>
+			<rom type="bgm" offset="0x4b">KASUKED.COM</rom>
+			<rom type="bgm" offset="0x4c">KASUKETH.COM</rom>
+			<rom type="bgm" offset="0x4d">KIRI1.COM</rom>
+			<rom type="bgm" offset="0x4e">KIRI2.COM</rom>
+			<rom type="bgm" offset="0x4f">KIRI3.COM</rom>
+			<rom type="bgm" offset="0x50">KIRI4.COM</rom>
+			<rom type="bgm" offset="0x51">KIRI5.COM</rom>
+			<rom type="bgm" offset="0x52">KIRI6.COM</rom>
+			<rom type="bgm" offset="0x53">KIRI7.COM</rom>
+			<rom type="bgm" offset="0x54">KIRI8.COM</rom>
+			<rom type="bgm" offset="0x55">MA.COM</rom>
+			<rom type="bgm" offset="0x56">ME19.COM</rom>
+			<rom type="bgm" offset="0x57">NAMI2.COM</rom>
+			<rom type="bgm" offset="0x58">NI.COM</rom>
+			<rom type="bgm" offset="0x59">OPEN1.COM</rom>
+			<rom type="bgm" offset="0x5a">OPEN2.COM</rom>
+			<rom type="bgm" offset="0x5b">OPEN3.COM</rom>
+			<rom type="bgm" offset="0x5c">OPEN4.COM</rom>
+			<rom type="bgm" offset="0x5d">OPEN5.COM</rom>
+			<rom type="bgm" offset="0x5e">OPEN6.COM</rom>
+			<rom type="bgm" offset="0x5f">OPEN7.COM</rom>
+			<rom type="bgm" offset="0x60">OPEN8.COM</rom>
+			<rom type="bgm" offset="0x61">PI.COM</rom>
+			<rom type="bgm" offset="0x62">RONDON1.COM</rom>
+			<rom type="bgm" offset="0x63">RUME1.COM</rom>
+			<rom type="bgm" offset="0x64">RUME2.COM</rom>
+			<rom type="bgm" offset="0x65">RUME3.COM</rom>
+			<rom type="bgm" offset="0x66">RUME4.COM</rom>
+			<rom type="bgm" offset="0x67">RUME5.COM</rom>
+			<rom type="bgm" offset="0x68">RUTIY1.COM</rom>
+			<rom type="bgm" offset="0x69">RUTIY2.COM</rom>
+			<rom type="bgm" offset="0x6a">RUTIY3.COM</rom>
+			<rom type="bgm" offset="0x6b">RUTIY4.COM</rom>
+			<rom type="bgm" offset="0x6c">RUTIY5.COM</rom>
+			<rom type="bgm" offset="0x6d">RUTIY6.COM</rom>
+			<rom type="bgm" offset="0x6e">RUTIY7.COM</rom>
+			<rom type="bgm" offset="0x6f">RUTIYNOA.COM</rom>
+			<rom type="bgm" offset="0x70">SENCHO1.COM</rom>
+			<rom type="bgm" offset="0x71">SENCHO2.COM</rom>
+			<rom type="bgm" offset="0x72">SENCHO3.COM</rom>
+			<rom type="bgm" offset="0x73">STRA1.COM</rom>
+			<rom type="bgm" offset="0x74">STRA2.COM</rom>
+			<rom type="bgm" offset="0x75">STRA3.COM</rom>
+			<rom type="bgm" offset="0x76">STRA4.COM</rom>
+			<rom type="bgm" offset="0x77">TANSAKU.COM</rom>
+			<rom type="bgm" offset="0x78">TANSAKUN.COM</rom>
+			<rom type="bgm" offset="0x79">TE1.COM</rom>
+			<rom type="bgm" offset="0x7a">TETE.COM</rom>
+			<rom type="bgm" offset="0x7b">TIANON1.COM</rom>
+			<rom type="bgm" offset="0x7c">TIANON2.COM</rom>
+			<rom type="bgm" offset="0x7d">TIANON3.COM</rom>
+			<rom type="bgm" offset="0x7e">TOKEI.COM</rom>
+			<rom type="bgm" offset="0x7f">TOKEIA.COM</rom>
+			<rom type="bgm" offset="0x80">TOKEIB.COM</rom>
+			<rom type="bgm" offset="0x81">TOKEIC.COM</rom>
+			<rom type="bgm" offset="0x82">TUKARETA.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x630000">[STOP]</title>
+			<title code="0x03">ASHU1.COM    : </title>
+			<title code="0x04">ASHU2.COM    : </title>
+			<title code="0x05">ASHU3.COM    : </title>
+			<title code="0x06">ASHU4.COM    : </title>
+			<title code="0x07">ASHU5.COM    : </title>
+			<title code="0x08">ASHU6.COM    : </title>
+			<title code="0x09">ASHU7.COM    : </title>
+			<title code="0x0f">BAKUDAN.COM  : </title>
+			<title code="0x10">BLACK1.COM   : </title>
+			<title code="0x11">BLACK2.COM   : </title>
+			<title code="0x12">BLACK3.COM   : </title>
+			<title code="0x13">BLACK4.COM   : </title>
+			<title code="0x17">CHOUSA.COM   : </title>
+			<title code="0x21">END.COM      : そう。</title>
+			<title code="0x22">F.COM        : </title>
+			<title code="0x24">GAME.COM     : 予感。(1)</title>
+			<title code="0x25">GAME1.COM    : 予感。(2)</title>
+			<title code="0x2b">INBOU1.COM   : 彼がドアを閉めた(1)</title>
+			<title code="0x2c">INBOU2.COM   : 彼がドアを閉めた(2)</title>
+			<title code="0x2d">INBOU3.COM   : 彼がドアを閉めた(3)</title>
+			<title code="0x2e">IRYU1.COM    : </title>
+			<title code="0x30">IRYU2.COM    : </title>
+			<title code="0x31">IRYU3.COM    : </title>
+			<title code="0x32">IRYU4.COM    : </title>
+			<title code="0x33">IRYU5.COM    : </title>
+			<title code="0x34">IRYU6.COM    : </title>
+			<title code="0x35">IRYU7.COM    : </title>
+			<title code="0x36">IRYU8.COM    : </title>
+			<title code="0x37">IRYU9.COM    : </title>
+			<title code="0x2f">IRYU10.COM   : </title>
+			<title code="0x38">IRYUNOAI.COM : </title>
+			<title code="0x39">IRYUU.COM    : </title>
+			<title code="0x3c">KAITAI.COM   : </title>
+			<title code="0x3d">KANSEI.COM   : 花を買うように</title>
+			<title code="0x3e">KAR.COM      : </title>
+			<title code="0x3f">KASUKE1.COM  : </title>
+			<title code="0x40">KASUKE2.COM  : </title>
+			<title code="0x41">KASUKE3.COM  : </title>
+			<title code="0x42">KASUKE4.COM  : </title>
+			<title code="0x43">KASUKE5.COM  : </title>
+			<title code="0x44">KASUKE6.COM  : </title>
+			<title code="0x45">KASUKE7.COM  : </title>
+			<title code="0x46">KASUKE8.COM  : </title>
+			<title code="0x47">KASUKE9.COM  : </title>
+			<title code="0x48">KASUKEA.COM  : </title>
+			<title code="0x49">KASUKEB.COM  : </title>
+			<title code="0x4a">KASUKEC.COM  : </title>
+			<title code="0x4b">KASUKED.COM  : </title>
+			<title code="0x4c">KASUKETH.COM : 彼の日々、</title>
+			<title code="0x55">MA.COM       : </title>
+			<title code="0x56">ME19.COM     : </title>
+			<title code="0x59">OPEN1.COM    : ここで、</title>
+			<title code="0x5a">OPEN2.COM    : </title>
+			<title code="0x5b">OPEN3.COM    : </title>
+			<title code="0x5c">OPEN4.COM    : </title>
+			<title code="0x5d">OPEN5.COM    : </title>
+			<title code="0x5e">OPEN6.COM    : </title>
+			<title code="0x5f">OPEN7.COM    : </title>
+			<title code="0x60">OPEN8.COM    : </title>
+			<title code="0x62">RONDON1.COM  : </title>
+			<title code="0x63">RUME1.COM    : </title>
+			<title code="0x64">RUME2.COM    : </title>
+			<title code="0x65">RUME3.COM    : </title>
+			<title code="0x66">RUME4.COM    : </title>
+			<title code="0x67">RUME5.COM    : </title>
+			<title code="0x68">RUTIY1.COM   : </title>
+			<title code="0x69">RUTIY2.COM   : </title>
+			<title code="0x6a">RUTIY3.COM   : </title>
+			<title code="0x6b">RUTIY4.COM   : </title>
+			<title code="0x6c">RUTIY5.COM   : </title>
+			<title code="0x6d">RUTIY6.COM   : </title>
+			<title code="0x6e">RUTIY7.COM   : </title>
+			<title code="0x6f">RUTIYNOA.COM : 気弱いんじゃない</title>
+			<title code="0x70">SENCHO1.COM  : </title>
+			<title code="0x71">SENCHO2.COM  : </title>
+			<title code="0x72">SENCHO3.COM  : </title>
+			<title code="0x73">STRA1.COM    : </title>
+			<title code="0x74">STRA2.COM    : </title>
+			<title code="0x75">STRA3.COM    : </title>
+			<title code="0x76">STRA4.COM    : </title>
+			<title code="0x77">TANSAKU.COM  : </title>
+			<title code="0x78">TANSAKUN.COM : </title>
+			<title code="0x7b">TIANON1.COM  : </title>
+			<title code="0x7c">TIANON2.COM  : </title>
+			<title code="0x7d">TIANON3.COM  : </title>
+			<title code="0x01">A.COM        : SE</title>
+			<title code="0x02">A1.COM       : SE</title>
+			<title code="0x0a">B.COM        : SE</title>
+			<title code="0x0b">B1.COM       : SE</title>
+			<title code="0x0c">B2.COM       : SE</title>
+			<title code="0x0d">B3.COM       : SE</title>
+			<title code="0x0e">BAGI.COM     : SE</title>
+			<title code="0x14">BUU1.COM     : SE</title>
+			<title code="0x15">BUU2.COM     : SE</title>
+			<title code="0x16">C.COM        : SE</title>
+			<title code="0x18">CO.COM       : SE</title>
+			<title code="0x19">D.COM        : SE</title>
+			<title code="0x1a">DORA11.COM   : SE</title>
+			<title code="0x1b">DORA22.COM   : SE</title>
+			<title code="0x1c">DORA33.COM   : SE</title>
+			<title code="0x1d">DORA44.COM   : SE</title>
+			<title code="0x1e">E.COM        : SE</title>
+			<title code="0x1f">E1.COM       : SE</title>
+			<title code="0x20">E2.COM       : SE</title>
+			<title code="0x23">G.COM        : SE</title>
+			<title code="0x26">GUSA.COM     : SE</title>
+			<title code="0x27">H.COM        : SE</title>
+			<title code="0x28">HATUKEN.COM  : SE</title>
+			<title code="0x29">HUBU3.COM    : SE</title>
+			<title code="0x2a">I.COM        : SE</title>
+			<title code="0x3a">IYA.COM      : SE</title>
+			<title code="0x3b">J.COM        : SE</title>
+			<title code="0x4d">KIRI1.COM    : SE</title>
+			<title code="0x4e">KIRI2.COM    : SE</title>
+			<title code="0x4f">KIRI3.COM    : SE</title>
+			<title code="0x50">KIRI4.COM    : SE</title>
+			<title code="0x51">KIRI5.COM    : SE</title>
+			<title code="0x52">KIRI6.COM    : SE</title>
+			<title code="0x53">KIRI7.COM    : SE</title>
+			<title code="0x54">KIRI8.COM    : SE</title>
+			<title code="0x57">NAMI2.COM    : SE</title>
+			<title code="0x58">NI.COM       : SE</title>
+			<title code="0x61">PI.COM       : SE</title>
+			<title code="0x79">TE1.COM      : SE</title>
+			<title code="0x7a">TETE.COM     : SE</title>
+			<title code="0x7e">TOKEI.COM    : SE</title>
+			<title code="0x7f">TOKEIA.COM   : SE</title>
+			<title code="0x80">TOKEIB.COM   : SE</title>
+			<title code="0x81">TOKEIC.COM   : SE</title>
+			<title code="0x82">TUKARETA.COM : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] NOSTALGIA 1907</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Sur De Wave</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="nostal68snd">
+			<rom type="code" offset="0x00000">nostal68snd.bin</rom>
+			<rom type="code" offset="0x10000">MD68k.r</rom>
+			<rom type="code" offset="0x70000">NOS.mus</rom>
+			<rom type="code" offset="0x85000">NOS.smp</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">00 : 予感。</title>
+			<title code="0x02">01 : ここで、</title>
+			<title code="0x03">02 : </title>
+			<title code="0x04">03 : </title>
+			<title code="0x05">04 : </title>
+			<title code="0x06">05 : 彼の日々、</title>
+			<title code="0x07">06 : </title>
+			<title code="0x08">07 : </title>
+			<title code="0x09">08 : </title>
+			<title code="0x0a">09 : </title>
+			<title code="0x0b">0A : </title>
+			<title code="0x0c">0B : </title>
+			<title code="0x0d">0C : </title>
+			<title code="0x0e">0D : </title>
+			<title code="0x0f">0E : </title>
+			<title code="0x10">0F : </title>
+			<title code="0x11">10 : SE 波の音</title>
+			<title code="0x12">11 : 気弱いんじゃない。</title>
+			<title code="0x13">12 : 彼がドアを閉めた、</title>
+			<title code="0x14">13 : </title>
+			<title code="0x15">14 : </title>
+			<title code="0x16">15 : </title>
+			<title code="0x17">16 : そう。</title>
+			<title code="0x18">17 : </title>
+			<title code="0x19">18 : SE</title>
+			<title code="0x1a">19 : </title>
+			<title code="0x1b">1a : </title>
+			<title code="0x1c">1b : </title>
+			<title code="0x1d">1c : </title>
+			<title code="0x1e">1d : </title>
+			<title code="0x1f">1e : </title>
+			<title code="0x20">1f : </title>
+			<title code="0x21">20 : </title>
+			<title code="0x22">21 : </title>
+			<title code="0x23">22 : </title>
+			<title code="0x24">23 : </title>
+			<title code="0x25">24 : </title>
+			<title code="0x26">25 : </title>
+			<title code="0x27">26 : </title>
+			<title code="0x28">27 : </title>
+			<title code="0x29">28 : </title>
+			<title code="0x2a">29 : </title>
+			<title code="0x2b">2a : </title>
+			<title code="0x2c">2b : </title>
+			<title code="0x2d">2c : </title>
+			<title code="0x2e">2d : </title>
+			<title code="0x2f">2e : </title>
+			<title code="0x30">2f : </title>
+			<title code="0x31">30 : </title>
+			<title code="0x32">31 : </title>
+			<title code="0x33">32 : </title>
+			<title code="0x34">33 : </title>
+			<title code="0x35">34 : </title>
+			<title code="0x36">35 : </title>
+			<title code="0x37">36 : </title>
+			<title code="0x38">37 : </title>
+			<title code="0x39">38 : </title>
+			<title code="0x3a">39 : </title>
+			<title code="0x3b">3a : </title>
+			<title code="0x3c">3b : </title>
+			<title code="0x3d">3c : </title>
+			<title code="0x3e">3d : </title>
+			<title code="0x3f">3e : </title>
+			<title code="0x40">3f : </title>
+			<title code="0x41">40 : </title>
+			<title code="0x42">41 : </title>
+			<title code="0x43">42 : </title>
+			<title code="0x44">43 : </title>
+			<title code="0x45">44 : </title>
+			<title code="0x46">45 : </title>
+			<title code="0x47">46 : </title>
+			<title code="0x48">47 : </title>
+			<title code="0x49">48 : </title>
+			<title code="0x4a">49 : </title>
+			<title code="0x4b">4a : </title>
+			<title code="0x4c">4b : </title>
+			<title code="0x4d">4c : </title>
+			<title code="0x4e">4d : </title>
+			<title code="0x4f">4e : </title>
+			<title code="0x50">4f : </title>
+			<title code="0x51">50 : </title>
+			<title code="0x52">51 : </title>
+			<title code="0x53">52 : </title>
+			<title code="0x54">53 : </title>
+			<title code="0x55">54 : </title>
+			<title code="0x56">55 : </title>
+			<title code="0x57">56 : </title>
+			<title code="0x58">57 : </title>
+			<title code="0x59">58 : </title>
+			<title code="0x5a">59 : 花を買うように</title>
+			<title code="0x5b">5a : SE</title>
+			<title code="0x5c">5b : SE</title>
+			<title code="0x5d">5c : </title>
+			<title code="0x5e">5d : SE</title>
+			<title code="0x5f">5e : SE</title>
+			<title code="0x60">5f : SE</title>
+			<title code="0x61">60 : SE</title>
+			<title code="0x6a">69 : </title>
+			<title code="0x6b">6a : SE</title>
+			<title code="0x6c">6b : SE</title>
+			<title code="0x6d">6c : SE</title>
+			<title code="0x6e">6d : SE</title>
+			<title code="0x6f">6e : </title>
+			<title code="0x70">6f : SE</title>
+			<title code="0x71">70 : SE</title>
+			<title code="0x72">71 : SE</title>
+			<title code="0x73">72 : </title>
+			<title code="0x74">73 : </title>
+			<title code="0x75">74 : </title>
+			<title code="0x76">75 : </title>
+			<title code="0x77">76 : </title>
+			<title code="0x78">77 : </title>
+			<title code="0x79">78 : SE</title>
+			<title code="0x7a">79 : SE</title>
+			<title code="0x7b">7a : SE</title>
+			<title code="0x7c">7b : SE</title>
+			<title code="0x7d">7c : SE</title>
+			<title code="0x7e">7d : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] HARD SHOT</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Sur De Wave</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="hardshot_98">
+			<rom type="file" offset="-1">SPLIT_98.COM</rom>
+			<rom type="file" offset="-1">SPLIT.COM</rom>
+			<rom type="file" offset="0x00">CREDIT.BGM</rom>
+			<rom type="file" offset="0x01">EP1.BGM</rom>
+			<rom type="file" offset="0x02">EP2.BGM</rom>
+			<rom type="file" offset="0x03">EP3.BGM</rom>
+			<rom type="file" offset="0x04">EP4.BGM</rom>
+			<rom type="file" offset="0x05">EP5.BGM</rom>
+			<rom type="file" offset="0x06">EP6.BGM</rom>
+			<rom type="file" offset="0x07">FIGHT1.BGM</rom>
+			<rom type="file" offset="0x08">FIGHT2.BGM</rom>
+			<rom type="file" offset="0x09">FIGHT3.BGM</rom>
+			<rom type="file" offset="0x0a">FIGHT4.BGM</rom>
+			<rom type="file" offset="0x0b">FIGHT5.BGM</rom>
+			<rom type="file" offset="0x0c">FIGHT6.BGM</rom>
+			<rom type="file" offset="0x0d">FIGHT7.BGM</rom>
+			<rom type="file" offset="0x0e">FIGHT8.BGM</rom>
+			<rom type="file" offset="0x0f">NOP0.BGM</rom>
+			<rom type="file" offset="0x10">NOP1.BGM</rom>
+			<rom type="file" offset="0x11">NOP2.BGM</rom>
+			<rom type="file" offset="0x12">NOP3.BGM</rom>
+			<rom type="file" offset="0x13">NOP4.BGM</rom>
+			<rom type="file" offset="0x14">SOP0.BGM</rom>
+			<rom type="file" offset="0x15">SOP1.BGM</rom>
+			<rom type="file" offset="0x16">SOP2.BGM</rom>
+			<rom type="file" offset="0x17">SOP3.BGM</rom>
+			<rom type="file" offset="0x18">SOP4.BGM</rom>
+			<rom type="file" offset="0x19">SOP5.BGM</rom>
+			<rom type="shell" offset="0">SPLIT</rom>
+			<rom type="shell" offset="0">SPLIT_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0f">NOP0.BGM   : </title>
+			<title code="0x10">NOP1.BGM   : </title>
+			<title code="0x11">NOP2.BGM   : </title>
+			<title code="0x12">NOP3.BGM   : </title>
+			<title code="0x13">NOP4.BGM   : </title>
+			<title code="0x14">SOP0.BGM   : </title>
+			<title code="0x15">SOP1.BGM   : </title>
+			<title code="0x16">SOP2.BGM   : </title>
+			<title code="0x17">SOP3.BGM   : </title>
+			<title code="0x18">SOP4.BGM   : </title>
+			<title code="0x19">SOP5.BGM   : </title>
+			<title code="0x07">FIGHT1.BGM : </title>
+			<title code="0x08">FIGHT2.BGM : </title>
+			<title code="0x09">FIGHT3.BGM : </title>
+			<title code="0x0a">FIGHT4.BGM : </title>
+			<title code="0x0b">FIGHT5.BGM : </title>
+			<title code="0x0c">FIGHT6.BGM : </title>
+			<title code="0x0d">FIGHT7.BGM : </title>
+			<title code="0x0e">FIGHT8.BGM : </title>
+			<title code="0x01">EP1.BGM    : </title>
+			<title code="0x02">EP2.BGM    : </title>
+			<title code="0x03">EP3.BGM    : </title>
+			<title code="0x04">EP4.BGM    : </title>
+			<title code="0x05">EP5.BGM    : </title>
+			<title code="0x06">EP6.BGM    : </title>
+			<title code="0x00">CREDIT.BGM : </title>
+		</titlelist>
+	</game>
+</gamelist>

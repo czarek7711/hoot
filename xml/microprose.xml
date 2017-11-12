@@ -1,0 +1,3085 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //MicroProse -->
+	<game>
+		<name>[X68000] F-15 Strike Eagle II (YM2151+MSM6258)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">MicroProse</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="f15se68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">F15SND0.OPM</rom>
+			<rom type="code" offset="0x28000">F15SND1.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">F15SND0.OPM</title>
+			<title code="0x03">F15SND1.OPM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Gunship: The Helicopter Simulation (YM2151+MSM6258)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">MicroProse</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="gunship68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">BGM00.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">BGM00.OPM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] 1942: The Pacific Air War (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="1942paw_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0B">Music 2</title>
+			<title code="0x0D">Music 3</title>
+			<title code="0x14">Music 4</title>
+			<title code="0x15">Music 5</title>
+			<title code="0x16">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] 1942: The Pacific Air War (YMF262)</name>
+		<driver type="soundblaster16">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl3_mix" value="0x180"/>
+		</options>
+		<romlist archive="1942paw_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">PSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0B">Music 2</title>
+			<title code="0x0D">Music 3</title>
+			<title code="0x14">Music 4</title>
+			<title code="0x15">Music 5</title>
+			<title code="0x16">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] 1942: The Pacific Air War (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="1942paw_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0B">Music 2</title>
+			<title code="0x0D">Music 3</title>
+			<title code="0x14">Music 4</title>
+			<title code="0x15">Music 5</title>
+			<title code="0x16">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] 1942: The Pacific Air War (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="1942paw_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0B">Music 2</title>
+			<title code="0x0D">Music 3</title>
+			<title code="0x14">Music 4</title>
+			<title code="0x15">Music 5</title>
+			<title code="0x16">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] 1942: The Pacific Air War (GM)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="1942paw_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">GMRESET.COM</rom>
+			<rom type="file" offset="9">GSOUND.DRV</rom>
+			<rom type="shell" offset="0">GMRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0B">Music 2</title>
+			<title code="0x0D">Music 3</title>
+			<title code="0x14">Music 4</title>
+			<title code="0x15">Music 5</title>
+			<title code="0x16">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] 1942: The Pacific Air War (Vermouth)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="1942paw_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">GSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0B">Music 2</title>
+			<title code="0x0D">Music 3</title>
+			<title code="0x14">Music 4</title>
+			<title code="0x15">Music 5</title>
+			<title code="0x16">Music 6</title>
+		</titlelist>
+	</game>
+  <game>
+		<name>[PC/AT] Across the Rhine (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="acrosstherhine_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0C">Music 2</title>
+			<title code="0x0E">Music 3</title>
+			<title code="0x10">Music 4</title>
+			<title code="0x41">Music 5</title>
+			<title code="0x43">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Across the Rhine (YMF262)</name>
+		<driver type="soundblaster16">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl3_mix" value="0x180"/>
+		</options>
+		<romlist archive="acrosstherhine_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">PSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0C">Music 2</title>
+			<title code="0x0E">Music 3</title>
+			<title code="0x10">Music 4</title>
+			<title code="0x41">Music 5</title>
+			<title code="0x43">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Across the Rhine (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="acrosstherhine_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0C">Music 2</title>
+			<title code="0x0E">Music 3</title>
+			<title code="0x10">Music 4</title>
+			<title code="0x41">Music 5</title>
+			<title code="0x43">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Across the Rhine (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="acrosstherhine_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0C">Music 2</title>
+			<title code="0x0E">Music 3</title>
+			<title code="0x10">Music 4</title>
+			<title code="0x41">Music 5</title>
+			<title code="0x43">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Across the Rhine (GM)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="acrosstherhine_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">GMRESET.COM</rom>
+			<rom type="file" offset="9">GSOUND.DRV</rom>
+			<rom type="shell" offset="0">GMRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0C">Music 2</title>
+			<title code="0x0E">Music 3</title>
+			<title code="0x10">Music 4</title>
+			<title code="0x41">Music 5</title>
+			<title code="0x43">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Across the Rhine (Vermouth)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="acrosstherhine_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">GSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0C">Music 2</title>
+			<title code="0x0E">Music 3</title>
+			<title code="0x10">Music 4</title>
+			<title code="0x41">Music 5</title>
+			<title code="0x43">Music 6</title>
+		</titlelist>
+	</game>
+
+  <game>
+		<name>[PC/AT] ATAC (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="atac_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ADLIB.BIN</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0">Music 1</title>
+			<title code="1">Music 2</title>
+			<title code="2">Music 3</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] ATAC (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="atac_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ROLAND.BIN</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0">Music 1</title>
+			<title code="1">Music 2</title>
+			<title code="2">Music 3</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] ATAC (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="atac_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ROLAND.BIN</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0">Music 1</title>
+			<title code="1">Music 2</title>
+			<title code="2">Music 3</title>
+		</titlelist>
+	</game>
+	
+	<game>
+		<name>[PC/AT] B-17 Flying Fortress (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="b17ff_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">ADLIB.CAT</rom>
+			<rom type="file" offset="9">AMUSIC.BIN</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+			<title code="0x06">Music 7</title>
+			<title code="0x07">Music 8</title>
+			<title code="0x08">Music 9</title>
+			<title code="0x0A">Music 10</title>
+			<title code="0x0B">Music 11</title>
+			<title code="0x0C">Music 12</title>
+			<title code="0x0D">Music 13</title>
+			<title code="0x0E">Music 14</title>
+			<title code="0x0F">Music 15</title>
+			<title code="0x10">Music 16</title>
+			<title code="0x11">Music 17</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] B-17 Flying Fortress (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="b17ff_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="-1">ROLAND.CAT</rom>
+			<rom type="file" offset="9">RMUSIC.BIN</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+			<title code="0x06">Music 7</title>
+			<title code="0x07">Music 8</title>
+			<title code="0x08">Music 9</title>
+			<title code="0x0A">Music 10</title>
+			<title code="0x0B">Music 11</title>
+			<title code="0x0C">Music 12</title>
+			<title code="0x0D">Music 13</title>
+			<title code="0x0E">Music 14</title>
+			<title code="0x0F">Music 15</title>
+			<title code="0x10">Music 16</title>
+			<title code="0x11">Music 17</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] B-17 Flying Fortress (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="b17ff_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="-1">ROLAND.CAT</rom>
+			<rom type="file" offset="9">RMUSIC.BIN</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+			<title code="0x06">Music 7</title>
+			<title code="0x07">Music 8</title>
+			<title code="0x08">Music 9</title>
+			<title code="0x0A">Music 10</title>
+			<title code="0x0B">Music 11</title>
+			<title code="0x0C">Music 12</title>
+			<title code="0x0D">Music 13</title>
+			<title code="0x0E">Music 14</title>
+			<title code="0x0F">Music 15</title>
+			<title code="0x10">Music 16</title>
+			<title code="0x11">Music 17</title>
+		</titlelist>
+	</game>
+
+  <game>
+		<name>[PC/AT] Civilization (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="civilization_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03">Music 1</title>
+			<title code="0x04">Music 2</title>
+			<title code="0x05">Music 3</title>
+			<title code="0x09">Music 4</title>
+			<title code="0x0A">Music 5</title>
+			<title code="0x0B">Music 6</title>
+			<title code="0x0C">Music 7</title>
+			<title code="0x0D">Music 8</title>
+			<title code="0x0E">Music 9</title>
+			<title code="0x0F">Music 10</title>
+			<title code="0x11">Music 11</title>
+			<title code="0x12">Music 12</title>
+			<title code="0x22">Music 13</title>
+			<title code="0x23">Music 14</title>
+			<title code="0x24">Music 15</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Civilization (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="civilization_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03">Music 1</title>
+			<title code="0x04">Music 2</title>
+			<title code="0x05">Music 3</title>
+			<title code="0x09">Music 4</title>
+			<title code="0x0A">Music 5</title>
+			<title code="0x0B">Music 6</title>
+			<title code="0x0C">Music 7</title>
+			<title code="0x0D">Music 8</title>
+			<title code="0x0E">Music 9</title>
+			<title code="0x0F">Music 10</title>
+			<title code="0x11">Music 11</title>
+			<title code="0x12">Music 12</title>
+			<title code="0x22">Music 13</title>
+			<title code="0x23">Music 14</title>
+			<title code="0x24">Music 15</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Civilization (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="civilization_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03">Music 1</title>
+			<title code="0x04">Music 2</title>
+			<title code="0x05">Music 3</title>
+			<title code="0x09">Music 4</title>
+			<title code="0x0A">Music 5</title>
+			<title code="0x0B">Music 6</title>
+			<title code="0x0C">Music 7</title>
+			<title code="0x0D">Music 8</title>
+			<title code="0x0E">Music 9</title>
+			<title code="0x0F">Music 10</title>
+			<title code="0x11">Music 11</title>
+			<title code="0x12">Music 12</title>
+			<title code="0x22">Music 13</title>
+			<title code="0x23">Music 14</title>
+			<title code="0x24">Music 15</title>
+		</titlelist>
+	</game>
+	
+	<game>
+		<name>[PC/AT] Colonization (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2mix" value="0x1C0"/>
+		</options>
+		<romlist archive="colonization_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x34">Music 1</title>
+			<title code="0x20">Music 2</title>
+			<title code="0x21">Music 3</title>
+			<title code="0x22">Music 4</title>
+			<title code="0x23">Music 5</title>
+			<title code="0x24">Music 6</title>
+			<title code="0x25">Music 7</title>
+			<title code="0x26">Music 8</title>
+			<title code="0x27">Music 9</title>
+			<title code="0x28">Music 10</title>
+			<title code="0x29">Music 11</title>
+			<title code="0x2A">Music 12</title>
+			<title code="0x2B">Music 13</title>
+			<title code="0x2C">Music 14</title>
+			<title code="0x2D">Music 15</title>
+			<title code="0x2E">Music 16</title>
+			<title code="0x2F">Music 17</title>
+			<title code="0x30">Music 18</title>
+			<title code="0x31">Music 19</title>
+			<title code="0x32">Music 20</title>
+			<title code="0x33">Music 21</title>
+			<title code="0x35">Music 22</title>
+			<title code="0x36">Music 23</title>
+			<title code="0x37">Music 24</title>
+			<title code="0x38">Music 25</title>
+			<title code="0x39">Music 26</title>
+			<title code="0x3A">Music 27</title>
+			<title code="0x3B">Music 28</title>
+			<title code="0x3D">Music 29</title>
+			<title code="0x80">Music 30</title>
+			<title code="0x81">Music 31</title>
+			<title code="0x82">Music 32</title>
+			<title code="0x83">Music 33</title>
+			<title code="0x84">Music 34</title>
+			<title code="0x85">Music 35</title>
+			<title code="0x86">Music 36</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Colonization (YMF262)</name>
+		<driver type="soundblaster16">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl3_mix" value="0x180"/>
+		</options>
+		<romlist archive="colonization_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">PSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x34">Music 1</title>
+			<title code="0x20">Music 2</title>
+			<title code="0x21">Music 3</title>
+			<title code="0x22">Music 4</title>
+			<title code="0x23">Music 5</title>
+			<title code="0x24">Music 6</title>
+			<title code="0x25">Music 7</title>
+			<title code="0x26">Music 8</title>
+			<title code="0x27">Music 9</title>
+			<title code="0x28">Music 10</title>
+			<title code="0x29">Music 11</title>
+			<title code="0x2A">Music 12</title>
+			<title code="0x2B">Music 13</title>
+			<title code="0x2C">Music 14</title>
+			<title code="0x2D">Music 15</title>
+			<title code="0x2E">Music 16</title>
+			<title code="0x2F">Music 17</title>
+			<title code="0x30">Music 18</title>
+			<title code="0x31">Music 19</title>
+			<title code="0x32">Music 20</title>
+			<title code="0x33">Music 21</title>
+			<title code="0x35">Music 22</title>
+			<title code="0x36">Music 23</title>
+			<title code="0x37">Music 24</title>
+			<title code="0x38">Music 25</title>
+			<title code="0x39">Music 26</title>
+			<title code="0x3A">Music 27</title>
+			<title code="0x3B">Music 28</title>
+			<title code="0x3D">Music 29</title>
+			<title code="0x80">Music 30</title>
+			<title code="0x81">Music 31</title>
+			<title code="0x82">Music 32</title>
+			<title code="0x83">Music 33</title>
+			<title code="0x84">Music 34</title>
+			<title code="0x85">Music 35</title>
+			<title code="0x86">Music 36</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Colonization (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="colonization_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x34">Music 1</title>
+			<title code="0x20">Music 2</title>
+			<title code="0x21">Music 3</title>
+			<title code="0x22">Music 4</title>
+			<title code="0x23">Music 5</title>
+			<title code="0x24">Music 6</title>
+			<title code="0x25">Music 7</title>
+			<title code="0x26">Music 8</title>
+			<title code="0x27">Music 9</title>
+			<title code="0x28">Music 10</title>
+			<title code="0x29">Music 11</title>
+			<title code="0x2A">Music 12</title>
+			<title code="0x2B">Music 13</title>
+			<title code="0x2C">Music 14</title>
+			<title code="0x2D">Music 15</title>
+			<title code="0x2E">Music 16</title>
+			<title code="0x2F">Music 17</title>
+			<title code="0x30">Music 18</title>
+			<title code="0x31">Music 19</title>
+			<title code="0x32">Music 20</title>
+			<title code="0x33">Music 21</title>
+			<title code="0x35">Music 22</title>
+			<title code="0x36">Music 23</title>
+			<title code="0x37">Music 24</title>
+			<title code="0x38">Music 25</title>
+			<title code="0x39">Music 26</title>
+			<title code="0x3A">Music 27</title>
+			<title code="0x3B">Music 28</title>
+			<title code="0x3D">Music 29</title>
+			<title code="0x80">Music 30</title>
+			<title code="0x81">Music 31</title>
+			<title code="0x82">Music 32</title>
+			<title code="0x83">Music 33</title>
+			<title code="0x84">Music 34</title>
+			<title code="0x85">Music 35</title>
+			<title code="0x86">Music 36</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Colonization (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="colonization_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x34">Music 1</title>
+			<title code="0x20">Music 2</title>
+			<title code="0x21">Music 3</title>
+			<title code="0x22">Music 4</title>
+			<title code="0x23">Music 5</title>
+			<title code="0x24">Music 6</title>
+			<title code="0x25">Music 7</title>
+			<title code="0x26">Music 8</title>
+			<title code="0x27">Music 9</title>
+			<title code="0x28">Music 10</title>
+			<title code="0x29">Music 11</title>
+			<title code="0x2A">Music 12</title>
+			<title code="0x2B">Music 13</title>
+			<title code="0x2C">Music 14</title>
+			<title code="0x2D">Music 15</title>
+			<title code="0x2E">Music 16</title>
+			<title code="0x2F">Music 17</title>
+			<title code="0x30">Music 18</title>
+			<title code="0x31">Music 19</title>
+			<title code="0x32">Music 20</title>
+			<title code="0x33">Music 21</title>
+			<title code="0x35">Music 22</title>
+			<title code="0x36">Music 23</title>
+			<title code="0x37">Music 24</title>
+			<title code="0x38">Music 25</title>
+			<title code="0x39">Music 26</title>
+			<title code="0x3A">Music 27</title>
+			<title code="0x3B">Music 28</title>
+			<title code="0x3D">Music 29</title>
+			<title code="0x80">Music 30</title>
+			<title code="0x81">Music 31</title>
+			<title code="0x82">Music 32</title>
+			<title code="0x83">Music 33</title>
+			<title code="0x84">Music 34</title>
+			<title code="0x85">Music 35</title>
+			<title code="0x86">Music 36</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Colonization (GM)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="colonization_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">GMRESET.COM</rom>
+			<rom type="file" offset="9">GSOUND.DRV</rom>
+			<rom type="shell" offset="0">GMRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x34">Music 1</title>
+			<title code="0x20">Music 2</title>
+			<title code="0x21">Music 3</title>
+			<title code="0x22">Music 4</title>
+			<title code="0x23">Music 5</title>
+			<title code="0x24">Music 6</title>
+			<title code="0x25">Music 7</title>
+			<title code="0x26">Music 8</title>
+			<title code="0x27">Music 9</title>
+			<title code="0x28">Music 10</title>
+			<title code="0x29">Music 11</title>
+			<title code="0x2A">Music 12</title>
+			<title code="0x2B">Music 13</title>
+			<title code="0x2C">Music 14</title>
+			<title code="0x2D">Music 15</title>
+			<title code="0x2E">Music 16</title>
+			<title code="0x2F">Music 17</title>
+			<title code="0x30">Music 18</title>
+			<title code="0x31">Music 19</title>
+			<title code="0x32">Music 20</title>
+			<title code="0x33">Music 21</title>
+			<title code="0x35">Music 22</title>
+			<title code="0x36">Music 23</title>
+			<title code="0x37">Music 24</title>
+			<title code="0x38">Music 25</title>
+			<title code="0x39">Music 26</title>
+			<title code="0x3A">Music 27</title>
+			<title code="0x3B">Music 28</title>
+			<title code="0x3D">Music 29</title>
+			<title code="0x80">Music 30</title>
+			<title code="0x81">Music 31</title>
+			<title code="0x82">Music 32</title>
+			<title code="0x83">Music 33</title>
+			<title code="0x84">Music 34</title>
+			<title code="0x85">Music 35</title>
+			<title code="0x86">Music 36</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Colonization (Vermouth)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="colonization_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">GSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x34">Music 1</title>
+			<title code="0x20">Music 2</title>
+			<title code="0x21">Music 3</title>
+			<title code="0x22">Music 4</title>
+			<title code="0x23">Music 5</title>
+			<title code="0x24">Music 6</title>
+			<title code="0x25">Music 7</title>
+			<title code="0x26">Music 8</title>
+			<title code="0x27">Music 9</title>
+			<title code="0x28">Music 10</title>
+			<title code="0x29">Music 11</title>
+			<title code="0x2A">Music 12</title>
+			<title code="0x2B">Music 13</title>
+			<title code="0x2C">Music 14</title>
+			<title code="0x2D">Music 15</title>
+			<title code="0x2E">Music 16</title>
+			<title code="0x2F">Music 17</title>
+			<title code="0x30">Music 18</title>
+			<title code="0x31">Music 19</title>
+			<title code="0x32">Music 20</title>
+			<title code="0x33">Music 21</title>
+			<title code="0x35">Music 22</title>
+			<title code="0x36">Music 23</title>
+			<title code="0x37">Music 24</title>
+			<title code="0x38">Music 25</title>
+			<title code="0x39">Music 26</title>
+			<title code="0x3A">Music 27</title>
+			<title code="0x3B">Music 28</title>
+			<title code="0x3D">Music 29</title>
+			<title code="0x80">Music 30</title>
+			<title code="0x81">Music 31</title>
+			<title code="0x82">Music 32</title>
+			<title code="0x83">Music 33</title>
+			<title code="0x84">Music 34</title>
+			<title code="0x85">Music 35</title>
+			<title code="0x86">Music 36</title>
+		</titlelist>
+	</game>
+	
+	<game>
+		<name>[PC/AT] Covert Action (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="covertaction_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Main Theme</title>
+			<title code="0x27">Arming Screen</title>
+			<title code="0x28">Laundry</title>
+			<title code="0x29">Office</title>
+			<title code="0x2A">Beach</title>
+			<title code="0x2B">Casino</title>
+			<title code="0x2C">Suspense</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Covert Action (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="covertaction_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Main Theme</title>
+			<title code="0x27">Arming Screen</title>
+			<title code="0x28">Laundry</title>
+			<title code="0x29">Office</title>
+			<title code="0x2A">Beach</title>
+			<title code="0x2B">Casino</title>
+			<title code="0x2C">Suspense</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Covert Action (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="covertaction_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Main Theme</title>
+			<title code="0x27">Arming Screen</title>
+			<title code="0x28">Laundry</title>
+			<title code="0x29">Office</title>
+			<title code="0x2A">Beach</title>
+			<title code="0x2B">Casino</title>
+			<title code="0x2C">Suspense</title>
+		</titlelist>
+	</game>
+	
+	<game>
+		<name>[PC/AT] David Leadbetter's Golf (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="dlgolf_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">ADLIB.CAT</rom>
+			<rom type="file" offset="9">AMUSIC.BIN</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Title</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] David Leadbetter's Golf (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="dlgolf_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="-1">ROLAND.CAT</rom>
+			<rom type="file" offset="9">RMUSIC.BIN</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Title</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] David Leadbetter's Golf (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="dlgolf_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="-1">ROLAND.CAT</rom>
+			<rom type="file" offset="9">RMUSIC.BIN</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Title</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Dogfight: 80 Years of Aerial Warfare (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="dogfight_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="8">ADLIB.CAT</rom>
+			<rom type="file" offset="9">AMUSIC.BIN</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Dogfight: 80 Years of Aerial Warfare (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="dogfight_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="8">ROLAND.CAT</rom>
+			<rom type="file" offset="9">RMUSIC.BIN</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Dogfight: 80 Years of Aerial Warfare (SC-55)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="dogfight_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">GSRESET.COM</rom>
+			<rom type="file" offset="8">SCC1.CAT</rom>
+			<rom type="file" offset="9">SMUSIC.BIN</rom>
+			<rom type="shell" offset="0">GSRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Dogfight: 80 Years of Aerial Warfare (Vermouth)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="dogfight_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="8">SCC1.CAT</rom>
+			<rom type="file" offset="9">SMUSIC.BIN</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+		</titlelist>
+	</game>
+
+	
+	<game>
+		<name>[PC/AT] F-117A Nighthawk Stealth Fighter 2.0 (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="f117ansf_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03">Music 1</title>
+			<title code="0x24">Music 2</title>
+			<title code="0x25">Music 3</title>
+			<title code="0x26">Music 4</title>
+			<title code="0x27">Music 5</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] F-117A Nighthawk Stealth Fighter 2.0 (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="f117ansf_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03">Music 1</title>
+			<title code="0x24">Music 2</title>
+			<title code="0x25">Music 3</title>
+			<title code="0x26">Music 4</title>
+			<title code="0x27">Music 5</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] F-117A Nighthawk Stealth Fighter 2.0 (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="f117ansf_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03">Music 1</title>
+			<title code="0x24">Music 2</title>
+			<title code="0x25">Music 3</title>
+			<title code="0x26">Music 4</title>
+			<title code="0x27">Music 5</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] F-15 Strike Eagle II (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="f15se2_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Main Theme</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] F-15 Strike Eagle II (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="f15se2_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Main Theme</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] F-15 Strike Eagle II (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="f15se2_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Main Theme</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] F-19 Stealth Fighter (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="f19sf_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Main Theme</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] F-19 Stealth Fighter (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="f19sf_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Main Theme</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] F-19 Stealth Fighter (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="f19sf_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Main Theme</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Harrier Jump Jet (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="harrierjj_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">ADLIB.CAT</rom>
+			<rom type="file" offset="9">AMUSIC.BIN</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+			<title code="0x06">Music 7</title>
+			<title code="0x07">Music 8</title>
+			<title code="0x08">Music 9</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Harrier Jump Jet (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="harrierjj_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="-1">ROLAND.CAT</rom>
+			<rom type="file" offset="9">RMUSIC.BIN</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+			<title code="0x06">Music 7</title>
+			<title code="0x07">Music 8</title>
+			<title code="0x08">Music 9</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Harrier Jump Jet (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="harrierjj_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="-1">ROLAND.CAT</rom>
+			<rom type="file" offset="9">RMUSIC.BIN</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+			<title code="0x06">Music 7</title>
+			<title code="0x07">Music 8</title>
+			<title code="0x08">Music 9</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Hyperspeed (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="hyperspeed_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x1E">Music 2</title>
+			<title code="0x1F">Music 3</title>
+			<title code="0x20">Music 4</title>
+			<title code="0x21">Music 5</title>
+			<title code="0x22">Music 6</title>
+			<title code="0x23">Music 7</title>
+			<title code="0x24">Music 8</title>
+			<title code="0x25">Music 9</title>
+			<title code="0x26">Music 10</title>
+			<title code="0x27">Music 11</title>
+			<title code="0x28">Music 12</title>
+			<title code="0x29">Music 13</title>
+			<title code="0x2A">Music 14</title>
+			<title code="0x2B">Music 15</title>
+			<title code="0x2C">Music 16</title>
+			<title code="0x2D">Music 17</title>
+			<title code="0x2E">Music 18</title>
+			<title code="0x2F">Music 19</title>
+			<title code="0x30">Music 20</title>
+			<title code="0x31">Music 21</title>
+			<title code="0x32">Music 22</title>
+			<title code="0x33">Music 23</title>
+			<title code="0x34">Music 24</title>
+			<title code="0x35">Music 25</title>
+			<title code="0x36">Music 26</title>
+			<title code="0x37">Music 27</title>
+			<title code="0x38">Music 28</title>
+			<title code="0x39">Music 29</title>
+			<title code="0x3A">Music 30</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Hyperspeed (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="hyperspeed_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x1E">Music 2</title>
+			<title code="0x1F">Music 3</title>
+			<title code="0x20">Music 4</title>
+			<title code="0x21">Music 5</title>
+			<title code="0x22">Music 6</title>
+			<title code="0x23">Music 7</title>
+			<title code="0x24">Music 8</title>
+			<title code="0x25">Music 9</title>
+			<title code="0x26">Music 10</title>
+			<title code="0x27">Music 11</title>
+			<title code="0x28">Music 12</title>
+			<title code="0x29">Music 13</title>
+			<title code="0x2A">Music 14</title>
+			<title code="0x2B">Music 15</title>
+			<title code="0x2C">Music 16</title>
+			<title code="0x2D">Music 17</title>
+			<title code="0x2E">Music 18</title>
+			<title code="0x2F">Music 19</title>
+			<title code="0x30">Music 20</title>
+			<title code="0x31">Music 21</title>
+			<title code="0x32">Music 22</title>
+			<title code="0x33">Music 23</title>
+			<title code="0x34">Music 24</title>
+			<title code="0x35">Music 25</title>
+			<title code="0x36">Music 26</title>
+			<title code="0x37">Music 27</title>
+			<title code="0x38">Music 28</title>
+			<title code="0x39">Music 29</title>
+			<title code="0x3A">Music 30</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Hyperspeed (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="hyperspeed_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x1E">Music 2</title>
+			<title code="0x1F">Music 3</title>
+			<title code="0x20">Music 4</title>
+			<title code="0x21">Music 5</title>
+			<title code="0x22">Music 6</title>
+			<title code="0x23">Music 7</title>
+			<title code="0x24">Music 8</title>
+			<title code="0x25">Music 9</title>
+			<title code="0x26">Music 10</title>
+			<title code="0x27">Music 11</title>
+			<title code="0x28">Music 12</title>
+			<title code="0x29">Music 13</title>
+			<title code="0x2A">Music 14</title>
+			<title code="0x2B">Music 15</title>
+			<title code="0x2C">Music 16</title>
+			<title code="0x2D">Music 17</title>
+			<title code="0x2E">Music 18</title>
+			<title code="0x2F">Music 19</title>
+			<title code="0x30">Music 20</title>
+			<title code="0x31">Music 21</title>
+			<title code="0x32">Music 22</title>
+			<title code="0x33">Music 23</title>
+			<title code="0x34">Music 24</title>
+			<title code="0x35">Music 25</title>
+			<title code="0x36">Music 26</title>
+			<title code="0x37">Music 27</title>
+			<title code="0x38">Music 28</title>
+			<title code="0x39">Music 29</title>
+			<title code="0x3A">Music 30</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Knights of the Sky (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="knightsofthesky_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x0D">Music 2</title>
+			<title code="0x0E">Music 3</title>
+			<title code="0x0F">Music 4</title>
+			<title code="0x10">Music 5</title>
+			<title code="0x11">Music 6</title>
+			<title code="0x12">Music 7</title>
+			<title code="0x13">Music 8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Knights of the Sky (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="knightsofthesky_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x0D">Music 2</title>
+			<title code="0x0E">Music 3</title>
+			<title code="0x0F">Music 4</title>
+			<title code="0x10">Music 5</title>
+			<title code="0x11">Music 6</title>
+			<title code="0x12">Music 7</title>
+			<title code="0x13">Music 8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Knights of the Sky (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="knightsofthesky_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x0D">Music 2</title>
+			<title code="0x0E">Music 3</title>
+			<title code="0x0F">Music 4</title>
+			<title code="0x10">Music 5</title>
+			<title code="0x11">Music 6</title>
+			<title code="0x12">Music 7</title>
+			<title code="0x13">Music 8</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Lightspeed (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="lightspeed_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x1E">Music 2</title>
+			<title code="0x1F">Music 3</title>
+			<title code="0x20">Music 4</title>
+			<title code="0x21">Music 5</title>
+			<title code="0x23">Music 6</title>
+			<title code="0x25">Music 7</title>
+			<title code="0x27">Music 8</title>
+			<title code="0x28">Music 9</title>
+			<title code="0x29">Music 10</title>
+			<title code="0x2A">Music 11</title>
+			<title code="0x2B">Music 12</title>
+			<title code="0x2C">Music 13</title>
+			<title code="0x2D">Music 14</title>
+			<title code="0x2E">Music 15</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Lightspeed (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="lightspeed_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x1E">Music 2</title>
+			<title code="0x1F">Music 3</title>
+			<title code="0x20">Music 4</title>
+			<title code="0x21">Music 5</title>
+			<title code="0x23">Music 6</title>
+			<title code="0x25">Music 7</title>
+			<title code="0x27">Music 8</title>
+			<title code="0x28">Music 9</title>
+			<title code="0x29">Music 10</title>
+			<title code="0x2A">Music 11</title>
+			<title code="0x2B">Music 12</title>
+			<title code="0x2C">Music 13</title>
+			<title code="0x2D">Music 14</title>
+			<title code="0x2E">Music 15</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Lightspeed (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="lightspeed_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x1E">Music 2</title>
+			<title code="0x1F">Music 3</title>
+			<title code="0x20">Music 4</title>
+			<title code="0x21">Music 5</title>
+			<title code="0x23">Music 6</title>
+			<title code="0x25">Music 7</title>
+			<title code="0x27">Music 8</title>
+			<title code="0x28">Music 9</title>
+			<title code="0x29">Music 10</title>
+			<title code="0x2A">Music 11</title>
+			<title code="0x2B">Music 12</title>
+			<title code="0x2C">Music 13</title>
+			<title code="0x2D">Music 14</title>
+			<title code="0x2E">Music 15</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] M1 Tank Platoon (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="m1tank_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x02">Music 2</title>
+			<title code="0x34">Music 3</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] M1 Tank Platoon (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="m1tank_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x02">Music 2</title>
+			<title code="0x34">Music 3</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] M1 Tank Platoon (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="m1tank_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x02">Music 2</title>
+			<title code="0x34">Music 3</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Pirates! Gold (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="piratesgold_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Title </title>
+			<title code="0x0A">Big Treasure</title>
+			<title code="0x0B">Merchant's Daughter</title>
+			<title code="0x0C">Niece</title>
+			<title code="0x0D">Governor's Daughter</title>
+			<title code="0x0E">Divide the Plunder</title>
+			<title code="0x0F">Barmaid</title>
+			<title code="0x10">Find the Treasure</title>
+			<title code="0x11">Governor's Enemy</title>
+			<title code="0x12">Governor's Friend</title>
+			<title code="0x13">Governor's Reward</title>
+			<title code="0x14">Merchant</title>
+			<title code="0x15">Plunder</title>
+			<title code="0x16">Relative (3 tunes, restart for the next one)</title>
+			<title code="0x17">Tavern (3 tunes)</title>
+			<title code="0x18">Wedding</title>
+			<title code="0x1B">Endgame</title>
+			<title code="0x2B">Jail Tune</title>
+			<title code="0x2C">Visit in Town (2 tunes)</title>
+			<title code="0x2D">Shipwright</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Pirates! Gold (YMF262)</name>
+		<driver type="soundblaster16">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl3_mix" value="0x180"/>
+		</options>
+		<romlist archive="piratesgold_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">PSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Title </title>
+			<title code="0x0A">Big Treasure</title>
+			<title code="0x0B">Merchant's Daughter</title>
+			<title code="0x0C">Niece</title>
+			<title code="0x0D">Governor's Daughter</title>
+			<title code="0x0E">Divide the Plunder</title>
+			<title code="0x0F">Barmaid</title>
+			<title code="0x10">Find the Treasure</title>
+			<title code="0x11">Governor's Enemy</title>
+			<title code="0x12">Governor's Friend</title>
+			<title code="0x13">Governor's Reward</title>
+			<title code="0x14">Merchant</title>
+			<title code="0x15">Plunder</title>
+			<title code="0x16">Relative</title>
+			<title code="0x17">Tavern (4 tunes, restart for the next one)</title>
+			<title code="0x18">Wedding</title>
+			<title code="0x1B">Endgame</title>
+			<title code="0x2B">Jail Tune</title>
+			<title code="0x2C">Visit in Town (2 tunes)</title>
+			<title code="0x2D">Shipwright</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Pirates! Gold (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="piratesgold_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Title </title>
+			<title code="0x0A">Big Treasure</title>
+			<title code="0x0B">Merchant's Daughter</title>
+			<title code="0x0C">Niece</title>
+			<title code="0x0D">Governor's Daughter</title>
+			<title code="0x0E">Divide the Plunder</title>
+			<title code="0x0F">Barmaid</title>
+			<title code="0x10">Find the Treasure</title>
+			<title code="0x11">Governor's Enemy</title>
+			<title code="0x12">Governor's Friend</title>
+			<title code="0x13">Governor's Reward</title>
+			<title code="0x14">Merchant</title>
+			<title code="0x15">Plunder</title>
+			<title code="0x16">Relative</title>
+			<title code="0x17">Tavern (4 tunes, restart for the next one)</title>
+			<title code="0x18">Wedding</title>
+			<title code="0x1B">Endgame</title>
+			<title code="0x2B">Jail Tune</title>
+			<title code="0x2C">Visit in Town (2 tunes)</title>
+			<title code="0x2D">Shipwright</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Pirates! Gold (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="piratesgold_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Title </title>
+			<title code="0x0A">Big Treasure</title>
+			<title code="0x0B">Merchant's Daughter</title>
+			<title code="0x0C">Niece</title>
+			<title code="0x0D">Governor's Daughter</title>
+			<title code="0x0E">Divide the Plunder</title>
+			<title code="0x0F">Barmaid</title>
+			<title code="0x10">Find the Treasure</title>
+			<title code="0x11">Governor's Enemy</title>
+			<title code="0x12">Governor's Friend</title>
+			<title code="0x13">Governor's Reward</title>
+			<title code="0x14">Merchant</title>
+			<title code="0x15">Plunder</title>
+			<title code="0x16">Relative</title>
+			<title code="0x17">Tavern (4 tunes, restart for the next one)</title>
+			<title code="0x18">Wedding</title>
+			<title code="0x1B">Endgame</title>
+			<title code="0x2B">Jail Tune</title>
+			<title code="0x2C">Visit in Town (2 tunes)</title>
+			<title code="0x2D">Shipwright</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Pirates! Gold for Windows (GM)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="piratesgoldw_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">GMRESET.COM</rom>
+			<rom type="file" offset="9">MID.DRV</rom>
+			<rom type="file" offset="0x10">TITLE.MID</rom>
+			<rom type="file" offset="0x11">BARMAID.MID</rom>
+			<rom type="file" offset="0x12">BIGTREAS.MID</rom>
+			<rom type="file" offset="0x13">DIVPLUND.MID</rom>
+			<rom type="file" offset="0x14">ENDGAME.MID</rom>
+			<rom type="file" offset="0x15">FINDTRES.MID</rom>
+			<rom type="file" offset="0x16">GOVDAUT.MID</rom>
+			<rom type="file" offset="0x17">GOVENEMY.MID</rom>
+			<rom type="file" offset="0x18">GOVFREND.MID</rom>
+			<rom type="file" offset="0x19">GOVREWRD.MID</rom>
+			<rom type="file" offset="0x1A">JAILTUNE.MID</rom>
+			<rom type="file" offset="0x1B">MERCHANT.MID</rom>
+			<rom type="file" offset="0x1C">MRCHDAUT.MID</rom>
+			<rom type="file" offset="0x1D">NIECE.MID</rom>
+			<rom type="file" offset="0x1E">PLUNDER.MID</rom>
+			<rom type="file" offset="0x1F">RELATIV1.MID</rom>
+			<rom type="file" offset="0x20">RELATIV2.MID</rom>
+			<rom type="file" offset="0x21">RELATIV3.MID</rom>
+			<rom type="file" offset="0x22">SHIPRITE.MID</rom>
+			<rom type="file" offset="0x23">TAVERN1.MID</rom>
+			<rom type="file" offset="0x24">TAVERN2.MID</rom>
+			<rom type="file" offset="0x25">TAVERN3.MID</rom>
+			<rom type="file" offset="0x26">TAVERN4.MID</rom>
+			<rom type="file" offset="0x27">VISTOWN1.MID</rom>
+			<rom type="file" offset="0x28">VISTOWN2.MID</rom>
+			<rom type="file" offset="0x29">WEDDING.MID</rom>
+			<rom type="shell" offset="0">GMRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Title</title>
+			<title code="0x12">Big Treasure</title>
+			<title code="0x1C">Merchant's Daughter</title>
+			<title code="0x1D">Niece</title>
+			<title code="0x16">Governor's Daughter</title>
+			<title code="0x13">Divide the Plunder</title>
+			<title code="0x11">Barmaid</title>
+			<title code="0x15">Find the Treasure</title>
+			<title code="0x17">Governor's Enemy</title>
+			<title code="0x18">Governor's Friend</title>
+			<title code="0x19">Governor's Reward</title>
+			<title code="0x1B">Merchant</title>
+			<title code="0x1E">Plunder</title>
+			<title code="0x1F">Relative 1</title>
+			<title code="0x20">Relative 2</title>
+			<title code="0x21">Relative 3</title>
+			<title code="0x23">Tavern 1</title>
+			<title code="0x24">Tavern 2</title>
+			<title code="0x25">Tavern 3</title>
+			<title code="0x26">Tavern 4</title>
+			<title code="0x29">Wedding</title>
+			<title code="0x14">Endgame</title>
+			<title code="0x1A">Jail Tune</title>
+			<title code="0x27">Visit in Town 1</title>
+			<title code="0x28">Visit in Town 2</title>
+			<title code="0x22">Shipwright</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Pirates! Gold for Windows (Vermouth)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="piratesgoldw_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">MID.DRV</rom>
+			<rom type="file" offset="0x10">TITLE.MID</rom>
+			<rom type="file" offset="0x11">BARMAID.MID</rom>
+			<rom type="file" offset="0x12">BIGTREAS.MID</rom>
+			<rom type="file" offset="0x13">DIVPLUND.MID</rom>
+			<rom type="file" offset="0x14">ENDGAME.MID</rom>
+			<rom type="file" offset="0x15">FINDTRES.MID</rom>
+			<rom type="file" offset="0x16">GOVDAUT.MID</rom>
+			<rom type="file" offset="0x17">GOVENEMY.MID</rom>
+			<rom type="file" offset="0x18">GOVFREND.MID</rom>
+			<rom type="file" offset="0x19">GOVREWRD.MID</rom>
+			<rom type="file" offset="0x1A">JAILTUNE.MID</rom>
+			<rom type="file" offset="0x1B">MERCHANT.MID</rom>
+			<rom type="file" offset="0x1C">MRCHDAUT.MID</rom>
+			<rom type="file" offset="0x1D">NIECE.MID</rom>
+			<rom type="file" offset="0x1E">PLUNDER.MID</rom>
+			<rom type="file" offset="0x1F">RELATIV1.MID</rom>
+			<rom type="file" offset="0x20">RELATIV2.MID</rom>
+			<rom type="file" offset="0x21">RELATIV3.MID</rom>
+			<rom type="file" offset="0x22">SHIPRITE.MID</rom>
+			<rom type="file" offset="0x23">TAVERN1.MID</rom>
+			<rom type="file" offset="0x24">TAVERN2.MID</rom>
+			<rom type="file" offset="0x25">TAVERN3.MID</rom>
+			<rom type="file" offset="0x26">TAVERN4.MID</rom>
+			<rom type="file" offset="0x27">VISTOWN1.MID</rom>
+			<rom type="file" offset="0x28">VISTOWN2.MID</rom>
+			<rom type="file" offset="0x29">WEDDING.MID</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Title</title>
+			<title code="0x12">Big Treasure</title>
+			<title code="0x1C">Merchant's Daughter</title>
+			<title code="0x1D">Niece</title>
+			<title code="0x16">Governor's Daughter</title>
+			<title code="0x13">Divide the Plunder</title>
+			<title code="0x11">Barmaid</title>
+			<title code="0x15">Find the Treasure</title>
+			<title code="0x17">Governor's Enemy</title>
+			<title code="0x18">Governor's Friend</title>
+			<title code="0x19">Governor's Reward</title>
+			<title code="0x1B">Merchant</title>
+			<title code="0x1E">Plunder</title>
+			<title code="0x1F">Relative 1</title>
+			<title code="0x20">Relative 2</title>
+			<title code="0x21">Relative 3</title>
+			<title code="0x23">Tavern 1</title>
+			<title code="0x24">Tavern 2</title>
+			<title code="0x25">Tavern 3</title>
+			<title code="0x26">Tavern 4</title>
+			<title code="0x29">Wedding</title>
+			<title code="0x14">Endgame</title>
+			<title code="0x1A">Jail Tune</title>
+			<title code="0x27">Visit in Town 1</title>
+			<title code="0x28">Visit in Town 2</title>
+			<title code="0x22">Shipwright</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Railroad Tycoon (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="railroadtycoon_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Main Theme</title>
+			<title code="0x08">Fiddle Tune</title>
+			<title code="0x12">Sad Tune</title>
+			<title code="0x13">Year End Tune (4 parts, restart for the next one)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Railroad Tycoon (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="railroadtycoon_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Main Theme</title>
+			<title code="0x08">Fiddle Tune</title>
+			<title code="0x12">Sad Tune</title>
+			<title code="0x13">Year End Tune (4 parts, restart for the next one)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Railroad Tycoon (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="railroadtycoon_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Main Theme</title>
+			<title code="0x08">Fiddle Tune</title>
+			<title code="0x12">Sad Tune</title>
+			<title code="0x13">Year End Tune (4 parts, restart for the next one)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Red Storm Rising (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="redstormrising_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Main Theme</title>
+			<title code="0x00">End Music</title>
+			<title code="0x24">Change Flags 1</title>
+			<title code="0x26">Change Flags 2</title>
+			<title code="0x3E">Scottish Port</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Red Storm Rising (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="redstormrising_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Main Theme</title>
+			<title code="0x00">End Music</title>
+			<title code="0x24">Change Flags 1</title>
+			<title code="0x26">Change Flags 2</title>
+			<title code="0x3E">Scottish Port</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Red Storm Rising (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="redstormrising_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Main Theme</title>
+			<title code="0x00">End Music</title>
+			<title code="0x24">Change Flags 1</title>
+			<title code="0x26">Change Flags 2</title>
+			<title code="0x3E">Scottish Port</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Silent Service II (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="silentservice2_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x1C">Music 2</title>
+			<title code="0x1D">Music 3</title>
+			<title code="0x1E">Music 4</title>
+			<title code="0x1F">Music 5</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Silent Service II (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="silentservice2_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x1C">Music 2</title>
+			<title code="0x1D">Music 3</title>
+			<title code="0x1E">Music 4</title>
+			<title code="0x1F">Music 5</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Silent Service II (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="silentservice2_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Music 1</title>
+			<title code="0x1C">Music 2</title>
+			<title code="0x1D">Music 3</title>
+			<title code="0x1E">Music 4</title>
+			<title code="0x1F">Music 5</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Special Forces (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="specforces_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">ADLIB.CAT</rom>
+			<rom type="file" offset="9">AMUSIC.BIN</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Special Forces (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="specforces_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="-1">ROLAND.CAT</rom>
+			<rom type="file" offset="9">RMUSIC.BIN</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Special Forces (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="specforces_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="-1">ROLAND.CAT</rom>
+			<rom type="file" offset="9">RMUSIC.BIN</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Sword of the Samurai (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="swordsamurai_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x56">Music 1</title>
+			<title code="0x28">Music 2</title>
+			<title code="0x2A">Music 3</title>
+			<title code="0x2C">Music 4</title>
+			<title code="0x2E">Music 5</title>
+			<title code="0x30">Music 6</title>
+			<title code="0x32">Music 7</title>
+			<title code="0x34">Music 8</title>
+			<title code="0x38">Music 9</title>
+			<title code="0x46">Music 10</title>
+			<title code="0x48">Music 11</title>
+			<title code="0x4A">Music 12</title>
+			<title code="0x4C">Music 13</title>
+			<title code="0x52">Music 14</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Sword of the Samurai (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="swordsamurai_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x56">Music 1</title>
+			<title code="0x28">Music 2</title>
+			<title code="0x2A">Music 3</title>
+			<title code="0x2C">Music 4</title>
+			<title code="0x2E">Music 5</title>
+			<title code="0x30">Music 6</title>
+			<title code="0x32">Music 7</title>
+			<title code="0x34">Music 8</title>
+			<title code="0x38">Music 9</title>
+			<title code="0x46">Music 10</title>
+			<title code="0x48">Music 11</title>
+			<title code="0x4A">Music 12</title>
+			<title code="0x4C">Music 13</title>
+			<title code="0x52">Music 14</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Sword of the Samurai (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="swordsamurai_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x56">Music 1</title>
+			<title code="0x28">Music 2</title>
+			<title code="0x2A">Music 3</title>
+			<title code="0x2C">Music 4</title>
+			<title code="0x2E">Music 5</title>
+			<title code="0x30">Music 6</title>
+			<title code="0x32">Music 7</title>
+			<title code="0x34">Music 8</title>
+			<title code="0x38">Music 9</title>
+			<title code="0x46">Music 10</title>
+			<title code="0x48">Music 11</title>
+			<title code="0x4A">Music 12</title>
+			<title code="0x4C">Music 13</title>
+			<title code="0x52">Music 14</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Task Force 1942 (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x140"/>
+		</options>
+		<romlist archive="tf1942_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x2C">Music 1</title>
+			<title code="0x26">Music 2</title>
+			<title code="0x27">Music 3</title>
+			<title code="0x28">Music 4</title>
+			<title code="0x29">Music 5</title>
+			<title code="0x2A">Music 6</title>
+			<title code="0x2B">Music 7</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Task Force 1942 (YMF262)</name>
+		<driver type="soundblaster16">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl3_mix" value="0x180"/>
+		</options>
+		<romlist archive="tf1942_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">PSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x2C">Music 1</title>
+			<title code="0x26">Music 2</title>
+			<title code="0x27">Music 3</title>
+			<title code="0x28">Music 4</title>
+			<title code="0x29">Music 5</title>
+			<title code="0x2A">Music 6</title>
+			<title code="0x2B">Music 7</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Task Force 1942 (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="tf1942_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x2C">Music 1</title>
+			<title code="0x26">Music 2</title>
+			<title code="0x27">Music 3</title>
+			<title code="0x28">Music 4</title>
+			<title code="0x29">Music 5</title>
+			<title code="0x2A">Music 6</title>
+			<title code="0x2B">Music 7</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Task Force 1942 (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="tf1942_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x2C">Music 1</title>
+			<title code="0x26">Music 2</title>
+			<title code="0x27">Music 3</title>
+			<title code="0x28">Music 4</title>
+			<title code="0x29">Music 5</title>
+			<title code="0x2A">Music 6</title>
+			<title code="0x2B">Music 7</title>
+		</titlelist>
+	</game>
+
+	<game>
+		<name>[PC/AT] The Legacy (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="legacy_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="8">ADLIB.CAT</rom>
+			<rom type="file" offset="9">AMUSIC.BIN</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+			<title code="0x06">Music 7</title>
+			<title code="0x07">Music 8</title>
+			<title code="0x08">Music 9</title>
+			<title code="0x09">Music 10</title>
+			<title code="0x0A">Music 11</title>
+			<title code="0x0B">Music 12</title>
+			<title code="0x0C">Music 13</title>
+			<title code="0x0D">Music 14</title>
+			<title code="0x0E">Music 15</title>
+			<title code="0x0F">Music 16</title>
+			<title code="0x10">Music 17</title>
+			<title code="0x11">Music 18</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] The Legacy (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="legacy_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="8">ROLAND.CAT</rom>
+			<rom type="file" offset="9">RMUSIC.BIN</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+			<title code="0x06">Music 7</title>
+			<title code="0x07">Music 8</title>
+			<title code="0x08">Music 9</title>
+			<title code="0x09">Music 10</title>
+			<title code="0x0A">Music 11</title>
+			<title code="0x0B">Music 12</title>
+			<title code="0x0C">Music 13</title>
+			<title code="0x0D">Music 14</title>
+			<title code="0x0E">Music 15</title>
+			<title code="0x0F">Music 16</title>
+			<title code="0x10">Music 17</title>
+			<title code="0x11">Music 18</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] The Legacy (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="legacy_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="8">ROLAND.CAT</rom>
+			<rom type="file" offset="9">RMUSIC.BIN</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Music 1</title>
+			<title code="0x01">Music 2</title>
+			<title code="0x02">Music 3</title>
+			<title code="0x03">Music 4</title>
+			<title code="0x04">Music 5</title>
+			<title code="0x05">Music 6</title>
+			<title code="0x06">Music 7</title>
+			<title code="0x07">Music 8</title>
+			<title code="0x08">Music 9</title>
+			<title code="0x09">Music 10</title>
+			<title code="0x0A">Music 11</title>
+			<title code="0x0B">Music 12</title>
+			<title code="0x0C">Music 13</title>
+			<title code="0x0D">Music 14</title>
+			<title code="0x0E">Music 15</title>
+			<title code="0x0F">Music 16</title>
+			<title code="0x10">Music 17</title>
+			<title code="0x11">Music 18</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultimate NFL Coaches Club Football (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="ultimatenfl_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">ASOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0A">Music 2</title>
+			<title code="0x0F">Music 3</title>
+			<title code="0x10">Music 4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultimate NFL Coaches Club Football (YMF262)</name>
+		<driver type="soundblaster16">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl3_mix" value="0x180"/>
+		</options>
+		<romlist archive="ultimatenfl_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">PSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0A">Music 2</title>
+			<title code="0x0F">Music 3</title>
+			<title code="0x10">Music 4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultimate NFL Coaches Club Football (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="ultimatenfl_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0A">Music 2</title>
+			<title code="0x0F">Music 3</title>
+			<title code="0x10">Music 4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultimate NFL Coaches Club Football (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="ultimatenfl_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="9">RSOUND.DRV</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0A">Music 2</title>
+			<title code="0x0F">Music 3</title>
+			<title code="0x10">Music 4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultimate NFL Coaches Club Football (GM)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="ultimatenfl_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">GMRESET.COM</rom>
+			<rom type="file" offset="9">GSOUND.DRV</rom>
+			<rom type="shell" offset="0">GMRESET.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0A">Music 2</title>
+			<title code="0x0F">Music 3</title>
+			<title code="0x10">Music 4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] Ultimate NFL Coaches Club Football (Vermouth)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x80"/>
+		</options>
+		<romlist archive="ultimatenfl_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="9">GSOUND.DRV</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x09">Music 1</title>
+			<title code="0x0A">Music 2</title>
+			<title code="0x0F">Music 3</title>
+			<title code="0x10">Music 4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] X-COM: UFO Defense (UFO: Enemy Unknown) / John Broomhall / 1994 Microprose (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="xcomufo_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">ADLIB.COM</rom>
+			<rom type="file" offset="8">ADLIB.CAT</rom>
+			<rom type="shell" offset="0">ADLIB.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Geoscape</title>
+			<title code="0x02">Intercept</title>
+			<title code="0x03">Defend</title>
+			<title code="0x06">Enemy Base</title>
+			<title code="0x08">Mars</title>
+			<title code="0x09">Mars Again</title>
+			<title code="0x0A">Lose</title>
+			<title code="0x0B">Win</title>
+			<title code="0x0C">Story</title>
+			<title code="0x11">Tactical Section</title>
+			<title code="0x12">Geoscape Alternative</title>
+			<title code="0x13">Intro 1</title>
+			<title code="0x14">Intro 2</title>
+			<title code="0x15">Intro 3</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] X-COM: Terror from the Deep (YM3812)</name>
+		<driver type="adlib">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="opl2_mix" value="0x1C0"/>
+		</options>
+		<romlist archive="xcomtftd_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">ADLIB.COM</rom>
+			<rom type="file" offset="8">ADLIB.CAT</rom>
+			<rom type="shell" offset="0">ADLIB.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Tune 00 - Music for the floppy intro</title>
+			<title code="0x01">Tune 01 - Signature type jingle</title>
+			<title code="0x02">Tune 02 - Load Game? New game?</title>
+			<title code="0x03">Tune 03</title>
+			<title code="0x04">Tune 04</title>
+			<title code="0x05">Tune 05</title>
+			<title code="0x06">Tune 06</title>
+			<title code="0x07">Tune 07</title>
+			<title code="0x08">Tune 08</title>
+			<title code="0x09">Tune 09 - Interception sequence</title>
+			<title code="0x0A">Tune 10 - Alternative interception sequence</title>
+			<title code="0x0B">Tune 11 - Second alternative interception sequence</title>
+			<title code="0x0C">Tune 12 - Pre-mission: Islands/Ports/Ships</title>
+			<title code="0x0D">Tune 13 - Pre-mission: Mars</title>
+			<title code="0x0E">Tune 14 - Pre-mission: Defend your base</title>
+			<title code="0x0F">Tune 15 - Pre-mission: Artefacts/Attack alien base</title>
+			<title code="0x10">Tune 16 - De-brief for okay or above rating</title>
+			<title code="0x11">Tune 17 - De-brief for poor or terrible rating</title>
+			<title code="0x12">Tune 18 - Tactical game - aquatic</title>
+			<title code="0x13">Tune 19 - Tactical game - on dry ground</title>
+			<title code="0x14">Tune 20 - Music for the floppy outro: win</title>
+			<title code="0x15">Tune 21 - Music for the floppy outro: lose</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] X-COM: Terror from the Deep (MT-32)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="2"/>
+		</options>
+		<romlist archive="xcomtftd_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="-1">LAPC.COM</rom>
+			<rom type="file" offset="-1">LAPC1.PAT</rom>
+			<rom type="file" offset="8">ROLAND.CAT</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">LAPC.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Tune 00 - Music for the floppy intro</title>
+			<title code="0x01">Tune 01 - Signature type jingle</title>
+			<title code="0x02">Tune 02 - Load Game? New game?</title>
+			<title code="0x03">Tune 03</title>
+			<title code="0x04">Tune 04</title>
+			<title code="0x05">Tune 05</title>
+			<title code="0x06">Tune 06</title>
+			<title code="0x07">Tune 07</title>
+			<title code="0x08">Tune 08</title>
+			<title code="0x09">Tune 09 - Interception sequence</title>
+			<title code="0x0A">Tune 10 - Alternative interception sequence</title>
+			<title code="0x0B">Tune 11 - Second alternative interception sequence</title>
+			<title code="0x0C">Tune 12 - Pre-mission: Islands/Ports/Ships</title>
+			<title code="0x0D">Tune 13 - Pre-mission: Mars</title>
+			<title code="0x0E">Tune 14 - Pre-mission: Defend your base</title>
+			<title code="0x0F">Tune 15 - Pre-mission: Artefacts/Attack alien base</title>
+			<title code="0x10">Tune 16 - De-brief for okay or above rating</title>
+			<title code="0x11">Tune 17 - De-brief for poor or terrible rating</title>
+			<title code="0x12">Tune 18 - Tactical game - aquatic</title>
+			<title code="0x13">Tune 19 - Tactical game - on dry ground</title>
+			<title code="0x14">Tune 20 - Music for the floppy outro: win</title>
+			<title code="0x15">Tune 21 - Music for the floppy outro: lose</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] X-COM: Terror from the Deep (Munt, MT-32 simulation)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+		</options>
+		<romlist archive="xcomtftd_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MTRESET.COM</rom>
+			<rom type="file" offset="-1">LAPC.COM</rom>
+			<rom type="file" offset="-1">LAPC1.PAT</rom>
+			<rom type="file" offset="8">ROLAND.CAT</rom>
+			<rom type="shell" offset="0">MTRESET.COM</rom>
+			<rom type="shell" offset="0">LAPC.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Tune 00 - Music for the floppy intro</title>
+			<title code="0x01">Tune 01 - Signature type jingle</title>
+			<title code="0x02">Tune 02 - Load Game? New game?</title>
+			<title code="0x03">Tune 03</title>
+			<title code="0x04">Tune 04</title>
+			<title code="0x05">Tune 05</title>
+			<title code="0x06">Tune 06</title>
+			<title code="0x07">Tune 07</title>
+			<title code="0x08">Tune 08</title>
+			<title code="0x09">Tune 09 - Interception sequence</title>
+			<title code="0x0A">Tune 10 - Alternative interception sequence</title>
+			<title code="0x0B">Tune 11 - Second alternative interception sequence</title>
+			<title code="0x0C">Tune 12 - Pre-mission: Islands/Ports/Ships</title>
+			<title code="0x0D">Tune 13 - Pre-mission: Mars</title>
+			<title code="0x0E">Tune 14 - Pre-mission: Defend your base</title>
+			<title code="0x0F">Tune 15 - Pre-mission: Artefacts/Attack alien base</title>
+			<title code="0x10">Tune 16 - De-brief for okay or above rating</title>
+			<title code="0x11">Tune 17 - De-brief for poor or terrible rating</title>
+			<title code="0x12">Tune 18 - Tactical game - aquatic</title>
+			<title code="0x13">Tune 19 - Tactical game - on dry ground</title>
+			<title code="0x14">Tune 20 - Music for the floppy outro: win</title>
+			<title code="0x15">Tune 21 - Music for the floppy outro: lose</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] X-COM: Terror from the Deep (GM)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="8"/>
+		</options>
+		<romlist archive="xcomtftd_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">GMRESET.COM</rom>
+			<rom type="file" offset="-1">GSRESET.COM</rom>
+			<rom type="file" offset="-1">MPU.COM</rom>
+			<rom type="file" offset="8">GM.CAT</rom>
+			<rom type="shell" offset="0">GMRESET.COM</rom>
+			<rom type="shell" offset="0">GSRESET.COM</rom>
+			<rom type="shell" offset="0">MPU.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Tune 00 - Music for the floppy intro</title>
+			<title code="0x01">Tune 01 - Signature type jingle</title>
+			<title code="0x02">Tune 02 - Load Game? New game?</title>
+			<title code="0x03">Tune 03</title>
+			<title code="0x04">Tune 04</title>
+			<title code="0x05">Tune 05</title>
+			<title code="0x06">Tune 06</title>
+			<title code="0x07">Tune 07</title>
+			<title code="0x08">Tune 08</title>
+			<title code="0x09">Tune 09 - Interception sequence</title>
+			<title code="0x0A">Tune 10 - Alternative interception sequence</title>
+			<title code="0x0B">Tune 11 - Second alternative interception sequence</title>
+			<title code="0x0C">Tune 12 - Pre-mission: Islands/Ports/Ships</title>
+			<title code="0x0D">Tune 13 - Pre-mission: Mars</title>
+			<title code="0x0E">Tune 14 - Pre-mission: Defend your base</title>
+			<title code="0x0F">Tune 15 - Pre-mission: Artefacts/Attack alien base</title>
+			<title code="0x10">Tune 16 - De-brief for okay or above rating</title>
+			<title code="0x11">Tune 17 - De-brief for poor or terrible rating</title>
+			<title code="0x12">Tune 18 - Tactical game - aquatic</title>
+			<title code="0x13">Tune 19 - Tactical game - on dry ground</title>
+			<title code="0x14">Tune 20 - Music for the floppy outro: win</title>
+			<title code="0x15">Tune 21 - Music for the floppy outro: lose</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC/AT] X-COM: Terror from the Deep (Vermouth)</name>
+		<driver type="beep">pcatdos</driver>
+		<driveralias type="PC/AT">Microprose</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x100"/>
+		</options>
+		<romlist archive="xcomtftd_at">
+			<rom type="file" offset="-1">CODE.COM</rom>
+			<rom type="file" offset="-1">MPU.COM</rom>
+			<rom type="file" offset="8">GM.CAT</rom>
+			<rom type="shell" offset="0">MPU.COM</rom>
+			<rom type="shell" offset="0">CODE.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Tune 00 - Music for the floppy intro</title>
+			<title code="0x01">Tune 01 - Signature type jingle</title>
+			<title code="0x02">Tune 02 - Load Game? New game?</title>
+			<title code="0x03">Tune 03</title>
+			<title code="0x04">Tune 04</title>
+			<title code="0x05">Tune 05</title>
+			<title code="0x06">Tune 06</title>
+			<title code="0x07">Tune 07</title>
+			<title code="0x08">Tune 08</title>
+			<title code="0x09">Tune 09 - Interception sequence</title>
+			<title code="0x0A">Tune 10 - Alternative interception sequence</title>
+			<title code="0x0B">Tune 11 - Second alternative interception sequence</title>
+			<title code="0x0C">Tune 12 - Pre-mission: Islands/Ports/Ships</title>
+			<title code="0x0D">Tune 13 - Pre-mission: Mars</title>
+			<title code="0x0E">Tune 14 - Pre-mission: Defend your base</title>
+			<title code="0x0F">Tune 15 - Pre-mission: Artefacts/Attack alien base</title>
+			<title code="0x10">Tune 16 - De-brief for okay or above rating</title>
+			<title code="0x11">Tune 17 - De-brief for poor or terrible rating</title>
+			<title code="0x12">Tune 18 - Tactical game - aquatic</title>
+			<title code="0x13">Tune 19 - Tactical game - on dry ground</title>
+			<title code="0x14">Tune 20 - Music for the floppy outro: win</title>
+			<title code="0x15">Tune 21 - Music for the floppy outro: lose</title>
+		</titlelist>
+	</game>
+</gamelist>

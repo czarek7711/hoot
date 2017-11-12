@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Old Stuff -->
+	<game>
+		<name>[X68000] Angel Dive (yamada_kikaku) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<romlist archive="angdive68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0B">SFX #0B</title>
+			<title code="0x0C">SFX #0C</title>
+			<title code="0x0D">SFX #0D</title>
+			<title code="0x0E">SFX #0E</title>
+			<title code="0x0F">SFX #0F</title>
+			<title code="0x10">SFX #10</title>
+			<title code="0x11">SFX #11</title>
+			<title code="0x12">SFX #12</title>
+			<title code="0x13">SFX #13</title>
+			<title code="0x14">SFX #14</title>
+			<title code="0x15">SFX #15</title>
+			<title code="0x16">SFX #16</title>
+			<title code="0x17">SFX #17</title>
+			<title code="0x18">SFX #18</title>
+			<title code="0x19">SFX #19</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Angel Dive (yamada_kikaku) (SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="angdive68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">Angel Dive [Stage 1]</title>
+			<title code="0x01">Chronicle [Stage 1 Boss]</title>
+			<title code="0x02">A.D.A. [Stage 2]</title>
+			<title code="0x03">15 sec. [Stage 2 Boss A]</title>
+			<title code="0x04">Black Widow [Stage 2 Boss B]</title>
+			<title code="0x05">Uba-Sakura [Stage 3 A]</title>
+			<title code="0x06">Outsider *type-S* [Stage 3 B]</title>
+			<title code="0x07">VIXEN [Stage 3 Boss]</title>
+			<title code="0x08">Irminate [Stage 4 A]</title>
+			<title code="0x09">Alternate [Stage 4 B]</title>
+			<title code="0x0A">Angel Rise [Ending]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Angel Dive (yamada_kikaku) (Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x80"/>
+		</options>
+		<romlist archive="angdive68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">Angel Dive [Stage 1]</title>
+			<title code="0x01">Chronicle [Stage 1 Boss]</title>
+			<title code="0x02">A.D.A. [Stage 2]</title>
+			<title code="0x03">15 sec. [Stage 2 Boss A]</title>
+			<title code="0x04">Black Widow [Stage 2 Boss B]</title>
+			<title code="0x05">Uba-Sakura [Stage 3 A]</title>
+			<title code="0x06">Outsider *type-S* [Stage 3 B]</title>
+			<title code="0x07">VIXEN [Stage 3 Boss]</title>
+			<title code="0x08">Irminate [Stage 4 A]</title>
+			<title code="0x09">Alternate [Stage 4 B]</title>
+			<title code="0x0A">Angel Rise [Ending]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Babel no Tou (バベルの塔) (gamma_awc) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<romlist archive="babel68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0A">BGM #0a</title>
+			<title code="0x0B">BGM #0b</title>
+			<title code="0x0C">BGM #0c</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Barcelona Fighter '92 (ltt) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<romlist archive="bfighter68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x08">BF_PCM_0</title>
+			<title code="0x09">BF_PCM_1</title>
+			<title code="0x0A">BF_PCM_2</title>
+			<title code="0x0B">BF_PCM_3</title>
+			<title code="0x0C">BF_PCM_4</title>
+			<title code="0x0D">BF_PCM_5</title>
+			<title code="0xffff">BF_MUS_0</title>
+			<title code="0x01">BF_MUS_1</title>
+			<title code="0x02">BF_MUS_2</title>
+			<title code="0x03">BF_MUS_3</title>
+			<title code="0x04">BF_MUS_4</title>
+			<title code="0x05">BF_MUS_5</title>
+			<title code="0x06">BF_MUS_A</title>
+			<title code="0x07">BF_MUS_B</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Barcelona Fighter '92 (ltt) (SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="bfighter68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0E">SC55_0</title>
+			<title code="0x0F">SC55_1</title>
+			<title code="0x10">SC55_2</title>
+			<title code="0x11">SC55_3</title>
+			<title code="0x12">SC55_4</title>
+			<title code="0x13">SC55_5</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Barcelona Fighter '92 (ltt) (Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x80"/>
+		</options>
+		<romlist archive="bfighter68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0E">SC55_0</title>
+			<title code="0x0F">SC55_1</title>
+			<title code="0x10">SC55_2</title>
+			<title code="0x11">SC55_3</title>
+			<title code="0x12">SC55_4</title>
+			<title code="0x13">SC55_5</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Souhou Blue Phoenix Taste Version (蒼鳳) (stillrise) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<romlist archive="bphoenix68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">Introduction</title>
+			<title code="0x01">Titleback</title>
+			<title code="0x02">Stage 1</title>
+			<title code="0x03">Stage 4</title>
+			<title code="0x04">Game Over</title>
+			<title code="0x05">Stage Clear</title>
+			<title code="0x06">Boss</title>
+			<title code="0x07">Ranking</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Chacha Fighter V (tmk) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<romlist archive="chachav68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">Title</title>
+			<title code="0x01">Character Select</title>
+			<title code="0x02">Gouki</title>
+			<title code="0x03">Champion</title>
+			<title code="0x04">Chacha</title>
+			<title code="0x05">Dorothy</title>
+			<title code="0x06">Marin</title>
+			<title code="0x07">Orin</title>
+			<title code="0x08">Riiya</title>
+			<title code="0x09">Seravi</title>
+			<title code="0x0A">Shiine</title>
+			<title code="0x0B">Yakko</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] ChoRenSha 68K (超連射68K) (famibe_no_yosshin) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="chorensha68snd">
+			<rom type="code" offset="0x00000">sz268snd.bin</rom>
+			<rom type="x" offset="0x10000">MCDRV.X</rom>
+			<rom type="code" offset="0x36000">SZ2_S0.MDC</rom>
+			<rom type="code" offset="0x3A000">SZ2_S1.MDC</rom>
+			<rom type="code" offset="0x3E000">SZ2_S2.MDC</rom>
+			<rom type="code" offset="0x42000">SZ2_S3.MDC</rom>
+			<rom type="code" offset="0x46000">SZ2_S4.MDC</rom>
+			<rom type="code" offset="0x4A000">SZ2_S5.MDC</rom>
+			<rom type="code" offset="0x4E000">SZ2_S6.MDC</rom>
+			<rom type="code" offset="0x52000">SZ2_B1.MDC</rom>
+			<rom type="code" offset="0x56000">SZ2_B2.MDC</rom>
+			<rom type="code" offset="0x5A000">SZ2_B3.MDC</rom>
+			<rom type="code" offset="0x5E000">SZ2_NM.MDC</rom>
+			<rom type="code" offset="0x62000">SZ2_TMP.MDC</rom>
+			<rom type="code" offset="0x66000">SZ2_GO.MDC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">Planet the E-A-R-T-H [Stage 1]</title>
+			<title code="0x03">Justice of Galaxy [Stage 2]</title>
+			<title code="0x04">Pleasure Trip ～君を乗せて～ [Stage 3]</title>
+			<title code="0x05">Infinity... [Stage 4]</title>
+			<title code="0x06">I'm Fighting To Your Happiness [Stage 5]</title>
+			<title code="0x07">Windy [Stage 6]</title>
+			<title code="0x01">All or Nothing [Bonus Stage]</title>
+			<title code="0x08">Chips!! [Boss 1]</title>
+			<title code="0x09">Impossible One [Boss 2]</title>
+			<title code="0x0a">Cookin' in the Hell [Boss 3]</title>
+			<title code="0x0c">We Love the E-A-R-T-H [High Score]</title>
+			<title code="0x0b">俺の人生そう捨てたもんじゃないぜ [See You Next Time]</title>
+			<title code="0x0d">Be Happy? [Game Over]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] ChoRenSha 68K for Windows (超連射68K) (famibe_no_yosshin) (OPM+MSM)</name>
+		<driver type="mxdrv">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<options>
+			<option name="opm_mix" value="0x70"/>
+			<option name="pcm_mix" value="0x82"/>
+		</options>
+		<romlist archive="chorensha68snd">
+			<rom type="data" offset="0x01">SZ2_B1.MDX</rom>
+			<rom type="data" offset="0x02">SZ2_B2.MDX</rom>
+			<rom type="data" offset="0x03">SZ2_B3.MDX</rom>
+			<rom type="data" offset="0x04">SZ2_GO.MDX</rom>
+			<rom type="data" offset="0x05">SZ2_NM.MDX</rom>
+			<rom type="data" offset="0x06">SZ2_S0.MDX</rom>
+			<rom type="data" offset="0x07">SZ2_S1.MDX</rom>
+			<rom type="data" offset="0x08">SZ2_S2.MDX</rom>
+			<rom type="data" offset="0x09">SZ2_S3.MDX</rom>
+			<rom type="data" offset="0x0a">SZ2_S4.MDX</rom>
+			<rom type="data" offset="0x0b">SZ2_S5.MDX</rom>
+			<rom type="data" offset="0x0c">SZ2_S6.MDX</rom>
+			<rom type="data" offset="0x0d">SZ2_TMP.MDX</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x07">Planet the E-A-R-T-H [Stage 1]</title>
+			<title code="0x08">Justice of Galaxy [Stage 2]</title>
+			<title code="0x09">Pleasure Trip ～君を乗せて～ [Stage 3]</title>
+			<title code="0x0a">Infinity... [Stage 4]</title>
+			<title code="0x0b">I'm Fighting To Your Happiness [Stage 5]</title>
+			<title code="0x0c">Windy [Stage 6]</title>
+			<title code="0x06">All or Nothing [Bonus Stage]</title>
+			<title code="0x01">Chips!! [Boss 1]</title>
+			<title code="0x02">Impossible One [Boss 2]</title>
+			<title code="0x03">Cookin' in the Hell [Boss 3]</title>
+			<title code="0x05">We Love the E-A-R-T-H [High Score]</title>
+			<title code="0x0d">俺の人生そう捨てたもんじゃないぜ [See You Next Time]</title>
+			<title code="0x04">Be Happy? [Game Over]</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Gardis Light (Sprite) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<romlist archive="glight68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Hellhound (Breakthrough) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<options>
+			<option name="opm_mix" value="0xC0"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="hellhound68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x100000">ZPD</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">Stop the Music</title>
+			<title code="0x09">Credit</title>
+			<title code="0x01">Die for Someone? [Stage 1]</title>
+			<title code="0x02">Biosphere [Stage 2]</title>
+			<title code="0x03">Kisetsu-Fu [Stage 3]</title>
+			<title code="0x04">Infinity [Stage 4]</title>
+			<title code="0x05">Outer Limits [Stage 5]</title>
+			<title code="0x06">Heading for the Thunderbolt [Boss]</title>
+			<title code="0x07">You are not Alone [Ending]</title>
+			<title code="0x08">Power Select</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Hellhound (Breakthrough) (SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="hellhound68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x100000">ZPD</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">Stop the Music</title>
+			<title code="0x0A">Die for Someone? [Stage 1]</title>				
+			<title code="0x0B">Biosphere [Stage 2]</title>							 
+			<title code="0x0C">Kisetsu-Fu [Stage 3]</title>							
+			<title code="0x0D">Infinity [Stage 4]</title>								
+			<title code="0x0E">Outer Limits [Stage 5]</title>						
+			<title code="0x0F">Heading for the Thunderbolt [Boss]</title>
+			<title code="0x10">You are not Alone [Ending]</title>				
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Hellhound (Breakthrough) (Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x80"/>
+		</options>
+		<romlist archive="hellhound68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x100000">ZPD</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">Stop the Music</title>
+			<title code="0x0A">Die for Someone? [Stage 1]</title>				
+			<title code="0x0B">Biosphere [Stage 2]</title>							 
+			<title code="0x0C">Kisetsu-Fu [Stage 3]</title>							
+			<title code="0x0D">Infinity [Stage 4]</title>								
+			<title code="0x0E">Outer Limits [Stage 5]</title>						
+			<title code="0x0F">Heading for the Thunderbolt [Boss]</title>
+			<title code="0x10">You are not Alone [Ending]</title>				
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Karou Densetsu (過労伝説) (DCS) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+		<romlist archive="karouden68snd">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">KAM_BT1</title>
+			<title code="0x01">KAM_BT2</title>
+			<title code="0x02">KAM_BT3</title>
+			<title code="0x03">KAM_BT4</title>
+			<title code="0x04">KAM_BT5</title>
+			<title code="0x05">KAM_BT6</title>
+			<title code="0x06">KAM_END</title>
+			<title code="0x07">KAM_ST</title>
+			<title code="0x08">KAM_ED</title>
+			<title code="0x09">KAM_GO</title>
+			<title code="0x0A">KAM_TITLE</title>
+			<title code="0x0B">KAM_CG1</title>
+			<title code="0x0C">KAM_CG2</title>
+			<title code="0x0D">KAM_CONT</title>
+			<title code="0x0E">KAM_CG3</title>
+			<title code="0x0F">RB_BEFORE</title>
+			<title code="0x10">KAM_YOKOKU</title>
+			<title code="0x11">KAM_CHOI</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Kounai Shasei (OPM+MSM)</name>
+		<!-- COSMIC PSYCHOのドライバを流用 -->
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Fairytale X-Shitei</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="kounai68snd">
+			<rom type="code">cos68snd.bin</rom>
+			<rom type="x" offset="0x08000">tank.x</rom>
+			<rom type="code" offset="0x1bbb8">ZON5.PCD</rom>
+			<rom type="code" offset="0x090000">U_01.USO</rom>
+			<rom type="code" offset="0x095000">U_02.USO</rom>
+			<rom type="code" offset="0x09a000">U_03.USO</rom>
+			<rom type="code" offset="0x09f000">U_04.USO</rom>
+			<rom type="code" offset="0x0a4000">U_05.USO</rom>
+			<rom type="code" offset="0x0a9000">U_06.USO</rom>
+			<rom type="code" offset="0x0ae000">U_07.USO</rom>
+			<rom type="code" offset="0x0b3000">U_08.USO</rom>
+			<rom type="code" offset="0x0b8000">U_09.USO</rom>
+			<rom type="code" offset="0x0bd000">U_10.USO</rom>
+			<rom type="code" offset="0x0c2000">U_11.USO</rom>
+			<rom type="code" offset="0x0c7000">U_12.USO</rom>
+			<rom type="code" offset="0x0cc000">U_13.USO</rom>
+			<rom type="code" offset="0x0d1000">U_14.USO</rom>
+			<rom type="code" offset="0x0d6000">U_15.USO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">U_01.USO</title>
+			<title code="0x02">U_02.USO</title>
+			<title code="0x03">U_03.USO</title>
+			<title code="0x04">U_04.USO</title>
+			<title code="0x05">U_05.USO</title>
+			<title code="0x06">U_06.USO</title>
+			<title code="0x07">U_07.USO</title>
+			<title code="0x08">U_08.USO</title>
+			<title code="0x09">U_09.USO</title>
+			<title code="0x0a">U_10.USO</title>
+			<title code="0x0b">U_11.USO</title>
+			<title code="0x0c">U_12.USO</title>
+			<title code="0x0d">U_13.USO</title>
+			<title code="0x0e">U_14.USO</title>
+			<title code="0x0f">U_15.USO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Kera Kera Sei (OPM+MSM)</name>
+		<!-- COSMIC PSYCHOのドライバを流用 -->
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Cocktail Soft</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="kuruh68snd">
+			<rom type="code">cos68snd.bin</rom>
+			<rom type="x" offset="0x08000">tank.x</rom>
+			<rom type="code" offset="0x1bbb8">KERA.PCD</rom>
+			<rom type="code" offset="0x090000">KR_BAND.USO</rom>
+			<rom type="code" offset="0x095000">KR_END.USO</rom>
+			<rom type="code" offset="0x09a000">KR_H.USO</rom>
+			<rom type="code" offset="0x09f000">KR_JIKE.USO</rom>
+			<rom type="code" offset="0x0a4000">KR_OPEN.USO</rom>
+			<rom type="code" offset="0x0a9000">KR_SAD.USO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">KR_BAND.USO</title>
+			<title code="0x02">KR_END.USO</title> 
+			<title code="0x03">KR_H.USO</title>	 
+			<title code="0x04">KR_JIKE.USO</title>
+			<title code="0x05">KR_OPEN.USO</title>
+			<title code="0x06">KR_SAD.USO</title> 
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Romance of the Three Kingdoms 2 (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Koei</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="san2_68snd">
+			<rom type="code">opmdrv.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x24000">MUS01.opm</rom>
+			<rom type="code" offset="0x28000">MUS02.opm</rom>
+			<rom type="code" offset="0x2c000">MUS03.opm</rom>
+			<rom type="code" offset="0x30000">MUS04.opm</rom>
+			<rom type="code" offset="0x34000">MUS05.opm</rom>
+			<rom type="code" offset="0x38000">MUS06.opm</rom>
+			<rom type="code" offset="0x3c000">MUS07.opm</rom>
+			<rom type="code" offset="0x40000">MUS08.opm</rom>
+			<rom type="code" offset="0x44000">MUS09.opm</rom>
+			<rom type="code" offset="0x48000">MUS10.opm</rom>
+			<rom type="code" offset="0x4c000">MUS11.opm</rom>
+			<rom type="code" offset="0x50000">MUS12.opm</rom>
+			<rom type="code" offset="0x54000">MUS13.opm</rom>
+			<rom type="code" offset="0x58000">MUS14.opm</rom>
+			<rom type="code" offset="0x5c000">MUS15.opm</rom>
+			<rom type="code" offset="0x60000">MUS16.opm</rom>
+			<rom type="code" offset="0x64000">MUS17.opm</rom>
+			<rom type="code" offset="0x68000">MUS18.opm</rom>
+			<rom type="code" offset="0x6c000">MUS19.opm</rom>
+			<rom type="code" offset="0x70000">MUS20.opm</rom>
+			<rom type="code" offset="0x74000">MUS21.opm</rom>
+			<rom type="code" offset="0x78000">SAN2.OPM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x1702">Opening ~ Daybreak (オープニング～黎明～)</title>
+			<title code="0x1703">Prologue (序章)</title>
+			<title code="0x1704">Theme of Chugen (魏のテーマ)</title>
+			<title code="0x1708">Theme of Kahoku (華北諸国)</title>
+			<title code="0x1706">Theme of Kounan (呉のテーマ)</title>
+			<title code="0x1707">Theme of the Frontiers (列強諸国)</title>
+			<title code="0x1705">Theme of Ekishu (蜀のテーマ)</title>
+			<title code="0x1709">War in Chugen (戦闘1)</title>
+			<title code="0x170d">War in Kahoku (戦闘5)</title>
+			<title code="0x170b">War in Kounan (戦闘3)</title>
+			<title code="0x170c">War in the Frontiers (戦闘4)</title>
+			<title code="0x170a">War in the Ekishu (戦闘2)</title>
+			<title code="0x1712">Defeated (敗戦)</title>
+			<title code="0x1711">Victory (勝利)</title>
+			<title code="0x1714">Envoy Visit (使臣来訪)</title>
+			<title code="0x1710">The Ruler's Death in Battle (君主陣没)</title>
+			<title code="0x170e">Ending (エンディング1)</title>
+			<title code="0x1716">Unification in Troubled Times (乱世統一)</title>
+			<title code="0x1713">The Demise of our Native Land (故国の終焉)</title>
+			<title code="0x170f">Dance of the Sable Cicada (貂蝉の舞)</title>
+			<title code="0x1715">Marriage Ceremony (婚姻の儀)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Sotsugyou Shashin (OPM+MSM)</name>
+		<!-- COSMIC PSYCHOのドライバを流用 -->
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Cocktail Soft</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="sotu68snd">
+			<rom type="code">cos68snd.bin</rom>
+			<rom type="x" offset="0x08000">tank.x</rom>
+			<rom type="code" offset="0x090000">AISY.USO</rom>
+			<rom type="code" offset="0x095000">DOK.USO</rom>
+			<rom type="code" offset="0x09a000">END.USO</rom>
+			<rom type="code" offset="0x09f000">IMARI.USO</rom>
+			<rom type="code" offset="0x0a4000">M_62.USO</rom>
+			<rom type="code" offset="0x0a9000">NAZO.USO</rom>
+			<rom type="code" offset="0x0ae000">OPEN.USO</rom>
+			<rom type="code" offset="0x0b3000">ST6.USO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">AISY.USO</title> 
+			<title code="0x02">DOK.USO</title>	
+			<title code="0x03">END.USO</title>	
+			<title code="0x04">IMARI.USO</title>
+			<title code="0x05">M_62.USO</title> 
+			<title code="0x06">NAZO.USO</title> 
+			<title code="0x07">OPEN.USO</title> 
+			<title code="0x08">ST6.USO</title>	
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Wrestle Angels 3 (OPM+MSM) 1 track missing</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Great</driveralias>
+		<options>
+			<option name="mfp"  value="1"/>
+		</options>
+		<romlist archive="wa368snd_incomplete">
+			<rom type="code" offset="0x000000">wa268snd.bin</rom>
+			<rom type="x"    offset="0x010000">ZMSC.X</rom>
+			<rom type="code" offset="0x030000">WA301.ZMD</rom>
+			<rom type="code" offset="0x032000">WA302.ZMD</rom>
+			<rom type="code" offset="0x034000">WA303.ZMD</rom>
+			<rom type="code" offset="0x036000">WA305.ZMD</rom>
+			<rom type="code" offset="0x038000">WA307.ZMD</rom>
+			<rom type="code" offset="0x03a000">WA308.ZMD</rom>
+			<rom type="code" offset="0x03c000">WA309.ZMD</rom>
+			<rom type="code" offset="0x03e000">WA310.ZMD</rom>
+			<rom type="code" offset="0x040000">WA312.ZMD</rom>
+			<!-- <rom type="code" offset="0x042000">WA313.ZMD</rom> -->
+			<rom type="code" offset="0x044000">WA314.ZMD</rom>
+			<rom type="code" offset="0x046000">WA315.ZMD</rom>
+			<rom type="code" offset="0x048000">WA316.ZMD</rom>
+			<rom type="code" offset="0x04a000">WA318.ZMD</rom>
+			<rom type="code" offset="0x04c000">WA319.ZMD</rom>
+			<rom type="code" offset="0x04e000">WA320.ZMD</rom>
+			<rom type="code" offset="0x050000">WA321.ZMD</rom>
+			<rom type="code" offset="0x052000">WA324.ZMD</rom>
+			<rom type="code" offset="0x054000">WA326.ZMD</rom>
+			<rom type="code" offset="0x056000">WA327.ZMD</rom>
+			<rom type="code" offset="0x058000">WA328.ZMD</rom>
+			<rom type="code" offset="0x05a000">WA329.ZMD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">WA301.ZMD</title>
+			<title code="0x02">WA302.ZMD</title>
+			<title code="0x03">WA303.ZMD</title>
+			<title code="0x04">WA305.ZMD</title>
+			<title code="0x05">WA307.ZMD</title>
+			<title code="0x06">WA308.ZMD</title>
+			<title code="0x07">WA309.ZMD</title>
+			<title code="0x08">WA310.ZMD</title>
+			<title code="0x09">WA312.ZMD</title>
+			<!-- <title code="0x0a">WA313.ZMD</title> -->
+			<title code="0x0b">WA314.ZMD</title>
+			<title code="0x0c">WA315.ZMD</title>
+			<title code="0x0d">WA316.ZMD</title>
+			<title code="0x0e">WA318.ZMD</title>
+			<title code="0x0f">WA319.ZMD</title>
+			<title code="0x10">WA320.ZMD</title>
+			<title code="0x11">WA321.ZMD</title>
+			<title code="0x12">WA324.ZMD</title>
+			<title code="0x13">WA326.ZMD</title>
+			<title code="0x14">WA327.ZMD</title>
+			<title code="0x15">WA328.ZMD</title>
+			<title code="0x16">WA329.ZMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Illusion City / Gen'ei Toshi (幻影都市) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Microcabin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0x180"/>
+			<option name="pcm_mix" value="0x180"/>
+		</options>
+		<romlist archive="mijet_illusioncity">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xFFFF">ショップ</title>
+			<title code="0x01">クライシス・エリア</title>
+			<title code="0x02">インドア・コンバット</title>
+			<title code="0x03">ハザード・エリア</title>
+			<title code="0x04">ＭＥＴＡＬエリア</title>
+			<title code="0x05">ＷＡＴＥＲパイプ</title>
+			<title code="0x06">ＣＡＶＥＲＮ（迷宮）</title>
+			<title code="0x07">研究施設（月の狂気）</title>
+			<title code="0x08">街のざわめき</title>
+			<title code="0x09">悪夢（ＤＡＲＫ　ＤＲＥＡＭ）</title>
+			<title code="0x0A">Ｈｏｍｅ</title>
+			<title code="0x0B">シャオメイ</title>
+			<title code="0x0C">老師</title>
+			<title code="0x0D">Ｄａｎｃｉｎｇ</title>
+			<title code="0x0E">ＶＩＰルーム</title>
+			<title code="0x0F">Ｌｏｖｅｒｓ</title>
+			<title code="0x10">囚われて</title>
+			<title code="0x11">勝利</title>
+			<title code="0x12">幻影城</title>
+			<title code="0x13">胎動</title>
+			<title code="0x14">魔天教</title>
+			<title code="0x15">儀式</title>
+			<title code="0x16">危機</title>
+			<title code="0x17">レクイエム</title>
+			<title code="0x18">ネットワーク・イマージュ</title>
+			<title code="0x19">イリュージョン・テーマ１</title>
+			<title code="0x1A">イリュージョン・テーマ２</title>
+			<title code="0x1B">イリュージョン・エンディング</title>
+			<title code="0x1C">バトル</title>
+			<title code="0x1D">八部衆バトル</title>
+			<title code="0x1E">魔天王バトル</title>
+			<title code="0x1F">ファイナルバトル</title>
+			<title code="0x81">題名無し</title>
+			<title code="0x80">Stop Sound</title>
+			<title code="0x7F">Thunder (ADPCM)</title>
+			<title code="0x82">BEM 02</title>
+			<title code="0x83">BEM 03</title>
+			<title code="0x84">BEM 04</title>
+			<title code="0x85">BEM 05</title>
+			<title code="0x86">BEM 06</title>
+			<title code="0x87">BEM 07</title>
+			<title code="0x100">BGE 00</title>
+			<title code="0x101">BGE 01</title>
+			<title code="0x102">BGE 02</title>
+			<title code="0x103">BGE 03</title>
+			<title code="0x104">BGE 04</title>
+			<title code="0x105">BGE 05</title>
+			<title code="0x106">BGE 06</title>
+			<title code="0x107">BGE 07</title>
+			<title code="0x108">BGE 08</title>
+			<title code="0x109">BGE 09</title>
+			<title code="0x10A">BGE 0A</title>
+			<title code="0x10B">BGE 0B</title>
+			<title code="0x10C">BGE 0C</title>
+			<title code="0x10D">BGE 0D</title>
+			<title code="0x10E">BGE 0E</title>
+			<title code="0x10F">BGE 0F</title>
+			<title code="0x110">BGE 10</title>
+			<title code="0x111">BGE 11</title>
+			<title code="0x112">BGE 12</title>
+			<title code="0x113">BGE 13</title>
+			<title code="0x114">BGE 14</title>
+			<title code="0x115">BGE 15</title>
+			<title code="0x116">BGE 16</title>
+			<title code="0x117">BGE 17</title>
+			<title code="0x118">BGE 18</title>
+			<title code="0x119">BGE 19</title>
+			<title code="0x11A">BGE 1A</title>
+			<title code="0x11B">BGE 1B</title>
+			<title code="0x11C">BGE 1C</title>
+			<title code="0x11D">BGE 1D</title>
+			<title code="0x11E">BGE 1E</title>
+			<title code="0x11F">BGE 1F</title>
+			<title code="0x120">BGE 20</title>
+			<title code="0x121">BGE 21</title>
+			<title code="0x122">BGE 22</title>
+			<title code="0x123">BGE 23</title>
+			<title code="0x124">BGE 24</title>
+			<title code="0x125">BGE 25</title>
+			<title code="0x126">BGE 26</title>
+			<title code="0x127">BGE 27</title>
+			<title code="0x128">BGE 28</title>
+			<title code="0x129">BGE 29</title>
+			<title code="0x12A">BGE 2A</title>
+			<title code="0x12B">BGE 2B</title>
+			<title code="0x12C">BGE 2C</title>
+			<title code="0x12D">BGE 2D</title>
+			<title code="0x12E">BGE 2E</title>
+			<title code="0x12F">BGE 2F</title>
+			<title code="0x130">BGE 30</title>
+			<title code="0x131">BGE 31</title>
+			<title code="0x132">BGE 32</title>
+			<title code="0x133">BGE 33</title>
+			<title code="0x134">BGE 34</title>
+			<title code="0x135">BGE 35</title>
+			<title code="0x136">BGE 36</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Illusion City / Gen'ei Toshi (幻影都市) (MT-32 Emulation)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Microcabin</driveralias>
+
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="1"/>
+			<option name="midiout_mix" value="0x400"/>
+		</options>
+		<romlist archive="mijet_illusioncity">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x20">ショップ</title>
+			<title code="0x21">クライシス・エリア</title>
+			<title code="0x22">インドア・コンバット</title>
+			<title code="0x23">ハザード・エリア</title>
+			<title code="0x24">ＭＥＴＡＬエリア</title>
+			<title code="0x25">ＷＡＴＥＲパイプ</title>
+			<title code="0x26">ＣＡＶＥＲＮ（迷宮）</title>
+			<title code="0x27">研究施設（月の狂気）</title>
+			<title code="0x28">街のざわめき</title>
+			<title code="0x29">悪夢（ＤＡＲＫ　ＤＲＥＡＭ）</title>
+			<title code="0x2A">Ｈｏｍｅ</title>
+			<title code="0x2B">シャオメイ</title>
+			<title code="0x2C">老師</title>
+			<title code="0x2D">Ｄａｎｃｉｎｇ</title>
+			<title code="0x2E">ＶＩＰルーム</title>
+			<title code="0x2F">Ｌｏｖｅｒｓ</title>
+			<title code="0x30">囚われて</title>
+			<title code="0x31">勝利</title>
+			<title code="0x32">幻影城</title>
+			<title code="0x33">胎動</title>
+			<title code="0x34">魔天教</title>
+			<title code="0x35">儀式</title>
+			<title code="0x36">危機</title>
+			<title code="0x37">レクイエム</title>
+			<title code="0x38">ネットワーク・イマージュ</title>
+			<title code="0x39">イリュージョン・テーマ１</title>
+			<title code="0x3A">イリュージョン・テーマ２</title>
+			<title code="0x3B">バトル</title>
+			<title code="0x3C">八部衆バトル</title>
+			<title code="0x3D">魔天王バトル</title>
+			<title code="0x3E">ファイナルバトル</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Illusion City / Gen'ei Toshi (幻影都市) (SC-55)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Microcabin</driveralias>
+
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="mijet_illusioncity">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x20">ショップ</title>
+			<title code="0x21">クライシス・エリア</title>
+			<title code="0x22">インドア・コンバット</title>
+			<title code="0x23">ハザード・エリア</title>
+			<title code="0x24">ＭＥＴＡＬエリア</title>
+			<title code="0x25">ＷＡＴＥＲパイプ</title>
+			<title code="0x26">ＣＡＶＥＲＮ（迷宮）</title>
+			<title code="0x27">研究施設（月の狂気）</title>
+			<title code="0x28">街のざわめき</title>
+			<title code="0x29">悪夢（ＤＡＲＫ　ＤＲＥＡＭ）</title>
+			<title code="0x2A">Ｈｏｍｅ</title>
+			<title code="0x2B">シャオメイ</title>
+			<title code="0x2C">老師</title>
+			<title code="0x2D">Ｄａｎｃｉｎｇ</title>
+			<title code="0x2E">ＶＩＰルーム</title>
+			<title code="0x2F">Ｌｏｖｅｒｓ</title>
+			<title code="0x30">囚われて</title>
+			<title code="0x31">勝利</title>
+			<title code="0x32">幻影城</title>
+			<title code="0x33">胎動</title>
+			<title code="0x34">魔天教</title>
+			<title code="0x35">儀式</title>
+			<title code="0x36">危機</title>
+			<title code="0x37">レクイエム</title>
+			<title code="0x38">ネットワーク・イマージュ</title>
+			<title code="0x39">イリュージョン・テーマ１</title>
+			<title code="0x3A">イリュージョン・テーマ２</title>
+			<title code="0x3B">バトル</title>
+			<title code="0x3C">八部衆バトル</title>
+			<title code="0x3D">魔天王バトル</title>
+			<title code="0x3E">ファイナルバトル</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Illusion City / Gen'ei Toshi (幻影都市) (Vermouth)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Microcabin</driveralias>
+
+		<options>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+			<option name="midiout_mix" value="0x200"/>
+		</options>
+		<romlist archive="mijet_illusioncity">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x20">ショップ</title>
+			<title code="0x21">クライシス・エリア</title>
+			<title code="0x22">インドア・コンバット</title>
+			<title code="0x23">ハザード・エリア</title>
+			<title code="0x24">ＭＥＴＡＬエリア</title>
+			<title code="0x25">ＷＡＴＥＲパイプ</title>
+			<title code="0x26">ＣＡＶＥＲＮ（迷宮）</title>
+			<title code="0x27">研究施設（月の狂気）</title>
+			<title code="0x28">街のざわめき</title>
+			<title code="0x29">悪夢（ＤＡＲＫ　ＤＲＥＡＭ）</title>
+			<title code="0x2A">Ｈｏｍｅ</title>
+			<title code="0x2B">シャオメイ</title>
+			<title code="0x2C">老師</title>
+			<title code="0x2D">Ｄａｎｃｉｎｇ</title>
+			<title code="0x2E">ＶＩＰルーム</title>
+			<title code="0x2F">Ｌｏｖｅｒｓ</title>
+			<title code="0x30">囚われて</title>
+			<title code="0x31">勝利</title>
+			<title code="0x32">幻影城</title>
+			<title code="0x33">胎動</title>
+			<title code="0x34">魔天教</title>
+			<title code="0x35">儀式</title>
+			<title code="0x36">危機</title>
+			<title code="0x37">レクイエム</title>
+			<title code="0x38">ネットワーク・イマージュ</title>
+			<title code="0x39">イリュージョン・テーマ１</title>
+			<title code="0x3A">イリュージョン・テーマ２</title>
+			<title code="0x3B">バトル</title>
+			<title code="0x3C">八部衆バトル</title>
+			<title code="0x3D">魔天王バトル</title>
+			<title code="0x3E">ファイナルバトル</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Laydock (Takayuki Hoshishiba) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0x160"/>
+		</options>
+		<romlist archive="mijet_laydock">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">00</title>
+			<title code="0x01">01</title>
+			<title code="0x02">02</title>
+			<title code="0x03">03</title>
+			<title code="0x04">04</title>
+			<title code="0x05">05</title>
+			<title code="0x06">06</title>
+			<title code="0x07">07</title>
+			<title code="0x08">08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] SiLsteeL (P.Pink.Pot) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0x140"/>
+			<option name="pcm_mix" value="0x140"/>
+		</options>
+		<romlist archive="mijet_silsteel">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">MUSIC STOP</title>
+			<title code="0x01">OVER LOAD</title>
+			<title code="0x02">SARK Squadron</title>
+			<title code="0x03">Dramatic Wave</title>
+			<title code="0x04">CROSS-MEMORY</title>
+			<title code="0x05">WINNINGED SUPER</title>
+			<title code="0x06">GAME OVER</title>
+			<title code="0x07">Spiral TOWER</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Rayer Shoot (TMK) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0x100"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mijet_rayershoot">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">ENTRY TO RAYER SHOOT</title>
+
+			<title code="0x01">WELCOME TO SEFIRO</title>
+			<title code="0x02">SILENT FOREST</title>
+			<title code="0x03">STRANGE SPRING</title>
+			<title code="0x04">FISHERS CANYON</title>
+			<title code="0x05">CROSS HIGHWAY</title>
+			<title code="0x06">BURNING MANDARA</title>
+			<title code="0x07">LOVE SLAVE</title>
+
+			<title code="0x08">ARSIONE</title>
+			<title code="0x09">ARSIONE2</title>
+			<title code="0x0A">EMERAUDE</title>
+			<title code="0x0B">ASCOT</title>
+			<title code="0x0C">CARDINA</title>
+			<title code="0x0D">RAFARGA</title>
+			<title code="0x0E">ZAGATO</title>
+
+			<title code="0x0F">STAGE CLEAR</title>
+			<title code="0x10">PRESEA</title>
+			<title code="0x11">GAME OVER</title>
+			<title code="0x12">ENDING</title>
+			<title code="0x13">NO USE</title>
+			<title code="0x14">THEME OF RAYER SHOOT</title>
+			<title code="0x15">NO USE</title>
+
+			<title code="0x16">16</title>
+			<title code="0x17">17</title>
+			<title code="0x18">18</title>
+			<title code="0x19">19</title>
+			<title code="0x1A">1A</title>
+			<title code="0x1B">1B</title>
+			<title code="0x1C">1C</title>
+			<title code="0x1D">1D</title>
+			<title code="0x1E">1E</title>
+			<title code="0x1F">1F</title>
+			<title code="0x20">20</title>
+			<title code="0x21">21</title>
+			<title code="0x22">22</title>
+			<title code="0x23">23</title>
+			<title code="0x24">24</title>
+			<title code="0x25">25</title>
+			<title code="0x26">26</title>
+			<title code="0x27">27</title>
+			<title code="0x28">28</title>
+			<title code="0x29">29</title>
+			<title code="0x2A">2A</title>
+			<title code="0x2B">2B</title>
+			<title code="0x2C">2C</title>
+			<title code="0x2D">2D</title>
+			<title code="0x2E">2E</title>
+			<title code="0x2F">2F</title>
+			<title code="0x30">30</title>
+			<title code="0x31">31</title>
+			<title code="0x32">32</title>
+			<title code="0x33">33</title>
+			<title code="0x34">34</title>
+			<title code="0x35">35</title>
+			<title code="0x36">36</title>
+			<title code="0x37">37</title>
+			<title code="0x38">38</title>
+			<title code="0x39">39</title>
+			<title code="0x3A">3A</title>
+			<title code="0x3B">3B</title>
+			<title code="0x3C">3C</title>
+			<title code="0x3D">3D</title>
+			<title code="0x3E">3E</title>
+			<title code="0x3F">3F</title>
+			<title code="0x40">40</title>
+			<title code="0x41">41</title>
+			<title code="0x42">42</title>
+			<title code="0x43">43</title>
+			<title code="0x44">44</title>
+			<title code="0x45">45</title>
+			<title code="0x46">46</title>
+			<title code="0x47">47</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Super Surgeon (Nangpin-C.P.) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0x100"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mijet_supersurgeon">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">Opening</title>
+			<title code="0x01">Silent Flash</title>
+			<title code="0x02">Fine Carrot!</title>
+			<title code="0x03">Flying Fish</title>
+			<title code="0x04">Craven Crasher</title>
+			<title code="0x05">Heart Fountain</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Sword Master 2' (Earth &amp; Moon Kai) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0xD0"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mijet_swordmaster2">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xFFFF">Loading Music</title>
+			<title code="0x01">Dungeon 1</title>
+			<title code="0x02">Dungeon 2</title>
+			<title code="0x03">Dungeon 3</title>
+			<title code="0x04">Dungeon 4</title>
+			<title code="0x05">Dungeon 5</title>
+			<title code="0x06">Opening</title>
+			<title code="0x07">Ending</title>
+			<title code="0x08">Battle 1</title>
+			<title code="0x09">Battle 2</title>
+			<title code="0x0A">City</title>
+			<title code="0x0B">Game Over</title>
+			<title code="0x0C">Epilogue</title>
+			<title code="0x0D">Dess</title>
+			<!--
+			<title code="0x0E">Opening (beta)</title>
+			<title code="0x0F">Dungeon 1 (beta)</title>
+			<title code="0x10">Dungeon 2 (beta)</title>
+			<title code="0x11">Dungeon 5 (beta)</title>
+			<title code="0x12">Battle 2 (beta)</title>
+			-->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bishoujo Senshi Moon Fighter (Sprite) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0xD0"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mijet_moonfighter">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">00</title>
+			<title code="0x01">01</title>
+			<title code="0x02">02</title>
+			<title code="0x03">03</title>
+			<title code="0x04">04</title>
+
+			<title code="0x05">02 (unused)</title>
+			<title code="0x06">03 (unused)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] ZugyA (Sprite) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0x100"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mijet_zugya">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xFFFF">00</title>
+			<title code="0x01">01</title>
+			<title code="0x02">02</title>
+			<title code="0x03">03</title>
+
+			<title code="0x04">04</title>
+			<title code="0x05">05</title>
+			<title code="0x06">06</title>
+			<title code="0x07">07</title>
+			<title code="0x08">08</title>
+			<title code="0x09">09</title>
+			<title code="0x0A">0A</title>
+			<title code="0x0B">0B</title>
+			<title code="0x0C">0C</title>
+			<title code="0x0D">0D</title>
+			<title code="0x0E">0E</title>
+			<title code="0x0F">0F</title>
+			<title code="0x10">10</title>
+			<title code="0x11">11</title>
+			<title code="0x12">12</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Push Bon! (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0x100"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mijet_pushbon">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xFFFF">PUSH00</title>
+			<title code="0x01">PUSH01</title>
+			<title code="0x02">PUSH02</title>
+			<title code="0x03">PUSH03</title>
+			<title code="0x04">PUSH04</title>
+			<title code="0x05">PUSH_A</title>
+			<title code="0x06">PUSH_B</title>
+			<title code="0x07">QUACK</title>
+			<title code="0x08">GIVEUP</title>
+			<title code="0x09">CLEAR</title>
+			<title code="0x0A">SLUGGISH</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bishoujo Senshi Lady Fighter (Sprite) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0xD0"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mijet_ladyfighter">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">00</title>
+			<title code="0x01">01</title>
+			<title code="0x02">02</title>
+			<title code="0x03">03</title>
+			<title code="0x04">04</title>
+			<title code="0x05">05</title>
+			<title code="0x06">06</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Cyber Mission (Login) (incomplete) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0x100"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mijet_cybermission">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">00</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Magery (日本洗脳倶楽部) (OPM+MSM)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">Doujin</driveralias>
+
+		<options>
+			<option name="opm_mix" value="0xE0"/>
+			<option name="pcm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mijet_magery">
+			<rom type="code">boot.bin</rom>
+			<rom type="code" offset="0x1F0000">trap_f.bin</rom>
+		</romlist>
+		<titlelist>
+			<title code="0xffff">Welcome to NSC World</title>
+			<title code="0x01">Magery</title>
+			<title code="0x02">Castle</title>
+			<title code="0x03">Dungeon</title>
+			<title code="0x04">魔宮</title>
+			<title code="0x05">Ending</title>
+			<title code="0x06">Encounter!!</title>
+			<title code="0x07">X Battle</title>
+			<title code="0x08">Draspi 1</title>
+		</titlelist>
+	</game>
+</gamelist>

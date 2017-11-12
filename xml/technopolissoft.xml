@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2010/03/10">
+	<!-- // テクノポリスソフト / GAMEテクノポリス -->
+	<game>
+		<name>[PC-8801] ドラゴンアイズ</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">GAMEテクノポリス</driveralias>
+		<romlist archive="drgeye88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0b00">USD88.Z80</rom>
+			<rom type="bgm" offset="0x00">AWA_A.USO</rom>
+			<rom type="bgm" offset="0x01">AWA_B.USO</rom>
+			<rom type="bgm" offset="0x02">BARA7.USO</rom>
+			<rom type="bgm" offset="0x03">D_SH.USO</rom>
+			<rom type="bgm" offset="0x04">DC_SIZ.USO</rom>
+			<rom type="bgm" offset="0x05">END.USO</rom>
+			<rom type="bgm" offset="0x06">FAMI.USO</rom>
+			<rom type="bgm" offset="0x07">HAPPY.USO</rom>
+			<rom type="bgm" offset="0x08">KURA3.USO</rom>
+			<rom type="bgm" offset="0x09">NIGE.USO</rom>
+			<rom type="bgm" offset="0x0a">NIKE.USO</rom>
+			<rom type="bgm" offset="0x0b">NOS.USO</rom>
+			<rom type="bgm" offset="0x0c">PARTY.USO</rom>
+			<rom type="bgm" offset="0x0d">PINK.USO</rom>
+			<rom type="bgm" offset="0x0e">PROG.USO</rom>
+			<rom type="bgm" offset="0x0f">SAD.USO</rom>
+			<rom type="bgm" offset="0x10">SE.USO</rom>
+			<rom type="bgm" offset="0x11">SIRO_C.USO</rom>
+			<rom type="bgm" offset="0x12">SPACE.USO</rom>
+			<rom type="bgm" offset="0x13">YA6.USO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">AWA_A.USO  : 回想</title>
+			<title code="0x06">FAMI.USO   : '球'たち</title>
+			<title code="0x10">SE.USO     : コスモス</title>
+			<title code="0x13">YA6.USO    : ミウィ</title>
+			<title code="0x04">DC_SIZ.USO : ガールドリア</title>
+			<title code="0x11">SIRO_C.USO : 少女たち</title>
+			<title code="0x0f">SAD.USO    : 先見師</title>
+			<title code="0x12">SPACE.USO  : ロゴナ</title>
+			<title code="0x0c">PARTY.USO  : 想人の星</title>
+			<title code="0x08">KURA3.USO  : 哀する星々</title>
+			<title code="0x0e">PROG.USO   : 渡り星</title>
+			<title code="0x07">HAPPY.USO  : ぴんく・ぴんく!</title>
+			<title code="0x0a">NIKE.USO   : 聖地</title>
+			<title code="0x09">NIGE.USO   : 戦星</title>
+			<title code="0x02">BARA7.USO  : 別離</title>
+			<title code="0x0b">NOS.USO    : 事起</title>
+			<title code="0x03">D_SH.USO   : 行きづまりの捷利</title>
+			<title code="0x0d">PINK.USO   : ドラゴンアイズ</title>
+			<title code="0x05">END.USO    : 再会</title>
+			<title code="0x01">AWA_B.USO  : アイネス</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] LotLot</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">テクノポリスソフト</driveralias>
+		<options>
+			<option name="init_pc"  value="0xa000"/>
+			<option name="use_vrtc" value="0x01"/>
+			<option name="baseclock" value="0x04"/>
+		</options>
+		<romlist archive="lotlot88">
+			<rom type="code" offset="0x0000">DATA</rom>
+			<rom type="code" offset="0xa000">PATCH</rom>
+			<rom type="code" offset="0xb000">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02">ROUND START</title>
+			<title code="0x00">MAIN BGM</title>
+			<title code="0x03">STAGE CLEAR</title>
+			<title code="0x04">GAME OVER</title>
+			<title code="0x01">NAME ENTRY</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] お嬢様くらぶ</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">テクノポリスソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7000"/>
+		</options>
+		<romlist archive="ojosama">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x6800">VOICE</rom>
+			<rom type="code" offset="0xa900">WRKTBL</rom>
+			<rom type="code" offset="0xf400">DRIVER</rom>
+			<rom type="bgm" offset="0x00">081</rom>
+			<rom type="bgm" offset="0x01">082</rom>
+			<rom type="bgm" offset="0x02">083</rom>
+			<rom type="bgm" offset="0x03">084</rom>
+			<rom type="bgm" offset="0x04">085</rom>
+			<rom type="bgm" offset="0x05">086</rom>
+			<rom type="bgm" offset="0x06">087</rom>
+			<rom type="bgm" offset="0x07">088</rom>
+			<rom type="bgm" offset="0x08">089</rom>
+			<rom type="bgm" offset="0x09">090</rom>
+			<rom type="bgm" offset="0x0a">091</rom>
+			<rom type="bgm" offset="0x0b">092</rom>
+			<rom type="bgm" offset="0x0c">093</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">081 : Jang ken          / TENTEKO</title>
+			<title code="0x01">082 : Atend of MENUETTE / XKD</title>
+			<title code="0x02">083 : Twincle           / TENTEKO</title>
+			<title code="0x03">084 : HARD              / NEKO</title>
+			<title code="0x04">085 : Sea side          / GOD</title>
+			<title code="0x05">086 : Spring skip       / XKD</title>
+			<title code="0x06">087 : Theme of GIRLS    / KOSIRON</title>
+			<title code="0x07">088 : Queens            / KOSIRON</title>
+			<title code="0x08">089 : Epilogue          / KOSIRON</title>
+			<title code="0x09">090 : GAME OVER         / TENTEKO</title>
+			<title code="0x0a">091 : STREET RUN AWAY   / ONION</title>
+			<title code="0x0b">092 : TEA of ONION      / ONION</title>
+			<title code="0x0c">093 : TITLE MUSIC       / TENTEKO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] GAL WARS きゃぴきゃぴるん</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">テクノポリスソフト</driveralias>
+		<romlist archive="galwars88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">A032</rom>
+			<rom type="code" offset="0xd000">A003</rom>
+			<rom type="bgm" offset="0x00">A033</rom>
+			<rom type="bgm" offset="0x01">A034</rom>
+			<rom type="bgm" offset="0x02">A035</rom>
+			<rom type="bgm" offset="0x03">A036</rom>
+			<rom type="bgm" offset="0x04">A037</rom>
+			<rom type="bgm" offset="0x05">A038</rom>
+			<rom type="bgm" offset="0x06">A039</rom>
+			<rom type="bgm" offset="0x07">A040</rom>
+			<rom type="bgm" offset="0x08">A041</rom>
+			<rom type="bgm" offset="0x09">A042</rom>
+			<rom type="bgm" offset="0x0a">A043</rom>
+			<rom type="bgm" offset="0x0b">A044</rom>
+			<rom type="bgm" offset="0x0c">A045</rom>
+			<rom type="bgm" offset="0x0d">A046</rom>
+			<rom type="bgm" offset="0x0e">A047</rom>
+			<rom type="bgm" offset="0x0f">A048</rom>
+			<rom type="bgm" offset="0x10">A049</rom>
+			<rom type="bgm" offset="0x11">A050</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">A033 : </title>
+			<title code="0x01">A034 : </title>
+			<title code="0x02">A035 : </title>
+			<title code="0x03">A036 : </title>
+			<title code="0x04">A037 : </title>
+			<title code="0x05">A038 : </title>
+			<title code="0x06">A039 : </title>
+			<title code="0x07">A040 : </title>
+			<title code="0x08">A041 : </title>
+			<title code="0x09">A042 : </title>
+			<title code="0x0a">A043 : </title>
+			<title code="0x0b">A044 : </title>
+			<title code="0x0c">A045 : </title>
+			<title code="0x0d">A046 : </title>
+			<title code="0x0e">A047 : </title>
+			<title code="0x0f">A048 : </title>
+			<title code="0x10">A049 : </title>
+			<title code="0x11">A050 : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] おんなのこけ～さつたい ＝ねぎ戦略＝</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">テクノポリスソフト</driveralias>
+		<romlist archive="onnanoko88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x9000">splitn.2</rom>
+			<rom type="bgm" offset="0x00">No1.mus</rom>
+			<rom type="bgm" offset="0x01">No2.mus</rom>
+			<rom type="bgm" offset="0x02">No3.mus</rom>
+			<rom type="bgm" offset="0x03">No4.mus</rom>
+			<rom type="bgm" offset="0x04">No5.mus</rom>
+			<rom type="bgm" offset="0x05">No6.mus</rom>
+			<rom type="bgm" offset="0x06">No8.mus</rom>
+			<rom type="bgm" offset="0x07">No9.mus</rom>
+			<rom type="bgm" offset="0x08">No10.mus</rom>
+			<rom type="bgm" offset="0x09">No11.mus</rom>
+			<rom type="bgm" offset="0x0a">No14.mus</rom>
+			<rom type="bgm" offset="0x0b">No15.mus</rom>
+			<rom type="bgm" offset="0x0c">No16.mus</rom>
+			<rom type="bgm" offset="0x0d">No18.mus</rom>
+			<rom type="bgm" offset="0x0e">No19.mus</rom>
+			<rom type="bgm" offset="0x0f">No20.mus</rom>
+			<rom type="bgm" offset="0x12">No21.mus</rom>
+			<rom type="bgm" offset="0x13">No22.mus</rom>
+			<rom type="bgm" offset="0x14">No23.mus</rom>
+			<rom type="bgm" offset="0x15">No24.mus</rom>
+			<rom type="bgm" offset="0x16">No26.mus</rom>
+			<rom type="bgm" offset="0x18">No27.mus</rom>
+			<rom type="bgm" offset="0x19">No28.mus</rom>
+			<rom type="bgm" offset="0x1a">No29.mus</rom>
+			<rom type="bgm" offset="0x1c">No30.mus</rom>
+			<rom type="bgm" offset="0x1d">No31.mus</rom>
+			<rom type="bgm" offset="0x1e">No32.mus</rom>
+			<rom type="bgm" offset="0x1f">No33.mus</rom>
+			<rom type="bgm" offset="0x20">No34.mus</rom>
+			<rom type="bgm" offset="0x21">No35.mus</rom>
+			<rom type="bgm" offset="0x22">No36.mus</rom>
+			<rom type="bgm" offset="0x23">No37.mus</rom>
+			<rom type="bgm" offset="0x24">No38.mus</rom>
+			<rom type="bgm" offset="0x25">No39.mus</rom>
+			<rom type="bgm" offset="0x26">No40.mus</rom>
+			<rom type="bgm" offset="0x28">No41.mus</rom>
+			<rom type="bgm" offset="0x29">No42.mus</rom>
+			<rom type="bgm" offset="0x2a">No43.mus</rom>
+			<rom type="bgm" offset="0x2c">No44.mus</rom>
+			<rom type="bgm" offset="0x2d">No45.mus</rom>
+			<rom type="bgm" offset="0x2e">No46.mus</rom>
+			<rom type="bgm" offset="0x2f">No47.mus</rom>
+			<rom type="bgm" offset="0x30">No49.mus</rom>
+			<rom type="bgm" offset="0x31">No50.mus</rom>
+			<rom type="bgm" offset="0x32">No51.mus</rom>
+			<rom type="bgm" offset="0x33">No52.mus</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">No1.mus</title>
+			<title code="0x01">No2.mus</title>
+			<title code="0x02">No3.mus</title>
+			<title code="0x03">No4.mus</title>
+			<title code="0x04">No5.mus</title>
+			<title code="0x05">No6.mus</title>
+			<title code="0x06">No8.mus</title>
+			<title code="0x07">No9.mus</title>
+			<title code="0x08">No10.mus</title>
+			<title code="0x09">No11.mus</title>
+			<title code="0x0a">No14.mus</title>
+			<title code="0x0b">No15.mus</title>
+			<title code="0x0c">No16.mus</title>
+			<title code="0x0d">No18.mus</title>
+			<title code="0x0e">No19.mus</title>
+			<title code="0x0f">No20.mus</title>
+			<title code="0x12">No21.mus</title>
+			<title code="0x13">No22.mus</title>
+			<title code="0x14">No23.mus</title>
+			<title code="0x15">No24.mus</title>
+			<title code="0x16">No26.mus</title>
+			<title code="0x18">No27.mus</title>
+			<title code="0x19">No28.mus</title>
+			<title code="0x1a">No29.mus</title>
+			<title code="0x1c">No30.mus</title>
+		<!--	<title code="0x1d">No31.mus</title> -->
+			<title code="0x1e">No32.mus</title>
+			<title code="0x1f">No33.mus</title>
+			<title code="0x20">No34.mus</title>
+			<title code="0x21">No35.mus</title>
+			<title code="0x22">No36.mus</title>
+			<title code="0x23">No37.mus</title>
+			<title code="0x24">No38.mus</title>
+			<title code="0x25">No39.mus</title>
+			<title code="0x26">No40.mus</title>
+			<title code="0x28">No41.mus</title>
+			<title code="0x29">No42.mus</title>
+			<title code="0x2a">No43.mus</title>
+			<title code="0x2c">No44.mus</title>
+			<title code="0x2d">No45.mus</title>
+			<title code="0x2e">No46.mus</title>
+			<title code="0x2f">No47.mus</title>
+			<title code="0x30">No49.mus</title>
+			<title code="0x31">No50.mus</title>
+			<title code="0x32">No51.mus</title>
+			<title code="0x33">No52.mus</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 破邪大星ダンガイオー(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">テクノポリスソフト</driveralias>
+		<options>
+			<option name="init_pc" value="0x3100"/>
+			<option name="mdata_addr" value="0x97fc"/>
+			<option name="mdata_size" value="0x2000"/>
+		</options>
+		<romlist archive="dangaio88">
+			<rom type="code" offset="0x0000">PROG1</rom>
+			<rom type="code" offset="0x1000">PROG2</rom>
+			<rom type="code" offset="0x3100">PATCH</rom>
+			<rom type="code" offset="0x93fc">B31</rom>
+			<rom type="bgm" offset="0x00">B27</rom>
+			<rom type="bgm" offset="0x01">B28</rom>
+			<rom type="bgm" offset="0x02">B29</rom>
+			<rom type="bgm" offset="0x03">B30</rom>
+			<rom type="bgm" offset="0x04">C27</rom>
+			<rom type="bgm" offset="0x05">D38</rom>
+			<rom type="bgm" offset="0x06">D39</rom>
+			<rom type="bgm" offset="0x07">D40</rom>
+			<rom type="bgm" offset="0x08">E30</rom>
+			<rom type="bgm" offset="0x09">E31</rom>
+			<rom type="bgm" offset="0x0a">E32</rom>
+			<rom type="bgm" offset="0x0b">F28</rom>
+			<rom type="bgm" offset="0x0c">F29</rom>
+			<rom type="bgm" offset="0x0d">F30</rom>
+			<rom type="bgm" offset="0x0e">F31</rom>
+			<rom type="bgm" offset="0x0f">F32</rom>
+			<rom type="bgm" offset="0x10">F33</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">B27 : </title>
+			<title code="0x00000001">B28 : </title>
+			<title code="0x00000002">B29 : </title>
+			<title code="0x00000003">B30 : </title>
+			<title code="0x00000004">C27 : </title>
+			<title code="0x00000005">D38 : </title>
+			<title code="0x00000006">D39 : </title>
+			<title code="0x00000007">D40 : </title>
+			<title code="0x00000008">E30 : </title>
+			<title code="0x00000009">E31 : </title>
+			<title code="0x0000000a">E32 : </title>
+			<title code="0x0000000b">F28 : CROSS FIGHT!</title>
+			<title code="0x0000000c">F29 : </title>
+			<title code="0x0000000d">F30 : </title>
+			<title code="0x0000000e">F31 : CROSS FIGHT! (サビのみ)</title>
+			<title code="0x0000000f">F32 : </title>
+			<title code="0x00000010">F33 : </title>
+			<title code="0x000000ff">B31 : 効果音00</title>
+			<title code="0x010000ff">B31 : 効果音01</title>
+			<title code="0x020000ff">B31 : 効果音02</title>
+			<title code="0x030000ff">B31 : 効果音03</title>
+			<title code="0x040000ff">B31 : 効果音04</title>
+			<title code="0x050000ff">B31 : 効果音05</title>
+			<title code="0x060000ff">B31 : 効果音06</title>
+			<title code="0x070000ff">B31 : 効果音07</title>
+			<title code="0x080000ff">B31 : 効果音08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] 破邪大星ダンガイオー(OPN)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">テクノポリスソフト</driveralias>
+		<options>
+			<option name="init_pc" value="0x3100"/>
+			<option name="mdata_addr" value="0x97fc"/>
+			<option name="mdata_size" value="0x2000"/>
+		</options>
+		<romlist archive="dangaio88">
+			<rom type="code" offset="0x0000">PROG1</rom>
+			<rom type="code" offset="0x1000">PROG2</rom>
+			<rom type="code" offset="0x3100">PATCH</rom>
+			<rom type="code" offset="0x93fc">B31</rom>
+			<rom type="bgm" offset="0x00">B00</rom>
+			<rom type="bgm" offset="0x01">B12</rom>
+			<rom type="bgm" offset="0x02">B16</rom>
+			<rom type="bgm" offset="0x03">B25</rom>
+			<rom type="bgm" offset="0x04">C08</rom>
+			<rom type="bgm" offset="0x05">D01</rom>
+			<rom type="bgm" offset="0x06">D17</rom>
+			<rom type="bgm" offset="0x07">D34</rom>
+			<rom type="bgm" offset="0x08">E03</rom>
+			<rom type="bgm" offset="0x09">E11</rom>
+			<rom type="bgm" offset="0x0a">E29</rom>
+			<rom type="bgm" offset="0x0b">F17</rom>
+			<rom type="bgm" offset="0x0c">F23</rom>
+			<rom type="bgm" offset="0x0d">F24</rom>
+			<rom type="bgm" offset="0x0e">F25</rom>
+			<rom type="bgm" offset="0x0f">F26</rom>
+			<rom type="bgm" offset="0x10">F27</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">B00 : </title>
+			<title code="0x00000001">B12 : </title>
+			<title code="0x00000002">B16 : </title>
+			<title code="0x00000003">B25 : </title>
+			<title code="0x00000004">C08 : </title>
+			<title code="0x00000005">D01 : </title>
+			<title code="0x00000006">D17 : </title>
+			<title code="0x00000007">D34 : </title>
+			<title code="0x00000008">E03 : </title>
+			<title code="0x00000009">E11 : </title>
+			<title code="0x0000000a">E29 : </title>
+			<title code="0x0000000b">F17 : CROSS FIGHT!</title>
+			<title code="0x0000000c">F23 : </title>
+			<title code="0x0000000d">F24 : </title>
+			<title code="0x0000000e">F25 : CROSS FIGHT! (サビのみ)</title>
+			<title code="0x0000000f">F26 : </title>
+			<title code="0x00000010">F27 : </title>
+			<title code="0x000000ff">B31 : 効果音00</title>
+			<title code="0x010000ff">B31 : 効果音01</title>
+			<title code="0x020000ff">B31 : 効果音02</title>
+			<title code="0x030000ff">B31 : 効果音03</title>
+			<title code="0x040000ff">B31 : 効果音04</title>
+			<title code="0x050000ff">B31 : 効果音05</title>
+			<title code="0x060000ff">B31 : 効果音06</title>
+			<title code="0x070000ff">B31 : 効果音07</title>
+			<title code="0x080000ff">B31 : 効果音08</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ヴァージン・ドリーム</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="funcvect" value="0x7e"/>
+			<option name="clockmul" value="8"/>
+			<option name="showfm3ex" value="1"/>
+		</options>
+		<romlist archive="virgin_d_98">
+			<rom type="file" offset="-1">PMD_98.COM</rom>
+			<rom type="file" offset="-1">PMD.COM</rom>
+			<rom type="file" offset="0x08">TKEFC.EFC</rom>
+			<rom type="file" offset="0x10">TK01.M</rom>
+			<rom type="file" offset="0x11">TK02.M</rom>
+			<rom type="file" offset="0x12">TK03.M</rom>
+			<rom type="file" offset="0x13">TK04.M</rom>
+			<rom type="file" offset="0x14">TK05.M</rom>
+			<rom type="file" offset="0x15">TK06.M</rom>
+			<rom type="file" offset="0x16">TK07.M</rom>
+			<rom type="file" offset="0x17">TK08.M</rom>
+			<rom type="file" offset="0x18">TK09.M</rom>
+			<rom type="file" offset="0x19">TK10.M</rom>
+			<rom type="file" offset="0x1a">TK11.M</rom>
+			<rom type="file" offset="0x1b">TK12.M</rom>
+			<rom type="file" offset="0x1c">TK13.M</rom>
+			<rom type="file" offset="0x1d">TK14.M</rom>
+			<rom type="file" offset="0x1e">TK15.M</rom>
+			<rom type="file" offset="0x1f">TK16.M</rom>
+			<rom type="shell" offset="0">pmd /M8 /V2 /E2 /K</rom>
+			<rom type="shell" offset="0">pmd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">TK01.M    : プロローグ</title>
+			<title code="0x11">TK02.M    : タイトル</title>
+			<title code="0x12">TK03.M    : メイン1/NORMAL</title>
+			<title code="0x13">TK04.M    : メイン2/HIGH</title>
+			<title code="0x14">TK05.M    : メイン3/LOW</title>
+			<title code="0x15">TK06.M    : メイン4/スケジュール消化時</title>
+			<title code="0x16">TK07.M    : 行楽/入浴/休養</title>
+			<title code="0x17">TK08.M    : 外出1/移動中 NORMAL コミカル</title>
+			<title code="0x18">TK09.M    : 外出2/移動中門限間近 NORMAL コミカル、焦り、緊迫</title>
+			<title code="0x19">TK10.M    : 外出3/移動中イベント発生 CUTOUT ジャジャジャーン</title>
+			<title code="0x1a">TK11.M    : 外出4/各種イベント表示中 NORMAL アップテンポ、明るく</title>
+			<title code="0x1b">TK12.M    : 外出5/バトル勝利 CUTOUT チャンチャカチャーン</title>
+			<title code="0x1c">TK13.M    : 外出6/バトル敗北 CUTOUT ヘロヘロヘロー</title>
+			<title code="0x1d">TK14.M    : 大会1/テーマ/得点表示</title>
+			<title code="0x1e">TK15.M    : 大会2/審査 NORMAL アップテンポ、緊張</title>
+			<title code="0x1f">TK16.M    : エンディング</title>
+			<range min="0x0801" max="0x081c" extcode="0">TKEFC.EFC : %2X</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] キミだけに愛を…</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="kimidake_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">ADVBIOS.EXE</rom>
+			<rom type="conin" offset="0x05">ADVBIOS.EXE</rom>
+			<rom type="file" offset="0x10">KI_01.USO</rom>
+			<rom type="file" offset="0x11">KI_02.USO</rom>
+			<rom type="file" offset="0x12">KI_03.USO</rom>
+			<rom type="file" offset="0x13">KI_04.USO</rom>
+			<rom type="file" offset="0x14">KI_05.USO</rom>
+			<rom type="file" offset="0x15">KI_06.USO</rom>
+			<rom type="file" offset="0x16">KI_07.USO</rom>
+			<rom type="file" offset="0x17">KI_08.USO</rom>
+			<rom type="file" offset="0x18">KI_09.USO</rom>
+			<rom type="file" offset="0x19">KI_10.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">KI_01.USO : 後悔しない</title>
+			<title code="0x11">KI_02.USO : いつも、朝に</title>
+			<title code="0x12">KI_03.USO : 白夜</title>
+			<title code="0x13">KI_04.USO : 予感</title>
+			<title code="0x14">KI_05.USO : アン不安</title>
+			<title code="0x15">KI_06.USO : 愛すべき乙女</title>
+			<title code="0x16">KI_07.USO : 裸／裸／裸</title>
+			<title code="0x17">KI_08.USO : 恋愛人</title>
+			<title code="0x18">KI_09.USO : サスペンス</title>
+			<title code="0x19">KI_10.USO : 永夢</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] コンチネンタル</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="conti_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">ADVBIOS.EXE</rom>
+			<rom type="conin" offset="0x05">ADVBIOS.EXE</rom>
+			<rom type="file" offset="0x10">COCKTAIL.USO</rom>
+			<rom type="file" offset="0x11">FME13.USO</rom>
+			<rom type="file" offset="0x12">FME14.USO</rom>
+			<rom type="file" offset="0x13">FME15.USO</rom>
+			<rom type="file" offset="0x14">FME16.USO</rom>
+			<rom type="file" offset="0x15">FRPG01.USO</rom>
+			<rom type="file" offset="0x16">FRPG03.USO</rom>
+			<rom type="file" offset="0x17">FRPG04.USO</rom>
+			<rom type="file" offset="0x18">FRPG05.USO</rom>
+			<rom type="file" offset="0x19">FRPG06.USO</rom>
+			<rom type="file" offset="0x1a">FRPG07.USO</rom>
+			<rom type="file" offset="0x1b">FRPG09.USO</rom>
+			<rom type="file" offset="0x1c">FRPG10.USO</rom>
+			<rom type="file" offset="0x1d">FRPG11.USO</rom>
+			<rom type="file" offset="0x1e">FRPG12.USO</rom>
+			<rom type="file" offset="0x1f">FRPG13.USO</rom>
+			<rom type="file" offset="0x20">FRPG14A.USO</rom>
+			<rom type="file" offset="0x21">FRPG14B.USO</rom>
+			<rom type="file" offset="0x22">FRPG15.USO</rom>
+			<rom type="file" offset="0x23">FRPG16.USO</rom>
+			<rom type="file" offset="0x24">FRPG17.USO</rom>
+			<rom type="file" offset="0x25">FRPG18.USO</rom>
+			<rom type="file" offset="0x26">FRPG18B.USO</rom>
+			<rom type="file" offset="0x27">FRPG19.USO</rom>
+			<rom type="file" offset="0x28">FRPG2A.USO</rom>
+			<rom type="file" offset="0x29">FRPG2B.USO</rom>
+			<rom type="file" offset="0x2a">FSE01.USO</rom>
+			<rom type="file" offset="0x2b">FSE02.USO</rom>
+			<rom type="file" offset="0x2c">FSE03.USO</rom>
+			<rom type="file" offset="0x2d">FSE04.USO</rom>
+			<rom type="file" offset="0x2e">FSE05.USO</rom>
+			<rom type="file" offset="0x2f">FSE06.USO</rom>
+			<rom type="file" offset="0x30">FSE07.USO</rom>
+			<rom type="file" offset="0x31">FSE088.USO</rom>
+			<rom type="file" offset="0x32">FSE08A.USO</rom>
+			<rom type="file" offset="0x33">FSE08B.USO</rom>
+			<rom type="file" offset="0x34">FSE10.USO</rom>
+			<rom type="file" offset="0x35">FSE11.USO</rom>
+			<rom type="file" offset="0x36">FSE12.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">COCKTAIL.USO</title>
+			<title code="0x11">FME13.USO</title>
+			<title code="0x12">FME14.USO</title>
+			<title code="0x13">FME15.USO</title>
+			<title code="0x14">FME16.USO</title>
+			<title code="0x15">FRPG01.USO</title>
+			<title code="0x16">FRPG03.USO</title>
+			<title code="0x17">FRPG04.USO</title>
+			<title code="0x18">FRPG05.USO</title>
+			<title code="0x19">FRPG06.USO</title>
+			<title code="0x1a">FRPG07.USO</title>
+			<title code="0x1b">FRPG09.USO</title>
+			<title code="0x1c">FRPG10.USO</title>
+			<title code="0x1d">FRPG11.USO</title>
+			<title code="0x1e">FRPG12.USO</title>
+			<title code="0x1f">FRPG13.USO</title>
+			<title code="0x20">FRPG14A.USO</title>
+			<title code="0x21">FRPG14B.USO</title>
+			<title code="0x22">FRPG15.USO</title>
+			<title code="0x23">FRPG16.USO</title>
+			<title code="0x24">FRPG17.USO</title>
+			<title code="0x25">FRPG18.USO</title>
+			<title code="0x26">FRPG18B.USO</title>
+			<title code="0x27">FRPG19.USO</title>
+			<title code="0x28">FRPG2A.USO</title>
+			<title code="0x29">FRPG2B.USO</title>
+			<title code="0x2a">FSE01.USO</title>
+			<title code="0x2b">FSE02.USO</title>
+			<title code="0x2c">FSE03.USO</title>
+			<title code="0x2d">FSE04.USO</title>
+			<title code="0x2e">FSE05.USO</title>
+			<title code="0x2f">FSE06.USO</title>
+			<title code="0x30">FSE07.USO</title>
+			<title code="0x31">FSE088.USO</title>
+			<title code="0x32">FSE08A.USO</title>
+			<title code="0x33">FSE08B.USO</title>
+			<title code="0x34">FSE10.USO</title>
+			<title code="0x35">FSE11.USO</title>
+			<title code="0x36">FSE12.USO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] テセラ ～キミは汚れた天使か聖なる魔女か!?～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="tecera_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">ADVBIOS.OVL</rom>
+			<rom type="conin" offset="0x05">ADVBIOS.OVL</rom>
+			<rom type="file" offset="0x10">BADEND.USO</rom>
+			<rom type="file" offset="0x11">ENA.USO</rom>
+			<rom type="file" offset="0x12">ENDING.USO</rom>
+			<rom type="file" offset="0x13">KICHIJOJ.USO</rom>
+			<rom type="file" offset="0x14">KIKEN.USO</rom>
+			<rom type="file" offset="0x15">MUSUME.USO</rom>
+			<rom type="file" offset="0x16">OPENING.USO</rom>
+			<rom type="file" offset="0x17">SHINSEI.USO</rom>
+			<rom type="file" offset="0x18">SHOUJO.USO</rom>
+			<rom type="file" offset="0x19">TESERA.USO</rom>
+			<rom type="file" offset="0x1a">UMI.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x16">OPENING.USO  : Ⅳ・オープニング</title>
+			<title code="0x11">ENA.USO      : エナ</title>
+			<title code="0x18">SHOUJO.USO   : 少女</title>
+			<title code="0x13">KICHIJOJ.USO : 吉祥寺クエスト</title>
+			<title code="0x15">MUSUME.USO   : 娘たち</title>
+			<title code="0x14">KIKEN.USO    : 危険な乙女</title>
+			<title code="0x19">TESERA.USO   : テセラ</title>
+			<title code="0x1a">UMI.USO      : 海</title>
+			<title code="0x10">BADEND.USO   : BAD・END</title>
+			<title code="0x17">SHINSEI.USO  : 新生</title>
+			<title code="0x12">ENDING.USO   : エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ドラゴンアイズ</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="drageye_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">ADVH.EXE</rom>
+			<rom type="conin" offset="0x05">ADVH.EXE</rom>
+			<rom type="file" offset="-1">AWA_A.USO</rom>
+			<rom type="file" offset="-1">AWA_B.USO</rom>
+			<rom type="file" offset="-1">BARA7.USO</rom>
+			<rom type="file" offset="-1">DC_SIZ.USO</rom>
+			<rom type="file" offset="-1">D_SH.USO</rom>
+			<rom type="file" offset="-1">END.USO</rom>
+			<rom type="file" offset="-1">FAMI.USO</rom>
+			<rom type="file" offset="-1">HAPPY.USO</rom>
+			<rom type="file" offset="-1">KURA3.USO</rom>
+			<rom type="file" offset="-1">NIGE.USO</rom>
+			<rom type="file" offset="-1">NIKE.USO</rom>
+			<rom type="file" offset="-1">NOS.USO</rom>
+			<rom type="file" offset="-1">PARTY.USO</rom>
+			<rom type="file" offset="-1">PINK.USO</rom>
+			<rom type="file" offset="-1">PROG.USO</rom>
+			<rom type="file" offset="-1">SAD.USO</rom>
+			<rom type="file" offset="-1">SE.USO</rom>
+			<rom type="file" offset="-1">SIRO_C.USO</rom>
+			<rom type="file" offset="-1">SPACE.USO</rom>
+			<rom type="file" offset="-1">YA6.USO</rom>
+			<rom type="conin" offset="0x10">AWA_A.USO</rom>
+			<rom type="conin" offset="0x11">AWA_B.USO</rom>
+			<rom type="conin" offset="0x12">BARA7.USO</rom>
+			<rom type="conin" offset="0x13">DC_SIZ.USO</rom>
+			<rom type="conin" offset="0x14">D_SH.USO</rom>
+			<rom type="conin" offset="0x15">END.USO</rom>
+			<rom type="conin" offset="0x16">FAMI.USO</rom>
+			<rom type="conin" offset="0x17">HAPPY.USO</rom>
+			<rom type="conin" offset="0x18">KURA3.USO</rom>
+			<rom type="conin" offset="0x19">NIGE.USO</rom>
+			<rom type="conin" offset="0x1a">NIKE.USO</rom>
+			<rom type="conin" offset="0x1b">NOS.USO</rom>
+			<rom type="conin" offset="0x1c">PARTY.USO</rom>
+			<rom type="conin" offset="0x1d">PINK.USO</rom>
+			<rom type="conin" offset="0x1e">PROG.USO</rom>
+			<rom type="conin" offset="0x1f">SAD.USO</rom>
+			<rom type="conin" offset="0x20">SE.USO</rom>
+			<rom type="conin" offset="0x21">SIRO_C.USO</rom>
+			<rom type="conin" offset="0x22">SPACE.USO</rom>
+			<rom type="conin" offset="0x23">YA6.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">AWA_A.USO  : 回想</title>
+			<title code="0x16">FAMI.USO   : '球'たち</title>
+			<title code="0x20">SE.USO     : コスモス</title>
+			<title code="0x23">YA6.USO    : ミウィ</title>
+			<title code="0x13">DC_SIZ.USO : ガールドリア</title>
+			<title code="0x21">SIRO_C.USO : 少女たち</title>
+			<title code="0x1f">SAD.USO    : 先見師</title>
+			<title code="0x22">SPACE.USO  : ロゴナ</title>
+			<title code="0x1c">PARTY.USO  : 想人の星</title>
+			<title code="0x18">KURA3.USO  : 哀する星々</title>
+			<title code="0x1e">PROG.USO   : 渡り星</title>
+			<title code="0x17">HAPPY.USO  : ぴんく・ぴんく!</title>
+			<title code="0x1a">NIKE.USO   : 聖地</title>
+			<title code="0x19">NIGE.USO   : 戦星</title>
+			<title code="0x12">BARA7.USO  : 別離</title>
+			<title code="0x1b">NOS.USO    : 事起</title>
+			<title code="0x14">D_SH.USO   : 行きづまりの捷利</title>
+			<title code="0x1d">PINK.USO   : ドラゴンアイズ</title>
+			<title code="0x15">END.USO    : 再会</title>
+			<title code="0x11">AWA_B.USO  : アイネス</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 初恋物語</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="hatukoi_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">ADVBIOS.OVL</rom>
+			<rom type="conin" offset="0x05">ADVBIOS.OVL</rom>
+			<rom type="file" offset="0x10">H_DENNOU.USO</rom>
+			<rom type="file" offset="0x11">H_DPOP.USO</rom>
+			<rom type="file" offset="0x12">H_DSLOW.USO</rom>
+			<rom type="file" offset="0x13">H_END1.USO</rom>
+			<rom type="file" offset="0x14">H_END2.USO</rom>
+			<rom type="file" offset="0x15">H_END3.USO</rom>
+			<rom type="file" offset="0x16">H_EVENT.USO</rom>
+			<rom type="file" offset="0x17">H_OPEN.USO</rom>
+			<rom type="file" offset="0x18">H_PHOTO.USO</rom>
+			<rom type="file" offset="0x19">H_ROOM.USO</rom>
+			<rom type="file" offset="0x1a">H_SUMMER.USO</rom>
+			<rom type="file" offset="0x1b">H_WINTER.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x17">H_OPEN.USO   : 初恋オープニング</title>
+			<title code="0x19">H_ROOM.USO   : 部屋</title>
+			<title code="0x18">H_PHOTO.USO  : 写真</title>
+			<title code="0x1a">H_SUMMER.USO : 夏</title>
+			<title code="0x1b">H_WINTER.USO : 冬</title>
+			<title code="0x16">H_EVENT.USO  : イベント</title>
+			<title code="0x10">H_DENNOU.USO : 電脳オープニング</title>
+			<title code="0x12">H_DSLOW.USO  : 電脳(スロー)</title>
+			<title code="0x11">H_DPOP.USO   : 電脳(ポップ)</title>
+			<title code="0x13">H_END1.USO   : エンディング1</title>
+			<title code="0x14">H_END2.USO   : エンディング2</title>
+			<title code="0x15">H_END3.USO   : エンディング3</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 電脳天使 ～デジタルアンジェ～</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="dennou_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">DENAN.OV1</rom>
+			<rom type="conin" offset="0x05">DENAN.OV1</rom>
+			<rom type="file" offset="0x10">D001.USO</rom>
+			<rom type="file" offset="0x11">D002.USO</rom>
+			<rom type="file" offset="0x12">D003.USO</rom>
+			<rom type="file" offset="0x13">D004.USO</rom>
+			<rom type="file" offset="0x14">D005.USO</rom>
+			<rom type="file" offset="0x15">D006.USO</rom>
+			<rom type="file" offset="0x16">D007.USO</rom>
+			<rom type="file" offset="0x17">D008.USO</rom>
+			<rom type="file" offset="0x18">D009.USO</rom>
+			<rom type="file" offset="0x19">S001.USO</rom>
+			<rom type="file" offset="0x1a">S002.USO</rom>
+			<rom type="file" offset="0x1b">S003.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">D001.USO : ベルのテーマ</title>
+			<title code="0x11">D002.USO : 天界</title>
+			<title code="0x12">D003.USO : 貴也のテーマ</title>
+			<title code="0x13">D004.USO : 悲しみ</title>
+			<title code="0x14">D005.USO : 神機登場</title>
+			<title code="0x15">D006.USO : ベスティア登場</title>
+			<title code="0x16">D007.USO : 行け、アクエリュース!</title>
+			<title code="0x17">D008.USO : やすらぎのとき</title>
+			<title code="0x18">D009.USO : 学校</title>
+			<title code="0x19">S001.USO : 星遊び</title>
+			<title code="0x1a">S002.USO : 星遊び</title>
+			<title code="0x1b">S003.USO : アンジュの想い</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] 秘密の花園</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="himihana_98">
+			<rom type="file" offset="-1">usd_98.com</rom>
+			<rom type="file" offset="-1">ADVBIOS.EXE</rom>
+			<rom type="conin" offset="0x05">ADVBIOS.EXE</rom>
+			<rom type="file" offset="0x10">HI_01.USO</rom>
+			<rom type="file" offset="0x11">HI_02.USO</rom>
+			<rom type="file" offset="0x12">HI_03.USO</rom>
+			<rom type="file" offset="0x13">HI_04.USO</rom>
+			<rom type="file" offset="0x14">HI_05.USO</rom>
+			<rom type="file" offset="0x15">HI_06.USO</rom>
+			<rom type="file" offset="0x16">HI_07.USO</rom>
+			<rom type="file" offset="0x17">HI_08.USO</rom>
+			<rom type="file" offset="0x18">HI_09.USO</rom>
+			<rom type="file" offset="0x19">HI_10.USO</rom>
+			<rom type="file" offset="0x1a">HI_11.USO</rom>
+			<rom type="file" offset="0x1b">HI_B.USO</rom>
+			<rom type="file" offset="0x1c">HI_D.USO</rom>
+			<rom type="shell" offset="0">usd_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">HI_01.USO : アンノン</title>
+			<title code="0x11">HI_02.USO : 年上の女性</title>
+			<title code="0x12">HI_03.USO : バッドモーニング</title>
+			<title code="0x13">HI_04.USO : 謎々</title>
+			<title code="0x14">HI_05.USO : 学園ラビリンス</title>
+			<title code="0x15">HI_06.USO : 恋する妖精</title>
+			<title code="0x16">HI_07.USO : 突然のニュース</title>
+			<title code="0x17">HI_08.USO : 愛愁</title>
+			<title code="0x18">HI_09.USO : 解決</title>
+			<title code="0x19">HI_10.USO : 別れ＝出会い</title>
+			<title code="0x1a">HI_11.USO : 奈保</title>
+			<title code="0x1b">HI_B.USO  : SE チャイム</title>
+			<title code="0x1c">HI_D.USO  : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Guerriere Lyew&#228;rd</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">テクノポリスソフト</driveralias>
+		<options>
+			<option name="mfp"     value="0x01"/>
+		</options>
+		<romlist archive="lyeward68snd">
+			<rom type="code">lyw68snd.bin</rom>
+			<rom type="x"    offset="0x010000">OPMDRV.X</rom>
+			<rom type="code" offset="0x030000">JNKMUS.DAT</rom>
+			<rom type="x"    offset="0x040000">LYEWARD.X</rom>
+			<rom type="code" offset="0x06e60e">JNKSND.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">01 : </title>
+			<title code="0x02">02 : </title>
+			<title code="0x03">03 : </title>
+			<title code="0x04">04 : </title>
+			<!--
+			<title code="0x05">05 : </title>
+			  -->
+			<title code="0x06">06 : </title>
+			<!--
+			<title code="0x07">07 : </title>
+			  -->
+			<title code="0x08">08 : </title>
+			<!--
+			<title code="0x09">09 : </title>
+			  -->
+			<title code="0x0a">0A : </title>
+			<title code="0x0b">0B : </title>
+			<title code="0x0c">0C : </title>
+			<!--
+			<title code="0x0d">0D : </title>
+			<title code="0x0d">0E : </title>
+			<title code="0x0d">0F : </title>
+			  -->
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] キミだけに愛を…</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="kimidake68snd">
+			<rom type="code" offset="0x000000">kimidake68snd.bin</rom>
+			<rom type="x"    offset="0x010000">TANK.X</rom>
+			<rom type="code" offset="0x050000">KIMI.PCD</rom>
+			<rom type="code" offset="0x090000">KI_01.USO</rom>
+			<rom type="code" offset="0x095000">KI_02.USO</rom>
+			<rom type="code" offset="0x09a000">KI_03.USO</rom>
+			<rom type="code" offset="0x09f000">KI_04.USO</rom>
+			<rom type="code" offset="0x0a4000">KI_05.USO</rom>
+			<rom type="code" offset="0x0a9000">KI_06.USO</rom>
+			<rom type="code" offset="0x0ae000">KI_07.USO</rom>
+			<rom type="code" offset="0x0b3000">KI_08.USO</rom>
+			<rom type="code" offset="0x0b8000">KI_09.USO</rom>
+			<rom type="code" offset="0x0bd000">KI_10.USO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">KI_01.USO : 後悔しない</title>
+			<title code="0x02">KI_02.USO : いつも、朝に</title>
+			<title code="0x03">KI_03.USO : 白夜</title>
+			<title code="0x04">KI_04.USO : 予感</title>
+			<title code="0x05">KI_05.USO : アン不安</title>
+			<title code="0x06">KI_06.USO : 愛すべき乙女</title>
+			<title code="0x07">KI_07.USO : 裸／裸／裸</title>
+			<title code="0x08">KI_08.USO : 恋愛人</title>
+			<title code="0x09">KI_09.USO : サスペンス</title>
+			<title code="0x0a">KI_10.USO : 永夢</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] コンチネンタル</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="conti68snd">
+			<rom type="code" offset="0x000000">conti68snd.bin</rom>
+			<rom type="x"    offset="0x010000">TANK.X</rom>
+			<rom type="code" offset="0x040000">FSE.SE</rom>
+			<rom type="code" offset="0x042000">CONTINEN.PCD</rom>
+			<rom type="code" offset="0x090000">FME13.USO</rom>
+			<rom type="code" offset="0x095000">FME14.USO</rom>
+			<rom type="code" offset="0x09a000">FME15.USO</rom>
+			<rom type="code" offset="0x09f000">FME16.USO</rom>
+			<rom type="code" offset="0x0a4000">FRPG01.USO</rom>
+			<rom type="code" offset="0x0a9000">FRPG03.USO</rom>
+			<rom type="code" offset="0x0ae000">FRPG04.USO</rom>
+			<rom type="code" offset="0x0b3000">FRPG05.USO</rom>
+			<rom type="code" offset="0x0b8000">FRPG06.USO</rom>
+			<rom type="code" offset="0x0bd000">FRPG07.USO</rom>
+			<rom type="code" offset="0x0c2000">FRPG09.USO</rom>
+			<rom type="code" offset="0x0c7000">FRPG10.USO</rom>
+			<rom type="code" offset="0x0cc000">FRPG11.USO</rom>
+			<rom type="code" offset="0x0d1000">FRPG12.USO</rom>
+			<rom type="code" offset="0x0d6000">FRPG13.USO</rom>
+			<rom type="code" offset="0x0db000">FRPG14A.USO</rom>
+			<rom type="code" offset="0x0e0000">FRPG14B.USO</rom>
+			<rom type="code" offset="0x0e5000">FRPG15.USO</rom>
+			<rom type="code" offset="0x0ea000">FRPG16.USO</rom>
+			<rom type="code" offset="0x0ef000">FRPG17.USO</rom>
+			<rom type="code" offset="0x0f4000">FRPG18.USO</rom>
+			<rom type="code" offset="0x0f9000">FRPG18B.USO</rom>
+			<rom type="code" offset="0x0fe000">FRPG19.USO</rom>
+			<rom type="code" offset="0x103000">FRPG2A.USO</rom>
+			<rom type="code" offset="0x108000">FRPG2B.USO</rom>
+			<rom type="code" offset="0x10d000">FSE01.USO</rom>
+			<rom type="code" offset="0x112000">FSE02.USO</rom>
+			<rom type="code" offset="0x117000">FSE03.USO</rom>
+			<rom type="code" offset="0x11c000">FSE04.USO</rom>
+			<rom type="code" offset="0x121000">FSE05.USO</rom>
+			<rom type="code" offset="0x126000">FSE06.USO</rom>
+			<rom type="code" offset="0x12B000">FSE07.USO</rom>
+			<rom type="code" offset="0x130000">FSE088.USO</rom>
+			<rom type="code" offset="0x135000">FSE08A.USO</rom>
+			<rom type="code" offset="0x13A000">FSE08B.USO</rom>
+			<rom type="code" offset="0x13F000">FSE10.USO</rom>
+			<rom type="code" offset="0x144000">FSE11.USO</rom>
+			<rom type="code" offset="0x149000">FSE12.USO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">FME13.USO</title>
+			<title code="0x02">FME14.USO</title>
+			<title code="0x03">FME15.USO</title>
+			<title code="0x04">FME16.USO</title>
+			<title code="0x05">FRPG01.USO</title>
+			<title code="0x06">FRPG03.USO</title>
+			<title code="0x07">FRPG04.USO</title>
+			<title code="0x08">FRPG05.USO</title>
+			<title code="0x09">FRPG06.USO</title>
+			<title code="0x0a">FRPG07.USO</title>
+			<title code="0x0b">FRPG09.USO</title>
+			<title code="0x0c">FRPG10.USO</title>
+			<title code="0x0d">FRPG11.USO</title>
+			<title code="0x0e">FRPG12.USO</title>
+			<title code="0x0f">FRPG13.USO</title>
+			<title code="0x10">FRPG14A.USO</title>
+			<title code="0x11">FRPG14B.USO</title>
+			<title code="0x12">FRPG15.USO</title>
+			<title code="0x13">FRPG16.USO</title>
+			<title code="0x14">FRPG17.USO</title>
+			<title code="0x15">FRPG18.USO</title>
+			<title code="0x16">FRPG18B.USO</title>
+			<title code="0x17">FRPG19.USO</title>
+			<title code="0x18">FRPG2A.USO</title>
+			<title code="0x19">FRPG2B.USO</title>
+			<title code="0x1a">FSE01.USO</title>
+			<title code="0x1b">FSE02.USO</title>
+			<title code="0x1c">FSE03.USO</title>
+			<title code="0x1d">FSE04.USO</title>
+			<title code="0x1e">FSE05.USO</title>
+			<title code="0x1f">FSE06.USO</title>
+			<title code="0x20">FSE07.USO</title>
+			<title code="0x21">FSE088.USO</title>
+			<title code="0x22">FSE08A.USO</title>
+			<title code="0x23">FSE08B.USO</title>
+			<title code="0x24">FSE10.USO</title>
+			<title code="0x25">FSE11.USO</title>
+			<title code="0x26">FSE12.USO</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] テセラ ～キミは汚れた天使か聖なる魔女か!?～</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="tecera68snd">
+			<rom type="code" offset="0x000000">tecera68snd.bin</rom>
+			<rom type="x"    offset="0x010000">TANK.X</rom>
+			<rom type="code" offset="0x04f000">TEC_SE.SE</rom>
+			<rom type="code" offset="0x050000">IV.PCD</rom>
+			<rom type="code" offset="0x090000">BADEND.USO</rom>
+			<rom type="code" offset="0x095000">ENA.USO</rom>
+			<rom type="code" offset="0x09a000">ENDING.USO</rom>
+			<rom type="code" offset="0x09f000">KICHIJOJ.USO</rom>
+			<rom type="code" offset="0x0a4000">KIKEN.USO</rom>
+			<rom type="code" offset="0x0a9000">MUSUME.USO</rom>
+			<rom type="code" offset="0x0ae000">OPENING.USO</rom>
+			<rom type="code" offset="0x0b3000">SHINSEI.USO</rom>
+			<rom type="code" offset="0x0b8000">SHOUJO.USO</rom>
+			<rom type="code" offset="0x0bd000">TESERA.USO</rom>
+			<rom type="code" offset="0x0c2000">UMI.USO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x07">OPENING.USO  : Ⅳ・オープニング</title>
+			<title code="0x02">ENA.USO      : エナ</title>
+			<title code="0x09">SHOUJO.USO   : 少女</title>
+			<title code="0x04">KICHIJOJ.USO : 吉祥寺クエスト</title>
+			<title code="0x06">MUSUME.USO   : 娘たち</title>
+			<title code="0x05">KIKEN.USO    : 危険な乙女</title>
+			<title code="0x0a">TESERA.USO   : テセラ</title>
+			<title code="0x0b">UMI.USO      : 海</title>
+			<title code="0x01">BADEND.USO   : BAD・END</title>
+			<title code="0x08">SHINSEI.USO  : 新生</title>
+			<title code="0x03">ENDING.USO   : エンディング</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] ドラゴンアイズ</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="drageye68snd">
+			<rom type="code" offset="0x000000">drageye68snd.bin</rom>
+			<rom type="x"    offset="0x010000">tank.x</rom>
+			<rom type="code" offset="0x01fb90">CITY.PCD</rom>
+			<rom type="code" offset="0x090000">AWA_A.USO</rom>
+			<rom type="code" offset="0x095000">AWA_B.USO</rom>
+			<rom type="code" offset="0x09a000">BARA7.USO</rom>
+			<rom type="code" offset="0x09f000">DC_SIZ.USO</rom>
+			<rom type="code" offset="0x0a4000">D_SH.USO</rom>
+			<rom type="code" offset="0x0a9000">END.USO</rom>
+			<rom type="code" offset="0x0ae000">FAMI.USO</rom>
+			<rom type="code" offset="0x0b3000">HAPPY.USO</rom>
+			<rom type="code" offset="0x0b8000">KURA3.USO</rom>
+			<rom type="code" offset="0x0bd000">NIGE.USO</rom>
+			<rom type="code" offset="0x0c2000">NIKE.USO</rom>
+			<rom type="code" offset="0x0c7000">NOS.USO</rom>
+			<rom type="code" offset="0x0cc000">PARTY.USO</rom>
+			<rom type="code" offset="0x0d1000">PINK.USO</rom>
+			<rom type="code" offset="0x0d6000">PROG.USO</rom>
+			<rom type="code" offset="0x0db000">SAD.USO</rom>
+			<rom type="code" offset="0x0e0000">SE.USO</rom>
+			<rom type="code" offset="0x0e5000">SIRO_C.USO</rom>
+			<rom type="code" offset="0x0ea000">SPACE.USO</rom>
+			<rom type="code" offset="0x0ef000">YA6.USO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">AWA_A.USO  : 回想</title>
+			<title code="0x07">FAMI.USO   : '球'たち</title>
+			<title code="0x11">SE.USO     : コスモス</title>
+			<title code="0x14">YA6.USO    : ミウィ</title>
+			<title code="0x04">DC_SIZ.USO : ガールドリア</title>
+			<title code="0x12">SIRO_C.USO : 少女たち</title>
+			<title code="0x10">SAD.USO    : 先見師</title>
+			<title code="0x13">SPACE.USO  : ロゴナ</title>
+			<title code="0x0d">PARTY.USO  : 想人の星</title>
+			<title code="0x09">KURA3.USO  : 哀する星々</title>
+			<title code="0x0f">PROG.USO   : 渡り星</title>
+			<title code="0x08">HAPPY.USO  : ぴんく・ぴんく!</title>
+			<title code="0x0b">NIKE.USO   : 聖地</title>
+			<title code="0x0a">NIGE.USO   : 戦星</title>
+			<title code="0x03">BARA7.USO  : 別離</title>
+			<title code="0x0c">NOS.USO    : 事起</title>
+			<title code="0x05">D_SH.USO   : 行きづまりの捷利</title>
+			<title code="0x0e">PINK.USO   : ドラゴンアイズ</title>
+			<title code="0x06">END.USO    : 再会</title>
+			<title code="0x02">AWA_B.USO  : アイネス</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 秘密の花園</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="mfp" value="0x01"/>
+		</options>
+		<romlist archive="himihana68snd">
+			<rom type="code" offset="0x000000">himihana68snd.bin</rom>
+			<rom type="x"    offset="0x010000">TANK.X</rom>
+			<rom type="code" offset="0x04f000">HIMITU.SE</rom>
+			<rom type="code" offset="0x050000">CITY.PCD</rom>
+			<rom type="code" offset="0x090000">HI_01.USO</rom>
+			<rom type="code" offset="0x095000">HI_02.USO</rom>
+			<rom type="code" offset="0x09a000">HI_03.USO</rom>
+			<rom type="code" offset="0x09f000">HI_04.USO</rom>
+			<rom type="code" offset="0x0a4000">HI_05.USO</rom>
+			<rom type="code" offset="0x0a9000">HI_06.USO</rom>
+			<rom type="code" offset="0x0ae000">HI_07.USO</rom>
+			<rom type="code" offset="0x0b3000">HI_08.USO</rom>
+			<rom type="code" offset="0x0b8000">HI_09.USO</rom>
+			<rom type="code" offset="0x0bd000">HI_10.USO</rom>
+			<rom type="code" offset="0x0c2000">HI_11.USO</rom>
+			<rom type="code" offset="0x0c7000">HI_B.USO</rom>
+			<rom type="code" offset="0x0cc000">HI_D.USO</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">HI_01.USO : アンノン</title>
+			<title code="0x02">HI_02.USO : 年上の女性</title>
+			<title code="0x03">HI_03.USO : バッドモーニング</title>
+			<title code="0x04">HI_04.USO : 謎々</title>
+			<title code="0x05">HI_05.USO : 学園ラビリンス</title>
+			<title code="0x06">HI_06.USO : 恋する妖精</title>
+			<title code="0x07">HI_07.USO : 突然のニュース</title>
+			<title code="0x08">HI_08.USO : 愛愁</title>
+			<title code="0x09">HI_09.USO : 解決</title>
+			<title code="0x0a">HI_10.USO : 別れ＝出会い</title>
+			<title code="0x0b">HI_11.USO : 奈保</title>
+			<title code="0x0c">HI_B.USO  : SE チャイム</title>
+			<title code="0x0d">HI_D.USO  : SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] Shenan Dragon</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">テクノポリスソフト</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+			<option name="mdata_size" value="0xb00"/>
+			<option name="mfile_size" value="0xb00"/>
+			<option name="init_pc"    value="0x400"/>
+		</options>
+		<romlist archive="sdragn_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x9000">MUX.COM</rom>
+			<rom type="code" offset="0x9c00">EFFECT.COM</rom>
+			<rom type="bgm" offset="0x00">EMUS.COM</rom>
+			<rom type="bgm" offset="0x01">GMUS.COM</rom>
+			<rom type="bgm" offset="0x02">OMUS.COM</rom>
+			<rom type="bgm" offset="0x03">TMUS.COM</rom>
+			<rom type="bgm" offset="0x04">VMUS.COM</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">EMUS.COM : 00 : </title>
+			<title code="0x0100">EMUS.COM : 01 : </title>
+			<title code="0x0200">EMUS.COM : 02 : </title>
+			<title code="0x0300">EMUS.COM : 03 : </title>
+			<title code="0x0001">GMUS.COM : 00 : </title>
+			<title code="0x0101">GMUS.COM : 01 : </title>
+			<title code="0x0201">GMUS.COM : 02 : </title>
+			<title code="0x0301">GMUS.COM : 03 : </title>
+			<title code="0x0002">OMUS.COM : 00 : </title>
+			<title code="0x0102">OMUS.COM : 01 : </title>
+			<title code="0x0202">OMUS.COM : 02 : </title>
+			<title code="0x0302">OMUS.COM : 03 : </title>
+			<title code="0x0003">TMUS.COM : 00 : </title>
+			<title code="0x0103">TMUS.COM : 01 : </title>
+			<title code="0x0203">TMUS.COM : 02 : </title>
+			<title code="0x0303">TMUS.COM : 03 : </title>
+			<title code="0x0004">VMUS.COM : 00 : </title>
+			<title code="0x0104">VMUS.COM : 01 : </title>
+			<title code="0x0204">VMUS.COM : 02 : </title>
+			<title code="0x0304">VMUS.COM : 03 : </title>
+			<range min="0xff01" max="0xff08" extcode="0">SE       : %02x : </range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] キミだけに愛を…</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="kimidake_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x8000">IMSX.COM</rom>
+			<rom type="bgm" offset="0x00">KI_01.M</rom>
+			<rom type="bgm" offset="0x01">KI_02.M</rom>
+			<rom type="bgm" offset="0x02">KI_03.M</rom>
+			<rom type="bgm" offset="0x03">KI_04.M</rom>
+			<rom type="bgm" offset="0x04">KI_05.M</rom>
+			<rom type="bgm" offset="0x05">KI_06.M</rom>
+			<rom type="bgm" offset="0x06">KI_07.M</rom>
+			<rom type="bgm" offset="0x07">KI_08.M</rom>
+			<rom type="bgm" offset="0x08">KI_09.M</rom>
+			<rom type="bgm" offset="0x09">KI_10.M</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">KI_01.M : 後悔しない</title>
+			<title code="0x01">KI_02.M : いつも、朝に</title>
+			<title code="0x02">KI_03.M : 白夜</title>
+			<title code="0x03">KI_04.M : 予感</title>
+			<title code="0x04">KI_05.M : アン不安</title>
+			<title code="0x05">KI_06.M : 愛すべき乙女</title>
+			<title code="0x06">KI_07.M : 裸／裸／裸</title>
+			<title code="0x07">KI_08.M : 恋愛人</title>
+			<title code="0x08">KI_09.M : サスペンス</title>
+			<title code="0x09">KI_10.M : 永夢</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] コンチネンタル</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="conti_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x8000">IMSX.COM</rom>
+			<rom type="bgm" offset="0x00">FME13.M</rom>
+			<rom type="bgm" offset="0x01">FME14.M</rom>
+			<rom type="bgm" offset="0x02">FME15.M</rom>
+			<rom type="bgm" offset="0x03">FME16.M</rom>
+			<rom type="bgm" offset="0x04">FRPG01.M</rom>
+			<rom type="bgm" offset="0x05">FRPG03.M</rom>
+			<rom type="bgm" offset="0x06">FRPG04.M</rom>
+			<rom type="bgm" offset="0x07">FRPG05.M</rom>
+			<rom type="bgm" offset="0x08">FRPG06.M</rom>
+			<rom type="bgm" offset="0x09">FRPG07.M</rom>
+			<rom type="bgm" offset="0x0a">FRPG09.M</rom>
+			<rom type="bgm" offset="0x0b">FRPG10.M</rom>
+			<rom type="bgm" offset="0x0c">FRPG11.M</rom>
+			<rom type="bgm" offset="0x0d">FRPG12.M</rom>
+			<rom type="bgm" offset="0x0e">FRPG13.M</rom>
+			<rom type="bgm" offset="0x0f">FRPG15.M</rom>
+			<rom type="bgm" offset="0x10">FRPG16.M</rom>
+			<rom type="bgm" offset="0x11">FRPG17.M</rom>
+			<rom type="bgm" offset="0x12">FRPG19.M</rom>
+			<rom type="bgm" offset="0x13">FRPG2A.M</rom>
+			<rom type="bgm" offset="0x14">FRPG2B.M</rom>
+			<rom type="bgm" offset="0x15">FSE088.M</rom>
+			<rom type="bgm" offset="0x16">RPG14A.M</rom>
+			<rom type="bgm" offset="0x17">RPG14B.M</rom>
+			<rom type="bgm" offset="0x18">RPG18A.M</rom>
+			<rom type="bgm" offset="0x19">RPG18B.M</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">FME13.M  : </title>
+			<title code="0x01">FME14.M  : </title>
+			<title code="0x02">FME15.M  : </title>
+			<title code="0x03">FME16.M  : </title>
+			<title code="0x04">FRPG01.M : </title>
+			<title code="0x05">FRPG03.M : </title>
+			<title code="0x06">FRPG04.M : </title>
+			<title code="0x07">FRPG05.M : </title>
+			<title code="0x08">FRPG06.M : </title>
+			<title code="0x09">FRPG07.M : </title>
+			<title code="0x0a">FRPG09.M : </title>
+			<title code="0x0b">FRPG10.M : </title>
+			<title code="0x0c">FRPG11.M : </title>
+			<title code="0x0d">FRPG12.M : </title>
+			<title code="0x0e">FRPG13.M : </title>
+			<title code="0x0f">FRPG15.M : </title>
+			<title code="0x10">FRPG16.M : </title>
+			<title code="0x11">FRPG17.M : </title>
+			<title code="0x12">FRPG19.M : </title>
+			<title code="0x13">FRPG2A.M : </title>
+			<title code="0x14">FRPG2B.M : </title>
+			<title code="0x15">FSE088.M : </title>
+			<title code="0x16">RPG14A.M : </title>
+			<title code="0x17">RPG14B.M : </title>
+			<title code="0x18">RPG18A.M : </title>
+			<title code="0x19">RPG18B.M : </title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] ドラゴンアイズ</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="drageye_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x8000">EYEMSX.COM</rom>
+			<rom type="bgm" offset="0x00">AWA.M</rom>
+			<rom type="bgm" offset="0x01">BARA7.M</rom>
+			<rom type="bgm" offset="0x02">D_SH.M</rom>
+			<rom type="bgm" offset="0x03">DC_SIZ.M</rom>
+			<rom type="bgm" offset="0x04">END.M</rom>
+			<rom type="bgm" offset="0x05">FAMI.M</rom>
+			<rom type="bgm" offset="0x06">HAPPY.M</rom>
+			<rom type="bgm" offset="0x07">KURA3.M</rom>
+			<rom type="bgm" offset="0x08">NIGE.M</rom>
+			<rom type="bgm" offset="0x09">NIKE.M</rom>
+			<rom type="bgm" offset="0x0a">NOS.M</rom>
+			<rom type="bgm" offset="0x0b">PARTY.M</rom>
+			<rom type="bgm" offset="0x0c">PINK.M</rom>
+			<rom type="bgm" offset="0x0d">PROG.M</rom>
+			<rom type="bgm" offset="0x0e">SAD.M</rom>
+			<rom type="bgm" offset="0x0f">SE.M</rom>
+			<rom type="bgm" offset="0x10">SIRO.M</rom>
+			<rom type="bgm" offset="0x11">SPACE.M</rom>
+			<rom type="bgm" offset="0x12">YA6.M</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">AWA.M    : 回想</title>
+			<title code="0x05">FAMI.M   : '球'たち</title>
+			<title code="0x0f">SE.M     : コスモス</title>
+			<title code="0x12">YA6.M    : ミウィ</title>
+			<title code="0x03">DC_SIZ.M : ガールドリア</title>
+			<title code="0x10">SIRO.M   : 少女たち</title>
+			<title code="0x0e">SAD.M    : 先見師</title>
+			<title code="0x11">SPACE.M  : ロゴナ</title>
+			<title code="0x0b">PARTY.M  : 想人の星</title>
+			<title code="0x07">KURA3.M  : 哀する星々</title>
+			<title code="0x0d">PROG.M   : 渡り星</title>
+			<title code="0x06">HAPPY.M  : ぴんく・ぴんく!</title>
+			<title code="0x09">NIKE.M   : 聖地</title>
+			<title code="0x08">NIGE.M   : 戦星</title>
+			<title code="0x01">BARA7.M  : 別離</title>
+			<title code="0x0a">NOS.M    : 事起</title>
+			<title code="0x02">D_SH.M   : 行きづまりの捷利</title>
+			<title code="0x0c">PINK.M   : ドラゴンアイズ</title>
+			<title code="0x04">END.M    : 再会</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 秘密の花園</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">GAMEテクノポリス</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x9000"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="himihana_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x8000">IMSX.COM</rom>
+			<rom type="bgm" offset="0x00">HI_01.M</rom>
+			<rom type="bgm" offset="0x01">HI_02.M</rom>
+			<rom type="bgm" offset="0x02">HI_03.M</rom>
+			<rom type="bgm" offset="0x03">HI_04.M</rom>
+			<rom type="bgm" offset="0x04">HI_05.M</rom>
+			<rom type="bgm" offset="0x05">HI_06.M</rom>
+			<rom type="bgm" offset="0x06">HI_07.M</rom>
+			<rom type="bgm" offset="0x07">HI_08.M</rom>
+			<rom type="bgm" offset="0x08">HI_09.M</rom>
+			<rom type="bgm" offset="0x09">HI_10.M</rom>
+			<rom type="bgm" offset="0x0a">HI_11.M</rom>
+			<rom type="bgm" offset="0x0b">HI_A.M</rom>
+			<rom type="bgm" offset="0x0c">HI_B.M</rom>
+			<rom type="bgm" offset="0x0d">HI_C.M</rom>
+			<rom type="bgm" offset="0x0e">HI_D.M</rom>
+			<rom type="bgm" offset="0x0f">HI_E.M</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">HI_01.M : アンノン</title>
+			<title code="0x01">HI_02.M : 年上の女性</title>
+			<title code="0x02">HI_03.M : バッドモーニング</title>
+			<title code="0x03">HI_04.M : 謎々</title>
+			<title code="0x04">HI_05.M : 学園ラビリンス</title>
+			<title code="0x05">HI_06.M : 恋する妖精</title>
+			<title code="0x06">HI_07.M : 突然のニュース</title>
+			<title code="0x07">HI_08.M : 愛愁</title>
+			<title code="0x08">HI_09.M : 解決</title>
+			<title code="0x09">HI_10.M : 別れ＝出会い</title>
+			<title code="0x0a">HI_11.M : 奈保</title>
+			<title code="0x0b">HI_A.M  : SE 目覚まし</title>
+			<title code="0x0c">HI_B.M  : SE チャイム</title>
+			<title code="0x0d">HI_C.M  : SE チャイム</title>
+			<title code="0x0e">HI_D.M  : SE </title>
+			<title code="0x0f">HI_E.M  : SE 電話</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 単騎狼・ウルフ・AT</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">テクノポリスソフト</driveralias>
+		<options>
+			<option name="init_pc"    value="0x00400"/>
+		</options>
+		<romlist archive="fwolfat_msx">
+			<rom type="code" offset="0x0100">WOLF.COM</rom>
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xb000">AMAZONA.SNG</rom>
+			<rom type="code" offset="0xb200">AMAZONB.SNG</rom>
+			<rom type="code" offset="0xb400">AMAZONC.SNG</rom>
+			<rom type="code" offset="0xb600">CALIFOA.SNG</rom>
+			<rom type="code" offset="0xb800">CALIFOB.SNG</rom>
+			<rom type="code" offset="0xba00">CALIFOC.SNG</rom>
+			<rom type="code" offset="0xbc00">PROG12A.SNG</rom>
+			<rom type="code" offset="0xbe00">PROG12B.SNG</rom>
+			<rom type="code" offset="0xc000">PROG12C.SNG</rom>
+			<rom type="code" offset="0xc200">RUN5A.SNG</rom>
+			<rom type="code" offset="0xc400">RUN5B.SNG</rom>
+			<rom type="code" offset="0xc600">RUN5C.SNG</rom>
+			<rom type="code" offset="0xc800">SAHARAA.SNG</rom>
+			<rom type="code" offset="0xca00">SAHARAB.SNG</rom>
+			<rom type="code" offset="0xcc00">SAHARAC.SNG</rom>
+			<rom type="code" offset="0xce00">SAMBAA.SNG</rom>
+			<rom type="code" offset="0xd000">SAMBAB.SNG</rom>
+			<rom type="code" offset="0xd200">SAMBAC.SNG</rom>
+			<rom type="code" offset="0xd400">TOKYOA.SNG</rom>
+			<rom type="code" offset="0xd600">TOKYOB.SNG</rom>
+			<rom type="code" offset="0xd800">TOKYOC.SNG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">TITLE</title>
+			<title code="0x06">BGM</title>
+			<title code="0x02">BGM2</title>
+			<title code="0x03">BGM3</title>
+			<title code="0x05">CLEAR DEMO</title>
+			<title code="0x00">GAME OVER</title>
+			<range min="0x04" max="0x04" extcode="1">BGM 0x%02x</range>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] お嬢様くらぶ</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">テクノポリスソフト</driveralias>
+		<options>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="ojosama_msx">
+			<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0x3ff9">M.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Jang ken          / TENTEKO</title>
+			<title code="0x01">HARD              / NEKO</title>
+			<title code="0x02">Twincle           / TENTEKO</title>
+			<title code="0x03">Spring skip       / XKD</title>
+			<title code="0x04">Theme of GIRLS    / KOSIRON</title>
+			<title code="0x05">Epilogue          / KOSIRON</title>
+			<title code="0x06">GAME OVER         / TENTEKO</title>
+			<title code="0x07">Sea side          / GOD</title>
+			<title code="0x08">Atend of MENUETTE / XKD</title>
+			<title code="0x09">Queens            / KOSIRON</title>
+		</titlelist>
+	</game>
+</gamelist>

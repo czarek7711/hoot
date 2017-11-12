@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+
+	<!-- //magicalzoo -->
+	<game>
+		<name>[PC-8801] 摩訶迦羅</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">マジカル・ズゥ</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7800"/>
+		</options>
+		<romlist archive="makakara">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xa800">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00 : 表題</title>
+			<title code="0x01">MUS01 : 地上</title>
+			<title code="0x02">MUS02 : 戦闘</title>
+			<title code="0x03">MUS03 : 明姫</title>
+			<title code="0x04">MUS04 : 魔界</title>
+			<title code="0x05">MUS05 : 死</title>
+			<title code="0x06">MUS06 : 迷宮</title>
+			<title code="0x07">MUS07 : 結末</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] 摩訶迦羅</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="SHARP X1">マジカル・ズゥ</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x7800"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="init_pc" value="0xf000"/>
+		</options>
+		<romlist archive="x1mkkr">
+			<rom type="code" offset="0x9800">INIT</rom>
+			<rom type="code" offset="0xe000">OPMDRV</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+			<rom type="bgm" offset="0x04">MUS04</rom>
+			<rom type="bgm" offset="0x05">MUS05</rom>
+			<rom type="bgm" offset="0x06">MUS06</rom>
+			<rom type="bgm" offset="0x07">MUS07</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS00 : 表題</title>
+			<title code="0x01">MUS01 : 地上</title>
+			<title code="0x02">MUS02 : 戦闘</title>
+			<title code="0x03">MUS03 : 明姫</title>
+			<title code="0x04">MUS04 : 魔界</title>
+			<title code="0x05">MUS05 : 死</title>
+			<title code="0x06">MUS06 : 迷宮</title>
+			<title code="0x07">MUS07 : 結末</title>
+		</titlelist>
+	</game>
+</gamelist>

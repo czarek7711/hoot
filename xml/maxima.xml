@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //MAXIMA -->
+	<game>
+		<name>[PC-98] Mercury: The Prime Master (マーキュリー ザ プライムマスター)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">maxima</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix" value="0"/>
+			<option name="ssg_mix" value="-18"/>
+		</options>
+		<romlist archiver="mercury_98">
+			<rom type="file" offset="-1">MRCRY_98.COM</rom>
+			<rom type="file" offset="-1">MUSDRV.EXE</rom>
+			<rom type="file" offset="-1">SOUND.DAT</rom>
+			<rom type="file" offset="0x10">MCM01.DAT</rom>
+			<rom type="file" offset="0x11">MCM02.DAT</rom>
+			<rom type="file" offset="0x12">MCM03.DAT</rom>
+			<rom type="file" offset="0x13">MCM04.DAT</rom>
+			<rom type="file" offset="0x14">MCM05.DAT</rom>
+			<rom type="file" offset="0x15">MCM06.DAT</rom>
+			<rom type="file" offset="0x16">MCM07.DAT</rom>
+			<rom type="file" offset="0x17">MCM08.DAT</rom>
+			<rom type="file" offset="0x18">MCM09.DAT</rom>
+			<rom type="file" offset="0x19">MCM10.DAT</rom>
+			<rom type="file" offset="0x1a">MCM11.DAT</rom>
+			<rom type="file" offset="0x1b">MCM12.DAT</rom>
+			<rom type="file" offset="0x1c">MCM13.DAT</rom>
+			<rom type="file" offset="0x1d">MCM14.DAT</rom>
+			<rom type="file" offset="0x1e">MCM15.DAT</rom>
+			<rom type="file" offset="0x1f">MCM16.DAT</rom>
+			<rom type="file" offset="0x20">MCM17.DAT</rom>
+			<rom type="file" offset="0x21">MCM18.DAT</rom>
+			<rom type="file" offset="0x22">MCM19.DAT</rom>
+			<rom type="file" offset="0x23">MCM20.DAT</rom>
+			<rom type="file" offset="0x24">MCM21.DAT</rom>
+			<rom type="file" offset="0x25">MCM22.DAT</rom>
+			<rom type="file" offset="0x26">MCM23.DAT</rom>
+			<rom type="shell" offset="0">MUSDRV</rom>
+			<rom type="shell" offset="0">MRCRY_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">タイトル</title>          
+			<title code="0x11">エンディング1</title>     
+			<title code="0x12">エンディング2</title>     
+			<title code="0x13">ゲームオーバー</title>    
+			<title code="0x14">平和な空中都市</title>    
+			<title code="0x15">平和な町、村</title>      
+			<title code="0x16">戦闘状態の空中都市</title>
+			<title code="0x17">戦闘時の町、村</title>    
+			<title code="0x18">塔</title>                
+			<title code="0x19">洞窟</title>              
+			<title code="0x1a">魔都市</title>            
+			<title code="0x1b">廃虚</title>              
+			<title code="0x1c">宮殿</title>              
+			<title code="0x1d">ラガート飛行中</title>    
+			<title code="0x1e">船での航海</title>        
+			<title code="0x1f">戦闘</title>              
+			<title code="0x20">ボスとの遭遇</title>      
+			<title code="0x21">ボスとの戦闘</title>      
+			<title code="0x22">ボスとの戦闘後</title>    
+			<title code="0x23">大陸BGM A</title>         
+			<title code="0x24">大陸BGM B</title>         
+			<title code="0x25">大陸BGM C</title>         
+			<title code="0x26">大陸BGM D</title>         
+			<title code="0x00FF">SFX #00</title>
+			<title code="0x01FF">SFX #01</title>
+			<title code="0x02FF">SFX #02</title>
+			<title code="0x03FF">SFX #03</title>
+			<title code="0x04FF">SFX #04</title>
+			<title code="0x05FF">SFX #05</title>
+			<title code="0x06FF">SFX #06</title>
+			<title code="0x07FF">SFX #07</title>
+			<title code="0x08FF">SFX #08</title>
+			<title code="0x09FF">SFX #09</title>
+			<title code="0x0AFF">SFX #0A</title>
+			<title code="0x0BFF">SFX #0B</title>
+			<title code="0x0CFF">SFX #0C</title>
+			<title code="0x0DFF">SFX #0D</title>
+			<title code="0x0EFF">SFX #0E</title>
+			<title code="0x0FFF">SFX #0F</title>
+			<title code="0x10FF">SFX #10</title>
+			<title code="0x11FF">SFX #11</title>
+			<title code="0x12FF">SFX #12</title>
+			<title code="0x13FF">SFX #13</title>
+			<title code="0x14FF">SFX #14</title>
+			<title code="0x15FF">SFX #15</title>
+			<title code="0x16FF">SFX #16</title>
+			<title code="0x17FF">SFX #17</title>
+			<title code="0x18FF">SFX #18</title>
+			<title code="0x19FF">SFX #19</title>
+			<title code="0x1AFF">SFX #1A</title>
+			<title code="0x1BFF">SFX #1B</title>
+			<title code="0x1DFF">SFX #1D</title>
+			<title code="0x1EFF">SFX #1E</title>
+			<title code="0x1FFF">SFX #1F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Mercury: The Prime Master (マーキュリー ザ プライムマスター)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">maxima</driveralias>
+		<options>
+			<option name="opm_mix" value="0x100"/>
+		</options>
+		<romlist archive="mercury68snd">
+			<rom type="code" offset="0x00000">mrcry68snd.bin</rom>
+			<rom type="x" offset="0x10000">MUSDRV.X</rom>
+			<rom type="code" offset="0x13d9a">SOUND.DAT</rom>
+			<rom type="code" offset="0x14000">MCM00.DAT</rom>
+			<rom type="code" offset="0x16000">MCM01.DAT</rom>
+			<rom type="code" offset="0x18000">MCM02.DAT</rom>
+			<rom type="code" offset="0x1A000">MCM03.DAT</rom>
+			<rom type="code" offset="0x1C000">MCM04.DAT</rom>
+			<rom type="code" offset="0x1E000">MCM05.DAT</rom>
+			<rom type="code" offset="0x20000">MCM06.DAT</rom>
+			<rom type="code" offset="0x22000">MCM07.DAT</rom>
+			<rom type="code" offset="0x24000">MCM08.DAT</rom>
+			<rom type="code" offset="0x26000">MCM09.DAT</rom>
+			<rom type="code" offset="0x28000">MCM10.DAT</rom>
+			<rom type="code" offset="0x2A000">MCM11.DAT</rom>
+			<rom type="code" offset="0x2C000">MCM12.DAT</rom>
+			<rom type="code" offset="0x2E000">MCM13.DAT</rom>
+			<rom type="code" offset="0x30000">MCM14.DAT</rom>
+			<rom type="code" offset="0x32000">MCM15.DAT</rom>
+			<rom type="code" offset="0x34000">MCM16.DAT</rom>
+			<rom type="code" offset="0x36000">MCM17.DAT</rom>
+			<rom type="code" offset="0x38000">MCM18.DAT</rom>
+			<rom type="code" offset="0x3A000">MCM19.DAT</rom>
+			<rom type="code" offset="0x3C000">MCM20.DAT</rom>
+			<rom type="code" offset="0x3E000">MCM21.DAT</rom>
+			<rom type="code" offset="0x40000">MCM22.DAT</rom>
+			<rom type="code" offset="0x42000">MCM23.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">MCM00.DAT</title>
+			<title code="0x02">タイトル</title>
+			<title code="0x03">エンディング1</title>
+			<title code="0x04">エンディング2</title>
+			<title code="0x05">ゲームオーバー</title>
+			<title code="0x06">平和な空中都市</title>
+			<title code="0x07">平和な町、村</title>
+			<title code="0x08">戦闘状態の空中都市</title>
+			<title code="0x09">戦闘時の町、村</title>
+			<title code="0x0a">塔</title>
+			<title code="0x0b">洞窟</title>
+			<title code="0x0c">魔都市</title>
+			<title code="0x0d">廃虚</title>
+			<title code="0x0e">宮殿</title>
+			<title code="0x0f">ラガート飛行中</title>
+			<title code="0x10">船での航海</title>
+			<title code="0x11">戦闘</title>
+			<title code="0x12">ボスとの遭遇</title>
+			<title code="0x13">ボスとの戦闘</title>
+			<title code="0x14">ボスとの戦闘後</title>
+			<title code="0x15">大陸BGM A</title>
+			<title code="0x16">大陸BGM B</title>
+			<title code="0x17">大陸BGM C</title>
+			<title code="0x18">大陸BGM D</title>
+		</titlelist>
+	</game>
+</gamelist>

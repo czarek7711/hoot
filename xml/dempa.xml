@@ -1,0 +1,1567 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //dempa -->
+	<game>
+		<name>[PC-88] Super Zenon Gamma 5</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">dempa</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x8400"/>
+			<option name="vdata_addr" value="0xc000"/>
+			<option name="use_rtc"    value="0x01"/>
+		</options>
+		<romlist archive="gamma5">
+			<rom type="code"  offset="0x0000">PATCH</rom>
+			<rom type="bgm"   offset="0x00">MUS00</rom>
+			<rom type="voice" offset="0x00">VOI00</rom>
+			<rom type="bgm"   offset="0x01">MUS01</rom>
+			<rom type="voice" offset="0x01">VOI01</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Opening</title>
+			<title code="0x01">BGM</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] The Demon Crystal</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">dempa</driveralias>
+		<options>
+			<option name="init_pc" value="0x0100"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="dcrystal">
+			<rom type="code" offset="0x0100">PATCH</rom>
+			<rom type="code" offset="0x8500">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Theme Music (テーマ・ミュージック)</title>
+			<title code="0x01">Transformation Music (面変わりミュージック)</title>
+			<title code="0x02">Game BGM (ゲームBGM)</title>
+			<title code="0x03">Time Up BGM (時間切れBGM)</title>
+			<title code="0x04">Defeated Music (やられのエンディング・ミュージック)</title>
+			<title code="0x05">Round Clear Music (全ラウンド・クリア・ミュージック)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Knither -Demon Crystal Ⅱ-</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">dempa</driveralias>
+		<options>
+			<option name="use_vrtc" value="0x01"/>
+		</options>
+		<romlist archive="knither">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0A</title>
+			<title code="0x0b">BGM #0B</title>
+			<title code="0x0c">BGM #0C</title>
+			<title code="0x0d">BGM #0D</title>
+			<title code="0x0e">BGM #0E</title>
+			<title code="0x0f">BGM #0F</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Mappy (マッピー)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">dempa</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+			<option name="use_rtc" value="0x01"/>
+		</options>
+		<romlist archive="mappy88">
+			<rom type="code" offset="0x0000">PROG1</rom>
+			<rom type="code" offset="0x8a00">PROG2</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x16">Game Start</title>
+			<title code="0x09">SFX "!"</title>
+			<title code="0x05">Trampoline (トランポリン)</title>
+			<title code="0x12">Main BGM</title>
+			<title code="0x07">Hurry UP!</title>
+			<title code="0x18">Main BGM (Hurry)</title>
+			<title code="0x11">Round Clear</title>
+			<title code="0x0a">Bonus Round Start</title>
+			<title code="0x13">Bonus Round</title>
+			<title code="0x17">Bonus Round Result</title>
+			<title code="0x10">Extend</title>
+			<title code="0x0e">Miss</title>
+			<title code="0x0f">Game Over</title>
+			<title code="0x06">Recovering the Stolen Goods (盗品回収)</title>
+			<title code="0x08">Power Door (パワードア)</title>
+			<title code="0x0d">Bell (ベル)</title>
+			<title code="0x0b">SFX (?)</title>
+			<title code="0x0c">SFX (?)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-88] Space Harrier (スペースハリアー)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="PC-88">dempa</driveralias>
+
+		<romlist archive="sharri88">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0x3000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS00</rom>
+			<rom type="bgm" offset="0x02">MUS01</rom>
+			<rom type="bgm" offset="0x03">MUS02</rom>
+			<rom type="bgm" offset="0x04">MUS03</rom>
+			<rom type="bgm" offset="0x05">MUS04</rom>
+			<rom type="bgm" offset="0x06">MUS05</rom>
+			<rom type="bgm" offset="0x07">MUS06</rom>
+			<rom type="bgm" offset="0x08">MUS07</rom>
+			<rom type="bgm" offset="0x09">MUS08</rom>
+			<rom type="bgm" offset="0x0a">MUS09</rom>
+			<rom type="bgm" offset="0x0b">MUS10</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Credit</title>
+			<title code="0x01">Main Theme</title>
+			<title code="0x02">Squilla</title>
+			<title code="0x03">Ida</title>
+			<title code="0x04">Godarni</title>
+			<title code="0x05">Wi Wi Jumbo</title>
+			<title code="0x06">Battle Field</title>
+			<title code="0x07">Syura</title>
+			<title code="0x08">Valda</title>
+			<title code="0x09">Stanray</title>
+			<title code="0x0a">Lake Side Memory</title>
+			<title code="0x0b">Winner's Song</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Issural -The Story of Calcan- (イシュラル)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">dempa</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xea00"/>
+			<option name="mdata_size" value="0x1600"/>
+			<option name="use_ctc3"   value="0x82"/>
+		</options>
+		<romlist archive="x1issural">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xb500">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS00</rom>
+			<rom type="bgm" offset="0x01">MUS01</rom>
+			<rom type="bgm" offset="0x02">MUS02</rom>
+			<rom type="bgm" offset="0x03">MUS03</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000000">Opening</title>
+			<title code="0x06000000">Field</title>
+			<title code="0x07000000">00-07</title>
+			<title code="0x08000000">00-08</title>
+			<title code="0x09000000">Menu</title>
+			<title code="0x00000002">Dungeon</title>
+			<title code="0x03000002">Town</title>
+			<title code="0x04000002">02-04</title>
+			<title code="0x08000002">02-08</title>
+			<title code="0x02000003">Battle</title>
+			<title code="0x05000003">03-05</title>
+			<title code="0x0B000003">Game Over</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] The Curse of Mars (マーズ)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">dempa</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xc000"/>
+			<option name="mdata_size" value="0x1c00"/>
+			<option name="use_ctc3"   value="0x80"/>
+		</options>
+		<romlist archive="x1mars">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="bgm" offset="0x00">MUSIC</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x02000000">Title</title>
+			<title code="0x03000000">BGM1</title>
+			<title code="0x01000000">BGM2</title>
+			<title code="0x05000000">BGM3</title>
+			<title code="0x06000000">BGM4</title>
+			<title code="0x00000000">BGM5</title>
+			<title code="0x04000000">Labyrinth</title>
+			<title code="0x07000000">Ending</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Knither -Demon Crystal II-</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">dempa</driveralias>
+		<options>
+			<option name="use_ctc3" value="0x80"/>
+		</options>
+		<romlist archive="x1knither">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0xe600">SUB</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01000001">BGM #01</title>
+			<title code="0x01000002">BGM #02</title>
+			<title code="0x01000003">BGM #03</title>
+			<title code="0x01000004">BGM #04</title>
+			<title code="0x01000005">BGM #05</title>
+			<title code="0x01000006">BGM #06</title>
+			<title code="0x01000007">BGM #07</title>
+			<title code="0x00000008">BGM #08</title>
+			<title code="0x00000009">BGM #09</title>
+			<title code="0x0000000a">BGM #0A</title>
+			<title code="0x0000000b">BGM #0B</title>
+			<title code="0x0000000c">BGM #0C</title>
+			<title code="0x0000000d">BGM #0D</title>
+			<title code="0x0000000e">BGM #0E</title>
+			<title code="0x0000000f">BGM #0F</title>
+			<title code="0x00000010">BGM #10</title>
+			<title code="0x00000011">BGM #11</title>
+			<title code="0x00000012">BGM #12</title>
+			<title code="0x00000013">BGM #13</title>
+			<title code="0x00000014">BGM #14</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Dark Storm -Demon Crystal Ⅲ- (ダークストーム)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">dempa</driveralias>
+		<options>
+			<option name="use_ctc3" value="0x94"/>
+		</options>
+		<romlist archive="x1ds">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xbe87">DRIVER2</rom>
+			<rom type="code" offset="0xee10">DRIVER1</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03">Title (タイトル)</title>
+			<title code="0x01">Main BGM (メインBGM)</title>
+			<title code="0x06">Shop (お店)</title>
+			<title code="0x02">Labyrinth 1 (ラビリンス1)</title>
+			<title code="0x13">Labyrinth 2 (ラビリンス2)</title>
+			<title code="0x14">Labyrinth 3 (ラビリンス3)</title>
+			<title code="0x04">Ending (エンディング)</title>
+			<title code="0x05">Game Over (ゲームオーバー)</title>
+			<title code="0x07">SFX #01 (効果音 #01)</title>
+			<title code="0x08">SFX #02 (効果音 #02)</title>
+			<title code="0x09">SFX #03 (効果音 #03)</title>
+			<title code="0x0a">SFX #04 (効果音 #04)</title>
+			<title code="0x0b">SFX #05 (効果音 #05)</title>
+			<title code="0x0c">SFX #06 (効果音 #06)</title>
+			<title code="0x0d">SFX #07 (効果音 #07)</title>
+			<title code="0x0e">SFX #08 (効果音 #08)</title>
+			<title code="0x0f">SFX #09 (効果音 #09)</title>
+			<title code="0x10">SFX #10 (効果音 #10)</title>
+			<title code="0x11">SFX #11 (効果音 #11)</title>
+			<title code="0x12">SFX #12 (効果音 #12)</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] The Gate of Labyrinth (迷宮への扉 -THE GATE OF LABYRINTH-)</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">dempa</driveralias>
+		<options>
+			<option name="use_ctc3" value="0x80"/>
+		</options>
+		<romlist archive="x1gateof">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xb300">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0A</title>
+			<title code="0x0b">BGM #0B</title>
+			<title code="0x0c">BGM #0C</title>
+			<title code="0x0d">BGM #0D</title>
+			<title code="0x0e">BGM #0E</title>
+			<title code="0x0f">BGM #0F</title>
+			<title code="0x10">BGM #10</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Parallel World Sofia</name>
+		<driver type="psg">x1</driver>
+		<driveralias type="X1">dempa</driveralias>
+		<options>
+			<option name="use_ctc3" value="0x80"/>
+		</options>
+		<romlist archive="x1sofia">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0xc800">DRIVER</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Title</title>
+			<title code="0x09">Start Demo</title>
+			<title code="0x02">BGM</title>
+			<title code="0x0a">Jingle</title>
+			<title code="0x08">Game Over</title>
+			<title code="0x0b">BGM #0B</title>
+			<title code="0x03">SFX #01</title>
+			<title code="0x04">SFX #02</title>
+			<title code="0x05">SFX #03</title>
+			<title code="0x06">SFX #04</title>
+			<title code="0x07">SFX #05</title>
+			<title code="0x0c">SFX #06</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Space Harrier ((スペースハリアー))</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="X1">dempa</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xa000"/>
+			<option name="use_ctc0"   value="0x01"/>
+		</options>
+		<romlist archive="x1sphari">
+			<rom type="code" offset="0x0100">PATCH</rom>
+			<rom type="code" offset="0x4800">MUS02</rom>
+			<rom type="code" offset="0xe000">OPMDRV</rom>
+			<rom type="bgm"  offset="0x01">MUS00</rom>
+			<rom type="bgm"  offset="0x02">MUS01</rom>
+			<rom type="bgm"  offset="0x03">MUS02</rom>
+			<rom type="bgm"  offset="0x04">MUS03</rom>
+			<rom type="bgm"  offset="0x05">MUS04</rom>
+			<rom type="bgm"  offset="0x06">MUS05</rom>
+			<rom type="bgm"  offset="0x07">MUS06</rom>
+			<rom type="bgm"  offset="0x08">MUS07</rom>
+			<rom type="bgm"  offset="0x09">MUS08</rom>
+			<rom type="bgm"  offset="0x0a">MUS09</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00000000">Main Theme</title>
+			<title code="0x01000000">Main Theme (Resume 1)</title>
+			<title code="0x02000000">Main Theme (Resume 2)</title>
+			<title code="0x03000000">Main Theme (Resume 3)</title>
+			<title code="0x04000000">Main Theme (Resume 4)</title>
+			<title code="0x03000001">Squilla</title>
+			<title code="0x04000002">Ida</title>
+			<title code="0x03000003">Godarni</title>
+			<title code="0x01000004">Wi Wi Jumbo</title>
+			<title code="0x03000005">Battle Field</title>
+			<title code="0x05000006">Syura</title>
+			<title code="0x03000007">Valda</title>
+			<title code="0x03000008">Stanray</title>
+			<title code="0x03000009">Lake Side Memory</title>
+			<title code="0x0300000a">White Summer</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X1] Toypop (トイポップ)</name>
+		<driver type="opm">x1</driver>
+		<driveralias type="X1">dempa</driveralias>
+		<options>
+			<option name="init_pc" value="0xf000"/>
+		</options>
+		<romlist archive="x1toypop">
+			<rom type="code" offset="0x1000">TOYPOP_MUSIC.Bin</rom>
+			<rom type="code" offset="0xf000">PATCH</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">Box Start</title>
+			<title code="0x00">Main BGM</title>
+			<title code="0x06">Time Bonus</title>
+			<title code="0x04">Game Over</title>
+			<title code="0x02">Box Clear</title>
+			<title code="0x03">Miss</title>
+			<title code="0x05">Bonus Stage</title>
+			<title code="0x07">Name Entry</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Motos (モトス)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="mts68snd">
+			<rom type="code">mts68snd.bin</rom>
+			<rom type="code" offset="0x10000">SYSTEM</rom>
+			<rom type="code" offset="0x28000">MUSD01</rom>
+			<rom type="code" offset="0x30000">MUSD02</rom>
+			<rom type="code" offset="0x48010">MUSD00</rom>
+			<rom type="code" offset="0x52000">PCMDAT</rom>
+			<rom type="code" offset="0xa0000">MANPRG</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">Stop the Music (演奏停止)</title>
+			<title code="0x001">Motos BGM No. 6</title>
+			<title code="0x002">Balance check</title>
+			<title code="0x003">Rolling Saru</title>
+			<title code="0x213">Round clear</title>
+			<title code="0x214">Naming</title>
+			<title code="0x217">Hi Score</title>
+			<title code="0x218">Game Over</title>
+			<title code="0x219">Attract</title>
+			<title code="0x21b">Wall of Valkyurie</title>
+			<title code="0x21c">Religion -Axe-</title>
+			<title code="0x21d">Bow of truth</title>
+			<title code="0x21e">Motos Giant</title>
+			<title code="0x21f">Lione -Lu-</title>
+			<title code="0x220">Girl Force</title>
+			<title code="0x221">Black Vinegar</title>
+			<title code="0x222">Theme of Motos</title>
+			<title code="0x301">Big Net</title>
+			<title code="0x302">Spring in the Head</title>
+			<title code="0x303">For you</title>
+			<title code="0x304">X68k Initial Program Loader v1.02  .1989.01.15  By X68k_FORCE.  やられたぁ～！</title>
+			<title code="0x305">Merry X-mas</title>
+			<title code="0x306">A Happy new year!!</title>
+			<title code="0x101">BGM #00</title>
+			<title code="0x102">BGM #01</title>
+			<title code="0x103">BGM #02</title>
+			<title code="0x104">BGM #03</title>
+			<title code="0x105">BGM #04</title>
+			<title code="0x106">BGM #05</title>
+			<title code="0x107">BGM #06</title>
+			<title code="0x108">BGM #07</title>
+			<title code="0x109">BGM #08</title>
+			<title code="0x10a">BGM #09</title>
+			<title code="0x10b">BGM #10</title>
+			<title code="0x10c">BGM #11</title>
+			<title code="0x10d">BGM #12</title>
+			<title code="0x10e">BGM #13</title>
+			<title code="0x10f">BGM #14</title>
+			<title code="0x110">BGM #15</title>
+			<title code="0x111">BGM #16</title>
+			<title code="0x112">BGM #17</title>
+			<title code="0x113">BGM #18</title>
+			<title code="0x114">BGM #19</title>
+			<title code="0x115">BGM #20</title>
+			<title code="0x116">BGM #21</title>
+			<title code="0x117">BGM #22</title>
+			<title code="0x118">BGM #23</title>
+			<title code="0x119">BGM #24</title>
+			<title code="0x11a">BGM #25</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Galaga'88 (ギャラガ '８８)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="g8868snd">
+			<rom type="code">g8868snd.bin</rom>
+			<rom type="code" offset="0x08000">GMD68K.r</rom>
+			<rom type="code" offset="0x10000">G8MUS.GML</rom>
+			<rom type="code" offset="0x30000">G8MUS.PLD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x3e">BGM #3e</title>
+			<title code="0x3f">BGM #3f</title>
+			<title code="0x81">BGM #81</title>
+			<title code="0x82">BGM #82</title>
+			<title code="0x83">BGM #83</title>
+			<title code="0x84">BGM #84</title>
+			<title code="0x85">BGM #85</title>
+			<title code="0x86">BGM #86</title>
+			<title code="0x87">BGM #87</title>
+			<title code="0x88">BGM #88</title>
+			<title code="0x89">BGM #89</title>
+			<title code="0x8a">BGM #8a</title>
+			<title code="0x8b">BGM #8b</title>
+			<title code="0x8c">BGM #8c</title>
+			<title code="0x8d">BGM #8d</title>
+			<title code="0x8e">BGM #8e</title>
+			<title code="0x8f">BGM #8f</title>
+			<title code="0x90">BGM #90</title>
+			<title code="0x91">BGM #91</title>
+			<title code="0x92">BGM #92</title>
+			<title code="0x93">BGM #93</title>
+			<title code="0x94">BGM #94</title>
+			<title code="0x95">BGM #95</title>
+			<title code="0x96">BGM #96</title>
+			<title code="0x97">BGM #97</title>
+			<title code="0x98">BGM #98</title>
+			<title code="0x99">BGM #99</title>
+			<title code="0x9a">BGM #9a</title>
+			<title code="0xa1">BGM #a1</title>
+			<title code="0xa2">BGM #a2</title>
+			<title code="0xa3">BGM #a3</title>
+			<title code="0xa4">BGM #a4</title>
+			<title code="0xa5">BGM #a5</title>
+			<title code="0xa6">BGM #a6</title>
+			<title code="0xa7">BGM #a7</title>
+			<title code="0xa8">BGM #a8</title>
+			<title code="0xa9">BGM #a9</title>
+			<title code="0xaa">BGM #aa</title>
+			<title code="0xab">BGM #ab</title>
+			<title code="0xac">BGM #ac</title>
+			<title code="0xad">BGM #ad</title>
+			<title code="0xae">BGM #ae</title>
+			<title code="0xaf">BGM #af</title>
+			<title code="0xb0">BGM #b0</title>
+			<title code="0xb1">BGM #b1</title>
+			<title code="0xb2">BGM #b2</title>
+			<title code="0xb3">BGM #b3</title>
+			<title code="0xb4">BGM #b4</title>
+			<title code="0xb5">BGM #b5</title>
+			<title code="0xb6">BGM #b6</title>
+			<title code="0xb7">BGM #b7</title>
+			<title code="0xb8">BGM #b8</title>
+			<title code="0xb9">BGM #b9</title>
+			<title code="0xba">BGM #ba</title>
+			<title code="0xbb">BGM #bb</title>
+			<title code="0xbc">BGM #bc</title>
+			<title code="0xbd">BGM #bd</title>
+			<title code="0xbe">BGM #be</title>
+			<title code="0xbf">BGM #bf</title>
+			<title code="0xc0">BGM #c0</title>
+			<title code="0xc1">BGM #c1</title>
+			<title code="0xc2">BGM #c2</title>
+			<title code="0xc3">BGM #c3</title>
+			<title code="0xc4">BGM #c4</title>
+			<title code="0xc5">BGM #c5</title>
+			<title code="0xc6">BGM #c6</title>
+			<title code="0xc7">BGM #c7</title>
+			<title code="0xc8">BGM #c8</title>
+			<title code="0xc9">BGM #c9</title>
+			<title code="0xca">BGM #ca</title>
+			<title code="0xf0">BGM #f0</title>
+			<title code="0xf1">BGM #f1</title>
+			<title code="0xf2">BGM #f2</title>
+			<title code="0xf3">BGM #f3</title>
+			<title code="0xf4">BGM #f4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Cameltry (キャメルトライ)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="cml68snd">
+			<rom type="code">cml68snd.bin</rom>
+			<rom type="code" offset="0x08000">GMD68K.r</rom>
+			<rom type="code" offset="0x10000">CAMEL.GML</rom>
+			<rom type="code" offset="0x20000">CAMEL.PLD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x3f">BGM #3f</title>
+			<title code="0x40">BGM #40</title>
+			<title code="0x4b">BGM #4b</title>
+			<title code="0x60">BGM #60</title>
+			<title code="0x61">BGM #61</title>
+			<title code="0x62">BGM #62</title>
+			<title code="0x63">BGM #63</title>
+			<title code="0x64">BGM #64</title>
+			<title code="0x65">BGM #65</title>
+			<title code="0x66">BGM #66</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x29">BGM #29</title>
+			<title code="0x2a">BGM #2a</title>
+			<title code="0x2b">BGM #2b</title>
+			<title code="0x2c">BGM #2c</title>
+			<title code="0x2d">BGM #2d</title>
+			<title code="0x2e">BGM #2e</title>
+			<title code="0x2f">BGM #2f</title>
+			<title code="0x30">BGM #30</title>
+			<title code="0x31">BGM #31</title>
+			<title code="0x32">BGM #32</title>
+			<title code="0x33">BGM #33</title>
+			<title code="0x34">BGM #34</title>
+			<title code="0x35">BGM #35</title>
+			<title code="0x36">BGM #36</title>
+			<title code="0x37">BGM #37</title>
+			<title code="0x38">BGM #38</title>
+			<title code="0x39">BGM #39</title>
+			<title code="0x3a">BGM #3a</title>
+			<title code="0x3b">BGM #3b</title>
+			<title code="0x3c">BGM #3c</title>
+			<title code="0x3d">BGM #3d</title>
+			<title code="0x3e">BGM #3e</title>
+			<title code="0x47">BGM #47</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bubble Bobble (バブルボブル)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="bub68snd">
+			<rom type="code">bub68snd.bin</rom>
+			<rom type="code" offset="0x08000">GMD68K.r</rom>
+			<rom type="code" offset="0x10000">bubble.GML</rom>
+			<rom type="code" offset="0x20000">bubble.PLD</rom>
+			<rom type="code" offset="0x60000">bub100.gmd</rom>
+			<rom type="code" offset="0x70000">bub100.PLD</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x100">BGM #100</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x29">BGM #29</title>
+			<title code="0x2a">BGM #2a</title>
+			<title code="0x2b">BGM #2b</title>
+			<title code="0x30">BGM #30</title>
+			<title code="0x32">BGM #32</title>
+			<title code="0x3c">BGM #3c</title>
+			<title code="0x3d">BGM #3d</title>
+			<title code="0x3e">BGM #3e</title>
+			<title code="0x3f">BGM #3f</title>
+			<title code="0x47">BGM #47</title>
+			<title code="0x48">BGM #48</title>
+			<title code="0x49">BGM #49</title>
+			<title code="0x4a">BGM #4a</title>
+			<title code="0x4b">BGM #4b</title>
+			<title code="0x4f">BGM #4f</title>
+			<title code="0x50">BGM #50</title>
+			<title code="0x54">BGM #54</title>
+			<title code="0x58">BGM #58</title>
+			<title code="0x59">BGM #59</title>
+			<title code="0x69">BGM #69</title>
+			<title code="0x6a">BGM #6a</title>
+			<title code="0x6b">BGM #6b</title>
+			<title code="0x70">BGM #70</title>
+			<title code="0x72">BGM #72</title>
+			<title code="0x7e">BGM #7e</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x2c">BGM #2c</title>
+			<title code="0x2d">BGM #2d</title>
+			<title code="0x2f">BGM #2f</title>
+			<title code="0x31">BGM #31</title>
+			<title code="0x33">BGM #33</title>
+			<title code="0x34">BGM #34</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Chelnov (チェルノブ -戦う人間発電所-)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="chel68snd">
+			<rom type="code">chel68snd.bin</rom>
+			<rom type="x" offset="0x08000">XDRV.x</rom>
+			<rom type="code" offset="0x1727c">sepcm.dat</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x03">Stop the Music (演奏停止)</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x29">BGM #29</title>
+			<title code="0x2a">BGM #2A</title>
+			<title code="0x2b">BGM #2B</title>
+			<title code="0x2c">BGM #2C</title>
+			<title code="0x2d">BGM #2D</title>
+			<title code="0x00">BGM #00</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0A</title>
+			<title code="0x0b">BGM #0B</title>
+			<title code="0x0c">BGM #0C</title>
+			<title code="0x0d">BGM #0D</title>
+			<title code="0x0e">BGM #0E</title>
+			<title code="0x0f">BGM #0F</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1A</title>
+			<title code="0x1b">BGM #1B</title>
+			<title code="0x1c">BGM #1C</title>
+			<title code="0x1d">BGM #1D</title>
+			<title code="0x1e">BGM #1E</title>
+			<title code="0x1f">BGM #1F</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x25">BGM #25</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Star Force (スターフォース)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="sfr68snd">
+			<rom type="code">sfr68snd.bin</rom>
+			<rom type="x" offset="0x8000">SFBGM.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+			<title code="0x08">BGM #08</title>
+			<title code="0x09">BGM #09</title>
+			<title code="0x0a">BGM #0a</title>
+			<title code="0x0b">BGM #0b</title>
+			<title code="0x0c">BGM #0c</title>
+			<title code="0x0d">BGM #0d</title>
+			<title code="0x0e">BGM #0e</title>
+			<title code="0x0f">BGM #0f</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+			<title code="0x1b">BGM #1b</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1d">BGM #1d</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x1f">BGM #1f</title>
+			<title code="0x20">BGM #20</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x23">BGM #23</title>
+			<title code="0x24">BGM #24</title>
+			<title code="0x25">BGM #25</title>
+			<title code="0x26">BGM #26</title>
+			<title code="0x27">BGM #27</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x29">BGM #29</title>
+			<title code="0x2a">BGM #2a</title>
+			<title code="0x2b">BGM #2b</title>
+			<title code="0x2c">BGM #2c</title>
+			<title code="0x2d">BGM #2d</title>
+			<title code="0x2e">BGM #2e</title>
+			<title code="0x2f">BGM #2f</title>
+			<title code="0x30">Tone Set #0</title>
+			<title code="0x31">Tone Set #1</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Libble Rabble (リブルラブル)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="lr68snd">
+			<rom type="code">lr68snd.bin</rom>
+			<rom type="x" offset="0x08000">LRBGM.X</rom>
+			<rom type="code" offset="0x0eb22">MUSIC.LR</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">Stop the Music (演奏停止)</title>
+			<title code="0x100">BGM #00</title>
+			<title code="0x101">BGM #01</title>
+			<title code="0x102">BGM #02</title>
+			<title code="0x103">BGM #03</title>
+			<title code="0x104">BGM #04</title>
+			<title code="0x105">BGM #05</title>
+			<title code="0x106">BGM #06</title>
+			<title code="0x107">BGM #07</title>
+			<title code="0x108">BGM #08</title>
+			<title code="0x109">BGM #09</title>
+			<title code="0x10a">BGM #0A</title>
+			<title code="0x10b">BGM #0B</title>
+			<title code="0x10c">BGM #0C</title>
+			<title code="0x10d">BGM #0D</title>
+			<title code="0x10e">BGM #0E</title>
+			<title code="0x10f">BGM #0F</title>
+			<title code="0x110">BGM #10</title>
+			<title code="0x111">BGM #11</title>
+			<title code="0x112">BGM #12</title>
+			<title code="0x113">BGM #13</title>
+			<title code="0x114">BGM #14</title>
+			<title code="0x115">BGM #15</title>
+			<title code="0x116">BGM #16</title>
+			<title code="0x117">BGM #17</title>
+			<title code="0x118">BGM #18</title>
+			<title code="0x119">BGM #19</title>
+			<title code="0x11a">BGM #1A</title>
+			<title code="0x11b">BGM #1B</title>
+			<title code="0x11c">BGM #1C</title>
+			<title code="0x11d">BGM #1D</title>
+			<title code="0x11e">BGM #1E</title>
+			<title code="0x11f">BGM #1F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Dragon Buster (ドラゴンバスター)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="db68snd">
+			<rom type="code">db68snd.bin</rom>
+			<rom type="x" offset="0x08000">DBDRV.X</rom>
+			<rom type="code" offset="0x09060">DBDRV.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">Stop the Music (演奏停止)</title>
+			<title code="0x100">BGM #00</title>
+			<title code="0x101">BGM #01</title>
+			<title code="0x102">BGM #02</title>
+			<title code="0x103">BGM #03</title>
+			<title code="0x104">BGM #04</title>
+			<title code="0x105">BGM #05</title>
+			<title code="0x106">BGM #06</title>
+			<title code="0x107">BGM #07</title>
+			<title code="0x108">BGM #08</title>
+			<title code="0x109">BGM #09</title>
+			<title code="0x10a">BGM #0A</title>
+			<title code="0x10b">BGM #0B</title>
+			<title code="0x10c">BGM #0C</title>
+			<title code="0x10d">BGM #0D</title>
+			<title code="0x10e">BGM #0E</title>
+			<title code="0x10f">BGM #0F</title>
+			<title code="0x110">BGM #10</title>
+			<title code="0x111">BGM #11</title>
+			<title code="0x112">BGM #12</title>
+			<title code="0x113">BGM #13</title>
+			<title code="0x114">BGM #14</title>
+			<title code="0x115">BGM #15</title>
+			<title code="0x116">BGM #16</title>
+			<title code="0x117">BGM #17</title>
+			<title code="0x118">BGM #18</title>
+			<title code="0x119">BGM #19</title>
+			<title code="0x11a">BGM #1A</title>
+			<title code="0x11b">BGM #1B</title>
+			<title code="0x11c">BGM #1C</title>
+			<title code="0x11d">BGM #1D</title>
+			<title code="0x11e">BGM #1E</title>
+			<title code="0x11f">BGM #1F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Pac Land (パックランド)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="pl68snd">
+			<rom type="code">pl68snd.bin</rom>
+			<rom type="x" offset="0x08000">PLSND.X</rom>
+			<rom type="code" offset="0x09eb0">PLSND.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">Stop the Music (演奏停止)</title>
+			<title code="0x100">BGM #00</title>
+			<title code="0x101">BGM #01</title>
+			<title code="0x102">BGM #02</title>
+			<title code="0x103">BGM #03</title>
+			<title code="0x104">BGM #04</title>
+			<title code="0x105">BGM #05</title>
+			<title code="0x106">BGM #06</title>
+			<title code="0x107">BGM #07</title>
+			<title code="0x108">BGM #08</title>
+			<title code="0x109">BGM #09</title>
+			<title code="0x10a">BGM #0A</title>
+			<title code="0x10b">BGM #0B</title>
+			<title code="0x10c">BGM #0C</title>
+			<title code="0x10d">BGM #0D</title>
+			<title code="0x10e">BGM #0E</title>
+			<title code="0x10f">BGM #0F</title>
+			<title code="0x110">BGM #10</title>
+			<title code="0x111">BGM #11</title>
+			<title code="0x112">BGM #12</title>
+			<title code="0x113">BGM #13</title>
+			<title code="0x114">BGM #14</title>
+			<title code="0x115">BGM #15</title>
+			<title code="0x116">BGM #16</title>
+			<title code="0x117">BGM #17</title>
+			<title code="0x118">BGM #18</title>
+			<title code="0x119">BGM #19</title>
+			<title code="0x11a">BGM #1A</title>
+			<title code="0x11b">BGM #1B</title>
+			<title code="0x11c">BGM #1C</title>
+			<title code="0x11d">BGM #1D</title>
+			<title code="0x11e">BGM #1E</title>
+			<title code="0x11f">BGM #1F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Dig Dug (ディグダグ)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="dd168snd">
+			<rom type="code">dd168snd.bin</rom>
+			<rom type="code" offset="0x08000">D1MUSDRV.R</rom>
+			<rom type="code" offset="0x090be">DD1_7.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0000">Stop the Music (演奏停止)</title>
+			<title code="0x1a80">BGM #00</title>
+			<title code="0x1a81">BGM #01</title>
+			<title code="0x1a82">BGM #02</title>
+			<title code="0x1a83">BGM #03</title>
+			<title code="0x1a84">BGM #04</title>
+			<title code="0x1a85">BGM #05</title>
+			<title code="0x1a86">BGM #06</title>
+			<title code="0x1a87">BGM #07</title>
+			<title code="0x1a88">BGM #08</title>
+			<title code="0x1a89">BGM #09</title>
+			<title code="0x1a8a">BGM #0A</title>
+			<title code="0x1a8b">BGM #0B</title>
+			<title code="0x1a8c">BGM #0C</title>
+			<title code="0x1a8d">BGM #0D</title>
+			<title code="0x1a8e">BGM #0E</title>
+			<title code="0x1a8f">BGM #0F</title>
+			<title code="0x1a90">BGM #10</title>
+			<title code="0x1a91">BGM #11</title>
+			<title code="0x1a92">BGM #12</title>
+			<title code="0x1a93">BGM #13</title>
+			<title code="0x1a94">BGM #14</title>
+			<title code="0x1a95">BGM #15</title>
+			<title code="0x1a96">BGM #16</title>
+			<title code="0x1a97">BGM #17</title>
+			<title code="0x1a98">BGM #18</title>
+			<title code="0x1a99">BGM #19</title>
+			<title code="0x1a9a">BGM #1A</title>
+			<title code="0x1a9b">BGM #1B</title>
+			<title code="0x1a9c">BGM #1C</title>
+			<title code="0x1a9d">BGM #1D</title>
+			<title code="0x1a9e">BGM #1E</title>
+			<title code="0x1a9f">BGM #1F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Dig Dug II (ディグダグII)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="dd268snd">
+			<rom type="code">dd268snd.bin</rom>
+			<rom type="code" offset="0x08000">D2MUSDRV.R</rom>
+			<rom type="code" offset="0x0b21e">D21_4.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x40">BGM #00</title>
+			<title code="0x41">BGM #01</title>
+			<title code="0x42">BGM #02</title>
+			<title code="0x43">BGM #03</title>
+			<title code="0x44">BGM #04</title>
+			<title code="0x45">BGM #05</title>
+			<title code="0x46">BGM #06</title>
+			<title code="0x47">BGM #07</title>
+			<title code="0x48">BGM #08</title>
+			<title code="0x49">BGM #09</title>
+			<title code="0x4a">BGM #0A</title>
+			<title code="0x4b">BGM #0B</title>
+			<title code="0x4c">BGM #0C</title>
+			<title code="0x4d">BGM #0D</title>
+			<title code="0x4e">BGM #0E</title>
+			<title code="0x4f">BGM #0F</title>
+			<title code="0x50">BGM #10</title>
+			<title code="0x51">BGM #11</title>
+			<title code="0x52">BGM #12</title>
+			<title code="0x53">BGM #13</title>
+			<title code="0x54">BGM #14</title>
+			<title code="0x55">BGM #15</title>
+			<title code="0x56">BGM #16</title>
+			<title code="0x57">BGM #17</title>
+			<title code="0x58">BGM #18</title>
+			<title code="0x59">BGM #19</title>
+			<title code="0x5a">BGM #1A</title>
+			<title code="0x5b">BGM #1B</title>
+			<title code="0x5c">BGM #1C</title>
+			<title code="0x5d">BGM #1D</title>
+			<title code="0x5e">BGM #1E</title>
+			<title code="0x5f">BGM #1F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Baraduke (バラデューク)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="bd68snd">
+			<rom type="code">bd68snd.bin</rom>
+			<rom type="x" offset="0x08000">BDSND.X</rom>
+			<rom type="code" offset="0x0e738">BDSND.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">Stop the Music (演奏停止)</title>
+			<title code="0x100">BGM #00</title>
+			<title code="0x101">BGM #01</title>
+			<title code="0x102">BGM #02</title>
+			<title code="0x103">BGM #03</title>
+			<title code="0x104">BGM #04</title>
+			<title code="0x105">BGM #05</title>
+			<title code="0x106">BGM #06</title>
+			<title code="0x107">BGM #07</title>
+			<title code="0x108">BGM #08</title>
+			<title code="0x109">BGM #09</title>
+			<title code="0x10a">BGM #0A</title>
+			<title code="0x10b">BGM #0B</title>
+			<title code="0x10c">BGM #0C</title>
+			<title code="0x10d">BGM #0D</title>
+			<title code="0x10e">BGM #0E</title>
+			<title code="0x10f">BGM #0F</title>
+			<title code="0x110">BGM #10</title>
+			<title code="0x111">BGM #11</title>
+			<title code="0x112">BGM #12</title>
+			<title code="0x113">BGM #13</title>
+			<title code="0x114">BGM #14</title>
+			<title code="0x115">BGM #15</title>
+			<title code="0x116">BGM #16</title>
+			<title code="0x117">BGM #17</title>
+			<title code="0x118">BGM #18</title>
+			<title code="0x119">BGM #19</title>
+			<title code="0x11a">BGM #1A</title>
+			<title code="0x11b">BGM #1B</title>
+			<title code="0x11c">BGM #1C</title>
+			<title code="0x11d">BGM #1D</title>
+			<title code="0x11e">BGM #1E</title>
+			<title code="0x11f">BGM #1F</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Genpei TourmaDen (源平討魔伝)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="gt68snd">
+			<rom type="code">gt68snd.bin</rom>
+			<rom type="x" offset="0x08000">OPMDRV.X</rom>
+			<rom type="code" offset="0x10000">MUSIC.DAT</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">BGM #00</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x10">BGM #10</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x1c">BGM #1c</title>
+			<title code="0x1e">BGM #1e</title>
+			<title code="0x21">BGM #21</title>
+			<title code="0x22">BGM #22</title>
+			<title code="0x28">BGM #28</title>
+			<title code="0x2a">BGM #2a</title>
+			<title code="0x2f">BGM #2f</title>
+			<title code="0x31">BGM #31</title>
+			<title code="0x33">BGM #33</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Alien Syndrome (エイリアンシンドローム)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="as68snd">
+			<rom type="code">as68snd.bin</rom>
+			<rom type="x" offset="0x08000">ASMUSICW.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x00">BGM #00</title>
+			<title code="0x0b">BGM #01</title>
+			<title code="0x0c">BGM #02</title>
+			<title code="0x0d">BGM #03</title>
+			<title code="0x0e">BGM #04</title>
+			<title code="0x0f">BGM #05</title>
+			<title code="0x30">BGM #06</title>
+			<title code="0x31">BGM #07</title>
+			<title code="0x32">BGM #08</title>
+			<title code="0x35">BGM #09</title>
+			<title code="0x36">BGM #10</title>
+			<title code="0x45">BGM #11</title>
+			<title code="0x5a">BGM #12</title>
+			<title code="0x5e">BGM #13</title>
+			<title code="0x00">SFX #00</title>
+			<title code="0x01">SFX #01</title>
+			<title code="0x02">SFX #02</title>
+			<title code="0x03">SFX #03</title>
+			<title code="0x04">SFX #04</title>
+			<title code="0x05">SFX #05</title>
+			<title code="0x06">SFX #06</title>
+			<title code="0x07">SFX #07</title>
+			<title code="0x08">SFX #08</title>
+			<title code="0x09">SFX #09</title>
+			<title code="0x0a">SFX #10</title>
+			<title code="0x10">SFX #11</title>
+			<title code="0x11">SFX #12</title>
+			<title code="0x12">SFX #13</title>
+			<title code="0x13">SFX #14</title>
+			<title code="0x14">SFX #15</title>
+			<title code="0x15">SFX #16</title>
+			<title code="0x16">SFX #17</title>
+			<title code="0x17">SFX #18</title>
+			<title code="0x18">SFX #19</title>
+			<title code="0x19">SFX #20</title>
+			<title code="0x1a">SFX #21</title>
+			<title code="0x1b">SFX #22</title>
+			<title code="0x1c">SFX #23</title>
+			<title code="0x1d">SFX #24</title>
+			<title code="0x1e">SFX #25</title>
+			<title code="0x1f">SFX #26</title>
+			<title code="0x20">SFX #27</title>
+			<title code="0x21">SFX #28</title>
+			<title code="0x22">SFX #29</title>
+			<title code="0x23">SFX #30</title>
+			<title code="0x24">SFX #31</title>
+			<title code="0x25">SFX #32</title>
+			<title code="0x26">SFX #33</title>
+			<title code="0x27">SFX #34</title>
+			<title code="0x28">SFX #35</title>
+			<title code="0x29">SFX #36</title>
+			<title code="0x2a">SFX #37</title>
+			<title code="0x2b">SFX #38</title>
+			<title code="0x2c">SFX #39</title>
+			<title code="0x2d">SFX #40</title>
+			<title code="0x2e">SFX #41</title>
+			<title code="0x2f">SFX #42</title>
+			<title code="0x33">SFX #43</title>
+			<title code="0x34">SFX #44</title>
+			<title code="0x37">SFX #45</title>
+			<title code="0x38">SFX #46</title>
+			<title code="0x39">SFX #47</title>
+			<title code="0x3a">SFX #48</title>
+			<title code="0x3b">SFX #49</title>
+			<title code="0x3c">SFX #50</title>
+			<title code="0x3d">SFX #51</title>
+			<title code="0x3e">SFX #52</title>
+			<title code="0x3f">SFX #53</title>
+			<title code="0x40">SFX #54</title>
+			<title code="0x41">SFX #55</title>
+			<title code="0x42">SFX #56</title>
+			<title code="0x43">SFX #57</title>
+			<title code="0x44">SFX #58</title>
+			<title code="0x46">SFX #59</title>
+			<title code="0x47">SFX #60</title>
+			<title code="0x48">SFX #61</title>
+			<title code="0x49">SFX #62</title>
+			<title code="0x4a">SFX #63</title>
+			<title code="0x4b">SFX #64</title>
+			<title code="0x4c">SFX #65</title>
+			<title code="0x4d">SFX #66</title>
+			<title code="0x4e">SFX #67</title>
+			<title code="0x4f">SFX #68</title>
+			<title code="0x50">SFX #69</title>
+			<title code="0x51">SFX #70</title>
+			<title code="0x52">SFX #71</title>
+			<title code="0x53">SFX #72</title>
+			<title code="0x54">SFX #73</title>
+			<title code="0x55">SFX #74</title>
+			<title code="0x56">SFX #75</title>
+			<title code="0x57">SFX #76</title>
+			<title code="0x58">SFX #77</title>
+			<title code="0x59">SFX #78</title>
+			<title code="0x5b">SFX #79</title>
+			<title code="0x5c">SFX #80</title>
+			<title code="0x5d">SFX #81</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] After Burner Ⅱ (アフターバーナーⅡ)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="ab268snd">
+			<rom type="code">ab268snd.bin</rom>
+			<rom type="x" offset="0x08000">ab2mus.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x000">Stop the Music (演奏停止)</title>
+			<title code="0x101">Red Out</title>
+			<title code="0x102">Maximum Power</title>
+			<title code="0x103">Final Take Off</title>
+			<title code="0x104">Super Stripe</title>
+			<title code="0x105">After Burner</title>
+			<title code="0x106">City 202</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Space Harrier / Hideya Nagata / 1987 Dempa</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="har68snd">
+			<rom type="code">har68snd.bin</rom>
+			<rom type="x" offset="0x08000">HARRIER.X</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x0b">Title</title>
+			<title code="0x0c">Credit</title>
+			<title code="0x0e">Main Theme 1</title>
+			<title code="0x0f">Main Theme 2</title>
+			<title code="0x10">Main Theme 3</title>
+			<title code="0x11">Main Theme 4</title>
+			<title code="0x12">Main Theme 5</title>
+			<title code="0x05">Squilla</title>
+			<title code="0x02">Ida</title>
+			<title code="0x03">Godarni</title>
+			<title code="0x0d">Wiwi Jumbo</title>
+			<title code="0x08">Battle Field</title>
+			<title code="0x01">Syura</title>
+			<title code="0x07">Valda</title>
+			<title code="0x06">Stanray</title>
+			<title code="0x0a">Hayaoh</title>
+			<title code="0x09">Lake Side Memory</title>
+			<title code="0x04">White Summer</title>
+			<title code="0x13">Over the Horizon</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Dragon Spirit (ドラゴンスピリット)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="ds68snd">
+			<rom type="code">dsopmdrv.bin</rom>
+			<rom type="code" offset="0x10000">dsmusic.dat</rom>
+			<rom type="code" offset="0x20000">dsmuspcm.dat</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">Opening</title>
+			<title code="0x01">Sea</title>
+			<title code="0x02">The Paleozoic Era</title>
+			<title code="0x0f">Boss A</title>
+			<title code="0x16">Boss Clear</title>
+			<title code="0x04">Volcano</title>
+			<title code="0x19">Boss B</title>
+			<title code="0x05">Jungle</title>
+			<title code="0x1a">Boss C</title>
+			<title code="0x06">Grave Yard</title>
+			<title code="0x08">Cave Road</title>
+			<title code="0x09">Glacier Land</title>
+			<title code="0x0a">Deep Sea</title>
+			<title code="0x0b">Dark Quarters</title>
+			<title code="0x0c">Dark Castle 1</title>
+			<title code="0x0d">Dark Castle 2</title>
+			<title code="0x0e">Dark Castle 3</title>
+			<title code="0x10">Yamata</title>
+			<title code="0x07">Zawell</title>
+			<title code="0x15">Alicia</title>
+			<title code="0x7f">Ending</title>
+			<title code="0x13">Name 1st</title>
+			<title code="0x14">Name 2-5</title>
+			<title code="0x18">Continue</title>
+			<title code="0x42">Omake 1</title>
+			<title code="0x41">Omake 2</title>
+			<title code="0x40">Speaker Test</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Bosconian / Yuzo Koshiro / 1989 Dempa</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<romlist archive="bos68snd">
+			<rom type="code">bos68.bin</rom>
+			<rom type="code" offset="0x10000">music.dat</rom>
+			<rom type="code" offset="0x20000">adpcm.dat</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0x01">Good Morning</title>
+			<title code="0x02">Red Alert</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">Little Wave</title>
+			<title code="0x05">Blast Off!!</title>
+			<title code="0x06">Get "Lady"</title>
+			<title code="0x07">Excellence</title>
+			<title code="0x08">Battle Was Gone</title>
+			<title code="0x09">Dusk...</title>
+			<title code="0x0a">Space Hibabango</title>
+			<title code="0x0b">Title Menu (single)</title>
+			<title code="0x0c">Title Menu (repeat)</title>
+			<title code="0x0d">Credit</title>
+			<title code="0x0e">Blast Power!</title>
+			<title code="0x0f">Flash Flash Flash</title>
+			<title code="0x10">Asteroid Memory</title>
+			<title code="0x11">BGM #11</title>
+			<title code="0x12">BGM #12</title>
+			<title code="0x13">BGM #13</title>
+			<title code="0x14">BGM #14</title>
+			<title code="0x15">BGM #15</title>
+			<title code="0x16">BGM #16</title>
+			<title code="0x17">BGM #17</title>
+			<title code="0x18">BGM #18</title>
+			<title code="0x19">BGM #19</title>
+			<title code="0x1a">BGM #1a</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Fantasy Zone (ファンタジーゾーン)</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+			<option name="pcm_mix" value="0xf0"/>
+		</options>
+		<romlist archive="fz68snd">
+			<rom type="code">fzmusdrv.bin</rom>
+			<rom type="code" offset="0x20000">fzmusic.mus</rom>
+			<rom type="code" offset="0x30000">fzmusic.pcm</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">Stop the Music (演奏停止)</title>
+			<title code="0xc8">Fade Out</title>
+			<title code="0x1b">Opa-Opa!</title>
+			<title code="0x44">Keep on the Beat</title>
+			<title code="0x3f">Saari</title>
+			<title code="0x41">Prome</title>
+			<title code="0x43">Hot Snow (USA)</title>
+			<title code="0x45">Hot Snow (JPN)</title>
+			<title code="0x40">Don't Stop</title>
+			<title code="0x42">Dreaming Tomorrow</title>
+			<title code="0x11">Boss</title>
+			<title code="0x3c">Ya.Da.Yo</title>
+			<title code="0x0f">Victory Way</title>
+			<title code="0x20">Shop</title>
+			<title code="0x19">Round Clear</title>
+			<title code="0x1a">Game Over</title>
+			<title code="0x60">Space Harrier</title>
+			<title code="0x50">Opa-Opa! (Arr.)</title>
+			<title code="0x52">Keep on the Beat (Arr.)</title>
+			<title code="0x53">Saari (Arr.)</title>
+			<title code="0x54">Prome (Arr.)</title>
+			<title code="0x62">Hot Snow (USA) (Arr.)</title>
+			<title code="0x55">Hot Snow (JPN) (Arr.)</title>
+			<title code="0x56">Don't Stop (Arr.)</title>
+			<title code="0x57">Dreaming Tomorrow (Arr.)</title>
+			<title code="0x58">Boss (Arr.)</title>
+			<title code="0x59">Ya.Da.Yo. (Arr.)</title>
+			<title code="0x5d">Victory Way (Arr.)</title>
+			<title code="0x5c">Shop (Arr.)</title>
+			<title code="0x5b">Round Clear (Arr.)</title>
+			<title code="0x5f">Game Over (Arr.)</title>
+			<title code="0x63">The Subdued Zone</title>
+			<title code="0x61">Space Harrier (Arr.)</title>
+			<title code="0x64">Unknown</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] Keeper</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="X68000">dempa</driveralias>
+		<options>
+			<option name="opm_mix" value="0xc0"/>
+		</options>
+		<romlist archive="keeper68snd">
+			<rom type="code" offset="0x00000">keep68snd.bin</rom>
+			<rom type="code" offset="0x10000">kpsound.r</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">BGM #01</title>
+			<title code="0x02">BGM #02</title>
+			<title code="0x03">BGM #03</title>
+			<title code="0x04">BGM #04</title>
+			<title code="0x05">BGM #05</title>
+			<title code="0x06">BGM #06</title>
+			<title code="0x07">BGM #07</title>
+		</titlelist>
+	</game>
+</gamelist>

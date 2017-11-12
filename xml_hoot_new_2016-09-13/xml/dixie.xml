@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Dixie -->
+	<game>
+		<name>[MSX] RONA 地母神の審判 (OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Dixie</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xbc00"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="use_opll"   value="0x01"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="rona_msx,fmpac_msx">
+		<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xce00">MUSDRV.BIN</rom>
+			<rom type="fmbios" offset="0x0000">FMPAC.ROM</rom>
+			<rom type="bgm" offset="0x00">FM00.BIN</rom>
+			<rom type="bgm" offset="0x01">FM01.BIN</rom>
+			<rom type="bgm" offset="0x02">FM02.BIN</rom>
+			<rom type="bgm" offset="0x03">FM03.BIN</rom>
+			<rom type="bgm" offset="0x04">FM04.BIN</rom>
+			<rom type="bgm" offset="0x05">FM05.BIN</rom>
+			<rom type="bgm" offset="0x06">FM06.BIN</rom>
+			<rom type="bgm" offset="0x07">FM07.BIN</rom>
+			<rom type="bgm" offset="0x08">FM08.BIN</rom>
+			<rom type="bgm" offset="0x09">FM09.BIN</rom>
+			<rom type="bgm" offset="0x0a">FM10.BIN</rom>
+			<rom type="bgm" offset="0x0b">FM11.BIN</rom>
+			<rom type="bgm" offset="0x0c">FM12.BIN</rom>
+			<rom type="bgm" offset="0x0d">FM13.BIN</rom>
+			<rom type="bgm" offset="0x0e">FM14.BIN</rom>
+			<rom type="bgm" offset="0x0f">FM15.BIN</rom>
+			<rom type="bgm" offset="0x10">FM16.BIN</rom>
+			<rom type="bgm" offset="0x11">FM17.BIN</rom>
+			<rom type="bgm" offset="0x12">FM18.BIN</rom>
+			<rom type="bgm" offset="0x13">FM19.BIN</rom>
+			<rom type="bgm" offset="0x14">FM20.BIN</rom>
+			<rom type="bgm" offset="0x15">FM21.BIN</rom>
+			<rom type="bgm" offset="0x16">FM22.BIN</rom>
+			<rom type="bgm" offset="0x17">FM23.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0e">Opening 1</title>
+			<title code="0x0f">Opening 2 / Epilogue 1</title>
+			<title code="0x10">Opening 3</title>
+			<title code="0x0d">Title</title>
+			<title code="0x07">Stage 1</title>
+			<title code="0x00">Boss 1</title>
+			<title code="0x01">Boss 2</title>
+			<title code="0x11">Demo 1 / Epilogue 2</title>
+			<title code="0x08">Stage 2</title>
+			<title code="0x12">Demo 2</title>
+			<title code="0x13">Demo 3</title>
+			<title code="0x09">Stage 3</title>
+			<title code="0x14">Demo 4</title>
+			<title code="0x0a">Stage 4</title>
+			<title code="0x16">Demo 5</title>
+			<title code="0x0b">Stage 5-1</title>
+			<title code="0x0c">Stage 5-2</title>
+			<title code="0x05">Last Boss</title>
+			<title code="0x0102">Stage Clear</title>
+			<title code="0x0106">Game Over</title>
+			<title code="0x04">Staff Roll</title>
+		<!--	<title code="0x0115">未使用</title> -->
+			<title code="0x0117">未使用</title>
+			<title code="0x03">SE</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] RONA 地母神の審判 (PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">Dixie</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xbc00"/>
+			<option name="mdata_size" value="0x1000"/>
+			<option name="mfile_size" value="0x1000"/>
+			<option name="init_pc"    value="0x0400"/>
+		</options>
+		<romlist archive="rona_msx">
+		<rom type="code" offset="0x0400">patch</rom>
+			<rom type="code" offset="0xce00">MUSDRV.BIN</rom>
+			<rom type="bgm" offset="0x00">PSG00.BIN</rom>
+			<rom type="bgm" offset="0x01">PSG01.BIN</rom>
+			<rom type="bgm" offset="0x02">PSG02.BIN</rom>
+			<rom type="bgm" offset="0x03">PSG03.BIN</rom>
+			<rom type="bgm" offset="0x04">PSG04.BIN</rom>
+			<rom type="bgm" offset="0x05">PSG05.BIN</rom>
+			<rom type="bgm" offset="0x06">PSG06.BIN</rom>
+			<rom type="bgm" offset="0x07">PSG07.BIN</rom>
+			<rom type="bgm" offset="0x08">PSG08.BIN</rom>
+			<rom type="bgm" offset="0x09">PSG09.BIN</rom>
+			<rom type="bgm" offset="0x0a">PSG10.BIN</rom>
+			<rom type="bgm" offset="0x0b">PSG11.BIN</rom>
+			<rom type="bgm" offset="0x0c">PSG12.BIN</rom>
+			<rom type="bgm" offset="0x0d">PSG13.BIN</rom>
+			<rom type="bgm" offset="0x0e">PSG14.BIN</rom>
+			<rom type="bgm" offset="0x0f">PSG15.BIN</rom>
+			<rom type="bgm" offset="0x10">PSG16.BIN</rom>
+			<rom type="bgm" offset="0x11">PSG17.BIN</rom>
+			<rom type="bgm" offset="0x12">PSG18.BIN</rom>
+			<rom type="bgm" offset="0x13">PSG19.BIN</rom>
+			<rom type="bgm" offset="0x14">PSG20.BIN</rom>
+			<rom type="bgm" offset="0x15">PSG21.BIN</rom>
+			<rom type="bgm" offset="0x16">PSG22.BIN</rom>
+			<rom type="bgm" offset="0x17">PSG23.BIN</rom>
+			<rom type="bgm" offset="0x18">PSG24.BIN</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x0e">Opening 1</title>
+			<title code="0x0f">Opening 2 / Epilogue 1</title>
+		<!--	<title code="0x16">Opening 2 / Epilogue 1</title> -->
+			<title code="0x10">Opening 3</title>
+		<!--	<title code="0x17">Opening 3</title> -->
+			<title code="0x0d">Title</title>
+			<title code="0x07">Stage 1</title>
+			<title code="0x00">Boss 1</title>
+			<title code="0x01">Boss 2</title>
+			<title code="0x11">Demo 1 / Epilogue 2</title>
+		<!--	<title code="0x18">Demo 1</title> -->
+			<title code="0x08">Stage 2</title>
+			<title code="0x12">Demo 2</title>
+			<title code="0x13">Demo 3</title>
+			<title code="0x09">Stage 3</title>
+			<title code="0x14">Demo 4</title>
+			<title code="0x0a">Stage 4</title>
+			<title code="0x15">Demo 5</title>
+			<title code="0x0b">Stage 5-1</title>
+			<title code="0x0c">Stage 5-2</title>
+			<title code="0x05">Last Boss</title>
+			<title code="0x0102">Stage Clear</title>
+			<title code="0x0106">Game Over</title>
+			<title code="0x04">Staff Roll</title>
+			<title code="0x14">未使用</title>
+			<title code="0x03">SE</title>
+		</titlelist>
+	</game>
+</gamelist>

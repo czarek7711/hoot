@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //BrainGray -->
+	<game>
+		<name>[PC-8801] LAST ARMAGEDDON(DEMO:OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">BrainGray</driveralias>
+		<romlist archive="lastarmg">
+			<rom type="code" offset="0x0000">PATCHD</rom>
+			<rom type="code" offset="0x0100">DEMO</rom>
+			<rom type="bgm" offset="0x00">MUS000</rom>
+			<rom type="bgm" offset="0x01">MUS001</rom>
+			<rom type="bgm" offset="0x02">MUS002</rom>
+			<rom type="bgm" offset="0x03">MUS003</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS000 : Opening BGM #1</title>
+			<title code="0x01">MUS001 : Opening BGM #2</title>
+			<title code="0x03">MUS003 : Opening BGM #3</title>
+			<title code="0x02">MUS002 : Opening BGM #4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] LAST ARMAGEDDON(DEMO:OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">BrainGray</driveralias>
+		<romlist archive="lastarmg">
+			<rom type="code" offset="0x0000">PATCH2D</rom>
+			<rom type="code" offset="0x0100">DEMO</rom>
+			<rom type="bgm" offset="0x00">MUS000</rom>
+			<rom type="bgm" offset="0x01">MUS001</rom>
+			<rom type="bgm" offset="0x02">MUS002</rom>
+			<rom type="bgm" offset="0x03">MUS003</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS000 : Opening BGM #1</title>
+			<title code="0x01">MUS001 : Opening BGM #2</title>
+			<title code="0x03">MUS003 : Opening BGM #3</title>
+			<title code="0x02">MUS002 : Opening BGM #4</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] LAST ARMAGEDDON(OPNA)</name>
+		<driver type="opna">pc88</driver>
+		<driveralias type="NEC PC-8801">BrainGray</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="lastarmg">
+			<rom type="code" offset="0x0000">PATCH</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0xe000">MUSTBL</rom>
+			<rom type="code" offset="0xf000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS200</rom>
+			<rom type="bgm" offset="0x01">MUS201</rom>
+			<rom type="bgm" offset="0x03">MUS203</rom>
+			<rom type="bgm" offset="0x05">MUS205</rom>
+			<rom type="bgm" offset="0x06">MUS206</rom>
+			<rom type="bgm" offset="0x07">MUS300</rom>
+			<rom type="bgm" offset="0x08">MUS301</rom>
+			<rom type="bgm" offset="0x09">MUS302</rom>
+			<rom type="bgm" offset="0x0a">MUS303</rom>
+			<rom type="bgm" offset="0x0b">MUS304</rom>
+			<rom type="bgm" offset="0x0c">MUS305</rom>
+			<rom type="bgm" offset="0x0d">MUS306</rom>
+			<rom type="bgm" offset="0x0e">MUS307</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS200 : コマンド</title>
+			<title code="0x01">MUS201 : コマンドII</title>
+			<title code="0x03">MUS203 : 戦闘</title>
+			<title code="0x05">MUS205 : 戦闘II</title>
+			<title code="0x06">MUS206 : キャラクター</title>
+			<title code="0x07">MUS300 : エイリアン</title>
+			<title code="0x08">MUS301 : バスクの樹</title>
+			<title code="0x09">MUS302 : 108の石板</title>
+			<title code="0x0a">MUS303 : IDカード完成</title>
+			<title code="0x0b">MUS304 : 魔界BGM</title>
+			<title code="0x0c">MUS305 : 昼の移動のテーマ</title>
+			<title code="0x0d">MUS306 : 夜の移動のテーマ</title>
+			<title code="0x0e">MUS307 : サルバン</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-8801] LAST ARMAGEDDON(OPN)</name>
+		<driver type="opn">pc88</driver>
+		<driveralias type="NEC PC-8801">BrainGray</driveralias>
+		<options>
+			<option name="mdata_addr" value="0xf800"/>
+			<option name="mdata_size" value="0x0800"/>
+		</options>
+		<romlist archive="lastarmg">
+			<rom type="code" offset="0x0000">PATCH2</rom>
+			<rom type="code" offset="0x0100">PROG</rom>
+			<rom type="code" offset="0xe000">MUSTBL</rom>
+			<rom type="code" offset="0xf000">DRIVER</rom>
+			<rom type="bgm" offset="0x00">MUS200</rom>
+			<rom type="bgm" offset="0x01">MUS201</rom>
+			<rom type="bgm" offset="0x03">MUS203</rom>
+			<rom type="bgm" offset="0x05">MUS205</rom>
+			<rom type="bgm" offset="0x06">MUS206</rom>
+			<rom type="bgm" offset="0x07">MUS300</rom>
+			<rom type="bgm" offset="0x08">MUS301</rom>
+			<rom type="bgm" offset="0x09">MUS302</rom>
+			<rom type="bgm" offset="0x0a">MUS303</rom>
+			<rom type="bgm" offset="0x0b">MUS304</rom>
+			<rom type="bgm" offset="0x0c">MUS305</rom>
+			<rom type="bgm" offset="0x0d">MUS306</rom>
+			<rom type="bgm" offset="0x0e">MUS307</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">MUS200 : コマンド</title>
+			<title code="0x01">MUS201 : コマンドII</title>
+			<title code="0x03">MUS203 : 戦闘</title>
+			<title code="0x05">MUS205 : 戦闘II</title>
+			<title code="0x06">MUS206 : キャラクター</title>
+			<title code="0x07">MUS300 : エイリアン</title>
+			<title code="0x08">MUS301 : バスクの樹</title>
+			<title code="0x09">MUS302 : 108の石板</title>
+			<title code="0x0a">MUS303 : IDカード完成</title>
+			<title code="0x0b">MUS304 : 魔界BGM</title>
+			<title code="0x0c">MUS305 : 昼の移動のテーマ</title>
+			<title code="0x0d">MUS306 : 夜の移動のテーマ</title>
+			<title code="0x0e">MUS307 : サルバン</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] LAST ARMAGEDDON(PSG)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BrainGray</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x4000"/>
+			<option name="mdata_size" value="0x4000"/>
+			<option name="mfile_size" value="0x4000"/>
+			<option name="init_pc"    value="0x8000"/>
+		</options>
+		<romlist archive="lastarmg_msx">
+			<rom type="code" offset="0x0100">028</rom>
+			<rom type="code" offset="0x8000">patch2</rom>
+			<rom type="bgm" offset="0x00">PSG-1.MSC</rom>
+			<rom type="bgm" offset="0x01">PSG-2.MSC</rom>
+			<rom type="bgm" offset="0x02">PSG-3.MSC</rom>
+			<rom type="bgm" offset="0x03">PSG-4.MSC</rom>
+			<rom type="bgm" offset="0x04">PSGBB57.COM</rom>
+			<rom type="bgm" offset="0x05">0B5</rom>
+			<rom type="bgm" offset="0x06">126</rom>
+			<rom type="bgm" offset="0x07">136</rom>
+			<rom type="bgm" offset="0x08">1B5</rom>
+			<rom type="bgm" offset="0x09">1A6</rom>
+			<rom type="bgm" offset="0x0A">1AB</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング #1</title>
+			<title code="0x01">オープニング #2</title>
+			<title code="0x02">オープニング #3</title>
+			<title code="0x03">オープニング #4</title>
+			<title code="0x04">モンスターバイブル</title>
+			<title code="0x05">コマンド</title>
+			<title code="0x06">コマンドII</title>
+			<title code="0x07">モンスターフュージョン</title>
+			<title code="0x08">戦闘のテーマ</title>
+			<title code="0x09">戦闘のテーマII</title>
+			<title code="0x0a">キャラクター</title>
+			<title code="0x0b">コールドスリープルーム</title>
+			<title code="0x0c">ダイアリー</title>
+			<title code="0x0d">CDルーム</title>
+			<title code="0x0e">スペースシップ</title>
+			<title code="0x0f">コントロールルーム</title>
+			<title code="0x10">司令官室のテーマ</title>
+			<title code="0x11">ガルマの部屋</title>
+			<title code="0x12">戻らずの塔</title>
+			<title code="0x13">鍵の部屋</title>
+			<title code="0x14">氷河期</title>
+			<title code="0x15">ノアの方舟</title>
+			<title code="0x16">ナポレオン</title>
+			<title code="0x17">ヒットラー</title>
+			<title code="0x18">1999年</title>
+			<title code="0x19">想像</title>
+			<title code="0x1a">滅亡</title>
+			<title code="0x1b">昼の移動テーマII</title>
+			<title code="0x1c">夜の移動テーマII</title>
+			<title code="0x1d">サルバンII</title>
+			<title code="0x1e">愛と優しさ</title>
+			<title code="0x1f">エイリアン</title>
+			<title code="0x20">バスクの樹</title>
+			<title code="0x21">108の石板</title>
+			<title code="0x22">IDカード</title>
+			<title code="0x23">魔界</title>
+			<title code="0x24">昼の移動テーマ</title>
+			<title code="0x25">夜の移動テーマ</title>
+			<title code="0x26">サルバン</title>
+			<title code="0x27">石板製作所</title>
+			<title code="0x28">転移機のテーマ</title>
+			<title code="0x29">石板製作室</title>
+			<title code="0x2a">109個目の石板</title>
+			<title code="0x2b">司令塔</title>
+			<title code="0x2c">エンディング #1</title>
+			<title code="0x2d">エンディング #2</title>
+			<title code="0x2e">ファンタジーランドショップ</title>
+			<title code="0x2f">戦士たちとの戦い</title>
+			<title code="0x30">メディカルセンター</title>
+			<title code="0x31">王の城</title>
+			<title code="0x32">王の部屋</title>
+			<title code="0x33">コンピュータールーム</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] LAST ARMAGEDDON(OPLL)</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BrainGray</driveralias>
+		<options>
+			<option name="mdata_addr" value="0x4000"/>
+			<option name="mdata_size" value="0x4000"/>
+			<option name="mfile_size" value="0x4000"/>
+			<option name="init_pc"    value="0x8000"/>
+			<option name="use_opll"   value="0x01"/>
+		</options>
+		<romlist archive="lastarmg_msx">
+			<rom type="code" offset="0x0100">029</rom>
+			<rom type="code" offset="0x8000">patch</rom>
+			<rom type="bgm" offset="0x00">FM-1.MSC</rom>
+			<rom type="bgm" offset="0x01">FM-2.MSC</rom>
+			<rom type="bgm" offset="0x02">FM-3.MSC</rom>
+			<rom type="bgm" offset="0x03">FM-4.MSC</rom>
+			<rom type="bgm" offset="0x04">FMBB57.COM</rom>
+			<rom type="bgm" offset="0x05">0B5</rom>
+			<rom type="bgm" offset="0x06">126</rom>
+			<rom type="bgm" offset="0x07">136</rom>
+			<rom type="bgm" offset="0x08">1B5</rom>
+			<rom type="bgm" offset="0x09">1A6</rom>
+			<rom type="bgm" offset="0x0a">1AB</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">オープニング #1</title>
+			<title code="0x01">オープニング #2</title>
+			<title code="0x02">オープニング #3</title>
+			<title code="0x03">オープニング #4</title>
+			<title code="0x04">モンスターバイブル</title>
+			<title code="0x05">コマンド</title>
+			<title code="0x06">コマンドII</title>
+			<title code="0x07">モンスターフュージョン</title>
+			<title code="0x08">戦闘のテーマ</title>
+			<title code="0x09">戦闘のテーマII</title>
+			<title code="0x0a">キャラクター</title>
+			<title code="0x0b">コールドスリープルーム</title>
+			<title code="0x0c">ダイアリー</title>
+			<title code="0x0d">CDルーム</title>
+			<title code="0x0e">スペースシップ</title>
+			<title code="0x0f">コントロールルーム</title>
+			<title code="0x10">司令官室のテーマ</title>
+			<title code="0x11">ガルマの部屋</title>
+			<title code="0x12">戻らずの塔</title>
+			<title code="0x13">鍵の部屋</title>
+			<title code="0x14">氷河期</title>
+			<title code="0x15">ノアの方舟</title>
+			<title code="0x16">ナポレオン</title>
+			<title code="0x17">ヒットラー</title>
+			<title code="0x18">1999年</title>
+			<title code="0x19">想像</title>
+			<title code="0x1a">滅亡</title>
+			<title code="0x1b">昼の移動テーマII</title>
+			<title code="0x1c">夜の移動テーマII</title>
+			<title code="0x1d">サルバンII</title>
+			<title code="0x1e">愛と優しさ</title>
+			<title code="0x1f">エイリアン</title>
+			<title code="0x20">バスクの樹</title>
+			<title code="0x21">108の石板</title>
+			<title code="0x22">IDカード</title>
+			<title code="0x23">魔界</title>
+			<title code="0x24">昼の移動テーマ</title>
+			<title code="0x25">夜の移動テーマ</title>
+			<title code="0x26">サルバン</title>
+			<title code="0x27">石板製作所</title>
+			<title code="0x28">転移機のテーマ</title>
+			<title code="0x29">石板製作室</title>
+			<title code="0x2a">109個目の石板</title>
+			<title code="0x2b">司令塔</title>
+			<title code="0x2c">エンディング #1</title>
+			<title code="0x2d">エンディング #2</title>
+			<title code="0x2e">ファンタジーランドショップ</title>
+			<title code="0x2f">戦士たちとの戦い</title>
+			<title code="0x30">メディカルセンター</title>
+			<title code="0x31">王の城</title>
+			<title code="0x32">王の部屋</title>
+			<title code="0x33">コンピュータールーム</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 抜忍伝説</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BrainGray</driveralias>
+		<options>
+			<option name="init_pc"    value="0x3000"/>
+			<option name="mdata_addr" value="0x4000"/>
+			<option name="mfile_size" value="0x2600"/>
+			<option name="mdata_size" value="0x2600"/>
+		</options>
+		<romlist archive="nukenin_msx">
+			<rom type="code" offset="0x0100">COMMAND.COM</rom>
+			<rom type="code" offset="0x3000">patch</rom>
+			<rom type="code" offset="0x4000">OPNMUS</rom>
+			<rom type="bgm" offset="0x00">OPNMUS</rom>
+			<rom type="bgm" offset="0x01">J/EVTMUS</rom>
+			<rom type="bgm" offset="0x02">K/EVTMUS</rom>
+			<rom type="bgm" offset="0x03">G/EVTMUS</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x00" max="0x0e" extcode="1">オープニング %02X</range>
+			<title code="0x100">邪鬼丸 00</title>
+			<title code="0x101">邪鬼丸 01</title>
+			<title code="0x102">邪鬼丸 02</title>
+			<title code="0x103">邪鬼丸 03</title>
+			<title code="0x104">邪鬼丸 04</title>
+			<title code="0x105">邪鬼丸 05</title>
+			<title code="0x106">邪鬼丸 06</title>
+			<title code="0x107">邪鬼丸 07</title>
+			<title code="0x108">邪鬼丸 08</title>
+			<title code="0x109">邪鬼丸 09</title>
+			<title code="0x10a">邪鬼丸 0A</title>
+			<title code="0x10b">邪鬼丸 0B</title>
+			<title code="0x10c">邪鬼丸 0C</title>
+			<title code="0x10d">邪鬼丸 0D</title>
+			<title code="0x10e">邪鬼丸 0E</title>
+			<title code="0x10f">邪鬼丸 0F</title>
+			<title code="0x110">邪鬼丸 10</title>
+			<title code="0x200">小源太 00</title>
+			<title code="0x201">小源太 01</title>
+			<title code="0x202">小源太 02</title>
+			<title code="0x203">小源太 03</title>
+			<title code="0x204">小源太 04</title>
+			<title code="0x205">小源太 05</title>
+			<title code="0x206">小源太 06</title>
+			<title code="0x207">小源太 07</title>
+			<title code="0x208">小源太 08</title>
+			<title code="0x209">小源太 09</title>
+			<title code="0x20a">小源太 0A</title>
+			<title code="0x20b">小源太 0B</title>
+			<title code="0x20c">小源太 0C</title>
+			<title code="0x20d">小源太 0D</title>
+			<title code="0x20e">小源太 0E</title>
+			<title code="0x20f">小源太 0F</title>
+			<title code="0x210">小源太 10</title>
+			<title code="0x211">小源太 11</title>
+			<title code="0x212">小源太 12</title>
+			<title code="0x213">小源太 13</title>
+			<title code="0x214">小源太 14</title>
+			<title code="0x300">幻妖斎 00</title>
+			<title code="0x301">幻妖斎 01</title>
+			<title code="0x302">幻妖斎 02</title>
+			<title code="0x303">幻妖斎 03</title>
+			<title code="0x304">幻妖斎 04</title>
+			<title code="0x305">幻妖斎 05</title>
+			<title code="0x306">幻妖斎 06</title>
+			<title code="0x307">幻妖斎 07</title>
+			<title code="0x308">幻妖斎 08</title>
+			<title code="0x309">幻妖斎 09</title>
+			<title code="0x30a">幻妖斎 0A</title>
+			<title code="0x30b">幻妖斎 0B</title>
+			<title code="0x30c">幻妖斎 0C</title>
+			<title code="0x30d">幻妖斎 0D</title>
+			<title code="0x30e">幻妖斎 0E</title>
+			<title code="0x30f">幻妖斎 0F</title>
+			<title code="0x310">幻妖斎 10</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[MSX] 抜忍伝説 外伝</name>
+		<driver type="generic">msx</driver>
+		<driveralias type="MSX">BrainGray</driveralias>
+		<options>
+			<option name="init_pc"    value="0x5000"/>
+			<option name="mdata_addr" value="0x6000"/>
+			<option name="mfile_size" value="0x2700"/>
+			<option name="mdata_size" value="0x2700"/>
+		</options>
+		<romlist archive="nukening_msx">
+			<rom type="code" offset="0x0100">COMMAND.COM</rom>
+			<rom type="code" offset="0x5000">patch</rom>
+			<rom type="bgm" offset="0x00">EVTMUS</rom>
+			<rom type="bgm" offset="0x01">MOVMUS</rom>
+		</romlist>
+		<titlelist>
+			<range min="0x00" max="0x18" extcode="1">EVTMUS : %02X</range>
+			<title code="0x119">MOVMUS : 00</title>
+			<title code="0x11a">MOVMUS : 01</title>
+			<title code="0x11b">MOVMUS : 02</title>
+			<title code="0x11c">MOVMUS : 03</title>
+			<title code="0x11d">MOVMUS : 04</title>
+			<title code="0x11e">MOVMUS : 05</title>
+			<title code="0x11f">MOVMUS : 06</title>
+		</titlelist>
+	</game>
+</gamelist>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //自転車創業 -->
+	<game>
+		<name>[X68000] あの、素晴らしい　　をもう一度</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">自転車創業</driveralias>
+		<romlist archive="anos68snd">
+			<rom type="code" offset="0x000000">anos68snd.bin</rom>
+			<rom type="code" offset="0x010000">FMSND.ZMD</rom>
+			<rom type="code" offset="0x012000">ANOS_MT.ZMD</rom>
+			<rom type="code" offset="0x014000">CRYSTAL.ZMD</rom>
+			<rom type="code" offset="0x015000">GIMON.ZMD</rom>
+			<rom type="code" offset="0x017000">KOYA.ZMD</rom>
+			<rom type="code" offset="0x019000">MIREIYU.ZMD</rom>
+			<rom type="code" offset="0x01b000">RIBI.ZMD</rom>
+			<rom type="code" offset="0x01f000">RI_HI.ZMD</rom>
+			<rom type="code" offset="0x020000">RI_KI.ZMD</rom>
+			<rom type="code" offset="0x022000">RI_KIAI.ZMD</rom>
+			<rom type="code" offset="0x024000">RI_MA.ZMD</rom>
+			<rom type="code" offset="0x025000">RYUKETU.ZMD</rom>
+			<rom type="code" offset="0x026000">SEKAI.ZMD</rom>
+			<rom type="code" offset="0x029000">SHOCK.ZMD</rom>
+			<rom type="code" offset="0x02b000">TANSAKU.ZMD</rom>
+			<rom type="code" offset="0x02c000">YANE.ZMD</rom>
+			<rom type="code" offset="0x040000">ANOS.ZPD</rom>
+			<rom type="x"    offset="0x060000">zmusic.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">ANOS_MT.ZMD : メインテーマ</title>
+			<title code="0x02">CRYSTAL.ZMD : 水晶</title>
+			<title code="0x03">GIMON.ZMD   : 疑問</title>
+			<title code="0x04">KOYA.ZMD    : 荒野を歩く</title>
+			<title code="0x05">MIREIYU.ZMD : ミレイユのテーマ</title>
+			<title code="0x06">RIBI.ZMD    : 堕天使殺し</title>
+			<title code="0x07">RI_HI.ZMD   : リト悲</title>
+			<title code="0x08">RI_KI.ZMD   : リト喜</title>
+			<title code="0x09">RI_KIAI.ZMD : リト喜哀</title>
+			<title code="0x0a">RI_MA.ZMD   : リトのテーマ(間抜け)</title>
+			<title code="0x0b">RYUKETU.ZMD : 流血の直前</title>
+			<title code="0x0c">SEKAI.ZMD   : 世界の知識</title>
+			<title code="0x0d">SHOCK.ZMD   : ショッキング</title>
+			<title code="0x0e">TANSAKU.ZMD : 探索中</title>
+			<title code="0x0f">YANE.ZMD    : 屋根の下のささやかな夜</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] 空の浮動産</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">自転車創業</driveralias>
+		<options>
+			<option name="pcm8"    value="0x01"/>
+		</options>
+		<romlist archive="anos268snd">
+			<rom type="code" offset="0x000000">anos2mus.r</rom>
+			<rom type="code" offset="0x010000">00fmsnd.zmd</rom>
+			<rom type="code" offset="0x014000">01taikut.zmd</rom>
+			<rom type="code" offset="0x018000">02op.zmd</rom>
+			<rom type="code" offset="0x01C000">03setumei.zmd</rom>
+			<rom type="code" offset="0x020000">04manuke.zmd</rom>
+			<rom type="code" offset="0x024000">05jyumon.zmd</rom>
+			<rom type="code" offset="0x028000">06sabisi.zmd</rom>
+			<rom type="code" offset="0x02C000">07kowai.zmd</rom>
+			<rom type="code" offset="0x030000">08pinch.zmd</rom>
+			<rom type="code" offset="0x034000">09battl1.zmd</rom>
+			<rom type="code" offset="0x038000">10battl2.zmd</rom>
+			<rom type="code" offset="0x03C000">11akaru1.zmd</rom>
+			<rom type="code" offset="0x040000">12akaru2.zmd</rom>
+			<rom type="code" offset="0x044000">13kincho.zmd</rom>
+			<rom type="code" offset="0x048000">14_100m.zmd</rom>
+			<rom type="code" offset="0x04C000">15okoru.zmd</rom>
+			<rom type="code" offset="0x050000">16battl3.zmd</rom>
+			<rom type="code" offset="0x054000">17ed.zmd</rom>
+			<rom type="code" offset="0x060000">sora.zpd</rom>
+			<rom type="x"    offset="0x080000">zmusic.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x00">停止</title>
+			<title code="0x01">退屈な授業。</title>
+			<title code="0x02">空の浮動産。</title>
+			<title code="0x03">法学概論。</title>
+			<title code="0x04">……っていうか今日休講日じゃないのよ。</title>
+			<title code="0x05">具現化された魔力の化学反応。</title>
+			<title code="0x06">春川春菜2。</title>
+			<title code="0x07">春川春菜3。</title>
+			<title code="0x08">ピンチ。</title>
+			<title code="0x09">戦闘。</title>
+			<title code="0x0A">決闘。</title>
+			<title code="0x0B">羊羹と牛乳。</title>
+			<title code="0x0C">春川春菜１。</title>
+			<title code="0x0D">即発。</title>
+			<title code="0x0E">高度100Mの綱渡りで100Mダッシュ。</title>
+			<title code="0x0F">最大の失敗。</title>
+			<title code="0x10">最後の魔法。</title>
+			<title code="0x11">伝模移位。</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[X68000] こねかけのうどんぶつける祭りがノルウェーの北の村の漁村で</name>
+		<driver type="generic">x68k</driver>
+		<driveralias type="SHARP X68000">自転車創業</driveralias>
+		<romlist archive="anos368snd">
+			<rom type="code" offset="0x000000">anos368snd.bin</rom>
+			<rom type="code" offset="0x010000">00LCsnd.ZMD</rom>
+			<rom type="code" offset="0x012000">02WHITEOUT.ZMD</rom>
+			<rom type="code" offset="0x014000">03anti.ZMD</rom>
+			<rom type="code" offset="0x017000">04UDON.ZMD</rom>
+			<rom type="code" offset="0x01b000">05rgb.ZMD</rom>
+			<rom type="code" offset="0x01f000">06cmyk.ZMD</rom>
+			<rom type="code" offset="0x022000">07color.ZMD</rom>
+			<rom type="code" offset="0x024000">08O_G.ZMD</rom>
+			<rom type="code" offset="0x028000">17offwhi.ZMD</rom>
+			<rom type="code" offset="0x030000">LC.ZPD</rom>
+			<rom type="code" offset="0x047000">orange.ZPD</rom>
+			<rom type="x"    offset="0x060000">zmusic.x</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x01">02WHITEOUT.ZMD : whiteout</title>
+			<title code="0x02">03anti.ZMD     : アンチエイリアス</title>
+			<title code="0x03">04UDON.ZMD     : U/D/O/N</title>
+			<title code="0x04">05rgb.ZMD      : RGB</title>
+			<title code="0x05">06cmyk.ZMD     : CMYK</title>
+			<title code="0x06">07color.ZMD    : colours</title>
+			<title code="0x07">08O_G.ZMD      : orange to green</title>
+			<title code="0x08">17offwhi.ZMD   : offwhite</title>
+		</titlelist>
+	</game>
+</gamelist>

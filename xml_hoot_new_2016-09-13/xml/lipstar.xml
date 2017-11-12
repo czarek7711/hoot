@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Lip Star -->
+	<game>
+		<name>[PC-9801] ESTATE(OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Lip Star</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="estate_98">
+			<rom type="file" offset="-1">MUSDRV.COM</rom>
+			<rom type="file" offset="-1">MBMUSP.COM</rom>
+			<rom type="file" offset="-1">ESTE_00N.MSB</rom>
+			<rom type="file" offset="-1">ESTE_01N.MSB</rom>
+			<rom type="file" offset="-1">ESTE_02N.MSB</rom>
+			<rom type="file" offset="-1">ESTE_03N.MSB</rom>
+			<rom type="file" offset="-1">ESTE_04N.MSB</rom>
+			<rom type="file" offset="-1">ESTE_05N.MSB</rom>
+			<rom type="conin" offset="0x10">ESTE_00N.MSB</rom>
+			<rom type="conin" offset="0x11">ESTE_01N.MSB</rom>
+			<rom type="conin" offset="0x12">ESTE_02N.MSB</rom>
+			<rom type="conin" offset="0x13">ESTE_03N.MSB</rom>
+			<rom type="conin" offset="0x14">ESTE_04N.MSB</rom>
+			<rom type="conin" offset="0x15">ESTE_05N.MSB</rom>
+			<rom type="shell" offset="0">MUSDRV</rom>
+			<rom type="shell" offset="0">MBMUSP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ESTE_00N.MSB</title>
+			<title code="0x11">ESTE_01N.MSB</title>
+			<title code="0x12">ESTE_02N.MSB</title>
+			<title code="0x13">ESTE_03N.MSB</title>
+			<title code="0x14">ESTE_04N.MSB</title>
+			<title code="0x15">ESTE_05N.MSB</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-9801] ESTATE(OPNA)</name>
+		<driver type="opna">pc98dos</driver>
+		<driveralias type="NEC PC-9801">Lip Star</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="estate_98">
+			<rom type="file" offset="-1">MUSDRV.COM</rom>
+			<rom type="file" offset="-1">MBMUSP.COM</rom>
+			<rom type="file" offset="-1">ESTE_00S.MSB</rom>
+			<rom type="file" offset="-1">ESTE_01S.MSB</rom>
+			<rom type="file" offset="-1">ESTE_02S.MSB</rom>
+			<rom type="file" offset="-1">ESTE_03S.MSB</rom>
+			<rom type="file" offset="-1">ESTE_04S.MSB</rom>
+			<rom type="file" offset="-1">ESTE_05S.MSB</rom>
+			<rom type="conin" offset="0x10">ESTE_00S.MSB</rom>
+			<rom type="conin" offset="0x11">ESTE_01S.MSB</rom>
+			<rom type="conin" offset="0x12">ESTE_02S.MSB</rom>
+			<rom type="conin" offset="0x13">ESTE_03S.MSB</rom>
+			<rom type="conin" offset="0x14">ESTE_04S.MSB</rom>
+			<rom type="conin" offset="0x15">ESTE_05S.MSB</rom>
+			<rom type="shell" offset="0">MUSDRV</rom>
+			<rom type="shell" offset="0">MBMUSP</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">ESTE_00S.MSB</title>
+			<title code="0x11">ESTE_01S.MSB</title>
+			<title code="0x12">ESTE_02S.MSB</title>
+			<title code="0x13">ESTE_03S.MSB</title>
+			<title code="0x14">ESTE_04S.MSB</title>
+			<title code="0x15">ESTE_05S.MSB</title>
+		</titlelist>
+	</game>
+</gamelist>

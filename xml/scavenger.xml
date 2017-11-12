@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+<game>
+<name>[MD] Sub-Terrania / Jesper Kyd / 1993 (Zyrinx) Scavenger</name>
+<driver type="sbterania">megadrive</driver> 
+<driveralias type="MegaDrive">scavenger</driveralias>
+<romlist archive="SubTerrania">
+<rom type="code">SubTerrania.bin</rom>
+</romlist>
+<titlelist> 
+<title code="0X02">Start Sequence (Intro)</title> 
+<title code="0X01">Carousel (title)</title> 
+<title code="0X03">Funky Writer (Mission Report)</title> 
+<title code="0X10">Start Demo</title> 
+<title code="0X04">Crystal Space (Level I)</title> 
+<title code="0X05">Sublevel (Level II)</title> 
+<title code="0X06">Crystal Space Ii (Level III)</title> 
+<title code="0X07">Enemy Mines (Level IV)</title> 
+<title code="0X08">Enemy Mines Ii (Level V)</title> 
+<title code="0X09">Sublevel Ii (Level VI)</title> 
+<title code="0X0A">Power Flower (Level VII)</title> 
+<title code="0X0B">Power Flower Ii (Level VIII)</title> 
+<title code="0X0C">Underwater (Level IX)</title> 
+<title code="0X0F">Last Level (Final Monster)</title> 
+<title code="0X0D">Complete (End Sequence)</title> 
+<title code="0X0E">Heroes Theme (High Score)</title> 
+</titlelist> 
+</game>
+</gamelist>

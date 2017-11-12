@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Mediax -->
+	<game>
+		<name>[PC-98] PP Disc 6</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">mediax</driveralias>
+		<options>
+      <option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdsk6_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK01.KMD</rom>
+			<rom type="file" offset="-1">PPDISK02.KMD</rom>
+			<rom type="file" offset="-1">PPDISK03.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK01.KMD</rom>
+			<rom type="conin" offset="0x11">PPDISK02.KMD</rom>
+			<rom type="conin" offset="0x12">PPDISK03.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV -mPPPP.KMD</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK01.KMD</title>
+			<title code="0x11">PPDISK02.KMD</title>
+			<title code="0x12">PPDISK03.KMD</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] PP Disc 10</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">mediax</driveralias>
+		<options>
+      <option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="ppdsk10_98">
+			<rom type="file" offset="-1">MDRV.COM</rom>
+			<rom type="file" offset="-1">MDRV_98.COM</rom>
+			<rom type="file" offset="-1">GUN_KUAN.TDT</rom>
+			<rom type="file" offset="-1">DRUMS.DRM</rom>
+			<rom type="file" offset="-1">PPDISK03.KMD</rom>
+			<rom type="file" offset="-1">PPDISK07.KMD</rom>
+			<rom type="file" offset="-1">PPDISK08.KMD</rom>
+			<rom type="file" offset="-1">PPDISK09.KMD</rom>
+			<rom type="file" offset="-1">PPDISK10.KMD</rom>
+			<rom type="file" offset="-1">PPDISK11.KMD</rom>
+			<rom type="conin" offset="0x10">PPDISK03.KMD</rom>
+			<rom type="conin" offset="0x11">PPDISK07.KMD</rom>
+			<rom type="conin" offset="0x12">PPDISK08.KMD</rom>
+			<rom type="conin" offset="0x13">PPDISK09.KMD</rom>
+			<rom type="conin" offset="0x14">PPDISK10.KMD</rom>
+			<rom type="conin" offset="0x15">PPDISK11.KMD</rom>
+			<rom type="shell" offset="0">MDRV</rom>
+			<rom type="shell" offset="0">MDRV -tGUN_KUAN.TDT</rom>
+			<rom type="shell" offset="0">MDRV -dDRUMS.DRM</rom>
+			<rom type="shell" offset="0">MDRV -mPPPP.KMD</rom>
+			<rom type="shell" offset="0">MDRV_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">PPDISK03.KMD</title>
+			<title code="0x11">PPDISK07.KMD</title>
+			<title code="0x12">PPDISK08.KMD</title>
+			<title code="0x13">PPDISK09.KMD</title>
+			<title code="0x14">PPDISK10.KMD</title>
+			<title code="0x15">PPDISK11.KMD</title>
+		</titlelist>
+	</game>
+</gamelist>

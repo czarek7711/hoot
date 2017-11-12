@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+		 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+		offset CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //u-me soft -->
+	<game>
+		<name>[PC-98] Paparazzo (パパラッチ) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="papara98">
+			<rom type="file" offset="-1">fgplay_h.com</rom>
+			<rom type="file" offset="-1">OPNDRV.COM</rom>
+			<rom type="file" offset="0x10">PAPA_00.FM</rom>
+			<rom type="file" offset="0x11">PAPA_01.FM</rom>
+			<rom type="file" offset="0x12">PAPA_02.FM</rom>
+			<rom type="file" offset="0x13">PAPA_03.FM</rom>
+			<rom type="file" offset="0x14">PAPA_04.FM</rom>
+			<rom type="file" offset="0x15">PAPA_05.FM</rom>
+			<rom type="file" offset="0x16">PAPA_06.FM</rom>
+			<rom type="file" offset="0x17">PAPA_07.FM</rom>
+			<rom type="file" offset="0x18">PAPA_08.FM</rom>
+			<rom type="file" offset="0x19">PAPA_09.FM</rom>
+			<rom type="file" offset="0x1A">PAPA_10.FM</rom>
+			<rom type="file" offset="0x1B">PAPA_11.FM</rom>
+			<rom type="shell" offset="0">opndrv</rom>
+			<rom type="shell" offset="0">fgplay_h</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>       
+			<title code="0x11">夢に向かって</title>
+			<title code="0x12">穏やかな日々</title>
+			<title code="0x13">GO!GO!パパラッチ</title>
+			<title code="0x14">枯葉、舞い落ちて…</title>
+			<title code="0x15">血の匂い</title>
+			<title code="0x16">冬のおとずれ</title>
+			<title code="0x17">静かに抱かれて</title>
+			<title code="0x18">男と女の関係</title>
+			<title code="0x19">日の出と共に</title>
+			<title code="0x1A">遠きあの日の思い出</title>
+			<title code="0x1B">乙女の気持ち</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Paparazzo (パパラッチ) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="papara98">
+			<rom type="file" offset="-1">FUGAM_98.COM</rom>
+			<rom type="file" offset="-1">FMD.EXE</rom>
+			<rom type="file" offset="0x10">PAPA_00.GS</rom>
+			<rom type="file" offset="0x11">PAPA_01.GS</rom>
+			<rom type="file" offset="0x12">PAPA_02.GS</rom>
+			<rom type="file" offset="0x13">PAPA_03.GS</rom>
+			<rom type="file" offset="0x14">PAPA_04.GS</rom>
+			<rom type="file" offset="0x15">PAPA_05.GS</rom>
+			<rom type="file" offset="0x16">PAPA_06.GS</rom>
+			<rom type="file" offset="0x17">PAPA_07.GS</rom>
+			<rom type="file" offset="0x18">PAPA_08.GS</rom>
+			<rom type="file" offset="0x19">PAPA_09.GS</rom>
+			<rom type="file" offset="0x1A">PAPA_10.GS</rom>
+			<rom type="file" offset="0x1B">PAPA_11.GS</rom>
+			<rom type="shell" offset="0">fmd -#</rom>
+			<rom type="shell" offset="0">fugam_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">夢に向かって</title>
+			<title code="0x12">穏やかな日々</title>
+			<title code="0x13">GO!GO!パパラッチ</title>
+			<title code="0x14">枯葉、舞い落ちて…</title>
+			<title code="0x15">血の匂い</title>
+			<title code="0x16">冬のおとずれ</title>
+			<title code="0x17">静かに抱かれて</title>
+			<title code="0x18">男と女の関係</title>
+			<title code="0x19">日の出と共に</title>
+			<title code="0x1A">遠きあの日の思い出</title>
+			<title code="0x1B">乙女の気持ち</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Paparazzo (パパラッチ) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="papara98">
+			<rom type="file" offset="-1">FUGAM_98.COM</rom>
+			<rom type="file" offset="-1">FMD.EXE</rom>
+			<rom type="file" offset="0x10">PAPA_00.GS</rom>
+			<rom type="file" offset="0x11">PAPA_01.GS</rom>
+			<rom type="file" offset="0x12">PAPA_02.GS</rom>
+			<rom type="file" offset="0x13">PAPA_03.GS</rom>
+			<rom type="file" offset="0x14">PAPA_04.GS</rom>
+			<rom type="file" offset="0x15">PAPA_05.GS</rom>
+			<rom type="file" offset="0x16">PAPA_06.GS</rom>
+			<rom type="file" offset="0x17">PAPA_07.GS</rom>
+			<rom type="file" offset="0x18">PAPA_08.GS</rom>
+			<rom type="file" offset="0x19">PAPA_09.GS</rom>
+			<rom type="file" offset="0x1A">PAPA_10.GS</rom>
+			<rom type="file" offset="0x1B">PAPA_11.GS</rom>
+			<rom type="shell" offset="0">fmd -#</rom>
+			<rom type="shell" offset="0">fugam_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">夢に向かって</title>
+			<title code="0x12">穏やかな日々</title>
+			<title code="0x13">GO!GO!パパラッチ</title>
+			<title code="0x14">枯葉、舞い落ちて…</title>
+			<title code="0x15">血の匂い</title>
+			<title code="0x16">冬のおとずれ</title>
+			<title code="0x17">静かに抱かれて</title>
+			<title code="0x18">男と女の関係</title>
+			<title code="0x19">日の出と共に</title>
+			<title code="0x1A">遠きあの日の思い出</title>
+			<title code="0x1B">乙女の気持ち</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Hiiragisaka no Kyukan (柊坂の旧館) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="hiiragi98">
+			<rom type="file" offset="-1">fgplay_h.com</rom>
+			<rom type="file" offset="-1">OPNDRV.COM</rom>
+			<rom type="file" offset="0x10">HIRAGI_00.FM</rom>
+			<rom type="file" offset="0x11">HIRAGI_01.FM</rom>
+			<rom type="file" offset="0x12">HIRAGI_02.FM</rom>
+			<rom type="file" offset="0x13">HIRAGI_03.FM</rom>
+			<rom type="file" offset="0x14">HIRAGI_04.FM</rom>
+			<rom type="file" offset="0x15">HIRAGI_05.FM</rom>
+			<rom type="file" offset="0x16">HIRAGI_06.FM</rom>
+			<rom type="file" offset="0x17">HIRAGI_07.FM</rom>
+			<rom type="file" offset="0x18">HIRAGI_08.FM</rom>
+			<rom type="file" offset="0x19">HIRAGI_09.FM</rom>
+			<rom type="file" offset="0x1A">HIRAGI_10.FM</rom>
+			<rom type="shell" offset="0">opndrv</rom>
+			<rom type="shell" offset="0">fgplay_h</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>       
+			<title code="0x11">ありふれた日常</title>
+			<title code="0x12">予感、そして…</title>
+			<title code="0x13">柊坂の旧館</title>
+			<title code="0x14">ショートカット</title>
+			<title code="0x15">暗闇からの呼び声</title>
+			<title code="0x16">マイルドタイム</title>
+			<title code="0x17">夢現(ゆめうつつ)</title>
+			<title code="0x18">悲運の結末</title>
+			<title code="0x19">グッドラック</title>
+			<title code="0x1A">雲間のきらめき</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Hiiragisaka no Kyukan (柊坂の旧館) (SC-55)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="hiiragi98">
+			<rom type="file" offset="-1">FUGAM_98.COM</rom>
+			<rom type="file" offset="-1">FMD.EXE</rom>
+			<rom type="file" offset="0x10">HIRAGI_00.GS</rom>
+			<rom type="file" offset="0x11">HIRAGI_01.GS</rom>
+			<rom type="file" offset="0x12">HIRAGI_02.GS</rom>
+			<rom type="file" offset="0x13">HIRAGI_03.GS</rom>
+			<rom type="file" offset="0x14">HIRAGI_04.GS</rom>
+			<rom type="file" offset="0x15">HIRAGI_05.GS</rom>
+			<rom type="file" offset="0x16">HIRAGI_06.GS</rom>
+			<rom type="file" offset="0x17">HIRAGI_07.GS</rom>
+			<rom type="file" offset="0x18">HIRAGI_08.GS</rom>
+			<rom type="file" offset="0x19">HIRAGI_09.GS</rom>
+			<rom type="file" offset="0x1A">HIRAGI_10.GS</rom>
+			<rom type="shell" offset="0">fmd -#</rom>
+			<rom type="shell" offset="0">fugam_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">ありふれた日常</title>
+			<title code="0x12">予感、そして…</title>
+			<title code="0x13">柊坂の旧館</title>
+			<title code="0x14">ショートカット</title>
+			<title code="0x15">暗闇からの呼び声</title>
+			<title code="0x16">マイルドタイム</title>
+			<title code="0x17">夢現(ゆめうつつ)</title>
+			<title code="0x18">悲運の結末</title>
+			<title code="0x19">グッドラック</title>
+			<title code="0x1A">雲間のきらめき</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Hiiragisaka no Kyukan (柊坂の旧館) (Vermouth)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="hiiragi98">
+			<rom type="file" offset="-1">FUGAM_98.COM</rom>
+			<rom type="file" offset="-1">FMD.EXE</rom>
+			<rom type="file" offset="0x10">HIRAGI_00.GS</rom>
+			<rom type="file" offset="0x11">HIRAGI_01.GS</rom>
+			<rom type="file" offset="0x12">HIRAGI_02.GS</rom>
+			<rom type="file" offset="0x13">HIRAGI_03.GS</rom>
+			<rom type="file" offset="0x14">HIRAGI_04.GS</rom>
+			<rom type="file" offset="0x15">HIRAGI_05.GS</rom>
+			<rom type="file" offset="0x16">HIRAGI_06.GS</rom>
+			<rom type="file" offset="0x17">HIRAGI_07.GS</rom>
+			<rom type="file" offset="0x18">HIRAGI_08.GS</rom>
+			<rom type="file" offset="0x19">HIRAGI_09.GS</rom>
+			<rom type="file" offset="0x1A">HIRAGI_10.GS</rom>
+			<rom type="shell" offset="0">fmd -#</rom>
+			<rom type="shell" offset="0">fugam_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">ありふれた日常</title>
+			<title code="0x12">予感、そして…</title>
+			<title code="0x13">柊坂の旧館</title>
+			<title code="0x14">ショートカット</title>
+			<title code="0x15">暗闇からの呼び声</title>
+			<title code="0x16">マイルドタイム</title>
+			<title code="0x17">夢現(ゆめうつつ)</title>
+			<title code="0x18">悲運の結末</title>
+			<title code="0x19">グッドラック</title>
+			<title code="0x1A">雲間のきらめき</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Momoko-chan for Me (ももこちゃん for me ～見習い看護婦編～) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="momoko_98">
+			<rom type="file" offset="-1">fgplay_h.com</rom>
+			<rom type="file" offset="-1">OPNDRV.COM</rom>
+			<rom type="file" offset="0x10">MOMOKO_00.FM</rom>
+			<rom type="file" offset="0x11">MOMOKO_01.FM</rom>
+			<rom type="file" offset="0x12">MOMOKO_02.FM</rom>
+			<rom type="file" offset="0x13">MOMOKO_03.FM</rom>
+			<rom type="file" offset="0x14">MOMOKO_04.FM</rom>
+			<rom type="file" offset="0x15">MOMOKO_05.FM</rom>
+			<rom type="file" offset="0x16">MOMOKO_06.FM</rom>
+			<rom type="file" offset="0x17">MOMOKO_07.FM</rom>
+			<rom type="file" offset="0x18">MOMOKO_08.FM</rom>
+			<rom type="file" offset="0x19">MOMOKO_09.FM</rom>
+			<rom type="file" offset="0x1A">MOMOKO_10.FM</rom>
+			<rom type="shell" offset="0">opndrv</rom>
+			<rom type="shell" offset="0">fgplay_h</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>       
+			<title code="0x15">Opening</title>
+			<title code="0x16">Main A-1</title>
+			<title code="0x17">Main A-2</title>
+			<title code="0x19">Main A-3</title>
+			<title code="0x11">H Scene 1</title>
+			<title code="0x1A">H Scene 2</title>
+			<title code="0x13">Date</title>
+			<title code="0x14">Bad Ending</title>
+			<title code="0x18">Happy End</title>
+			<title code="0x12">Best Happy End</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Momoko-chan for Me (ももこちゃん for me ～見習い看護婦編～) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="momoko_98">
+			<rom type="file" offset="-1">FUGAM_98.COM</rom>
+			<rom type="file" offset="-1">FMD.EXE</rom>
+			<rom type="file" offset="0x11">MOMOKO_01.GS</rom>
+			<rom type="file" offset="0x12">MOMOKO_02.GS</rom>
+			<rom type="file" offset="0x13">MOMOKO_03.GS</rom>
+			<rom type="file" offset="0x14">MOMOKO_04.GS</rom>
+			<rom type="file" offset="0x15">MOMOKO_05.GS</rom>
+			<rom type="file" offset="0x16">MOMOKO_06.GS</rom>
+			<rom type="file" offset="0x17">MOMOKO_07.GS</rom>
+			<rom type="file" offset="0x18">MOMOKO_08.GS</rom>
+			<rom type="file" offset="0x19">MOMOKO_09.GS</rom>
+			<rom type="file" offset="0x1A">MOMOKO_10.GS</rom>
+			<rom type="shell" offset="0">fmd -#</rom>
+			<rom type="shell" offset="0">fugam_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x15">Opening</title>
+			<title code="0x16">Main A-1</title>
+			<title code="0x17">Main A-2</title>
+			<title code="0x19">Main A-3</title>
+			<title code="0x11">H Scene 1</title>
+			<title code="0x1A">H Scene 2</title>
+			<title code="0x13">Date</title>
+			<title code="0x14">Bad Ending</title>
+			<title code="0x18">Happy End</title>
+			<title code="0x12">Best Happy End</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Momoko-chan for Me (ももこちゃん for me ～見習い看護婦編～) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="momoko_98">
+			<rom type="file" offset="-1">FUGAM_98.COM</rom>
+			<rom type="file" offset="-1">FMD.EXE</rom>
+			<rom type="file" offset="0x11">MOMOKO_01.GS</rom>
+			<rom type="file" offset="0x12">MOMOKO_02.GS</rom>
+			<rom type="file" offset="0x13">MOMOKO_03.GS</rom>
+			<rom type="file" offset="0x14">MOMOKO_04.GS</rom>
+			<rom type="file" offset="0x15">MOMOKO_05.GS</rom>
+			<rom type="file" offset="0x16">MOMOKO_06.GS</rom>
+			<rom type="file" offset="0x17">MOMOKO_07.GS</rom>
+			<rom type="file" offset="0x18">MOMOKO_08.GS</rom>
+			<rom type="file" offset="0x19">MOMOKO_09.GS</rom>
+			<rom type="file" offset="0x1A">MOMOKO_10.GS</rom>
+			<rom type="shell" offset="0">fmd -#</rom>
+			<rom type="shell" offset="0">fugam_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x15">Opening</title>
+			<title code="0x16">Main A-1</title>
+			<title code="0x17">Main A-2</title>
+			<title code="0x19">Main A-3</title>
+			<title code="0x11">H Scene 1</title>
+			<title code="0x1A">H Scene 2</title>
+			<title code="0x13">Date</title>
+			<title code="0x14">Bad Ending</title>
+			<title code="0x18">Happy End</title>
+			<title code="0x12">Best Happy End</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Yumemizaka (夢見坂)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="0x04"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="yumemi_98">
+			<rom type="file" offset="-1">fgplay_h.com</rom>
+			<rom type="file" offset="-1">OPNDRV.COM</rom>
+			<rom type="file" offset="0x10">YUMEMI_00.FM</rom>
+			<rom type="file" offset="0x11">YUMEMI_01.FM</rom>
+			<rom type="file" offset="0x12">YUMEMI_02.FM</rom>
+			<rom type="file" offset="0x13">YUMEMI_03.FM</rom>
+			<rom type="file" offset="0x14">YUMEMI_04.FM</rom>
+			<rom type="file" offset="0x15">YUMEMI_05.FM</rom>
+			<rom type="file" offset="0x16">YUMEMI_06.FM</rom>
+			<rom type="file" offset="0x17">YUMEMI_07.FM</rom>
+			<rom type="file" offset="0x18">YUMEMI_08.FM</rom>
+			<rom type="file" offset="0x19">YUMEMI_09.FM</rom>
+			<rom type="file" offset="0x1A">YUMEMI_10.FM</rom>
+			<rom type="file" offset="0x1B">YUMEMI_11.FM</rom>
+			<rom type="shell" offset="0">opndrv</rom>
+			<rom type="shell" offset="0">fgplay_h</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">戦慄の一戦</title>
+			<title code="0x12">このはてに…</title>
+			<title code="0x13">陽炎(かげろう)</title>
+			<title code="0x14">炎の舞</title>
+			<title code="0x15">大地の足音</title>
+			<title code="0x16">終冬(しゅうとう)</title>
+			<title code="0x17">天使のステップ</title>
+			<title code="0x18">小鳥達の楽園</title>
+			<title code="0x19">夜明けのホライズン</title>
+			<title code="0x1A">ハチャメチャ好走曲</title>
+			<title code="0x1B">木漏れ日の中で</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Yumemizaka &amp; Collections (夢見坂コレクションズ) (OPN)</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-18"/>
+		</options>
+		<romlist archive="yumecol_98">
+			<rom type="file" offset="-1">fgplay_h.com</rom>
+			<rom type="file" offset="-1">OPNDRV.COM</rom>
+			<rom type="file" offset="0x10">YUMEMI_00.FM</rom>
+			<rom type="file" offset="0x11">YUMEMI_01.FM</rom>
+			<rom type="file" offset="0x12">YUMEMI_02.FM</rom>
+			<rom type="file" offset="0x13">YUMEMI_03.FM</rom>
+			<rom type="file" offset="0x14">YUMEMI_04.FM</rom>
+			<rom type="file" offset="0x15">YUMEMI_05.FM</rom>
+			<rom type="file" offset="0x16">YUMEMI_06.FM</rom>
+			<rom type="file" offset="0x17">YUMEMI_07.FM</rom>
+			<rom type="file" offset="0x18">YUMEMI_08.FM</rom>
+			<rom type="file" offset="0x19">YUMEMI_09.FM</rom>
+			<rom type="file" offset="0x1A">YUMEMI_10.FM</rom>
+			<rom type="file" offset="0x1B">YUMEMI_11.FM</rom>
+			<rom type="shell" offset="0">opndrv</rom>
+			<rom type="shell" offset="0">fgplay_h</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x10">Stop the Music (演奏停止)</title>
+			<title code="0x11">戦慄の一戦</title>
+			<title code="0x12">このはてに…</title>
+			<title code="0x13">陽炎(かげろう)</title>
+			<title code="0x14">炎の舞</title>
+			<title code="0x15">大地の足音</title>
+			<title code="0x16">終冬(しゅうとう)</title>
+			<title code="0x17">天使のステップ</title>
+			<title code="0x18">小鳥達の楽園</title>
+			<title code="0x19">夜明けのホライズン</title>
+			<title code="0x1A">ハチャメチャ好走曲</title>
+			<title code="0x1B">木漏れ日の中で</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Yumemizaka &amp; Collections (夢見坂コレクションズ) (SC-55)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="4"/>
+		</options>
+		<romlist archive="yumecol_98">
+			<rom type="file" offset="-1">FUGAM_98.COM</rom>
+			<rom type="file" offset="-1">FMD.EXE</rom>
+			<rom type="file" offset="0x10">YUMEMI_00.GS</rom>
+			<rom type="file" offset="0x11">YUMEMI_01.GS</rom>
+			<rom type="file" offset="0x12">YUMEMI_02.GS</rom>
+			<rom type="file" offset="0x13">YUMEMI_03.GS</rom>
+			<rom type="file" offset="0x14">YUMEMI_04.GS</rom>
+			<rom type="file" offset="0x15">YUMEMI_05.GS</rom>
+			<rom type="file" offset="0x16">YUMEMI_06.GS</rom>
+			<rom type="file" offset="0x17">YUMEMI_07.GS</rom>
+			<rom type="file" offset="0x18">YUMEMI_08.GS</rom>
+			<rom type="file" offset="0x19">YUMEMI_09.GS</rom>
+			<rom type="file" offset="0x1A">YUMEMI_10.GS</rom>
+			<rom type="file" offset="0x1B">YUMEMI_11.GS</rom>
+			<rom type="shell" offset="0">fmd -#</rom>
+			<rom type="shell" offset="0">fugam_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">戦慄の一戦</title>
+			<title code="0x12">このはてに…</title>
+			<title code="0x13">陽炎(かげろう)</title>
+			<title code="0x14">炎の舞</title>
+			<title code="0x15">大地の足音</title>
+			<title code="0x16">終冬(しゅうとう)</title>
+			<title code="0x17">天使のステップ</title>
+			<title code="0x18">小鳥達の楽園</title>
+			<title code="0x19">夜明けのホライズン</title>
+			<title code="0x1A">ハチャメチャ好走曲</title>
+			<title code="0x1B">木漏れ日の中で</title>
+		</titlelist>
+	</game>
+	<game>
+		<name>[PC-98] Yumemizaka &amp; Collections (夢見坂コレクションズ) (Vermouth)</name>
+		<driver type="beep">pc98dos</driver>
+		<driveralias type="PC-98">u-me_soft</driveralias>
+		<options>
+			<option name="clockmul" value="4"/>
+			<option name="midiout" value="1"/>
+			<option name="midiout_type" value="6"/>
+		</options>
+		<romlist archive="yumecol_98">
+			<rom type="file" offset="-1">FUGAM_98.COM</rom>
+			<rom type="file" offset="-1">FMD.EXE</rom>
+			<rom type="file" offset="0x10">YUMEMI_00.GS</rom>
+			<rom type="file" offset="0x11">YUMEMI_01.GS</rom>
+			<rom type="file" offset="0x12">YUMEMI_02.GS</rom>
+			<rom type="file" offset="0x13">YUMEMI_03.GS</rom>
+			<rom type="file" offset="0x14">YUMEMI_04.GS</rom>
+			<rom type="file" offset="0x15">YUMEMI_05.GS</rom>
+			<rom type="file" offset="0x16">YUMEMI_06.GS</rom>
+			<rom type="file" offset="0x17">YUMEMI_07.GS</rom>
+			<rom type="file" offset="0x18">YUMEMI_08.GS</rom>
+			<rom type="file" offset="0x19">YUMEMI_09.GS</rom>
+			<rom type="file" offset="0x1A">YUMEMI_10.GS</rom>
+			<rom type="file" offset="0x1B">YUMEMI_11.GS</rom>
+			<rom type="shell" offset="0">fmd -#</rom>
+			<rom type="shell" offset="0">fugam_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="0x11">戦慄の一戦</title>
+			<title code="0x12">このはてに…</title>
+			<title code="0x13">陽炎(かげろう)</title>
+			<title code="0x14">炎の舞</title>
+			<title code="0x15">大地の足音</title>
+			<title code="0x16">終冬(しゅうとう)</title>
+			<title code="0x17">天使のステップ</title>
+			<title code="0x18">小鳥達の楽園</title>
+			<title code="0x19">夜明けのホライズン</title>
+			<title code="0x1A">ハチャメチャ好走曲</title>
+			<title code="0x1B">木漏れ日の中で</title>
+		</titlelist>
+	</game>
+</gamelist>

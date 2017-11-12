@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<?xml-stylesheet type="text/xsl" href="hoot.xsl"?>
+<!DOCTYPE gamelist [
+	<!ELEMENT gamelist (game|bind|childlists)*>
+	<!ATTLIST gamelist date CDATA #IMPLIED>
+	<!ELEMENT childlists (list)*>
+	<!ELEMENT list (#PCDATA)>
+	<!ELEMENT bind (exts,driver,options?)>
+	<!ELEMENT exts (ext)*>
+	<!ELEMENT ext (#PCDATA)>
+	<!ELEMENT game (name,driver,driveralias?,options?,romlist?,titlelist?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT driver (#PCDATA)>
+	<!ATTLIST driver type CDATA #IMPLIED>
+	<!ELEMENT driveralias (#PCDATA)>
+	<!ATTLIST driveralias type CDATA #IMPLIED>
+	<!ELEMENT options (option)*>
+	<!ELEMENT option EMPTY>
+	<!ATTLIST option name CDATA #REQUIRED
+					 value CDATA #REQUIRED>
+	<!ELEMENT romlist (rom)*>
+	<!ATTLIST romlist archive CDATA #IMPLIED>
+	<!ELEMENT rom (#PCDATA)>
+	<!ATTLIST rom type CDATA #REQUIRED
+				  offset CDATA #IMPLIED
+				  crc32 CDATA #IMPLIED>
+	<!ELEMENT titlelist (title|range)*>
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title code CDATA #REQUIRED
+					type CDATA #IMPLIED>
+	<!ELEMENT range (#PCDATA)>
+	<!ATTLIST range min CDATA #REQUIRED
+					max CDATA #REQUIRED
+					extcode CDATA #IMPLIED>
+]>
+<gamelist date="2005/09/25">
+	<!-- //Tear Drop -->
+	<game>
+		<name>[PC-9801] Turn Over</name>
+		<driver type="opn">pc98dos</driver>
+		<driveralias type="NEC PC-9801">TearDrop</driveralias>
+		<options>
+			<option name="clockmul" value="8"/>
+		</options>
+		<romlist archive="turnover_98">
+			<rom type="file" offset="-1">TURNO_98.COM</rom>
+			<rom type="file" offset="-1">AGI.EXE</rom>
+			<rom type="conin" offset="5">AGI.EXE</rom>
+			<rom type="file" offset="10">CHIME.MOB</rom>
+			<rom type="file" offset="11">DON.MOB</rom>
+			<rom type="file" offset="12">FIGHT.MOB</rom>
+			<rom type="file" offset="13">LIGHT.MOB</rom>
+			<rom type="file" offset="14">LOGOSE.MOB</rom>
+			<rom type="file" offset="15">MUTI.MOB</rom>
+			<rom type="file" offset="16">MUTI2.MOB</rom>
+			<rom type="file" offset="17">RING.MOB</rom>
+			<rom type="file" offset="18">RING2.MOB</rom>
+			<rom type="file" offset="19">TURN_01.MOB</rom>
+			<rom type="file" offset="20">TURN_02.MOB</rom>
+			<rom type="file" offset="21">TURN_03.MOB</rom>
+			<rom type="file" offset="22">TURN_04.MOB</rom>
+			<rom type="file" offset="23">TURN_05.MOB</rom>
+			<rom type="file" offset="24">TURN_06.MOB</rom>
+			<rom type="file" offset="25">TURN_07.MOB</rom>
+			<rom type="file" offset="26">TURN_08.MOB</rom>
+			<rom type="file" offset="27">TURN_09.MOB</rom>
+			<rom type="file" offset="28">TURN_S5B.MOB</rom>
+			<rom type="file" offset="29">TURN_S6B.MOB</rom>
+			<rom type="file" offset="30">TURN_S6C.MOB</rom>
+			<rom type="file" offset="31">TURN_SE1.MOB</rom>
+			<rom type="file" offset="32">TURN_SE5.MOB</rom>
+			<rom type="file" offset="33">TURN_SE6.MOB</rom>
+			<rom type="shell" offset="0">TURNO_98</rom>
+		</romlist>
+		<titlelist>
+			<title code="19">TURN_01.MOB  : オープニング～タイトル(Holy High School)</title>
+			<title code="20">TURN_02.MOB  : 通常流れる曲(It's Wonderful!)</title>
+			<title code="21">TURN_03.MOB  : 学校内で捜査している時の曲(The Secret)</title>
+			<title code="22">TURN_04.MOB  : Hシーンの曲1(Exciting Sight)</title>
+			<title code="23">TURN_05.MOB  : 学校以外の場所での曲(Private Time)</title>
+			<title code="24">TURN_06.MOB  : 驚いたとき、ガラッと場面が変わるときの曲(Happening)</title>
+			<title code="25">TURN_07.MOB  : Hシーンの曲2(Sexy Lesson)</title>
+			<title code="26">TURN_08.MOB  : 最後の山場の曲(Turn Over)</title>
+			<title code="27">TURN_09.MOB  : エンディング～スタッフロール(Seeya!)</title>
+			<title code="28">TURN_S5B.MOB : </title>
+			<title code="29">TURN_S6B.MOB : </title>
+			<title code="30">TURN_S6C.MOB : </title>
+			<title code="31">TURN_SE1.MOB : </title>
+			<title code="32">TURN_SE5.MOB : </title>
+			<title code="33">TURN_SE6.MOB : </title>
+			<title code="10">CHIME.MOB    : </title>
+			<title code="11">DON.MOB      : </title>
+			<title code="12">FIGHT.MOB    : </title>
+			<title code="13">LIGHT.MOB    : </title>
+			<title code="14">LOGOSE.MOB   : </title>
+			<title code="15">MUTI.MOB     : </title>
+			<title code="16">MUTI2.MOB    : </title>
+			<title code="17">RING.MOB     : </title>
+			<title code="18">RING2.MOB    : </title>
+		</titlelist>
+	</game>
+</gamelist>
