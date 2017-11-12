@@ -83,7 +83,7 @@ MSX, MSX2
 * Snatcher
 * Space Manbow
 * Salamander
-* Yie At Kung-Fu
+* Yie Ar Kung-Fu
 
 MegaDrive
 
@@ -114,7 +114,7 @@ MegaDrive
 * M.U.S.H.A
 * Madou Monogatari I
 * Master of Monsters
-* Megta Turrican
+* Mega Turrican
 * Michael Jackson's Moonwalker
 * Midnight Resistance
 * Monster World IV
@@ -172,11 +172,11 @@ NES
 * Chaos World
 * Chip 'n Dale Rescure Rangers
 * Chip 'n Dale Rescure Rangers 2
-* Choujin sentai - Jetman
+* Choujin Sentai - Jetman
 * Circus Charlie
 * Contra [Probotector]
 * Contra Force
-* Cowboy Kid [Westerb Kids]
+* Cowboy Kid [Western Kids]
 * Crisis Force
 * Crystalis [God Slayer - Haruka Tenkuu no Sonata]
 * Dark Lord
@@ -396,7 +396,7 @@ PC-98xx
 PC/AT
 
 * Ultima Underworld: The Stygian Abyss // no titles added
-* WarCraft 2
+* WarCraft 2 // some titles missing
 * X-COM: UFO Defense [UFO: Enemy Unknowm]
 
 SNES
@@ -477,7 +477,7 @@ SNES
 * Super Castlevania IV
 * Super Ghouls 'n Ghost
 * Super Mario All-Stars
-* Super mario Kart
+* Super Mario Kart
 * Super Mario RPG: Legend of the Seven Stars
 * Super Mario World
 * Super Mario World 2 - Yoshi's Island
