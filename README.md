@@ -309,7 +309,7 @@ PC-88xx
 PC-98xx
 
 * AD&D: Death Knights of Krynn
-* AD&D Eye of the Beholder
+* AD&D: Eye of the Beholder
 * Advanced Power Dolls 2
 * Advanced Variable Geo 2
 * Akiko GOLD: The Queen of Adult // no titles added
