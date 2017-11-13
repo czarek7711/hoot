@@ -122,7 +122,7 @@ MegaDrive
 * Phantasy Star III: Generations od Doom
 * Phantasy Star IV: The End of the Millenium
 * Ristar - The Shooting Star // some PCM samples don't work properly
-* Rocket Knight Adventures // doesn't work
+* Rocket Knight Adventures
 * Shining Force II: The Ancient Seal
 * Shining and the Darkness
 * Shinobi II: The Revenge of Shinobi
