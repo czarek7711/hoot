@@ -8,6 +8,7 @@ Arcade
 * Battle Garegga
 * Carrier Air Wing
 * Daytona USA
+* Dragon Saber: After Story of Dragon Spirit
 * Final Fight
 * GP Rider
 * Galaxy Force 2
@@ -23,7 +24,7 @@ Arcade
 * Ordyne
 * Power Drift
 * Space Harrier
-* Strategic Defense Initiative // doesn't work
+* SDI - Strategic Defense Initiative
 * Sunset Riders
 * Super Hang-On
 * Super Monaco GP
@@ -317,6 +318,7 @@ PC-98xx
 * Area 88: Etranger 1995 // some translation missing
 * Armored Flagship Atragon
 * Black Bird: Tori Tachi no Tooboe
+* Brandish 2 -The Planet Buster-
 * Brandish 3 -Spirit of Balcan-
 * Brandish VT
 * Briganty: The Roots of Darkness
