@@ -165,7 +165,7 @@ NES
 * Bionic Commando [Hitler no Fukkatsu - Top Secret]
 * Blaster Master
 * Blue Marlin, The
-* Castlavania
+* Castlevania
 * Castlevania II - Simon's Quest
 * Castlevania III - Dracula's Curse [Akumajou Densetsu] (VRC6)
 * Chaos World
