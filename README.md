@@ -267,7 +267,7 @@ NES
 * Shatterhand [Tokkyuu Shirei - Solbrain]
 * Shovel Knight (VRC6)
 * Silver Surfer
-* Skate or Die 2 - The Searh for Double Trouble
+* Skate or Die 2 - The Search for Double Trouble
 * Sky Shark
 * Smurfs, The
 * Solstice - The Quest for the Staff of Demons
