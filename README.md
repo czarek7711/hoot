@@ -1,5 +1,9 @@
 # README #
 
+Japanese letters won't show up properly here because of utf-8 encoding. They'll work fine in Notepad++ though.
+
+### Only edit files that contain japanese letters directly from your hard drive (using Notepad++ for example)!! ### 
+
 ## Games List ##
 
 Arcade
