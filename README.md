@@ -1,5 +1,7 @@
 # README #
 
+### Japanese letters won't show up properly here because of utf-8 charset. They'll work fine in Notepad++ though. Only edit files that contain japanese letters directly from your hard drive (using Notepad++ for example).
+
 ## Games List ##
 
 Arcade
@@ -265,7 +267,7 @@ NES
 * Shatterhand [Tokkyuu Shirei - Solbrain]
 * Shovel Knight (VRC6)
 * Silver Surfer
-* Skate or Die 2 - The Searh for Double Trouble
+* Skate or Die 2 - The Search for Double Trouble
 * Sky Shark
 * Smurfs, The
 * Solstice - The Quest for the Staff of Demons
