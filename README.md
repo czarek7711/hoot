@@ -507,6 +507,7 @@ TurboGrafx-16
 * Dragon Saber
 * Dragon Spirit
 * Dungeon Explorer
+* Final Soldier
 * Ganbare! Golf Boys
 * Jackie Chan
 * Legendary Axe, The [Makyou Densetsu]
