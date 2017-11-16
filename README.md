@@ -1,6 +1,6 @@
 # README #
 
-### Japanese letters won't show up properly here because of utf-8 charset. They'll work fine in Notepad++ though. Only edit files that contain japanese letters directly from your hard drive (using Notepad++ for example).
+### Japanese letters won't show up properly here because of utf-8 charset. They'll work fine in hoot though.
 
 ## Games List ##
 
