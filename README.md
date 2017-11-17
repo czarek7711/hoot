@@ -1,7 +1,5 @@
 # README #
 
-### Japanese letters won't show up properly here because of utf-8 charset. They'll work fine in hoot though.
-
 ## Games List ##
 
 Arcade
