@@ -1,5 +1,3 @@
-# README #
-
 ## Games List ##
 
 Arcade
