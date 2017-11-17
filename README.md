@@ -534,6 +534,7 @@ X68000
 * Gradius II
 * Granada
 * Illumination Laser
+* Kimi Dake ni Ai o...
 * Knight Arms
 * Kyuukyoku Senki Gikadiver // missing tracks
 * Mad Stalker: Full Metal Force
