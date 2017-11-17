@@ -97,7 +97,7 @@ MegaDrive
 * Dragon's Fury [Devil Crash MD]
 * Elemental Master
 * Gain Ground
-* Gauntlet
+* Gauntlet IV
 * GleyLancer
 * Gunstar Heroes
 * Gynoug [Wings of Wor]
@@ -257,6 +257,7 @@ NES
 * Power Blade 2 [Captain Saver]
 * Rambo
 * Robocop 3
+* Rollergames
 * SCAT - Special Cybernetic Attack Team [Final Mission]
 * Sangokushi 2 - Haou no Tairiku
 * Shadow of the Ninja [Kage]
@@ -292,6 +293,7 @@ NES
 * Werewolf - The Last Warrior
 * Wizards & Warriors [Densetsu no Kishi - Elrond]
 * Wolverine
+* Yume Penguin Monogatari
 * Zen - Intergalactic Ninja
 
 PC-88xx
@@ -531,6 +533,7 @@ X68000
 * Genocide 2
 * Geograph Seal
 * Gradius II
+* Granada
 * Illumination Laser
 * Knight Arms
 * Kyuukyoku Senki Gikadiver // missing tracks
