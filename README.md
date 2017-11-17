@@ -205,7 +205,7 @@ NES
 * Goonies 2, The
 * Gremlins 2 - The New Batch
 * Guardian Legend, The [Guardic Gaiden]
-* Gyruss
+* Gyruss (FDS)
 * Hero Quest (Prototype)
 * Incredible Crash Dummies, The
 * Indiana Jones and The Last Crusade
