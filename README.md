@@ -526,7 +526,6 @@ X68000
 * Aquales
 * Asuka 120%: Burning Fest
 * Bosconian
-* Casablanca Ni Ai Wo Satsujinsha Ha Jikuu Wo Koete // no titles added
 * Cho Ren Sha 68K
 * Cosmic Psycho
 * Dragon Knight 4
@@ -547,4 +546,5 @@ X68000
 * Star Cruiser
 * Star Trader
 * War-Torn Versnag
+* X-na
 * Ys III -Wanderers From Ys-
