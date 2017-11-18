@@ -22,6 +22,7 @@ Arcade
 * Ordyne
 * Power Drift
 * Space Harrier
+* Street Fighter Alpha 2
 * SDI - Strategic Defense Initiative
 * Sunset Riders
 * Super Hang-On
@@ -547,5 +548,4 @@ X68000
 * Star Cruiser
 * Star Trader
 * War-Torn Versnag
-* X-na
 * Ys III -Wanderers From Ys-
