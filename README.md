@@ -11,6 +11,8 @@ Arcade
 * GP Rider
 * Galaxy Force 2
 * Golden Axe: The Revenge of Death Adder
+* Gradius II [Vulcan Venture]
+* Gradius III
 * Lethal Enforcers
 * Magic Sword - Heroic Fantasy
 * Metal Black
@@ -19,12 +21,15 @@ Arcade
 * Metal Slug 3
 * Metal Slug X
 * Neo Turf Master
+* Ninja Warrios, The
 * Ordyne
+* OutRun
 * Power Drift
 * Space Harrier
 * Street Fighter Alpha 2
 * SDI - Strategic Defense Initiative
 * Sunset Riders
+* Super Dodge Ball
 * Super Hang-On
 * Super Monaco GP
 * Super Street Fighter II: Turbo
@@ -32,6 +37,7 @@ Arcade
 * Teenage Mutant Ninja Turtles - Turtles in Time
 * The Punisher
 * Turbo OutRun
+* TwinBee Yahhoo!
 * U. N. Squadron
 * Virtua Cop
 * Virtua Cop 2
@@ -122,6 +128,7 @@ MegaDrive
 * Phantasy Star IV: The End of the Millenium
 * Ristar - The Shooting Star // some PCM samples don't work properly
 * Rocket Knight Adventures
+* Rolling Thunder 2
 * Shining Force II: The Ancient Seal
 * Shining and the Darkness
 * Shinobi II: The Revenge of Shinobi
@@ -136,6 +143,7 @@ MegaDrive
 * Street of Rage 2 [Bare Knuckle II]
 * Sub-Terrania
 * Super Fantasy Zone
+* Sword of Vermilion
 * Thunder Force III
 * Thunder Force IV
 * Time Trax (Prototype)
@@ -147,6 +155,7 @@ MegaDrive
 
 NES
 
+* Abadox - The Deadly Inner War
 * Adventure Island
 * Adventure Island 3
 * Adventures of Bayou Billy, The
@@ -299,12 +308,18 @@ NES
 
 PC-88xx
 
+* Angelus: Akuma no Fukuin
+* Chatty
+* Fire Hawk: Thexder The Second Contact
 * Herzog
 * Hole Chaser
 * Misty Blue
+* Providence
 * Shinra Bansho
 * Sorcerian
+* Star/Ship Rendezvous
 * The Scheme
+* Valna
 * Wanderers from Super Scheme
 * Ys I -Ancient Ys Vanished Omen-
 
@@ -350,10 +365,12 @@ PC-98xx
 * Kara no Naka no Kotori
 * King Breeder // translation needed
 * Kirishima Shinyojio no Gogo // no titles added
+* Lemon Angel // some titles missing
 * Love Escalator // some translation needed
 * Mahou Shoujo Fancy Coco
 * Mahou no Tenshi Creamy Mami: Futari no Rondo // some translation needed
 * Manji: PSY Yuuki // no titles added
+* Marine Rouge
 * Marion // no titles added
 * Marionette Mind
 * Meikyuu Gakuensai: Kyuukousha no Nazo
@@ -440,6 +457,7 @@ SNES
 * Goof Troop
 * Gradius III
 * HyperZone
+* Ihatovo Monogatari
 * Illusion of Gaia
 * Jim Power - The Lost Dimension in 3D
 * Kamaitachi no Yoru
@@ -488,7 +506,7 @@ SNES
 * Tactics Ogre: Let Us Cling Together
 * Tales of Phantasia
 * Terranigma [Tenchi Souzou]
-* The Ninja Warriors
+* Ninja Warriors, The
 * Top Gear
 * Vortex
 * Waterworld
@@ -532,6 +550,7 @@ X68000
 * Dragon Knight 4
 * Genocide 2
 * Geograph Seal
+* Gize! XIX // no titles added
 * Gradius II
 * Granada
 * Illumination Laser
@@ -541,6 +560,7 @@ X68000
 * Mad Stalker: Full Metal Force
 * Metal Eye // some translation missing
 * Namachuuke 68
+* Olteus II // no titles added
 * Phalanx
 * Sion II: The First Attack
 * Snatcher (Sega-CD) // one song arrangement
@@ -548,4 +568,6 @@ X68000
 * Star Cruiser
 * Star Trader
 * War-Torn Versnag
+* Yami no Ketsuzoku // some translation needed
+* Yami no Ketsuzoku Kanketsu Hen [Final Version] // some translation needed
 * Ys III -Wanderers From Ys-
