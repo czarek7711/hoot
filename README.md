@@ -21,9 +21,10 @@ Arcade
 * Metal Slug 3
 * Metal Slug X
 * Neo Turf Master
-* Ninja Warrios, The
+* Ninja Warriors, The
 * Ordyne
 * OutRun
+* Parodius Da! From Myth to Laughter
 * Power Drift
 * Space Harrier
 * Street Fighter Alpha 2
@@ -103,6 +104,7 @@ MegaDrive
 * Devilish {Bad Omen]
 * Dragon's Fury [Devil Crash MD]
 * Elemental Master
+* Gaiares
 * Gain Ground
 * Gauntlet IV
 * GleyLancer
@@ -118,6 +120,7 @@ MegaDrive
 * M.U.S.H.A
 * Madou Monogatari I
 * Master of Monsters
+* McDonald's Treasure Land Adventure
 * Mega Turrican
 * Michael Jackson's Moonwalker
 * Midnight Resistance
@@ -129,6 +132,7 @@ MegaDrive
 * Ristar - The Shooting Star // some PCM samples don't work properly
 * Rocket Knight Adventures
 * Rolling Thunder 2
+* Shadow Dancer: The Secret of Shinobi
 * Shining Force II: The Ancient Seal
 * Shining and the Darkness
 * Shinobi II: The Revenge of Shinobi
@@ -315,10 +319,10 @@ PC-88xx
 * Hole Chaser
 * Misty Blue
 * Providence
+* Scheme, The
 * Shinra Bansho
 * Sorcerian
 * Star/Ship Rendezvous
-* The Scheme
 * Valna
 * Wanderers from Super Scheme
 * Ys I -Ancient Ys Vanished Omen-
