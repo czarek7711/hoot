@@ -5,8 +5,10 @@ Arcade
 * After Burner 2
 * Battle Garegga
 * Carrier Air Wing
+* Darius
 * Daytona USA
 * Dragon Saber: After Story of Dragon Spirit
+* Fighting Layer
 * Final Fight
 * GP Rider
 * Galaxy Force 2
@@ -24,6 +26,7 @@ Arcade
 * Ninja Warriors, The
 * Ordyne
 * OutRun
+* Outfoxies, The
 * Parodius Da! From Myth to Laughter
 * Power Drift
 * Space Harrier
@@ -43,6 +46,8 @@ Arcade
 * Virtua Cop
 * Virtua Cop 2
 * Virtua Fighter
+* X-Men
+* Xevious 3D/G
 * Xexex
 
 Gameboy
@@ -52,6 +57,7 @@ Gameboy
 * Castlevania - The Adventure
 * Castlevania II - Belmon't Revenge
 * Castlevania Legends // no titles added
+* Chikyuu Kaihou Gun ZAS
 * Donkey Kong Land
 * Final Fantasy Adventure [Mystic Quest]
 * Final Fantasy Legend II [SaGa 2 - Hihou Densetsu]
@@ -64,6 +70,7 @@ Gameboy
 * Pokemon Gold
 * Pokemon Red
 * Pokemon Training Card Game
+* Power Quest [Gekitou Power Modeler]
 * Project S-11 // no titles added
 * Raging Fighter [Outburst] // no titles added
 * Shantae
@@ -76,6 +83,7 @@ Gameboy
 * Trip World
 * Turok - Battle of the Bionosaurs // no titles added
 * Turok 2 - Seeds of Evil // no titles added
+* Uchuu no Kishi - Tekkaman Blade // no titles added
 * Warlocked // no titles added
 
 MSX, MSX2
@@ -460,6 +468,7 @@ SNES
 * Front Mission: Gun Hazard
 * Goof Troop
 * Gradius III
+* Honkaku Shougi: Fuuunji Ryuuou
 * HyperZone
 * Ihatovo Monogatari
 * Illusion of Gaia
@@ -480,6 +489,7 @@ SNES
 * Parodius Da!: Shinwa kara Owarai he
 * Plok
 * Pop'n Twinbee
+* Psycho Dream
 * Radical Dreamers
 * Rock N'Roll Racing
 * Romancing SaGa 3
@@ -509,9 +519,11 @@ SNES
 * Super Turrican 2
 * Tactics Ogre: Let Us Cling Together
 * Tales of Phantasia
+* Teenage Mutant Ninja Turtles: Tournament Fighters
 * Terranigma [Tenchi Souzou]
 * Ninja Warriors, The
 * Top Gear
+* Treasure Hunter G
 * Vortex
 * Waterworld
 * X-Kaliber 2097 [Sword Maniac]
