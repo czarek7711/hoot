@@ -22,7 +22,7 @@ Arcade
 * Metal Slug 2
 * Metal Slug 3
 * Metal Slug X
-* Neo Turf Master
+* Neo Turf Masters
 * Ninja Warriors, The
 * Ordyne
 * OutRun
@@ -55,7 +55,7 @@ Gameboy
 * Asterix
 * Batman - Return of the Joker
 * Castlevania - The Adventure
-* Castlevania II - Belmon't Revenge
+* Castlevania II - Belmont's Revenge
 * Castlevania Legends // no titles added
 * Chikyuu Kaihou Gun ZAS
 * Donkey Kong Land
@@ -116,6 +116,8 @@ MegaDrive
 * Gain Ground
 * Gauntlet IV
 * GleyLancer
+* Golden Axe II
+* Golden Axe III
 * Gunstar Heroes
 * Gynoug [Wings of Wor]
 * Herzog Zwei
@@ -156,6 +158,7 @@ MegaDrive
 * Sub-Terrania
 * Super Fantasy Zone
 * Sword of Vermilion
+* Teenage Mutant Ninja Turtles: Tournament Fighters
 * Thunder Force III
 * Thunder Force IV
 * Time Trax (Prototype)
