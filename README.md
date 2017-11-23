@@ -109,7 +109,7 @@ MegaDrive
 * Contra: Hard Corps
 * Crude Buster [Two Crude]
 * Crusader of Centy
-* Devilish {Bad Omen]
+* Devilish [Bad Omen]
 * Dragon's Fury [Devil Crash MD]
 * Elemental Master
 * Gaiares
@@ -136,6 +136,7 @@ MegaDrive
 * Midnight Resistance
 * Monster World IV
 * Nadia: The Secret of Blue Water
+* Nekketsu Koukou Dodgeball Bu: Soccer Hen MD
 * Phantasy Star II
 * Phantasy Star III: Generations od Doom
 * Phantasy Star IV: The End of the Millenium
