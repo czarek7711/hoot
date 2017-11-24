@@ -31,7 +31,6 @@ Arcade
 * Power Drift
 * Space Harrier
 * Street Fighter Alpha 2
-* SDI - Strategic Defense Initiative
 * Sunset Riders
 * Super Dodge Ball
 * Super Hang-On
@@ -39,6 +38,7 @@ Arcade
 * Super Street Fighter II: Turbo
 * Super Street Fighter II: The New Challengers
 * Teenage Mutant Ninja Turtles - Turtles in Time
+* Thunder Blade
 * The Punisher
 * Turbo OutRun
 * TwinBee Yahhoo!
