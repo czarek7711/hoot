@@ -154,8 +154,9 @@ MegaDrive
 * Sonic the Hedgehog 3 & Knuckles
 * Space Invaders 90
 * Star Cruiser
-* Street of Rage [Bare Knuckle]
-* Street of Rage 2 [Bare Knuckle II]
+* Streets of Rage [Bare Knuckle]
+* Streets of Rage 2 [Bare Knuckle II]
+* Streets of Rage 3 [Bare Knuckle III]
 * Sub-Terrania
 * Super Fantasy Zone
 * Sword of Vermilion
@@ -166,6 +167,7 @@ MegaDrive
 * ToeJam & Earl in Panic on Funkotron
 * Valis III
 * Valis: The Fantasm Soldier
+* Vectorman 2
 * Yuu Yuu Hakusho - Makyou Toitsusen
 * Zero Wing
 
@@ -580,6 +582,7 @@ X68000
 * Mad Stalker: Full Metal Force
 * Metal Eye // some translation missing
 * Namachuuke 68
+* Neural Gear
 * Olteus II // no titles added
 * Phalanx
 * Sion II: The First Attack
