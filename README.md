@@ -3,6 +3,7 @@
 Arcade
 
 * After Burner 2
+* Armed Police Batrider
 * Battle Garegga
 * Carrier Air Wing
 * Darius
@@ -55,6 +56,7 @@ Gameboy
 
 * Asterix
 * Batman - Return of the Joker
+* Bubble Ghost
 * Castlevania - The Adventure
 * Castlevania II - Belmont's Revenge
 * Castlevania Legends // no titles added
@@ -144,6 +146,7 @@ MegaDrive
 * Ristar - The Shooting Star // some PCM samples don't work properly
 * Rocket Knight Adventures
 * Rolling Thunder 2
+* Rolling Thunder 3
 * Shadow Dancer: The Secret of Shinobi
 * Shining Force II: The Ancient Seal
 * Shining and the Darkness
@@ -158,6 +161,7 @@ MegaDrive
 * Streets of Rage [Bare Knuckle]
 * Streets of Rage 2 [Bare Knuckle II]
 * Streets of Rage 3 [Bare Knuckle III]
+* Strider
 * Sub-Terrania
 * Super Fantasy Zone
 * Sword of Vermilion
@@ -243,6 +247,7 @@ NES
 * Jackie Chan's Action Kung-Fu
 * James Bond Jr.
 * Journey to Silius [RAF World]
+* Jungle Book, The
 * Just Breed
 * Kick Master
 * Kid Icarus (FDS)
@@ -254,6 +259,7 @@ NES
 * Legend of Zelda 2, The - The Adventure of Link (FDS)
 * Legend of Zelda, The
 * Life Force [Salamander]
+* Little Mermaid, The
 * Little Nemo - The Dream Master
 * Mappy
 * Mega Man (VRC6)
@@ -306,6 +312,7 @@ NES
 * Super Mario Bros. 2 [Yume Koujou - Doki Doki Panic]
 * Super Mario Bros. 3
 * Super Spy Hunter [Battle Formula]
+* Sweet Home
 * Target - Renegade
 * Teenage Mutant Ninja Turtles II - The Arcade Game
 * Teenage Mutant Ninja Turtles III - The Manhattan Project
@@ -452,9 +459,11 @@ SNES
 * Breath of Fire
 * Castlevania: Dracula X
 * Chrono Trigger
+* Clock Tower
 * Contra III: The Alien Wars
 * Cybernator
 * Demon's Crest
+* Do-Re-Mi Fantasy: Milon no Doki Doki Daiboken
 * Donkey Kong Country
 * Donkey Kong Country 2 - Diddy's Kong Quest
 * Donkey Kong Country 3
@@ -466,12 +475,14 @@ SNES
 * Eek! The Cat
 * Energy Breaker
 * Equinox [Solstice 2]
+* F-Zero
 * Final Fantasy IV
 * Final Fantasy V
 * Final Fantasy VI
 * Final Fight
 * Final Fight II
 * Fire Emblem: Monshou no Nazo
+* Front Mission
 * Front Mission: Gun Hazard
 * Goof Troop
 * Gradius III
@@ -484,10 +495,12 @@ SNES
 * Kirby Super Star
 * Kirby's Dream Land 3
 * Lady Stalker: Challange from the Past
+* Last Bible III [ラストバイブル 3]
 * Legend of The Mystical Ninja, The
 * Legend of Zelda, The - A Link to the Past
 * Live A Live
 * Lufia II - Rise of the Sinistrals
+* Madou Monogatari: Hanamaru Dai Youchienji
 * Mario Paint
 * Maui Mallard in Cold Shadow
 * Mega Man & Bass [Rockman & Forte]
@@ -495,6 +508,7 @@ SNES
 * Mega Man X2
 * Naki no Ryuu: Mahjong Hishouden
 * Parodius Da!: Shinwa kara Owarai he
+* Pilotwings
 * Plok
 * Pop'n Twinbee
 * Psycho Dream
