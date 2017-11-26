@@ -23,6 +23,7 @@ Arcade
 * Metal Slug 3
 * Metal Slug X
 * Neo Turf Masters
+* Night Slashers
 * Ninja Warriors, The
 * Ordyne
 * OutRun
@@ -90,7 +91,7 @@ MSX, MSX2
 
 * Final Fantasy
 * Fray -In Magical Adventure- // no titles added
-* Geneitoshi - Illusion City // no titles added
+* Illusion City [幻影都市]
 * Metal Gear 2: Solid Snake
 * SD Snatcher
 * Snatcher
@@ -492,6 +493,7 @@ SNES
 * Mega Man & Bass [Rockman & Forte]
 * Mega Man X
 * Mega Man X2
+* Naki no Ryuu: Mahjong Hishouden
 * Parodius Da!: Shinwa kara Owarai he
 * Plok
 * Pop'n Twinbee
@@ -581,7 +583,7 @@ X68000
 * Kyuukyoku Senki Gikadiver // missing tracks
 * Mad Stalker: Full Metal Force
 * Metal Eye // some translation missing
-* Namachuuke 68
+* Namachuukei 68
 * Neural Gear
 * Olteus II // no titles added
 * Phalanx
