@@ -4,16 +4,12 @@ Arcade
 
 * After Burner 2
 * Armed Police Batrider
-* Battle Garegga
 * Carrier Air Wing
-* Darius
 * Daytona USA
 * Dragon Saber: After Story of Dragon Spirit
 * Fighting Layer
 * Final Fight
-* GP Rider
 * Galaxy Force 2
-* Golden Axe: The Revenge of Death Adder
 * Gradius II [Vulcan Venture]
 * Gradius III
 * Lethal Enforcers
@@ -38,16 +34,10 @@ Arcade
 * Super Hang-On
 * Super Monaco GP
 * Super Street Fighter II: Turbo
-* Super Street Fighter II: The New Challengers
 * Teenage Mutant Ninja Turtles - Turtles in Time
 * Thunder Blade
-* The Punisher
-* Turbo OutRun
 * TwinBee Yahhoo!
 * U. N. Squadron
-* Virtua Cop
-* Virtua Cop 2
-* Virtua Fighter
 * X-Men
 * Xevious 3D/G
 * Xexex
@@ -74,20 +64,13 @@ Gameboy
 * Pokemon Red
 * Pokemon Training Card Game
 * Power Quest [Gekitou Power Modeler]
-* Project S-11 // no titles added
 * Raging Fighter [Outburst] // no titles added
 * Shantae
 * Smurfs' Nightmare, The
 * Super Mario Land
 * Super Mario Land 2 - 6 Golden Coins
 * Tetris
-* Tintin - Prisoners of the Sun
-* Tintin in Tibet
 * Trip World
-* Turok - Battle of the Bionosaurs // no titles added
-* Turok 2 - Seeds of Evil // no titles added
-* Uchuu no Kishi - Tekkaman Blade // no titles added
-* Warlocked // no titles added
 
 MSX, MSX2
 
@@ -114,6 +97,7 @@ MegaDrive
 * Crusader of Centy
 * Devilish [Bad Omen]
 * Dragon's Fury [Devil Crash MD]
+* Dynamite Headdy
 * Elemental Master
 * Gaiares
 * Gain Ground
@@ -281,6 +265,7 @@ NES
 * Mission - Impossible
 * Mitsume ga Tooru
 * Monster in My Pocket
+* Moon Crystal
 * Mother
 * Mouryou Senki Madara (VRC6)
 * Ninja Gaiden II - The Dark Sword of Chaos
@@ -486,12 +471,15 @@ SNES
 * Front Mission: Gun Hazard
 * Goof Troop
 * Gradius III
+* Hagane - The Final Conflict
 * Honkaku Shougi: Fuuunji Ryuuou
+* Hourai Gakuen no Bouken!: Tenkousei Scramble
 * HyperZone
 * Ihatovo Monogatari
 * Illusion of Gaia
 * Jim Power - The Lost Dimension in 3D
 * Kamaitachi no Yoru
+* King of Dragons, The
 * Kirby Super Star
 * Kirby's Dream Land 3
 * Lady Stalker: Challange from the Past
@@ -543,6 +531,7 @@ SNES
 * Tales of Phantasia
 * Teenage Mutant Ninja Turtles: Tournament Fighters
 * Terranigma [Tenchi Souzou]
+* Thoroughbred Breeder 3
 * Ninja Warriors, The
 * Top Gear
 * Treasure Hunter G
@@ -597,7 +586,7 @@ X68000
 * Kyuukyoku Senki Gikadiver // missing tracks
 * Mad Stalker: Full Metal Force
 * Metal Eye // some translation missing
-* Namachuukei 68
+* Nama Baseball '68 [Namachuukei 68]
 * Neural Gear
 * Olteus II // no titles added
 * Phalanx

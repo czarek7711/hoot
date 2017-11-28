@@ -3932,6 +3932,9 @@
 	<name>[GB] Metal Masters / Alberto Jose Gonzalez / 1994 (Bit Managers) Electro Brain</name>
 	<driver type="gbs">gb</driver>
 	<driveralias type="Gameboy">- systems -</driveralias>
+	<options>
+	<option name="dmg_mix" value="164"/>
+	</options>
 	<romlist archive="Metal Masters (GB)(1994-12)(Bit Managers)(Electro Brain)">
 		<rom type="code">DMG-E6-USA.gbs</rom>
 	</romlist>
@@ -5839,7 +5842,7 @@
 		</titlelist>
 	</game>
 	<game>
-		<name>[PC-98] Escalation 95: O Anesamatte Yonde Ii Desu ka? / Akira Sato, Misako Saito, Yoshihito Hata / 1995 Fairy Dust (OPN)</name>
+		<name>[PC-98] Escalation 95: O Anesamatte Yonde Ii Desu ka? / Akira Sato / 1995 (Melody) Fairy Dust (OPN)</name>
 		<driver type="opn">pc98dos</driver>
 		<driveralias type="PC-98xx">- systems -</driveralias>
 		<options>
@@ -7362,12 +7365,12 @@
 		<driveralias type="PC-98xx">- systems -</driveralias>
 		<options>
 			<option name="clockmul" value="0x04"/>
-			<option name="rhy_mix"  value="20"/>
-			<option name="fm_mix"   value="20"/>
-			<option name="ssg_mix"  value="0"/>
+			<option name="rhy_mix"  value="0"/>
+			<option name="fm_mix"   value="0"/>
+			<option name="ssg_mix"  value="-20"/>
 		</options>
 		<romlist archive="bg_98">
-			<rom type="file" offset="-1">- systems -fmp.com</rom>
+			<rom type="file" offset="-1">tglfmp.com</rom>
 			<rom type="file" offset="-1">FMP3.COM</rom>
 			<rom type="file" offset="0x10">BGM001.MF2</rom>
 			<rom type="file" offset="0x11">BGM002.MF2</rom>
@@ -7389,7 +7392,7 @@
 			<rom type="file" offset="0x21">BGM043.MF2</rom>
 			<rom type="file" offset="0x22">BGM044.MF2</rom>
 			<rom type="shell" offset="0">fmp3 -2</rom>
-			<rom type="shell" offset="0">- systems -fmp</rom>
+			<rom type="shell" offset="0">tglfmp</rom>
 		</romlist>
 		<titlelist>
 			<title code="0x10">Moving On</title>
@@ -7683,6 +7686,7 @@
 			<option name="funcvect" value="0x7e"/>
 			<option name="clockmul" value="8"/>
 			<option name="showfm3ex" value="1"/>
+			<option name="opna_mix" value="112"/>
 		</options>
 		<romlist archive="defana_21">
 			<rom type="file" offset="-1">PMD_98.COM</rom>
@@ -8433,6 +8437,9 @@
 	<name>[GB] Asterix / Alberto Jose Gonzalez / 1993 (Bit Managers) Infogrames</name>
 	<driver type="gbs">gb</driver>
 	<driveralias type="Gameboy">- systems -</driveralias>
+	<options>
+	<option name="dmg_mix" value="164"/>
+	</options>
 	<romlist archive="Asterix (GB)(1993)(Bit Managers)(Infogrames)">
 		<rom type="code">DMG-XA-NOE.gbs</rom>
 	</romlist>
@@ -8648,8 +8655,8 @@
 		<driver type="opn">pc98dos</driver>
 		<driveralias type="PC-98xx">- systems -</driveralias>
 		<options>
-			<option name="fm_mix" value="10"/>
-			<option name="ssg_mix" value="-8"/>
+			<option name="fm_mix" value="-3"/>
+			<option name="ssg_mix" value="-21"/>
 		</options>
 		<romlist archive="apdoll2_98">
 			<rom type="file" offset="-1">EMI.COM</rom>
@@ -11016,7 +11023,7 @@
 		</titlelist>
 	</game>
 	<game>
-		<name>[X68000] Namachuukei 68 / Yuji Takenouchi / 1991 Konami</name>
+		<name>[X68000] Nama Baseball '68 [Namachuukei 68] / Yuji Takenouchi / 1991 Konami</name>
 		<driver type="generic">x68k</driver>
 		<driveralias type="X68000">- systems -</driveralias>
 		<options>
@@ -16011,13 +16018,12 @@
 		</titlelist>
 	</game>
 	<game>
-		<name>[PC-98] AD&amp;D: Eye of the Beholder / Hitoshi Sakimoto, Yuji Yamada, Yuzo Koshiro / 1992 (Strategic Simulations, Opera House) Pony Canyon</name>
-		<driver type="opn">pc98dos</driver>
+		<name>[PC-98] AD&amp;D: Eye of the Beholder / Hitoshi Sakimoto, Yuji Yamada, Yuzo Koshiro / 1992 (Strategic Simulations, Opera House) Pony Canyon (OPNA)</name>
+		<driver type="opna">pc98dos</driver>
 		<driveralias type="PC-98xx">- systems -</driveralias>
 		<options>
 			<option name="clockmul" value="0x04"/>
-			<option name="fm_mix"   value="4"/>
-			<option name="ssg_mix"  value="-11"/>
+			<option name="opna_mix"   value="128"/>
 		</options>
 		<romlist archive="eob98">
 			<rom type="file" offset="-1">mlfplay.com</rom>
@@ -16812,6 +16818,8 @@
 			<rom type="pcm" offset="0x00000">10931.11</rom>
 			<rom type="pcm" offset="0x20000">10930.12</rom>
 			<rom type="pcm" offset="0x40000">11102.13</rom>
+			<option name="opm_mix" value="92"/>
+			<option name="pcm_mix" value="195"/>
 		</romlist>
 		<titlelist>
 			<title code="0x92">Maximum Power</title>
@@ -18004,6 +18012,10 @@
 		<driveralias type="Arcade">- systems -</driveralias>
 		<options>
 			<option name="adpcm_size" value="0x0800000"/>
+			<option name="fm_mix"   value="-10"/>
+			<option name="ssg_mix"   value="0"/>
+			<option name="adpcma_mix"   value="-10"/>
+			<option name="adpcmb_mix"   value="-10"/>
 		</options>
     <romlist archive="mslug">
       <rom type="code" offset="0x00000">201-m1.bin</rom>
@@ -18034,6 +18046,10 @@
 		<driveralias type="Arcade">- systems -</driveralias>
 		<options>
 			<option name="adpcm_size" value="0x0800000"/>
+			<option name="fm_mix"   value="-10"/>
+			<option name="ssg_mix"   value="0"/>
+			<option name="adpcma_mix"   value="-10"/>
+			<option name="adpcmb_mix"   value="-10"/>
 		</options>
     <romlist archive="mslug2">
       <rom type="code" offset="0x00000">241-m1.bin</rom>
@@ -18068,6 +18084,10 @@
 		<driveralias type="Arcade">- systems -</driveralias>
 		<options>
 			<option name="adpcm_size" value="0x0a00000"/>
+			<option name="fm_mix"   value="-10"/>
+			<option name="ssg_mix"   value="0"/>
+			<option name="adpcma_mix"   value="-10"/>
+			<option name="adpcmb_mix"   value="-10"/>
 		</options>
     <romlist archive="mslugx">
       <rom type="code" offset="0x00000">250-m1.bin</rom>
@@ -18103,6 +18123,10 @@
 		<driveralias type="Arcade">- systems -</driveralias>
 		<options>
 			<option name="adpcm_size" value="0x1000000"/>
+			<option name="fm_mix"   value="-10"/>
+			<option name="ssg_mix"   value="0"/>
+			<option name="adpcma_mix"   value="-10"/>
+			<option name="adpcmb_mix"   value="-10"/>
 		</options>
     <romlist archive="mslug3">
       <rom type="code" offset="0x00000">256-m1.bin</rom>
@@ -18154,6 +18178,10 @@
 		<driveralias type="Arcade">- systems -</driveralias>
 		<options>
 			<option name="adpcm_size" value="0x0800000"/>
+			<option name="fm_mix"   value="-10"/>
+			<option name="ssg_mix"   value="0"/>
+			<option name="adpcma_mix"   value="-10"/>
+			<option name="adpcmb_mix"   value="-10"/>
 		</options>
     <romlist archive="turfmast">
       <rom type="code" offset="0x00000">200-m1.bin</rom>
@@ -18161,6 +18189,7 @@
       <rom type="adpcma" offset="0x200000">200-v2.bin</rom>
       <rom type="adpcma" offset="0x400000">200-v3.bin</rom>
       <rom type="adpcma" offset="0x600000">200-v4.bin</rom>
+		
     </romlist>
     <titlelist>
 			<title code="0x02">Neo Geo Logo</title>                                                            
@@ -22889,9 +22918,9 @@
 		<driveralias type="PC-98xx">- systems -</driveralias>
 		<options>
 			<option name="clockmul" value="0x04"/>
-			<option name="rhy_mix"  value="20"/>
-			<option name="fm_mix"   value="10"/>
-			<option name="ssg_mix"  value="-10"/>
+			<option name="rhy_mix"  value="0"/>
+			<option name="fm_mix"   value="-10"/>
+			<option name="ssg_mix"  value="-30"/>
 		</options>
 		<romlist archive="fs1_98">
 			<rom type="file" offset="-1">tglfmp.com</rom>
@@ -22944,9 +22973,9 @@
 		<driveralias type="PC-98xx">- systems -</driveralias>
 		<options>
 			<option name="clockmul" value="0x04"/>
-			<option name="rhy_mix"  value="20"/>
-			<option name="fm_mix"   value="10"/>
-			<option name="ssg_mix"  value="-10"/>
+			<option name="rhy_mix"  value="0"/>
+			<option name="fm_mix"   value="-10"/>
+			<option name="ssg_mix"  value="-30"/>
 		</options>
 		<romlist archive="fs6_98">
 			<rom type="file" offset="-1">tglfmp.com</rom>
@@ -23013,9 +23042,9 @@
 		<driveralias type="PC-98xx">- systems -</driveralias>
 		<options>
 			<option name="clockmul" value="0x04"/>
-			<option name="rhy_mix"  value="20"/>
-			<option name="fm_mix"   value="10"/>
-			<option name="ssg_mix"  value="-10"/>
+			<option name="rhy_mix"  value="0"/>
+			<option name="fm_mix"   value="-10"/>
+			<option name="ssg_mix"  value="-30"/>
 		</options>
 		<romlist archive="fs7_98">
 			<rom type="file" offset="-1">tglfmp.com</rom>
@@ -25194,7 +25223,7 @@
 </titlelist>
 </game>
 <game> 
- <name>[MD] Master of Monsters / Hayato Matsuo / 1988 System Soft</name> 
+ <name>[MD] Master of Monsters / Hayato Matsuo, Koichi Sugiyama, Hitoshi Sakimoto / 1991 (ISCO, Opera House) Toshiba EMI, System Soft</name> 
  <driver type = "generic_z80">megadrive</driver> 
  <driveralias type = "MegaDrive">- systems -</driveralias>
  <options> 
@@ -27010,7 +27039,7 @@
 		<driveralias type="PC-88xx">- systems -</driveralias>
 		<options>
 			<option name="mdata_addr" value="0xc000"/>
-			<option name="opna_mix" value="128"/>
+			<option name="opna_mix" value="64"/>
 		</options>
 		<romlist archive="chatty">
 			<rom type="code" offset="0x0000">PATCH</rom>
@@ -29526,5 +29555,319 @@
 <title code="0x16">The Nightmare is Finally Over...</title>
 </titlelist>
 </game>
-
+<game>
+<name>[SNES] Hagane - The Final Conflict / Takahito Abe / 1995 (CAProduction, Red) Hudson</name>
+<driver type="spc">snes</driver>
+<driveralias type="SNES">- systems -</driveralias>
+<options>
+</options>
+<romlist archive="hag">
+<rom type="data" offset="0x01">hag-01.spc</rom>
+<rom type="data" offset="0x02">hag-02.spc</rom>
+<rom type="data" offset="0x03">hag-03.spc</rom>
+<rom type="data" offset="0x04">hag-04.spc</rom>
+<rom type="data" offset="0x05">hag-05.spc</rom>
+<rom type="data" offset="0x06">hag-06.spc</rom>
+<rom type="data" offset="0x07">hag-07.spc</rom>
+<rom type="data" offset="0x08">hag-08.spc</rom>
+<rom type="data" offset="0x09">hag-09.spc</rom>
+<rom type="data" offset="0x0a">hag-10.spc</rom>
+<rom type="data" offset="0x0b">hag-11.spc</rom>
+<rom type="data" offset="0x0c">hag-12.spc</rom>
+<rom type="data" offset="0x0d">hag-13.spc</rom>
+<rom type="data" offset="0x0e">hag-14.spc</rom>
+<rom type="data" offset="0x0f">hag-15.spc</rom>
+<rom type="data" offset="0x10">hag-16.spc</rom>
+<rom type="data" offset="0x11">hag-17.spc</rom>
+<rom type="data" offset="0x12">hag-18.spc</rom>
+<rom type="data" offset="0x13">hag-19.spc</rom>
+<rom type="data" offset="0x14">hag-20.spc</rom>
+<rom type="data" offset="0x15">hag-21.spc</rom>
+<rom type="data" offset="0x16">hag-22.spc</rom>
+<rom type="data" offset="0x17">hag-23.spc</rom>
+</romlist>
+<titlelist>
+<title code="0x01">Opening</title>
+<title code="0x02">Title</title>
+<title code="0x03">Stage Opening</title>
+<title code="0x04">Stage 1-1</title>
+<title code="0x05">Stage 1-2</title>
+<title code="0x06">Miniboss</title>
+<title code="0x07">Stage 1-4</title>
+<title code="0x08">Boss Battle</title>
+<title code="0x09">Challenge of the Warrior</title>
+<title code="0x0a">Miniboss 2</title>
+<title code="0x0b">Stage 2-2</title>
+<title code="0x0c">Stage 2-3</title>
+<title code="0x0d">Stage 3-1</title>
+<title code="0x0e">Stage 3-2</title>
+<title code="0x0f">Stage 3-4</title>
+<title code="0x10">Stage 4-1</title>
+<title code="0x11">Battle with the Warrior</title>
+<title code="0x12">Stage 4-2</title>
+<title code="0x13">Stage 4-3</title>
+<title code="0x14">Stage 5-1</title>
+<title code="0x15">Stage 5-2</title>
+<title code="0x16">Final Boss</title>
+<title code="0x17">Credits</title>
+</titlelist>
+</game>
+<game> 
+<name>[MD] Dynamite Headdy / Norio Hanzawa, Katsuhiko Suzuki, Yasuko, Koji Yamada, Aki Hata / 1994 (Treasure) Sega</name> 
+<driver type="dynheaddy">megadrive</driver> 
+<driveralias type="MegaDrive">- systems -</driveralias>
+<options>
+<option name="opn_mix" value="0xCA"/> 
+<option name="ssg_mix" value="0x55"/> 
+<option name="dac_mix" value="0xCA"/>
+</options>
+<romlist archive="DynamiteHeaddy"> 
+<rom type="code">DynamiteHeaddy.bin</rom> 
+</romlist> 
+<titlelist> 
+<title code="0x81">Headdy the Hero</title> 
+<title code="0x84">Escape Hero</title>
+<title code="0x8a">Maruyama Appears</title>
+<title code="0x87">That's the Way the Boss is Killed</title>   
+<title code="0x93">Kejime (Game 1)</title>
+<title code="0x96">Good For You!!</title>
+<title code="0x97">North Town's Theme</title>  
+<title code="0x8b">Nutcracker</title> 
+<title code="0x9a">Why, Figgy?</title> 
+<title code="0x88">Danzen Dungeon</title> 
+<title code="0x90">Hustle Maruyama (Part 1)</title> 
+<title code="0x85">Mystery Spot</title> 
+<title code="0xa4">Ohnami Konami</title>
+<title code="0x8f">I Sing</title>
+<title code="0x89">South Town's Theme</title>
+<title code="0x8c">Tower of Puppet</title>  
+<title code="0x8d">Sky High</title>
+<title code="0xa5">Schumacher Fly</title>   
+<title code="0x99">Paradise</title> 
+<title code="0x9c">Walk Towards Me</title> 
+<title code="0xa6">You're Izayoi</title>  
+<title code="0x94">Tonight's A Jazzy Night</title> 
+<title code="0x8e">A Man of Sun</title> 
+<title code="0x98">Funny Angry</title> 
+<title code="0x95">Dark Demon's Song</title> 
+<title code="0xa8">Kejime (Game 2)</title> 
+<title code="0xa0">It's Good if it Ends Happily, Isn't It?</title> 
+<title code="0xa1">Crosswalk of Love/Staff Roll</title> 
+<title code="0xa2">Ballad For You</title> 
+<title code="0xa7">Night of Dial Q2</title> 
+<title code="0xaa">I Love Goldie Hawn</title> 
+<title code="0xa9">Good Job, Headdy</title> 
+<title code="0x83">Opening Theme</title> 
+<title code="0x92">Hattari Is Here</title> 
+<title code="0x82">82: CD–¢Žû˜^</title> 
+<title code="0x86">86: CD–¢Žû˜^</title> 
+<title code="0x91">Hustle Maruyama (Part 3)</title> 
+<title code="0x9b">Next Stage</title>
+</titlelist> 
+</game>
+<game>
+<name>[SNES] King of Dragons, The / Yoko Shimomura / 1994 (Capcom, Prism Kikaku) Capcom</name>
+<driver type="spc">snes</driver>
+<driveralias type="SNES">- systems -</driveralias>
+<options>
+</options>
+<romlist archive="kod">
+<rom type="data" offset="0x01">kod-01.spc</rom>
+<rom type="data" offset="0x02">kod-02.spc</rom>
+<rom type="data" offset="0x03">kod-03.spc</rom>
+<rom type="data" offset="0x04">kod-04.spc</rom>
+<rom type="data" offset="0x05">kod-05.spc</rom>
+<rom type="data" offset="0x06">kod-06.spc</rom>
+<rom type="data" offset="0x07">kod-07.spc</rom>
+<rom type="data" offset="0x08">kod-08.spc</rom>
+<rom type="data" offset="0x09">kod-09.spc</rom>
+<rom type="data" offset="0x0a">kod-10.spc</rom>
+<rom type="data" offset="0x0b">kod-11.spc</rom>
+<rom type="data" offset="0x0c">kod-12.spc</rom>
+<rom type="data" offset="0x0d">kod-13.spc</rom>
+<rom type="data" offset="0x0e">kod-14.spc</rom>
+<rom type="data" offset="0x0f">kod-15.spc</rom>
+<rom type="data" offset="0x10">kod-16.spc</rom>
+<rom type="data" offset="0x11">kod-17.spc</rom>
+<rom type="data" offset="0x12">kod-18.spc</rom>
+<rom type="data" offset="0x13">kod-19.spc</rom>
+<rom type="data" offset="0x14">kod-20.spc</rom>
+<rom type="data" offset="0x15">kod-21.spc</rom>
+<rom type="data" offset="0x16">kod-22.spc</rom>
+<rom type="data" offset="0x17">kod-23.spc</rom>
+<rom type="data" offset="0x18">kod-24.spc</rom>
+</romlist>
+<titlelist>
+<title code="0x01">Title Screen</title>
+<title code="0x02">Introduction</title>
+<title code="0x03">Player Select</title>
+<title code="0x04">The Orc Village</title>
+<title code="0x05">Boss 1</title>
+<title code="0x06">Victory</title>
+<title code="0x07">Treasure</title>
+<title code="0x08">Next Stage</title>
+<title code="0x09">Treasure in an Old Castle</title>
+<title code="0x0a">Battle on a Mountain Peak</title>
+<title code="0x0b">Boss 2</title>
+<title code="0x0c">Cave of Hydra</title>
+<title code="0x0d">Boss 3</title>
+<title code="0x0e">To the Norde Isle</title>
+<title code="0x0f">The Giant in the Cave</title>
+<title code="0x10">Trent Wood</title>
+<title code="0x11">The Old Tree</title>
+<title code="0x12">To the Castle</title>
+<title code="0x13">Boss 4</title>
+<title code="0x14">Dark Wizard</title>
+<title code="0x15">Red Dragon</title>
+<title code="0x16">Game Clear</title>
+<title code="0x17">Story</title>
+<title code="0x18">Casting</title>
+</titlelist>
+</game>
+<game>
+	<name>[NES] Moon Crystal / Tsukasa Tawada / 1992 Hect</name>
+	<driver type="nsf">nes</driver>
+	<driveralias type="NES">- systems -</driveralias>
+	<romlist archive="Moon Crystal (1992-08-28)(-)(Hect)">
+		<rom type="code">Moon Crystal (1992-08-28)(-)(Hect).nsf</rom>
+	</romlist>
+	<titlelist>
+		<title code="0x11">Opening (1)</title>
+		<title code="0x12">Opening (2)</title>
+		<title code="0x0c">The Moon Crystal</title>
+		<title code="0x04">Evil Forest (Stage 1)</title>
+		<title code="0x08">Game Over</title>
+		<title code="0x00">Boss</title>
+		<title code="0x0d">Rosina</title>
+		<title code="0x01">Waylaid Street (Stage 2)</title>
+		<title code="0x0e">Count Crimson</title>
+		<title code="0x03">Count's Castle (Stage 3)</title>
+		<title code="0x0a">Count Crimson's Decoy</title>
+		<title code="0x05">Pirate Ship (Stage 4)</title>
+		<title code="0x02">Maclonna Mine (Stage 5)</title>
+		<title code="0x06">Laboratory (Stage 6)</title>
+		<title code="0x0f">Last Boss</title>
+		<title code="0x0b">Credits</title>
+		<title code="0x07">Unused (1)</title>
+		<title code="0x09">Unused (2)</title>
+	</titlelist>
+</game>
+<game>
+<name>[SNES] Thoroughbred Breeder 3 / Tsukasa Tawada, Seiichi Satou, Hitoshi Sakimoto / 1996 Hect</name>
+<driver type="spc">snes</driver>
+<driveralias type="SNES">- systems -</driveralias>
+<options>
+</options>
+<romlist archive="tb3">
+<rom type="data" offset="0x01">tb3-01.spc</rom>
+<rom type="data" offset="0x02">tb3-02.spc</rom>
+<rom type="data" offset="0x03">tb3-03.spc</rom>
+<rom type="data" offset="0x04">tb3-04.spc</rom>
+<rom type="data" offset="0x05">tb3-05.spc</rom>
+<rom type="data" offset="0x06">tb3-06.spc</rom>
+<rom type="data" offset="0x07">tb3-07.spc</rom>
+<rom type="data" offset="0x08">tb3-08.spc</rom>
+<rom type="data" offset="0x09">tb3-09.spc</rom>
+<rom type="data" offset="0x0a">tb3-10.spc</rom>
+<rom type="data" offset="0x0b">tb3-11.spc</rom>
+<rom type="data" offset="0x0c">tb3-12.spc</rom>
+<rom type="data" offset="0x0d">tb3-13.spc</rom>
+<rom type="data" offset="0x0e">tb3-14.spc</rom>
+<rom type="data" offset="0x0f">tb3-15.spc</rom>
+<rom type="data" offset="0x10">tb3-16.spc</rom>
+<rom type="data" offset="0x11">tb3-17.spc</rom>
+<rom type="data" offset="0x12">tb3-18.spc</rom>
+<rom type="data" offset="0x13">tb3-19.spc</rom>
+</romlist>
+<titlelist>
+<title code="0x01">Opening</title>
+<title code="0x02">Japan</title>
+<title code="0x03">Farm</title>
+<title code="0x04">Birth of a Foal</title>
+<title code="0x05">Race Track</title>
+<title code="0x06">Happiness</title>
+<title code="0x07">Sadness</title>
+<title code="0x08">Fanfare 1</title>
+<title code="0x09">Fanfare 2</title>
+<title code="0x0a">Fanfare 3</title>
+<title code="0x0b">Win 1</title>
+<title code="0x0c">Win 2</title>
+<title code="0x0d">Win 3</title>
+<title code="0x0e">Win 4</title>
+<title code="0x0f">Europe</title>
+<title code="0x10">North America</title>
+<title code="0x11">History</title>
+<title code="0x12">Ending</title>
+<title code="0x13">Battle</title>
+</titlelist>
+</game>
+<game>
+<name>[SNES] Hourai Gakuen no Bouken!: Tenkousei Scramble / Hitoshi Sakimoto / 1996 (Dynamite) J-Wing</name>
+<driver type="spc">snes</driver>
+<driveralias type="SNES">- systems -</driveralias>
+<options>
+</options>
+<romlist archive="hgb">
+<rom type="data" offset="0x01">hgb-01.spc</rom>
+<rom type="data" offset="0x02">hgb-02.spc</rom>
+<rom type="data" offset="0x03">hgb-03.spc</rom>
+<rom type="data" offset="0x04">hgb-04.spc</rom>
+<rom type="data" offset="0x05">hgb-05.spc</rom>
+<rom type="data" offset="0x06">hgb-06.spc</rom>
+<rom type="data" offset="0x07">hgb-07.spc</rom>
+<rom type="data" offset="0x08">hgb-08.spc</rom>
+<rom type="data" offset="0x09">hgb-09.spc</rom>
+<rom type="data" offset="0x0a">hgb-10.spc</rom>
+<rom type="data" offset="0x0b">hgb-11.spc</rom>
+<rom type="data" offset="0x0c">hgb-12.spc</rom>
+<rom type="data" offset="0x0d">hgb-13.spc</rom>
+<rom type="data" offset="0x0e">hgb-14.spc</rom>
+<rom type="data" offset="0x0f">hgb-15.spc</rom>
+<rom type="data" offset="0x10">hgb-16.spc</rom>
+<rom type="data" offset="0x11">hgb-17.spc</rom>
+<rom type="data" offset="0x12">hgb-18.spc</rom>
+<rom type="data" offset="0x13">hgb-19.spc</rom>
+<rom type="data" offset="0x14">hgb-20.spc</rom>
+<rom type="data" offset="0x15">hgb-21.spc</rom>
+<rom type="data" offset="0x16">hgb-22.spc</rom>
+<rom type="data" offset="0x17">hgb-23.spc</rom>
+<rom type="data" offset="0x18">hgb-24.spc</rom>
+<rom type="data" offset="0x19">hgb-25.spc</rom>
+<rom type="data" offset="0x1a">hgb-26.spc</rom>
+<rom type="data" offset="0x1b">hgb-27.spc</rom>
+<rom type="data" offset="0x1c">hgb-28.spc</rom>
+<rom type="data" offset="0x1d">hgb-29.spc</rom>
+</romlist>
+<titlelist>
+<title code="0x01">Title</title>
+<title code="0x02">Airplane</title>
+<title code="0x03">Tension</title>
+<title code="0x04">Opening and Ending</title>
+<title code="0x05">School 1</title>
+<title code="0x06">School 2</title>
+<title code="0x07">Hospo Editors Room</title>
+<title code="0x08">System Menu</title>
+<title code="0x09">Field</title>
+<title code="0x0a">Team Member Joined</title>
+<title code="0x0b">Dungeon</title>
+<title code="0x0c">Battle</title>
+<title code="0x0d">Victory</title>
+<title code="0x0e">Level Up</title>
+<title code="0x0f">Radio Gymnastics</title>
+<title code="0x10">Shinmachi (Day)</title>
+<title code="0x11">Sleeping</title>
+<title code="0x12">Jungle</title>
+<title code="0x13">Boss Battle</title>
+<title code="0x14">Important Item</title>
+<title code="0x15">Shinmachi (Night)</title>
+<title code="0x16">Ruin in the Jungle</title>
+<title code="0x17">Cosan Nostra</title>
+<title code="0x18">Streetcar</title>
+<title code="0x19">Muteki 22 Gou</title>
+<title code="0x1a">Christmas</title>
+<title code="0x1b">Staff Roll</title>
+<title code="0x1c">Some Mysteries Still Remain</title>
+<title code="0x1d">Birthday</title>
+</titlelist>
+</game>
 </gamelist>
