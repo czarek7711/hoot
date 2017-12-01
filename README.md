@@ -430,14 +430,9 @@ PC/AT
 
 SNES
 
-* Ace wo Nerae! [Aim for the Ace!] // some tracks missing
 * Actraiser
-* Adventures of Batman & Robin, The
-* Alladin
-* Arcana
 * Axelay
 * Bahamut Lagoon
-* Battle Cars
 * Biker Mice from Mars
 * Brainlord
 * Brandish
@@ -446,99 +441,64 @@ SNES
 * Chrono Trigger
 * Clock Tower
 * Contra III: The Alien Wars
-* Cybernator
+* Cybernator [Assault Suits Valken]
 * Demon's Crest
-* Do-Re-Mi Fantasy: Milon no Doki Doki Daiboken
 * Donkey Kong Country
 * Donkey Kong Country 2 - Diddy's Kong Quest
 * Donkey Kong Country 3
-* Dragon Quest I & II
 * Dragon Quest III: Soshite Densetsu he...
-* Dragon Quest V: Tenkuu no Hanayome
-* Dragon Quest VI: Maboroshi no Daichi
 * Earthbound [Mother 2]
-* Eek! The Cat
-* Energy Breaker
 * Equinox [Solstice 2]
 * F-Zero
-* Final Fantasy IV
 * Final Fantasy V
 * Final Fantasy VI
-* Final Fight
-* Final Fight II
-* Fire Emblem: Monshou no Nazo
 * Front Mission
 * Front Mission: Gun Hazard
-* Goof Troop
-* Gradius III
 * Hagane - The Final Conflict
 * Honkaku Shougi: Fuuunji Ryuuou
 * Hourai Gakuen no Bouken!: Tenkousei Scramble
-* HyperZone
+* Hyper Zone
 * Ihatovo Monogatari
-* Illusion of Gaia
-* Jim Power - The Lost Dimension in 3D
-* Kamaitachi no Yoru
 * King of Dragons, The
 * Kirby Super Star
-* Kirby's Dream Land 3
-* Lady Stalker: Challange from the Past
-* Last Bible III [ラストバイブル 3]
 * Legend of The Mystical Ninja, The
 * Legend of Zelda, The - A Link to the Past
 * Live A Live
-* Lufia II - Rise of the Sinistrals
-* Madou Monogatari: Hanamaru Dai Youchienji
+* Majin Tensei 2: Spiral Nemesis
 * Mario Paint
-* Maui Mallard in Cold Shadow
 * Mega Man & Bass [Rockman & Forte]
 * Mega Man X
 * Mega Man X2
 * Naki no Ryuu: Mahjong Hishouden
-* Parodius Da!: Shinwa kara Owarai he
+* Ninja Warriors, The
+* Pebble Beach Golf Links
 * Pilotwings
 * Plok
 * Pop'n Twinbee
 * Psycho Dream
 * Radical Dreamers
-* Rock N'Roll Racing
 * Romancing SaGa 3
-* Rudra no Hihou
-* Secret of Evermore
 * Secret of Mana [Seiken Densetsu 2]
 * Seiken Densetsu 3
-* Shin Kidou Senki Gundam W - Endless Duel
 * SimCity
-* Soul Blazer
 * Sparkster
-* Spider-Man & Venom - Maximum Carnage
-* Spider-Man and the X-Men in Arcade's Revenge
 * Star Fox
-* Star Ocean
 * Super Adventure Island
-* Super Bomberman
 * Super Castlevania IV
 * Super Ghouls 'n Ghost
-* Super Mario All-Stars
+* Super Mahjong 2: Honkaku 4 Nin Uchi!
 * Super Mario Kart
-* Super Mario RPG: Legend of the Seven Stars
 * Super Mario World
 * Super Mario World 2 - Yoshi's Island
 * Super Metroid
-* Super Off Road
-* Super Turrican 2
-* Tactics Ogre: Let Us Cling Together
 * Tales of Phantasia
 * Teenage Mutant Ninja Turtles: Tournament Fighters
 * Terranigma [Tenchi Souzou]
 * Thoroughbred Breeder 3
-* Ninja Warriors, The
-* Top Gear
 * Treasure Hunter G
-* Vortex
-* Waterworld
-* X-Kaliber 2097 [Sword Maniac]
-* Zombies Ate My Neighbours
+* Treasure of the Rudras [Rudra no Hihou]
+* Uncharted Waters: New Horizons
+* Wild Guns
 
 TurboGrafx-16
 
