@@ -86,12 +86,10 @@ MSX, MSX2
 
 MegaDrive
 
-* Adventures of Batman & Robin, The
 * Alien Soldier
 * Batman
 * Battle Mania Daiginjo
 * Castlevania: Bloodlines [Vampire Killer]
-* Columns III: Revenge of Columns
 * Contra: Hard Corps
 * Crude Buster [Two Crude]
 * Crusader of Centy
@@ -100,7 +98,6 @@ MegaDrive
 * Dynamite Headdy
 * Elemental Master
 * Gaiares
-* Gain Ground
 * Gauntlet IV
 * GleyLancer
 * Golden Axe II
@@ -122,7 +119,6 @@ MegaDrive
 * Michael Jackson's Moonwalker
 * Midnight Resistance
 * Monster World IV
-* Nadia: The Secret of Blue Water
 * Nekketsu Koukou Dodgeball Bu: Soccer Hen MD
 * Phantasy Star II
 * Phantasy Star III: Generations od Doom
@@ -144,9 +140,6 @@ MegaDrive
 * Star Cruiser
 * Streets of Rage [Bare Knuckle]
 * Streets of Rage 2 [Bare Knuckle II]
-* Streets of Rage 3 [Bare Knuckle III]
-* Strider
-* Sub-Terrania
 * Super Fantasy Zone
 * Sword of Vermilion
 * Teenage Mutant Ninja Turtles: Tournament Fighters
@@ -166,18 +159,13 @@ NES
 * Adventure Island
 * Adventure Island 3
 * Adventures of Bayou Billy, The
-* Ai Senshi Nicol (FDS)
 * Akumajou Special - Boku Dracula-kun
-* Alien 3
 * Almana no Kiseki (FDS)
 * Base Wars - Cyber Stadium Series
-* Batman - Return of The Joker
 * Batman
 * Batman Returns
 * Battletoads & Double Dragon - The Ultimate Team
 * Battletoads
-* Bio Senshi Dan - Increaser tono Tatakai
-* Bionic Commando [Hitler no Fukkatsu - Top Secret]
 * Blaster Master
 * Blue Marlin, The
 * Castlevania
@@ -190,16 +178,12 @@ NES
 * Circus Charlie
 * Contra [Probotector]
 * Contra Force
-* Cowboy Kid [Western Kids]
 * Crisis Force
-* Crystalis [God Slayer - Haruka Tenkuu no Sonata]
 * Dark Lord
 * Darkwing Duck
 * Double Dragon
-* Double Dragon II - The Revenge
 * Dr. Mario
 * Dragon Fighter
-* Dragon Quest
 * Dragon Quest II: Luminaries of the Legendary Line
 * Dragon Quest III: The Seeds of Salvation
 * Dragon Quest IV: Chapters of the Chosen
@@ -207,27 +191,18 @@ NES
 * Erik the Viking (Prototype)
 * Esper Dream 2 (VRC6)
 * Falsion (FDS)
-* Fantasy Zone
 * Faxanadu
 * Felix the Cat
 * Ferrari Grand Prix Challenge
-* Fester's Quest
 * Final Fantasy II
 * Final Fantasy III
 * Final Lap
 * Ganbare Goemon 2
-* Getsufuu Maden
-* Ghosts 'n Goblins [Makaimura]
 * Gimmick!
-* Goonies 2, The
 * Gremlins 2 - The New Batch
-* Guardian Legend, The [Guardic Gaiden]
 * Gyruss (FDS)
 * Hero Quest (Prototype)
-* Incredible Crash Dummies, The
-* Indiana Jones and The Last Crusade
 * Ivan "Ironman" Stewart's Super Off Road
-* Jackal
 * Jackie Chan's Action Kung-Fu
 * James Bond Jr.
 * Journey to Silius [RAF World]
@@ -235,9 +210,7 @@ NES
 * Just Breed
 * Kick Master
 * Kid Icarus (FDS)
-* King Kong 2 - Ikari no Megaton Punch
 * Kirby's Adventure
-* Kiwi Kraze - A Bird-Brained Adventure!
 * Kunio-kun no Nekketsu Soccer League
 * Lagrange Point (VRC7)
 * Legend of Zelda 2, The - The Adventure of Link (FDS)
@@ -259,46 +232,30 @@ NES
 * Megami Tensei II - Digital Devil Story
 * Metal Max
 * Metroid
-* Might Final Fight
 * Mike Tyson's Punch-Out!!
 * Milon's Secret Castle
 * Mission - Impossible
-* Mitsume ga Tooru
 * Monster in My Pocket
-* Moon Crystal
 * Mother
 * Mouryou Senki Madara (VRC6)
 * Ninja Gaiden II - The Dark Sword of Chaos
 * Ninja Gaiden III - The Ancient Ship of Doom
 * Ninja Gaiden [Ninja Ryukenden]
-* Over Horizon
 * Palamedes II - Star Twinkles
 * Pictionary
-* Power Blade 2 [Captain Saver]
-* Rambo
-* Robocop 3
 * Rollergames
-* SCAT - Special Cybernetic Attack Team [Final Mission]
 * Sangokushi 2 - Haou no Tairiku
 * Shadow of the Ninja [Kage]
 * Shatterhand [Tokkyuu Shirei - Solbrain]
 * Shovel Knight (VRC6)
 * Silver Surfer
-* Skate or Die 2 - The Search for Double Trouble
-* Sky Shark
-* Smurfs, The
 * Solstice - The Quest for the Staff of Demons
-* StarTropics
-* Street Fighter 2010 - Final Fight
-* Summer Carnival '92 - Recca
 * Super C [Super Contra]
 * Super Dodge Ball [Nekketsu Koukou Dodgeball-bu]
 * Super Mario Bros.
 * Super Mario Bros. 2 [Yume Koujou - Doki Doki Panic]
 * Super Mario Bros. 3
 * Super Spy Hunter [Battle Formula]
-* Sweet Home
-* Target - Renegade
 * Teenage Mutant Ninja Turtles II - The Arcade Game
 * Teenage Mutant Ninja Turtles III - The Manhattan Project
 * Teenage Mutant Ninja Turtles [Gekikame Ninja Den]
@@ -308,12 +265,8 @@ NES
 * Treasure Master
 * Trojan [Tatakai no Banka]
 * Trolls in Crazyland, The [Doki! Doki! Yuuenchi - Crazyland Daisakusen]
-* U-four-ia - The Saga [Hebereke]
-* Wai Wai World
-* Wai Wai World 2 - SOS!! Paseri Jou
 * Werewolf - The Last Warrior
 * Wizards & Warriors [Densetsu no Kishi - Elrond]
-* Wolverine
 * Yume Penguin Monogatari
 * Zen - Intergalactic Ninja
 
@@ -448,7 +401,6 @@ SNES
 * Donkey Kong Country 3
 * Dragon Quest III: Soshite Densetsu he...
 * Earthbound [Mother 2]
-* Equinox [Solstice 2]
 * F-Zero
 * Final Fantasy V
 * Final Fantasy VI
@@ -477,7 +429,6 @@ SNES
 * Pop'n Twinbee
 * Psycho Dream
 * Radical Dreamers
-* Romancing SaGa 3
 * Secret of Mana [Seiken Densetsu 2]
 * Seiken Densetsu 3
 * SimCity
@@ -498,7 +449,6 @@ SNES
 * Treasure Hunter G
 * Treasure of the Rudras [Rudra no Hihou]
 * Uncharted Waters: New Horizons
-* Wild Guns
 
 TurboGrafx-16
 
