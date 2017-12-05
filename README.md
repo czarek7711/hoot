@@ -3,6 +3,7 @@
 Arcade
 
 * After Burner 2
+* Aliens
 * Armed Police Batrider
 * Carrier Air Wing
 * Daytona USA
@@ -44,48 +45,32 @@ Arcade
 
 Gameboy
 
-* Asterix
 * Batman - Return of the Joker
-* Bubble Ghost
 * Castlevania - The Adventure
-* Castlevania II - Belmont's Revenge
 * Castlevania Legends // no titles added
-* Chikyuu Kaihou Gun ZAS
-* Donkey Kong Land
-* Final Fantasy Adventure [Mystic Quest]
-* Final Fantasy Legend II [SaGa 2 - Hihou Densetsu]
-* Final Fantasy Legend III [SaGa 3 - Jikuu no Hasha]
 * Legend of Zelda, The - Link's Awakening
-* Metal Gear: Ghost Babel // no titles added
 * Metal Masters
-* Metroid II - Return of Samus
-* Mole Mania [Moguranya] // no titles added
-* Pokemon Gold
-* Pokemon Red
-* Pokemon Training Card Game
 * Power Quest [Gekitou Power Modeler]
 * Raging Fighter [Outburst] // no titles added
 * Shantae
-* Smurfs' Nightmare, The
 * Super Mario Land
 * Super Mario Land 2 - 6 Golden Coins
 * Tetris
 * Trip World
 
-MSX, MSX2
+MSX Computers
 
 * Final Fantasy
-* Fray -In Magical Adventure- // no titles added
 * Illusion City [幻影都市]
 * Metal Gear 2: Solid Snake
 * SD Snatcher
+* Salamander
 * Snatcher
 * Space Manbow
-* Salamander
-* Yie Ar Kung-Fu
 
 MegaDrive
 
+* Alien 3
 * Alien Soldier
 * Batman
 * Battle Mania Daiginjo
@@ -99,7 +84,7 @@ MegaDrive
 * Elemental Master
 * Gaiares
 * Gauntlet IV
-* GleyLancer
+* Gley Lancer
 * Golden Axe II
 * Golden Axe III
 * Gunstar Heroes
@@ -150,6 +135,7 @@ MegaDrive
 * Valis III
 * Valis: The Fantasm Soldier
 * Vectorman 2
+* Verytex
 * Yuu Yuu Hakusho - Makyou Toitsusen
 * Zero Wing
 
@@ -434,7 +420,6 @@ SNES
 * SimCity
 * Sparkster
 * Star Fox
-* Super Adventure Island
 * Super Castlevania IV
 * Super Ghouls 'n Ghost
 * Super Mahjong 2: Honkaku 4 Nin Uchi!
@@ -449,6 +434,7 @@ SNES
 * Treasure Hunter G
 * Treasure of the Rudras [Rudra no Hihou]
 * Uncharted Waters: New Horizons
+* Wagyan Paradise
 
 TurboGrafx-16
 
@@ -478,7 +464,6 @@ X68000
 * 38 Man Kilo no Kokuu
 * Akiko -Premium-
 * Akumajo Dracula
-* Algarna
 * Aquales
 * Asuka 120%: Burning Fest
 * Bosconian
@@ -487,7 +472,6 @@ X68000
 * Dragon Knight 4
 * Genocide 2
 * Geograph Seal
-* Gize! XIX // no titles added
 * Gradius II
 * Granada
 * Illumination Laser
@@ -498,8 +482,6 @@ X68000
 * Metal Eye // some translation missing
 * Nama Baseball '68 [Namachuukei 68]
 * Neural Gear
-* Olteus II // no titles added
-* Phalanx
 * Sion II: The First Attack
 * Snatcher (Sega-CD) // one song arrangement
 * Spindizzy II

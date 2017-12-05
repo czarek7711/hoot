@@ -1,4 +1,4 @@
 @echo off
 D:
 cd Programy\hoot20161231
-hootclient volume 0x070
+hootclient volume 0x060
