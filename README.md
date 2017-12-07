@@ -10,7 +10,7 @@ Arcade
 * Dragon Saber: After Story of Dragon Spirit
 * Fighting Layer
 * Final Fight
-* Galaxy Force 2
+* Galaxy Force II
 * Gradius II [Vulcan Venture]
 * Gradius III
 * Lethal Enforcers
@@ -19,14 +19,11 @@ Arcade
 * Metal Slug
 * Metal Slug 2
 * Metal Slug 3
-* Metal Slug X
 * Neo Turf Masters
 * Night Slashers
 * Ninja Warriors, The
-* Ordyne
 * OutRun
 * Outfoxies, The
-* Parodius Da! From Myth to Laughter
 * Power Drift
 * Space Harrier
 * Street Fighter Alpha 2
@@ -37,10 +34,8 @@ Arcade
 * Super Street Fighter II: Turbo
 * Teenage Mutant Ninja Turtles - Turtles in Time
 * Thunder Blade
-* TwinBee Yahhoo!
 * U. N. Squadron
 * X-Men
-* Xevious 3D/G
 * Xexex
 
 Gameboy
@@ -122,6 +117,8 @@ MegaDrive
 * Sonic the Hedgehog 2
 * Sonic the Hedgehog 3 & Knuckles
 * Space Invaders 90
+* Splatterhouse 2 // see hoot.ini for correct sample rate
+* Splatterhouse 3 // see hoot.ini for correct sample rate
 * Star Cruiser
 * Streets of Rage [Bare Knuckle]
 * Streets of Rage 2 [Bare Knuckle II]
