@@ -116,6 +116,7 @@ MegaDrive
 * Sonic the Hedgehog
 * Sonic the Hedgehog 2
 * Sonic the Hedgehog 3 & Knuckles
+* Sorcerian
 * Space Invaders 90
 * Splatterhouse 2 // see hoot.ini for correct sample rate
 * Splatterhouse 3 // see hoot.ini for correct sample rate
@@ -255,18 +256,13 @@ NES
 
 PC-88xx
 
-* Angelus: Akuma no Fukuin
 * Chatty
-* Fire Hawk: Thexder The Second Contact
-* Herzog
-* Hole Chaser
 * Misty Blue
 * Providence
 * Scheme, The
 * Shinra Bansho
 * Sorcerian
 * Star/Ship Rendezvous
-* Valna
 * Wanderers from Super Scheme
 * Ys I -Ancient Ys Vanished Omen-
 
