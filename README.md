@@ -427,7 +427,6 @@ SNES
 * Treasure Hunter G
 * Treasure of the Rudras [Rudra no Hihou]
 * Uncharted Waters: New Horizons
-* Wagyan Paradise
 
 TurboGrafx-16
 
