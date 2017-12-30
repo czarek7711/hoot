@@ -310,6 +310,7 @@ PC-98xx
 * Kirishima Shinyojio no Gogo // no titles added
 * Lemon Angel // some titles missing
 * Love Escalator // some translation needed
+* Mahjongg Fantasia 2 // no titles added
 * Mahou Shoujo Fancy Coco
 * Mahou no Tenshi Creamy Mami: Futari no Rondo // some translation needed
 * Manji: PSY Yuuki // no titles added
@@ -349,6 +350,7 @@ PC-98xx
 * Xenon -Fantasy Body-
 * YU-NO: A Girl Who Chants Love at the Bound of this World
 * Yan Yan no Gekitou: Dousoukai
+* Yougekitai: Jashin Koumaroku
 * Ys II -Ancient Ys Vanished The Final Chapter-
 * Yume no Sei
 * Yuugirl: Ningyou Shi no Isan
@@ -371,7 +373,6 @@ SNES
 * Breath of Fire
 * Castlevania: Dracula X
 * Chrono Trigger
-* Clock Tower
 * Contra III: The Alien Wars
 * Cybernator [Assault Suits Valken]
 * Demon's Crest
@@ -386,6 +387,7 @@ SNES
 * Front Mission
 * Front Mission: Gun Hazard
 * Hagane - The Final Conflict
+* Hiouden: Mamono-tachi to no Chikai
 * Honkaku Shougi: Fuuunji Ryuuou
 * Hourai Gakuen no Bouken!: Tenkousei Scramble
 * Hyper Zone
@@ -402,6 +404,7 @@ SNES
 * Mega Man X2
 * Naki no Ryuu: Mahjong Hishouden
 * Ninja Warriors, The
+* Ohmono Black Bass Fishing: Jinzouko Hen
 * Pebble Beach Golf Links
 * Pilotwings
 * Plok
@@ -415,7 +418,6 @@ SNES
 * Star Fox
 * Super Castlevania IV
 * Super Ghouls 'n Ghost
-* Super Mahjong 2: Honkaku 4 Nin Uchi!
 * Super Mario Kart
 * Super Mario World
 * Super Mario World 2 - Yoshi's Island
@@ -427,6 +429,7 @@ SNES
 * Treasure Hunter G
 * Treasure of the Rudras [Rudra no Hihou]
 * Uncharted Waters: New Horizons
+* Wagyan Paradise
 
 TurboGrafx-16
 
@@ -474,6 +477,7 @@ X68000
 * Metal Eye // some translation missing
 * Nama Baseball '68 [Namachuukei 68]
 * Neural Gear
+* Pita Pat
 * Sion II: The First Attack
 * Snatcher (Sega-CD) // one song arrangement
 * Spindizzy II
