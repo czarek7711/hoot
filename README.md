@@ -411,8 +411,6 @@ SNES
 * Pop'n Twinbee
 * Psycho Dream
 * Radical Dreamers
-* Secret of Mana [Seiken Densetsu 2]
-* Seiken Densetsu 3
 * SimCity
 * Sparkster
 * Star Fox
@@ -424,10 +422,8 @@ SNES
 * Super Metroid
 * Tales of Phantasia
 * Teenage Mutant Ninja Turtles: Tournament Fighters
-* Terranigma [Tenchi Souzou]
 * Thoroughbred Breeder 3
 * Treasure Hunter G
-* Treasure of the Rudras [Rudra no Hihou]
 * Uncharted Waters: New Horizons
 * Wagyan Paradise
 
@@ -477,7 +473,7 @@ X68000
 * Metal Eye // some translation missing
 * Nama Baseball '68 [Namachuukei 68]
 * Neural Gear
-* Pita Pat
+* Pita Pat // no titles added
 * Sion II: The First Attack
 * Snatcher (Sega-CD) // one song arrangement
 * Spindizzy II
