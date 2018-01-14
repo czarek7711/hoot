@@ -374,6 +374,7 @@ SNES
 * Castlevania: Dracula X
 * Chrono Trigger
 * Contra III: The Alien Wars
+* Crystal Beans From Dungeon Explorer
 * Cybernator [Assault Suits Valken]
 * Demon's Crest
 * Donkey Kong Country
@@ -411,6 +412,8 @@ SNES
 * Pop'n Twinbee
 * Psycho Dream
 * Radical Dreamers
+* Secret of Mana
+* Seiken Densetsu 3
 * SimCity
 * Sparkster
 * Star Fox
@@ -420,6 +423,7 @@ SNES
 * Super Mario World
 * Super Mario World 2 - Yoshi's Island
 * Super Metroid
+* Super R-Type
 * Tales of Phantasia
 * Teenage Mutant Ninja Turtles: Tournament Fighters
 * Thoroughbred Breeder 3
@@ -473,7 +477,7 @@ X68000
 * Metal Eye // some translation missing
 * Nama Baseball '68 [Namachuukei 68]
 * Neural Gear
-* Pita Pat // no titles added
+* Pita Pat
 * Sion II: The First Attack
 * Snatcher (Sega-CD) // one song arrangement
 * Spindizzy II
