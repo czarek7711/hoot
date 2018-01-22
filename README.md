@@ -175,12 +175,9 @@ NES
 * Erik the Viking (Prototype)
 * Esper Dream 2 (VRC6)
 * Falsion (FDS)
-* Faxanadu
-* Felix the Cat
 * Ferrari Grand Prix Challenge
 * Final Fantasy II
 * Final Fantasy III
-* Final Lap
 * Ganbare Goemon 2
 * Gimmick!
 * Gremlins 2 - The New Batch
@@ -250,7 +247,6 @@ NES
 * Trojan [Tatakai no Banka]
 * Trolls in Crazyland, The [Doki! Doki! Yuuenchi - Crazyland Daisakusen]
 * Werewolf - The Last Warrior
-* Wizards & Warriors [Densetsu no Kishi - Elrond]
 * Yume Penguin Monogatari
 * Zen - Intergalactic Ninja
 
