@@ -5,6 +5,7 @@ Arcade
 * After Burner 2
 * Aliens
 * Armed Police Batrider
+* Battle Garegga
 * Carrier Air Wing
 * Daytona USA
 * Dragon Saber: After Story of Dragon Spirit
@@ -192,6 +193,7 @@ NES
 * Kick Master
 * Kid Icarus (FDS)
 * Kirby's Adventure
+* Konami Hyper Soccer
 * Kunio-kun no Nekketsu Soccer League
 * Lagrange Point (VRC7)
 * Legend of Zelda 2, The - The Adventure of Link (FDS)
@@ -297,6 +299,7 @@ PC-98xx
 * Grounseed // some translation needed
 * Harled Blade: The Greatest of All Time
 * Hinadori no Saezuri
+* If
 * Illumina
 * Jinmon Yuugi // no titles added
 * Kagake Kirakira Senshi Risky Jewel // no titles added
@@ -306,6 +309,7 @@ PC-98xx
 * Kirishima Shinyojio no Gogo // no titles added
 * Lemon Angel // some titles missing
 * Love Escalator // some translation needed
+* Mahjongg Fantasia
 * Mahjongg Fantasia 2 // no titles added
 * Mahou Shoujo Fancy Coco
 * Mahou no Tenshi Creamy Mami: Futari no Rondo // some translation needed
@@ -320,7 +324,6 @@ PC-98xx
 * Miwaku no Chousho
 * Night Slave
 * Only You: Seiki Matsu no Juliet to Tachi
-* Otome Senki
 * PeroPero Candy: You no Shou // no titles added
 * Popful Mail
 * Power Dolls
@@ -413,6 +416,8 @@ SNES
 * SimCity
 * Sparkster
 * Star Fox
+* Star Fox 2
+* Super Aleste
 * Super Castlevania IV
 * Super Ghouls 'n Ghost
 * Super Mario Kart
@@ -430,25 +435,12 @@ SNES
 TurboGrafx-16
 
 * Air Zonk
-* Aldynes - The Mission Code for Rage Crisis (SGX)
-* Battle Ace (SGX)
-* Blazing Lazers [Gunhed]
 * Bomberman '93
 * Bomberman '94
-* Coryoon - Child of Dragon
 * Devil's Crush [Devil Crash]
-* Dragon Saber
-* Dragon Spirit
-* Dungeon Explorer
-* Final Soldier
-* Ganbare! Golf Boys
-* Jackie Chan
-* Legendary Axe, The [Makyou Densetsu]
 * Magical Chase, The
-* Psychosis [Paranoia]
 * Soldier Blade
 * Super Star Soldier
-* Tatsujin
 
 X68000
 
