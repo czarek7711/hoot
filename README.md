@@ -1,6 +1,6 @@
 ## Games List ##
 
-Arcade
+Arcade, Neo Geo
 
 * After Burner 2
 * Aliens
@@ -16,10 +16,12 @@ Arcade
 * Gradius III
 * Lethal Enforcers
 * Magic Sword - Heroic Fantasy
+* Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
 * Metal Slug
 * Metal Slug 2
 * Metal Slug 3
+* Mystic Warriors
 * Neo Turf Masters
 * Night Slashers
 * Ninja Warriors, The
@@ -56,9 +58,13 @@ Gameboy
 
 MSX Computers
 
+* F1 Spirit -The Way to Formula-
+* F1 Spirit 3D Special
 * Final Fantasy
+* Gekitotsu Pennant Race 2
 * Illusion City [幻影都市]
 * Metal Gear 2: Solid Snake
+* Quarth
 * SD Snatcher
 * Salamander
 * Snatcher
@@ -267,60 +273,37 @@ PC-88xx
 PC-98xx
 
 * AD&D: Death Knights of Krynn
-* AD&D: Eye of the Beholder
 * Advanced Power Dolls 2
 * Advanced Variable Geo 2
 * Akiko GOLD: The Queen of Adult // no titles added
 * Anime Mahjong X // no titles added
 * Area 88: Etranger 1995 // some translation missing
-* Armored Flagship Atragon
 * Black Bird: Tori Tachi no Tooboe
+* Brandish
 * Brandish 2 -The Planet Buster-
 * Brandish 3 -Spirit of Balcan-
 * Brandish VT
-* Briganty: The Roots of Darkness
-* C'est la vie // no titles added
-* Carat -Magical Blocks-
 * Chou Jigen Densetsu Rall 3: Kakuseihen // some titles missing
-* Cyber Block Metal Orange
-* De.Fana
 * Desire -Spiral of Perversion-
 * Don't Call Me Amy!
+* Dragon Slayer: The Legend of Heroes
 * Dragon Slayer: The Legend of Heroes 2
 * Escalation 95: O Anesamatte Yonde Li Desu ka? // no titles added
 * Eve: Burst Terror!
-* Farland Story 6: Kamigami no Isen
-* Farland Story 7: Shishi Ou no Akashi
-* Farland Story: Tooikuni no Monogatari
-* Flame Zapper Kotsujin
 * FlixMix
-* GaoGao! 4th Canaan // no titles added
-* Goice // some translation needed
 * Grounseed // some translation needed
-* Harled Blade: The Greatest of All Time
-* Hinadori no Saezuri
 * If
 * Illumina
 * Jinmon Yuugi // no titles added
-* Kagake Kirakira Senshi Risky Jewel // no titles added
-* Kagaku Ninja Tai Gatchaman // translation needed
-* Kara no Naka no Kotori
-* King Breeder // translation needed
-* Kirishima Shinyojio no Gogo // no titles added
-* Lemon Angel // some titles missing
-* Love Escalator // some translation needed
 * Mahjongg Fantasia
 * Mahjongg Fantasia 2 // no titles added
 * Mahou Shoujo Fancy Coco
 * Mahou no Tenshi Creamy Mami: Futari no Rondo // some translation needed
 * Manji: PSY Yuuki // no titles added
 * Marine Rouge
-* Marion // no titles added
-* Marionette Mind
 * Meikyuu Gakuensai: Kyuukousha no Nazo
 * Metal Force
 * Miho: Momoiro Byoutou, Menkai Shazetsu!
-* Mime
 * Miwaku no Chousho
 * Night Slave
 * Only You: Seiki Matsu no Juliet to Tachi
@@ -329,31 +312,19 @@ PC-98xx
 * Power Dolls
 * Power Dolls 2
 * Power Dolls 2 Dash
-* Power Slave
-* Princess Maker 2
 * Puyo Puyo
 * Revival Xanadu
 * Rhyme Star
-* Rookies // some translation needed
 * Rusty
 * Saint Diary: Kiyoshi-chan no Nikki // translation needed
 * Starfire
-* Steam-Heart's
-* Totsugeki Mix!
 * Trouble Outsiders // no titles added
-* Valkyrie: The Power Beauties
-* Variable Geo 2: The Bout of Cabalistic Goddess
 * Viper CTR: Asuka
-* X-Girl
 * Xak IV -The Eternal Reccurence-
 * Xenon -Fantasy Body-
 * YU-NO: A Girl Who Chants Love at the Bound of this World
-* Yan Yan no Gekitou: Dousoukai
 * Yougekitai: Jashin Koumaroku
 * Ys II -Ancient Ys Vanished The Final Chapter-
-* Yume no Sei
-* Yuugirl: Ningyou Shi no Isan
-* Zwei Metajo // translation needed
 
 PC/AT
 
@@ -397,7 +368,6 @@ SNES
 * Legend of The Mystical Ninja, The
 * Legend of Zelda, The - A Link to the Past
 * Live A Live
-* Majin Tensei 2: Spiral Nemesis
 * Mario Paint
 * Mega Man & Bass [Rockman & Forte]
 * Mega Man X
@@ -411,7 +381,7 @@ SNES
 * Pop'n Twinbee
 * Psycho Dream
 * Radical Dreamers
-* Secret of Mana
+* Secret of Mana [Seiken Densetsu 2]
 * Seiken Densetsu 3
 * SimCity
 * Sparkster
