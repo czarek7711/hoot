@@ -1,8 +1,17 @@
+## About ##
+
+This here is my personal <i>hoot</i> folder with my favourite video game soundtracks added in.
+
+You can read about <i>hoot</i> here: http://vgmrips.net/wiki/Hoot
+
+If I add any new stuff it goes to <i>xml/\~systems\~.xml</i> which is the only xml file hoot reads for soundtrack entries.
+
 ## Games List ##
 
 Arcade, Neo Geo
 
 * After Burner 2
+* Akuma-Jou Dracula [Haunted Castle]
 * Aliens
 * Armed Police Batrider
 * Battle Garegga
@@ -12,6 +21,7 @@ Arcade, Neo Geo
 * Fighting Layer
 * Final Fight
 * Galaxy Force II
+* Garou: Mark of the Wolves
 * Gradius II [Vulcan Venture]
 * Gradius III
 * Lethal Enforcers
@@ -223,8 +233,6 @@ NES
 * Metroid
 * Mike Tyson's Punch-Out!!
 * Milon's Secret Castle
-* Mission - Impossible
-* Monster in My Pocket
 * Mother
 * Mouryou Senki Madara (VRC6)
 * Ninja Gaiden II - The Dark Sword of Chaos
@@ -260,7 +268,6 @@ NES
 
 PC-88xx
 
-* Chatty
 * Misty Blue
 * Providence
 * Scheme, The
@@ -297,7 +304,7 @@ PC-98xx
 * Jinmon Yuugi // no titles added
 * Mahjongg Fantasia
 * Mahjongg Fantasia 2 // no titles added
-* Mahou Shoujo Fancy Coco
+* Mahou Shoujo Fancy CoCo
 * Mahou no Tenshi Creamy Mami: Futari no Rondo // some translation needed
 * Manji: PSY Yuuki // no titles added
 * Marine Rouge
@@ -339,7 +346,6 @@ SNES
 * Bahamut Lagoon
 * Biker Mice from Mars
 * Brainlord
-* Brandish
 * Breath of Fire
 * Castlevania: Dracula X
 * Chrono Trigger
