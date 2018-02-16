@@ -6,6 +6,8 @@ You can read about <i>hoot</i> here: http://vgmrips.net/wiki/Hoot
 
 If I add any new stuff it goes to <i>xml/\~systems\~.xml</i> which is the only xml file hoot reads for soundtrack entries.
 
+![Screenshot](screenshot.png)
+
 ## Games List ##
 
 Arcade, Neo Geo
