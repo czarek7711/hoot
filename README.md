@@ -43,6 +43,7 @@ Arcade, Neo Geo
 * Space Harrier
 * Street Fighter Alpha 2
 * Sunset Riders
+* Super Contra
 * Super Dodge Ball
 * Super Hang-On
 * Super Monaco GP
