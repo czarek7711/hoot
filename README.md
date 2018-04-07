@@ -40,6 +40,7 @@ Arcade, Neo Geo
 * OutRun
 * Outfoxies, The
 * Power Drift
+* Rolling Thunder 2
 * Space Harrier
 * Street Fighter Alpha 2
 * Sunset Riders
@@ -175,7 +176,6 @@ NES
 * Castlevania
 * Castlevania II - Simon's Quest
 * Castlevania III - Dracula's Curse [Akumajou Densetsu] (VRC6)
-* Chaos World
 * Chip 'n Dale Rescue Rangers
 * Chip 'n Dale Rescue Rangers 2
 * Choujin Sentai - Jetman
@@ -220,6 +220,7 @@ NES
 * Life Force [Salamander]
 * Little Mermaid, The
 * Little Nemo - The Dream Master
+* Magician
 * Mappy
 * Mega Man (VRC6)
 * Mega Man
@@ -288,12 +289,14 @@ PC-98xx
 * Akiko GOLD: The Queen of Adult // no titles added
 * Anime Mahjong X // no titles added
 * Area 88: Etranger 1995 // some translation missing
+* Ballade for Maria // no titles added
 * Black Bird: Tori Tachi no Tooboe
 * Brandish
 * Brandish 2 -The Planet Buster-
 * Brandish 3 -Spirit of Balcan-
 * Brandish VT
 * Chou Jigen Densetsu Rall 3: Kakuseihen // some titles missing
+* Cyber Block Metal Orange
 * Desire -Spiral of Perversion-
 * Don't Call Me Amy!
 * Dragon Slayer: The Legend of Heroes
@@ -312,6 +315,7 @@ PC-98xx
 * Manji: PSY Yuuki // no titles added
 * Marine Rouge
 * Meikyuu Gakuensai: Kyuukousha no Nazo
+* Mesuneko Hishoshitsu // no titles added
 * Metal Force
 * Miho: Momoiro Byoutou, Menkai Shazetsu!
 * Miwaku no Chousho
@@ -329,7 +333,9 @@ PC-98xx
 * Saint Diary: Kiyoshi-chan no Nikki // translation needed
 * Starfire
 * Trouble Outsiders // no titles added
+* Valkyrie: The Power Beauties
 * Viper CTR: Asuka
+* Waku Waku Mahjong Panic 2: Koku Shimusou
 * Xak IV -The Eternal Reccurence-
 * Xenon -Fantasy Body-
 * YU-NO: A Girl Who Chants Love at the Bound of this World
