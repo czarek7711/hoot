@@ -10,7 +10,7 @@ If I add any new stuff it goes to <i>xml/\~systems\~.xml</i> which is the only x
 
 ## Games List ##
 
-Arcade, Neo Geo
+Arcade
 
 * After Burner 2
 * Akuma-Jou Dracula [Haunted Castle]
@@ -23,18 +23,13 @@ Arcade, Neo Geo
 * Fighting Layer
 * Final Fight
 * Galaxy Force II
-* Garou: Mark of the Wolves
 * Gradius II [Vulcan Venture]
 * Gradius III
 * Lethal Enforcers
 * Magic Sword - Heroic Fantasy
 * Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
-* Metal Slug
-* Metal Slug 2
-* Metal Slug 3
 * Mystic Warriors
-* Neo Turf Masters
 * Night Slashers
 * Ninja Warriors, The
 * OutRun
@@ -45,7 +40,6 @@ Arcade, Neo Geo
 * Street Fighter Alpha 2
 * Sunset Riders
 * Super Contra
-* Super Dodge Ball
 * Super Hang-On
 * Super Monaco GP
 * Super Street Fighter II: Turbo
@@ -270,6 +264,15 @@ NES
 * Yume Penguin Monogatari
 * Zen - Intergalactic Ninja
 
+Neo Geo
+
+* Garou: Mark of the Wolves
+* Metal Slug
+* Metal Slug 2
+* Metal Slug 3
+* Neo Turf Masters
+* Super Dodge Ball
+
 PC-88xx
 
 * Misty Blue
@@ -403,6 +406,7 @@ SNES
 * Star Fox
 * Star Fox 2
 * Super Aleste
+* Super Bomberman 3
 * Super Castlevania IV
 * Super Ghouls 'n Ghost
 * Super Mario Kart
