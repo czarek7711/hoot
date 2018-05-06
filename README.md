@@ -91,7 +91,6 @@ MegaDrive
 * Devilish [Bad Omen]
 * Dragon's Fury [Devil Crash MD]
 * Dynamite Headdy
-* Elemental Master
 * Gaiares
 * Gauntlet IV
 * Gley Lancer
@@ -102,22 +101,17 @@ MegaDrive
 * Herzog Zwei
 * Hybrid Front, The
 * Jewel Master
-* Landstalker: The Treasures of King Nole
 * Langrisser II
 * Lethal Enforcers
 * Light Crusader
 * M.U.S.H.A
-* Madou Monogatari I
 * Master of Monsters
 * McDonald's Treasure Land Adventure
 * Mega Turrican
 * Michael Jackson's Moonwalker
 * Midnight Resistance
-* Monster World IV
 * Nekketsu Koukou Dodgeball Bu: Soccer Hen MD
 * Phantasy Star II
-* Phantasy Star III: Generations od Doom
-* Phantasy Star IV: The End of the Millenium
 * Ristar - The Shooting Star // some PCM samples don't work properly
 * Rocket Knight Adventures
 * Rolling Thunder 2
@@ -147,8 +141,8 @@ MegaDrive
 * ToeJam & Earl in Panic on Funkotron
 * Valis III
 * Valis: The Fantasm Soldier
-* Vectorman 2
 * Verytex
+* Vixen 357 // no titles added
 * Yuu Yuu Hakusho - Makyou Toitsusen
 * Zero Wing
 
