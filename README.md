@@ -132,6 +132,7 @@ MegaDrive
 * Star Cruiser
 * Streets of Rage [Bare Knuckle]
 * Streets of Rage 2 [Bare Knuckle II]
+* Strider
 * Super Fantasy Zone
 * Sword of Vermilion
 * Teenage Mutant Ninja Turtles: Tournament Fighters
