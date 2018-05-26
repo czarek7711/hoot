@@ -17,6 +17,7 @@ Arcade
 * Aliens
 * Armed Police Batrider
 * Battle Garegga
+* Burning Force
 * Carrier Air Wing
 * Daytona USA
 * Dragon Saber: After Story of Dragon Spirit
@@ -166,28 +167,21 @@ NES
 * Castlevania II - Simon's Quest
 * Castlevania III - Dracula's Curse [Akumajou Densetsu] (VRC6)
 * Chip 'n Dale Rescue Rangers
-* Chip 'n Dale Rescue Rangers 2
 * Choujin Sentai - Jetman
-* Circus Charlie
 * Contra [Probotector]
 * Contra Force
 * Crisis Force
 * Dark Lord
-* Darkwing Duck
-* Double Dragon
 * Dr. Mario
-* Dragon Fighter
 * Dragon Quest II: Luminaries of the Legendary Line
 * Dragon Quest III: The Seeds of Salvation
 * Dragon Quest IV: Chapters of the Chosen
-* DuckTales
 * Erik the Viking (Prototype)
 * Esper Dream 2 (VRC6)
 * Falsion (FDS)
 * Ferrari Grand Prix Challenge
 * Final Fantasy II
 * Final Fantasy III
-* Ganbare Goemon 2
 * Gimmick!
 * Gremlins 2 - The New Batch
 * Gyruss (FDS)
@@ -207,10 +201,8 @@ NES
 * Legend of Zelda 2, The - The Adventure of Link (FDS)
 * Legend of Zelda, The
 * Life Force [Salamander]
-* Little Mermaid, The
 * Little Nemo - The Dream Master
 * Magician
-* Mappy
 * Mega Man (VRC6)
 * Mega Man
 * Mega Man 2 (VRC6)
@@ -220,12 +212,10 @@ NES
 * Mega Man 4 (VRC6)
 * Mega Man 4
 * Mega Man 5
-* Mega Man 6
 * Megami Tensei II - Digital Devil Story
 * Metal Max
 * Metroid
 * Mike Tyson's Punch-Out!!
-* Milon's Secret Castle
 * Mother
 * Mouryou Senki Madara (VRC6)
 * Ninja Gaiden II - The Dark Sword of Chaos
@@ -331,6 +321,7 @@ PC-98xx
 * Saint Diary: Kiyoshi-chan no Nikki // translation needed
 * Starfire
 * Trouble Outsiders // no titles added
+* Tsunyan Jaayao
 * Valkyrie: The Power Beauties
 * Viper CTR: Asuka
 * Waku Waku Mahjong Panic 2: Koku Shimusou
@@ -374,7 +365,6 @@ SNES
 * Hiouden: Mamono-tachi to no Chikai
 * Honkaku Shougi: Fuuunji Ryuuou
 * Hourai Gakuen no Bouken!: Tenkousei Scramble
-* Hyper Zone
 * Ihatovo Monogatari
 * King of Dragons, The
 * Kirby Super Star
@@ -418,12 +408,8 @@ SNES
 
 TurboGrafx-16
 
-* Air Zonk
-* Bomberman '93
-* Bomberman '94
-* Devil's Crush [Devil Crash]
+* Aldynes - The Mission Code for Rage Crisis
 * Magical Chase, The
-* Soldier Blade
 * Super Star Soldier
 
 X68000
@@ -432,6 +418,7 @@ X68000
 * Akiko -Premium-
 * Akumajo Dracula
 * Aquales
+* Arcus Odyssey
 * Asuka 120%: Burning Fest
 * Bosconian
 * Cho Ren Sha 68K
