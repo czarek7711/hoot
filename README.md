@@ -24,9 +24,7 @@ Arcade
 * Fighting Layer
 * Final Fight
 * Galaxy Force II
-* Gradius II [Vulcan Venture]
 * Gradius III
-* Lethal Enforcers
 * Magic Sword - Heroic Fantasy
 * Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
@@ -83,7 +81,6 @@ MegaDrive
 
 * Alien 3
 * Alien Soldier
-* Batman
 * Battle Mania Daiginjo
 * Castlevania: Bloodlines [Vampire Killer]
 * Contra: Hard Corps
@@ -96,7 +93,6 @@ MegaDrive
 * Gauntlet IV
 * Gley Lancer
 * Golden Axe II
-* Golden Axe III
 * Gunstar Heroes
 * Gynoug [Wings of Wor]
 * Herzog Zwei
@@ -109,15 +105,11 @@ MegaDrive
 * Master of Monsters
 * McDonald's Treasure Land Adventure
 * Mega Turrican
-* Michael Jackson's Moonwalker
 * Midnight Resistance
-* Nekketsu Koukou Dodgeball Bu: Soccer Hen MD
 * Phantasy Star II
 * Ristar - The Shooting Star // some PCM samples don't work properly
 * Rocket Knight Adventures
 * Rolling Thunder 2
-* Rolling Thunder 3
-* Shadow Dancer: The Secret of Shinobi
 * Shining Force II: The Ancient Seal
 * Shining and the Darkness
 * Shinobi II: The Revenge of Shinobi
@@ -140,13 +132,11 @@ MegaDrive
 * Thunder Force III
 * Thunder Force IV
 * Time Trax (Prototype)
-* ToeJam & Earl in Panic on Funkotron
 * Valis III
 * Valis: The Fantasm Soldier
 * Verytex
 * Vixen 357 // no titles added
 * Yuu Yuu Hakusho - Makyou Toitsusen
-* Zero Wing
 
 NES
 
@@ -185,15 +175,11 @@ NES
 * Gimmick!
 * Gremlins 2 - The New Batch
 * Gyruss (FDS)
-* Hero Quest (Prototype)
 * Ivan "Ironman" Stewart's Super Off Road
 * Jackie Chan's Action Kung-Fu
-* James Bond Jr.
 * Journey to Silius [RAF World]
-* Jungle Book, The
 * Just Breed
 * Kick Master
-* Kid Icarus (FDS)
 * Kirby's Adventure
 * Konami Hyper Soccer
 * Kunio-kun no Nekketsu Soccer League
@@ -203,7 +189,6 @@ NES
 * Life Force [Salamander]
 * Little Nemo - The Dream Master
 * Magician
-* Mega Man (VRC6)
 * Mega Man
 * Mega Man 2 (VRC6)
 * Mega Man 2
@@ -213,18 +198,14 @@ NES
 * Mega Man 4
 * Mega Man 5
 * Megami Tensei II - Digital Devil Story
-* Metal Max
 * Metroid
-* Mike Tyson's Punch-Out!!
 * Mother
 * Mouryou Senki Madara (VRC6)
 * Ninja Gaiden II - The Dark Sword of Chaos
 * Ninja Gaiden III - The Ancient Ship of Doom
 * Ninja Gaiden [Ninja Ryukenden]
-* Palamedes II - Star Twinkles
 * Pictionary
 * Rollergames
-* Sangokushi 2 - Haou no Tairiku
 * Shadow of the Ninja [Kage]
 * Shatterhand [Tokkyuu Shirei - Solbrain]
 * Shovel Knight (VRC6)
@@ -342,7 +323,6 @@ SNES
 * Actraiser
 * Axelay
 * Bahamut Lagoon
-* Biker Mice from Mars
 * Brainlord
 * Breath of Fire
 * Castlevania: Dracula X
@@ -352,8 +332,6 @@ SNES
 * Cybernator [Assault Suits Valken]
 * Demon's Crest
 * Donkey Kong Country
-* Donkey Kong Country 2 - Diddy's Kong Quest
-* Donkey Kong Country 3
 * Dragon Quest III: Soshite Densetsu he...
 * Earthbound [Mother 2]
 * F-Zero
@@ -364,14 +342,9 @@ SNES
 * Hagane - The Final Conflict
 * Hiouden: Mamono-tachi to no Chikai
 * Honkaku Shougi: Fuuunji Ryuuou
-* Hourai Gakuen no Bouken!: Tenkousei Scramble
 * Ihatovo Monogatari
-* King of Dragons, The
-* Kirby Super Star
-* Legend of The Mystical Ninja, The
 * Legend of Zelda, The - A Link to the Past
 * Live A Live
-* Mario Paint
 * Mega Man & Bass [Rockman & Forte]
 * Mega Man X
 * Mega Man X2
