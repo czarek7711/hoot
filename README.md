@@ -16,11 +16,11 @@ Arcade
 * Akuma-Jou Dracula [Haunted Castle]
 * Aliens
 * Armed Police Batrider
-* Battle Garegga
 * Burning Force
 * Carrier Air Wing
 * Daytona USA
 * Dragon Saber: After Story of Dragon Spirit
+* E.D.F.: Earth Defense Force
 * Fighting Layer
 * Final Fight
 * Galaxy Force II
@@ -28,12 +28,13 @@ Arcade
 * Magic Sword - Heroic Fantasy
 * Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
-* Mystic Warriors
 * Night Slashers
+* Night Striker
 * Ninja Warriors, The
 * OutRun
 * Outfoxies, The
 * Power Drift
+* Quartet
 * Rolling Thunder 2
 * Space Harrier
 * Street Fighter Alpha 2
@@ -54,10 +55,7 @@ Gameboy
 * Castlevania - The Adventure
 * Castlevania Legends // no titles added
 * Legend of Zelda, The - Link's Awakening
-* Metal Masters
-* Power Quest [Gekitou Power Modeler]
 * Raging Fighter [Outburst] // no titles added
-* Shantae
 * Super Mario Land
 * Super Mario Land 2 - 6 Golden Coins
 * Tetris
@@ -283,6 +281,7 @@ PC-98xx
 * Mahou no Tenshi Creamy Mami: Futari no Rondo // some translation needed
 * Manji: PSY Yuuki // no titles added
 * Marine Rouge
+* Marionette Mind
 * Meikyuu Gakuensai: Kyuukousha no Nazo
 * Mesuneko Hishoshitsu // no titles added
 * Metal Force
