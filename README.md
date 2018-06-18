@@ -36,6 +36,8 @@ Arcade
 * Power Drift
 * Quartet
 * Rolling Thunder 2
+* S.D.I.: Strategic Defense Initiative
+* Shinobi
 * Space Harrier
 * Street Fighter Alpha 2
 * Sunset Riders
