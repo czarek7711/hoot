@@ -16,11 +16,13 @@ Arcade
 * Akuma-Jou Dracula [Haunted Castle]
 * Aliens
 * Armed Police Batrider
+* Armed Police Unit Gallop [Cosmic Cop]
 * Burning Force
 * Carrier Air Wing
 * Daytona USA
 * Dragon Saber: After Story of Dragon Spirit
 * E.D.F.: Earth Defense Force
+* Fantasy Zone
 * Fighting Layer
 * Final Fight
 * Galaxy Force II
@@ -55,7 +57,7 @@ Gameboy
 
 * Batman - Return of the Joker
 * Castlevania - The Adventure
-* Castlevania Legends // no titles added
+* Castlevania Legends
 * Legend of Zelda, The - Link's Awakening
 * Raging Fighter [Outburst] // no titles added
 * Super Mario Land
@@ -71,7 +73,6 @@ MSX Computers
 * Gekitotsu Pennant Race 2
 * Illusion City [幻影都市]
 * Metal Gear 2: Solid Snake
-* Quarth
 * SD Snatcher
 * Salamander
 * Snatcher
@@ -223,8 +224,6 @@ NES
 * Tetris
 * Tiny Toon Adventures
 * Tom & Jerry: The Ultimate Game of Cat and Mouse!
-* Treasure Master
-* Trojan [Tatakai no Banka]
 * Trolls in Crazyland, The [Doki! Doki! Yuuenchi - Crazyland Daisakusen]
 * Werewolf - The Last Warrior
 * Yume Penguin Monogatari
