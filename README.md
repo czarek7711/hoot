@@ -390,6 +390,7 @@ X68000
 * 38 Man Kilo no Kokuu
 * Akiko -Premium-
 * Akumajo Dracula
+* Akushu
 * Aquales
 * Arcus Odyssey
 * Asuka 120%: Burning Fest
