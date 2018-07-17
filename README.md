@@ -78,7 +78,7 @@ MSX Computers
 * Snatcher
 * Space Manbow
 
-MegaDrive
+MegaDrive / Genesis
 
 * Alien 3
 * Alien Soldier
@@ -238,6 +238,12 @@ Neo Geo
 * Neo Turf Masters
 * Super Dodge Ball
 
+PC Engine / TurboGrafx-16
+
+* Aldynes - The Mission Code for Rage Crisis
+* Magical Chase, The
+* Super Star Soldier
+
 PC-88xx
 
 * Misty Blue
@@ -379,19 +385,12 @@ SNES
 * Uncharted Waters: New Horizons
 * Wagyan Paradise
 
-TurboGrafx-16
-
-* Aldynes - The Mission Code for Rage Crisis
-* Magical Chase, The
-* Super Star Soldier
-
 X68000
 
 * 38 Man Kilo no Kokuu
 * Akiko -Premium-
 * Akumajo Dracula
 * Akushu
-* Aquales
 * Arcus Odyssey
 * Asuka 120%: Burning Fest
 * Bosconian
@@ -399,20 +398,19 @@ X68000
 * Cosmic Psycho
 * Dragon Knight 4
 * Genocide 2
-* Geograph Seal
 * Gradius II
 * Granada
 * Illumination Laser
 * Kimi Dake ni Ai o...
 * Knight Arms
 * Kyuukyoku Senki Gikadiver // missing tracks
+* Lam-Mal [Ranmaru] // no titles added
 * Mad Stalker: Full Metal Force
 * Metal Eye // some translation missing
 * Nama Baseball '68 [Namachuukei 68]
 * Neural Gear
 * Pita Pat
 * Sion II: The First Attack
-* Snatcher (Sega-CD) // one song arrangement
 * Spindizzy II
 * Star Cruiser
 * Star Trader
