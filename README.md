@@ -59,7 +59,7 @@ Gameboy
 * Castlevania - The Adventure
 * Castlevania Legends
 * Legend of Zelda, The - Link's Awakening
-* Raging Fighter [Outburst] // no titles added
+* Raging Fighter [Outburst] // some titles are missing
 * Super Mario Land
 * Super Mario Land 2 - 6 Golden Coins
 * Tetris
@@ -227,7 +227,6 @@ NES
 * Trolls in Crazyland, The [Doki! Doki! Yuuenchi - Crazyland Daisakusen]
 * Werewolf - The Last Warrior
 * Yume Penguin Monogatari
-* Zen - Intergalactic Ninja
 
 Neo Geo
 
@@ -338,6 +337,7 @@ SNES
 * Cybernator [Assault Suits Valken]
 * Demon's Crest
 * Donkey Kong Country
+* Donkey Kong Country 2 - Diddy's Kong Quest
 * Dragon Quest III: Soshite Densetsu he...
 * Earthbound [Mother 2]
 * F-Zero
