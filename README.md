@@ -135,6 +135,7 @@ MegaDrive / Genesis
 * Time Trax (Prototype)
 * Valis III
 * Valis: The Fantasm Soldier
+* Vapor Trail: Hyper Offence Formation
 * Verytex
 * Vixen 357 // some unlabeled tracks
 * Yuu Yuu Hakusho - Makyou Toitsusen
@@ -182,7 +183,7 @@ NES
 * Just Breed
 * Kick Master
 * Kirby's Adventure
-* Konami Hyper Soccer
+* Konami Hyper Soccer // unlabeled tracks
 * Kunio-kun no Nekketsu Soccer League
 * Lagrange Point (VRC7)
 * Legend of Zelda 2, The - The Adventure of Link (FDS)
@@ -311,7 +312,6 @@ PC-98xx
 * Valkyrie: The Power Beauties
 * Viper CTR: Asuka
 * Waku Waku Mahjong Panic 2: Koku Shimusou
-* Xak IV -The Eternal Reccurence-
 * Xenon -Fantasy Body-
 * YU-NO: A Girl Who Chants Love at the Bound of this World
 * Yougekitai: Jashin Koumaroku
@@ -319,9 +319,7 @@ PC-98xx
 
 PC/AT
 
-* Ultima Underworld: The Stygian Abyss // unlabeled tracks
 * WarCraft 2 // some unlabeled tracks
-* X-COM: UFO Defense [UFO: Enemy Unknowm]
 
 SNES
 
@@ -356,6 +354,7 @@ SNES
 * Mega Man X2
 * Naki no Ryuu: Mahjong Hishouden
 * Ninja Warriors, The
+* Nontan to Issho: Kuru Kuru Puzzle
 * Ohmono Black Bass Fishing: Jinzouko Hen
 * Pebble Beach Golf Links
 * Pilotwings
