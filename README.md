@@ -59,7 +59,7 @@ Gameboy
 * Castlevania - The Adventure
 * Castlevania Legends
 * Legend of Zelda, The - Link's Awakening
-* Raging Fighter [Outburst] // some titles are missing
+* Raging Fighter [Outburst] // some unlabeled tracks
 * Super Mario Land
 * Super Mario Land 2 - 6 Golden Coins
 * Tetris
@@ -108,7 +108,7 @@ MegaDrive / Genesis
 * Mega Turrican
 * Midnight Resistance
 * Phantasy Star II
-* Ristar - The Shooting Star // some PCM samples don't work properly
+* Ristar - The Shooting Star
 * Rocket Knight Adventures
 * Rolling Thunder 2
 * Shining Force II: The Ancient Seal
@@ -136,7 +136,7 @@ MegaDrive / Genesis
 * Valis III
 * Valis: The Fantasm Soldier
 * Verytex
-* Vixen 357 // no titles added
+* Vixen 357 // some unlabeled tracks
 * Yuu Yuu Hakusho - Makyou Toitsusen
 
 NES
@@ -259,43 +259,43 @@ PC-98xx
 * AD&D: Death Knights of Krynn
 * Advanced Power Dolls 2
 * Advanced Variable Geo 2
-* Akiko GOLD: The Queen of Adult // no titles added
-* Anime Mahjong X // no titles added
+* Akiko GOLD: The Queen of Adult // unlabeled tracks
+* Anime Mahjong X // unlabeled tracks
 * Area 88: Etranger 1995 // some translation missing
-* Ballade for Maria // no titles added
+* Ballade for Maria // unlabeled tracks
 * Black Bird: Tori Tachi no Tooboe
 * Brandish
 * Brandish 2 -The Planet Buster-
 * Brandish 3 -Spirit of Balcan-
 * Brandish VT
-* Chou Jigen Densetsu Rall 3: Kakuseihen // some titles missing
+* Chou Jigen Densetsu Rall 3: Kakuseihen // some unlabeled tracks
 * Cyber Block Metal Orange
 * Desire -Spiral of Perversion-
 * Don't Call Me Amy!
 * Dragon Slayer: The Legend of Heroes
 * Dragon Slayer: The Legend of Heroes 2
-* Escalation 95: O Anesamatte Yonde Li Desu ka? // no titles added
+* Escalation 95: O Anesamatte Yonde Li Desu ka? // unlabeled tracks
 * Eve: Burst Terror!
 * FlixMix
 * Grounseed // some translation needed
 * If
 * Illumina
-* Jinmon Yuugi // no titles added
+* Jinmon Yuugi // unlabeled tracks
 * Mahjongg Fantasia
-* Mahjongg Fantasia 2 // no titles added
+* Mahjongg Fantasia 2 // unlabeled tracks
 * Mahou Shoujo Fancy CoCo
 * Mahou no Tenshi Creamy Mami: Futari no Rondo // some translation needed
-* Manji: PSY Yuuki // no titles added
+* Manji: PSY Yuuki // unlabeled tracks
 * Marine Rouge
 * Marionette Mind
 * Meikyuu Gakuensai: Kyuukousha no Nazo
-* Mesuneko Hishoshitsu // no titles added
+* Mesuneko Hishoshitsu // unlabeled tracks
 * Metal Force
 * Miho: Momoiro Byoutou, Menkai Shazetsu!
 * Miwaku no Chousho
 * Night Slave
 * Only You: Seiki Matsu no Juliet to Tachi
-* PeroPero Candy: You no Shou // no titles added
+* PeroPero Candy: You no Shou // unlabeled tracks
 * Popful Mail
 * Power Dolls
 * Power Dolls 2
@@ -306,7 +306,7 @@ PC-98xx
 * Rusty
 * Saint Diary: Kiyoshi-chan no Nikki // translation needed
 * Starfire
-* Trouble Outsiders // no titles added
+* Trouble Outsiders // unlabeled tracks
 * Tsunyan Jaayao
 * Valkyrie: The Power Beauties
 * Viper CTR: Asuka
@@ -319,8 +319,8 @@ PC-98xx
 
 PC/AT
 
-* Ultima Underworld: The Stygian Abyss // no titles added
-* WarCraft 2 // some titles missing
+* Ultima Underworld: The Stygian Abyss // unlabeled tracks
+* WarCraft 2 // some unlabeled tracks
 * X-COM: UFO Defense [UFO: Enemy Unknowm]
 
 SNES
@@ -404,7 +404,7 @@ X68000
 * Kimi Dake ni Ai o...
 * Knight Arms
 * Kyuukyoku Senki Gikadiver // missing tracks
-* Lam-Mal [Ranmaru] // no titles added
+* Lam-Mal [Ranmaru] // unlabeled tracks
 * Mad Stalker: Full Metal Force
 * Metal Eye // some translation missing
 * Nama Baseball '68 [Namachuukei 68]
