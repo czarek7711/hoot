@@ -19,6 +19,7 @@ Arcade
 * Armed Police Unit Gallop [Cosmic Cop]
 * Burning Force
 * Carrier Air Wing
+* Darius II
 * Daytona USA
 * Dragon Saber: After Story of Dragon Spirit
 * E.D.F.: Earth Defense Force
@@ -135,7 +136,6 @@ MegaDrive / Genesis
 * Time Trax (Prototype)
 * Valis III
 * Valis: The Fantasm Soldier
-* Vapor Trail: Hyper Offence Formation
 * Verytex
 * Vixen 357 // some unlabeled tracks
 * Yuu Yuu Hakusho - Makyou Toitsusen
@@ -161,7 +161,7 @@ NES
 * Chip 'n Dale Rescue Rangers
 * Choujin Sentai - Jetman
 * Contra [Probotector]
-* Contra Force
+* Contra Force [Ark Hound]
 * Crisis Force
 * Dark Lord
 * Dr. Mario
@@ -354,7 +354,6 @@ SNES
 * Mega Man X2
 * Naki no Ryuu: Mahjong Hishouden
 * Ninja Warriors, The
-* Nontan to Issho: Kuru Kuru Puzzle
 * Ohmono Black Bass Fishing: Jinzouko Hen
 * Pebble Beach Golf Links
 * Pilotwings
