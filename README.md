@@ -298,6 +298,7 @@ PC-98xx
 * Only You: Seiki Matsu no Juliet to Tachi
 * PeroPero Candy: You no Shou // unlabeled tracks
 * Popful Mail
+* Possessioner
 * Power Dolls
 * Power Dolls 2
 * Power Dolls 2 Dash
