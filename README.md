@@ -160,7 +160,7 @@ NES
 * Castlevania III - Dracula's Curse [Akumajou Densetsu] (VRC6)
 * Chip 'n Dale Rescue Rangers
 * Choujin Sentai - Jetman
-* Contra [Probotector]
+* Contra
 * Contra Force [Ark Hound]
 * Crisis Force
 * Dark Lord
@@ -291,6 +291,7 @@ PC-98xx
 * Marionette Mind
 * Meikyuu Gakuensai: Kyuukousha no Nazo
 * Mesuneko Hishoshitsu // unlabeled tracks
+* Metal & Lace 2 [Ningyou Tsukai 2]
 * Metal Force
 * Miho: Momoiro Byoutou, Menkai Shazetsu!
 * Miwaku no Chousho
