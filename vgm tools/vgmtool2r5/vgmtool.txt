@@ -1,0 +1,187 @@
+VGMTool 2
+=========
+
+Release 5
+
+A tool for editing VGM files.
+
+It can:
+
+- edit the VGM header
+- edit, add and remove the GD3 tag
+- trim data (for some chips) and insert state-restoring data to allow sample-
+  accurate editing of tracks, and loop definition
+- optimise data by removing data that does not affect the system state
+- check VGM files are valid
+- output VGM data in a human-readable format
+- remove selected chips' channels' data from the file
+- convert GYM, CYM and SSL files to the VGM format
+- compress and decompress VGM files
+- and more.
+
+See:
+
+http://www.smspower.org/music/tools/instructions/
+  for instructions
+http://www.smspower.org/music/tools/
+  for all the VGM information and files you need
+http://www.smspower.org/maxim/
+  for other stuff I've done
+
+
+Quick instructions
+==================
+
+Run the program, and drag-and-drop a file onto it. If it's a valid VGM (or VGZ)
+file it'll be loaded.
+
+Use the buttons to do what you want. For basic usage, just use the Trimming box
+(enter the trimming points (in samples) and click on Trim) and GD3 tag box
+(enter text and click on Update GD3).
+
+If you are entering a playback rate, set the version number to 1.01 or later;
+lower numbers may cause players to ignore it.
+
+If you are entering YM2612 or YM2151 clock speeds, or PSG feedback/shift register 
+size parameters, set the version number to 1.10 or later; lower values may cause
+them to be ignored. In particular, the YM2413 clock will be used instead of the
+YM2612 and YM2151 clocks.
+
+Please be careful with version numbers, and check that your files work after any
+editing.
+
+
+
+History
+=======
+
+30/10/05  VGM 1.10 updates, and various work on the trimmer which is currently
+          hidden - the trimmer is the same as r4.
+          Visit http://sourceforge.net/projects/vgmtool/ to see the source
+          code and maybe help develop VGMTool.
+11/2/05   More refactoring; Finally managed to manually add Ctrl+Tab/
+          Shift+Ctrl+Tab support to the tab control! MS don't make that easy.
+		  Added a commandline parser.
+8/2/05    Restarted refactoring process; Esc no longer closes the window
+8/6/04    Re-added tab images and trimming logging
+7/6/04    Made NCR recognition always happen so tagging can be done more easily
+          in Windows XP
+2002-2003 Various efforts on the trimming engine, and many little tweaks, some
+          of which was lost in a disk crash
+4/6/02    Rewrote trimmer to be more accurate
+2/6/02    Added GYMX (YMAmp compression/tagging) detection and GYM DAC data
+          conversion
+1/6/02    Release 4
+1/6/02    Added GYM (not GYMX), CYM and SSL conversion; fixed a bug in the
+          optimiser
+31/5/02   Redesigned GUI; added clock rate setting and title/lengths copying
+28/5/02   Release 3
+27/5/02   Added Unicode NCR conversion for GD3s, and made GD3 System a combobox
+          which fills in the Japanese equivalent where possible
+19/5/02   Fixed some bugs in the YM2413 optimiser
+13/5/02   Added VGM rate detection button, and 50->60Hz conversion button
+8/4/02    Public release 2
+8/4/02    Improved PSG handling based on new information I found, lots of other
+          bug fixes
+4/3/02    Fixed a bug which made the GD3 tagger crash the program if no existing
+          GD3 had been opened yet
+3/3/02    Improved handling of YM2612 and YM2151 data (ie. stopped discarding
+          it)
+10/3/02   The GD3 updater was incorrectly setting the EOF offset, it's fixed.
+30/1/02   Public release 1
+30/12/01  Version (hmm) 7ish, I haven't been writing here for a while. Fixed a
+          bug where when a tone key was lifted and pressed with the same
+          settings, the second press was not written; fixed a bug where it
+          would show a time like "0:60"; other stuff too no doubt
+28/11/01  Version 5 - fixed a bug with the length display
+27/11/01  Version 4 - fixed some bugs with PSG looping, and when FM keys were
+          lifted and pressed instantaneously. Fixed a bug with the GD3 tagger.
+23/11/01  Version 3 - added GD3 editor
+22/11/01  Version 2 - changed to GUI
+20/11/01  Version 1 - console mode
+
+
+"Cannot convert compressed GYM"
+===============================
+
+The YM-Amp Winamp plugin for GYM and CYM files introduced a descriptive header
+for GYM files. This was enhanced with GYM-tailored compression in an unofficial
+update. Unfortunately, this compression is not documented so I can't decompress
+it. (I suspect it's quite complicated anyway.)
+
+So, if you want to convert such files, you need to decompress them. YM-Amp is a
+bit buggy, you have to do it exactly like this:
+
+1. Get YMAmp 2.0b plugin
+2. Load GYM files in Winamp
+3. Press Play (X)
+4. Press Alt+3
+5. Click "Decompress", "OK"
+6. Press Next (B)
+7. Go to 4
+
+In other words, you have to only decompress the currently playing (or, the last
+played) file.
+
+
+Right-click -> VGMTool
+======================
+
+Maybe it's useful for you to be able to edit VGM files without having to open
+VGMTool and drag/drop onto it. Simply open up Regedit and find
+
+HKEY_CLASSES_ROOT\.vgm
+
+It should be there if you've got VGM files associated with Winamp.
+
+Under that, add a key called "shell"; under that, add one called "Edit"; under
+that, add one called "command". Under that (phew!) double-click on "(Default)"
+and type in something like this:
+
+"c:\Program Files\VGMTool\VGMTool.exe" "%1"
+
+where you've written the path to VGMTool, enclosed in quotes, followed by a
+space, then "%1" (including the quotes).
+
+Do the same for HKEY_CLASSES_ROOT\.vgz if you want.
+
+Now, right-clicking on VGM files will give an Edit option. Change the (Default)
+value of the "Edit" key to something else, like "Edit with &VGMTool", to
+customise even more.
+
+
+International characters
+========================
+
+VGMTool supports the Unicode text in GD3 tags. It does this in three ways:
+
+1. If it can send the Unicode direct to the edit boxes, it will.
+2. If it can't, it will try to convert to your system's native character set.
+3. If that fails, it will convert any non-ASCII characters to HTML-style
+   hexadecimal Numerical Character References.
+
+This should allow text to be displayed without loss of information, and in the
+most visible way possible. You should be able to edit the text and it will be
+processed back to the tag's Unicode representation in a similar way.
+
+If you want to see Japanese text properly, you have to install the requried
+support on your system. In Windows XP, open the "Regional and Language Options"
+control panel applet, choose the "Languages" tab and select "Install files for
+East Asian languages". (Of course, if your Windows is not English, it'll be
+labelled in your language.) You'll need the installation CD for the requires
+hundreds of megabytes of files. That should be enough for you to see all the
+GD3 text you're likely to ever see.
+
+If you don't, you might see "boxes" in place of undisplayable characters.
+Simply ignore them and they will not destroy any information.
+
+Hexadecimal NCRs will always be processed, no matter what the conversion mode,
+so you can always use them when needed. I don't deal with decimal NCRs at all,
+and broken NCRs might cause problems.
+
+
+
+
+Maxim
+maxim@mwos.cjb.net
+

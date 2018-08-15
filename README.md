@@ -24,6 +24,7 @@ Arcade
 * Dragon Saber: After Story of Dragon Spirit
 * E.D.F.: Earth Defense Force
 * Fantasy Zone
+* Fantasy Zone II DX: The Tears of Opa-Opa (part of the first track)
 * Fighting Layer
 * Final Fight
 * Galaxy Force II
