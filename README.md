@@ -23,8 +23,9 @@ Arcade
 * Daytona USA
 * Dragon Saber: After Story of Dragon Spirit
 * E.D.F.: Earth Defense Force
+* Elevator Action Returns
 * Fantasy Zone
-* Fantasy Zone II DX: The Tears of Opa-Opa (part of the first track)
+* Fantasy Zone II DX: The Tears of Opa-Opa // part of the first track
 * Fighting Layer
 * Final Fight
 * Galaxy Force II
@@ -42,6 +43,7 @@ Arcade
 * Rolling Thunder 2
 * S.D.I.: Strategic Defense Initiative
 * Shinobi
+* Soldam
 * Space Harrier
 * Street Fighter Alpha 2
 * Sunset Riders
@@ -244,6 +246,7 @@ PC Engine / TurboGrafx-16
 * Aldynes - The Mission Code for Rage Crisis
 * Magical Chase, The
 * Super Star Soldier
+* Susano-O Densetsu
 
 PC-88xx
 
@@ -349,7 +352,9 @@ SNES
 * Hagane - The Final Conflict
 * Hiouden: Mamono-tachi to no Chikai
 * Honkaku Shougi: Fuuunji Ryuuou
+* Hourai Gakuen no Bouken!: Tenkousei Scramble
 * Ihatovo Monogatari
+* Last Bible III
 * Legend of Zelda, The - A Link to the Past
 * Live A Live
 * Mega Man & Bass [Rockman & Forte]
