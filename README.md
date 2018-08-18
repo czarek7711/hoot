@@ -339,7 +339,6 @@ SNES
 * Contra III: The Alien Wars
 * Crystal Beans From Dungeon Explorer
 * Cybernator [Assault Suits Valken]
-* Demon's Crest
 * Donkey Kong Country
 * Donkey Kong Country 2 - Diddy's Kong Quest
 * Dragon Quest III: Soshite Densetsu he...
@@ -347,7 +346,6 @@ SNES
 * F-Zero
 * Final Fantasy V
 * Final Fantasy VI
-* Front Mission
 * Front Mission: Gun Hazard
 * Hagane - The Final Conflict
 * Hiouden: Mamono-tachi to no Chikai
@@ -374,7 +372,6 @@ SNES
 * SimCity
 * Sparkster
 * Star Fox
-* Star Fox 2
 * Super Aleste
 * Super Bomberman 3
 * Super Castlevania IV
