@@ -160,7 +160,7 @@ NES
 * Blue Marlin, The
 * Castlevania
 * Castlevania II - Simon's Quest
-* Castlevania III - Dracula's Curse [Akumajou Densetsu] (VRC6)
+* Castlevania III - Dracula's Curse [Akumajou Densetsu]
 * Chip 'n Dale Rescue Rangers
 * Choujin Sentai - Jetman
 * Contra
@@ -172,7 +172,7 @@ NES
 * Dragon Quest III: The Seeds of Salvation
 * Dragon Quest IV: Chapters of the Chosen
 * Erik the Viking (Prototype)
-* Esper Dream 2 (VRC6)
+* Esper Dream 2
 * Falsion (FDS)
 * Ferrari Grand Prix Challenge
 * Final Fantasy II
@@ -188,7 +188,7 @@ NES
 * Kirby's Adventure
 * Konami Hyper Soccer // unlabeled tracks
 * Kunio-kun no Nekketsu Soccer League
-* Lagrange Point (VRC7)
+* Lagrange Point
 * Legend of Zelda 2, The - The Adventure of Link (FDS)
 * Legend of Zelda, The
 * Life Force [Salamander]
@@ -205,7 +205,7 @@ NES
 * Megami Tensei II - Digital Devil Story
 * Metroid
 * Mother
-* Mouryou Senki Madara (VRC6)
+* Mouryou Senki Madara
 * Ninja Gaiden II - The Dark Sword of Chaos
 * Ninja Gaiden III - The Ancient Ship of Doom
 * Ninja Gaiden [Ninja Ryukenden]
@@ -213,7 +213,7 @@ NES
 * Rollergames
 * Shadow of the Ninja [Kage]
 * Shatterhand [Tokkyuu Shirei - Solbrain]
-* Shovel Knight (VRC6)
+* Shovel Knight
 * Silver Surfer
 * Solstice - The Quest for the Staff of Demons
 * Super C [Super Contra]
@@ -244,6 +244,8 @@ Neo Geo
 PC Engine / TurboGrafx-16
 
 * Aldynes - The Mission Code for Rage Crisis
+* Legend of Xanadu, The [Kaze no Densetsu Xanadu]
+* Legend of Xanadu II, The [Kaze no Densetsu Xanadu II]
 * Magical Chase, The
 * Super Star Soldier
 * Susano-O Densetsu
@@ -370,6 +372,7 @@ SNES
 * Secret of Mana [Seiken Densetsu 2]
 * Seiken Densetsu 3
 * SimCity
+* Soul Blazer
 * Sparkster
 * Star Fox
 * Super Aleste
