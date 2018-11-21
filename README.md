@@ -80,7 +80,6 @@ MSX Computers
 * SD Snatcher
 * Salamander
 * Snatcher
-* Space Manbow
 
 MegaDrive / Genesis
 
@@ -115,8 +114,6 @@ MegaDrive / Genesis
 * Ristar - The Shooting Star
 * Rocket Knight Adventures
 * Rolling Thunder 2
-* Shining Force II: The Ancient Seal
-* Shining and the Darkness
 * Shinobi II: The Revenge of Shinobi
 * Shinobi III: Return of the Ninja Master
 * Socket [Time Dominator 1st]
@@ -146,16 +143,12 @@ MegaDrive / Genesis
 NES
 
 * Abadox - The Deadly Inner War
-* Adventure Island
-* Adventure Island 3
 * Adventures of Bayou Billy, The
 * Akumajou Special - Boku Dracula-kun
 * Almana no Kiseki (FDS)
 * Base Wars - Cyber Stadium Series
 * Batman
 * Batman Returns
-* Battletoads & Double Dragon - The Ultimate Team
-* Battletoads
 * Blaster Master
 * Blue Marlin, The
 * Castlevania
@@ -169,7 +162,6 @@ NES
 * Dark Lord
 * Dr. Mario
 * Dragon Quest II: Luminaries of the Legendary Line
-* Dragon Quest III: The Seeds of Salvation
 * Dragon Quest IV: Chapters of the Chosen
 * Erik the Viking (Prototype)
 * Esper Dream 2
@@ -181,7 +173,6 @@ NES
 * Gremlins 2 - The New Batch
 * Gyruss (FDS)
 * Ivan "Ironman" Stewart's Super Off Road
-* Jackie Chan's Action Kung-Fu
 * Journey to Silius [RAF World]
 * Just Breed
 * Kick Master
@@ -217,15 +208,11 @@ NES
 * Silver Surfer
 * Solstice - The Quest for the Staff of Demons
 * Super C [Super Contra]
-* Super Dodge Ball [Nekketsu Koukou Dodgeball-bu]
-* Super Mario Bros.
-* Super Mario Bros. 2 [Yume Koujou - Doki Doki Panic]
 * Super Mario Bros. 3
 * Super Spy Hunter [Battle Formula]
 * Teenage Mutant Ninja Turtles II - The Arcade Game
 * Teenage Mutant Ninja Turtles III - The Manhattan Project
 * Teenage Mutant Ninja Turtles [Gekikame Ninja Den]
-* Tetris
 * Tiny Toon Adventures
 * Tom & Jerry: The Ultimate Game of Cat and Mouse!
 * Trolls in Crazyland, The [Doki! Doki! Yuuenchi - Crazyland Daisakusen]
@@ -349,7 +336,6 @@ SNES
 * Final Fantasy V
 * Final Fantasy VI
 * Front Mission: Gun Hazard
-* Hagane - The Final Conflict
 * Hiouden: Mamono-tachi to no Chikai
 * Honkaku Shougi: Fuuunji Ryuuou
 * Hourai Gakuen no Bouken!: Tenkousei Scramble
@@ -363,6 +349,7 @@ SNES
 * Naki no Ryuu: Mahjong Hishouden
 * Ninja Warriors, The
 * Ohmono Black Bass Fishing: Jinzouko Hen
+* Otogirisou
 * Pebble Beach Golf Links
 * Pilotwings
 * Plok
@@ -384,9 +371,7 @@ SNES
 * Super Mario World 2 - Yoshi's Island
 * Super Metroid
 * Super R-Type
-* Tales of Phantasia
 * Teenage Mutant Ninja Turtles: Tournament Fighters
-* Thoroughbred Breeder 3
 * Treasure Hunter G
 * Uncharted Waters: New Horizons
 * Wagyan Paradise
