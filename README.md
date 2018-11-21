@@ -234,6 +234,7 @@ PC Engine / TurboGrafx-16
 * Legend of Xanadu, The [Kaze no Densetsu Xanadu]
 * Legend of Xanadu II, The [Kaze no Densetsu Xanadu II]
 * Magical Chase, The
+* Neutopia II
 * Super Star Soldier
 * Susano-O Densetsu
 
@@ -371,6 +372,7 @@ SNES
 * Super Mario World 2 - Yoshi's Island
 * Super Metroid
 * Super R-Type
+* Sword Maniac
 * Teenage Mutant Ninja Turtles: Tournament Fighters
 * Treasure Hunter G
 * Uncharted Waters: New Horizons
