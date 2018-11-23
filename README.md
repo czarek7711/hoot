@@ -347,6 +347,7 @@ SNES
 * Mega Man & Bass [Rockman & Forte]
 * Mega Man X
 * Mega Man X2
+* Monstania
 * Naki no Ryuu: Mahjong Hishouden
 * Ninja Warriors, The
 * Ohmono Black Bass Fishing: Jinzouko Hen
