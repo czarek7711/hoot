@@ -231,6 +231,7 @@ Neo Geo
 PC Engine / TurboGrafx-16
 
 * Aldynes - The Mission Code for Rage Crisis
+* City Hunter
 * Legend of Xanadu, The [Kaze no Densetsu Xanadu]
 * Legend of Xanadu II, The [Kaze no Densetsu Xanadu II]
 * Magical Chase, The
