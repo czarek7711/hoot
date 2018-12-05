@@ -361,6 +361,7 @@ SNES
 * Radical Dreamers
 * Secret of Mana [Seiken Densetsu 2]
 * Seiken Densetsu 3
+* Shin Kidou Senki Gundam W: Endless Duel
 * SimCity
 * Soul Blazer
 * Sparkster
@@ -375,7 +376,10 @@ SNES
 * Super Metroid
 * Super R-Type
 * Sword Maniac
+* Syvalion
+* Tales of Phantasia
 * Teenage Mutant Ninja Turtles: Tournament Fighters
+* Terranigma [Tenchi Souzou]
 * Treasure Hunter G
 * Uncharted Waters: New Horizons
 * Wagyan Paradise
