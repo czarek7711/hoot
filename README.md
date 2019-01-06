@@ -40,6 +40,7 @@ Arcade
 * Outfoxies, The
 * Power Drift
 * Quartet
+* Quiz Nanairo Dreams: Nijiirochou no Kiseki
 * Rolling Thunder 2
 * S.D.I.: Strategic Defense Initiative
 * Shinobi
