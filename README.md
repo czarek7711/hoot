@@ -56,6 +56,7 @@ Arcade
 * Thunder Blade
 * U. N. Squadron
 * X-Men
+* X-Men: Children of the Atom
 * Xexex
 
 Gameboy
@@ -317,6 +318,7 @@ PC-98xx
 
 PC/AT
 
+* Secret of Monkey Island, The
 * WarCraft 2 // some unlabeled tracks
 
 SNES
