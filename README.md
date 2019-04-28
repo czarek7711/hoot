@@ -30,9 +30,11 @@ Arcade
 * Final Fight
 * Galaxy Force II
 * Gradius III
+* Gradius IV
 * Magic Sword - Heroic Fantasy
 * Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
+* Mysstic Warriors
 * Night Slashers
 * Night Striker
 * Ninja Warriors, The
@@ -93,7 +95,6 @@ MegaDrive / Genesis
 * Crude Buster [Two Crude]
 * Crusader of Centy
 * Devilish [Bad Omen]
-* Dragon's Fury [Devil Crash MD]
 * Dynamite Headdy
 * Gaiares
 * Gauntlet IV
@@ -175,6 +176,7 @@ NES
 * Gremlins 2 - The New Batch
 * Gyruss (FDS)
 * Ivan "Ironman" Stewart's Super Off Road
+* Jackal
 * Journey to Silius [RAF World]
 * Just Breed
 * Kick Master
@@ -217,7 +219,6 @@ NES
 * Teenage Mutant Ninja Turtles [Gekikame Ninja Den]
 * Tiny Toon Adventures
 * Tom & Jerry: The Ultimate Game of Cat and Mouse!
-* Trolls in Crazyland, The [Doki! Doki! Yuuenchi - Crazyland Daisakusen]
 * Werewolf - The Last Warrior
 * Yume Penguin Monogatari
 
@@ -234,6 +235,8 @@ PC Engine / TurboGrafx-16
 
 * Aldynes - The Mission Code for Rage Crisis
 * City Hunter
+* Devil's Crush [Devil's Crash]
+* Digital Champ - Battle Boxing
 * Legend of Xanadu, The [Kaze no Densetsu Xanadu]
 * Legend of Xanadu II, The [Kaze no Densetsu Xanadu II]
 * Magical Chase, The
@@ -273,7 +276,7 @@ PC-98xx
 * Dragon Slayer: The Legend of Heroes
 * Dragon Slayer: The Legend of Heroes 2
 * Escalation 95: O Anesamatte Yonde Li Desu ka? // unlabeled tracks
-* Eve: Burst Terror!
+* Eve: Burst Error!
 * FlixMix
 * Grounseed // some translation needed
 * If
@@ -294,8 +297,6 @@ PC-98xx
 * Miwaku no Chousho
 * Night Slave
 * Only You: Seiki Matsu no Juliet to Tachi
-* PeroPero Candy: You no Shou // unlabeled tracks
-* Popful Mail
 * Possessioner
 * Power Dolls
 * Power Dolls 2
@@ -312,9 +313,8 @@ PC-98xx
 * Viper CTR: Asuka
 * Waku Waku Mahjong Panic 2: Koku Shimusou
 * Xenon -Fantasy Body-
-* YU-NO: A Girl Who Chants Love at the Bound of this World
+* YU-NO: The Girl that Chants Love at the Edge of the World
 * Yougekitai: Jashin Koumaroku
-* Ys II -Ancient Ys Vanished The Final Chapter-
 
 PC/AT
 
@@ -386,6 +386,7 @@ SNES
 * Treasure Hunter G
 * Uncharted Waters: New Horizons
 * Wagyan Paradise
+* Waterworld
 
 X68000
 
@@ -411,6 +412,7 @@ X68000
 * Metal Eye // some translation missing
 * Nama Baseball '68 [Namachuukei 68]
 * Neural Gear
+* Phalanx
 * Pita Pat
 * Sion II: The First Attack
 * Spindizzy II
