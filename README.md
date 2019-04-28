@@ -34,7 +34,7 @@ Arcade
 * Magic Sword - Heroic Fantasy
 * Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
-* Mysstic Warriors
+* Mystic Warriors
 * Night Slashers
 * Night Striker
 * Ninja Warriors, The
@@ -237,6 +237,7 @@ PC Engine / TurboGrafx-16
 * City Hunter
 * Devil's Crush [Devil's Crash]
 * Digital Champ - Battle Boxing
+* F-1 Dream
 * Legend of Xanadu, The [Kaze no Densetsu Xanadu]
 * Legend of Xanadu II, The [Kaze no Densetsu Xanadu II]
 * Magical Chase, The
