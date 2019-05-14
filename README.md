@@ -94,6 +94,7 @@ MegaDrive / Genesis
 * Contra: Hard Corps
 * Crude Buster [Two Crude]
 * Crusader of Centy
+* Dangerous Seed
 * Devilish [Bad Omen]
 * Dynamite Headdy
 * Gaiares
@@ -249,6 +250,7 @@ PC-88xx
 
 * Misty Blue
 * Providence
+* Revolter
 * Scheme, The
 * Shinra Bansho
 * Sorcerian
@@ -283,6 +285,7 @@ PC-98xx
 * If
 * Illumina
 * Jinmon Yuugi // unlabeled tracks
+* King Breeder 98
 * Mahjongg Fantasia
 * Mahjongg Fantasia 2 // unlabeled tracks
 * Mahou Shoujo Fancy CoCo
@@ -371,6 +374,7 @@ SNES
 * Sparkster
 * Star Fox
 * Super Aleste
+* Super Back to the Future II
 * Super Bomberman 3
 * Super Castlevania IV
 * Super Ghouls 'n Ghost
