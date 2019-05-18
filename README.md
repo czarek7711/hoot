@@ -275,7 +275,6 @@ PC-98xx
 * Chou Jigen Densetsu Rall 3: Kakuseihen // some unlabeled tracks
 * Cyber Block Metal Orange
 * Desire -Spiral of Perversion-
-* Don't Call Me Amy!
 * Dragon Slayer: The Legend of Heroes
 * Dragon Slayer: The Legend of Heroes 2
 * Escalation 95: O Anesamatte Yonde Li Desu ka? // unlabeled tracks
