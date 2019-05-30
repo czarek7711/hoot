@@ -68,7 +68,6 @@ Gameboy
 * Castlevania Legends
 * Legend of Zelda, The - Link's Awakening
 * Raging Fighter [Outburst] // some unlabeled tracks
-* Super Mario Land
 * Super Mario Land 2 - 6 Golden Coins
 * Tetris
 * Trip World
@@ -96,7 +95,6 @@ MegaDrive / Genesis
 * Crusader of Centy
 * Dangerous Seed
 * Devilish [Bad Omen]
-* Dynamite Headdy
 * Gaiares
 * Gauntlet IV
 * Gley Lancer
@@ -113,14 +111,12 @@ MegaDrive / Genesis
 * Master of Monsters
 * McDonald's Treasure Land Adventure
 * Mega Turrican
-* Midnight Resistance
 * Phantasy Star II
 * Ristar - The Shooting Star
 * Rocket Knight Adventures
 * Rolling Thunder 2
 * Shinobi II: The Revenge of Shinobi
 * Shinobi III: Return of the Ninja Master
-* Socket [Time Dominator 1st]
 * Sonic the Hedgehog
 * Sonic the Hedgehog 2
 * Sonic the Hedgehog 3 & Knuckles
@@ -164,7 +160,6 @@ NES
 * Contra Force [Ark Hound]
 * Crisis Force
 * Dark Lord
-* Dr. Mario
 * Dragon Quest II: Luminaries of the Legendary Line
 * Dragon Quest IV: Chapters of the Chosen
 * Erik the Viking (Prototype)
@@ -238,82 +233,53 @@ PC Engine / TurboGrafx-16
 * City Hunter
 * Devil's Crush [Devil's Crash]
 * Digital Champ - Battle Boxing
-* F-1 Dream
-* Legend of Xanadu, The [Kaze no Densetsu Xanadu]
-* Legend of Xanadu II, The [Kaze no Densetsu Xanadu II]
 * Magical Chase, The
 * Neutopia II
 * Super Star Soldier
 * Susano-O Densetsu
 
-PC-88xx
+PC-88
 
 * Misty Blue
 * Providence
 * Revolter
 * Scheme, The
-* Shinra Bansho
 * Sorcerian
 * Star/Ship Rendezvous
-* Wanderers from Super Scheme
 * Ys I -Ancient Ys Vanished Omen-
 
-PC-98xx
+PC-98
 
-* AD&D: Death Knights of Krynn
 * Advanced Power Dolls 2
-* Advanced Variable Geo 2
-* Akiko GOLD: The Queen of Adult // unlabeled tracks
-* Anime Mahjong X // unlabeled tracks
-* Area 88: Etranger 1995 // some translation missing
-* Ballade for Maria // unlabeled tracks
 * Black Bird: Tori Tachi no Tooboe
 * Brandish
-* Brandish 2 -The Planet Buster-
-* Brandish 3 -Spirit of Balcan-
-* Brandish VT
-* Chou Jigen Densetsu Rall 3: Kakuseihen // some unlabeled tracks
-* Cyber Block Metal Orange
 * Desire -Spiral of Perversion-
 * Dragon Slayer: The Legend of Heroes
-* Dragon Slayer: The Legend of Heroes 2
-* Escalation 95: O Anesamatte Yonde Li Desu ka? // unlabeled tracks
 * Eve: Burst Error!
 * FlixMix
 * Grounseed // some translation needed
-* If
-* Illumina
-* Jinmon Yuugi // unlabeled tracks
 * King Breeder 98
 * Mahjongg Fantasia
 * Mahjongg Fantasia 2 // unlabeled tracks
 * Mahou Shoujo Fancy CoCo
-* Mahou no Tenshi Creamy Mami: Futari no Rondo // some translation needed
-* Manji: PSY Yuuki // unlabeled tracks
-* Marine Rouge
-* Marionette Mind
 * Meikyuu Gakuensai: Kyuukousha no Nazo
 * Mesuneko Hishoshitsu // unlabeled tracks
 * Metal & Lace 2 [Ningyou Tsukai 2]
 * Metal Force
-* Miho: Momoiro Byoutou, Menkai Shazetsu!
 * Miwaku no Chousho
 * Night Slave
 * Only You: Seiki Matsu no Juliet to Tachi
 * Possessioner
 * Power Dolls
-* Power Dolls 2
 * Power Dolls 2 Dash
 * Puyo Puyo
 * Revival Xanadu
 * Rhyme Star
 * Rusty
-* Saint Diary: Kiyoshi-chan no Nikki // translation needed
 * Starfire
 * Trouble Outsiders // unlabeled tracks
 * Tsunyan Jaayao
 * Valkyrie: The Power Beauties
-* Viper CTR: Asuka
 * Waku Waku Mahjong Panic 2: Koku Shimusou
 * Xenon -Fantasy Body-
 * YU-NO: The Girl that Chants Love at the Edge of the World
@@ -390,7 +356,6 @@ SNES
 * Treasure Hunter G
 * Uncharted Waters: New Horizons
 * Wagyan Paradise
-* Waterworld
 
 X68000
 
