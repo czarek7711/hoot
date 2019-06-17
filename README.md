@@ -4,7 +4,7 @@ This here is my personal <i>hoot</i> folder with my favourite video game soundtr
 
 You can read about <i>hoot</i> here: http://vgmrips.net/wiki/Hoot
 
-If I add any new stuff it goes to <i>xml/\~systems\~.xml</i> which is the only xml file hoot reads for soundtrack entries.
+If I add anything it goes to <i>xml/\~systems\~.xml</i> which is the only xml file <i>hoot</i> reads for soundtrack entries.
 
 ![Screenshot](screenshot.png)
 
@@ -12,7 +12,6 @@ If I add any new stuff it goes to <i>xml/\~systems\~.xml</i> which is the only x
 
 Arcade
 
-* After Burner 2
 * Akuma-Jou Dracula [Haunted Castle]
 * Aliens
 * Armed Police Batrider
@@ -29,22 +28,16 @@ Arcade
 * Fighting Layer
 * Final Fight
 * Galaxy Force II
-* Gradius III
 * Gradius IV
 * Magic Sword - Heroic Fantasy
 * Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
-* Mystic Warriors
 * Night Slashers
-* Night Striker
 * Ninja Warriors, The
 * OutRun
 * Outfoxies, The
-* Power Drift
-* Quartet
 * Quiz Nanairo Dreams: Nijiirochou no Kiseki
 * Rolling Thunder 2
-* S.D.I.: Strategic Defense Initiative
 * Shinobi
 * Soldam
 * Space Harrier
@@ -57,9 +50,7 @@ Arcade
 * Teenage Mutant Ninja Turtles - Turtles in Time
 * Thunder Blade
 * U. N. Squadron
-* X-Men
 * X-Men: Children of the Atom
-* Xexex
 
 Gameboy
 
@@ -258,6 +249,7 @@ PC-98
 * Eve: Burst Error!
 * FlixMix
 * Grounseed // some translation needed
+* Kankin // unlabeled tracks
 * King Breeder 98
 * Mahjongg Fantasia
 * Mahjongg Fantasia 2 // unlabeled tracks
@@ -310,10 +302,9 @@ SNES
 * Final Fantasy V
 * Final Fantasy VI
 * Front Mission: Gun Hazard
+* Gradius III
 * Hiouden: Mamono-tachi to no Chikai
-* Honkaku Shougi: Fuuunji Ryuuou
 * Hourai Gakuen no Bouken!: Tenkousei Scramble
-* Ihatovo Monogatari
 * Last Bible III
 * Legend of Zelda, The - A Link to the Past
 * Live A Live
@@ -324,7 +315,6 @@ SNES
 * Naki no Ryuu: Mahjong Hishouden
 * Ninja Warriors, The
 * Ohmono Black Bass Fishing: Jinzouko Hen
-* Otogirisou
 * Pebble Beach Golf Links
 * Pilotwings
 * Plok
