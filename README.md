@@ -6,7 +6,7 @@ You can read about <i>hoot</i> here: http://vgmrips.net/wiki/Hoot
 
 If I add anything it goes to <i>xml/\~systems\~.xml</i> which is the only xml file <i>hoot</i> reads for soundtrack entries.
 
-![Screenshot](screenshot.png)
+![Hoot in action](screenshot.gif)
 
 ## Games List ##
 
@@ -216,7 +216,6 @@ Neo Geo
 * Metal Slug 2
 * Metal Slug 3
 * Neo Turf Masters
-* Super Dodge Ball
 
 PC Engine / TurboGrafx-16
 
