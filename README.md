@@ -82,7 +82,6 @@ MegaDrive / Genesis
 * Battle Mania Daiginjo
 * Castlevania: Bloodlines [Vampire Killer]
 * Contra: Hard Corps
-* Crude Buster [Two Crude]
 * Crusader of Centy
 * Dangerous Seed
 * Devilish [Bad Omen]
@@ -92,7 +91,6 @@ MegaDrive / Genesis
 * Golden Axe II
 * Gunstar Heroes
 * Gynoug [Wings of Wor]
-* Herzog Zwei
 * Hybrid Front, The
 * Jewel Master
 * Langrisser II
@@ -140,7 +138,6 @@ NES
 * Base Wars - Cyber Stadium Series
 * Batman
 * Batman Returns
-* Blaster Master
 * Blue Marlin, The
 * Castlevania
 * Castlevania II - Simon's Quest
@@ -153,12 +150,10 @@ NES
 * Dark Lord
 * Dragon Quest II: Luminaries of the Legendary Line
 * Dragon Quest IV: Chapters of the Chosen
-* Erik the Viking (Prototype)
 * Esper Dream 2
 * Falsion (FDS)
 * Ferrari Grand Prix Challenge
 * Final Fantasy II
-* Final Fantasy III
 * Gimmick!
 * Gremlins 2 - The New Batch
 * Gyruss (FDS)
@@ -177,27 +172,22 @@ NES
 * Little Nemo - The Dream Master
 * Magician
 * Mega Man
-* Mega Man 2 (VRC6)
 * Mega Man 2
-* Mega Man 3 (VRC6)
 * Mega Man 3
-* Mega Man 4 (VRC6)
 * Mega Man 4
 * Mega Man 5
-* Megami Tensei II - Digital Devil Story
 * Metroid
 * Mother
 * Mouryou Senki Madara
+* Ninja Gaiden
 * Ninja Gaiden II - The Dark Sword of Chaos
-* Ninja Gaiden III - The Ancient Ship of Doom
-* Ninja Gaiden [Ninja Ryukenden]
 * Pictionary
 * Rollergames
 * Shadow of the Ninja [Kage]
 * Shatterhand [Tokkyuu Shirei - Solbrain]
 * Shovel Knight
 * Silver Surfer
-* Solstice - The Quest for the Staff of Demons
+* Street Fighter 2010 - Final Fight
 * Super C [Super Contra]
 * Super Mario Bros. 3
 * Super Spy Hunter [Battle Formula]
@@ -256,7 +246,6 @@ PC-98
 * Meikyuu Gakuensai: Kyuukousha no Nazo
 * Mesuneko Hishoshitsu // unlabeled tracks
 * Metal & Lace 2 [Ningyou Tsukai 2]
-* Metal Force
 * Miwaku no Chousho
 * Night Slave
 * Only You: Seiki Matsu no Juliet to Tachi
@@ -304,13 +293,10 @@ SNES
 * Gradius III
 * Hiouden: Mamono-tachi to no Chikai
 * Hourai Gakuen no Bouken!: Tenkousei Scramble
-* Last Bible III
 * Legend of Zelda, The - A Link to the Past
-* Live A Live
 * Mega Man & Bass [Rockman & Forte]
 * Mega Man X
 * Mega Man X2
-* Monstania
 * Naki no Ryuu: Mahjong Hishouden
 * Ninja Warriors, The
 * Ohmono Black Bass Fishing: Jinzouko Hen
@@ -328,19 +314,15 @@ SNES
 * Sparkster
 * Star Fox
 * Super Aleste
-* Super Back to the Future II
-* Super Bomberman 3
 * Super Castlevania IV
 * Super Ghouls 'n Ghost
 * Super Mario Kart
-* Super Mario World
 * Super Mario World 2 - Yoshi's Island
 * Super Metroid
 * Super R-Type
 * Sword Maniac
 * Syvalion
 * Tales of Phantasia
-* Teenage Mutant Ninja Turtles: Tournament Fighters
 * Terranigma [Tenchi Souzou]
 * Treasure Hunter G
 * Uncharted Waters: New Horizons
@@ -351,8 +333,6 @@ X68000
 * 38 Man Kilo no Kokuu
 * Akiko -Premium-
 * Akumajo Dracula
-* Akushu
-* Arcus Odyssey
 * Asuka 120%: Burning Fest
 * Bosconian
 * Cho Ren Sha 68K
@@ -372,11 +352,9 @@ X68000
 * Neural Gear
 * Phalanx
 * Pita Pat
-* Sion II: The First Attack
 * Spindizzy II
 * Star Cruiser
 * Star Trader
 * War-Torn Versnag
 * Yami no Ketsuzoku // some translation needed
-* Yami no Ketsuzoku Kanketsu Hen [Final Version] // some translation needed
 * Ys III -Wanderers From Ys-
