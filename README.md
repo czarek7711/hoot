@@ -273,6 +273,7 @@ PC/AT
 SNES
 
 * Actraiser
+* Arcana [Cardmaster]
 * Axelay
 * Bahamut Lagoon
 * Brainlord
@@ -304,7 +305,6 @@ SNES
 * Pilotwings
 * Plok
 * Pop'n Twinbee
-* Psycho Dream
 * Radical Dreamers
 * Secret of Mana [Seiken Densetsu 2]
 * Seiken Densetsu 3
