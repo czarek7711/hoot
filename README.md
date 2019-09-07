@@ -132,9 +132,8 @@ MegaDrive / Genesis
 NES
 
 * Abadox - The Deadly Inner War
-* Adventures of Bayou Billy, The
 * Akumajou Special - Boku Dracula-kun
-* Almana no Kiseki (FDS)
+* Arumana no Kiseki
 * Base Wars - Cyber Stadium Series
 * Batman
 * Batman Returns
@@ -148,25 +147,24 @@ NES
 * Contra Force [Ark Hound]
 * Crisis Force
 * Dark Lord
-* Dragon Quest II: Luminaries of the Legendary Line
 * Dragon Quest IV: Chapters of the Chosen
 * Esper Dream 2
-* Falsion (FDS)
+* Exciting Soccer - Konami Cup
+* Falsion
 * Ferrari Grand Prix Challenge
 * Final Fantasy II
 * Gimmick!
 * Gremlins 2 - The New Batch
-* Gyruss (FDS)
+* Gyruss
 * Ivan "Ironman" Stewart's Super Off Road
 * Jackal
 * Journey to Silius [RAF World]
 * Just Breed
 * Kick Master
-* Kirby's Adventure
 * Konami Hyper Soccer // unlabeled tracks
 * Kunio-kun no Nekketsu Soccer League
 * Lagrange Point
-* Legend of Zelda 2, The - The Adventure of Link (FDS)
+* Legend of Zelda 2, The - The Adventure of Link
 * Legend of Zelda, The
 * Life Force [Salamander]
 * Little Nemo - The Dream Master
@@ -189,11 +187,10 @@ NES
 * Silver Surfer
 * Street Fighter 2010 - Final Fight
 * Super C [Super Contra]
-* Super Mario Bros. 3
 * Super Spy Hunter [Battle Formula]
+* Teenage Mutant Ninja Turtles
 * Teenage Mutant Ninja Turtles II - The Arcade Game
 * Teenage Mutant Ninja Turtles III - The Manhattan Project
-* Teenage Mutant Ninja Turtles [Gekikame Ninja Den]
 * Tiny Toon Adventures
 * Tom & Jerry: The Ultimate Game of Cat and Mouse!
 * Werewolf - The Last Warrior
@@ -220,13 +217,9 @@ PC Engine / TurboGrafx-16
 
 PC-88
 
-* Misty Blue
 * Providence
 * Revolter
 * Scheme, The
-* Sorcerian
-* Star/Ship Rendezvous
-* Ys I -Ancient Ys Vanished Omen-
 
 PC-98
 
