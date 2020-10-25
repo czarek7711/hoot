@@ -79,6 +79,7 @@ MegaDrive / Genesis
 
 * Alien 3
 * Alien Soldier
+* Alisia Dragoon
 * Battle Mania Daiginjo
 * Castlevania: Bloodlines [Vampire Killer]
 * Contra: Hard Corps
@@ -166,7 +167,6 @@ NES
 * Lagrange Point
 * Legend of Zelda 2, The - The Adventure of Link
 * Legend of Zelda, The
-* Life Force [Salamander]
 * Little Nemo - The Dream Master
 * Magician
 * Mega Man
@@ -220,6 +220,7 @@ PC-88
 * Providence
 * Revolter
 * Scheme, The
+* Sorcerian
 
 PC-98
 
