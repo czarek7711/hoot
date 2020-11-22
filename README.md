@@ -210,6 +210,7 @@ PC Engine / TurboGrafx-16
 * City Hunter
 * Devil's Crush [Devil's Crash]
 * Digital Champ - Battle Boxing
+* Legend of Xanadu, The [Kaze no Densetsu Xanadu]
 * Magical Chase, The
 * Neutopia II
 * Super Star Soldier
@@ -281,6 +282,7 @@ SNES
 * Donkey Kong Country 2 - Diddy's Kong Quest
 * Dragon Quest III: Soshite Densetsu he...
 * Earthbound [Mother 2]
+* Energy Breaker
 * F-Zero
 * Final Fantasy V
 * Final Fantasy VI
@@ -288,6 +290,7 @@ SNES
 * Gradius III
 * Hiouden: Mamono-tachi to no Chikai
 * Hourai Gakuen no Bouken!: Tenkousei Scramble
+* Hyper Zone
 * Legend of Zelda, The - A Link to the Past
 * Mega Man & Bass [Rockman & Forte]
 * Mega Man X
@@ -295,11 +298,13 @@ SNES
 * Naki no Ryuu: Mahjong Hishouden
 * Ninja Warriors, The
 * Ohmono Black Bass Fishing: Jinzouko Hen
+* Otogirisou
 * Pebble Beach Golf Links
 * Pilotwings
 * Plok
 * Pop'n Twinbee
 * Radical Dreamers
+* Rudra no Hihou
 * Secret of Mana [Seiken Densetsu 2]
 * Seiken Densetsu 3
 * Shin Kidou Senki Gundam W: Endless Duel
@@ -317,6 +322,7 @@ SNES
 * Sword Maniac
 * Syvalion
 * Tales of Phantasia
+* Tetris Attack [Panel de Pon]
 * Terranigma [Tenchi Souzou]
 * Treasure Hunter G
 * Uncharted Waters: New Horizons
