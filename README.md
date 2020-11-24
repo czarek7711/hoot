@@ -286,6 +286,7 @@ SNES
 * F-Zero
 * Final Fantasy V
 * Final Fantasy VI
+* Final Fantasy: Mystic Quest
 * Front Mission: Gun Hazard
 * Gradius III
 * Hiouden: Mamono-tachi to no Chikai
