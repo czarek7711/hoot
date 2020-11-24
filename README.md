@@ -307,7 +307,6 @@ SNES
 * Plok
 * Pop'n Twinbee
 * Radical Dreamers
-* Rudra no Hihou
 * Secret of Mana [Seiken Densetsu 2]
 * Seiken Densetsu 3
 * Shin Kidou Senki Gundam W: Endless Duel
@@ -328,6 +327,7 @@ SNES
 * Tetris Attack [Panel de Pon]
 * Terranigma [Tenchi Souzou]
 * Treasure Hunter G
+* Treasure of the Rudras [Rudra no Hihou]
 * Uncharted Waters: New Horizons
 * Wagyan Paradise
 
