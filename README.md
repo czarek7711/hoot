@@ -291,7 +291,7 @@ SNES
 * Gradius III
 * Hiouden: Mamono-tachi to no Chikai
 * Hourai Gakuen no Bouken!: Tenkousei Scramble
-* Hyper Zone
+* HyperZone
 * Legend of Zelda, The - A Link to the Past
 * Live A Live
 * Mega Man & Bass [Rockman & Forte]
