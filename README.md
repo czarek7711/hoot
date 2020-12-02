@@ -81,12 +81,18 @@ MegaDrive / Genesis
 * Alien Soldier
 * Alisia Dragoon
 * Battle Mania Daiginjo
+* Bishoujo Senshi Sailor Moon
 * Castlevania: Bloodlines [Vampire Killer]
+* Columns III: Revenge of Columns
 * Contra: Hard Corps
+* Crude Buster [Two Crude]
 * Crusader of Centy
 * Dangerous Seed
 * Devilish [Bad Omen]
+* Dynamite Headdy
+* Fushigino Umi no Nadia
 * Gaiares
+* Gain Ground
 * Gauntlet IV
 * Gley Lancer
 * Golden Axe II
@@ -94,19 +100,28 @@ MegaDrive / Genesis
 * Gynoug [Wings of Wor]
 * Hybrid Front, The
 * Jewel Master
+* Landstalker: The Treasures of King Nole
 * Langrisser II
 * Lethal Enforcers
 * Light Crusader
 * M.U.S.H.A
+* Madou Monogatari I
 * Master of Monsters
 * McDonald's Treasure Land Adventure
 * Mega Turrican
+* Midnight Resistance
 * Phantasy Star II
+* Phantasy Star III
+* Phantasy Star IV
 * Ristar - The Shooting Star
 * Rocket Knight Adventures
 * Rolling Thunder 2
-* Shinobi II: The Revenge of Shinobi
+* Rolling Thunder 3
+* Shadow Dancer: The Secret of Shinobi
+* Shining Force II: The Ancient Seal
+* Shining in the Darkness
 * Shinobi III: Return of the Ninja Master
+* Socket [Time Dominator 1st]
 * Sonic the Hedgehog
 * Sonic the Hedgehog 2
 * Sonic the Hedgehog 3 & Knuckles
@@ -121,14 +136,17 @@ MegaDrive / Genesis
 * Super Fantasy Zone
 * Sword of Vermilion
 * Teenage Mutant Ninja Turtles: Tournament Fighters
+* The Revenge of Shinobi
 * Thunder Force III
 * Thunder Force IV
 * Time Trax (Prototype)
 * Valis III
 * Valis: The Fantasm Soldier
+* Vapor Trail: Hyper Offence Formation
 * Verytex
 * Vixen 357 // some unlabeled tracks
 * Yuu Yuu Hakusho - Makyou Toitsusen
+* Zero Wing
 
 NES
 
@@ -284,14 +302,22 @@ SNES
 * Earthbound [Mother 2]
 * Energy Breaker
 * F-Zero
+* Final Fantasy IV
 * Final Fantasy V
 * Final Fantasy VI
 * Final Fantasy: Mystic Quest
+* Fire Emblem: Monshou no Nazo
 * Front Mission: Gun Hazard
 * Gradius III
+* Hagane - The Final Conflict
 * Hiouden: Mamono-tachi to no Chikai
+* Honkaku Shougi: Fuuunji Ryuuou
 * Hourai Gakuen no Bouken!: Tenkousei Scramble
 * HyperZone
+* Ihatovo Monogatari
+* King od Dragons, The
+* Last Bible III
+* Legend of The Mystical Ninja, The
 * Legend of Zelda, The - A Link to the Past
 * Live A Live
 * Mega Man & Bass [Rockman & Forte]
@@ -300,6 +326,8 @@ SNES
 * Monstania
 * Naki no Ryuu: Mahjong Hishouden
 * Ninja Warriors, The
+* nontan to Issho: Kuru Kuru Puzzle
+* Ogre Battle: The March of the Black Queen
 * Ohmono Black Bass Fishing: Jinzouko Hen
 * Otogirisou
 * Pebble Beach Golf Links
@@ -307,6 +335,8 @@ SNES
 * Plok
 * Pop'n Twinbee
 * Radical Dreamers
+* Romancing SaGa 3
+* Secret of Evermore
 * Secret of Mana [Seiken Densetsu 2]
 * Seiken Densetsu 3
 * Shin Kidou Senki Gundam W: Endless Duel
@@ -314,22 +344,32 @@ SNES
 * Soul Blazer
 * Sparkster
 * Star Fox
+* Star Ocean
 * Super Aleste
+* Super Back to the Future II
+* Super Bomberman 3
 * Super Castlevania IV
 * Super Ghouls 'n Ghost
 * Super Mario Kart
+* Super Mario RPG: Legend of the Seven Stars
 * Super Mario World 2 - Yoshi's Island
 * Super Metroid
 * Super R-Type
 * Sword Maniac
 * Syvalion
+* Tactics Ogre: Let Us Cling Together
 * Tales of Phantasia
+* Teenage Mutant Ninja Turtles: Tournament Fighters
 * Tetris Attack [Panel de Pon]
 * Terranigma [Tenchi Souzou]
+* Thoroughbred Breeder 3
 * Treasure Hunter G
 * Treasure of the Rudras [Rudra no Hihou]
+* Umihara Kawase
 * Uncharted Waters: New Horizons
 * Wagyan Paradise
+* Waterworld
+* Wild Guns
 
 X68000
 
