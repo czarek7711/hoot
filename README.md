@@ -166,20 +166,28 @@ NES
 * Contra Force [Ark Hound]
 * Crisis Force
 * Dark Lord
+* Double Dragon II - The Revenge
+* Dragon Fighter
+* Dragon Quest
+* Dragon Quest II: Luminaries of the Legendary Line
 * Dragon Quest IV: Chapters of the Chosen
 * Esper Dream 2
 * Exciting Soccer - Konami Cup
 * Falsion
 * Ferrari Grand Prix Challenge
 * Final Fantasy II
+* Final Fantasy III
 * Gimmick!
+* Goonies II, The
 * Gremlins 2 - The New Batch
 * Gyruss
 * Ivan "Ironman" Stewart's Super Off Road
 * Jackal
+* Jackie Chan's Action Kung-Fu
 * Journey to Silius [RAF World]
 * Just Breed
 * Kick Master
+* Kirby's Adventure
 * Konami Hyper Soccer // unlabeled tracks
 * Kunio-kun no Nekketsu Soccer League
 * Lagrange Point
@@ -192,11 +200,14 @@ NES
 * Mega Man 3
 * Mega Man 4
 * Mega Man 5
+* Megami Tensei II - Figital Devil Story
 * Metroid
+* Mitsum ga Tooru
 * Mother
 * Mouryou Senki Madara
 * Ninja Gaiden
 * Ninja Gaiden II - The Dark Sword of Chaos
+* Palamedes II - Star Twinkles
 * Pictionary
 * Rollergames
 * Shadow of the Ninja [Kage]
@@ -211,8 +222,11 @@ NES
 * Teenage Mutant Ninja Turtles III - The Manhattan Project
 * Tiny Toon Adventures
 * Tom & Jerry: The Ultimate Game of Cat and Mouse!
+* Trojan [Tatakai no Banka]
+* Trolls in Crazyland, The [Doki! Doki! Yuuenchi - Crazyland Daisakusen]
 * Werewolf - The Last Warrior
 * Yume Penguin Monogatari
+* Zen - Intergalactic Ninja
 
 Neo Geo
 
@@ -326,7 +340,7 @@ SNES
 * Monstania
 * Naki no Ryuu: Mahjong Hishouden
 * Ninja Warriors, The
-* nontan to Issho: Kuru Kuru Puzzle
+* Nontan to Issho: Kuru Kuru Puzzle
 * Ogre Battle: The March of the Black Queen
 * Ohmono Black Bass Fishing: Jinzouko Hen
 * Otogirisou
@@ -346,7 +360,6 @@ SNES
 * Star Fox
 * Star Ocean
 * Super Aleste
-* Super Back to the Future II
 * Super Bomberman 3
 * Super Castlevania IV
 * Super Ghouls 'n Ghost
