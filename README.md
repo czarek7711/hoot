@@ -151,6 +151,7 @@ MegaDrive / Genesis
 NES
 
 * Abadox - The Deadly Inner War
+* Adventure Island
 * Akumajou Special - Boku Dracula-kun
 * Arumana no Kiseki
 * Base Wars - Cyber Stadium Series
@@ -160,6 +161,7 @@ NES
 * Castlevania
 * Castlevania II - Simon's Quest
 * Castlevania III - Dracula's Curse [Akumajou Densetsu]
+* Chaos World
 * Chip 'n Dale Rescue Rangers
 * Choujin Sentai - Jetman
 * Contra
@@ -202,7 +204,7 @@ NES
 * Mega Man 5
 * Megami Tensei II - Figital Devil Story
 * Metroid
-* Mitsum ga Tooru
+* Mitsume ga Tooru
 * Mother
 * Mouryou Senki Madara
 * Ninja Gaiden
@@ -287,6 +289,7 @@ PC-98
 * Trouble Outsiders // unlabeled tracks
 * Tsunyan Jaayao
 * Valkyrie: The Power Beauties
+* Viper CTR: Asuka
 * Waku Waku Mahjong Panic 2: Koku Shimusou
 * Xenon -Fantasy Body-
 * YU-NO: The Girl that Chants Love at the Edge of the World
@@ -407,8 +410,9 @@ X68000
 * Nama Baseball '68 [Namachuukei 68]
 * Neural Gear
 * Phalanx
-* Pita Pat
+* Pita Pat // unlabeled tracks
 * Spindizzy II
+* Square Resort // some unlabeled track
 * Star Cruiser
 * Star Trader
 * War-Torn Versnag
