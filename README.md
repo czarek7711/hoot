@@ -237,6 +237,7 @@ Neo Geo
 * Metal Slug 2
 * Metal Slug 3
 * Neo Turf Masters
+* Super Dodge Ball
 
 PC Engine / TurboGrafx-16
 
