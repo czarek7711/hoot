@@ -29,6 +29,8 @@ Arcade
 * Final Fight
 * Galaxy Force II
 * Gradius IV
+* Growl
+* Kaiser Knuckle
 * Magic Sword - Heroic Fantasy
 * Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
@@ -36,8 +38,10 @@ Arcade
 * Ninja Warriors, The
 * OutRun
 * Outfoxies, The
+* PuLiRuLa
 * Quiz Nanairo Dreams: Nijiirochou no Kiseki
 * Rolling Thunder 2
+* Salamander 2
 * Shinobi
 * Soldam
 * Space Harrier
@@ -51,6 +55,7 @@ Arcade
 * Thunder Blade
 * U. N. Squadron
 * X-Men: Children of the Atom
+* Xexex
 
 Gameboy
 
@@ -113,6 +118,7 @@ MegaDrive / Genesis
 * Phantasy Star II
 * Phantasy Star III
 * Phantasy Star IV
+* Revenge of Shinobi, The
 * Ristar - The Shooting Star
 * Rocket Knight Adventures
 * Rolling Thunder 2
@@ -136,13 +142,12 @@ MegaDrive / Genesis
 * Super Fantasy Zone
 * Sword of Vermilion
 * Teenage Mutant Ninja Turtles: Tournament Fighters
-* The Revenge of Shinobi
 * Thunder Force III
 * Thunder Force IV
 * Time Trax (Prototype)
 * Valis III
 * Valis: The Fantasm Soldier
-* Vapor Trail: Hyper Offence Formation
+* Vapor Trail
 * Verytex
 * Vixen 357 // some unlabeled tracks
 * Yuu Yuu Hakusho - Makyou Toitsusen
@@ -261,8 +266,10 @@ PC-88
 PC-98
 
 * Advanced Power Dolls 2
+* Advanced Variable Geo 2
 * Black Bird: Tori Tachi no Tooboe
 * Brandish
+* Cyber Block Metal Orange
 * Desire -Spiral of Perversion-
 * Dragon Slayer: The Legend of Heroes
 * Eve: Burst Error!
