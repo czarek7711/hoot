@@ -53,6 +53,7 @@ Arcade
 * Super Street Fighter II: Turbo
 * Teenage Mutant Ninja Turtles - Turtles in Time
 * Thunder Blade
+* TwinBee Yahhoo!
 * U. N. Squadron
 * X-Men: Children of the Atom
 * Xexex
@@ -61,10 +62,19 @@ Gameboy
 
 * Batman - Return of the Joker
 * Castlevania - The Adventure
+* Castlevania II - Belmont's Revenge
 * Castlevania Legends
+* Final Fantasy Legend II [SaGa 2 - Hihou Densetsu]
 * Legend of Zelda, The - Link's Awakening
+* Megami Tensei Gaiden: Last Bible
+* Metroid II - Return of Samus
+* Pokemon Trading Card Game
+* Pokemon Card GB: GRdan Sanjou
 * Raging Fighter [Outburst] // some unlabeled tracks
+* Spawn
+* Super Mario Land
 * Super Mario Land 2 - 6 Golden Coins
+* Teenage Mutant Ninja Turtles - Fall of the Foot Clan
 * Tetris
 * Trip World
 
@@ -216,6 +226,7 @@ NES
 * Ninja Gaiden II - The Dark Sword of Chaos
 * Palamedes II - Star Twinkles
 * Pictionary
+* Rackets & Rivals
 * Rollergames
 * Shadow of the Ninja [Kage]
 * Shatterhand [Tokkyuu Shirei - Solbrain]
@@ -227,6 +238,7 @@ NES
 * Teenage Mutant Ninja Turtles
 * Teenage Mutant Ninja Turtles II - The Arcade Game
 * Teenage Mutant Ninja Turtles III - The Manhattan Project
+* Teenage Mutant Ninja Turtles Tournament Fighters
 * Tiny Toon Adventures
 * Tom & Jerry: The Ultimate Game of Cat and Mouse!
 * Trojan [Tatakai no Banka]
@@ -404,6 +416,7 @@ X68000
 * Bosconian
 * Cho Ren Sha 68K
 * Cosmic Psycho
+* Detana!! TwinBee
 * Dragon Knight 4
 * Genocide 2
 * Gradius II
