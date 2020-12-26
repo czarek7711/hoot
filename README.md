@@ -16,6 +16,7 @@ Arcade
 * Aliens
 * Armed Police Batrider
 * Armed Police Unit Gallop [Cosmic Cop]
+* Battle Garegga
 * Burning Force
 * Carrier Air Wing
 * Darius II
@@ -39,6 +40,7 @@ Arcade
 * OutRun
 * Outfoxies, The
 * PuLiRuLa
+* Quartet
 * Quiz Nanairo Dreams: Nijiirochou no Kiseki
 * Rolling Thunder 2
 * Salamander 2
@@ -68,8 +70,8 @@ Gameboy
 * Legend of Zelda, The - Link's Awakening
 * Megami Tensei Gaiden: Last Bible
 * Metroid II - Return of Samus
-* Pokemon Trading Card Game
 * Pokemon Card GB: GRdan Sanjou
+* Pokemon Trading Card Game
 * Raging Fighter [Outburst] // some unlabeled tracks
 * Spawn
 * Super Mario Land
@@ -84,7 +86,7 @@ MSX Computers
 * F1 Spirit 3D Special
 * Final Fantasy
 * Gekitotsu Pennant Race 2
-* Illusion City [幻影都市]
+* Illusion City
 * Metal Gear 2: Solid Snake
 * SD Snatcher
 * Salamander
@@ -363,7 +365,6 @@ SNES
 * Monstania
 * Naki no Ryuu: Mahjong Hishouden
 * Ninja Warriors, The
-* Nontan to Issho: Kuru Kuru Puzzle
 * Ogre Battle: The March of the Black Queen
 * Ohmono Black Bass Fishing: Jinzouko Hen
 * Otogirisou
@@ -401,7 +402,6 @@ SNES
 * Thoroughbred Breeder 3
 * Treasure Hunter G
 * Treasure of the Rudras [Rudra no Hihou]
-* Umihara Kawase
 * Uncharted Waters: New Horizons
 * Wagyan Paradise
 * Waterworld
@@ -431,9 +431,9 @@ X68000
 * Nama Baseball '68 [Namachuukei 68]
 * Neural Gear
 * Phalanx
-* Pita Pat // unlabeled tracks
+* Pita Pat
 * Spindizzy II
-* Square Resort // some unlabeled track
+* Square Resort // some unlabeled tracks
 * Star Cruiser
 * Star Trader
 * War-Torn Versnag
