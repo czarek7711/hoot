@@ -412,6 +412,7 @@ X68000
 * 38 Man Kilo no Kokuu
 * Akiko -Premium-
 * Akumajo Dracula
+* Arcus Odyssey
 * Asuka 120%: Burning Fest
 * Bosconian
 * Cho Ren Sha 68K
@@ -432,6 +433,7 @@ X68000
 * Neural Gear
 * Phalanx
 * Pita Pat
+* Sion II: The First Attack
 * Spindizzy II
 * Square Resort // some unlabeled tracks
 * Star Cruiser
