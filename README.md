@@ -287,6 +287,9 @@ PC-98
 * Desire -Spiral of Perversion-
 * Dragon Slayer: The Legend of Heroes
 * Eve: Burst Error!
+* FMP Music Disk Vol.3 (selected tracks)
+* FMP Music Disk Vol.4 (selected tracks)
+* FMP Music Disk Vol.5 (selected tracks)
 * FlixMix
 * Grounseed // some translation needed
 * Kankin // unlabeled tracks
@@ -297,6 +300,7 @@ PC-98
 * Meikyuu Gakuensai: Kyuukousha no Nazo
 * Mesuneko Hishoshitsu // unlabeled tracks
 * Metal & Lace 2 [Ningyou Tsukai 2]
+* Metal Force
 * Miwaku no Chousho
 * Night Slave
 * Only You: Seiki Matsu no Juliet to Tachi
@@ -307,6 +311,9 @@ PC-98
 * Revival Xanadu
 * Rhyme Star
 * Rusty
+* Ryokusui PMD Disk Vol.1 (selected tracks)
+* Ryokusui PMD Disk Vol.3 (selected tracks)
+* Sound Ceremony Vol.3 (selected tracks)
 * Starfire
 * Trouble Outsiders // unlabeled tracks
 * Tsunyan Jaayao
@@ -316,6 +323,8 @@ PC-98
 * Xenon -Fantasy Body-
 * YU-NO: The Girl that Chants Love at the Edge of the World
 * Yougekitai: Jashin Koumaroku
+* Ys I -Ancient Ys Vanished Omen-
+* Ys II -Ancient Ys Vanished The Final Chapter-
 
 PC/AT
 
