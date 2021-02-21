@@ -314,7 +314,10 @@ PC-98
 * Ryokusui PMD Disk Vol.1 (selected tracks)
 * Ryokusui PMD Disk Vol.3 (selected tracks)
 * Sound Ceremony Vol.3 (selected tracks)
+* Star Platinum
+* Star Trap
 * Starfire
+* Totsugeki Mix!
 * Trouble Outsiders // unlabeled tracks
 * Tsunyan Jaayao
 * Valkyrie: The Power Beauties
