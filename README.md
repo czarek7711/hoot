@@ -270,14 +270,7 @@ PC Engine / TurboGrafx-16
 * Super Star Soldier
 * Susano-O Densetsu
 
-PC-88
-
-* Providence
-* Revolter
-* Scheme, The
-* Sorcerian
-
-PC-98
+PC-88/98
 
 * Advanced Power Dolls 2
 * Advanced Variable Geo 2
@@ -292,11 +285,14 @@ PC-98
 * FMP Music Disk Vol.5 (selected tracks)
 * FlixMix
 * Grounseed // some translation needed
+* Heart Heat Girls
 * Kankin // unlabeled tracks
 * King Breeder 98
+* King's Bounty
 * Mahjongg Fantasia
 * Mahjongg Fantasia 2 // unlabeled tracks
 * Mahou Shoujo Fancy CoCo
+* Marionette Mind
 * Meikyuu Gakuensai: Kyuukousha no Nazo
 * Mesuneko Hishoshitsu // unlabeled tracks
 * Metal & Lace 2 [Ningyou Tsukai 2]
@@ -307,12 +303,16 @@ PC-98
 * Possessioner
 * Power Dolls
 * Power Dolls 2 Dash
+* Providence
 * Puyo Puyo
 * Revival Xanadu
+* Revolter
 * Rhyme Star
 * Rusty
 * Ryokusui PMD Disk Vol.1 (selected tracks)
 * Ryokusui PMD Disk Vol.3 (selected tracks)
+* Scheme, The
+* Sorcerian
 * Sound Ceremony Vol.3 (selected tracks)
 * Star Platinum
 * Star Trap
