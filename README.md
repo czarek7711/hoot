@@ -62,10 +62,12 @@ Arcade
 
 Gameboy
 
+* Another Bible
 * Batman - Return of the Joker
 * Castlevania - The Adventure
 * Castlevania II - Belmont's Revenge
 * Castlevania Legends
+* Dragon Warrior Monsters 2
 * Final Fantasy Legend II [SaGa 2 - Hihou Densetsu]
 * Legend of Zelda, The - Link's Awakening
 * Megami Tensei Gaiden: Last Bible
@@ -74,6 +76,7 @@ Gameboy
 * Pokemon Trading Card Game
 * Raging Fighter [Outburst] // some unlabeled tracks
 * Spawn
+* Star Ocean: Blue Sphere
 * Super Mario Land
 * Super Mario Land 2 - 6 Golden Coins
 * Teenage Mutant Ninja Turtles - Fall of the Foot Clan
