@@ -32,6 +32,7 @@ Arcade
 * Gradius IV
 * Growl
 * Kaiser Knuckle
+* Konami's Open Golf Championship
 * Magic Sword - Heroic Fantasy
 * Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
@@ -340,6 +341,7 @@ PC/AT
 SNES
 
 * Actraiser
+* Alcahest
 * Arcana [Cardmaster]
 * Axelay
 * Bahamut Lagoon
