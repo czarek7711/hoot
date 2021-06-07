@@ -6,6 +6,8 @@ You can read about <i>hoot</i> here: http://vgmrips.net/wiki/Hoot
 
 If I add anything it goes to <i>xml/\~systems\~.xml</i> which is the only xml file <i>hoot</i> reads for soundtrack entries.
 
+It includes shuffeling by Shadowdevo, which you can find instructions for here: https://github.com/czarek7711/hoot/pull/1 
+
 ![Hoot in action](screenshot.gif)
 
 ## Games List ##
