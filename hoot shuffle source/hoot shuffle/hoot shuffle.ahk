@@ -23,7 +23,9 @@ PlayRandomSong()
         Random, timesToArrowKey, 0, 12 ; how many times we press the arrow key after paging down
         ControlSend,, {PgDn %timesToPD%}, ahk_exe hoot.exe
         ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe
+        Sleep 200
         ControlSend,, {Enter}, ahk_exe hoot.exe ; enter this randomly chosen game directory
+        Sleep 200
         
         Random, downOrUp, 0, 1 ; down = 0 up = 1
         if (downOrUp = 0)
@@ -96,8 +98,9 @@ PlayRandomSong()
             }
         }
         
-        Sleep 1000 ; need to wait a second after playing otherwise it will stop the track
+        Sleep 2000 ; need to wait a couple seconds after playing otherwise it will stop the track
         ControlSend,, {Esc}, ahk_exe hoot.exe ; get back to the game directory
+        Sleep 100
         ControlSend,, {Home}, ahk_exe hoot.exe ; go to the top of the game directory
         Sleep 180000 ; let the track play for 3 minutes(180 seconds)
     }
