@@ -204,29 +204,41 @@ PlayRandomSong()\n\
         Random, downOrUp, 0, 1 ; down = 0 up = 1\n\
         if (downOrUp = 0)\n\
         {\n\
-            Random, timesToArrowKey, 0, 5\n\
-            ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
-            ControlSend,, {Enter}, ahk_exe hoot.exe ; play the selected track\n\
             Random, continueArrowKey, 0, 1 ; reason for continueArrowKey is to get better variety when shuffling tracks, previously it was choosing the firstand last tracks too often\n\
-            if (continueArrowKey = 1)\n\
+            if (continueArrowKey = 0)\n\
             {\n\
-                Random, timesToArrowKey, 0, 10\n\
+                Random, timesToArrowKey, 0, 5\n\
                 ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
-                ControlSend,, {Enter}, ahk_exe hoot.exe\n\
+                ControlSend,, {Enter}, ahk_exe hoot.exe ; play the selected track\n\
+            }\n\
+            else\n\
+            {\n\
                 Random, continueArrowKey, 0, 1\n\
-                if (continueArrowKey = 1)\n\
+                if (continueArrowKey = 0)\n\
                 {\n\
-                    Random, timesToArrowKey, 0, 20\n\
+                    Random, timesToArrowKey, 0, 10\n\
                     ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
                     ControlSend,, {Enter}, ahk_exe hoot.exe\n\
+                }\n\
+                else\n\
+                {\n\
                     Random, continueArrowKey, 0, 1\n\
-                    if (continueArrowKey = 1)\n\
+                    if (continueArrowKey = 0)\n\
                     {\n\
-                        Random, timesToArrowKey, 0, 30\n\
+                        Random, timesToArrowKey, 0, 20\n\
                         ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
                         ControlSend,, {Enter}, ahk_exe hoot.exe\n\
+                    }\n\
+                    else\n\
+                    {\n\
                         Random, continueArrowKey, 0, 1\n\
-                        if (continueArrowKey = 1)\n\
+                        if (continueArrowKey = 0)\n\
+                        {\n\
+                            Random, timesToArrowKey, 0, 30\n\
+                            ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
+                            ControlSend,, {Enter}, ahk_exe hoot.exe\n\
+                        }\n\
+                        else\n\
                         {\n\
                             Random, timesToArrowKey, 0, 40\n\
                             ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
@@ -238,30 +250,42 @@ PlayRandomSong()\n\
         }\n\
         else\n\
         {\n\
-            Random, timesToArrowKey, 0, 5\n\
             ControlSend,, {End}, ahk_exe hoot.exe ; go to the bottom before going up\n\
-            ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
-            ControlSend,, {Enter}, ahk_exe hoot.exe ; play the selected track\n\
-            Random, continueArrowKey, 0, 1\n\
-            if (continueArrowKey = 1)\n\
+            Random, continueArrowKey, 0, 1 ; reason for continueArrowKey is to get better variety when shuffling tracks, previously it was choosing the firstand last tracks too often\n\
+            if (continueArrowKey = 0)\n\
             {\n\
-                Random, timesToArrowKey, 0, 10\n\
+                Random, timesToArrowKey, 0, 5\n\
                 ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
-                ControlSend,, {Enter}, ahk_exe hoot.exe\n\
+                ControlSend,, {Enter}, ahk_exe hoot.exe ; play the selected track\n\
+            }\n\
+            else\n\
+            {\n\
                 Random, continueArrowKey, 0, 1\n\
-                if (continueArrowKey = 1)\n\
+                if (continueArrowKey = 0)\n\
                 {\n\
-                    Random, timesToArrowKey, 0, 20\n\
+                    Random, timesToArrowKey, 0, 10\n\
                     ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
                     ControlSend,, {Enter}, ahk_exe hoot.exe\n\
+                }\n\
+                else\n\
+                {\n\
                     Random, continueArrowKey, 0, 1\n\
-                    if (continueArrowKey = 1)\n\
+                    if (continueArrowKey = 0)\n\
                     {\n\
-                        Random, timesToArrowKey, 0, 30\n\
+                        Random, timesToArrowKey, 0, 20\n\
                         ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
                         ControlSend,, {Enter}, ahk_exe hoot.exe\n\
+                    }\n\
+                    else\n\
+                    {\n\
                         Random, continueArrowKey, 0, 1\n\
-                        if (continueArrowKey = 1)\n\
+                        if (continueArrowKey = 0)\n\
+                        {\n\
+                            Random, timesToArrowKey, 0, 30\n\
+                            ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
+                            ControlSend,, {Enter}, ahk_exe hoot.exe\n\
+                        }\n\
+                        else\n\
                         {\n\
                             Random, timesToArrowKey, 0, 40\n\
                             ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
