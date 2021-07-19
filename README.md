@@ -289,6 +289,8 @@ PC-88/98
 * FMP Music Disk Vol.3 (selected tracks)
 * FMP Music Disk Vol.4 (selected tracks)
 * FMP Music Disk Vol.5 (selected tracks)
+* FMP Music Disk Vol.8 (selected tracks)
+* Firecracker Music Selection Vol.13 (selected tracks)
 * FlixMix
 * Grounseed // some translation needed
 * Heart Heat Girls
