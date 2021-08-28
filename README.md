@@ -6,14 +6,13 @@ You can read about <i>hoot</i> here: http://vgmrips.net/wiki/Hoot
 
 If I add anything it goes to <i>xml/\~systems\~.xml</i> which is the only xml file <i>hoot</i> reads for soundtrack entries.
 
-It includes shuffling by Shadowdevo, which you can find instructions for here: https://github.com/czarek7711/hoot/pull/1 
-
 ![Hoot in action](screenshot.gif)
 
 ## Games List ##
 
 Arcade
 
+* 3D Outrun (3DS tracks)
 * Akuma-Jou Dracula [Haunted Castle]
 * Aliens
 * Armed Police Batrider
@@ -27,39 +26,48 @@ Arcade
 * E.D.F.: Earth Defense Force
 * Elevator Action Returns
 * Fantasy Zone
-* Fantasy Zone II DX: The Tears of Opa-Opa // part of the first track
+* Fantasy Zone II DX: The Tears of Opa-Opa
 * Fighting Layer
 * Final Fight
 * Galaxy Force II
+* Golgo 13: Kiseki no Dandou
 * Gradius IV
+* Great Sluggers '94
 * Growl
+* Hayaoshi Quiz Ouza Ketteisen: The King Of Quiz
 * Kaiser Knuckle
+* Kart Duel
+* Kingdom Grandprix [Shippu Mahou Daisakusen]
 * Konami's Open Golf Championship
 * Magic Sword - Heroic Fantasy
 * Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
+* Mr. Driller
 * Night Slashers
 * Ninja Warriors, The
 * OutRun
 * Outfoxies, The
+* Paca Paca Passion
+* Prime Goal EX
 * PuLiRuLa
 * Quartet
 * Quiz Nanairo Dreams: Nijiirochou no Kiseki
 * Rolling Thunder 2
 * Salamander 2
+* Sega Rally Championship
 * Shinobi
 * Soldam
 * Space Harrier
 * Street Fighter Alpha 2
 * Sunset Riders
 * Super Contra
-* Super Hang-On
 * Super Monaco GP
 * Super Street Fighter II: Turbo
 * Teenage Mutant Ninja Turtles - Turtles in Time
 * Thunder Blade
 * TwinBee Yahhoo!
 * U. N. Squadron
+* Under Fire
 * X-Men: Children of the Atom
 * Xexex
 
@@ -77,7 +85,7 @@ Gameboy
 * Metroid II - Return of Samus
 * Pokemon Card GB: GRdan Sanjou
 * Pokemon Trading Card Game
-* Raging Fighter [Outburst] // some unlabeled tracks
+* Raging Fighter [Outburst]
 * Spawn
 * Star Ocean: Blue Sphere
 * Super Mario Land
@@ -94,6 +102,7 @@ MSX Computers
 * Gekitotsu Pennant Race 2
 * Illusion City
 * Metal Gear 2: Solid Snake
+* Quarth
 * SD Snatcher
 * Salamander
 * Snatcher
@@ -103,9 +112,11 @@ MegaDrive / Genesis
 * Alien 3
 * Alien Soldier
 * Alisia Dragoon
+* Arnold Palmer Tournament Golf [Naomichi Ozaki no Super Masters]
 * Battle Mania Daiginjo
 * Bishoujo Senshi Sailor Moon
 * Castlevania: Bloodlines [Vampire Killer]
+* Chou Kyuukai Miracle Nine
 * Columns III: Revenge of Columns
 * Contra: Hard Corps
 * Crude Buster [Two Crude]
@@ -117,6 +128,7 @@ MegaDrive / Genesis
 * Gaiares
 * Gain Ground
 * Gauntlet IV
+* Ghouls 'n Ghosts
 * Gley Lancer
 * Golden Axe II
 * Gunstar Heroes
@@ -158,6 +170,7 @@ MegaDrive / Genesis
 * Streets of Rage 2 [Bare Knuckle II]
 * Strider
 * Super Fantasy Zone
+* Super Hang-On
 * Sword of Vermilion
 * Teenage Mutant Ninja Turtles: Tournament Fighters
 * Thunder Force III
@@ -167,7 +180,7 @@ MegaDrive / Genesis
 * Valis: The Fantasm Soldier
 * Vapor Trail
 * Verytex
-* Vixen 357 // some unlabeled tracks
+* Vixen 357
 * Yuu Yuu Hakusho - Makyou Toitsusen
 * Zero Wing
 
@@ -213,7 +226,7 @@ NES
 * Just Breed
 * Kick Master
 * Kirby's Adventure
-* Konami Hyper Soccer // unlabeled tracks
+* Konami Hyper Soccer
 * Kunio-kun no Nekketsu Soccer League
 * Lagrange Point
 * Legend of Zelda 2, The - The Adventure of Link
@@ -268,11 +281,13 @@ PC Engine / TurboGrafx-16
 
 * Aldynes - The Mission Code for Rage Crisis
 * City Hunter
+* Cyber City Oedo 808 - Kemono no Zokusei
 * Devil's Crush [Devil's Crash]
 * Digital Champ - Battle Boxing
 * Legend of Xanadu, The [Kaze no Densetsu Xanadu]
 * Magical Chase, The
 * Neutopia II
+* Shin Megami Tensei
 * Super Star Soldier
 * Susano-O Densetsu
 
@@ -280,6 +295,9 @@ PC-88/98
 
 * Advanced Power Dolls 2
 * Advanced Variable Geo 2
+* Anime Mahjong X
+* Area 88: Etranger 1995
+* Ballade for Maria
 * Black Bird: Tori Tachi no Tooboe
 * Brandish
 * Cyber Block Metal Orange
@@ -290,24 +308,32 @@ PC-88/98
 * FMP Music Disk Vol.4 (selected tracks)
 * FMP Music Disk Vol.5 (selected tracks)
 * FMP Music Disk Vol.8 (selected tracks)
+* Farland Story: Tooi Kuni no Monogatari
 * Firecracker Music Selection Vol.13 (selected tracks)
 * FlixMix
-* Grounseed // some translation needed
+* Frontier
+* Grounseed
 * Heart Heat Girls
-* Kankin // unlabeled tracks
+* Horny Sweeper 2: Joshi Kou Kiki Ippatsu
+* Kankin
 * King Breeder 98
 * King's Bounty
-* Mahjongg Fantasia
-* Mahjongg Fantasia 2 // unlabeled tracks
+* La Blue Girl: School of Lust
+* Mahjong Fantasia
+* Mahjong Fantasia II
+* Mahjong Fantasia III
 * Mahou Shoujo Fancy CoCo
+* Majo Gari no Yoru ni
 * Marionette Mind
+* Mashou no Kao
 * Meikyuu Gakuensai: Kyuukousha no Nazo
-* Mesuneko Hishoshitsu // unlabeled tracks
+* Mesuneko Hishoshitsu
 * Metal & Lace 2 [Ningyou Tsukai 2]
 * Metal Force
 * Miwaku no Chousho
 * Night Slave
 * Only You: Seiki Matsu no Juliet to Tachi
+* PeroPero Candy: You no Shou
 * Possessioner
 * Power Dolls
 * Power Dolls 2 Dash
@@ -319,6 +345,8 @@ PC-88/98
 * Rusty
 * Ryokusui PMD Disk Vol.1 (selected tracks)
 * Ryokusui PMD Disk Vol.3 (selected tracks)
+* Ryokusui PMD Disk Vol.4 (selected tracks)
+* Saint Diary: Kiyoshi-chan no Nikki
 * Scheme, The
 * Sorcerian
 * Sound Ceremony Vol.3 (selected tracks)
@@ -326,7 +354,7 @@ PC-88/98
 * Star Trap
 * Starfire
 * Totsugeki Mix!
-* Trouble Outsiders // unlabeled tracks
+* Trouble Outsiders
 * Tsunyan Jaayao
 * Valkyrie: The Power Beauties
 * Viper CTR: Asuka
@@ -340,7 +368,8 @@ PC-88/98
 PC/AT
 
 * Secret of Monkey Island, The
-* WarCraft 2 // some unlabeled tracks
+* Theme Hospital
+* WarCraft 2
 
 SNES
 
@@ -423,6 +452,7 @@ SNES
 * Thoroughbred Breeder 3
 * Treasure Hunter G
 * Treasure of the Rudras [Rudra no Hihou]
+* Umihara Kawase
 * Uncharted Waters: New Horizons
 * Wagyan Paradise
 * Waterworld
@@ -433,6 +463,8 @@ X68000
 * 38 Man Kilo no Kokuu
 * Akiko -Premium-
 * Akumajo Dracula
+* Akushu: Kagerou no Jidai wo Koe te
+* Ano, Subarashii o Mou Ichido
 * Arcus Odyssey
 * Asuka 120%: Burning Fest
 * Bosconian
@@ -443,22 +475,26 @@ X68000
 * Genocide 2
 * Gradius II
 * Granada
+* Illumina
 * Illumination Laser
 * Kimi Dake ni Ai o...
 * Knight Arms
 * Kyuukyoku Senki Gikadiver // missing tracks
-* Lam-Mal [Ranmaru] // unlabeled tracks
+* Lam-Mal [Ranmaru]
 * Mad Stalker: Full Metal Force
-* Metal Eye // some translation missing
+* Metal Eye
 * Nama Baseball '68 [Namachuukei 68]
 * Neural Gear
 * Phalanx
 * Pita Pat
+* Saori -Bishoujo-tachi no Yakata- 
 * Sion II: The First Attack
+* Sol-Feace
 * Spindizzy II
-* Square Resort // some unlabeled tracks
+* Square Resort
 * Star Cruiser
 * Star Trader
 * War-Torn Versnag
-* Yami no Ketsuzoku // some translation needed
+* XIX!
+* Yami no Ketsuzoku
 * Ys III -Wanderers From Ys-
