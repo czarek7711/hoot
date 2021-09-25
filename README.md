@@ -20,6 +20,7 @@ Arcade
 * Battle Garegga
 * Burning Force
 * Carrier Air Wing
+* Darius
 * Darius II
 * Daytona USA
 * Dragon Saber: After Story of Dragon Spirit
@@ -285,6 +286,7 @@ PC Engine / TurboGrafx-16
 * Devil's Crush [Devil's Crash]
 * Digital Champ - Battle Boxing
 * Legend of Xanadu, The [Kaze no Densetsu Xanadu]
+* Legend of Xanadu II, The [Kaze no Densetsu Xanadu II]
 * Magical Chase, The
 * Neutopia II
 * Shin Megami Tensei
@@ -304,6 +306,8 @@ PC-88/98
 * Desire -Spiral of Perversion-
 * Dragon Slayer: The Legend of Heroes
 * Eve: Burst Error!
+* FMP Data Disk Vol.8 (selected tracks)
+* FMP Music Disk Vol.2 (selected tracks)
 * FMP Music Disk Vol.3 (selected tracks)
 * FMP Music Disk Vol.4 (selected tracks)
 * FMP Music Disk Vol.5 (selected tracks)
@@ -315,6 +319,10 @@ PC-88/98
 * Grounseed
 * Heart Heat Girls
 * Horny Sweeper 2: Joshi Kou Kiki Ippatsu
+* Imagical Musion Depot Vol.1
+* Imagical Musion Depot Vol.2
+* Imagical Musion Depot Vol.3
+* Imagical Musion Depot Vol.4
 * Kankin
 * King Breeder 98
 * King's Bounty
