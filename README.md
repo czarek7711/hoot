@@ -283,7 +283,7 @@ PC Engine / TurboGrafx-16
 * Aldynes - The Mission Code for Rage Crisis
 * City Hunter
 * Cyber City Oedo 808 - Kemono no Zokusei
-* Devil's Crush [Devil's Crash]
+* Devil's Crush
 * Digital Champ - Battle Boxing
 * Legend of Xanadu, The [Kaze no Densetsu Xanadu]
 * Legend of Xanadu II, The [Kaze no Densetsu Xanadu II]
@@ -295,6 +295,7 @@ PC Engine / TurboGrafx-16
 
 PC-88/98
 
+* Advanced Fantasian
 * Advanced Power Dolls 2
 * Advanced Variable Geo 2
 * Anime Mahjong X
@@ -331,7 +332,7 @@ PC-88/98
 * Mahjong Fantasia II
 * Mahjong Fantasia III
 * Mahou Shoujo Fancy CoCo
-* Majo Gari no Yoru ni
+* Majogari no Yoru ni
 * Marionette Mind
 * Mashou no Kao
 * Meikyuu Gakuensai: Kyuukousha no Nazo
@@ -372,6 +373,7 @@ PC-88/98
 * Yougekitai: Jashin Koumaroku
 * Ys I -Ancient Ys Vanished Omen-
 * Ys II -Ancient Ys Vanished The Final Chapter-
+* Yuugiri -Ningyoushi no Isan-
 
 PC/AT
 
