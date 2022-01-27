@@ -10,7 +10,7 @@ If I add anything it goes to <i>xml/\~systems\~.xml</i> which is the only xml fi
 
 ## Games List ##
 
-Arcade
+Arcade/Neo Geo
 
 * 3D Outrun (3DS tracks)
 * Akuma-Jou Dracula [Haunted Castle]
@@ -31,19 +31,27 @@ Arcade
 * Fighting Layer
 * Final Fight
 * Galaxy Force II
+* Garou: Mark of the Wolves
 * Golgo 13: Kiseki no Dandou
 * Gradius IV
 * Great Sluggers '94
 * Growl
 * Hayaoshi Quiz Ouza Ketteisen: The King Of Quiz
+* Hyper Duel
 * Kaiser Knuckle
 * Kart Duel
 * Kingdom Grandprix [Shippu Mahou Daisakusen]
 * Konami's Open Golf Championship
+* Last Survivor
 * Magic Sword - Heroic Fantasy
 * Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
+* Metal Slug
+* Metal Slug 2
+* Metal Slug 3
+* Money Puzzle Exchanger
 * Mr. Driller
+* Neo Turf Masters
 * Night Slashers
 * Ninja Warriors, The
 * OutRun
@@ -51,6 +59,7 @@ Arcade
 * Paca Paca Passion
 * Prime Goal EX
 * PuLiRuLa
+* Puzzle Bobble
 * Quartet
 * Quiz Nanairo Dreams: Nijiirochou no Kiseki
 * Rolling Thunder 2
@@ -62,6 +71,7 @@ Arcade
 * Street Fighter Alpha 2
 * Sunset Riders
 * Super Contra
+* Super Dodge Ball
 * Super Monaco GP
 * Super Street Fighter II: Turbo
 * Teenage Mutant Ninja Turtles - Turtles in Time
@@ -94,6 +104,8 @@ Gameboy
 * Teenage Mutant Ninja Turtles - Fall of the Foot Clan
 * Tetris
 * Trip World
+* X
+* Xerd no Densetsu 2
 
 MSX Computers
 
@@ -124,6 +136,7 @@ MegaDrive / Genesis
 * Crusader of Centy
 * Dangerous Seed
 * Devilish [Bad Omen]
+* Dino Land
 * Dynamite Headdy
 * Fushigino Umi no Nadia
 * Gaiares
@@ -269,15 +282,6 @@ NES
 * Yume Penguin Monogatari
 * Zen - Intergalactic Ninja
 
-Neo Geo
-
-* Garou: Mark of the Wolves
-* Metal Slug
-* Metal Slug 2
-* Metal Slug 3
-* Neo Turf Masters
-* Super Dodge Ball
-
 PC Engine / TurboGrafx-16
 
 * Aldynes - The Mission Code for Rage Crisis
@@ -285,8 +289,10 @@ PC Engine / TurboGrafx-16
 * Cyber City Oedo 808 - Kemono no Zokusei
 * Devil's Crush
 * Digital Champ - Battle Boxing
+* Hisou Kihei X-Serd
 * Legend of Xanadu, The [Kaze no Densetsu Xanadu]
 * Legend of Xanadu II, The [Kaze no Densetsu Xanadu II]
+* Legendary Axe II, The
 * Magical Chase, The
 * Neutopia II
 * Shin Megami Tensei
@@ -319,6 +325,7 @@ PC-88/98
 * Frontier
 * Grounseed
 * Heart Heat Girls
+* Hinadori no Saezuri
 * Horny Sweeper 2: Joshi Kou Kiki Ippatsu
 * Imagical Musion Depot Vol.1
 * Imagical Musion Depot Vol.2
@@ -337,6 +344,7 @@ PC-88/98
 * Mashou no Kao
 * Meikyuu Gakuensai: Kyuukousha no Nazo
 * Mesuneko Hishoshitsu
+* Metajo
 * Metal & Lace 2 [Ningyou Tsukai 2]
 * Metal Force
 * Miwaku no Chousho
@@ -377,8 +385,11 @@ PC-88/98
 
 PC/AT
 
+* Betreyal at Krondor
 * Secret of Monkey Island, The
 * Theme Hospital
+* Transport Tycoon Deluxe
+* Universe
 * WarCraft 2
 
 SNES
@@ -419,6 +430,7 @@ SNES
 * Legend of The Mystical Ninja, The
 * Legend of Zelda, The - A Link to the Past
 * Live A Live
+* Mario Paint
 * Mega Man & Bass [Rockman & Forte]
 * Mega Man X
 * Mega Man X2
@@ -478,6 +490,7 @@ X68000
 * Arcus Odyssey
 * Asuka 120%: Burning Fest
 * Bosconian
+* Butasan Quest
 * Cho Ren Sha 68K
 * Cosmic Psycho
 * Detana!! TwinBee
@@ -497,6 +510,7 @@ X68000
 * Neural Gear
 * Phalanx
 * Pita Pat
+* Robot Construction R.C.
 * Saori -Bishoujo-tachi no Yakata- 
 * Sion II: The First Attack
 * Sol-Feace
