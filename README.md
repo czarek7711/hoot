@@ -82,7 +82,7 @@ Arcade/Neo Geo
 * X-Men: Children of the Atom
 * Xexex
 
-Gameboy
+Game Boy
 
 * Another Bible
 * Batman - Return of the Joker
@@ -106,6 +106,15 @@ Gameboy
 * Trip World
 * X
 * Xerd no Densetsu 2
+
+Game Gear/Master System
+
+* Devilish
+* GG Aleste
+* GG Aleste 2
+* Sonic the HedgeHog
+* Sylvan Tale
+* Zillion
 
 MSX Computers
 
@@ -313,14 +322,14 @@ PC-88/98
 * Desire -Spiral of Perversion-
 * Dragon Slayer: The Legend of Heroes
 * Eve: Burst Error!
-* FMP Data Disk Vol.8 (selected tracks)
-* FMP Music Disk Vol.2 (selected tracks)
-* FMP Music Disk Vol.3 (selected tracks)
-* FMP Music Disk Vol.4 (selected tracks)
-* FMP Music Disk Vol.5 (selected tracks)
-* FMP Music Disk Vol.8 (selected tracks)
+* FMP Data Disk Vol.8
+* FMP Music Disk Vol.2
+* FMP Music Disk Vol.3
+* FMP Music Disk Vol.4
+* FMP Music Disk Vol.5
+* FMP Music Disk Vol.8
 * Farland Story: Tooi Kuni no Monogatari
-* Firecracker Music Selection Vol.13 (selected tracks)
+* Firecracker Music Selection Vol.13
 * FlixMix
 * Frontier
 * Grounseed
@@ -360,13 +369,13 @@ PC-88/98
 * Revolter
 * Rhyme Star
 * Rusty
-* Ryokusui PMD Disk Vol.1 (selected tracks)
-* Ryokusui PMD Disk Vol.3 (selected tracks)
-* Ryokusui PMD Disk Vol.4 (selected tracks)
+* Ryokusui PMD Disk Vol.1
+* Ryokusui PMD Disk Vol.3
+* Ryokusui PMD Disk Vol.4
 * Saint Diary: Kiyoshi-chan no Nikki
 * Scheme, The
 * Sorcerian
-* Sound Ceremony Vol.3 (selected tracks)
+* Sound Ceremony Vol.3
 * Star Platinum
 * Star Trap
 * Starfire
