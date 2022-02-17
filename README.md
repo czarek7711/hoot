@@ -111,8 +111,9 @@ Game Gear/Master System
 
 * Devilish
 * GG Aleste
-* GG Aleste 2
-* Sonic the HedgeHog
+* GG Aleste 2: Lance Bird
+* Shining Force Gaiden - Final Conflict
+* Sonic the Hedgehog
 * Sylvan Tale
 * Zillion
 
