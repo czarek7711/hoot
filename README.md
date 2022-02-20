@@ -107,15 +107,20 @@ Game Boy
 * X
 * Xerd no Densetsu 2
 
-Game Gear/Master System
+Game Gear
 
 * Devilish
 * GG Aleste
-* GG Aleste 2: Lance Bird
+* GG Aleste II: Lance Bird
+* GG Shinobi
+* GG Shinobi II: The Silent Fury
+* Lunar - Sanposuru Gakuen
+* Master of Darkness
+* Moldorian: Hikari to Yami no Sister
+* Nazo Puyo - Arle no Ru
+* Ninku Gaiden - Hiroyuki Daikatsugeki
 * Shining Force Gaiden - Final Conflict
-* Sonic the Hedgehog
 * Sylvan Tale
-* Zillion
 
 MSX Computers
 
@@ -129,6 +134,17 @@ MSX Computers
 * SD Snatcher
 * Salamander
 * Snatcher
+
+Master System
+
+* Astro Warrior
+* Eswat - City Under Siege
+* Lord of the Sword
+* Phantasy Star
+* Power Strike II
+* Secret Command [Ashura]
+* Sonic the Hedgehog
+* Zillion
 
 MegaDrive / Genesis
 
@@ -299,6 +315,7 @@ PC Engine / TurboGrafx-16
 * Cyber City Oedo 808 - Kemono no Zokusei
 * Devil's Crush
 * Digital Champ - Battle Boxing
+* Gunhed [Blazing Lazers]
 * Hisou Kihei X-Serd
 * Legend of Xanadu, The [Kaze no Densetsu Xanadu]
 * Legend of Xanadu II, The [Kaze no Densetsu Xanadu II]
