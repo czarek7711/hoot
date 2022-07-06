@@ -124,6 +124,7 @@ Game Gear
 
 MSX Computers
 
+* Aleste 2
 * F1 Spirit -The Way to Formula-
 * F1 Spirit 3D Special
 * Final Fantasy
@@ -146,7 +147,7 @@ Master System
 * Sonic the Hedgehog
 * Zillion
 
-MegaDrive / Genesis
+Mega Drive
 
 * Alien 3
 * Alien Soldier
@@ -179,7 +180,7 @@ MegaDrive / Genesis
 * Langrisser II
 * Lethal Enforcers
 * Light Crusader
-* M.U.S.H.A
+* M.U.S.H.A Aleste
 * Madou Monogatari I
 * Master of Monsters
 * McDonald's Treasure Land Adventure
@@ -311,20 +312,35 @@ NES
 PC Engine / TurboGrafx-16
 
 * Aldynes - The Mission Code for Rage Crisis
+* Battle Ace
+* Blazing Lazers [Gunhed]
+* Blood Gear
+* Bloody Wolf
+* Bomberman '93
+* Bomberman '94
+* Break In
 * City Hunter
 * Cyber City Oedo 808 - Kemono no Zokusei
 * Devil's Crush
 * Digital Champ - Battle Boxing
-* Gunhed [Blazing Lazers]
 * Hisou Kihei X-Serd
-* Legend of Xanadu, The [Kaze no Densetsu Xanadu]
-* Legend of Xanadu II, The [Kaze no Densetsu Xanadu II]
+* Hyper Dyne Side Arms
+* Kaze no Densetsu Xanadu
+* Kaze no Densetsu Xanadu II
+* Legendary Axe, The
 * Legendary Axe II, The
 * Magical Chase, The
+* Neutopia
 * Neutopia II
+* Pastel Lime
+* Psychosis [Paranoia]
 * Shin Megami Tensei
+* Star Breaker
 * Super Star Soldier
-* Susano-O Densetsu
+* Susanoou Densetsu
+* Tokimeki Memorial
+* Tatsujin [Truxton]
+* Zero4 Champ
 
 PC-88/98
 
@@ -529,7 +545,7 @@ X68000
 * Illumination Laser
 * Kimi Dake ni Ai o...
 * Knight Arms
-* Kyuukyoku Senki Gikadiver // missing tracks
+* Kyuukyoku Senki Gikadiver
 * Lam-Mal [Ranmaru]
 * Mad Stalker: Full Metal Force
 * Metal Eye
