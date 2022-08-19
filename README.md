@@ -289,6 +289,7 @@ NES
 * Palamedes II - Star Twinkles
 * Pictionary
 * Rackets & Rivals
+* Power Blade II [Captain Saver]
 * Rollergames
 * Shadow of the Ninja [Kage]
 * Shatterhand [Tokkyuu Shirei - Solbrain]
@@ -306,6 +307,8 @@ NES
 * Trojan [Tatakai no Banka]
 * Trolls in Crazyland, The [Doki! Doki! Yuuenchi - Crazyland Daisakusen]
 * Werewolf - The Last Warrior
+* Wizards & Warriors
+* Wizards & Warriors II - Ironsword
 * Yume Penguin Monogatari
 * Zen - Intergalactic Ninja
 
