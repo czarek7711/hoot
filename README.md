@@ -464,6 +464,7 @@ SNES
 * Final Fantasy: Mystic Quest
 * Fire Emblem: Monshou no Nazo
 * Front Mission: Gun Hazard
+* Glory of Heracles IV: Gift from the Gods
 * Gradius III
 * Hagane - The Final Conflict
 * Hiouden: Mamono-tachi to no Chikai
@@ -491,6 +492,7 @@ SNES
 * Plok
 * Pop'n Twinbee
 * Radical Dreamers
+* Robotrek [SlapStick]
 * Romancing SaGa 3
 * Secret of Evermore
 * Secret of Mana [Seiken Densetsu 2]
