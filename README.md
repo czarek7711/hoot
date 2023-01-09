@@ -350,7 +350,7 @@ PC-88/98
 * Advanced Fantasian
 * Advanced Power Dolls 2
 * Advanced Variable Geo 2
-* Anime Mahjong X
+* Animahjong X
 * Area 88: Etranger 1995
 * Ballade for Maria
 * Black Bird: Tori Tachi no Tooboe
