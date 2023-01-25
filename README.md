@@ -4,6 +4,8 @@ This here is my personal <i>hoot</i> folder with my favourite video game soundtr
 
 You can read about <i>hoot</i> here: http://vgmrips.net/wiki/Hoot
 
+FAQ (some may be out of date): http://snesmusic.org/hoot/v2/faq.php
+
 If I add anything it goes to <i>xml/\~systems\~.xml</i> which is the only xml file <i>hoot</i> reads for soundtrack entries.
 
 ![Hoot in action](screenshot.gif)
@@ -286,6 +288,7 @@ NES
 * Mouryou Senki Madara
 * Ninja Gaiden
 * Ninja Gaiden II - The Dark Sword of Chaos
+* Ninja Gaiden III - The Ancient Ship of Doom
 * Palamedes II - Star Twinkles
 * Pictionary
 * Rackets & Rivals
