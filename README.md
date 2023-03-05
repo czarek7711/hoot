@@ -109,20 +109,28 @@ Game Boy
 * X
 * Xerd no Densetsu 2
 
-Game Gear
+Game Gear/Master System
 
+* Astro Warrior
 * Devilish
+* Eswat - City Under Siege
 * GG Aleste
 * GG Aleste II: Lance Bird
 * GG Shinobi
 * GG Shinobi II: The Silent Fury
+* Lord of the Sword
 * Lunar - Sanposuru Gakuen
 * Master of Darkness
 * Moldorian: Hikari to Yami no Sister
 * Nazo Puyo - Arle no Ru
 * Ninku Gaiden - Hiroyuki Daikatsugeki
+* Phantasy Star
+* Power Strike II
+* Secret Command [Ashura]
 * Shining Force Gaiden - Final Conflict
+* Sonic the Hedgehog
 * Sylvan Tale
+* Zillion
 
 MSX Computers
 
@@ -137,17 +145,6 @@ MSX Computers
 * SD Snatcher
 * Salamander
 * Snatcher
-
-Master System
-
-* Astro Warrior
-* Eswat - City Under Siege
-* Lord of the Sword
-* Phantasy Star
-* Power Strike II
-* Secret Command [Ashura]
-* Sonic the Hedgehog
-* Zillion
 
 Mega Drive
 
@@ -167,6 +164,8 @@ Mega Drive
 * Devilish [Bad Omen]
 * Dino Land
 * Dynamite Headdy
+* Earnest Evans
+* El Viento
 * Fushigino Umi no Nadia
 * Gaiares
 * Gain Ground
@@ -325,6 +324,7 @@ PC Engine / TurboGrafx-16
 * Bomberman '93
 * Bomberman '94
 * Break In
+* Bubblegum Crash - Knight Sabers 2034
 * City Hunter
 * Cyber City Oedo 808 - Kemono no Zokusei
 * Devil's Crush
