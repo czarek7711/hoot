@@ -88,23 +88,27 @@ Game Boy
 
 * Another Bible
 * Batman - Return of the Joker
+* Batman - The Animated Series
 * Castlevania - The Adventure
 * Castlevania II - Belmont's Revenge
 * Castlevania Legends
 * Dragon Warrior Monsters 2
 * Final Fantasy Legend II [SaGa 2 - Hihou Densetsu]
+* Keitai Denjuu Telefang
+* Kirby's Star Stacker
 * Legend of Zelda, The - Link's Awakening
 * Megami Tensei Gaiden: Last Bible
 * Metroid II - Return of Samus
 * Pokemon Card GB: GRdan Sanjou
 * Pokemon Trading Card Game
 * Raging Fighter [Outburst]
-* Spawn
+* Side Pocket
 * Star Ocean: Blue Sphere
 * Super Mario Land
 * Super Mario Land 2 - 6 Golden Coins
 * Teenage Mutant Ninja Turtles - Fall of the Foot Clan
 * Tetris
+* Tetris Plus
 * Trip World
 * X
 * Xerd no Densetsu 2
