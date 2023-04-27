@@ -264,6 +264,7 @@ NES
 * Gimmick!
 * Goonies II, The
 * Gremlins 2 - The New Batch
+* Guardian Legend, The
 * Gyruss
 * Ivan "Ironman" Stewart's Super Off Road
 * Jackal
@@ -330,6 +331,7 @@ PC Engine / TurboGrafx-16
 * Break In
 * Bubblegum Crash - Knight Sabers 2034
 * City Hunter
+* Cross Wiber - Cyber Combat Police
 * Cyber City Oedo 808 - Kemono no Zokusei
 * Devil's Crush
 * Digital Champ - Battle Boxing
@@ -481,6 +483,7 @@ SNES
 * Ihatovo Monogatari
 * King od Dragons, The
 * Last Bible III
+* Leading Company
 * Legend of The Mystical Ninja, The
 * Legend of Zelda, The - A Link to the Past
 * Live A Live
@@ -508,6 +511,7 @@ SNES
 * SimCity
 * Soul Blazer
 * Sparkster
+* Spriggan Powered
 * Star Fox
 * Star Ocean
 * Super Aleste
