@@ -203,6 +203,7 @@ Mega Drive
 * Shining Force II: The Ancient Seal
 * Shining in the Darkness
 * Shinobi III: Return of the Ninja Master
+* Side Pocket
 * Socket [Time Dominator 1st]
 * Sonic the Hedgehog
 * Sonic the Hedgehog 2
@@ -214,9 +215,11 @@ Mega Drive
 * Star Cruiser
 * Streets of Rage [Bare Knuckle]
 * Streets of Rage 2 [Bare Knuckle II]
+* Streets of Rage 3 [Bare Knuckle III]
 * Strider
 * Super Fantasy Zone
 * Super Hang-On
+* Super Monaco GP
 * Sword of Vermilion
 * Teenage Mutant Ninja Turtles: Tournament Fighters
 * Thunder Force III
@@ -335,6 +338,7 @@ PC Engine / TurboGrafx-16
 * Cyber City Oedo 808 - Kemono no Zokusei
 * Devil's Crush
 * Digital Champ - Battle Boxing
+* Ganbare! Golf Boys
 * Hisou Kihei X-Serd
 * Hyper Dyne Side Arms
 * Kaze no Densetsu Xanadu
@@ -344,6 +348,7 @@ PC Engine / TurboGrafx-16
 * Magical Chase, The
 * Neutopia
 * Neutopia II
+* Parasol Stars - The Story of Bubble Bobble III
 * Pastel Lime
 * Psychosis [Paranoia]
 * Shin Megami Tensei
