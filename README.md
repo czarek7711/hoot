@@ -45,7 +45,7 @@ Arcade/Neo Geo
 * Kingdom Grandprix [Shippu Mahou Daisakusen]
 * Konami's Open Golf Championship
 * Last Survivor
-* Magic Sword - Heroic Fantasy
+* Magic Sword: Heroic Fantasy
 * Marvel Vs. Capcom: Clash of Super Heroes
 * Metal Black
 * Metal Slug
@@ -76,7 +76,7 @@ Arcade/Neo Geo
 * Super Dodge Ball
 * Super Monaco GP
 * Super Street Fighter II: Turbo
-* Teenage Mutant Ninja Turtles - Turtles in Time
+* Teenage Mutant Ninja Turtles: Turtles in Time
 * Thunder Blade
 * TwinBee Yahhoo!
 * U. N. Squadron
@@ -87,26 +87,26 @@ Arcade/Neo Geo
 Game Boy
 
 * Another Bible
-* Batman - Return of the Joker
-* Batman - The Animated Series
-* Castlevania - The Adventure
-* Castlevania II - Belmont's Revenge
+* Batman: Return of the Joker
+* Batman: The Animated Series
+* Castlevania: The Adventure
+* Castlevania II: Belmont's Revenge
 * Castlevania Legends
 * Dragon Warrior Monsters 2
-* Final Fantasy Legend II [SaGa 2 - Hihou Densetsu]
+* Final Fantasy Legend II [SaGa 2: Hihou Densetsu]
 * Keitai Denjuu Telefang
 * Kirby's Star Stacker
-* Legend of Zelda, The - Link's Awakening
+* Legend of Zelda, The: Link's Awakening
 * Megami Tensei Gaiden: Last Bible
-* Metroid II - Return of Samus
+* Metroid II: Return of Samus
 * Pokemon Card GB: GRdan Sanjou
 * Pokemon Trading Card Game
 * Raging Fighter [Outburst]
 * Side Pocket
 * Star Ocean: Blue Sphere
 * Super Mario Land
-* Super Mario Land 2 - 6 Golden Coins
-* Teenage Mutant Ninja Turtles - Fall of the Foot Clan
+* Super Mario Land 2: 6 Golden Coins
+* Teenage Mutant Ninja Turtles: Fall of the Foot Clan
 * Tetris
 * Tetris Plus
 * Trip World
@@ -117,21 +117,21 @@ Game Gear/Master System
 
 * Astro Warrior
 * Devilish
-* Eswat - City Under Siege
+* Eswat: City Under Siege
 * GG Aleste
 * GG Aleste II: Lance Bird
 * GG Shinobi
 * GG Shinobi II: The Silent Fury
 * Lord of the Sword
-* Lunar - Sanposuru Gakuen
+* Lunar: Sanposuru Gakuen
 * Master of Darkness
 * Moldorian: Hikari to Yami no Sister
-* Nazo Puyo - Arle no Ru
-* Ninku Gaiden - Hiroyuki Daikatsugeki
+* Nazo Puyo: Arle no Ru
+* Ninku Gaiden: Hiroyuki Daikatsugeki
 * Phantasy Star
 * Power Strike II
 * Secret Command [Ashura]
-* Shining Force Gaiden - Final Conflict
+* Shining Force Gaiden: Final Conflict
 * Sonic the Hedgehog
 * Sylvan Tale
 * Zillion
@@ -195,7 +195,7 @@ Mega Drive
 * Phantasy Star III
 * Phantasy Star IV
 * Revenge of Shinobi, The
-* Ristar - The Shooting Star
+* Ristar: The Shooting Star
 * Rocket Knight Adventures
 * Rolling Thunder 2
 * Rolling Thunder 3
@@ -230,43 +230,43 @@ Mega Drive
 * Vapor Trail
 * Verytex
 * Vixen 357
-* Yuu Yuu Hakusho - Makyou Toitsusen
+* Yuu Yuu Hakusho: Makyou Toitsusen
 * Zero Wing
 
 NES
 
-* Abadox - The Deadly Inner War
+* Abadox: The Deadly Inner War
 * Adventure Island
-* Akumajou Special - Boku Dracula-kun
+* Akumajou Special: Boku Dracula-kun
 * Arumana no Kiseki
-* Base Wars - Cyber Stadium Series
+* Base Wars: Cyber Stadium Series
 * Batman
 * Batman Returns
 * Blue Marlin, The
 * Castlevania
-* Castlevania II - Simon's Quest
-* Castlevania III - Dracula's Curse [Akumajou Densetsu]
+* Castlevania II: Simon's Quest
+* Castlevania III: Dracula's Curse [Akumajou Densetsu]
 * Chaos World
 * Chip 'n Dale Rescue Rangers
-* Choujin Sentai - Jetman
+* Choujin Sentai: Jetman
 * Contra
 * Contra Force [Ark Hound]
 * Crisis Force
 * Dark Lord
-* Double Dragon II - The Revenge
+* Double Dragon II: The Revenge
 * Dragon Fighter
 * Dragon Quest
 * Dragon Quest II: Luminaries of the Legendary Line
 * Dragon Quest IV: Chapters of the Chosen
 * Esper Dream 2
-* Exciting Soccer - Konami Cup
+* Exciting Soccer: Konami Cup
 * Falsion
 * Ferrari Grand Prix Challenge
 * Final Fantasy II
 * Final Fantasy III
 * Gimmick!
 * Goonies II, The
-* Gremlins 2 - The New Batch
+* Gremlins 2: The New Batch
 * Guardian Legend, The
 * Gyruss
 * Ivan "Ironman" Stewart's Super Off Road
@@ -279,52 +279,52 @@ NES
 * Konami Hyper Soccer
 * Kunio-kun no Nekketsu Soccer League
 * Lagrange Point
-* Legend of Zelda 2, The - The Adventure of Link
+* Legend of Zelda 2, The: The Adventure of Link
 * Legend of Zelda, The
-* Little Nemo - The Dream Master
+* Little Nemo: The Dream Master
 * Magician
 * Mega Man
 * Mega Man 2
 * Mega Man 3
 * Mega Man 4
 * Mega Man 5
-* Megami Tensei II - Figital Devil Story
+* Megami Tensei II: Figital Devil Story
 * Metroid
 * Mitsume ga Tooru
 * Mother
 * Mouryou Senki Madara
 * Ninja Gaiden
-* Ninja Gaiden II - The Dark Sword of Chaos
-* Ninja Gaiden III - The Ancient Ship of Doom
-* Palamedes II - Star Twinkles
+* Ninja Gaiden II: The Dark Sword of Chaos
+* Ninja Gaiden III: The Ancient Ship of Doom
+* Palamedes II: Star Twinkles
 * Pictionary
 * Rackets & Rivals
 * Power Blade II [Captain Saver]
 * Rollergames
 * Shadow of the Ninja [Kage]
-* Shatterhand [Tokkyuu Shirei - Solbrain]
+* Shatterhand [Tokkyuu Shirei: Solbrain]
 * Shovel Knight
 * Silver Surfer
-* Street Fighter 2010 - Final Fight
+* Street Fighter 2010: Final Fight
 * Super C [Super Contra]
 * Super Spy Hunter [Battle Formula]
 * Teenage Mutant Ninja Turtles
-* Teenage Mutant Ninja Turtles II - The Arcade Game
-* Teenage Mutant Ninja Turtles III - The Manhattan Project
+* Teenage Mutant Ninja Turtles II: The Arcade Game
+* Teenage Mutant Ninja Turtles III: The Manhattan Project
 * Teenage Mutant Ninja Turtles Tournament Fighters
 * Tiny Toon Adventures
 * Tom & Jerry: The Ultimate Game of Cat and Mouse!
 * Trojan [Tatakai no Banka]
-* Trolls in Crazyland, The [Doki! Doki! Yuuenchi - Crazyland Daisakusen]
-* Werewolf - The Last Warrior
+* Trolls in Crazyland, The [Doki! Doki! Yuuenchi: Crazyland Daisakusen]
+* Werewolf: The Last Warrior
 * Wizards & Warriors
-* Wizards & Warriors II - Ironsword
+* Wizards & Warriors II: Ironsword
 * Yume Penguin Monogatari
-* Zen - Intergalactic Ninja
+* Zen: Intergalactic Ninja
 
 PC Engine / TurboGrafx-16
 
-* Aldynes - The Mission Code for Rage Crisis
+* Aldynes: The Mission Code for Rage Crisis
 * Battle Ace
 * Blazing Lazers [Gunhed]
 * Blood Gear
@@ -332,12 +332,12 @@ PC Engine / TurboGrafx-16
 * Bomberman '93
 * Bomberman '94
 * Break In
-* Bubblegum Crash - Knight Sabers 2034
+* Bubblegum Crash: Knight Sabers 2034
 * City Hunter
-* Cross Wiber - Cyber Combat Police
-* Cyber City Oedo 808 - Kemono no Zokusei
+* Cross Wiber: Cyber Combat Police
+* Cyber City Oedo 808: Kemono no Zokusei
 * Devil's Crush
-* Digital Champ - Battle Boxing
+* Digital Champ: Battle Boxing
 * Ganbare! Golf Boys
 * Hisou Kihei X-Serd
 * Hyper Dyne Side Arms
@@ -348,7 +348,7 @@ PC Engine / TurboGrafx-16
 * Magical Chase, The
 * Neutopia
 * Neutopia II
-* Parasol Stars - The Story of Bubble Bobble III
+* Parasol Stars: The Story of Bubble Bobble III
 * Pastel Lime
 * Psychosis [Paranoia]
 * Shin Megami Tensei
@@ -456,19 +456,25 @@ SNES
 
 * Actraiser
 * Alcahest
+* Angelique
 * Arcana [Cardmaster]
 * Axelay
 * Bahamut Lagoon
-* Brainlord
+* Battle Grand Prix
+* Brain Lord
 * Breath of Fire
 * Castlevania: Dracula X
 * Chrono Trigger
+* Classic Road 2
 * Contra III: The Alien Wars
 * Crystal Beans From Dungeon Explorer
 * Cybernator [Assault Suits Valken]
+* Dark Law: Meaning of Death
 * Donkey Kong Country
-* Donkey Kong Country 2 - Diddy's Kong Quest
+* Donkey Kong Country 2: Diddy's Kong Quest
 * Dragon Quest III: Soshite Densetsu he...
+* Dragon Quest VI: Maboroshi no Daichi
+* Dungeon Master
 * Earthbound [Mother 2]
 * Energy Breaker
 * F-Zero
@@ -476,39 +482,55 @@ SNES
 * Final Fantasy V
 * Final Fantasy VI
 * Final Fantasy: Mystic Quest
+* Final Fight 2
+* Final Fight 3
 * Fire Emblem: Monshou no Nazo
 * Front Mission: Gun Hazard
-* Glory of Heracles IV: Gift from the Gods
+* Ganbare Goemon: Yukihime Kyushutsu Emaki
+* Ghost Sweeper Mikami: Joreishi wa Nice Body
 * Gradius III
-* Hagane - The Final Conflict
+* Hagane: The Final Conflict
+* Herakles no Eikou IV: Kamigami kara no Okurimono
 * Hiouden: Mamono-tachi to no Chikai
-* Honkaku Shougi: Fuuunji Ryuuou
 * Hourai Gakuen no Bouken!: Tenkousei Scramble
-* HyperZone
+* Hyper Zone
 * Ihatovo Monogatari
+* International Superstar Soccer Deluxe
+* J.League Soccer Prime Goal 3
 * King od Dragons, The
 * Last Bible III
 * Leading Company
-* Legend of The Mystical Ninja, The
-* Legend of Zelda, The - A Link to the Past
+* Legend of Zelda, The: A Link to the Past
 * Live A Live
 * Mario Paint
 * Mega Man & Bass [Rockman & Forte]
+* Mega Man VII
 * Mega Man X
 * Mega Man X2
+* Melfand Stories
 * Monstania
+* Mouryou Senki Madara 2
 * Naki no Ryuu: Mahjong Hishouden
-* Ninja Warriors, The
+* Ninja Warriors Again, The
+* Nontan to Issho: Kuru Kuru Puzzle
 * Ogre Battle: The March of the Black Queen
 * Ohmono Black Bass Fishing: Jinzouko Hen
 * Otogirisou
+* Pac-Attack
 * Pebble Beach Golf Links
+* Pikiinya!
 * Pilotwings
 * Plok
 * Pop'n Twinbee
+* Psycho Dream
 * Radical Dreamers
 * Robotrek [SlapStick]
+* Rockman & Forte
 * Romancing SaGa 3
+* Rudra no Hihou
+* Ruin Arm
+* Rushing Beat Ran: Fukusei Toshi
+* Rushing Beat Shura
 * Secret of Evermore
 * Secret of Mana [Seiken Densetsu 2]
 * Seiken Densetsu 3
@@ -525,7 +547,7 @@ SNES
 * Super Ghouls 'n Ghost
 * Super Mario Kart
 * Super Mario RPG: Legend of the Seven Stars
-* Super Mario World 2 - Yoshi's Island
+* Super Mario World 2: Yoshi's Island
 * Super Metroid
 * Super R-Type
 * Sword Maniac
@@ -537,7 +559,6 @@ SNES
 * Terranigma [Tenchi Souzou]
 * Thoroughbred Breeder 3
 * Treasure Hunter G
-* Treasure of the Rudras [Rudra no Hihou]
 * Umihara Kawase
 * Uncharted Waters: New Horizons
 * Wagyan Paradise
