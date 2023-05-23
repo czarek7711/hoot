@@ -454,6 +454,7 @@ PC/AT
 
 SNES
 
+* '96 Zenkoku Koukou Soccer Senshuken
 * Actraiser
 * Alcahest
 * Angelique
@@ -485,6 +486,8 @@ SNES
 * Final Fight 2
 * Final Fight 3
 * Fire Emblem: Monshou no Nazo
+* Flying Hero: Bugyuru no Daibouken
+* From TV Animation Slam Dunk: SD Heat Up!!
 * Front Mission: Gun Hazard
 * Ganbare Goemon: Yukihime Kyushutsu Emaki
 * Ghost Sweeper Mikami: Joreishi wa Nice Body
@@ -497,13 +500,13 @@ SNES
 * Ihatovo Monogatari
 * International Superstar Soccer Deluxe
 * J.League Soccer Prime Goal 3
-* King od Dragons, The
+* Kamaitachi no Yoru
+* King of Rally, The
 * Last Bible III
 * Leading Company
 * Legend of Zelda, The: A Link to the Past
 * Live A Live
 * Mario Paint
-* Mega Man & Bass [Rockman & Forte]
 * Mega Man VII
 * Mega Man X
 * Mega Man X2
@@ -536,20 +539,25 @@ SNES
 * Seiken Densetsu 3
 * Shin Kidou Senki Gundam W: Endless Duel
 * SimCity
+* Snoopy Concert
 * Soul Blazer
 * Sparkster
 * Spriggan Powered
 * Star Fox
-* Star Ocean
 * Super Aleste
+* Super Back to the Future II
 * Super Bomberman 3
 * Super Castlevania IV
-* Super Ghouls 'n Ghost
+* Super Chase H.Q.
+* Super Ghouls 'n Ghosts
+* Super Hockey '94
 * Super Mario Kart
 * Super Mario RPG: Legend of the Seven Stars
+* Super Mario World
 * Super Mario World 2: Yoshi's Island
 * Super Metroid
 * Super R-Type
+* Super Tennis
 * Sword Maniac
 * Syvalion
 * Tactics Ogre: Let Us Cling Together
@@ -557,13 +565,23 @@ SNES
 * Teenage Mutant Ninja Turtles: Tournament Fighters
 * Tetris Attack [Panel de Pon]
 * Terranigma [Tenchi Souzou]
-* Thoroughbred Breeder 3
+* Thoroughbred Breeder III
+* Treasure Conflix
 * Treasure Hunter G
+* Tsuri Taro
+* TwinBee: Rainbow Bell Adventure
+* U.N. Squadron
 * Umihara Kawase
 * Uncharted Waters: New Horizons
+* Undercover Cops
 * Wagyan Paradise
 * Waterworld
 * Wild Guns
+* Wondrous Magic
+* Ys IV: Mask of the Sun
+* Zero4 Champ RR
+* Zero4 Champ RR-Z
+* Zombies Ate My Neighbors
 
 X68000
 
