@@ -341,6 +341,7 @@ PC Engine / TurboGrafx-16
 * Ganbare! Golf Boys
 * Hisou Kihei X-Serd
 * Hyper Dyne Side Arms
+* Kato-chan & Ken-chan
 * Kaze no Densetsu Xanadu
 * Kaze no Densetsu Xanadu II
 * Legendary Axe, The
