@@ -353,6 +353,7 @@ PC Engine / TurboGrafx-16
 * Pastel Lime
 * Psychosis [Paranoia]
 * Shin Megami Tensei
+* Soldier Blade
 * Star Breaker
 * Super Star Soldier
 * Susanoou Densetsu
