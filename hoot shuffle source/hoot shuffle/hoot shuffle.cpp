@@ -15,7 +15,7 @@
 using namespace std;
 using namespace filesystem;
 
-int i = 0;
+int countToShuffle = 0;
 int timesRepeated = 0;
 float peak_session = 0.0f;
 float lastPeakValue = 0.0f;
@@ -160,7 +160,7 @@ void getSettings()
         createSettings();
     }
     else
-    {   
+    {
         // get key from file
         while (ReadSettings >> key); // gets the character in the settings file - written this way to catch whitespaces in the settings file if they exist for some reason
         hotkeyCode = (BYTE)VkKeyScanExA(key, GetKeyboardLayout(0));
@@ -204,38 +204,38 @@ PlayRandomSong()\n\
         Random, downOrUp, 0, 1 ; down = 0 up = 1\n\
         if (downOrUp = 0)\n\
         {\n\
+            Random, timesToArrowKey, 0, 5\n\
+            ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
             Random, continueArrowKey, 0, 1 ; reason for continueArrowKey is to get better variety when shuffling tracks, previously it was choosing the firstand last tracks too often\n\
             if (continueArrowKey = 0)\n\
             {\n\
-                Random, timesToArrowKey, 0, 5\n\
-                ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
                 ControlSend,, {Enter}, ahk_exe hoot.exe ; play the selected track\n\
             }\n\
             else\n\
             {\n\
+                Random, timesToArrowKey, 0, 10\n\
+                ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
                 Random, continueArrowKey, 0, 1\n\
                 if (continueArrowKey = 0)\n\
                 {\n\
-                    Random, timesToArrowKey, 0, 10\n\
-                    ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
                     ControlSend,, {Enter}, ahk_exe hoot.exe\n\
                 }\n\
                 else\n\
                 {\n\
+                    Random, timesToArrowKey, 0, 20\n\
+                    ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
                     Random, continueArrowKey, 0, 1\n\
                     if (continueArrowKey = 0)\n\
                     {\n\
-                        Random, timesToArrowKey, 0, 20\n\
-                        ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
                         ControlSend,, {Enter}, ahk_exe hoot.exe\n\
                     }\n\
                     else\n\
                     {\n\
+                        Random, timesToArrowKey, 0, 30\n\
+                        ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
                         Random, continueArrowKey, 0, 1\n\
                         if (continueArrowKey = 0)\n\
                         {\n\
-                            Random, timesToArrowKey, 0, 30\n\
-                            ControlSend,, {Down %timesToArrowKey%}, ahk_exe hoot.exe\n\
                             ControlSend,, {Enter}, ahk_exe hoot.exe\n\
                         }\n\
                         else\n\
@@ -251,38 +251,38 @@ PlayRandomSong()\n\
         else\n\
         {\n\
             ControlSend,, {End}, ahk_exe hoot.exe ; go to the bottom before going up\n\
+            Random, timesToArrowKey, 0, 5\n\
+            ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
             Random, continueArrowKey, 0, 1 ; reason for continueArrowKey is to get better variety when shuffling tracks, previously it was choosing the firstand last tracks too often\n\
             if (continueArrowKey = 0)\n\
             {\n\
-                Random, timesToArrowKey, 0, 5\n\
-                ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
                 ControlSend,, {Enter}, ahk_exe hoot.exe ; play the selected track\n\
             }\n\
             else\n\
             {\n\
+                Random, timesToArrowKey, 0, 10\n\
+                ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
                 Random, continueArrowKey, 0, 1\n\
                 if (continueArrowKey = 0)\n\
                 {\n\
-                    Random, timesToArrowKey, 0, 10\n\
-                    ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
                     ControlSend,, {Enter}, ahk_exe hoot.exe\n\
                 }\n\
                 else\n\
                 {\n\
+                    Random, timesToArrowKey, 0, 20\n\
+                    ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
                     Random, continueArrowKey, 0, 1\n\
                     if (continueArrowKey = 0)\n\
                     {\n\
-                        Random, timesToArrowKey, 0, 20\n\
-                        ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
                         ControlSend,, {Enter}, ahk_exe hoot.exe\n\
                     }\n\
                     else\n\
                     {\n\
+                        Random, timesToArrowKey, 0, 30\n\
+                        ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
                         Random, continueArrowKey, 0, 1\n\
                         if (continueArrowKey = 0)\n\
                         {\n\
-                            Random, timesToArrowKey, 0, 30\n\
-                            ControlSend,, {Up %timesToArrowKey%}, ahk_exe hoot.exe\n\
                             ControlSend,, {Enter}, ahk_exe hoot.exe\n\
                         }\n\
                         else\n\
@@ -349,27 +349,27 @@ int main()
 
     for (;;)
     {
-        for (UINT f = 0; f < ARRAYSIZE(flows); f++) 
+        for (UINT f = 0; f < ARRAYSIZE(flows); f++)
         {
             CComPtr<IMMDeviceCollection> pMMDeviceCollection;
             hr = pMMDeviceEnumerator->EnumAudioEndpoints(flows[f], DEVICE_STATE_ACTIVE, &pMMDeviceCollection);
-            if (FAILED(hr)) 
+            if (FAILED(hr))
             {
                 continue;
             }
 
             UINT32 nDevices;
             hr = pMMDeviceCollection->GetCount(&nDevices);
-            if (FAILED(hr)) 
+            if (FAILED(hr))
             {
                 continue;
             }
 
-            for (UINT32 d = 0; d < nDevices; d++) 
+            for (UINT32 d = 0; d < nDevices; d++)
             {
                 CComPtr<IMMDevice> pMMDevice;
                 hr = pMMDeviceCollection->Item(d, &pMMDevice);
-                if (FAILED(hr)) 
+                if (FAILED(hr))
                 {
                     continue;
                 }
@@ -390,7 +390,7 @@ int main()
                 hr = pAudioSessionEnumerator->GetCount(&count);
 
                 int active = 0;
-                for (int session = 0; session < count; session++) 
+                for (int session = 0; session < count; session++)
                 {
                     // get the session identifier
                     CComPtr<IAudioSessionControl> pAudioSessionControl;
@@ -399,7 +399,7 @@ int main()
                     // get the state
                     AudioSessionState state;
                     hr = pAudioSessionControl->GetState(&state);
-                    if (AudioSessionStateActive != state) 
+                    if (AudioSessionStateActive != state)
                     {
                         // skip this session if it's in an active state
                         continue;
@@ -413,7 +413,7 @@ int main()
                     // get the session identifier which contains information about what is making sound
                     CComHeapPtr<WCHAR> szSessionIdentifier;
                     hr = pAudioSessionControl2->GetSessionIdentifier(&szSessionIdentifier);
-                    
+
                     // get the current audio peak meter level for this session
                     CComPtr<IAudioMeterInformation> pAudioMeterInformation_Session;
                     hr = pAudioSessionControl->QueryInterface(IID_PPV_ARGS(&pAudioMeterInformation_Session));
@@ -431,32 +431,47 @@ int main()
                             cout << "-- [Hoot found!] Now listening... --\n\n";
                             checkForHoot = false;
                         }
-                        if (peak_session > 0 && timesRepeated < 4)
+                        if (peak_session > 0 && timesRepeated < 8)
                         {
                             float currentPeakValue = peak_session;
                             if (currentPeakValue == lastPeakValue)
                             {
                                 timesRepeated++; // need this to catch some buggy songs that hang on a note but aren't playing anything
                             }
+                            else
+                            {
+                                timesRepeated = 0; // if the track hasn't repeated then reset the repeated counter
+                                countToShuffle = 0; // and reset the shuffle counter
+                            }
                             lastPeakValue = peak_session;
-                            i = 0;
+                        }
+                        else if (timesRepeated >= 8)
+                        {
+                            countToShuffle = 8;
                         }
                         else
                         {
-                            i++;
+                            countToShuffle++;
                         }
-                        if (i >= 8) // if i has been incremented enough times to make this true, that means no audio has been detected for about 4 seconds (every time i is incremented 2 times, a little over a second has passed)
+                        if (countToShuffle >= 8) // if countToShuffle has been incremented enough times to make this true, that means no audio has been detected or repeated audio has been happening for about 4 seconds (every time it's incremented 2 times, a little over a second has passed)
                         {
                             // ouputs a timestamp for the operation
-                            cout << "-- Timestamp: [" << getTime() << "] --\nNo audio from hoot in the last 5 seconds!" << "\nHitting the shuffle button...\n\n";
+                            if (timesRepeated >= 8)
+                            {
+                                cout << "-- Timestamp: [" << getTime() << "] --\nHoot has been repeating audio for the last 5 seconds!" << "\nHitting the shuffle button...\n\n";
+                            }
+                            else
+                            {
+                                cout << "-- Timestamp: [" << getTime() << "] --\nNo audio from hoot in the last 5 seconds!" << "\nHitting the shuffle button...\n\n";
+                            }
 
                             // press the shuffle button
                             keybd_event(hotkeyCode, 0, KEYEVENTF_EXTENDEDKEY, 0); // presses ` (shuffles hoot)
                             Sleep(100);
                             keybd_event(hotkeyCode, 0, KEYEVENTF_KEYUP, 0); // releases the key press
                             Sleep(100);
-                            // shuffle button has been pressed so reset these variables to begin listening for no audio again
-                            i = 0;
+                            // shuffle button has been pressed so reset these variables
+                            countToShuffle = 0;
                             timesRepeated = 0;
                         }
                     }
